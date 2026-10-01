@@ -1,0 +1,185 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage{xcolor}
+\usepackage{xurl}
+\definecolor{linkblue}{RGB}{29,69,105}
+\usepackage[colorlinks=true,linkcolor=linkblue,urlcolor=linkblue,citecolor=linkblue]{hyperref}
+\hypersetup{pdftitle={Uniform time sampling of infinite-window normal-operator frames},pdfauthor={Siavash Sadeghi (contributor); AI-generated research note},pdfsubject={Affirmative proof claim for AIM 457; independent review pending}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small AIM 457: Infinite-window sampling}
+\fancyhead[R]{\small Supplementary research note}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{4pt}\setlength{\parindent}{0pt}
+\emergencystretch=2em
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\CC}{\mathbb C}
+\DeclareMathOperator{\Arg}{Arg}
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\Large\bfseries Uniform time sampling of infinite-window\\[3pt]
+normal-operator frames\par}
+\vspace{8pt}
+{\normalsize A quantitative affirmative answer to AIM problem 457\par}
+\vspace{10pt}
+{\normalsize Contributor: Siavash Sadeghi\par}
+\vspace{4pt}
+{\small AI-generated research note\quad$\cdot$\quad1 October 2026\par}
+\end{center}
+\begin{abstract}
+Under the assumptions of AIM problem 457, every sufficiently fine uniform time grid gives an unweighted frame on the infinite observation window. The Bessel hypothesis on the initial sensors and the continuous lower frame bound force the normal evolution operator to be bounded away from zero. Its specified Borel logarithm is consequently bounded. Applying the continuous upper frame bound to the logarithmic generator controls the time derivative of the observation map in $L^2$. A direct step-function approximation then supplies a uniform sampling grid and explicit frame bounds, without exponential stability.
+\end{abstract}
+\textbf{Evidence status.} Complete AI-generated proof claim with AI review only. No independent human review or proof-assistant verification is claimed. This is supplementary to the separate counterexample for AIM 558.
+
+\section{Statement with explicit constants}
+Let $\HH\ne\{0\}$ be a separable complex Hilbert space, $A\in\mathcal B(\HH)$ be normal, and $(g_j)_{j\in J}$ be a countable Bessel family with bound $B_0$. Powers are defined by the specified spectral calculus:
+\[
+z^t=|z|^t e^{it\Arg z},\qquad \Arg z\in(-\pi,\pi],\qquad
+0^t=0\ (t>0),\qquad A^0=I.
+\]
+Assume that $0<m\leq M<\infty$ and
+\begin{equation}\label{eq:continuous}
+m\|f\|^2\leq\int_0^\infty\sum_{j\in J}|\langle f,A^tg_j\rangle|^2\,dt
+\leq M\|f\|^2\quad(f\in\HH).
+\end{equation}
+These are precisely the operator, sensor, and observation assumptions in the repository target \cite{aim}. The question is whether time can be sampled on a locally finite set of finite upper Beurling density, with no time-dependent weights.
+
+\begin{theorem}\label{thm:main}
+Under these assumptions, $A$ is boundedly invertible and the Borel logarithm
+\[
+L=\log A=\int_{\sigma(A)}(\log|z|+i\Arg z)\,dE(z)
+\]
+is a bounded operator satisfying $A^t=e^{tL}$ for all $t\geq0$. For every $\delta>0$ with
+\begin{equation}\label{eq:delta}
+\delta\sqrt M\,\|L\|<\sqrt m,
+\end{equation}
+the grid $T=\delta\NN_0$ gives the unweighted frame bounds
+\begin{equation}\label{eq:bounds}
+\begin{split}
+\frac{(\sqrt m-\delta\sqrt M\|L\|)^2}{\delta}\|f\|^2
+&\leq\sum_{k=0}^\infty\sum_{j\in J}|\langle f,A^{k\delta}g_j\rangle|^2\\
+&\leq\frac{(\sqrt M+\delta\sqrt M\|L\|)^2}{\delta}\|f\|^2.
+\end{split}
+\end{equation}
+Furthermore $D^+(T)=1/\delta<\infty$.
+\end{theorem}
+An explicit choice using only the original bounds and $\|A\|$ is
+\begin{equation}\label{eq:explicit}
+\Lambda=\frac{B_0}{m}+\max\{0,\log\|A\|\}+\pi,
+\qquad \delta=\frac{\sqrt m}{2\sqrt M\,\Lambda}.
+\end{equation}
+For this choice, the bounds may be simplified to $m_T=m/(4\delta)$ and $M_T=9M/(4\delta)$. The zero Hilbert space is trivial and may be handled by any grid.
+
+\section{The lower frame bound excludes spectrum near zero}
+Let $0<r<1$, let $E$ be the spectral measure of $A$, and take
+$f\in E(\{z:|z|\leq r\})\HH$. The lower frame bound on a nonzero space implies $B_0>0$. The initial Bessel bound gives, for $t>0$,
+\[
+\sum_j|\langle f,A^tg_j\rangle|^2
+=\sum_j|\langle (A^t)^*f,g_j\rangle|^2
+\leq B_0\|(A^t)^*f\|^2\leq B_0r^{2t}\|f\|^2.
+\]
+Integrating and using the lower bound in \eqref{eq:continuous} yields
+\begin{equation}\label{eq:spectral-gap}
+m\|f\|^2\leq\frac{B_0}{-2\log r}\|f\|^2.
+\end{equation}
+Take $r_0=\exp(-B_0/m)\in(0,1)$. Then the right side is $(m/2)\|f\|^2$, so $f=0$. Thus
+\[
+E(\{z:|z|\leq r_0\})=0.
+\]
+In particular, the spectral calculus for $1/z$ defines a bounded inverse of $A$. On the spectral support, $|z|\geq r_0$ and $|z|\leq\|A\|$, so $\log|z|+i\Arg z$ is bounded. Hence $L$ is bounded, $\|L\|\leq\Lambda$ for \eqref{eq:explicit}, and composition in the Borel functional calculus gives $A^t=e^{tL}$.
+
+No holomorphic logarithm is needed. The possible branch discontinuity at the negative real axis does not affect bounded Borel functional calculus. The value at zero is immaterial because its spectral projection vanishes.
+
+\section{An \texorpdfstring{$L^2$}{L2} derivative bound gives a uniform grid}
+Use the convention that inner products are linear in their first argument, and define the bounded analysis operator
+\[
+C:\HH\longrightarrow\ell^2(J),\qquad Cf=(\langle f,g_j\rangle)_{j\in J}.
+\]
+Set $F_f(t)=Ce^{tL^*}f$. The frame bounds say
+\begin{equation}\label{eq:analysis-bounds}
+\sqrt m\|f\|\leq\|F_f\|_{L^2(0,\infty;\ell^2(J))}\leq\sqrt M\|f\|.
+\end{equation}
+Since $L$ is bounded, $F_f$ is continuously differentiable and
+\[
+F_f'(t)=Ce^{tL^*}L^*f=F_{L^*f}(t).
+\]
+Crucially, applying the \emph{continuous upper frame bound} to $L^*f$, rather than estimating the evolution's operator norm over the whole half-line, gives
+\begin{equation}\label{eq:derivative}
+\|F_f'\|_{L^2}\leq\sqrt M\|L^*f\|\leq\sqrt M\|L\|\|f\|.
+\end{equation}
+
+For a Hilbert-space-valued continuously differentiable function $F$ with $F,F'\in L^2$, define the left-sample step function
+\[
+(Q_\delta F)(t)=F(k\delta)\quad\text{when }k\delta\leq t<(k+1)\delta.
+\]
+For such $t$, the fundamental theorem of calculus and Cauchy--Schwarz give
+\[
+\|F(t)-F(k\delta)\|^2
+\leq(t-k\delta)\int_{k\delta}^t\|F'(s)\|^2\,ds.
+\]
+Integrating over a grid interval, bounding by its full derivative integral, and summing yields
+\[
+\|Q_\delta F-F\|_{L^2}^2
+\leq\frac{\delta^2}{2}\|F'\|_{L^2}^2
+\leq\delta^2\|F'\|_{L^2}^2.
+\]
+This first proves that the difference is in $L^2$, and then that $Q_\delta F\in L^2$; sampled summability is not assumed in advance. Since
+\[
+\|Q_\delta F_f\|_{L^2}^2
+=\delta\sum_{k=0}^\infty\sum_j|\langle f,A^{k\delta}g_j\rangle|^2,
+\]
+applying the triangle and reverse triangle inequalities, together with \eqref{eq:analysis-bounds}--\eqref{eq:derivative}, proves \eqref{eq:bounds}. The lower bound is positive by \eqref{eq:delta}.
+
+The factor $\delta$ in the step-function norm is absorbed into the frame constants. The resulting discrete frame contains the original vectors $A^{k\delta}g_j$, not reweighted sensors. Every interval of length $R$ contains at most $R/\delta+1$ grid points, while intervals starting at zero achieve the asymptotic rate $1/\delta$. This proves the claimed upper Beurling density. Finally, \eqref{eq:explicit} gives $\delta\sqrt M\|L\|\leq\sqrt m/2$, which yields the simplified constants stated after the theorem.\hfill$\square$
+
+\section{Why exponential stability is not being assumed}
+The time-sampling question appears in the 2026 survey \cite{survey}, Open Problem 1 and \S5.2(B). The infinite-window discretization theorem in \cite{dmm}, Theorem 3.4, assumes exponential stability. The derivative estimate \eqref{eq:derivative} does not use that assumption. More generally, the argument of Section 3 applies to any bounded generator and bounded observation operator satisfying \eqref{eq:analysis-bounds}; normality was used here to establish the bounded logarithm of the specified power evolution.
+
+As a concrete infinite-dimensional example outside exponential stability, take $\HH=\ell^2(\NN)$ and
+\[
+Ae_n=e^{-1/n}e_n,\qquad g_n=\sqrt{2/n}\,e_n\quad(n\geq1).
+\]
+The initial sensors have Bessel bound $2$, and Tonelli's theorem gives
+\[
+\int_0^\infty\sum_n|\langle f,A^tg_n\rangle|^2\,dt
+=\sum_n\frac2n|f_n|^2\int_0^\infty e^{-2t/n}\,dt=\|f\|^2.
+\]
+Nevertheless $\|A^t\|=\sup_n e^{-t/n}=1$ for all $t\geq0$, so the evolution is not exponentially stable. The theorem still supplies uniform unweighted sampling.
+
+\section{Provenance and review status}
+The exact target was read on 1 October 2026 from the \texttt{main} branch of \texttt{MColbrook/AIM}, path \path{problems/457-infinite-time-dynamical-frame-discretization.md}. It was marked Open, with last-check date 22 September 2026. The target was rechecked at repository revision \path{aa776a01d7d48a79f93251af11fde9454b0aea95} on the same date. The conclusion addresses the statement under its explicit \emph{initial Bessel-family} hypothesis; it makes no claim for arbitrary unbounded observation operators, unbounded generators, or versions of the problem omitting that hypothesis.
+
+The argument is a complete proof claim under the stated assumptions, not an independently reviewed resolution or a certified novelty claim. The supplied package attributes its proof and original review to one AI assistant. Codex (AI assistant) subsequently read the argument and compared it with the pinned target. Siavash Sadeghi is identified as the contributor and proposed submitter, not as an independent reviewer. No repository update or external submission was made. The repository accepts a resolution report as \emph{Solution claimed} while independent review is pending. A published resolution or documented independent audit is required for the stronger \emph{Solved} status.
+
+\begin{thebibliography}{9}
+\raggedright\small
+\bibitem{aim}
+MColbrook/AIM. \emph{Problem 457: Finite-density time sampling of an infinite observation window}.
+Repository revision \path{aa776a01d7d48a79f93251af11fde9454b0aea95}, accessed 1 October 2026.
+\url{https://github.com/MColbrook/AIM/blob/aa776a01d7d48a79f93251af11fde9454b0aea95/problems/457-infinite-time-dynamical-frame-discretization.md}.
+
+\bibitem{survey}
+A. Aldroubi, C. Cabrelli, I. Krishtal and U. Molter.
+\emph{Dynamical Sampling: A Survey}.
+La Matematica \textbf{5} (2026), article 37.
+Open Problem 1 and \S5.2(B).
+\url{https://doi.org/10.1007/s44007-026-00215-y}.
+Also arXiv:2511.10769v3.
+
+\bibitem{dmm}
+R. D\'{i}az Mart\'{i}n, I. Medri and U. Molter.
+\emph{Continuous and discrete dynamical sampling}.
+Journal of Mathematical Analysis and Applications \textbf{499} (2021), 125060.
+Theorem 3.4.
+\url{https://arxiv.org/abs/2006.08046}.
+\end{thebibliography}
+\end{document}

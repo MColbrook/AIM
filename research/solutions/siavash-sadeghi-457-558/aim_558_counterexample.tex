@@ -1,0 +1,371 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,enumitem}
+\usepackage{xcolor}
+\usepackage{xurl}
+\definecolor{linkblue}{RGB}{29,69,105}
+\usepackage[colorlinks=true,linkcolor=linkblue,urlcolor=linkblue,citecolor=linkblue]{hyperref}
+\hypersetup{pdftitle={Gaussian alpha-projections are not coordinatewise variance-monotone},pdfauthor={Siavash Sadeghi (contributor); AI-generated research note},pdfsubject={Exact counterexample to AIM 558; independent review pending}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small AIM 558: Gaussian variance ordering}
+\fancyhead[R]{\small Research note}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\emergencystretch=2em
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\R}{\mathbb R}
+\title{\textbf{Gaussian $\alpha$-projections are not\\coordinatewise variance-monotone}\\[6pt]
+\large An exact counterexample to AIM problem 558,\\
+with a determinant-monotonicity theorem}
+\author{Siavash Sadeghi (contributor); AI-generated research note}
+\date{1 October 2026}
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\Large\bfseries Gaussian $\alpha$-projections are not\\[3pt]
+coordinatewise variance-monotone\par}
+\vspace{8pt}
+{\normalsize An exact counterexample to AIM problem 558,\\
+with a determinant-monotonicity theorem\par}
+\vspace{10pt}
+{\normalsize Contributor: Siavash Sadeghi\par}
+\vspace{4pt}
+{\small AI-generated research note\quad$\cdot$\quad1 October 2026\par}
+\end{center}
+\vspace{4pt}
+\begin{abstract}
+For a fixed correlated Gaussian target, consider its optimal diagonal Gaussian approximation under $D_\alpha(p\Vert q)$, with $\alpha>1$. We give a rational three-dimensional target whose optimal covariance is the identity at $\alpha=10$, but whose second and third variances are strictly smaller than one for every $\alpha>10$. The first variance is strictly larger than one, so the covariances are incomparable in the coordinatewise order. A convex comparison argument proves the result without numerical optimization or limiting arguments. This disproves the statement in AIM problem 558 and the corresponding conjecture in Remark 12 of Margossian, Pillaud-Vivien and Saul. We also derive a general sensitivity formula, show that dimension three is minimal, and prove that the determinant of the optimal covariance nevertheless increases strictly for every non-diagonal Gaussian target and every $\alpha>1$.
+\end{abstract}
+\noindent\textbf{Evidence status.} Complete proof claim, self-audited with exact rational and symbolic calculations. No independent human review, publication, or formal proof-assistant verification is claimed. The appropriate repository status pending independent review is \emph{Solution claimed}.
+
+\section{The target and the result}
+Let $p=N(\mu,\Sigma)$, where $\Sigma\succ0$ is real, symmetric and non-diagonal. Optimize over $q=N(\nu,\Psi)$ with positive diagonal $\Psi$ the divergence
+\begin{equation}\label{eq:divergence}
+D_\alpha(p\Vert q)=\frac{\int_{\R^d}p(x)^\alpha q(x)^{1-\alpha}\,dx-1}{\alpha(\alpha-1)},\qquad \alpha>1.
+\end{equation}
+The target in AIM problem 558 is coordinatewise monotonicity of the separately optimized variances as $\alpha$ increases \cite{aim}. The ordering is the one in Definition 2 of \cite{mps}; its extension beyond one is conjectured in Remark 12, p.~26. The proof below addresses that ordering, not an ordering of divergence values for fixed distributions.
+
+\begin{theorem}[Exact counterexample]\label{thm:counterexample}
+Set $\mu=0$ and take the target precision
+\begin{equation}\label{eq:K}
+K=\Sigma^{-1}=
+\begin{pmatrix}
+37/5&-4&-4\\
+-4&243/70&17/7\\
+-4&17/7&243/70
+\end{pmatrix}.
+\end{equation}
+This matrix is positive definite. The unique optimal diagonal covariance satisfies
+\begin{equation}\label{eq:counterexample}
+\Psi(10)=I_3,\qquad
+\Psi_{11}(\alpha)>1,\qquad
+\Psi_{22}(\alpha)=\Psi_{33}(\alpha)<1\quad(\alpha>10).
+\end{equation}
+In particular, $(\alpha_1,\alpha_2)=(10,11)$ disproves the conjecture.
+\end{theorem}
+For completeness, the target covariance itself is
+\begin{equation}\label{eq:sigma}
+\Sigma=\begin{pmatrix}
+295/583&200/583&200/583\\
+200/583&33910/42559&-6900/42559\\
+200/583&-6900/42559&33910/42559
+\end{pmatrix}.
+\end{equation}
+The result concerns uncertainty reported by an exactly optimized factorized approximation. It does not claim that an arbitrary non-Gaussian posterior is calibrated, nor does it contradict the ordering established for $0<\alpha<1$ in \cite{mps}.
+
+\section{A convex formulation and global optimality}
+Write $a=\alpha>1$, $b=a-1$, $t_i=1/\Psi_{ii}$, and $T=\diag(t)$. Translation allows us to assume $\mu=0$. Define
+\begin{align}
+H_a(t)&=aK-bT,&S_a(t)&=H_a(t)^{-1},\label{eq:H}\\
+\mathcal D_a&=\{t\in(0,\infty)^d:H_a(t)\succ0\},\nonumber\\
+F_a(t)&=-\log\det H_a(t)-b\sum_{i=1}^d\log t_i.\label{eq:F}
+\end{align}
+If $H_a(t)$ is not positive definite, the Gaussian integral in \eqref{eq:divergence} diverges. When $H_a(t)\succ0$, completing the square gives
+\begin{equation}\label{eq:integral}
+\begin{split}
+2\log\!\int p^a q^{1-a}
+={}&-a\log\det\Sigma+F_a(t)\\
+&+b\nu^TT\nu+b^2\nu^TT S_a(t)T\nu.
+\end{split}
+\end{equation}
+The last two terms are minimized uniquely at $\nu=0$. Because $a(a-1)>0$, minimizing the divergence is therefore equivalent to minimizing $F_a$ on $\mathcal D_a$.
+
+\begin{proposition}[Existence, uniqueness and stationarity]\label{prop:convex}
+For every $a>1$ and $K\succ0$, $F_a$ has a unique global minimizer $t^*(a)$ in $\mathcal D_a$. It is characterized by
+\begin{equation}\label{eq:stationarity}
+[S_a(t^*(a))]_{ii}=\frac1{t_i^*(a)}\quad(1\leq i\leq d).
+\end{equation}
+The minimizer is smooth in $a$ and in $K$ locally on their domains.
+\end{proposition}
+\begin{proof}
+The domain is nonempty (take all $t_i$ sufficiently small) and convex. Differentiation gives
+\begin{align}
+\partial_i F_a(t)&=b\left([S_a(t)]_{ii}-\frac1{t_i}\right),\label{eq:gradient}\\
+\nabla^2F_a(t)&=b^2(S_a(t)\circ S_a(t))+b\diag(t_i^{-2})\succ0,\label{eq:hessian}
+\end{align}
+where $\circ$ is the entrywise product. Indeed, for $S\succ0$ and real $w$,
+\[
+w^T(S\circ S)w=\tr\!\left[(S^{1/2}\diag(w)S^{1/2})^2\right]\geq0,
+\]
+and the second term in \eqref{eq:hessian} is positive definite.
+
+The domain is bounded, since $0<t_i<aK_{ii}/b$. As a sequence approaches its boundary, at least one $t_i$ tends to zero or $H_a(t)$ becomes singular. The corresponding negative logarithm diverges to $+\infty$; the remaining terms are bounded below because both $t$ and $H_a(t)$ are bounded above. Thus a minimizer exists in the interior. Strict convexity proves uniqueness and makes \eqref{eq:stationarity} sufficient as well as necessary. The implicit function theorem applied to \eqref{eq:gradient}, with invertible Hessian, proves local smoothness.
+\end{proof}
+
+\section{Proof of the counterexample}
+\subsection{An exactly known optimum at \texorpdfstring{$a=10$}{a=10}}
+Introduce the correlation matrix
+\begin{equation}\label{eq:R}
+R=\begin{pmatrix}
+1&4/5&4/5\\
+4/5&1&3/10\\
+4/5&3/10&1
+\end{pmatrix}.
+\end{equation}
+Its leading principal minors are $1$, $9/25$, and $7/500$, so $R\succ0$. Direct rational calculation gives
+\begin{equation}\label{eq:Rinv}
+R^{-1}=\begin{pmatrix}
+65&-40&-40\\
+-40&180/7&170/7\\
+-40&170/7&180/7
+\end{pmatrix},\qquad K=\frac{R^{-1}+9I}{10}.
+\end{equation}
+Consequently $K\succ0$, and $H_{10}(\one)=R^{-1}\succ0$. Moreover,
+\[
+S_{10}(\one)=R,\qquad [S_{10}(\one)]_{ii}=1.
+\]
+By Proposition~\ref{prop:convex}, $t^*(10)=\one$ and $\Psi(10)=I_3$ exactly.
+
+\subsection{A feasible rational comparison curve}
+For $a>10$, put
+\begin{equation}\label{eq:comparator}
+c(a)=\frac{213a+370}{5(49a+10)},\qquad \bar t=(c(a),1,1).
+\end{equation}
+Then $0<c(a)<1$, because
+\[
+1-c(a)=\frac{32(a-10)}{5(49a+10)}>0.
+\]
+In the orthonormal basis $e_1$, $(e_2+e_3)/\sqrt2$, $(e_2-e_3)/\sqrt2$, the matrix $H_a(\bar t)$ is
+\begin{equation}\label{eq:block}
+\begin{pmatrix}
+37a/5-bc(a)&-4\sqrt2\,a&0\\
+-4\sqrt2\,a&h_+&0\\
+0&0&h_-
+\end{pmatrix},\qquad
+h_+=\frac{49a+10}{10},\quad h_-=\frac{3a+70}{70}.
+\end{equation}
+Both $h_+$ and $h_-$ are positive. The Schur complement of $h_+$ in the $2\times2$ block equals $c(a)$, since
+\begin{equation}\label{eq:schur}
+c(a)=\frac{37}{5}-\frac{32a}{h_+},\qquad
+\frac{37a}{5}-bc(a)-\frac{32a^2}{h_+}=c(a).
+\end{equation}
+Thus $\bar t\in\mathcal D_a$, and block inversion gives
+\begin{align}
+[S_a(\bar t)]_{11}&=\frac1{c(a)},\label{eq:comparator11}\\
+[S_a(\bar t)]_{22}=[S_a(\bar t)]_{33}
+&=\frac12\left(\frac1{h_-}+\frac1{h_+}+
+\frac{32a^2}{c(a)h_+^2}\right).\label{eq:comparator22}
+\end{align}
+Substitution and reduction to a common denominator yield the exact identity
+\begin{equation}\label{eq:factorization}
+\boxed{
+[S_a(\bar t)]_{22}-1
+=-\frac{a(a-10)(7311a-64010)}
+{(3a+70)(49a+10)(213a+370)}<0\quad(a>10).
+}
+\end{equation}
+The last sign follows from $7311a-64010>9100$ for $a>10$. It follows from \eqref{eq:gradient} that
+\begin{equation}\label{eq:gradient-sign}
+\nabla F_a(\bar t)=(0,g,g)^T\quad\text{for some }g<0.
+\end{equation}
+
+\subsection{From the comparison point to the global optimum}
+Let $t^*=t^*(a)$. Interchanging coordinates $2$ and $3$ leaves $K$, $F_a$, and $\mathcal D_a$ unchanged. Uniqueness therefore implies $t_2^*=t_3^*$.
+
+The comparison point is not stationary, so $F_a(t^*)<F_a(\bar t)$. The supporting-plane inequality for the differentiable convex function $F_a$ gives
+\[
+F_a(t^*)\geq F_a(\bar t)+\nabla F_a(\bar t)^T(t^*-\bar t)
+=F_a(\bar t)+g(t_2^*+t_3^*-2).
+\]
+Combining these inequalities shows $g(t_2^*+t_3^*-2)<0$. Since $g<0$ and $t_2^*=t_3^*$, both leaf precisions are greater than one. Hence
+\begin{equation}\label{eq:leaf-conclusion}
+\Psi_{22}(a)=\Psi_{33}(a)<1\quad(a>10).
+\end{equation}
+For the first coordinate, set $u=t_2^*=t_3^*>1$. Applying the first stationarity equation to the same block decomposition now at $t^*$ gives
+\[
+t_1^*=\frac{37}{5}-\frac{32a}{59a/10-bu}.
+\]
+Positive definiteness implies $59a/10-bu>0$. Because $u>1$, this denominator is less than $h_+$, so
+\[
+0<t_1^*<\frac{37}{5}-\frac{32a}{h_+}=c(a)<1.
+\]
+Thus $\Psi_{11}(a)>1$. This finishes the proof of Theorem~\ref{thm:counterexample}.
+
+\subsection{A single finite rational certificate: \texorpdfstring{$a=11$}{a=11}}
+Only the finite pair $(10,11)$ is needed to disprove the conjecture. At $a=11$, the preceding comparison point and inverse become
+\begin{equation}\label{eq:11-certificate}
+\bar t=\left(\frac{2713}{2745},1,1\right),\qquad
+S_{11}(\bar t)=
+\begin{pmatrix}
+\frac{2745}{2713}&\frac{2200}{2713}&\frac{2200}{2713}\\[3pt]
+\frac{2200}{2713}&\frac{153231490}{153412011}&\frac{48970900}{153412011}\\[3pt]
+\frac{2200}{2713}&\frac{48970900}{153412011}&\frac{153231490}{153412011}
+\end{pmatrix}.
+\end{equation}
+Here $\det H_{11}(\bar t)=279439/3500>0$, and
+\[
+\nabla F_{11}(\bar t)=
+\left(0,-\frac{1805210}{153412011},-\frac{1805210}{153412011}\right)^T.
+\]
+Feasibility follows from \eqref{eq:block}--\eqref{eq:schur}, or from the exact positive leading principal minors checked by the accompanying program. The same supporting-plane argument proves the contradiction using rational data alone.
+
+Numerical values are supplied only to indicate scale:
+\begin{equation}\label{eq:numerical}
+\Psi(11)\approx\diag(1.012120833804016,\ 0.999727697047115,\ 0.999727697047115).
+\end{equation}
+As an additional algebraic cross-check, putting $y=\Psi_{22}(11)=\Psi_{33}(11)$ gives
+\[
+\Psi_{11}(11)=\frac{5(649y-100)}{6413y-3700},
+\]
+and the feasible solution near one satisfies
+\[
+303828701y^3-573214290y^2+295302000y-25900000=0.
+\]
+The polynomial is negative at $9997/10000$ and positive at $4999/5000$. Neither this polynomial nor the decimal approximation is needed for the proof.
+
+\section{A general sensitivity identity}
+The counterexample can also be seen in an exact negative derivative. The same calculation leads to positive structural results.
+
+\begin{proposition}[Sensitivity formula]\label{prop:sensitivity}
+Let $v_i(a)=\Psi_{ii}(a)$, $D=\diag(v_i)$, and
+\[
+S=(aK-(a-1)D^{-1})^{-1},\qquad
+R_a=D^{-1/2}SD^{-1/2},\qquad C=R_a\circ R_a.
+\]
+Then $R_a$ is a positive-definite correlation matrix. The logarithmic variance derivatives $u_i=v_i'/v_i$ obey
+\begin{equation}\label{eq:sensitivity}
+\boxed{[I+(a-1)C]u=\frac{C\one-\one}{a}.}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Stationarity implies $S_{ii}=v_i$, so $R_a$ has diagonal entries one. Put $T=D^{-1}$ and $U=\diag(u)$. Since $T'=-TU$, differentiation of $S^{-1}=aK-(a-1)T$ gives
+\[
+S'=-S\bigl(K-T+(a-1)TU\bigr)S.
+\]
+Use $K-T=(S^{-1}-T)/a$ to rewrite this as
+\[
+S'=\frac{STS-S}{a}-(a-1)STUS.
+\]
+Now $(STS)_{ii}/v_i=\sum_j C_{ij}$ and $(STUS)_{ii}/v_i=\sum_j C_{ij}u_j$. Taking diagonal entries and dividing by $v_i$ proves \eqref{eq:sensitivity}.
+\end{proof}
+For the target \eqref{eq:K}, $D(10)=I$ and $R_{10}=R$ from \eqref{eq:R}. Exact solution of \eqref{eq:sensitivity} yields
+\begin{equation}\label{eq:derivative}
+\left.\frac{d}{da}\diag\Psi(a)\right|_{a=10}
+=\left(\frac{3392}{260905},-\frac{91}{521810},-\frac{91}{521810}\right)^T.
+\end{equation}
+The right side of \eqref{eq:sensitivity} is entrywise nonnegative, but the inverse of its positive-definite coefficient matrix need not preserve entrywise positivity. The exact derivative displays the resulting failure.
+
+\section{What remains monotone}
+\subsection{Dimension three is minimal}
+\begin{corollary}\label{cor:minimal}
+For a non-diagonal two-dimensional Gaussian target, both optimal variances are strictly increasing throughout $a>1$. Therefore the dimension of Theorem~\ref{thm:counterexample} is minimal.
+\end{corollary}
+\begin{proof}
+In two dimensions write
+\[
+R_a=\begin{pmatrix}1&r\\r&1\end{pmatrix},\qquad |r|<1.
+\]
+Non-diagonality of $K$ implies $r\ne0$: if $r=0$, then $S$ and $S^{-1}$ are diagonal, forcing $K$ to be diagonal. The two row sums of $C$ are equal, so \eqref{eq:sensitivity} gives
+\[
+u_1=u_2=\frac{r^2}{a\,[a+(a-1)r^2]}>0.
+\]
+Both variances have positive derivatives everywhere. In dimension one the optimal approximation is the target itself, independent of $a$.
+\end{proof}
+The counterexample extends to every $d\geq3$ by adjoining an independent diagonal Gaussian block. The objective splits over the blocks, leaving the three-dimensional optimum unchanged.
+
+\subsection{Strict increase of generalized variance and entropy}
+\begin{theorem}[Determinant monotonicity]\label{thm:determinant}
+For every real non-diagonal positive-definite target covariance and every $a>1$,
+\begin{equation}\label{eq:determinant}
+\frac{d}{da}\log\det\Psi(a)>0.
+\end{equation}
+Thus generalized variance and Gaussian differential entropy increase strictly, even though individual marginal variances can decrease.
+\end{theorem}
+\begin{proof}
+We first show that for any positive-definite correlation matrix $R\ne I$ in dimension $d$,
+\begin{equation}\label{eq:schur-bound}
+R\circ R-\frac1d\one\one^T\succ0.
+\end{equation}
+For a real vector $w$, put $W=\diag(w)$ and $M=R^{1/2}WR^{1/2}$. The trace Cauchy--Schwarz inequality yields
+\[
+w^T(R\circ R)w=\tr(M^2)\geq\frac{\tr(M)^2}{d}
+=\frac{(\one^Tw)^2}{d}.
+\]
+Equality requires $M=\lambda I$, equivalently $W=\lambda R^{-1}$. If $\lambda=0$, then $w=0$. If $\lambda\ne0$, diagonality of $W$ forces $R^{-1}$, hence $R$, to be diagonal. A diagonal correlation matrix is $I$, contrary to assumption. Therefore equality is impossible for nonzero $w$, proving \eqref{eq:schur-bound}.
+
+Apply this to $R_a$ in Proposition~\ref{prop:sensitivity}. It is not $I$, since that would force $K$ to be diagonal. With $b=a-1>0$ and $B=I+bC$, we obtain
+\[
+B\succ I+\frac b d\one\one^T,
+\quad\text{hence}\quad
+\one^TB^{-1}\one<
+\one^T\left(I+\frac b d\one\one^T\right)^{-1}\one=\frac d a.
+\]
+Equation \eqref{eq:sensitivity} can be written
+\[
+u=\frac{1}{ab}\bigl(\one-aB^{-1}\one\bigr).
+\]
+Summing its entries gives
+\[
+\frac{d}{da}\log\det\Psi(a)=\one^Tu
+=\frac{d-a\one^TB^{-1}\one}{ab}>0.
+\]
+The entropy conclusion follows from
+$h(N(\mu,\Psi))=\frac d2\log(2\pi e)+\frac12\log\det\Psi$.
+\end{proof}
+
+\section{Reproduction, provenance and scope of the claim}
+The accompanying \texttt{verify\_558.py} uses only Python's standard-library rational arithmetic. It checks positive definiteness by principal minors, the exact target inverse, stationarity at $a=10$, the feasible comparison point and negative gradient at $a=11$, and the derivative \eqref{eq:derivative}. Run
+\begin{verbatim}
+python verify_558.py
+\end{verbatim}
+The optional \texttt{symbolic\_audit\_558.py} verifies the rational-function identity \eqref{eq:factorization} using SymPy, then separately solves the original stationarity equations with mpmath at 90-digit precision. The script requires positive precision coordinates, a positive-definite $H$, a maximum stationarity residual below $10^{-75}$, and the stated direction of the variance change. The accompanying log records the measured values. These numerical checks are not used in the proof.
+
+\textbf{Provenance.} On 1 October 2026, problem 558 was rechecked at \texttt{MColbrook/AIM} revision \path{aa776a01d7d48a79f93251af11fde9454b0aea95}; see the pinned target link in \cite{aim}. It was marked Open, last checked 24 September 2026. The supplied package records direct checks of Definition 2 and Remark 12 of the published source.
+
+\textbf{Review.} The original proof and audits were AI-generated. Codex (AI assistant) subsequently read the argument, checked the pinned target and reran the audits. Contributor and proposed submitter: Siavash Sadeghi. No independent human review, publication priority or formal verification is claimed. The status remains \emph{Solution claimed} \cite{contributing}. The accompanying report maps the target hypotheses to the proof. No external submission was made.
+
+\begin{thebibliography}{9}
+\raggedright\small
+\bibitem{mps}
+C.~C. Margossian, L. Pillaud-Vivien and L.~K. Saul.
+\emph{Variational Inference for Uncertainty Quantification: an Analysis of Trade-offs}.
+Journal of Machine Learning Research \textbf{26}(202) (2025), 1--41.
+Definition 2, Theorem 3 and Remark 12.
+\url{https://www.jmlr.org/papers/v26/24-0878.html}.
+Also arXiv:2403.13748v5, 19 October 2025.
+
+\bibitem{aim}
+MColbrook/AIM.
+\emph{Problem 558: Variance ordering for Gaussian alpha-divergence approximations}.
+Repository revision \path{aa776a01d7d48a79f93251af11fde9454b0aea95}, accessed 1 October 2026.
+\url{https://github.com/MColbrook/AIM/blob/aa776a01d7d48a79f93251af11fde9454b0aea95/problems/558-gaussian-variational-variance-ordering.md}.
+
+\bibitem{contributing}
+MColbrook/AIM. \emph{Contributing: Reporting a resolution; Status and evidence}.
+Accessed 1 October 2026.
+\url{https://github.com/MColbrook/AIM/blob/aa776a01d7d48a79f93251af11fde9454b0aea95/CONTRIBUTING.md}.
+\end{thebibliography}
+\end{document}

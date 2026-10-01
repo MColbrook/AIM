@@ -1,0 +1,107 @@
+Local review and checks - 1 October 2026
+Contributor / submitter: Siavash Sadeghi
+Reviewer for this revision: Codex (AI assistant)
+
+SCOPE
+
+This review polishes an existing AI-generated research package. It preserves
+the two mathematical claims and their proof methods. No critical gap was
+identified on reading the supplied arguments against the pinned targets;
+this is not an independent human audit or formal proof verification.
+
+Repository: https://github.com/MColbrook/AIM
+Confirmed target revision: aa776a01d7d48a79f93251af11fde9454b0aea95
+At the time of the original local checks, the downloaded repository was unchanged.
+The subsequent supporting comments and this supplementary PR are described in README.md.
+
+CHANGES
+
+- Added Siavash Sadeghi as contributor/proposed submitter to the README,
+  reports, document title blocks, PDF metadata and issue drafts. Preserved
+  explicit AI generation and review disclosure.
+- Replaced missing repository-SHA notices with the confirmed revision and
+  changed target/contribution links to immutable commit URLs.
+- Corrected the AIM 457 suggestion that independent review is required to
+  submit a claim. It is required for stronger evidence status, while a claim
+  can be reported under "Solution claimed".
+- Clarified B_0 > 0 for the nonzero Hilbert space in AIM 457; the conclusion
+  already follows from its lower frame bound. Constants are unchanged.
+- Strengthened the optional AIM 558 numerical audit to check positive
+  precision coordinates as well as positive-definite H, and to check the
+  reported direction of the variance change. The exact certificate and
+  all numeric input values remain unchanged.
+- Added pinned optional audit dependencies, reran current logs, preserved
+  the original environment as historical provenance, and refreshed hashes.
+- Repaired PDF bookmark warnings caused by math in section headings,
+  tightened repeated provenance wording and checked the page layouts.
+- Prepared issue drafts during the original local review; they were later
+  superseded by supporting comments on existing PRs. Historical drafts are
+  excluded from this PR-specific package.
+
+EXECUTABLE CHECKS
+
+1. Original archive integrity: all 12 original manifest hashes matched.
+2. verify_558.py: all 12 exact rational checks passed.
+3. symbolic_audit_558.py: all 7 symbolic/numerical checks passed with
+   SymPy 1.14.0 and mpmath 1.3.0 at 90-digit working precision.
+   Maximum stationarity residual: 4.1228715e-90.
+   Smallest eigenvalue of H: 0.430521039455574814298060542865.
+4. Both scripts also passed under python -O with identical output, so their
+   checks are not disabled by Python assertion optimization.
+5. Both audit scripts passed Python syntax parsing.
+6. The unmodified repository's catalogue.py --check passed for all 665
+   entries, metadata, sections, math delimiters, local links and generated
+   index freshness. See repository_catalogue_check_log.txt.
+   Catalogue machinery was not changed; test_catalogue.py is not required
+   for this package-only revision. No catalogue write was performed.
+7. Both revised documents compiled in two passes using the already installed
+   MiKTeX compiler. Final passes have no LaTeX warnings or box warnings.
+   The built-in editor compiler was unavailable because of a platform-directory
+   error; it did not verify the documents. The successful downloadable PDFs
+   were generated using the local compiler. See compile_check_log.txt.
+8. All 11 final PDF pages were rendered with Poppler and visually inspected:
+   4 pages for AIM 457 and 7 for AIM 558. No clipping, overlap or unresolved
+   references were observed. Both PDFs contain Siavash Sadeghi on the title
+   page and in the author metadata. A reference stranded on an extra page
+   was eliminated by tightening repeated prose, without shrinking the text.
+
+MATHEMATICAL REVIEW
+
+AIM 558: checked the Gaussian integral and mean optimization, bounded feasible
+domain and logarithmic barriers, strict convexity and stationarity, rational
+comparison curve, symmetry and supporting-plane implication, sensitivity
+identity, two-dimensional monotonicity and determinant comparison. The exact
+and symbolic checks substantiate the algebra; they do not formally prove
+the analytic existence and convexity arguments.
+
+AIM 457: checked the initial Bessel bound on spectral subspaces, exclusion
+of spectrum near zero, bounded Borel logarithm with the specified branch,
+L2 derivative estimate, left-sample approximation, unweighted frame constants,
+finite upper Beurling density, and the non-exponentially-stable example.
+This note has no executable proof test. Its infinite-dimensional argument
+was read analytically; the AIM 558 scripts do not certify AIM 457.
+
+PRIMARY-SOURCE SPOT CHECKS
+
+Both full target statements were read from the pinned repository. The
+survey's Open Problem 1 and section 5.2(B) match the time-sampling question;
+Diaz Martin, Medri and Molter, Theorem 3.4, explicitly assumes exponential
+stability. The JMLR publication record for the Gaussian-variance source was
+checked. These are targeted source checks, not a new exhaustive novelty
+search or an independent review of all cited papers.
+
+https://arxiv.org/html/2511.10769v3
+https://arxiv.org/html/2006.08046v1
+https://www.jmlr.org/papers/v26/24-0878.html
+
+REMAINING LIMITS AND NEXT STEP
+
+Independent mathematical review, publication priority and formal verification
+remain outstanding. Neither claim should be presented as independently
+verified or "Solved" on the strength of this work. The historical literature
+search statements in the supplied reports remain attributed to that package.
+
+The supplementary PR includes proof sources, PDFs, reports and reproducibility
+records. Existing submissions and overlap are disclosed in README.md. The
+mathematical sources and PDFs match the previously checked package; only
+submission-context documentation and the checksum manifest were updated.
