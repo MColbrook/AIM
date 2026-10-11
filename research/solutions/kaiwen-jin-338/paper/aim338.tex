@@ -1,0 +1,194 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\LAS}{\operatorname{LAS}}
+\newcommand{\GAS}{\operatorname{GAS}}
+\newcommand{\HGAS}{\operatorname{HGAS}}
+\title{Local asymptotic stability of rational polynomial ODEs is undecidable}
+\author{Kaiwen Jin\\\small\href{mailto:yui.ui.siki@gmail.com}{yui.ui.siki@gmail.com}}
+\date{October 12, 2026}
+\hypersetup{pdftitle={Local asymptotic stability of rational polynomial ODEs is undecidable},pdfauthor={Kaiwen Jin},pdfsubject={A literature resolution of AIM Problem 338}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+No Turing algorithm can decide local asymptotic stability of the origin for
+every exactly encoded rational polynomial autonomous ODE, when dimension and
+degree are unrestricted. This follows from the recent global
+asymptotic-stability theorem of Shevchenko, Liu and Liu
+\cite{SLL}. We give the reduction for the precise formulation of AIM
+Problem~338, including forward existence near the equilibrium. For a
+homogeneous polynomial vector field, local asymptotic stability implies global
+asymptotic stability by rescaling both the initial condition and time.
+\end{abstract}
+
+\section{The question and the cited theorem}
+
+The question is whether exact polynomial coefficients suffice for a terminating
+decision procedure for local asymptotic stability. The distinction between
+stability and attraction matters: a stable equilibrium whose nearby solutions
+do not converge to it is a negative instance. AIM Problem~338
+\cite{AIM338} asks this question for rational polynomial continuous-time
+systems without a bound on dimension or degree.
+
+Shevchenko, Liu and Liu \cite{SLL} prove undecidability of global asymptotic
+stability even for a suitable fixed dimension and fixed homogeneous degree.
+This note records the consequence for the full local question. We use
+Theorem~1.5 of their October~8, 2026 preprint, version~1; the undecidability
+construction is theirs. The additional argument here is the elementary
+local-to-global implication for homogeneous fields and the exact conversion
+of the decision problems.
+
+An input consists of an integer $n\geq1$ and a finite monomial description of
+\[
+  f\in\Q[x_1,\ldots,x_n]^n,\qquad f(0)=0,
+  \qquad \dot x=f(x)\quad\text{on }\R^n.
+\]
+Coefficients are exact rationals and exponents are nonnegative integers.
+Write $\phi_f(t,x_0)$ for the unique maximal classical solution from $x_0$,
+and let $\|\cdot\|$ be the Euclidean norm. We use precisely the following
+meaning of $\LAS(f)$:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item For every $\varepsilon>0$ there is a $\delta>0$ such that, if
+$\|x_0\|<\delta$, the solution exists for all $t\geq0$ and
+$\|\phi_f(t,x_0)\|<\varepsilon$ for all $t\geq0$.
+\item There is an $r>0$ such that, if $\|x_0\|<r$, the solution exists for
+all $t\geq0$ and $\phi_f(t,x_0)\to0$ as $t\to\infty$.
+\end{enumerate}
+Thus forward completeness is required near zero; it is not assumed for
+arbitrary initial states. A decider must halt on every valid finite input and
+return the truth value of this conjunction.
+
+The predicate $\GAS(f)$ requires $f(0)=0$, condition~(i), and existence for all
+$t\geq0$ with convergence to zero for every $x_0\in\R^n$. This agrees with
+the convention in \cite[\S1.1]{SLL}.
+
+For fixed positive integers $N,d$, let $\HGAS(N,d)$ be the set of rational
+coefficient codes for homogeneous degree-$d$ polynomial vector fields on
+$\R^N$ satisfying $\GAS$. Invalid codes are excluded. A set is recursively
+enumerable if a Turing machine halts precisely on its members. It is
+many-one complete if it is recursively enumerable and, for each recursively
+enumerable set $A$, there is a total computable function $q$ such that
+$e\in A$ if and only if $q(e)$ belongs to that set.
+
+\begin{theorem}[{Shevchenko--Liu--Liu \cite[Theorem~1.5, p.~4]{SLL}}]
+There are a fixed integer $N_*\geq1$ and a fixed odd integer $d_*\geq3$ for
+which $\HGAS(N_*,d_*)$ is many-one complete.
+\end{theorem}
+
+The coefficients and the autonomous continuous-time model in this theorem
+are the same as those above. Its proof is in \cite[\S15, pp.~44--45]{SLL}.
+
+\section{From local to global stability}
+
+Homogeneity allows any initial state to be moved into the local attraction
+ball. The corresponding change of time preserves the entire forward half-line.
+
+\begin{lemma}\label{lem:scaling}
+Let $f:\R^n\to\R^n$ be a homogeneous polynomial vector field of degree
+$d\geq1$. Then $\LAS(f)$ holds if and only if $\GAS(f)$ holds, with the
+definitions above.
+\end{lemma}
+
+\begin{proof}
+Global asymptotic stability implies both local conditions, with any positive
+attraction radius. Conversely, assume $\LAS(f)$ and let $r>0$ be supplied by
+condition~(ii). Condition~(i) already gives the stability required for $\GAS$.
+
+Fix $x_0\ne0$ and choose
+\[
+  \lambda=\min\left\{1,\frac{r}{2\|x_0\|}\right\}>0.
+\]
+Then $\|\lambda x_0\|\leq r/2<r$, so
+$y(t)=\phi_f(t,\lambda x_0)$ exists for every $t\geq0$ and tends to zero.
+Define, on the whole half-line,
+\[
+  x(t)=\lambda^{-1}y(\lambda^{1-d}t).
+\]
+The chain rule and $f(\lambda x)=\lambda^d f(x)$ give
+\[
+  x'(t)=\lambda^{-d}f\bigl(y(\lambda^{1-d}t)\bigr)
+       =\lambda^{-d}f\bigl(\lambda x(t)\bigr)=f(x(t)),
+  \qquad x(0)=x_0.
+\]
+Since $\lambda^{1-d}$ is a fixed positive number, $x$ is defined for all
+nonnegative times and $x(t)\to0$. By uniqueness it agrees with the maximal
+solution from $x_0$ on their common domain. This global continuation rules
+out a finite forward endpoint of that maximal solution.
+
+For $x_0=0$ the solution is identically zero, since $f(0)=0$. Hence every
+initial state has a forward-complete solution converging to zero. Together
+with condition~(i), this proves $\GAS(f)$.
+\end{proof}
+
+\section{The decision problem}
+
+\begin{corollary}\label{cor:aim}
+There is no Turing algorithm that halts on every finite exact rational
+polynomial input of unrestricted dimension and degree with $f(0)=0$ and
+correctly decides conditions~(i) and~(ii). In particular, the answer to AIM
+Problem~338 at the revision in \cite{AIM338} is negative.
+\end{corollary}
+
+\begin{proof}
+Suppose such a decider $D$ exists. Fix $N_*,d_*$ from Theorem~1. We construct
+a total decider $C$ for $\HGAS(N_*,d_*)$.
+
+On an arbitrary source code, first check the finite rational coefficient
+syntax and the required dimension and degree. Combine any repeated monomials
+by exact rational addition, then verify that each nonzero monomial has total
+degree $d_*$. Zero coordinate polynomials are allowed. The checks terminate;
+on an invalid code, return false, as required by the definition of $\HGAS$.
+In a format that stores only coefficients, the fixed dimension and degree
+are hardcoded. If they are explicit metadata, check them as well.
+
+On a valid code, write the same vector field as the finite monomial lists
+accepted by $D$. A dense degree-$d_*$ coefficient list can be converted by
+enumerating its finitely many monomials and omitting zero coefficients. No
+coefficient is approximated. As $d_*\geq1$, the resulting field vanishes at
+zero. Thus the input to $D$ is valid and $D$ halts. Lemma~\ref{lem:scaling}
+identifies its answer about $\LAS$ with the required answer about $\GAS$.
+The resulting $C$ is total. The numerical values of the fixed existential
+constants need not be extracted: their existence suffices to give a finite
+program with those constants hardcoded.
+
+Let $K$ be the set of codes of pairs $(M,w)$ for which the Turing machine $M$
+halts on $w$. It is recursively enumerable by simulation. It is undecidable:
+given a hypothetical total halting decider $H$, a machine $B$ on a machine
+code $u$ could loop if $H(u,u)$ answers yes and halt if it answers no. On its
+own code $b$, either answer $H(b,b)$ would then be wrong.
+
+By Theorem~1, a total computable map $q$ reduces $K$ to
+$\HGAS(N_*,d_*)$. Running $q$ and then $C$ would therefore decide $K$ on
+every input, a contradiction.
+\end{proof}
+
+\paragraph{AI assistance.}
+OpenAI Codex (gpt-6.1-sol) assisted with literature retrieval, drafting and
+checking this note. The cited undecidability theorem is due to the authors
+of \cite{SLL}.
+
+\begin{thebibliography}{9}
+\bibitem{SLL}
+I.~O. Shevchenko, J.~Liu and X.~Liu,
+\emph{Global asymptotic stability of homogeneous polynomial vector fields is
+undecidable}, preprint, arXiv:2610.12434v1 [math.DS], October~8, 2026.
+\href{https://arxiv.org/abs/2610.12434v1}{arXiv:2610.12434v1}.
+
+\bibitem{AIM338}
+AIM problem catalogue,
+\emph{338: Decidability of local asymptotic stability for polynomial ODEs},
+revision \texttt{c9929805cece044705abaaebe1cebddac1ba11a6}.
+\href{https://github.com/MColbrook/AIM/blob/c9929805cece044705abaaebe1cebddac1ba11a6/problems/338-polynomial-local-stability-decidability.md}{Immutable problem statement}.
+\end{thebibliography}
+\end{document}
