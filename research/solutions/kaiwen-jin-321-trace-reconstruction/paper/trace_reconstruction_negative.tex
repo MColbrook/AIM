@@ -1,0 +1,186 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{sourcetheorem}{Source theorem}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\Prob}{\mathbb P}
+\title{A negative answer to polynomial sample complexity\protect\\
+for deletion-trace reconstruction}
+\author{Kaiwen Jin\\\small\texttt{yui.ui.siki@gmail.com}}
+\date{October 12, 2026}
+\hypersetup{pdftitle={A negative answer to polynomial sample complexity for deletion-trace reconstruction},pdfauthor={Kaiwen Jin}}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Can every binary string be recovered from polynomially many independent
+deletion traces at a fixed deletion probability? The September 2026 lower
+bound of OpenAI answers this question negatively. We record its precise
+consequence for AIM problem 321, including randomized decoders with
+unrestricted computation and constants depending on the channel.
+The argument combines the cited one-trace indistinguishability theorem with
+an elementary product bound and two-point testing. The underlying
+indistinguishability construction is due to OpenAI.
+\end{abstract}
+
+\section{The model and the source result}
+
+Fix a known deletion probability $q\in(0,1)$ and an integer $n\ge2$.
+For $x\in\{0,1\}^n$, the law $D_q(x)$ deletes each bit independently with
+probability $q$ and lists the surviving bits in their original order.
+The output space is
+\[
+ \mathcal T_n=\bigcup_{j=0}^n\{0,1\}^j,
+\]
+where the empty word is included. A trace reveals its length and its bits,
+but no original positions. The sample is a tuple of independent full traces.
+A decoder knows $n,q$, may be randomized, and outputs a length-$n$ binary word.
+It must be the same decoder for every unknown input.
+
+Problem 321 of the AIM catalogue~\cite{AIM321} asks whether, for every fixed
+$q$, there are finite $C_q,k_q>0$ giving exact recovery with probability at
+least $2/3$ on every input, at every length $n\ge2$, from at most
+$\lceil C_qn^{k_q}\rceil$ traces. Computation time is unrestricted.
+This note explains why the later result of OpenAI~\cite{OpenAI2026} rules out
+that guarantee. It does not introduce a new indistinguishability construction.
+
+For laws $P,Q$ on a finite set $S$, use the convention
+\[
+ \TV(P,Q)=\frac12\sum_{z\in S}|P(z)-Q(z)|.
+\]
+The complete trace laws are supported on $\mathcal T_n$, so this agrees with
+the source's sum over all finite binary words. Define
+\[
+ \delta_n(q)=
+ \min_{\substack{x,y\in\{0,1\}^n\\x\ne y}}
+ \TV(D_q(x),D_q(y)).
+\]
+The minimum exists because the collection of distinct pairs is finite and
+nonempty.
+
+\begin{sourcetheorem}[OpenAI, one-trace conclusion of Theorem 1.2]
+For a channel with any fixed $q\in(0,1)$ and any real exponent $a>0$,
+\begin{equation}\label{eq:source}
+ \lim_{n\to\infty} n^a\delta_n(q)=0.
+\end{equation}
+\end{sourcetheorem}
+
+The cited statement is equation (1.2) on page 2
+of~\cite{OpenAI2026}. Its inputs are deterministic binary words, and its
+observations are complete traces. The limit runs through all integer
+lengths; Section 8 of that paper proves the bound for complete trace laws and pads the
+constructed pairs to length $n$. In particular, $q$ remains fixed as $n$
+grows. The proof below uses only~\eqref{eq:source} from that paper.
+
+\section{From indistinguishability to reconstruction}
+
+Write $P^{\otimes m}$ for the joint law of $m$ independent samples from $P$.
+For $m=0$ the observation space is a singleton.
+
+\begin{lemma}\label{lem:testing}
+Suppose two distinct inputs $x,y$ give observation laws $P,Q$ on the same
+finite set. For every common randomized decoder $A$,
+\begin{equation}\label{eq:testing}
+ \frac{\Prob_x(A=x)+\Prob_y(A=y)}2
+ \le \frac{1+\TV(P,Q)}2.
+\end{equation}
+For each nonnegative integer $m$,
+\begin{equation}\label{eq:product}
+ \TV(P^{\otimes m},Q^{\otimes m})\le m\TV(P,Q).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Let $f(z)$ and $g(z)$ be the decoder's conditional probabilities of reporting
+$x$ and $y$ on observation $z$. They satisfy $0\le f,g\le1$ and $f+g\le1$.
+Consequently,
+\[
+ \Prob_x(A=x)+\Prob_y(A=y)
+ \le \mathbb E_P f+\mathbb E_Q(1-f)
+ =1+\sum_z(P(z)-Q(z))f(z).
+\]
+Because $P-Q$ has total mass zero, the sum of its positive entries is
+$\TV(P,Q)$. The last sum is at most that positive mass, which
+proves~\eqref{eq:testing}. This calculation already averages all randomness
+used by the decoder.
+
+For $m\ge1$, the signed mass functions satisfy the exact identity
+\[
+ P^{\otimes m}-Q^{\otimes m}
+ =\sum_{j=0}^{m-1}
+ P^{\otimes j}\otimes(P-Q)\otimes Q^{\otimes(m-1-j)}.
+\]
+Each summand has $\ell^1$ norm $\|P-Q\|_1$: the other factors are probability
+laws with mass one. The triangle inequality and division by two give
+\eqref{eq:product}. For $m=0$ both product laws are the same point mass.
+\end{proof}
+
+\begin{theorem}\label{thm:negative}
+For every fixed $q\in(0,1)$ and all finite real constants $C,k>0$, there is
+an integer $n_0\ge2$ such that the following holds. For every integer
+$n\ge n_0$, every integer $0\le m\le\lceil Cn^k\rceil$, and every randomized
+decoder $A:\mathcal T_n^m\to\{0,1\}^n$, some input $x\in\{0,1\}^n$ satisfies
+\[
+ \Prob\bigl[A(Y_1,\ldots,Y_m)=x\bigr]<\frac23,
+ \qquad Y_1,\ldots,Y_m\overset{\mathrm{iid}}{\sim}D_q(x).
+\]
+Thus the polynomial-sample guarantee in AIM problem 321 fails at every fixed
+deletion probability in $(0,1)$.
+\end{theorem}
+
+Here $n$ is the known input length, $m$ is the number of independent complete
+traces, and the probability includes the decoder's own randomness. The
+threshold $n_0$ may depend on $q,C,k$; no uniformity in the channel is required.
+
+\begin{proof}
+Fix $q,C,k$ as stated. At each $n\ge2$ choose distinct $x_n,y_n$ attaining
+$\delta_n(q)$. They can be chosen before the sample budget and the decoder.
+Since $n^k\ge1$, every permitted budget obeys
+\[
+ m\le\lceil Cn^k\rceil\le Cn^k+1\le(C+1)n^k.
+\]
+Lemma~\ref{lem:testing} therefore gives
+\[
+ \TV\bigl(D_q(x_n)^{\otimes m},D_q(y_n)^{\otimes m}\bigr)
+ \le (C+1)n^k\delta_n(q)=:\varepsilon_n.
+\]
+Equation~\eqref{eq:source} with $a=k$ implies $\varepsilon_n\to0$ at this
+same fixed channel. Choose $n_0\ge2$ so that $\varepsilon_n<1/3$ for every
+integer $n\ge n_0$. Applying~\eqref{eq:testing} to the full $m$-trace laws,
+\[
+ \frac{\Prob_{x_n}(A=x_n)+\Prob_{y_n}(A=y_n)}2
+ \le\frac{1+\varepsilon_n}2<\frac23.
+\]
+At least one of these two recovery probabilities is strictly below $2/3$.
+The pair works for every permitted $m$ and every common decoder. This proves
+the stated quantifiers and contradicts any polynomial guarantee valid at all
+lengths.
+\end{proof}
+
+\paragraph{AI-use statement.}
+OpenAI Codex assisted with source retrieval, drafting, and checking the testing
+argument in this note. The multiscale lower-bound theorem is credited to
+OpenAI~\cite{OpenAI2026}. Independent mathematical review is requested.
+
+\begin{thebibliography}{9}
+\raggedright
+\bibitem{AIM321}
+AIM catalogue, \emph{321. Polynomial sample complexity for deletion-trace
+reconstruction}, repository version
+\texttt{c9929805cece044705abaaebe1cebddac1ba11a6}.
+\url{https://github.com/MColbrook/AIM/blob/c9929805cece044705abaaebe1cebddac1ba11a6/problems/321-polynomial-trace-reconstruction.md}.
+
+\bibitem{OpenAI2026}
+OpenAI, \emph{Quantitative lower bounds for trace reconstruction},
+OpenAI Math Release preprint, September 24, 2026.
+Theorem 1.2, p.~2, equation (1.2); proof in Section 8 following the
+construction in Sections 2--7. Repository version
+\texttt{fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb}.
+\url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/quantitative-lower-bounds-for-trace-reconstruction-September-24-2026/paper.pdf}.
+\end{thebibliography}
+\end{document}
