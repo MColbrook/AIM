@@ -1,0 +1,393 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\nnz}{\operatorname{nnz}}
+\newcommand{\round}{\operatorname{round}}
+\newcommand{\softO}{\widetilde O}
+\title{A rational-input specialization of Kelner's sparse linear solver}
+\author{Kaiwen Jin\\\small\href{mailto:yui.ui.siki@gmail.com}{yui.ui.siki@gmail.com}}
+\date{12 October 2026}
+\hypersetup{pdftitle={A rational-input specialization of Kelner's sparse linear solver},pdfauthor={Kaiwen Jin}}
+\begin{document}
+\maketitle
+\begin{abstract}
+Kelner's recent identity-modulus lifting method gives a deterministic route to
+the quadratic bit-work scale for sparse linear systems. We specialize this
+method to the short rational inputs in AIM problem 044. For each fixed positive
+integer $c$, a nonsingular rational $n\times n$ matrix with $m$ nonzeros,
+condition number at most $n^c$, and input numerators and denominators of
+$O_c(\log(2n))$ bits can be solved to relative Euclidean solution error at most
+$n^{-c}/10$ in $\softO_c(nm)$ bit operations. Individual rational rounding
+avoids a common denominator over the input. The proof gives explicit scales,
+short residual bounds, reconstruction heights, and a direct forward-error
+estimate. An accompanying implementation uses FLINT for fast bounded rational
+reconstruction and includes exact finite-case checks.
+\end{abstract}
+
+\section{The promised-input problem}
+The distinction between arithmetic operations and bit operations matters for
+sparse linear systems: even an algorithm with few matrix--vector products may
+operate on increasingly long numbers. The finite-precision question appears
+as Problem 2.10 of the Simons workshop collection~\cite{workshop}. AIM
+problem 044~\cite{aim} fixes a polynomial condition bound and short rational
+input, and asks for $\softO(nm)$ bit operations at inverse-polynomial relative
+solution accuracy.
+
+Kelner~\cite{kelner} introduced a deterministic solver using a perturbation
+whose scaled matrix is the identity modulo a chosen integer. Its lifting
+steps need only sparse products on short integers; fast rational
+reconstruction recovers the solution of the perturbed system. That method
+and its fast reconstruction theorem are the basis of this note. Our purpose
+is to make its consequence for the exact rational-input and forward-error
+formulation of problem 044 explicit. The algorithmic mechanism is due to
+Kelner.
+
+All vector norms without a subscript are Euclidean, and matrix norms with
+subscript $2$ are induced Euclidean norms. We use
+$\kappa_2(A)=\norm{A}_2\norm{A^{-1}}_2$. A rational number is represented by
+a signed numerator and a positive denominator. Bit work includes arithmetic,
+input and output, and sparse indices. The notation $\softO_c$ hides fixed
+powers of $\log(2n)$, with constants allowed to depend on the fixed integer
+$c$.
+
+\begin{theorem}\label{thm:main}
+For every fixed positive integer $c$ there is a deterministic algorithm with
+the following guarantee. Let $n\geq1$, let $A\in\mathbb Q^{n\times n}$ be
+nonsingular and given by its sparse nonzero list, put $m=\nnz(A)$, and let
+$b\in\mathbb Q^n\setminus\{0\}$. Suppose
+\[
+ \kappa_2(A)\leq n^c,
+ \qquad B=c\lceil\log_2(2n)\rceil,
+\]
+and every input numerator and denominator has at most $B$ bits. In
+$\softO_c(nm)$ bit operations the algorithm returns a rational vector
+$\widehat x$ satisfying
+\begin{equation}\label{eq:target}
+ \norm{\widehat x-A^{-1}b}_2
+ \leq \frac{n^{-c}}{10}\norm{A^{-1}b}_2.
+\end{equation}
+\end{theorem}
+The probability of success is one, which meets the randomized success
+requirement of problem 044. Symmetry, positive definiteness, and graph
+structure are not required. Nonsingularity and the condition bound are input
+promises; the algorithm need not certify them.
+
+\section{An exact integer solve by lifting}
+We first describe the integer part of the construction. This is Kelner's
+identity-modulus method, with convenient explicit bounds. For an integer
+matrix $C\in\mathbb Z^{n\times n}$ and $d\in\mathbb Z^n$, set
+\[
+ T=\max\{1,\max_{i,k}|C_{ik}|,\max_i|d_i|\}.
+\]
+Choose a power of two $R=2^s\geq2nT$ and put $M=I+RC$. The determinant
+expansion gives $\det M\equiv1\pmod R$. Thus $M$ is nonsingular, and its
+determinant is coprime to every power of $R$. In particular this construction
+does not require $C$ to be nonsingular.
+
+To solve $Mz=d$, fix $L=6n+2$, start with $r_0=d$, and compute, for
+$j=0,\ldots,L-1$,
+\begin{equation}\label{eq:lift}
+ u_j=r_j\bmod R\in\{0,\ldots,R-1\}^n,
+ \qquad
+ r_{j+1}=\frac{r_j-u_j}{R}-Cu_j.
+\end{equation}
+Remainders are taken coordinatewise and are nonnegative even for negative
+residuals. The divisions in~\eqref{eq:lift} are exact. The digits encode the
+modular solution; they are stored during the iteration and assembled only
+after the last step.
+
+\begin{lemma}\label{lem:lift}
+Let $P=R^L$ and $v=\sum_{j=0}^{L-1}R^ju_j$. Then $0\leq v_i<P$ and
+$Mv\equiv d\pmod P$. Each residual coordinate has absolute value at most
+$R^2$, and all arithmetic operands used in the sparse products have $O(s)$
+bits. The lifting and assembly cost
+$O(n(\nnz(C)+n)\operatorname{poly}(s+\log(2n)))$ bit operations.
+\end{lemma}
+\begin{proof}
+Equation~\eqref{eq:lift} gives $Mu_j=r_j-Rr_{j+1}$. Multiplication by $R^j$
+and summation telescope to
+\begin{equation}\label{eq:telescoping}
+ Mv=d-R^Lr_L.
+\end{equation}
+The digit bounds give the asserted range of $v$.
+
+For a vector, $\norm{\cdot}_\infty$ denotes its largest absolute coordinate;
+for a matrix it denotes the largest absolute row sum. Put
+$W=\max\{\norm{d}_\infty,\norm{M}_\infty\}$. If
+$\norm{r_j}_\infty\leq W$, then
+\[
+ \norm{r_{j+1}}_\infty
+ \leq\frac{W+(R-1)\norm{M}_\infty}{R}\leq W.
+\]
+This starts at $r_0=d$. Since $nT\leq R/2$,
+\[
+ \norm{M}_\infty\leq1+nRT\leq1+R^2/2\leq R^2,
+ \qquad \norm{d}_\infty\leq T\leq R^2.
+\]
+Every partial sum in a row of $Cu_j$ is bounded in absolute value by
+$nT(R-1)\leq R^2/2$. Residuals, digits, products, sums, and the exact
+division therefore involve $O(s)$ bits. Each of the $O(n)$ rounds costs
+$O(\nnz(C)+n)$ short-integer operations, with the sparse indices charged.
+Elementary arithmetic suffices at these widths. As $R$ is a power of two,
+concatenating the $s$-bit digits once per coordinate constructs $v$ in
+$O(nLs)$ bit operations. Repeatedly updating long prefixes is unnecessary.
+\end{proof}
+
+The last step uses bounded rational reconstruction. We state the precise
+external result because its arithmetic cost is essential.
+
+\begin{proposition}[Kelner, Theorem 2.3]\label{prop:recovery}
+Let $P,v,N,D$ be integers with $P\geq2$, $0\leq v<P$, $N,D\geq1$, and
+$P>2ND$. There is at most one reduced fraction $a/q$ satisfying
+\[
+ |a|\leq N,\quad 1\leq q\leq D,\quad
+ \gcd(q,P)=1,\quad a\equiv vq\pmod P.
+\]
+If it exists, it can be recovered deterministically in
+$O(\mathsf M(k)\log k)$ bit operations, where
+$k=\lceil\log_2(P+1)\rceil$ and $\mathsf M(k)=\softO(k)$ is the bit cost of
+fast integer multiplication.
+\end{proposition}
+This is Theorem 2.3 on page 7 of the pinned version~\cite{kelner}; its modulus
+need not be prime. The fast reconstruction algorithm is part of this
+statement. Ordinary scalar Euclidean reconstruction cannot replace it in
+the bit-work analysis.
+
+\begin{lemma}\label{lem:height}
+With $M,d,R,L,P,v$ as above, set $H=R^{3n}$. Applying
+Proposition~\ref{prop:recovery} to each $v_i$ with $N=D=H$ recovers exactly
+$z=M^{-1}d$. All coordinates together cost $\softO(n^2s)$ bit operations,
+including parameter construction and output writing.
+\end{lemma}
+\begin{proof}
+Write $z_i=a_i/q_i$ in lowest terms, with $q_i>0$. By Cramer's rule,
+$z_i=\det(M_i)/\det M$, where $M_i$ replaces column $i$ by $d$. Hence
+$q_i$ divides $|\det M|$ and is coprime to $P$.
+
+All entries in $M$ and $d$ have absolute value at most $RT+1\leq R^2$.
+Hadamard's determinant bound gives
+\[
+ |\det M|,\ |\det(M_i)|
+ \leq n^{n/2}R^{2n}\leq R^{5n/2}\leq H,
+\]
+where $n\leq R$. For completeness, orthogonalizing the columns preserves
+the determinant and does not increase their lengths, so its absolute value
+is bounded by the product of the original column lengths. A dependent
+column gives determinant zero. Reduction of the Cramer fractions therefore
+preserves $|a_i|\leq H$ and $q_i\leq H$.
+
+Since $M$ is invertible modulo $P$,~\eqref{eq:telescoping} implies
+$a_i\equiv v_iq_i\pmod P$. Also
+\[
+ P=R^{6n+2}\geq4R^{6n}>2H^2.
+\]
+All hypotheses of Proposition~\ref{prop:recovery} are now satisfied,
+including existence and coprimality. The modulus has $O(ns)$ bits, giving
+$\softO(ns)$ work per coordinate. The parameters $P,H$ are binary powers
+of two, constructed by writing their bits. Every output numerator and
+denominator has $O(ns)$ bits, and their total writing cost is $O(n^2s)$.
+\end{proof}
+
+\section{Rational rounding and forward error}
+We now choose the integer data for Theorem~\ref{thm:main}. Put
+$Q=2^B$ and $K=n^c$. Each nonzero input has absolute value at least $1/Q$
+and each input has absolute value at most $Q$. Nonsingularity gives a
+nonzero matrix entry, and a nonzero column tested on a coordinate vector
+therefore shows $\norm{A}_2\geq1/Q$. Consequently
+\begin{equation}\label{eq:inputscale}
+ \norm{A^{-1}}_2\leq KQ,\qquad
+ \norm{b}_2\geq1/Q,
+ \qquad x=A^{-1}b\ne0.
+\end{equation}
+Every row of $A$ is nonzero, so $m\geq n$.
+
+To keep the perturbation small even at the largest allowed condition
+number, choose
+\begin{equation}\label{eq:roundscale}
+ \ell=\lceil\log_2 n\rceil,\quad
+ h=4+B+(2c+1)\ell,\quad S=2^h,
+ \qquad S\geq16K^2nQ.
+\end{equation}
+Round entries individually by
+\[
+ C_{ik}=\round(SA_{ik}),\qquad d_i=\round(Sb_i),
+ \qquad \round(t)=\lfloor t+1/2\rfloor.
+\]
+On an input $p/q$ with $q>0$, the rounded value is
+$\lfloor(2Sp+q)/(2q)\rfloor$. This requires only $O_c(\log(2n))$-bit
+operands. Zeros remain zero, so $\nnz(C)\leq m$, and no common input
+denominator is formed. Entrywise rounding errors give
+\begin{equation}\label{eq:rounderror}
+ \norm{C/S-A}_2\leq\frac{n}{2S},\qquad
+ \norm{d/S-b}_2\leq\frac{\sqrt n}{2S}.
+\end{equation}
+The first inequality follows by bounding the operator norm by the
+Frobenius norm, using Cauchy--Schwarz on each row.
+
+For these $C,d$, the quantity $T$ in Section 2 obeys $T\leq SQ+1/2$, so
+$\log_2 T=O_c(\log(2n))$. Choose the least power of two $R\geq2nT$, form
+$M=I+RC$, and use the lifting and reconstruction of Section 2 to obtain
+$z=M^{-1}d$. Return
+\begin{equation}\label{eq:output}
+ \widehat x=Rz.
+\end{equation}
+The complete computation is summarized in the algorithm below.
+
+\begin{center}
+\fbox{\begin{minipage}{0.94\linewidth}
+\textbf{Algorithm: sparse rational solve}\par\smallskip
+\textbf{Input:} $n,c,A,b$ satisfying Theorem~\ref{thm:main}.\par
+\textbf{Output:} $\widehat x\in\mathbb Q^n$.\par\smallskip
+\begin{tabbing}
+\hspace{1em}\=\hspace{1em}\=\kill
+Compute $B,\ell,h,S$ by~\eqref{eq:roundscale} and the definition of $B$.\\
+Set $C=\round(SA)$ and $d=\round(Sb)$ entrywise.\\
+Set $T=\max\{1,\max|C_{ik}|,\max|d_i|\}$; choose $R=2^{\lceil\log_2(2nT)\rceil}$.\\
+Set $L=6n+2$ and $r=d$.\\
+\textbf{for} $j=0,\ldots,L-1$ \textbf{do}\\
+\> $u_j=r\bmod R$; store the $n$ radix-$R$ digits.\\
+\> $w=Cu_j$ using the sparse nonzero list of $C$.\\
+\> $r=(r-u_j)/R-w$.\\
+\textbf{end for}\\
+Set $P=R^L$ and $H=R^{3n}$ as binary powers of two.\\
+\textbf{for} $i=1,\ldots,n$ \textbf{do}\\
+\> Concatenate the stored digits to form $v_i=\sum_{j=0}^{L-1}R^j(u_j)_i$.\\
+\> Recover $a_i/q_i$ from $v_i,P,N=D=H$ by Proposition~\ref{prop:recovery}.\\
+\> $\widehat x_i=Ra_i/q_i$.\\
+\textbf{end for}\\
+\textbf{return} $\widehat x$.
+\end{tabbing}
+\end{minipage}}
+\end{center}
+
+Lemmas~\ref{lem:lift} and~\ref{lem:height} give
+$\softO_c(n(m+n)+n^2)=\softO_c(nm)$ bit work for this computation, including
+rounding, assembly, reconstruction and output. Stored digits and sparse data,
+with fast reconstruction workspace, require $\softO_c(n^2)$ bits.
+Diagnostics and exact reference solutions used in the tests are outside the
+solver. The following proof establishes its relative error and collects the
+work estimates.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The exact working equation $Mz=d$ becomes
+\[
+ (A+E)\widehat x=b+f,
+ \qquad E=C/S-A+I/(RS),\quad f=d/S-b.
+\]
+Both perturbations must be included in the forward error. By
+\eqref{eq:rounderror} and $R\geq2$,
+\[
+ \norm{E}_2\leq n/S,\qquad \norm{f}_2\leq n/(2S).
+\]
+Let $\beta=\norm{A^{-1}}_2\norm{E}_2$. Equations
+\eqref{eq:inputscale}--\eqref{eq:roundscale} yield
+\[
+ \beta\leq\frac{KnQ}{S}\leq\frac1{16K}\leq\frac1{16}.
+\]
+For any vector $w$, the triangle inequality gives
+$\norm{(I+A^{-1}E)w}_2\geq(1-\beta)\norm{w}_2$. This square matrix is
+injective, hence invertible, with inverse norm at most $(1-\beta)^{-1}$.
+Subtracting the equation $Ax=b$, and writing $e=\widehat x-x$, gives
+\[
+ (I+A^{-1}E)e=A^{-1}f-A^{-1}Ex.
+\]
+As $\norm{b}_2=\norm{Ax}_2\leq\norm{A}_2\norm{x}_2$,
+\[
+ \frac{\norm{A^{-1}f}_2}{\norm{x}_2}
+ \leq\kappa_2(A)\frac{\norm{f}_2}{\norm{b}_2}
+ \leq\frac{KnQ}{2S}.
+\]
+Combining these estimates proves the explicit bound
+\begin{equation}\label{eq:forward}
+ \frac{\norm{e}_2}{\norm{x}_2}
+ \leq\frac{3KnQ/(2S)}{1-KnQ/S}
+ \leq\frac{3}{2(16K-1)}\leq\frac1{10K}.
+\end{equation}
+The last inequality is equivalent to $30K\leq32K-2$, valid for $K\geq1$.
+This proves~\eqref{eq:target}, including $n=1$.
+
+For the bit work, $h$ and $s=\log_2 R$ are $O_c(\log(2n))$. Rounding and
+reading the input cost $O_c((m+n)\operatorname{polylog}(2n))$.
+Lemma~\ref{lem:lift} gives $\softO_c(n(m+n))$ lifting and digit-assembly
+work. Lemma~\ref{lem:height} gives $\softO_c(n^2)$ reconstruction work.
+Multiplying the recovered numerators by $R$ and writing the rational output
+also cost $O(n^2s)$. The recovered denominators are odd, so this multiplication
+preserves reduced fractions without a further long-integer gcd. Since
+$m\geq n$, the total cost is $\softO_c(nm)$. Every operation is deterministic.
+\end{proof}
+
+\section{Implementation and finite checks}
+The accompanying Python library accepts a sparse list with zero-based
+indices and rational entries. Its default reconstruction backend calls
+FLINT's bounded rational reconstruction, through the pinned
+\texttt{python-flint 0.8.0} wheel~\cite{flint}. The binding supports its
+64-bit Linux and macOS ABI. Integer transfer uses hexadecimal strings,
+avoiding a decimal-conversion cost on long integers. Digits are stored in
+byte arrays and concatenated once. For this purpose the code rounds $s$
+up to a multiple of eight; the resulting $R$ is at most $2^7$ times the
+least admissible radix. Every bound above remains valid because
+$R\geq2nT$ and $s=O_c(\log(2n))$ still hold. A separate classical Euclidean
+backend serves as a slow reference and carries no fast bit-complexity claim.
+
+The tests compare the output with exact rational Gaussian elimination,
+exercise negative and zero coordinates, non-dyadic denominators, small input
+scales, and the condition-bound endpoint, and compare fast reconstruction
+with the Euclidean reference. A fixed 32,768-bit reconstruction test checks
+the long-integer interface. The reproduction script uses $c=2$ and
+$n\in\{4,8,16,32\}$ in each of four families: a diagonal matrix with entries
+$1,\ldots,1,n^{-2}$; a scalar matrix $I/(2n^2-1)$; a tridiagonal matrix with
+alternating diagonal entries $\pm2$ and off-diagonal entries $1/4$; and an
+upper bidiagonal matrix with diagonal $1$ and superdiagonal $1/4$.
+The right-hand sides have coordinates $(-1)^i/(2i+1)$, indexed from zero.
+The first two families have condition numbers $n^2$ and $1$. For the third,
+the off-diagonal operator has norm at most $1/2$, giving singular values in
+$[3/2,5/2]$; for the fourth they lie in $[3/4,5/4]$. Thus all cases meet the
+input promises.
+
+All 14 tests and all 16 reproduced cases passed. Case acceptance uses the
+exact squared form of~\eqref{eq:target}, with an independent rational
+solution as reference, together with the proved residual-width bound.
+Code, compact results, and reproduction instructions are available in the
+\href{https://github.com/yuiyuiui/aim-044-sparse-lift/tree/d1541aa86177584bcf75dc8545d8859a4d549258}{fixed version of the accompanying repository}. These
+finite checks validate the implementation on the stated cases; the
+all-input guarantee and asymptotic work bound are established by the proof.
+
+\paragraph{AI use.}
+OpenAI Codex assisted with literature retrieval, derivation, proof checking,
+implementation, finite-case validation, and preparation of this manuscript.
+The central algorithm and the fast rational reconstruction result are
+attributed to Kelner. This statement does not assert independent human review
+or formal verification.
+
+\begin{thebibliography}{9}
+\bibitem{aim}
+M.~Colbrook and contributors,
+\emph{044. Quadratic-scale bit complexity for well-conditioned sparse systems},
+AIM problem catalogue, revision
+\texttt{c9929805cece044705abaaebe1cebddac1ba11a6}, 2026.
+\href{https://github.com/MColbrook/AIM/blob/c9929805cece044705abaaebe1cebddac1ba11a6/problems/044-sparse-linear-solve-bit-complexity.md}{Pinned problem statement}.
+\bibitem{workshop}
+N.~Amsel et al.,
+\emph{Linear Systems and Eigenvalue Problems: Open Questions from a Simons Workshop},
+arXiv:2602.05394, 2026, Problem 2.10.
+\url{https://arxiv.org/abs/2602.05394}.
+\bibitem{kelner}
+J.~A.~Kelner,
+\emph{Solving Linear Systems in $\softO(mn\log(\kappa/\epsilon))$ Bit Operations},
+arXiv:2609.38101v1, 29 September 2026.
+\url{https://arxiv.org/abs/2609.38101v1}.
+\bibitem{flint}
+FLINT contributors,
+\emph{FLINT 3.3.1: Fast Library for Number Theory},
+bounded rational reconstruction routine
+\texttt{fmpq\_reconstruct\_fmpz\_2}, 2025.
+\href{https://github.com/flintlib/flint/blob/v3.3.1/src/fmpq/reconstruct_fmpz_2.c}{Versioned source};
+\href{https://pypi.org/project/python-flint/0.8.0/}{python-flint 0.8.0}.
+\end{thebibliography}
+\end{document}
