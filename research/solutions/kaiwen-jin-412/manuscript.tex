@@ -1,0 +1,193 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Downstream transport control: a literature resolution of AIM 412},pdfauthor={Kaiwen Jin}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}[proposition]{Lemma}
+\newtheorem{corollary}[proposition]{Corollary}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\title{Downstream transport control:\\a literature resolution of AIM 412}
+\author{Kaiwen Jin\\\small\href{mailto:yui.ui.siki@gmail.com}{\texttt{yui.ui.siki@gmail.com}}}
+\date{12 October 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+AIM Problem 412 asks whether the worst minimal boundary-control norm for a
+one-dimensional transport--diffusion equation tends to zero as the viscosity
+vanishes, whenever the control time exceeds the transport time $L/M$.
+The adjoint construction of Koike and Laheurte gives a negative answer:
+for positive speed $M$, the cost instead diverges for every $0<T<2L/M$.
+We explain its application to the problem's $L^2$ boundary controls and
+transposition solutions, including the scaling to arbitrary $L,M>0$.
+\end{abstract}
+
+Fix $L,M>0$. The equation in Problem 412~\cite{aim} is
+\begin{equation}\label{eq:primal}
+\begin{cases}
+y_t+My_x-\varepsilon y_{xx}=0 &(t,x)\in(0,T)\times(0,L),\\
+y(t,0)=h(t),\quad y(t,L)=0 &t\in(0,T),\\
+y(0,\cdot)=y_0\in L^2(0,L).
+\end{cases}
+\end{equation}
+For $h\in L^2(0,T)$, the solution and its terminal nullity are interpreted
+by transposition. Write
+\begin{equation}\label{eq:cost}
+C(T,\varepsilon)
+=\sup_{\norm{y_0}_{L^2(0,L)}\leq1}
+\inf\bigl\{\norm{h}_{L^2(0,T)}:\ y(T)=0\bigr\}.
+\end{equation}
+The infimum runs over admissible boundary controls.
+The question is whether this cost tends to zero as $\varepsilon\downarrow0$
+for every $T>L/M$.
+
+Koike and Laheurte's preprint~\cite{kl}, submitted on 28 September 2026,
+contains the following contrary conclusion; see its Theorem 1.3.
+This source appeared after the problem's stated literature check of
+22 September 2026. We give the direct implication of its adjoint theorem
+for the precise formulation~\eqref{eq:primal}--\eqref{eq:cost}.
+
+\begin{proposition}\label{prop:divergence}
+For every fixed $L,M>0$ and every fixed $0<T<2L/M$,
+\[
+\lim_{\varepsilon\downarrow0}C(T,\varepsilon)=+\infty.
+\]
+\end{proposition}
+
+The obstruction is a family of adjoint solutions with a nonvanishing
+terminal interior norm and an observed boundary flux tending to zero.
+The initial state in the worst-data cost may depend on $\varepsilon$;
+this dependence is permitted by the supremum in~\eqref{eq:cost}.
+
+\begin{lemma}[Koike--Laheurte]\label{lem:witness}
+For each $0<\tau<2$, there are $c>0$ and real solutions $z_\delta$,
+$\delta>0$, of
+\[
+(z_\delta)_s=(z_\delta)_\xi+\delta(z_\delta)_{\xi\xi},
+\qquad z_\delta(s,0)=z_\delta(s,1)=0,
+\]
+on $(0,\tau)\times(0,1)$, with
+$z_\delta(0,\cdot)\in H^2(0,1)\cap H_0^1(0,1)$, such that
+\begin{equation}\label{eq:witness}
+\norm{z_\delta(\tau,\cdot)}_{L^2(0,1)}^2\geq c,
+\qquad
+\int_0^\tau|\delta(z_\delta)_\xi(s,0)|^2\,ds\longrightarrow0
+\quad(\delta\downarrow0).
+\end{equation}
+The lower bound holds for all sufficiently small $\delta>0$, with $c$
+independent of $\delta$. The solutions constructed in the source proof
+are smooth finite eigenfunction sums.
+\end{lemma}
+
+This is Theorem 4.1 of~\cite{kl}, stated on PDF page 16 and proved on
+pages 16--18. Its construction is entirely analytic.
+
+\begin{proof}[Proof of Proposition~\ref{prop:divergence}]
+Set $\tau=MT/L$ and $\delta=\varepsilon/(ML)$, so $0<\tau<2$.
+Using Lemma~\ref{lem:witness}, define
+\[
+Z_\varepsilon(t,x)=L^{-1/2}z_\delta(Mt/L,x/L).
+\]
+Differentiation gives
+\[
+(Z_\varepsilon)_t=ML^{-3/2}(z_\delta)_s,
+\quad (Z_\varepsilon)_x=L^{-3/2}(z_\delta)_\xi,
+\quad (Z_\varepsilon)_{xx}=L^{-5/2}(z_\delta)_{\xi\xi}.
+\]
+Thus $Z_\varepsilon$ solves the forward adjoint equation
+$(Z_\varepsilon)_t=M(Z_\varepsilon)_x+
+\varepsilon(Z_\varepsilon)_{xx}$ with homogeneous Dirichlet endpoints.
+Changing variables in the terminal and observation norms yields
+\begin{align}
+a_\varepsilon^2
+&:=\norm{Z_\varepsilon(T,\cdot)}_{L^2(0,L)}^2
+=\norm{z_\delta(\tau,\cdot)}_{L^2(0,1)}^2\geq c,
+\label{eq:terminal}\\
+b_\varepsilon^2
+&:=\int_0^T|\varepsilon(Z_\varepsilon)_x(t,0)|^2\,dt
+=M\int_0^\tau|\delta(z_\delta)_\xi(s,0)|^2\,ds
+\longrightarrow0.\label{eq:flux}
+\end{align}
+Here $L,M,T$ are fixed, and $\delta\downarrow0$ precisely when
+$\varepsilon\downarrow0$.
+
+Put $p(t,x)=Z_\varepsilon(T-t,x)$. It solves
+$p_t+Mp_x+\varepsilon p_{xx}=0$ with zero endpoint traces.
+For smooth primal solutions, integration by parts gives
+\[
+\frac{d}{dt}\int_0^L yp\,dx
+=\bigl[-Myp+\varepsilon(y_xp-yp_x)\bigr]_0^L
+=\varepsilon h(t)p_x(t,0).
+\]
+The corresponding terminal identity is
+\begin{equation}\label{eq:duality}
+\langle y(T),Z_\varepsilon(0)\rangle
+-\langle y_0,Z_\varepsilon(T)\rangle
+=\int_0^T h(t)\varepsilon(Z_\varepsilon)_x(T-t,0)\,dt.
+\end{equation}
+For $L^2$ boundary inputs, this is the defining terminal duality identity
+of the transposition solution. The first pairing is a terminal duality
+pairing, which vanishes when $y(T)=0$; no stronger terminal trace is needed.
+The smooth adjoint test makes the boundary integral well-defined.
+
+Choose $y_{0,\varepsilon}=Z_\varepsilon(T)/a_\varepsilon$.
+By~\eqref{eq:terminal}, this is an admissible unit $L^2$ initial state.
+Every null control for it satisfies, by~\eqref{eq:duality} and
+Cauchy--Schwarz,
+\begin{equation}\label{eq:lower}
+a_\varepsilon
+\leq\norm{h}_{L^2(0,T)}b_\varepsilon.
+\end{equation}
+Time reversal leaves the observation norm $b_\varepsilon$ unchanged.
+If $b_\varepsilon>0$, taking the infimum for this initial state and then
+the supremum in~\eqref{eq:cost} gives
+$C(T,\varepsilon)\geq a_\varepsilon/b_\varepsilon$.
+If $b_\varepsilon=0$,~\eqref{eq:lower} rules out a null control for this
+state; with $\inf\varnothing=+\infty$, the same conclusion of divergence
+holds. Since $a_\varepsilon\geq\sqrt c$ for all sufficiently small
+$\varepsilon$ and $b_\varepsilon\to0$, this proves the proposition.
+No minimizer or interchange of the supremum with the limit is used.
+\end{proof}
+
+The source leaves the critical time $T=2L/M$ open~\cite[PDF p.~5]{kl}.
+That endpoint is unnecessary for the original yes/no question:
+
+\begin{corollary}[Negative answer to AIM 412]
+For every fixed $L,M>0$, the time $T_0=3L/(2M)$ satisfies $T_0>L/M$ and
+\[
+\lim_{\varepsilon\downarrow0}C(T_0,\varepsilon)=+\infty.
+\]
+Consequently the assertion that this cost tends to zero for every
+$T>L/M$ is false.
+\end{corollary}
+Here $L$ is the interval length, $M$ is the positive transport speed,
+$\varepsilon$ is the viscosity, and $C$ is the worst minimal $L^2$
+boundary-control norm in~\eqref{eq:cost}.
+The corollary is the specialization $T=3L/(2M)$ of
+Proposition~\ref{prop:divergence}.
+
+\begin{thebibliography}{2}
+\bibitem{kl}
+K. Koike and V. Laheurte,
+\emph{Uniform null-controllability times for the Coron--Guerrero problems
+are $2$ and $2+2\sqrt2$},
+arXiv:2609.35355v1, submitted 28 September 2026.
+\url{https://arxiv.org/abs/2609.35355v1}.
+
+\bibitem{aim}
+M. Colbrook's AIM problem collection,
+\emph{412. Sharp vanishing-viscosity control time for downstream transport},
+revision \texttt{c9929805cece044705abaaebe1cebddac1ba11a6}.
+\href{https://github.com/MColbrook/AIM/blob/c9929805cece044705abaaebe1cebddac1ba11a6/problems/412-positive-transport-sharp-uniform-control-time.md}{Immutable problem statement}.
+\end{thebibliography}
+
+\paragraph{AI assistance.}
+OpenAI Codex was used to retrieve the cited sources, check the connection
+between the adjoint theorem and the stated problem, and draft this note.
+The mathematical threshold result is attributed to Koike and Laheurte.
+No independent human review is asserted; independent mathematical review
+of this literature-resolution report is requested.
+\end{document}
