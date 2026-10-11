@@ -1,0 +1,229 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+  pdftitle={AIM 340 and the Alman--Vassilevska Williams 3SUM algorithm},
+  pdfauthor={Kaiwen Jin}}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}[lemma]{Proposition}
+\newtheorem{theorem}[lemma]{Theorem}
+\newcommand{\bits}{\operatorname{bit}}
+\title{AIM 340 and the Alman--Vassilevska Williams 3SUM algorithm}
+\author{Kaiwen Jin\\\small\href{mailto:yui.ui.siki@gmail.com}{yui.ui.siki@gmail.com}}
+\date{October 12, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Alman and Vassilevska Williams give a deterministic
+$O(N^{1.9992})$-time algorithm for integer 3SUM in the logarithmic-word
+RAM. We explain its application to the exact version in AIM Problem 340:
+given $n$ distinct integers in $[-n^3,n^3]$, decide whether three pairwise
+distinct elements satisfy $a+b=c$. An elementary reduction uses
+$O(\log n)$ zero-sum instances of size at most $2n$, with a fixed
+polynomial bound on their entries. It gives total time
+$O(n^{2-1/2500})$ for every valid input.
+The fast algorithm is entirely due to Alman and Vassilevska Williams;
+this note records the correspondence with the stated target.
+\end{abstract}
+
+\section{The target and the cited algorithm}\label{sec:target}
+
+We use Problem 340 of the AIM collection at the exact revision
+recorded in reference~\cite{aim}.
+For each integer $n\geq3$, its input is an explicitly listed set
+$S\subseteq[-n^3,n^3]\cap\mathbb Z$ with $|S|=n$.
+The answer is YES precisely when there are pairwise distinct
+$a,b,c\in S$ with $a+b=c$.
+The model is a classical word-RAM with $w=\Theta(\log n)$-bit words,
+large enough to store an input integer and an address.
+Usual word arithmetic, bit operations, comparisons and indexed memory
+accesses have unit cost. A single finite program must work at every size.
+All input-dependent preprocessing is counted.
+
+For an admissible algorithm $A$, the target uses
+\[
+ T_A(n)=
+ \max_{\substack{S\subseteq[-n^3,n^3]\cap\mathbb Z\\|S|=n}}
+ \mathbb E[\text{total word-RAM steps of }A(S)].
+\]
+The answer must be correct with probability at least $2/3$ on each input.
+The conjecture excludes $T_A(n)=O(n^{2-\varepsilon})$ for every fixed
+$\varepsilon>0$.
+
+The primary result we use is Alman and Vassilevska
+Williams~\cite[Theorem 22, Section 3.4]{avw}.
+For every fixed constant $\nu$, they give a deterministic algorithm for
+zero-sum 3SUM on $N$ integers of absolute value at most $N^\nu$,
+with total time $O(N^{1.9992})$.
+Their Theorem 2 specifies the standard word-RAM with $O(\log N)$-bit
+words. We fix $\nu=6$ throughout.
+We denote this algorithm by $Z$.
+Its construction, preprocessing and running-time analysis belong to
+the cited work. The task here is to enforce distinctness of the
+original elements while using $Z$.
+
+\section{A reduction preserving distinct elements}\label{sec:reduction}
+
+First sort $S$. If $0\in S$, test whether both $x$ and $-x$ belong to
+$S$ for some nonzero $x$. If so, return YES:
+$(x,-x,0)$ is a valid distinct triple.
+Sorting and binary searches take $O(n\log n)$ total time.
+
+Set
+\[
+ S^*=S\setminus\{0\},\qquad m=|S^*|,\qquad U=n^3,\qquad Q=4U+1.
+\]
+Assign the elements of $S^*$ their sorted ranks
+$j=0,\ldots,m-1$. For $t\geq0$, write
+$\bits_t(j)=\lfloor j/2^t\rfloor\bmod2$.
+Let $L=\lceil\log_2m\rceil$; since $n\geq3$, we have $m\geq2$.
+For $0\leq t<L$, form
+\begin{align}
+ T_t={}&
+ \{Q+x:x\in S^*,\ \bits_t(\operatorname{rank}(x))=0\}\notag\\
+ &{}\cup
+ \{2Q+x:x\in S^*,\ \bits_t(\operatorname{rank}(x))=1\}\notag\\
+ &{}\cup\{-3Q-x:x\in S^*\}.\label{eq:encoding}
+\end{align}
+Call $Z$ on each $T_t$ and return YES if any call does.
+If the initial stage and all calls return NO, return NO.
+The tags $1,2,-3$ force a zero-sum triple to use one value from each
+of the three displayed sets. The rank bit then separates the two summands.
+
+\begin{lemma}\label{lem:legal}
+Every $T_t$ has $N=2m$ distinct integers, where $n\leq N\leq2n$,
+and all its entries have absolute value at most $N^6$.
+\end{lemma}
+\begin{proof}
+The three sets in~\eqref{eq:encoding} lie respectively in
+\[
+ [3U+1,5U+1],\qquad [7U+2,9U+2],\qquad
+ [-13U-3,-11U-3].
+\]
+These intervals are disjoint, and each encoding within one set is
+injective. The first two sets together have $m$ entries, and the
+last has $m$. Also $n-1\leq m\leq n$, whence $n\leq2m\leq2n$.
+Finally, for $n\geq3$,
+\[
+ 13n^3+3\leq14n^3\leq n^6\leq N^6.
+\]
+Thus each call has the fixed polynomial integer bound required by $Z$.
+\end{proof}
+
+\begin{proposition}\label{prop:correct}
+The reduction returns YES if and only if $S$ contains pairwise distinct
+$a,b,c$ with $a+b=c$.
+\end{proposition}
+\begin{proof}
+The initial opposite-pair test produces a valid witness.
+Suppose a call on $T_t$ finds a zero-sum triple.
+Each term has the form $h_iQ+r_i$, with
+$h_i\in\{1,2,-3\}$ and $|r_i|\leq U$.
+Since $|r_1+r_2+r_3|\leq3U<Q$, zero sum forces
+$h_1+h_2+h_3=0$ and $r_1+r_2+r_3=0$.
+
+Let $k_1,k_2,k_3$ count the tags $1,2,-3$.
+Then $k_1+k_2+k_3=3$ and $k_1+2k_2-3k_3=0$.
+If $k_3=0$ the latter sum is positive; if $k_3\geq2$ it is negative.
+Hence $k_3=1$ and $k_1=k_2=1$.
+The triple is therefore
+$(Q+a,2Q+b,-3Q-c)$ for $a,b,c\in S^*$ with $a+b=c$.
+The rank-bit condition gives $a\ne b$.
+If $c=a$, then $b=0$, and if $c=b$, then $a=0$.
+Both are excluded by the definition of $S^*$.
+Thus all three original elements are distinct.
+The same tag argument shows that the encoded values are distinct,
+so allowing repeated values in a zero-sum convention would not alter
+any oracle answer here.
+
+Conversely, suppose a valid triple satisfies $a+b=c$.
+When $c=0$, the initial test finds its opposite pair.
+Otherwise neither summand is zero: a zero summand would make the other
+equal to $c$. Thus $a,b,c\in S^*$.
+The distinct ranks of $a$ and $b$ differ in some bit $t<L$.
+Interchange $a,b$ if needed so that their bits are $0,1$.
+Then the three corresponding values in~\eqref{eq:encoding}
+sum to zero. The call on this $T_t$ returns YES.
+\end{proof}
+
+\section{Total time and the exact consequence}\label{sec:time}
+
+Each set $T_t$ can be constructed in $O(n)$ word operations.
+Its integers have $O(\log n)$ bits, and
+$\log N=\Theta(\log n)$ because $n\leq N\leq2n$.
+Thus the cited algorithm and the new arithmetic use the same
+logarithmic-word model, with a fixed sufficiently large constant
+in the word size.
+The source algorithm is fixed for $\nu=6$; sorting, rank assignment,
+bit tests and the loop over $t$ are also one finite program.
+No advice or supplied data structure is used.
+
+Including all preprocessing and all $O(\log n)$ source calls, the time is
+\[
+ O(n\log n+n^{1.9992}\log n).
+\]
+All logarithms in this time bound may be taken to base two.
+Put $q=2500$, $k=\lfloor\log_2n\rfloor$ and
+$j=\lfloor k/q\rfloor$. Then $2^{qj}\leq n$ and
+$k+1\leq q(j+1)$. The elementary induction
+$2^j\geq j+1$ for integers $j\geq0$ gives
+\[
+ \log_2n<k+1\leq q(j+1)\leq q2^j\leq qn^{1/q}.
+\]
+Consequently the total time is
+$O(n^{1.9996})=O(n^{2-1/2500})$, uniformly over $S$.
+
+\begin{theorem}\label{thm:main}
+There is one uniform deterministic classical word-RAM algorithm $A$,
+with word size $\Theta(\log n)$, which, for every integer $n\geq3$
+and every set $S\subseteq[-n^3,n^3]\cap\mathbb Z$ of cardinality $n$,
+correctly decides whether pairwise distinct $a,b,c\in S$ satisfy $a+b=c$.
+Counting all input-dependent preprocessing, it satisfies
+\[
+ T_A(n)=O(n^{2-1/2500}).
+\]
+\end{theorem}
+
+Here $T_A$ is the maximum expected step count defined in
+Section~\ref{sec:target}; determinism makes the expectation equal to the
+actual step count. The success probability on every input is $1$,
+and the positive exponent improvement $\varepsilon=1/2500$ is fixed.
+The constants do not depend on $S$ or $n$.
+The theorem follows from the cited algorithm through
+Lemma~\ref{lem:legal} and Proposition~\ref{prop:correct}, and
+refutes the precise conjecture in the pinned AIM statement.
+The source of the fixed-power speedup is~\cite{avw}.
+
+\begin{thebibliography}{2}
+\raggedright
+
+\bibitem{avw}
+Josh Alman and Virginia Vassilevska Williams,
+\emph{Truly Subquadratic 3SUM and Truly Subcubic APSP via Triangles
+in Sparse Lopsided Graphs},
+arXiv:2610.06783v1, October 5, 2026.
+\url{https://arxiv.org/abs/2610.06783v1}.
+Theorems 2 and 22; Section 3.4.
+
+\bibitem{aim}
+Steve Brunton, Matthew J. Colbrook, Maarten V. de Hoop,
+George Stepaniants, Alex Townsend and Rachel Ward,
+\emph{AIM---Open Applied Problems}, Problem 340,
+\emph{The modern integer 3SUM conjecture},
+revision c9929805cece044705abaaebe1cebddac1ba11a6.
+\url{https://github.com/MColbrook/AIM/blob/c9929805cece044705abaaebe1cebddac1ba11a6/problems/340-integer-three-sum-hardness.md}.
+
+\end{thebibliography}
+
+\paragraph{AI use.}
+OpenAI Codex assisted the source search, reduction, checking and drafting
+of this note under the author's direction.
+The fast 3SUM algorithm is due entirely to Alman and Vassilevska Williams.
+Independent mathematical review is requested.
+
+\end{document}
