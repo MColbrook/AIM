@@ -1,0 +1,277 @@
+\section{Persistence and one fixed smooth metric}\label{sec:limit}
+
+\subsection{A finite norm suffices to preserve earlier signs}
+
+\begin{lemma}\label{lem:persistence}
+Let a smooth positive pair \(\mathcal P\) have a simple positive
+eigenvalue \(\lambda\) and a real eigenfunction with a sign
+certificate \(\mathcal C\). For any open interval
+\(I\subset(0,\infty)\) containing \(\lambda\), there are
+an integer \(s\ge1\) and \(\varepsilon>0\) such that every
+smooth positive pair \(\mathcal P'\) with
+\(\|\mathcal P'-\mathcal P\|_{C^s}\le\varepsilon\)
+has a simple eigenvalue in \(I\) and a real eigenfunction
+with the same certificate disks.
+\end{lemma}
+
+\begin{proof}
+We specify the compactness and regularity facts used both here
+and in Lemma~\ref{lem:simple}.
+On \(H^1(B)\), the shifted form
+\[
+ a(f,v)=\int_B A(\dd f,\dd v)\dd\mu+
+                     \int_B\rho fv\dd\mu
+\]
+is continuous, symmetric and coercive.
+The inclusion \(H^1(B)\hookrightarrow L^2(\rho\dd\mu)\)
+is continuous, compact and dense.
+These properties follow in a finite atlas from the local Sobolev
+compactness theorem \cite[Theorem~3.49, p.~76]{Hunter};
+positive smooth densities give equivalent \(L^2\) norms.
+Laugesen's discrete spectral theorem
+\cite[Theorem~4.1, pp.~28--32]{Laugesen}, with form space
+\(H^1\) and Hilbert space \(L^2(\rho\dd\mu)\), gives an orthonormal
+eigenbasis for the shifted problem with eigenvalues tending to
+infinity. Subtracting one gives the nonnegative discrete spectrum
+of \(-L\), with finite multiplicities.
+All eigenfunctions can be chosen real.
+
+For completeness, weak eigenfunctions are smooth.
+In a coordinate chart write \(\dd\mu=m(x)\dd x\).
+The divergence coefficients are \(mA^{ab}\), and the right-hand
+side is a smooth density times the eigenfunction.
+Local uniform ellipticity and
+\cite[Theorems~4.27--4.28, pp.~112--114]{Hunter}
+first give \(H^2_{\rm loc}\) and then successively every finite
+Sobolev order. Their hypotheses on coefficient derivatives and
+the Sobolev regularity of the right-hand side are met at each
+step. Sobolev embedding and a finite cover give global smoothness.
+The same argument applies to a weak limit solving a fixed smooth
+eigenfunction equation.
+
+The eigenbasis also gives the min--max characterization
+\begin{equation}\label{eq:minmax}
+ \lambda_n=\inf_{\dim F=n+1}\ \sup_{0\ne f\in F}
+ \frac{\int_B A(\dd f,\dd f)\dd\mu}
+      {\int_B\rho f^2\dd\mu},\qquad n=0,1,\ldots .
+\end{equation}
+Indeed, the first \(n+1\) eigenvectors give the upper bound.
+Every \((n+1)\)-dimensional \(F\) contains a nonzero vector
+orthogonal to the first \(n\), whose eigenbasis expansion gives
+the lower bound. The characterization is on the common form
+domain \(H^1\), including when the density varies.
+Uniform multiplicative comparisons of nearby positive tensors
+and densities compare all the quotients in \eqref{eq:minmax}.
+Thus \(C^0\) convergence of pairs implies convergence of every
+fixed ordered eigenvalue. A smaller interval with closure in \(I\)
+can separate the simple \(\lambda\) from its neighboring
+ordered eigenvalues. For all sufficiently close pairs it contains
+exactly the corresponding eigenvalue, which is still simple.
+
+We need convergence of its normalized eigenfunction in \(C^0\).
+The same interior estimates, localization by a finite smooth
+partition of unity and absorption of lower-order terms give,
+for the fixed smooth operator \(L\),
+\begin{equation}\label{eq:elliptic}
+ \|f\|_{H^{a+2}}\le C_a
+       \bigl(\|Lf\|_{H^a}+\|f\|_{L^2}\bigr),\qquad a\ge0.
+\end{equation}
+One way to see the absorption is to apply the interior estimates
+on a slightly larger chart to cutoff multiples of \(f\).
+The commutator with the cutoff is first order.
+The inequalities
+\(\|f\|_{H^{a+1}}\le
+ \epsilon\|f\|_{H^{a+2}}+C_\epsilon\|f\|_{L^2}\)
+follow from the elementary Fourier weight inequality in each
+chart. A finite sum and sufficiently small \(\epsilon\) absorb
+those commutators and give \eqref{eq:elliptic}.
+
+A sufficiently small \(C^4\) change of the pair makes
+\(L'-L\) small as a map \(H^{a+2}\to H^a\) for \(a=0,2\).
+In coordinates its principal coefficients have no coefficient
+derivatives, and its first-order coefficients have at most one;
+the stated finite norm bounds every product-rule coefficient
+needed at these two orders. Absorb
+\(\|(L'-L)f\|_{H^a}\) into \eqref{eq:elliptic}.
+For eigenvalues in the chosen bounded interval, the estimates
+at \(a=0\) and then \(a=2\) give uniform \(H^4\) bounds for
+weighted-\(L^2\)-normalized eigenfunctions.
+
+If \(\mathcal P_m\to\mathcal P\) in this finite norm, choose
+real eigenfunctions \(f_m\) with
+\(\int_B\rho_m f_m^2\dd\mu=1\).
+A subsequence converges strongly in \(H^3\), and hence in \(C^0\);
+the dimension-four embedding \(H^3\hookrightarrow C^0\)
+again follows from Hunter's Theorem~3.49 in a finite atlas.
+The weak equation passes to the limit, whose norm is one
+because \(\rho_m\to\rho\) uniformly. Simplicity identifies the
+limit with the given normalized eigenfunction, up to sign.
+On the finite collection of compact disks its strict signs
+have a positive absolute margin. Uniform convergence retains
+all those signs, possibly after a global sign change.
+If no sufficiently small finite-norm neighborhood retained
+them, a sequence contradicting this conclusion could be
+chosen and the same compactness argument would apply.
+Finally shrink the radius to put a closed finite-norm ball
+inside that neighborhood.
+\end{proof}
+
+\subsection{Summable changes and separated exact eigenvalues}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Take monotone coordinate norms as in Section~\ref{sec:base}.
+Choose \(b>0\) such that the closed \(C^1\) ball of radius \(b\)
+about \(\mathcal P_0=(g_0^{-1},1)\) consists of positive pairs
+inside \(\mathcal U\). Set
+\[
+ l^{(j)}=\frac14+2^{-j-2}\quad(j\ge0),\qquad
+ \epsilon_0=\gamma/4>0 .
+\]
+We construct \(\mathcal P_j=(A_j,\rho_j)\), round for
+\(t<l^{(j)}\), with a simple eigenvalue \(k_j^2\) and
+certificate \(\mathcal C_j\).
+
+After stage \(i\), apply Lemma~\ref{lem:persistence} with interval
+\((k_i^2/2,2k_i^2)\), and call its norm order and radius
+\(s_i,\varepsilon_i\). At stage \(j\), only earlier such
+numbers enter the requirements:
+\begin{equation}\label{eq:budgets}
+ \begin{split}
+ r_j&=\max\{j+1,1,s_1,\ldots,s_{j-1}\},\\
+ \eta_j&=\min\left\{2^{-j},\,b2^{-j-1},\,
+              \min_{1\le i<j}
+                    2^{-(j-i+1)}\varepsilon_i\right\}.
+ \end{split}
+\end{equation}
+For \(j=1\) omit the inner minimum. Apply
+Proposition~\ref{prop:step} to the fixed input
+\(\mathcal P_{j-1}\), collar
+\((l^{(j)},l^{(j-1)})\), order \(r_j\) and tolerance \(\eta_j\).
+Its positive constant \(c_j\) is known before choosing \(k_j\).
+Choose an allowed frequency beyond its threshold satisfying
+\[
+ k_j>2k_{j-1}\quad(j>1),\qquad c_jk_j^{\gamma/2}>j.
+\]
+The resulting certificate then obeys
+\begin{equation}\label{eq:stagesize}
+ |\mathcal C_j|>j k_j^{1+\gamma/2}.
+\end{equation}
+Use the disks constructed in Lemma~\ref{lem:signs}; their centers
+are in \(V\Subset\Omega\), and their radii are at most \(k_j^{-1}\).
+Choose also the first frequency large enough to keep all cylinders
+in one fixed compact subregion of \(\Omega\).
+Only now select \(s_j,\varepsilon_j\) for this output.
+They restrict later stages and do not constrain the frequency
+that produced them.
+
+For every fixed \(r\), eventually \(r_j\ge r\), and
+\(\|\mathcal P_j-\mathcal P_{j-1}\|_{C^r}<2^{-j}\).
+The sequence therefore converges in every \(C^r\) to a single
+smooth pair \(\mathcal P_\infty=(A_\infty,\rho_\infty)\).
+Its total \(C^1\) movement from the round pair is at most
+\(b\sum_{j\ge1}2^{-j-1}=b/2\), so it is positive and lies
+inside \(\mathcal U\).
+For each \(i\), \eqref{eq:budgets} gives
+\[
+ \|\mathcal P_\infty-\mathcal P_i\|_{C^{s_i}}
+ \le\sum_{j>i}2^{-(j-i+1)}\varepsilon_i
+       =\varepsilon_i/2 .
+\]
+Thus Lemma~\ref{lem:persistence} applies simultaneously to every
+earlier certificate. There are nonzero real smooth \(v_i\) for
+the same limiting operator satisfying
+\begin{equation}\label{eq:limitlambda}
+ -L_\infty v_i=\lambda_i v_i,\qquad
+ k_i^2/2<\lambda_i<2k_i^2,
+\end{equation}
+with certificate disks \(\mathcal C_i\).
+The eigenvalue intervals are disjoint and tend to infinity
+because \(k_{i+1}>2k_i\).
+
+\subsection*{An ordinary metric with the prescribed base operator}
+
+Put
+\[
+ G_\infty^{-1}=A_\infty/\rho_\infty,\qquad
+ q=\frac{\rho_\infty\,\dd\mu}{\dd\operatorname{vol}_{G_\infty}},
+ \qquad
+ g=G_\infty+q^2\dd\varphi^2\quad\hbox{on }B\times S^1 .
+\]
+The ratio \(q\) of smooth positive densities is smooth and positive.
+Hence \(g\) is a smooth positive metric on a closed connected
+five-dimensional manifold, fixed independently of \(i\).
+Its volume density is
+\[
+ \dd\operatorname{vol}_g
+      =q\,\dd\operatorname{vol}_{G_\infty}\dd\varphi
+      =\rho_\infty\,\dd\mu\dd\varphi .
+\]
+For any function \(f\) independent of \(\varphi\), the coordinate
+divergence formula, with \(\mu=m(x)\dd x\), gives
+\begin{equation}\label{eq:circle}
+ \Delta_g f=\frac{1}{\rho_\infty m}
+  \partial_a(\rho_\infty mG_\infty^{ab}\partial_b f)
+     =\rho_\infty^{-1}\Div_\mu(A_\infty\dd f)=L_\infty f .
+\end{equation}
+The pullbacks \(u_i\) of \(v_i\) are therefore exact real
+Laplace eigenfunctions on this single metric, at \(\lambda_i\).
+
+\subsection*{An intrinsic Hausdorff measure lower bound}
+
+Fix a closed interval \(I_0\) of positive length in a circle
+coordinate chart. For one certificate cylinder \(C_i^{(a)}\),
+let \(D_i^{(a)}\) denote its transverse disk.
+Continuity and opposite endpoint signs force a zero on each
+joining segment. Consequently
+\[
+ \Z(u_i)\cap(C_i^{(a)}\times I_0)
+\]
+projects onto \(D_i^{(a)}\times I_0\) by the orthogonal
+base-coordinate projection and the circle coordinate.
+
+All these cylinders lie in a single compact coordinate region.
+Extend its coordinate functions, and the circle coordinate on
+\(I_0\), smoothly with cutoffs to the compact manifold.
+Their gradients have fixed bounds in \(g\). Integrating along
+curves bounds their differences by a fixed constant times
+the intrinsic distance. Composing with any orthogonal projection
+gives one Lipschitz constant \(K\), uniform in every disk's
+radius and orientation.
+The Hausdorff covering inequality therefore implies
+\begin{equation}\label{eq:project}
+ \HH_g^4\bigl(\Z(u_i)\cap(C_i^{(a)}\times I_0)\bigr)
+ \ge K^{-4}\HH_{\mathrm{Euc}}^4(D_i^{(a)}\times I_0)
+ \ge c\,\HH_{\mathrm{Euc}}^3(D_i^{(a)})|I_0|.
+\end{equation}
+The last constant is purely dimensional: the product disk has
+four-dimensional Lebesgue volume equal to the disk's
+three-volume times \(|I_0|\), while a set of diameter \(d\)
+in its four-dimensional affine span has volume at most \(Cd^4\).
+Apply this estimate to every countable cover and take the
+Hausdorff infimum. The identical three-dimensional covering
+normalization identifies the disk's three-volume with a fixed
+multiple of \(\HH^3_{\mathrm{Euc}}\).
+Thus no convention on the normalization of Hausdorff measure
+affects the bound.
+
+The finitely many closed cylinders are in disjoint open balls,
+so their compact nodal subsets are pairwise positively separated.
+Hausdorff measure is additive on these separated sets directly
+from covers of sufficiently small diameter. Summing
+\eqref{eq:project} and using \eqref{eq:stagesize} yields
+\begin{equation}\label{eq:finalmeasure}
+ \HH_g^4(\Z(u_i))\ge c|\mathcal C_i|
+                   >c\,i k_i^{1+\gamma/2}.
+\end{equation}
+Only continuity and strict signs were used; no regularity of
+the nodal set is needed.
+Finally, \eqref{eq:limitlambda} and \(\epsilon_0=\gamma/4\) give
+\[
+ \lambda_i^{1/2+\epsilon_0}
+ \le 2^{1/2+\epsilon_0}k_i^{1+\gamma/2},\qquad
+ \frac{\HH_g^4(\Z(u_i))}{\lambda_i^{1/2+\epsilon_0}}
+       \ge c\,2^{-1/2-\epsilon_0}i\longrightarrow\infty .
+\]
+The metric and positive exponent are fixed for the full sequence.
+This proves Theorem~\ref{thm:main}.
+\end{proof}

@@ -1,0 +1,394 @@
+\section{Local complex waves below the envelope}\label{sec:packets}
+
+Fix a smooth positive input pair and an envelope from
+Proposition~\ref{prop:envelope}. A wave packet will have amplitude
+comparable to \(e^{kh}\) at its center, decay rapidly relative to
+that envelope away from the center, and have a residual as small
+as any prescribed inverse power of \(k\). The finite construction
+must retain the same derivative and spanning exponents when its
+accuracy is increased.
+
+\subsection{Characteristic Hessians and polynomial equations}
+
+In \(G\)-normal coordinates at a center, let
+\(p=\nabla h\), \(Q=\sqrt{1+|p|^2}\) and \(H=\nabla^2h\).
+For a unit \(v\perp p\), the bilinear square of \(P=p+iQv\) is
+\(-1\). Require the phase to satisfy the bilinear eikonal equation
+\(G^{-1}(\dd\phi,\dd\phi)=-1\) to first order at the center.
+A phase with differential \(P\) must then have Hessian \(S\)
+satisfying \(SP=0\): differentiating the equation gives this condition
+because the first metric derivatives vanish at the center.
+The real Hessian gap \(H-\operatorname{Re}S>0\)
+will keep its exponential below \(e^{kh}\).
+
+\begin{lemma}\label{lem:hessian}
+Let \(e_1,v\) be orthonormal, \(0\le b<1\), and \(H\) real
+symmetric, with
+\[
+ |H|\le k^{4\delta},\qquad
+ b^2H(e_1,e_1)+H(v,v)\ge k^{-2\delta}.
+\]
+For all sufficiently large \(k\), uniformly under these hypotheses,
+there are real symmetric \(U,D\) with
+\begin{equation}\label{eq:hessian}
+ (U+iD)(be_1+iv)=0,\quad
+ H-U\ge k^{-3\delta}I,\quad |U+iD|\le k^{20\delta}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For \(b>0\) the first identity is
+\(Dv=bUe_1,\ De_1=-Uv/b\). The prescribed columns are compatible
+with symmetry exactly when \(b^2U_{11}+U_{vv}=0\).
+If \(b\ge k^{-12\delta}\), put
+\[
+ c_0=\frac{b^2H_{11}+H_{vv}}{1+b^2},\qquad U=H-c_0I.
+\]
+Relative to \(e_1,v,\{e_1,v\}^{\perp}\), a symmetric completion is
+\[
+ D=\begin{pmatrix}
+ -u_{12}/b&bu_{11}&-u_{2E}/b\\
+ bu_{11}&bu_{12}&bu_{1E}\\
+ -u_{E2}/b&bu_{E1}&0
+ \end{pmatrix}.
+\]
+Here the \(u\)'s are the corresponding blocks of \(U\).
+Then \(H-U\ge\tfrac12k^{-2\delta}I\) and
+\(|D|\le Ck^{16\delta}\).
+
+For \(0\le b<k^{-12\delta}\), set \(K=k^{14\delta}\) and
+\[
+ U=-K(I-vv^{\mathsf t})+b^2Kvv^{\mathsf t},\qquad
+ D=-bK(e_1v^{\mathsf t}+ve_1^{\mathsf t}).
+\]
+The identity holds also at \(b=0\). In
+\(H-U-k^{-3\delta}I\), the \(v^\perp\) block is at least
+\(KI/2\), while the scalar \(v\) block is at least
+\[
+ k^{-2\delta}-k^{-20\delta}-k^{-10\delta}-k^{-3\delta}.
+\]
+Its Schur complement subtracts at most \(C|H|^2/K\le Ck^{-6\delta}\).
+All negative terms are smaller than \(k^{-2\delta}\) for large \(k\).
+The size bounds follow from the explicit matrices.
+\end{proof}
+
+Only the Hermitian size of a complex direction is needed to solve
+the subsequent polynomial equations. To see this, let \(\mathcal P_m\)
+be the homogeneous complex polynomials of degree \(m\), and suppose
+\(c\le|q|\le C\). Choose \(|q_i|\ge c/2\), write
+\(q\cdot\partial=q_i\partial_i+D'\), and let \(I_i\) integrate
+in \(X_i\) with zero constant. The operator
+\(\mathcal K=D'I_i/q_i\) lowers the degree in the other variables,
+so \(\mathcal K^{m+1}=0\) on \(\mathcal P_m\). Thus
+\begin{equation}\label{eq:polyinverse}
+ R_{q,m}=\frac{I_i}{q_i}\sum_{r=0}^m(-\mathcal K)^r,\qquad
+ (q\cdot\partial)R_{q,m}=I .
+\end{equation}
+Its coefficient norm is bounded in terms of \(m,c,C\).
+There is no division by the possibly small bilinear square \(q\cdot q\).
+
+\subsection{Four packets with arbitrary finite accuracy}
+
+For packets centered at \(z\), define their normalized first jets
+in that center's fixed normal coordinates by
+\[
+ {\bf j}_z w(x)=e^{-kh(x)}
+       \left(w(x),\frac{\partial_\xi w(x)}{kQ_z}\right),
+ \qquad Q_z=\sqrt{1+|\nabla h(z)|^2}.
+\]
+The real and imaginary columns of these jets form a real matrix.
+Its least spanning singular value means the square root of the
+least eigenvalue of the matrix times its transpose.
+
+\begin{proposition}\label{prop:packets}
+Given an integer \(J\ge0\) and \(M>0\), finite construction orders
+can be fixed so that, for every sufficiently large \(k\), every
+center \(z\) with \(t(z)\ge1/4\) has four smooth complex packets.
+They have support radius at most \(Ck^{-1/3-100\delta}\), and
+\begin{align}
+ |D_x^j w|&\le C_j k^{2j}e^{kh}\qquad(j\ge0),\label{eq:packetder}\\
+ |D_x^j(L+k^2)w|&\le Ck^{-M}e^{kh}
+                    \qquad(0\le j\le J).\label{eq:packetres}
+\end{align}
+The family spans real first jets with singular value at least
+\(ck^{-3/4}\) at \(z\), and at least \(k^{-1}\) at distance
+at most \(k^{-10}\) from \(z\). The support, derivative and
+spanning exponents do not depend on \(J,M\). Constants and
+frequency thresholds may depend on the fixed pair and chosen orders.
+\end{proposition}
+
+\begin{proof}
+The envelope bounds give \(Q\le k^{3\delta}\) and
+\(|H|\le k^{4\delta}\) for large \(k\).
+If \(p\ne0\), take \(e_1=p/|p|\); choose a favorable test \(e_2\)
+in \eqref{eq:envelope}. At \(p=0\), choose \(e_2\) first and
+then any perpendicular \(e_1\). Complete an orthonormal basis and put
+\[
+ \eta_{\rm v}=k^{-9\delta},\quad v_2=e_2,\quad
+ v_3=\frac{e_2+\eta_{\rm v}e_3}{\sqrt{1+\eta_{\rm v}^2}},\quad
+ v_4=\frac{e_2+\eta_{\rm v}e_4}{\sqrt{1+\eta_{\rm v}^2}}.
+\]
+Use the four pairs
+\[
+ (p',v)=(p,v_2),(p,v_3),(p,v_4),
+             (p+Qk^{-3/4}e_1,v_2).
+\]
+For each set \(Q'=\sqrt{1+|p'|^2}\), \(P=p'+iQ'v\),
+\(b=|p'|/Q'\). Then \(P\cdot P=-1\) and
+\(1\le Q'/Q\le1+k^{-3/4}\).
+The change in the favorable Hessian test is at most
+\(Ck^{-5\delta}+Ck^{-3/4+4\delta}\).
+For the second term, differentiate \(s^2/(1+s^2)\) as
+\(s=|p|\) increases by \(Qk^{-3/4}\).
+These errors are smaller than the original \(ck^{-\delta}\)
+margin. Lemma~\ref{lem:hessian} therefore gives \(U,D\) with
+\((U+iD)P=0\) for each pair.
+
+Each packet uses one frozen normal chart
+\(\Psi_{z,E}(\xi)=\exp_z(\sum_i\xi_iE_i)\).
+For a fixed smooth input metric, all fixed-order derivatives of
+these charts and their inverses are uniformly bounded over centers
+and unit frames on sufficiently small common balls. This follows
+by solving the smooth geodesic equation on a common bounded set
+and differentiating it in initial conditions, then using compactness
+of the frame bundle. No spatial derivative of the frame-selection
+rule is taken.
+
+Introduce the scaled variables
+\begin{equation}\label{eq:scaling}
+ r_0=k^{-100\delta},\quad X=\xi/r_0,\quad
+ \kappa=kr_0Q,\quad
+ h_{\rm sc}(X)=\frac{h(\Psi_{z,E}(r_0X))-h(z)}{r_0Q}.
+\end{equation}
+For \(q\ge2\), the chain rule gives
+\[
+ |D_X^q h_{\rm sc}|\le C_q Q^{-1}k^{\delta(101-99q)}.
+\]
+These are bounded for every fixed order. If
+\(L=g^{ij}(\xi)\partial_{\xi_i\xi_j}
+       +\beta^i(\xi)\partial_{\xi_i}\), multiplying \(L+k^2\)
+by \(r_0^2\) gives
+\[
+ \mathcal L+\kappa^2/Q^2,\qquad
+ \mathcal L=g^{ij}(r_0X)\partial_{X_iX_j}
+                   +r_0\beta^i(r_0X)\partial_{X_i}.
+\]
+Its fixed-order coefficient derivatives are bounded, with
+\(g^{ij}(0)=\delta_{ij}\) and \(\partial g^{ij}(0)=0\).
+
+For an integer \(T\ge3\), construct a polynomial phase with
+\[
+ \Phi(0)=0,\quad \partial\Phi(0)=P/Q,\quad
+ \partial^2\Phi(0)=r_0(U+iD)/Q
+\]
+so that
+\(E_\Phi=g^{ij}(r_0X)\partial_i\Phi\,\partial_j\Phi+Q^{-2}\)
+vanishes to order \(T\) at zero. The constant and linear equations
+are already satisfied. At homogeneous degree \(m\ge2\), the new
+term \(\Phi_{m+1}\) enters as
+\(2(P/Q)\cdot\partial\Phi_{m+1}\); everything else is known.
+Its direction has Hermitian norm between \(1\) and \(3\), so
+\eqref{eq:polyinverse} solves every equation.
+For fixed \(T\) all coefficients are uniformly bounded.
+
+Put
+\[
+ \mathcal T a=2g^{ij}(r_0X)(\partial_i\Phi)(\partial_j a)
+                          +(\mathcal L\Phi)a.
+\]
+For a finite integer \(s\ge0\), solve by homogeneous degrees for
+polynomials \(a_0,\ldots,a_s\), with \(a_0(0)=1\), \(a_j(0)=0\)
+for \(j\ge1\), such that
+\[
+ \mathcal T a_0,\qquad
+ \mathcal T a_j+\mathcal L a_{j-1}\quad(1\le j\le s)
+\]
+vanish to order \(T\).
+Again the new degree-\((m+1)\) term enters via
+\(2(P/Q)\cdot\partial\). Complete all of \(a_{j-1}\) before
+starting \(a_j\), so the second derivatives in its right-hand side
+are already determined. Every coefficient is bounded for fixed \(T,s\).
+
+Choose a real smooth cutoff \(\omega\), equal to one on the unit
+ball and supported in the radius-two ball, and define
+\begin{equation}\label{eq:packet}
+ a=\sum_{j=0}^s\kappa^{-j}a_j,\qquad
+ w(\Psi_{z,E}(r_0X))=
+ e^{kh(z)}e^{\kappa\Phi(X)}a(X)\omega(k^{1/3}X).
+\end{equation}
+It extends smoothly by zero and has the stated support radius.
+On its support \(a=1+O(k^{-1/3})\), hence \(|a|\ge1/2\).
+
+The real phase lies below the envelope to quadratic order:
+\begin{equation}\label{eq:localization}
+ \operatorname{Re}\Phi-h_{\rm sc}
+ \le k^{-3/4}|X|-c k^{-106\delta}|X|^2+C|X|^3 .
+\end{equation}
+The linear term is zero for the first three packets. On
+\(|X|\le2k^{-1/3}\), the cubic term is absorbed into half the
+quadratic deficit. The remaining maximum is
+\(O(k^{-3/2+106\delta})\); since
+\(k^{1-100\delta}\le\kappa\le k\), the exponential in
+\eqref{eq:packet} is at most \(2e^{kh}\).
+On the annulus \(\tfrac14k^{-1/3}\le|X|\le2k^{-1/3}\)
+it is at most
+\begin{equation}\label{eq:tail}
+ e^{-2k^{1/4}}e^{kh}.
+\end{equation}
+Indeed, the negative exponent has size at least
+\(ck^{1/3-206\delta}\), and the positive linear exponent is
+at most \(Ck^{-1/12}\).
+
+Direct differentiation before the cutoff gives
+\[
+\begin{split}
+ e^{-\kappa\Phi}(\mathcal L+\kappa^2/Q^2)(e^{\kappa\Phi}a)
+ ={}&\kappa^2E_\Phi a+\kappa\mathcal T a_0\\
+ &+\sum_{j=1}^s\kappa^{1-j}
+       (\mathcal T a_j+\mathcal L a_{j-1})
+       +\kappa^{-s}\mathcal L a_s .
+\end{split}
+\]
+Taylor remainders and their \(q\le J\le T\) derivatives cost
+\(|X|^{T-q}\). In ordinary coordinates a derivative of such a
+remainder costs at most \(k^{1/3+100\delta}\);
+derivatives of the exponential, amplitude and cutoff cost at
+most \(Ck^2\) each. Undoing the operator scaling gives the bound
+\begin{equation}\label{eq:accuracy}
+ Ck^{200\delta+2J}
+ \left(k^{2-T/3}+k^{1-T/3}+k^{-(1-100\delta)s}\right)e^{kh}.
+\end{equation}
+All cutoff commutators have polynomial factors times \eqref{eq:tail}.
+Choose, before \(k\),
+\[
+ T>3(M+200\delta+2J+3),\qquad
+ s>\frac{M+200\delta+2J+1}{1-100\delta}.
+\]
+Increasing the frequency threshold then proves \eqref{eq:packetres}.
+The same calculation without the operator factor proves
+\eqref{eq:packetder}, with an exponent independent of \(T,s\).
+
+At the center,
+\({\bf j}_z w=(1,P/Q)+O(\kappa^{-1})\).
+The real leading columns contain
+\((1,(|p|/Q)e_1)\) and
+\((1,(|p|/Q+k^{-3/4})e_1)\); they span the value--\(e_1\)
+plane with singular value at least \(ck^{-3/4}\).
+The imaginary columns span \(e_1^\perp\) with singular value
+at least \(ck^{-9\delta}\).
+The amplitude error is \(O(k^{-1+100\delta})=o(k^{-3/4})\).
+Through two derivatives \eqref{eq:packetder} also gives
+\(|D_x{\bf j}_z w|\le Ck^3\). Moving by \(k^{-10}\)
+changes the matrix by only \(O(k^{-7})\).
+Fixed coordinate changes have bounded inverses, so the nearby
+lower bound is \(k^{-1}\) for large \(k\).
+Every step includes \(p=0\).
+\end{proof}
+
+\subsection{Estimates on wavelength balls}
+
+The next estimates control all packets that meet a small ball,
+including packets centered outside the region where signs will be
+measured. This is needed because a value-normalized Gaussian sum
+must have bounded local derivative moments.
+
+\begin{lemma}\label{lem:scaled}
+Fix the packet orders. Let \(\mathcal W\) contain all four packets
+at each of finitely many centers, with
+\(|\mathcal W|\le Ck^{K_1}\) for fixed \(K_1\).
+Suppose every \(x\in V\) has a center within \(C_0k^{-10}\).
+Define, in the fixed chart \(\Omega\),
+\[
+ R_x=(kQ_x)^{-1},\quad
+ S_x^2=\sum_{w\in\mathcal W}|w(x)|^2,\quad
+ w_x(Y)=w(x+R_xY),\quad |Y|\le2.
+\]
+For packets whose support meets this ball, let \(X_z\) denote
+their own centered scaled coordinates. Call them non-tail when
+\(|X_z(x)|<\tfrac12k^{-1/3}\), and tail otherwise.
+For every fixed \(j\ge0\),
+\begin{align}
+ S_x&\ge ce^{kh(x)},\label{eq:variance}\\
+ \sup_{|Y|\le2}|D_Y^jw_x(Y)|
+ &\le C_j|w(x)| &&\text{for non-tails},\label{eq:nontail}\\
+ \sup_{|Y|\le2}|D_Y^jw_x(Y)|
+ &\le C_j e^{-k^{1/4}}e^{kh(x)}
+                         &&\text{for tails}.\label{eq:abstail}
+\end{align}
+Every non-tail has nonzero center value and cutoff identically
+one on the ball, and
+\begin{equation}\label{eq:imaginary}
+ \left|\operatorname{Im}\frac{\dd_Yw_x}{w_x}(0)\right|\ge c.
+\end{equation}
+Consequently,
+\begin{equation}\label{eq:squares}
+ S_x^{-2}\sum_w\sup_{|Y|\le2}|D_Y^jw_x|^2\le C_j,\qquad
+ S_x^{-2}\sum_{\text{non-tail }w}|w(x)|^2=1-o(1).
+\end{equation}
+Constants and thresholds may depend on the fixed pair, orders
+and \(K_1,C_0\), but not on \(k,x\).
+\end{lemma}
+
+\begin{proof}
+The envelope gives \(|D Q|\le Ck^{4\delta}\).
+Any intersecting packet center has
+\[
+ |z-x|\le Ck^{-1/3-100\delta}+C/k,\qquad
+ |Q_z-Q_x|\le Ck^{-1/3-96\delta}+Ck^{-1+4\delta}=o(1).
+\]
+All such centers and balls lie in a common compact subchart for
+large \(k\). Since \(Q\ge1\), the ratios \(Q_z/Q_x\) and the
+corresponding ratios throughout the ball are bounded above and
+below. From \(|\dd h|\le C Q\),
+\[
+ k|h(x+R_xY)-h(x)|\le C \quad(|Y|\le2).
+\]
+The nearest center has \(|X_z(x)|=O(k^{-10+100\delta})\).
+Its center value and nearby jet estimates yield
+\(|w(x)|\ge ce^{kh(x)}\) for one of its packets, proving
+\eqref{eq:variance}.
+
+With \(\kappa_z=kr_0Q_z\), fixed normal-chart bounds give
+\[
+ |D_Y^qX_z|\le C_qr_0^{-1}R_x^q,\qquad
+ \kappa_z|D_Y^qX_z|\le
+ C_q(Q_z/Q_x)(kQ_x)^{1-q}\le C_q\quad(q\ge1).
+\]
+For \(q=1\),
+\(\kappa_z D_YX_z=(Q_z/Q_x)D_x\xi_z\) has a uniformly
+bounded inverse. The displacement of \(X_z\) on the ball is
+\(O(k^{-1+100\delta}/Q_x)=o(k^{-1/3})\).
+
+For a tail, any point where the cutoff or its derivatives
+contribute satisfies
+\(\tfrac14k^{-1/3}\le|X_z|\le2k^{-1/3}\).
+Use \eqref{eq:tail}. Each fixed positive \(Y\)-derivative of
+\(\kappa_z\Phi(X_z)\) is bounded by the preceding estimates;
+products with \(m\) derivatives of \(X_z\) leave
+\(\kappa_z^{1-m}\le1\).
+Amplitude derivatives are bounded, and
+\(k^{1/3}/\kappa_z\le k^{-2/3+100\delta}\le1\)
+controls cutoff derivatives. The exponential estimate therefore
+gives \eqref{eq:abstail}, even when \(w(x)=0\).
+
+For a non-tail the cutoff stays one on the ball and the amplitude
+is bounded away from zero. The same derivative bounds control
+the logarithmic derivative and all higher derivatives relative
+to \(|w_x|\). Integrating its real logarithmic derivative along
+straight segments gives \(|w_x(Y)|\le C|w(x)|\), proving
+\eqref{eq:nontail}.
+Moreover,
+\[
+ \operatorname{Im}\partial_X\Phi(X_z(x))
+       =(Q'/Q_z)v+O(k^{-1/3}).
+\]
+Its leading norm is at least one, so the inverse bound on
+\(\kappa_zD_YX_z\) gives a positive imaginary \(Y\)-gradient.
+The amplitude's logarithmic derivative is only
+\(O(k^{-1+100\delta}/Q_x)=o(1)\), which proves
+\eqref{eq:imaginary}. Squaring the tail bounds and using
+\eqref{eq:variance} bounds their total normalized contribution
+by \(C_j k^{K_1}e^{-2k^{1/4}}=o(1)\).
+The non-tail contributions are controlled by their center
+values. The definition of \(S_x\) then proves \eqref{eq:squares}.
+\end{proof}

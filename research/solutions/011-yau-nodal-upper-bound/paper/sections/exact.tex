@@ -1,0 +1,432 @@
+\section{An exact simple eigenfunction after a small perturbation}
+\label{sec:exact}
+
+Fix the input pair, \(l_-,l_+\), and put
+\(w_{\rm c}=l_+-l_->0\),
+\(s_i=l_-+i w_{\rm c}/5\) for \(1\le i\le4\).
+For the allowed \(k=\sqrt{N(N+3)}\), let
+\[
+ b_N(t)=\frac{N}{2k}\log(1-t).
+\]
+Choose the additive constant in the envelope so that
+\(h(s_2)=b_N(s_2)\). It is bounded uniformly in \(N\).
+For the fixed small \(a_*\), and all sufficiently large \(N\),
+\[
+ \partial_t(h-b_N)
+       =-a_*+\frac{N}{2k(1-t)}\ge c_0>0
+       \quad(0\le t\le1/2).
+\]
+It follows that
+\begin{equation}\label{eq:gluegaps}
+ h\le b_N-c w_{\rm c}\ (t\le s_1),\qquad
+ h\ge b_N+c w_{\rm c}\ (s_3\le t\le s_4).
+\end{equation}
+Take \(0\le\beta\le1\), equal to one for \(t\le s_3\) and
+zero for \(t\ge s_4\). The smooth positive weight
+\begin{equation}\label{eq:weight}
+ W=e^{kh}+\beta(t)e^{kb_N(t)}
+\end{equation}
+uses a zero extension of the second summand.
+The pair is round on the support of \(\beta\).
+Thus \((L+k^2)(\beta u_*)\) is only a cutoff commutator.
+Its support lies in the exponential gap of \eqref{eq:gluegaps}.
+For every fixed \(q\ge0\) and \(M>0\),
+\begin{equation}\label{eq:beamweight}
+ |D^q(\beta u_*)|\le C_qk^qW,\quad
+ |D^q(L+k^2)(\beta u_*)|\le C_{q,M}k^{-M}W,\quad
+ |\dd W|/W\le Ck^2 .
+\end{equation}
+Derivatives of the fixed collar cutoff can depend on \(w_{\rm c}\);
+the positive gap absorbs them when \(k\) is sufficiently large.
+
+\subsection{A real sample with a nonvanishing first jet}
+
+Choose a net in \(\{t\ge s_1\}\) of mesh at most \(k^{-10}\).
+There are at most \(Ck^{40}\) centers. At each take the four
+packets of Proposition~\ref{prop:packets}, and denote the collection
+by \(\mathcal W_k\). Use independent standard real Gaussian
+coefficients \(g_v^{(1)},g_v^{(2)}\) and set
+\begin{equation}\label{eq:random}
+ u=\beta u_*+\sum_{v\in\mathcal W_k}
+       (g_v^{(1)}\operatorname{Re}v+
+                         g_v^{(2)}\operatorname{Im}v).
+\end{equation}
+Let \(\mathcal B_k\) be the event that all coefficients have
+absolute value at most \(k\). The elementary Gaussian tail bound gives
+\(\Prob(\mathcal B_k^c)\le Ck^{40}e^{-k^2/2}\to0\).
+
+Given finite \(J\ge2\) and \(M>0\), choose the packet residual
+orders through \(J\) to exceed \(M+42\). On \(\mathcal B_k\),
+their number, \eqref{eq:packetder} and \eqref{eq:beamweight} give
+\begin{equation}\label{eq:samplebounds}
+ |D^q u|\le C_qk^{2q+41}W,\qquad
+ |D^q\mathfrak r|\le C_qk^{-M}W\quad(0\le q\le J),\qquad
+ \mathfrak r=\Div_\mu(A\,\dd u)+k^2\rho u.
+\end{equation}
+All orders are chosen before \(k\).
+Every packet vanishes for
+\(t<s_1-Ck^{-1/3-100\delta}\), so in that region \(u=u_*\)
+and \(\mathfrak r=0\).
+
+\begin{lemma}\label{lem:jet}
+For every fixed choice of packet orders,
+\[
+ \Prob\left(\mathcal B_k\cap
+   \left\{\inf_B\frac{|u|+|\dd u|_{g_0}}{W}\ge k^{-500}\right\}\right)
+ \longrightarrow1 .
+\]
+\end{lemma}
+
+\begin{proof}
+Where \(W/e^{kh}>k^{50}\), the cutoff is one for large \(k\),
+by \eqref{eq:gluegaps}. The cosine and angular derivative of
+the uncut beam give
+\(|u_*|+|\dd u_*|_{g_0}\ge ce^{kb_N}\).
+On \(\mathcal B_k\) the packet first jets are at most
+\(Ck^{43}e^{kh}\), so the beam dominates there and gives a
+lower bound \(cW\). This region includes \(t<s_1\).
+
+In the remaining region there is a nearby center. The real
+jet spanning from Proposition~\ref{prop:packets}, converted
+to ordinary derivatives, gives a covariance matrix for the
+five-dimensional value--gradient vector whose least eigenvalue
+has square root at least
+\[
+ ck^{-1}e^{kh}\ge ck^{-51}W\ge k^{-52}W.
+\]
+One packet family suffices; others add nonnegative covariance.
+The deterministic beam shifts only the mean.
+Hence the density of the normalized vector
+\(\mathcal J=W^{-1}(u,\partial_1u,\ldots,\partial_4u)\)
+is at most \(Ck^{260}\). For fixed \(C_0,D>0\),
+\begin{equation}\label{eq:smallball}
+ \Prob(|\mathcal J(x)|\le C_0k^{-D})\le Ck^{260-5D}.
+\end{equation}
+This is an unconditional Gaussian estimate.
+
+On \(\mathcal B_k\), two derivatives in
+\eqref{eq:samplebounds} and \(|\dd W|/W\le Ck^2\) give
+\(|D\mathcal J|\le Ck^{45}\le k^{46}\).
+In a finite atlas take grids of mesh \(k^{-D-48}\), with
+at most \(Ck^{4D+192}\) points. Apply \eqref{eq:smallball}
+at the Gaussian-region grid points and the beam bound elsewhere.
+The union bound is \(Ck^{452-D}\). With \(D=500\) it tends
+to zero, while the interpolation error is \(O(k^{-D-2})\).
+Choose \(C_0\) to cover the fixed coordinate norm comparisons.
+This yields the stated global first-jet bound, after also
+subtracting \(\Prob(\mathcal B_k^c)\).
+The use of \(\mathcal B_k\) is confined to derivative control
+and interpolation, not to the Gaussian density calculation.
+\end{proof}
+
+\subsection{Many strict signs at the local wavelength}
+
+\begin{lemma}\label{lem:signs}
+For fixed packet orders there are \(p_*,c_*>0\) such that,
+for all sufficiently large allowed \(k\), \(u\) has a sign
+certificate of size at least \(c_*k^{1+\gamma}\) with
+probability at least \(p_*\). Potential disks can be fixed
+deterministically before sampling.
+\end{lemma}
+
+\begin{proof}
+In \(V\), use radii \(R_x=(kQ_x)^{-1}\).
+Since \(|D Q|\le Ck^{4\delta}\), intersecting balls have
+comparable \(Q\)'s and radii for large \(k\).
+At a fixed \(k\) these radii have a positive minimum.
+Choose a finite maximal disjoint family
+\(\{B(x,R_x):x\in\mathcal X_k\}\).
+Fixed enlargements cover \(V\), and \(Q\) is comparable
+to \(Q_x\) in each enlargement. Therefore
+\begin{equation}\label{eq:packing}
+ \int_V kQ\,\dd x\le C\sum_{x\in\mathcal X_k}
+             kQ_xR_x^4=C\sum_xR_x^3,\qquad
+ \sum_xR_x^3\ge ck^{1+\gamma}.
+\end{equation}
+The latter inequality uses the integral in \eqref{eq:envelope}.
+
+The beam vanishes on radius-two enlargements of these balls.
+On one define
+\[
+ S_x^2=\sum_v|v(x)|^2,\qquad
+ U_x(Y)=u(x+R_xY)/S_x,\quad |Y|\le2.
+\]
+Lemma~\ref{lem:scaled} gives all fixed-order squared derivative
+bounds after this normalization, and the non-tail value fraction
+is \(1-o(1)\). The value \(U_x(0)\) is a standard real Gaussian.
+
+Let \(z\) be the coefficient vector with pair
+\((\operatorname{Re}v(x),\operatorname{Im}v(x))\) for each packet,
+and \(T\) the matrix of their four real \(Y\)-derivatives at zero.
+Then \(|z|=S_x\), and the gradient covariance conditional on
+the value is
+\begin{equation}\label{eq:condcov}
+ S_x^{-2}T\left(I-\frac{zz^{\mathsf t}}{S_x^2}\right)T^{\mathsf t}.
+\end{equation}
+The formula follows by an orthogonal decomposition of the
+standard Gaussian coefficient vector along \(z\).
+For each non-tail, the unit coefficient direction
+\[
+ c_v=(-\operatorname{Im}v(x),\operatorname{Re}v(x))/|v(x)|
+\]
+is perpendicular to \(z\); these directions are mutually
+orthonormal, and
+\[
+ T c_v=|v(x)|\operatorname{Im}\frac{\dd_Yv}{v}(0).
+\]
+Equations~\eqref{eq:imaginary} and \eqref{eq:squares} give a
+fixed positive trace lower bound in \eqref{eq:condcov}.
+There is a deterministic unit direction \(e_x\) such that
+\(Z_x=\partial_{e_x}U_x(0)\), conditional on \(U_x(0)\),
+has variance between fixed positive constants. Unconditional
+variance and the regression coefficient are bounded above
+by the derivative square sums.
+
+Those same estimates through order five, integrated on
+\(B(0,2)\subset\R^4\), give
+\begin{equation}\label{eq:c2moment}
+ \E\|U_x\|_{C^2(\overline{B(0,1)})}^2
+ \le C\,\E\|U_x\|_{H^5(B(0,2))}^2\le C.
+\end{equation}
+The Sobolev inequality here is the \(k=5,m=2,p=2,n=4\)
+case of \cite[Theorem~3.49, p.~76]{Hunter}.
+In particular, it controls the Euclidean gradient and
+Hessian operator norms.
+
+Take \(a'=1/4\), \(0<c'<a'/4\). For each sufficiently large
+fixed \(H\), the conditional Gaussian density gives
+\[
+ \Prob(1\le Z_x\le2,\ |U_x(0)|<c'/H)\ge c_1/H.
+\]
+Its conditional mean is bounded on the indicated value interval,
+and its conditional variance stays above and below fixed
+positive numbers. Markov's inequality applied to
+\eqref{eq:c2moment} costs at most \(C/H^2\) for the
+failure of \(\|U_x\|_{C^2}\le H\).
+Fix \(H\) large enough so the intersection has probability
+\(\pi_*=c_1/(2H)>0\).
+
+Taylor's formula at \(\pm a'e_x/H\) now gives opposite
+values of absolute size at least \(a'/(2H)\).
+The gradient bound keeps those signs on the parallel transverse
+disks of radius \(\sigma_*=a'/(4H^2)\).
+Their joining cylinder lies inside the unit ball.
+The directions, disks and radii are deterministic; only success
+depends on the Gaussian sample.
+
+Let \(F_k\) be the fraction of successful balls weighted by
+\(R_x^3\). Then \(0\le F_k\le1\), \(\E F_k\ge\pi_*\).
+Writing \(q=\Prob(F_k\ge\pi_*/2)\) gives
+\(\pi_*\le(\pi_*/2)(1-q)+q\), hence
+\[
+ \Prob(F_k\ge\pi_*/2)\ge\pi_* /(2-\pi_*)>0.
+\]
+No independence between balls is needed.
+Each disk has three-area proportional to
+\(\sigma_*^3R_x^3\). Summing and using \eqref{eq:packing}
+proves the lemma.
+\end{proof}
+
+After all finite orders are fixed, Lemma~\ref{lem:signs}
+has one positive probability \(p_*\), while failure in
+Lemma~\ref{lem:jet} tends to zero.
+For every sufficiently large allowed \(k\), probability
+subtraction therefore gives a real sample satisfying
+\eqref{eq:samplebounds}, the global first-jet lower bound,
+and a certificate of size \(c_*k^{1+\gamma}\).
+
+\subsection{Canceling the residual exactly}
+
+\begin{lemma}\label{lem:repair}
+Suppose the first-jet bound in Lemma~\ref{lem:jet} holds.
+For an integer \(R\ge0\), assume the derivative bounds
+\eqref{eq:samplebounds} for \(u\) through \(R+2\) and for
+\(\mathfrak r\) through \(R+1\). There are smooth real corrections
+to the pair, zero on every open set where \(\mathfrak r=0\), such that
+\[
+ \Div_\mu((A+\delta A)\dd u)+k^2(\rho+\delta\rho)u=0,\qquad
+ \|(\delta A,\delta\rho)\|_{C^R}
+       \le C_Rk^{-M+2129+1088R}.
+\]
+Thus \(M\ge2131+1088R\) gives corrections tending to zero in \(C^R\).
+\end{lemma}
+
+\begin{proof}
+Put \(I=g_0^{-1}\), and define
+\begin{equation}\label{eq:repair}
+ \mathcal D=u^2+I(\dd u,\dd u),\quad
+ F=-\mathfrak r/\mathcal D,\quad
+ \delta A=FuI,\quad
+ \delta\rho=k^{-2}\bigl(Fu-\Div_\mu(FI\dd u)\bigr).
+\end{equation}
+The first-jet bound implies
+\(\mathcal D\ge \tfrac12 k^{-1000}W^2>0\).
+Consequently all four expressions are globally smooth. The product rule
+gives
+\[
+ \Div_\mu(FuI\dd u)
+   +\bigl(Fu-\Div_\mu(FI\dd u)\bigr)u
+     =F\bigl(u^2+I(\dd u,\dd u)\bigr)=-\mathfrak r.
+\]
+This is the required exact identity.
+
+For \(0\le q\le R+1\), the bounds on \(u\) give
+\[
+ |D^q\mathcal D|\le C_q k^{2q+86}W^2.
+\]
+A derivative of order \(q\ge1\) of \(\mathcal D^{-1}\) is a sum
+of terms
+\(\mathcal D^{-m-1}\prod_{\nu=1}^m D^{q_\nu}\mathcal D\),
+where \(q_\nu\ge1\), \(\sum q_\nu=q\), and \(m\le q\).
+The lower bound for \(\mathcal D\) therefore yields, also at order zero,
+\[
+ |D^q\mathcal D^{-1}|
+    \le C_q k^{1000+1088q}W^{-2},\qquad
+ |D^qF|\le C_q k^{-M+1000+1088q}W^{-1}.
+\]
+These are estimates on already differentiated factors; they do not
+differentiate \(W^{-1}\).
+Multiplication by derivatives of \(u\) cancels the weights and gives
+\[
+ |D^q(Fu)|\le C_qk^{-M+1041+1088q},\qquad
+ |D^q(FI\dd u)|\le C_qk^{-M+1043+1088q}.
+\]
+The divergence in \eqref{eq:repair} costs one derivative, followed
+by \(k^{-2}\). Its exponent is
+\(1043+1088(R+1)-2=2129+1088R\), as stated.
+If \(\mathfrak r\) vanishes on an open set, then \(F\) and its
+derivatives vanish there, so both corrections vanish there.
+For sufficiently large \(k\) they preserve positivity, since the
+input pair is positive on a compact manifold.
+\end{proof}
+
+\subsection{Making the eigenvalue simple while retaining its eigenfunction}
+
+\begin{lemma}\label{lem:simple}
+Suppose \(u\) is an exact real eigenfunction at \(k^2=N(N+3)\),
+with \(N>1\). Suppose the pair is round and \(u=u_*\) on an open
+region containing a point where \(0<t<1\) and \(\dd u,\dd t\)
+are independent. A smooth tensor perturbation supported there can
+make \(k^2\) simple while retaining \(u\) and \(\rho\).
+Its size can be arbitrarily small in any prescribed finite \(C^R\) norm.
+\end{lemma}
+
+\begin{proof}
+Take a small product coordinate patch \(O\) with coordinates
+\((u,t,z_3,z_4)\). Choose a nonnegative bump \(\chi\) supported
+inside \(O\), positive on a smaller product patch \(O_0\). On \(O\) put
+\[
+ E=\chi\left(I-
+   \frac{(I\dd u)\otimes(I\dd u)}{I(\dd u,\dd u)}\right),
+ \qquad I=g_0^{-1},
+\]
+and extend it by zero. The tensor is smooth, nonnegative and
+\(E\dd u=0\). Let \(\mathcal E\) be the old real eigenspace at
+\(k^2\). We first show that the kernel on \(\mathcal E\) of
+\(\int_B E(\dd f,\dd f)\dd\mu\) is exactly \(\R u\).
+
+If the integral is zero, positivity on \(O_0\) gives
+\(\dd f\in\R\,\dd u\) there. On its product coordinates this
+means \(f=b(u)\), with \(b\) smooth. The round equations imply
+\begin{equation}\label{eq:composition}
+ b''(u)|\dd u|_{g_0}^2=k^2\bigl(ub'(u)-b(u)\bigr).
+\end{equation}
+The ambient gradient of \(\operatorname{Re}(x_1+i x_2)^N\)
+has squared norm \(N^2(1-t)^{N-1}\) and radial derivative \(Nu\).
+Projection to the tangent space of the sphere gives
+\[
+ |\dd u|_{g_0}^2=N^2\bigl((1-t)^{N-1}-u^2\bigr).
+\]
+Differentiate \eqref{eq:composition} in the coordinate \(t\),
+holding \(u\) fixed. Since \(N>1\) and \(t<1\), this gives
+\(b''=0\); substitution eliminates the constant term of \(b\).
+Thus \(f=cu\) on \(O_0\).
+The difference satisfies a smooth uniformly elliptic second-order
+equation. Aronszajn's theorem \cite[pp.~235--236]{Aronszajn}
+applies: the smooth principal coefficients satisfy its
+\(C^2\) and Lipschitz-second-derivative requirements, and the
+lower-order coefficients are bounded locally. Open-set vanishing
+gives infinite-order vanishing at an interior point. Unique
+continuation, applied in overlapping charts on connected \(B\),
+therefore gives \(f=cu\) globally.
+
+Now replace \(A\) by \(A+\tau E\), with \(\tau>0\).
+The same \(u\) still solves the exact equation at \(k^2\).
+If that eigenvalue were not simple for arbitrarily small positive
+\(\tau\), there would be \(\tau_m\downarrow0\) and corresponding
+real eigenfunctions \(f_m\), of unit weighted \(L^2\) norm and
+orthogonal to \(u\). Their energy identity
+\[
+ \int_B(A+\tau_mE)(\dd f_m,\dd f_m)\dd\mu=k^2
+\]
+bounds them in \(H^1\). Weak \(H^1\) compactness and compact
+\(H^1\hookrightarrow L^2\) give a subsequence converging to
+a norm-one \(f_0\) orthogonal to \(u\).
+The weak equation passes to the limit; local elliptic regularity
+makes \(f_0\) smooth, so \(f_0\in\mathcal E\).
+For any fixed \(\phi\in\mathcal E\), testing the old equation
+against \(f_m\) and the perturbed one against \(\phi\), then
+subtracting and dividing by \(\tau_m\), gives
+\[
+ \int_B E(\dd f_m,\dd\phi)\dd\mu=0.
+\]
+Weak convergence preserves this identity. Taking \(\phi=f_0\)
+places \(f_0\) in the kernel already shown to be \(\R u\),
+which contradicts its norm and orthogonality.
+Thus every sufficiently small positive \(\tau\) makes \(k^2\)
+simple. The tensor \(E\) is fixed before this scalar is chosen,
+so \(\tau E\) can meet any finite derivative tolerance.
+The compactness and regularity used here are justified explicitly
+in Lemma~\ref{lem:persistence} below.
+\end{proof}
+
+\subsection{Completion of the quantitative step}
+
+\begin{proof}[Proof of Proposition~\ref{prop:step}]
+Fix the pair, collar, \(r,\eta\). Choose \(R\ge\max(r,1)\) and
+a smaller positive tolerance \(\eta'\) such that movement
+less than \(\eta'\) in \(C^R\) implies the desired \(C^r\)
+bound and keeps the pair positive and inside \(\mathcal U\).
+This is possible because the fixed input is in the open neighborhood.
+Set \(J=R+2\), take \(M\ge2131+1088R\), and then choose the
+finite packet orders for \eqref{eq:samplebounds}.
+These choices precede the frequency.
+
+For every sufficiently large allowed \(k\), the simultaneous
+sample above has a certificate of size \(c_*k^{1+\gamma}\)
+and the hypotheses of Lemma~\ref{lem:repair}.
+Choose \(k\) sufficiently large that its correction is smaller
+than \(\eta'/2\) in \(C^R\).
+The protected round region remains nonempty for every fixed
+collar width: it suffices to require
+\begin{equation}\label{eq:collarthreshold}
+ Ck^{-1/3-100\delta}<w_{\rm c}/100,\qquad
+ c w_{\rm c}k>(M'+P)\log k+\log C_q(w_{\rm c}).
+\end{equation}
+The second inequality makes a cutoff error
+\(C_q(w_{\rm c})k^P e^{-c w_{\rm c}k}\) smaller than
+\(k^{-M'}\). There are only finitely many derivative orders
+and accuracy targets at this stage, so all these inequalities
+hold for every sufficiently large \(k\).
+Below \(s_1-w_{\rm c}/100\), \(u=u_*\) and the residual and
+corrections vanish.
+
+In \(l_-+w_{\rm c}/20<t<l_-+w_{\rm c}/10\), choose a point
+where \(\sin(N\vartheta)\ne0\). Here \(\dd t\ne0\) and
+the angular derivative of \(u_*\) is nonzero, so \(\dd u,\dd t\)
+are independent. Apply Lemma~\ref{lem:simple}. After \(k\)
+and the sample have been fixed, choose its scalar \(\tau\)
+below the simplicity threshold with
+\(\|\tau E\|_{C^R}<\eta'/2\).
+All derivatives of \(E\) are finite at this stage; their possible
+growth with \(k\) causes no obstruction to this later choice.
+The perturbation is supported in \(t>l_-\).
+It preserves the function, eigenvalue and signs exactly.
+
+The final pair is round for \(t<l_-\), meets the norm tolerance,
+and has a simple eigenvalue and the required certificate.
+The number \(c_*>0\) is fixed before the universal choice of
+large frequency. The exponent \(\gamma\), chart \(\Omega\)
+and neighborhood \(\mathcal U\) were fixed earlier, independent
+of all the finite orders, tolerances and collar widths.
+\end{proof}

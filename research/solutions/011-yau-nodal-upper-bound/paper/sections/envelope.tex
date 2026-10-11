@@ -1,0 +1,321 @@
+\section{A common power gain in the envelope}\label{sec:envelope}
+
+We construct \(h=h_k\) with a positive test \eqref{eq:test} wherever
+packets will be centered, while making the integral of its local
+oscillation scale grow by a power of \(k\).
+
+\begin{proposition}\label{prop:envelope}
+There are a small \(C^1\) neighborhood \(\mathcal G\) of \(g_0\),
+fixed regions \(V\Subset\Omega\subset\{t>1/2\}\), and common
+\(a_*,c,\gamma>0\), such that every fixed smooth \(G\in\mathcal G\)
+admits envelopes \(h_k\) satisfying
+\begin{equation}\label{eq:envelope}
+\begin{gathered}
+ h_k=-a_*t+c_k\quad(t\le1/2),\qquad
+ \|h_k\|_{C^j}\le C_j k^{\delta(j+1)}\quad(j\ge0),\\
+ \max_e J_{h_k}(e)\ge c k^{-\delta}\quad(t\ge1/4),\qquad
+ \int_V(1+|\nabla_Gh_k|_G^2)^{1/2}\,\dd x\ge c k^\gamma .
+\end{gathered}
+\end{equation}
+The additive constants \(c_k\) may be any prescribed bounded sequence.
+For each fixed derivative order the constant and frequency threshold
+can depend on that order and on the fixed smooth metric.
+The exponent \(\gamma\) is independent of these orders, all later
+residual accuracies, and all round gluing collars.
+\end{proposition}
+
+\subsection{A seed and a repeated local modification}
+
+The round seed \(\widetilde h=-a_*t\) obeys
+\[
+ |\nabla_{g_0}\widetilde h|^2=4a_*^2t(1-t),\qquad
+ \nabla_{g_0}^2\widetilde h=2a_*(tg_0-\dd y\cdot\dd y).
+\]
+Since \(\dd y:T_xB\to\R^3\) has a four-dimensional domain, there
+is a unit vector in its kernel. It is an admissible test, with Hessian
+value \(2a_*t\). The Hessian norm is at most \(2a_*\), so for
+\(t\ge1/4\) and \(a_*^2\le1/8\),
+\[
+ J_{\widetilde h}(e)\ge a_*/2-2a_*^3\ge a_*/4.
+\]
+At a point with \(t=1\), the Hessian has two eigenvalues \(2a_*\)
+and two zero eigenvalues. Add a sufficiently small smooth quadratic
+bump there, supported in \(\{t>1/2\}\), to make the Hessian positive
+definite at that point. Throughout the bump support two positive
+directions remain and the gradient stays sufficiently small. Their
+two-plane intersects \(\ker\dd h\), leaving a positive test even at
+a critical point. Away from that support the old kernel test applies.
+Choose a nearby region \(U_0\) where the Hessian is positive definite
+and the gradient is separated from zero. These properties persist in
+a common small \(C^1\) metric neighborhood: the Hessian of a fixed
+function changes by the connection difference contracted with its
+differential. Fix \(U_0\Subset V\Subset\Omega\).
+
+A cube \(P\) of side \(\nu S\), \(S\le1\), is called prepared for \(h\)
+if, on its closure,
+\begin{equation}\label{eq:prepared}
+\begin{gathered}
+ |\nabla h|>0,\qquad
+ |\nabla^2h|\le C_{\rm p}|\nabla h|/S,\\
+ \text{there is a two-plane }E\subset\ker\dd h
+ \text{ with }J_h(e)\ge c_{\rm p}|\nabla h|/S
+ \text{ for every unit }e\in E.
+\end{gathered}
+\end{equation}
+The plane need not depend continuously on the point. The seed is
+prepared at scale \(1\) on a sufficiently small cube in \(U_0\),
+for fixed large \(C_{\rm p}\) and small \(c_{\rm p}>0\).
+
+\begin{lemma}\label{lem:corrugation}
+One can fix a reciprocal integer \(\nu>0\), constants
+\(0<\alpha\le1\le\beta\), and \(\zeta>0\), uniformly under the
+common metric bounds, so that every prepared parent \(P\) admits a
+smooth modification \(v=h+w\), supported in its interior, with
+\[
+ \alpha|\nabla h|\le|\nabla v|\le\beta|\nabla h|,\qquad
+ \max_eJ_v(e)\ge c|\nabla h|/S.
+\]
+Put \(\ell=\nu^2S\). Some cubes of side \(\nu\ell\) inside \(P\)
+are prepared at scale \(\ell\), with the same constants, and their
+union \(\mathcal R_P\) has
+\begin{equation}\label{eq:gain}
+ \int_{\mathcal R_P}|\nabla v|\,\dd x
+ \ge(1+\zeta)\int_P|\nabla h|\,\dd x.
+\end{equation}
+If \(s=|\nabla h(x_P)|\) at the parent center, then
+\begin{equation}\label{eq:increment}
+ \|D^jw\|_\infty\le C_j s\ell^{1-j}\qquad(j\ge0).
+\end{equation}
+Neither the modification nor these bounds use higher derivatives
+of the input \(h\).
+\end{lemma}
+
+\begin{proof}
+Choose a smooth \(F:[0,1]\to\R\), positive inside, equal to its
+argument near zero and flat at one. In a finite collection of
+disjoint balls of radii \(R_i\) in a unit three-cube, define
+\[
+ \psi(r)=-\int_r^{R_i}F(q/R_i)\,\dd q,\qquad
+ f=F(r/R_i),\qquad u_0=f/r.
+\]
+Extend by zero and periodically. At the center \(\psi\) is a constant
+plus \(r^2/(2R_i)\), so it is smooth there; flatness makes the boundary
+extension smooth. With radial unit vector \(\sigma\),
+\begin{equation}\label{eq:radial}
+ D\psi=f\sigma,\qquad
+ D^2\psi=f'\sigma\otimes\sigma+u_0(I-\sigma\otimes\sigma).
+\end{equation}
+The inequalities \(f^2|f'|\le C u_0\) and \(f^2\le C u_0\) hold.
+The first constant does not depend on a ball radius, since
+\(f^2|f'|/u_0=vF(v)|F'(v)|\), \(v=r/R_i\).
+Also \(u_0=0\) implies \(f=f'=\psi=0\).
+At a center the radial Hessian is independent of the choice of \(\sigma\).
+
+Fix a small amplitude \(a>0\) using that radius-independent bound.
+The mean gradient factor inside any ball is
+\[
+ m(a)=3\int_0^1v^2\sqrt{1+a^2F(v)^2}\,\dd v>1.
+\]
+Let \(\eta_0=(m(a)-1)/8\). Choose the finite packing to have volume
+fraction \(\varpi\) with \(\varpi m(a)>1+6\eta_0\). Such finite
+packings can approach full volume: finitely many grid cubes capture
+a fixed fraction of any remaining open volume; smaller inscribed
+balls capture a fixed fraction of those cubes. Repeating this
+finitely often leaves an arbitrarily small uncovered volume and
+keeps closures disjoint. Reduce each ball to a concentric core
+of relative radius \(1-\eta_{\rm c}\), so that the integral per
+period over the cores is \(C_{\rm core}>1+5\eta_0\).
+Choose an inner-parent volume fraction \(q_{\rm in}<1\) with
+\(q_{\rm in}C_{\rm core}>1+4\eta_0\).
+A smooth parent cutoff \(\chi\), equal to one on that inner cube
+and flat on its zero set, is now fixed.
+
+Take affine coordinates \(z=(z_1,z')\) that make the metric
+Euclidean at \(x_P\) and \(\nabla h(x_P)=s\partial_{z_1}\).
+The preparation bound and the common connection bound give
+\(|D(\dd h)|\le C|\dd h|/S\). Integration along parent segments
+of length \(O(\nu S)\) gives
+\begin{equation}\label{eq:parent}
+ \dd h/s=\dd z_1+O(\nu),\qquad G_{ij}=I+O(\nu),
+ \qquad |\nabla h|/s=1+O(\nu).
+\end{equation}
+Rescale \(\chi\) to the parent and set
+\begin{equation}\label{eq:modify}
+ v=h+s\ell a\chi\psi(z'/\ell).
+\end{equation}
+The ratio between the pattern scale and cutoff scale is \(\nu\);
+hence
+\(\dd v/s=\dd z_1+a\chi f\sigma\cdot\dd z'+O(\nu)\).
+This proves the gradient comparison.
+
+We give the Hessian check also where the favorable coefficient
+vanishes. Put \(D=\nabla v/\sqrt{1+|\nabla v|^2}\) and
+\[
+ \mathcal F=\{e:\dd v(e)=0,\ \sigma\cdot e'=0\}.
+\]
+This is a two-plane. For metric-unit \(e\in\mathcal F\),
+\[
+ |e'|^2\ge1/2,\qquad |\sigma\cdot D'|\le C_0a\chi f+C\nu.
+\]
+After dividing the new Hessian test by \(s/\ell\), its principal
+contribution from \eqref{eq:radial} is
+\[
+ a\chi\{f'(\sigma\cdot D')^2+
+            u_0(|\Pi_{\sigma^\perp}D'|^2+|e'|^2)\}.
+\]
+Choose \(a\) so that
+\(2C_0^2a^2\sup_v vF(v)|F'(v)|\le1/4\).
+The displayed expression is then at least
+\(a\chi u_0/4-Ca\nu^2\chi|f'|\).
+Mixed cutoff terms on \(e,e\) vanish. On \(D,D\) they are bounded by
+\[
+ C\nu f|D_{\rm sc}\chi|(\chi f+\nu).
+\]
+The remaining cutoff and connection errors are bounded by
+\[
+ C\nu^2|\psi||D_{\rm sc}^2\chi|
+       +C\ell(\chi f+\nu).
+\]
+Here \(D_{\rm sc}\) denotes differentiation at the parent cutoff scale.
+
+Let \(X=\chi u_0\). On the compact set of cutoff and period positions
+and bounded affine frames, every continuous \(b\ge0\) that vanishes
+when \(X=0\) satisfies
+\[
+ \sup\frac{\nu^2b}{X+\nu^2}\longrightarrow0.
+\]
+For \(X\ge\tau\), bound the ratio by \(\nu^2\sup b/\tau\);
+for \(X<\tau\), bound it by \(\sup_{X<\tau}b\), then let
+\(\tau\downarrow0\). Apply this to
+\(\chi|f'|,\ f|D_{\rm sc}\chi|,\ |\psi||D_{\rm sc}^2\chi|\);
+their vanishing follows from flatness and \(u_0=0\Rightarrow f=f'=\psi=0\).
+The other mixed term is \(O(\nu X)\), and
+\(\chi f\le C\sqrt X\), \(\ell\le\nu^2\) imply
+\(\ell(\chi f+\nu)/(X+\nu^2)=O(\nu)\).
+Consequently, uniformly over admissible parents,
+\begin{equation}\label{eq:newhessian}
+ \frac{\ell}{s}\{\nabla^2(v-h)(D,D)+\nabla^2(v-h)(e,e)\}
+ \ge c_aX-\varepsilon(\nu)(X+\nu^2),\qquad
+ \varepsilon(\nu)\to0.
+\end{equation}
+
+The old Hessian is \(O(\nu^2)\) in these normalized units.
+If \(X/\nu^2\to\infty\), the new positive term dominates it.
+If this ratio stays bounded, the old and new gradients differ by a
+relative \(O(\nu)\). The map \(T(p)=p/\sqrt{1+|p|^2}\) obeys
+\[
+ |T(q)-T(p)|\le2\epsilon
+ \quad\text{when }|q-p|\le\epsilon|p|,\quad\epsilon\le1/2.
+\]
+This follows by integrating its derivative along a segment whose
+distance from zero is at least \(|p|/2\). A rotation \(R=I+O(\nu)\)
+takes \(\ker\dd h\) to \(\ker\dd v\). Inside this three-dimensional
+space, \(RE\) and \(\mathcal F\) have intersection dimension at least
+\(2+2-3=1\). In that direction the old positive test changes by
+\(o(\nu^2)\); the new contribution in \eqref{eq:newhessian} is
+bounded below by \(-o(\nu^2)\). Thus a positive margin of size
+\(c_{\rm p}\nu^2/8\) remains. A contrary sequence of configurations
+has a subsequence with bounded ratio or ratio tending to infinity;
+both cases exclude its failure. This proves the uniform one-direction
+margin on the whole parent. The intersection calculation is the use
+of base dimension four.
+
+Where \(\chi=1\) and the period position lies in a core, \(u_0\)
+has a fixed positive lower bound. Both directions in \(\mathcal F\)
+then have test at least \(c's/\ell\), while the Hessian norm is at most
+\((C'+O(C_{\rm p}\nu^2))s/\ell\). Fix sufficiently large
+\(C_{\rm p}\) and small \(c_{\rm p}\), then sufficiently small \(\nu\);
+this region is prepared at scale \(\ell\).
+Retain only whole child cubes contained in it.
+
+To compare mass, tile the affine coordinates by period cells of
+side \(\ell\), including a dummy \(z_1\) period. Cells meeting the
+inner-parent boundary occupy relative volume \(O(\nu)\).
+Discarding child cubes meeting core boundaries loses another
+\(O(\nu)\) fraction, because the finite cores have finite boundary
+area in a period. On the retained region
+\[
+ |\nabla v|/s=\sqrt{1+a^2f^2}+O(\nu).
+\]
+The fixed affine Jacobian cancels against parent volume. Thus
+\[
+ \frac1{s|P|}\int_{\mathcal R_P}|\nabla v|\,\dd x
+ \ge q_{\rm in}C_{\rm core}-C\nu,\qquad
+ \frac1{s|P|}\int_P|\nabla h|\,\dd x\le1+C\nu.
+\]
+Taking both errors below \(\eta_0\) gives a ratio exceeding
+\((1+3\eta_0)/(1+\eta_0)>1+\zeta\), with
+\(\zeta=\eta_0/(1+\eta_0)>0\).
+
+Finally, \(j\) derivatives of \eqref{eq:modify}, with \(q\) on the
+cutoff, cost
+\[
+ s\ell(\nu S)^{-q}\ell^{-(j-q)}
+   =s\ell^{1-j}\nu^q\le s\ell^{1-j}.
+\]
+The slope and affine frame are frozen constants in this expression.
+This proves \eqref{eq:increment}. The order of choices is the
+pattern and its small amplitude, the packing and cutoffs,
+the preparation constants, and finally \(\nu\).
+\end{proof}
+
+\subsection{Iteration with every finite derivative order}
+
+\begin{proof}[Proof of Proposition~\ref{prop:envelope}]
+Start from one seed cube of side \(\nu\), prepared at scale \(1\),
+compactly inside \(U_0\). Write \(h_0\) for the seed and \(P_0\)
+for this cube. Fix \(s_{\min}>0\) with
+\( |\nabla_Gh_0|_G\ge s_{\min}\) on \(P_0\), common over
+\(G\in\mathcal G\); this follows from the gradient separation on
+\(U_0\) and the common metric bounds. Put \(r_{\rm c}=\nu^2\).
+At generation \(i\), apply Lemma~\ref{lem:corrugation} on each
+selected parent at scale \(S_i=r_{\rm c}^{i-1}\).
+The selected children have side \(\nu r_{\rm c}^{i}\).
+Supports lie strictly inside parents, so every finite generation
+is smooth. The total selected gradient mass \(I_i\) satisfies
+\[
+ I_i\ge(1+\zeta)I_{i-1},\qquad
+ \int_V\sqrt{1+|\nabla h_i|^2}\,\dd x\ge I_i.
+\]
+The initial \(I_0\) has a common positive lower bound.
+
+Gradients grow by at most \(\beta\) each generation and retain
+at least a factor \(\alpha\) on the initial cube. Disjoint supports
+within a generation and \eqref{eq:increment} give
+\[
+ \|D^j(h_i-h_{i-1})\|_\infty
+ \le C_j\beta^{i-1}r_{\rm c}^{i(1-j)}.
+\]
+There is no factor counting cubes. The increments are added, so
+their higher derivative constants are not multiplied between
+generations. Summing yields one \(C_*\), independent of \(j\), with
+\begin{equation}\label{eq:iteration}
+ \|h_m\|_{C^j}\le C_j e^{C_*(j+1)m}.
+\end{equation}
+For example, take \(C_*\) larger than
+\(\log\beta+|\log r_{\rm c}|+1\).
+At a point last changed at generation \(i\le m\), the retained
+Hessian margin is at least
+\[
+ c\,s_{\min}\alpha^{i-1}/r_{\rm c}^{i-1}
+ \ge c\,s_{\min}\alpha^m.
+\]
+Later modifications vanish there, with all jets vanishing at
+support boundaries. Outside the initial cube the seed is unchanged.
+Enlarge \(C_*\) to obtain \(\max_eJ_{h_m}(e)\ge c e^{-C_*m}\)
+on \(t\ge1/4\).
+
+Choose once \(\theta>0\) with \(C_*\theta\le\delta\), and put
+\[
+ m=\lfloor\theta\log k\rfloor,\qquad
+ \gamma=\theta\log(1+\zeta)>0,\qquad h_k=h_m+c_k.
+\]
+The derivative and Hessian bounds follow from \eqref{eq:iteration},
+and the mass bound follows from
+\((1+\zeta)^m\ge(1+\zeta)^{-1}k^\gamma\).
+All changes lie in the seed cube above \(t=1/2\).
+The constants determining \(C_*,\theta,\gamma\) use the fixed
+pattern and common \(C^1\) metric bounds only. A later smooth coordinate
+change contributes finite order-dependent chain-rule constants and
+lower derivatives of \(h_k\), without changing these exponents.
+\end{proof}
