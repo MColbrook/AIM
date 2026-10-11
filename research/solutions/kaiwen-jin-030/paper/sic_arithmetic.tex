@@ -1,0 +1,515 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+  pdftitle={From arithmetic dilogarithms to SICs in every dimension},
+  pdfauthor={Kaiwen Jin}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Qbar}{\overline{\mathbb Q}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\e}{\mathrm e}
+\newcommand{\SF}{\mathcal S}
+\title{From arithmetic dilogarithms to SICs in every dimension}
+\author{Kaiwen Jin\thanks{Contact: \href{mailto:yui.ui.siki@gmail.com}{yui.ui.siki@gmail.com}.}}
+\date{12 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Recent arithmetic results give a construction of symmetric informationally
+complete configurations in every finite complex dimension. This note explains
+the implication with explicit coordinates and phases. Twisted convolution
+produces a trace-one algebraic idempotent. The common-conjugation theorem of
+\emph{Stark units for real quadratic fields and reciprocity laws} makes its
+nonzero displacement coefficients simultaneously have modulus one, so an
+algebraic conjugate is a Hermitian rank-one projector. Its displacement orbit
+consists of $d^2$ unit vectors with every distinct squared inner product equal
+to $1/(d+1)$. We include the even-dimensional representative convention and
+explicit vectors in dimensions two and three. The all-dimension consequence
+is already stated in the cited reciprocity preprint; the purpose here is to
+spell out its deduction from the arithmetic results.
+\end{abstract}
+
+\section{The existence statement and its arithmetic sources}
+\label{sec:introduction}
+
+A symmetric informationally complete configuration, or SIC, in $\C^d$ is a
+family of $d^2$ unit vectors whose distinct squared inner products are all
+$1/(d+1)$. The lines they span are therefore equiangular. The existence of such
+a family for every integer $d\geq2$ is the question recorded as AIM~030
+\cite{AIM030}. The question imposes no group symmetry on the vectors.
+
+Appleby, Flammia and Kopp \cite{AFK25} gave an arithmetic construction using
+special values of the Shintani--Faddeev modular cocycle. Their construction
+required both an algebraic conjugation predicted by Stark's conjectures and a
+twisted-convolution identity ensuring idempotency. Radchenko and Wheeler
+\cite{RW26} proved algebraicity of the corresponding finite quantum
+dilogarithm values and a finite pentagon relation. Appleby, Flammia and Kopp
+\cite{AFK26} then proved the required convolution identity and supplied an
+explicit conversion between the two special-function conventions.
+These results produce algebraic rank-one idempotents, called ghost SIC
+projectors, but idempotency by itself does not make a matrix Hermitian.
+
+The October preprint \emph{Stark units for real quadratic fields and
+reciprocity laws} \cite{REC26} proves the simultaneous conjugation needed for
+that last step. Its Proposition~7 states that every algebraic automorphism
+switching the two embeddings of the real quadratic field sends all the
+nonzero finite dilogarithm values to numbers of modulus one. The same source
+already states the SIC consequence in Section~9.2. We give a detailed
+deduction in the conventions of \cite{AFK25,AFK26,RW26}, with the coordinate
+conversion and all dimensions explicit.
+
+\begin{theorem}[Consequence of the cited arithmetic results]
+\label{thm:main}
+For every integer $d\geq2$, there exist $d^2$ vectors
+$\psi_1,\ldots,\psi_{d^2}$ in $\C^d$ such that
+\begin{equation}
+\label{eq:target}
+ \psi_j^*\psi_j=1,
+ \qquad |\psi_j^*\psi_k|^2=\frac1{d+1}\quad(j\ne k).
+\end{equation}
+\end{theorem}
+
+Here star denotes conjugate transpose, so $v^*w$ is conjugate linear in $v$.
+The construction for $d\geq4$ uses a displacement orbit. This supplies
+witnesses for the unrestricted assertion~\eqref{eq:target}.
+The argument concerns existence; it neither classifies all SICs nor provides
+a practical procedure for selecting the algebraic automorphism. Its
+arithmetic premises are the exact preprint versions cited below. No
+peer-review status is assumed.
+
+The reason modulus one is sufficient is that the displacement coefficients
+already come in reciprocal pairs. After one common algebraic conjugation,
+the reciprocal of each coefficient becomes its complex conjugate. The
+idempotent is then Hermitian, and trace one makes its range a line.
+We first fix the displacement and special-function conventions, then derive
+the idempotent, and finally prove~\eqref{eq:target}, including $d=2,3$.
+All algebraic numbers lie in a fixed algebraic closure $\Qbar\subset\C$.
+
+\section{Displacements and finite arithmetic values}
+\label{sec:definitions}
+
+For $d\geq2$, set
+\[
+ \omega_d=\exp(2\pi i/d),\qquad
+ \xi_d=-\exp(\pi i/d),\qquad
+ \bar d=\begin{cases}d,&d\text{ odd},\\2d,&d\text{ even}.\end{cases}
+\]
+In the standard basis $e_0,\ldots,e_{d-1}$ of $\C^d$, define
+$Xe_j=e_{j+1\bmod d}$ and $Ze_j=\omega_d^j e_j$. For $p\in\Z^2$, put
+\begin{equation}
+\label{eq:displacement}
+ D_p=\xi_d^{p_1p_2}X^{p_1}Z^{p_2},\qquad
+ [p,q]=p_2q_1-p_1q_2.
+\end{equation}
+The identities $ZX=\omega_dXZ$ and $\xi_d^2=\omega_d$ give
+\begin{equation}
+\label{eq:weyl}
+ D_pD_q=\xi_d^{[p,q]}D_{p+q},\qquad D_p^*=D_{-p}.
+\end{equation}
+For any fixed representatives of $(\Z/d\Z)^2$, the $d^2$ matrices $D_p$
+form a trace-orthogonal basis:
+\begin{equation}
+\label{eq:trace}
+ \tr(D_p)=0\quad(p\notin d\Z^2),\qquad
+ \tr(D_p^*D_q)=d\,\delta_{p,q}.
+\end{equation}
+A nontrivial shift has zero diagonal, and a nontrivial modulation has trace
+$\sum_{j=0}^{d-1}\omega_d^{p_2j}=0$, which proves these assertions.
+In even dimensions $D_p$ itself can change sign on replacing $p$ modulo $d$.
+Its projective class is well defined. Later sums use coefficients for which
+the entire summand is representative independent.
+
+We next state the arithmetic result with the normalization needed here.
+Let $K$ be a real quadratic field, $I\subset K$ a rank-two lattice, and
+$\varepsilon>1$ a totally positive unit satisfying $\varepsilon I=I$.
+The prime denotes the other real embedding. Choose an oriented basis
+$I=\Z\beta_1+\Z\beta_2$ with
+$\beta_1\beta_2'-\beta_1'\beta_2>0$ and $\beta_2$ totally positive.
+Put $t=\beta_1/\beta_2$, and let
+$A=\left(\begin{smallmatrix}a&b\\c&e\end{smallmatrix}\right)\in
+\mathrm{SL}_2(\Z)$ satisfy
+$A(\beta_1,\beta_2)^T=\varepsilon(\beta_1,\beta_2)^T$.
+Then $A\cdot t=(at+b)/(ct+e)=t$ and $ct+e=\varepsilon$.
+
+Write $\e(z)=\exp(2\pi iz)$ and
+$(z;q)_\infty=\prod_{n\geq0}(1-zq^n)$ for $|q|<1$.
+The modular quantum dilogarithm is initially the quotient
+\begin{equation}
+\label{eq:phi}
+ \Phi_{A,m,n}(z;t)=
+ \frac{(\e(mt+z);\e(t))_\infty}
+ {(\e(nA\cdot t+z/(ct+e));\e(A\cdot t))_\infty}
+ \qquad(\operatorname{Im}t>0).
+\end{equation}
+At the real fixed point it means the meromorphic continuation described in
+\cite[Section~2.2]{RW26}, rather than direct substitution into either infinite
+product. Let $\mu_A$ be the Dedekind eta multiplier, defined in the upper
+half-plane by
+\[
+ \eta(A\cdot t)=\mu_A\sqrt{ct+e}\,\eta(t),\qquad
+ \eta(t)=\e(t/24)\prod_{n\geq1}(1-\e(nt)),
+\]
+with the principal square root. This multiplier is a root of unity.
+
+For a nonzero class in the finite group
+$\mathcal G_{I,\varepsilon}=(\varepsilon-1)^{-1}I/I$, choose a representative
+$x$ and integers $m,n$ such that
+$(\varepsilon^{-1}-1)x/\beta_2=mt+n$. Define
+\begin{equation}
+\label{eq:E}
+ E_{I,\varepsilon}(x)=\mu_A\Phi_{A,m,0}(x/\beta_2;t),
+ \qquad E_{I,\varepsilon}(0)=\sqrt\varepsilon>0.
+\end{equation}
+The algebraicity, reflection and continuation results of
+\cite[Theorems~1--2]{RW26}, expressed in these lattice coordinates in
+\cite[Section~3 and Appendix~B]{REC26}, make the values nonzero algebraic
+numbers and independent of the permitted choices.
+
+\begin{proposition}[Common conjugation, {\cite[Proposition~7]{REC26}}]
+\label{prop:common}
+For every $K,I,\varepsilon$ as above and every automorphism $\tau$ of $\Qbar$
+restricting to the nontrivial automorphism of $K$, one has
+\begin{equation}
+\label{eq:common}
+ |\tau(E_{I,\varepsilon}(x))|=1
+ \quad\text{for all }x\in\mathcal G_{I,\varepsilon}\setminus\{0\}.
+\end{equation}
+\end{proposition}
+
+The quantifier over $\tau$ is shared by all $x$ in this statement. There is
+no restriction to a maximal-order lattice or to a fundamental unit. This
+allows the lattice and the third power of a unit used below.
+
+\section{A trace-one arithmetic idempotent}
+\label{sec:ghost}
+
+Fix $d\geq4$, and set
+\begin{equation}
+\label{eq:arithmetic}
+ \Delta=(d+1)(d-3),\quad
+ \rho=\frac{d-1+\sqrt\Delta}{2},\quad
+ K=\Q(\sqrt\Delta),\quad I=\Z\rho+\Z,\quad
+ \varepsilon=\rho^3.
+\end{equation}
+We have $(d-2)^2<\Delta<(d-1)^2$, since the respective differences are
+$2d-7>0$ and $4$. Thus $\Delta$ is positive and nonsquare. Moreover,
+$\rho^2-(d-1)\rho+1=0$ and $\rho'=\rho^{-1}>0$. Hence $\rho$ is a totally
+positive integral unit preserving $I$, and $(\rho,1)$ is oriented.
+Multiplication by $\rho$ and by $\varepsilon$ is represented respectively by
+\begin{equation}
+\label{eq:A}
+ L=\begin{pmatrix}d-1&-1\\1&0\end{pmatrix},\qquad
+ A=L^3=
+ \begin{pmatrix}d^3-3d^2+d+1&-d(d-2)\\d(d-2)&1-d\end{pmatrix}.
+\end{equation}
+In particular,
+\begin{equation}
+\label{eq:Amod}
+ \frac{A-I_2}{d}=
+ \begin{pmatrix}d^2-3d+1&2-d\\d-2&-1\end{pmatrix},
+ \qquad N=\tr(A)-2=d^2(d-3)>0.
+\end{equation}
+The fixed point of $A$ is $\rho$ and its lower-left entry is positive.
+
+Here is the precise rank-one instance of the dimension correspondence in
+\cite[Definitions~1.28--1.30 and Theorem~4.50]{AFK25}.
+The integral form
+\[
+ Q_d(x,y)=x^2-(d-1)xy+y^2
+\]
+has discriminant $\Delta$. The tuple $(d,1,Q_d)$ is admissible in
+\cite[Definition~1.1]{AFK26}: $1<(d-1)/2$,
+$(d^2-1)/(d-1)=d+1$ is an integer, and $\Delta/\operatorname{disc}(Q_d)=1$.
+In the notation of \cite{AFK25}, $\rho$ is the $j$th power of the fundamental
+totally positive unit, $d=d_{j,1}$, and the conductor of the form is $f=f_j$.
+Indeed, if $\Delta_0$ is the field discriminant, this conductor is
+$(\rho-\rho')/\sqrt{\Delta_0}$. The source matrix $L_{z,t}$ is exactly $L$,
+and its rank-one stabilizer $L_{z,t}^3$ is $A$.
+
+For $p\in\Z^2$ put
+\begin{equation}
+\label{eq:coordinates}
+ S=\begin{pmatrix}0&-1\\1&0\end{pmatrix},\qquad
+ u=S^{-1}(A-I_2)p/d,\qquad x_p=\frac{\rho p_2-p_1}{d}\pmod I.
+\end{equation}
+The vector $u$ is integral by~\eqref{eq:Amod}, with entries
+\[
+ u_1=(d-2)p_1-p_2,\qquad
+ u_2=-(d^2-3d+1)p_1+(d-2)p_2.
+\]
+Using $A+A^{-1}=(N+2)I_2$ and $\rho^2=(d-1)\rho-1$ gives
+\begin{equation}
+\label{eq:dictionary-coordinate}
+ \frac{(I_2-A^{-1})Su}{N}=\frac pd,\qquad
+ \frac{u_1\rho+u_2}{\varepsilon^{-1}-1}=\frac{\rho p_2-p_1}{d}.
+\end{equation}
+Since $A\equiv I_2\pmod d$, the class $x_p$ belongs to
+$\mathcal G_{I,\varepsilon}$; it is zero exactly when $p\in d\Z^2$.
+The nonzero branch of the special-function dictionary applies at precisely
+these indices. To check its exclusion, put $M=(I_2-A^{-1})S/N$.
+Then $Mu=p/d$ and
+\[
+ M(A^T-I_2)\Z^2=-A^{-1}S\Z^2=\Z^2,
+\]
+so $u\in(A^T-I_2)\Z^2$ if and only if $p\in d\Z^2$.
+
+For $p\notin d\Z^2$, define
+\begin{equation}
+\label{eq:nu}
+ s_d(p)=d+(1+d)(1+p_1)(1+p_2),\qquad
+ \nu_p=\frac{(-1)^{s_d(p)}\xi_d^{-Q_d(p)}}{E_{I,\varepsilon}(x_p)}.
+\end{equation}
+These are the normalized ghost coefficients of \cite{AFK25}. We spell out
+the normalization because an uncancelled multiplier would change the
+convolution. Write $\SF_A^r(\rho)$ for the Shintani--Faddeev modular cocycle
+at rational column index $r$, in the convention of \cite{AFK25}. On the
+nonzero branch, \cite[Proposition~2.1]{AFK26} gives
+\begin{equation}
+\label{eq:dictionary}
+ F_A(u^T)=\mu_A\,\SF_A^{Mu}(\rho)^{-1}
+          =E_{I,\varepsilon}(x_p).
+\end{equation}
+The source phase is
+$\phi_p=(-1)^{s_d(p)}\mu_A^{-1}\xi_d^{-Q_d(p)}$, because $f=f_j$ and the
+rank is one. Thus $\phi_p\SF_A^{p/d}(\rho)=\nu_p$.
+The zero coefficient is separately defined by
+\begin{equation}
+\label{eq:zero}
+ \nu_0=-\varepsilon^{-1/2}
+ \qquad\text{{\cite[Equation~(5.65)]{AFK25}}}.
+\end{equation}
+It is not obtained by inserting the zero class into~\eqref{eq:nu}.
+The unconditional reciprocal identity is
+\begin{equation}
+\label{eq:reciprocal}
+ \nu_p\nu_{-p}=1\quad(p\notin d\Z^2)
+ \qquad\text{{\cite[Theorem~5.8]{AFK25}}}.
+\end{equation}
+
+\begin{lemma}
+\label{lem:ghost}
+Let $G=\operatorname{diag}(-1,1)$. Then
+\begin{equation}
+\label{eq:B}
+ B=\frac{I_d}{d}+\frac1{d\sqrt{d+1}}
+     \sum_{p\ne0\bmod d}\nu_{Gp}D_p
+\end{equation}
+is an algebraic matrix satisfying $B^2=B$ and $\tr(B)=1$.
+The entire summands in this expression are independent of the chosen
+integer representatives.
+\end{lemma}
+
+\begin{proof}
+The proved convolution theorem \cite[Theorem~1.2]{AFK26} permits a shift
+$\lambda$ with $\lambda r_{j,m}\equiv-r_{j,m-1}\pmod d$, as specified in
+its proof on pages~7--8. At $m=1$ we have $r_{j,0}=0$ and $r_{j,1}=1$,
+so $\lambda=0$ is available. With the inverse cocycle identity
+\cite[Lemma~2.13]{AFK25}, this gives
+\begin{equation}
+\label{eq:TCI}
+ \sum_q\omega_d^{[p,Lq]}
+ \frac{\SF_A^{q/d}(\rho)}{\SF_A^{(q-p)/d}(\rho)}=0
+ \qquad(p\ne0\bmod d).
+\end{equation}
+The representatives in this sum include $0$ and $p$.
+We use only this proved shift; no assertion about the entire set of
+conjectural shifts is needed.
+
+The twist condition of \cite[Lemma~1.42]{AFK25} is
+$\det(G)(2\lambda+d-1+d)\equiv1\pmod{\bar d}$.
+For our choices its left side is $1-2d$, so it holds in both parities.
+The same lemma gives representative independence of $\nu_{Gp}D_p$.
+
+For the phases $\phi_q$ above, direct calculation yields
+\begin{equation}
+\label{eq:phase}
+ \xi_d^{-[p,q]}\frac{\phi_q}{\phi_{q-p}}
+   =(-1)^{1+s_d(p)}\xi_d^{Q_d(p)}\omega_d^{[p,Lq]}.
+\end{equation}
+Indeed,
+\begin{align*}
+ s_d(q)+s_d(q-p)&\equiv1+s_d(p)+(1+d)[p,q]\pmod2,\\
+ Q_d(q-p)-Q_d(q)&=Q_d(p)-(d-1)[p,q]+2[p,Lq].
+\end{align*}
+Together with $\xi_d^d=(-1)^{d+1}$ these identities prove~\eqref{eq:phase}.
+Multiplying~\eqref{eq:TCI} by the common nonzero phase therefore gives
+\begin{equation}
+\label{eq:normalizedTCI}
+ \sum_q\xi_d^{-[p,q]}\frac{\nu_q}{\nu_{q-p}}=0.
+\end{equation}
+The zero values in this normalization are exactly~\eqref{eq:zero}.
+By~\eqref{eq:reciprocal}, the $q=0,p$ terms are
+$\nu_p(\nu_0+\nu_0^{-1})$. Since
+$\sqrt\rho+1/\sqrt\rho=\sqrt{d+1}$, we obtain
+\[
+ \nu_0+\nu_0^{-1}
+ =-(\rho^{3/2}+\rho^{-3/2})=-(d-2)\sqrt{d+1}.
+\]
+Consequently
+\begin{equation}
+\label{eq:offzero}
+ \sum_{q\ne0,p}\xi_d^{-[p,q]}\nu_q\nu_{p-q}
+       =(d-2)\sqrt{d+1}\,\nu_p.
+\end{equation}
+
+Put $F=\sum_{p\ne0}\nu_pD_{G^{-1}p}$. Since $\det(G^{-1})=-1$,
+\eqref{eq:weyl} gives the phase $\xi_d^{-[p,q]}$ in the coefficient of
+$D_{G^{-1}p}$ in $F^2$. Formula~\eqref{eq:offzero} computes that
+coefficient. The identity coefficient is $d^2-1$, by~\eqref{eq:reciprocal}.
+Thus
+\begin{equation}
+\label{eq:F}
+ F^2=(d^2-1)I_d+(d-2)\sqrt{d+1}\,F.
+\end{equation}
+Representative independence justifies the changes of index also when $d$ is
+even. Substitution in $B=I_d/d+F/(d\sqrt{d+1})$ proves $B^2=B$.
+Equation~\eqref{eq:trace} gives $\tr(B)=1$.
+All its entries are algebraic, by the arithmetic algebraicity theorem and
+\eqref{eq:nu}. No Hermiticity assertion has been used.
+\end{proof}
+
+\section{Hermitian conjugation and the vector family}
+\label{sec:hermitian}
+
+The nontrivial automorphism of $K$ extends to an automorphism $\tau$ of
+$\Qbar$. For completeness, order partial field embeddings into $\Qbar$
+extending that automorphism by extension of their domains. Unions of chains
+are embeddings, so Zorn's lemma gives a maximal one. If its domain omits an
+algebraic number, a root of the transformed minimal polynomial extends the
+embedding, a contradiction. Its domain is therefore $\Qbar$. Its image is
+algebraically closed: pull back a polynomial with coefficients in the image,
+take a root, and map that root. An algebraically closed subfield of $\Qbar$
+containing $\Q$ contains every root of every rational polynomial, so the
+image is all of $\Qbar$. This proves the required automorphism extension.
+It may be selected separately for each $d$.
+
+Apply Proposition~\ref{prop:common} to this one $\tau$ and all $x_{Gp}$.
+Roots of unity map to roots of unity, so
+\begin{equation}
+\label{eq:c}
+ c_p=\tau(\nu_{Gp}),\qquad |c_p|=1,\qquad
+ c_pc_{-p}=1,\qquad c_{-p}=\overline{c_p}.
+\end{equation}
+We must also conjugate the displacement matrices and the normalization.
+There are $k$ coprime to $\bar d$ and $h\in\{1,-1\}$ with
+\[
+ \tau(\xi_d)=\xi_d^k,\qquad
+ \tau(\sqrt{d+1})=h\sqrt{d+1}.
+\]
+Since $X$ has rational entries and $\tau(Z)=Z^k$, entrywise conjugation gives
+\begin{equation}
+\label{eq:P}
+ U_p=\tau(D_p)=D_{(p_1,kp_2)},\qquad
+ P=\tau(B)=\frac{I_d}{d}+\frac{h}{d\sqrt{d+1}}
+           \sum_{p\ne0}c_pU_p.
+\end{equation}
+In particular $U_{-p}=U_p^*$, and $p\mapsto(p_1,kp_2)$ permutes the
+classes modulo $d$. The full summands $c_pU_p$ remain representative
+independent. Reindexing their adjoints by $p\mapsto-p$ and
+using~\eqref{eq:c} proves $P^*=P$. This argument includes self-inverse
+classes in even dimensions. It does not require $\tau$ to commute with
+complex conjugation on arbitrary algebraic numbers.
+
+Applying a field automorphism to the algebraic equations in
+Lemma~\ref{lem:ghost} gives $P^2=P$ and $\tr(P)=1$.
+Every idempotent has the direct sum decomposition
+$\C^d=\operatorname{ran}P\oplus\ker P$, and is diagonal with ones on its
+range and zeros on its kernel in an adapted basis. Therefore
+$\operatorname{rank}P=\tr(P)=1$. Hermiticity makes the kernel orthogonal to
+the range. Choose a unit vector $\psi$ spanning that range. Then
+\begin{equation}
+\label{eq:projector}
+ P=\psi\psi^*,\qquad v^*Pv=\|Pv\|^2\geq0\quad(v\in\C^d).
+\end{equation}
+
+For every nonzero class $q$ modulo $d$, trace orthogonality and the
+permutation in~\eqref{eq:P} imply
+\begin{equation}
+\label{eq:overlap}
+ |\tr(PD_q^*)|=\frac1{\sqrt{d+1}},\qquad
+ |\psi^*D_q\psi|^2=\frac1{d+1}.
+\end{equation}
+Changing an integer representative only multiplies the relevant
+displacement by a phase of modulus one. The possible sign $h$ likewise
+disappears from the absolute value.
+For one representative of each $q\in(\Z/d\Z)^2$ define $\psi_q=D_q\psi$.
+All these vectors have unit norm. If $q\ne r$, then $D_q^*D_r$ is a unit
+phase times $D_{r-q}$, and hence
+\[
+ |\psi_q^*\psi_r|^2=|\psi^*D_{r-q}\psi|^2=\frac1{d+1}.
+\]
+Since this number is less than one, no two vectors are parallel. We have
+therefore obtained exactly $d^2$ vectors satisfying~\eqref{eq:target}
+for every $d\geq4$.
+
+The two remaining dimensions have elementary witnesses. For $d=2$, set
+$\zeta=\exp(2\pi i/3)$ and take
+\[
+ v_0=(1,0),\qquad
+ v_{j+1}=\bigl(1/\sqrt3,\sqrt{2/3}\,\zeta^j\bigr),\quad j=0,1,2.
+\]
+Their norms are one. The squared overlaps with $v_0$ equal $1/3$, and for
+$j\ne k$ the other squared overlaps equal
+$|1+2\zeta^{k-j}|^2/9=1/3$, since
+$\operatorname{Re}\zeta=\operatorname{Re}\zeta^2=-1/2$.
+
+For $d=3$, take $v=(0,1,-1)/\sqrt2$ and the nine vectors
+$X^pZ^qv$, with $p,q=0,1,2$ and the dimension-three generators defined
+in Section~\ref{sec:definitions}. For $q=1,2$,
+\[
+ v^*Z^qv=(\omega_3^q+\omega_3^{2q})/2=-1/2.
+\]
+For $p=1$ the overlap $v^*X^pZ^qv$ is $-\omega_3^q/2$, and for $p=2$
+it is $-\omega_3^{2q}/2$. Thus every nontrivial shift or modulation has
+overlap of modulus $1/2$. Weyl multiplication reduces every distinct pair
+in the orbit to one of these overlaps, so its squared inner product is
+$1/4$. Together with the $d\geq4$ construction, these two cases prove
+Theorem~\ref{thm:main} for every integer $d\geq2$.
+
+\paragraph{AI assistance.}
+OpenAI Codex assisted with source retrieval, mathematical derivations,
+checking, and preparation of this note. The cited reciprocity preprint also
+discloses substantial LLM assistance in its own preparation. These disclosures
+do not replace mathematical verification or independent review.
+
+\begin{thebibliography}{9}
+\bibitem{AFK25}
+M. Appleby, S. T. Flammia and G. S. Kopp,
+\emph{A Constructive Approach to Zauner's Conjecture via the Stark Conjectures},
+arXiv:2501.03970v2 (17 March 2025).
+\url{https://arxiv.org/abs/2501.03970v2}.
+
+\bibitem{RW26}
+D. Radchenko and C. Wheeler,
+\emph{Real quadratic fields and finite quantum dilogarithms I},
+arXiv:2609.21892v2 (29 September 2026).
+\url{https://arxiv.org/abs/2609.21892v2}.
+
+\bibitem{AFK26}
+M. Appleby, S. T. Flammia and G. S. Kopp,
+\emph{The twisted convolution identity and ghost $r$-SICs from finite
+quantum dilogarithms}, arXiv:2609.39192v1 (30 September 2026).
+\url{https://arxiv.org/abs/2609.39192v1}.
+
+\bibitem{REC26}
+\emph{Stark units for real quadratic fields and reciprocity laws},
+Hexagon 2610.00186v1 (10 October 2026), especially Proposition~7 and
+Section~9.2. The source requests citation by title, date and URL.
+\url{https://hexagonmath.org/2610.00186v1}.
+
+\bibitem{AIM030}
+AIM problem catalogue (\texttt{MColbrook/AIM}),
+\emph{030 --- SIC measurements in every finite dimension},
+statement at revision \texttt{c9929805cece044705abaaebe1cebddac1ba11a6}.
+\href{https://github.com/MColbrook/AIM/blob/c9929805cece044705abaaebe1cebddac1ba11a6/problems/030-sic-povms.md}{Frozen AIM 030 statement (GitHub)}.
+\end{thebibliography}
+\end{document}
