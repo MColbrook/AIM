@@ -1,0 +1,169 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xurl}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\hypersetup{pdfauthor={Kaiwen Jin},pdftitle={AIM 450 and a uniform Hilbert transform estimate for Lipschitz directions}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Schwartz}{\mathcal S}
+\title{AIM 450 and a uniform Hilbert transform estimate\\
+for Lipschitz directions}
+\author{Kaiwen Jin\thanks{Contact: \href{mailto:yui.ui.siki@gmail.com}{yui.ui.siki@gmail.com}.}}
+\date{October 12, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Stein's question asks for a uniform weak-$L^2$ bound for the short Hilbert
+transform along a Lipschitz unit vector field in the plane, allowing dependence
+on both coordinates. OpenAI's September 25, 2026 preprint states a stronger
+uniform $L^2$ estimate for every inner truncation. We record its exact
+implication for AIM problem 450: the symmetric principal value exists for
+Schwartz inputs, and the requested level-set bound holds with absolute
+constants. The passage uses cancellation at zero and Fatou's lemma. The main
+uniform estimate and its proof are due to OpenAI.
+\end{abstract}
+
+The Hilbert transform along a varying direction integrates a function on a
+different straight line at each point. Stein's question asks whether a
+Lipschitz bound on the direction controls this singular integral uniformly
+on sufficiently short segments. Lacey and Li formulate the weak-$(2,2)$
+conjecture in the final preprint version of
+\cite[Conjecture~1.5, equation~(1.6)]{LaceyLi}; the normalized form appears
+as AIM problem 450 \cite{AIM}.
+
+OpenAI's preprint \cite[Theorem~1.1]{OpenAI} states the uniform estimate
+needed for this question, together with its principal-value and weak-type
+consequences. This note compares that statement with the exact catalogue
+target and spells out the passage to those consequences. The uniform
+estimate and its proof are due to OpenAI.
+
+For a unit vector field $v\colon\R^2\to S^1$ and $0<\varepsilon<a$,
+write
+\begin{equation}\label{eq:truncated}
+ H^{\varepsilon}_{v,a}f(x)
+ =\int_{\varepsilon<|t|<a}f(x-tv(x))\,\frac{dt}{t}.
+\end{equation}
+Here $S^1=\{u\in\R^2:|u|=1\}$, and the direction $v(x)$ is
+held fixed while $t$ varies. The integral follows the straight line through
+$x$ in direction $v(x)$. We use Lebesgue measure on $\R^2$ and allow
+complex-valued Schwartz functions $f\in\Schwartz(\R^2)$.
+
+The following is the estimate stated in Theorem~1.1 of OpenAI's preprint
+\cite{OpenAI}, with the operator notation in \eqref{eq:truncated}.
+
+\begin{theorem}[OpenAI]\label{thm:openai}
+There are absolute constants $a_*\in(0,1/2)$ and $C_*<\infty$
+such that, for every $v\colon\R^2\to S^1$ satisfying
+\[
+ |v(x)-v(y)|\le |x-y|\qquad(x,y\in\R^2)
+\]
+and every $f\in\Schwartz(\R^2)$,
+\begin{equation}\label{eq:uniform}
+ \sup_{0<\varepsilon<a_*}
+ \bigl\|H^{\varepsilon}_{v,a_*}f\bigr\|_{L^2(\R^2)}
+ \le C_*\|f\|_{L^2(\R^2)}.
+\end{equation}
+\end{theorem}
+
+The supremum in \eqref{eq:uniform} is outside the norm. The estimate
+applies to fields depending on both spatial coordinates and to unrestricted
+Schwartz inputs. Its full proof is in the cited preprint; the argument below
+uses precisely this stated estimate.
+
+\begin{corollary}[The bound in AIM 450]\label{cor:aim}
+There are absolute constants $K\ge1$ and $C<\infty$ such that, for every
+$v\colon\R^2\to S^1$ with $|v(x)-v(y)|\le|x-y|$, every
+$f\in\Schwartz(\R^2)$, and every $\lambda>0$, the symmetric principal value
+\begin{equation}\label{eq:pv}
+ H_vf(x)=\lim_{\varepsilon\downarrow0}
+ \int_{\varepsilon<|t|<1/K}f(x-tv(x))\,\frac{dt}{t}
+\end{equation}
+exists at every $x\in\R^2$ and satisfies
+\begin{equation}\label{eq:weak}
+ \lambda^2\bigl|\{x\in\R^2:|H_vf(x)|>\lambda\}\bigr|
+ \le C\|f\|_{L^2(\R^2)}^2.
+\end{equation}
+One may take $K=1/a_*$ and $C=C_*^2$, with the constants from
+Theorem~\ref{thm:openai}.
+\end{corollary}
+
+\begin{proof}
+Choose $a_*$ and $C_*$ from Theorem~\ref{thm:openai} and put
+$K=1/a_*>2$. For fixed $x$, changing variables in the negative half of the
+symmetric integral gives
+\begin{equation}\label{eq:symmetric}
+ H^{\varepsilon}_{v,a_*}f(x)
+ =\int_{\varepsilon}^{a_*}
+ \frac{f(x-tv(x))-f(x+tv(x))}{t}\,dt.
+\end{equation}
+Set $M_x=\sup_{|z-x|\le a_*}|\nabla f(z)|$, where the gradient norm is
+the Euclidean norm of its complex components. Smoothness of $f$ gives
+$M_x<\infty$. Since $|v(x)|=1$, the fundamental theorem of calculus along
+the segment $x+s v(x)$ yields
+\[
+ |f(x-tv(x))-f(x+tv(x))|
+ \le \int_{-t}^{t}|\nabla f(x+s v(x))|\,ds
+ \le 2t M_x\qquad(0<t<a_*).
+\]
+Thus the integrand in \eqref{eq:symmetric} is bounded by $2M_x$ on
+$(0,a_*)$. Dominated convergence proves the existence of the limit in
+\eqref{eq:pv} at each $x$.
+
+For fixed $\varepsilon>0$, continuity of $v$ and $f$ makes
+$H^{\varepsilon}_{v,a_*}f$ continuous, by dominated convergence in $t$ on
+the truncated interval. Hence the principal value is measurable.
+Take $\varepsilon_n=a_* /(n+2)$ for $n=0,1,\ldots$. Fatou's lemma and
+\eqref{eq:uniform} give
+\[
+ \int_{\R^2}|H_vf(x)|^2\,dx
+ \le \liminf_{n\to\infty}
+       \int_{\R^2}|H^{\varepsilon_n}_{v,a_*}f(x)|^2\,dx
+ \le C_*^2\|f\|_{L^2(\R^2)}^2.
+\]
+Consequently, for each $\lambda>0$,
+\[
+ \lambda^2|\{x:|H_vf(x)|>\lambda\}|
+ \le \int_{\R^2}|H_vf(x)|^2\,dx
+ \le C_*^2\|f\|_{L^2(\R^2)}^2,
+\]
+which is \eqref{eq:weak}. Both constants were chosen before $v$, $f$,
+and $\lambda$.
+\end{proof}
+
+The cutoff $1/K=a_*$ is fixed and absolute. Corollary~\ref{cor:aim}
+retains the two-coordinate direction fields and every quantifier in the
+pinned AIM statement \cite{AIM}. No estimate for a supremum inside the
+$L^2$ norm, or for arbitrary outer lengths, is used here.
+
+\paragraph{AI assistance.}
+OpenAI's preprint \cite{OpenAI} supplies the uniform estimate and its proof.
+This note was prepared with assistance from OpenAI's ChatGPT/Codex for
+source comparison, drafting, and proof checking.
+
+\begin{thebibliography}{9}
+\bibitem{AIM}
+AIM problem catalogue, \emph{450. Stein's Hilbert-transform bound along Lipschitz
+directions}, AIM problem catalogue, revision
+\texttt{c9929805cece044705abaaebe1cebddac1ba11a6}.
+\url{https://github.com/MColbrook/AIM/blob/c9929805cece044705abaaebe1cebddac1ba11a6/problems/450-stein-lipschitz-direction-hilbert-bound.md}.
+
+\bibitem{LaceyLi}
+M. Lacey and X. Li, \emph{On a conjecture of E. M. Stein on the Hilbert
+transform on vector fields}, Memoirs of the American Mathematical Society
+\textbf{205} (2010), no.~965.
+\url{https://doi.org/10.1090/S0065-9266-10-00572-7}.
+Final preprint: arXiv:0704.0808v3, January~11, 2008; Conjecture~1.5 and
+equation~(1.6). \url{https://arxiv.org/abs/0704.0808v3}.
+
+\bibitem{OpenAI}
+OpenAI, \emph{A uniform Hilbert transform estimate for Lipschitz directions},
+preprint, September~25, 2026; Theorem~1.1. Revision
+\texttt{adc7f1241b42e322a6451854ab7e4b4c146bf78a}.
+\url{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-uniform-Hilbert-transform-estimate-for-Lipschitz-directions-September-25-2026/main.pdf}.
+\end{thebibliography}
+\end{document}
