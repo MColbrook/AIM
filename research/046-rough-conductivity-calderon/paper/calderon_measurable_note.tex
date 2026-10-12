@@ -1,0 +1,220 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype,needspace}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,pdftitle={A counterexample to measurable Calderon uniqueness: an expository note},pdfauthor={Kaiwen Jin}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\av}[2]{\int_{#1}\Tr(#2)\,d\mu_{#1}}
+\title{A counterexample to measurable Calder\'on uniqueness:\\ an expository note}
+\author{Kaiwen Jin\\\small\href{mailto:yui.ui.siki@gmail.com}{yui.ui.siki@gmail.com}}
+\date{October 12, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Can all boundary voltage and current measurements distinguish every bounded, uniformly positive scalar conductivity in three dimensions? OpenAI's September 23, 2026 preprint gives a counterexample on a smooth ball. This note explains its correspondence with AIM Problem 046 and supplies the argument from the cited scalar branching block to equality of the complete weak Dirichlet-to-Neumann maps. Nested blocks force one common surface average for every harmonic field. Signed currents then produce a bounded source potential whose interaction with those fields permits a change of conductivity preserving all boundary responses. The construction and nonuniqueness theorem are due to OpenAI; the present contribution is exposition and target comparison.
+\end{abstract}
+
+\section{The question and the source result}
+For a bounded smooth domain $\Omega\subset\R^3$, a real scalar conductivity $\gamma\in L^\infty(\Omega)$ with $0<c\leq\gamma\leq C<\infty$ determines a unique weak solution $u_f\in H^1(\Omega)$ for each boundary voltage $f\in H^{1/2}(\partial\Omega)$:
+\[
+\Tr u_f=f,\qquad \int_\Omega\gamma\nabla u_f\cdot\nabla\phi=0\quad(\phi\in H^1_0(\Omega)).
+\]
+The weak Dirichlet-to-Neumann operator records its boundary current. It is defined by
+\begin{equation}\label{eq:dn}
+\langle\Lambda_\gamma f,h\rangle=\int_\Omega\gamma\nabla u_f\cdot\nabla V_h,
+\qquad \Tr V_h=h.
+\end{equation}
+The value is independent of the $H^1$ extension $V_h$, by the weak equation. The spaces are the usual Sobolev trace space and its dual, and the pairings are real. All bounds on coefficients and functions are almost everywhere bounds.
+
+AIM Problem 046 asks whether equality of these full operators forces equality of arbitrary bounded measurable positive scalar conductivities \cite{aim}. Regularity makes a substantial difference: Caro, Garc\'ia-Ferrero and Rogers give reconstruction for positive Lipschitz conductivities in dimension at least three \cite[Introduction]{cgr}. Their result does not cover the whole measurable class. The subsequent counterexample of OpenAI has the following exact scope.
+
+\Needspace{13\baselineskip}
+\begin{theorem}[OpenAI {\cite[Theorem 1.1]{oai}}]\label{thm:main}
+On $\Omega=B(0,3)\subset\R^3$ there exist two real scalar conductivities $\gamma_0,\gamma_1\in L^\infty(\Omega)$ and common constants $0<c\leq C<\infty$ such that
+\[
+c\leq\gamma_j\leq C\quad\text{a.e.},\qquad
+|\{x:\gamma_0(x)\ne\gamma_1(x)\}|>0,
+\]
+and
+\[
+\Lambda_{\gamma_0}=\Lambda_{\gamma_1}:H^{1/2}(\partial\Omega)\longrightarrow H^{-1/2}(\partial\Omega).
+\]
+Both conductivities equal one in a neighborhood of $\partial\Omega$.
+\end{theorem}
+Here $|E|$ denotes three-dimensional Lebesgue measure. One pair on one smooth ball disproves the universal assertion in Problem 046. Boundary agreement is a property of the example, so imposing it would not restore that assertion.
+
+The nonstandard ingredient is a scalar block with three torus boundary components. It first controls the responses to separately constant voltages on that block. Reciprocity turns these responses into identities for \emph{every} harmonic field in a larger domain. The construction below then uses a bounded potential with a nonzero interior source, rather than a globally harmonic factor with constant outer trace. The latter would be constant by the energy identity. Sections 2--4 explain these steps; the proof of the scalar block itself is the public dependency \cite[Sections 3--4]{oai}.
+
+\section{A scalar block and its scaled copies}
+We use the trace, matching-trace gluing and bounded Sobolev product and chain rules stated in \cite[Section 2]{oai}. For bounded positive coefficients, variational coercivity gives the weak Dirichlet problem. Testing with positive and negative truncations bounds a harmonic solution by its bounded boundary values.
+
+\begin{proposition}[OpenAI {\cite[Proposition 4.1]{oai}}]\label{prop:block}
+Let $B\subset\R^3$ be a bounded connected Lipschitz domain with three boundary components $\Gamma_0,\Gamma_-,\Gamma_+$. Suppose they have disjoint product collars parametrized by $(\R/2\pi\mathbb Z)^2\times[0,\eta_i]$, bi-Lipschitz and smooth with nonsingular derivative on open pieces covering up to a null set. Removing sufficiently thin collars must leave a connected Lipschitz central region. Let $\mu_i$ be the pushforward to $\Gamma_i$ of normalized angular measure $(2\pi)^{-2}d\theta_1d\theta_2$.
+
+There is one real scalar $b$, bounded above and away from zero, such that the weak $b$-harmonic function $U_c$ with separate constant voltages $c_i$ on the components satisfies
+\begin{equation}\label{eq:block}
+\int_B b\nabla U_c\cdot\nabla\psi
+=\sum_{i=0,-,+} I_i(c)\int_{\Gamma_i}\Tr\psi\,d\mu_i
+\quad(\psi\in H^1(B)).
+\end{equation}
+The current map $c\mapsto I(c)$ is linear, has kernel $\R(1,1,1)$, and image $\{p\in\R^3:p_0+p_-+p_+=0\}$.
+\end{proposition}
+This proposition preserves the whole conormal functional for these voltages. Its proof in \cite[pp.16--25]{oai} constructs two tensor-harmonic fields with independent current vectors, terminates their angular oscillations within finite collars, and applies the exact two-field scalarization of \cite[Theorem 3.1]{oai}. No identification of a tensor's complete operator with a scalar operator is needed.
+
+To apply it repeatedly, take the geometry of \cite[Lemma 5.1]{oai}. Set
+\[
+L=\frac85,\quad h=\frac3{100},\quad s=\frac{57}{100},\quad a=\frac{81}{100},
+\]
+\[
+D=\{x:h<\max(|x_1|/L,|x_2|)<1,\ |x_3|<1\},\qquad
+S_\pm x=s(x_2,x_1,x_3)\pm ae_1,
+\]
+and $D_\pm=S_\pm D$, $B=D\setminus(\overline D_-\cup\overline D_+)$. The child outer boxes have first-coordinate intervals $[-1.38,-0.24]$ and $[0.24,1.38]$, with $|x_2|\leq0.912$ and $|x_3|\leq0.57$. They lie strictly inside $D$ and avoid its axial hole, whose first half-width is $Lh=0.048$. Also $\overline D\subset B(0,3)$ because $L^2+2=4.56<9$.
+
+For completeness, the collar coordinates can be chosen compatibly at every depth. Let $q(\theta)$ parametrize the unit square perimeter by rays and let $\zeta(\psi)$ parametrize the perimeter of $[h,1]\times[-1,1]$ by rays from $c_* =((1+h)/2,0)$. Both angles have period $2\pi$. If
+\[
+(r,z)=c_*+(1+\tau)(\zeta(\psi)-c_*),
+\]
+the map $(\theta,\psi,\tau)\mapsto(Lr q_1(\theta),r q_2(\theta),z)$ is a piecewise smooth bi-Lipschitz collar of $\partial D$ for small $|\tau|$. The parent uses $\tau\leq0$ and the children the images of $\tau\geq0$, pointing into $B$. The finite seams are null and $r$ stays positive. The annulus at height $0.8$ connects the region above the children. Points below the child boxes can first move horizontally to $|x_2|=0.96$ and then vertically; points in a child axial hole can move vertically through that hole. These paths and the strict gaps persist for sufficiently thin collars. Thus the block has the hypotheses of Proposition~\ref{prop:block}.
+
+Let $\mu$ be the resulting probability measure on $\Sigma=\partial D$. For words $\nu$ in the alphabet $\{-,+\}$, define $S_\varnothing=\mathrm{id}$ and $S_{\nu\varepsilon}=S_\nu\circ S_\varepsilon$. Write $D_\nu=S_\nu D$, $B_\nu=S_\nu B$, $\Sigma_\nu=\partial D_\nu$ and $\mu_\nu=(S_\nu)_*\mu$. The open blocks are pairwise disjoint. Define
+\begin{equation}\label{eq:gamma}
+\gamma(x)=b(S_\nu^{-1}x)\quad(x\in B_\nu),\qquad \gamma(x)=1\quad\text{elsewhere}.
+\end{equation}
+This is a measurable scalar with fixed positive finite bounds $c_0,C_0$ at all depths. It equals one outside $\overline D$. The total volume of depth-$j$ cells is $(2s^3)^j|D|$, and $2s^3=0.370386<1$.
+
+For any zero-sum current vector $p$, invert the current map in Proposition~\ref{prop:block}, normalizing the parent voltage to zero. Extend the block solution by its constant child voltages inside $D_-,D_+$ and by zero outside $D$. The glued function $W_p$ belongs to $H^1_0(\Omega)$, has support in $\overline D$, and satisfies
+\begin{equation}\label{eq:rootcharges}
+\int_\Omega\gamma\nabla W_p\cdot\nabla\psi
+=\sum_{i=0,-,+}p_i\int_{\Sigma_i}\Tr\psi\,d\mu_i
+\quad(\psi\in H^1(\Omega)),
+\end{equation}
+where $\Sigma_0=\Sigma$. Its gradient vanishes inside both children. Finite-dimensional linearity and the maximum principle give, for a fixed block constant $K$,
+\[
+\|W_p\|_\infty\leq K|p|,\qquad \|\nabla W_p\|_2^2\leq K|p|^2.
+\]
+For the gradient bound, express $W_p$ in two fixed basis solutions; their finite energies and the bounded coefficients of that expression supply $K$.
+
+At depth $j=|\nu|$ use $W_{\nu,p}=s^{-j}W_p\circ S_\nu^{-1}$, extending $W_p$ by zero to $\R^3$. If $S_\nu y=rQy+t$, with $r=s^j$ and $Q$ orthogonal, then
+\[
+\nabla W_{\nu,p}=r^{-2}Q(\nabla W_p)\circ S_\nu^{-1},\quad
+ dx=r^3dy,\quad
+\nabla_y(\psi\circ S_\nu)=rQ^t(\nabla_x\psi)\circ S_\nu.
+\]
+These formulas show that the prescribed integrated currents remain $p_i$:
+\begin{equation}\label{eq:scaledcharges}
+\int_\Omega\gamma\nabla W_{\nu,p}\cdot\nabla\psi
+=\sum_{i=0,-,+}p_i\int_{\Sigma_{\nu i}}\Tr\psi\,d\mu_{\nu i},
+\end{equation}
+where $\nu0=\nu$. They also give
+\begin{equation}\label{eq:scaledbounds}
+\|W_{\nu,p}\|_\infty\leq K s^{-j}|p|,\qquad
+\|\nabla W_{\nu,p}\|_2^2\leq K s^{-j}|p|^2.
+\end{equation}
+Only gradients on $B_\nu$ contribute, where the coefficient is the scaled block coefficient. Both neighboring blocks use exactly the same pushed-forward probability measure on a shared surface.
+
+\section{Common averages and a nonzero source potential}
+Let $u\in H^1(\Omega)$ be any weakly $\gamma$-harmonic function and put
+\[
+m_\nu(u)=\int_{\Sigma_\nu}\Tr u\,d\mu_\nu.
+\]
+Testing its weak equation with $W_{\nu,p}$, then using \eqref{eq:scaledcharges} with $\psi=u$, gives
+\[
+p_0m_\nu(u)+p_-m_{\nu-}(u)+p_+m_{\nu+}(u)=0
+\quad(p_0+p_-+p_+=0).
+\]
+Hence the three averages are equal. Induction gives one value $u_*$ on every cell surface. If $\|u\|_\infty\leq M$, then the trace bounds give $|u_*|\leq M$.
+
+Now place charge $1$ on the left first-generation child and $-1$ on the right, splitting each charge equally between its children. Denote the charges by $q_\nu$. At depth $j\geq1$,
+\[
+|q_\nu|=2^{1-j},\qquad \sum_{|\nu|=j}|q_\nu|=2.
+\]
+Define
+\[
+Z_0=W_{\varnothing,(0,1,-1)},\qquad
+Z_j=\sum_{|\nu|=j}W_{\nu,(-q_\nu,q_\nu/2,q_\nu/2)}\quad(j\geq1),
+\qquad w_N=\sum_{j=0}^{N-1}Z_j.
+\]
+A child charge cancels the next block's parent charge. Thus
+\begin{equation}\label{eq:telescoping}
+\int_\Omega\gamma\nabla w_N\cdot\nabla\psi
+=\sum_{|\nu|=N}q_\nu\int_{\Sigma_\nu}\Tr\psi\,d\mu_\nu.
+\end{equation}
+The depth-$j$ cells are disjoint. Since $|(-q,q/2,q/2)|^2=3q^2/2$, \eqref{eq:scaledbounds} gives, after enlarging one fixed $K$,
+\[
+\|Z_j\|_\infty\leq K(2s)^{-j},\qquad
+\|\nabla Z_j\|_2^2\leq K(2s)^{-j}.
+\]
+Here $2s=1.14>1$. Both the series of supremum norms and the series of gradient norms converge. Consequently $w_N$ converges strongly in $H^1$ and in $L^\infty$ to a bounded $w\in H^1_0(\Omega)$ supported in $\overline D$.
+
+Choose $\eta\in C^\infty_c(\Omega)$ equal to one near $\overline D_-$ and zero near $\overline D_+$. All terminal positive charges lie in the left subtree and sum to one; all negative charges lie in the right subtree. Equation~\eqref{eq:telescoping} gives
+\[
+\int_\Omega\gamma\nabla w_N\cdot\nabla\eta=1.
+\]
+Strong $H^1$ convergence gives the same identity for $w$. In particular $w$ is nonzero on a set of positive volume.
+
+The common surface averages give the identity needed to change conductivity. For any bounded harmonic $u$ and any $\phi\in C^\infty_c(\Omega)$, the fixed test $(u-u_*)\phi$ is in $H^1_0$. Choose $x_\nu\in D_\nu$. Since the mean of $\Tr u-u_*$ is zero,
+\[
+\int_{\Sigma_\nu}(\Tr u-u_*)\phi\,d\mu_\nu
+=\int_{\Sigma_\nu}(\Tr u-u_*)[\phi-\phi(x_\nu)]\,d\mu_\nu.
+\]
+Its absolute value is at most $2M\|\nabla\phi\|_\infty s^N\operatorname{diam}D$ when $|\nu|=N$ and $M=\|u\|_\infty$. The absolute terminal charge is two, so the right side of \eqref{eq:telescoping} for this test tends to zero. Passing to the strong $H^1$ limit proves
+\begin{equation}\label{eq:annihilation}
+\int_\Omega\gamma\nabla w\cdot\nabla[(u-u_*)\phi]=0.
+\end{equation}
+No trace on the limiting nested null set is used.
+
+\section{Changing the conductivity and preserving all data}
+Choose real $\delta\ne0$ with $|\delta|\|w\|_\infty<1/2$ and set
+\[
+\rho=1+\delta w,\qquad \gamma_0=\gamma,\qquad \gamma_1=\rho^2\gamma.
+\]
+Both coefficients have common bounds $c_0/4\leq\gamma_j\leq9C_0/4$, and both equal one near the outer sphere. Since $\rho>0$, the equality $\rho^2=1$ is equivalent to $w=0$; the two coefficients therefore differ on a set of positive volume.
+
+First take a smooth boundary voltage $f$. Its $\gamma$-harmonic extension $u$ is bounded by the maximum principle. The reciprocal chain rule and bounded $H^1$ product rule give
+\[
+\widetilde u=u_*+\frac{u-u_*}{\rho}\in H^1(\Omega),\qquad
+\gamma_1\nabla\widetilde u
+=\rho\gamma\nabla u-(u-u_*)\gamma\nabla\rho\in L^2.
+\]
+It has trace $f$ and equals $u$ in the outer collar. For compact smooth $\phi$, the original equation tested with $\rho\phi$ gives
+\[
+\int_\Omega\rho\gamma\nabla u\cdot\nabla\phi
+=-\int_\Omega\phi\gamma\nabla u\cdot\nabla\rho.
+\]
+Multiplying \eqref{eq:annihilation} by $\delta$ and expanding gives
+\[
+\int_\Omega(u-u_*)\gamma\nabla\rho\cdot\nabla\phi
+=-\int_\Omega\phi\gamma\nabla\rho\cdot\nabla u.
+\]
+The mixed terms cancel upon subtraction. They are integrable by Cauchy--Schwarz. Thus the transformed flux has zero distributional divergence; density of compact smooth tests gives the whole weak equation on $H^1_0$. Uniqueness identifies $\widetilde u$ as the $\gamma_1$-harmonic extension of $f$.
+
+For an arbitrary $h\in H^{1/2}(\partial\Omega)$, multiply an $H^1$ extension $V_h$ by a smooth cutoff equal to one near the boundary and supported in the outer collar. The resulting $V_h^0$ has the same trace and its gradient is supported where the two fluxes agree. By \eqref{eq:dn},
+\[
+\langle\Lambda_{\gamma_1}f,h\rangle
+=\int_\Omega\gamma_1\nabla\widetilde u\cdot\nabla V_h^0
+=\int_\Omega\gamma_0\nabla u\cdot\nabla V_h^0
+=\langle\Lambda_{\gamma_0}f,h\rangle.
+\]
+This proves equality for every smooth $f$ and every $h$. The energy bound and the bounded trace extension give bounded operators $H^{1/2}\to H^{-1/2}$. Smooth traces are dense on the sphere, so equality holds for every $f$ in the full trace space. This last passage uses linear continuity, without transforming a possibly unbounded rough-data solution. It completes the proof of Theorem~\ref{thm:main} from the cited block proposition.
+
+\begin{thebibliography}{9}
+\small
+\bibitem{oai} OpenAI, \emph{Nonuniqueness for Bounded Measurable Scalar Conductivities in Three Dimensions}, preprint, September 23, 2026, 33 pp.\par
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Nonuniqueness-for-Bounded-Measurable-Scalar-Conductivities-in-Three-Dimensions-September-23-2026/paper.pdf}{Primary manuscript at a fixed source revision}.
+\bibitem{aim} MColbrook/AIM, \emph{046---Calder\'on uniqueness for bounded measurable conductivities}, repository statement, fixed revision checked October 12, 2026.\par
+\href{https://github.com/MColbrook/AIM/blob/c9929805cece044705abaaebe1cebddac1ba11a6/problems/046-rough-conductivity-calderon.md}{Problem statement at the reviewed catalogue revision}.
+\bibitem{cgr} P. Caro, M. \'A. Garc\'ia-Ferrero and K. M. Rogers, \emph{Reconstruction for the Calder\'on problem with Lipschitz conductivities}, arXiv:2401.06120v1, 2024.\par
+\href{https://arxiv.org/abs/2401.06120v1}{Primary preprint}.
+\end{thebibliography}
+
+\section*{AI-use statement}
+This expository note was prepared with OpenAI Codex for source retrieval, mathematical checking, drafting and typesetting. The counterexample and its scalar branching construction are attributed to OpenAI's cited preprint. No independent human proof certification or local Lean verification is claimed for this note. Independent mathematical review is requested.
+\end{document}
