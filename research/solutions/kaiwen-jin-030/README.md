@@ -9,7 +9,8 @@ in `C^d` with every distinct squared inner product equal to `1/(d+1)`.
 No covariance assumption is added to the question. The construction uses
 Weyl--Heisenberg orbits as witnesses.
 
-The decisive primary source is [*Stark units for real quadratic fields and
+The decisive primary source is Danylo Radchenko and Campbell Wheeler's
+[*Stark units for real quadratic fields and
 reciprocity laws*, Hexagon 2610.00186v1, 10 October 2026](https://hexagonmath.org/2610.00186v1),
 Proposition 7 and Section 9.2. Its Section 9.2 already announces the SIC
 consequence. This submission is a literature update and an explicit derivation,
