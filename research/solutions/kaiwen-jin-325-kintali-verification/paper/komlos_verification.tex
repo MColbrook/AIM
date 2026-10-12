@@ -1,0 +1,242 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\R}{\mathbb R}
+\newcommand{\pdisc}{\operatorname{pdisc}}
+\title{Kintali's counterexample to fixed-order prefix balancing}
+\author{Kaiwen Jin\\\small\href{mailto:yui.ui.siki@gmail.com}{yui.ui.siki@gmail.com}}
+\date{October 12, 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+The strong Koml\'os question asks whether one signing can keep every
+prefix of any fixed ordered family of Euclidean-unit vectors bounded
+in the maximum norm by an absolute constant. We give a self-contained
+exposition of Kintali's counterexample. His finite recursive family has
+dimension $d_k=2^{2^k-1}$ and prefix discrepancy at least
+$2^{k/2-1}=\tfrac12\sqrt{1+\log_2d_k}$ for every signing.
+The proof freezes a large mean in each of several coordinate pairs and
+then forces a large difference in one of those pairs. All witness choices
+are represented in a fixed ordered word, so the argument applies to
+signs chosen with knowledge of the entire input. The construction and
+amplification argument are due to Kintali.
+\end{abstract}
+
+\section{The question and its source}
+
+For a matrix $A=(v_1,\ldots,v_T)$ with ordered columns in $\R^d$, define
+\[
+\pdisc(A)=\min_{\varepsilon\in\{-1,1\}^T}
+\max_{1\le t\le T}\left\|\sum_{i=1}^t\varepsilon_i v_i\right\|_\infty,
+\qquad \|x\|_\infty=\max_{1\le r\le d}|x_r|.
+\]
+The order is fixed, and the same signs must work for all prefixes.
+They may depend on the entire input. The strong Koml\'os conjecture asks
+whether $\pdisc(A)$ has an absolute upper bound whenever
+$\|v_i\|_2\le1$. Bansal et al.~\cite[Open Problem 6.1]{bansal} state
+this question, which is the target of AIM problem 325~\cite{aim}.
+It differs from the terminal-sum problem: a small value of
+$\|\sum_i\varepsilon_i v_i\|_\infty$ allows large intermediate
+excursions. Karingula and Lovett's terminal-sum result and their
+Conjecture 1.6 explicitly retain this distinction~\cite{karingula}.
+
+Kintali's preprint~\cite[Lemma 2.2 and Theorem 3.1]{kintali} gives
+the following negative answer. This note explains its construction and
+proof; it makes no claim of a new construction or mathematical priority.
+
+\begin{theorem}[Kintali]\label{thm:main}
+For every integer $k\ge0$, there is a finite fixed ordered matrix
+$A_k\in\R^{d_k\times n_k}$, where $d_k=2^{2^k-1}$ and $n_k\ge1$,
+whose columns have Euclidean norm one, such that every
+$\varepsilon\in\{-1,1\}^{n_k}$ satisfies
+\begin{equation}\label{eq:main}
+\max_{1\le t\le n_k}\left\|\sum_{i=1}^t
+\varepsilon_i(A_k)_i\right\|_\infty
+\ge 2^{k/2-1}=\frac12\sqrt{1+\log_2d_k}.
+\end{equation}
+Consequently there is no absolute constant in the strong Koml\'os question.
+\end{theorem}
+
+Here $(A_k)_i$ is column $i$, and $n_k$ is its finite number of columns.
+The right side grows without bound. The length of the construction is
+large; neither an efficient algorithm nor an optimal lower bound is asserted.
+
+\section{The construction and amplification}
+
+Copies of a matrix can begin after earlier copies have moved the current
+sum. We therefore use a statement that allows an arbitrary initial offset.
+Put $E=\{c\in\R:|c|\ge1\}$. For an ordered $d\times n$ matrix
+$M=(M_1,\ldots,M_n)$ and $a\ge0$, write $R(M,a)$ for
+\begin{equation}\label{eq:robust}
+\forall c\in E^n\ \forall u\in\R^d:
+\quad\max_{0\le t\le n}\left\|u+\sum_{j=1}^t c_jM_j\right\|_\infty\ge a.
+\end{equation}
+The prefix with $t=0$ is included in this auxiliary property.
+
+Assume $d,n\ge1$. In dimension $2d^2$, index coordinates by
+$(\ell,r,\sigma)$ for $\ell,r\in[d]=\{1,\ldots,d\}$ and
+$\sigma\in\{+,-\}$, and let $e_{\ell,r,\sigma}$ be the corresponding
+standard vector. For each source column $j$, define
+\begin{align}
+O_{\ell,j}&=\sum_{r=1}^d m_{rj}
+ (e_{\ell,r,+}+e_{\ell,r,-}),\label{eq:original}\\
+D_{\rho,j}&=\sum_{\ell=1}^d m_{\ell j}
+ (e_{\ell,r_\ell,+}-e_{\ell,r_\ell,-}),
+ \qquad \rho=(r_1,\ldots,r_d)\in[d]^d.\label{eq:detector}
+\end{align}
+The source row in the second formula is $\ell$; $r_\ell$ chooses only
+the physical coordinate pair. Different depths $\ell$ use disjoint pairs.
+An original column will change the mean of a pair, while a detector
+column will change its difference.
+
+Let $Q$ concatenate $(D_{\rho,1},\ldots,D_{\rho,n})$ for every
+$\rho\in[d]^d$ in lexicographic order. Define words backwards by
+\begin{equation}\label{eq:word}
+W_{d+1}=Q,\qquad
+W_\ell=(W_{\ell+1},O_{\ell,1},W_{\ell+1},\ldots,
+ O_{\ell,n},W_{\ell+1})\quad(\ell=d,\ldots,1).
+\end{equation}
+The matrix $F(M)$ has ordered column word $W_1$. Every physical occurrence
+has its own coefficient, even when two occurrences are equal as vectors.
+The entire word is specified before these coefficients are chosen.
+
+Each output column corresponding to $M_j$ has squared norm
+$2\|M_j\|_2^2$. This follows by counting its two copies of each source
+entry in distinct coordinates in~\eqref{eq:original} and
+\eqref{eq:detector}. In particular, $s$ nonzero entries in $\{-1,1\}$
+per source column become exactly $2s$ such entries per output column.
+The output dimension and length are
+\begin{equation}\label{eq:size}
+d'=2d^2,\qquad n'=(1+nd^d)(n+1)^d-1.
+\end{equation}
+Indeed $|Q|=nd^d$ and $|W_\ell|+1=(n+1)(|W_{\ell+1}|+1)$.
+Thus the construction is finite for every finite source matrix.
+
+\begin{lemma}[Kintali]\label{lem:amplify}
+If $R(M,a)$ holds, then $R(F(M),2a)$ holds.
+\end{lemma}
+
+\begin{proof}
+Fix arbitrary coefficients in $E$ on all $n'$ physical occurrences and
+an arbitrary initial vector $w\in\R^{2d^2}$. Let $p(t)$ be the resulting
+path, including $p(0)=w$. For each coordinate pair set
+\[
+h_{\ell,r}(t)=\frac{p_{\ell,r,+}(t)+p_{\ell,r,-}(t)}2,
+\qquad z_{\ell,r}(t)=\frac{p_{\ell,r,+}(t)-p_{\ell,r,-}(t)}2.
+\]
+Thus $p_{\ell,r,\pm}=h_{\ell,r}\pm z_{\ell,r}$. An occurrence of
+$O_{\ell,j}$ changes only the depth-$\ell$ mean vector, by its
+coefficient times $M_j$. No original changes any $z$. A detector
+$D_{\rho,j}$ changes $z_{\ell,r_\ell}$ by its coefficient times
+$m_{\ell j}$ for every $\ell$, and changes no mean.
+
+In an occurrence of $W_\ell$, let $h^0$ be the depth-$\ell$ mean
+vector at its start and $\alpha_j\in E$ the coefficients of its $n$
+separating original columns. At the starts of its $n+1$ child occurrences
+of $W_{\ell+1}$ the mean vector has values
+\[
+h^0+\sum_{j=1}^s\alpha_jM_j,\qquad 0\le s\le n.
+\]
+Property~\eqref{eq:robust} selects a child and a row $r_\ell$ with
+$|h_{\ell,r_\ell}|\ge a$. That mean stays fixed throughout the
+chosen child, since it contains only deeper originals and detectors.
+Starting at $W_1$, repeat this selection inside each chosen child.
+After $d$ selections there is one occurrence of $Q$ and rows
+$r_1,\ldots,r_d$ such that all means $h_{\ell,r_\ell}$ are constant
+there and have absolute value at least $a$. Previously selected means
+remain fixed on every descendant interval.
+
+This occurrence of $Q$ contains the detector word for
+$\rho=(r_1,\ldots,r_d)$. If its occurrence coefficients are
+$\beta_1,\ldots,\beta_n$, the vector of selected differences follows
+\[
+(z_{1,r_1},\ldots,z_{d,r_d})_{\rm start}
+ +\sum_{j=1}^s\beta_jM_j,\qquad 0\le s\le n.
+\]
+Its initial value may reflect earlier detectors. Property
+\eqref{eq:robust} permits precisely this arbitrary offset, and gives a
+time and depth $\ell$ with $|z_{\ell,r_\ell}|\ge a$. At the same
+time $|h_{\ell,r_\ell}|\ge a$. For real $h,z$,
+\[
+\max\{|h+z|,|h-z|\}=|h|+|z|,
+\]
+as follows by squaring both sides. One physical coordinate therefore has
+magnitude at least $2a$ at a global prefix time.
+The initial vector and all occurrence coefficients were arbitrary.
+Choosing the witness interval and tuple after fixing them changes
+neither the input word nor its coefficients. This proves the lemma.
+\end{proof}
+
+\section{Iteration and unit normalization}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Set $M_0=[1]$ and $M_{k+1}=F(M_k)$. For $u\in\R$ and $|c|\ge1$,
+\[
+|c|\le|u|+|u+c|,
+\]
+so $R(M_0,1/2)$ holds. Lemma~\ref{lem:amplify} gives
+$R(M_k,2^{k-1})$ for every integer $k\ge0$.
+Each $M_k$ is an integer matrix with exactly $s_k$ nonzero entries in
+$\{-1,1\}$ per column. The norm count and~\eqref{eq:size} give
+\[
+s_0=d_0=n_0=1,\qquad s_{k+1}=2s_k,\qquad d_{k+1}=2d_k^2,
+\]
+and the finite positive length obeys
+\[
+n_{k+1}=(1+n_kd_k^{d_k})(n_k+1)^{d_k}-1.
+\]
+Induction yields $s_k=2^k$ and $d_k=2^{2^k-1}$.
+Define $A_k=M_k/\sqrt{s_k}$. Every column then has squared Euclidean
+norm $s_k/s_k=1$. For any signing, apply $R(M_k,2^{k-1})$ with
+offset zero and divide by $\sqrt{s_k}$. The result is~\eqref{eq:main},
+since $2^{k-1}/\sqrt{2^k}=2^{k/2-1}$ and
+$1+\log_2d_k=2^k$. The zero prefix has norm zero, so it cannot be
+the witness to this positive bound.
+
+For any proposed $C>0$, choose a positive integer $m>2C$ and take
+$k=2m$. Since $2^m\ge m+1>2C$, the bound $2^{k/2-1}$ exceeds $C$.
+The fixed finite family $A_k$ then defeats every signing. Every column is
+retained, the order is unchanged, and the signs may use the entire family.
+\end{proof}
+
+\paragraph{AI-use statement.}
+OpenAI Codex assisted with source retrieval, reconstruction and checking
+of the argument, and preparation of this exposition. The construction
+and proof mechanism are credited to Shiva Kintali. The checking performed
+for this note was AI-assisted; no independent human review is claimed.
+
+\begin{thebibliography}{4}
+\bibitem{bansal}
+N. Bansal, H. Jiang, R. Meka, S. Singla, and M. Sinha,
+\emph{Prefix Discrepancy, Smoothed Analysis, and Combinatorial Vector Balancing},
+ITCS 2022, LIPIcs 215, 13:1--13:22.
+\href{https://doi.org/10.4230/LIPIcs.ITCS.2022.13}{doi:10.4230/LIPIcs.ITCS.2022.13}.
+Full version: \href{https://arxiv.org/abs/2111.07049v1}{arXiv:2111.07049v1},
+Section 6, Open Problem 6.1.
+
+\bibitem{karingula}
+S. R. Karingula and S. Lovett,
+\emph{An elementary proof of the Koml\'os conjecture},
+\href{https://eccc.weizmann.ac.il/report/2026/188/}{ECCC TR26-188}, 2026.
+\href{https://arxiv.org/abs/2609.20979v1}{arXiv:2609.20979v1},
+Theorem 1.2 and Conjecture 1.6.
+
+\bibitem{kintali}
+S. Kintali, \emph{On the Fixed-Order Strong Koml\'os Conjecture},
+\href{https://eccc.weizmann.ac.il/report/2026/242/}{ECCC TR26-242}, 2026,
+Sections 2--3.1, Lemma 2.2 and Theorem 3.1, pp. 2--5.
+The PDF title page is dated September 15; the ECCC report record is dated
+September 26; its publication field gives October 9.
+
+\bibitem{aim}
+\emph{AIM---Open Applied Problems}, problem 325,
+\href{https://github.com/MColbrook/AIM/blob/c9929805cece044705abaaebe1cebddac1ba11a6/problems/325-strong-komlos-prefix-discrepancy.md}{fixed-order prefix discrepancy statement},
+revision \texttt{c9929805cece044705abaaebe1cebddac1ba11a6},
+accessed October 12, 2026.
+\end{thebibliography}
+\end{document}
