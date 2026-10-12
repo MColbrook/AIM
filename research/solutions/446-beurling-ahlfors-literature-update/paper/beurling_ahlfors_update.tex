@@ -1,0 +1,374 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\B}{\mathcal B}
+\newcommand{\dz}{\partial_z}
+\newcommand{\db}{\partial_{\bar z}}
+\newcommand{\pv}{\operatorname{pv}}
+\DeclareMathOperator{\supp}{supp}
+\title{A note on the sharp Beurling--Ahlfors bound}
+\author{Kaiwen Jin\\[2pt]\small\href{mailto:yui.ui.siki@gmail.com}{yui.ui.siki@gmail.com}}
+\date{October 12, 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Agazzi and collaborators prove the sharp Beurling--Ahlfors norm in
+arXiv:2609.28311v2. We give an explicit derivation of the corresponding
+disk principal-value estimate for arbitrary smooth compactly supported
+complex functions. The argument starts from their unrestricted
+quasiconvexity theorem and records the power integral, the Cauchy-potential
+cutoff, and complex duality. This is an attributed exposition of the
+existing result.
+\end{abstract}
+
+\section{The estimate and its source}
+
+Identify \(\C\) with \(\R^2\), write \(dA=dx\,dy\), and use
+\[
+ \dz=\tfrac12(\partial_x-i\partial_y),\qquad
+ \db=\tfrac12(\partial_x+i\partial_y).
+\]
+For a smooth compactly supported complex function \(f\), the
+Beurling--Ahlfors transform is
+\begin{equation}\label{eq:pv}
+ \B f(z)=-\frac1\pi\lim_{\epsilon\downarrow0}
+       \int_{|z-w|>\epsilon}\frac{f(w)}{(z-w)^2}\,dA(w).
+\end{equation}
+All \(L^p\) norms below use complex modulus and area measure.
+
+\begin{theorem}\label{thm:bound}
+For every real \(1<p<\infty\) and every \(f\in C_c^\infty(\C;\C)\),
+the limit in \eqref{eq:pv} exists at every point, \(\B f\in L^p(\C)\),
+and
+\begin{equation}\label{eq:bound}
+ \|\B f\|_p\le (p^*-1)\|f\|_p,\qquad
+ p^*=\max\{p,p/(p-1)\}.
+\end{equation}
+\end{theorem}
+
+The result is due to Agazzi et al.~\cite{agazzi}: their Corollary~2,
+equation~(4), states the full complex \(L^p\) operator norm equality.
+The purpose of this note is to spell out the passage to
+\eqref{eq:pv} and \eqref{eq:bound}. In particular, neither component of
+\(f\) is restricted, and its integral need not vanish.
+
+We use the following precise form of their main theorem. Write a
+real-linear map \(A:\C\to\C\) as
+\[
+ Az=a_+z+a_-\bar z,\qquad a=|a_+|,\quad b=|a_-|,\quad s=a+b.
+\]
+Then \(|A|_{\mathrm{op}}=s\) and \(\det A=a^2-b^2\). Define
+\begin{equation}\label{eq:L}
+ L(A)=
+ \begin{cases}
+   \det A,&s\le1,\\
+   2a-1,&s>1 .
+ \end{cases}
+\end{equation}
+The two expressions agree when \(s=1\).
+
+\begin{theorem}[Agazzi et al., Theorem 1]\label{thm:source}
+On \(Q=\R^2/\mathbb Z^2\), with area one, every
+\(A\in\R^{2\times2}\) and every
+\(\varphi\in C^\infty_{\mathrm{per}}(Q;\R^2)\) satisfy
+\begin{equation}\label{eq:qc}
+ \int_Q L(A+D\varphi)\,dx\ge L(A).
+\end{equation}
+\end{theorem}
+
+Theorem~\ref{thm:source} is quoted from \cite[Theorem~1 and
+Section~2]{agazzi}. It concerns arbitrary Jacobians of two-component
+fields. The source proves it by a constrained gradient projection and a
+pointwise representation of \(L\). We need only its stated inequality.
+The relation between \(L\), power integrands, and the transform was
+already considered by Baernstein and Montgomery-Smith~\cite{bms};
+we include the calculation needed here.
+
+\section{From periodic quasiconvexity to power estimates}
+
+Let \(u\in C_c^\infty(\R^2;\R^2)\). Choose a square
+\(x_0+[0,R]^2\) containing its support in the interior. Then
+\(\varphi(y)=u(x_0+Ry)/R\) extends smoothly and periodically to \(Q\),
+and \(D\varphi(y)=Du(x_0+Ry)\). Theorem~\ref{thm:source} at \(A=0\)
+gives
+\[
+ \int_{\R^2}L(Du)\,dx=R^2\int_Q L(D\varphi)\,dy\ge0.
+\]
+Also \(\int_{\R^2}\det Du=0\): both
+\(\int u^1_xu^2_y\) and \(\int u^1_yu^2_x\) equal
+\(-\int u^1u^2_{xy}\) by integration by parts. Thus, with \(M=L-\det\),
+\begin{equation}\label{eq:Mpositive}
+ \int_{\R^2}M(Du/t)\,dx\ge0\qquad(t>0),
+\end{equation}
+where we have applied the same argument to \(u/t\).
+
+Fix \(p>2\). For a matrix \(A\) with \(s=a+b>0\), \(M(A/t)\)
+vanishes when \(t\ge s\), whereas for \(0<t<s\) it is
+\((b^2-a^2)t^{-2}+2at^{-1}-1\). Consequently
+\begin{align}
+ \int_0^\infty t^{p-1}M(A/t)\,dt
+ &=\frac{(b^2-a^2)s^{p-2}}{p-2}
+      +\frac{2as^{p-1}}{p-1}-\frac{s^p}{p}\notag\\
+ &=\frac{2}{p(p-1)(p-2)}
+                [(p-1)b-a](a+b)^{p-1}. \label{eq:mellin}
+\end{align}
+The last equality uses \(b^2-a^2=(b-a)s\).
+Both sides vanish at \(A=0\). Moreover,
+\begin{equation}\label{eq:absolute}
+ \int_0^\infty t^{p-1}|M(A/t)|\,dt
+ \le\left(\frac1{p-2}+\frac2{p-1}+\frac1p\right)s^p .
+\end{equation}
+Indeed, bound \(|b^2-a^2|\) by \(s^2\) and \(a\) by \(s\)
+in the three integrals. Since \(Du\) is bounded and compactly supported,
+\eqref{eq:absolute} justifies Fubini. Integrating
+\eqref{eq:Mpositive} with the positive weight \(t^{p-1}\) therefore gives
+\begin{equation}\label{eq:Burkholder}
+ \int_{\R^2}[(p-1)b-a](a+b)^{p-1}\,dx\ge0,
+ \qquad a=|\dz u|,\quad b=|\db u|.
+\end{equation}
+Here \(u=u^1+iu^2\); the complex coefficients of its real Jacobian
+are exactly \(\dz u\) and \(\db u\).
+
+\begin{lemma}\label{lem:majorant}
+If \(p>2\), \(k=p-1\), and
+\(\alpha=k^{p-1}/p^{p-2}\), then for every \(a,b\ge0\),
+\begin{equation}\label{eq:majorant}
+ \alpha(kb-a)(a+b)^{p-1}\le k^p b^p-a^p .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For \(b>0\), divide by \(b^p\) and put \(t=a/b\).
+The difference between the right and left sides becomes
+\[
+ E(t)=k^p-t^p-\alpha(k-t)(t+1)^{p-1}.
+\]
+We have \(E(k)=0\), and
+\[
+ E'(t)=p\bigl[-t^{p-1}
+          +\alpha(t+1)^{p-2}(t-(p-2))\bigr].
+\]
+The derivative is negative for \(0\le t\le p-2\).
+For \(t>p-2\), set
+\[
+ R(t)=\frac{t^{p-1}}{(t+1)^{p-2}(t-(p-2))}.
+\]
+Then \(R(k)=\alpha\), and
+\[
+ \frac{R'(t)}{R(t)}
+ =\frac{p-1}{t}-\frac{p-2}{t+1}-\frac1{t-(p-2)}
+ =-\frac{(p-1)(p-2)}{t(t+1)(t-(p-2))}<0.
+\]
+Thus \(E\) decreases up to \(k\) and increases thereafter.
+Its minimum is \(E(k)=0\). Continuity as \(b\downarrow0\)
+proves the remaining case.
+\end{proof}
+
+Integrating \eqref{eq:majorant}, then using \eqref{eq:Burkholder},
+proves the following potential estimate:
+\begin{proposition}\label{prop:potential}
+For every \(p>2\) and every \(u\in C_c^\infty(\C;\C)\),
+\begin{equation}\label{eq:potential}
+ \|\dz u\|_p\le(p-1)\|\db u\|_p .
+\end{equation}
+\end{proposition}
+There is no restriction on either real component of \(u\).
+
+\section{The Cauchy potential and the disk kernel}
+
+The locally integrable function \(E_C(z)=1/(\pi z)\) satisfies
+\begin{equation}\label{eq:fundamental}
+ \db E_C=\delta_0,\qquad
+ \dz E_C=-\pv\frac1{\pi z^2},
+\end{equation}
+where the principal value uses disks. We record the boundary computation
+to fix the sign and normalization. For
+\(\psi\in C_c^\infty(\C;\C)\), polar coordinates give
+\[
+ \db\psi=\tfrac12e^{i\theta}(\psi_r+i\psi_\theta/r),
+ \qquad
+ \dz\psi=\tfrac12e^{-i\theta}(\psi_r-i\psi_\theta/r).
+\]
+Integration in \(r>\epsilon\), and periodic integration by parts in
+\(\theta\), yield
+\begin{align*}
+ -\int_{|z|>\epsilon} E_C\,\db\psi\,dA
+   &=\frac1{2\pi}\int_0^{2\pi}\psi(\epsilon e^{i\theta})\,d\theta,\\
+ -\int_{|z|>\epsilon} E_C\,\dz\psi\,dA
+   &=\frac1{2\pi}\int_0^{2\pi}e^{-2i\theta}
+                         \psi(\epsilon e^{i\theta})\,d\theta
+       -\int_{|z|>\epsilon}\frac{\psi(z)}{\pi z^2}\,dA.
+\end{align*}
+The first boundary expression tends to \(\psi(0)\).
+In the second, the constant term has zero angular integral, and the
+remainder is \(O_\psi(\epsilon)\). Subtracting \(\psi(0)\) near zero
+also proves existence of the principal value, since
+\(|\psi(z)-\psi(0)|\le C_\psi|z|\). The omitted disk integrals on the
+left tend to zero because \(1/|z|\) is locally integrable.
+This proves \eqref{eq:fundamental}, without an additional delta term.
+
+For \(f\in C_c^\infty(\C;\C)\), put
+\[
+ u(z)=(E_C*f)(z)=\int_\C\frac{f(w)}{\pi(z-w)}\,dA(w).
+\]
+It is smooth: after writing the integral as
+\(\int E_C(w)f(z-w)\,dA(w)\), place each derivative on \(f\).
+On every compact \(z\)-set, the resulting integrals have common bounded
+support in \(w\) and an integrable bound proportional to \(|E_C(w)|\).
+Dominated convergence applies to every derivative.
+Convolving \eqref{eq:fundamental} with \(f\) gives
+\begin{equation}\label{eq:potentialidentity}
+ \db u=f,\qquad \dz u=\B f .
+\end{equation}
+The second equality holds for the pointwise definition
+\eqref{eq:pv}: subtract \(f(z)\) in a disk about \(z\); the constant
+has zero angular integral, and the error from a removed disk of radius
+\(\epsilon\) is \(O_f(\epsilon)\), locally uniformly in \(z\).
+Thus the principal values converge to the smooth distributional derivative.
+This is also the classical normalization in
+\cite[equations~(1.3), (2.1), (2.2)]{bms}.
+
+Choose \(R_0>0\) with \(\supp f\subset B_{R_0}\).
+For \(|z|>2R_0\), differentiating the nonsingular integral gives
+\[
+ |u(z)|\le C_f|z|^{-1},\qquad |Du(z)|\le C_f|z|^{-2}.
+\]
+Local smoothness and this decay imply \(Du\in L^r\) for every \(r>1\).
+The potential itself need not belong to \(L^2\).
+
+Let \(0\le\chi\le1\) be smooth, equal to one on \(B_1\), zero outside
+\(B_2\), and put \(u_R(z)=\chi(z/R)u(z)\).
+For every fixed \(r>1\),
+\begin{equation}\label{eq:cutoff}
+ Du_R-Du=(\chi(z/R)-1)Du+R^{-1}u(z)D\chi(z/R)
+                   \longrightarrow0\quad\hbox{in }L^r .
+\end{equation}
+The first term tends to zero by integrability of \(|Du|^r\).
+The second is supported in \(R\le|z|\le2R\), is bounded by
+\(C_fR^{-2}\), and has norm at most \(C_{f,r}R^{2/r-2}\),
+which tends to zero. Applying Proposition~\ref{prop:potential} to
+\(u_R\) and passing in norm proves \eqref{eq:bound} for every \(p>2\).
+
+\section{The remaining exponents}
+
+Use \(\widehat h(\xi)=\int_{\R^2}h(x)e^{-2\pi i x\cdot\xi}\,dx\)
+and its unitary \(L^2\) extension. For the compact smooth \(u_R\),
+integration by parts gives
+\[
+ \widehat{\dz u_R}=\pi i(\xi_1-i\xi_2)\widehat{u_R},\qquad
+ \widehat{\db u_R}=\pi i(\xi_1+i\xi_2)\widehat{u_R}.
+\]
+Define
+\begin{equation}\label{eq:multiplier}
+ m(\xi)=\frac{\xi_1-i\xi_2}{\xi_1+i\xi_2}\quad(\xi\ne0),\qquad
+ m(0)=1.
+\end{equation}
+It has unit modulus and is even. The preceding identities give
+\(\widehat{\dz u_R}=m\widehat{\db u_R}\) almost everywhere.
+By \eqref{eq:cutoff} at \(r=2\) and Plancherel,
+\[
+ \widehat{\B f}=m\widehat f,\qquad \|\B f\|_2=\|f\|_2.
+\]
+This identifies the multiplier with the original disk operator.
+
+On complex \(L^2\), let \(B_2=\mathcal F^{-1}m\mathcal F\) and
+use the pairing \(\langle h,g\rangle=\int h\bar g\,dA\).
+Its adjoint has multiplier \(\bar m\).
+For the antilinear isometry \(Ch=\bar h\),
+\(\widehat{Ch}(\xi)=\overline{\widehat h(-\xi)}\);
+evenness of \(m\) therefore gives \(B_2^*=CB_2C\).
+
+Fix \(1<q<2\) and set \(p=q/(q-1)>2\). For every
+\(g\in C_c^\infty(\C;\C)\), the bound already proved at exponent \(p\)
+implies
+\[
+ \|B_2^*g\|_p=\|\B(Cg)\|_p\le(p-1)\|g\|_p .
+\]
+For the original smooth compact \(f\), the \(L^2\) adjoint identity
+and Hölder give
+\begin{equation}\label{eq:pairing}
+ \left|\int\B f\,\bar g\,dA\right|
+ =\left|\int f\,\overline{B_2^*g}\,dA\right|
+ \le(p-1)\|f\|_q\|g\|_p .
+\end{equation}
+We already know \(\B f\in L^q\) from its smoothness and decay.
+The complex \(L^q\) norm is the supremum of its pairings with unit
+\(L^p\) test functions, and smooth compact tests suffice by density.
+For example, for a nonzero \(h\in L^q\) the unit norm maximizer is
+\(h|h|^{q-2}/\|h\|_q^{q-1}\), set to zero where \(h=0\).
+Approximation in \(L^p\) and Hölder recover its pairing from smooth tests.
+If \(g_n\) approximates the unit test, replacing it by
+\(g_n/\max\{1,\|g_n\|_p\}\) preserves the limiting pairing.
+For density, first truncate an \(L^p\) function to a bounded compactly
+supported \(v\), with \(|v|\le M\). Theorem~1.3.20(iii) of \cite{tao}
+provides a continuous compactly supported approximation in \(L^1\).
+Radially projecting this approximant onto the complex disk of radius \(M\)
+gives \(w\) with \(|w|\le M\), preserving continuity and compact support;
+its \(L^1\) error increases by at most a factor of two. Hence
+\[
+ \|v-w\|_p^p\le(2M)^{p-1}\|v-w\|_1.
+\]
+Choose the \(L^1\) error after \(M\). Mollification of \(w\) converges
+uniformly on a common compact support, hence in \(L^p\); truncation
+converges in \(L^p\) by dominated convergence. This proves the required
+smooth density without restricting the complex phase.
+Taking the supremum in \eqref{eq:pairing} yields
+\[
+ \|\B f\|_q\le(p-1)\|f\|_q
+            =\frac1{q-1}\|f\|_q .
+\]
+Together with the \(p>2\) estimate and \(p=2\) equality, this proves
+Theorem~\ref{thm:bound} for every \(1<p<\infty\), with
+\(\max\{p,p/(p-1)\}-1\) and the kernel \(-1/(\pi z^2)\).
+All inputs throughout are arbitrary complex smooth compactly supported
+functions on the plane.
+
+\begin{thebibliography}{9}
+\bibitem{agazzi}
+A. Agazzi, K. Astala, R. Ba\~nuelos, G. Bruno, G. Cassese,
+D. Faraco, A. Guerra, M. Hormozi, B. Kirchheim, A. Koski,
+V. Kova\v c, J. Kristensen, F. Pasqualotto, I. Prause,
+E. Saksman, V. \v Sver\'ak, L. Sz\'ekelyhidi, R. Tione,
+A. Volberg, and H. Yang,
+\emph{Sharp Higher Integrability Theory, Part I:
+The \(L^p\)-norm of the Beurling--Ahlfors transform},
+arXiv:2609.28311v2 (2026).
+\href{https://arxiv.org/abs/2609.28311v2}{Versioned primary source};
+\href{https://arxiv.org/html/2609.28311v2}{complete proof}.
+
+\bibitem{bms}
+A. Baernstein II and S. J. Montgomery-Smith,
+\emph{Some conjectures about integral means of \(\partial f\) and
+\(\bar\partial f\)},
+in \emph{Complex Analysis and Differential Equations},
+C. Kiselman (ed.), Acta Universitatis Upsaliensis C,
+64 (1999), 92--109.
+\href{https://stephenmontgomerysmith.github.io/preprints/brn.html}
+{Author's publication page};
+\href{https://stephenmontgomerysmith.github.io/preprints/brn6.tex}
+{Author's TeX source}.
+
+\bibitem{tao}
+T. Tao, \emph{An Introduction to Measure Theory},
+Graduate Studies in Mathematics 126, American Mathematical Society, 2011.
+\href{https://terrytao.wordpress.com/wp-content/uploads/2012/12/gsm-126-tao5-measure-book.pdf}
+{Author's preliminary version}.
+\end{thebibliography}
+
+\paragraph{AI-use disclosure.}
+Codex assisted with primary-source comparison, the displayed transfer
+calculations, drafting, and document checks. The sharp norm result and its
+quasiconvexity proof are attributed to Agazzi and collaborators.
+Independent mathematical review of this exposition is requested.
+
+\end{document}
