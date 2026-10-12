@@ -1,0 +1,142 @@
+\subsection{Angular norms without fractional functional calculus}
+\label{prelim:spectral}
+The shrinking-sphere estimate uses half-integer angular norms. We give
+the precise mapping statement needed there, including its uniformity.
+Let $B$ be the outward radial Dirichlet-to-Neumann operator of the
+Euclidean unit ball in $\mathbb R^n$. Let $\Pi_k$ project onto restrictions
+of harmonic homogeneous polynomials of degree $k$ to $S^{n-1}$, with
+its probability measure. Then
+\[
+ B\Pi_k=k\Pi_k,\qquad
+ \|v\|_s^2=\sum_{k\ge0}(1+k)^{2s}\|\Pi_kv\|_2^2.
+\]
+
+\begin{lemma}[Spectral angular mapping]\label{prelim:spectral-map}
+For every integer $m\ge0$ and real $s$, a scalar classical operator
+$A\in\Psi^m(S^{n-1})$ satisfies
+\begin{equation}\label{prelim:spectral-bound}
+ \|Av\|_{s-m}\le C\|v\|_s.
+\end{equation}
+The constant is bounded by finitely many symbol and smooth-kernel
+seminorms of $A$. Thus the bound is uniform for bounded smooth families
+on the fixed sphere, and applies componentwise to finitely many tensor
+components. Orders $m=0,1,2,3$ suffice below.
+\end{lemma}
+
+\begin{proof}
+We first justify the complete decomposition used in the displayed norm.
+Restrictions of polynomials are dense in continuous functions on the
+sphere. Indeed extend a continuous function to a continuous compactly
+supported function $F$ in an annulus of $\mathbb R^n$. Gaussian
+convolution converges uniformly to $F$ on the sphere. On $|x|=1$ its
+kernel is
+\[
+ e^{-|x-y|^2/a}=e^{-(1+|y|^2)/a}e^{2x\cdot y/a}.
+\]
+For fixed $a>0$, the exponential series converges uniformly on the
+sphere times the compact support of $F$. Integrating a finite partial
+sum gives a polynomial in $x$, approximating that convolution uniformly.
+Continuous functions are dense in $L^2$ by local convolution and cutoffs.
+
+Every homogeneous polynomial $p$ of degree $k$ is a sum of
+$|x|^{2j}$ times harmonic homogeneous polynomials. To see this without
+an additional decomposition theorem, put
+\[
+ H=p+\sum_{j=1}^{\lfloor k/2\rfloor}c_j|x|^{2j}\Delta^jp,
+ \quad c_0=1,\quad
+ c_j=-\frac{c_{j-1}}{2j(2k-2j+n-2)}.
+\]
+The formula
+\[
+ \Delta(|x|^{2j}q)
+ =2j(2\deg q+2j+n-2)|x|^{2j-2}q+|x|^{2j}\Delta q
+\]
+shows that $\Delta H=0$. The difference $p-H$ is divisible by $|x|^2$;
+induction on degree completes the decomposition. In polar coordinates,
+$-\Delta_{S^{n-1}}H=k(k+n-2)H$. Integration by parts gives orthogonality
+of distinct degrees. These finite-dimensional spaces therefore give a
+complete orthogonal decomposition. The harmonic extension is
+$r^kH(\omega)$, proving $B\Pi_k=k\Pi_k$, including $k=0$.
+
+By the local scalar boundary construction already recorded,
+$B$ is a classical elliptic operator of order one with principal
+symbol $|\xi|$. For an integer $m\ge0$, a parametrix for $(1+B)^m$
+and the ordinary chart-Sobolev mapping bounds give
+\[
+ \|u\|_{H^m}\le C_m\bigl(\|(1+B)^mu\|_2+\|u\|_2\bigr)
+ \le 2C_m\|(1+B)^mu\|_2.
+\]
+Here the smoothing remainder is bounded $L^2\to H^m$, and the last
+inequality uses $1+k\ge1$. This step uses only integer powers.
+
+Put $P_j=\sum_{2^j\le1+k<2^{j+1}}\Pi_k$, $j\ge0$.
+Since a commutator with the scalar order-one operator $B$ preserves
+the order $m$, all $\operatorname{ad}_B^N(A)$ belong to $\Psi^m$.
+For each fixed integer $N\ge0$, the preceding integer estimate implies
+\begin{equation}\label{prelim:band-input}
+ \|\operatorname{ad}_B^N(A)P_l\|_{2\to2}
+ \le C_N2^{lm}.
+\end{equation}
+Each $C_N$ uses only finitely many seminorms of $A$.
+For $|j-l|\ge2$ the two finite-dimensional spectra of $B_j=B|_{P_j}$
+and $B_l=B|_{P_l}$ have distance at least
+$c\max(2^j,2^l)$. If $j>l$, set $X=P_jAP_l$ and
+$Y=P_j[B,A]P_l$. The finite-dimensional identity
+$B_jX-XB_l=Y$ gives
+\[
+ X=\int_0^\infty e^{-tB_j}Y e^{tB_l}\,dt,
+ \qquad \|X\|\le \frac{\|Y\|}{\operatorname{dist}
+             (\operatorname{spec}B_j,\operatorname{spec}B_l)}.
+\]
+It follows by differentiating $e^{-tB_j}Xe^{tB_l}$; the exponential
+tends to zero because of the spectral gap. For $j<l$, use the opposite
+sign and the exponentials $e^{tB_j}$ and $e^{-tB_l}$. Iteration and
+\eqref{prelim:band-input} yield
+\begin{equation}\label{prelim:far-band}
+ \|P_jAP_l\|_{2\to2}
+ \le C_N2^{lm}\max(2^j,2^l)^{-N},\quad |j-l|\ge2.
+\end{equation}
+For $|j-l|\le1$, the bound $C2^{lm}$ suffices.
+
+On each band the norm $\|\cdot\|_s$ is equivalent, with factors at
+most $2^{|s|}$, to $2^{js}\|\cdot\|_2$. Multiplying the block bound
+by $2^{j(s-m)-ls}$ leaves, in the far case,
+\[
+ C_N2^{(j-l)(s-m)}2^{-N\max(j,l)}
+ \le C_N2^{-(N-|s-m|)|j-l|}.
+\]
+Choose $N>|s-m|+2$. The resulting nonnegative matrix $b_{jl}$ has
+uniformly bounded row sums and column sums, including its three
+near-diagonal entries. For finitely supported numbers $a_l$,
+\[
+ \sum_j\left(\sum_l b_{jl}|a_l|\right)^2
+ \le \left(\sup_j\sum_l b_{jl}\right)
+      \left(\sup_l\sum_j b_{jl}\right)\sum_l|a_l|^2,
+\]
+by Cauchy--Schwarz in each row. This proves
+\eqref{prelim:spectral-bound} first for finite harmonic sums, then by
+completion. For a smooth input, integration by parts with every integer
+power of $-\Delta_{S^{n-1}}$ shows rapid weighted square summability of
+its harmonic components. The finite sums therefore converge in every
+integer chart-Sobolev norm by the integer estimate above. The completed
+operator agrees with the original $A$ on smooth inputs. In particular
+no exchange involving an unbounded operator precedes the estimate.
+The proof is uniform in the stated seminorms.
+\end{proof}
+
+Spectral Cauchy--Schwarz gives the dual pairing
+$|\langle u,v\rangle|\le\|u\|_{-s}\|v\|_s$.
+Consequently angular operators of orders one, two and three have the
+form bounds
+\[
+ |\langle A_1u,v\rangle|\le C\|u\|_{1/2}\|v\|_{1/2},\qquad
+ |\langle A_2u,v\rangle|\le C\|u\|_{3/2}\|v\|_{1/2},\qquad
+ |\langle A_3u,v\rangle|\le C\|u\|_{3/2}\|v\|_{3/2}.
+\]
+Applying the same bounds to $A_2^*\in\Psi^2$ gives the second form
+bound with the two input orders reversed. An orthonormal identification
+of a tangent sphere with the fixed
+Euclidean sphere is unitary and conjugates $B$ to this same operator.
+Thus the bounds hold pointwise in the center with the uniform symbol
+constants specified in the moving-sphere argument. They introduce no
+additional center derivatives of the small tensor.

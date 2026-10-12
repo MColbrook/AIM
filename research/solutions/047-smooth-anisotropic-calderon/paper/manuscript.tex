@@ -1,0 +1,48 @@
+% An attributed exposition derived from OpenAI, September 24, 2026.
+% Modified for this exposition; the source argument is licensed Apache-2.0.
+\documentclass[11pt,a4paper]{article}
+\input{preamble}
+\title{An exposition of smooth anisotropic Calder\'on uniqueness\newline
+from full boundary data}
+\author{Kaiwen Jin\thanks{\href{mailto:yui.ui.siki@gmail.com}{yui.ui.siki@gmail.com}}}
+\date{October 12, 2026}
+\hypersetup{pdftitle={An exposition of smooth anisotropic Calderon uniqueness from full boundary data},
+ pdfauthor={Kaiwen Jin}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We present the argument of OpenAI's September 2026 preprint on the smooth
+anisotropic Calder\'on problem and its implication for full boundary data.
+For a compact connected smooth manifold of dimension at least three,
+two smooth Riemannian metrics with the same boundary metric and the same
+single zero-frequency Dirichlet-to-Neumann map are related by a smooth
+diffeomorphism fixing the boundary pointwise. The proof is included:
+product continuation of Green functions, a uniform estimate on shrinking
+spheres, and continuation of the resulting local isometry. We also give
+the angular spectral estimates and the passage from density-valued patch
+measurements to the ordinary full boundary operator explicitly. The
+uniqueness argument and its priority belong to OpenAI; this article is
+an attributed exposition.
+\end{abstract}
+{\footnotesize\tableofcontents}
+\clearpage
+\input{sections/00-introduction}
+\input{sections/01-target}
+\input{sections/01-preliminaries}
+\input{sections/01-spectral}
+\input{sections/02-boundary-data}
+\input{sections/03-product-continuation}
+\input{sections/04-shrinking-balls}
+\input{sections/05-angular-estimate}
+\input{sections/06-bootstrap}
+\input{sections/07-globalization}
+\input{sections/08-full-conclusion}
+\paragraph{AI use.}
+This exposition was prepared with OpenAI Codex (GPT-6.1 Sol), which assisted
+with source retrieval, proof reconstruction, mathematical checks,
+typesetting, and revision. The underlying uniqueness argument is the
+OpenAI preprint \citep{OpenAI2026}, whose attribution is retained.
+No formal verification or independent human refereeing is claimed.
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

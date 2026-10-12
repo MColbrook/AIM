@@ -1,0 +1,61 @@
+\section{The full boundary problem and the patch theorem}
+\label{sec:target}
+Let $M$ be a compact connected smooth manifold with nonempty smooth boundary,
+and let $n=\dim M\ge3$. All metrics below are smooth and positive definite
+up to the boundary. Neither orientability of $M$ nor connectedness of its
+boundary is assumed. We use positive densities and the convention
+$\Delta_g=\operatorname{div}_g\nabla_g$.
+For $f\in H^{1/2}(\partial M;\C)$, let $u_f$ be the unique weak solution
+of $\Delta_gu_f=0$ with trace $f$. The ordinary Dirichlet-to-Neumann
+map is $\Lambda_g f=\partial_{\nu_g}u_f$, with outward unit normal.
+For smooth inputs this is a smooth boundary function; its weak extension
+uses the boundary density $dS_g$.
+
+\begin{theorem}[Full boundary uniqueness]\label{main:full}
+For every such $M$ and every pair $g_1,g_2$ inducing the same tangential
+metric on $\partial M$, equality of the single zero-frequency full
+Dirichlet-to-Neumann maps $\Lambda_{g_1}=\Lambda_{g_2}$ implies that
+there is a smooth diffeomorphism $F:M\to M$ with
+$F|_{\partial M}=\Id$ and $g_1=F^*g_2$.
+\end{theorem}
+
+The proof follows OpenAI's argument for measurements on one boundary
+patch \citep[Theorem~1.1 and Corollary~1.2]{OpenAI2026}.
+The patch theorem is proved in full below; it is not assumed as a separate
+input. The final deduction records explicitly the passage from ordinary
+normal derivatives to density-valued measurements. The cap, product
+continuation, moving-sphere estimate, and global continuation are due to
+OpenAI. The exposition below retains that attribution.
+
+For a nonempty relatively open $\Gamma\subset\partial M$, put
+\[
+ H^{1/2}_{\mathrm{co}}(\Gamma)
+ =\{f\in H^{1/2}(\partial M):\supp f\subset\Gamma\},
+ \qquad
+ Q_g(f,h)=\int_M\langle du_f,d\overline{u_h}\rangle_g\,dV_g.
+\]
+The supported space carries the inherited $H^{1/2}$ norm. It is not
+being defined as the closure of all supported smooth functions. Each
+individual support is compact in $\Gamma$. A cutoff equal to one near
+that support, followed by smooth approximation on the boundary, gives
+approximation within a fixed compact subset of $\Gamma$.
+The energy map is the distribution density on $\Gamma$ defined by
+$Q_g$; for smooth inputs it is
+$\partial_{\nu_g}u_f\,dS_g$. Equality of these maps means equality
+of the sesquilinear forms for every pair in the supported space.
+
+\begin{theorem}[Patch uniqueness]\label{main:patch}
+Let $M,n,g_1,g_2$ be as above, without prescribing a common boundary
+metric. For every nonempty proper relatively open
+$\Gamma\subset\partial M$, equality
+$Q_{g_1}(f,h)=Q_{g_2}(f,h)$ for all
+$f,h\in H^{1/2}_{\mathrm{co}}(\Gamma)$ implies a smooth
+diffeomorphism $\Phi:M\to M$ fixing $\Gamma$ pointwise and satisfying
+$g_2=\Phi^*g_1$.
+\end{theorem}
+
+All source-generated functions and the finite harmonic Hessian family
+will be selected before spatial dilation. The spatial dilation will
+then be fixed before any radius tends to zero. This order is needed
+because qualitative continuation away from the Green kernel's pole
+alone gives no uniform estimate as the separation vanishes.

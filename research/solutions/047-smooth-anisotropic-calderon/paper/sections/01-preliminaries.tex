@@ -1,0 +1,212 @@
+\section{Analytic preliminaries}
+\label{sec:prelim}
+We record the analytic inputs used in the proof, including the parameter
+estimates needed for moving balls. Sobolev spaces are defined in smooth
+charts by $\|v\|_{H^s}^2=\int\langle\xi\rangle^{2s}|\widehat v(\xi)|^2\,d\xi$,
+using $\widehat v=(2\pi)^{-n/2}\int e^{-ix\cdot\xi}v(x)\,dx$.
+A finite partition of unity defines the norms on compact manifolds.
+Different smooth charts and positive smooth densities give equivalent
+norms; all such comparisons below are on fixed compact sets.
+The measure-theoretic inputs are monotone and dominated convergence,
+Tonelli and Fubini on sigma-finite spaces, and completeness of $L^2$;
+see \citep[Theorems~3.11, 3.31, 5.28, 5.32 and~7.24]{Axler2020}.
+All measures used here are positive smooth densities, Euclidean
+Lebesgue measure or counting measure, hence sigma-finite. Fubini is
+used with an absolute-integrability bound; nonnegative square integrals
+use Tonelli. Complex formulas follow by real and imaginary parts.
+Sobolev spaces are Hilbert completions, and local PDE regularity fixes
+their smooth representatives when point values are used.
+
+\subsection{Dirichlet solutions and uniform estimates}
+The Fourier inversion and Plancherel statements used here are
+\citep[Propositions~3.1--3.2]{TaylorFourier}; the corresponding Fourier
+series identity is given there in Section~1.
+For a half-space, the operator
+\[
+ Ef(x',s)=\mathcal F^{-1}_{\xi\to x'}
+           \big(e^{-s\langle\xi\rangle}\widehat f(\xi)\big),\qquad s\ge0,
+\]
+followed by a fixed cutoff, is a bounded right inverse of the trace
+$H^1\to H^{1/2}$. Indeed integration in $s$ gives
+$\|Ef\|_{H^1}^2\le C\int\langle\xi\rangle|\widehat f|^2$.
+Conversely the one-dimensional fundamental theorem of calculus gives
+\[
+ \langle\xi\rangle|\widehat u(\xi,0)|^2
+ \le\int_0^\infty
+       \big(\langle\xi\rangle^2|\widehat u|^2
+                        +|\partial_s\widehat u|^2\big)\,ds
+\]
+for smooth functions of compact support. Density and boundary charts
+give the trace and extension assertions on $M$. Convolution after
+local extension gives smooth approximation. Zero extension across a
+flat boundary with zero trace has no distributional jump; conversely
+translations followed by convolution approximate such extensions by
+functions supported on the interior side. Applying cutoffs proves
+$\ker\operatorname{Tr}=H^1_0(M)$ and the gluing statement for $H^1$
+functions with equal traces on a smooth interface.
+
+For completeness the coercivity used here is also present in
+\citep[Section~1, (1.16)]{TaylorElliptic}: for a fixed trace $g$ there
+are $B>0,C_g$ with
+$\frac12\|du\|_2^2\ge B\|u\|_2^2-C_g$ on that trace class.
+With $g=0$, replace $u$ by $a u$ and let $a\to\infty$.
+Thus $\|u\|_2\le C\|du\|_2$ on $H^1_0(M)$.
+The form $a_g(u,v)=\int\langle du,d\bar v\rangle_gdV_g$
+therefore defines an equivalent Hilbert norm. The Riesz representation
+theorem \citep[Proposition~2.2]{TaylorFunctional} gives a unique zero-trace
+solution of $L_gu=F$ for every continuous functional $F$ on $H^1_0$.
+Applying it to $-a_g(Ef,\cdot)$ gives the harmonic extension of $f$.
+Its energy is at most that of $Ef$, and hence $Q_g$ is bounded on
+$H^{1/2}\times H^{1/2}$. Symmetry of $a_g$ gives a self-adjoint
+Dirichlet inverse on smooth sources.
+
+Here is the quantitative regularity fact used below. For a smooth
+uniformly positive metric on a fixed smooth compact domain and
+integer $q\ge0$, its zero-Dirichlet solution obeys
+\begin{equation}\label{prelim:dir-estimate}
+ \|u\|_{H^{q+2}}\le C_q(\|L_gu\|_{H^q}+\|u\|_{H^1}).
+\end{equation}
+The constants depend on finitely many coefficient bounds, ellipticity,
+and fixed boundary charts. One can derive this estimate directly as
+follows. In a flattened boundary chart the weak equation is in
+divergence form with symmetric coefficients $a^{ij}$ and $a^{nn}>c>0$.
+For a tangential difference quotient $D_{h,k}$, test the equation with
+$-D_{-h,k}(\eta^2D_{h,k}u)$. Integration of difference quotients moves
+$D_{h,k}$ to $a^{ij}\partial_j u$; its principal term is
+\[
+ \int\eta^2a^{ij}(x+he_k)
+          \partial_jD_{h,k}u\,\partial_iD_{h,k}\bar u.
+\]
+The coefficient difference and cutoff terms are bounded, by Cauchy--Schwarz
+and Young's inequality, by half that positive term plus
+$C(\|u\|_{H^1}^2+\|L_gu\|_2^2)$. The source term uses
+$\|D_{-h,k}(\eta^2D_{h,k}u)\|_2
+ \le C\|\nabla(\eta^2D_{h,k}u)\|_2$.
+Passing to $h\to0$ controls every second derivative with at least one
+tangential index. The equation solves for $\partial_n^2u$, so $u\in H^2$.
+For higher orders apply the same argument to each tangential derivative;
+its boundary trace is zero. Commutators contain derivatives of coefficients
+and lower derivatives of $u$. Recover derivatives with two or more normal
+indices successively from
+$a^{nn}\partial_n^2u=-L_gu-\sum_{(i,j)\ne(n,n)}a^{ij}\partial_i\partial_j u$
+plus the first-order terms. Induction first on total order and then on
+normal order proves \eqref{prelim:dir-estimate}. Interior patches use
+unrestricted difference quotients. A finite partition and slightly nested
+cutoffs give the global estimate. Approximation of the coefficients and
+source, or first applying the inequalities to difference quotients of the
+weak solution, justifies each step before the asserted derivatives exist.
+Nonzero smooth trace is subtracted by a smooth extension. In particular,
+smooth data give solutions smooth up to the boundary, in agreement with
+\citep[Propositions~1.2--1.3]{TaylorElliptic}.
+
+The same local estimates with cutoffs give
+$\|u\|_{H^q(K)}\le C_{q,K}\|u\|_{L^2(D)}$ for homogeneous solutions,
+$K\Subset D$, including scalar elliptic equations with bounded smooth
+lower-order terms. The initial $H^1$ estimate is obtained by testing with
+$\eta^2\bar u$; each further derivative follows from difference quotients.
+For distributional solutions local regularity instead follows from the
+elliptic parametrix described below.
+
+Pull a smooth family of balls back to the fixed unit ball, including its
+limit at radius zero. For each $q$, \eqref{prelim:dir-estimate} and
+coercivity give uniform bounded inverses
+$L(\theta)^{-1}:H^q\to H^{q+2}\cap H^1_0$ on compact parameter sets.
+Multiplying a metric Laplacian by a positive smooth function changes its
+source by that function's reciprocal, preserving these assertions.
+A perturbation in this operator norm is inverted by the Neumann series.
+Differentiation gives
+$\partial_\theta R=-R(\partial_\theta L)R$, and its iterates give smooth
+parameter dependence in every fixed Sobolev order. Sobolev embedding here
+follows directly from Fourier inversion and
+$\int\langle\xi\rangle^{-2s}<\infty$ for $s>n/2$.
+These estimates control smooth-kernel remainders by taking sufficiently
+large, fixed orders; the number of orders may depend on the requested
+seminorm, but no shrinking parameter enters that choice.
+
+\subsection{Symbols, Green kernels, and point distributions}
+Use classical scalar $\Psi^m=\Psi^m_{1,0}$ operators.
+The symbol product, adjoint, $H^s$ boundedness, and elliptic parametrix
+are those of \citep[Lecture~I, Sections~2--4 and~8]{TaylorPsido}.
+In particular, left symbols satisfy
+$b\#c\sim\sum_\alpha(1/i)^{|\alpha|}
+ (\partial_\xi^\alpha b)(\partial_x^\alpha c)/\alpha!$;
+a scalar commutator lowers the summed order by one, and an operator of
+order $m$ maps $H^s$ boundedly to $H^{s-m}$.
+An elliptic operator of order two has a two-sided local parametrix
+of order $-2$ modulo smoothing. Its kernel is smooth off the diagonal.
+For that parametrix, \citep[Lecture~I, (1.23)--(1.24)]{TaylorPsido}
+gives $|\partial_x^\alpha\partial_y^\zeta K(x,y)|
+ \le C|x-y|^{2-n-|\alpha|-|\zeta|}$ when $n\ge3$.
+Subtracting the true Dirichlet inverse leaves a smooth kernel on compact
+interior subsets: apply local regularity to the parametrix error, and
+to the transposed error in the second variable. Thus these bounds apply
+locally to the Dirichlet Green kernel. After dilation, each derivative
+has its matching power of the dilation, so compact subsets at fixed
+positive separation have uniform bounds. The smooth remainder is harmless
+since $\lambda^{n-2}$ and its differentiated factors are bounded for
+$n\ge3$. The weak inverse and its transpose supply the Green distribution;
+this construction supplies its off-diagonal smooth representative.
+
+The boundary symbol factorization used below is the scalar case of
+\citep[Theorem~1.1(i)--(ii) and Proposition~3.1]{JoshiLionheart2005}.
+The theorem is stated for an orientable manifold and all form degrees;
+we use its local scalar construction in half-balls and normal unit balls,
+which are orientable. Its recursion also applies after multiplication
+by a positive function: the harmonic solutions are unchanged, and any
+chosen transverse derivative trace is a smooth multiple of the unit
+normal trace plus a tangential derivative. Its dependence on parameters
+is obtained by the symbol recursion and the uniform inverse estimates
+above. No global differential-form conclusion is used. The authors'
+errata change the sign in a differential-form Green identity and correct
+an introductory reference, leaving this scalar construction unchanged.
+
+A point-supported distribution is a finite sum of derivatives of a
+point mass \citep[Proposition~4.5]{TaylorFourier}. Locally this also follows
+without an additional representation theorem. If it has order $k$ and
+all derivatives of a test function through $k$ vanish at the point,
+multiplying that function by a cutoff at scale $a$ gives $C^k$ norm
+$O(a)$. The distribution's action tends to zero, and equals its action
+on the original function by point support. It therefore factors through
+the finite $k$-jet space, whose dual is spanned by derivatives of the
+point mass. The principal symbol calculation in the next section will
+use this fact for the transposed Dirichlet inverse.
+
+\subsection{Continuation and geometric coordinates}
+The open-set unique continuation input is
+\citep[Theorem~8, Definitions~8.1--8.3]{KochTataru2005} for scalar elliptic
+operators, applied in smooth coordinate balls. With positive quadratic
+principal symbol, at a nonzero normal covector the simultaneous complex
+conditions $p_\theta=\{p_\theta,\theta\}=0$ have no solution:
+the imaginary part of the latter bracket is, up to sign,
+$2\tau|d\theta|_g^2$. Thus every smooth hypersurface is strongly
+pseudoconvex for the surface form of that theorem. One-sided zero sets
+propagate across coordinate sphere fronts, and a path with overlapping
+balls gives open-set continuation on a connected domain. Distributional
+solutions are first made smooth by the elliptic parametrix.
+The strict-weight Carleman estimate used for product continuation is
+\citep[Definition~8.3 and Theorem~9(a)]{KochTataru2005}; its specialization,
+normalization, and uniform margins are also derived in the proof below.
+
+Local existence of geodesics and smooth parameter dependence follow by
+writing the geodesic equation as a first-order smooth system, using
+\citep[Theorem~2.1, Propositions~6.1--6.2]{TaylorODE}.
+The inverse function theorem is \citep[Theorem~3.1]{TaylorODE}.
+At zero velocity the exponential map has derivative the identity;
+these inputs give normal coordinate balls uniform on compact center sets.
+For a compact smooth boundary, the inward normal exponential has
+invertible differential at the zero section. Local injectivity and a
+finite cover give a uniform collar; otherwise two colliding sequences
+would limit to one boundary point and contradict local injectivity there.
+Differentiating the geodesic equation gives Jacobi fields and the
+$O(r^2)$ center-variation remainder used for the moving traces.
+Metric compatibility shows $g(\partial_s,\partial_{z_a})=0$ along a
+normal collar: its derivative in $s$ is
+$\frac12\partial_{z_a}g(\partial_s,\partial_s)=0$, and it is zero at
+$s=0$. Hence $|ds|_g=1$. Any curve reaching the boundary in the collar
+has length at least $s$, while the normal segment has length $s$;
+curves first leaving a fixed larger collar have a longer fixed lower
+bound when $s$ is small. The collar parameter is consequently the
+boundary distance. This also proves the boundary-distance smoothness
+used in completing the final isometry. Green identities and metric
+normal transport use the coordinate divergence formula and integration
+by parts against positive densities; orientation is never needed.
