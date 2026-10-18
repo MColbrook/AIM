@@ -1,6 +1,6 @@
-# Correspondence with AIM Problem 458
+# Correspondence with AIM Problem 458: revised claim
 
-**Maintainer note, 15 October 2026:** this table describes the submitted complete claim. The [independent AI review](../solution_reviews/2026-10-15-active-prs/458-review.md) found an unverified hypothesis in Section 3.3: the corrected KKW theorem also requires compatible fractional right-inverse estimates. The repository records **partial progress**, rather than accepting the full existence and continuous-dependence claim. The original requirement comparison is preserved below.
+Revision of 19 October 2026. The historical partial-progress finding is preserved in the [original review](../solution_reviews/2026-10-15-active-prs/458-review.md). The revised manuscript supplies the missing compatible right inverses in Lemmas 3.1--3.2; see [the response](REVISION_RESPONSE.md). This is a renewed complete claim, pending independent assessment.
 
 Target: [458. Local no-slip Navier--Stokes theory under non-small transport noise](https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/458-stochastic-navier-stokes-no-slip-local.md), repository revision `a153f469ee0ea64e876b2ad97c79d252c19a3e22`.
 
@@ -25,13 +25,13 @@ The numbered bibliography in the manuscript supplies direct public source links.
 | Public input | Location and application in the manuscript |
 | --- | --- |
 | Pruss--Wilke, Section 5 and Proposition 5.1 | Section 2: isotropic weak Stokes and Besov trace identifications on a bounded smooth domain. |
-| Kalton--Kunstmann--Weis, Theorem 9.17 | Section 2: isotropic physical Stokes calculus. It is not invoked as a periodic-channel theorem. |
+| Kunstmann--Weis 2013 erratum, Theorem 2.1 | Section 2: physical isotropic Stokes calculus on the smooth bounded Euclidean domain; its C^(2+mu) condition is satisfied. It is not invoked directly on the channel. |
 | Girardi--Weis, Corollary 4.4 | Section 3.3: operator-valued multipliers after proving all required derivatives and Hilbert-index uniformity; periodic restriction is proved in the manuscript. |
 | Deleaval--Kriegler, Theorem 1 | Section 3.2: vector-valued maximal estimate for the full-line kernels. The reflected kernels are handled by the displayed Hardy estimate. |
-| Kalton--Kunstmann--Weis, Theorem 8.2 and the cited Stokes comparison argument | Section 3.3: channel isotropic calculus, with the inverse operators, endpoint spaces and signed image conditions written explicitly. The explicit resolvent supplies the model geometry and consistency. |
+| Kunstmann--Weis 2013 erratum, Theorem 1.3; Teschl 2009, Theorem 2.13 and Section 3.1 | Section 3.3: corrected channel comparison, including compatible base and BOTH fractional right inverses. Lemmas 3.1--3.2 prove the missing regularity and Hilbert interpolation independently of the desired Lp calculus; the explicit resolvent supplies the strong domains and consistency. |
 | Agresti--Veraar, Theorem 3.14, Proposition 2.1 and Definitions 3.7--3.8 | Sections 2--3: additive stochastic maximal regularity and its time trace. Non-small multiplicative transport is proved separately by translation, localization and continuation. |
 | Costabel--McIntosh, formula (3.13), Theorem 3.2, Corollary 3.4 and Remark 3.5 | Section 4.2: one regularized supported divergence solver on fixed convex Euclidean boxes, consistently at the stated orders. |
-| Breit--Gaudin, fixed preprint v1, Theorem 4.38, Proposition 4.39, Lemma 2.12 and Proposition 2.4 | Section 4.2: strict-window negative pressure and zero-extension bounds at both dual exponents. |
+| Breit--Gaudin, fixed preprint v1, Theorem 4.38, Proposition 4.39, Lemma 2.12 and Proposition 2.4 | Sections 3.3 and4.2: strict subtrace scalar extension and strict-window negative pressure/zero-extension bounds at both dual exponents. |
 | Kalton--Kunstmann--Weis, Theorem 6.1, Lemma 6.2 and Proposition 2.2 | Section 4.3: two fractional defect bounds, quantitative root comparison and interpolation. Both smallness conditions are proved in the manuscript. |
 | Agresti--Veraar, Lemma A.5 | Section 6.2: stopped variational Ito identity, with its projection-limit justification included. |
 

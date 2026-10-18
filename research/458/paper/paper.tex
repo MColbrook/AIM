@@ -29,20 +29,20 @@
 \DeclareMathOperator{\Dom}{D}
 \title{Local no-slip Navier--Stokes equations under stochastic parabolicity}
 \author{Kaiwen Jin\\\small\href{mailto:yui.ui.siki@gmail.com}{yui.ui.siki@gmail.com}}
-\date{16 October 2026}
+\date{19 October 2026}
 \begin{document}
 \maketitle
 
 \begin{quote}\small
-\textbf{Maintainer review, 15 October 2026: partial progress.}
-Section 3.3 applies KKW Theorem 8.2 without verifying the additional
-compatible fractional right-inverse estimates required by
-Kunstmann--Weis, Erratum, Theorem 1.3~\cite{KWErratum}.
-The submitted argument therefore does not yet establish the full local
-no-slip existence and continuous-dependence claim. The original proposed
-proof is retained below. The
-\href{https://github.com/MColbrook/AIM/blob/main/research/solution_reviews/2026-10-15-active-prs/458-review.md}{repository's independent AI review}
-records the precise gap and verified progress.
+\textbf{Revision, 19 October 2026.}
+The earlier version was recorded as partial progress after the
+\href{https://github.com/MColbrook/AIM/blob/24edaadc6bb272737d8da0745c662c992db07b22/research/solution_reviews/2026-10-15-active-prs/458-review.md}{repository's independent AI review}
+identified a missing hypothesis in Section~\ref{sec:channel-consumer}.
+Lemmas~\ref{lem:channel-extra-derivative} and
+\ref{lem:channel-compatible-right-inverses} now supply the compatible
+fractional right-inverse estimates of the corrected comparison theorem
+\cite[Theorem 1.3]{KWErratum}. This revised complete claim is submitted
+for renewed independent review; the historical review is retained.
 \end{quote}
 
 \begin{abstract}
@@ -223,7 +223,7 @@ All spatial norms are inhomogeneous. The weak Stokes identifications in
 $[Y_q,V_q]_{1/2}=H_q$. They follow from the isotropic Stokes
 square-root scale; they will not be assumed for an anisotropic operator.
 The strong isotropic operator has a bounded $H^\infty$ calculus on
-$H_q$ by \cite[Theorem 9.17]{KKW}. The negative-half identification
+$H_q$ by \cite[Theorem 2.1]{KWErratum}, whose $C^{2+\mu}$ boundary hypothesis, $0<\mu<1$, is satisfied by smooth $D$. The negative-half identification
 \[
  J_q=(1+A_D)^{-1/2}:Y_q\longrightarrow H_q
 \]
@@ -686,60 +686,198 @@ $[H_q,\Dom_q]_{1/2}=V_q$. The componentwise Dirichlet Laplacian is
 the odd part of the doubled-torus Laplacian and has its scalar
 $H^\infty$ calculus.
 
-We spell out the comparison criterion \cite[Theorem 8.2]{KKW}.
-Let $(X_0,X_1)$ be a reflexive B-convex interpolation couple,
-$Y_j\subset X_j$ complemented by compatible projections $P_j$,
-and let $\mathsf A_j,\mathsf B_j$ be consistent sectorial families
-on these spaces. Assume that $\mathsf A_j$ has $H^\infty$ calculus
-and $\mathsf B_j$ is almost $R$-sectorial. If $\alpha<0<\beta$ and
-\[
- P_0(\dot X_{0,\alpha,\mathsf A_0})
- =\dot Y_{0,\alpha,\mathsf B_0},\qquad
- P_1(\dot X_{1,\beta,\mathsf A_1})
- =\dot Y_{1,\beta,\mathsf B_1},
-\]
-then $\mathsf B$ has $H^\infty$ calculus on $[Y_0,Y_1]_t$ for
-$0<t<1$. The dots denote the homogeneous fractional scales of the
-specified operators.
+We use the corrected comparison theorem
+\cite[Theorem 1.3]{KWErratum}. Let $(X_0,X_1)$ be a reflexive
+B-convex interpolation couple, with compatible surjections
+$P_j:X_j\to Y_j$ and compatible bounded right inverses
+$\mathsf J_j:Y_j\to X_j$. Let $\mathsf A_j,\mathsf B_j$ be the
+consistent sectorial families on these spaces. Suppose that
+$\mathsf A_j$ has bounded $H^\infty$ calculus and $\mathsf B_j$ is
+almost $R$-sectorial. For $\alpha<0<\beta$, require both
+\begin{equation}\label{eq:corrected-images}
+ P_0\dot X_{0,\alpha,\mathsf A_0}
+   =\dot Y_{0,\alpha,\mathsf B_0},\qquad
+ P_1\dot X_{1,\beta,\mathsf A_1}
+   =\dot Y_{1,\beta,\mathsf B_1},
+\end{equation}
+and the compatible extensions
+\begin{equation}\label{eq:corrected-right-inverses}
+ \mathsf J_0:\dot Y_{0,\alpha,\mathsf B_0}
+                 \longrightarrow\dot X_{0,\alpha,\mathsf A_0},\qquad
+ \mathsf J_1:\dot Y_{1,\beta,\mathsf B_1}
+                 \longrightarrow\dot X_{1,\beta,\mathsf A_1}.
+\end{equation}
+Then $\mathsf B$ has bounded $H^\infty$ calculus on
+$[Y_0,Y_1]_\theta$, $0<\theta<1$. The dots denote the homogeneous
+fractional scales of the specified operators. The estimates
+\eqref{eq:corrected-right-inverses} are additional hypotheses; the
+surjections in \eqref{eq:corrected-images} do not imply them.
 
-As in \cite[Propositions 9.14--9.16, Theorem 9.17]{KKW}, apply this to inverse
-operators. Put $p_0=2$, take $p_1=8$ or $8/7$, and set
+Here $A_{0,p}=-\PP_O\Delta$ denotes the unit-viscosity reference
+Stokes operator, and $L_p=-\Delta_{\mathrm{Dir},p}$ the componentwise
+Dirichlet Laplacian. The physical viscosity remains $\nu$ in
+\eqref{eq:linear} and in $A_Q$. With $i_p:H_p\hookrightarrow L^p$,
+set
+\begin{equation}\label{eq:channel-right-inverse}
+ \mathcal J_p=L_pi_pA_{0,p}^{-1},\qquad
+ \widetilde Q_p=A_{0,p}^{-1}\PP_OL_p.
+\end{equation}
+The new symbol $\mathcal J_p$ denotes this elliptic right inverse,
+not the inverse-root isomorphism $J_q$ of Section~\ref{sec:framework}.
+The strong-domain estimate already proved above makes
+$\mathcal J_p:H_p\to L^p$ bounded and gives
+$\PP_O\mathcal J_p=I$. Its fractional estimate requires one more
+regularity argument.
+
+\begin{lemma}\label{lem:channel-extra-derivative}
+On the fixed channel, let $f\in H^1(O;\C^3)$ and
+$u=A_{0,2}^{-1}\PP_Of$. Choose the periodic pressure $p$ with mean
+zero in $-\Delta u+\nabla p=f$. Then
+\begin{equation}\label{eq:channel-h3}
+ \norm{u}_{H^3}+\norm{p}_{H^2}\leq C\norm{f}_{H^1}.
+\end{equation}
+The constant depends on the fixed lattice and height.
+\end{lemma}
+\begin{proof}
+The strong-domain bound and the Helmholtz decomposition first give
+\begin{equation}\label{eq:channel-h2-pressure}
+ \norm{u}_{H^2}+\norm{p}_{H^1}\leq C\norm{f}_{L^2}.
+\end{equation}
+For a horizontal direction $e$, take the difference quotient
+$\delta_t^e$. Translation preserves the channel, the zero wall values,
+and the pressure normalization. Thus \eqref{eq:channel-h2-pressure}
+applied to the translated difference gives
 \[
- X_j=L^{p_j}(O;\C^3),\quad Y_j=H_{p_j}(O),\quad P_j=\PP_O,
- \qquad
- \mathsf A_j=(-\Delta_{\mathrm{Dir},p_j})^{-1},\quad
- \mathsf B_j=A_{0,p_j}^{-1}.
+ \norm{\delta_t^e u}_{H^2}+\norm{\delta_t^e p}_{H^1}
+ \leq C\norm{\delta_t^e f}_{L^2}
+ \leq C\norm{\partial_e f}_{L^2}.
 \]
-Here $-\Delta_{\mathrm{Dir},p_j}$ is the componentwise Dirichlet
-Laplacian. Choose $\alpha=-s$, $0<s<1/4$, and $\beta=1$.
-Inversion exchanges the fractional signs. Thus the first image
-condition reads
+Weak compactness and the distributional difference-quotient limit yield
+$\partial_eu\in H^2$ and $\partial_ep\in H^1$. This controls every
+third velocity derivative containing a horizontal derivative, and every
+second pressure derivative containing one.
+
+Write $u=(u_h,u_3)$ and use $z$ for the normal coordinate.
+Incompressibility and the normal momentum equation give, successively,
+\begin{equation}\label{eq:channel-normal-reconstruction}
+ \partial_z^3u_3=-\divg_h\partial_z^2u_h,\qquad
+ \partial_z^2p=\partial_zf_3+\Delta\partial_zu_3.
+\end{equation}
+Their right-hand sides are controlled in $L^2$ by the preceding
+horizontal estimates and $\norm{f}_{H^1}$. The horizontal momentum
+equations then give
 \[
- \PP_O\Dom((-\Delta_{\mathrm{Dir},2})^s)
- =\PP_OH^{2s,2}=H^{2s,2}_\sigma=\Dom(A_{0,2}^s).
+ \partial_z^3u_h=-\partial_zf_h-\Delta_h\partial_zu_h
+                         +\nabla_h\partial_zp.
 \]
-The retraction and subtrace reflection bounds above give this identity.
-For the second, write
+These are the remaining third velocity derivatives. Together they
+prove \eqref{eq:channel-h3}. The identities are distributional;
+no trace of $f$, $\Delta u$, or $p$ has been prescribed at the wall.
+\end{proof}
+
+\begin{lemma}\label{lem:channel-compatible-right-inverses}
+The operators $\mathcal J_p$ are compatible base-space right inverses
+of $\PP_O$. They have consistent bounded extensions
+\begin{align}
+ \mathcal J_2:&\ \Dom(A_{0,2}^{s})\longrightarrow\Dom(L_2^{s}),
+                     &&0<s<\tfrac14,\label{eq:channel-positive-J}\\
+ \mathcal J_p:&\ Z_{A,p}\longrightarrow Z_{\Delta,p},
+                     &&1<p<\infty,\label{eq:channel-negative-J}
+\end{align}
+where
 \[
- Z_{\Delta,p_1}=(W^{2,p_1'}\cap W^{1,p_1'}_0)^*,\qquad
- Z_{A,p_1}=(\Dom_{p_1'})^*.
+ Z_{\Delta,p}=\bigl(\Dom(L_{p'})\bigr)^*,\qquad
+ Z_{A,p}=\bigl(\Dom(A_{0,p'})\bigr)^*.
 \]
-It is precisely $\PP_OZ_{\Delta,p_1}=Z_{A,p_1}$.
-The strong-domain inclusion
-$\Dom_{p_1'}\subset W^{2,p_1'}\cap W^{1,p_1'}_0$
-with its graph norm, followed by duality and Hahn--Banach extension,
-gives this surjection consistently with the ordinary projection.
-The scalar calculus was proved above; the explicit resolvent bounds
-give $R$-sectoriality of $A_0$ and its inverse and consistency across
-these exponents. All spaces in the couple are reflexive and B-convex.
-The criterion at $t=2/3$ therefore gives calculus on $H_4$ from
-$p_1=8$, and on $H_{4/3}$ from $p_1=8/7$. Calculus for the inverse
-is equivalent to calculus for $A_0$ by $F(z)\mapsto F(1/z)$.
-This proves existence of isotropic $H^\infty$ calculus. Its angle is
-less than $\pi/2$ by the already
-proved $R$-sectorial bounds and the angle comparison in
-\cite[Theorem 4.1, Corollary 4.4]{KKW}. This angle comparison is used
-only after calculus existence has been established.
+Moreover $\PP_O\mathcal J_p=I$ on these extended spaces.
+\end{lemma}
+\begin{proof}
+The closed coercive form $\int_O\nabla u:\overline{\nabla v}$ on
+$V_2$ has positive selfadjoint operator $A_{0,2}$, as follows by
+identifying its resolvent with the strong solution already constructed.
+The Hilbert form theorem gives
+$\Dom(A_{0,2}^{1/2})=V_2$; see \cite[Theorem 2.13 and (3.51)]{Teschl}.
+This Hilbert assertion precedes the $L^p$ calculus under consideration.
+The base estimate bounds $\mathcal J_2:H_2\to L^2$, and
+Lemma~\ref{lem:channel-extra-derivative} bounds
+$\mathcal J_2:V_2\to H^1$, since $L_2u\in H^1$ when $u\in H^3$.
+Interpolating the same operator at parameter $2s$ gives
+\begin{equation}\label{eq:channel-J-interpolation}
+ \mathcal J_2:
+ [H_2,\Dom(A_{0,2}^{1/2})]_{2s}
+   =\Dom(A_{0,2}^{s})
+ \longrightarrow [L^2,H^1]_{2s}=H^{2s},\qquad 0<s<\tfrac12.
+\end{equation}
+The fractional-domain identity here follows from the Hilbert spectral
+calculus and \cite[Proposition 2.2]{KKW}, not from the desired
+Banach-space calculus.
+
+For $0<s<1/4$, one also has
+\begin{equation}\label{eq:channel-scalar-subtrace}
+ \Dom(L_2^s)=H^{2s}(O;\C^3).
+\end{equation}
+Indeed, use finitely many horizontal periodic coordinate cutoffs and
+zero extension of the corresponding flat strip pieces. The indicator
+bound \cite[Proposition 2.4]{BG} applies with $p=2$ and
+$0<2s<1/2$. Odd reflection at the walls therefore extends these
+pieces boundedly into the doubled periodic space; restriction is its
+bounded inverse on the odd subspace. Fourier series horizontally and
+sine series vertically identify its weighted norm with
+$\norm{L_2^s\cdot}_{L^2}$. Ordinary Sobolev interpolation in
+\eqref{eq:channel-J-interpolation} follows similarly using a common
+even extension at orders zero and one and Fourier-weight interpolation.
+Equations~\eqref{eq:channel-J-interpolation}--\eqref{eq:channel-scalar-subtrace}
+prove \eqref{eq:channel-positive-J}. The strict subtrace range avoids
+an extra boundary condition on $\mathcal J_2f$.
+
+For the negative endpoint, $\widetilde Q_{p'}$ is bounded from
+$\Dom(L_{p'})$ into $\Dom(A_{0,p'})$. Define
+\[
+ \langle\mathcal J_p\ell,v\rangle
+   =\langle\ell,\widetilde Q_{p'}v\rangle,
+ \qquad v\in\Dom(L_{p'}),\quad\ell\in Z_{A,p}.
+\]
+This proves \eqref{eq:channel-negative-J} and agrees with the base
+operator by adjointness. The projection extends by restricting
+functionals to the continuously included domain
+$\Dom(A_{0,p'})\subset\Dom(L_{p'})$. Since
+$\widetilde Q_{p'}v=v$ on the solenoidal strong domain,
+$\PP_O\mathcal J_p\ell=\ell$. The same identity on base spaces follows
+from $-\PP_O\Delta A_{0,p}^{-1}=I$. Consistency follows from the common
+elliptic solutions and the distributional formulas; thus these are
+extensions of one compatible family.
+\end{proof}
+
+We now verify the projection images as well. The retraction
+$\widetilde Q_2$ maps the scalar base and strong Dirichlet domains to
+the Stokes counterparts. Interpolating these Hilbert endpoint bounds
+maps $\Dom(L_2^s)$ into $\Dom(A_{0,2}^s)$. Since $\PP_O$ is bounded
+on $H^{2s}$ below the trace threshold, and
+$\widetilde Q_2\PP_O=\PP_O$, this proves its bounded positive image.
+Lemma~\ref{lem:channel-compatible-right-inverses} makes it onto:
+\[
+ \PP_O\Dom(L_2^s)=\Dom(A_{0,2}^s),\qquad 0<s<\tfrac14.
+\]
+The same lemma gives the negative full-step image
+$\PP_OZ_{\Delta,p}=Z_{A,p}$, together with its right inverse.
+
+Apply the corrected criterion to inverse operators with
+\[
+ p_0=2,\qquad p_1=8\ \hbox{or}\ 8/7,\qquad
+ \mathsf A_j=L_{p_j}^{-1},\qquad
+ \mathsf B_j=A_{0,p_j}^{-1},\qquad
+ P_j=\PP_O,\quad\mathsf J_j=\mathcal J_{p_j}.
+\]
+Take $\alpha=-1/8$ and $\beta=1$. Inversion exchanges the fractional
+signs, so \eqref{eq:channel-positive-J} and
+\eqref{eq:channel-negative-J} are exactly the two estimates in
+\eqref{eq:corrected-right-inverses}. The scalar calculus, compatible
+resolvents, and $R$-sectoriality were proved before this application.
+At $\theta=2/3$ the resulting spaces are $H_4$ and $H_{4/3}$.
+Calculus for the inverse is equivalent to calculus for $A_0$ by
+$F(z)\mapsto F(1/z)$. This first establishes calculus existence.
+Only then do \cite[Theorem 4.1, Corollary 4.4]{KKW} and the proved
+$R$-sectorial angle zero give a calculus angle less than $\pi/2$.
 
 The resulting negative-half scale identifies
 $Y_q=(V_{q'})^*$ and gives $[Y_q,V_q]_{1/2}=H_q$.
@@ -1447,6 +1585,11 @@ each other's report. These same-provider AI reviews and the author
 checks do not constitute human peer review or acceptance by the
 problem repository.
 
+The present revision also used Codex to derive the additional channel
+regularity argument and recheck the corrected comparison theorem and its
+dependent estimates. Those checks were performed in the same context as the
+revision; no new independent referee report is claimed for this version.
+
 \begin{thebibliography}{10}
 \bibitem{AV}
 A. Agresti and M. Veraar,
@@ -1507,12 +1650,21 @@ P. Kunstmann and L. Weis,
 $H^\infty$-calculus with applications to differential operators},
 Math. Ann. \textbf{357} (2013), 801--804.
 \href{https://doi.org/10.1007/s00208-011-0768-7}{doi:10.1007/s00208-011-0768-7}.
-Theorem 1.3 corrects the criterion used in Section 3.3; the missing
-right-inverse hypothesis is not verified in the proposed proof.
+Theorem~1.3 is the corrected comparison criterion used in
+Section~\ref{sec:channel-consumer}; Theorem~2.1 supplies the physical
+isotropic Stokes calculus.
 
 \bibitem{PW}
 J. Pr\"uss and M. Wilke,
 \emph{On critical spaces for the Navier--Stokes equations},
 \href{https://arxiv.org/abs/1703.08714v1}{arXiv:1703.08714v1} (2017).
+\bibitem{Teschl}
+G.~Teschl,
+\emph{Mathematical Methods in Quantum Mechanics: With Applications to
+Schr\"odinger Operators}, Graduate Studies in Mathematics 99,
+American Mathematical Society, 2009. Author's online edition dated
+12 February 2009, Theorem~2.13 and Section~3.1.
+\url{https://www.mat.univie.ac.at/~gerald/ftp/book-schroe/schroe.pdf}.
+
 \end{thebibliography}
 \end{document}
