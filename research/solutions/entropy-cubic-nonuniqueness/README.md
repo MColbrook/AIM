@@ -1,5 +1,9 @@
 # A finite-entropy counterexample for a reversible reaction-diffusion system
 
+Author: **Kaiwen Jin**
+
+Contact: [yui.ui.siki@gmail.com](mailto:yui.ui.siki@gmail.com)
+
 This package contains a proposed negative resolution of
 [AIM 482](https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/482-entropy-reaction-diffusion-renormalized-uniqueness.md).
 The reversible reaction A+2B <-> 3B, with equal diffusion on a
