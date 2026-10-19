@@ -1,0 +1,289 @@
+{
+  "verification": {
+    "status": "FULL_REPLAY_MATCHED",
+    "unique_inputs": 608,
+    "cell_members": 618,
+    "data_sha256": "bd22e0775a0475fe485349483dec748c0045fa3b4e2b0f066a716a3b031bdc21",
+    "context_sha256": "061a13983b61b92928ae7162cf3cdf8dacc0a9fe302f917f201ff1d919cd618e",
+    "manifest_sha256": "bc74bb8227c462944b5152f6498e723bfa2e645842c59d4b8d3dabff52c5e278",
+    "scope": "Checks actual recorded Normaliz results and exact algebra; not a second counting implementation or independent certification",
+    "computed_output_algebra": {
+      "action_sums": {
+        "identity": {
+          "minus_order": 8,
+          "plus_order": 0,
+          "numerator": [
+            0,
+            0,
+            0,
+            0,
+            669807,
+            -3348976,
+            7783173,
+            -10577048,
+            8928985,
+            -4635736,
+            1361923,
+            -173936
+          ]
+        },
+        "H": {
+          "minus_order": 5,
+          "plus_order": 1,
+          "numerator": [
+            0,
+            0,
+            0,
+            0,
+            2349,
+            -5170,
+            1784,
+            4048,
+            -4117,
+            1138
+          ]
+        },
+        "V": {
+          "minus_order": 5,
+          "plus_order": 0,
+          "numerator": [
+            0,
+            0,
+            0,
+            0,
+            2069,
+            -6465,
+            7915,
+            -4447,
+            960
+          ]
+        },
+        "HV": {
+          "minus_order": 4,
+          "plus_order": 0,
+          "numerator": [
+            0,
+            0,
+            0,
+            0,
+            335,
+            -806,
+            669,
+            -190
+          ]
+        }
+      },
+      "scaled_polynomial_coefficients": [
+        2842560,
+        9503448,
+        12991860,
+        9071552,
+        3291540,
+        602672,
+        53760,
+        2048
+      ],
+      "full_rational_differences": [
+        0
+      ],
+      "polynomial_coefficient_difference": [
+        0
+      ]
+    }
+  },
+  "compute_options": [
+    "HilbertSeries",
+    "BigInt",
+    "NoGradingDenom"
+  ],
+  "environment": {
+    "python": "3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 17.0.0 (clang-1700.0.13.3)]",
+    "implementation": "CPython",
+    "system": "Darwin",
+    "machine": "arm64",
+    "pynormaliz": "2.24",
+    "wrapper_sha256": "595c3fc605d3e3b4599ef23621f3f408de40572e1295e2cd922a84550030bc2f",
+    "native_sha256": {
+      "PyNormaliz_cpp.cpython-313-darwin.so": "ecb08b9eeb70c463e126a6c9c1cf062673401d8d48fe19d68e8e2599ba25d7b9",
+      "libeantic.3.dylib": "7bb0c64af9c75139d9a6278690e0f2d9ca4616a8b67f5c7d7cb1410ff608c2e7",
+      "libeanticxx.3.dylib": "268a4ead342e440b1d859fa25a04ee080625b44c9a053a20c8d92ff7fc4fb70c",
+      "libflint.22.0.dylib": "7a4ac176a397b23f916b085940ab68d9c56aaf44ac3c9675ba9eca6dd1a801ef",
+      "libgmp.10.dylib": "816e30ea46c751ed724bdd83da205496f09f3710adc76651a268c4d528c8ed26",
+      "libgmpxx.4.dylib": "942b56a253454e83a0898ebb037432ef35fd2ee93f3f1d81a52e0efd49017284",
+      "libmpfr.6.dylib": "fb9de2d813bf60f8e6bbfc0f0b3baf86691e98be5c7f9523042b166e821280e4",
+      "libnormaliz.3.dylib": "13fcc377b5d9d271b5dc08fbf06481ff8284b4d396cc7ed08b8437e692f5deb4"
+    },
+    "compiled_normaliz_minor_version": "not exposed by this binding; binary hashes identify the actual implementation"
+  },
+  "workers": 3,
+  "normaliz_threads_per_worker": 1,
+  "cell_members_by_action": {
+    "identity": 420,
+    "V": 84,
+    "HV": 42,
+    "H": 72
+  },
+  "cached_inputs_reused": 0,
+  "controller_invocation_wall_seconds": 3487.009459374938,
+  "sum_compute_seconds": 10377.393345957855,
+  "sum_cpu_seconds_through_readback": 10367.124619,
+  "median_compute_seconds": 0.04216495854780078,
+  "p95_compute_seconds": 118.85935920802876,
+  "max_compute_seconds": 299.0331590420101,
+  "max_worker_peak_rss_bytes": 36438016,
+  "top20_fraction_of_compute_time": 0.3376790456920357,
+  "slowest10": [
+    {
+      "input_sha256": "18783bc9f19055b1fa05e09b5b4485b2ea12b18ac8435895d9ce370d341f8ee7",
+      "members": "identity:413",
+      "variables": 8,
+      "inequalities": 10,
+      "equations": 0,
+      "compute_seconds": 299.0331590420101,
+      "construction_seconds": 0.00018645799718797207,
+      "readback_seconds": 3.5833101719617844e-05,
+      "invocation_wall_seconds": 299.1091619168874,
+      "cpu_seconds_through_readback": 298.79292,
+      "peak_rss_bytes": 33980416,
+      "status": "MATCH"
+    },
+    {
+      "input_sha256": "6e9cf092a61fc3e415f4d579aaa90066eaf3fd8df4a222d8e118abee034859b9",
+      "members": "identity:384",
+      "variables": 8,
+      "inequalities": 10,
+      "equations": 0,
+      "compute_seconds": 270.9438691670075,
+      "construction_seconds": 0.00019179191440343857,
+      "readback_seconds": 3.445800393819809e-05,
+      "invocation_wall_seconds": 271.02099358313717,
+      "cpu_seconds_through_readback": 270.718914,
+      "peak_rss_bytes": 36438016,
+      "status": "MATCH"
+    },
+    {
+      "input_sha256": "629a1b92cba8234b2719687904f7044ee50aa361bbfbc3e6cbdd605d55b660f0",
+      "members": "identity:385",
+      "variables": 8,
+      "inequalities": 10,
+      "equations": 0,
+      "compute_seconds": 236.4689227498602,
+      "construction_seconds": 0.00018904195167124271,
+      "readback_seconds": 2.1625077351927757e-05,
+      "invocation_wall_seconds": 236.5460628331639,
+      "cpu_seconds_through_readback": 236.299748,
+      "peak_rss_bytes": 35028992,
+      "status": "MATCH"
+    },
+    {
+      "input_sha256": "2438849fc2a5546f4049617c36081e8dd23cf94365200356e165b67d097da17b",
+      "members": "identity:377",
+      "variables": 7,
+      "inequalities": 9,
+      "equations": 0,
+      "compute_seconds": 208.11370595893823,
+      "construction_seconds": 0.00018029101192951202,
+      "readback_seconds": 2.6791123673319817e-05,
+      "invocation_wall_seconds": 208.18835120787844,
+      "cpu_seconds_through_readback": 205.48218,
+      "peak_rss_bytes": 34357248,
+      "status": "MATCH"
+    },
+    {
+      "input_sha256": "2e4894a5ef0b823feec645dc5e199ae788d2108941fc1667a03140225cc899b5",
+      "members": "identity:381",
+      "variables": 7,
+      "inequalities": 9,
+      "equations": 0,
+      "compute_seconds": 206.05371920904145,
+      "construction_seconds": 0.00016875006258487701,
+      "readback_seconds": 2.8207898139953613e-05,
+      "invocation_wall_seconds": 206.1433335421607,
+      "cpu_seconds_through_readback": 205.798677,
+      "peak_rss_bytes": 33767424,
+      "status": "MATCH"
+    },
+    {
+      "input_sha256": "5a22cfb82e64ab9611f60ba79d08700d5cd85a44d981af23878242b707be7483",
+      "members": "identity:415",
+      "variables": 8,
+      "inequalities": 10,
+      "equations": 0,
+      "compute_seconds": 177.07360037509352,
+      "construction_seconds": 0.0001924580428749323,
+      "readback_seconds": 2.0958948880434036e-05,
+      "invocation_wall_seconds": 177.15071825007908,
+      "cpu_seconds_through_readback": 176.94819700000002,
+      "peak_rss_bytes": 34799616,
+      "status": "MATCH"
+    },
+    {
+      "input_sha256": "1d33abc68542e9e41a36c11001ba522c7099057d765ae044bb2f2ae0e65ffe9f",
+      "members": "identity:378",
+      "variables": 7,
+      "inequalities": 9,
+      "equations": 0,
+      "compute_seconds": 171.93937820894644,
+      "construction_seconds": 0.00018720794469118118,
+      "readback_seconds": 2.295803278684616e-05,
+      "invocation_wall_seconds": 172.020385916112,
+      "cpu_seconds_through_readback": 169.404512,
+      "peak_rss_bytes": 34111488,
+      "status": "MATCH"
+    },
+    {
+      "input_sha256": "bff3a64e432d5d4706018bd54cad86a0ecaf3a15886d779a824438c95078b8a5",
+      "members": "identity:399",
+      "variables": 7,
+      "inequalities": 9,
+      "equations": 0,
+      "compute_seconds": 170.90970916696824,
+      "construction_seconds": 0.00018987501971423626,
+      "readback_seconds": 2.2207852452993393e-05,
+      "invocation_wall_seconds": 170.98815204086713,
+      "cpu_seconds_through_readback": 170.698033,
+      "peak_rss_bytes": 34078720,
+      "status": "MATCH"
+    },
+    {
+      "input_sha256": "a4b9081500cb390e37b78cc9538d5bf01ea48af233c8936abbca417d249bd7b2",
+      "members": "identity:340",
+      "variables": 7,
+      "inequalities": 9,
+      "equations": 0,
+      "compute_seconds": 156.63637679209933,
+      "construction_seconds": 0.0001790828537195921,
+      "readback_seconds": 2.174987457692623e-05,
+      "invocation_wall_seconds": 156.71369591588154,
+      "cpu_seconds_through_readback": 156.42467,
+      "peak_rss_bytes": 33505280,
+      "status": "MATCH"
+    },
+    {
+      "input_sha256": "f3881e1436663378ed94474850222a0c734a3f02773cc67def7bb4fa098c58f1",
+      "members": "identity:376",
+      "variables": 7,
+      "inequalities": 9,
+      "equations": 0,
+      "compute_seconds": 156.50359395798296,
+      "construction_seconds": 0.00017954199574887753,
+      "readback_seconds": 2.2167107090353966e-05,
+      "invocation_wall_seconds": 156.58040445903316,
+      "cpu_seconds_through_readback": 156.312643,
+      "peak_rss_bytes": 34996224,
+      "status": "MATCH"
+    }
+  ],
+  "timing_scope": "Single fresh whole-workload run; worker CPU is sampled through numerical readback, before environment hashing. Controller wall includes startup, validation, hashing and checkpoint writes. No controlled whole-workload serial/parallel speedup claim.",
+  "trust_boundary": "Same trusted Normaliz implementation. These author-side reruns and the receipt checker are not an independent enumeration algorithm, checked simplicial certificates, human review or Lean verification.",
+  "execution_hardware": {
+    "observed_utc": "2026-10-19T11:12:36.559860+00:00",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "cpu_model": "Apple M4 Pro",
+    "logical_cpus": 14,
+    "physical_memory_bytes": 51539607552,
+    "requested_normaliz_processes": 3,
+    "normaliz_threads_per_process": 1,
+    "scope": "Same local host observed during the fixed608-input run; no performance portability claim."
+  }
+}
