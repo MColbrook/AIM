@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**425 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**426 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -17,7 +17,7 @@
 | [Geometry and topology](#geometry-and-topology) | [39](#geometry-topology-open) | [39](#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [21](#optimization-information-open) | [5](#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](#waves-quantum-systems-and-spectral-geometry) | [23](#spectral2-open) | [5](#spectral2-solved) |
-| [Imaging, control, geometry and dynamics](#imaging-control-geometry-and-dynamics) | [21](#inverse2-open) | [5](#inverse2-solved) |
+| [Imaging, control, geometry and dynamics](#imaging-control-geometry-and-dynamics) | [22](#inverse2-open) | [5](#inverse2-solved) |
 | [Fluids, kinetic theory and continuum mechanics](#fluids-kinetic-theory-and-continuum-mechanics) | [33](#continuum2-open) | [13](#continuum2-solved) |
 | [Stochastic growth, populations and statistical mechanics](#stochastic-growth-populations-and-statistical-mechanics) | [19](#stochastic2-open) | [10](#stochastic2-solved) |
 | [Many-body physics, quantum information and wave analysis](#many-body-physics-quantum-information-and-wave-analysis) | [18](#spectral3-open) | [12](#spectral3-solved) |
@@ -557,6 +557,7 @@
 | 319 | [Generic stabilization by static output feedback](problems/319-generic-static-output-feedback-stabilization.md) | 🔵 OPEN | Feedback control and real algebraic geometry |
 | 332 | [Decidability of stability under arbitrary switching](problems/332-switched-linear-stability-decidability.md) | 🔵 OPEN | Switched systems, robust control and formal verification |
 | 491 | [Polynomial-time solution of simple stochastic games](problems/491-simple-stochastic-games-polynomial-time.md) | 🟡 PARTIAL | Stochastic control, formal verification and algorithmic game theory |
+| 666 | [Injectivity radius of the canonical Stiefel manifold](problems/666-canonical-stiefel-manifold-injectivity-radius.md) | 🔵 OPEN | Riemannian geometry / manifold optimization and data analysis |
 
 <a name="inverse2-solved"></a>
 
@@ -1043,6 +1044,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 22 expansion — PDE emphasis | 76 | 2026-09-22–2026-10-15 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
 | Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 86 | 2026-09-23–2026-10-13 |
+| Community additions, October 2026 | 1 | 2026-10-21 |
 
 ## Maintaining the collection
 

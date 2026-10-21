@@ -441,8 +441,8 @@ def validate(entries, manifest, documents=None):
         errors.append("Duplicate ID in active or retired records")
     if not issued or set(issued) != {f"{i:03d}" for i in range(1, max(map(int, issued), default=0) + 1)}:
         errors.append("IDs must be consecutive across active and retired records; renumber after deletion")
-    if set(ids) != {f"{i:03d}" for i in range(1, len(ids) + 1)}:
-        errors.append("Active problem IDs must be consecutive from 001 with no gaps")
+    # Archived identities share this numbering scheme; new pages may follow them.
+    # The combined check above still rejects gaps across all issued IDs.
     batched = [identifier for batch in manifest["batches"] for identifier in batch["ids"]]
     if len(set(batched)) != len(batched) or set(batched) != set(issued):
         errors.append("Publication batches must partition all active and retired IDs exactly once")

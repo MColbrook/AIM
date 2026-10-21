@@ -600,9 +600,41 @@ class CatalogueTests(unittest.TestCase):
                 self.write_json('catalogue.json', manifest)
                 self.run_catalogue(expected=1, message='removed_ids must be an array of valid IDs')
 
+    def test_new_problem_page_after_archived_ids_keeps_existing_identities(self):
+        manifest = self.read_json('catalogue.json')
+        self.assertTrue(manifest['retired'])
+        archive_before = json.dumps(manifest['retired'], sort_keys=True)
+        pages_before = {p.relative_to(self.root): p.read_bytes()
+                        for p in (self.root / 'problems').glob('*.md')}
+        identifier = f"{next_problem_id(manifest):03d}"
+        original = self.read_json('data/spectral.json')[0]
+        row = {key: original[key] for key in
+               ('id', 'title', 'area', 'file', 'status', 'last_checked')}
+        row.update(id=identifier, title='A new target after archived entries',
+                   file=f'problems/{identifier}-after-archive.md', status='Open')
+        content = (self.root / original['file']).read_text(encoding='utf-8')
+        content = content.replace(f"# {original['id']}. {original['title']}",
+                                  f"# {identifier}. {row['title']}", 1)
+        path = self.root / row['file']
+        path.write_text(content, encoding='utf-8')
+        self.set_page_status(path, 'Open')
+        self.change_row(lambda rows: rows.append(row))
+        manifest['batches'].append({'key': 'after-archive-test',
+                                   'title': 'New target after archives',
+                                   'ids': [identifier]})
+        self.write_json('catalogue.json', manifest)
+        self.run_catalogue()
+        self.run_catalogue('--check')
+        self.assertEqual(json.dumps(self.read_json('catalogue.json')['retired'],
+                                    sort_keys=True), archive_before)
+        self.assertTrue(all((self.root / p).read_bytes() == data
+                            for p, data in pages_before.items()))
+        catalogue = (self.root / 'CATALOG.md').read_text(encoding='utf-8')
+        self.assertIn(f'| {identifier} |', catalogue)
+
     def test_gap_in_active_numbering_is_rejected(self):
         self.change_row(lambda rows: rows.pop(1))
-        self.run_catalogue(expected=1, message='Active problem IDs must be consecutive')
+        self.run_catalogue(expected=1, message='IDs must be consecutive across active and retired records')
 
     def test_solved_page_keeps_its_id_and_path(self):
         rows = self.read_json('data/spectral.json')
