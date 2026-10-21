@@ -19,6 +19,8 @@ On 13 October 2026, we cross-referenced AIM with [OpenAI's mathematics collectio
 
 The [15 October PR reviews](research/solution_reviews/2026-10-15-active-prs/README.md) record individual proof audits, partial progress and claims still awaiting verification, together with further primary-source comparisons. All original problem pages and IDs are retained.
 
+The [21 October PR reviews](research/solution_reviews/2026-10-21-active-prs/README.md) record the accepted resolutions of AIM458 and AIM571, partial progress on AIM541, the new canonical Stiefel problem AIM666, and the author-attribution correction for AIM482, with literature comparisons and verification evidence.
+
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
 **425 open targets** (349 open, 76 partial) · **213 solved entries** · **0 Lean verified** · **28 solution claims**. Counts reflect the statuses recorded in this collection.
