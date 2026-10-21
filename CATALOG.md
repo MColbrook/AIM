@@ -299,7 +299,7 @@
 | 496 | [Global uniqueness of fine-mesh semilinear Galerkin solutions](problems/496-semilinear-galerkin-global-uniqueness.md) | 🟡 PARTIAL | Numerical PDEs and optimal control |
 | 522 | [Linear inverse bounds for four-diamond scattering](problems/522-four-diamond-scattering-inverse.md) | 🔵 OPEN | Numerical PDEs and acoustic scattering |
 | 536 | [Optimal star-discrepancy lower bound for infinite sequences](problems/536-star-discrepancy-sequence-lower-bound.md) | 🔵 OPEN | Uncertainty quantification and quasi-Monte Carlo integration |
-| 541 | [Low-degree convergence of relaxed minimal-deformation surface elements](problems/541-low-degree-relaxed-minimal-deformation.md) | 🔵 OPEN | Numerical analysis of evolving surfaces |
+| 541 | [Low-degree convergence of relaxed minimal-deformation surface elements](problems/541-low-degree-relaxed-minimal-deformation.md) | 🟡 PARTIAL | Numerical analysis of evolving surfaces |
 | 542 | [Optimal stable manifold widths of Besov balls](problems/542-stable-manifold-widths-besov.md) | 🟡 PARTIAL | Stable nonlinear approximation and numerical analysis |
 | 568 | [Sharp permutation bound for triangular parts of correlation matrices](problems/568-sor-permutation-sharp-constant.md) | 🔵 OPEN | Numerical linear algebra and iterative methods |
 | 569 | [A sharp Galerkin projection bound on nonobtuse triangles](problems/569-nonobtuse-galerkin-projection-constant.md) | 🔵 OPEN | Finite element approximation and numerical PDEs |
@@ -1043,7 +1043,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 2026 expansion — batch 6 | 6 | 2026-09-19–2026-10-13 |
 | September 22 expansion — PDE emphasis | 75 | 2026-09-22–2026-10-15 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
-| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 86 | 2026-09-23–2026-10-13 |
+| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 86 | 2026-09-23–2026-10-21 |
 | Community additions, October 2026 | 1 | 2026-10-21 |
 
 ## Maintaining the collection

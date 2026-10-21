@@ -21,7 +21,7 @@ The [15 October PR reviews](research/solution_reviews/2026-10-15-active-prs/READ
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**425 open targets** (350 open, 75 partial) · **212 solved entries** · **0 Lean verified** · **29 solution claims**. Counts reflect the statuses recorded in this collection.
+**425 open targets** (349 open, 76 partial) · **212 solved entries** · **0 Lean verified** · **29 solution claims**. Counts reflect the statuses recorded in this collection.
 
 **[Browse all 425 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 

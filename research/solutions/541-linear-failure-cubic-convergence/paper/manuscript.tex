@@ -1,0 +1,2237 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle_0}
+\newcommand{\Graph}{\mathsf E}
+\newcommand{\PN}{P_{\!N}}
+\newcommand{\Xzero}{\mathcal X_0}
+\newcommand{\Xone}{\mathcal X_1}
+\newcommand{\Azero}{\mathcal A_0}
+\newcommand{\Aone}{\mathcal A_1}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\diag}{\operatorname{diag}}
+\title{Linear failure and cubic convergence for surface evolution\\
+with relaxed minimal deformation}
+\author{Kaiwen Jin\\[2pt]\small\href{mailto:yui.ui.siki@gmail.com}{\texttt{yui.ui.siki@gmail.com}}}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+The finite element scheme for relaxed minimal-deformation surface evolution
+prescribes normal velocity while allowing tangential mesh motion.
+We establish contrasting results for its original exact-integral formulation
+with the discontinuous geometric unit normals of the current elements.
+For linear elements, one fixed smooth torus, a tangential rigid-rotation
+field, and an admissible alternating mesh family give a positive lower
+bound for the uniform-in-time \(L^2\) error of the lifted flow map,
+on an interval where the discrete solution exists uniquely and remains
+nondegenerate. For cubic elements, every admissible mesh family converges
+for every smooth exact solution with smooth inverse on a fixed interval:
+the original discrete solution exists uniquely throughout that interval,
+and its lifted map error is at most \(C_T h^3\sqrt{1+|\log h|}\).
+The cubic proof first controls shape error by a signed-distance-weighted
+relative volume and then estimates weakly tangent map error.
+These results partially solve the low-degree convergence question;
+the quadratic case remains unresolved.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+Tangential redistribution can improve a surface mesh without changing
+its normal velocity. For a parametrized method, however, the resulting
+flow map is itself part of the approximation. Its convergence requires
+more than control of the shape of the surface.
+The relaxed minimal-deformation formulation of Gao, Li and
+Tang~\cite{GLT2026} uses a harmonic-map relaxation from the initial
+surface to the evolving one. Its finite element scheme uses the
+geometric normal of the computed surface directly.
+
+For smooth solutions whose flow maps and inverse maps remain smooth,
+Theorem~2.1 of the author manuscript of Gao, Li and Tang~\cite{GLT2026}
+proves a lifted, uniform-in-time \(L^2\) error bound of order \(h^k\)
+for polynomial degree \(k\geq4\). Section~7 of that manuscript leaves
+convergence for \(k=1,2,3\) open. The question concerns the same
+position-gradient equation, exact fixed-reference integrals, and
+raw geometric normals, which can jump across current element edges.
+The theorem and section locators for \cite{GLT2026} used here refer
+to the linked author manuscript.
+
+We prove failure for degree one and convergence for degree three.
+For the negative result, the initial surface is a fixed smooth torus
+and the external field is one fixed small rigid rotation tangent to it.
+Thus the continuous relaxed minimal-deformation solution is stationary.
+An admissible shape-regular, quasi-uniform mesh family alternates two
+unequal azimuthal spacings. There are fixed \(T_*,c_*>0\) such that
+the original semidiscrete solutions exist uniquely with nondegenerate
+faces on \([0,T_*]\), while
+\[
+ \liminf_{h\to0}\sup_{0\leq t\leq T_*}
+           \norm{X_h^\ell(t)-\id}_{L^2(\Gamma^0)}\geq c_* .
+\]
+The lift is the closest-point lift from the initial nodal surface.
+The construction is given in Theorem~\ref{thm:failure}.
+
+For the positive result, fix any smooth exact solution on \([0,T]\)
+with smooth inverse, and any admissible cubic nodal mesh family under
+the original uniform parametrization bounds. For all sufficiently
+small \(h\), the unmodified semidiscrete solution exists uniquely
+with nondegenerate elements through \(T\), and
+\[
+ \sup_{0\leq t\leq T}\norm{X_h^\ell(t)-X(t)}_{L^2(\Gamma^0)}
+          \leq C_T h^3\sqrt{1+|\log h|}.
+\]
+Theorem~\ref{thm:cubic} retains every smooth-solution and mesh-family
+hypothesis of the original cubic question. The constant is independent
+of \(h\). This paper gives a partial solution of AIM Problem~541:
+the quadratic case remains unresolved.
+
+The linear counterexample separates map error from surface shape.
+The alternating species create a displacement proportional to the mesh
+width whose reference gradient can remain nonzero. A scalar label
+of the weak normal constraint records this displacement. At the initial
+torus its rate is \(-\varepsilon\cos\theta/6\), where \(\theta\) is
+the meridional angle and \(\varepsilon\) the fixed rotation amplitude.
+A common analytic interval and a time modulus for the mean velocity
+control the label through the fast initial layer. The original rotation
+energy then converts its fixed-time gradient effect into a positive
+\(L^2\) map-error lower bound.
+
+For cubic elements a single map-error estimate would mix this tangent
+drift with the error in surface shape. We instead use two estimates.
+A relative volume weighted by signed distance controls shape error.
+Its derivative is paired with a projection defect that retains the
+current area ratio, because the algorithm's weak constraint uses the
+fixed reference measure. The first area variation annihilates pure
+normal slopes, leaving a vanishing tangent-to-shape feedback.
+This gives a normal-error bound strong enough to close the tangent
+energy, with the logarithmic factor from a two-dimensional discrete
+Sobolev estimate. The resulting differential closeness permits
+continuation of the actual mixed system to the final time.
+
+Section~\ref{sec:mesh} gives the original equations and the linear mesh
+construction. Sections~\ref{sec:operators} and \ref{sec:interval}
+control its weak operators and common existence interval;
+Section~\ref{sec:label} proves linear failure.
+Section~\ref{sec:cubic} treats general smooth data with cubic elements.
+All physical fields are real. Fourier arguments use their
+complexification, with conventions stated beside their use.
+All discrete integrals use the fixed initial surface exactly.
+
+\section{The torus and its triangulations}\label{sec:mesh}
+
+We use the position-gradient relaxed minimal-deformation equations
+\begin{equation}\label{eq:continuous}
+ X_t=v,\qquad
+ (v-U_{\rm ext}(X,t))\cdot(n\circ X)=0,\qquad
+ v-\Delta_{\Gamma^0}X=\kappa(n\circ X),\qquad X(0)=\id .
+\end{equation}
+The Laplace--Beltrami operator and all reference integrals are on the
+initial surface \(\Gamma^0\). The unit normal \(n\) belongs to the current
+surface. Thus \(\kappa\) is a scalar constraint multiplier.
+
+For degree \(k\), let \(S_h\) be the continuous degree-\(k\) parametric
+space on a nodal interpolant \(\Gamma_h^0\). The semidiscrete equations are exactly
+\begin{align}
+ &X_{h,t}=v_h,\qquad X_h(0)=\id,\label{eq:discrete-time}\\
+ &\int_{\Gamma_h^0}(v_h-U_{\rm ext}(X_h,t))\cdot N_h\,\chi_h=0
+       &&(\chi_h\in S_h),\label{eq:discrete-normal}\\
+ &\int_{\Gamma_h^0}v_h\cdot\eta_h+
+       \int_{\Gamma_h^0}\nabla_{\Gamma_h^0}X_h:
+                         \nabla_{\Gamma_h^0}\eta_h
+       =\int_{\Gamma_h^0}\kappa_h N_h\cdot\eta_h
+       &&(\eta_h\in S_h^3).\label{eq:discrete-force}
+\end{align}
+Here \(N_h\) is the pullback of the full geometric unit normal of each
+current element. It can jump across edges. All integrals are exact.
+In this section and Sections~\ref{sec:operators}--\ref{sec:label},
+we take \(k=1\), so the reference elements are planar triangles.
+Section~\ref{sec:cubic} uses the same equations for \(k=3\).
+
+\subsection{Data and the mesh family}
+
+Fix \(R=2\), \(r=2/5\), let \(\T=\R/(2\pi\mathbb Z)\), and set
+\begin{equation}\label{eq:torus}
+ \Psi(\theta,\phi)=
+ ((R+r\cos\theta)\cos\phi,(R+r\cos\theta)\sin\phi,r\sin\theta),
+ \qquad (\theta,\phi)\in\T^2.
+\end{equation}
+The orientation is outward. Write \(\rho_\theta=R+r\cos\theta\),
+\(\Omega x=(-x_2,x_1,0)\), and take one fixed, sufficiently small
+\(\varepsilon>0\) with
+\begin{equation}\label{eq:field}
+ U_{\rm ext}(x,t)=\varepsilon\Omega x .
+\end{equation}
+This field is tangent to the torus. Its metric is
+\(\diag(r^2,\rho_\theta^2)\), and direct differentiation gives
+\[
+ \Delta_{\Gamma^0}\Psi
+   =-\left(\frac1r+\frac{\cos\theta}{\rho_\theta}\right)n .
+\]
+Thus \(X=\id\), \(v=0\), and \(\kappa=1/r+\cos\theta/\rho_\theta\)
+solve \eqref{eq:continuous} smoothly on every fixed interval.
+
+For \(n\in\mathbb N\), put
+\[
+ \delta=\frac{2\pi}{4n},\qquad s=4\delta,\qquad
+ \theta_i=is,\qquad a=\frac13,\quad b=\frac23 .
+\]
+The two azimuthal labels in cell \(j\), \(0\leq j<4n\), are
+\[
+ \phi_{j,+}=j\delta-a\delta/2,\qquad
+ \phi_{j,-}=j\delta+a\delta/2 .
+\]
+Take nodal values of \(\Psi\) at these angles. In two neighboring rows
+denote the nodes in one cell by \(A=(i,+)\), \(B=(i,-)\),
+\(C=(i+1,+)\), \(D=(i+1,-)\). Primes indicate the next azimuthal cell.
+Use the oriented faces
+\begin{equation}\label{eq:faces}
+ ABD,\qquad ADC,\qquad BA'C',\qquad BC'D .
+\end{equation}
+The short and long azimuthal widths are \(a\delta\) and \(b\delta\).
+Let \(Y_h\) be the identity on the resulting planar surface.
+
+\begin{lemma}\label{lem:admissible}
+For sufficiently large \(n\), these are admissible shape-regular,
+quasi-uniform degree-one nodal meshes, with \(h\asymp\delta\).
+The closest-point projection \(a_h:\Gamma_h^0\to\Gamma^0\) is bijective,
+its face Jacobians are bounded above and below uniformly, and
+\[
+ \norm{Y_h^\ell-\id}_{L^\infty(\Gamma^0)}\leq C\delta^2,
+ \qquad Y_h^\ell=Y_h\circ a_h^{-1}.
+\]
+Here \(K_f\) is the flat triangle with the same vertices as \(K\).
+The degree-one element parametrization \(F_K:K_f\to K\) is the identity.
+\end{lemma}
+\begin{proof}
+The limiting edge directions are the nonparallel meridional and
+azimuthal tangents, of lengths \(rs\), \(\rho_\theta a\delta\), and
+\(\rho_\theta b\delta\). Their normalized lengths and angles stay
+in compact nondegenerate sets. The distance and normal errors are
+\(O(\delta^2)\) and \(O(\delta)\), by trigonometric expansion.
+
+The closest projection is explicit. Put
+\(\rho_{xy}=(x_1^2+x_2^2)^{1/2}\) and
+\(d=((\rho_{xy}-R)^2+x_3^2)^{1/2}\). Then
+\[
+ a(x)=\left(
+ \left[R+\frac{r(\rho_{xy}-R)}d\right]\frac{x_1}{\rho_{xy}},
+ \left[R+\frac{r(\rho_{xy}-R)}d\right]\frac{x_2}{\rho_{xy}},
+ \frac{rx_3}d\right).
+\]
+Both denominators are uniformly positive near the meshes. Each
+azimuthal quadrilateral is planar. At fixed azimuth \(\phi\), its
+cylindrical radius is the affine interpolation of its two row radii
+multiplied by
+\[
+ c_\phi=\frac{\cos(d_\phi/2)}{\cos(\phi-\phi_{\rm mid})}
+        =1+O(\delta^2),
+\]
+where \(d_\phi\) is its angular width. The determinant of the
+cross-section vector about \((R,0)\) and its meridional chord is
+\(r^2\sin s+O(\delta^2s)>0\). Its projected cross-section angle is
+strictly increasing, as is the azimuth. The lifted angular coordinates
+cover both periods once. This proves bijectivity. The tangent estimates
+give the Jacobian bounds and the identity error.
+\end{proof}
+
+\begin{theorem}\label{thm:failure}
+For the fixed torus \eqref{eq:torus}, one fixed field
+\eqref{eq:field}, and the mesh family \eqref{eq:faces}, there are
+\(T_*>0\), \(c_*>0\), and \(n_0\) such that the original system
+\eqref{eq:discrete-time}--\eqref{eq:discrete-force} has a unique solution
+with nondegenerate evolving elements on \([0,T_*]\) for \(n\geq n_0\),
+but
+\begin{equation}\label{eq:main-failure}
+ \liminf_{n\to\infty}\ \sup_{0\leq t\leq T_*}
+       \norm{X_h^\ell(t)-\id}_{L^2(\Gamma^0)}\geq c_* .
+\end{equation}
+Here \(X_h^\ell=X_h\circ a_h^{-1}\) is the closest-point lift and
+\(h\asymp\delta=2\pi/(4n)\). All constants and the field are fixed
+before the mesh limit.
+\end{theorem}
+
+The theorem concerns the parametrized flow map. Its proof needs a
+common existence interval: an initial velocity calculation alone
+would not exclude disappearance of the effect in an initial layer.
+We establish that interval in Section~\ref{sec:interval} and complete
+the proof in Section~\ref{sec:label}.
+
+\subsection{The full local equation and cyclic coordinates}
+
+Let \(M\), \(K\), and \(T(X)\) denote the exact vector mass, reference
+stiffness, and weak normal matrices. In physical nodal coordinates,
+\begin{equation}\label{eq:matrix-original}
+ X_t=V,\qquad MV+KX=T(X)^*\kappa,\qquad
+ T(X)(V-\varepsilon\Omega X)=0 .
+\end{equation}
+Initially \(X=Y\), the nodal identity. These matrices depend smoothly
+on \(X\) while all scaled edge cross products stay nonzero.
+
+Let \(N_{\rm ref}\) insert the smooth reference nodal normal. On a
+small geometric neighborhood, every current face normal has a common
+positive component in this direction. Hence \(TN_{\rm ref}\) is a
+definite weighted scalar mass plus \(O(\delta)\): replacing a nodal
+reference normal by a common reference normal on each face costs
+\(O(\delta)\) in its mass norm, and the remaining weights are positive.
+Its Hermitian part has a uniform lower bound. This argument holds on
+the full mesh, not only on cyclic modes. Thus \(T\) has full row rank
+and \(TM^{-1}T^*\) is invertible.
+Eliminating \(\kappa\) gives a smooth finite-dimensional ODE. Picard
+iteration on a closed coordinate ball gives a local solution: a short
+time makes the integral map a contraction, and the same Lipschitz
+bound gives uniqueness.
+
+Cyclic rotations preserve \eqref{eq:matrix-original}. Full uniqueness
+therefore gives the exact representation
+\begin{equation}\label{eq:cyclic}
+ X_{i,j,\pm}=\mathcal R_{\phi_{j,\pm}}(y_i\pm\delta w_i),
+ \qquad
+ y_i(0)=y_i^0=(R+r\cos\theta_i,0,r\sin\theta_i),\quad w_i(0)=0 ,
+\end{equation}
+where \(\mathcal R_\phi\) is rotation about the third axis.
+All three Cartesian components of both profiles remain present.
+
+\section{The geometric constraint and its weak operators}\label{sec:operators}
+
+\subsection{Row norms and exact element formulas}
+
+The row inner product is \(\ip pq=s\sum_i p_i^*q_i\).
+Let \(\tau\) be the forward row permutation and set
+\[
+ D=\frac{\tau-I}{s},\qquad
+ D^*=\frac{\tau^{-1}-I}{s}=-\tau^{-1}D,\qquad
+ \lambda_k=\frac{e^{iks}-1}{s}.
+\]
+Stars refer to this uniform row inner product. A varying-mass adjoint
+is written explicitly as \(M^{-1}A^*M\).
+With \(\widehat q_k=n^{-1}\sum_iq_i e^{-ik\theta_i}\), define
+\begin{equation}\label{eq:row-sobolev}
+ \norm q_{H^\sigma}^2
+   =2\pi\sum_k(1+|\lambda_k|^2)^\sigma|\widehat q_k|^2 .
+\end{equation}
+Signed modular frequencies are used. For \(|k|\leq n/2\),
+\(|\lambda_k|\geq 2|k|/\pi\), and
+\(|\lambda_{k+l}|\leq|\lambda_k|+|\lambda_l|\), including aliasing.
+Fourier convolution and Cauchy--Schwarz give the uniform \(H^1\)
+embedding into \(\ell^\infty\) and one-dimensional product estimates.
+
+For a physical species vector write \(q_\pm=q_b\pm q_o\), with
+label rotations understood, and put \(q_c=q_o/\delta\). Its reference
+squared piecewise affine \(H^1\) norm is uniformly equivalent to
+\[
+ \norm{q_b}_{H^1}^2+\norm{q_c}_0^2+
+                      \delta^2\norm{Dq_c}_0^2
+ \asymp\norm{q_b}_{H^1}^2+\norm{q_c}_0^2 .
+\]
+Here \(\delta\norm D\leq1/2\). We shall use the bases
+\begin{equation}\label{eq:bases}
+ \Xzero=H^4\times H^3,\quad \Xone=H^5\times H^4,\qquad
+ \Azero=H^3\times H^2,\quad \Aone=H^4\times H^3 .
+\end{equation}
+The macro component is the mean of the two nodal species; the optical
+component is half their difference. The scaled optical coordinate divides
+that difference by \(\delta\). Geometry is \(\mathbf e=(y-y^0,w)\),
+so its physical error has mean \(y-y^0\) and optical part \(\delta w\).
+The velocity spaces have one fewer row derivative than the corresponding
+geometry spaces; each scaled optical component has one fewer than its mean.
+
+Fix \(p=4\). For a row space \(B\) and \(\rho>0\), write
+\begin{equation}\label{eq:analytic-norm}
+ \varpi_j=\frac{(j+1)^p\rho^j}{j!},\qquad
+ \norm q_{\rho,p;B}^2=\sum_{j\geq0}\varpi_j^2\norm{D^jq}_B^2 .
+\end{equation}
+Coefficient norms have the same weights with coefficient row
+differences.
+
+There are \(4n\) azimuthal copies. Multiply each assembled one-cell
+weak matrix by \(4n/s=(\pi/2)\delta^{-2}\). In the row inner product
+this represents exactly the full physical cyclic energy and leaves
+the equations unchanged. Thus normalized \(M,T\) are order zero.
+On a triangle of reference area \(A\), the scalar mass is \(A/12\)
+times the matrix with diagonal \(2\) and off-diagonal \(1\).
+The stiffness is \(K=J^*J\), where \(J\) is the exact reference
+gradient including area and metric factors.
+
+For scaled current edges \(g_l=(X_l-X_0)/\delta\), put
+\(c=g_1\times g_2\), \(n=c/|c|\), and
+\(d_l=(h_l-h_0)/\delta\). The exact normal derivative is
+\begin{equation}\label{eq:normal-derivative}
+ DN[h]=\frac{(I-nn^{\mathsf T})(d_1\times g_2+g_1\times d_2)}{|c|}.
+\end{equation}
+We keep this full normal map. Its coefficients are analytic on a
+compact nondegenerate set of scaled edges. Rotation remainders
+retain their powers of \(\delta\) by
+\[
+ \frac{\mathcal R_{\beta\delta}-I}{\delta}
+       =\beta\int_0^1\Omega\mathcal R_{t\beta\delta}\,dt .
+\]
+
+\subsection{Row moments and the normal graph}
+
+For \((Aq)_i=\sum_k a_i(k)q_{i+k}\), put
+\(m_\ell(A)_i=\sum_k k^\ell a_i(k)\).
+All kernels below have exponentially summable distance moments and
+bounded coefficient differences at the displayed regularities.
+Class \(0\) imposes no zero condition; classes \(1\) and \(2\) mean
+\[
+ m_0=\delta c_0,\qquad\hbox{and}\qquad
+ m_0=\delta^2c_0,\quad m_1=\delta c_1 ,
+\]
+respectively. The factors remain present after coefficient differences.
+Physical first and second orders are \(\delta^{-1}\) times class \(1\)
+and \(\delta^{-2}\) times class \(2\).
+
+Exactly, without commuting matrices,
+\begin{align}
+ m_0(AB)_i&=\sum_k a_i(k)m_0(B)_{i+k},\nonumber\\
+ m_1(AB)_i&=\sum_k k a_i(k)m_0(B)_{i+k}
+                    +\sum_k a_i(k)m_1(B)_{i+k}.\label{eq:mom-products}
+\end{align}
+Subtract the value of each right coefficient at \(i\). A difference
+supplies \(s=4\delta\). Thus two class \(1\) factors give class \(2\).
+For a class \(2\) factor next to class \(0\), expand once more: the
+first moment contributes \(\delta s\), and the second-difference
+remainder contributes \(s^2\). Class \(2\) is preserved in either order.
+
+The adjoint moments are
+\[
+ m_0(A^*)_i=\sum_l a_{i-l}(l)^*,\qquad
+ m_1(A^*)_i=-\sum_l l\,a_{i-l}(l)^* .
+\]
+The finite Laurent identity
+\(\tau^{-l}=I-l(\tau-I)+(\tau-I)^2R_l(\tau)\), with
+\(\norm{R_l}_{\ell^1}\leq C(1+|l|)^2\), yields
+\begin{equation}\label{eq:adjoint-moment}
+ m_0(A^*)=m_0(A)^*-sD_{\rm coeff}(m_1(A)^*)
+       +s^2\sum_lR_l(\tau)D_{\rm coeff}^2(a(l)^*) .
+\end{equation}
+Its minus sign corresponds to our forward difference. The analogous
+first-moment identity proves adjoint stability of the classes.
+Periodic moments are read on lifted periodized kernels; wrapping
+tails are exponential and smaller than each fixed required power of
+\(\delta\).
+
+A uniformly invertible localized order-zero matrix has a localized
+inverse. Conjugate by
+\(W_j=\exp(\gamma\,\operatorname{dist}(i,j))\). Weighted kernel
+moments give \(\norm{WAW^{-1}-A}\leq C\gamma\), so a fixed small
+\(\gamma\) preserves invertibility by a Neumann series. One-row inputs
+then give exponential kernel decay for \(A^{-1}\). If
+\(A^+=\tau A\tau^{-1}\) and \(\delta_c A=(A^+-A)/s\), exactly
+\begin{equation}\label{eq:inverse-difference}
+ \delta_c(A^{-1})=-(A^+)^{-1}(\delta_c A)A^{-1}.
+\end{equation}
+This also supplies the coefficient differences of the global inverse.
+
+The actual mass-normal projection is
+\begin{equation}\label{eq:normal-projector}
+ \PN=M^{-1}T^*(TM^{-1}T^*)^{-1}T,\qquad Q=I-\PN .
+\end{equation}
+The full normal-column gap supplies its inverses. Freezing at output
+row \(i\) changes each kernel by
+\(C\delta(1+\operatorname{dist})\) times an exponential. At zero
+row phase the coherent frozen off-diagonal blocks vanish, since the
+alternating affine function on a whole rectangle satisfies
+\(\int\chi=0\), \(\int\chi^2=A_{\rm rect}/3\).
+A zero-sum cross kernel acts on neighboring differences and supplies
+the factor \(\delta\) required by the scaled optical norm.
+More explicitly, in a coherent frozen strip let \(\zeta\) be the row
+Fourier phase and set \(d_\delta(\zeta)=(1+|\zeta-1|^2/s^2)^{1/2}\).
+The full physical state consists of both three-component species values,
+with mean and optical parts as above. The alternating affine function
+\(\chi\) has nodal values \(+1\) and \(-1\) on the two species.
+At \(\zeta=1\), its rectangle integrals make both the mass and weak-normal
+matrices block diagonal in mean/optical coordinates. The Schur inverse
+therefore has the same zero cross blocks, and smooth dependence gives
+\(|P_{bo}(\zeta)|+|P_{ob}(\zeta)|\leq C|\zeta-1|\).
+Conjugating by \(\diag(d_\delta I_3,\delta^{-1}I_3)\) is bounded, since
+\[
+ \frac{|\zeta-1|}{\delta d_\delta}\leq C,\qquad
+       \delta d_\delta|\zeta-1|\leq C.
+\]
+The \(O(\delta)\) actual-kernel freezing remainder is bounded before
+dividing the optical coordinate by \(\delta\). This gives a bounded
+order-zero remainder in the same mixed norm.
+The identity \([D,A^{-1}]=-A^{-1}[D,A]A^{-1}\) supplies differentiated
+bounds. In particular \(\PN,Q\) are uniformly bounded in macro
+\(H^1\) plus scaled-optical \(L^2\), and in their differentiated versions
+when the corresponding coefficient norms are retained.
+
+Use the fixed aligned reference frame
+\[
+ e_\theta=(-\sin\theta,0,\cos\theta),\quad
+ e_\phi=(0,1,0),\quad n_0=(\cos\theta,0,\sin\theta).
+\]
+Let \(C_{\rm all}\) insert all four tangent coordinates
+\(\mathbf a=(u,\omega)\), with physical optical size \(\delta\omega\).
+Let \(L_{\rm ref}\) extract them and let \(N_{\rm ref}\) insert the
+reference normal coordinates. Set
+\begin{equation}\label{eq:graph}
+ R_N=N_{\rm ref}(TN_{\rm ref})^{-1},\qquad
+ \Graph=C_{\rm all}-R_NTC_{\rm all}.
+\end{equation}
+Then \(T\Graph=0\), \(L_{\rm ref}\Graph=I\), and
+\(\Graph'[h]=-R_NT'[h]\Graph\).
+Every weak-tangent vector equals \(\Graph L_{\rm ref}\) of itself.
+The global graph and its inverse have uniform mixed bounds. In scaled
+state coordinates their type is
+\begin{equation}\label{eq:state-type}
+ \begin{pmatrix}\text{order }0&\delta^2\text{ order }1\\
+                 \text{order }1&\text{order }0\end{pmatrix}.
+\end{equation}
+Consequently
+\begin{equation}\label{eq:graph-high}
+ \norm{\Graph\mathbf a}_{\Xzero}
+ \leq C_{\rm low}\bigl(\norm{\mathbf a}_{\Aone}
+            +\norm{\mathbf e}_{\Xone}\norm{\mathbf a}_{\Azero}\bigr).
+\end{equation}
+Here \(\Xzero,\Xone\) are the geometry bases \((H^4,H^3)\),
+\((H^5,H^4)\), whereas \(\Azero,\Aone\) are the velocity bases
+\((H^3,H^2)\), \((H^4,H^3)\). Low constants depend on fixed reference
+bounds and the stated current low norms, never on \(n\).
+The high geometry factor is written explicitly.
+
+\subsection{The curved cancellation and the initial velocity}
+
+For a scalar multiplier define \(H_\kappa h=T'[h]^*\kappa\).
+The alternating curvature scale is \(\kappa_o=\lambda/\delta\).
+After removing the common factor \(\delta^{-2}\), the physical
+mean/optical blocks of \(H_{\lambda/\delta}\) satisfy
+\begin{equation}\label{eq:curved-moments}
+ \begin{array}{c|ccc}
+       &m_0&m_1&\text{kernel size}\\ \hline
+ bb&O(\delta^2)&O(\delta)&O(1)\\
+ bo,\ ob&O(\delta)&O(1)&O(1)\\
+ oo&O(1)&O(1)&O(1).
+ \end{array}
+\end{equation}
+Here the alternating signs are included in the multiplier, and all
+entries are factored identities with bounded smooth coefficients.
+
+To prove them, freeze the lower-row divided meridional chord
+\(p=(y_{i+1}-y_i)/\delta\), \(q=\Omega y_i\), and \(w_i\).
+The leading short and long rectangles have chords
+\(p,aq-2w_i\) and \(p,bq+2w_i\). They are planar, even when
+the two directions are not orthogonal. The alternating P1 function
+\(\chi\) is affine azimuthally. A coarse row test \(L_\nu\) is affine
+meridionally, and exact integration on the two triangles gives
+\begin{equation}\label{eq:rectangle-zero}
+                  \int_{\rm rectangle}\chi L_\nu=0 .
+\end{equation}
+A constant aligned macro input changes the scaled edges first at
+order \(\delta\), through label rotations. That first variation is
+affine azimuthally, so its normal variation is constant on each
+leading rectangle. Equation~\eqref{eq:rectangle-zero} removes its
+order-\(\delta\) pairing. Reference weights, neighboring multipliers,
+test rotations and normal coefficients then change it by another
+\(\delta\). This proves the \(bb\) zero sum.
+For the \(bb\) first moment the input is affine in row level; its
+leading normal variation is again constant on the whole rectangle.
+One curvature or coefficient difference remains. For \(bo\), a
+constant optical input is affine azimuthally and the same integral
+vanishes. For \(ob\), the constant leading macro input is a
+translation, so its normal variation is zero. The \(oo\) bound follows
+from \eqref{eq:normal-derivative}.
+
+These arguments factor the remainders by exact divided differences
+and the rotation integral. For example, the \(bb\) zero-sum
+coefficient uses macro first and second differences, optical first
+differences and multiplier first differences. A coefficient row
+difference raises each corresponding count by one and retains both
+mesh factors. Thus the conclusions apply to the actual curved
+triangles and their coefficient derivatives.
+
+We need a distinct cancellation for the moving constraint.
+For \(W_\pm=W_b\pm\delta W_c\), put
+\(B_W h=M_{\rm scalar}^{-1}T'[h]W\). After removing
+\(\delta^{-1}\), its physical scalar-output/vector-input blocks have
+\begin{equation}\label{eq:connection-moments}
+ \begin{array}{c|cc}
+       &m_0&m_1\\ \hline
+ bb&O(\delta)&O(1)\\
+ bo&O(1)&O(1)\\
+ ob&O(\delta^2)&O(\delta)\\
+ oo&O(\delta)&O(1).
+ \end{array}
+\end{equation}
+The optical test at just one meridional row is important. On a short
+rectangle, a constant vector has optical test integral \(A_{\rm tri}/3\)
+at the lower row and \(-A_{\rm tri}/3\) at the upper row; on a long
+rectangle the signs reverse. Assembly is therefore a backward patch
+difference. A constant macro input already supplies its rotational
+factor \(\delta\), and this patch difference supplies the second
+factor in \(ob\). An affine row input gives its first-moment zero.
+The other entries follow from the constant macro variation or the
+constant optical patch cancellation. The actual row-supported test
+has been used, rather than a bilinear product \(\chi L_\nu\).
+Scalar mass inversion preserves the table: its cross blocks have one
+zero, so a cross inverse followed by the \(bb\) single zero still
+has the \(ob\) double zero, by \eqref{eq:mom-products}.
+
+Laurent division by \(\tau-I=sD\) now gives
+\[
+ (B_W h)_b:\ Dh_b,\ h_c,\qquad
+ (B_W h)_o/\delta:\ D^2h_b,\ Dh_c ,
+\]
+up to the stated lower coefficients. This is one derivative on the
+mixed scale. A mean multiplier gives the same first-order normal
+derivative estimate. An alternating \emph{velocity} multiplier
+\(\delta l_c\) has two additional mesh factors relative to
+\(\lambda/\delta\), and is mixed order zero.
+
+At \(X=Y\), let \(\kappa_s=1/r+\cos\theta/\rho_\theta\).
+The reference force defect is
+\(R_h=KY-T_Y^*\kappa_s\). In an orthonormal Monge chart the actual
+tangent-projected planar star annihilates affine nodal data exactly.
+Its curved metric differs from its projected planar metric by
+\(O(\delta^2)\). The projected star differs from the leading product
+star by a relative \(O(\delta)\), which acts only on quadratic data.
+For short/long lengths \(a_0,b_0\) and meridional length \(c_0\),
+the latter star has mass row sum \(c_0(a_0+b_0)/2\); its action on
+\((h_{11}x^2+2h_{12}xz+h_{22}z^2)/2\) is
+\(-c_0(a_0+b_0)(h_{11}+h_{22})/2\).
+Indeed its horizontal stiffness weights are \(c_0/a_0,c_0/b_0\),
+its vertical weights are \((a_0+b_0)/(2c_0)\), and its diagonal
+weights vanish. The affine part cancels on the actual projected
+star, including its perturbation. The metric error, perturbed
+quadratic weights and cubic remainder all cost \(O(\delta^3)\)
+in weak force. Dividing by its \(O(\delta^2)\) mass gives
+\begin{equation}\label{eq:initial-consistency}
+ \norm{M^{-1}R_h}_{H^j}\leq C_j\delta,\qquad
+ \norm{M^{-1}KY}_0\leq C .
+\end{equation}
+Each fixed coefficient difference retains the order, since the
+reference descriptors are smooth periodic trigonometric functions.
+Their convergent angle series give the corresponding uniform
+positive analytic radius.
+
+Since \(\Omega Y\) is tangent to the smooth torus, its weak normal
+projection is \(O(\delta)\). Thus the actual initial velocity is
+\[
+ V(0)=-QM^{-1}R_h+\PN\varepsilon\Omega Y .
+\]
+It is physically \(O(\delta)\), its mean is \(O(\delta)\) in \(H^1\),
+and its optical coordinate divided by \(\delta\) is uniformly bounded.
+We retain this bounded initial layer.
+
+\subsection{Force scales and the weak tangent form}
+
+Fix an analysis constant \(\beta>0\), let \(e=X-Y\) in physical
+coordinates, and define
+\begin{equation}\label{eq:geometric-force}
+ \widehat\kappa=(TN_{\rm ref})^{-*}N_{\rm ref}^*(KX+\beta Me),
+ \qquad \widehat B=K+\beta M-H_{\widehat\kappa}.
+\end{equation}
+Write \(\widehat\kappa=(k_b,\lambda/\delta)\) in physical
+mean/optical multiplier coordinates. A physical primal pair is
+\((q_b,\delta q_c)\); pairing it with a force \((F_b,F_o)\) gives
+\(F_b\cdot q_b+\delta F_o\cdot q_c\). Thus the scaled dual force is
+\((F_b,\delta F_o)\), not \((F_b,F_o/\delta)\).
+The inverse normal map has the state type \eqref{eq:state-type}; its force-dual type is instead
+\[
+ \begin{pmatrix}\text{order }0&\text{order }1\\
+          \delta^2\text{ order }1&\text{order }0\end{pmatrix}.
+\]
+For \(F=KX+\beta Me\), the row moment calculus gives
+\[
+ \norm{F_b}_{H^2}+\norm{\delta F_o}_{H^3}\leq C_{\rm low},
+ \qquad
+ \norm{k_b}_{H^2}+\norm\lambda_{H^3}\leq C_{\rm low}.
+\]
+The mean force uses \(D^2y,Dw\), whereas \(\delta F_o\) uses
+\(Dy,w\). The apparent extra order in the lower dual cross block
+is controlled by \(\delta^2D^2\). At the reference,
+\eqref{eq:initial-consistency} gives \(\lambda=O(\delta^2)\).
+On an analytic geometry ball of radius \(\eta\) in \(\Xzero\),
+\begin{equation}\label{eq:lambda-small}
+                 \norm\lambda_{H^3}\leq C(\eta+\delta^2).
+\end{equation}
+All these bounds hold in the row analytic norm \eqref{eq:analytic-norm}.
+The scaled normal formulas and ordered inverse series are analytic
+there. Reference real-angle gaps are uniform by the same geometric
+argument for every common angle shift; a small complex shift
+preserves them. The holomorphic continuation of a real transpose
+is used, not conjugation of the complex shift. This gives a uniform
+reference series disk for the inverse coefficients.
+
+Set \(B=\Graph^*\widehat B\Graph\), with macro/fast blocks
+\(B_{ss},B_{sf},B_{fs},B_{ff}\). Their normalized classes are
+\[
+ \delta^{-2}\text{ class }2,\quad
+ \delta^{-1}\text{ class }1,\quad
+ \delta^{-1}\text{ class }1,\quad
+ \text{class }0 ,
+\]
+and hence
+\[
+ B_{ss}:H^3\to H^1,\quad B_{sf}:H^2\to H^1,\quad
+ B_{fs}:H^3\to H^2,\quad B_{ff}:H^2\to H^2.
+\]
+Products with \(\Graph\), its adjoint and global inverse kernels
+preserve the factored classes by \eqref{eq:mom-products} and
+\eqref{eq:adjoint-moment}. The alternating form is bounded by
+\(C\norm\lambda_{H^3}\) times the mixed \(H^1\) norm squared.
+For the mean part \eqref{eq:normal-derivative} gives
+\[
+ |\ip v{H_{k_b}v}|
+     \leq C\norm{k_b}_\infty\norm v_{L^2}\norm v_{H^1}.
+\]
+Choose \(\beta\) large from the reference mean bound, then \(\eta\)
+small relative to \(\beta\), and finally \(\delta\) small. The full
+tangent form \(B\) is uniformly coercive in the mixed \(H^1\) norm.
+In particular \(H:=B_{ff}\) has a uniform gap and a localized
+global inverse.
+
+The weak representation gives more information than these strong
+mapping bounds. Factoring the exact reference gradient before
+expanding a left adjoint gives
+\begin{equation}\label{eq:gradient-factor}
+       J\Graph_s=J_sD+J_0,\qquad J\Graph_f=J_f .
+\end{equation}
+To obtain \(J_s\), divide the optical-from-mean class \(1\) kernel
+by its phase difference. Its factored zero moment belongs to \(J_0\).
+The macro part uses \(D\Graph_s=\Graph_sD+[D,\Graph_s]\).
+For \(J_f\), both the azimuthal gradient and \(\delta D\) are
+order zero. Thus \(J_s,J_f\) have coefficient \(H^3\) from \(\Xzero\),
+and \(J_0\) has \(H^2\), using \(D^2y,Dw\).
+
+The nine stiffness coefficients are exactly
+\[
+ \begin{gathered}
+ J_s^*J_s,\ J_s^*J_f,\ J_f^*J_s,\ J_f^*J_f,\\
+ J_s^*J_0,\ J_0^*J_s,\ J_0^*J_f,\ J_f^*J_0,\ J_0^*J_0 .
+ \end{gathered}
+\]
+For the alternating multiplier, \eqref{eq:curved-moments} places
+one \(D\) on the input and one \(D^*\) on the macro test. Moving
+the latter difference uses one coefficient difference. Its lower
+coefficients involve \(D\lambda,D^2y,Dw,k_b\), and have \(H^2\).
+The mean multiplier is a first-normal-derivative form; its
+principal gradient/fast terms retain an explicit small \(\delta\).
+The \(\beta\) mass is lower order, with any \(\delta D\) factor
+kept inside an order-zero kernel. Consequently the exact weak blocks
+can be written
+\begin{equation}\label{eq:nine-blocks}
+ \begin{aligned}
+ B_{ss}&=D^*AD+D^*b_R+b_LD+c,\\
+ B_{sf}&=D^*C_f+d_f,\qquad
+ B_{fs}=C_sD+d_s,\qquad B_{ff}=H .
+ \end{aligned}
+\end{equation}
+The principal coefficients \(A,C_f,C_s,H\) have \(H^3\);
+the lower coefficients have \(H^2\) at geometry \(\Xzero\).
+One additional lower-coefficient derivative costs exactly one
+\(\Xone\) factor, linearly.
+
+\begin{lemma}\label{lem:global-gap}
+The actual global order-zero matrix
+\(\mathbb A=\left(\begin{smallmatrix}A&C_f\\C_s&H\end{smallmatrix}\right)\)
+has a uniformly positive Hermitian part on the small geometry ball.
+\end{lemma}
+\begin{proof}
+The coherent frozen reference form is the P1 Dirichlet form on an
+arbitrary macro gradient and fast coordinate. At zero phase the divided
+kernel is defined by its continuous extension after removing the macro
+phase zero; the class-\(1\) factorization in
+\eqref{eq:gradient-factor} gives this extension. Its norm controls both:
+on the product strip, vanishing gradients force the optical
+coordinate and then the macro gradient to vanish. The same holds
+at zero phase after division by the macro phase difference.
+Compactness of phase and reference shapes gives a uniform gap.
+The small optical geometry and \eqref{eq:lambda-small} preserve it;
+the mean-multiplier principal terms retain their small \(\delta\).
+
+To pass from frozen to actual kernels, take a smooth row partition
+\(\sum_\nu\chi_\nu^2=1\), with bounded overlap and windows of \(L\)
+rows. Kernel first moments give a commutator error \(C/L\).
+Replacing coefficients in a window by its center's coherent frozen
+ones costs \(CL\delta\); the inverse-kernel freezing error is
+included. Therefore
+\[
+ \operatorname{Re}\ip v{\mathbb Av}
+       \geq [c-C(L\delta+1/L)]\norm v_0^2 .
+\]
+Choose the integer \(L\) once, then \(\delta\) small. This proves
+the global gap. The localization length is a proof choice, not
+a discretization parameter.
+\end{proof}
+
+\section{A uniform analytic interval}\label{sec:interval}
+
+The analytic weights and norms are those in \eqref{eq:analytic-norm}. The exact shifted Leibniz rule gives binomial convolution;
+the polynomial factor makes this an algebra. Indeed
+\((k+l+1)^p\leq C_p((k+1)^p+(l+1)^p)\), and
+\(\sum(j+1)^{-2p}<\infty\). This proves the product bounds with
+uniform constants. Ordered inverse series and the binomial series
+for the full normal denominator converge in a sufficiently small
+geometry ball. Reference angle analyticity, uniform real gaps and
+complex perturbation give a positive initial radius independent
+of the mesh.
+
+\begin{proposition}\label{prop:interval}
+For the fixed sufficiently small \(\varepsilon>0\), there are
+\(T_0>0\), \(\rho_*>0\) and \(C\), independent of sufficiently small
+\(\delta\), such that the original solution exists uniquely with
+nondegenerate elements on \([0,T_0]\), and
+\[
+ \sup_{t\leq T_0}\left(
+   \norm{\mathbf e(t)}_{\rho_*,p;\Xzero}
+   +\norm{(u(t),z(t))}_{\rho_*,p;\Azero}\right)\leq C .
+\]
+Here \(\mathbf e=(y-y^0,w)\), the relative velocity is
+\(W=V-\varepsilon\Omega X=\Graph(u,\omega)\), and
+\(z=\omega+H^{-1}B_{fs}u\).
+The geometry remains in a fixed small nondegenerate analytic ball.
+\end{proposition}
+
+\subsection{The relative velocity and the fast Schur variable}
+
+The constraint is \(TW=0\). Differentiate the force equation and
+use the identities
+\[
+ K\Omega=\Omega K,\quad M\Omega=\Omega M,\quad
+ T'[\Omega X]^*\kappa=\Omega T^*\kappa .
+\]
+Since \((K-H_\kappa)\Omega X=-\Omega MV\), the explicit rotation
+terms cancel in the full vector equation. Exactly,
+\begin{equation}\label{eq:relative-equation}
+ W_t=-QM^{-1}(K-H_\kappa)W+Q_tW .
+\end{equation}
+The normal part \(Q_tW\) is fixed by differentiating \(QW=W\).
+
+Set \(Z=V-\beta e\). The original force equation and
+\eqref{eq:geometric-force} give
+\[
+ \kappa=\widehat\kappa+\lambda_Z,\qquad
+ \lambda_Z=R_N^*MZ=(l_b,\delta l_c),\qquad
+ \norm{l_b}_{H^3}+\norm{l_c}_{H^2}
+                    \leq C_{\rm low}\norm Z_{\Azero}.
+\]
+This is a velocity scale, distinct from the force scale
+\((k_b,\lambda/\delta)\).
+With \(G=\Graph^*M\Graph\) and \(\mathbf a=(u,\omega)\),
+\eqref{eq:relative-equation} becomes
+\[
+ G\mathbf a_t+B\mathbf a
+  =\beta G\mathbf a+\Graph^*H_{\lambda_Z}\Graph\mathbf a
+                         -\Graph^*M\Graph'[V]\mathbf a .
+\]
+Equivalently, \(\mathbf a_t+G^{-1}B\mathbf a=\mathcal N_{\mathbf a}\),
+where the exact source is
+\begin{equation}\label{eq:physical-source}
+ \mathcal N_{\mathbf a}
+  =L_{\rm ref}\left[\beta W+QM^{-1}H_{\lambda_Z}W
+                         +(R_N-R_M)T'[V]W\right],
+ \quad R_M=M^{-1}T^*(TM^{-1}T^*)^{-1}.
+\end{equation}
+The moment table \eqref{eq:connection-moments}, the velocity multiplier
+scale, and \eqref{eq:graph-high} give
+\begin{equation}\label{eq:one-high-source}
+ \norm{\mathcal N_{\mathbf a}}_{\Azero}
+ \leq P(\text{low norms})
+       \left(1+\norm{\mathbf e}_{\Xone}
+                          +\norm{\mathbf a}_{\Aone}\right).
+\end{equation}
+In each product only one factor has the higher norm. The mean source
+has one macro and zero optical-coordinate derivatives; the optical
+source has two macro and one optical-coordinate derivatives.
+These counts follow before estimation from Laurent division of
+\eqref{eq:connection-moments}. Coefficient derivatives of the graph
+use \(D^2y,Dw\); their one-higher applications give the single high
+geometry factor in \eqref{eq:one-high-source}.
+
+The physical mass retains its optical factor:
+\[
+ G=\begin{pmatrix}G_{ss}&\delta^2M_{sf}\\
+             \delta^2M_{fs}&\delta^2M_{ff}\end{pmatrix}.
+\]
+Introduce the actual global operators
+\begin{equation}\label{eq:schur-defs}
+ \begin{aligned}
+ C&=H^{-1}B_{fs},& z&=\omega+Cu,\\
+ \overline M&=G_{ss}-\delta^2M_{sf}M_{ff}^{-1}M_{fs},&
+ S&=B_{ss}-B_{sf}H^{-1}B_{fs},\\
+ L&=B_{sf}-M_{sf}M_{ff}^{-1}H,&
+ N&=M_{ff}^{-1}M_{fs}-C,\qquad A_f=M_{ff}^{-1}H .
+ \end{aligned}
+\end{equation}
+Direct elimination of the mass equations, in this order, gives
+\begin{equation}\label{eq:schur-system}
+ \begin{aligned}
+ \overline M u_t+Su+Lz&=\overline M\mathcal N_u,\\
+ z_t+\delta^{-2}A_fz-N\overline M^{-1}(Su+Lz)
+       &=\mathcal N_z,\\
+ \mathcal N_z&=\mathcal N_\omega+C\mathcal N_u+C_tu .
+ \end{aligned}
+\end{equation}
+The source in the original mass equation was \(G\mathcal N_{\mathbf a}\);
+its mass factors cancel in this elimination. No independent source
+is multiplied by \(\delta^{-2}\).
+Here
+\[
+ C_t=H^{-1}(B_{fs}'[V]-H'[V]C),\qquad
+ \widehat\kappa'[V]=R_N^*\widehat B V .
+\]
+Thus \(C_tu\) has the same one-high-factor estimate as
+\eqref{eq:one-high-source}, without \(\kappa_t\).
+The change between \((u,\omega)\) and \((u,z)\) is bounded on
+\(\Azero\); its one-higher application is tame with one \(\Xone\)
+factor.
+
+\subsection{A connection for the weak macro operator}
+
+Using \eqref{eq:nine-blocks}, define
+\[
+ \begin{aligned}
+ a_0&=A-C_fH^{-1}C_s,& r_0&=b_R-C_fH^{-1}d_s,\\
+ l_0&=b_L-d_fH^{-1}C_s,& v_0&=c-d_fH^{-1}d_s .
+ \end{aligned}
+\]
+For arbitrary \(\xi\), test the global matrix in
+Lemma~\ref{lem:global-gap} on
+\((\xi,-H^{-1}C_s\xi)\). Its lower row is zero, so
+\[
+ \operatorname{Re}\ip{\xi}{a_0\xi}
+  =\operatorname{Re}\ip{(\xi,-H^{-1}C_s\xi)}
+                         {\mathbb A(\xi,-H^{-1}C_s\xi)}
+       \geq c\norm\xi_0^2 .
+\]
+The order-zero inverse \(a_0^{-1}\) is consequently a genuine
+localized global inverse. Put
+\begin{equation}\label{eq:connection}
+ \Gamma=a_0^{-1}r_0,\qquad \nabla=D+\Gamma .
+\end{equation}
+Keeping all products in their order yields the exact identity
+\begin{equation}\label{eq:weak-connection}
+ S=\nabla^*a_0\nabla+(l_0-\Gamma^*a_0)\nabla+(v_0-l_0\Gamma).
+\end{equation}
+The principal coefficient \(a_0\) has \(H^3\); \(\Gamma\) and the
+two lower coefficients have \(H^2\) from geometry \(\Xzero\).
+Their \(H^3\) norms cost one \(\Xone\) factor.
+
+The choice of connection matters. For the scalar graph \((1,g)\),
+the weak coefficients are \(1+g^2\), \(gg_x\), \(gg_x\), \(g_x^2\).
+It gives \(\Gamma=gg_x/(1+g^2)\) and
+\[
+ S=\nabla^*(1+g^2)\nabla+\frac{g_x^2}{1+g^2}.
+\]
+The strong second derivative of the graph lies in the principal
+connection, rather than in a lower potential.
+
+For an operator coefficient, let \(A_l(k)\) map input Fourier frequency
+\(k\) to \(k+l\), and define
+\[
+ W_p(t)^2=\sum_{j\geq0}\frac{(j+1)^{2p}t^{2j}}{(j!)^2},\qquad
+ \norm A_{\rho,p;H^r,\mathrm{coeff}}^2
+ =\sum_l(1+|\lambda_l|^2)^rW_p(\rho|\lambda_l|)^2
+                                      \sup_k\norm{A_l(k)}^2.
+\]
+This is the coefficient analytic \(H^r\) norm in the next lemma.
+\begin{lemma}\label{lem:same-radius}
+If the actual connection has bounded coefficient analytic \(H^2\)
+norm at radius \(\rho\), its common covariant jets satisfy
+\[
+ \sum_{j\geq0}\varpi_j^2\sum_{\ell=0}^3
+                  \norm{\nabla^{j+\ell}u}_0^2
+       \asymp\norm u_{\rho,p;H^3}^2 .
+\]
+The same assertion through offset \(2\) holds for the fast variable.
+Both sides use the same radius. At exponent \(p+1/2\) the comparison
+is tame: its high geometry dependence is linear, and its low
+constants depend only on exponent-\(p\) norms.
+\end{lemma}
+\begin{proof}
+The hypothesis is precisely a bound for
+\(\norm\Gamma_{\rho,p;H^2,\mathrm{coeff}}\).
+For a circle-dependent coefficient \(A(\vartheta)\) use
+\[
+ \norm A_{r,p}^2=\sum_l(1+|\lambda_l|^2)^r
+                       \sup_k\norm{A_l(k,\vartheta)}_{H^p_\vartheta}^2 .
+\]
+Here the circle norm uses Fourier weight \((1+|m|)^{2p}\).
+For \(r,p>1/2\) this is an algebra: product coefficients are
+\(\sum_m A_{l-m}(k+m)B_m(k)\), and the two weighted convolution
+inequalities apply in their stated order.
+
+For \(\zeta=\rho' e^{i\vartheta}\), \(0\leq\rho'\leq\rho\), set
+\[
+ \Gamma_\zeta=e^{\zeta D}\Gamma e^{-\zeta D},\qquad
+ \mathcal H(\zeta)=e^{\zeta\nabla}e^{-\zeta D}.
+\]
+The exact modular identity
+\(\lambda_{k+l}-\lambda_k=e^{iks}\lambda_l\) shows that the circle
+norm of the transported coefficient has precisely the factor
+\(W_p(\rho'|\lambda_l|)\); the input-frequency phase just rotates
+the circle. The ordered equations
+\[
+ \mathcal H'=\mathcal H\Gamma_\zeta,\qquad
+ (\mathcal H^{-1})'=-\Gamma_\zeta\mathcal H^{-1}
+\]
+give bounds in the same \(r=2\) algebra by their convergent
+iterated-integral series. Differentiating the interaction product
+the other way gives
+\[
+ [D,\mathcal H]=\mathcal H\Gamma_\zeta-\Gamma\mathcal H .
+\]
+Its \(l,k\) coefficient contains \(e^{iks}\lambda_l\).
+Thus \(\mathcal H,\mathcal H^{-1}\) gain one coefficient derivative
+and belong to the \(r=3\) algebra. They act boundedly on
+circle \(H^p\) with values in row \(H^3\). Circle Parseval in
+\(e^{\zeta\nabla}u=\mathcal H e^{\zeta D}u\) proves same-radius
+comparison for jets with an ordinary \(H^3\) base.
+
+For each vector \(v\), the finite norm
+\(\sum_{\ell=0}^3\norm{\nabla^\ell v}_0^2\) is equivalent to
+\(\norm v_{H^3}^2\). Expanding \(\nabla^3-D^3\), the highest
+coefficient derivative is the second derivative of \(\Gamma\).
+It is row \(L^2\) and acts on an \(H^1\) field by the uniform
+Fourier convolution bound. Hence
+\(\norm{(\nabla^3-D^3)v}_0\leq C\norm v_{H^2}\), and triangular
+induction proves the finite comparison. Apply it to
+\(v=\nabla^ju\). The offset-\(2\) proof is the same finite expansion.
+
+For \(q=p+1/2\), the algebra has the tame bound
+\(\norm{AB}_{r,q}\leq C(\norm A_{r,q}\norm B_{r,p}
+                     +\norm A_{r,p}\norm B_{r,q})\).
+The interaction ODE and its derivative-gain identity therefore have
+linear high-norm bounds, with low constants fixed at \(p\).
+Since \(\Gamma\) is an analytic coefficient map using \(D^2y,Dw\),
+its high norm is bounded by
+\(C_{\rm low}(1+\norm{\mathbf e}_{\rho,q;\Xzero})\).
+This proves the asserted tame comparison.
+All series are finite-matrix entire functions before estimation,
+so the coefficient integrations and Parseval passages are justified
+by absolute convergence.
+\end{proof}
+
+\subsection{Common jets and the energy estimate}
+
+The macro and fast coordinates both have dimension two. Apply the
+same operator \(\nabla\) to both, using their fixed reference coordinate
+identification. Put \(u_m=\nabla^m u\), \(z_m=\nabla^m z\), and
+\(\mathcal T_m=[\partial_t,\nabla^m]\). Commuting the mass equation
+before substituting \(u_t\) gives exactly
+\begin{equation}\label{eq:jet-system}
+ \begin{aligned}
+ \overline M u_{m,t}+Su_m+Lz_m&=R_{u,m},\\
+ z_{m,t}+\delta^{-2}A_fz_m
+       -N\overline M^{-1}(Su_m+Lz_m)&=R_{z,m},
+ \end{aligned}
+\end{equation}
+where
+\begin{equation}\label{eq:jet-remainders}
+ \begin{aligned}
+ R_{u,m}={}&-[\nabla^m,\overline M]u_t-[\nabla^m,S]u
+       -[\nabla^m,L]z+\nabla^m(\overline M\mathcal N_u)
+                              +\overline M\mathcal T_m u,\\
+ R_{z,m}={}&-\delta^{-2}[\nabla^m,A_f]z
+       +[\nabla^m,N\overline M^{-1}S]u
+       +[\nabla^m,N\overline M^{-1}L]z
+                              +\nabla^m\mathcal N_z+\mathcal T_m z .
+ \end{aligned}
+\end{equation}
+The time insertion is
+\(\mathcal T_m=\sum_{k=0}^{m-1}\nabla^k\Gamma_t\nabla^{m-1-k}\).
+There is no mismatch of ordinary and covariant derivatives between
+the two blocks.
+
+For a coefficient operator \(A\), the exact formulas are
+\[
+ [\nabla^m,A]
+    =\sum_{k=1}^m\binom mk(\ad_\nabla^k A)\nabla^{m-k},
+ \qquad
+ e^{\zeta\nabla}Ae^{-\zeta\nabla}
+       =\mathcal H(\zeta)e^{\zeta D}Ae^{-\zeta D}\mathcal H(\zeta)^{-1}.
+\]
+Reference positive analytic jets are \(O(\rho)\); actual-minus-reference
+jets are \(O(\eta)\) on the small analytic ball. This includes the
+commutator with \(\Gamma\), even for matrix coefficients. The
+principal coefficients \(a_0\), masses, \(A_f\), and first-order
+coefficients of \(L,N\) have analytic row \(H^3\) bounds.
+The lower coefficients have \(H^2\), with one \(\Xone\) factor
+for an additional derivative.
+Differentiating the actual products defining \(\Gamma\) gives
+\[
+ \Gamma_t=a_0^{-1}(r_{0,t}-a_{0,t}\Gamma).
+\]
+The identity for \(\widehat\kappa'[V]\) above shows that \(\Gamma_t\)
+has \(H^1\) from the velocity base \(\Azero\), and \(H^2\) with one
+\(\Aone/\Xone\) factor. Low metric time derivatives are bounded by
+\[
+ g_V=\norm{V_b}_{W^{2,\infty}}
+                       +\norm{V_o/\delta}_{W^{1,\infty}},
+\]
+which is controlled by \(\Azero\) and \(\Xzero\), using
+\(V=\Graph(u,\omega)+\varepsilon\Omega X\).
+
+Choose smooth real Fourier cutoffs \(\Pi_L,\Pi_H\) with
+\(\Pi_L^2+\Pi_H^2=I\), low support \(|\tau-I|\leq2d_0\), and high
+support \(|\tau-I|\geq d_0\). Their phase functions are fixed; their
+periodized kernels have uniformly summable distance moments, by
+integration by parts in the phase Fourier coefficients.
+For each common jet let \(u_L=\Pi_Lu_m\), \(u_H=\Pi_Hu_m\),
+and likewise for \(z\). Use the positive low energy
+\[
+ E_m^L=\ip{u_L}{\overline M u_L}
+       +\ip{\nabla u_L}{\overline M\nabla u_L}
+       +\ip{z_L}{M_{ff}z_L},
+\]
+and the high energy
+\begin{equation}\label{eq:high-energy}
+ E_m^H=\delta^{-2}\ip{\mathbf a_H}{G\mathbf a_H},
+ \qquad \mathbf a_H=(u_H,z_H-Cu_H).
+\end{equation}
+Let \(E_m=E_m^L+E_m^H\). The current coefficients are used in these
+metrics, so their equivalence constants do not depend on \(m\):
+\begin{equation}\label{eq:base-energy}
+ E_m\asymp\norm{u_m}_{H^1}^2+\norm{z_m}_0^2,\qquad
+ D_m:=\norm{u_m}_{H^2}^2+\delta^{-2}\norm{z_m}_0^2 .
+\end{equation}
+For the high part this follows from physical mass positivity,
+\(C:H^1\to L^2\), and
+\(\delta^{-1}\norm{u_H}_0\asymp\norm{u_H}_{H^1}\).
+The macro \(L^2\) addition supplies the low zero mode.
+
+The principal low energy estimate follows from
+\eqref{eq:weak-connection}. In differentiating its \(H^1\) part,
+\([\nabla,\nabla^*]\) is order zero with one coefficient derivative
+of \(\Gamma\). Integration by parts leaves
+\(\operatorname{Re}\ip{\nabla^2u_L}{a_0\nabla^2u_L}\).
+Lower terms cost a small part of \(H^2\) plus \(CE_m\).
+The mass commutator contains \(u_t\); substitute the exact macro
+equation in \eqref{eq:schur-system}. Its bound is
+\[
+ C\norm{u_L}_{H^1}
+      \left(\norm{u_L}_{H^2}
+                         +(d_0/\delta+1)\norm{z_L}_0\right).
+\]
+The \(Lz\) and \(NSu\) terms jointly have bound
+\[
+ C(d_0/\delta+1)\norm{u_L}_{H^2}\norm{z_L}_0,
+\]
+and \(NLz\) contributes
+\(C(d_0^2/\delta^2+1)\norm{z_L}_0^2\).
+Choose \(d_0\) small, then \(\delta\) small, and absorb these in
+the two terms of \(D_m\).
+On the high band, the coercivity of the physical form \(B\)
+controls \(\delta^{-2}\norm{\mathbf a_H}_{\rm mixed\,H^1}^2\).
+Since \(z_H=\omega_H+Cu_H\), this controls the high contribution
+to \(D_m\).
+
+We give the remainder estimates for \eqref{eq:jet-remainders},
+including their high mass cross terms. The identity
+\begin{equation}\label{eq:high-mass-square}
+ E_m^H=\delta^{-2}\ip{u_H}{\overline M u_H}
+             +\ip{z_H+Nu_H}{M_{ff}(z_H+Nu_H)}
+\end{equation}
+shows that macro force \(p\) and fast force \(q\) pair through
+\[
+ \delta^{-2}\ip{u_H}{p}
+       +\ip{z_H+Nu_H}{M_{ff}(q+N\overline M^{-1}p)}.
+\]
+Thus the additional \(N\)-application to a macro force is retained.
+For a high-cutoff physical source,
+\(\norm{p_H}_0\leq C\delta\norm p_{H^1}\); its first pairing uses
+the macro energy root. For force commutators, the first pairing
+uses \(H^2\) dissipation. The extra \(N\)-application either has
+one higher coefficient, paired with the energy root, or a
+principal term bounded by a joint macro/fast dissipation.
+
+Take \(m=j+\ell\), \(\ell=0,1,2\).
+Finite reference coefficient derivatives in the stiff fast
+commutator multiply lower \(\ell\) levels. The finite Leibniz
+split
+\(\binom{j+\ell}{k}=\sum_{r=0}^{\ell}\binom{\ell}{r}\binom{j}{k-r}\)
+separates these from analytic \(j\) derivatives. Choose fixed positive
+weights \(\vartheta_0=1,\vartheta_1,\vartheta_2\), successively small
+relative to the lower levels, so all finite stiff Young remainders
+are absorbed by their lower-level fast dissipations. Positive
+analytic coefficient jets contribute \(C(\rho+\eta)\) times the
+weighted dissipation. For example, the apparent factor \(j\) in a
+first principal commutator is canceled by
+\(\varpi_j/\varpi_{j-1}=O(\rho/j)\) against the lower dissipative jet.
+
+For the other commutators the relevant estimates are as follows.
+In \([\nabla^m,S]u\), use
+\[
+ [\nabla^m,S]
+ =[\nabla^m,\nabla^*]a_0\nabla
+   +\nabla^*[\nabla^m,a_0]\nabla
+   +[\nabla^m,l_0-\Gamma^*a_0]\nabla
+   +[\nabla^m,v_0-l_0\Gamma].
+\]
+At \(\ell=2\) the highest force coefficient is
+\(D^{j+4}y,D^{j+3}w\), the same-level \(\Xzero\) geometry.
+Its \(L^2\)-force pairing with \(H^2\) leaves that geometry energy
+after Young's inequality. The principal positive jets have already
+been absorbed. For \([\nabla^m,\overline M]u_t\), first insert
+\(u_t=-\overline M^{-1}(Su+Lz)+\mathcal N_u\); its principal orders
+are macro second and fast first, with the same joint low-band
+estimate. The remaining mass and \(L\) coefficients have the same
+geometry count.
+
+Expand the fast \([\nabla^m,N\overline M^{-1}S]\) into its three
+product commutators. Losing one principal derivative leaves at most
+macro \(H^2\) at the differentiated unknown. If \(N\) differentiates
+a high coefficient of \(S\), the maximum is
+\(D^{j+5}y,D^{j+4}w\), one \(\Xone\) factor. It is paired with
+the fast energy root. The same bound applies to
+\(N\overline M^{-1}R_{u,m}\) in \eqref{eq:high-mass-square}.
+The uncommuted third-order \(NSu_m\) has already been estimated
+jointly in the main system.
+For \([\nabla^m,N\overline M^{-1}L]z\), the remaining first fast
+derivative uses the row bound \(\norm D\leq(2\delta)^{-1}\);
+its principal part is absorbed by fast dissipation. Higher
+coefficient terms again have one high geometry factor.
+
+The sole explicit stiff commutator is
+\(-\delta^{-2}[\nabla^m,A_f]z\).
+Its analytic jets are small, and its finite reference jets are
+handled by the \(\vartheta_\ell\) choice. In the high metric its
+cross pairing uses
+\[
+ \norm{Nu_H}_0\leq C\delta\norm{u_H}_{H^2}+C\norm{u_H}_0 ,
+\]
+so small analytic jets also absorb the joint macro/fast terms.
+The time insertions and \(\mathcal N_u,\mathcal N_z\) have one
+\(\Aone\) or \(\Xone\) factor, by
+\eqref{eq:physical-source}--\eqref{eq:one-high-source} and the exact
+formulas for \(C_t,\Gamma_t\). They retain their energy-root pairing.
+
+Cutoffs are applied after common jets. For every localized
+coefficient \(A\), the exact kernel difference gives
+\[
+ \norm{[\Pi,A]}_{0\to0}
+       \leq C\delta\norm{D_{\rm coeff}A}_{\rm kernel}.
+\]
+Apply this identity before expanding weak derivatives. Highest
+macro and mass cutoff terms have an absorbable \(\delta\);
+lower terms use the \(H^2\) coefficient bound with an \(H^1\)
+field, or reduce \(\delta D^2\) to the available first derivative
+by \(\delta\norm D\leq1/2\). Mass cutoffs still use the exact
+substitution for \(u_t\). In particular the stiff high cutoff
+term is exactly, up to sign and the real factor,
+\[
+ \delta^{-2}\ip{z_H+Nu_H}{M_{ff}[\Pi_H,A_f]z}.
+\]
+Its absolute value is at most
+\[
+ C\delta^{-1}(\norm{z_H}_0+\norm{u_H}_{H^1})\norm z_0
+ \leq c_1\delta^{-2}\norm z_0^2+C_{c_1}E_m .
+\]
+Choose \(c_1\) as a small part of the global fast dissipation.
+Base metric derivatives, including \(C_t,\Gamma_t\), use \(g_V\)
+and cost only \(P(\text{low norms})E_m\).
+This accounts for all mass, principal, time, source and cutoff
+terms in \eqref{eq:jet-remainders}.
+
+It remains to sum the one-higher sources without squaring a higher
+norm. For a nonnegative sequence \(A=(A_j)_{j\geq0}\), let
+\[
+ \norm A_q^2=\sum_{j\geq0}
+       \frac{(j+1)^{2q}\rho^{2j}}{(j!)^2}A_j^2 ,
+\]
+and define the norms of \(B,C\) in the same way. Consider
+\[
+ \sum_{k,l\geq0}\varpi_{k+l}^2\binom{k+l}{k}
+                  A_{k+l}B_k C_{l+1}.
+\]
+Put \(j=k+m-1\), \(m=l+1\), and absorb weights into the sequences.
+The remaining factor is exactly
+\[
+ \frac m\rho\,\frac{(k+m)^p}{(k+1)^p(m+1)^p}.
+\]
+Since \(m\leq\sqrt{j+1}\sqrt{m+1}\), weighted convolution gives
+\begin{equation}\label{eq:half-pair}
+ \sum_{k,l\geq0}\varpi_{k+l}^2\binom{k+l}{k}A_{k+l}B_kC_{l+1}
+ \leq \frac{C_p}{\rho}
+  \norm A_{p+1/2}\norm B_p\norm C_{p+1/2}.
+\end{equation}
+Indeed the residual polynomial kernel is bounded by
+\(C_p((k+1)^{-p}+(m+1)^{-p})\), and each reciprocal sequence is
+square summable. Repeated ordered products and inverse series
+retain one differentiated factor. Lemma~\ref{lem:same-radius}
+at half exponent converts its covariant and ordinary norms tamely.
+After squaring that tame norm comparison the extra half-weight
+velocity norm is bounded by a low constant times the sum of the
+connection half-weight velocity energy and the ordinary half-weight
+geometry energy.
+
+Set
+\[
+ \begin{aligned}
+ E_x&=\norm{\mathbf e}_{\rho,p;\Xzero}^2,&
+ E_v&=\sum_{j\geq0}\varpi_j^2\sum_{\ell=0}^2\vartheta_\ell E_{j+\ell},\\
+ D_v&=\sum_{j\geq0}\varpi_j^2\sum_{\ell=0}^2\vartheta_\ell D_{j+\ell}.
+ \end{aligned}
+\]
+Let \(\mathcal L_x,\mathcal L_v\) be the respective energy sums
+with an extra factor \(j\). In particular \(E_v\) is equivalent
+to the ordinary analytic \(\Azero\) norm. In scaled mean/optical
+components the geometry equation is
+\[
+ (y_t,w_t)=
+ \left((\Graph(u,z-Cu))_b,\frac{(\Graph(u,z-Cu))_o}{\delta}\right)
+                         +\varepsilon(\Omega y,\Omega w).
+\]
+Equation~\eqref{eq:graph-high}
+has one higher factor, so \eqref{eq:half-pair} applies to it too.
+The \(j=0\) part of the half weights is ordinary growth, with a
+fixed constant depending on a positive lower radius.
+
+Combining the estimates, choose \(\rho,\eta\) small to absorb
+all principal \(C(\rho+\eta)D_v\) terms. For a fixed geometry
+weight \(M_w\), the energy \(\mathcal E=M_wE_x+E_v\) satisfies
+\begin{equation}\label{eq:combined-energy}
+ \mathcal E_t+cD_v
+ \leq P_{M_w}(\mathcal E)(1+\mathcal E)
+  +\left(\frac{2\rho'}{\rho}
+       +\frac{P_{M_w}(\mathcal E)}{\rho}\right)
+                          (M_w\mathcal L_x+\mathcal L_v).
+\end{equation}
+The polynomial has fixed reference and positive-lower-radius
+constants; none depends on the mesh.
+
+\subsection{Continuation}
+
+Choose the compact geometric neighborhood and \(\beta\), then the
+finite \(\vartheta_\ell\) weights and \(d_0\). Choose \(\eta,\rho_0\)
+small for the preceding absorptions. Initial consistency and
+reference analyticity give \(E_x(0)=0\), \(E_v(0)\leq C_0\),
+including the bounded scaled optical initial layer.
+Choose \(M_w>(2C_0+1)/\eta^2\), and fix
+\(\rho_*=\rho_0/2\).
+Let \(\nu>P_{M_w}(2C_0+1)\), put \(\rho(t)=\rho_0-\nu t\),
+and choose \(T_0>0\) smaller than \(\rho_0/(2\nu)\) and the
+scalar comparison time for \(\mathcal E\leq2C_0+1\).
+Then \eqref{eq:combined-energy} implies this energy bound and,
+strictly, \(E_x<\eta^2\). This supplies the same small analytic
+geometry neighborhood used in the coefficient estimates.
+
+For every fixed mesh, all factorial jet sums and their differentiated
+sums converge absolutely on compact local time intervals, since
+\(D,\nabla\) and their time derivatives are finite matrices.
+If the original maximal time were below \(T_0\), bounded physical
+velocity would give a limit for \(X\). The scaled edge cross products
+and the full weak-normal block retain strict positive gaps at that
+limit. The local ODE therefore extends by Picard iteration, a
+contradiction. The cyclic reduction remains the full original
+solution by uniqueness. This proves Proposition~\ref{prop:interval}.
+
+\section{An optical label and the map error}\label{sec:label}
+
+\subsection{The label and its spatial equation}
+
+At row \(i\), let \(p_i=Dy_i\), \(\hat e_i=p_i/|p_i|\), and define
+\[
+ q_i=\Omega y_i-(\Omega y_i\cdot\hat e_i)\hat e_i,\qquad
+ A_i=|q_i|>0,\qquad \hat t_i=q_i/A_i,\qquad
+ \hat n_i=\hat t_i\times\hat e_i.
+\] These quantities are smooth
+on the small neighborhood already obtained. Put
+\[
+ k_i=\frac{w_i\cdot\hat t_i}{A_i},\qquad
+ F_i=\frac{w_i\cdot\hat n_i}{A_i}.
+\]
+For \(k,F\) near zero, define
+\[
+ d_a=(a-2k,-2F),\quad d_b=(b+2k,2F),\quad
+ L_a=|d_a|,\quad L_b=|d_b|,\quad
+ U=L_a+L_b,\quad V_c=L_b-L_a
+\]
+and the scalar label
+\begin{equation}\label{eq:label}
+ I(k,F)=F\left[
+  \frac{256}{27(U+1)^3(1-V_c)(1+V_c)^2}
+                         \right]^{1/3}.
+\end{equation}
+The positive cube root is smooth near zero and \(I_F(0,0)=1\).
+Let \(\mathcal J(x,y)=(-y,x)\) in the \((\hat t,\hat n)\) plane.
+The coherent extruded-cell normals are
+\(N_a=\mathcal Jd_a/L_a\), \(N_b=\mathcal Jd_b/L_b\).
+Their weighted sum is
+\(\bar n=aN_a+bN_b=\mathcal J\mathcal T\), where
+\(\mathcal T=ad_a/L_a+bd_b/L_b\).
+
+Direct differentiation in \((k,F)\) verifies the label identity.
+The local gradients of \(U,V_c\) are orthogonal, with
+\[
+ \begin{gathered}
+ |\nabla_{k,F} U|^2=\frac{16(U^2-1)}{U^2-V_c^2},\qquad
+ |\nabla_{k,F} V_c|^2=\frac{16(1-V_c^2)}{U^2-V_c^2},\\
+ 16F^2=(U^2-1)(1-V_c^2).
+ \end{gathered}
+\]
+Moreover
+\(\mathcal T=((b-a)\nabla_{k,F}U+\nabla_{k,F}V_c)/4\).
+For \(F\ne0\), \eqref{eq:label} gives
+\[
+ \partial_U\log|I|=\frac1{U^2-1},\qquad
+ \partial_{V_c}\log|I|=-\frac1{3(1-V_c^2)}.
+\]
+Since \(b-a=1/3\), \(\nabla_{k,F} I\cdot\mathcal T=0\).
+Continuity extends this across \(F=0\). As
+\(\mathcal T(0,0)=(1,0)\), there is a smooth bounded
+\(\mu>0\), with bounded reciprocal, such that
+\begin{equation}\label{eq:label-normal}
+             \nabla_{k,F}I=\mu\bar n,\qquad
+             \partial_w I_i=(\mu_i/A_i)\bar n_i .
+\end{equation}
+An optical component parallel to \(p_i\) has no component in this
+identity, since it does not change the plane normal.
+
+We now use the actual curved constraint, whose matrix \(T\) still
+contains the original geometric normals. Write
+\(W_\pm=\xi\pm\delta\zeta\). Its optical row is exactly
+\[
+                       T_{ob}\xi+\delta T_{oo}\zeta=0 .
+\]
+Whole-rectangle integration and exact divided remainders give
+\[
+ \sum_jT_{ob}(i,j)=\delta b_i,\qquad
+ \sum_jT_{oo}(i,j)=m_i\bar n_i+\delta c_i,\qquad m_i>0 .
+\]
+Here \(m_i\) is a reference scalar weight bounded away from zero.
+Subtract neighboring \(\xi_i,\zeta_i\) values from the finite-band
+row sums, and divide by the common \(\delta\). Every difference
+is \(s=4\delta\) times a finite sum of forward differences. Thus
+\begin{equation}\label{eq:label-constraint}
+ \bar n_i\cdot\zeta_i
+  =B_i\xi_i+\sum_jC_{ij}D\xi_j
+       +\delta\sum_jE_{ij}D\zeta_j+\delta G_i\zeta_i .
+\end{equation}
+The coefficients here are exactly the finite combinations from
+\(T_{ob},T_{oo},b_i,c_i,m_i^{-1}\); they have uniform bounds and
+Lipschitz dependence at geometry \(\Xzero\).
+Their lower descriptors are \(D^2y,Dw\).
+
+The position equation reads
+\[
+ y_t=\xi+\varepsilon\Omega y,\qquad
+ w_t=\zeta+\varepsilon\Omega w,\qquad
+ p_t=D\xi+\varepsilon\Omega p.
+\]
+The scalar \(I(y,p,w)\) is invariant under simultaneous rotation.
+The explicit \(\varepsilon\) terms therefore cancel in its chain
+rule. Inserting \eqref{eq:label-constraint} into
+\[
+ I_{i,t}=\partial_yI_i\cdot\xi_i+
+        \partial_pI_i\cdot D\xi_i+
+                       (\mu_i/A_i)\bar n_i\cdot\zeta_i
+\]
+gives an exact equation of the form
+\begin{equation}\label{eq:label-spatial}
+ I_t=\mathcal F_\delta(\mathbf e,\xi,D\xi)
+                  +\delta\mathcal G_\delta(\mathbf e,\zeta,D\zeta).
+\end{equation}
+On the uniform interval, \(\mathcal F_\delta\) is uniformly locally
+Lipschitz from \(\Xzero\times H^1\) to \(L^2\), and the second
+term has uniformly bounded coefficient functions. This equation
+retains the spatial and moving-frame terms.
+
+\subsection{A fixed positive-time effect}
+
+The positive lower analytic radius supplies an extra fixed row
+derivative with constant \(C/\rho_*\). Proposition~\ref{prop:interval}
+and \eqref{eq:graph-high} consequently give
+\[
+                  \norm{\mathbf e_t}_{\Xzero}\leq C,\qquad
+                  \norm{\mathbf e(t)}_{\Xzero}\leq Ct .
+\]
+The macro equation in \eqref{eq:schur-system} gives
+\(\norm{u_t}_{H^1}\leq C\) without a time derivative of \(z\).
+The physical mean relative velocity is
+\[
+ \xi=\Graph_{bb}(\mathbf e)u
+                         +\delta^2\Graph_{bo,1}(\mathbf e)\omega ,
+ \qquad \omega=z-Cu ,
+\]
+where \(\Graph_{bo,1}\) has one row order. The second term has
+size \(O(\delta^2)\) in \(H^1\), since \(\omega\) is bounded
+in \(H^2\). Bounding its value at both times, rather than
+differentiating it through the fast layer, gives
+\[
+ \norm{\xi(t)-\xi(0)}_{H^1}\leq C(t+\delta^2).
+\]
+Equation~\eqref{eq:label-spatial} then implies
+\begin{equation}\label{eq:label-modulus}
+                       \norm{I_t(t)-I_t(0)}_0\leq C(t+\delta).
+\end{equation}
+
+It remains to calculate the initial rate. At the reference,
+\(I_y=I_p=0\) and \(I_w=n_0/A+O(\delta)\).
+Each short or long reference quadrilateral is exactly planar.
+After rotating its azimuthal midpoint to zero, its vertices are
+\[
+ (\rho_i\cos(d/2),\ \pm\rho_i\sin(d/2),z_i),\qquad
+ (\rho_{i+1}\cos(d/2),\ \pm\rho_{i+1}\sin(d/2),z_{i+1}) .
+\]
+Its two geometric normals agree. The trace of
+\(\varepsilon\Omega Y\) on that normal has leading magnitude
+\(\varepsilon A\cos\theta\sin(d/2)\), with opposite species signs.
+The short strip has the \(\chi\) sign and the long strip its negative.
+For a lower optical row test on the two leading triangles, the
+consistent mass gives \(A_{\rm tri}/6+A_{\rm tri}/6=A_{\rm tri}/3\);
+the upper row gives the same pairing with the global \(\chi\).
+After neighboring-patch assembly, the reference area factors cancel
+between the optical mass and forcing. In the equation for
+\(V_c=V_o/\delta\), the signed forcing-to-mass quotient is
+\[
+ \frac{a\sin(a\delta/2)-b\sin(b\delta/2)}{\delta(a+b)}
+       =\frac{a^2-b^2}{2(a+b)}+O(\delta^2).
+\]
+The common triangle factor \(A_{\rm tri}/3\) cancels; the short-strip
+term has positive sign and the long-strip term negative sign.
+The remaining curved-row variations contribute \(O(\delta)\).
+Therefore
+\begin{equation}\label{eq:initial-minus-sixth}
+ n_0\cdot V_c(0)
+   =\varepsilon A\cos\theta\,\frac{a^2-b^2}{2(a+b)}+O(\delta)
+   =-\frac{\varepsilon A\cos\theta}{6}+O(\delta).
+\end{equation}
+Here \(V_c=V_o/\delta\).
+The term \(T_{ob}V_b(0)\), after division of the optical equation
+by \(\delta\), is \(O(\delta)\), since \(T_{ob}\) is \(\delta\)
+times first row order and \(V_b(0)=O(\delta)\) in \(H^1\).
+Thus \(I_t(0)=-\varepsilon\cos\theta/6+O(\delta)\) in row \(L^2\).
+
+Since \(I(0)=0\), integration of \eqref{eq:label-modulus} yields
+\begin{equation}\label{eq:label-growth}
+ \norm{I(t)+\varepsilon t\cos\theta/6}_0
+                                    \leq C(t^2+\delta t).
+\end{equation}
+For sufficiently large \(n\), the exact uniform-grid norm is
+\(\norm{\cos\theta}_0=\sqrt\pi\). Fix one
+\[
+        0<t_*<\min\{T_0,\varepsilon\sqrt\pi/(24C)\},
+\]
+and then take \(\delta\) small. It follows that
+\begin{equation}\label{eq:positive-label}
+                   \norm{I(t_*)}_0\geq
+                           \varepsilon t_*\sqrt\pi/12>0 .
+\end{equation}
+The time is independent of the mesh and \(\varepsilon\) has already
+been fixed.
+
+\subsection{The original energy and the lifted error}
+
+On the small neighborhood, \(|I_i|\leq C|w_i|\).
+For \(E_h=X_h-Y_h\), the leading short and long azimuthal edge
+differences in its aligned representation are
+\[
+ \delta\{a\Omega(y-y^0)-2w\},\qquad
+ \delta\{b\Omega(y-y^0)+2w\}.
+\]
+Their two squared norms control \(w\), including every Cartesian
+component. The exact rotation formulas differ by uniformly small
+terms, absorbed with the physical \(L^2\) part. Reference shape
+regularity therefore gives from \eqref{eq:positive-label}
+\begin{equation}\label{eq:positive-H1}
+             \norm{E_h(t_*)}_{H^1(\Gamma_h^0)}^2
+                                      \geq c\varepsilon^2t_*^2 .
+\end{equation}
+
+Test the original force equation by \(V\) and \(\Omega X\).
+The weak constraint gives \(TV=\varepsilon T\Omega X\), while
+\(\ip{KX}{\Omega X}=0\) by componentwise skew rotation. Hence
+the exact identity is
+\begin{equation}\label{eq:original-energy}
+ \frac12\frac d{dt}\ip X{KX}+\norm V_M^2
+                                =\varepsilon\ip V{M\Omega X}.
+\end{equation}
+Here the normalized row pairings equal the full reference surface
+integrals on cyclic fields, and \(\norm V_M^2=\ip V{MV}\).
+
+Put \(d_h=\sup_{0\leq t\leq t_*}\norm{E_h(t)}_M\).
+Expand \(X=Y+E_h\) in \eqref{eq:original-energy}. The work integral is
+\[
+ \varepsilon\ip{E_h(t)}{M\Omega Y}
+          +\varepsilon\int_0^t\ip V{M\Omega E_h}\,d\tau .
+\]
+The reference bound \eqref{eq:initial-consistency} controls
+\(\ip{E_h}{KY}\). Proposition~\ref{prop:interval} bounds
+physical \(V\) uniformly in \(L^2\). Thus
+\begin{equation}\label{eq:gradient-from-map}
+ \frac12\norm{\nabla_{\Gamma_h^0}E_h(t)}_{L^2}^2
+                   +\int_0^t\norm V_M^2\,d\tau\leq C d_h .
+\end{equation}
+Combining \eqref{eq:positive-H1} with this bound gives fixed
+positive constants \(\alpha,C_1,C_2,D_0\), independent of the mesh,
+such that
+\[
+ \alpha:=c\varepsilon^2t_*^2\leq C_1d_h+C_2d_h^2,\qquad
+                              d_h\leq D_0 .
+\]
+Consequently \(d_h\geq\alpha/(C_1+C_2D_0)>0\).
+Lemma~\ref{lem:admissible} gives a fixed lift norm constant \(c_\ell>0\)
+and an \(O(\delta^2)\) identity error, so
+\[
+ \sup_{t\leq t_*}\norm{X_h^\ell(t)-\id}_{L^2(\Gamma^0)}
+           \geq \frac{c_\ell\alpha}{C_1+C_2D_0}-C\delta^2 .
+\]
+For sufficiently small \(\delta\), take
+\(T_*=t_*\) and
+\(c_*=c_\ell\alpha/[2(C_1+C_2D_0)]\).
+These are positive fixed constants. The continuous solution is
+the identity, the closest lift is the original one, and the full
+original discrete solution exists nondegenerately on this interval.
+This proves Theorem~\ref{thm:failure}.
+
+\section{Convergence for cubic elements}\label{sec:cubic}
+
+We now consider arbitrary smooth data, rather than the stationary torus.
+Write \(u=U_{\rm ext}\) in this section. Assume that
+\eqref{eq:continuous} has a smooth solution on a fixed finite interval
+\([0,T]\), with smooth flow map and inverse throughout that interval.
+Let \(\Gamma_h^0\) be any admissible shape-regular, quasi-uniform cubic
+nodal interpolant of \(\Gamma^0\). For its element parametrizations require
+exactly the original bounds
+\begin{equation}\label{eq:cubic-mesh}
+ \max_K\bigl(\norm{F_K}_{W^{3,\infty}(K_f)}
+       +\norm{F_K^{-1}}_{W^{1,\infty}(K)}\bigr)\leq C_0 .
+\end{equation}
+Here \(K_f\) is the flat triangle with the same vertices as \(K\).
+The space \(S_h\) now consists of continuous functions whose pullbacks
+by \(F_K\) are cubic polynomials. We retain precisely
+\eqref{eq:discrete-time}--\eqref{eq:discrete-force}, including their
+fixed reference measure and discontinuous current unit normals.
+
+\begin{theorem}\label{thm:cubic}
+For every such smooth solution and mesh family there are \(h_0,C_T>0\),
+independent of \(h\), such that for \(h<h_0\) the original semidiscrete
+solution exists uniquely on \([0,T]\). Its map remains an embedding and
+its element differentials remain nondegenerate. Moreover,
+\begin{equation}\label{eq:cubic-result}
+ \sup_{0\leq t\leq T}
+ \norm{X_h^\ell(t)-X(t)}_{L^2(\Gamma^0)}
+       \leq C_T h^3\sqrt{1+|\log h|}.
+\end{equation}
+If \(d(x,t)\) is signed distance to \(\Gamma(t)\), then also
+\[
+ \sup_{0\leq t\leq T}\norm{d(X_h(\cdot,t),t)}_{L^2(\Gamma_h^0)}
+       \leq C_T h^3 .
+\]
+The constants may depend on the fixed smooth solution, \(T\), and the
+uniform mesh-family bounds.
+\end{theorem}
+
+The proof controls shape error before estimating the full map error.
+The first energy is a relative volume weighted by signed distance.
+The second is the energy of a weakly tangent part of the map error.
+Their interaction leaves a vanishing coefficient in the shape equation,
+while allowing a logarithmic loss in the tangent estimate.
+
+\subsection{Reference geometry and weak tangency}
+
+All notation in this section is local; in particular \(D\) below is a
+gradient norm, rather than the row difference of the preceding sections.
+Put
+\[
+ (w,z)_h=\int_{\Gamma_h^0}w\cdot z,\qquad
+ a_h(w,z)=\int_{\Gamma_h^0}\nabla w:\nabla z,
+ \qquad (L_hw,z)_h=a_h(w,z).
+\]
+Unqualified norms and gradients use this fixed surface. Let \(\Pi_h\)
+and \(\Pi_h^3\) be the scalar and vector mass projections. With the
+initial closest-point projection \(a:\Gamma_h^0\to\Gamma^0\), define
+\[
+ \overline X=X\circ a,\quad Y=I_h\overline X,\quad Z_h=Y_t,
+ \quad m=n(\overline X,t),\quad\nu=N(Y),\quad
+ \kappa^*=I_h(\kappa\circ a).
+\]
+The known unit field \(m\) is the restriction of a smooth field on a
+fixed initial tube. It is used only in the analysis.
+
+The original mesh assumptions imply
+\begin{equation}\label{eq:cubic-interpolation}
+ \norm{Y-\overline X}_\infty\leq Ch^4,\qquad
+ \norm{\nabla(Y-\overline X)}_\infty
+       +\norm{\nu-m}_\infty\leq Ch^3.
+\end{equation}
+Indeed, derivatives of \(F_K\) through order three are bounded and
+its fourth derivatives vanish. Composing any fixed smooth ambient
+function with \(F_K\) therefore gives bounded fourth derivatives.
+Subtract its cubic Taylor polynomial and use the fixed nodal basis
+on the scaled triangle. This gives interpolation errors \(Ch^4\)
+and \(Ch^3\) in value and gradient. Applied to the initial signed
+distance, which vanishes at all nodes, it gives initial distance
+\(Ch^4\) and initial normal error \(Ch^3\).
+The closest-point area ratio is \(1+O(h^4)\), and the pulled-back
+Dirichlet metric differs by \(O(h^4)\): its displacement contribution
+is \(O(h^4)\), and its squared normal-slope contribution is \(O(h^6)\).
+
+Adjacent elements have the same polynomial edge tangent. Their outward
+conormals therefore have sum \(O(h^3)\). For a known smooth ambient
+coefficient \(b\), this gives
+\begin{equation}\label{eq:cubic-conormal}
+                    [\partial_\mu b]=O(h^3).
+\end{equation}
+Scaled polynomial norm equivalence also gives
+\begin{equation}\label{eq:cubic-inverse}
+ \begin{gathered}
+ \norm w_\infty\leq Ch^{-1}\norm w_2,\qquad
+ \norm{\nabla w}_2\leq Ch^{-1}\norm w_2,\\
+ \norm{\nabla w}_\infty\leq Ch^{-2}\norm w_2,\qquad
+ \norm w_{L^2(\text{edges})}\leq Ch^{-1/2}\norm w_2.
+ \end{gathered}
+\end{equation}
+The last estimate is summed over element traces, with bounded overlap.
+In particular \(\norm{L_hw}_2\leq Ch^{-1}\norm{\nabla w}_2\).
+These geometric estimates concern the known initial mesh, not the
+curvature of the unknown evolving surface.
+
+For a smooth coefficient \(b\) and an FE function \(w\), product
+superapproximation takes the form
+\begin{equation}\label{eq:cubic-product}
+ \norm{bw-I_h(bw)}_2+h\norm{\nabla(bw-I_h(bw))}_2
+                          \leq Ch^2\norm w_{H^1}.
+\end{equation}
+To see the two powers, remove a constant value of \(b\), whose product
+with \(w\) is reproduced. Subtract also the element mean of \(w\).
+The latter difference has norm at most \(Ch\norm{\nabla w}_2\), by
+the line-segment formula on the flat triangle. In the fourth-order
+interpolation remainder, the highest remaining polynomial derivative
+is bounded by \(Ch^{-2}\norm{\nabla w}_2\), so multiplication by
+\(h^4\) gives \(h^2\). The constant part of \(w\) gives
+\(Ch^4\norm w_2\). Differentiating the scaled basis once proves the
+gradient assertion. Thus
+\begin{equation}\label{eq:cubic-project-product}
+ \norm{(I-\Pi_h^3)(m\chi)}_2\leq Ch\norm\chi_2,
+ \qquad\norm{\Pi_h^3(m\chi)-m\chi}_{H^1}\leq C\norm\chi_2.
+\end{equation}
+For the second bound split at \(I_h(m\chi)\) and use
+\eqref{eq:cubic-inverse}; no \(H^1\) stability of \(\Pi_h\) is needed.
+
+For any measurable unit field \(b\), set
+\[
+ \mathcal T_b v=\Pi_h(b\cdot v),\qquad
+ \mathcal T_b^*\chi=\Pi_h^3(b\chi),\qquad
+ \mathcal S_b=\mathcal T_b\mathcal T_b^*.
+\]
+Mass orthogonality gives the exact identity
+\begin{equation}\label{eq:cubic-schur-identity}
+ (\mathcal S_b\chi,\chi)_h
+       =\norm\chi_2^2-\norm{(I-\Pi_h^3)(b\chi)}_2^2.
+\end{equation}
+Hence \(\mathcal S_m\geq1-Ch^2\). Write
+\[
+ \mathcal T=\mathcal T_m,\quad\mathcal S=\mathcal S_m,\quad
+ Q=I-\mathcal T^*\mathcal S^{-1}\mathcal T,
+ \quad e=X_h-Y=z+\mathcal T^*\psi,
+\]
+\[
+ z=Qe,\quad\psi=\mathcal S^{-1}\mathcal T e,\qquad
+ E=\norm e_2,\quad F=\norm\psi_2,\quad Z=\norm z_2,
+ \quad D=\norm{\nabla z}_2.
+\]
+Then \(Q\) is the mass-orthogonal projection onto \(\ker\mathcal T\),
+\begin{equation}\label{eq:cubic-split}
+ E^2=Z^2+(\mathcal S\psi,\psi)_h\asymp Z^2+F^2,
+ \qquad (e_t,z)_h=\tfrac12(Z^2)'-\tfrac12(e,Q_t e)_h,
+ \qquad\norm{Q_t}_{2\to2}\leq C.
+\end{equation}
+The time bound follows by differentiating the inverse and using
+\(\mathcal T_t v=\Pi_h(m_t\cdot v)\).
+
+Weak tangency yields a stronger leakage estimate than an inverse bound:
+\begin{equation}\label{eq:cubic-leak}
+ \norm{m\cdot z}_2\leq Ch^2(D+Z),\qquad
+ \norm{\nabla(m\cdot z)}_2\leq Ch(D+Z).
+\end{equation}
+Indeed, \(\Pi_h(m\cdot z)=0\), so
+\(I_h(m\cdot z)=\Pi_h[I_h(m\cdot z)-m\cdot z]\).
+Apply \eqref{eq:cubic-product} and then an inverse estimate.
+Furthermore,
+\begin{equation}\label{eq:cubic-cross}
+ \begin{gathered}
+ |a_h(z,\mathcal T^*\chi)|\leq C(D+Z)\norm\chi_2,
+ \quad\norm{\mathcal T L_hz}_2\leq C(D+Z),\\
+ \norm{QL_h\mathcal T^*\psi}_2\leq Ch^{-1}F,
+ \qquad a_h(e,z)\geq\tfrac12D^2-CE^2.
+ \end{gathered}
+\end{equation}
+For the first assertion, replace \(\mathcal T^*\chi\) by \(m\chi\)
+using \eqref{eq:cubic-project-product}, and expand
+\[
+ a_h(z,m\chi)=(\nabla\chi,\nabla(m\cdot z))_h
+ -\sum_j(\nabla\chi,z_j\nabla m_j)_h
+ +\sum_j(\chi\nabla m_j,\nabla z_j)_h.
+\]
+The first term uses \eqref{eq:cubic-leak}. Integrate the middle term
+on each initial element; the volume coefficients are bounded, and
+\eqref{eq:cubic-conormal} with two inverse traces bounds its edge term
+by \(Ch^2\norm\chi_2Z\). The last term is bounded directly.
+Adjoint testing gives the third assertion of \eqref{eq:cubic-cross};
+Young's inequality gives the last.
+
+We also use the two-dimensional discrete logarithmic inequality
+\begin{equation}\label{eq:cubic-log}
+ \norm z_\infty\leq C\sqrt\ell(D+Z),\qquad\ell=1+|\log h|.
+\end{equation}
+Here is a proof uniform over these curved meshes. The element mass
+matrix gives a polynomial evaluation dual \(\delta_h\), with
+\(\norm{\delta_h}_1\leq C\), \(\norm{\delta_h}_2\leq Ch^{-1}\).
+Push its density into a smooth initial coordinate chart. With
+\(\widehat f(\xi)=\int f(x)e^{-2\pi i x\cdot\xi}\,dx\), Plancherel's
+identity~\cite[Theorem~43]{TaoFourier} and \(|\widehat\delta_h|\leq C\)
+give
+\[
+ \int_{\R^2}\frac{|\widehat\delta_h(\xi)|^2}{1+4\pi^2|\xi|^2}\,d\xi
+ \leq C\int_{|\xi|\leq h^{-1}}\frac{d\xi}{1+|\xi|^2}
+             +Ch^2\norm{\delta_h}_2^2\leq C\ell.
+\]
+Weighted Cauchy--Schwarz bounds its pairing with a chart \(H^1\)
+function. The Fourier derivative identity follows by integration by
+parts and then convolution approximation. A fixed finite chart cover,
+with cutoffs equal to one on the relevant elements, proves
+\eqref{eq:cubic-log}.
+
+\subsection{The actual mixed system on a small-error interval}
+
+Fix the analysis exponent \(1/4\), and work initially while
+\begin{equation}\label{eq:cubic-first-bootstrap}
+ E\leq h^{11/4},\qquad
+ \rho=C_1(h^3+h^{-2}E),\qquad\alpha=h+\rho .
+\end{equation}
+The fixed \(C_1\) is sufficiently large. For small \(h\),
+\(\rho\leq Ch^{3/4}\), \(\alpha\geq h\),
+\(\alpha^2\leq h\), and \(\alpha^2\leq Ch^{3/2}\).
+All constants below are uniform on one fixed small geometric
+neighborhood and independent of the later bulk constant.
+
+For the actual normal \(N=N(X_h)\),
+\begin{equation}\label{eq:cubic-normal-difference}
+ \norm{N-m}_\infty\leq C\rho,\qquad
+ \norm{N-m}_2\leq C(h^{-1}F+E+\alpha D+h^3).
+\end{equation}
+The first variation about \(Y\) is \(-\mathcal H(\mathrm De)^{\mathsf T}\nu\),
+where \(\mathcal H\) is a uniformly bounded inverse-tangent coefficient.
+Use
+\((\mathrm De)^{\mathsf T}m=\nabla(m\cdot e)-(\mathrm Dm)^{\mathsf T}e\),
+\eqref{eq:cubic-leak}, and
+\(\norm{\nabla e}_2\leq C(D+h^{-1}F)\).
+The linear term is bounded by \(C(h^{-1}F+E+hD)\); its Taylor remainder
+is at most \(C\rho(D+h^{-1}F)\). Adding the reference normal error
+proves \eqref{eq:cubic-normal-difference}.
+
+Set \(\mathcal U=\mathcal T_N\) and
+\(Q_N=I-\mathcal U^*\mathcal S_N^{-1}\mathcal U\).
+The exact identity \eqref{eq:cubic-schur-identity} gives
+\begin{equation}\label{eq:cubic-actual-schur}
+ \mathcal S_N\geq[1-(Ch+C\rho)^2]I,
+ \qquad\norm{Q_N-Q}_{2\to2}\leq C\rho .
+\end{equation}
+The inverse-difference formula proves the second bound. Discontinuity
+of \(N\) across edges is permitted; no derivative of \(N\) is used.
+
+Define the known defects
+\[
+ \mathfrak d=Z_h+L_hY-\mathcal T_\nu^*\kappa^*,\qquad
+ r_h=\Pi_h[(Z_h-u(Y,t))\cdot\nu].
+\]
+Pulling the smooth weak equation to the initial mesh and using
+\eqref{eq:cubic-interpolation} gives
+\begin{equation}\label{eq:cubic-defects}
+ \norm{\mathfrak d}_{H_h^{-1}}\leq Ch^3,
+ \qquad\norm{\mathfrak d}_2\leq Ch^2,
+ \qquad\norm{r_h}_2\leq Ch^3.
+\end{equation}
+The dual norm here tests only FE vectors in their full \(H^1\) norm.
+The stiffness interpolation error is \(Ch^3\), while initial metric
+errors are \(O(h^4)\). Inverse testing gives the mass bound. For the
+bottom defect compare with \(\overline X_t-u(\overline X)\), which is
+smooth and exactly \(m\)-tangent.
+
+For \(\mu=\kappa_h-\kappa^*\), subtraction gives exactly
+\begin{equation}\label{eq:cubic-error}
+ e_t+L_he=\mathcal U^*\mu+G,\qquad\mathcal Ue_t=R,
+\end{equation}
+where
+\[
+ \begin{split}
+ G&=\Pi_h^3[\kappa^*(N-\nu)]-\mathfrak d,\\
+ R&=\Pi_h[(u(X_h)-u(Y))\cdot N
+               +(u(Y)-Z_h)\cdot(N-\nu)]-r_h .
+ \end{split}
+\]
+Thus \(\norm G_2+\norm R_2\leq C(h^{-1}F+E+\alpha D+h^2)\),
+with \(h^3\) in the separate bound for \(R\).
+Exact elimination gives
+\[
+ \mu=\mathcal S_N^{-1}(R+\mathcal UL_he-\mathcal UG),\qquad
+ e_t=-Q_NL_he+Q_NG+\mathcal U^*\mathcal S_N^{-1}R .
+\]
+By \eqref{eq:cubic-cross} and
+\(\norm{\mathcal U-\mathcal T}\leq C\rho\),
+\begin{equation}\label{eq:cubic-mixed-bounds}
+ \begin{split}
+ \norm\mu_2&\leq C(h^{-2}F+\alpha h^{-1}D+E+h^2),\\
+ \norm{e_t}_2&\leq C(h^{-1}D+\alpha h^{-2}F+E+h^2).
+ \end{split}
+\end{equation}
+For the improved normal coefficient in the second line, keep the
+projection before the stiffness:
+\[
+ \norm{Q_NL_h\mathcal T^*\psi}_2
+       \leq C(h^{-1}+\rho h^{-2})F.
+\]
+
+Finally, the actual pointwise residual
+\(q=(v_h-u(X_h,t))\cdot N\) satisfies \(\Pi_hq=0\) and
+\begin{equation}\label{eq:cubic-q}
+ \norm q_2\leq C(h^{-1}F+\alpha h^{-1}D+E+\alpha h^2).
+\end{equation}
+Indeed, its \(e_t\cdot m\) projection defect costs \(Ch\norm{e_t}_2\),
+and its \(e_t\cdot(N-m)\) part costs \(C\rho\norm{e_t}_2\).
+The remaining reference-tangent part costs
+\(C(\norm{N-m}_2+E+h^4)\). Substitution of
+\eqref{eq:cubic-mixed-bounds} gives an additional
+\(\alpha^2h^{-2}F\), absorbed by \(\alpha^2\leq h\);
+\(h^3\leq\alpha h^2\) handles the source.
+
+\subsection{Relative volume and the area-weighted projection defect}
+
+Orient one connected component outward, and let \(\Omega(t)\) and
+\(\Omega_h(t)\) be its exact and numerical bounded interiors. The
+small geometric neighborhood gives a normal graph \(r(s,t)\) over
+\(\Gamma(t)\). Define
+\begin{equation}\label{eq:cubic-bulk}
+ \mathcal B(t)=\int_{\R^3}
+       (\mathbf1_{\Omega_h(t)}-\mathbf1_{\Omega(t)})d(x,t)\,dx .
+\end{equation}
+Only a fixed tube is involved, so signed distance may be smoothly
+extended outside it. In normal coordinates,
+\[
+ \mathcal B=\int_{\Gamma(t)}\int_0^{r(s,t)}
+       \xi\det(I+\xi\mathsf S(s,t))\,d\xi\,dS_s,
+\]
+where \(\mathsf S\) is the exact shape operator, with the sign matching
+this normal-coordinate Jacobian. The integral is nonnegative also
+when \(r<0\). Uniform graph and area bounds give, for \(f=d(X_h,t)\),
+\begin{equation}\label{eq:cubic-bulk-distance}
+              c\norm f_2^2\leq\mathcal B\leq C\norm f_2^2.
+\end{equation}
+For several components take the sum of these functionals separately,
+so nesting causes no cancellation. Reversing a component's orientation
+reverses its multiplier and leaves the position equations unchanged.
+
+Let \(J\) be the area ratio of \(X_h\) from the fixed initial mesh to
+the current numerical surface. Closed-surface transport gives
+\begin{equation}\label{eq:cubic-bulk-transport}
+ \mathcal B'=\int(\mathbf1_{\Omega_h}-\mathbf1_\Omega)
+             [d_t+\operatorname{div}(du)]\,dx+(q,fJ)_h.
+\end{equation}
+To verify the formula for piecewise-smooth elements, differentiate
+their swept regions. Each face contributes its area times normal
+displacement; the common moving-edge traces cancel all side fluxes.
+Add and subtract \(u\) on the two closed boundaries and apply the
+divergence identity to \(du\). The exact normal speed equals
+\(u\cdot n\), giving \eqref{eq:cubic-bulk-transport}. No derivative
+of the numerical normal appears.
+
+On the exact surface, \(d_t+u\cdot\nabla d=0\). Integrating its smooth
+normal derivative along tube fibers shows that this expression is
+\(c_1(x,t)d\) with bounded \(c_1\). The volume term in
+\eqref{eq:cubic-bulk-transport} is therefore at most \(C\mathcal B\).
+The ORIGINAL weak constraint, in the fixed measure, removes only an
+FE projection:
+\begin{equation}\label{eq:cubic-bulk-weak}
+ \mathcal B'\leq C\mathcal B+(q,(I-\Pi_h)(fJ))_h.
+\end{equation}
+Thus the current area ratio \(J\) must remain in the test defect.
+
+The estimate that permits closure is
+\begin{equation}\label{eq:cubic-projection-defect}
+ \norm{(I-\Pi_h)(fJ)}_2
+ \leq C\{(h+\rho^2)F+h\alpha(D+E)+h^4\}
+ \leq C\{hF+h\alpha(D+E)+h^4\}.
+\end{equation}
+We give all parts of its proof. Let \(j\) be the known smooth exact
+flow area ratio, pulled back to the initial mesh. Distance Taylor
+expansion at \(\overline X\) gives
+\begin{equation}\label{eq:cubic-distance-expansion}
+ f=m\cdot e+\mathcal R_f,\qquad
+ \norm{\mathcal R_f}_2\leq C(h^4+h^{-1}E^2),\qquad
+ \norm f_\infty\leq C(h^4+h^{-1}E).
+\end{equation}
+Use the weak leakage of \(z\),
+\(\norm{m\cdot\Pi_h^3(m\psi)-\psi}_2\leq ChF\), and the
+smooth-product defect of \(j\psi\). They imply
+\begin{equation}\label{eq:cubic-smooth-area}
+ \norm{(I-\Pi_h)(jf)}_2
+      \leq C\{hF+h^2(D+E)+h^4+h^{-1}E^2\}.
+\end{equation}
+
+For a rank-two differential matrix \(A\), write
+\(\mathcal J(A)=\sqrt{\det(A^{\mathsf T}A)}\). Its derivative at the
+exact differential satisfies
+\begin{equation}\label{eq:cubic-area-cancellation}
+ \mathrm D\mathcal J(\mathrm D\overline X)[m\otimes\xi]=0,
+\end{equation}
+since \((\mathrm D\overline X)^{\mathsf T}m=0\).
+Write \(e=z+m\psi+r\), where
+\(r=\Pi_h^3(m\psi)-m\psi\) has \(H^1\) norm at most \(CF\).
+The term \(m\nabla\psi\) therefore drops out of the linear area
+variation. Its other linear terms cost \(C(D+E)\), and its quadratic
+remainder costs \(C\rho(D+h^{-1}F)\). Interpolation and initial lift
+errors give
+\begin{equation}\label{eq:cubic-area-difference}
+ \norm{J-j}_2\leq C\{h^3+D+E+\rho(D+h^{-1}F)\}.
+\end{equation}
+Multiply by the last bound in \eqref{eq:cubic-distance-expansion}.
+The inequality \(E/h\leq Ch\rho\) gives
+\[
+ \norm{f(J-j)}_2
+       \leq C\{(h+\rho^2)F+h\alpha(D+E)+h^4\}.
+\]
+Keep the term \(h^{-1}E^2\) in \eqref{eq:cubic-smooth-area} until using
+\(h^{-1}E^2\leq Ch\rho E\). Combining proves the first inequality
+in \eqref{eq:cubic-projection-defect}; \(\rho^2\leq\alpha^2\leq h\)
+proves the second.
+
+The same decomposition, absorbing \(ChF\), gives
+\[
+ F\leq C\norm f_2+Ch^2(D+E)+Ch^{-1}E^2+Ch^4.
+\]
+Since \(D\leq Ch^{-1}E\),
+\begin{equation}\label{eq:cubic-shape-normal}
+ F^2\leq C\mathcal B+Ch^2E^2+Ch^{-2}E^4+Ch^8.
+\end{equation}
+Pair \eqref{eq:cubic-q} and \eqref{eq:cubic-projection-defect} in
+\eqref{eq:cubic-bulk-weak}. Their main terms are \(F^2\),
+\(\alpha FD\), and \(\alpha^2D^2\). All cross terms are bounded by
+\(C\{F^2+\alpha^2(D^2+E^2)+h^6\}\). In particular the source
+\(h^4E\) costs
+\(\alpha^2E^2+h^8/\alpha^2\leq\alpha^2E^2+h^6\);
+the other source pairings use Young's inequality in the same way.
+Under \eqref{eq:cubic-first-bootstrap},
+\(h^{-2}E^4\leq h^{7/2}E^2\leq h^2E^2\). Thus
+\begin{equation}\label{eq:cubic-bulk-energy}
+ \mathcal B'\leq C\mathcal B+C\alpha^2(D^2+E^2)+Ch^6.
+\end{equation}
+The vanishing coefficient \(\alpha^2\) permits control of shape error
+without first knowing an optimal bound for the whole map.
+
+\subsection{Tangent energy and the fourth power of normal error}
+
+Test \eqref{eq:cubic-error} by \(z\). Equations
+\eqref{eq:cubic-split} and \eqref{eq:cubic-cross} give
+\begin{equation}\label{eq:cubic-tangent-start}
+ \tfrac12(Z^2)'+\tfrac12D^2
+       \leq CE^2+(G,z)_h+(\mu,(\mathcal U-\mathcal T)z)_h.
+\end{equation}
+For any fixed \(\vartheta>0\), small \(h\) gives
+\begin{equation}\label{eq:cubic-G}
+             |(G,z)_h|\leq\vartheta D^2+C_\vartheta(E^2+h^6).
+\end{equation}
+The defect \(\mathfrak d\) uses its \(H_h^{-1}\) bound. For the linear
+normal variation write
+\[
+ -\mathcal H\nabla(e\cdot m)+\mathcal H(\mathrm Dm)^{\mathsf T}e
+       -\mathcal H(\mathrm De)^{\mathsf T}(\nu-m).
+\]
+Replacing \(\mathcal H\) by the exact-reference coefficient costs
+\(Ch^3\norm{\nabla e}_2E\leq Ch^2E^2\). The replacement of
+\(\kappa^*\) by its smooth reference value is smaller. Integrate the
+first term once on each initial element. Volume terms cost
+\(CE(D+E)\). The known coefficient flux jumps are \(O(h^3)\), since
+their dependence on the initial tangent planes is smooth and their
+conormals have the jump in \eqref{eq:cubic-conormal}. Two inverse
+traces bound the edge terms by \(CE^2\).
+
+For the nonlinear remainder, choose an orthonormal reference tangent
+frame \(\mathsf V\) at \(Y\), and write \(\mathrm DY=\mathsf V R_0\).
+Both \(R_0\) and its inverse are uniformly bounded. Normalize columns by
+\(R_0^{-1}\), so
+\[
+ \mathrm DX_hR_0^{-1}=\mathsf V A+\nu b^{\mathsf T},\qquad
+ N=\frac{\nu-\mathsf V A^{-\mathsf T}b}
+                {\sqrt{1+|A^{-\mathsf T}b|^2}}.
+\]
+Here \(A-I\) is the tangential differential perturbation and \(b\)
+the normal slope. After subtracting the first variation, the remainder
+\(\mathcal R\) satisfies
+\begin{equation}\label{eq:cubic-refined-remainder}
+ |P_\nu\mathcal R|\leq C(|A-I||b|+|b|^3),\qquad
+ |\nu\cdot\mathcal R|\leq C|b|^2,
+ \quad P_\nu=I-\nu\nu^{\mathsf T}.
+\end{equation}
+Tangential projection removes \(m\nabla\psi\) up to an
+\(O(h^3)\nabla\psi\) error. Hence
+\[
+ \norm{A-I}_2\leq C(D+E),\quad\norm b_\infty\leq C\rho,
+ \quad\norm b_2\leq C(D+h^{-1}F),\quad
+ \norm{\nu\cdot z}_2\leq Ch^2(D+E)+Ch^3E.
+\]
+The tangential remainder pairing is bounded by
+\(C\rho E(D+E)+C\rho^2E(D+h^{-1}F)\); the normal pairing is at most
+\(C\rho(D+h^{-1}F)[h^2(D+E)+h^3E]\).
+Use \(F\leq CE\) and \(\rho^2/h\leq Ch^{1/2}\to0\).
+Young's inequality gives \eqref{eq:cubic-G}.
+
+The multiplier term retains a particular normal-error factor. From
+\eqref{eq:cubic-normal-difference}, \eqref{eq:cubic-mixed-bounds},
+and \eqref{eq:cubic-log},
+\begin{equation}\label{eq:cubic-multiplier-product}
+ \begin{split}
+ |(\mu,(\mathcal U-\mathcal T)z)_h|
+ &\leq C\sqrt\ell(h^{-2}F+\alpha h^{-1}D+E+h^2)\\
+ &\hspace{12mm}\cdot(h^{-1}F+E+\alpha D+h^3)(D+E).
+ \end{split}
+\end{equation}
+Its leading product is bounded by
+\begin{equation}\label{eq:cubic-critical}
+ C\sqrt\ell h^{-3}F^2(D+E)
+    \leq\vartheta D^2+CE^2+C_\vartheta\ell h^{-6}F^4.
+\end{equation}
+To account for every other term, the product of the first two
+parentheses in \eqref{eq:cubic-multiplier-product}, less
+\(h^{-3}F^2\), is exactly
+\[
+ \begin{split}
+ &(h^{-2}+h^{-1})FE+2\alpha h^{-2}FD
+ +(\alpha h^{-1}+\alpha)ED+\alpha^2h^{-1}D^2+E^2\\
+ &\hspace{15mm}+2hF+2\alpha h^2D+(h^2+h^3)E+h^5.
+ \end{split}
+\]
+After multiplication by \(D+E\), the first eight groups have respective
+bounds by \(D^2+E^2\) with coefficients
+\[
+ C h^{3/4},\quad C h^{3/2},\quad C h^{5/2},\quad C h^{9/4},
+ \quad C h^{11/4},\quad Ch,\quad C h^{11/4},\quad Ch^2.
+\]
+For the fourth group the bound uses only \(D^2\). These follow from
+\(F\leq CE\), \(D\leq Ch^{-1}E\), and
+\eqref{eq:cubic-first-bootstrap}. Each coefficient still tends to zero
+after multiplication by \(\sqrt\ell\). The final source gives
+\(\vartheta D^2+CE^2+C_\vartheta h^{10}\ell\). Absorbing the
+small terms in \eqref{eq:cubic-tangent-start} proves
+\begin{equation}\label{eq:cubic-tangent-energy}
+                 (Z^2)'+cD^2\leq CE^2+Ch^6+C\ell h^{-6}F^4,
+                 \qquad c>0.
+\end{equation}
+The fourth power here is \(F^4\), rather than \(E^4\).
+
+\subsection{Closing the estimates and continuing to the final time}
+
+Add a second bootstrap \(\mathcal B\leq Mh^6\), with \(M\) fixed
+independently of \(h\). At time zero \(e=0\), since all initial nodes
+are on \(\Gamma^0\), and \(\mathcal B(0)\leq Ch^8\). Thus both
+bootstraps hold strictly on a nonempty initial interval. By
+\eqref{eq:cubic-shape-normal},
+\[
+ F^2\leq CMh^6+Ch^{15/2}+Ch^9+Ch^8\leq C(M+1)h^6.
+\]
+Insert this into \eqref{eq:cubic-tangent-energy} and use
+\eqref{eq:cubic-split}. The integrating factor \(e^{-Ct}\) yields
+\begin{equation}\label{eq:cubic-map-energy}
+ \sup_{s\leq t}E(s)^2+\int_0^tD(s)^2\,ds
+                              \leq C_{M,T}h^6\ell.
+\end{equation}
+Then \eqref{eq:cubic-bulk-energy} and \(\alpha^2\leq Ch^{3/2}\) give
+\begin{equation}\label{eq:cubic-bulk-improvement}
+       \mathcal B(t)\leq C_T h^6+C_{M,T}h^{3/2}h^6\ell.
+\end{equation}
+The first \(C_T\) is independent of \(M\): it comes from the linear
+bulk equation, the initial bulk, and the smooth \(Ch^6\) source.
+Choose \(M\geq4C_T\) first, and then choose \(h\) small enough that
+the second term is at most \(C_Th^6\). This gives
+\(\mathcal B\leq Mh^6/2\). Also
+\eqref{eq:cubic-map-energy} gives \(E\leq h^{11/4}/2\), since
+\(h^{1/4}\sqrt\ell\to0\). Both bootstraps improve strictly.
+
+For completeness, full-time existence is part of this argument.
+Where element cross products are nonzero and \(\mathcal S_N\) is
+invertible, the ORIGINAL system is the smooth finite-dimensional ODE
+\begin{equation}\label{eq:cubic-ODE}
+ \begin{split}
+ X_{h,t}&=-Q_NL_hX_h+
+         \mathcal U^*\mathcal S_N^{-1}\Pi_h[N\cdot u(X_h,t)],\\
+ \kappa_h&=\mathcal S_N^{-1}
+             \{\Pi_h[N\cdot u(X_h,t)]+\mathcal UL_hX_h\}.
+ \end{split}
+\end{equation}
+The initial Schur bound gives local existence and uniqueness: on a small
+fixed-\(h\) nodal ball the vector field has finite value and derivative
+bounds, and successive integral iterates have factorially summable
+differences. The same difference estimate proves uniqueness.
+No Lipschitz constant uniform in \(h\) is required.
+
+On its maximal safe interval, the improved estimates imply
+\[
+ \norm{X_h-\overline X}_{W^{1,\infty}}
+       \leq C(h^3+h^{-2}E)\leq C_T h\sqrt\ell\longrightarrow0.
+\]
+The first bootstrap alone already bounds this by \(Ch^{3/4}\).
+The exact embedding has a uniform differential lower bound and local
+graph radius on compact space-time. On each smaller graph chart,
+project to its tangent plane and integrate the derivative difference
+along line segments. Small piecewise \(W^{1,\infty}\) perturbations
+preserve a local lower Lipschitz bound. Continuous FE traces make
+these restrictions absolutely continuous across edges. Parameter
+pairs outside these charts have a positive exact-image separation by
+compactness; uniform \(C^0\) closeness preserves it. Consequently
+the numerical map remains an embedding with nondegenerate elements.
+This also justifies the normal graph used on the safe interval.
+
+For fixed \(h\), the bounded nodal positions, positive element
+Jacobian lower bounds, and \eqref{eq:cubic-actual-schur} keep the
+trajectory in a compact subset of the ODE domain. The vector field
+is bounded there, so a finite endpoint has a limiting nodal value
+from which local existence restarts. Strict bootstrap improvement
+excludes an endpoint before \(T\). Equation \eqref{eq:cubic-ODE}
+also gives uniqueness of the velocity and multiplier.
+
+Finally the original closest lift and
+\eqref{eq:cubic-interpolation}, \eqref{eq:cubic-map-energy} give
+\[
+ \norm{X_h^\ell-X}_{L^2(\Gamma^0)}\leq CE+Ch^4
+                      \leq C_T h^3\sqrt\ell.
+\]
+The signed-distance estimate follows from
+\eqref{eq:cubic-bulk-distance}, \eqref{eq:cubic-bulk-improvement}.
+All endpoint estimates hold by continuity. This proves
+Theorem~\ref{thm:cubic}.
+
+\begin{remark}\label{rem:quadratic-open}
+These results partially solve the low-degree question: degree one
+fails for an admissible family, and degree three converges for every
+original admissible family under the smooth-solution hypothesis.
+Degree two remains unresolved. Even substituting a putative
+\(F=O(h^2)\) in \eqref{eq:cubic-tangent-energy} gives only the driving
+bound \(O(h^2\ell)\), hence a map bound \(O(h\sqrt\ell)\).
+The inverse estimate then cannot exclude local element degeneration.
+This failure of the present estimate is not a quadratic counterexample.
+\end{remark}
+
+\begin{thebibliography}{9}
+\bibitem{GLT2026}
+G.~Gao, B.~Li and R.~Tang,
+\emph{Convergent finite element approximations of surface evolution
+with relaxed minimal deformation},
+Numerische Mathematik \textbf{158} (2026), 671--714.
+\href{https://doi.org/10.1007/s00211-026-01529-3}{doi:10.1007/s00211-026-01529-3}.
+Author manuscript:
+\url{https://libuyang.com/NM-15.pdf}.
+\bibitem{TaoFourier}
+T.~Tao, \emph{245C, Notes 2: The Fourier transform},
+lecture notes, 6 April 2009, Theorem~43.
+\url{https://terrytao.wordpress.com/2009/04/06/the-fourier-transform/}.
+\end{thebibliography}
+
+\section*{AI-use statement}
+This work was developed with substantial assistance from OpenAI Codex
+in mathematical exploration, algebraic checking and manuscript preparation.
+
+\end{document}

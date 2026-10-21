@@ -2,9 +2,9 @@
 
 **Area:** Numerical analysis of evolving surfaces
 
-**Status:** 🔵 OPEN
+**Status:** 🟡 PARTIAL
 
-**Last checked:** 2026-09-24
+**Last checked:** 2026-10-21
 
 ## Problem statement
 
@@ -57,8 +57,12 @@ Tangential mesh motion can preserve element quality during simulations of moving
 
 ## Status review
 
-Reference [1] proves convergence for $`k\ge4`$ and explicitly leaves $`k=1,2,3`$ unresolved in §7. Its error estimate controls the flow map in $`L^\infty(0,T;L^2)`$ and the tangential component in $`L^2(0,T;H^1)`$. These proved high-degree cases lie outside the displayed target.
+**Partial progress reviewed 2026-10-21:** Kaiwen Jin's [manuscript](../research/solutions/541-linear-failure-cubic-convergence/paper/manuscript.pdf), [PR 172](https://github.com/MColbrook/AIM/pull/172) at `71ed609ac0d213f399348e2bf6669767b8444ca0`, establishes distinct results for degrees one and three. The degree-two question remains open.
 
-Reference [2] proves convergence for degree $`k\ge3`$ for a fully discrete MDR mean-curvature scheme with an $`L^2`$-projected normal. Its velocity-gradient equation differs from the position-gradient RMD equation above. It therefore does not settle even the cubic case here. Energy stability and observed numerical convergence also do not establish the requested theorem.
+**Known cases:** For degree one, Theorem 2.2 gives one fixed smooth torus, a fixed tangential rigid rotation and an admissible alternating mesh family whose original discrete solutions are unique and nondegenerate on a common positive interval, yet the uniform-in-time lifted L2 map error has a positive lower limit. It does not claim failure for every linear mesh family. For degree three, Theorem 6.1 proves unique nondegenerate evolution throughout each prescribed smooth-solution interval and a lifted map-error bound $`C_T h^3\sqrt{1+|\log h|}`$ for every original admissible cubic family.
 
-No matching resolution or announcement was found in the literature, author-page, conference, arXiv, GitHub-indexed, Zenodo-indexed and native Palomar checks on the date above. Native Zenodo access returned HTTP 403; the individual conference contribution required login.
+**Remaining target:** Establish convergence with a quantitative bound, or an admissible original-scheme counterexample, for degree two.
+
+The [first independent AI review](../research/solution_reviews/2026-10-21-active-prs/172-review.md) reconstructs the complete cubic proof and independently checks the linear cell-level forcing calculation. A [second independent review](../research/solution_reviews/2026-10-21-active-prs/172-second-review.md) reconstructs the linear theorem's mesh-uniform inverse bounds, analytic estimates, common existence interval and fixed-time nonconvergence argument. Neither is human peer review or Lean verification.
+
+**Literature check:** No earlier matching proved solution was found on 21 October 2026. Gao–Li–Tang [1] proves the original RMD convergence result for degrees at least four and leaves lower degrees open. A [2024 conference abstract by Buyang Li](https://aimsconference.org/AIMS-Conference/conf-reg2024/ts/detail1.php?abs_no=14) announces cubic convergence; the later published RMD paper still leaves that case unresolved, so the announcement alone is not treated as an available complete proof. Huang–Li–Tang [2] concerns a different MDR scheme with a projected normal. The reviews document these prior contributions and their exact scope.
