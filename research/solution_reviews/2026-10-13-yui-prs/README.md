@@ -1,5 +1,7 @@
 # Individual solution-PR review, 13 October 2026
 
+**Correction, 21 October 2026:** The AIM010 manuscript has been removed and replaced by a [note pointing to Mikael Sundqvist's existing solution](../../solutions/010-mercedes-disk-partition/README.md), arXiv:2609.21964, submitted 18 September 2026. Its earlier acceptance recommendation and AI audit are superseded; the batch account below records the original processing.
+
 Forty original open submissions from Kaiwen Jin (`yuiyuiui`) were reviewed individually at immutable heads and merged separately. Each complete argument was reconstructed against its original AIM target, with references, ancillary materials, supplied integrity records and all manuscript pages checked. The reviews are independent AI audits during maintainer processing, separate from the submission's drafting/self-review; no human peer review or Lean verification is claimed.
 
 All forty original submissions meet the repository's documented-independent-audit criterion for **Solved**. No substantive uncorrected proof gap or omitted original target clause was found. Counterexamples resolve universal questions even when narrower related questions remain. Finite numerical checks are distinguished from proof-critical exact certificates and from analytic coverage of infinite parameter ranges. Original problem pages, IDs, statements, applications and references are retained.
@@ -18,7 +20,7 @@ All three saved source documents passed the built-in compiler, their exported PD
 
 | PR | AIM | Decision | Proof | Review |
 | --- | --- | --- | --- | --- |
-| [#60](https://github.com/MColbrook/AIM/pull/60) | 010 | Solved | [PDF](../../../research/solutions/010-mercedes-disk-partition/paper/mercedes_partition.pdf) | [Audit](010-review.md) |
+| [#60](https://github.com/MColbrook/AIM/pull/60) | 010 | Superseded; existing solution cited | [arXiv](https://arxiv.org/abs/2609.21964) | [Correction](010-review.md) |
 | [#71](https://github.com/MColbrook/AIM/pull/71) | 051 | Solved | [PDF](../../../research/solutions/051-potential-on-general-manifold/paper/main.pdf) | [Audit](051-review.md) |
 | [#66](https://github.com/MColbrook/AIM/pull/66) | 063 | Solved | [PDF](../../../research/solutions/063-geodesic-scattering/paper/geodesic_scattering.pdf) | [Audit](063-review.md) |
 | [#45](https://github.com/MColbrook/AIM/pull/45) | 067 | Solved | [PDF](../../../research/solutions/067-burgers-shock-uniform-control-time/paper/main.pdf) | [Audit](067-review.md) |

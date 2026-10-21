@@ -4,7 +4,7 @@
 
 **Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-13
+**Last checked:** 2026-10-21
 
 ## Problem statement
 
@@ -24,11 +24,10 @@ This provides a concrete three-cell benchmark for partition algorithms used to b
 
 1. V. Bonnaillie-Noël and B. Helffer, [On spectral minimal partitions: the disk revisited](https://www.math.ens.psl.eu/~bonnaillie/articles/BoHe13.pdf), Annals of the University of Bucharest, mathematical series (2013), introduction.
 2. G. Berkolaiko, Y. Canzani, G. Cox and J. L. Marzuola, [Homology of spectral minimal partitions](https://doi.org/10.1112/jlms.70065), Journal of the London Mathematical Society 111 (2025), introduction and disk example; [preprint](https://arxiv.org/abs/2406.04225).
+3. M. Sundqvist, [The Y-partition is the optimal three-partition for the disc and the harmonic oscillator](https://arxiv.org/abs/2609.21964), arXiv:2609.21964 (18 September 2026), Theorem 1.1.
 
 ## Status review
 
-**Resolution reviewed 2026-10-13:** [Kaiwen Jin's manuscript](../research/solutions/010-mercedes-disk-partition/paper/mercedes_partition.pdf) establishes the full original target. The unrestricted three-cell disk partition minimum equals the Mercedes-sector eigenvalue and is attained.
+**Existing solution noted 2026-10-21:** The conjecture of Bernard Helffer and Thomas Hoffmann-Ostenhof is resolved in [Mikael Sundqvist's paper](https://arxiv.org/abs/2609.21964), posted on 18 September 2026. Theorem 1.1 gives the unrestricted three-cell disk partition minimum as $`j_{3/2,1}^2`$, attained by three equal sectors.
 
-**Independent review:** the [complete per-problem audit](../research/solution_reviews/2026-10-13-yui-prs/010-review.md) reconstructs the argument, compares its hypotheses and quantifiers with the original statement, and checks the cited sources and accompanying materials. The review was carried out by independent Codex AI agents during maintainer processing; it does not assert human peer review or Lean verification.
-
-The reviewed submission is [PR #60](https://github.com/MColbrook/AIM/pull/60) at `533508074cd44bc0117d6a936853db0d259e25e2`. The original problem statement at `c9929805cece044705abaaebe1cebddac1ba11a6` was compared with its unchanged current form. The proof and documented independent audit meet the repository's **Solved** criterion; the original problem page and ID are retained.
+The previous local manuscript has been removed and replaced by a [note pointing to this existing solution](../research/solutions/010-mercedes-disk-partition/README.md). The earlier repository acceptance and AI review are [superseded](../research/solution_reviews/2026-10-13-yui-prs/010-review.md).
