@@ -2,9 +2,9 @@
 
 **Area:** Stochastic fluid PDEs; solid boundaries
 
-**Status:** 🟡 PARTIAL
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-10-21
 
 ## Problem statement
 
@@ -40,18 +40,10 @@ Solid walls impose a physically important constraint on turbulent transport mode
 
 ## Status review
 
-Reviewed 15 October 2026 against the original target in [PR #171](https://github.com/MColbrook/AIM/pull/171). Partial progress: conditional pathwise uniqueness and perturbative cases; full non-small-noise local theory has an unverified channel-calculus input.
+**Resolution reviewed 2026-10-21:** Kaiwen Jin's revised [manuscript](../research/458/paper/paper.pdf), [PR 175](https://github.com/MColbrook/AIM/pull/175) at `a9e2073c1da1a576c699b0a71661068013c43ab7`, establishes local adapted existence, pathwise uniqueness in the displayed class, and continuous dependence after common stopping for the full finite smooth-noise target under the stated stochastic parabolicity condition.
 
-[Proof or source](../research/458/paper/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/458-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+The [complete independent AI review](../research/solution_reviews/2026-10-21-active-prs/175-review.md) reconstructs the full argument and checks its primary-source interfaces. A [second independent review](../research/solution_reviews/2026-10-21-active-prs/175-second-review.md) verifies the repaired channel-calculus step: Lemmas 3.1–3.2 supply the compatible positive and negative fractional right inverses required by the Kunstmann–Weis 2013 erratum, as well as the projection-image conditions. This closes the blocker in the [15 October review](../research/solution_reviews/2026-10-15-active-prs/458-review.md).
 
-**Known cases:** Zero-noise deterministic and sufficiently small-noise cases via isotropic additive theory and contraction; without added amplitude smallness, pathwise uniqueness among any existing solutions in the full asserted path class (Section 6.2); flat-model and localization calculations do not alone prove the arbitrary-domain existence target.
+**Literature check:** No earlier complete solution of this exact target was found on 21 October 2026. Goodair's no-slip weak martingale and two-dimensional results have different solution and dimension quantifiers; the torus theory does not establish the stated arbitrary smooth-domain no-slip theorem. The review records the primary-source comparisons and search limits.
 
-**Remaining target:** Local adapted existence and continuous dependence in C(Besov 1/2_(4,4)) intersect L4(W1,4_0) on every bounded smooth three-dimensional domain throughout the stochastic-parabolicity range. Verify the corrected KKW compatible fractional right-inverse hypotheses for the periodic channel or give a valid direct channel-calculus input, then recheck the dependent estimates.
-
-### Earlier review notes
-
-The following historical notes are retained; the current decision and review date are given above.
-
-**Literature check:** Open in cited literature; no later resolution located.
-
-Open Problem 9 requests a non-small-noise local theory for no-slip domains; the statement specifies one subcritical maximal-regularity solution class. Searches on 2026-09-22 checked Goodair's boundary results and 2026 transport-noise papers. Navier-slip strong solutions do not impose the displayed zero trace, and the 2026 no-slip inviscid-limit theorem uses weak martingale solutions rather than this pathwise unique local class. Perturbative small-noise arguments do not establish the full parabolicity range.
+The accepted conclusion concerns the precise finite smooth-coefficient formulation above. It does not assert global three-dimensional regularity, a theorem for arbitrary rough or infinite-dimensional noise, human peer review or Lean verification.

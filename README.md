@@ -21,9 +21,9 @@ The [15 October PR reviews](research/solution_reviews/2026-10-15-active-prs/READ
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**426 open targets** (350 open, 76 partial) · **211 solved entries** · **0 Lean verified** · **29 solution claims**. Counts reflect the statuses recorded in this collection.
+**425 open targets** (350 open, 75 partial) · **212 solved entries** · **0 Lean verified** · **29 solution claims**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 426 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 425 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
@@ -45,7 +45,7 @@ If a problem here is resolved, we encourage you to improve the proof, explain it
 | [Nonlinear waves, fluids and kinetic equations](CATALOG.md#nonlinear-waves-fluids-and-kinetic-equations) | [25](CATALOG.md#waves-fluids-kinetics-open) | [7](CATALOG.md#waves-fluids-kinetics-solved) |
 | [Diffusion, materials and variational problems](CATALOG.md#diffusion-materials-and-variational-problems) | [39](CATALOG.md#diffusion-materials-open) | [18](CATALOG.md#diffusion-materials-solved) |
 | [Applied geometry, control and information](CATALOG.md#applied-geometry-control-and-information) | [31](CATALOG.md#inverse3-open) | [14](CATALOG.md#inverse3-solved) |
-| [Stochastic dynamics, reaction networks and applied optimization](CATALOG.md#stochastic-dynamics-reaction-networks-and-applied-optimization) | [38](CATALOG.md#stochastic3-open) | [7](CATALOG.md#stochastic3-solved) |
+| [Stochastic dynamics, reaction networks and applied optimization](CATALOG.md#stochastic-dynamics-reaction-networks-and-applied-optimization) | [37](CATALOG.md#stochastic3-open) | [8](CATALOG.md#stochastic3-solved) |
 
 ## Solved problems
 
@@ -166,6 +166,7 @@ Complete resolutions recorded in this collection, including counterexamples to t
 | 451 | [A mixed Sobolev estimate for reconstructing a scalar potential](problems/451-bourgain-brezis-mixed-sobolev-gradient-estimate.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/451-mixed-sobolev-counterexample/paper/main.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/451-review.md) |
 | 455 | [A deterministic Hölder exponent for smooth-transport parabolic SPDEs](problems/455-smooth-transport-spde-deterministic-holder-exponent.md) | ✅ SOLVED | The entire smooth-transport variational SPDE class has a deterministic positive parabolic Hölder exponent on each positive-time strip. | [Proof](research/solutions/455-smooth-transport-spde-deterministic-holder-exponent/manuscript.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/455-review.md) |
 | 457 | [Transport-noise Navier–Stokes at critical smoothness minus one half](problems/457-stochastic-navier-stokes-negative-half-critical-data.md) | ✅ SOLVED | Local well-posedness holds at the exact inhomogeneous B^(-1/2)_(6,4) endpoint for all prescribed transport families in AIM457. | [Proof](research/solutions/transport-noise-navier-stokes-negative-half-data/paper/paper.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/457-review.md) |
+| 458 | [Local no-slip Navier–Stokes theory under non-small transport noise](problems/458-stochastic-navier-stokes-no-slip-local.md) | ✅ SOLVED | Affirmative proof | [Proof](research/458/paper/paper.pdf) | [Review](research/solution_reviews/2026-10-21-active-prs/175-review.md) |
 | 460 | [Uniqueness of positive harmonic profiles for singular stable operators in cones](problems/460-singular-stable-cone-positive-solution-uniqueness.md) | ✅ SOLVED | Positive integrable-growth harmonic profiles outside every admitted convex cone are proportional, including singular spectral measures. | [Proof](research/solutions/460-singular-stable-cone-positive-solution-uniqueness/paper/manuscript.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/460-review.md) |
 | 461 | [Comparison for viscosity solutions of infinity-fractional diffusion](problems/461-infinity-fractional-evolution-comparison.md) | ✅ SOLVED | The specified relaxed infinity-fractional subsolution–supersolution comparison fails, even with identical smooth initial data. | [Proof](research/solutions/461-relaxed-infinity-fractional-comparison/paper.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/461-review.md) |
 | 463 | [Calderón–Zygmund estimates for general concave nonlocal equations](problems/463-concave-nonlocal-calderon-zygmund.md) | ✅ SOLVED | The proposed kernel-uniform full-order Sobolev estimate fails at every finite sufficiently large p for strict ellipticity pairs. | [Proof](research/solutions/463-concave-nonlocal-sobolev-counterexample/paper/manuscript.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/463-review.md) |

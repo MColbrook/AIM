@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**426 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**425 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -24,7 +24,7 @@
 | [Nonlinear waves, fluids and kinetic equations](#nonlinear-waves-fluids-and-kinetic-equations) | [25](#waves-fluids-kinetics-open) | [7](#waves-fluids-kinetics-solved) |
 | [Diffusion, materials and variational problems](#diffusion-materials-and-variational-problems) | [39](#diffusion-materials-open) | [18](#diffusion-materials-solved) |
 | [Applied geometry, control and information](#applied-geometry-control-and-information) | [31](#inverse3-open) | [14](#inverse3-solved) |
-| [Stochastic dynamics, reaction networks and applied optimization](#stochastic-dynamics-reaction-networks-and-applied-optimization) | [38](#stochastic3-open) | [7](#stochastic3-solved) |
+| [Stochastic dynamics, reaction networks and applied optimization](#stochastic-dynamics-reaction-networks-and-applied-optimization) | [37](#stochastic3-open) | [8](#stochastic3-solved) |
 
 [Publication batches and review dates](#publication-batches)
 
@@ -1001,7 +1001,6 @@
 | 453 | [Bourgain–Spencer accuracy for random elliptic media at finite contrast](problems/453-bourgain-spencer-nonperturbative-homogenization.md) | 🔵 OPEN | Stochastic homogenization; diffusion in heterogeneous media |
 | 454 | [Hölder continuity for parabolic SPDEs with merely bounded transport noise](problems/454-rough-transport-spde-holder.md) | 🔵 OPEN | Stochastic parabolic PDEs; passive scalar transport |
 | 456 | [Global quadratic reaction–diffusion systems with general transport noise](problems/456-quadratic-mass-controlled-rd-transport-noise.md) | 🔵 OPEN | Stochastic PDEs; chemical and population kinetics |
-| 458 | [Local no-slip Navier–Stokes theory under non-small transport noise](problems/458-stochastic-navier-stokes-no-slip-local.md) | 🟡 PARTIAL | Stochastic fluid PDEs; solid boundaries |
 | 477 | [A bounded critical norm continuation criterion for stochastic Navier–Stokes](problems/477-stochastic-navier-stokes-bounded-critical-norm.md) | 🔵 OPEN | Stochastic fluid PDEs; regularity criteria |
 | 487 | [The GNRS conjecture for minor-free network flow](problems/487-gnrs-minor-free-flow-cut.md) | 🟡 PARTIAL | Network routing, metric geometry and combinatorial optimization |
 | 492 | [Constant-gap NP-hardness of densest k-subgraph](problems/492-densest-k-subgraph-constant-gap-hardness.md) | 🔵 OPEN | Network optimization and approximation complexity |
@@ -1018,6 +1017,7 @@
 | 341 | [The modified integer round-up conjecture for cutting stock](problems/341-modified-integer-round-up.md) | ✅ SOLVED | Counterexample | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Additive-hardness-and-unbounded-configuration-gaps-in-bin-packing-September-24-2026/Additive-hardness-and-unbounded-configuration-gaps-in-bin-packing-September-24-2026.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
 | 455 | [A deterministic Hölder exponent for smooth-transport parabolic SPDEs](problems/455-smooth-transport-spde-deterministic-holder-exponent.md) | ✅ SOLVED | The entire smooth-transport variational SPDE class has a deterministic positive parabolic Hölder exponent on each positive-time strip. | [Proof](research/solutions/455-smooth-transport-spde-deterministic-holder-exponent/manuscript.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/455-review.md) |
 | 457 | [Transport-noise Navier–Stokes at critical smoothness minus one half](problems/457-stochastic-navier-stokes-negative-half-critical-data.md) | ✅ SOLVED | Local well-posedness holds at the exact inhomogeneous B^(-1/2)_(6,4) endpoint for all prescribed transport families in AIM457. | [Proof](research/solutions/transport-noise-navier-stokes-negative-half-data/paper/paper.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/457-review.md) |
+| 458 | [Local no-slip Navier–Stokes theory under non-small transport noise](problems/458-stochastic-navier-stokes-no-slip-local.md) | ✅ SOLVED | Affirmative proof | [Proof](research/458/paper/paper.pdf) | [Review](research/solution_reviews/2026-10-21-active-prs/175-review.md) |
 | 478 | [Global regularity for critical SQG with state-dependent noise](problems/478-critical-stochastic-sqg-global-regularity.md) | ✅ SOLVED | The critical stochastic SQG equation has the required pathwise unique global adapted H3 solution for the full specified nonlinear finite-noise class. | [Proof](research/solutions/478-critical-stochastic-sqg-global-regularity/paper/manuscript.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/478-review.md) |
 
 ### Solution claimed
@@ -1041,7 +1041,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 2026 expansion — batch 4 | 6 | 2026-09-18 |
 | September 2026 expansion — batch 5 | 8 | 2026-09-18–2026-10-13 |
 | September 2026 expansion — batch 6 | 6 | 2026-09-19–2026-10-13 |
-| September 22 expansion — PDE emphasis | 76 | 2026-09-22–2026-10-15 |
+| September 22 expansion — PDE emphasis | 75 | 2026-09-22–2026-10-15 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
 | Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 86 | 2026-09-23–2026-10-13 |
 | Community additions, October 2026 | 1 | 2026-10-21 |
