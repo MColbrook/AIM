@@ -21,7 +21,7 @@ The [15 October PR reviews](research/solution_reviews/2026-10-15-active-prs/READ
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**425 open targets** (349 open, 76 partial) · **212 solved entries** · **0 Lean verified** · **29 solution claims**. Counts reflect the statuses recorded in this collection.
+**425 open targets** (349 open, 76 partial) · **213 solved entries** · **0 Lean verified** · **28 solution claims**. Counts reflect the statuses recorded in this collection.
 
 **[Browse all 425 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
@@ -35,7 +35,7 @@ If a problem here is resolved, we encourage you to improve the proof, explain it
 | [PDEs, fluids and materials](CATALOG.md#pdes-fluids-and-materials) | [23](CATALOG.md#pdes-materials-open) | [9](CATALOG.md#pdes-materials-solved) |
 | [Probability, statistics and learning](CATALOG.md#probability-statistics-and-learning) | [27](CATALOG.md#probability-statistics-open) | [18](CATALOG.md#probability-statistics-solved) |
 | [Numerical analysis and scientific computing](CATALOG.md#numerical-analysis-and-scientific-computing) | [11](CATALOG.md#numerical-analysis-open) | [18](CATALOG.md#numerical-analysis-solved) |
-| [Geometry and topology](CATALOG.md#geometry-and-topology) | [39](CATALOG.md#geometry-topology-open) | [39](CATALOG.md#geometry-topology-solved) |
+| [Geometry and topology](CATALOG.md#geometry-and-topology) | [39](CATALOG.md#geometry-topology-open) | [40](CATALOG.md#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](CATALOG.md#combinatorics-optimization-and-information-theory) | [21](CATALOG.md#optimization-information-open) | [5](CATALOG.md#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](CATALOG.md#waves-quantum-systems-and-spectral-geometry) | [23](CATALOG.md#spectral2-open) | [5](CATALOG.md#spectral2-solved) |
 | [Imaging, control, geometry and dynamics](CATALOG.md#imaging-control-geometry-and-dynamics) | [22](CATALOG.md#inverse2-open) | [5](CATALOG.md#inverse2-solved) |
@@ -217,6 +217,7 @@ Complete resolutions recorded in this collection, including counterexamples to t
 | 562 | [Sharp least-singular-value bounds for independent random tensor columns](problems/562-tensor-singular-value.md) | ✅ SOLVED | Sharp ambient-scale smallest singular-value lower bound with a K-only constant throughout the stated growing-order regime. | [Proof](research/solutions/kaiwen-jin-562-tensor-singular-values/paper/main.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/562-review.md) |
 | 565 | [Asymmetry at the Macbeath point of a convex body](problems/565-macbeath-center-asymmetry.md) | ✅ SOLVED | A square pyramid is a counterexample to the proposed Macbeath-center asymmetry inclusion. | [Proof](research/solutions/565-macbeath-center-asymmetry/paper/macbeath_counterexample.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/565-review.md) |
 | 570 | [The cost of continuous reconstruction on Banach unit balls](problems/570-continuous-decoder-banach-balls.md) | ✅ SOLVED | Universal bound disproved | [Proof](research/solutions/siavash-sadeghi-570/aim570_report.pdf) | [Review](research/solution_reviews/2026-10-04-active-prs/570-review.md) |
+| 571 | [Counting half-integral polygons with collinear interior lattice points](problems/571-half-integral-collinear-count.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/571-half-integral-collinear-count/paper/manuscript.pdf) | [Review](research/solution_reviews/2026-10-21-active-prs/176-review.md) |
 | 572 | [Counting Ehrhart quasipolynomials of half-integral polygons](problems/572-half-integral-ehrhart-count.md) | ✅ SOLVED | Exact cubic count of entire Ehrhart functions for every requested half-integral polygon interior count, including integral polygons and period collapse. | [Proof](research/solutions/572-half-integral-ehrhart-count/paper/main.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/572-review.md) |
 | 574 | [Draws in the undirected trapping game on percolation clusters](problems/574-trap-draws-percolation.md) | ✅ SOLVED | No planar Trap draws for any interior deletion probability, and positive draws at some positive deletion probability in every higher dimension. | [Proof](research/solutions/574-trap-draws-percolation/paper/main.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/574-review.md) |
 | 576 | [Uniform covariance bounds for constrained Ising replicas](problems/576-ising-replica-covariance.md) | ✅ SOLVED | Uniform constrained-Ising replica covariance bound at arbitrary fixed interaction strengths. | [Proof](research/solutions/576-ising-replica-covariance/paper/ising_replica_covariance.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/576-review.md) |

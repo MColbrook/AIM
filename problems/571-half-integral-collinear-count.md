@@ -2,9 +2,9 @@
 
 **Area:** Discrete geometry and lattice-point enumeration
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-10-21
 
 ## Problem statement
 
@@ -30,16 +30,10 @@ Exact enumeration supplies benchmark collections for algorithms on rational poly
 
 ## Status review
 
-Reviewed 15 October 2026 against the original target in [PR #122](https://github.com/MColbrook/AIM/pull/122). Claim: all-parameter half-integral collinear polygon formula via exact finite boundary-chain generating functions and Burnside, with an explicit Normaliz software dependency.
+**Resolution reviewed 2026-10-21:** Kaiwen Jin's [manuscript](../research/solutions/571-half-integral-collinear-count/paper/manuscript.pdf), originally submitted in [PR 122](https://github.com/MColbrook/AIM/pull/122), establishes the displayed formula for every requested interior-point count. The unchanged original proof and [PR 176 replay supplement](https://github.com/MColbrook/AIM/pull/176) received a [new proof and supplement audit](../research/solution_reviews/2026-10-21-active-prs/176-proof-review.md).
 
-[Proof or source](../research/solutions/571-half-integral-collinear-count/paper/manuscript.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/571-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+The maintainer review independently recomputed all 608 distinct complete Normaliz rational series, covering all 618 cell members, with zero reused cached results and zero failures. All full rational functions and original gradings match; reaggregation verifies all four action sums, Burnside's identity and the polynomial identity. The [acceptance review](../research/solution_reviews/2026-10-21-active-prs/176-review.md), [execution summary](../research/solution_reviews/2026-10-21-active-prs/571-independent-replay-summary.json) and [complete execution bundle](../research/solution_reviews/2026-10-21-active-prs/571-independent-replay-bundle.json) preserve the scope and receipts. This completes the gate left open by the [15 October review](../research/solution_reviews/2026-10-15-active-prs/571-review.md).
 
-**Review boundary:** Complete the independent replay of all608 Normaliz rational series before the maintainer acceptance gate; no mathematical gap has been identified.
+**Literature check:** No earlier matching all-parameter resolution was found on 21 October 2026. Bohnert–Springer [1] states the formula as Conjecture 3.7; its finite verification range and related finite classifications are distinguished from this complete identity. Integral polygons remain included, and equivalence continues to use integer translations.
 
-### Earlier review notes
-
-The following historical notes are retained; the current decision and review date are given above.
-
-The 2026 published paper explicitly poses this formula and reports verification for $`3\le i\le20`$. Its classification algorithm and the accompanying finite datasets do not prove the identity for every $`i`$. The equivalence relation uses integral translations, and half-integrality means denominator dividing two, not denominator exactly two.
-
-The known count for integral polygons is a different, smaller family. The other conjecture in the same paper concerning distinct Ehrhart quasipolynomials counts different objects and imposes no collinearity condition. Current searches found no matching proof, counterexample, or announced solution.
+The result retains its disclosed reliance on trusted exact Normaliz enumeration. It is not a second enumeration algorithm, an independently checked simplicial-decomposition certificate, human peer review or Lean verification.

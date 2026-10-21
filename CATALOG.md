@@ -14,7 +14,7 @@
 | [PDEs, fluids and materials](#pdes-fluids-and-materials) | [23](#pdes-materials-open) | [9](#pdes-materials-solved) |
 | [Probability, statistics and learning](#probability-statistics-and-learning) | [27](#probability-statistics-open) | [18](#probability-statistics-solved) |
 | [Numerical analysis and scientific computing](#numerical-analysis-and-scientific-computing) | [11](#numerical-analysis-open) | [18](#numerical-analysis-solved) |
-| [Geometry and topology](#geometry-and-topology) | [39](#geometry-topology-open) | [39](#geometry-topology-solved) |
+| [Geometry and topology](#geometry-and-topology) | [39](#geometry-topology-open) | [40](#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [21](#optimization-information-open) | [5](#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](#waves-quantum-systems-and-spectral-geometry) | [23](#spectral2-open) | [5](#spectral2-solved) |
 | [Imaging, control, geometry and dynamics](#imaging-control-geometry-and-dynamics) | [22](#inverse2-open) | [5](#inverse2-solved) |
@@ -408,6 +408,7 @@
 | 547 | [Minimal persistence grids versus homological Morse lower bounds](problems/547-minimal-persistence-grid-morse-bound.md) | ✅ SOLVED | The proposed Morse quantity bounds the largest coordinate size of the canonical minimal persistence grid. | [Proof](research/solutions/547-minimal-persistence-grid-morse-bound/paper/grid_morse_bound.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/547-review.md) |
 | 559 | [Deciding nonnegativity of unnormalized univariate trace polynomials](problems/559-univariate-trace-decidability.md) | ✅ SOLVED | Algorithmic undecidability proved | [Proof](research/solutions/559-univariate-trace-decidability/paper/trace_decidability.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/559-review.md) |
 | 565 | [Asymmetry at the Macbeath point of a convex body](problems/565-macbeath-center-asymmetry.md) | ✅ SOLVED | A square pyramid is a counterexample to the proposed Macbeath-center asymmetry inclusion. | [Proof](research/solutions/565-macbeath-center-asymmetry/paper/macbeath_counterexample.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/565-review.md) |
+| 571 | [Counting half-integral polygons with collinear interior lattice points](problems/571-half-integral-collinear-count.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/571-half-integral-collinear-count/paper/manuscript.pdf) | [Review](research/solution_reviews/2026-10-21-active-prs/176-review.md) |
 | 572 | [Counting Ehrhart quasipolynomials of half-integral polygons](problems/572-half-integral-ehrhart-count.md) | ✅ SOLVED | Exact cubic count of entire Ehrhart functions for every requested half-integral polygon interior count, including integral polygons and period collapse. | [Proof](research/solutions/572-half-integral-ehrhart-count/paper/main.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/572-review.md) |
 | 593 | [A linear threshold for extracting a segment grid](problems/593-red-blue-segment-grid.md) | ✅ SOLVED | Every arrangement in the question contains the required embedded rectangular grid; the proof also gives the stronger2k−1 sufficient threshold. | [Proof](research/solutions/aim-593-segment-grids/paper/segment_grids.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/593-review.md) |
 | 596 | [A bounded number of flat transversals for fat convex sets](problems/596-fat-convex-transversal-pq.md) | ✅ SOLVED | The fractional flat-transversal theorem can be rounded to boundedly many actual flats for arbitrary concentric-fat convex bodies. | [Proof](research/solutions/aim-596-fat-convex-transversals/paper/main.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/596-review.md) |
@@ -426,12 +427,6 @@
 | 649 | [Vanishing threshold for first path homology of a random digraph](problems/649-random-digraph-path-homology-vanishing.md) | ✅ SOLVED | Rational nonregular first path homology vanishes with high probability throughout the requested exponent range above minus two-thirds. | [Proof](research/solutions/649-random-digraph-path-homology-vanishing/paper/path_homology_vanishing.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/649-review.md) |
 | 650 | [Central limit theorem for the first path Betti number](problems/650-random-digraph-path-betti-central-limit.md) | ✅ SOLVED | Rational nonregular first path Betti number CLT with true mean and variance for every requested density sequence, with variance asymptotic to the edge-count variance. | [Proof](research/solutions/650-random-digraph-path-betti-central-limit/manuscript.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/650-review.md) |
 | 661 | [Path connectivity of the infinity Z-Gromov–Wasserstein space](research/resolved/661-z-gw-infinity-path-connectivity.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/514-infinity-z-gw/PROOF.md) | [Review](research/solution_reviews/2026-10-02/514-review.md) |
-
-### Solution claimed
-
-| ID | Problem | Status | Outcome | Proof | Review |
-| --- | --- | --- | --- | --- | --- |
-| 571 | [Counting half-integral polygons with collinear interior lattice points](problems/571-half-integral-collinear-count.md) | 🟠 SOLUTION CLAIMED | Claim: all-parameter half-integral collinear polygon formula via exact finite boundary-chain generating functions and Burnside, with an explicit Normaliz software dependency. | [Proof](research/solutions/571-half-integral-collinear-count/paper/manuscript.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/571-review.md) |
 
 ## Combinatorics, optimization and information theory
 

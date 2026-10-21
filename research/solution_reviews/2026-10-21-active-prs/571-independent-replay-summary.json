@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-21",
+  "submitted_head": "3cc0f979cb475aeacc120e0523897a9786da1850",
+  "execution_role": "Independent maintainer execution of all required systems",
+  "command": "python3 -B reproduction_v1.1/replay.py --workers 16 --timeout 3600 --output <fresh-output>",
+  "status": "FULL_REPLAY_MATCHED",
+  "unique_inputs": 608,
+  "cell_members": 618,
+  "cached_results_reused": 0,
+  "failed_systems": 0,
+  "wall_seconds": 926.3759951107204,
+  "environment": {
+    "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+    "implementation": "CPython",
+    "system": "Linux",
+    "machine": "x86_64",
+    "pynormaliz": "2.24",
+    "wrapper_sha256": "595c3fc605d3e3b4599ef23621f3f408de40572e1295e2cd922a84550030bc2f",
+    "native_sha256": {
+      "PyNormaliz_cpp.cpython-310-x86_64-linux-gnu.so": "6520942ec0cb9fd5ac327cc2346c81ad0ca230fc9830dddc18ca7c2368b8ab46",
+      "libeantic-8a89ee6a.so.3.1.0": "61da6d0b41cadf12aedf64f07fc9d992523863430c87901b46671371128b62eb",
+      "libeanticxx-3ccdae71.so.3.1.0": "0c6bccb5e370504f4866f3155cb9576acbe7d67c2f58b44b79ffd8c3f5017592",
+      "libflint-2d14cefb.so.22.0.0": "d78aab36e125bdc1d30e68209dec11e9a19a4e51e004d0e03e34e5ee9f5ca4e7",
+      "libgmp-520318c2.so.10.5.0": "a81d1e6ab4c0d898d85296abc329fa56ccb661954350cfd90237b4eae97432b4",
+      "libgmpxx-c8fba613.so.4.7.0": "fbc0ad2b6c73d5e7c3b8dff32d287506e352b2d71b090830230d225a1867147b",
+      "libgomp-e985bcbb.so.1.0.0": "a43904e4fa297301d4640dc1bb3c8a3480b406f99e498eba9b1914b68aab604a",
+      "libmpfr-4101dc7b.so.6.2.2": "75c0602ac14b77431e7c4769e43968d8a91b0f0b3e2f061b5e4cede448d39ab7",
+      "libnormaliz-b105b60c.so.3.11.0": "f2f692832e3f47464c54dc998cecd5f0b69ee20d4e0927c837230b513b3c9ed3"
+    },
+    "compiled_normaliz_minor_version": "not exposed by this binding; binary hashes identify the actual implementation"
+  },
+  "data_sha256": "bd22e0775a0475fe485349483dec748c0045fa3b4e2b0f066a716a3b031bdc21",
+  "bundle_sha256": "3d693c1c1b7656b285b587f041c03f21d55154b0c88866ed559fcfc505ec3de8",
+  "bundle_bytes": 918509,
+  "verification": {
+    "status": "FULL_REPLAY_MATCHED",
+    "unique_inputs": 608,
+    "cell_members": 618,
+    "data_sha256": "bd22e0775a0475fe485349483dec748c0045fa3b4e2b0f066a716a3b031bdc21",
+    "context_sha256": "84bae092da630462305983da7ab887eb076e03d647a5bf7c7ed85bd65a768f5a",
+    "manifest_sha256": "8b9ec5e1d5262a0d2d4a6a1c4a20b3cdc5b107a43ae7d563469541221c3b775e",
+    "scope": "Checks actual recorded Normaliz results and exact algebra; not a second counting implementation or independent certification",
+    "computed_output_algebra": {
+      "action_sums": {
+        "identity": {
+          "minus_order": 8,
+          "plus_order": 0,
+          "numerator": [
+            0,
+            0,
+            0,
+            0,
+            669807,
+            -3348976,
+            7783173,
+            -10577048,
+            8928985,
+            -4635736,
+            1361923,
+            -173936
+          ]
+        },
+        "H": {
+          "minus_order": 5,
+          "plus_order": 1,
+          "numerator": [
+            0,
+            0,
+            0,
+            0,
+            2349,
+            -5170,
+            1784,
+            4048,
+            -4117,
+            1138
+          ]
+        },
+        "V": {
+          "minus_order": 5,
+          "plus_order": 0,
+          "numerator": [
+            0,
+            0,
+            0,
+            0,
+            2069,
+            -6465,
+            7915,
+            -4447,
+            960
+          ]
+        },
+        "HV": {
+          "minus_order": 4,
+          "plus_order": 0,
+          "numerator": [
+            0,
+            0,
+            0,
+            0,
+            335,
+            -806,
+            669,
+            -190
+          ]
+        }
+      },
+      "scaled_polynomial_coefficients": [
+        2842560,
+        9503448,
+        12991860,
+        9071552,
+        3291540,
+        602672,
+        53760,
+        2048
+      ],
+      "full_rational_differences": [
+        0
+      ],
+      "polynomial_coefficient_difference": [
+        0
+      ]
+    }
+  },
+  "original_tests": {
+    "passed": 7,
+    "seconds": 17.564
+  },
+  "supplement_tests": {
+    "passed": 11,
+    "seconds": 129.463
+  },
+  "catalogue_regressions": {
+    "passed": 60,
+    "seconds": 795.909,
+    "candidate_tree": "eff5a79afc71586895c7f26a2b686d666f2f31f7"
+  },
+  "receipt_scope_note": "The unmodified runner contains a fixed author-side label. This separate execution was initiated and controlled by the maintainer review; its fresh input coverage, software hashes and complete outputs are preserved.",
+  "trust_boundary": "Trusted Normaliz and native arithmetic dependencies; not a second enumeration algorithm, independent simplicial certificate, human review or formal verification."
+}

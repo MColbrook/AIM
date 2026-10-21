@@ -1,0 +1,127 @@
+{
+  "input_sha256": "18783bc9f19055b1fa05e09b5b4485b2ea12b18ac8435895d9ce370d341f8ee7",
+  "members": [
+    {
+      "action": "identity",
+      "index": 413
+    }
+  ],
+  "trials_per_strategy": 1,
+  "same_local_hardware": true,
+  "normaliz_threads_per_trial": 1,
+  "environment": {
+    "python": "3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 17.0.0 (clang-1700.0.13.3)]",
+    "implementation": "CPython",
+    "system": "Darwin",
+    "machine": "arm64",
+    "pynormaliz": "2.24",
+    "wrapper_sha256": "595c3fc605d3e3b4599ef23621f3f408de40572e1295e2cd922a84550030bc2f",
+    "native_sha256": {
+      "PyNormaliz_cpp.cpython-313-darwin.so": "ecb08b9eeb70c463e126a6c9c1cf062673401d8d48fe19d68e8e2599ba25d7b9",
+      "libeantic.3.dylib": "7bb0c64af9c75139d9a6278690e0f2d9ca4616a8b67f5c7d7cb1410ff608c2e7",
+      "libeanticxx.3.dylib": "268a4ead342e440b1d859fa25a04ee080625b44c9a053a20c8d92ff7fc4fb70c",
+      "libflint.22.0.dylib": "7a4ac176a397b23f916b085940ab68d9c56aaf44ac3c9675ba9eca6dd1a801ef",
+      "libgmp.10.dylib": "816e30ea46c751ed724bdd83da205496f09f3710adc76651a268c4d528c8ed26",
+      "libgmpxx.4.dylib": "942b56a253454e83a0898ebb037432ef35fd2ee93f3f1d81a52e0efd49017284",
+      "libmpfr.6.dylib": "fb9de2d813bf60f8e6bbfc0f0b3baf86691e98be5c7f9523042b166e821280e4",
+      "libnormaliz.3.dylib": "13fcc377b5d9d271b5dc08fbf06481ff8284b4d396cc7ed08b8437e692f5deb4"
+    },
+    "compiled_normaliz_minor_version": "not exposed by this binding; binary hashes identify the actual implementation"
+  },
+  "default": {
+    "driver": "numerical_case/replay.py",
+    "driver_sha256": "04e0eef61823601b3cd5d9f87519a04128d45193aa024ceed7f274c79c291077",
+    "compute_options": [
+      "HilbertSeries",
+      "BigInt",
+      "NoGradingDenom"
+    ],
+    "controller_wall_seconds": 296.19853737507947,
+    "numerical_seconds": 296.15147349983454,
+    "computed_series": [
+      [
+        1246,
+        -742,
+        3174,
+        -2860,
+        1722,
+        -574,
+        82
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      4
+    ],
+    "grading_readback": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      1
+    ]
+  },
+  "dual": {
+    "driver": "reproduction_v1.1/replay.py",
+    "driver_sha256": "88a6add3bb2de29be1fb0733eae94fafd5141bcddd697487544a3f2b322a2cdf",
+    "compute_options": [
+      "HilbertSeries",
+      "BigInt",
+      "NoGradingDenom",
+      "DualMode"
+    ],
+    "controller_wall_seconds": 293.5515061249025,
+    "numerical_seconds": 293.4787846249528,
+    "computed_series": [
+      [
+        1246,
+        -742,
+        3174,
+        -2860,
+        1722,
+        -574,
+        82
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      4
+    ],
+    "grading_readback": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      1
+    ]
+  },
+  "entire_rational_function_agreement": true,
+  "exact_grading_agreement": true,
+  "scope": "Diagnostic single-case observations with different Python front ends; not a statistically established performance comparison or whole-workload speedup. The full run keeps the original default options."
+}

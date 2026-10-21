@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "supplement_version": "1.1.0",
+  "recorded_utc": "2026-10-19T11:35:56.518976+00:00",
+  "original_pr": "https://github.com/MColbrook/AIM/pull/122",
+  "original_artifact_commit": "c6ec4842bef76b3ef16cf783628d5ea669396046",
+  "repository_base_commit": "24edaadc6bb272737d8da0745c662c992db07b22",
+  "scope": "Additive reproduction supplement. Original17 public files and mathematical claims unchanged. No catalogue status change.",
+  "original_files_sha256": {
+    ".gitignore": "1484efeb08c01179b25b39f97baa6ecdaf04972b3525cc2e3604915853745789",
+    "AI_REVIEW.md": "5c8a5d98352bf3e02fb336fdc93c0c11c8f7757362c43603a2c2f7a2716d6bb7",
+    "ENVIRONMENT.json": "3c4949bf3c63b0a345e20d30c3ae0b551ea227ac885b5d4af6d289a520398327",
+    "PUBLIC_MANIFEST.json": "177a556c36254b164a640f7b35e5f1a4fd2cf4253f3fd1110c60de3942a71ad8",
+    "README.md": "bdde79fba7b24cac8ec0249602d9305c357e079f3255756faaafec444439c59b",
+    "SHA256SUMS": "6306b27a7bf71fbd92b88110831652f4b1239d4aa35d120a39a6ad77d0d6c29a",
+    "TARGET_COMPARISON.md": "d6d82a72eeeef7f0256dbb105aa31b14bbebeb3a5880afc3c4ddb6bf313aa734",
+    "numerical_case/exact_series.json": "bd22e0775a0475fe485349483dec748c0045fa3b4e2b0f066a716a3b031bdc21",
+    "numerical_case/replay.py": "04e0eef61823601b3cd5d9f87519a04128d45193aa024ceed7f274c79c291077",
+    "numerical_case/verify.py": "c276a8dfe449c2f3ad3c808d4fcc2b6a0b1a5cd4238f997471f225743373ec61",
+    "paper/manuscript.pdf": "9f751a6486068f9afe74320d82fa8639f711d02a04a4f18d5015f4af9c43bc5b",
+    "paper/manuscript.tex": "27d1759f59b1c7d2fce1c026e631541f0658c76d75d1486eeaa4c7ac937f7c67",
+    "requirements.txt": "ea97b350649dc6d8ad3edbd727641c1cb1dc5215109e0beacbf808d097a0ca59",
+    "src/chain_models.py": "19e214370cb93d61800387c731d459cf64651d576464100495720203c1b48f77",
+    "src/exact_algebra.py": "eda23675d786928cf65db0539d42d2d93c1317b5afef4308d4a4e382b3cddf9a",
+    "test/test_export_verifier.py": "c7be55f4427ced6e302fefe48b9fb905f1e9477c75418e5ab2bea2eea5cdb998",
+    "test/test_geometry_controls.py": "0e6b7584d750430a0f772be25ee0e954b872cdfd4220bbc74e3c7967185d4aac"
+  },
+  "files": {
+    "README.md": {
+      "sha256": "4d1016d8c69fcf6bac0095ff384e0ccc186b4e957bd2e97072dca8121567872b",
+      "bytes": 9158
+    },
+    "bundle.py": {
+      "sha256": "444660b472441f658cc8eb6d81b726654c39d942edc031d8462e4be0b15ee1fc",
+      "bytes": 1246
+    },
+    "check.py": {
+      "sha256": "2b44dc5c0873481c3b6e8619bc08a7ef657e160ffa43a44b32b7a98958d64d82",
+      "bytes": 3953
+    },
+    "recorded/benchmark.json": {
+      "sha256": "67ff9dc07bd56ea8fe5def87caa7f1973feb36c5414fbb0160439838dfe2b795",
+      "bytes": 10026
+    },
+    "recorded/per_system.csv": {
+      "sha256": "2128d11b02e53097e981c52dc3772d0a80f1a89eb78e6339e6f38f562b375927",
+      "bytes": 118437
+    },
+    "recorded/pilot_comparison.json": {
+      "sha256": "7d72adf0d16b1d6746c85835150e8208246b7c71540d9af882212dbdfd04fd71",
+      "bytes": 3296
+    },
+    "recorded/replay_bundle.json": {
+      "sha256": "7abb059f02eb659853b271e7572063c89e402002b39eb4a4cbfba1673d02c9e9",
+      "bytes": 917706
+    },
+    "recorded/verification.json": {
+      "sha256": "9f976f32e6e7bb10d3c479f7c766c0c0b7b91c9ce2b6fedc67a119ae36f9fa5d",
+      "bytes": 1849
+    },
+    "replay.py": {
+      "sha256": "88a6add3bb2de29be1fb0733eae94fafd5141bcddd697487544a3f2b322a2cdf",
+      "bytes": 15849
+    },
+    "requirements-macos-arm64-cp313.txt": {
+      "sha256": "252c443a1c9586ed3b53547e07367560129889c84dbad0ede6188ec93ad58581",
+      "bytes": 253
+    },
+    "summarize.py": {
+      "sha256": "9e4527f363be385cf1fbcaf6148b3472b4aee97bd0375bb9f3d7b0048786cc42",
+      "bytes": 4097
+    },
+    "test_replay.py": {
+      "sha256": "3a1521d3e467eaa55d19d3f8dab5defaf746b118ee077ecdc40a95a45035fc87",
+      "bytes": 8606
+    }
+  },
+  "full_run": {
+    "status": "FULL_REPLAY_MATCHED",
+    "fresh_unique_systems": 608,
+    "covered_cell_members": 618,
+    "cached_inputs_reused": 0,
+    "failed_inputs": 0,
+    "run_manifest_sha256": "bc74bb8227c462944b5152f6498e723bfa2e645842c59d4b8d3dabff52c5e278",
+    "context_sha256": "061a13983b61b92928ae7162cf3cdf8dacc0a9fe302f917f201ff1d919cd618e",
+    "normaliz_processes": 3,
+    "threads_per_process": 1,
+    "controller_wall_seconds": 3487.009459374938
+  },
+  "validation": {
+    "original_tests_passed": 7,
+    "receipt_tests_passed": 11,
+    "standalone_check_passed": true,
+    "catalogue_check_passed": true,
+    "fixture_scope": "Receipt test fixtures are explicitly synthetic and are not computation evidence."
+  },
+  "benchmark_hardware_provenance": "Same host observed during the run; the observation is included in recorded/benchmark.json.",
+  "disclosure": "OpenAI Codex implemented and tested this supplement at Kaiwen Jin's request.",
+  "acceptance_boundary": "Author-side fresh replay using the same trusted Normaliz implementation; no second enumeration implementation, human/Lean certificate, or maintainer acceptance claimed."
+}
