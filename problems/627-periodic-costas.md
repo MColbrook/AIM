@@ -4,7 +4,7 @@
 
 **Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-10-21
 
 ## Problem statement
 
@@ -52,6 +52,8 @@ Reviewed 15 October 2026 against the original target in [PR #124](https://github
 [Proof or source](../research/solutions/627-periodic-costas/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/627-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
 
 **Scope:** A six-point periodic four-dimensional Costas array disproves the universal order restriction.
+
+**Earlier announcement, rechecked 2026-10-21:** The [4 October 2026 disproof announcement by shivm](https://prove2.me/theorems/f2732909-8aec-45d0-afe0-8943f5d2c80e) predates PR124 and was already acknowledged in the linked review. The accessible record states the exact conjecture but does not expose a counterexample or complete disproof. It is credited as an earlier announcement; the submitted analytic witness is retained. The [new prior-art comparison](../research/solution_reviews/2026-10-21-yui-prior-art/yui-prior-art-90-125.md) records the retrieval limits. Failure to retrieve that proof is not evidence of novelty.
 
 ### Earlier review notes
 

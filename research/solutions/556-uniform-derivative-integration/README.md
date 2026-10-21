@@ -1,50 +1,5 @@
-# Integration under uniform derivative bounds
+# AIM 556: existing solution
 
-This package submits an affirmative solution claim for
-[AIM problem 556](https://github.com/MColbrook/AIM/blob/c9929805cece044705abaaebe1cebddac1ba11a6/problems/556-smooth-integration-dimensional-curse.md).
+AIM 556 remains **Solved**. Cite [Esra Sengelen Sevim, *The curse of dimensionality for integration of infinitely differentiable functions*, Journal of Complexity 97 (2026), 102074](https://doi.org/10.1016/j.jco.2026.102074). Theorem 1.1 resolves the stated integration question, including adaptive sampling and nonlinear output.
 
-Theorem 1 of the [manuscript](paper/uniform_derivative_integration.pdf)
-proves, for every dimension `d >= 1` and every `0 < epsilon < 1`,
-
-```math
-n(\varepsilon,d)\ge (1-\varepsilon)
- \left(\tfrac12+\sin\tfrac12\right)^{-d}.
-```
-
-
-The function class and information model are those of the linked problem:
-every mixed partial derivative of every order, including the function itself,
-has supremum at most one. The lower bound permits adaptive sampling,
-nonlinear reconstruction, and arbitrary quadrature weights. It therefore
-gives the dimensional curse at a fixed absolute error tolerance.
-
-The proof constructs a quadratic function from a sample-span complement
-projection and a tensor product of unit vectors. It proves the full
-all-order derivative inclusion and computes the exact product moment
-matrix. Related squared-kernel work is credited in the paper; no priority
-claim is made.
-
-Files:
-
-- [Complete manuscript](paper/uniform_derivative_integration.pdf).
-- [Editable LaTeX source](paper/uniform_derivative_integration.tex).
-- [Target comparison](TARGET_COMPARISON.md).
-- [Content manifest](PUBLIC_MANIFEST.json) and [checksums](SHA256SUMS).
-
-The result is an analytic proof and does not depend on numerical
-experiments or a computation certificate. The four-page manuscript was
-compiled and read in full; its bibliography was checked against primary
-sources. OpenAI Codex assisted in developing and checking the argument and
-preparing the manuscript. Independent mathematical review is requested.
-Catalogue classification remains with the maintainer.
-
-To rebuild with a standard LaTeX installation:
-
-```sh
-cd paper
-latexmk -pdf -interaction=nonstopmode -halt-on-error uniform_derivative_integration.tex
-```
-
-The source is standalone and needs only standard LaTeX packages. The
-manifest covers the authored mathematical files; `SHA256SUMS` also records
-the manifest's hash and excludes its own hash.
+The DOI record predates PR 83. The [priority and scope review](../../solution_reviews/2026-10-21-yui-prior-art/556-prior-solution.md) distinguishes the earlier record from the December issue date. Kaiwen Jin's later submitted manuscript has been removed from the current repository in favour of this attribution note.

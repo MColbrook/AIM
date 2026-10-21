@@ -4,7 +4,7 @@
 
 **Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-13
+**Last checked:** 2026-10-21
 
 ## Problem statement
 
@@ -38,8 +38,6 @@ This problem tests whether uniformly controlling derivatives of every order is e
 
 ## Status review
 
-**Resolution reviewed 2026-10-13:** [Kaiwen Jin's manuscript](../research/solutions/556-uniform-derivative-integration/paper/uniform_derivative_integration.pdf) establishes the full original target. Affirmative: the dimensional curse holds, with exponential deterministic sampling complexity.
+**Existing solution identified 2026-10-21:** [Esra Sengelen Sevim's paper](https://doi.org/10.1016/j.jco.2026.102074), Theorem 1.1, resolves the full stated integration question. The problem remains **Solved**.
 
-**Independent review:** the [complete per-problem audit](../research/solution_reviews/2026-10-13-yui-prs/556-review.md) reconstructs the argument, compares its hypotheses and quantifiers with the original statement, and checks the cited sources and accompanying materials. The review was carried out by independent Codex AI agents during maintainer processing; it does not assert human peer review or Lean verification.
-
-The reviewed submission is [PR #83](https://github.com/MColbrook/AIM/pull/83) at `73683304bcf7d3e748eb1c3f4db614175c938170`. The original problem statement at `c9929805cece044705abaaebe1cebddac1ba11a6` was compared with its unchanged current form. The proof and documented independent audit meet the repository's **Solved** criterion; the original problem page and ID are retained.
+The earlier DOI record predates [PR 83](https://github.com/MColbrook/AIM/pull/83). The [priority and scope review](../research/solution_reviews/2026-10-21-yui-prior-art/556-prior-solution.md) records the exact target match and dates. The later contributor manuscript is removed and its package entry point is now an [attribution note](../research/solutions/556-uniform-derivative-integration/README.md). The 13 October AI audit is retained as history and superseded for attribution.

@@ -1,10 +1,12 @@
 # AIM556: independent review of PR#83
 
+**Attribution correction, 21 October 2026:** This submission has been replaced by [Esra Sengelen Sevim's earlier solution](../2026-10-21-yui-prior-art/556-prior-solution.md). The problem remains Solved; the manuscript links below now lead to the attribution note. The earlier acceptance account is historical and does not establish novelty.
+
 Date:2026-10-13. [PR#83](https://github.com/MColbrook/AIM/pull/83), Kaiwen Jin. Reviewed head:`73683304bcf7d3e748eb1c3f4db614175c938170`. Original target:`c9929805cece044705abaaebe1cebddac1ba11a6`, compared with the unchanged current statement.
 
 **Decision: Solved.** Affirmative: the dimensional curse holds, with exponential deterministic sampling complexity for the full uniformly derivative-bounded class.
 
-[PDF](../../solutions/556-uniform-derivative-integration/paper/uniform_derivative_integration.pdf) · [Source](../../solutions/556-uniform-derivative-integration/paper/uniform_derivative_integration.tex)
+[Attribution note](../../solutions/556-uniform-derivative-integration/README.md) · [Existing-solution note](../../solutions/556-uniform-derivative-integration/README.md)
 
 ## Complete independent argument audit
 

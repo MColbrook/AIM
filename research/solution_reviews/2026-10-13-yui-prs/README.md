@@ -1,5 +1,7 @@
 # Individual solution-PR review, 13 October 2026
 
+**Additional correction, 21 October 2026:** AIM556 now cites [Esra Sengelen Sevim's existing solution](../2026-10-21-yui-prior-art/556-prior-solution.md); the later PR83 manuscript has been removed. The original processing account below is historical.
+
 **Correction, 21 October 2026:** The AIM010 manuscript has been removed and replaced by a [note pointing to Mikael Sundqvist's existing solution](../../solutions/010-mercedes-disk-partition/README.md), arXiv:2609.21964, submitted 18 September 2026. Its earlier acceptance recommendation and AI audit are superseded; the batch account below records the original processing.
 
 Forty original open submissions from Kaiwen Jin (`yuiyuiui`) were reviewed individually at immutable heads and merged separately. Each complete argument was reconstructed against its original AIM target, with references, ancillary materials, supplied integrity records and all manuscript pages checked. The reviews are independent AI audits during maintainer processing, separate from the submission's drafting/self-review; no human peer review or Lean verification is claimed.
@@ -48,7 +50,7 @@ All three saved source documents passed the built-in compiler, their exported PD
 | [#86](https://github.com/MColbrook/AIM/pull/86) | 527 | Solved | [PDF](../../../research/solutions/kaiwen-jin-527-negative-jump-flow/paper/main.pdf) | [Audit](527-review.md) |
 | [#84](https://github.com/MColbrook/AIM/pull/84) | 554 | Solved | [PDF](../../../research/solutions/554-stieltjes-rational-asymptotic-constant/paper/main.pdf) | [Audit](554-review.md) |
 | [#46](https://github.com/MColbrook/AIM/pull/46) | 555 | Solved | [PDF](../../../research/solutions/555-nonadaptive-randomization-gain/paper/main.pdf) | [Audit](555-review.md) |
-| [#83](https://github.com/MColbrook/AIM/pull/83) | 556 | Solved | [PDF](../../../research/solutions/556-uniform-derivative-integration/paper/uniform_derivative_integration.pdf) | [Audit](556-review.md) |
+| [#83](https://github.com/MColbrook/AIM/pull/83) | 556 | Solved; existing solution cited | [Existing paper](https://doi.org/10.1016/j.jco.2026.102074) | [Audit](556-review.md) |
 | [#77](https://github.com/MColbrook/AIM/pull/77) | 559 | Solved | [PDF](../../../research/solutions/559-univariate-trace-decidability/paper/trace_decidability.pdf) | [Audit](559-review.md) |
 | [#76](https://github.com/MColbrook/AIM/pull/76) | 562 | Solved | [PDF](../../../research/solutions/kaiwen-jin-562-tensor-singular-values/paper/main.pdf) | [Audit](562-review.md) |
 | [#88](https://github.com/MColbrook/AIM/pull/88) | 574 | Solved | [PDF](../../../research/solutions/574-trap-draws-percolation/paper/main.pdf) | [Audit](574-review.md) |
