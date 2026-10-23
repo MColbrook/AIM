@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**425 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**424 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -18,7 +18,7 @@
 | [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [21](#optimization-information-open) | [5](#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](#waves-quantum-systems-and-spectral-geometry) | [23](#spectral2-open) | [5](#spectral2-solved) |
 | [Imaging, control, geometry and dynamics](#imaging-control-geometry-and-dynamics) | [22](#inverse2-open) | [5](#inverse2-solved) |
-| [Fluids, kinetic theory and continuum mechanics](#fluids-kinetic-theory-and-continuum-mechanics) | [33](#continuum2-open) | [13](#continuum2-solved) |
+| [Fluids, kinetic theory and continuum mechanics](#fluids-kinetic-theory-and-continuum-mechanics) | [32](#continuum2-open) | [13](#continuum2-solved) |
 | [Stochastic growth, populations and statistical mechanics](#stochastic-growth-populations-and-statistical-mechanics) | [19](#stochastic2-open) | [10](#stochastic2-solved) |
 | [Many-body physics, quantum information and wave analysis](#many-body-physics-quantum-information-and-wave-analysis) | [18](#spectral3-open) | [12](#spectral3-solved) |
 | [Nonlinear waves, fluids and kinetic equations](#nonlinear-waves-fluids-and-kinetic-equations) | [25](#waves-fluids-kinetics-open) | [7](#waves-fluids-kinetics-solved) |
@@ -611,7 +611,6 @@
 | 406 | [Stationarity of Lipschitz weak solutions of the minimal-surface system](problems/406-lawson-osserman-stationarity.md) | 🔵 OPEN | Nonlinear elliptic PDE systems / surface energy |
 | 407 | [Polynomial growth of every entire minimal graph](problems/407-entire-minimal-graphs-polynomial-growth.md) | 🔵 OPEN | Quasilinear elliptic PDEs / minimal interfaces |
 | 408 | [Polynomial anisotropic minimal graphs in dimensions four and five](problems/408-polynomial-anisotropic-minimal-graphs.md) | 🔵 OPEN | Quasilinear elliptic PDEs / crystalline surface energy |
-| 410 | [Quadratic-growth rigidity for the complex Monge–Ampère equation](problems/410-complex-monge-ampere-quadratic-growth.md) | 🔵 OPEN | Nonlinear elliptic PDEs / geometric analysis |
 | 414 | [Existence of a nonaffine polynomial minimal graph](problems/414-isotropic-polynomial-minimal-graph.md) | 🔵 OPEN | Quasilinear elliptic PDEs / minimal interfaces |
 | 418 | [Uniqueness of the zero-average dispersion-managed soliton](problems/418-zero-dispersion-soliton-uniqueness.md) | 🔵 OPEN | Nonlocal dispersive PDEs / optical pulse design |
 | 435 | [Continuous harmonic extension of every degree-zero sphere boundary map](problems/435-degree-zero-harmonic-extension.md) | 🔵 OPEN | Elliptic systems and orientational order |
@@ -643,6 +642,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 392 | [Regularity of transport interfaces for nonconvex polyhedral targets](problems/392-polyhedral-transport-singular-interface.md) | 🟠 SOLUTION CLAIMED | Claim: affirmative codimension-two transport-interface regularity | [Proof](https://arxiv.org/pdf/2610.18756v1) | [Review](research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md) |
 | 393 | [Singular-set dimension of polyhedral partial-transport free boundaries](problems/393-polyhedral-partial-transport-free-boundary.md) | 🟠 SOLUTION CLAIMED | Claim: affirmative codimension-two partial-transport regularity | [Proof](https://arxiv.org/pdf/2610.18756v1) | [Review](research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md) |
+| 410 | [Quadratic-growth rigidity for the complex Monge–Ampère equation](problems/410-complex-monge-ampere-quadratic-growth.md) | 🟠 SOLUTION CLAIMED | Claim: affirmative quadratic rigidity under the two-sided growth bound | [Proof](https://arxiv.org/pdf/2610.26016v1) | [Review](research/literature_reports/2026-10-23-clopen-aim-410.md) |
 
 ## Stochastic growth, populations and statistical mechanics
 
@@ -1036,7 +1036,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 2026 expansion — batch 4 | 6 | 2026-09-18 |
 | September 2026 expansion — batch 5 | 8 | 2026-09-18–2026-10-13 |
 | September 2026 expansion — batch 6 | 6 | 2026-09-19–2026-10-13 |
-| September 22 expansion — PDE emphasis | 75 | 2026-09-22–2026-10-15 |
+| September 22 expansion — PDE emphasis | 74 | 2026-09-22–2026-10-15 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
 | Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 86 | 2026-09-23–2026-10-21 |
 | Community additions, October 2026 | 1 | 2026-10-21 |
