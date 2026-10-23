@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**425 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**424 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -11,7 +11,7 @@
 | [Spectral theory and spectral geometry](#spectral-theory-and-spectral-geometry) | [19](#spectral-open) | [6](#spectral-solved) |
 | [Operators, matrices and computation](#operators-matrices-and-computation) | [20](#operators-open) | [15](#operators-solved) |
 | [Inverse problems, control and dynamics](#inverse-problems-control-and-dynamics) | [18](#inverse-open) | [10](#inverse-solved) |
-| [PDEs, fluids and materials](#pdes-fluids-and-materials) | [23](#pdes-materials-open) | [9](#pdes-materials-solved) |
+| [PDEs, fluids and materials](#pdes-fluids-and-materials) | [22](#pdes-materials-open) | [9](#pdes-materials-solved) |
 | [Probability, statistics and learning](#probability-statistics-and-learning) | [27](#probability-statistics-open) | [18](#probability-statistics-solved) |
 | [Numerical analysis and scientific computing](#numerical-analysis-and-scientific-computing) | [11](#numerical-analysis-open) | [18](#numerical-analysis-solved) |
 | [Geometry and topology](#geometry-and-topology) | [39](#geometry-topology-open) | [40](#geometry-topology-solved) |
@@ -199,7 +199,6 @@
 | 427 | [Strong comparison for ordered p-harmonic fields](problems/427-p-harmonic-strong-comparison.md) | 🔵 OPEN | Nonlinear elliptic PDEs and comparison principles |
 | 437 | [Bounded variation of gradients in the Rudin–Osher–Fatemi denoising model](problems/437-rof-gradient-bounded-variation.md) | 🔵 OPEN | Variational elliptic PDEs and image denoising |
 | 438 | [Regular MEMS extremal states without an asymptotic curvature condition](problems/438-mems-extremal-without-crandall-rabinowitz.md) | 🔵 OPEN | Semilinear elliptic PDEs and electrostatic microdevices |
-| 439 | [Interior bounds for stable elliptic states with sign-changing reaction laws](problems/439-stable-semilinear-sign-changing-interior-bound.md) | 🔵 OPEN | Semilinear elliptic PDEs and reaction equilibria |
 | 440 | [A single blow-up point for singular extremal states on convex domains](problems/440-convex-domain-extremal-single-singularity.md) | 🔵 OPEN | Semilinear elliptic PDEs and thermal ignition |
 | 444 | [Optimal dimension for bounded subquadratic p-Laplace extremal states](problems/444-subquadratic-p-laplace-extremal-critical-dimension.md) | 🔵 OPEN | Singular quasilinear elliptic PDEs |
 | 631 | [Largest radius ratio in nonuniform triangulated circle packings](problems/631-triangulated-packing-radius-ratio.md) | 🟡 PARTIAL | Discrete geometry and circle packing |
@@ -220,6 +219,12 @@
 | 451 | [A mixed Sobolev estimate for reconstructing a scalar potential](problems/451-bourgain-brezis-mixed-sobolev-gradient-estimate.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/451-mixed-sobolev-counterexample/paper/main.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/451-review.md) |
 | 597 | [Entropy chain rule on nonsmooth nonconvex Lipschitz domains](problems/597-entropy-chain-rule-lipschitz.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/597-entropy-chain-rule-lipschitz/paper/manuscript.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/597-review.md) |
 | 665 | [Smooth-gradient approximation of finite-Fisher-information scores](research/resolved/665-fisher-score-gradient-closure.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/618-fisher-score/PROOF.md) | [Review](research/solution_reviews/2026-10-02/618-review.md) |
+
+### Solution claimed
+
+| ID | Problem | Status | Outcome | Proof | Review |
+| --- | --- | --- | --- | --- | --- |
+| 439 | [Interior bounds for stable elliptic states with sign-changing reaction laws](problems/439-stable-semilinear-sign-changing-interior-bound.md) | 🟠 SOLUTION CLAIMED | Claim: affirmative interior bound for stable solutions in dimensions 6–9 | [Proof](https://arxiv.org/pdf/2610.21641v1) | [Review](research/literature_reports/2026-10-23-clopen-aim-439.md) |
 
 ## Probability, statistics and learning
 
@@ -1036,7 +1041,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 2026 expansion — batch 4 | 6 | 2026-09-18 |
 | September 2026 expansion — batch 5 | 8 | 2026-09-18–2026-10-13 |
 | September 2026 expansion — batch 6 | 6 | 2026-09-19–2026-10-13 |
-| September 22 expansion — PDE emphasis | 75 | 2026-09-22–2026-10-15 |
+| September 22 expansion — PDE emphasis | 74 | 2026-09-22–2026-10-15 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
 | Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 86 | 2026-09-23–2026-10-21 |
 | Community additions, October 2026 | 1 | 2026-10-21 |
