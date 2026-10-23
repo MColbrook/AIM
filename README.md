@@ -19,9 +19,9 @@ On 13 October 2026, we cross-referenced AIM with [OpenAI's mathematics collectio
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**425 open targets** (349 open, 76 partial) · **213 solved entries** · **0 Lean verified** · **28 solution claims**. Counts reflect the statuses recorded in this collection.
+**424 open targets** (348 open, 76 partial) · **213 solved entries** · **0 Lean verified** · **29 solution claims**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 425 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 424 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
@@ -37,7 +37,7 @@ If a problem here is resolved, we encourage you to improve the proof, explain it
 | [Combinatorics, optimization and information theory](CATALOG.md#combinatorics-optimization-and-information-theory) | [21](CATALOG.md#optimization-information-open) | [5](CATALOG.md#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](CATALOG.md#waves-quantum-systems-and-spectral-geometry) | [23](CATALOG.md#spectral2-open) | [5](CATALOG.md#spectral2-solved) |
 | [Imaging, control, geometry and dynamics](CATALOG.md#imaging-control-geometry-and-dynamics) | [22](CATALOG.md#inverse2-open) | [5](CATALOG.md#inverse2-solved) |
-| [Fluids, kinetic theory and continuum mechanics](CATALOG.md#fluids-kinetic-theory-and-continuum-mechanics) | [33](CATALOG.md#continuum2-open) | [13](CATALOG.md#continuum2-solved) |
+| [Fluids, kinetic theory and continuum mechanics](CATALOG.md#fluids-kinetic-theory-and-continuum-mechanics) | [32](CATALOG.md#continuum2-open) | [13](CATALOG.md#continuum2-solved) |
 | [Stochastic growth, populations and statistical mechanics](CATALOG.md#stochastic-growth-populations-and-statistical-mechanics) | [19](CATALOG.md#stochastic2-open) | [10](CATALOG.md#stochastic2-solved) |
 | [Many-body physics, quantum information and wave analysis](CATALOG.md#many-body-physics-quantum-information-and-wave-analysis) | [18](CATALOG.md#spectral3-open) | [12](CATALOG.md#spectral3-solved) |
 | [Nonlinear waves, fluids and kinetic equations](CATALOG.md#nonlinear-waves-fluids-and-kinetic-equations) | [25](CATALOG.md#waves-fluids-kinetics-open) | [7](CATALOG.md#waves-fluids-kinetics-solved) |

@@ -2,9 +2,9 @@
 
 **Area:** Nonlinear elliptic PDEs / geometric analysis
 
-**Status:** 🔵 OPEN
+**Status:** 🟠 SOLUTION CLAIMED
 
-**Last checked:** 2026-09-22
+**Last checked:** 2026-10-23
 
 ## Problem statement
 
@@ -33,6 +33,16 @@ This equation constructs Ricci-flat Kähler metrics and is a central nonlinear e
 3. H. Chen, J. Hu and L. Sheng, *Pogorelov interior estimates and a Liouville theorem for the complex Monge–Ampère equation*, preprint (16 September 2026), §1 discussion of Székelyhidi’s quadratic-growth question and Theorem 1.3. [Full text](https://arxiv.org/html/2609.18265v1).
 
 ## Status review
+
+Reviewed 23 October 2026 against the target at [`8729eab`](https://github.com/MColbrook/AIM/blob/8729eab98bafe409b66c5e39253bf56569a62327/problems/410-complex-monge-ampere-quadratic-growth.md). Claim: affirmative quadratic rigidity under the two-sided growth bound.
+
+[Proof or source](https://arxiv.org/pdf/2610.26016v1) · [Resolution report and AI review](../research/literature_reports/2026-10-23-clopen-aim-410.md). The linked report records the exact scope and verification limits; this is not human peer review or Lean verification.
+
+**Review boundary:** The public source claims the full target. Its complete argument was read by two AI referees, not by an independent human reviewer, and no peer-reviewed publication is established; the claim awaits independent review.
+
+### Earlier review notes
+
+The following historical notes are retained; the current decision and review date are given above.
 
 **Literature check:** Open in cited literature; no later resolution located.
 
