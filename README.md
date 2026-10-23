@@ -19,9 +19,9 @@ On 13 October 2026, we cross-referenced AIM with [OpenAI's mathematics collectio
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**425 open targets** (349 open, 76 partial) · **213 solved entries** · **0 Lean verified** · **28 solution claims**. Counts reflect the statuses recorded in this collection.
+**424 open targets** (348 open, 76 partial) · **213 solved entries** · **0 Lean verified** · **29 solution claims**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 425 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 424 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
@@ -30,7 +30,7 @@ If a problem here is resolved, we encourage you to improve the proof, explain it
 | [Spectral theory and spectral geometry](CATALOG.md#spectral-theory-and-spectral-geometry) | [19](CATALOG.md#spectral-open) | [6](CATALOG.md#spectral-solved) |
 | [Operators, matrices and computation](CATALOG.md#operators-matrices-and-computation) | [20](CATALOG.md#operators-open) | [15](CATALOG.md#operators-solved) |
 | [Inverse problems, control and dynamics](CATALOG.md#inverse-problems-control-and-dynamics) | [18](CATALOG.md#inverse-open) | [10](CATALOG.md#inverse-solved) |
-| [PDEs, fluids and materials](CATALOG.md#pdes-fluids-and-materials) | [23](CATALOG.md#pdes-materials-open) | [9](CATALOG.md#pdes-materials-solved) |
+| [PDEs, fluids and materials](CATALOG.md#pdes-fluids-and-materials) | [22](CATALOG.md#pdes-materials-open) | [9](CATALOG.md#pdes-materials-solved) |
 | [Probability, statistics and learning](CATALOG.md#probability-statistics-and-learning) | [27](CATALOG.md#probability-statistics-open) | [18](CATALOG.md#probability-statistics-solved) |
 | [Numerical analysis and scientific computing](CATALOG.md#numerical-analysis-and-scientific-computing) | [11](CATALOG.md#numerical-analysis-open) | [18](CATALOG.md#numerical-analysis-solved) |
 | [Geometry and topology](CATALOG.md#geometry-and-topology) | [39](CATALOG.md#geometry-topology-open) | [40](CATALOG.md#geometry-topology-solved) |
