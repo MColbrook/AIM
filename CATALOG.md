@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**425 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**424 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -14,7 +14,7 @@
 | [PDEs, fluids and materials](#pdes-fluids-and-materials) | [23](#pdes-materials-open) | [9](#pdes-materials-solved) |
 | [Probability, statistics and learning](#probability-statistics-and-learning) | [27](#probability-statistics-open) | [18](#probability-statistics-solved) |
 | [Numerical analysis and scientific computing](#numerical-analysis-and-scientific-computing) | [11](#numerical-analysis-open) | [18](#numerical-analysis-solved) |
-| [Geometry and topology](#geometry-and-topology) | [39](#geometry-topology-open) | [40](#geometry-topology-solved) |
+| [Geometry and topology](#geometry-and-topology) | [38](#geometry-topology-open) | [40](#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [21](#optimization-information-open) | [5](#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](#waves-quantum-systems-and-spectral-geometry) | [23](#spectral2-open) | [5](#spectral2-solved) |
 | [Imaging, control, geometry and dynamics](#imaging-control-geometry-and-dynamics) | [22](#inverse2-open) | [5](#inverse2-solved) |
@@ -369,7 +369,6 @@
 | 591 | [Three or four layers for 2-degenerate graphs](problems/591-geometric-thickness-two-degenerate.md) | 🔵 OPEN | Computational geometry and graph drawing |
 | 592 | [Bounded geometric thickness for unions of two forests](problems/592-arboricity-two-geometric-thickness.md) | 🔵 OPEN | Computational geometry and graph drawing |
 | 594 | [Connectivity of plane spanning-path reconfiguration](problems/594-plane-spanning-path-connectivity.md) | 🔵 OPEN | Computational geometry and geometric reconfiguration |
-| 595 | [The minimum vertex number of a triangulation of real projective 5-space](problems/595-rp5-minimum-vertices.md) | 🔵 OPEN | Computational topology and triangulated manifolds |
 | 600 | [Sierksma's lower bound for Tverberg partitions](problems/600-sierksma-tverberg-partition-count.md) | 🔵 OPEN | Discrete geometry and convexity |
 | 611 | [Counting cospherical tuples in lattice cubes](problems/611-cospherical-lattice-tuple-count.md) | 🔵 OPEN | Discrete geometry and lattice-point counting |
 | 613 | [Unbounded weak chromatic number for geometric tetrahedral complexes](problems/613-tetrahedral-weak-chromatic.md) | 🔵 OPEN | Combinatorial topology and geometric hypergraphs |
@@ -427,6 +426,12 @@
 | 649 | [Vanishing threshold for first path homology of a random digraph](problems/649-random-digraph-path-homology-vanishing.md) | ✅ SOLVED | Rational nonregular first path homology vanishes with high probability throughout the requested exponent range above minus two-thirds. | [Proof](research/solutions/649-random-digraph-path-homology-vanishing/paper/path_homology_vanishing.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/649-review.md) |
 | 650 | [Central limit theorem for the first path Betti number](problems/650-random-digraph-path-betti-central-limit.md) | ✅ SOLVED | Rational nonregular first path Betti number CLT with true mean and variance for every requested density sequence, with variance asymptotic to the edge-count variance. | [Proof](research/solutions/650-random-digraph-path-betti-central-limit/manuscript.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/650-review.md) |
 | 661 | [Path connectivity of the infinity Z-Gromov–Wasserstein space](research/resolved/661-z-gw-infinity-path-connectivity.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/514-infinity-z-gw/PROOF.md) | [Review](research/solution_reviews/2026-10-02/514-review.md) |
+
+### Solution claimed
+
+| ID | Problem | Status | Outcome | Proof | Review |
+| --- | --- | --- | --- | --- | --- |
+| 595 | [The minimum vertex number of a triangulation of real projective 5-space](problems/595-rp5-minimum-vertices.md) | 🟠 SOLUTION CLAIMED | Claim: affirmative, the minimum is 24 vertices | [Proof](https://arxiv.org/pdf/2610.25171v1) | [Review](research/literature_reports/2026-10-23-clopen-aim-595.md) |
 
 ## Combinatorics, optimization and information theory
 
@@ -1038,7 +1043,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 2026 expansion — batch 6 | 6 | 2026-09-19–2026-10-13 |
 | September 22 expansion — PDE emphasis | 75 | 2026-09-22–2026-10-15 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
-| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 86 | 2026-09-23–2026-10-21 |
+| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 85 | 2026-09-23–2026-10-21 |
 | Community additions, October 2026 | 1 | 2026-10-21 |
 
 ## Maintaining the collection

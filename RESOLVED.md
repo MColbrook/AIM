@@ -258,6 +258,7 @@ A matching complete resolution has been announced, but independent proof review 
 | 412 | [Sharp vanishing-viscosity control time for downstream transport](problems/412-positive-transport-sharp-uniform-control-time.md) | 🟠 SOLUTION CLAIMED | Claim: negative, claimed | 2026-10-15 | [Proof](https://arxiv.org/pdf/2609.35355v1) | [Review](research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_115_140.md) |
 | 446 | [The sharp Beurling–Ahlfors bound for planar elliptic systems](problems/446-beurling-ahlfors-sharp-norm.md) | 🟠 SOLUTION CLAIMED | Claim: affirmative sharp bound, claimed | 2026-10-15 | [Proof](https://arxiv.org/pdf/2609.28311v2) | [Review](research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_115_140.md) |
 | 462 | [A finite-integrability ABP estimate for general nonlocal Pucci operators](problems/462-nonlocal-pucci-finite-integrability-abp.md) | 🟠 SOLUTION CLAIMED | Claim: negative for every strict ellipticity pair, claimed | 2026-10-15 | [Proof](https://arxiv.org/pdf/2610.16162v1) | [Review](research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_115_140.md) |
+| 595 | [The minimum vertex number of a triangulation of real projective 5-space](problems/595-rp5-minimum-vertices.md) | 🟠 SOLUTION CLAIMED | Claim: affirmative, the minimum is 24 vertices | 2026-10-23 | [Proof](https://arxiv.org/pdf/2610.25171v1) | [Review](research/literature_reports/2026-10-23-clopen-aim-595.md) |
 
 ## Reporting a solution
 

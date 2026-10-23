@@ -19,9 +19,9 @@ On 13 October 2026, we cross-referenced AIM with [OpenAI's mathematics collectio
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**425 open targets** (349 open, 76 partial) · **213 solved entries** · **0 Lean verified** · **28 solution claims**. Counts reflect the statuses recorded in this collection.
+**424 open targets** (348 open, 76 partial) · **213 solved entries** · **0 Lean verified** · **29 solution claims**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 425 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 424 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
@@ -33,7 +33,7 @@ If a problem here is resolved, we encourage you to improve the proof, explain it
 | [PDEs, fluids and materials](CATALOG.md#pdes-fluids-and-materials) | [23](CATALOG.md#pdes-materials-open) | [9](CATALOG.md#pdes-materials-solved) |
 | [Probability, statistics and learning](CATALOG.md#probability-statistics-and-learning) | [27](CATALOG.md#probability-statistics-open) | [18](CATALOG.md#probability-statistics-solved) |
 | [Numerical analysis and scientific computing](CATALOG.md#numerical-analysis-and-scientific-computing) | [11](CATALOG.md#numerical-analysis-open) | [18](CATALOG.md#numerical-analysis-solved) |
-| [Geometry and topology](CATALOG.md#geometry-and-topology) | [39](CATALOG.md#geometry-topology-open) | [40](CATALOG.md#geometry-topology-solved) |
+| [Geometry and topology](CATALOG.md#geometry-and-topology) | [38](CATALOG.md#geometry-topology-open) | [40](CATALOG.md#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](CATALOG.md#combinatorics-optimization-and-information-theory) | [21](CATALOG.md#optimization-information-open) | [5](CATALOG.md#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](CATALOG.md#waves-quantum-systems-and-spectral-geometry) | [23](CATALOG.md#spectral2-open) | [5](CATALOG.md#spectral2-solved) |
 | [Imaging, control, geometry and dynamics](CATALOG.md#imaging-control-geometry-and-dynamics) | [22](CATALOG.md#inverse2-open) | [5](CATALOG.md#inverse2-solved) |
