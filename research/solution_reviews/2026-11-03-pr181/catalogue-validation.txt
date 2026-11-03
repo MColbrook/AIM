@@ -1,0 +1,24 @@
+Integration checks, 2026-11-03
+Reviewer: Codex (AI)
+PR #181 head: 9491e1e3d3ac403100ce5ff6b8b663d0998fc922
+Current main used for conflict resolution: c661dce4e5da54acf669b8f5d554bde72916fa69
+
+PASS: supplied 15-entry checksum manifest, downloaded Git blobs, and unchanged proof files.
+PASS: all 28 exact symbolic identities and three rejection cases in normal and optimized Python; see reproduction.log.
+PASS: current AIM 1007 statement equals the submitted target; all current problem headings and IDs preserved.
+PASS: only AIM 1007's data row changed; every other subject dataset is unchanged.
+PASS: python -B scripts/catalogue.py --write --catalogue-only
+      875 open targets (367 Open, 508 Partially resolved); 192 retained (191 Solved, 1 Lean verified).
+PASS: python -B scripts/catalogue.py --check
+      Validated 1058 current problem pages, metadata, required sections, math delimiters, local links and generated indexes.
+PASS: python -B cut_problems/verify_cut.py --skip-protected
+      1067 current AIM entries; original selection decisions, 868 relocations and 57 preserved packages verified.
+      Previously verified protected research hashes were not repeated; those files were not changed.
+PASS: 39 targeted catalogue, Lean evidence, allocation, math-formatting and cut-registry unit tests.
+PASS: git diff --check
+
+An initial full-tree check also inspected our incomplete downloaded snapshots under .cache
+and found their intentionally absent sibling links, plus an unsupported diagonal-matrix macro
+in the submitted Markdown report and new review. Snapshots were moved beneath the existing
+_sources exclusion, and those two display macros were corrected without changing the proof.
+The full-tree check then passed. Catalogue machinery was unchanged.

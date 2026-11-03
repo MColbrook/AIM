@@ -1,8 +1,8 @@
 # 1007. Embedded eigenvalues in asymptotically flat twisted strips
 
 **Area:** Spectral geometry and waveguides
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -29,15 +29,30 @@ Theorem 5.1 gives the positive Hardy bound. Corollary 5.3 proves $`\sigma(H)=\si
 
 1. D. Krejčiřík and K. Zahradová, [*Quantum strips in higher dimensions*](https://files.ele-math.com/articles/oam-14-41.pdf), *Operators and Matrices* **14** (2020), 635–665, [DOI:10.7153/oam-2020-14-41](https://doi.org/10.7153/oam-2020-14-41), Eq. (3.1), Theorem 5.1, Corollary 5.3 and Open Problem 5.6 (printed p. 654). [Original arXiv version](https://arxiv.org/abs/1906.02431v1).
 2. D. Krejčiřík, [*Spectral geometry: old questions and new answers*](https://arxiv.org/html/2609.28602v1), arXiv:2609.28602v1 (2026), Section 2.3. This survey's embedded-eigenvalue discussion uses different domain geometries.
+3. S. Sadeghi, [*An embedded eigenvalue in an asymptotically flat purely twisted strip*](../research/solutions/siavash-sadeghi-1007/twisted-strip-counterexample.pdf), 2 November 2026, revised 3 November 2026. [TeX source](../research/solutions/siavash-sadeghi-1007/twisted-strip-counterexample.tex), [solution package](../research/solutions/siavash-sadeghi-1007/README.md), and [independent maintainer audit](../research/solution_reviews/2026-11-03-pr181/1007-review.md).
 
 ## Status review
 
+**Outcome:** Counterexample.
 
-**Known cases:** The asymptotically flat nontrivially twisted strip has all Corollary 5.3 hypotheses and only eigenvalues strictly above threshold are asked. Other waveguide geometries and the known Hardy threshold exclusion do not settle embedded point spectrum here.
+**Resolution, 2026-11-03:** Sadeghi constructs an admissible purely twisted strip with a nonzero square-integrable eigenfunction strictly between its first two transverse thresholds. For unit half-width, put
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+```math
+m=\frac13-\frac2{\pi^2},\qquad k=(2m)^{-1/2},\qquad
+\lambda_* = \frac{\pi^4}{4(\pi^2-6)}.
+```
 
-### Online recheck, 2026-10-30
+For every sufficiently large scale $`S`$, some phase $`\delta\in[0,2\pi]`$ makes the twist profile
+
+```math
+q(s)^2=\frac{16k}{S+|s|}\left(1+\frac12\cos(2k|s|+\delta)\right)
+```
+
+support this embedded eigenvalue. Taking $`S\ge12k`$ as well as the proof's contraction bounds gives $`\|q\|_\infty\le\sqrt2`$; the twist is nonzero and tends to zero at both ends. A straight reference curve with rotating normal realizes the required metric and satisfies every hypothesis in the Problem statement. Dilation gives a counterexample for every half-width $`a>0`$, at energy $`a^{-2}\lambda_*`$, in every allowed ambient dimension.
+
+The [independent maintainer audit](../research/solution_reviews/2026-11-03-pr181/1007-review.md) checked the complete argument at PR revision `9491e1e3d3ac403100ce5ff6b8b663d0998fc922`, including all closed transverse modes, the weighted inverse estimates, the exact nonlocal scalar equation, phase selection, and the full operator-domain identity after reflection. Codex performed this AI review on 3 November 2026 and reproduced the 28 exact symbolic identities in normal and optimized Python. This is an analytic existence proof; no numerical scale or phase, human peer review, or Lean verification is asserted. The separate resonance question remains outside this entry.
+
+### Earlier status checks, through 2026-10-30
 
 The asymptotically flat nontrivially twisted strip has all Corollary 5.3 hypotheses and only eigenvalues strictly above threshold are asked. Other waveguide geometries and the known Hardy threshold exclusion do not settle embedded point spectrum here.
 

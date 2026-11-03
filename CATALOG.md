@@ -2,13 +2,13 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**876 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**875 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
 | Subject group | Open targets | Solved |
 | --- | ---: | ---: |
-| [Spectral theory and spectral geometry](#spectral-theory-and-spectral-geometry) | [47](#spectral-open) | [8](#spectral-solved) |
+| [Spectral theory and spectral geometry](#spectral-theory-and-spectral-geometry) | [46](#spectral-open) | [9](#spectral-solved) |
 | [Operators, matrices and computation](#operators-matrices-and-computation) | [69](#operators-open) | [18](#operators-solved) |
 | [Inverse problems, control and dynamics](#inverse-problems-control-and-dynamics) | [21](#inverse-open) | [8](#inverse-solved) |
 | [PDEs, fluids and materials](#pdes-fluids-and-materials) | [50](#pdes-materials-open) | [11](#pdes-materials-solved) |
@@ -64,7 +64,6 @@
 | 022 | [The regular-polygon Steklov conjecture](problems/022-steklov-polygon-optimizer.md) | 🟡 PARTIAL | Boundary spectral optimization |
 | 295 | [Dirichlet spectral determination of smooth strictly convex planar domains](problems/295-convex-dirichlet-spectrum.md) | 🔵 OPEN | Spectral theory and spectral geometry |
 | 1006 | [Fourier leakage after symmetric rearrangement](problems/1006-fourier-leakage-after-symmetric-rearrangement.md) | 🟡 PARTIAL | Harmonic analysis and quantitative uncertainty principles |
-| 1007 | [Embedded eigenvalues in asymptotically flat twisted strips](problems/1007-embedded-eigenvalues-in-asymptotically-flat-twisted-strips.md) | 🟡 PARTIAL | Spectral geometry and waveguides |
 | 1008 | [The Wang-Xia lower bound for a Neumann biharmonic Steklov eigenvalue](problems/1008-the-wang-xia-lower-bound-for-a-neumann-biharmonic-steklov-eigenvalue.md) | 🟡 PARTIAL | Spectral geometry |
 | 1009 | [A Hodge spectral gap from lower sectional curvature, volume, and diameter](problems/1009-a-hodge-spectral-gap-from-lower-sectional-curvature-volume-and-diameter.md) | 🟡 PARTIAL | Spectral theory and spectral geometry |
 | 1010 | [Nonempty spectrum of a positive-elliptic polynomial pencil in odd dimensions](problems/1010-nonempty-spectrum-of-a-positive-elliptic-polynomial-pencil-in-odd-dimensions.md) | 🟡 PARTIAL | Spectral theory and partial differential equations |
@@ -106,6 +105,7 @@
 | 015 | [Extended states in the three-dimensional Anderson model](problems/015-anderson-extended-states.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026/paper.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
 | 652 | [The Robin fundamental gap conjecture](research/resolved/652-robin-fundamental-gap.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/021-robin-gap-counterexample/robin_gap_021.pdf) | [Review](research/solution_reviews/2026-10-02/021-review.md) |
 | 653 | [Exponential interior decay for smooth Steklov domains](research/resolved/653-steklov-smooth-interior-decay.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-steklov-024/steklov_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/024-review.md) |
+| 1007 | [Embedded eigenvalues in asymptotically flat twisted strips](problems/1007-embedded-eigenvalues-in-asymptotically-flat-twisted-strips.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-1007/twisted-strip-counterexample.pdf) | [Review](research/solution_reviews/2026-11-03-pr181/1007-review.md) |
 | 1026 | [Steklov zeros in a fixed boundary collar](problems/1026-steklov-zeros-in-a-fixed-boundary-collar.md) | ✅ SOLVED | Counterexample | [Proof](https://arxiv.org/pdf/2610.28391v2) | [Review](research/solution-status-audit-2026-11-03/lane-d/1026.json) |
 
 ## Operators, matrices and computation
@@ -1529,7 +1529,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 22 expansion — PDE emphasis | 88 | 2026-09-22–2026-10-30 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
 | Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 117 | 2026-09-23–2026-11-03 |
-| Retained further problems, integrated 30 October 2026 | 401 | 2026-10-30–2026-11-03 |
+| Retained further problems, integrated 30 October 2026 | 400 | 2026-10-30–2026-11-03 |
 
 ## Maintaining the collection
 

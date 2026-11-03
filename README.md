@@ -15,15 +15,15 @@ Contributions made with or without AI are welcome.
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**876 open targets** (367 open, 509 partial) · **190 solved entries** · **1 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
+**875 open targets** (367 open, 508 partial) · **191 solved entries** · **1 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 876 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 875 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
 | Subject group | Open targets | Solved |
 | --- | ---: | ---: |
-| [Spectral theory and spectral geometry](CATALOG.md#spectral-theory-and-spectral-geometry) | [47](CATALOG.md#spectral-open) | [8](CATALOG.md#spectral-solved) |
+| [Spectral theory and spectral geometry](CATALOG.md#spectral-theory-and-spectral-geometry) | [46](CATALOG.md#spectral-open) | [9](CATALOG.md#spectral-solved) |
 | [Operators, matrices and computation](CATALOG.md#operators-matrices-and-computation) | [69](CATALOG.md#operators-open) | [18](CATALOG.md#operators-solved) |
 | [Inverse problems, control and dynamics](CATALOG.md#inverse-problems-control-and-dynamics) | [21](CATALOG.md#inverse-open) | [8](CATALOG.md#inverse-solved) |
 | [PDEs, fluids and materials](CATALOG.md#pdes-fluids-and-materials) | [50](CATALOG.md#pdes-materials-open) | [11](CATALOG.md#pdes-materials-solved) |
@@ -246,6 +246,7 @@ Complete resolutions recorded in this collection, including counterexamples to t
 | 660 | [Small-ball ratios for general symmetric product priors](research/resolved/660-product-prior-small-ball-ratios.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-506/aim506_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/506-review.md) |
 | 662 | [Variance ordering for Gaussian alpha-divergence approximations](research/resolved/662-gaussian-variational-variance-ordering.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-457-558/aim_558_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/558-review.md) |
 | 665 | [Smooth-gradient approximation of finite-Fisher-information scores](research/resolved/665-fisher-score-gradient-closure.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/618-fisher-score/PROOF.md) | [Review](research/solution_reviews/2026-10-02/618-review.md) |
+| 1007 | [Embedded eigenvalues in asymptotically flat twisted strips](problems/1007-embedded-eigenvalues-in-asymptotically-flat-twisted-strips.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-1007/twisted-strip-counterexample.pdf) | [Review](research/solution_reviews/2026-11-03-pr181/1007-review.md) |
 | 1026 | [Steklov zeros in a fixed boundary collar](problems/1026-steklov-zeros-in-a-fixed-boundary-collar.md) | ✅ SOLVED | Counterexample | [Proof](https://arxiv.org/pdf/2610.28391v2) | [Review](research/solution-status-audit-2026-11-03/lane-d/1026.json) |
 
 ## Local working material
