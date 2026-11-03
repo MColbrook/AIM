@@ -1,8 +1,8 @@
 # 1007. Embedded eigenvalues in asymptotically flat twisted strips
 
 **Area:** Spectral geometry and waveguides
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** 🟠 SOLUTION CLAIMED
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -32,10 +32,15 @@ Theorem 5.1 gives the positive Hardy bound. Corollary 5.3 proves $`\sigma(H)=\si
 
 ## Status review
 
+### Counterexample submitted, 2026-11-03
 
-**Known cases:** The asymptotically flat nontrivially twisted strip has all Corollary 5.3 hypotheses and only eigenvalues strictly above threshold are asked. Other waveguide geometries and the known Hardy threshold exclusion do not settle embedded point spectrum here.
+**Siavash Sadeghi** proposes a negative resolution of the full point-spectrum target. For every half-width, a sufficiently small positive oscillatory twist, decaying at infinity, produces an eigenvalue strictly between the first two transverse thresholds. The construction retains all transverse modes and selects a matching phase by a continuity argument.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+The [proof PDF](../research/solutions/siavash-sadeghi-1007/twisted-strip-counterexample.pdf) and [editable source](../research/solutions/siavash-sadeghi-1007/twisted-strip-counterexample.tex) are accompanied by a [full target comparison](../research/solutions/siavash-sadeghi-1007/RESOLUTION_REPORT.md), [fresh mathematical audit](../research/solutions/siavash-sadeghi-1007/MATHEMATICAL_AUDIT.md), [reproduction record](../research/solutions/siavash-sadeghi-1007/REPRODUCTION_RECORD.md), and [dated submission search](../research/solutions/siavash-sadeghi-1007/TARGET_AUDIT.md).
+
+Codex (AI) reviewed the complete supplied proof and re-derived its key estimates on 3 November 2026; no substantive defect was identified. Exact symbolic checks support the algebra, not the complete analytic proof. Further independent mathematical review remains pending, and no human peer review or formal verification is claimed. The scale threshold and selected phase are given by existence, not by certified numerical values. The separate resonance question is outside this entry.
+
+The earlier status reviews below describe the evidence available at their dates.
 
 ### Online recheck, 2026-10-30
 
