@@ -1,0 +1,662 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{microtype}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\R}{\mathbb R}
+\newcommand{\D}{\mathcal D}
+\newcommand{\Lop}{\mathcal L}
+\newcommand{\Kop}{\mathcal K}
+\newcommand{\Tcal}{\mathcal T}
+\newcommand{\Ical}{\mathcal I}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\mathscr}{\mathcal}
+\title{An embedded eigenvalue in an asymptotically flat\protect\\purely twisted strip}
+\author{Siavash Sadeghi}
+\date{2 November 2026; revised 3 November 2026}
+\hypersetup{pdftitle={An embedded eigenvalue in an asymptotically flat purely twisted strip},pdfauthor={Siavash Sadeghi},pdfsubject={Proposed counterexample for AIM 1007}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a counterexample to the universal absence assertion in AIM problem 1007. An explicit one-parameter family of positive twisting profiles contains an embedded eigenvalue for every sufficiently large value of a scale parameter. The proof treats the complete transverse operator, uses a contraction in global Sobolev spaces, and enforces the longitudinal matching condition through a continuous antiperiodic phase family.
+\end{abstract}
+
+\noindent\textbf{Target and status.}
+This is a proposed negative resolution of
+\href{https://github.com/MColbrook/AIM/blob/ee5c5c52f527db2f310cb0734bbebc9f7b95aac8/problems/1007-embedded-eigenvalues-in-asymptotically-flat-twisted-strips.md}{AIM problem 1007},
+at repository revision \texttt{ee5c5c52f527}. It concerns the
+point-spectrum question strictly above the first transverse threshold;
+the separate resonance question in the source is outside this target.
+The accompanying audit records a fresh AI review and symbolic checks,
+not a human peer review or a formal verification.
+
+For $a>0$ let $\Omega_a=\R\times(-a,a)$ and
+$E_j=(j\pi/(2a))^2$. The admissible class consists of
+$q\in L^\infty(\R)$ such that $q\ge0$, $q$ is not almost everywhere zero,
+$a\norm q_\infty\le\sqrt2$, and
+$\operatorname*{ess\,sup}_{|s|>R}q(s)\to0$ as $R\to\infty$.
+With $f_q(s,t)=\sqrt{1+t^2q(s)^2}$, let $H_q$ be the selfadjoint operator
+in $L^2(\Omega_a,f_q\,ds\,dt)$ defined by
+\[
+ h_q[\psi]=\int_{\Omega_a}
+   \bigl(f_q^{-1}|\psi_s|^2+f_q|\psi_t|^2\bigr)\,ds\,dt,
+ \qquad D(h_q)=H_0^1(\Omega_a).
+\]
+We denote this admissible class by $\mathscr Q_a$.
+
+\begin{theorem}\label{thm:main}
+Set
+\[
+ m=\frac13-\frac2{\pi^2},\qquad
+ k=\frac1{\sqrt{2m}},\qquad
+ \lambda_*=\frac{\pi^2}{4}+k^2=\frac{\pi^4}{4(\pi^2-6)}.
+\]
+There is a finite $S_0$ such that, for every $S\ge S_0$, some
+$\delta\in[0,2\pi]$ has the following property. The profile
+\begin{equation}\label{eq:profile}
+ q_{S,\delta}(s)
+ =\left[\frac{16k}{S+|s|}
+     \left(1+\frac12\cos(2k|s|+\delta)\right)\right]^{1/2}
+\end{equation}
+belongs to $\mathscr Q_1$, and $H_{q_{S,\delta}}$ has a nonzero eigenfunction
+in $H^2(\R\times(-1,1))\cap H_0^1(\R\times(-1,1))$ at energy $\lambda_*$.
+In particular, $E_1<\lambda_*<E_2$.
+For every $a>0$, the profile $q_a(s)=a^{-1}q_{S,\delta}(s/a)$ belongs to
+$\mathscr Q_a$ and has an embedded eigenvalue $a^{-2}\lambda_*$.
+\end{theorem}
+
+Only the phase is selected by existence. It is specified below as a zero
+of a continuous real function obtained from convergent linear inverses.
+No transverse truncation or numerical spectral assertion is used.
+
+The intrinsic Dirichlet Laplace--Beltrami operator describes a particle
+on a two-dimensional twisted ribbon, confined transversely by its edges
+but free to propagate longitudinally. This is a surface or ribbon
+quantum waveguide; the result concerns this model rather than a solid
+three-dimensional twisted tube. In the asymptotic free guide, the
+transverse mode $\chi_j$ has dispersion $\lambda=E_j+p^2$, where $p$
+is longitudinal momentum. A channel is open when $\lambda>E_j$,
+permitting longitudinal propagation. Since $\lambda_*\in(E_1,E_2)$,
+the first channel is open, and the constructed state's component
+$u\chi_1$ in that channel is nonzero. Nevertheless, its eigenfunction
+is square integrable in $f_q\,ds\,dt$ and defines a normalizable
+stationary state: a bound state in the continuum. Localization concerns
+the probability distribution, not compact support. Under Schr\"odinger
+evolution, the eigenstate changes only by a global phase, so its
+probability density remains stationary despite the available
+longitudinal escape channel. The construction achieves this through
+oscillatory long-range twisting.
+
+\section{Half-strip formulation and uniform estimates}
+
+Work with $a=1$. For $J=(-1,1)$ define the transverse Hilbert space
+and Dirichlet operator by
+\[
+ \mathfrak h=L^2(J,dt),\qquad T=-\partial_t^2,\qquad
+ D(T)=H^2(J)\cap H_0^1(J).
+\]
+Its normalized orthonormal eigenbasis $(\chi_j)_{j\ge1}$ is
+\[
+ \chi_j(t)=
+ \begin{cases}
+  \cos(j\pi t/2),&j\text{ odd},\\
+  \sin(j\pi t/2),&j\text{ even},
+ \end{cases}
+ \qquad T\chi_j=E_j\chi_j,\qquad E_j=(j\pi/2)^2.
+\]
+Write $\chi=\chi_1=\cos(\pi t/2)$. The transverse orthogonal projections are
+\[
+ P_Tw=\chi_1\int_J\overline{\chi_1(t)}w(t)\,dt,\qquad
+ Q_T=I_{\mathfrak h}-P_T.
+\]
+Their closed-channel space and the transverse restriction are
+\[
+ \mathfrak h_Q=\operatorname{Ran}Q_T
+ =\{\chi_1\}^{\perp}
+ =\overline{\operatorname{span}}\{\chi_j:j\ge2\},\qquad
+ T_Q=T\big|_{D(T)\cap\mathfrak h_Q}.
+\]
+The space $\mathfrak h_Q$ reduces $T$, so $T_Q$ is selfadjoint in
+$\mathfrak h_Q$ and $T_Q\ge E_2$. All modes $j\ge2$ are retained.
+Since $\pi^2>8$, the formula for $\lambda_*$ gives $\lambda_*<E_2$.
+
+On the half-strip and its unweighted auxiliary Hilbert space,
+\[
+ \D=(0,\infty)\times J,\qquad
+ \mathfrak H=L^2(\D,ds\,dt)=L^2((0,\infty);\mathfrak h),
+\]
+define the fibrewise extensions and their closed-channel range by
+\[
+ P_{\D}=I_{L^2(0,\infty)}\otimes P_T,\qquad
+ Q_{\D}=I_{L^2(0,\infty)}\otimes Q_T,\qquad
+ \mathfrak H_Q=\operatorname{Ran}Q_{\D}
+              =L^2((0,\infty);\mathfrak h_Q).
+\]
+These projections are orthogonal in the unweighted auxiliary spaces
+used for the divergence-form equation, not in the physical space
+$L^2(\D,f_\delta\,ds\,dt)$. The perturbed operator need not preserve
+this decomposition.
+
+Put $\rho(s)=S+s$, with $S\ge1$. Constants below may depend on the
+fixed $k$ and $\lambda_*$, but are independent of $\delta$ and sufficiently
+large $S$. For $\mathcal U=(0,\infty)$ or $\D$ and $j\ge0$ define
+\[
+ Y_j(\mathcal U)=\{F:\rho^jF\in L^2(\mathcal U)\},\qquad
+ X_j(\mathcal U)=
+ \{v:\rho^j\partial^\nu v\in L^2(\mathcal U),\ |\nu|\le2\},
+\]
+with the norms
+\[
+ \norm{F}_{Y_j(\mathcal U)}=\norm{\rho^jF}_{L^2(\mathcal U)},\qquad
+ \norm{v}_{X_j(\mathcal U)}
+ =\sum_{|\nu|\le2}\norm{\rho^j\partial^\nu v}_{L^2(\mathcal U)}.
+\]
+All underlying norms use unweighted Lebesgue measure. On the half-line,
+$\partial^\nu$ denotes the longitudinal derivatives of orders $0,1,2$;
+on the half-strip it denotes all derivatives in $s,t$ of total order
+at most two. Thus $X_0(\mathcal U)=H^2(\mathcal U)$.
+Projection and boundary conditions are additional conditions, not
+part of these definitions. For $\R^2$-valued functions we write
+$X_j((0,\infty);\R^2)$ and $Y_j((0,\infty);\R^2)$, using the same
+definitions with Euclidean norms. All constructions below preserve
+real-valued functions; we use their real subspaces when selecting the phase.
+
+On $s\ge0$ set
+\begin{equation}\label{eq:b}
+ b_\delta(s)=\frac{16k}{\rho(s)}
+       \left(1+\frac12\cos(2ks+\delta)\right),\qquad
+ f_\delta(s,t)=\sqrt{1+t^2b_\delta(s)}.
+\end{equation}
+For each fixed derivative order $j$,
+\begin{equation}\label{eq:b-bound}
+ |b_\delta^{(j)}(s)|\le C_j\rho(s)^{-1}.
+\end{equation}
+The eigenvalue equation for the stated form is exactly $\Lop_\delta\psi=0$, where
+\begin{align}
+ \Lop_\delta
+ &=-\partial_s(f_\delta^{-1}\partial_s)
+   -\partial_t(f_\delta\partial_t)-\lambda_*f_\delta,
+ \label{eq:L}\\
+ \Lop_{\rm free}&=-\partial_s^2-\partial_t^2-\lambda_*,
+ \qquad \Kop_\delta=\Lop_\delta-\Lop_{\rm free}.\notag
+\end{align}
+On expanding derivatives, every coefficient of the order-two differential
+operator $\Kop_\delta$ is bounded by $C/\rho(s)$. They are combinations of
+$f_\delta^{-1}-1$, $\partial_sf_\delta^{-1}$, $f_\delta-1$,
+$\partial_tf_\delta$, and $\lambda_*(f_\delta-1)$. Consequently
+\begin{align}
+ \norm{\Kop_\delta v}_{Y_1(\D)}&\le C\norm{v}_{H^2(\D)},\label{eq:K1}\\
+ \norm{\Kop_\delta v}_{Y_1(\D)}&\le \frac CS\norm{v}_{X_1(\D)},
+ &\norm{\Kop_\delta v}_{Y_2(\D)}&\le C\norm{v}_{X_1(\D)}.
+ \label{eq:K2}
+\end{align}
+These statements do not require a longitudinal boundary condition on $v$.
+The coefficient maps in these operator norms are continuous and
+$2\pi$-periodic in $\delta$.
+
+Let $N$ be the longitudinal Neumann operator in $L^2(0,\infty)$:
+\[
+ N=-\frac{d^2}{ds^2},\qquad
+ D(N)=\{u\in H^2(0,\infty):u'(0)=0\}.
+\]
+
+\begin{lemma}[Free closed inverse]\label{lem:closed-free}
+The operator
+\[
+ A_0=N\otimes I_{\mathfrak h_Q}
+       +I_{L^2(0,\infty)}\otimes T_Q-\lambda_*I
+ \quad\text{in }\mathfrak H_Q
+\]
+has domain
+\[
+ D(A_0)=\{v\in H^2(\D)\cap\mathfrak H_Q:
+          v(s,\pm1)=0,\ \partial_sv(0,t)=0\},
+\]
+with boundary conditions in the Sobolev trace sense. Its inverse satisfies
+\[
+ \norm{A_0^{-1}F}_{H^2(\D)}\le C\norm{F}_{L^2(\D)},\qquad
+ \norm{A_0^{-1}F}_{X_1(\D)}\le C\norm{F}_{Y_1(\D)},
+\]
+for $F\in\mathfrak H_Q$, with the additional weighted condition in the
+second estimate, and with $C$ independent of $S\ge1$.
+\end{lemma}
+
+\begin{proof}
+Expand $v(s,t)=\sum_{j\ge2}v_j(s)\chi_j(t)$ in the transverse
+Dirichlet eigenbasis. The $j$-th component of $A_0v$ is
+$-v_j''+(E_j-\lambda_*)v_j$. Applying the continuous cosine transform
+in the longitudinal variable $s$, corresponding to Neumann data at zero,
+gives the multipliers
+\[
+ A_0:\ \xi^2+E_j-\lambda_*,
+ \qquad A_0^{-1}:\ (\xi^2+E_j-\lambda_*)^{-1}.
+\]
+Here $E_j$ comes from the discrete transverse expansion and $\xi^2$
+from the continuous longitudinal transform. The spectral gap gives
+\[
+ \sup_{j\ge2,\,\xi\ge0}
+ \frac{1+\xi^2+E_j}{\xi^2+E_j-\lambda_*}<\infty.
+\]
+This proves the unweighted estimate, including mixed derivatives, and
+identifies the domain as the stated closed-channel subspace of $H^2(\D)$.
+
+For the weighted estimate use $w(s)=S+\sqrt{1+s^2}$.
+Then $\rho\le w\le2\rho$, $w'(0)=0$, and $|w'|+|w''|\le C$.
+Choose bounded smooth truncations $w_N$ tending pointwise to $w$, with
+$w_N\le w$, $w_N'(0)=0$, and uniformly bounded first and second
+derivatives. Such truncations result by smoothly flattening
+$\sqrt{1+s^2}$ above level $N$ before adding $S$.
+For $v=A_0^{-1}F$, multiplication by $w_N$ preserves both boundary
+conditions and $\mathfrak H_Q$. Hence
+\[
+ A_0(w_Nv)=w_NF-2w_N'v_s-w_N''v.
+\]
+The unweighted estimate gives
+\[
+ \norm{w_Nv}_{H^2(\D)}
+ \le C\bigl(\norm{wF}_{L^2(\D)}+\norm{v}_{H^2(\D)}\bigr)
+ \le C\norm{wF}_{L^2(\D)}.
+\]
+The product rule bounds all $w_N\partial^\nu v$ for $|\nu|\le2$
+by the same right-hand side. Fatou's lemma proves the assertion.
+The weight chosen here preserves the Neumann condition at zero.
+\end{proof}
+
+\begin{lemma}[Exact elimination of the closed modes]\label{lem:eliminate}
+For sufficiently large $S$ and every scalar $u\in H^2(0,\infty)$, there
+is a unique $z=z_\delta[u]\in X_1(\D)\cap\mathfrak H_Q$, with transverse Dirichlet
+conditions and $z_s(0,t)=0$ such that
+\[
+ Q_{\D}\Lop_\delta(u\chi+z)=0\quad\text{on }\D.
+\]
+It satisfies
+\begin{equation}\label{eq:z-est}
+ \begin{aligned}
+ \norm{z_\delta[u]}_{X_1(\D)}&\le C\norm{u}_{H^2(0,\infty)},\\
+ \norm{\ip{\chi}{\Kop_\delta z_\delta[u]}_{\mathfrak h}}_{Y_2((0,\infty))}
+ &\le C\norm{u}_{H^2(0,\infty)}.
+ \end{aligned}
+\end{equation}
+The resulting linear maps are continuous and $2\pi$-periodic in $\delta$.
+\end{lemma}
+
+\begin{proof}
+Let $R_0=A_0^{-1}$. The equation for $z$ is the fixed-point equation
+\begin{equation}\label{eq:z-fp}
+ z=-R_0Q_{\D}\Kop_\delta(u\chi)-R_0Q_{\D}\Kop_\delta z.
+\end{equation}
+On the closed subspace of $X_1(\D)\cap\mathfrak H_Q$ carrying the
+stated boundary conditions, the second operator has norm at most $C/S$,
+by Lemma~\ref{lem:closed-free} and \eqref{eq:K2}. The first term has
+$X_1(\D)$ norm at most $C\norm{u}_{H^2(0,\infty)}$ by \eqref{eq:K1}.
+The Neumann series proves existence, uniqueness and the first bound.
+The second follows from the last estimate in \eqref{eq:K2}.
+The lifted projection $Q_{\D}$ is bounded on the strip spaces used:
+it acts fibrewise in $t$, and the complementary transverse projection
+$P_T$ has the fixed smooth range spanned by $\chi$.
+Uniform convergence of the Neumann series proves parameter continuity.
+
+No boundary condition on $u$ is imposed here. This is an interior
+differential elimination with $z_s(0)=0$. The full longitudinal boundary
+condition will be enforced later by $u'(0)=0$.
+\end{proof}
+
+\section{The exact scalar equation}
+
+Define the scalar functions
+\begin{align}
+ A(b)&=\int_J(1+t^2b)^{-1/2}\chi^2\,dt,\notag\\
+ B(b)&=\int_J(1+t^2b)^{1/2}
+           (\chi'^2-\lambda_*\chi^2)\,dt,\notag\\
+ \alpha(s)&=A(b_\delta(s)),\qquad
+ \beta(s)=B(b_\delta(s)).\label{eq:alpha-beta}
+\end{align}
+Writing $\psi=u\chi+z_\delta[u]$, its remaining equation is precisely
+\begin{equation}\label{eq:scalar-u}
+ -(\alpha u')'+\beta u+F_\delta u=0,\qquad
+ F_\delta u=\ip{\chi}{\Kop_\delta z_\delta[u]}_{\mathfrak h}.
+\end{equation}
+Here the inner product is taken in $t$, leaving a scalar function of $s$.
+Indeed, $P_{\D}\Lop_{\rm free}z=0$, and transverse integration by parts gives
+the coefficient $\beta$ in \eqref{eq:scalar-u}.
+
+The elementary identities
+\[
+ \int_Jt^2\chi^2=m,\qquad
+ \int_Jt^2\chi'^2=E_1m+1
+\]
+give, uniformly for small nonnegative $b$,
+\begin{equation}\label{eq:expansion}
+ A(b)=1-\frac m2b+O(b^2),\qquad
+ B(b)=-k^2+\frac{1-mk^2}{2}b+O(b^2).
+\end{equation}
+The second identity follows by integrating
+$\int t^2\chi(-\chi'')=E_1m$ once and using $\int 2t\chi\chi'=-1$.
+
+Put $y=\sqrt\alpha\,u$. Direct differentiation gives
+\[
+ -(\alpha u')'+\beta u
+ =\sqrt\alpha\,(-y''-W_\delta y),\qquad
+ W_\delta=-\frac\beta\alpha-\frac{\alpha''}{2\alpha}
+                       +\frac{(\alpha')^2}{4\alpha^2}.
+\]
+Thus \eqref{eq:scalar-u} is equivalent to
+\begin{equation}\label{eq:y-exact}
+ y''+W_\delta y
+ =\alpha^{-1/2}F_\delta(\alpha^{-1/2}y).
+\end{equation}
+Taylor's formula for the smooth functions $A,B$, and \eqref{eq:b-bound},
+give
+\begin{equation}\label{eq:Omega-expand}
+ W_\delta
+ =k^2+(mk^2-\tfrac12)b_\delta+\frac m4b_\delta''+r_{1,\delta},
+ \qquad |r_{1,\delta}(s)|\le C\rho(s)^{-2}.
+\end{equation}
+All remainders here are bounded by a constant times
+$b^2+|bb''|+(b')^2$; no uncontrolled longitudinal derivative occurs.
+The choice of $k$ gives $mk^2=1/2$. Differentiating \eqref{eq:b} twice
+therefore yields
+\begin{equation}\label{eq:resonance}
+ W_\delta=k^2-\frac{4k}{\rho}\cos(2ks+\delta)+r_\delta,
+ \qquad |r_\delta(s)|\le C\rho(s)^{-2}.
+\end{equation}
+The complete equation, with every closed mode included, is
+\begin{equation}\label{eq:full-scalar}
+ \mathfrak L_\delta y:=
+ y''+\left(k^2-\frac{4k}{\rho}\cos(2ks+\delta)\right)y
+ =\Tcal_\delta y,
+\end{equation}
+where
+\[
+ \Tcal_\delta y=
+ \alpha^{-1/2}F_\delta(\alpha^{-1/2}y)-r_\delta y.
+\]
+Since $\alpha$ stays bounded away from zero, its inverse square root
+and its first two derivatives are uniformly bounded.
+Lemma~\ref{lem:eliminate} and \eqref{eq:resonance} show that
+\begin{equation}\label{eq:T-bound}
+ \Tcal_\delta:H^2(0,\infty)\longrightarrow Y_2((0,\infty)),\qquad
+ \norm{\Tcal_\delta y}_{Y_2((0,\infty))}\le C\norm{y}_{H^2(0,\infty)}.
+\end{equation}
+This is an exact bounded linear operator, generally nonlocal in $s$.
+It is real, continuous and $2\pi$-periodic in $\delta$ in the indicated
+operator norm. Uniform bounds for the Taylor remainders and their
+$\delta$ derivatives give the same assertion for multiplication by
+$r_\delta$.
+
+\section{A scalar right inverse with a small norm}
+
+\begin{lemma}\label{lem:scalar}
+For sufficiently large $S$ there are real functions
+$h_\delta\in H^2(0,\infty)$ and real bounded linear maps
+$G_\delta:Y_2((0,\infty))\to H^2(0,\infty)$ such that
+\[
+ \mathfrak L_\delta h_\delta=0,\qquad
+ \mathfrak L_\delta G_\delta g=g,\qquad
+ \norm{G_\delta}_{Y_2((0,\infty))\to H^2(0,\infty)}\le C/S.
+\]
+The family $G_\delta$ is continuous and $2\pi$-periodic, while
+$h_\delta$ is continuous and satisfies $h_{\delta+2\pi}=-h_\delta$.
+For the vector $e_\delta\in\R^2$ and the scalar trace functional
+$\ell_\delta:H^2(0,\infty)\to\R$ defined by
+\[
+ e_\delta=
+ \begin{pmatrix}\cos(3\pi/4-\delta/2)\\
+                 \sin(3\pi/4-\delta/2)\end{pmatrix},
+ \qquad
+ \ell_\delta(y)=e_\delta^{\mathsf T}
+            \begin{pmatrix}y(0)\\y'(0)/k\end{pmatrix},
+\]
+the normalization is
+\begin{equation}\label{eq:normalization}
+ \ell_\delta(h_\delta)=1/S,\qquad
+ \ell_\delta(G_\delta g)=0.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Start with $\mathfrak L_\delta y=g$, with scalar
+$g\in Y_2((0,\infty))$, and put $v=(y,y'/k)^{\mathsf T}\in\R^2$.
+Let $R(s),E$ be the following real $2\times2$ matrices and $e_2\in\R^2$:
+\[
+ R(s)=\begin{pmatrix}\cos ks&\sin ks\\-\sin ks&\cos ks\end{pmatrix},
+ \quad E=\begin{pmatrix}0&0\\1&0\end{pmatrix},
+ \quad e_2=\begin{pmatrix}0\\1\end{pmatrix}.
+\]
+Writing $v=R(s)a$, with $a(s)\in\R^2$, converts the equation exactly to
+\begin{equation}\label{eq:rotate}
+ a'=\frac{M_\delta+N_\delta(s)}\rho a+R(s)^{-1}e_2g/k,\qquad
+ M_\delta=\begin{pmatrix}\sin\delta&\cos\delta\\
+                         \cos\delta&-\sin\delta\end{pmatrix}.
+\end{equation}
+To verify this, $M_\delta+N_\delta(s)$ is the matrix
+$4\cos(2ks+\delta)R(s)^{-1}ER(s)$.
+Its mean over the period $\pi/k$ is $M_\delta$, so $N_\delta$ is
+bounded, periodic and has mean zero. Also $M_\delta^2=I$ and
+$M_\delta e_\delta=-e_\delta$.
+
+Define $Z_\delta(s)=\int_0^sN_\delta(r)\,dr$.
+It is bounded and periodic, with $Z_\delta(0)=0$.
+For sufficiently large $S$, $H_\delta(s)=I+Z_\delta(s)/\rho(s)$ is
+uniformly invertible. These are real $2\times2$ matrices.
+Set $a=H_\delta x$, with $x(s)\in\R^2$. The exact transformed equation is
+\begin{equation}\label{eq:normal}
+ x'=\frac{M_\delta}\rho x+D_\delta(s)x+B_\delta(s)g,
+\end{equation}
+where
+\begin{align*}
+ D_\delta(s)&=\rho^{-2}H_\delta^{-1}
+ \bigl([M_\delta,Z_\delta]+N_\delta Z_\delta+Z_\delta\bigr),\\
+ B_\delta(s)&=H_\delta^{-1}R(s)^{-1}e_2/k.
+\end{align*}
+In particular $|D_\delta(s)|\le C\rho^{-2}$ and $|B_\delta(s)|\le C$.
+Here $D_\delta(s)\in\R^{2\times2}$ and $B_\delta(s)\in\R^2$;
+both are continuous and $2\pi$-periodic in $\delta$.
+
+The orthogonal projections $\Pi_\pm=(I_{\R^2}\pm M_\delta)/2$ act on
+$\R^2$, independently of the transverse and half-strip projections.
+For $F\in Y_2((0,\infty);\R^2)$ define
+\begin{equation}\label{eq:I}
+ (\Ical_\delta F)(s)
+ =\rho(s)^{-1}\int_0^s\rho(r)\Pi_-F(r)\,dr
+  -\rho(s)\int_s^\infty\rho(r)^{-1}\Pi_+F(r)\,dr.
+\end{equation}
+This solves $x'=M_\delta x/\rho+F$ and has $\Pi_-x(0)=0$. Moreover,
+\begin{equation}\label{eq:I-bound}
+ \norm{\Ical_\delta F}_{L^2((0,\infty);\R^2)}
+ \le\frac CS\norm{F}_{Y_2((0,\infty);\R^2)}.
+\end{equation}
+Indeed, writing $f=\rho^2F\in L^2((0,\infty);\R^2)$, the stable kernel is
+$1_{r\le s}/(\rho(s)\rho(r))$, whose squared Hilbert--Schmidt norm is
+\[
+ \int_0^\infty\rho(r)^{-2}\int_r^\infty\rho(s)^{-2}\,ds\,dr
+ =\frac1{2S^2}.
+\]
+The unstable kernel is $1_{r\ge s}\rho(s)/\rho(r)^3$.
+Its row integrals are $1/(2\rho(s))$; its column integrals are
+$(\rho(r)^2-S^2)/(2\rho(r)^3)$. Both are at most $1/(2S)$.
+The Schur estimate proves \eqref{eq:I-bound}.
+
+Multiplication by $D_\delta$ maps $L^2((0,\infty);\R^2)$ to
+$Y_2((0,\infty);\R^2)$ with uniformly bounded norm.
+Hence $I-\Ical_\delta D_\delta$ has a convergent Neumann inverse on
+$L^2((0,\infty);\R^2)$ for large $S$. Define
+\begin{align*}
+ x_{h,\delta}&=(I-\Ical_\delta D_\delta)^{-1}(\rho^{-1}e_\delta),\\
+ x_{g,\delta}&=(I-\Ical_\delta D_\delta)^{-1}
+                         \Ical_\delta(B_\delta g).
+\end{align*}
+These solve \eqref{eq:normal} with $g=0$ and with the given $g$,
+respectively. They are in $H^1((0,\infty);\R^2)$:
+differentiating \eqref{eq:I} in the distributional sense gives
+\eqref{eq:normal}, whose right-hand side is in $L^2((0,\infty);\R^2)$. The integral formulas also give the trace data
+\[
+ \Pi_-x_{h,\delta}(0)=e_\delta/S,\qquad
+ \Pi_-x_{g,\delta}(0)=0.
+\]
+Define $h_\delta$ and $G_\delta g$ as the first components of
+$RH_\delta x_{h,\delta}$ and $RH_\delta x_{g,\delta}$.
+Since all transformations were exact, the reconstructed vector satisfies
+\[
+ v_1'=kv_2,\qquad
+ v_2'=-kv_1+4\rho^{-1}\cos(2ks+\delta)v_1+g/k.
+\]
+Thus the scalar functions belong to $H^2(0,\infty)$ and solve their
+asserted equations. In particular
+\[
+ \begin{aligned}
+ \norm{G_\delta g}_{H^2(0,\infty)}
+ &\le C\bigl(\norm{x_{g,\delta}}_{L^2((0,\infty);\R^2)}
+                +\norm{g}_{L^2(0,\infty)}\bigr)\\
+ &\le\frac CS\norm{g}_{Y_2((0,\infty))},
+ \end{aligned}
+\]
+where $\norm{g}_{L^2(0,\infty)}
+\le S^{-2}\norm{g}_{Y_2((0,\infty))}$ was used.
+At zero, $R(0)=H_\delta(0)=I$, proving \eqref{eq:normalization}.
+
+Every operator in these formulas is continuous and periodic in $\delta$,
+while $e_{\delta+2\pi}=-e_\delta$. The claimed continuity and
+antiperiodicity follow, including in the $H^2(0,\infty)$ norm by the exact
+reconstructed equations.
+\end{proof}
+
+\section{Phase selection and the weak eigenvalue identity}
+
+Take $S$ larger than all the preceding fixed bounds.
+By \eqref{eq:T-bound} and Lemma~\ref{lem:scalar},
+uniformly in $\delta$ we have
+\[
+ \norm{G_\delta\Tcal_\delta}_{H^2(0,\infty)\to H^2(0,\infty)}
+ \le C/S<1.
+\]
+Thus
+\begin{equation}\label{eq:final-fixedpoint}
+ y_\delta=(I-G_\delta\Tcal_\delta)^{-1}h_\delta
+\end{equation}
+is well defined in $H^2(0,\infty)$ and satisfies \eqref{eq:full-scalar}.
+Its normalization remains $\ell_\delta(y_\delta)=1/S$, so it is nonzero.
+It is real, continuous in $\delta$, and $y_{\delta+2\pi}=-y_\delta$.
+Set
+\[
+ u_\delta=\alpha_\delta^{-1/2}y_\delta,\qquad
+ z_\delta=z_\delta[u_\delta],\qquad
+ \psi_\delta=u_\delta\chi+z_\delta.
+\]
+These functions are real and antiperiodic in $\delta$;
+$u_\delta$ is continuous in $H^2(0,\infty)$, and $z_\delta,\psi_\delta$
+are continuous in $H^2(\D)$. The half-strip function $\psi_\delta$ solves
+$\Lop_\delta\psi_\delta=0$ in $L^2(\D)$ and has transverse Dirichlet
+boundary values. Its closed component satisfies $z_{\delta,s}(0)=0$.
+
+The real function
+\begin{equation}\label{eq:phase-functional}
+ \mathcal B_S(\delta)=u_\delta'(0)
+ =\alpha_\delta(0)^{-1/2}
+   \left[y_\delta'(0)
+       -\frac{\alpha_\delta'(0)}{2\alpha_\delta(0)}y_\delta(0)\right]
+\end{equation}
+is continuous, since derivative trace is continuous on $H^2(0,\infty)$.
+It satisfies $\mathcal B_S(\delta+2\pi)=-\mathcal B_S(\delta)$.
+The intermediate value theorem gives $\delta_*\in[0,2\pi]$ with
+$\mathcal B_S(\delta_*)=0$. For definiteness, select the least zero in
+this compact interval. At this phase
+\begin{equation}\label{eq:neumann}
+ \partial_s\psi_{\delta_*}(0,t)=0.
+\end{equation}
+Also $\psi_{\delta_*}\ne0$: its $P_{\D}$ component is
+$\alpha_{\delta_*}^{-1/2}y_{\delta_*}\chi$ and
+$\ell_{\delta_*}(y_{\delta_*})=1/S$.
+
+Extend $b_{\delta_*}$ and $\psi_{\delta_*}$ evenly to the full strip.
+The coefficient $b$ is continuous and globally Lipschitz; a derivative
+jump at zero is permitted by the admissible class.
+Equation \eqref{eq:neumann} ensures that the even extension of $\psi$
+belongs to $H^2(\R\times J)$ and that its longitudinal flux
+$f^{-1}\partial_s\psi$ has zero trace at the joining section.
+In particular $\psi\in H_0^1(\R\times J)$.
+
+For any smooth compactly supported test function with zero transverse
+boundary values, integration by parts on both half-strips gives
+\begin{equation}\label{eq:weak}
+ \int_{\R\times J}
+ \left(f^{-1}\psi_s\overline{\varphi_s}
+                  +f\psi_t\overline{\varphi_t}\right)\,ds\,dt
+ =\lambda_*\int_{\R\times J}f\psi\overline\varphi\,ds\,dt.
+\end{equation}
+The joining boundary terms vanish by \eqref{eq:neumann}.
+Since $f$ and $f^{-1}$ are bounded, both sides of \eqref{eq:weak}
+are continuous in the $H^1(\R\times J)$ norm of $\varphi$.
+Density proves this identity for every $\varphi\in H_0^1(\R\times J)$.
+The representation theorem for the defining form gives
+$\psi\in D(H_q)$ and $H_q\psi=\lambda_*\psi$.
+
+Finally, the profile \eqref{eq:profile} is everywhere positive and
+\[
+ 0<q_{S,\delta_*}(s)^2\le\frac{24k}{S+|s|}.
+\]
+Increasing $S_0$ to at least $12k$ proves $\norm q_\infty\le\sqrt2$
+and uniform decay at both ends. Thus $q\in\mathscr Q_1$.
+The essential-spectrum theorem of \cite[Theorem~3.1]{KZ} gives
+$\sigma_{\rm ess}(H_q)=[E_1,\infty)$, so the eigenvalue is embedded.
+The cited source also supplies this essential-spectrum statement for
+the Lipschitz profile constructed here. For completeness, $f_{q_a}(s,t)=f_q(s/a,t/a)$, and
+\[
+ (U_a\psi)(s,t)=a^{-1}\psi(s/a,t/a)
+\]
+is a unitary map between the two weighted $L^2$ spaces.
+Changing variables in the forms gives
+$h_{q_a}[U_a\psi]=a^{-2}h_q[\psi]$, hence
+$H_{q_a}U_a=a^{-2}U_aH_q$. This proves the assertion
+for every $a>0$ and completes the proof of Theorem~\ref{thm:main}.
+\qed
+
+\clearpage
+\section*{Relation to the source and verification scope}
+
+For any ambient dimension $n+1\ge3$, choose
+\[
+ \Gamma(s)=(s,0,\ldots,0),\qquad
+ \theta(s)=\int_0^s q(r)\,dr,\qquad
+ \Theta(s)=(\cos\theta(s),\sin\theta(s),0,\ldots,0)
+\]
+in the constant relatively parallel normal frame. The curve is unit speed
+and smooth, $\Theta$ is a Lipschitz unit vector,
+$|\Theta'|=q$ almost everywhere, and
+$k_{\rm curve}\cdot\Theta=0$. The immersion is
+\[
+ \Phi(s,t)=(s,t\cos\theta(s),t\sin\theta(s),0,\ldots,0).
+\]
+Its metric is exactly $\operatorname{diag}(1+t^2q(s)^2,1)$.
+It is injective: its first coordinate determines $s$, and at fixed $s$
+its unit transverse direction determines $t$. Thus it also gives a
+genuine embedded ribbon, although the repository permits an abstract
+immersed strip. Assumption~1 in \cite{KZ} holds.
+Uniform decay gives its condition (3.1), and the amplitude bound is
+its condition (5.1). Theorem~3.1 and Corollary~5.3 give the essential
+spectrum; Theorem~5.1 supplies the stated Hardy inequality.
+The construction answers the point-spectrum part of Open Problem~5.6
+negatively for the full class in AIM problem 1007.
+
+The dated submission and literature audit accompanying this paper found
+no matching earlier resolution in the records checked on 3 November 2026.
+That bounded search does not establish publication priority. The existence argument above uses only elementary
+Fourier/Sobolev theory, convergent Neumann series, the intermediate
+value theorem, the form representation theorem, and the
+essential-spectrum theorem in \cite{KZ}.
+
+\begin{thebibliography}{1}
+\bibitem{KZ}
+D. Krej\v ci\v r\'ik and K. Zahradov\'a,
+\emph{Quantum strips in higher dimensions},
+Operators and Matrices \textbf{14} (2020), 635--665.
+\href{https://doi.org/10.7153/oam-2020-14-41}{doi:10.7153/oam-2020-14-41}.
+\href{https://files.ele-math.com/articles/oam-14-41.pdf}{Published paper};
+\href{https://arxiv.org/abs/1906.02431}{arXiv:1906.02431}.
+\end{thebibliography}
+\end{document}
