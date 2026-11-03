@@ -4,7 +4,7 @@
 
 **Status:** 🟡 PARTIAL
 
-**Last checked:** 2026-10-02
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -24,12 +24,15 @@ Steklov modes describe a membrane with mass concentrated on its boundary and the
 
 1. Z. Cheng, C. Gui, Y. Hu, Q. Li and R. Yao, [Monotonicity of the first nonzero Steklov eigenvalue of regular N-gon with fixed perimeter](https://arxiv.org/abs/2603.25116), preprint (2026), Conjectures 1.1–1.2.
 2. N. Nigam (problem proposer), [Open problems from the miniconference on sharp eigenvalue estimates for partial differential operators](https://publish.illinois.edu/eigenvalues2020/files/2020/04/Open-problems.pdf), April 2020, Open Problem 8.
+3. M. J. Colbrook, [*The square maximizes the first Steklov eigenvalue among parallelograms*](../research/solutions/022-parallelogram-steklov/aim022.pdf), 3 November 2026. [TeX source](../research/solutions/022-parallelogram-steklov/aim022.tex), [package and reproduction](../research/solutions/022-parallelogram-steklov/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-spectral-batch/022-review.md).
 
 ## Status review
 
-**Known cases:** The n=3 case is resolved: among nondegenerate triangles of fixed perimeter, the equilateral triangle uniquely maximizes the first positive Steklov eigenvalue. The [computer-assisted proof](../research/solutions/022-steklov-triangle/PROOF.md) combines analytic estimates with exact rational and outward-rounded interval certificates.
+**Known cases:** The existing triangle theorem remains recorded in the [triangle solution package](../research/solutions/022-steklov-triangle/PROOF.md). In addition, the square uniquely maximizes the first positive Steklov eigenvalue among all nondegenerate parallelograms of a fixed perimeter.
 
-**Remaining target:** The comparison with the regular n-gon, including the equality characterization, remains open for n>=4 and arbitrary convex polygons with at most n sides. The triangle result does not resolve this full family.
+**Remaining target:** The regular-polygon comparison and its equality characterization remain open for arbitrary convex polygons with at most $`n`$ sides when $`n\ge4`$, including non-parallelogram quadrilaterals.
+
+**Reviewed result, 2026-11-03:** The square uniquely maximizes the first positive Steklov eigenvalue among parallelograms of a fixed perimeter. The [manuscript](../research/solutions/022-parallelogram-steklov/aim022.pdf) and [individual audit](../research/solution_reviews/2026-11-03-spectral-batch/022-review.md) record the proof, checked references and exact target comparison. Review was performed by Codex (AI).
 
 **Review (2026-10-02):** [Independent Codex AI audit](../research/solution_reviews/2026-10-02-active-prs/022-triangles-review.md) of [PR #20](https://github.com/MColbrook/AIM/pull/20), including fresh certificate reproduction and additional checks. This is not human peer review or proof-assistant verification. The audit records a minor arithmetic-precision documentation correction.
 

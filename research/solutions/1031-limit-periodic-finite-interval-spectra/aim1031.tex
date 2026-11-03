@@ -1,0 +1,508 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage{xcolor,graphicx,booktabs,longtable,array}
+\usepackage{microtype,enumitem,fancyhdr,titlesec}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
+ pdftitle={Dense nonperiodic limit-periodic potentials with finite interval spectra},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 1031: mathematical result and proof}}
+\urlstyle{same}
+\Urlmuskip=0mu plus 1mu
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 1031}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setcounter{secnumdepth}{0}
+\allowdisplaybreaks[2]
+\title{\textbf{Dense nonperiodic limit-periodic potentials with finite interval spectra}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove that real nonperiodic limit-periodic potentials whose spectrum is a finite union of nondegenerate intervals are dense among all real limit-periodic potentials. Finite block insertions fill limiting spectral clusters, while separately protected marker blocks ensure nonperiodicity. This answers AIM 1031 affirmatively.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 1031 at revision
+\texttt{3fa50884d129}. Its scope is stated below.
+\medskip
+
+The answer to Problem 1031 is \textbf{yes}. In fact, potentials whose
+entire spectrum is a finite union of nondegenerate closed intervals are
+dense among limit-periodic potentials, and the approximating potentials
+can always be required to be nonperiodic. The proof places
+finite-support approximate eigenvectors inside long periodic blocks.
+Small constant shifts of those blocks fill successively smaller spectral
+gaps, while separate marker blocks ensure that the limiting potential is
+nonperiodic.
+
+\hypertarget{1031-theorem}{%
+\section{Theorem}\label{1031-theorem}}
+
+Let \(V:\mathbb Z\to\mathbb R\) be a bounded uniform limit of periodic
+sequences, and let \(\varepsilon>0\). Then there exists a nonperiodic
+uniform limit of periodic sequences \(W\) such that
+
+\[
+\|W-V\|_\infty<\varepsilon,
+\qquad
+\sigma(H_W)=\bigcup_{j=1}^{M}[\ell_j,r_j],
+\qquad \ell_j<r_j<\ell_{j+1},
+\]
+
+where
+
+\[
+(H_Wu)(n)=u(n-1)+u(n+1)+W(n)u(n)
+\quad\text{on }\ell^2(\mathbb Z).
+\]
+
+The interval union is finite, with \(M\geq1\), and the displayed
+separation condition applies for \(j<M\). In particular, the spectrum
+has nonempty interior and is not a Cantor set. The initial potential
+need not itself be nonperiodic. Thus the theorem has all the quantifiers
+required in the catalogue question, with a stronger conclusion. If \(V\)
+is constant, one may take \(M=1\).
+
+\hypertarget{1031-a-finite-block-insertion-lemma}{%
+\section{1. A finite block insertion
+lemma}\label{1031-a-finite-block-insertion-lemma}}
+
+Let \(P\) be a bounded real potential of integer period \(q\). Fix a
+number \(a>0\), a positive integer \(K\), and a finite list of target
+energies \(E_1,\ldots,E_m\). Suppose that
+
+\[
+\operatorname{dist}(E_j,\sigma(H_P))\leq a
+\qquad(1\leq j\leq m).
+\]
+
+For every \(\eta>0\), there is a periodic potential \(\widetilde P\),
+whose period is a multiple of \(q\), with the following three
+properties:
+
+\[
+\|\widetilde P-P\|_\infty\leq a,
+\tag{1}
+\]
+
+\[
+\operatorname{dist}(E_j,\sigma(H_{\widetilde P}))<\eta
+\qquad(1\leq j\leq m),
+\tag{2}
+\]
+
+and, for every integer \(1\leq p\leq K\), there is an integer \(n_p\)
+such that
+
+\[
+|\widetilde P(n_p+p)-\widetilde P(n_p)|\geq2a.
+\tag{3}
+\]
+
+\hypertarget{1031-proof-of-the-lemma}{%
+\subsection{Proof of the lemma}\label{1031-proof-of-the-lemma}}
+
+Choose \(e_j\in\sigma(H_P)\) with \(|E_j-e_j|\leq a\), and set
+\(c_j=E_j-e_j\). Since adding a constant to a potential shifts its
+spectrum by that constant,
+
+\[
+E_j\in\sigma(H_{P+c_j}).
+\]
+
+For a bounded self-adjoint operator, every spectral point is an
+approximate eigenvalue. Finitely supported sequences are dense in
+\(\ell^2(\mathbb Z)\), and the operator is bounded, so there is a
+finitely supported unit vector \(\phi_j\) with
+
+\[
+\|(H_{P+c_j}-E_j)\phi_j\|_2<\eta.
+\tag{4}
+\]
+
+Choose an integer block length \(L\), divisible by \(q\), which exceeds
+\(K\) and is sufficiently large to accommodate each support after
+translation by a multiple of \(q\). On a finite sequence of consecutive
+blocks of length \(L\), prescribe the potential as follows:
+
+\[
+P+c_1,\ P+c_2,\ \ldots,\ P+c_m,\ P+a,\ P-a,\ P+a.
+\tag{5}
+\]
+
+Then repeat this entire block pattern periodically. Because every block
+boundary is a multiple of \(q\), the background \(P\) has the same phase
+on every block. The resulting potential \(\widetilde P\) has period
+\((m+3)L\), a multiple of \(q\), and satisfies (1).
+
+Translate \(\phi_j\) by a multiple of \(q\) so that its support lies in
+the block carrying \(P+c_j\). On that support the two potentials agree
+exactly. Their difference is a multiplication operator, so the
+translated vector still has the residual in (4), even though the
+potentials outside the block may differ. The spectral theorem gives
+
+\[
+\operatorname{dist}(E_j,\sigma(H_{\widetilde P}))
+\leq\|(H_{\widetilde P}-E_j)\phi_j^{\rm translated}\|_2<\eta.
+\]
+
+This proves (2).
+
+For (3), use the two internal boundaries in the three marker blocks
+\(P+a,P-a,P+a\). Call them \(b_1,b_2\); both are multiples of \(q\). For
+\(1\leq p\leq K<L\), the pair of sites \(b_i-1,b_i+p-1\) crosses the
+corresponding boundary and stays within its two adjacent marker blocks.
+In both cases the background difference is the same number
+
+\[
+v_p=P(p-1)-P(-1).
+\]
+
+The two differences of the new potential are therefore
+
+\[
+v_p-2a,\qquad v_p+2a.
+\]
+
+At least one has absolute value at least \(2a\). This proves (3)
+simultaneously for every \(p\leq K\). \(\square\)
+
+\hypertarget{1031-spectral-clusters-and-the-perturbation-budget}{%
+\section{2. Spectral clusters and the perturbation
+budget}\label{1031-spectral-clusters-and-the-perturbation-budget}}
+
+Choose a periodic potential \(V_0\) with
+
+\[
+\|V-V_0\|_\infty<\frac{\varepsilon}{2}.
+\]
+
+Write its spectrum as its finitely many connected components:
+
+\[
+S_0=\sigma(H_{V_0})
+=\bigcup_{j=1}^{M}I_{0,j},
+\qquad
+I_{0,j}=[\ell_{0,j},r_{0,j}],
+\qquad
+\ell_{0,j}<r_{0,j}<\ell_{0,j+1}.
+\tag{6}
+\]
+
+The intervals are nondegenerate by the elementary Floquet description of
+the spectrum of a periodic discrete Schrödinger operator. Touching bands
+are combined into a single component. If \(M>1\), let
+
+\[
+G=\min_{j<M}(\ell_{0,j+1}-r_{0,j})>0.
+\]
+
+Choose a number \(t\) satisfying
+
+\[
+0<t<\varepsilon,
+\qquad
+ t<G/4\quad\hbox{if }M>1.
+\]
+
+For \(k\geq1\), set
+
+\[
+a_k=t4^{-k},
+\qquad
+\delta_k=\frac{a_{k+1}}8=\frac{a_k}{32},
+\qquad
+\delta_0=0.
+\tag{7}
+\]
+
+Thus
+
+\[
+\sum_{k\geq1}a_k=\frac t3,
+\qquad
+\sum_{j>k}a_j=\frac{a_k}{3},
+\qquad
+\delta_{k-1}=\frac{a_k}{8}\quad(k\geq2).
+\tag{8}
+\]
+
+The initial gaps will remain open throughout the construction. Indeed,
+each endpoint can move by at most \(\sum a_k=t/3\), so all gaps between
+the original \(M\) clusters remain at least \(G-2t/3>G/2\) when \(M>1\).
+
+We shall construct periodic potentials \(V_k\), with periods divisible
+by those of their predecessors, and ordered disjoint intervals
+\(I_{k,1},\ldots,I_{k,M}\) such that, with \(S_k=\sigma(H_{V_k})\),
+
+\[
+\|V_k-V_{k-1}\|_\infty\leq a_k,
+\tag{9}
+\]
+
+\[
+S_k\subset\bigcup_{j=1}^{M}I_{k,j},
+\qquad
+\sup_{E\in\bigcup_jI_{k,j}}\operatorname{dist}(E,S_k)\leq\delta_k,
+\tag{10}
+\]
+
+and each \(I_{k,j}\) is the convex hull of the part of \(S_k\) in its
+corresponding cluster. Its endpoints therefore belong to \(S_k\). We
+will also retain the marker condition
+
+\[
+\forall\,1\leq p\leq k\quad
+\exists\,n_{k,p}\in\mathbb Z:\quad
+|V_k(n_{k,p}+p)-V_k(n_{k,p})|\geq2a_k.
+\tag{11}
+\]
+
+At \(k=0\), (10) holds with \(\delta_0=0\) by (6).
+
+\hypertarget{1031-filling-each-expanded-cluster}{%
+\section{3. Filling each expanded
+cluster}\label{1031-filling-each-expanded-cluster}}
+
+Suppose \(V_{k-1}\) and its cluster hulls have been constructed. Define
+the expanded intervals
+
+\[
+K_{k,j}=I_{k-1,j}+[-a_k,a_k],
+\qquad
+K_k=\bigcup_{j=1}^{M}K_{k,j}.
+\tag{12}
+\]
+
+The mesh bound in (10), together with \(\delta_{k-1}<a_k\), gives the
+exact identity
+
+\[
+S_{k-1}+[-a_k,a_k]=K_k.
+\tag{13}
+\]
+
+For completeness, a point inside a previous hull is within
+\(\delta_{k-1}\) of \(S_{k-1}\); a point in one of its two extensions is
+within \(a_k\) of the corresponding endpoint, which belongs to
+\(S_{k-1}\). This proves one inclusion. The reverse inclusion follows
+from \(S_{k-1}\subset\bigcup_j I_{k-1,j}\). The case \(k=1\) uses
+\(\delta_0=0\).
+
+Choose a finite \(\delta_k/4\)-net \(E_1,\ldots,E_m\) of the entire
+compact set \(K_k\). By (13), every target satisfies
+
+\[
+\operatorname{dist}(E_j,S_{k-1})\leq a_k.
+\]
+
+Apply the finite block insertion lemma with \(P=V_{k-1}\), \(a=a_k\),
+\(K=k\), and \(\eta=\delta_k/4\). It gives a periodic potential \(V_k\)
+satisfying (9), (11), and
+
+\[
+\sup_{E\in K_k}\operatorname{dist}(E,S_k)\leq\delta_k.
+\tag{14}
+\]
+
+The residual estimate actually gives \(\delta_k/2\), but the weaker
+bound is convenient.
+
+For bounded self-adjoint operators, spectral Hausdorff distance is at
+most operator-norm distance. Since the difference of the Schrödinger
+operators is multiplication by the difference of their potentials, (9)
+and (13) also give the exact confinement
+
+\[
+S_k\subset S_{k-1}+[-a_k,a_k]=K_k.
+\tag{15}
+\]
+
+This is what controls the entire spectrum, including spectral points
+associated with interfaces between the blocks.
+
+Define
+
+\[
+I_{k,j}=\operatorname{conv}(S_k\cap K_{k,j})
+=[\ell_{k,j},r_{k,j}].
+\tag{16}
+\]
+
+The sets being convexified are nonempty. If there is only one cluster,
+this follows from (14). If \(M>1\), the gaps between the \(K_{k,j}\)
+exceed \(G/2\), while \(\delta_k\leq t/128<G/512\); hence the spectral
+points within \(\delta_k\) of either endpoint of \(K_{k,j}\) must lie in
+that same cluster. Compactness then gives the endpoint bounds
+
+\[
+\ell_{k-1,j}-a_k
+\leq\ell_{k,j}
+\leq\ell_{k-1,j}-a_k+\delta_k,
+\tag{17}
+\]
+
+\[
+r_{k-1,j}+a_k-\delta_k
+\leq r_{k,j}
+\leq r_{k-1,j}+a_k.
+\tag{18}
+\]
+
+In particular,
+
+\[
+I_{k-1,j}\subset I_{k,j}\subset K_{k,j}.
+\tag{19}
+\]
+
+These inclusions also verify inductively the claimed lower bound on gaps
+between different clusters. Because \(I_{k,j}\subset K_{k,j}\), (14)
+proves the mesh bound (10); the confinement (15) proves its other
+inclusion. The induction is complete.
+
+The tolerance choices are not circular. The current spectral mesh is
+fixed by increasing block lengths, without increasing the allowed
+perturbation amplitude. The next step then uses \(\delta_k=a_{k+1}/8\)
+to ensure (13).
+
+\hypertarget{1031-the-limiting-spectrum-is-exactly-a-finite-interval-union}{%
+\section{4. The limiting spectrum is exactly a finite interval
+union}\label{1031-the-limiting-spectrum-is-exactly-a-finite-interval-union}}
+
+The summable perturbation bounds imply that \(V_k\) converges uniformly
+to a bounded real limit-periodic potential \(W\). Moreover,
+
+\[
+\|W-V\|_\infty
+\leq\|W-V_0\|_\infty+\|V_0-V\|_\infty
+<\frac t3+\frac{\varepsilon}{2}
+<\varepsilon,
+\tag{20}
+\]
+
+and
+
+\[
+\|W-V_k\|_\infty\leq\frac{a_k}{3}.
+\tag{21}
+\]
+
+By (17)--(19), each sequence of left endpoints is decreasing and
+bounded, and each sequence of right endpoints is increasing and bounded.
+Write their limits as \(\ell_j,r_j\). The limiting intervals are
+nondegenerate because they contain \(I_{0,j}\). Distinct intervals
+remain separated by at least \(G-2t/3>0\). Thus
+
+\[
+K_\infty=\bigcup_{j=1}^{M}[\ell_j,r_j]
+\tag{22}
+\]
+
+is a finite union of exactly \(M\) disjoint nondegenerate closed
+intervals. The endpoint movement after stage \(k\) is at most
+\(\sum_{s>k}a_s=a_k/3\), so
+
+\[
+d_H\!\left(\bigcup_j I_{k,j},K_\infty\right)
+\leq\frac{a_k}{3}.
+\tag{23}
+\]
+
+The mesh and confinement in (10) say
+
+\[
+d_H\!\left(S_k,\bigcup_jI_{k,j}\right)\leq\delta_k.
+\tag{24}
+\]
+
+At the same time, norm continuity of the spectrum and (21) give
+
+\[
+d_H(S_k,\sigma(H_W))\leq\frac{a_k}{3}.
+\tag{25}
+\]
+
+Combining (23)--(25) and letting \(k\to\infty\) yields
+
+\[
+\boxed{\sigma(H_W)=K_\infty.}
+\tag{26}
+\]
+
+This proves the asserted conclusion for the entire spectrum. In
+particular, if the initial periodic potential \(V_0\) is constant, its
+spectrum is one interval and the construction retains \(M=1\).
+
+\hypertarget{1031-the-limit-is-nonperiodic}{%
+\section{5. The limit is nonperiodic}\label{1031-the-limit-is-nonperiodic}}
+
+Fix an integer \(p\geq1\), and choose \(k\geq p\). The marker property
+(11) gives a site \(n_{k,p}\) where the \(p\)-shift difference of
+\(V_k\) has magnitude at least \(2a_k\). The future tail cannot erase
+that difference:
+
+\[
+\begin{aligned}
+|W(n_{k,p}+p)-W(n_{k,p})|
+&\geq2a_k-2\|W-V_k\|_\infty\\
+&\geq2a_k-\frac{2a_k}{3}
+=\frac{4a_k}{3}>0.
+\end{aligned}
+\]
+
+Therefore \(p\) is not a period of \(W\). Since \(p\) was arbitrary,
+\(W\) is nonperiodic. Equations (20) and (26) now prove the theorem.
+
+\hypertarget{1031-scope-and-references}{%
+\section{Scope and references}\label{1031-scope-and-references}}
+
+The construction guarantees that the entire spectrum is a finite union
+of nondegenerate closed intervals. It can be a single interval when the
+initial periodic approximant has connected spectrum; this includes
+approximation of any constant potential. The argument makes no assertion
+about the spectral type, so it does not resolve the separate mixed-type
+or coupling-dependence questions.
+
+\begin{enumerate}
+\raggedright
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  D. Damanik and J. Fillman, \emph{Spectral Properties of Limit-Periodic
+  Operators}, arXiv:1802.05794v1 (2018), Question 10.4, printed p.~36;
+  subsequently Chapter 15 in \emph{Analysis and Geometry on Graphs and
+  Manifolds} (2020). The question explicitly requires density among
+  nonperiodic limit-periodic potentials.
+  \url{https://arxiv.org/pdf/1802.05794}.
+\item
+  D. Damanik, Z. Gan, and H. Krüger, \emph{Limit-periodic Schrödinger
+  operators with a discontinuous Lyapunov exponent}, Journal of
+  Functional Analysis \textbf{279} (2020), 108565. Its Theorem 1.3
+  concerns density of discontinuous Lyapunov exponents and is not itself
+  the spectral-interior statement proved here.
+  \url{https://doi.org/10.1016/j.jfa.2020.108565}.
+\end{enumerate}
+
+The proof uses only elementary periodic approximation, the
+approximate-eigenvector criterion, and norm continuity of the spectrum
+for bounded self-adjoint operators. No bibliographic-priority claim is
+made.
+\end{document}

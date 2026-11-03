@@ -1,0 +1,467 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage{xcolor,graphicx,booktabs,longtable,array}
+\usepackage{microtype,enumitem,fancyhdr,titlesec}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
+ pdftitle={A variational spectral lower bound from concentration of separated sets},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 1013: mathematical result and proof}}
+\urlstyle{same}
+\Urlmuskip=0mu plus 1mu
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 1013}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setcounter{secnumdepth}{0}
+\allowdisplaybreaks[2]
+\title{\textbf{A variational spectral lower bound from concentration of separated sets}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We derive a quantitative variational spectral lower bound from the multiset concentration hypothesis in AIM 1013, under nonnegative Bakry--\'Emery curvature. The proof uses a half-volume isoperimetric region and separated distance layers, and applies without assuming discrete spectrum.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 1013 at revision
+\texttt{3fa50884d129}. Its scope is stated below.
+\medskip
+
+\hypertarget{1013-result}{%
+\section{Result}\label{1013-result}}
+
+The answer to Problem 1013 is \textbf{yes}. In fact its concentration
+hypothesis implies a lower bound for the first variational gap, and
+hence for every higher variational level:
+
+\[
+\boxed{
+\lambda^{(k)}\geq\lambda^{(1)}
+\geq \frac{a}{64k^2(k-1)^2\log 2},\qquad k\geq2.
+}
+\tag{1}
+\]
+
+Here \(a\) is exactly the parameter in the question. The constant is not
+claimed to be optimal. The proof applies to complete, possibly
+noncompact, smooth connected weighted Riemannian manifolds and does not
+require discrete spectrum.
+
+The geometric input is the classical isoperimetric comparison theory
+under \(\operatorname{Ric}+\operatorname{Hess}V\geq0\). The additional
+step is to divide one side of a half-volume isoperimetric region into
+alternating pieces and gaps of prescribed measures. The other half of
+the manifold serves as one of the \(k\) pieces.
+
+\hypertarget{1013-isoperimetric-facts-and-their-precise-scope}{%
+\section{1. Isoperimetric facts and their precise
+scope}\label{1013-isoperimetric-facts-and-their-precise-scope}}
+
+Write
+
+\[
+P_\mu(E)=\int_{\partial^*E}e^{-V}\,d\mathcal H^{n-1},
+\qquad
+\mathcal I(v)=\inf_{\mu(E)=v}P_\mu(E),
+\qquad
+I=\mathcal I(1/2),
+\]
+
+where \(\partial^*E\) is the reduced boundary and \(n=\dim M\). Under
+the assumptions of the question, the following facts apply.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Isoperimetric minimizers of every measure \(0<v<1\) exist. A minimizer
+  can be represented by an open set. Its boundary is smooth outside a
+  singular set of Hausdorff dimension at most \(n-8\), and its regular
+  part has constant weighted mean curvature. Its weighted perimeter is
+  the weighted area of that regular part.
+\item
+  The profile \(\mathcal I\) is symmetric about \(1/2\) and concave on
+  \((0,1)\). Consequently its Cheeger constant is \[
+  h_\mu:=\inf_{0<\mu(E)<1}
+  \frac{P_\mu(E)}{\min(\mu(E),1-\mu(E))}
+  =2\mathcal I(1/2)=2I.
+  \tag{2}
+  \]
+\item
+  Normal rays from the regular boundary of an isoperimetric region cover
+  its interior up to a set of measure zero. Weighted normal Jacobians
+  obey the Heintze--Karcher comparison estimate under the Bakry--Émery
+  curvature bound.
+\end{enumerate}
+
+These facts hold for the complete finite-measure setting, not just for
+compact manifolds. In particular, finite total measure prevents loss of
+a prescribed positive volume to infinity in the existence argument:
+local BV compactness, followed by the uniform bound
+\(\mu(M\setminus K)\to0\) along a compact exhaustion, gives global
+convergence in \(L^1(\mu)\). Lower semicontinuity of weighted perimeter
+then gives a minimizer. Boundary regularity and the normal-ray assertion
+are the standard geometric measure theory and comparison inputs cited
+below.
+
+For (2), concavity and nonnegativity imply
+
+\[
+\mathcal I(v)\geq2v\mathcal I(1/2)
+\quad(0<v\leq1/2).
+\]
+
+Symmetry gives the corresponding inequality for \(v\geq1/2\), while a
+half-volume minimizer gives equality in the infimum defining \(h_\mu\).
+
+The inputs can be found together in Milman (2010), Sections 2--3:
+existence and regularity in Section 2.2, the normal-ray treatment of
+singular boundaries in Section 2.4, and Theorem 3.2 and Corollary 3.3
+for the profile and Cheeger constant. Milman (2015), Theorem 2.3,
+Corollary 2.5, and Proposition 2.9 give a detailed treatment of the
+geometric inputs, including the fact that nearest boundary points are
+regular. The required comparison is a specialization of its Theorem 2.1.
+
+These statements do not require an orientation of the ambient manifold.
+Weighted perimeter uses the Riemannian density; an isoperimetric region
+supplies an outward normal on its regular boundary, even if the ambient
+manifold is nonorientable. The compactness, regularity, first-variation,
+and normal-Jacobian arguments are local and apply in coordinate charts
+without an ambient orientation.
+
+The one-dimensional cases are also included. A complete connected
+one-dimensional manifold without boundary is a line or a circle. On the
+line the density is log-concave, and half-lines are isoperimetric
+minimizers; on a circle, \(V''\geq0\) forces \(V\) to be constant and
+arcs are minimizers. Their distance-density comparisons below follow
+directly from log-concavity, or from the same normal-ray calculation
+with no tangential second fundamental form. The Cheeger-profile identity
+(2) holds in these cases as well.
+
+\hypertarget{1013-a-half-volume-region-with-bounded-inward-distance-density}{%
+\section{2. A half-volume region with bounded inward distance
+density}\label{1013-a-half-volume-region-with-bounded-inward-distance-density}}
+
+Choose an open isoperimetric region \(E\) with
+
+\[
+\mu(E)=\frac12,
+\qquad P_\mu(E)=I.
+\]
+
+Its complement, represented by its interior, is another half-volume
+minimizer with the opposite weighted mean curvature. Thus we may choose
+the side so that the weighted mean curvature with respect to its outward
+normal is nonnegative:
+
+\[
+H_\mu(E)=\operatorname{div}_{\partial E}\nu-\langle\nabla V,\nu\rangle=H\geq0.
+\]
+
+Here the curvature is the trace of the second fundamental form, without
+division by \(n-1\), minus the outward normal derivative of \(V\).
+Define the globally 1-Lipschitz function
+
+\[
+f(x)=d(x,M\setminus E).
+\tag{3}
+\]
+
+It vanishes on the complement and is positive in \(E\). We claim that,
+for all \(0\leq s<t<\infty\),
+
+\[
+\mu\{s<f<t\}\leq I(t-s).
+\tag{4}
+\]
+
+For clarity, (4) is a bound on every distance layer, stronger than a
+bound only on the total layer adjacent to the boundary.
+
+To prove it, let \(S\) be the regular part of \(\partial E\), and follow
+the inward unit normal from \(x\in S\) until its first cut time
+\(\tau(x)\). Let \(J_x(t)\) be the normal Jacobian including the density
+ratio, normalized by \(J_x(0)=1\). Before the cut time, the Riccati
+equation gives
+
+\[
+\frac{d^2}{dt^2}\log J_x(t)
+=-|B_t|^2
+-\bigl(\operatorname{Ric}+\operatorname{Hess}V\bigr)(\dot\gamma,\dot\gamma)
+\leq0.
+\]
+
+The initial logarithmic derivative is \(-H\). Hence
+
+\[
+J_x(t)\leq e^{-Ht}\leq1,
+\qquad 0\leq t<\tau(x).
+\tag{5}
+\]
+
+The normal-ray representation, including the standard treatment of the
+singular boundary and cut locus, now yields
+
+\[
+\begin{aligned}
+\mu\{s<f<t\}
+&\leq\int_S\int_s^t
+\mathbf1_{\{r<\tau(x)\}}J_x(r)\,dr\,
+ e^{-V(x)}d\mathcal H^{n-1}(x)\\
+&\leq(t-s)P_\mu(E)=I(t-s).
+\end{aligned}
+\]
+
+This proves (4). Equivalently, the pushforward of \(\mu|_E\) under \(f\)
+is absolutely continuous on \((0,\infty)\), with density at most \(I\),
+and total mass \(1/2\). The quantity \(I\) is finite and positive: a set
+of zero weighted perimeter on a connected manifold with positive smooth
+density is constant almost everywhere, which is incompatible with
+measure \(1/2\).
+
+In dimension one, choose the half-line for which the density is
+nonincreasing into its interior. Convexity of \(V\) guarantees one such
+side at the median; the density at the median is \(I\), proving (4). For
+a circle with uniform measure, the two inward endpoint rays give the
+constant density \(I\) up to their meeting point.
+
+\hypertarget{1013-the-separated-pieces}{%
+\section{3. The separated pieces}\label{1013-the-separated-pieces}}
+
+Fix \(k\geq2\), and set
+
+\[
+b=\frac1{2k},
+\qquad
+g=\frac{b}{k-1}=\frac1{2k(k-1)}.
+\tag{6}
+\]
+
+Let
+
+\[
+G(t)=\mu\{0<f<t\}.
+\]
+
+By (4), \(G\) is continuous and \(I\)-Lipschitz, with \(G(0)=0\) and
+\(G(t)\to1/2\) as \(t\to\infty\). Choose finite numbers
+
+\[
+0=s_1<t_1<s_2<t_2<\cdots<s_{k-1}<t_{k-1}
+\]
+
+such that
+
+\[
+G(s_j)=(j-1)(g+b),
+\qquad
+G(t_j)=jg+(j-1)b,
+\qquad 1\leq j\leq k-1.
+\tag{7}
+\]
+
+All target values in (7) are below \(1/2\), so such thresholds exist.
+Flat portions of \(G\) cause no problem, and every positive level set of
+\(f\) has measure zero by (4).
+
+Define \(k\) Borel sets by
+
+\[
+A_1=\{f=0\},
+\]
+
+\[
+A_{j+1}=\{t_j\leq f\leq s_{j+1}\}
+\quad(1\leq j\leq k-2),
+\qquad
+A_k=\{f\geq t_{k-1}\}.
+\tag{8}
+\]
+
+For \(k=2\), the middle family is empty. The omitted gaps are
+
+\[
+D_j=\{s_j<f<t_j\},
+\qquad 1\leq j\leq k-1,
+\]
+
+and each has measure \(g\). Therefore
+
+\[
+\mu(A_1)=\frac12,
+\qquad
+\mu(A_i)=b\quad(2\leq i\leq k),
+\qquad
+\mu(A)=1-b,
+\quad A=\bigcup_{i=1}^kA_i.
+\tag{9}
+\]
+
+In particular, the measure tuple belongs to the set \(\Delta_k\) in the
+question: its sum is \(1-b\), and every individual measure is at least
+\(b\).
+
+The density bound (4) and the gap masses give
+
+\[
+t_j-s_j\geq\frac{g}{I}.
+\]
+
+Since \(f\) is 1-Lipschitz, any two consecutive sets in (8) are at
+distance at least the intervening gap width; nonconsecutive sets are
+farther apart. Thus
+
+\[
+\min_{i\ne j}d(A_i,A_j)\geq\frac{g}{I}>0.
+\tag{10}
+\]
+
+\hypertarget{1013-testing-the-concentration-assumption}{%
+\section{4. Testing the concentration
+assumption}\label{1013-testing-the-concentration-assumption}}
+
+Set
+
+\[
+r=\frac{g}{4I}.
+\tag{11}
+\]
+
+By (10), this is within the radius range allowed by the hypothesis:
+
+\[
+0<r\leq\frac12\min_{i\ne j}d(A_i,A_j).
+\]
+
+If a point of a gap \(D_j\) lies in \(A_r\), the 1-Lipschitz property of
+\(f\) forces its \(f\)-value to lie within \(r\) of one of that gap's
+two endpoints. Each such endpoint layer has measure at most \(Ir\), by
+(4). Consequently
+
+\[
+\begin{aligned}
+\mu(A_r\setminus A)
+&\leq2(k-1)Ir\\
+&=\frac{(k-1)g}{2}
+=\frac b2.
+\end{aligned}
+\]
+
+Combining this with (9),
+
+\[
+1-\mu(A_r)\geq\frac b2.
+\tag{12}
+\]
+
+The assumed multi-set concentration estimate, applied to the sets (8),
+gives
+
+\[
+1-\mu(A_r)
+\leq b\exp\bigl[-\min(ar^2,\sqrt a\,r)\bigr].
+\]
+
+Together with (12), this implies
+
+\[
+\min(ar^2,\sqrt a\,r)\leq\log2.
+\]
+
+Writing \(x=\sqrt a\,r\), and using \(\log2<1\), the last inequality
+forces \(x<1\) and then \(x^2\leq\log2\). Thus
+
+\[
+a\leq\frac{\log2}{r^2}
+=\frac{16\log2}{g^2}I^2
+=64k^2(k-1)^2\log2\,I^2.
+\tag{13}
+\]
+
+\hypertarget{1013-from-isoperimetry-to-the-variational-levels}{%
+\section{5. From isoperimetry to the variational
+levels}\label{1013-from-isoperimetry-to-the-variational-levels}}
+
+The weighted Cheeger inequality on a complete manifold gives
+
+\[
+\lambda^{(1)}\geq\frac{h_\mu^2}{4}=I^2.
+\tag{14}
+\]
+
+This is a functional inequality, so it does not require an eigenfunction
+or a discrete spectrum. One may verify it directly: for a real
+\(H^1(\mu)\) function \(u\), choose a median \(m\). Apply the coarea
+form of the Cheeger inequality to \((u-m)_+^2\) and \((u-m)_-^2\), whose
+supports have measure at most \(1/2\), and then use Cauchy--Schwarz.
+This gives
+
+\[
+\int|\nabla u|^2d\mu
+\geq\frac{h_\mu^2}{4}\int|u-m|^2d\mu
+\geq\frac{h_\mu^2}{4}\int|u-\mu(u)|^2d\mu.
+\]
+
+Every two-dimensional subspace in the variational definition contains a
+nonzero mean-zero function, proving (14). Monotonicity of the min--max
+levels gives \(\lambda^{(k)}\geq\lambda^{(1)}\). Equations (13)--(14)
+prove (1).
+
+If one permits a connected zero-dimensional manifold, it is a single
+point and the infimum over \((k+1)\)-dimensional subspaces is empty,
+hence \(+\infty\); the assertion is then immediate under the usual
+variational convention.
+
+\hypertarget{1013-references-and-verification-scope}{%
+\section{References and verification
+scope}\label{1013-references-and-verification-scope}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  N. Gozlan and R. Herry, \emph{Multiple sets exponential concentration
+  and higher order eigenvalues}, Potential Analysis \textbf{52} (2020),
+  203--221, Section 5.2. DOI:
+  \url{https://doi.org/10.1007/s11118-018-9743-1}. Primary preprint:
+  \url{https://arxiv.org/abs/1804.06133}.
+\item
+  E. Milman, \emph{Isoperimetric and Concentration Inequalities ---
+  Equivalence under Curvature Lower Bound}, Duke Mathematical Journal
+  \textbf{154} (2010), 207--239. Sections 2--3, especially Section 2.2,
+  Section 2.4, Theorem 3.2, and Corollary 3.3. DOI:
+  \url{https://doi.org/10.1215/00127094-2010-038}. Primary final
+  preprint: \url{https://arxiv.org/pdf/0902.1560}.
+\item
+  E. Milman, \emph{Sharp isoperimetric inequalities and model spaces for
+  the Curvature-Dimension-Diameter condition}, Journal of the European
+  Mathematical Society \textbf{17} (2015), 1041--1078. Theorem 2.1,
+  Theorem 2.3, Corollary 2.5, and Proposition 2.9. DOI:
+  \url{https://doi.org/10.4171/JEMS/526}. Primary published text:
+  \url{https://ems.press/content/serial-article-files/32036}.
+\item
+  E. Milman, \emph{Uniform tail-decay of Lipschitz functions implies
+  Cheeger's isoperimetric inequality under convexity assumptions},
+  Comptes Rendus Mathématique \textbf{346} (2008), 989--994, Theorem 4.2
+  and the ensuing Cheeger-profile identity. DOI:
+  \url{https://doi.org/10.1016/j.crma.2008.07.022}. Primary published
+  text:
+  \url{https://www.numdam.org/item/10.1016/j.crma.2008.07.022.pdf}.
+\end{enumerate}
+\end{document}

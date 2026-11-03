@@ -2,13 +2,13 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**874 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**868 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
 | Subject group | Open targets | Solved |
 | --- | ---: | ---: |
-| [Spectral theory and spectral geometry](#spectral-theory-and-spectral-geometry) | [45](#spectral-open) | [10](#spectral-solved) |
+| [Spectral theory and spectral geometry](#spectral-theory-and-spectral-geometry) | [39](#spectral-open) | [16](#spectral-solved) |
 | [Operators, matrices and computation](#operators-matrices-and-computation) | [69](#operators-open) | [18](#operators-solved) |
 | [Inverse problems, control and dynamics](#inverse-problems-control-and-dynamics) | [21](#inverse-open) | [8](#inverse-solved) |
 | [PDEs, fluids and materials](#pdes-fluids-and-materials) | [50](#pdes-materials-open) | [11](#pdes-materials-solved) |
@@ -69,15 +69,12 @@
 | 1010 | [Nonempty spectrum of a positive-elliptic polynomial pencil in odd dimensions](problems/1010-nonempty-spectrum-of-a-positive-elliptic-polynomial-pencil-in-odd-dimensions.md) | 🟡 PARTIAL | Spectral theory and partial differential equations |
 | 1011 | [Dominance of the continuous spectrum on random cusped hyperbolic surfaces](problems/1011-dominance-of-the-continuous-spectrum-on-random-cusped-hyperbolic-surfaces.md) | 🟡 PARTIAL | Spectral theory and spectral geometry |
 | 1012 | [Bishop's mean-eigenvalue conjecture for three regions on the sphere](problems/1012-bishop-s-mean-eigenvalue-conjecture-for-three-regions-on-the-sphere.md) | 🟡 PARTIAL | Spectral geometry and shape optimization |
-| 1013 | [Spectral lower bounds from multi-set concentration](problems/1013-spectral-lower-bounds-from-multi-set-concentration.md) | 🟡 PARTIAL | Spectral geometry and concentration of measure |
 | 1014 | [Is every second p-Laplacian nodal line in a disk a diameter?](problems/1014-is-every-second-p-laplacian-nodal-line-in-a-disk-a-diameter.md) | 🟡 PARTIAL | Nonlinear spectral geometry |
 | 1015 | [Stability of higher Laplace eigenvalue bounds on the sphere](problems/1015-stability-of-higher-laplace-eigenvalue-bounds-on-the-sphere.md) | 🟡 PARTIAL | Spectral geometry and spectral optimization |
 | 1016 | [The sharp inradius bound for superhomogeneous Dirichlet frequencies](problems/1016-the-sharp-inradius-bound-for-superhomogeneous-dirichlet-frequencies.md) | 🟡 PARTIAL | Spectral theory and spectral geometry |
 | 1017 | [Fractal Weyl upper bound for hyperbolic manifolds with cusps](problems/1017-fractal-weyl-upper-bound-for-hyperbolic-manifolds-with-cusps.md) | 🟡 PARTIAL | Spectral theory and spectral geometry |
-| 1018 | [Can spectral type vary within a limit-periodic Schrödinger hull?](problems/1018-can-spectral-type-vary-within-a-limit-periodic-schrodinger-hull.md) | 🟡 PARTIAL | Spectral theory and aperiodic media |
 | 1019 | [The sharp logarithmic Sobolev constant of a flat torus](problems/1019-the-sharp-logarithmic-sobolev-constant-of-a-flat-torus.md) | 🟡 PARTIAL | Spectral theory and spectral geometry |
 | 1020 | [Can coupling change the spectral type of a limit-periodic Schrödinger operator?](problems/1020-can-coupling-change-the-spectral-type-of-a-limit-periodic-schrodinger-operator.md) | 🟡 PARTIAL | Spectral theory and aperiodic media |
-| 1022 | [Can intersection complexity be separated from eigenvalue growth?](problems/1022-can-intersection-complexity-be-separated-from-eigenvalue-growth.md) | 🟡 PARTIAL | Spectral geometry and embedded hypersurfaces |
 | 1023 | [Reznikov's geodesic-period decay conjecture](problems/1023-reznikov-s-geodesic-period-decay-conjecture.md) | 🟡 PARTIAL | Spectral geometry and hyperbolic surfaces |
 | 1024 | [Are critical points of eigenfunctions on closed hyperbolic surfaces always finite?](problems/1024-are-critical-points-of-eigenfunctions-on-closed-hyperbolic-surfaces-always-finite.md) | 🟡 PARTIAL | Spectral geometry |
 | 1025 | [Does the Steklov spectrum determine every cuboid?](problems/1025-does-the-steklov-spectrum-determine-every-cuboid.md) | 🟡 PARTIAL | Spectral geometry and inverse problems |
@@ -85,11 +82,8 @@
 | 1028 | [Sharp convex Pólya-functional bounds in dimensions three and higher](problems/1028-sharp-convex-polya-functional-bounds-in-dimensions-three-and-higher.md) | 🟡 PARTIAL | Spectral shape optimization |
 | 1029 | [An asymptotic Courant bound for boundary nodal domains](problems/1029-an-asymptotic-courant-bound-for-boundary-nodal-domains.md) | 🟡 PARTIAL | Spectral geometry and elliptic boundary problems |
 | 1030 | [Uniform Weyl asymptotics for self-generated spinless magnetic fields](problems/1030-uniform-weyl-asymptotics-for-self-generated-spinless-magnetic-fields.md) | 🟡 PARTIAL | Semiclassical spectral theory and magnetic Schrödinger operators |
-| 1031 | [Are non-Cantor spectra dense among nonperiodic limit-periodic potentials?](problems/1031-are-non-cantor-spectra-dense-among-nonperiodic-limit-periodic-potentials.md) | 🟡 PARTIAL | Spectral theory and aperiodic media |
-| 1032 | [The spectral tree for high-order Heun operators](problems/1032-the-spectral-tree-for-high-order-heun-operators.md) | 🟡 PARTIAL | Spectral asymptotics of differential operators and planar potential theory |
 | 1033 | [Sharp Landau-level counting on arbitrary planar domains](problems/1033-sharp-landau-level-counting-on-arbitrary-planar-domains.md) | 🟡 PARTIAL | Spectral theory and spectral geometry |
 | 1034 | [The sharp curvature Schrödinger inequality for closed loops](problems/1034-the-sharp-curvature-schrodinger-inequality-for-closed-loops.md) | 🟡 PARTIAL | Spectral geometry and elastic loops |
-| 1035 | [Do matrix local-mass bounds imply Stahl–Totik regularity?](problems/1035-do-matrix-local-mass-bounds-imply-stahltotik-regularity.md) | 🟡 PARTIAL | Spectral theory and matrix orthogonal polynomials |
 
 <a name="spectral-solved"></a>
 
@@ -105,8 +99,14 @@
 | 652 | [The Robin fundamental gap conjecture](research/resolved/652-robin-fundamental-gap.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/021-robin-gap-counterexample/robin_gap_021.pdf) | [Review](research/solution_reviews/2026-10-02/021-review.md) |
 | 653 | [Exponential interior decay for smooth Steklov domains](research/resolved/653-steklov-smooth-interior-decay.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-steklov-024/steklov_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/024-review.md) |
 | 1007 | [Embedded eigenvalues in asymptotically flat twisted strips](problems/1007-embedded-eigenvalues-in-asymptotically-flat-twisted-strips.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-1007/twisted-strip-counterexample.pdf) | [Review](research/solution_reviews/2026-11-03-pr181/1007-review.md) |
+| 1013 | [Spectral lower bounds from multi-set concentration](problems/1013-spectral-lower-bounds-from-multi-set-concentration.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/1013-multiset-concentration-gap/aim1013.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1013-review.md) |
+| 1018 | [Can spectral type vary within a limit-periodic Schrödinger hull?](problems/1018-can-spectral-type-vary-within-a-limit-periodic-schrodinger-hull.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/1018-limit-periodic-hull-spectral-type/aim1018.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1018-review.md) |
 | 1021 | [Must limit-periodic discrete Schrödinger operators have pure spectral type?](problems/1021-must-limit-periodic-discrete-schrodinger-operators-have-pure-spectral-type.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/1021-limit-periodic-mixed-spectrum/limit_periodic_mixed_spectrum.pdf) | [Review](research/solution_reviews/2026-11-03-aim1021/1021-review.md) |
+| 1022 | [Can intersection complexity be separated from eigenvalue growth?](problems/1022-can-intersection-complexity-be-separated-from-eigenvalue-growth.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/1022-additive-intersection-index-counterexample/aim1022.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1022-review.md) |
 | 1026 | [Steklov zeros in a fixed boundary collar](problems/1026-steklov-zeros-in-a-fixed-boundary-collar.md) | ✅ SOLVED | Counterexample | [Proof](https://arxiv.org/pdf/2610.28391v2) | [Review](research/solution-status-audit-2026-11-03/lane-d/1026.json) |
+| 1031 | [Are non-Cantor spectra dense among nonperiodic limit-periodic potentials?](problems/1031-are-non-cantor-spectra-dense-among-nonperiodic-limit-periodic-potentials.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/1031-limit-periodic-finite-interval-spectra/aim1031.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1031-review.md) |
+| 1032 | [The spectral tree for high-order Heun operators](problems/1032-the-spectral-tree-for-high-order-heun-operators.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/1032-heun-star-counterexample/aim1032.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1032-review.md) |
+| 1035 | [Do matrix local-mass bounds imply Stahl–Totik regularity?](problems/1035-do-matrix-local-mass-bounds-imply-stahltotik-regularity.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/1035-matrix-local-mass-counterexample/aim1035.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1035-review.md) |
 
 ## Operators, matrices and computation
 
@@ -1517,7 +1517,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 
 | Publication batch | Open targets | Entry review dates |
 | --- | ---: | --- |
-| Original collection | 63 | 2026-09-08–2026-10-30 |
+| Original collection | 63 | 2026-09-08–2026-11-03 |
 | Second collection | 76 | 2026-09-08–2026-11-03 |
 | Third collection | 77 | 2026-09-13–2026-11-03 |
 | September 2026 expansion — batch 1 | 8 | 2026-09-17 |
@@ -1529,7 +1529,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 22 expansion — PDE emphasis | 88 | 2026-09-22–2026-10-30 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
 | Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 117 | 2026-09-23–2026-11-03 |
-| Retained further problems, integrated 30 October 2026 | 399 | 2026-10-30–2026-11-03 |
+| Retained further problems, integrated 30 October 2026 | 393 | 2026-10-30–2026-11-03 |
 
 ## Maintaining the collection
 

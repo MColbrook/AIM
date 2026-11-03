@@ -1,0 +1,370 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage{xcolor,graphicx,booktabs,longtable,array}
+\usepackage{microtype,enumitem,fancyhdr,titlesec}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
+ pdftitle={Local matrix-mass bounds do not imply Stahl--Totik regularity},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 1035: mathematical result and proof}}
+\urlstyle{same}
+\Urlmuskip=0mu plus 1mu
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 1035}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setcounter{secnumdepth}{0}
+\allowdisplaybreaks[2]
+\title{\textbf{Local matrix-mass bounds do not imply Stahl--Totik regularity}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct a normalized nontrivial positive-semidefinite matrix measure with a uniform polynomial local-mass lower bound whose block-Jacobi determinant regularity limit nevertheless vanishes. The rank-one density has no polynomial null vector. This gives a counterexample to the precise matrix local-mass criterion in AIM 1035.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 1035 at revision
+\texttt{3fa50884d129}. Its scope is stated below.
+\medskip
+
+\hypertarget{1035-status-and-scope}{%
+\section{Status and scope}\label{1035-status-and-scope}}
+
+This counterexample disproves AIM 1035 and Conjecture~5.9 in the work of D. Damanik,
+A. Pushnitski and B. Simon, \emph{The Analytic Theory of Matrix
+Orthogonal Polynomials}, Surveys in Approximation Theory \textbf{4}
+(2008), 1--85 \cite{DPS08}. It uses the positive-semidefinite matrix measures allowed
+by that paper. The polynomial moment form is strictly positive, as
+required by \cite[Section~1.2 and Lemma~2.1]{DPS08}. The density has rank one, so a variant requiring
+a positive-definite density almost everywhere is not addressed.
+
+Primary published text:
+\url{https://www.math.auckland.ac.nz/sat/papers/11/11.pdf}. The
+relevant source equations are (2.34) and (5.20); the needed facts are
+proved below.
+
+\hypertarget{1035-theorem}{%
+\section{Theorem}\label{1035-theorem}}
+
+There exists a normalized, nontrivial, positive \(2\times2\) matrix
+measure \(\mu\), supported on \(E=[-1,1]\), whose associated block
+Jacobi matrix has essential spectrum exactly \(E\), such that
+
+\[
+\mu([x-m^{-1},x+m^{-1}])\succeq c m^{-3} I_2
+\qquad(x\in E,\ m\ge1)
+\]
+
+for a constant \(c>0\), but whose invertible off-diagonal Jacobi blocks
+satisfy
+
+\[
+\lim_{n\to\infty}|\det(A_1\cdots A_n)|^{1/n}=0.
+\]
+
+Since \(\operatorname{Cap}([-1,1])^2=1/4\), this measure is not regular.
+Its mass condition is stronger than the conjectured condition: for every
+\(\eta>0\), one has \(E\subset S_{m,\eta}\) for all sufficiently large
+\(m\).
+
+\hypertarget{1035-construction-and-nondegeneracy}{%
+\section{1. Construction and
+nondegeneracy}\label{1035-construction-and-nondegeneracy}}
+
+Set
+
+\[
+v(x)=\begin{pmatrix}1\\e^x\end{pmatrix},\qquad
+d\nu(x)=v(x)v(x)^T\,\mathbf1_{[-1,1]}(x)\,dx.
+\]
+
+Let \(M=\nu(E)\), \(C=M^{-1/2}\), and \(d\mu=C\,d\nu\,C\). In
+particular, \(\mu(E)=I_2\). Explicitly,
+
+\[
+M=\begin{pmatrix}
+2&e-e^{-1}\\
+e-e^{-1}&(e^2-e^{-2})/2
+\end{pmatrix},\qquad
+\det M=2(1-e^{-2})>0.
+\]
+
+For a vector polynomial \(f=(a,b)^T\),
+
+\[
+\|f\|_\nu^2=\int_{-1}^1|a(x)+e^x b(x)|^2\,dx.
+\]
+
+This norm is zero only if \(a=b=0\). Indeed, vanishing of the integral
+forces the entire function \(a(z)+e^z b(z)\) to vanish identically. If
+\(b\ne0\), its exponential term dominates the polynomial \(a\) on the
+positive real axis, a contradiction. The invertible constant change
+\(f\mapsto Cf\) gives the same nondegeneracy for \(\mu\).
+
+Consequently every finite vector-polynomial Gram matrix is positive
+definite. Block Gram--Schmidt therefore produces the monic matrix
+orthogonal polynomials of all degrees and an associated block Jacobi
+matrix with all off-diagonal blocks invertible. The rank-one density is
+compatible with strict positivity of the polynomial moment form: there
+is no nonzero polynomial vector lying in its pointwise nullspace.
+
+\hypertarget{1035-the-associated-essential-spectrum}{%
+\section{2. The associated essential
+spectrum}\label{1035-the-associated-essential-spectrum}}
+
+Define, initially on vector polynomials,
+
+\[
+(Uf)(x)=v(x)^T C f(x).
+\]
+
+By construction, \(U\) is an isometry from the polynomial-vector inner
+product for \(\mu\) into \(L^2([-1,1],dx)\). Its range contains every
+scalar polynomial: for a scalar polynomial \(r\), take
+\(f=C^{-1}(r,0)^T\). Scalar polynomials are dense in this scalar \(L^2\)
+space. Thus \(U\) extends to a unitary map from the completion of the
+polynomial vectors onto \(L^2([-1,1],dx)\).
+
+Moreover, \(U(xf)=xUf\). Hence the block Jacobi operator obtained from
+the orthonormal polynomial-vector basis is unitarily equivalent to
+multiplication by \(x\) on scalar \(L^2([-1,1],dx)\). This is a bounded
+self-adjoint operator of norm one, with spectrum and essential spectrum
+both \([-1,1]\). (Its spectrum is purely absolutely continuous of
+multiplicity one; the conjecture does not assume maximal matrix spectral
+multiplicity.)
+
+\hypertarget{1035-uniform-local-matrix-mass-lower-bound}{%
+\section{3. Uniform local matrix-mass lower
+bound}\label{1035-uniform-local-matrix-mass-lower-bound}}
+
+Let \(I\subset[-1,1]\) be an interval of length \(L>0\). Write
+
+\[
+G_I=\nu(I)=\begin{pmatrix}
+L&\int_I e^t\,dt\\
+\int_I e^t\,dt&\int_I e^{2t}\,dt
+\end{pmatrix}.
+\]
+
+The determinant identity
+
+\[
+\det G_I
+=\frac12\int_I\int_I(e^s-e^t)^2\,ds\,dt
+\]
+
+and the mean-value bound \(|e^s-e^t|\ge e^{-1}|s-t|\) imply
+
+\[
+\det G_I\ge\frac{e^{-2}}2\int_I\int_I(s-t)^2\,ds\,dt
+=\frac{e^{-2}}{12}L^4.
+\]
+
+Also \(\operatorname{tr}G_I\le(1+e^2)L\). Since \(G_I\) is positive
+definite,
+
+\[
+\lambda_{\min}(G_I)
+=\frac{\det G_I}{\lambda_{\max}(G_I)}
+\ge\frac{e^{-2}}{12(1+e^2)}L^3.
+\]
+
+For \(x\in[-1,1]\) and \(m\ge1\), the truncated interval
+\(I=[x-m^{-1},x+m^{-1}]\cap[-1,1]\) has length at least \(m^{-1}\),
+including when \(x\) is an endpoint. Consequently,
+
+\[
+\mu([x-m^{-1},x+m^{-1}])=CG_I C
+\succeq \frac{e^{-2}}{12(1+e^2)\lambda_{\max}(M)}m^{-3}I_2.
+\]
+
+Take the positive constant on the right as \(c\). Because
+\(c m^{-3}\ge e^{-\eta m}\) for every sufficiently large \(m\), for each
+fixed \(\eta>0\), the required sets contain all of \(E\) eventually.
+
+\hypertarget{1035-an-elementary-paduxe9-remainder-identity}{%
+\section{4. An elementary Padé remainder
+identity}\label{1035-an-elementary-paduxe9-remainder-identity}}
+
+For every integer \(n\ge1\), there are real polynomials \(q_n,p_n\) such
+that \(q_n\) is monic of degree \(n\), \(\deg p_n\le n-1\), and
+
+\[
+e^x q_n(x)-p_n(x)
+=\frac{x^{2n}}{(n-1)!}
+\int_0^1 e^{tx}t^n(1-t)^{n-1}\,dt.
+\tag{1}
+\]
+
+Here is a direct proof. Let \(f_n(t)=t^n(1-t)^{n-1}\). Integrating by
+parts repeatedly, using \(f_n^{(2n)}=0\), gives
+
+\[
+\frac{x^{2n}}{(n-1)!}\int_0^1 e^{tx} f_n(t)\,dt
+=\frac1{(n-1)!}\sum_{j=0}^{2n-1}(-1)^j x^{2n-1-j}
+\bigl(e^x f_n^{(j)}(1)-f_n^{(j)}(0)\bigr).
+\]
+
+The endpoint vanishing orders are \(n-1\) at \(1\) and \(n\) at \(0\).
+Therefore the coefficient of \(e^x\) is a polynomial of degree \(n\),
+while the other polynomial has degree at most \(n-1\). Since
+\(f_n^{(n-1)}(1)=(-1)^{n-1}(n-1)!\), the former polynomial is monic.
+This proves (1), initially for \(x\ne0\) and then at \(0\) by
+continuity.
+
+For reference, explicit coefficients are
+
+\[
+q_n(x)=\sum_{k=0}^{n}(-1)^{n+k}
+\frac{(2n-1-k)!\,n!}{(n-1)!\,(n-k)!\,k!}x^k,
+\]
+
+\[
+p_n(x)=(-1)^n\sum_{k=0}^{n-1}
+\frac{(2n-1-k)!}{(n-1-k)!\,k!}x^k.
+\]
+
+These are the monically rescaled Padé approximants of type \([n-1/n]\)
+for the exponential. No Padé approximation theorem is needed: identity
+(1) is sufficient.
+
+For \(|x|\le1\), the beta integral yields
+
+\[
+|e^xq_n(x)-p_n(x)|
+\le\frac{e}{(n-1)!}\int_0^1t^n(1-t)^{n-1}\,dt
+= e\frac{n!}{(2n)!}.
+\tag{2}
+\]
+
+\hypertarget{1035-the-determinant-regularity-limit-is-zero}{%
+\section{5. The determinant regularity limit is
+zero}\label{1035-the-determinant-regularity-limit-is-zero}}
+
+Let \(P_n\) denote the monic matrix orthogonal polynomial for \(\mu\),
+and let
+
+\[
+H_n=\int P_n(x)^*\,d\mu(x)\,P_n(x).
+\]
+
+For every monic matrix polynomial \(Q\) of degree \(n\), orthogonality
+gives
+
+\[
+\int Q^*\,d\mu\,Q
+=H_n+\int(Q-P_n)^*\,d\mu\,(Q-P_n)\succeq H_n.
+\tag{3}
+\]
+
+Consider the monic trial matrix
+
+\[
+T_n(x)=\begin{pmatrix}x^n&-p_n(x)\\0&q_n(x)\end{pmatrix}
+\]
+
+for \(\nu\), and \(\widetilde T_n=C^{-1}T_n C\) for \(\mu\). Both have
+leading coefficient \(I_2\). If \(R_n=e^xq_n-p_n\), then
+
+\[
+K_n:=\int T_n^*\,d\nu\,T_n
+=\int_{-1}^1
+\begin{pmatrix}x^{2n}&x^nR_n(x)\\x^nR_n(x)&R_n(x)^2\end{pmatrix}\,dx.
+\]
+
+The determinant of this Gram matrix is bounded above by the product of
+its diagonal entries. By (2),
+
+\[
+\det K_n\le
+\left(\int_{-1}^1x^{2n}\,dx\right)
+\left(\int_{-1}^1R_n(x)^2\,dx\right)
+\le4e^2\left(\frac{n!}{(2n)!}\right)^2.
+\tag{4}
+\]
+
+The normalized trial norm is \(CK_n C\). Since determinants are monotone
+for the positive-definite order, (3)--(4) imply
+
+\[
+\det H_n\le\det(CK_nC)
+\le\frac{4e^2}{\det M}\left(\frac{n!}{(2n)!}\right)^2.
+\tag{5}
+\]
+
+For a normalized matrix measure, comparison of the leading coefficients
+in the orthonormal three-term recurrence gives
+
+\[
+\det H_n=|\det(A_1\cdots A_n)|^2.
+\tag{6}
+\]
+
+For completeness, the recurrence gives
+
+\[
+|\det A_j|=(\det H_j/\det H_{j-1})^{1/2}.
+\]
+
+Multiplying and using \(H_0=I_2\) gives (6). This is also \cite[Eq.~(2.34)]{DPS08}.
+
+Combining (5) and (6),
+
+\[
+0<|\det(A_1\cdots A_n)|
+\le \frac{2e}{\sqrt{\det M}}\frac{n!}{(2n)!}.
+\]
+
+Finally,
+
+\[
+\frac{n!}{(2n)!}
+=\frac1{(n+1)(n+2)\cdots(2n)}\le(n+1)^{-n}.
+\]
+
+Taking \(n\)-th roots proves that the determinant limit is zero. This
+contradicts regularity, whose required value is \(1/4\), and completes
+the counterexample.
+
+\hypertarget{1035-why-the-scalar-intuition-fails}{%
+\section{Why the scalar intuition
+fails}\label{1035-why-the-scalar-intuition-fails}}
+
+Every fixed vector direction receives substantial mass on every short
+interval. Nevertheless, the null direction of the rank-one density
+rotates analytically with \(x\). Vector polynomials can follow this
+changing null direction to superexponential accuracy, via rational
+approximation of \(e^x\). The local integral lower bound does not
+control such changing polynomial directions. This mechanism is absent
+from a scalar measure or a fixed diagonal direct sum.
+
+\begin{thebibliography}{1}
+\raggedright
+\bibitem{DPS08}
+D. Damanik, A. Pushnitski and B. Simon,
+\emph{The Analytic Theory of Matrix Orthogonal Polynomials},
+Surveys in Approximation Theory \textbf{4} (2008), 1--85.
+\url{https://www.math.auckland.ac.nz/sat/papers/11/11.pdf}.
+\url{https://arxiv.org/abs/0711.2703v2}.
+The positive-semidefinite convention is in Section~1.2 (p.~5),
+polynomial nontriviality in Lemma~2.1 (p.~16),
+the norm identity in (2.34) (p.~21), determinant regularity in
+Theorem~5.4 (p.~70), and Conjecture~5.9 in (5.20) (p.~72).
+\end{thebibliography}
+\end{document}

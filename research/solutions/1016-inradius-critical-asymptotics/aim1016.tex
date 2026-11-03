@@ -1,0 +1,553 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage{xcolor,graphicx,booktabs,longtable,array}
+\usepackage{microtype,enumitem,fancyhdr,titlesec}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
+ pdftitle={Critical inradius asymptotics and a supremum-norm bound for convex domains},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 1016: mathematical result and proof}}
+\urlstyle{same}
+\Urlmuskip=0mu plus 1mu
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 1016}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setcounter{secnumdepth}{0}
+\allowdisplaybreaks[2]
+\title{\textbf{Critical inradius asymptotics and a supremum-norm bound for convex domains}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We determine the leading large-exponent asymptotic of the critical inradius-normalized Dirichlet frequency constant. We also give an explicit lower bound for the supremum-norm problem in a separate range of exponents. These results address parts of AIM 1016 and do not determine its general sharp constants.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 1016 at revision
+\texttt{3fa50884d129}. Its scope is stated below.
+\medskip
+
+\hypertarget{1016-result-and-scope}{%
+\section{Result and scope}\label{1016-result-and-scope}}
+
+For a bounded nonempty open convex domain \(\Omega\subset\mathbb R^N\),
+let \(R_\Omega\) be its Euclidean inradius. In the critical case
+considered here, the constant in AIM 1016 is
+
+\[
+C_{\mathrm{opt}}(N,N,q)=
+\inf_{\Omega\ \mathrm{convex}} R_\Omega^{N^2/q}
+\inf_{\substack{u\in C_c^\infty(\Omega)\\u\ne0}}
+\frac{\int_\Omega|\nabla u|^N\,dx}
+ {(\int_\Omega|u|^q\,dx)^{N/q}}.
+\]
+
+Equivalently, impose \(R_\Omega=1\) and take the infimum of the
+displayed quotient. Write
+
+\[
+\sigma_{N-1}=|S^{N-1}|,\qquad N'=\frac{N}{N-1}.
+\]
+
+For every integer \(N\ge 2\), the following asymptotic holds:
+
+\[
+\boxed{\displaystyle
+\lim_{q\to\infty}q^{N-1}C_{\rm opt}(N,N,q)
+=\sigma_{N-1}\left(\frac{eN^2}{N-1}\right)^{N-1}.}
+\tag{1}
+\]
+
+In particular,
+
+\[
+\lim_{q\to\infty}q\,C_{\rm opt}(2,2,q)=8\pi e.
+\]
+
+This determines an asymptotic regime of the parameter-dependent problem,
+\textbf{not} the exact constant at a fixed finite \(q\). The proof is a
+consequence of classical sharp exponential integrability, a uniform
+convex-domain Hardy estimate, and an explicit concentrating test. No
+claim that the asymptotic is new in the literature is made.
+
+\hypertarget{1016-a-shape-uniform-ln-estimate}{%
+\section{1. A shape-uniform L\^{}N
+estimate}\label{1016-a-shape-uniform-ln-estimate}}
+
+By scaling, restrict to domains of inradius one. Their boundary-distance
+function \(d(x)=\operatorname{dist}(x,\partial\Omega)\) satisfies
+\(0<d\le 1\), \(|\nabla d|=1\) almost everywhere, and is concave because
+the domain is convex. In particular \(\Delta d\le 0\) distributionally.
+
+For \(u\in C_c^\infty(\Omega)\), integration by parts using
+
+\[
+\operatorname{div}\left(\frac{\nabla d}{d^{N-1}}\right)
+\le-\frac{N-1}{d^N}
+\]
+
+and then Hölder's inequality give the standard convex Hardy estimate
+
+\[
+\left\|\frac{u}{d}\right\|_N
+\le \frac{N}{N-1}\|\nabla u\|_N.
+\]
+
+The distributional computation can equivalently use the locally BV
+field \(\nabla d/(d+\varepsilon)^{N-1}\), whose singular divergence
+part is nonpositive, and then let \(\varepsilon\downarrow0\).
+Adding \(\varepsilon\) regularizes the denominator, not the distance
+function itself. Since \(d\le 1\), this implies
+
+\[
+\|u\|_N^N\le B_N\|\nabla u\|_N^N,
+\qquad B_N=\left(\frac{N}{N-1}\right)^N.
+\tag{2}
+\]
+
+The constant is uniform over the entire inradius-one class; no bound on
+volume or diameter is needed.
+
+\hypertarget{1016-exponential-integrability-and-moment-bounds}{%
+\section{2. Exponential integrability and moment
+bounds}\label{1016-exponential-integrability-and-moment-bounds}}
+
+Use the Adachi--Tanaka inequality on \(\mathbb R^N\). Put
+
+\[
+\alpha_N=N\sigma_{N-1}^{1/(N-1)},\qquad
+\Phi_N(t)=e^t-\sum_{j=0}^{N-2}\frac{t^j}{j!}.
+\]
+
+For each fixed \(0<\alpha <\alpha _N\), there is a finite
+\(A_{N,\alpha}\) such that every \(u\in W^{1,N}(\mathbb R^N)\) with
+\(\Vert \nabla u\Vert _N=1\) satisfies
+
+\[
+\int_{\mathbb R^N}\Phi_N(\alpha|u|^{N'})\,dx
+\le A_{N,\alpha}\|u\|_N^N.
+\tag{3}
+\]
+
+This is Theorem 0.1 of the authors' 1999 primary manuscript and the
+principal theorem of their 2000 journal paper:
+
+\begin{itemize}
+\tightlist
+\item
+  S. Adachi and K. Tanaka, \emph{A scale-invariant form of
+  Trudinger--Moser inequality and its best exponent}, RIMS Kokyuroku
+  \textbf{1102} (1999), 148--153. Primary PDF:
+  \url{https://www.kurims.kyoto-u.ac.jp/~kyodo/kokyuroku/contents/pdf/1102-11.pdf}
+\item
+  S. Adachi and K. Tanaka, \emph{Trudinger type inequalities in R\^{}N
+  and their best exponents}, Proc. Amer. Math. Soc. \textbf{128} (2000),
+  2051--2057. DOI: \url{https://doi.org/10.1090/S0002-9939-99-05180-1}
+\end{itemize}
+
+Extend a compactly supported domain test by zero to \(\mathbb R^N\) and
+normalize its gradient norm to one. Combining (2) and (3), and retaining
+the \(m\)th nonnegative exponential-series term for any integer
+\(m\ge N-1\), gives
+
+\[
+\int_\Omega |u|^{N'm}\,dx
+\le A_{N,\alpha}B_N\,m!\,\alpha^{-m}.
+\tag{4}
+\]
+
+Set \(r_m=N'm\). Taking the power \(N/r_m=(N-1)/m\) in (4), and then
+taking the reciprocal, proves the shape-uniform lower bound
+
+\[
+C_{\rm opt}(N,N,r_m)
+\ge \alpha^{N-1}
+(A_{N,\alpha}B_N)^{-(N-1)/m}
+(m!)^{-(N-1)/m}.
+\tag{5}
+\]
+
+Stirling's formula yields
+
+\[
+\liminf_{m\to\infty}r_m^{N-1}C_{\rm opt}(N,N,r_m)
+\ge(eN'\alpha)^{N-1}.
+\tag{6}
+\]
+
+This also holds along all real \(q\to \infty\), not only the sequence
+\(r_m\). Indeed, choose \(m=\lceil q/N'\rceil\), so \(q\le r_m<q+N'\),
+and interpolate between the uniform \(L^N\) estimate (2) and (4):
+
+\[
+\frac1q=\frac{\theta_q}{N}+\frac{1-\theta_q}{r_m},
+\qquad
+\theta_q=\frac{N(r_m-q)}{q(r_m-N)}=O(q^{-2}).
+\]
+
+Thus \(\|u\|_q^N\le B_N^{\theta_q}\|u\|_{r_m}^{N(1-\theta_q)}\); the
+interpolation factors are asymptotically one after division by
+\(q^{N-1}\). Taking the infimum over all shapes and tests preserves this
+uniform bound. Finally let \(\alpha\) increase to \(\alpha _N\) in (6),
+obtaining
+
+\[
+\liminf_{q\to\infty}q^{N-1}C_{\rm opt}(N,N,q)
+\ge(eN'\alpha_N)^{N-1}
+=\sigma_{N-1}\left(\frac{eN^2}{N-1}\right)^{N-1}.
+\tag{7}
+\]
+
+The order of limits is important: \(\alpha <\alpha _N\) is fixed while
+\(q\) tends to infinity. No uniform control of \(A_{N,\alpha}\) at the
+critical exponent is assumed.
+
+\hypertarget{1016-a-matching-moser-test-in-the-unit-ball}{%
+\section{3. A matching Moser test in the unit
+ball}\label{1016-a-matching-moser-test-in-the-unit-ball}}
+
+The unit ball has inradius one, so its test functions provide upper
+bounds for the shape infimum. For \(L>0\), define the radial function
+
+\[
+u_L(r)=\sigma_{N-1}^{-1/N}
+\begin{cases}
+L^{(N-1)/N},&0\le r\le e^{-L},\\
+L^{-1/N}\log(1/r),&e^{-L}<r<1,\\
+0,&r\ge1.
+\end{cases}
+\]
+
+This belongs to \(W_0^{1,N}(B_1)\), and direct integration gives
+
+\[
+\int_{B_1}|\nabla u_L|^N\,dx=1.
+\tag{8}
+\]
+
+Its inner plateau alone yields
+
+\[
+\int_{B_1}|u_L|^q\,dx
+\ge\frac{\sigma_{N-1}}{N}e^{-NL}
+\sigma_{N-1}^{-q/N}L^{q(N-1)/N}.
+\]
+
+Therefore
+
+\[
+C_{\rm opt}(N,N,q)
+\le \sigma_{N-1}
+\left(\frac N{\sigma_{N-1}}\right)^{N/q}
+e^{N^2L/q}L^{-(N-1)}.
+\tag{9}
+\]
+
+The nonsmooth test is legitimate by smooth approximation in
+\(W_0^{1,N}(B_1)\) and \(L^q(B_1)\) for each finite \(q\).
+Alternatively, place the same test inside a fixed smaller concentric
+ball and let its radius tend to one.
+
+Choose
+
+\[
+L=\frac{(N-1)q}{N^2}.
+\]
+
+Then (9) gives
+
+\[
+\limsup_{q\to\infty}q^{N-1}C_{\rm opt}(N,N,q)
+\le\sigma_{N-1}\left(\frac{eN^2}{N-1}\right)^{N-1}.
+\tag{10}
+\]
+
+Equations (7) and (10) prove (1).
+
+\hypertarget{1016-additional-bound-for-the-supremum-norm}{%
+\section{Additional bound for the supremum
+norm}\label{1016-additional-bound-for-the-supremum-norm}}
+
+\hypertarget{1016-statement-and-scope}{%
+\subsection{Statement and scope}\label{1016-statement-and-scope}}
+
+Let \(N\geq2\). For a nonempty bounded open convex set
+\(\Omega\subset\mathbb R^N\), define its Euclidean inradius and its
+Dirichlet Poincaré--Sobolev frequency at \(q=\infty\) by
+
+\[
+R_\Omega=\sup\{r>0:\text{there is }x\in\mathbb R^N
+\text{ with }B_r(x)\subset\Omega\},
+\]
+
+\[
+\lambda_{p,\infty}(\Omega)
+=\inf_{\substack{f\in C_c^\infty(\Omega;\mathbb R)\\f\ne0}}
+\frac{\displaystyle\int_\Omega|\nabla f|^p\,dx}
+     {\|f\|_{L^\infty(\Omega)}^p}.
+\]
+
+For \(p>N\), the constant requested in this parameter regime of Problem
+1016 is
+
+\[
+C_{\mathrm{opt}}(N,p,\infty)
+=\inf_{\substack{\Omega\subset\mathbb R^N\\
+\Omega\text{ nonempty, bounded, open, convex}}}
+R_\Omega^{p-N}\lambda_{p,\infty}(\Omega).
+\tag{S1}
+\]
+
+Scaling gives the equivalent definition with the constraint
+\(R_\Omega=1\). The following explicit lower bound holds in the range
+\(p\geq N+1\):
+
+\[
+\boxed{
+C_{\mathrm{opt}}(N,p,\infty)
+\geq
+2\left(\frac{p-N}{p-1}\right)^{p-1}
+\frac{\pi^{(N-1)/2}\Gamma((p-N+1)/2)}{\Gamma(p/2)}.
+}
+\tag{S2}
+\]
+
+For example, (S2) gives the exact comparison
+
+\[
+C_{\mathrm{opt}}(2,4,\infty)\geq\frac{8\pi}{27}.
+\]
+
+This is a lower bound, not a determination of the optimal constant. No
+equality case, minimizing domain, or sharpness assertion is made. It
+adds a parameter regime different from the critical-exponent asymptotic
+\(p=N\), \(q\to\infty\). The proof below does not cover \(N<p<N+1\), and
+no claim of bibliographic priority is made.
+
+\hypertarget{1016-balanced-supporting-planes}{%
+\subsection{1. Balanced supporting
+planes}\label{1016-balanced-supporting-planes}}
+
+Normalize \(R_\Omega=1\), and translate a center of a maximal inscribed
+ball to the origin. Such a center exists because \(\Omega\) is bounded.
+There are contact supporting planes with unit outward normals
+\(n_1,\ldots,n_m\), and positive weights \(\lambda_1,\ldots,\lambda_m\),
+such that
+
+\[
+\Omega\subset P:=\bigcap_{i=1}^m\{x:n_i\cdot x<1\},
+\qquad
+\sum_{i=1}^m\lambda_i=1,
+\qquad
+\sum_{i=1}^m\lambda_i n_i=0.
+\tag{S3}
+\]
+
+Here one can take \(m\leq N+1\). To justify the balance condition, let
+\(h_\Omega(n)=\sup_{x\in\Omega}n\cdot x\), and consider the compact set
+of contact normals satisfying \(h_\Omega(n)=1\). If their convex hull
+did not contain zero, strict separation would give a direction in which
+moving the ball center increases the distance from all contact planes.
+The support function is continuous, so the same strict gain holds in a
+neighborhood of the contact normals; away from that neighborhood the
+support distances already exceed one by a positive amount. A
+sufficiently small displacement would therefore permit a larger
+inscribed ball, a contradiction. Carathéodory's theorem gives the finite
+collection in (S3); zero weights can be discarded.
+
+Fix a nonzero test function \(f\in C_c^\infty(\Omega;\mathbb R)\).
+Choose a point \(x_*\in\Omega\) at which its absolute value attains its
+maximum, and put
+
+\[
+M=|f(x_*)|=\|f\|_\infty,
+\qquad
+a_i=1-n_i\cdot x_*>0,
+\qquad
+v_i=\frac{n_i}{a_i},
+\qquad
+\rho_i=\lambda_i a_i.
+\]
+
+The identities in (S3) imply
+
+\[
+\sum_i\lambda_i a_i=1,
+\qquad
+\sum_i\rho_i=1,
+\qquad
+\sum_i\rho_i v_i=0.
+\tag{S4}
+\]
+
+Thus the \(\rho_i\) are probability weights, and the vectors \(v_i\)
+have weighted mean zero. In particular, the maximum point \(x_*\) need
+not be an incenter.
+
+\hypertarget{1016-a-support-function-estimate}{%
+\subsection{2. A support-function
+estimate}\label{1016-a-support-function-estimate}}
+
+Write
+
+\[
+s=p-N\geq1,
+\qquad
+h(\omega)=\max_i(v_i\cdot\omega),
+\quad\omega\in S^{N-1}.
+\]
+
+Equation (S4) implies \(h\geq0\). Along the ray \(x_*+r\omega\), the
+exit length from \(P\) is \(1/h(\omega)\), with value \(+\infty\) when
+\(h(\omega)=0\).
+
+For a fixed direction \(\omega\), set
+
+\[
+A=h(\omega),\qquad B=h(-\omega),\qquad X_i=v_i\cdot\omega.
+\]
+
+Then \(-B\leq X_i\leq A\) and \(\sum_i\rho_iX_i=0\). Convexity of
+\(x\mapsto|x|^s\) and comparison with its chord over \([-B,A]\) give
+
+\[
+\sum_i\rho_i|X_i|^s
+\leq\frac{AB^s+BA^s}{A+B}
+\leq\frac{A^s+B^s}{2}.
+\tag{S5}
+\]
+
+The second inequality is equivalent to \((A-B)(A^s-B^s)\geq0\). If
+\(A+B=0\), all terms vanish and (S5) holds directly.
+
+Integrating (S5) over the unit sphere and using its symmetry yields
+
+\[
+\int_{S^{N-1}}h(\omega)^s\,d\omega
+\geq\kappa_{N,s}\sum_i\rho_i|v_i|^s
+=\kappa_{N,s}\sum_i\lambda_i a_i^{1-s},
+\tag{S6}
+\]
+
+where the beta integral gives, for any unit vector \(e\),
+
+\[
+\kappa_{N,s}
+=\int_{S^{N-1}}|e\cdot\omega|^s\,d\omega
+=\frac{2\pi^{(N-1)/2}\Gamma((s+1)/2)}
+       {\Gamma((N+s)/2)}.
+\tag{S7}
+\]
+
+Since \(s\geq1\), the function \(a\mapsto a^{1-s}\) is convex on
+\((0,\infty)\). Jensen's inequality and (S4) therefore imply
+
+\[
+\sum_i\lambda_i a_i^{1-s}
+\geq\left(\sum_i\lambda_i a_i\right)^{1-s}=1.
+\]
+
+Consequently
+
+\[
+\int_{S^{N-1}}h(\omega)^s\,d\omega\geq\kappa_{N,s}.
+\tag{S8}
+\]
+
+\hypertarget{1016-radial-energy-from-the-maximum-point}{%
+\subsection{3. Radial energy from the maximum
+point}\label{1016-radial-energy-from-the-maximum-point}}
+
+Let \(R(\omega)\) be the exit length from \(\Omega\) along
+\(x_*+r\omega\). Convexity ensures that this ray stays in the domain for
+\(0\leq r<R(\omega)\), and (S3) gives
+
+\[
+R(\omega)\leq\frac1{h(\omega)}.
+\tag{S9}
+\]
+
+The test function vanishes before the exit. The fundamental theorem of
+calculus, followed by weighted Hölder, gives
+
+\[
+\begin{aligned}
+M
+&\leq\int_0^{R(\omega)}|\partial_r f(x_*+r\omega)|\,dr\\
+&\leq
+\left(\int_0^{R(\omega)}|\partial_r f|^p r^{N-1}\,dr\right)^{1/p}
+\left(\int_0^{R(\omega)}r^{-(N-1)/(p-1)}\,dr\right)^{(p-1)/p}.
+\end{aligned}
+\]
+
+The last integral is finite because \(p>N\). Evaluating it and
+rearranging give
+
+\[
+\int_0^{R(\omega)}|\partial_r f|^p r^{N-1}\,dr
+\geq
+\left(\frac{p-N}{p-1}\right)^{p-1}
+M^pR(\omega)^{N-p}.
+\tag{S10}
+\]
+
+Since \(N-p=-s\), (S9) implies \(R(\omega)^{N-p}\geq h(\omega)^s\),
+including the case \(h(\omega)=0\). Integrate (S10) in direction, use
+\(|\partial_r f|\leq|\nabla f|\), and apply (S8). This proves
+
+\[
+\frac{\int_\Omega|\nabla f|^p\,dx}{\|f\|_\infty^p}
+\geq
+\left(\frac{p-N}{p-1}\right)^{p-1}\kappa_{N,p-N}.
+\]
+
+Taking the infimum over all tests and all convex domains of inradius
+one, and substituting (S7), gives (S2). For a general inradius, scaling
+restores the factor \(R_\Omega^{p-N}\) in (S1).
+
+The two convexity steps in Section 2 require \(p-N\geq1\). Moreover, the
+radial estimate omits angular derivatives. Equality in an auxiliary
+geometric inequality therefore would not establish sharpness of (S2) for
+the original shape optimization problem.
+
+\section{Problem source and prior asymptotics}
+The sharp-inradius question is posed in Brasco's Open problems~1,
+following the superhomogeneous inequality in Proposition~6.3.
+For a fixed planar domain, the large-\(q\) coefficient \(8\pi e\)
+also appears in Bozzola--Brasco, Corollary~3.7 of the published version.
+A fixed-domain limit alone does not justify interchanging the limit with
+an infimum over all convex shapes; the uniform Hardy and
+Adachi--Tanaka argument above provides the needed uniformity.
+\begin{enumerate}
+\raggedright
+\item L. Brasco, \emph{On principal frequencies and inradius in convex sets},
+Bruno Pini Mathematical Analysis Seminar \textbf{9}(1) (2018), 78--101,
+Proposition~6.3 and (15), p.~99; Open problems~1, p.~100.
+\url{https://doi.org/10.6092/issn.2240-2829/8945}.
+\url{https://mathematicalanalysis.unibo.it/article/download/8945/8866/28804}.
+\item F. Bozzola and L. Brasco,
+\emph{The role of topology and capacity in some bounds for principal frequencies},
+The Journal of Geometric Analysis \textbf{34} (2024), Article~299.
+Published Section~3.3, Corollary~3.7, p.~23.
+\url{https://doi.org/10.1007/s12220-024-01742-2}.
+The author manuscript at
+\url{https://cvgmt.sns.it/media/doc/paper/6357/bozbra_final.pdf}
+numbers the same result Corollary~3.8, pp.~17--18.
+\end{enumerate}
+\end{document}

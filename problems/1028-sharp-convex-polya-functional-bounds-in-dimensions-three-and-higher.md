@@ -2,7 +2,7 @@
 
 **Area:** Spectral shape optimization
 **Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -33,15 +33,17 @@ The functional compares a domain's lowest vibration frequency with its torsional
 2. Z. Deng, [*A Proof of a Conjecture on a Pólya Functional*](https://arxiv.org/html/2609.13221), arXiv:2609.13221v1 (2026), Abstract and Section 1. It announces both sharp bounds for bounded convex domains in **dimension two**, leaving the dimension range here separate.
 3. M. van den Berg, V. Ferone, C. Nitsch and C. Trombetti, [*On Pólya's inequality for torsional rigidity and first Dirichlet eigenvalue*](https://arxiv.org/abs/1602.04618), *Integral Equations and Operator Theory* **86** (2016), 579–600. Its unrestricted open-set construction gives $`\sup F=1`$ for $`d\geq2`$; this is why convexity is essential here.
 4. V. Amato, C. Nitsch, C. Trombetti and F. Villone, [*On some functionals involving torsional rigidity, principal eigenvalue and perimeter*](https://arxiv.org/html/2601.09592), *Potential Analysis* **65** (2026), article 25, Introduction and equations (1.7)–(1.11). It distinguishes the unrestricted and convex classes and studies a separate perimeter-normalized functional.
+5. M. J. Colbrook, [*The sharp upper constant for the eigenvalue-torsion product on convex domains*](../research/solutions/1028-eigenvalue-torsion-upper-constant/aim1028.pdf), 3 November 2026. [TeX source](../research/solutions/1028-eigenvalue-torsion-upper-constant/aim1028.tex), [package and reproduction](../research/solutions/1028-eigenvalue-torsion-upper-constant/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-spectral-batch/1028-review.md).
 
 ## Status review
 
+**Known cases:** The sharp upper constant $`\sup F=\pi^2/12`$ holds in every dimension $`d\ge3`$ required here. Each bounded convex domain has strict inequality; elongated boxes approach the supremum. The proof preserves attribution to Deng for the one-dimensional upper-bound mechanism.
 
-**Known cases:** The residual is d>=3. The September 2026 announcement proves the planar convex case; unrestricted nonconvex domain constructions and perimeter-dependent functionals change the setting.
+**Remaining target:** Prove or disprove the proposed lower constant $`\inf F=\pi^2/[2(d+1)(d+2)]`$ for every $`d\ge3`$. The appended lower-route obstruction concerns test functions that are not torsion functions and is not a counterexample to this target.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+**Reviewed result, 2026-11-03:** The sharp convex upper constant pi squared over twelve is established in every dimension; the lower constant remains open. The [manuscript](../research/solutions/1028-eigenvalue-torsion-upper-constant/aim1028.pdf) and [individual audit](../research/solution_reviews/2026-11-03-spectral-batch/1028-review.md) record the proof, checked references and exact target comparison. Review was performed by Codex (AI).
 
-### Online recheck, 2026-10-30
+### Earlier status check, 2026-10-30
 
 The residual is d>=3. The September 2026 announcement proves the planar convex case; unrestricted nonconvex domain constructions and perimeter-dependent functionals change the setting.
 

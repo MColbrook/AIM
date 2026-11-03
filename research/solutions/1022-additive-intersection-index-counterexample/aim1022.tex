@@ -1,0 +1,614 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage{xcolor,graphicx,booktabs,longtable,array}
+\usepackage{microtype,enumitem,fancyhdr,titlesec}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
+ pdftitle={A counterexample to an additive intersection-index eigenvalue bound},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 1022: mathematical result and proof}}
+\urlstyle{same}
+\Urlmuskip=0mu plus 1mu
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 1022}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setcounter{secnumdepth}{0}
+\allowdisplaybreaks[2]
+\title{\textbf{A counterexample to an additive intersection-index eigenvalue bound}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct embedded hypersurfaces that contradict the additive intersection-index spectral estimate in AIM 1022. The argument combines a base with large normalized first eigenvalue, tapered connecting handles, a uniform intersection count and Neumann spectral counting.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 1022 at revision
+\texttt{3fa50884d129}. Its scope is stated below.
+\medskip
+
+\textbf{Theorem.} For every integer \(n\ge 2\), there do not exist a
+finite constant \(A_n>0\) and a continuous function
+\(F_n:[0,\infty)\to\mathbb R\) such that every smooth compact connected
+embedded hypersurface \(\Sigma ^n\) in \(\mathbb R^{n+1}\), with finite
+intersection index, satisfies
+
+\[
+ \lambda_k(\Sigma)\operatorname{Vol}_n(\Sigma)^{2/n}
+ \le F_n(i(\Sigma))+A_n k^{2/n}\qquad(k\ge1).
+\]
+
+The additive question is posed by P\'etiard [5, p.~3].
+The proof replicates a fixed hypersurface with a large normalized first
+eigenvalue, joining its copies by long handles whose Neumann spectra
+contain at most two low modes each. The copies and handles can be placed
+so that the intersection index stays bounded as their number increases.
+The fixed base may have a large index; it is independence from the
+replication number that matters.
+
+The only substantial external inputs are the existence of embedded bases
+with unbounded normalized first eigenvalue {[}1, Theorem 1.4{]}, and
+uniform finiteness for definable families in the o-minimal structure
+\(\mathbb R_{\mathrm{an},\exp}\) {[}2,3{]}. All handle, placement,
+smoothing, and spectral-counting details are supplied below. This is a
+mathematical proof developed in this research session, not a claim of
+external peer review or priority.
+
+\hypertarget{1022-bases-with-large-normalized-first-eigenvalue-and-finite-definable-complexity}{%
+\section{0. Bases with large normalized first eigenvalue and finite
+definable
+complexity}\label{1022-bases-with-large-normalized-first-eigenvalue-and-finite-definable-complexity}}
+
+Colbois--Dryden--El Soufi {[}1, Theorem 1.4{]} prove that, for every
+\(n\ge 2\),
+
+\[
+ \sup_B \lambda_1(B)\operatorname{Vol}_n(B)^{2/n}=\infty,
+ \tag{0.1}
+\]
+
+where B ranges over smooth compact connected embedded hypersurfaces of
+\(\mathbb R^{n+1}\). In dimension two the topology may vary; in higher
+dimensions the result is stronger, but that strengthening is unnecessary
+here.
+
+We can require each chosen base to be a regular compact component of a
+polynomial zero set. Here are details of the approximation. A smooth
+closed embedded hypersurface has a compact tubular neighborhood on which
+its signed distance rho is smooth, with nonzero normal derivative.
+Extend rho smoothly to a surrounding compact box. Approximate this
+extension in \(C^2\) on the box by polynomials. For a sufficiently close
+polynomial p, its zero set in the tubular neighborhood is a unique
+\(C^1\)-small normal graph over B, with nonvanishing gradient. The
+polynomial has fixed nonzero signs on the two boundary sheets of a
+sufficiently small tube, so this zero component cannot leave the tube or
+join any other zero component. It is therefore a smooth compact
+connected component of the real algebraic set \({p=0}\).
+
+Such a component is semialgebraic. Other components of the polynomial
+zero set are irrelevant: the base is only the selected compact
+component. The induced metrics converge uniformly under the \(C^1\)
+normal-graph convergence. The variational characterization of
+eigenvalues and the volume formula then give convergence of
+\(\lambda _1\) and volume. Hence (0.1) still holds for these
+semialgebraic bases.
+
+After a Euclidean dilation, normalize
+
+\[
+ \lambda_1(B)=1.
+\]
+
+The base volume \(V=\operatorname{Vol} _n(B)\) can consequently be
+arbitrarily large, because this rescaling changes the volume to the
+\(n/2\) power of the original normalized first eigenvalue. Fix one such
+base for the rest of the construction. Its definable complexity, and all
+constants depending on it, are allowed to be large but remain fixed as
+the number N of copies tends to infinity.
+
+\hypertarget{1022-a.-a-straight-handle-with-at-most-two-low-neumann-eigenvalues}{%
+\section{A. A straight handle with at most two low Neumann
+eigenvalues}\label{1022-a.-a-straight-handle-with-at-most-two-low-neumann-eigenvalues}}
+
+Fix \(a>0\), length \(L>0\), and radius parameter \(\varepsilon >0\).
+Put
+
+\[
+ r(s)=\epsilon\frac{\cosh(a(s-L/2))}{\cosh(aL/2)},\qquad0\le s\le L.
+\]
+
+The \(n\)-dimensional tube of revolution in \(\mathbb R^{n+1}\) has
+metric
+
+\[
+ g=q(s)^2 ds^2+r(s)^2g_{S^{n-1}},\qquad
+ q(s)=\sqrt{1+r'(s)^2}\le\sqrt{1+a^2\epsilon^2}=:Q.
+\]
+
+With Neumann conditions at the two end cross-sections, separate
+spherical harmonics. In angular degree zero the Rayleigh quotient is
+
+\[
+ \frac{\int_0^L r^{n-1}q^{-1}|f'|^2\,ds}
+      {\int_0^L qr^{n-1}|f|^2\,ds}
+ \ge Q^{-2}
+ \frac{\int_0^L r^{n-1}|f'|^2\,ds}
+      {\int_0^L r^{n-1}|f|^2\,ds}.
+ \tag{A1}
+\]
+
+Write \(p=(n-1)/2\). On the codimension-two subspace \(H^1_0(0,L)\),
+putting \(\psi =r^p f\) and integrating by parts gives
+
+\[
+ \int_0^Lr^{2p}|f'|^2
+ =\int_0^L\left(|\psi'|^2+
+       \frac{(r^p)''}{r^p}|\psi|^2\right),
+\]
+
+where
+
+\[
+ \frac{(r^p)''}{r^p}
+  =a^2\left[p\operatorname{sech}^2(a(s-L/2))
+              +p^2\tanh^2(a(s-L/2))\right]
+  \ge a^2\min(p,p^2).
+ \tag{A2}
+\]
+
+The min--max principle therefore says that the third angular-zero
+Neumann eigenvalue (that is, the eigenvalue with index 2 when counting
+from zero) is at least
+
+\[
+ \Gamma_\epsilon=
+ \frac{a^2\min(p,p^2)}{1+a^2\epsilon^2}.
+ \tag{A3}
+\]
+
+Equivalently, that sector has at most two eigenvalues strictly below
+\(\Gamma _\varepsilon\). Every nonconstant spherical mode has Rayleigh
+quotient at least
+
+\[
+ \frac{n-1}{\epsilon^2},
+ \tag{A4}
+\]
+
+because its angular eigenvalue is at least \(n-1\) and
+\(r\le \varepsilon\). Thus, after fixing a sufficiently large a and then
+taking epsilon small, \textbf{the entire handle has at most two
+eigenvalues below any prescribed fixed threshold}, independently of its
+length L.
+
+Its volume also satisfies a length-independent estimate. Since
+
+\[
+ \frac{\cosh(a(s-L/2))}{\cosh(aL/2)}
+ \le e^{-as}+e^{-a(L-s)},
+\]
+
+and \((x+y)^{n-1}\le 2^{n-2}(x^{n-1}+y^{n-1})\),
+
+\[
+ \operatorname{Vol}_n(\text{handle})
+ \le Q|S^{n-1}|\frac{2^{n-1}}{(n-1)a}\epsilon^{n-1}.
+ \tag{A5}
+\]
+
+\hypertarget{1022-b.-each-straight-handle-meets-an-affine-line-at-most-four-times}{%
+\section{B. Each straight handle meets an affine line at most four
+times}\label{1022-b.-each-straight-handle-meets-an-affine-line-at-most-four-times}}
+
+If a line has nonconstant axial coordinate s, its transverse coordinate
+is \(A+Bs\). Its intersections with the tube satisfy
+
+\[
+ |A+Bs|^2-r(s)^2=0.
+\]
+
+The fourth derivative of the left side is strictly negative, since
+\((r^2)''''>0\). Five distinct zeros would contradict Rolle's theorem.
+If the axial coordinate is constant, the line meets one spherical
+cross-section in at most two points. Hence the handle contributes at
+most four transverse intersections to any affine line.
+
+\hypertarget{1022-c.-a-robust-bound-of-eight-handles-intersected-by-one-line}{%
+\section{C. A robust bound of eight handles intersected by one
+line}\label{1022-c.-a-robust-bound-of-eight-handles-intersected-by-one-line}}
+
+Let \(m=n+1\ge 3\). Choose a generic polygonal chain with N vertices in
+\(\mathbb R^m\), with all increments in a prescribed open cone around
+\(+e_m\). The vertices may additionally be restricted to an open set
+with consecutive edge lengths between 1 and 2.
+
+For five \textbf{pairwise vertex-disjoint} edges, the set of vertex
+configurations admitting a common affine-line transversal has positive
+codimension. Indeed affine lines have dimension \(2m-2\); for a fixed
+line, one segment's endpoints allowing an intersection have dimension at
+most \(m+2\) rather than \(2m\). Because the five endpoint pairs are
+disjoint, these conditions are independent. The total incidence-set
+dimension is at most
+
+\[
+ mN+(2m-2)-5(m-2)<mN
+\]
+
+for every \(m\ge 3\). This parametrization also includes endpoint
+intersections; those strata have no larger dimension. There are only
+finitely many choices of five edges, so generic vertices avoid all such
+configurations.
+
+Every collection of nine edges of a chain contains a matching of five
+pairwise vertex-disjoint edges. Therefore no affine line meets nine
+edges of this generic chain. A line meets \textbf{at most eight} core
+edges. This slightly weaker constant avoids degeneracies involving
+adjacent edges and is fully sufficient.
+
+We also choose the vertices so no three are collinear and nonadjacent
+core edges do not intersect. These are additional finite genericity
+conditions.
+
+For the fixed finite chain, all these nonintersection conditions have a
+positive tolerance. A line meeting a fixed bounded neighborhood of the
+chain belongs to a compact line-parameter space after restricting its
+offset. Thus, if arbitrarily small tubular neighborhoods of nine chosen
+edges had a common transversal, compactness would give a transversal of
+their cores. Taking the minimum over the finitely many subsets gives a
+positive tube-radius tolerance. The same compactness argument supplies a
+positive radius tolerance for no line meeting three vertex balls.
+
+Global dilation of the prototype chain increases these margins
+arbitrarily. Consequently its vertices can be replaced by fixed-size
+base hypersurfaces, and its edges by arbitrarily long thin handles,
+while retaining the bounds of two base balls and eight handles per line.
+
+\hypertarget{1022-d.-matching-the-actual-ports-to-the-prototype-chain}{%
+\section{D. Matching the actual ports to the prototype
+chain}\label{1022-d.-matching-the-actual-ports-to-the-prototype-chain}}
+
+Let the fixed base hypersurface be a regular compact component of a
+polynomial zero set. Choose a direction v such that both v and -v are
+regular values of its Gauss map and the height in direction v has a
+unique global maximum and a unique global minimum. This is possible:
+Sard's theorem gives the first condition almost everywhere, while
+almost-everywhere differentiability of the support function of the
+convex hull gives uniqueness of the two support points almost
+everywhere. At these extrema, nondegeneracy implies strict convexity of
+the outward second fundamental form.
+
+The normal maps on small neighborhoods of these two points therefore
+have analytic semialgebraic inverses
+
+\[
+ p_+(d),\qquad p_-(-d),
+\]
+
+for d in a sufficiently small open cone around v. The rays leaving these
+ports in their outward normals avoid the rest of the fixed compact base,
+after narrowing the cone if necessary.
+
+Let the prototype chain have increments \(L_j d_j\). For a dilation
+factor R, choose actual translations recursively by
+
+\[
+ t_{j+1}=t_j+p_+(d_j)+R L_jd_j-p_-(-d_j).
+ \tag{D1}
+\]
+
+The outgoing port on copy j and incoming port on copy j+1 are then
+exactly joined by a straight segment of length \(R L_j\) in direction
+d\_j. The actual translations and segments differ from those of the
+dilated prototype chain by at most a constant times N, because the port
+offsets are uniformly bounded. For each fixed N, choose R so large that
+these bounded errors are smaller than the dilated nonintersection
+margins. This preserves the no-three-base-balls and no-nine-core-edges
+conclusions. All copies use the same base metric and orientation.
+
+The smooth collars below occupy a fixed-radius base ball, and the
+straight tube begins a distance epsilon beyond each port. Thus its
+length is \(R L_j-2\varepsilon\) rather than \(R L_j\); this harmless
+change is already covered by the estimates in A.
+
+\hypertarget{1022-e.-explicit-definable-collars-without-integrating-a-cutoff}{%
+\section{E. Explicit definable collars, without integrating a
+cutoff}\label{1022-e.-explicit-definable-collars-without-integrating-a-cutoff}}
+
+This construction supplies the local family needed for the
+intersection-index argument. In coordinates centered at a port, with
+outward normal the z-axis, write the base locally as an analytic
+semialgebraic graph \(z=g(y)\), where \(g(0)=0\) and \(Dg(0)=0\). Its
+interior lies below the graph.
+
+Choose a fixed nondecreasing \(C^\infty\) definable cutoff chi on
+\([0,1]\), equal to zero on \([0,1/4]\) and one on \([3/4,1]\). For
+example it can be built from the flat function \(\exp (-1/t)\) for
+\(t>0\), extended by zero for \(t\le 0\), using products and quotients;
+no integration is needed. Put \(\eta (t)=t \chi (t)\). Then eta is zero
+near zero, equals t near one, and has positive derivative when it is not
+zero.
+
+A fixed corner profile is
+
+\[
+ \rho_0(t)=\epsilon[1+\eta(1-t)],\qquad
+ z_0(t)=\epsilon\eta(t),\qquad 0\le t\le1.
+\]
+
+It is planar near t=0 and cylindrical near t=1, with no zero tangent
+vector. Let \(\chi_{\mathrm{in}}\) be another such cutoff, zero on
+\([0,1/2]\) and one on \([3/4,1]\). Let r be the cosh tube profile,
+analytically continued a short distance to negative s. Define
+
+\[
+ \rho(t)=\rho_0(t)+\chi_{\rm in}(t)[r(z_0(t)-\epsilon)-\epsilon].
+\]
+
+Choose \(\chi_{\mathrm{base}}\) equal to one near zero and zero on
+\([1/2,1]\). The collar is parametrized by
+
+\[
+ (t,\theta)\longmapsto
+ \left(\rho(t)\theta,
+       z_0(t)+\chi_{\rm base}(t)g(\rho(t)\theta)\right),
+ \qquad\theta\in S^{n-1}.
+ \tag{E1}
+\]
+
+Near t=0 this agrees exactly with the base graph on an annulus. Near t=1
+it agrees exactly with the continued tube, with axial coordinate
+\(s=z_0(t)-\varepsilon\); thus all derivatives match at both ends.
+Remove the base disk of radius \(2\varepsilon\) and retain the collar up
+to t=1, where the straight tube begins.
+
+Because \(g(y)=O(|y|^2)\) and the cosh correction on a segment of length
+\(O(\varepsilon )\) is \(O(a \varepsilon ^2)\), after rescaling by
+epsilon this is a small \(C^1\) perturbation of the fixed corner
+profile. It is embedded and has a uniformly controlled scaled metric for
+sufficiently small epsilon. These bounds are uniform in the tube length:
+on the short continued segment,
+\(|r^{(j)}(s)|\le a^j\varepsilon e^{a\varepsilon}\). The fixed corner
+profile is a compact embedded annular cylinder with nonzero tangent;
+sufficiently small C1 perturbations preserve its embedding. One may also
+choose chi\_base nonincreasing, in which case strict convexity of the
+port graph makes its axial coordinate monotone through the outer
+transition. The same construction at the other endpoint uses its outward
+normal, which reverses the tube coordinate; the cosh profile is
+symmetric about its midpoint.
+
+All functions and parametrizations above are definable in
+\(\mathbb R_{\mathrm{an},\exp}\). The base is fixed, its local graph and
+inverse Gauss maps are semialgebraic, coordinate rotations can be chosen
+semialgebraically in the normal cone, and the cutoff and cosh terms use
+only exponentials and algebraic operations. This is a fixed
+finite-parameter family: parameters are the two port directions,
+epsilon, a, and the two incident handle lengths \(L_-\) and \(L_+\)
+(with a fixed after the spectral threshold is chosen). A one-port end
+piece uses only its incident length.
+
+O-minimal uniform finiteness gives a constant \(C(\mathrm{base})\)
+bounding the number of connected components in intersections of any
+member of this local family with any affine line. For a line transverse
+to the final smooth hypersurface the intersections are isolated, hence
+their number is bounded by the same constant. This includes the two
+collars and the fixed base piece in one base ball. The constant does not
+depend on N, epsilon, or the lengths of the handles.
+
+Together with C and B,
+
+\[
+ i(\Sigma_N)\le 2C(\text{base})+32.
+ \tag{E2}
+\]
+
+\hypertarget{1022-f.-neumann-spectra-of-the-base-pieces-converge-to-the-original-base}{%
+\section{F. Neumann spectra of the base pieces converge to the original
+base}\label{1022-f.-neumann-spectra-of-the-base-pieces-converge-to-the-original-base}}
+
+For a fixed finite collection of port locations, remove the one or two
+disks of radius \(2\varepsilon\) used by the chain and add the collars
+E1. The first and last copies use one port each; all interior copies use
+two, and unused ports remain part of the original base. Cut at the tube
+ends and impose Neumann conditions there. Denote this compact
+manifold-with-boundary by \(B_\varepsilon\).
+
+The standard extension/Rellich argument gives
+
+\[
+ \lambda_1^N(B_\epsilon)\longrightarrow\lambda_1(B),\qquad
+ \operatorname{Vol}(B_\epsilon)\longrightarrow\operatorname{Vol}(B).
+ \tag{F1}
+\]
+
+Here is the required compactness mechanism, to make clear that no long
+thin region is hidden in this claim. The collars have diameter
+\(O(\varepsilon )\) and, after scaling, a uniformly controlled fixed
+geometry. Uniform extension from a Euclidean annulus to its ball, chosen
+to preserve constants and then transported through local coordinate
+charts, extends functions on the punctured base to the whole base with
+uniformly bounded \(H^1\) norm. For clarity, write \(\Gamma_\epsilon\)
+for the common collar/annulus boundary. The fixed-domain trace and
+Poincaré inequalities, after scaling, give
+
+\[
+ \int_{\mathrm{collar}} |f|^2
+ \le C\epsilon\int_{\Gamma_\epsilon}|f|^2
+       +C\epsilon^2\int_{\mathrm{collar}}|\nabla f|^2,
+\]
+
+and
+
+\[
+ \epsilon\int_{\Gamma_\epsilon}|f|^2
+ \le C\int_{\mathrm{annulus}}|f|^2
+       +C\epsilon^2\int_{\mathrm{annulus}}|\nabla f|^2.
+\]
+
+Combining them gives
+
+\[
+ \int_{\rm collar}|f|^2
+ \le C\int_{\rm annulus}|f|^2
+   +C\epsilon^2\int_{\rm annulus}|\nabla f|^2
+   +C\epsilon^2\int_{\rm collar}|\nabla f|^2.
+ \tag{F2}
+\]
+
+A family with bounded energy and \(L^2\) norm therefore has vanishing
+\(L^2\) mass in the shrinking collars: after extension, Rellich
+compactness on the fixed closed base makes the annular \(L^2\) masses
+vanish. A bounded-energy orthonormal family converges, after
+subsequences, to an orthonormal family on the base. For the energy lower
+limit, first apply weak lower semicontinuity on the fixed complement of
+port balls of radius delta, where the extension agrees with the original
+function once epsilon is small. Then let delta decrease to zero. This
+gives the required inequality with the original base-piece energies; the
+energy introduced inside the artificially filled holes need not tend to
+zero. Applying min--max to the limiting orthonormal family gives the
+lower eigenvalue limit. Restriction of smooth test functions, with the
+obvious uniformly controlled collar extension, gives the upper limit.
+This works also when n=2; no assertion that a long cylindrical neck has
+a large gap is used.
+
+For each finite N, only finitely many ports occur. Thus epsilon may be
+chosen small enough that (F1) holds at every base piece simultaneously.
+No uniform rate in N is needed.
+
+\hypertarget{1022-g.-spectral-counting-and-the-contradiction}{%
+\section{G. Spectral counting and the
+contradiction}\label{1022-g.-spectral-counting-and-the-contradiction}}
+
+Normalize the fixed base B so that \(\lambda _1(B)=1\); choose it with
+volume V as large as needed, using the unbounded normalized
+first-eigenvalue theorem for smooth embedded hypersurfaces.
+Approximation by an algebraic hypersurface can be made C1-small, so this
+remains possible with a definable base.
+
+Fix a sufficiently large a in A. For each N, construct the chain and
+then choose epsilon sufficiently small so that every base piece has
+first positive Neumann eigenvalue at least \(1/2\), volume at least
+\(V/2\), and every handle has at most two Neumann eigenvalues below
+\(1/2\).
+
+The construction replaces exactly two disk boundaries for every
+connecting tube, so the result is a smooth closed hypersurface. The
+chain makes it connected, and the placement and clearance estimates make
+it embedded. Cut this hypersurface along all base/handle interfaces. Its
+Neumann-bracketed disjoint union has at most
+
+\[
+ N+2(N-1)=3N-2
+\]
+
+eigenvalues strictly below \(1/2\), counting its zero modes. Since
+eigenvalues are indexed from zero, min--max gives
+
+\[
+ \lambda_{3N-2}(\Sigma_N)\ge\frac12,
+ \qquad
+ \operatorname{Vol}_n(\Sigma_N)\ge\frac{NV}{2}.
+ \tag{G1}
+\]
+
+The intersection index is bounded independently of N by E2. If the
+proposed additive estimate held, continuity of F on the compact interval
+\([0,2C(base)+32]\) would bound its first term by a finite number
+\(M_B\). Thus
+
+\[
+ \frac12\left(\frac{NV}{2}\right)^{2/n}
+ \le M_B+A_n(3N-2)^{2/n}.
+\]
+
+Divide by \(N^{2/n}\) and let N tend to infinity:
+
+\[
+ \frac12\left(\frac V2\right)^{2/n}\le A_n3^{2/n}.
+\]
+
+Since the normalized base volume V can be arbitrarily large, this is
+impossible for a dimension-only finite \(A_n\).
+
+The exact numerical constants 2, 8, 32, and 3 are irrelevant; their
+independence of N is what permits the contradiction.
+
+\hypertarget{1022-h.-two-strengthenings}{%
+\section{H. Two strengthenings}\label{1022-h.-two-strengthenings}}
+
+Continuity of the proposed additive term is not needed for this
+contradiction. The intersection index is an integer and stays in the
+finite set \(\{0,1,\ldots,\lfloor 2C(\mathrm{base})+32\rfloor\}\). Any
+real-valued function on the nonnegative integers is bounded on that
+finite set. Thus the same argument rules out an arbitrary finite-valued
+additive function of the index.
+
+For \(n\ge 3\), the counterexample can also be confined to hypersurfaces
+diffeomorphic to \(S^n\). In Theorem 1.4(2) of {[}1{]}, take the fixed
+original submanifold to be the standard embedded sphere. The selected
+base is then an n-sphere, and the algebraic approximation preserves its
+diffeomorphism type. Joining N such components along a chain is their
+connected sum, again diffeomorphic to \(S^n\). The large normalized
+first eigenvalue input in dimension two requires varying topology, so
+this additional fixed-topology conclusion is asserted only for
+\(n\ge 3\).
+
+\hypertarget{1022-references}{%
+\section{References}\label{1022-references}}
+
+{[}1{]} B. Colbois, E. B. Dryden, A. El Soufi, \emph{Bounding the
+eigenvalues of the Laplace--Beltrami operator on compact submanifolds},
+Bulletin of the London Mathematical Society \textbf{42} (2010), 96--108,
+Theorem 1.4. DOI: \url{https://doi.org/10.1112/blms/bdp100}. Primary
+preprint: \url{https://arxiv.org/abs/0909.5346}.
+
+{[}2{]} L. van den Dries, A. Macintyre, D. Marker, \emph{The elementary
+theory of restricted analytic fields with exponentiation}, Annals of
+Mathematics \textbf{140} (1994), 183--205. DOI:
+\url{https://doi.org/10.2307/2118545}. This establishes o-minimality of
+the restricted analytic structure expanded by the real exponential
+function.
+
+{[}3{]} L. van den Dries, C. Miller, \emph{On the real exponential field
+with restricted analytic functions}, Israel Journal of Mathematics
+\textbf{85} (1994), 19--56. The uniform finite-component bound used in
+Section E is the standard consequence of definable cell decomposition:
+for a fixed definable family, the number of connected components of
+every fiber is bounded uniformly over its parameters. A precise statement
+is Section~4.4 (PDF p.~13) of [4].
+
+
+{[}4{]} L. van den Dries and C. Miller,
+\emph{Geometric categories and o-minimal structures},
+Duke Mathematical Journal \textbf{84} (1996), 497--540;
+author's revised manuscript dated 20 February 2001.
+Section~4.4 gives uniform bounds on connected components of fibers.
+\url{https://people.math.osu.edu/miller.1987/newg.pdf}.
+Only this uniform-fiber result is used here.
+
+
+{[}5{]} L. P\'etiard, \emph{Counter-example to a Kr\"oger type spectral inequality},
+arXiv:1706.09189v1 (2017), six-page preprint.
+The additive intersection-index question is on p.~3, immediately before
+Section~2.
+\url{https://arxiv.org/abs/1706.09189v1}.
+
+The polynomial approximation, min--max principle, coarea-free
+one-dimensional handle estimates, and elementary extension/Rellich
+argument are presented in the proof. No numerical approximation is used.
+\end{document}

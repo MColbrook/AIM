@@ -1,0 +1,82 @@
+--- submitted/sections/1035.tex
++++ aim1035.tex
+@@ -1,3 +1,44 @@
+-\hypertarget{1035-local-matrix-mass-does-not-imply-regularity}{%
+-\chapter{1035 --- Local matrix mass does not imply
+-regularity}\label{1035-local-matrix-mass-does-not-imply-regularity}}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=14pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb}
++\usepackage{xcolor,graphicx,booktabs,longtable,array}
++\usepackage{microtype,enumitem,fancyhdr,titlesec}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
++ pdftitle={Local matrix-mass bounds do not imply Stahl--Totik regularity},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 1035: mathematical result and proof}}
++\urlstyle{same}
++\Urlmuskip=0mu plus 1mu
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
++\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
++\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 1035}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\setcounter{secnumdepth}{0}
++\allowdisplaybreaks[2]
++\title{\textbf{Local matrix-mass bounds do not imply Stahl--Totik regularity}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We construct a normalized nontrivial positive-semidefinite matrix measure with a uniform polynomial local-mass lower bound whose block-Jacobi determinant regularity limit nevertheless vanishes. The rank-one density has no polynomial null vector. This gives a counterexample to the precise matrix local-mass criterion in AIM 1035.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 1035 at revision
++\texttt{3fa50884d129}. Its scope is stated below.
++\medskip
+@@ -8 +49 @@
+-This counterexample disproves AIM 1035 and Conjecture 5.9 of D. Damanik,
++This counterexample disproves AIM 1035 and Conjecture~5.9 in the work of D. Damanik,
+@@ -11 +52 @@
+-(2008), 1--85. It uses the positive-semidefinite matrix measures allowed
++(2008), 1--85 \cite{DPS08}. It uses the positive-semidefinite matrix measures allowed
+@@ -13 +54 @@
+-required by Lemma 2.1. The density has rank one, so a variant requiring
++required by \cite[Section~1.2 and Lemma~2.1]{DPS08}. The density has rank one, so a variant requiring
+@@ -17 +58 @@
+-\url{https://surveys-in-approximation-theory.com/papers/11/11.pdf}. The
++\url{https://www.math.auckland.ac.nz/sat/papers/11/11.pdf}. The
+@@ -284,2 +325 @@
+-Multiplying and using \(H_0=I_2\) gives (6). This is also equation
+-(2.34) of the primary source.
++Multiplying and using \(H_0=I_2\) gives (6). This is also \cite[Eq.~(2.34)]{DPS08}.
+@@ -315,0 +356,15 @@
++
++\begin{thebibliography}{1}
++\raggedright
++\bibitem{DPS08}
++D. Damanik, A. Pushnitski and B. Simon,
++\emph{The Analytic Theory of Matrix Orthogonal Polynomials},
++Surveys in Approximation Theory \textbf{4} (2008), 1--85.
++\url{https://www.math.auckland.ac.nz/sat/papers/11/11.pdf}.
++\url{https://arxiv.org/abs/0711.2703v2}.
++The positive-semidefinite convention is in Section~1.2 (p.~5),
++polynomial nontriviality in Lemma~2.1 (p.~16),
++the norm identity in (2.34) (p.~21), determinant regularity in
++Theorem~5.4 (p.~70), and Conjecture~5.9 in (5.20) (p.~72).
++\end{thebibliography}
++\end{document}

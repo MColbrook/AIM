@@ -1,0 +1,66 @@
+--- submitted/sections/1032.tex
++++ packaged/aim1032.tex
+@@ -1,3 +1,44 @@
+-\hypertarget{1032-a-leading-root-can-be-a-branch-point}{%
+-\chapter{1032 --- A leading root can be a branch
+-point}\label{1032-a-leading-root-can-be-a-branch-point}}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=14pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb}
++\usepackage{xcolor,graphicx,booktabs,longtable,array}
++\usepackage{microtype,enumitem,fancyhdr,titlesec}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
++ pdftitle={A leading Heun root at a branch point of its limiting spectral tree},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 1032: mathematical result and proof}}
++\urlstyle{same}
++\Urlmuskip=0mu plus 1mu
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
++\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
++\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 1032}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\setcounter{secnumdepth}{0}
++\allowdisplaybreaks[2]
++\title{\textbf{A leading Heun root at a branch point of its limiting spectral tree}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++For a third-order Heun operator with leading coefficient $z^4-z$, we prove convergence of the complete sequence of Van Vleck root-counting measures to an explicit positive law supported on a three-spoke star. The leading root zero is a branch point, refuting the universal leaf assertion in AIM 1032. The proof uses total nonnegativity, compounds and moment determinacy on an interval.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 1032 at revision
++\texttt{3fa50884d129}. Its scope is stated below.
++\medskip
+@@ -197,0 +239,3 @@
++The compound eigenvalue identity and the Perron--Frobenius facts used
++here are standard matrix theory; see, for example,
++Gantmakher--Krein, Section~4, cited below.
+@@ -383,0 +428,9 @@
++\item
++  F. Gantmakher and M. Krein,
++  \emph{Sur les matrices complètement non négatives et oscillatoires},
++  Compositio Mathematica \textbf{4} (1937), 445--476.
++  Section~4, p.~461, states the compound eigenvalue-products identity
++  and the oscillatory positive-simple-spectrum theorem.
++  \url{https://www.numdam.org/item/CM_1937__4__445_0.pdf}.
++  The particular factorization and compound irreducibility argument are
++  proved above.
+@@ -389,0 +443 @@
++\end{document}

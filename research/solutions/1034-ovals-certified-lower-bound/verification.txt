@@ -1,0 +1,17 @@
+Independent reviewer inspected and freshly reproduced the standard-library directed-rounding program with Python 3.12.14 -B; exit code 0.
+The packaged file changes only the descriptive source filename in its docstring.
+Its executable AST is identical to the program that was reproduced.
+
+D lower = 0.75572407410315354459185997743982991229030521161745297662414349632
+D upper = 0.75572407410315354459189263714459183772967242933331088322377232952
+C lower = 0.96221777605650156838482818142212356313104547909082246860285849093
+C upper = 0.96221777605650156838486976504974582190230907302553936813093581638
+Both C>0.96221 and C<0.96222 passed.
+
+The reviewer also independently implemented integer fixed-point intervals, with isqrt
+and proved series tails. The narrower interval lies inside the supplied enclosure:
+0.9622177760565015683848384173746812387083 < C <
+0.9622177760565015683848384173746812387084.
+
+The attached ovals_certificate.json records the supplied parameters and enclosure.
+Neither computation proves the conjectured constant one.

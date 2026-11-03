@@ -1,0 +1,74 @@
+--- submitted/sections/1022.tex
++++ aim1022.tex
+@@ -1,3 +1,44 @@
+-\hypertarget{1022-an-additive-intersection-index-bound-fails}{%
+-\chapter{1022 --- An additive intersection-index bound
+-fails}\label{1022-an-additive-intersection-index-bound-fails}}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=14pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb}
++\usepackage{xcolor,graphicx,booktabs,longtable,array}
++\usepackage{microtype,enumitem,fancyhdr,titlesec}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
++ pdftitle={A counterexample to an additive intersection-index eigenvalue bound},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 1022: mathematical result and proof}}
++\urlstyle{same}
++\Urlmuskip=0mu plus 1mu
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
++\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
++\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 1022}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\setcounter{secnumdepth}{0}
++\allowdisplaybreaks[2]
++\title{\textbf{A counterexample to an additive intersection-index eigenvalue bound}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We construct embedded hypersurfaces that contradict the additive intersection-index spectral estimate in AIM 1022. The argument combines a base with large normalized first eigenvalue, tapered connecting handles, a uniform intersection count and Neumann spectral counting.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 1022 at revision
++\texttt{3fa50884d129}. Its scope is stated below.
++\medskip
+@@ -15,0 +57 @@
++The additive question is posed by P\'etiard [5, p.~3].
+@@ -550 +592,18 @@
+-every fiber is bounded uniformly over its parameters.
++every fiber is bounded uniformly over its parameters. A precise statement
++is Section~4.4 (PDF p.~13) of [4].
++
++
++{[}4{]} L. van den Dries and C. Miller,
++\emph{Geometric categories and o-minimal structures},
++Duke Mathematical Journal \textbf{84} (1996), 497--540;
++author's revised manuscript dated 20 February 2001.
++Section~4.4 gives uniform bounds on connected components of fibers.
++\url{https://people.math.osu.edu/miller.1987/newg.pdf}.
++Only this uniform-fiber result is used here.
++
++
++{[}5{]} L. P\'etiard, \emph{Counter-example to a Kr\"oger type spectral inequality},
++arXiv:1706.09189v1 (2017), six-page preprint.
++The additive intersection-index question is on p.~3, immediately before
++Section~2.
++\url{https://arxiv.org/abs/1706.09189v1}.
+@@ -554,0 +614 @@
++\end{document}

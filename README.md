@@ -15,15 +15,15 @@ Contributions made with or without AI are welcome.
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**874 open targets** (367 open, 507 partial) · **192 solved entries** · **1 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
+**868 open targets** (367 open, 501 partial) · **198 solved entries** · **1 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 874 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 868 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
 | Subject group | Open targets | Solved |
 | --- | ---: | ---: |
-| [Spectral theory and spectral geometry](CATALOG.md#spectral-theory-and-spectral-geometry) | [45](CATALOG.md#spectral-open) | [10](CATALOG.md#spectral-solved) |
+| [Spectral theory and spectral geometry](CATALOG.md#spectral-theory-and-spectral-geometry) | [39](CATALOG.md#spectral-open) | [16](CATALOG.md#spectral-solved) |
 | [Operators, matrices and computation](CATALOG.md#operators-matrices-and-computation) | [69](CATALOG.md#operators-open) | [18](CATALOG.md#operators-solved) |
 | [Inverse problems, control and dynamics](CATALOG.md#inverse-problems-control-and-dynamics) | [21](CATALOG.md#inverse-open) | [8](CATALOG.md#inverse-solved) |
 | [PDEs, fluids and materials](CATALOG.md#pdes-fluids-and-materials) | [50](CATALOG.md#pdes-materials-open) | [11](CATALOG.md#pdes-materials-solved) |
@@ -247,8 +247,14 @@ Complete resolutions recorded in this collection, including counterexamples to t
 | 662 | [Variance ordering for Gaussian alpha-divergence approximations](research/resolved/662-gaussian-variational-variance-ordering.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-457-558/aim_558_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/558-review.md) |
 | 665 | [Smooth-gradient approximation of finite-Fisher-information scores](research/resolved/665-fisher-score-gradient-closure.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/618-fisher-score/PROOF.md) | [Review](research/solution_reviews/2026-10-02/618-review.md) |
 | 1007 | [Embedded eigenvalues in asymptotically flat twisted strips](problems/1007-embedded-eigenvalues-in-asymptotically-flat-twisted-strips.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-1007/twisted-strip-counterexample.pdf) | [Review](research/solution_reviews/2026-11-03-pr181/1007-review.md) |
+| 1013 | [Spectral lower bounds from multi-set concentration](problems/1013-spectral-lower-bounds-from-multi-set-concentration.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/1013-multiset-concentration-gap/aim1013.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1013-review.md) |
+| 1018 | [Can spectral type vary within a limit-periodic Schrödinger hull?](problems/1018-can-spectral-type-vary-within-a-limit-periodic-schrodinger-hull.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/1018-limit-periodic-hull-spectral-type/aim1018.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1018-review.md) |
 | 1021 | [Must limit-periodic discrete Schrödinger operators have pure spectral type?](problems/1021-must-limit-periodic-discrete-schrodinger-operators-have-pure-spectral-type.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/1021-limit-periodic-mixed-spectrum/limit_periodic_mixed_spectrum.pdf) | [Review](research/solution_reviews/2026-11-03-aim1021/1021-review.md) |
+| 1022 | [Can intersection complexity be separated from eigenvalue growth?](problems/1022-can-intersection-complexity-be-separated-from-eigenvalue-growth.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/1022-additive-intersection-index-counterexample/aim1022.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1022-review.md) |
 | 1026 | [Steklov zeros in a fixed boundary collar](problems/1026-steklov-zeros-in-a-fixed-boundary-collar.md) | ✅ SOLVED | Counterexample | [Proof](https://arxiv.org/pdf/2610.28391v2) | [Review](research/solution-status-audit-2026-11-03/lane-d/1026.json) |
+| 1031 | [Are non-Cantor spectra dense among nonperiodic limit-periodic potentials?](problems/1031-are-non-cantor-spectra-dense-among-nonperiodic-limit-periodic-potentials.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/1031-limit-periodic-finite-interval-spectra/aim1031.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1031-review.md) |
+| 1032 | [The spectral tree for high-order Heun operators](problems/1032-the-spectral-tree-for-high-order-heun-operators.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/1032-heun-star-counterexample/aim1032.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1032-review.md) |
+| 1035 | [Do matrix local-mass bounds imply Stahl–Totik regularity?](problems/1035-do-matrix-local-mass-bounds-imply-stahltotik-regularity.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/1035-matrix-local-mass-counterexample/aim1035.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1035-review.md) |
 
 ## Local working material
 

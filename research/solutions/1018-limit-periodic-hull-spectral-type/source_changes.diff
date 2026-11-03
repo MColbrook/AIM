@@ -1,0 +1,97 @@
+--- submitted/sections/1018.tex
++++ packaged/aim1018.tex
+@@ -1,3 +1,44 @@
+-\hypertarget{1018-spectral-type-varies-within-a-limit-periodic-hull}{%
+-\chapter{1018 --- Spectral type varies within a limit-periodic
+-hull}\label{1018-spectral-type-varies-within-a-limit-periodic-hull}}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=14pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb}
++\usepackage{xcolor,graphicx,booktabs,longtable,array}
++\usepackage{microtype,enumitem,fancyhdr,titlesec}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
++ pdftitle={Spectral type can vary within a limit-periodic Schrodinger hull},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 1018: mathematical result and proof}}
++\urlstyle{same}
++\Urlmuskip=0mu plus 1mu
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
++\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
++\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 1018}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\setcounter{secnumdepth}{0}
++\allowdisplaybreaks[2]
++\title{\textbf{Spectral type can vary within a limit-periodic Schrödinger hull}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We construct a bounded real limit-periodic potential whose uniform hull contains both an operator with an explicit square-summable eigenfunction and an operator with no eigenvalues. The two phases have different nonzero spectral components, answering AIM 1018 negatively. The construction also permits arbitrarily small potentials.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 1018 at revision
++\texttt{3fa50884d129}. Its scope is stated below.
++\medskip
+@@ -9 +50,3 @@
+-problem 1018. Every construction and estimate needed below is included.
++problem 1018, namely Damanik--Fillman Question~10.2
++\cite[arXiv v1, p.~36]{DF20}; see also \cite[Remark~(v)]{DG11}.
++Every construction and estimate needed below is included.
+@@ -125 +168 @@
+-The series is finite: by the Lipschitz bound and \(h_k(0)=0\),
++The series converges to a finite value: by the Lipschitz bound and \(h_k(0)=0\),
+@@ -260 +303 @@
+-\mathscr W_j(m)=u(m+1)v_j(m)-u(m)v_j(m+1).
++\mathcal W_j(m)=u(m+1)v_j(m)-u(m)v_j(m+1).
+@@ -266 +309 @@
+-\mathscr W_j(m)-\mathscr W_j(m-1)
++\mathcal W_j(m)-\mathcal W_j(m-1)
+@@ -271 +314 @@
+-\(-\infty\) and Cauchy--Schwarz give \(|\mathscr W_j(m)|\leq d_j\). At
++\(-\infty\) and Cauchy--Schwarz give \(|\mathcal W_j(m)|\leq d_j\). At
+@@ -383,0 +427,29 @@
++
++\begin{thebibliography}{3}
++\raggedright
++\bibitem{DF20}
++D. Damanik and J. Fillman,
++\emph{Spectral Properties of Limit-Periodic Operators},
++in \emph{Analysis and Geometry on Graphs and Manifolds},
++M. Keller, D. Lenz and R. K. Wojciechowski (eds.),
++London Mathematical Society Lecture Note Series~461,
++Cambridge University Press (2020), 382--444.
++\href{https://doi.org/10.1017/9781108615259.016}{doi:10.1017/9781108615259.016}.
++The question and section locators used here refer to
++\url{https://arxiv.org/abs/1802.05794v1}.
++\bibitem{DG11}
++D. Damanik and Z. Gan,
++\emph{Spectral properties of limit-periodic Schr\"odinger operators},
++Communications on Pure and Applied Analysis \textbf{10} (2011),
++859--871.
++\href{https://doi.org/10.3934/cpaa.2011.10.859}{doi:10.3934/cpaa.2011.10.859}.
++\url{https://arxiv.org/abs/0906.3337v3}.
++\bibitem{KS10}
++J. Kwiatkowski and A. Siemaszko,
++\emph{Discrete orbits in topologically transitive cylindrical transformations},
++Discrete and Continuous Dynamical Systems \textbf{27} (2010), 945--961.
++\href{https://doi.org/10.3934/dcds.2010.27.945}{doi:10.3934/dcds.2010.27.945}.
++This reference supplies context for discrete cocycles, not a theorem used
++in the self-contained construction.
++\end{thebibliography}
++\end{document}
