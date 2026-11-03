@@ -11,7 +11,6 @@ Documented resolutions of the exact target. Proof and review links give the argu
 | ID | Problem | Status | Outcome | Last checked | Proof | Review |
 | --- | --- | --- | --- | --- | --- | --- |
 | 003 | [Hot spots on convex planar domains](problems/003-planar-convex-hot-spots.md) | ✅ SOLVED | Affirmative proof | 2026-10-13 | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains-September-24-2026/main.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
-| 007 | [Pólya–Szegő conjecture for the first buckling load](problems/007-buckling-load-ball.md) | ✅ SOLVED | Affirmative proof | 2026-11-03 | [Proof](https://github.com/QuanyuTang/polya-szego-planar-unconditional-palomar/blob/3b3417486b092363b411ed25ee2edb5e6f87f0ed/manuscript/PS_dim2_v5.pdf) | [Review](research/solution-status-audit-2026-11-03/lane-a/007.json) |
 | 010 | [The Mercedes-star partition of a disk](problems/010-mercedes-disk-partition.md) | ✅ SOLVED | Affirmative proof | 2026-10-21 | [Proof](https://arxiv.org/abs/2609.21964) | [Review](research/solution_reviews/2026-10-13-yui-prs/010-review.md) |
 | 011 | [Yau's sharp upper bound for nodal volume](problems/011-yau-nodal-upper-bound.md) | ✅ SOLVED | Counterexample | 2026-10-13 | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Smooth-counterexamples-to-Yaus-nodal-upper-bound-in-dimensions-three-and-four-September-23-2026/paper.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
 | 015 | [Extended states in the three-dimensional Anderson model](problems/015-anderson-extended-states.md) | ✅ SOLVED | Affirmative proof | 2026-10-13 | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026/paper.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
@@ -201,6 +200,14 @@ Documented resolutions of the exact target. Proof and review links give the argu
 | 662 | [Variance ordering for Gaussian alpha-divergence approximations](research/resolved/662-gaussian-variational-variance-ordering.md) | ✅ SOLVED | Counterexample | 2026-10-02 | [Proof](research/solutions/siavash-sadeghi-457-558/aim_558_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/558-review.md) |
 | 665 | [Smooth-gradient approximation of finite-Fisher-information scores](research/resolved/665-fisher-score-gradient-closure.md) | ✅ SOLVED | Affirmative proof | 2026-10-02 | [Proof](research/solutions/618-fisher-score/PROOF.md) | [Review](research/solution_reviews/2026-10-02/618-review.md) |
 | 1026 | [Steklov zeros in a fixed boundary collar](problems/1026-steklov-zeros-in-a-fixed-boundary-collar.md) | ✅ SOLVED | Counterexample announcement; unverified | 2026-11-03 | [Proof](https://arxiv.org/pdf/2610.28391v2) | [Review](research/solution-status-audit-2026-11-03/lane-d/1026.json) |
+
+## Lean verified
+
+Complete resolutions with a reviewed Lean proof, statement comparison, and reproducible kernel-checking evidence. The evidence link records exactly what was checked.
+
+| ID | Problem | Status | Outcome | Last checked | Proof | Review |
+| --- | --- | --- | --- | --- | --- | --- |
+| 007 | [Pólya–Szegő conjecture for the first buckling load](problems/007-buckling-load-ball.md) | 🏆 LEAN VERIFIED | Affirmative proof | 2026-11-03 | [Proof](https://github.com/QuanyuTang/polya-szego-planar-unconditional-palomar/blob/5311f47821b5da92e81e75b7da5091d176c8deb9/PlanarBucklingSolution.lean) | [Review](research/solution_reviews/2026-11-03-lean-007/scope-review.json) · [Lean evidence](research/solution_reviews/2026-11-03-lean-007/README.md) |
 
 ## Reporting a solution
 

@@ -2,7 +2,7 @@
 
 **Area:** Elastic stability
 
-**Status:** ✅ SOLVED
+**Status:** 🏆 LEAN VERIFIED
 
 **Last checked:** 2026-11-03
 
@@ -29,9 +29,11 @@ The eigenvalue is proportional to the compressive load at which a clamped plate 
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The manuscript claims the sharp area inequality for every planar open set of finite positive area, using the same buckling Rayleigh quotient on H02, without a sign condition on the eigenfunction. Its Corollary 1.3 therefore includes the full bounded smooth-domain target.
+**Resolution update (3 November 2026):** Affirmative proof by Quanyu Tang and Haiqi Zhang, with the formal theorem recorded as **Lean verified** on the basis of [Palomar's version 1 registration](https://palomar-registry.org/entry?id=PALOMAR-2026-10-18-000008&version=1) and an AIM statement-and-assumption review. The declaration `BucklingChallenge.polya_szego_buckling` proves the equal-area disk comparison for every planar open set of finite positive area, using the buckling Rayleigh quotient on the closure of smooth compactly supported functions in the full second-order Sobolev graph. It imposes no sign condition on the eigenfunction and includes the bounded smooth-domain target above.
 
-[Claimed solution](https://github.com/QuanyuTang/polya-szego-planar-unconditional-palomar/blob/3b3417486b092363b411ed25ee2edb5e6f87f0ed/manuscript/PS_dim2_v5.pdf) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/007.json). Corollary 1.3; formal declaration BucklingChallenge.polya_szego_buckling. The full external proof has not been independently verified here; no local Lean kernel replay or human peer review is asserted. This label records the complete announcement under the requested status policy.
+[Manuscript](https://github.com/QuanyuTang/polya-szego-planar-unconditional-palomar/blob/3b3417486b092363b411ed25ee2edb5e6f87f0ed/manuscript/PS_dim2_v5.pdf) · [Registered formal proof](https://github.com/QuanyuTang/polya-szego-planar-unconditional-palomar/blob/5311f47821b5da92e81e75b7da5091d176c8deb9/PlanarBucklingSolution.lean) · [Lean verification record and statement comparison](../research/solution_reviews/2026-11-03-lean-007/README.md).
+
+Palomar's successful report is tied to the registered source hashes and records acceptance by Lean, NanoDa and con-ron with only `propext`, `Classical.choice` and `Quot.sound` permitted. AIM reviewed the concrete definitions, hypotheses, proof bridges and recorded checks; it relies on Palomar for kernel replay. This designation concerns the formal theorem, without claiming human peer review or a line-by-line verification of the working manuscript. The [earlier announcement-only review](../research/solution-status-audit-2026-11-03/lane-a/007.json) is retained as history and is superseded by this verification record.
 
 ### Earlier status record
 

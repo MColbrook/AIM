@@ -2,8 +2,6 @@
 
 A sourced collection of precise mathematical research problems in spectral theory, operator theory, applied mathematics, and related fields. Each entry has a self-contained statement, a discussion of applications or mathematical significance, references, and a dated literature-status review.
 
-This project is not affiliated with the [American Institute of Mathematics (AIM)](https://aimath.org/).
-
 After discussions with mathematicians from different areas, we started this collection with several motivations:
 
 - AI tools are increasingly being used to search the literature and tackle conjectures. We would like our community to help shape this work, solve problems and understand their consequences.
@@ -13,11 +11,11 @@ After discussions with mathematicians from different areas, we started this coll
 
 Contributions made with or without AI are welcome.
 
-**[AIM, explained](https://mathematics-explained.com/)** is our companion website for explanations of the problems, known results, proofs and applications in this collection. Papers and videos are welcome; you do not need to solve a problem to contribute. The aim is to improve human understanding, with credit to explanation authors and their sources.
+**[AIM, explained](https://mathematics-explained.com/)** is our companion website for explanations of the problems, known results, proofs and applications in this collection. Papers and videos are welcome; you do not need to solve a problem to contribute. The aim is to improve human understanding, with credit to explanation authors and their sources. This project is not affiliated with the [American Institute of Mathematics (AIM)](https://aimath.org/).
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**876 open targets** (367 open, 509 partial) · **191 solved entries** · **0 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
+**876 open targets** (367 open, 509 partial) · **190 solved entries** · **1 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
 
 **[Browse all 876 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
@@ -59,7 +57,7 @@ Complete resolutions recorded in this collection, including counterexamples to t
 | ID | Problem | Status | Outcome | Proof | Review |
 | --- | --- | --- | --- | --- | --- |
 | 003 | [Hot spots on convex planar domains](problems/003-planar-convex-hot-spots.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains-September-24-2026/main.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
-| 007 | [Pólya–Szegő conjecture for the first buckling load](problems/007-buckling-load-ball.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/QuanyuTang/polya-szego-planar-unconditional-palomar/blob/3b3417486b092363b411ed25ee2edb5e6f87f0ed/manuscript/PS_dim2_v5.pdf) | [Review](research/solution-status-audit-2026-11-03/lane-a/007.json) |
+| 007 | [Pólya–Szegő conjecture for the first buckling load](problems/007-buckling-load-ball.md) | 🏆 LEAN VERIFIED | Affirmative proof | [Proof](https://github.com/QuanyuTang/polya-szego-planar-unconditional-palomar/blob/5311f47821b5da92e81e75b7da5091d176c8deb9/PlanarBucklingSolution.lean) | [Review](research/solution_reviews/2026-11-03-lean-007/scope-review.json) · [Lean evidence](research/solution_reviews/2026-11-03-lean-007/README.md) |
 | 010 | [The Mercedes-star partition of a disk](problems/010-mercedes-disk-partition.md) | ✅ SOLVED | Affirmative proof | [Proof](https://arxiv.org/abs/2609.21964) | [Review](research/solution_reviews/2026-10-13-yui-prs/010-review.md) |
 | 011 | [Yau's sharp upper bound for nodal volume](problems/011-yau-nodal-upper-bound.md) | ✅ SOLVED | Counterexample | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Smooth-counterexamples-to-Yaus-nodal-upper-bound-in-dimensions-three-and-four-September-23-2026/paper.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
 | 015 | [Extended states in the three-dimensional Anderson model](problems/015-anderson-extended-states.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026/paper.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |

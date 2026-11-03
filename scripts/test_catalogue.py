@@ -9,6 +9,8 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
+import catalogue
 from catalogue import next_problem_id, presentation_records, render_catalog, render_readme, render_resolved, subject_index
 from markdown_math import expressions, validate_math
 
@@ -100,6 +102,70 @@ class ResolutionPresentationTests(unittest.TestCase):
         self.assertIn('| 003 |', catalogue.split('### Solution claimed', 1)[1])
         self.assertIn('[An outstanding claim](problems/003-claim.md)',
                       render_resolved(presented))
+
+
+class LeanPageEvidenceTests(unittest.TestCase):
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory(prefix='aim-lean-page-')
+        self.addCleanup(temporary.cleanup)
+        self.root = Path(temporary.name)
+        (self.root / 'data').mkdir()
+        (self.root / 'research').mkdir()
+        self.evidence = self.root / 'research/verification.md'
+        self.evidence.write_text('Pinned formal theorem and verification evidence.\n',
+                                 encoding='utf-8')
+        self.row = {'id': '007', 'title': 'Original target', 'area': 'Example',
+                    'file': 'problems/007-original.md', 'status': 'Lean verified',
+                    'last_checked': '2026-01-01', 'outcome': 'Affirmative proof',
+                    'proof': 'https://example.com/pinned-proof',
+                    'review': 'research/verification.md',
+                    'verification_record': 'research/verification.md'}
+        self.manifest = {'groups': [{'key': 'example', 'title': 'Example'}],
+                         'batches': [{'title': 'Example', 'ids': ['007']}],
+                         'retired': []}
+        mocked_root = patch.object(catalogue, 'ROOT', self.root)
+        mocked_root.start()
+        self.addCleanup(mocked_root.stop)
+
+    def load(self):
+        (self.root / 'data/example.json').write_text(
+            json.dumps([self.row]), encoding='utf-8')
+        return catalogue.load_entries(self.manifest)
+
+    def test_lean_verified_page_keeps_identity_and_appears_in_tables(self):
+        entries, errors = self.load()
+        self.assertEqual(errors, [])
+        opened, presented = presentation_records(entries, self.manifest)
+        self.assertEqual(opened, [])
+        self.assertEqual(presented['retired'][0]['id'], '007')
+        self.assertEqual(presented['retired'][0]['record'], self.row['file'])
+        for text in (render_readme(opened, presented),
+                     render_catalog(opened, presented), render_resolved(presented)):
+            self.assertIn('[Original target](problems/007-original.md)', text)
+            self.assertIn('🏆 LEAN VERIFIED', text)
+            self.assertIn('[Lean evidence](research/verification.md)', text)
+        self.assertIn('**1 Lean verified**', render_readme(opened, presented))
+        self.assertIn('[0](#example-open) | [1](#example-solved)',
+                      '\n'.join(subject_index(opened, presented)))
+
+    def test_lean_verified_page_requires_local_nonempty_markdown_evidence(self):
+        for value in (None, [], {}, '', ' ', 'https://example.com/proof.md',
+                      '../outside.md', 'research/missing.md', 'research/proof.txt'):
+            with self.subTest(record=value):
+                self.row['verification_record'] = value
+                self.assertTrue(any('verification_record' in error
+                                    for error in self.load()[1]))
+        self.row['verification_record'] = 'research/verification.md'
+        self.evidence.write_text(' \n', encoding='utf-8')
+        self.assertTrue(any('verification_record' in error
+                            for error in self.load()[1]))
+
+    def test_lean_verified_page_still_requires_proof_review_and_outcome(self):
+        for field in ('proof', 'review', 'outcome'):
+            with self.subTest(field=field):
+                original = self.row.pop(field)
+                self.assertTrue(any(field in error for error in self.load()[1]))
+                self.row[field] = original
 
 
 class NumberAllocationTests(unittest.TestCase):

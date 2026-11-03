@@ -99,6 +99,21 @@ def local_source_cache(path):
             and "_sources" in parts[2:])
 
 
+def verification_record_errors(row):
+    """Require published, local evidence for every Lean-verified entry."""
+    if row.get("status") != "Lean verified":
+        return []
+    value = row.get("verification_record")
+    if not isinstance(value, str) or not value.strip():
+        return [f"{row['id']}: Lean verified requires a verification_record"]
+    evidence = (ROOT / value).resolve()
+    if (Path(value).is_absolute() or ROOT not in evidence.parents or
+            evidence.suffix != ".md" or not evidence.is_file() or
+            not evidence.read_text(encoding="utf-8").strip()):
+        return [f"{row['id']}: invalid or empty Lean verification_record"]
+    return []
+
+
 def load_manifest():
     errors = []
     try:
@@ -179,16 +194,7 @@ def load_manifest():
         if item.get("status") not in RETIRED_STATUSES:
             errors.append(f"catalogue.json: invalid retired status for {item['id']}")
         errors.extend(date_errors(item.get("last_checked"), item["id"]))
-        if item.get("status") == "Lean verified":
-            value = item.get("verification_record")
-            if not isinstance(value, str) or not value.strip():
-                errors.append(f"{item['id']}: Lean verified requires a verification_record")
-            else:
-                evidence = (ROOT / value).resolve()
-                if (Path(value).is_absolute() or ROOT not in evidence.parents or
-                        evidence.suffix != ".md" or not evidence.is_file() or
-                        not evidence.read_text(encoding="utf-8").strip()):
-                    errors.append(f"{item['id']}: invalid or empty Lean verification_record")
+        errors.extend(verification_record_errors(item))
     for item in manifest.get("cut", []):
         if not isinstance(item, dict) or not valid_id(item.get("id")):
             errors.append("catalogue.json: cut ID needs a valid id")
@@ -320,9 +326,9 @@ def load_entries(manifest):
             if not valid_id(row["id"]):
                 errors.append(f"{path.name}: invalid ID {row['id']}")
                 continue
-            if row["status"] not in (*OPEN_STATUSES, "Solved", "Solution claimed"):
-                errors.append(f"{row['id']}: invalid page status; use Open, Partially resolved, Solved or Solution claimed")
-            if row["status"] in ("Solved", "Solution claimed"):
+            if row["status"] not in (*OPEN_STATUSES, *SOLVED_STATUSES, "Solution claimed"):
+                errors.append(f"{row['id']}: invalid page status; use Open, Partially resolved, Solved, Lean verified or Solution claimed")
+            if row["status"] in (*SOLVED_STATUSES, "Solution claimed"):
                 if not isinstance(row.get("outcome"), str) or not row["outcome"].strip():
                     errors.append(f"{row['id']}: {row['status']} requires an outcome")
                 for field in ("proof", "review"):
@@ -333,6 +339,7 @@ def load_entries(manifest):
                         evidence = (ROOT / value).resolve()
                         if Path(value).is_absolute() or ROOT not in evidence.parents or not evidence.is_file():
                             errors.append(f"{row['id']}: invalid {field} link")
+            errors.extend(verification_record_errors(row))
             errors.extend(date_errors(row["last_checked"], row["id"]))
             entries.append({**row, "group": stem})
     return sorted(entries, key=lambda row: int(row["id"])), errors
@@ -343,7 +350,7 @@ def presentation_records(entries, manifest):
     opened = [row for row in entries if row["status"] in OPEN_STATUSES]
     solved = [{**row, "record": row["file"],
                "reason": "Resolution or claim recorded on the problem page."}
-              for row in entries if row["status"] in ("Solved", "Solution claimed")]
+              for row in entries if row["status"] in (*SOLVED_STATUSES, "Solution claimed")]
     return opened, {**manifest, "retired": [*manifest["retired"], *solved]}
 
 
@@ -397,14 +404,13 @@ def render_readme(entries, manifest):
     lines = [
         "# AIM — Open Applied Problems", "",
         "A sourced collection of precise mathematical research problems in spectral theory, operator theory, applied mathematics, and related fields. Each entry has a self-contained statement, a discussion of applications or mathematical significance, references, and a dated literature-status review.", "",
-        "This project is not affiliated with the [American Institute of Mathematics (AIM)](https://aimath.org/).", "",
         "After discussions with mathematicians from different areas, we started this collection with several motivations:", "",
         "- AI tools are increasingly being used to search the literature and tackle conjectures. We would like our community to help shape this work, solve problems and understand their consequences.",
         "- These changes can bring excitement, uncertainty or a sense of loss. We hope this project will create opportunities for mathematicians, especially early-career researchers, to gain recognition for understanding, explaining, improving and extending proofs.",
         "- We want to explore where applications, conceptual insight and asking the right questions fit into mathematical research.",
         "- We want to collect proposed proofs and established solutions in one place, making them easier to find, check and build on.", "",
         "Contributions made with or without AI are welcome.", "",
-        "**[AIM, explained](https://mathematics-explained.com/)** is our companion website for explanations of the problems, known results, proofs and applications in this collection. Papers and videos are welcome; you do not need to solve a problem to contribute. The aim is to improve human understanding, with credit to explanation authors and their sources.", "",
+        "**[AIM, explained](https://mathematics-explained.com/)** is our companion website for explanations of the problems, known results, proofs and applications in this collection. Papers and videos are welcome; you do not need to solve a problem to contribute. The aim is to improve human understanding, with credit to explanation authors and their sources. This project is not affiliated with the [American Institute of Mathematics (AIM)](https://aimath.org/).", "",
         "If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.", "",
         summary + ". Counts reflect the statuses recorded in this collection.", "",
         f"**[Browse all {len(entries)} open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**", "",

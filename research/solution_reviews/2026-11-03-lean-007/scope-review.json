@@ -1,0 +1,871 @@
+{
+  "schema": "AIM_EXTERNAL_LEAN_STATEMENT_REVIEW_V1",
+  "date": "2026-11-03",
+  "problem_id": "007",
+  "canonical_file": "problems/007-buckling-load-ball.md",
+  "statement_sha256": "0c5035df64c5240430c14f222ec6d92022dd395149616dafcd04875043f0a856",
+  "reviewer": "Codex AI assistant; independent AIM source and statement review, not a local kernel run",
+  "verdict": "Full original target covered; record Lean verified relying on Palomar version 1 mechanical verification, as requested by the editor.",
+  "formal_theorem": "BucklingChallenge.polya_szego_buckling",
+  "registered_commit": "5311f47821b5da92e81e75b7da5091d176c8deb9",
+  "source_repository": "https://github.com/QuanyuTang/polya-szego-planar-unconditional-palomar",
+  "challenge_sha256": "92f8c376d384bdeb53cb09c9de868d743bfbd7fdc2ea04b3c25fae13f534d45b",
+  "solution_sha256": "76863569c0628a3c096bdbfb9a6a4989cf16a57c623f0a6371af763d462f4f0a",
+  "scope_checks": [
+    {
+      "topic": "Domain and quantifiers",
+      "finding": "Every open subset of EuclideanSpace real (Fin 2) with finite positive Lebesgue area; the original bounded smooth nonempty planar domain is included. Equal area is pi times R squared with R positive.",
+      "sources": [
+        "PlanarBucklingChallenge.lean:138-147",
+        "PlanarBucklingSolution.lean:219-226"
+      ]
+    },
+    {
+      "topic": "Sobolev space and boundary condition",
+      "finding": "H02 is the closure of actual smooth compactly supported value, first-derivative and second-derivative graphs in a finite product of L2 spaces. Equivalent finite-product norms give the standard H02 closure; for smooth domains this imposes both clamped traces. No positivity restriction is built into IsTestFn or H02.",
+      "sources": [
+        "PlanarBucklingChallenge.lean:39-78",
+        "RequestProject/Core1.lean:4140-4201",
+        "RequestProject/Core4.lean:172-208"
+      ]
+    },
+    {
+      "topic": "Eigenvalue and nonvacuity",
+      "finding": "Squared L2 norm of the sum of diagonal second derivatives divided by the sum of squared first-derivative L2 norms. Nonzero denominator is required; nonempty admissible functions on every nonempty open domain are constructed with a smooth bump. The quotient is nonnegative and the infimum is bounded below; this is not an empty-infimum proof.",
+      "sources": [
+        "PlanarBucklingChallenge.lean:82-102",
+        "RequestProject/Core2.lean:2025-2033",
+        "RequestProject/Core2.lean:2152-2210"
+      ]
+    },
+    {
+      "topic": "Concrete definition bridges",
+      "finding": "The complete challenge/solution mathematical-definition blocks agree after removing comments and whitespace. H02_eq and bucklingEig_eq identify them with the concrete proof objects; the toL2 fallback never applies to the test functions or their derivatives, since their MemLp facts are proved.",
+      "sources": [
+        "PlanarBucklingSolution.lean:146-196",
+        "RequestProject/Core1.lean:4161-4193"
+      ]
+    },
+    {
+      "topic": "No hidden extra hypothesis",
+      "finding": "The final theorem has only the natural geometric/area/radius hypotheses. The older intermediate Core4 theorem accepts PaperExternals, whose sole field is Faber-Krahn; UnconditionalFaberKrahn constructs that package from proved results and UnconditionalAreaRigidity supplies it. No sign, connectedness, topology or unproved theorem-package assumption is passed by the user.",
+      "sources": [
+        "RequestProject/Core1.lean:4702-4716",
+        "UnconditionalFaberKrahn.lean:30-53",
+        "UnconditionalAreaRigidity.lean:29-46",
+        "PlanarBucklingSolution.lean:219-226"
+      ]
+    },
+    {
+      "topic": "Disk comparison and constants",
+      "finding": "The conclusion is an actual bucklingEig comparison against the same-area metric disk, with exact open-disk equality. Bessel functions use their power series and positive zero infima; the disk eigenvalue is proved. The buckling denominator is gradient energy, distinct from clamped-plate vibration.",
+      "sources": [
+        "PlanarBucklingChallenge.lean:105-147",
+        "RequestProject/Core4.lean:1013-1021",
+        "RequestProject/Core4.lean:1128-1159"
+      ]
+    }
+  ],
+  "source_scan": {
+    "review_date": "2026-11-03",
+    "registered_commit": "5311f47821b5da92e81e75b7da5091d176c8deb9",
+    "lean_files_scanned": 185,
+    "challenge_solution_definitions_identical_ignoring_comments_and_whitespace": true,
+    "non_challenge_trust_token_matches": [],
+    "isolated_challenge_placeholders": [
+      {
+        "path": "PlanarBucklingChallenge.lean",
+        "line": 129,
+        "code": "sorry"
+      },
+      {
+        "path": "PlanarBucklingChallenge.lean",
+        "line": 136,
+        "code": "sorry"
+      },
+      {
+        "path": "PlanarBucklingChallenge.lean",
+        "line": 147,
+        "code": "sorry"
+      },
+      {
+        "path": "PlanarBucklingChallenge.lean",
+        "line": 152,
+        "code": "sorry"
+      },
+      {
+        "path": "PlanarBucklingChallenge.lean",
+        "line": 159,
+        "code": "sorry"
+      }
+    ],
+    "challenge_not_imported_by_solution_or_other_source_modules": true,
+    "files": [
+      {
+        "path": "AbsoluteValueEnergy.lean",
+        "sha256": "3468db848ccd7cece1cfbbfde86ad868de61fc36d870c4d40a342d9a99aa2375"
+      },
+      {
+        "path": "AffineHalfspaceFold.lean",
+        "sha256": "936cc7f319738d87dd47fe329ed50321f934c42d067fc5924e17cbe9aa97ab4c"
+      },
+      {
+        "path": "AffinePolarizationRealEnergy.lean",
+        "sha256": "c7d8e25eb193ec9ea4ec928e7ed0a5ed6dd50badbe4164c1ca21749817a12447"
+      },
+      {
+        "path": "AffinePolarizedGroundState.lean",
+        "sha256": "c0f320fb682713bc5ddda5072650830a1e79603679d978c24a7481cb8e941b93"
+      },
+      {
+        "path": "AffinePolarizedH01Candidate.lean",
+        "sha256": "eb89b82ea92e51de60ecfd9e3d1729300fd393a79232be288e92baf78cf92b63"
+      },
+      {
+        "path": "AffineReflectionWeakTransport.lean",
+        "sha256": "c3d9ad7c4bb7d8c79dc7bd05eb654fe5ad26569db264c6a6e6c275dd9bd688bd"
+      },
+      {
+        "path": "AnchoredL2Estimate.lean",
+        "sha256": "f835f6a2bff40a13e71ab8b5016be07133b66d0de23d83c02c1ada5a4ba39cc6"
+      },
+      {
+        "path": "BoundedPolarizationOrbit.lean",
+        "sha256": "6e4c93831f708e70ed57c60bf39c922f3566dcf41705d42d6f41604f6964948c"
+      },
+      {
+        "path": "CompactLipOriginalH01.lean",
+        "sha256": "ca928fedbaa515c7e42d4d719b12d2b744e3fea20142a87f476a08d237ff3c82"
+      },
+      {
+        "path": "CompactLipOriginalH01Energy.lean",
+        "sha256": "0205a6c7069a67c42833478b91ddf59af33c2c2800590443c15f658c472574a6"
+      },
+      {
+        "path": "ConnectedLocalAEDichotomy.lean",
+        "sha256": "c1c3391d07fffca779abf03bfd30313569a1293b376cafcdb1d026250cbf295a"
+      },
+      {
+        "path": "CutoffEnergyEstimate.lean",
+        "sha256": "fcee848d4bcd2399276f0f5e686452956866e256c3a93aa6caab4d5962c45865"
+      },
+      {
+        "path": "CutoffMassLimit.lean",
+        "sha256": "801548f4913fcba5d06bfd2e6c01633a0f5eebfd1ea6d52f6c8142b0c639b01d"
+      },
+      {
+        "path": "CutoffRayleighReal.lean",
+        "sha256": "c518ca16242e7a51602f0df93ebcb3537c158dc2edcf9bb55ede4de299b198fe"
+      },
+      {
+        "path": "DirichletFKAreaProduct.lean",
+        "sha256": "a01c18c868b7e468cb4bad5e9a0193f43482bcfd4e184d772d9cca56450d1735"
+      },
+      {
+        "path": "DirichletTestDensity.lean",
+        "sha256": "a3e1b36b2fc0db7c536fb17d25686b3bb2c69bd32ffd02214e1e0bdcf8068e0c"
+      },
+      {
+        "path": "EllipticH01Bridge.lean",
+        "sha256": "f4a4ebce8c482f14f47a374fa8222969ab0794a5f5f658f2911c817c65ce7002"
+      },
+      {
+        "path": "EuclideanReflection.lean",
+        "sha256": "8791c4bba3c74655ed1151baa5caa6a9bcc0d4f1309b9d89f44660009ffdac23"
+      },
+      {
+        "path": "EuclideanReflectionContraction.lean",
+        "sha256": "175c27520a265a5fcf31d6a89209c0e2b2f83d0987468cf10594c8020d2dc6b7"
+      },
+      {
+        "path": "FaberKrahnEqualityAeDisk.lean",
+        "sha256": "2e7e4be4cb1ae7c6864311430769ba8f2425a69a61a3da3c47b6056afa207902"
+      },
+      {
+        "path": "FaberKrahnEqualityConnected.lean",
+        "sha256": "cf6f8f7fa725e625f4c54330087d64d39b2d6f7c75e64978a7495d3e98f089c8"
+      },
+      {
+        "path": "FaberKrahnEqualityGroundStateData.lean",
+        "sha256": "cab18d30c3749c17a3646c2b2dc6a04172e439dabd42de9b383d6d98d2b08237"
+      },
+      {
+        "path": "FaberKrahnPolarizationBranch.lean",
+        "sha256": "84f7ab75dcbf71c4b421df921d82bd78e393a6a69aa09702b25b8ea7690a8cef"
+      },
+      {
+        "path": "FiniteAreaTestLpBounds.lean",
+        "sha256": "8186da12b899c786afbabef420def5f16a6da3459206372078cd31e50bd83587"
+      },
+      {
+        "path": "FiniteOrbitEnergies.lean",
+        "sha256": "6540d391e55cea0d9c21ec6a5a140c49aeabcd50855446a0fd770a03406a9693"
+      },
+      {
+        "path": "FinitePolarizationOrbit.lean",
+        "sha256": "c21379a5b331b762c692286094a0b2e58f7d77ae76163f1f592696d2876dfc2c"
+      },
+      {
+        "path": "FixedInitialFaberKrahn.lean",
+        "sha256": "ea53e12cfb178b2ac9735cac77b4b5fbc2407b2af81dedda71d956372b5cac1d"
+      },
+      {
+        "path": "FoldedDomainConnected.lean",
+        "sha256": "f4ff237d0cfff4a1b879529c44f5f330cc944c310b727405a54592038c8879d9"
+      },
+      {
+        "path": "FoldedDomainNonempty.lean",
+        "sha256": "1ef2cb7033e7b81fe8b047d2323dca0bc424f53f58df181afc054ea63b4ef86f"
+      },
+      {
+        "path": "FrechetKolmogorovTail.lean",
+        "sha256": "b9782c431f1d124f44973b9623fc96d23e46f2c05333cecf6a059ae40e1d1872"
+      },
+      {
+        "path": "GlobalLipschitzCompactness.lean",
+        "sha256": "204b3f0f3b26da3aa3496697bcc846454e43c8f73500fc3a540415d606d077e2"
+      },
+      {
+        "path": "GraphH01ShiftedTruncation.lean",
+        "sha256": "eabb74c387f121d8bee72c9a812324024e01427e10e68210091524e364d05c99"
+      },
+      {
+        "path": "H01AbsoluteValue.lean",
+        "sha256": "f62c55bf3ca4a058ad5647eba7738eacbc7a75d7b13da4f3d6bd92568bc5b748"
+      },
+      {
+        "path": "H01BoundaryTruncation.lean",
+        "sha256": "0fc6642f44040865f5a626fea57750f2cef7599a919574fd6fb0840e23be5e77"
+      },
+      {
+        "path": "H01CompactEmbedding.lean",
+        "sha256": "8b52ec80d59acc2655c62076a91fb7231c6bdee4cb34aa9f2b18426dd63f63e4"
+      },
+      {
+        "path": "H01ComponentProjection.lean",
+        "sha256": "25519b726b1c3b61512df5f3b79c35d54409750635c0a7a0c7f2a54d9b56a8f6"
+      },
+      {
+        "path": "H01ComponentRestriction.lean",
+        "sha256": "fdbc0db09cc0b162571455335f65270a23aef0c5a4e01447e1518e150fce2103"
+      },
+      {
+        "path": "H01ComponentSelection.lean",
+        "sha256": "37c7f20d443791f40fa72e0e942dd582bc4b518ea9b3c089113db5b47c00c73a"
+      },
+      {
+        "path": "H01ComponentTestCutoff.lean",
+        "sha256": "6d362468a16b305aea5b71ea00ee9c2833344d71f1c86e6a3f1b06ff9845fd61"
+      },
+      {
+        "path": "H01DirichletEuler.lean",
+        "sha256": "0d804ed53624e15c437683d43eba2f12c73f7b1c3778319aa481f284abdb664d"
+      },
+      {
+        "path": "H01FullEuler.lean",
+        "sha256": "7d5b43324ec6b391a8abb57745956135d7664f0cfb98b152ba3c782e307494ab"
+      },
+      {
+        "path": "H01GraphEuler.lean",
+        "sha256": "a10fd2a0fca6fe94e0643b11117a34cac759bb5a1a19c8a64adf97395fa06255"
+      },
+      {
+        "path": "H01GroundStateGlobalTest.lean",
+        "sha256": "9ffa994aadcb1cfda3541b9ec678561722a06e20bf410b584922f3e719f817b4"
+      },
+      {
+        "path": "H01GroundStatePositive.lean",
+        "sha256": "f376211cc2bae8a38d4ff196efed453da99fe387fd4ecaf760b9e3097b16a904"
+      },
+      {
+        "path": "H01HilbertModel.lean",
+        "sha256": "b9de2e1f67be82ce36789c744543dca2efb9c8a89c2a58e9ea1b7b964e3c74d6"
+      },
+      {
+        "path": "H01NonnegativeCompactApproximation.lean",
+        "sha256": "5f9e6aa9da73fca76b90a800c092ba799e1c3772774d8158597c3fa5005644ce"
+      },
+      {
+        "path": "H01NonnegativeMinimizer.lean",
+        "sha256": "f0bcfe76424a6a2b3403f826a3180d6070d6d9a04d5d4660fa6bbb9c019ef272"
+      },
+      {
+        "path": "H01NonzeroMass.lean",
+        "sha256": "5c1e127eead071fae0f7280db7e43716ea11aff4c4dc9119396fb200d6cbf764"
+      },
+      {
+        "path": "H01RayleighMinimizer.lean",
+        "sha256": "6ee8d4549a16660c8faa2cc86aafcf33255f0f88400ab13fa37bbae31fbeb27c"
+      },
+      {
+        "path": "H01TranslationModulus.lean",
+        "sha256": "a7d29e6259a3af5079fef9554c4a4acf6461c8c6b625e7a49320176835cc042f"
+      },
+      {
+        "path": "H01UniformTails.lean",
+        "sha256": "6e567dbcdcc280ab4bcb8387e229a34bcda3eafcbfd8172f8c2aafebdf1a7f8b"
+      },
+      {
+        "path": "H01WeakGradientBridge.lean",
+        "sha256": "688a176c86ca9b704fe27847a42b1b27dcbff16d4f61ece2843f776c0eba0f5b"
+      },
+      {
+        "path": "H01WeakLimitAdmissibility.lean",
+        "sha256": "619a927ca5bcd947378c837c6306bb0a2bb00c1f96b623babfdab73c74f834f8"
+      },
+      {
+        "path": "H01ZeroExtensionSubsolution.lean",
+        "sha256": "b9f9519bec91f52f4dc99d20f1a15683fb9944ee5cc2b7628c6a48a5924782db"
+      },
+      {
+        "path": "LipschitzCompactness.lean",
+        "sha256": "3de129d0096afb94fc3ff304a546fb316b72c50e6d25bc881dbf517c4040aaea"
+      },
+      {
+        "path": "OrbitL2Closure.lean",
+        "sha256": "cee09fb26bb03507d16b0b123a3820556c7adfbcfabae6d0d0b33c6cbc71c100"
+      },
+      {
+        "path": "OrbitMinimizerSupport.lean",
+        "sha256": "d3c80861aab05de2f22934ff4d299e190314f83d79507efdd892ffd00026b95f"
+      },
+      {
+        "path": "PlanarBallRadius.lean",
+        "sha256": "d3f34b744d73716d9dff1597db4a4cbb870960010416a838406ccb83226c04e2"
+      },
+      {
+        "path": "PlanarBucklingChallenge.lean",
+        "sha256": "92f8c376d384bdeb53cb09c9de868d743bfbd7fdc2ea04b3c25fae13f534d45b"
+      },
+      {
+        "path": "PlanarBucklingSolution.lean",
+        "sha256": "76863569c0628a3c096bdbfb9a6a4989cf16a57c623f0a6371af763d462f4f0a"
+      },
+      {
+        "path": "PolarizationBounds.lean",
+        "sha256": "157aaf2028bf2767fba7ab54c5f14cf65c97b15c98002d55523acfe7a75f5eda"
+      },
+      {
+        "path": "PolarizationBranchExtension.lean",
+        "sha256": "a4940a363bb21375abd2c3e36e44bb1efee2b5be5083d5c371456c483a089518"
+      },
+      {
+        "path": "PolarizationEnergy.lean",
+        "sha256": "8c1b8a2af2c2bc2d4f52580e25664b68a1c413fddf971db925d758a6bdb1d1cc"
+      },
+      {
+        "path": "PolarizationEnergyTransport.lean",
+        "sha256": "5ffe474393a7f2e85425e7ef1ce9bdd1bf806fe867502f72e17c7c69608f83f9"
+      },
+      {
+        "path": "PolarizationL2Continuity.lean",
+        "sha256": "c98d2964b1a6340c9b3f8907124eaaa9d6ec54e2b1df7b9e170de0f26a27e1b0"
+      },
+      {
+        "path": "PolarizationLipschitz.lean",
+        "sha256": "392d1444e62051446baae2f92a80cef2e39bad5fa2c4959d4dbbfb88db21721d"
+      },
+      {
+        "path": "PolarizationMeasure.lean",
+        "sha256": "52fe0e2f72bb1eca5d1bf69969e6f5d493b99173e5089ec9a4f79f50171ce89d"
+      },
+      {
+        "path": "PolarizationMoment.lean",
+        "sha256": "7b2e4a4f9d992b8e03bb0bb5c1bc2dfcb280e382efae8239f1e3752f09e0a594"
+      },
+      {
+        "path": "PolarizationMomentTransport.lean",
+        "sha256": "c186f02408778cabcadb6ce778e780edbac56056917fbc4f8eb9baea84c436ba"
+      },
+      {
+        "path": "PolarizedOpenDomain.lean",
+        "sha256": "7c69775fa3a8bc20aee1a2ff53ee8142407088930c09597c2a326fa2b3553bde"
+      },
+      {
+        "path": "PositiveCompactWeakApproximation.lean",
+        "sha256": "ad7fea456e092e4b38dca15f8bf39ec82317e0184159868c7cc3621e4c5cb89b"
+      },
+      {
+        "path": "PositiveCompactWeakTesting.lean",
+        "sha256": "189bb2e6b83c98cfee80428198a23ed544fab4af920f9f922cb31e67230342a5"
+      },
+      {
+        "path": "RadialKernelReflection.lean",
+        "sha256": "54ad19c5023fb78e43cebeab0679ae924e880c542256cb26574d2d8e606cfbd0"
+      },
+      {
+        "path": "RadialPotentialCenter.lean",
+        "sha256": "abbb5a11e4243a979b245e57bd6ce8813c0676fd1dbd5fd963cc03431adc5e9e"
+      },
+      {
+        "path": "RadialPotentialPolarization.lean",
+        "sha256": "40ec993c79e073df8500942fbf9192cb825c075bd310a004f54359855239d5af"
+      },
+      {
+        "path": "RadialSupportRadius.lean",
+        "sha256": "cf0e0422480c2d55b1c5bbe4ff205039d6356ed3d1ae89b1f39741a22951f126"
+      },
+      {
+        "path": "ReflectionBranchPositiveBall.lean",
+        "sha256": "93cc17aced1f6269a92aba9d008d23fe47576dc57a1e8db9def73f2425891eec"
+      },
+      {
+        "path": "ReflectionOrderGoodPoints.lean",
+        "sha256": "505e09ffe6812506d36903715c5c9fb71ea1a1844a8791cf3563b9fd17afc80d"
+      },
+      {
+        "path": "ReflectionOrderPositiveBall.lean",
+        "sha256": "b3b32ae177507288251dd09b53588cde8fcdf0a641d6b1739f46cba5fecc3d10"
+      },
+      {
+        "path": "ReflectionPairs.lean",
+        "sha256": "e0dfdd6bc51f6e8d7ad8e5ce6592a3c32cca3aade64c2b0d14170f8fbe4396e8"
+      },
+      {
+        "path": "RequestProject/Core1.lean",
+        "sha256": "49631879b18ac41ea5dad7d261bfdc50c0fba05c317113ec6a5b7b00b5bb87e7"
+      },
+      {
+        "path": "RequestProject/Core2.lean",
+        "sha256": "280ec87806101abc592ef79b8aa45d61016db924947d3d46e25623da07877d9b"
+      },
+      {
+        "path": "RequestProject/Core3.lean",
+        "sha256": "cb7ec309e63385f5622b2af4dd884185194bd3d7495daee1b9650754930dc94d"
+      },
+      {
+        "path": "RequestProject/Core4.lean",
+        "sha256": "06ec90eeb15eef598d320986a9a0accfb3c1aa5f0e664fd0c0501e13d818b2e8"
+      },
+      {
+        "path": "RequestProject/MainResults.lean",
+        "sha256": "f0d7cdabf527c7d14f767d5502ba065353e6249ab481ae001e8cd50d07f420df"
+      },
+      {
+        "path": "SpectralCutoffGeometry.lean",
+        "sha256": "c1ec149e1f8d849d7a572c24d9f14428b111fe04f934f9d00fa9b0f7e8ab737f"
+      },
+      {
+        "path": "SquaredMomentPolarization.lean",
+        "sha256": "f1433c25d44f8d4cd8d490bee35b0789fb68e140fe442f3a4b250d47054dc426"
+      },
+      {
+        "path": "SubmissionSolutionAudit.lean",
+        "sha256": "a778b25fd9224800f86e705e837bef25e0af2537abc0a977fad4e76e2ea9cb59"
+      },
+      {
+        "path": "TestFunctionFaberKrahn.lean",
+        "sha256": "b7e897eeb5fba3136492b3820abf85d911555cf0ee70c10677128619d49443d4"
+      },
+      {
+        "path": "UnconditionalAreaFinalAudit.lean",
+        "sha256": "4c3a99e6611263534f9e294e344b33dbca821b123d0ada70bda5a1d07f5ece47"
+      },
+      {
+        "path": "UnconditionalAreaRigidity.lean",
+        "sha256": "5c4078212ee9a213d6bb28754d38b1e2017ddc35add641fdef567b260f809d45"
+      },
+      {
+        "path": "UnconditionalFaberKrahn.lean",
+        "sha256": "806b1dd3bf3f05c29aab654dba9ac8d3c32bf90bbcdf7b7ae10b09c9026d8390"
+      },
+      {
+        "path": "UniformDistributionClosure.lean",
+        "sha256": "788960f8a3fbfed04edd1405476148afb12fedbb127be086fe50177f4cd9aa28"
+      },
+      {
+        "path": "UniformSquaredIntegral.lean",
+        "sha256": "eb8ad49f5a42427db417e0773953daed34c5ce353d02c22d4175a9693a96108c"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Analysis/Dilation.lean",
+        "sha256": "cc4c0390f60c50feb1858dcf670b58132b4fdebc59425bfad8887a6778b819ac"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Analysis/DirectMethodForm.lean",
+        "sha256": "36d008ff0474213e3d42fb59435594fec6f45e14c7609a30d27e3804f480d034"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Analysis/EuclideanFunctionalNorm.lean",
+        "sha256": "b6c7a4387189d62447d25c2bd609d2fbe4250470990aedb7e9c7b4fb8d2b6f5a"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Analysis/FrechetKolmogorov.lean",
+        "sha256": "235b180768a084b0ac85ae10651f825b6526f0386a0c381e960e5ba472d23856"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Analysis/LpExtendByZero.lean",
+        "sha256": "954e4fc579921bea5487765c110d6589fe1554cded293f1805d34210cbbc664d"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Analysis/LpTranslation.lean",
+        "sha256": "3dd8dc518a58ab12a6377e529c24ad69bcccfb73f50a00e2429a1bd096095ad8"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Analysis/Mollifier.lean",
+        "sha256": "bee04f1c6f0f655ca0dc7d86eb732c68841253c48d470146cb280992160969f4"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Analysis/PoincareInequality.lean",
+        "sha256": "bba1d2435e94223fbfc0b6771d23960d624926ffd0a82bd07f342de0e490eebc"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Analysis/SmoothCutoff.lean",
+        "sha256": "6627517fb3bb70593655d6737b5542df2172e7f9a13427dcedfc449d04ccf258"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Analysis/Translation.lean",
+        "sha256": "955faf94bfcd6c23b00c4957b3307e3d0da6ba42bcc4a0bf75b4488b1d17ca86"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Analysis/WeakCompactness.lean",
+        "sha256": "d1cb25eda21c3e11ce8670319480c86f60214a27241260b93ca31308f9d134f2"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Embedding/ChainRule.lean",
+        "sha256": "eb0e2acd22aa5e42a8eb1f7d79d0b3810f78d1ae650133c40ff62f7df876934a"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Embedding/ConstOfGradZero.lean",
+        "sha256": "cbba1460222beca98e883d6324f8d1d66162a2ced113436c28693a9ee79e02e1"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Embedding/Convolution.lean",
+        "sha256": "a71bd4999906f8c50a5453a69ac9b6926092b51f38532289eecc6c84c43e93ee"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Embedding/DomainSobolev.lean",
+        "sha256": "a7a13cad1c8f10e41b0edd6188e78d4da445e985ff111ce2e6814a540ec54d21"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Embedding/GagliardoNirenberg.lean",
+        "sha256": "ec8a231a74e983ef02d5205017cffabf5d4e4884131c295d2458e61241658588"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Embedding/H01Sobolev.lean",
+        "sha256": "23d9aedb46dc5e9a361d69fb08f4ad311314bfad3f98d6c4609aee1bed57cb2e"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Embedding/Morrey.lean",
+        "sha256": "c0e57ade449c2dca437d756917ad022b856a9355f28d80a7d481fb31ef00ad97"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Embedding/RayIntegral.lean",
+        "sha256": "79be3e23a80158906e6e628ce9b7439d00821e8d3c22f5b127ab5ccac78859b5"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Embedding/WeakDerivChain.lean",
+        "sha256": "dfb50da7203dd855bd3209a303d0f586fa506884dd95d0a24d6091cc24156559"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Embedding/WeakGradient.lean",
+        "sha256": "88f7f6bbb1e375845e867eb4ee424405f3488afc5c7c0d6eec9c34c2c1785ceb"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Embedding/WeakGradUnique.lean",
+        "sha256": "8f9199ce18fe51f9a1da6fb51b86b699f509293ea4a977fc9425e2bde703192d"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Embedding/WeakSobolev.lean",
+        "sha256": "8496f02c1d56901d8480114c268193195e9e480e56890800042ef79458f611f5"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Existence/DivFormExistence.lean",
+        "sha256": "855c0a95e04d54426f54569a72deca043bd83475556af011b3f178105f60c94d"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Existence/FullOp.lean",
+        "sha256": "db3248174fec8999906eba5ea0123778352b853670c42b068674484a621a7416"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Existence/Garding.lean",
+        "sha256": "92cd6e2f305156b3217fa79debcede698455f12bf24ecd39bf4b1d62304a28cd"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/BallChart.lean",
+        "sha256": "a3abdb9cf588aa6ee9f24cbbc350b294ac7d4680e56da8d27f97961ebf4cc3a2"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/Basic.lean",
+        "sha256": "463c2034444f28ec04e7648a4dfff5018f5b6f1b7d6e45748b01a5dc0e31bc07"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/BoundaryChart.lean",
+        "sha256": "d31efd92e8518865877fa984194971410120cfc42d29753303bb2ca72fef2a6c"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/C1Boundary.lean",
+        "sha256": "e8016c91acd6a2b6da0e5db9c00a503b13d13d17510c98eebf652f70d5c592d1"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/C1Test.lean",
+        "sha256": "ae442f138087d0d8db6a58160ec1d0748f71bdce523534952f92b96ebf961c1a"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/Cutoff.lean",
+        "sha256": "05c2d6d2da08f78d64accc731576ba12c913f837bb92073b996a7ec9a3f2554b"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/Descent.lean",
+        "sha256": "c03224c0563788ca28c43a39856bb9e1834aef7692670d6be1506da13f3b9593"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/EvenReflection.lean",
+        "sha256": "b993f9a566248cf0ee0884a4a52766c48ddee8f43e885dd40b222483d39af4f3"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/GlobalApproximation.lean",
+        "sha256": "65a41c483a0399cb3c253851f03e94a9e623001c8b71b34f063737c510e2919a"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/GraphOperator.lean",
+        "sha256": "c33333a16dc815839cf1107e5b7b8f1a09bc99ea55f31fa20e5bd4e986c8e123"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/HalfSpace.lean",
+        "sha256": "7785fe06c831be1aa8ba485d926266b42e56f27fa2283c3e6b41ef63765b8f86"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/LinearOperator.lean",
+        "sha256": "0a2e4fd3221e9b31a0290775926d1445552f5af8f5c2fb48e3061f4171dc50a5"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/LocalExtension.lean",
+        "sha256": "da3b374f54ec75ef873c4c82b95d289231609a8f5656c848bc70e9c5c11e31ef"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/Motion.lean",
+        "sha256": "83e9f21726275e102bb11037f07f59c9a7fc153d2ae92c9ea097fafc2dc6970f"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/Operator.lean",
+        "sha256": "e3ac15e00513098ea15c4bdf39b74b8600b755aef369050c0a6517325b51b9cb"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/PartitionOfUnity.lean",
+        "sha256": "6b244d4a5231aad4f0d63dea8b931eca476686eceff65cc09a82923f2c3f1230"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/Patch.lean",
+        "sha256": "575e11370d7a1dd5443300791df61f385c4d4ed6493ff2ceac220b35b16c43a1"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/Reflect.lean",
+        "sha256": "7f08bb2a9ee838cc4d7db73bbddb72a7c30a90a309aa92ea3e1ef6a24205c2e8"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/Shear.lean",
+        "sha256": "5da699998aedc1c08f2fdbf6349c508595088e4d56ea52e7d8c7907896d1b4fa"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/ShearWeakGrad.lean",
+        "sha256": "41d9f0a15c3a4f6e5709765b73d30fdb5eee8abb7f49586f878efaa66d4cc6ad"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Extension/Translate.lean",
+        "sha256": "733faf68d4c40190e8d99cb1b4ad870bf9de905fdfb7a847437564813618c8df"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Form/BilinearForm.lean",
+        "sha256": "8d5d81b2eef7ccc67149973dfe0f7f5c2be92e611b05b6e88ea36414c7fe5858"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Form/DivForm.lean",
+        "sha256": "9e7b4f048d756e253ec90db09d6b69bc94707f8267b3a4d4eca40558435bd140"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Form/DivFormEuclidean.lean",
+        "sha256": "6cd03cb057da894f0e8be5a0e0c988cf56e6d7d9d2d401e89dccccd584b96de5"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Form/DivFormGarding.lean",
+        "sha256": "795d602dca7897522c53b4449aab02b9bd5e231e84ab034381c4973c01230961"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Form/GeneralForm.lean",
+        "sha256": "a45bd573111d92b6c9f3a9ea540f19d257e7c4ebcf5cfe41b20af40c60bcc79c"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Fredholm/Compactness.lean",
+        "sha256": "c7e6f6c3b6f8785799954db95050f1e4e339e158a3551c5ba44a1a880c9cf840"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Fredholm/CompactOperator.lean",
+        "sha256": "c52a120d806efd87cc4754b16c0178df08f64b2f97f4a4d673efb28643417484"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Fredholm/Fredholm.lean",
+        "sha256": "572a79ddd6ed9305c81109d9f128e40c82d69cd33427420f9a1752f9ffafc6da"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Fredholm/FredholmComplete.lean",
+        "sha256": "f207066b282fb83117abcb44a4efbc5b9f3ee6d6fac396cf400848edc3ceaac9"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Fredholm/GardingForm.lean",
+        "sha256": "f334c3b4de96d253cd1b5d0521922cb6e3b366cfc0ce5dac4aa8b65a26e3e5d7"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Poincare/BoundedDomain.lean",
+        "sha256": "1b9336d7d4e393423fc5432daabeb1e6f83483c7e1f0ba47ed86c15e3b6969a3"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Poincare/BoxSlice.lean",
+        "sha256": "99414c614b70057aea2f4a5f77e03af17a0ac2bb2464318006faf09c60de9825"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Poincare/Density.lean",
+        "sha256": "3b05e91a50be717a517cccaa071878396c4b4e44019762dc21164390649dabe9"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Poincare/Domain.lean",
+        "sha256": "00ff2d2bd7fdd0f77ddf68c64c0750cac898837300326a2e1c9a29a9b311a444"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Poincare/Geometry.lean",
+        "sha256": "c7154b6f1619f1d5c78eaa5e4aab7e9b60d5bcc0c38578b730afae3caba11a0a"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Poincare/GraphBounded.lean",
+        "sha256": "c4b3063621cb3931de585ea13d76aae4b5357aed52cee52fe6a2e5c99dda98b2"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Poincare/Slab.lean",
+        "sha256": "56bac3b6805b52c339a126f83e70f865b3da4cfb89d5a66741ea88179962bbdd"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Regularity/Caccioppoli.lean",
+        "sha256": "2a8007c709d1e61b3e73ce8469a3de9d083a642041d53e175e319bee685d5196"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Regularity/DifferenceQuotient.lean",
+        "sha256": "0d749b864229ee0e33cb450e8a16e2b85f76c6e8f3865cc049db65ac6c1742ec"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Regularity/DiffQuotientBound.lean",
+        "sha256": "4ebfaa3bdb1c641bdd4c14289b10660b50ad4dbf2891f0a67f86131d68c3ff9d"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Regularity/InteriorCompactSupport.lean",
+        "sha256": "dd11550ab07dff74ddceeaeb126ba0749f5871573af3798873dac3c5a1b9f5ec"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Regularity/RestrictedDiffQuotient.lean",
+        "sha256": "248f1d47a2f8b673772297995d00b5abc89bea47493c28cfa11c5e30d87c130f"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Sobolev/Basic.lean",
+        "sha256": "148d1c7b1f62ab051c3597453b916066bea897f58aa2070cd124297b341dcbae"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Sobolev/Coefficients.lean",
+        "sha256": "4d7db9ceb741c4a5b675dfad894beb82f1f1a167d1d689088b09a79f355c6628"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Sobolev/Graph.lean",
+        "sha256": "b44f2bf48a61456761396fdd2f14bb9fee6ef4e37985ba176ddd1afc99033ec6"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Sobolev/GraphEuclidean.lean",
+        "sha256": "358d47435bd20ade0d8ac1fa3c78db1a1684af5326cc7207ea145b1a81be5dc4"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Sobolev/GraphLattice.lean",
+        "sha256": "2e5d124f325b58215d6314fa6310e72b16b1a4c49df538259448ea355b9b405b"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Sobolev/WeakDeriv.lean",
+        "sha256": "f002f3865f72550cdea253735f4c91941a619603c6e874811818cd38a03a701c"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Sobolev/WeakDerivClassical.lean",
+        "sha256": "11a3145f6fa3746eb32cc0368bc88f5dcdee5e7d7379057b508793a49b73d0d9"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Spectrum/PoincareBall.lean",
+        "sha256": "e489e20ac8482f5774066a7af2fa96763c3a0bb5b8b8b772c62eee351a57183d"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Spectrum/PoincareWirtinger.lean",
+        "sha256": "c819d91a21ba004f84fb41613b8e13a0c3a1e92b01d16cb96e1bf353e83b4875"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Spectrum/RellichDischarge.lean",
+        "sha256": "a2466af1fe74ef380964a2a2b243502165a6a79da1a1f08b7c19d2d4eded1e2a"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Spectrum/RellichW12.lean",
+        "sha256": "7303683771dd8a2134553592fa05fd20c23dee408b19e19127fc85699153cc0d"
+      },
+      {
+        "path": "vendor/EllipticPdes/EllipticPdes/Spectrum/Spectrum.lean",
+        "sha256": "ceac8aa5934dd8b60fcc74c4c7a6c57526109136f0ce278863b99c0f8da2fad7"
+      },
+      {
+        "path": "WeakGradientDifference.lean",
+        "sha256": "cdcf3df057c14cc78d0ca37636de624a588c197691946e1ab3fee130fa73c899"
+      },
+      {
+        "path": "WeakSMPBallLogBound.lean",
+        "sha256": "99c76f8373c7fb5d3ece42810602e8edec502a8df4afa14a7742959c03ad4ffd"
+      },
+      {
+        "path": "WeakSMPBallZero.lean",
+        "sha256": "44ec7bc9481499b7ce7524a76d7d3697a314dc68f80ad068ca4385b399adb04a"
+      },
+      {
+        "path": "WeakSMPCaccioppoliAlgebra.lean",
+        "sha256": "5802152fa6a25508912c1e4296469b85737b21cba7f7c2dac98e1f5fd2a8c189"
+      },
+      {
+        "path": "WeakSMPConnected.lean",
+        "sha256": "2e854ecaba9fce883e0f6b4381c5b7be5b6316ccd757cb9590c5cd3688fca40a"
+      },
+      {
+        "path": "WeakSMPIntegratedCaccioppoli.lean",
+        "sha256": "d23e357d26cc14bf44a18e1212486e018b5e628768facff74cf689878402a01e"
+      },
+      {
+        "path": "WeakSMPLogBoundDecay.lean",
+        "sha256": "ab185136054637afc9a97ef8e39d6f3b9a4f42f493592c126b9fae00d88a2dce"
+      },
+      {
+        "path": "WeakSMPLogTest.lean",
+        "sha256": "90d6df772c75ce0d0cb829c1c4c5c543680de15bb185b06c4a43f5e8cebbeec6"
+      },
+      {
+        "path": "WeakSMPMinimumBranch.lean",
+        "sha256": "055e5eba802b00360970667f0c6944b0073ce23282f80e2633d45ec2fee7dd4e"
+      },
+      {
+        "path": "WeakSMPRegularizers.lean",
+        "sha256": "42390f7ba3e653998b79af5f670f19b2ec45ae2ee4d4ed4fd64c6e911e6c49fa"
+      }
+    ]
+  },
+  "mechanical_evidence": {
+    "provider": "Palomar",
+    "record_id": "PALOMAR-2026-10-18-000008",
+    "version": 1,
+    "workflow_url": "https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/39105403007",
+    "checked_at": "2026-10-18T07:02:04Z",
+    "status": "pass",
+    "mechanical_report_sha256": "a08f3cd0a35732ed71c1e2837904c0226c135693c7254a00309c0e443fb1023e",
+    "permitted_transitive_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "comparator_log_tail": "Running con-ron kernel on solution\ncon-ron: accepted 72031 declarations (--verified)\ncon-ron kernel accepts the solution\nRunning nanoda kernel on solution\nnanoda kernel accepts the solution\nRunning Lean default kernel on solution\nLean default kernel accepts the solution\nYour solution is okay!\n\ncon-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)",
+    "local_kernel_replay_performed_by_this_review": false
+  },
+  "limitations": [
+    "Relies on Palomar for the mechanical build, Comparator and kernel replay as explicitly requested by the editor.",
+    "Source and statement review is AI-assisted, with no independent human peer review claimed.",
+    "Verification applies to the pinned formal theorems, not to a line-by-line formalization of the informal working manuscript."
+  ],
+  "current_source_comparison": {
+    "commit": "3b3417486b092363b411ed25ee2edb5e6f87f0ed",
+    "registered_lean_files_with_changed_bytes": []
+  }
+}
