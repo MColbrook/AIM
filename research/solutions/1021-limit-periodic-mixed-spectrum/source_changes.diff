@@ -1,0 +1,70 @@
+--- submitted/limit_periodic_mixed_spectrum.tex
++++ packaged/limit_periodic_mixed_spectrum.tex
+@@ -6,0 +7,5 @@
++\hypersetup{
++  pdftitle={A limit-periodic Schrodinger operator with mixed absolutely continuous and singular continuous spectrum},
++  pdfauthor={Matthew J. Colbrook},
++  pdfsubject={Counterexample to AIM 1021: limit-periodic spectral purity}
++}
+@@ -23,3 +28,6 @@
+-\title{\textbf{A proposed limit-periodic construction with both\\
+-absolutely continuous and singular continuous spectrum}}
+-\author{Research note prepared for review}
++\title{\textbf{A limit-periodic Schr\"odinger operator with\\
++mixed absolutely continuous and singular continuous spectrum}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+@@ -42,9 +50,9 @@
+-\noindent\textbf{Status and attribution.}
+-Spectral purity in this class is posed as Question~10.1 in
+-Damanik--Fillman~\cite{DF}. The construction below is a proposed argument
+-developed for the present question; it is not attributed to that
+-reference or represented as a previously published theorem. Periodic
+-spectral formulas and the Gordon argument are standard. Details are
+-included so that the proposed combination can be checked directly.
+-
+-\section{Claim}
++\noindent\textbf{Problem and attribution.}
++This construction gives a negative answer to
++\href{https://github.com/MColbrook/AIM/blob/b014a51815ffd025d2b1abc4a3954205dfbf61e0/problems/1021-must-limit-periodic-discrete-schrodinger-operators-have-pure-spectral-type.md}{AIM problem 1021}
++at repository revision \texttt{b014a51815ff}, namely Question~10.1 in
++Damanik--Fillman~\cite{DF}. The construction is submitted here by
++Matthew J. Colbrook. Periodic spectral formulas and the Gordon
++argument are standard and are identified below.
++
++\section{The construction theorem}
+@@ -535,3 +543,9 @@
+-there. The associated absolutely continuous spectral consequence
+-also gives $\mathcal H_{\mathrm{ac}}(H_V)\ne\{0\}$.
+-See Remling~\cite[Proposition~4.1(b),(d)]{Remling}.
++there. Remling~\cite[Proposition~4.1(d)]{Remling} gives this compactness
++on the fixed set $K_\infty$, with the common coefficient bound.
++Part~(b) gives absolutely continuous spectrum for the half-line
++restrictions: their Weyl functions have positive boundary imaginary
++parts almost everywhere on $K_\infty$. The formula for the full-line
++diagonal Green function in terms of these Weyl functions then gives a
++nonzero absolutely continuous component for $H_V$; see also
++\cite[Chapter~2]{Teschl}. This optional alternative is not used in the
++direct measure proof.
+@@ -637 +651,2 @@
+-\begin{thebibliography}{9}
++\begin{thebibliography}{4}
++\raggedright
+@@ -642,0 +658 @@
++London Mathematical Society Lecture Note Series~461,
+@@ -644 +660,2 @@
+-\url{https://arxiv.org/abs/1802.05794}.
++\href{https://doi.org/10.1017/9781108615259.016}{doi:10.1017/9781108615259.016}.
++\url{https://arxiv.org/abs/1802.05794v1}.
+@@ -655,2 +672,2 @@
+-arXiv:1210.6325 (2012), Section~2.6.
+-\url{https://arxiv.org/abs/1210.6325}.
++arXiv:1210.6325v1 (2012), Section~2.6, Lemmas~2.11--2.12.
++\url{https://arxiv.org/abs/1210.6325v1}.
+@@ -661 +678 @@
+-\url{https://arxiv.org/abs/0706.1101}.
++\url{https://arxiv.org/abs/0706.1101v2}.
+@@ -664 +680,0 @@
+-

@@ -1,0 +1,28 @@
+AIM 1021 submission checks, 3 November 2026
+Reviewer: Codex (AI)
+Base revision: b014a51815ffd025d2b1abc4a3954205dfbf61e0
+
+PASS: complete proof read; estimates and recursive parameter order independently checked.
+PASS: all four mathematical references checked in primary sources.
+PASS: 35 exact identities and inequalities, and two rejection checks, in normal Python.
+PASS: the same checks in optimized Python.
+PASS: built-in compile_latex_document on the saved final source.
+PASS: two final installed-compiler export passes; no undefined references, citations,
+      LaTeX warnings, or overfull/underfull boxes in the final log.
+PASS: nine PDF pages rendered and visually inspected; author and metadata agree.
+PASS: original input hash retained and unchanged; final source and PDF receipt verified.
+PASS: python -B scripts/catalogue.py --write --catalogue-only
+      874 open targets (367 Open, 507 Partially resolved), 192 Solved and 1 Lean verified.
+PASS: python -B scripts/catalogue.py --check
+      1058 current problem pages; metadata, sections, math delimiters, local links
+      and freshness of README.md, CATALOG.md and RESOLVED.md.
+PASS: python -B cut_problems/verify_cut.py --skip-protected
+      1067 current IDs and original selection decisions; 868 relocations and
+      57 existing protected solution packages verified.
+      Previously verified protected research hashes were not repeated;
+      those files were not changed.
+PASS: all problem IDs/headings and the AIM 1021 Problem statement preserved.
+PASS: only AIM 1021's metadata changed; other subject datasets unchanged.
+
+Catalogue machinery is unchanged. Supporting finite checks are not formal verification
+of the analytic proof. No human peer review or Lean verification is claimed.
