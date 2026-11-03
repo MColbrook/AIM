@@ -202,6 +202,14 @@ Documented resolutions of the exact target. Proof and review links give the argu
 | 665 | [Smooth-gradient approximation of finite-Fisher-information scores](research/resolved/665-fisher-score-gradient-closure.md) | ✅ SOLVED | Affirmative proof | 2026-10-02 | [Proof](research/solutions/618-fisher-score/PROOF.md) | [Review](research/solution_reviews/2026-10-02/618-review.md) |
 | 1026 | [Steklov zeros in a fixed boundary collar](problems/1026-steklov-zeros-in-a-fixed-boundary-collar.md) | ✅ SOLVED | Counterexample announcement; unverified | 2026-11-03 | [Proof](https://arxiv.org/pdf/2610.28391v2) | [Review](research/solution-status-audit-2026-11-03/lane-d/1026.json) |
 
+## Solution claimed
+
+A matching complete resolution has been announced, but independent proof review remains outstanding.
+
+| ID | Problem | Status | Outcome | Last checked | Proof | Review |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1007 | [Embedded eigenvalues in asymptotically flat twisted strips](problems/1007-embedded-eigenvalues-in-asymptotically-flat-twisted-strips.md) | 🟠 SOLUTION CLAIMED | Counterexample: an embedded eigenvalue in an asymptotically flat purely twisted strip. | 2026-11-03 | [Proof](research/solutions/siavash-sadeghi-1007/twisted-strip-counterexample.pdf) | [Review](research/solutions/siavash-sadeghi-1007/MATHEMATICAL_AUDIT.md) |
+
 ## Reporting a solution
 
 Open a [GitHub issue](https://github.com/MColbrook/AIM/issues) or pull request with the problem ID, a direct proof or counterexample reference, and a comparison with the entry's assumptions and conclusion. State whether the result is a claim, a published result, or an independently reviewed argument, and identify the review evidence. See [CONTRIBUTING.md](CONTRIBUTING.md#reporting-a-resolution) for how to update the record and index.

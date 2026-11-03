@@ -17,15 +17,15 @@ Contributions made with or without AI are welcome.
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**876 open targets** (367 open, 509 partial) · **191 solved entries** · **0 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
+**875 open targets** (367 open, 508 partial) · **191 solved entries** · **0 Lean verified** · **1 solution claim**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 876 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 875 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
 | Subject group | Open targets | Solved |
 | --- | ---: | ---: |
-| [Spectral theory and spectral geometry](CATALOG.md#spectral-theory-and-spectral-geometry) | [47](CATALOG.md#spectral-open) | [8](CATALOG.md#spectral-solved) |
+| [Spectral theory and spectral geometry](CATALOG.md#spectral-theory-and-spectral-geometry) | [46](CATALOG.md#spectral-open) | [8](CATALOG.md#spectral-solved) |
 | [Operators, matrices and computation](CATALOG.md#operators-matrices-and-computation) | [69](CATALOG.md#operators-open) | [18](CATALOG.md#operators-solved) |
 | [Inverse problems, control and dynamics](CATALOG.md#inverse-problems-control-and-dynamics) | [21](CATALOG.md#inverse-open) | [8](CATALOG.md#inverse-solved) |
 | [PDEs, fluids and materials](CATALOG.md#pdes-fluids-and-materials) | [50](CATALOG.md#pdes-materials-open) | [11](CATALOG.md#pdes-materials-solved) |
