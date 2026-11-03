@@ -1,0 +1,67 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "491",
+  "manifest_index": 387,
+  "original_target": {
+    "id": "491",
+    "title": "Polynomial-time solution of simple stochastic games",
+    "area": "Stochastic control, formal verification and algorithmic game theory",
+    "file": "problems/491-simple-stochastic-games-polynomial-time.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-13",
+    "group": "inverse2",
+    "source_sha256": "c8d43447f3f3469a52fa056eddc49c171a791885fd6d0ba6cb90736b2f5bf620",
+    "statement_sha256": "2247e03c44232f2936dd24c5a2da2e33472ef9427dba988e597e4be4b095fda6",
+    "state": "unreviewed"
+  },
+  "source_sha256": "c8d43447f3f3469a52fa056eddc49c171a791885fd6d0ba6cb90736b2f5bf620",
+  "statement_sha256": "2247e03c44232f2936dd24c5a2da2e33472ef9427dba988e597e4be4b095fda6",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:31:43.307040+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Actual2610.26568 Section5.3 before Theorem5 explicitly retains the polynomial-time strict>1/2 SSG question. Theorems5–6 are hardness reductions rather than algorithms. Current pinned OpenAI family104 index claims quasipolynomial, which does not settle polynomial-time target.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.26568",
+      "locator": "Section5.3 and Theorems5–6",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"simple stochastic games\" polynomial solution (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "simple stochastic games"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "simple stochastic games"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Pinned OpenAI family104 body access failed; current index used only to exclude its explicitly quasipolynomial scope, not as fresh theorem-body verification."
+  ],
+  "canonical_update_required": false
+}

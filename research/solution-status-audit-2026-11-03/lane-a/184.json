@@ -1,0 +1,86 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "184",
+  "manifest_index": 144,
+  "original_target": {
+    "id": "184",
+    "title": "Liouville invariance under changing local moves on a Cayley network",
+    "area": "Random walks and network potential theory",
+    "file": "problems/184-liouville-generating-set-invariance.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "f5833f362c2328e5a38e8c958f14c6f9d3b325d268b46ea85fb03c1be2816597",
+    "statement_sha256": "dbd3e3d54935020b6d09d70db714c6065afe9451536865ea5d62440dca06a9f0",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f5833f362c2328e5a38e8c958f14c6f9d3b325d268b46ea85fb03c1be2816597",
+  "statement_sha256": "dbd3e3d54935020b6d09d70db714c6065afe9451536865ea5d62440dca06a9f0",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:49:29.363260+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Lyons–Peres after Theorem14.49 explicitly retains change-of-generators stability for simple random walk on one group. Theorem1.1 of Matte Bon–Nekrashevych–Zheng requires a contracting self-similar group with conformal dimension<2. Counterexamples on nontransitive graphs or walks with arbitrary jump distributions do not provide two finite symmetric uniform generating sets of one group.",
+  "primary_sources": [
+    {
+      "url": "https://rdlyons.pages.iu.edu/prbtree/book.pdf",
+      "locator": "Section14.7 paragraph after Theorem14.49",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2305.14545v3",
+      "locator": "Theorem1.1, contracting self-similar group and conformal dimension<2",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Liouville\" \"generating sets\" \"2026\" counterexample",
+    "\"Liouville\" \"generating sets\" proof 2026",
+    "\"Liouville\" \"generating sets\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Liouville property",
+        "generating sets"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-17-000013",
+          "title": "Growth series of the triangle Coxeter groups (p, q, infinity), with the PGL(2,Z) instance: Padovan sphere sizes and growth rate the plastic number"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Liouville property",
+        "generating sets"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00148v1",
+          "title": "Uniform Kazhdan Monsters and Schmidt's Property M"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "The HTML of the official v3 contains a later internal date; no historical byte parity is asserted."
+  ],
+  "canonical_update_required": false
+}

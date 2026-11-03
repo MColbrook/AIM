@@ -1,0 +1,99 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1060",
+  "manifest_index": 904,
+  "checked_date": "2026-11-03",
+  "source_sha256": "221365e5dc940a8cd67c76023c594a4ff1c8fba60549ab634076d05bc8953c8d",
+  "statement_sha256": "a165f8d8ce0c9ce9b66ca152365d1b85d85d091dd540d79957b2894b509b16ee",
+  "original_target": {
+    "id": "1060",
+    "title": "Does the Pearcey critical profile satisfy the Benjamin–Ono string equation?",
+    "area": "Nonlinear dispersive waves; Benjamin–Ono equation",
+    "file": "problems/1060-does-the-pearcey-critical-profile-satisfy-the-benjaminono-string-equation.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c6f3e9dfbda61171",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "221365e5dc940a8cd67c76023c594a4ff1c8fba60549ab634076d05bc8953c8d",
+    "statement_sha256": "a165f8d8ce0c9ce9b66ca152365d1b85d85d091dd540d79957b2894b509b16ee",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Blackstone, Miller and Mitchell define a Pearcey integral $`\\tau(T,X)`$ in their equation (1.52) and the real profile\n\n```math\nU(T,X)=-2\\mathrm{Im}\\,\\partial_X\\log\\tau(T,X).\n```\n\n\nAssume their separate **Conjecture 1.9**: $`\\tau(T,X)\\ne0`$ for all real $`(T,X)`$. Prove **Conjecture 1.10**: for every real $`T`$, this globally defined $`U`$ satisfies the nonlocal Benjamin–Ono string equation\n\n```math\nX-2UT+4U^3-6U|D_X|U-3|D_X|(U^2)-4U_{XX}=0,\n```\n\n\nwhere $`|D_X|`$ is the Fourier multiplier $`|\\xi|`$, with the principal-value interpretation specified by the cited paper. Its $`X\\to\\pm\\infty`$ behavior is given in equation (1.53). This is the normalized form of the string equation proposed by Masoero, Raimondo and Antunes in 2015; the zero-free assertion is an explicit prerequisite, not a proved fact.",
+  "full_original_page": "# 1060. Does the Pearcey critical profile satisfy the Benjamin–Ono string equation?\n\n**Area:** Nonlinear dispersive waves; Benjamin–Ono equation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nBlackstone, Miller and Mitchell define a Pearcey integral $`\\tau(T,X)`$ in their equation (1.52) and the real profile\n\n```math\nU(T,X)=-2\\mathrm{Im}\\,\\partial_X\\log\\tau(T,X).\n```\n\n\nAssume their separate **Conjecture 1.9**: $`\\tau(T,X)\\ne0`$ for all real $`(T,X)`$. Prove **Conjecture 1.10**: for every real $`T`$, this globally defined $`U`$ satisfies the nonlocal Benjamin–Ono string equation\n\n```math\nX-2UT+4U^3-6U|D_X|U-3|D_X|(U^2)-4U_{XX}=0,\n```\n\n\nwhere $`|D_X|`$ is the Fourier multiplier $`|\\xi|`$, with the principal-value interpretation specified by the cited paper. Its $`X\\to\\pm\\infty`$ behavior is given in equation (1.53). This is the normalized form of the string equation proposed by Masoero, Raimondo and Antunes in 2015; the zero-free assertion is an explicit prerequisite, not a proved fact.\n\n## Application\n\nThe proposed string equation describes the universal critical profile near a Benjamin–Ono dispersive shock. A 2026 theorem identifies the Pearcey profile as a scaling limit for a class of rational initial data away from zeros of $`\\tau`$. Showing that this profile obeys the predicted nonlocal equation would connect that rigorous limit to the earlier string-equation picture. The 2026 paper checks the identity numerically and derives a related coupled local system, but leaves the nonlocal identity unproved.\n\n## References\n\n1. D. Masoero, A. Raimondo and P. R. S. Antunes, [*Critical behaviour for scalar nonlinear waves*](https://arxiv.org/html/1312.3880), arXiv:1312.3880v3 (2015); *Physica D* **292–293** (2015), 1–7, [doi:10.1016/j.physd.2014.09.007](https://doi.org/10.1016/j.physd.2014.09.007). Section IV, equations (15) and (18), and “A new Painlevé equation?”\n2. E. Blackstone, P. D. Miller and M. D. Mitchell, [*Universality in the Small-Dispersion Limit of the Benjamin–Ono Equation*](https://link.springer.com/article/10.1007/s00220-025-05506-z), *Communications in Mathematical Physics* **407** (2026), article 60, [doi:10.1007/s00220-025-05506-z](https://doi.org/10.1007/s00220-025-05506-z). Equations (1.51)–(1.53), Theorem 1.7, Conjectures 1.9–1.10, and equation (1.60).\n\n## Status review\n\n\n**Known cases:** The zero-free Pearcey assertion is an explicit premise, while the remaining target is the exact nonlocal string equation. Limiting-profile theorems, numerical tests and a coupled local system do not establish that identity.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe zero-free Pearcey assertion is an explicit premise, while the remaining target is the exact nonlocal string equation. Limiting-profile theorems, numerical tests and a coupled local system do not establish that identity.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe later paper explicitly calls this equation-verification claim Conjecture 1.10 and says that numerical checks and a coupled local system do not constitute a proof. Its theorem for rational initial data establishes a limiting profile under stated hypotheses, not the nonlocal string equation or the zero-free premise. The original paper's separate meromorphic-continuation and isomonodromic-linearization questions are outside this entry. A bounded search through 2026-10-21 located no exact-scope proof or announcement. The [source-bound arXiv packet](../FURTHER_problems/_tracking/parallel/rough-filtering/arxiv-body-secondpass-0184-review.json), [independent status review](../FURTHER_problems/_tracking/benjamin-ono-pearcey-string-status-2026-10-21.json), and [duplicate snapshot](../FURTHER_problems/_tracking/benjamin-ono-pearcey-string-duplicates-2026-10-21.json) record the limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-c6f3e9dfbda61171**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Pearcey Benjamin Ono",
+    "Blackstone Miller Mitchell",
+    "string equation"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"Pearcey\" \"Benjamin-Ono\" \"string equation\" proof 2026"
+    },
+    {
+      "query": "Pearcey Benjamin Ono string equation proof",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00220-025-05506-z",
+      "locator": "Published23February2026Conjectures1.9–1.10eq1.60–1.61lines492–546"
+    }
+  ],
+  "scope_comparison": "ExactsourceConjecture1.10assumeszero-free1.9andassertsthefullequation. Universalscalinglimit/numerical5digitcheck and coupledlocalU,Vsystemdo notprovePVnonlocalidentity; eliminatingVrequiresunprovedhalf-planeanalyticconditions. A zero-freeproofalonewouldnotsettleconditionalstringtarget. No full match.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative search does not establish continued openness. Candidate theorem bodies with plausible thematic overlap inspected; not full proof certification. 1061October20KITPDFwebaccess unavailable, no plausible all-datafullclaim observed;1063StruwePDFtimeout means booksourceparitynotfullyrechecked.",
+  "announcement_routing": {
+    "localID": "1060",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Pearcey Benjamin Ono",
+          "Blackstone Miller Mitchell",
+          "string equation"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Pearcey Benjamin Ono",
+          "Blackstone Miller Mitchell",
+          "string equation"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Pearcey Benjamin Ono",
+        "Blackstone Miller Mitchell",
+        "string equation"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

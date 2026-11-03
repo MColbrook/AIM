@@ -1,0 +1,157 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "922",
+  "manifest_index": 766,
+  "checked_date": "2026-11-03",
+  "source_sha256": "3e3ec9c226d3ae78d5b63457b8f782711fe40aa36f52360dc4195641d40c6de2",
+  "statement_sha256": "358c0c007be915ff8668bd65390c2949ada9cc4388f7ea77f872d42d0fd8776b",
+  "original_target": {
+    "id": "922",
+    "title": "An integrable weak gradient for the uncentered cube maximal function",
+    "area": "Harmonic analysis and endpoint Sobolev regularity",
+    "file": "problems/922-an-integrable-weak-gradient-for-the-uncentered-cube-maximal-function.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a785c86819d04640",
+    "group": "operators",
+    "source_sha256": "3e3ec9c226d3ae78d5b63457b8f782711fe40aa36f52360dc4195641d40c6de2",
+    "statement_sha256": "358c0c007be915ff8668bd65390c2949ada9cc4388f7ea77f872d42d0fd8776b",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For an integer $`d\\geq2`$, let $`W^{1,1}(\\mathbb R^d)`$ denote the integrable real functions whose distributional first derivatives are integrable. For $`f`$ in this space, define\n```math\nM_{\\square}f(x)=\n\\sup_{\\substack{x\\in Q\\\\Q\\text{ an open axis-parallel cube}}}\n\\frac{1}{|Q|}\\int_Q |f(y)|\\,dy .\n```\n\nThe cubes may have any positive side length and need only contain $`x`$; their centers are unrestricted.\n\n**Does there exist a finite constant $`C_d`$, depending only on $`d`$, such that every $`f\\in W^{1,1}(\\mathbb R^d)`$ satisfies**\n```math\nM_{\\square}f\\in W^{1,1}_{\\mathrm{loc}}(\\mathbb R^d),\n\\qquad\n\\int_{\\mathbb R^d}|\\nabla M_{\\square}f(x)|\\,dx\n\\leq C_d\\int_{\\mathbb R^d}|\\nabla f(x)|\\,dx?\n```\n\nHere $`\\nabla M_{\\square}f`$ must be the distributional gradient represented by an $`L^1`$ vector field. Global integrability of $`M_{\\square}f`$ itself is not required.",
+  "full_original_page": "# 922. An integrable weak gradient for the uncentered cube maximal function\n\n**Area:** Harmonic analysis and endpoint Sobolev regularity\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor an integer $`d\\geq2`$, let $`W^{1,1}(\\mathbb R^d)`$ denote the integrable real functions whose distributional first derivatives are integrable. For $`f`$ in this space, define\n```math\nM_{\\square}f(x)=\n\\sup_{\\substack{x\\in Q\\\\Q\\text{ an open axis-parallel cube}}}\n\\frac{1}{|Q|}\\int_Q |f(y)|\\,dy .\n```\n\nThe cubes may have any positive side length and need only contain $`x`$; their centers are unrestricted.\n\n**Does there exist a finite constant $`C_d`$, depending only on $`d`$, such that every $`f\\in W^{1,1}(\\mathbb R^d)`$ satisfies**\n```math\nM_{\\square}f\\in W^{1,1}_{\\mathrm{loc}}(\\mathbb R^d),\n\\qquad\n\\int_{\\mathbb R^d}|\\nabla M_{\\square}f(x)|\\,dx\n\\leq C_d\\int_{\\mathbb R^d}|\\nabla f(x)|\\,dx?\n```\n\nHere $`\\nabla M_{\\square}f`$ must be the distributional gradient represented by an $`L^1`$ vector field. Global integrability of $`M_{\\square}f`$ itself is not required.\n\n## Application\n\nMaximal averaging replaces each value of a signal by the largest average magnitude seen on an admissible neighborhood. The question asks whether this operation controls total first-order spatial variation at the endpoint Sobolev exponent. It distinguishes a function-valued weak gradient from a derivative measure that can contain singular mass, a basic issue in the regularity theory of maximal operators.\n\n## Known results and scope\n\nWeigt proves that the uncentered cube maximal operator satisfies a dimensional total-variation bound for inputs of bounded variation. Applied to $`|f|`$, this already bounds the total mass of the distributional derivative of $`M_{\\square}f`$. What remains is to show that this derivative has no singular part for Sobolev inputs. The current arXiv version and the published article explicitly distinguish these conclusions.\n\nWeigt defines his operator using averages of $`g`$, allowing signed $`g`$. The operator above is his operator applied to $`g=|f|`$. Since $`|f|\\in W^{1,1}`$ and $`|\\nabla|f||\\leq|\\nabla f|`$ almost everywhere, his variation estimate applies to this classical absolute-average convention. No equivalence with his operator on arbitrary signed inputs is asserted.\n\nThe one-dimensional case is established. The 2025 Lahti–Weigt conditional regularity theorem concerns centered Euclidean balls. OpenAI's 2026 manuscript gives an endpoint gradient theorem for centered disks in the plane. Neither selected statement gives the uncentered cube conclusion above. Pointwise comparability of maximal values for different shapes does not supply comparability of their gradients.\n\n## References\n\n1. O. Saari, *Poincaré inequalities for the maximal function*, Annali della Scuola Normale Superiore di Pisa, Classe di Scienze **19** (2019), 1065–1083, [DOI](https://doi.org/10.2422/2036-2145.201705_001). Eligible primary version: [arXiv:1605.05176v2](https://arxiv.org/pdf/1605.05176v2), explicit open question p. 2 and absolute-average uncentered cube definition p. 3. Published counterparts are pp. 1066–1067.\n2. J. Weigt, *The variation of the uncentered maximal operator with respect to cubes*, Journal of the European Mathematical Society **27** (2025), 2531–2570, [DOI](https://doi.org/10.4171/JEMS/1575), introduction and Theorem 1.1, pp. 2531–2533. [Current arXiv version, v4](https://arxiv.org/pdf/2109.10747v4), pp. 1–3. The published introduction explicitly leaves the Sobolev weak-gradient question for cubes open.\n3. P. Lahti and J. Weigt, *The centered maximal operator removes the non-concave Cantor part from the gradient*, [arXiv:2510.01936v1](https://arxiv.org/pdf/2510.01936v1) (2025), operator definition p. 1 and Theorem 1.2 p. 3. Its conditional upgrade uses centered balls.\n4. OpenAI, *An Endpoint Gradient Bound for the Centered Disk Maximal Operator* (2026), [manuscript](https://github.com/openai/math/blob/main/preprints/An-Endpoint-Gradient-Bound-for-the-Centered-Disk-Maximal-Operator-September-26-2026/article.pdf), Theorem 1.1 and operator definition p. 1; comparison with cube variation results pp. 2–3. This is an announced planar centered-disk result; its complete proof and formalization have not been checked here.\n5. J. Kapulainen, *On continuity of generalized maximal functions*, manuscripta mathematica **177** (2026), article 49, [DOI](https://doi.org/10.1007/s00229-026-01732-4), Sections 1–2 and Theorem 4.5. The theorem proves pointwise continuity for continuous integrable inputs, a different regularity statement.\n\n## Status review\n\n\n**Known cases:** The cube, uncentered, endpoint W1,1 assertion requires absolute continuity of the BV derivative. The centered planar-disk announcement, fractional maximal estimates and existing BV bound do not settle it.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe cube, uncentered, endpoint W1,1 assertion requires absolute continuity of the BV derivative. The centered planar-disk announcement, fractional maximal estimates and existing BV bound do not settle it.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked on 2026-10-24 against the eligible primary question and definitions, Weigt's current v4 and published introduction, the selected later primary statements and version histories, targeted solution and announcement searches, current public AIM/OpenAI metadata, the Prove2Me homepage and targeted navigation, and all-status AIM/FURTHER comparisons. No matching resolution or announcement was located. The existing FURTHER problem about the sharp weak-type $`(1,1)`$ constant of the centered square maximal operator concerns maximal values, a different operator and norm.\n\nThe 2021 first version of Weigt's paper asserted that a ball-based regularity argument extends to cubes. The current v4 and published article instead explicitly leave the cube weak-gradient question open; the earlier sentence is not used as a current resolution.\n\nThe review covers selected primary statements and their scope. It does not certify all cited proofs or establish an exhaustive absence of solutions.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-a785c86819d04640**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "uncentered maximal",
+    "cube maximal",
+    "weak gradient",
+    "Sobolev"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"uncentered\" \"cubes\" \"Sobolev\" maximal 2026",
+    "\"uncentered\" \"cubes\" \"Sobolev\" maximal; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2109.10747v4",
+      "locator": "Introduction lines67–69; unversioned metadata latestv4 18December2024",
+      "comparison": "Current body explicitly distinguishes BV derivative measure from integrable weak gradient and retains the cube Sobolev question. Earlier v1 implication is not current. Fractional alpha>0 and centered planar disks change essential operator hypotheses."
+    }
+  ],
+  "rationale": "Current body explicitly distinguishes BV derivative measure from integrable weak gradient and retains the cube Sobolev question. Earlier v1 implication is not current. Fractional alpha>0 and centered planar disks change essential operator hypotheses.",
+  "limitations": [
+    "Bounded negative search, not proof of continued openness."
+  ],
+  "announcement_routing": {
+    "localID": "922",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "uncentered maximal",
+          "cube maximal",
+          "weak gradient",
+          "Sobolev"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-28-000014",
+            "title": "The Critical 2D KPZ Process",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-28-000014-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-27-000028",
+            "title": "Perron's extremal solutions of the Bernoulli one-phase problem: viscosity, inner variational and one-sided minimizing solutions, and free boundary structure in the plane",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-27-000028-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-18-000008",
+            "title": "Planar Pólya–Szegő Buckling Inequality",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000008-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-02-000004",
+            "title": "Nash's isometric embedding theorem for closed manifolds (Günther's proof)",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-02-000004-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "uncentered maximal",
+          "cube maximal",
+          "weak gradient",
+          "Sobolev"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "uncentered maximal",
+        "cube maximal",
+        "weak gradient",
+        "Sobolev"
+      ],
+      "hits": [
+        {
+          "entry": "079",
+          "title": "Local smoothing for the Euclidean wave equation",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Local-smoothing-for-the-Euclidean-wave-equation-October-25-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Critical-local-smoothing-for-the-three-dimensional-wave-equation-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "080",
+          "title": "The Sobolev endpoint in Carleson's Schr\\\"odinger convergence problem",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Endpoint-convergence-for-the-planar-Schrodinger-equation-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Endpoint-pointwise-convergence-for-the-Schrodinger-equation-in-higher-dimensions-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "085",
+          "title": "Endpoint regularity of the planar centered maximal function",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/An-Endpoint-Gradient-Bound-for-the-Centered-Disk-Maximal-Operator-September-26-2026/article.pdf"
+          ]
+        },
+        {
+          "entry": "093",
+          "title": "Dimension-free logarithmic Sobolev inequality for subgaussian log-concave measures",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-dimension-free-logarithmic-Sobolev-inequality-for-subgaussian-log-concave-measures-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "371",
+          "title": "Stable blowup for a defocusing Schr\\\"odinger equation",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Stable-Self-Similar-Blowup-for-a-Supercritical-Defocusing-Schrodinger-Equation-on-the-Torus-September-24-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "OpenAI085 actual Definition/Theorem1.1 average over CENTERED EUCLIDEAN DISKS in R2. Target permits uncentered axis-parallel cubes in EVERY d>=2. The theorem proves the different case expressly named in its introduction. Wave/Schrodinger, buckling, Bernoulli and isometric-embedding hits do not establish weak-gradient integrability for the target maximal operator.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.714Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

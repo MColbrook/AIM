@@ -1,0 +1,106 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1021",
+  "manifest_index": 865,
+  "checked_date": "2026-11-03",
+  "source_sha256": "3ca32ed0a462aedd17f1c7a447f1da4eaa6d4189daeb6d43f33ca7fbc517d023",
+  "statement_sha256": "435e8adb0dabab244a8d68c4618e4f55d6bfa6036d47131c5e9ee3f98a83a1f7",
+  "original_target": {
+    "id": "1021",
+    "title": "Must limit-periodic discrete Schrödinger operators have pure spectral type?",
+    "area": "Spectral theory and aperiodic media",
+    "file": "problems/1021-must-limit-periodic-discrete-schrodinger-operators-have-pure-spectral-type.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8b7a9f3341559561",
+    "group": "spectral",
+    "source_sha256": "3ca32ed0a462aedd17f1c7a447f1da4eaa6d4189daeb6d43f33ca7fbc517d023",
+    "statement_sha256": "435e8adb0dabab244a8d68c4618e4f55d6bfa6036d47131c5e9ee3f98a83a1f7",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`V:\\mathbb Z\\to\\mathbb R`$ be a bounded uniform limit of periodic sequences, and define the bounded self-adjoint operator on $`\\ell^2(\\mathbb Z)`$ by\n```math\n(H_Vu)(n)=u(n-1)+u(n+1)+V(n)u(n).\n```\n\nMust its spectral type be pure? Precisely, in the canonical decomposition\n```math\n\\ell^2(\\mathbb Z)=\\mathcal H_{\\mathrm{pp}}(H_V)\\oplus\n\\mathcal H_{\\mathrm{ac}}(H_V)\\oplus\\mathcal H_{\\mathrm{sc}}(H_V),\n```\n\nmust at most one summand be nonzero?\n\nThis is Damanik–Fillman, Question 10.1, in the discrete Schrödinger setting specified in their introduction. The summands denote pure-point, absolutely continuous and singular continuous spectral subspaces. Pure-point spectrum means a complete eigenvector system; compact resolvent is not required.",
+  "full_original_page": "# 1021. Must limit-periodic discrete Schrödinger operators have pure spectral type?\n\n**Area:** Spectral theory and aperiodic media\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`V:\\mathbb Z\\to\\mathbb R`$ be a bounded uniform limit of periodic sequences, and define the bounded self-adjoint operator on $`\\ell^2(\\mathbb Z)`$ by\n```math\n(H_Vu)(n)=u(n-1)+u(n+1)+V(n)u(n).\n```\n\nMust its spectral type be pure? Precisely, in the canonical decomposition\n```math\n\\ell^2(\\mathbb Z)=\\mathcal H_{\\mathrm{pp}}(H_V)\\oplus\n\\mathcal H_{\\mathrm{ac}}(H_V)\\oplus\\mathcal H_{\\mathrm{sc}}(H_V),\n```\n\nmust at most one summand be nonzero?\n\nThis is Damanik–Fillman, Question 10.1, in the discrete Schrödinger setting specified in their introduction. The summands denote pure-point, absolutely continuous and singular continuous spectral subspaces. Pure-point spectrum means a complete eigenvector system; compact resolvent is not required.\n\n## Application\n\nThese operators model waves or particles in media approximated uniformly by periodic structures. The question asks whether distinct spectral mechanisms can coexist in one such operator.\n\n## References\n\n1. D. Damanik and J. Fillman, [*Spectral Properties of Limit-Periodic Operators*](https://arxiv.org/pdf/1802.05794), v1 (2018), Introduction and Question 10.1, p.36; Chapter 15 in *Analysis and Geometry on Graphs and Manifolds*, LMS Lecture Note Series **461** (2020), 382–444. [DOI](https://doi.org/10.1017/9781108615259.016).\n2. M. Gomez Solis, [*A note on the absolutely continuous spectrum of limit-periodic Jacobi matrices*](https://arxiv.org/html/2610.19416), v1, 14 October 2026, Definitions 1.1–1.3 and Theorem 1.2.\n\n## Status review\n\n\n**Known cases:** Every uniform limit of periodic discrete potentials is allowed. Dense examples of each pure class and the October pure-absolute-continuity theorem under an exponential approximation condition do not exclude mixed spectra generally.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nEvery uniform limit of periodic discrete potentials is allowed. Dense examples of each pure class and the October pure-absolute-continuity theorem under an exponential approximation condition do not exclude mixed spectra generally.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nAll three pure spectral types occur in the source, even densely among limit-periodic potentials. That does not settle whether mixed types occur.\n\nThe October 2026 result proves pure absolute continuity under a particular exponential approximation-rate condition. It does not cover arbitrary uniform limits. Random Anderson-model and quasiperiodic results also have different hypotheses.\n\nThe [coordinating review](../FURTHER_problems/_tracking/focused-limit-periodic-spectral-purity-D030-C179-Root-20261028/ROOT-FINAL-SCIENTIFIC-REVIEW.json) records primary, current-announcement and semantic duplicate checks, with an independent formulation review. These bounded checks do not prove continued openness. Questions about varying the hull element or coupling constant are separate source questions.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-8b7a9f3341559561**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "limit-periodic",
+    "spectral purity",
+    "mixed spectrum",
+    "Gomez Solis"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"limit-periodic\" \"mixed spectrum\" 2026"
+    },
+    {
+      "query": "\"limit-periodic\" \"mixed spectrum\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    },
+    {
+      "query": "limit periodic Schrodinger spectral purity mixed spectrum proof"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.19416v1",
+      "locator": "14October2026Definition1.3/Theorem1.2; original1802.05794Q10.1p36"
+    }
+  ],
+  "scope_comparison": "The exact EC(eta) approximation condition is stronger than arbitrary uniform periodic approximation. Dense pure-pp, pure-ac, pure-sc classes do not exclude one operator with mixed types. Quasiperiodic mixed-spectrum examples and dynamical spectra of power-free integer hulls concern different hypotheses/operators.",
+  "recommendation": "Retain partial status; bounded current searches locate no complete matching resolution.",
+  "limitations": "Bounded negative evidence, not proof of continued openness. Exact statement and original references/status retained. Shared providers are metadata routing only except primary candidates explicitly described.",
+  "announcement_routing": {
+    "localID": "1021",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "limit-periodic",
+          "spectral purity",
+          "mixed spectrum",
+          "Gomez Solis"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "limit-periodic",
+          "spectral purity",
+          "mixed spectrum",
+          "Gomez Solis"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "limit-periodic",
+        "spectral purity",
+        "mixed spectrum",
+        "Gomez Solis"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

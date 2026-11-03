@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "641",
+  "manifest_index": 496,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "641",
+    "title": "Bos's cubic and quartic simplex interpolation nodes",
+    "area": "Multivariate approximation and optimal experimental design",
+    "file": "problems/641-bos-simplex-interpolation-nodes.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-04",
+    "group": "numerical-analysis",
+    "source_sha256": "3de3e56c4718b70511c4167d2526b992481c05420f52b3baad5d30b2d294c639",
+    "statement_sha256": "132bc807e9dbd360a0f7066e25a24a63b935d4a1a1f6c3eb33f3b7ee39213c16",
+    "state": "unreviewed"
+  },
+  "source_sha256": "3de3e56c4718b70511c4167d2526b992481c05420f52b3baad5d30b2d294c639",
+  "statement_sha256": "132bc807e9dbd360a0f7066e25a24a63b935d4a1a1f6c3eb33f3b7ee39213c16",
+  "actual_source_sha256": "3de3e56c4718b70511c4167d2526b992481c05420f52b3baad5d30b2d294c639",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`S_d=\\mathop{\\mathrm{conv}}\\nolimits\\{v_1,\\ldots,v_{d+1}\\}`$ be a nondegenerate real $`d`$-simplex. Specify nodes by their barycentric coordinates. In each of the following lists, include all distinct coordinate permutations, append zero coordinates, and omit a type requiring more than $`d+1`$ coordinates.\n\nThe cubic set $`F_{3,d}`$ comprises\n\n```math\n(1),\\qquad (t,1-t),\\qquad (1/3,1/3,1/3),\\qquad t=\\frac{1+1/\\sqrt5}{2}.\n```\n\nThe quartic set $`F_{4,d}`$ comprises\n\n```math\n(1),\\qquad (1/2,1/2),\\qquad (s,1-s),\\qquad (a,b,b),\\qquad (1/4,1/4,1/4,1/4),\n```\n\nwhere\n\n```math\ns=\\frac{1+\\sqrt{3/7}}2,\\qquad a=\\frac{4+\\sqrt5}{11},\\qquad b=\\frac{7-\\sqrt5}{22}.\n```\n\nFor $`k=3,4`$, these are unisolvent sets of $`N_{k,d}=\\binom{d+k}{k}`$ nodes for the real polynomials of total degree at most $`k`$. Write $`\\ell_x^{(k,d)}`$ for the cardinal polynomial satisfying $`\\ell_x^{(k,d)}(y)=\\delta_{xy}`$ at the nodes.\n\nResolve the following conjectures of Bos:\n\n1. **Cubic Fejér property:** for every $`d\\ge1`$ and $`z\\in S_d`$,\n\n```math\n\\sum_{x\\in F_{3,d}}|\\ell_x^{(3,d)}(z)|^2\\le1.\n```\n\n2. **Quartic Fejér property in dimension three:** for every $`z\\in S_3`$,\n\n```math\n\\sum_{x\\in F_{4,3}}|\\ell_x^{(4,3)}(z)|^2\\le1.\n```\n\n3. **Quartic Fekete property:** for every $`d\\ge1`$, $`F_{4,d}`$ maximizes the absolute Vandermonde determinant among all $`N_{4,d}`$-point configurations in $`S_d`$. The polynomial basis is any fixed basis of $`\\mathbb P_4(\\mathbb R^d)`$.\n4. **Quartic fourth-power bound:** for every $`d\\ge1`$ and $`z\\in S_d`$,\n\n```math\n\\sum_{x\\in F_{4,d}}|\\ell_x^{(4,d)}(z)|^4\\le1.\n```\n\nThese are related assertions about prescribed node families. The Fejér property implies both the Fekete property and the fourth-power bound in the same degree and dimension. The Fekete property implies $`|\\ell_x(z)|\\le1`$ individually; that necessary condition alone is insufficient for either of the other properties.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Bos\" \"quartic\" \"Fejer\" Fekete 2026",
+    "\"Bos\" \"quartic\" \"Fejer\" Fekete (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2205.06498",
+      "primary_body_access_gap": false,
+      "scope_comparison": "The local cubic theorem resolves only item1. The source's quartic fourth-power inequality is Conjecture4.6; the quartic3D Fejer and all-dimensional Fekete targets remain separate. No query hit supplied a complete resolution of all four original targets. Existing published quartic failures in dimensions>=4 do not refute the3D item.",
+      "version_or_date": "v1,13May2022; latest record inspected",
+      "locator": "Sections3–4; Conjecture4.6, lines443–452; local cubic proof identified on page"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The local cubic theorem resolves only item1. The source's quartic fourth-power inequality is Conjecture4.6; the quartic3D Fejer and all-dimensional Fekete targets remain separate. No query hit supplied a complete resolution of all four original targets. Existing published quartic failures in dimensions>=4 do not refute the3D item.",
+  "latest_version_check": "v1,13May2022; latest record inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

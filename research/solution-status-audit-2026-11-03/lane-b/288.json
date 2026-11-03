@@ -1,0 +1,52 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "288",
+  "manifest_index": 231,
+  "reviewed_UTC": "2026-11-03",
+  "source_sha256": "0e35c94415e8ca3d918d74387d929730a829a3aabb3a27db20fbcbec71902bec",
+  "statement_sha256": "57264674e6fa0baa23d8c027bcde1659e649815e733db089044bddb2efea77be",
+  "original_target": {
+    "id": "288",
+    "title": "Polynomial equilibration at the four-state planar Potts critical point",
+    "area": "Critical dynamics and statistical simulation",
+    "file": "problems/288-critical-four-state-potts-mixing.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "0e35c94415e8ca3d918d74387d929730a829a3aabb3a27db20fbcbec71902bec",
+    "statement_sha256": "57264674e6fa0baa23d8c027bcde1659e649815e733db089044bddb2efea77be",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "problem_statement": "On the nearest-neighbor torus $`V_n=(\\mathbb Z/n\\mathbb Z)^2`$, $`n\\ge3`$, let $`\\pi_n(\\sigma)\\propto\\exp((\\log3)\\sum_{xy\\in E_n}\\mathbf1_{\\sigma_x=\\sigma_y})`$ for $`\\sigma\\in\\{1,2,3,4\\}^{V_n}`$. At each vertex, independently at rate one, resample its color from the conditional law under $`\\pi_n`$. Let $`t_{\\rm mix}(n)=\\inf\\{t:\\max_\\sigma\\|\\mathcal L_\\sigma(\\sigma_t)-\\pi_n\\|_{\\rm TV}\\le1/4\\}`$. Do finite constants $`C,a>0`$ exist with $`t_{\\rm mix}(n)\\le Cn^a`$ for every $`n`$?",
+  "review_state": "bounded_review_complete",
+  "outcome": "partial",
+  "recommendation": "Retain Open for exact target; bounded searches found no full match, not a certification of openness.",
+  "scope_comparison": "Local target is rate-one single-site Glauber on planar torus q=4 exactly beta=log3. Blanca et al Theorem1.2 is strict beta<beta_c, leaving equality. Critical q=4 quasi-polynomial bound is weaker than any fixed power bound.",
+  "queries": [
+    "four state critical Potts Glauber polynomial mixing proof 2026",
+    "four state Potts polynomial mixing (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomarmath.ai OR site:hexagonmath.org)",
+    "critical Potts mixing (site:palomar-registry.org OR site:hexagonmath.org OR site:github.com/openai/math)"
+  ],
+  "search_date": "2026-11-03",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.42059v1",
+      "version": "v1,30October2026; abstract record checked",
+      "locator": "Theorem1.2",
+      "scope": "Cubes/tori in every d,q but strict beta<beta_c; cannot cover q=4 at critical beta=log3."
+    },
+    {
+      "url": "https://arxiv.org/abs/1607.02182",
+      "version": "published2018; primary abstract accessed",
+      "locator": "Main results for q=3 versus q=4",
+      "scope": "q=4 inverse gap at most n^{O(log n)}; polynomial q=3 does not cover q=4."
+    }
+  ],
+  "verification": "Literature and theorem-scope review only; no independent proof verification.",
+  "limitations": [
+    "Searches are bounded and web-index coverage is not exhaustive.",
+    "No newly located full matching announcement; theorem-body checks recorded only for plausible primary candidates.",
+    "Palomar initial guessed hostname corrected to palomar-registry.org in follow-up queries."
+  ]
+}

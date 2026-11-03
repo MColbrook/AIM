@@ -1,0 +1,78 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "062",
+  "manifest_index": 45,
+  "original_target": {
+    "id": "062",
+    "title": "Injectivity with attenuation of finite angular degree",
+    "area": "Attenuated tomography",
+    "file": "problems/062-finite-angular-attenuation.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-08",
+    "group": "inverse",
+    "source_sha256": "f064023f4cd8344cd473ee055e3762496c3507d48cb39c5552fc4aeedd24eb07",
+    "statement_sha256": "2a778cd8e17d4a6a2561bc1fbcab377a0affdd8d46007186a2b1451f14211467",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f064023f4cd8344cd473ee055e3762496c3507d48cb39c5552fc4aeedd24eb07",
+  "statement_sha256": "2a778cd8e17d4a6a2561bc1fbcab377a0affdd8d46007186a2b1451f14211467",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:36:53.787268+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Primary book Open problem4 explicitly asks injectivity for arbitrary finite vertical Fourier expansion. Position-dependent attenuation and connections/Higgs fields cover only restricted angular modes, not every finite N. October2610.15030 treats jointly unknown rendering density and angular SOURCES; finite angular sources are not arbitrary prescribed higher-mode attenuation.",
+  "primary_sources": [
+    {
+      "url": "https://www.dpmms.cam.ac.uk/~gpp24/GIP2D_driver.pdf",
+      "locator": "§15.1, printed p339, Open problem4.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2610.15030v2",
+      "locator": "Contents, model and related-work distinction between finite-angular sources and attenuation.",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "attenuat",
+    "finite angular"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "attenuat",
+        "finite angular"
+      ],
+      "metadata_hits": [],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "attenuat",
+        "finite angular"
+      ],
+      "metadata_hits": [
+        {
+          "id": "2610.00716",
+          "title": "A 7/8 zero-free half-plane for angular Hecke L-functions over the Eisenstein field"
+        }
+      ],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted web searches; arXiv, Zenodo, HAL, GitHub, shared OpenAI current index and requested Colbrook author lists screened. No matching complete claim located.",
+  "limitations": [
+    "Bounded search cannot establish absence of unindexed solutions.",
+    "No end-to-end proof or Lean verification; clearly excluding source hypotheses can be established by a primary abstract."
+  ],
+  "canonical_update_required": false
+}

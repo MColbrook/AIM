@@ -1,0 +1,79 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "470",
+  "manifest_index": 372,
+  "original_target": {
+    "id": "470",
+    "title": "Instantaneous strict separation for three-dimensional local Cahn–Hilliard",
+    "area": "Phase-field PDEs; binary mixtures",
+    "file": "problems/470-local-cahn-hilliard-three-dimensional-separation.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "85c2baf5a47077bdc5dd161a752753047cd7710673ef6ca4a41805894d37c948",
+    "statement_sha256": "8b2f450fbedba3898b85f48745e8814e7c4e8649232060863a2138bc22034edb",
+    "state": "unreviewed"
+  },
+  "source_sha256": "85c2baf5a47077bdc5dd161a752753047cd7710673ef6ca4a41805894d37c948",
+  "statement_sha256": "8b2f450fbedba3898b85f48745e8814e7c4e8649232060863a2138bc22034edb",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:17:44.075316+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The actual Gal–Poiatti Section6.1.1 eqs6.7–6.10 and following paragraph exclude natural logarithmic q=1 from the 3D instantaneous local theorem. Poiatti2025 eqs1.7–1.8 use an integral chemical potential, not local minus-Laplacian. October2026 author bibliography had no matching extension.",
+  "primary_sources": [
+    {
+      "url": "https://doi.org/10.1017/S0956792524000196",
+      "locator": "Section6.1.1 equations6.7–6.10, Section6.1.2",
+      "body_inspected": true
+    },
+    {
+      "url": "https://msp.org/apde/2025/18-1/apde-v18-n1-p03-p.pdf",
+      "locator": "Introduction and equations1.7–1.8",
+      "body_inspected": true
+    },
+    {
+      "url": "https://sites.google.com/view/andrea-poiatti/research",
+      "locator": "Current bibliography through October2026",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Cahn-Hilliard\" \"local\" \"separation\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) 2026",
+    "\"Cahn\" \"instantaneous separation\" \"2026\" \"local\" -site:researchgate.net"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Cahn",
+        "Poiatti"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Cahn",
+        "Poiatti"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

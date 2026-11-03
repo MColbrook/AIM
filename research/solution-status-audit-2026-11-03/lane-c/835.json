@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "835",
+  "manifest_index": 679,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "835",
+    "title": "Is the maximally stable catenoid least-area among all minimal surfaces spanning a slab?",
+    "area": "Geometry and topology",
+    "file": "problems/835-is-the-maximally-stable-catenoid-least-area-among-all-minimal-surfaces-spanning-a-slab.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b9934b396e984e8a",
+    "group": "geometry-topology",
+    "source_sha256": "1e2b4a468d9162219224c231b5e8da0185f78fa7e43edcce0b5013e95efc1f06",
+    "statement_sha256": "7c271e83a6f33314bd38091034733482f361481599c80b695e81d5d031eb79e8",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1e2b4a468d9162219224c231b5e8da0185f78fa7e43edcce0b5013e95efc1f06",
+  "statement_sha256": "7c271e83a6f33314bd38091034733482f361481599c80b695e81d5d031eb79e8",
+  "actual_source_sha256": "1e2b4a468d9162219224c231b5e8da0185f78fa7e43edcce0b5013e95efc1f06",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`P_-`$ and $`P_+`$ be two distinct parallel planes in $`\\mathbb R^3`$, with open slab $`\\Omega`$ between them. Bernstein and Breiner [1, p. 2] define $`\\mathcal M(\\Omega)`$ as the smooth minimal surfaces spanning these planes: a surface $`\\Sigma\\subset\\Omega`$ is given by a conformal harmonic immersion of an open orientable surface, and its closure-boundary $`\\overline\\Sigma\\setminus\\Sigma`$ lies in $`P_-\\cup P_+`$. This class allows topology and boundary behaviour beyond embedded annuli.\n\nLet $`C_{\\rm ms}\\in\\mathcal M(\\Omega)`$ be the *maximally stable catenoidal waist* scaled to the slab, unique up to translation parallel to its boundary planes. Is\n\n```math\n\\mathcal H^2(\\Sigma)\\geq\\mathcal H^2(C_{\\rm ms})\n\\quad\\text{for every }\\Sigma\\in\\mathcal M(\\Omega),\n```\n\n\nwith equality only when $`\\Sigma`$ is a horizontal translate of $`C_{\\rm ms}`$? This is [1, Conjecture 1.2]. Infinite-area surfaces satisfy the inequality trivially; the issue is the finite-area competitors outside the annular class. The source's Theorem 1.1 proves the assertion for the embedded minimal annuli $`\\mathcal A(\\Omega)\\subset\\mathcal M(\\Omega)`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"catenoid\" \"slab\" \"least area\" conjecture 2026",
+    "\"catenoid\" \"slab\" \"least area\" conjecture (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"catenoid\" \"slab\" \"least area\" conjecture (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Introduction pp1–2;Theorem4.3 p22 and Remark4.1",
+      "version_or_date": "arXiv:2410.15535v2,29September2025,currentlatest; JKMS62(2025)1101–1125",
+      "url": "https://arxiv.org/pdf/2410.15535",
+      "scope_comparison": "The full target is least area and equality classification for all smooth orientable immersed minimal surfaces spanning a slab, beyond annuli and uniform section orientation. The current v2 actual Theorem4.3 assumes an annulus in AV(Omega,0) with vertical flux, and Remark4.1 extends even winding numbers within the same annular setting. The introduction explicitly distinguishes Choe–Daniel's same-orientation extension. Neither controls every general-topology mixed-orientation competitor. No matching unrestricted proof, counterexample or complete announcement was located."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The full target is least area and equality classification for all smooth orientable immersed minimal surfaces spanning a slab, beyond annuli and uniform section orientation. The current v2 actual Theorem4.3 assumes an annulus in AV(Omega,0) with vertical flux, and Remark4.1 extends even winding numbers within the same annular setting. The introduction explicitly distinguishes Choe–Daniel's same-orientation extension. Neither controls every general-topology mixed-orientation competitor. No matching unrestricted proof, counterexample or complete announcement was located.",
+  "latest_version_check": "arXiv:2410.15535v2,29September2025,currentlatest; JKMS62(2025)1101–1125",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "181",
+  "manifest_index": 141,
+  "original_target": {
+    "id": "181",
+    "title": "Coexistence for every positive cyclic invasion rate",
+    "area": "Spatial ecology and evolutionary dynamics",
+    "file": "problems/181-cyclic-spatial-coexistence.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "607da213a066d0c8055b4e90ddba270980b2c9858a7295b9f32aa81c1324fd89",
+    "statement_sha256": "da0a236da44ac8c6303312663907983da7ddce7b830688d14ef459204ad7aea1",
+    "state": "unreviewed"
+  },
+  "source_sha256": "607da213a066d0c8055b4e90ddba270980b2c9858a7295b9f32aa81c1324fd89",
+  "statement_sha256": "da0a236da44ac8c6303312663907983da7ddce7b830688d14ef459204ad7aea1",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:49:29.010366+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The live Durrett book's Open Problem 3.5.2 still asks coexistence at every positive cyclic invasion rate. Its periodic mean-field orbits and finite lattice simulations do not construct an infinite-lattice translation-invariant stationary law in which all three types coexist almost surely. Ecological ODE invasion-graph results differ from this nearest-neighbor Markov system.",
+  "primary_sources": [
+    {
+      "url": "https://sites.math.duke.edu/~rtd/PASTA/PASTAcurrent.pdf",
+      "locator": "Section 3.5.1, Open Problem 3.5.2, printed page104 (PDF page112)",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"cyclic\" \"invasion\" \"coexistence\" \"2026\" Z2",
+    "\"cyclic\" \"coexistence\" \"Durrett\" 2026 proof",
+    "\"cyclic\" \"coexistence\" \"Durrett\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "cyclic invasion",
+        "Silvertown",
+        "cyclic coexistence"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "cyclic invasion",
+        "Silvertown",
+        "cyclic coexistence"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "The live book has different chapter numbering from the cited September manuscript; no historical parity is asserted."
+  ],
+  "canonical_update_required": false
+}

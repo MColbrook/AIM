@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "686",
+  "manifest_index": 530,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "686",
+    "title": "Boundary-pole decay of the pluricomplex Green function",
+    "area": "Complex analysis and potential theory",
+    "file": "problems/686-boundary-pole-decay-of-the-pluricomplex-green-function.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-39bf7ccf72798af9",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "2a4e4a31a85f8e66f48ba8a064dabdd27e10044c332b0ddd28137bd141350e1d",
+    "statement_sha256": "30c6ce4d42e86d60ca2cbbac9819f3b721bcb62aa92a6db15c090aed13fd5e5c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "2a4e4a31a85f8e66f48ba8a064dabdd27e10044c332b0ddd28137bd141350e1d",
+  "statement_sha256": "30c6ce4d42e86d60ca2cbbac9819f3b721bcb62aa92a6db15c090aed13fd5e5c",
+  "actual_source_sha256": "2a4e4a31a85f8e66f48ba8a064dabdd27e10044c332b0ddd28137bd141350e1d",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb C^n`$, $`n\\ge2`$, be a bounded hyperconvex domain: there exists a negative plurisubharmonic exhaustion $`\\rho`$, with $`\\{\\rho<c\\}\\Subset\\Omega`$ for every $`c<0`$. Define\n\n```math\ng_\\Omega(z,w)=\\sup\\{u(z):u\\in\\mathrm{PSH}(\\Omega),\\ u\\le0,\\ \\limsup_{s\\to w}(u(s)-\\log\\|s-w\\|)<\\infty\\}.\n```\n\nFor every nonempty compact $`K\\Subset\\Omega`$ and every sequence $`w_j\\in\\Omega`$ with $`\\mathrm{dist}(w_j,\\partial\\Omega)\\to0`$, must\n\n```math\n\\sup_{z\\in K}|g_\\Omega(z,w_j)|\\longrightarrow0?\n```",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Green function\" \"pole\" \"hyperconvex\" boundary proof 2026",
+    "\"Green function\" \"pole\" \"hyperconvex\" boundary (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Theorem3.3.7 pp70–71; proof lines5439–5482",
+      "version_or_date": "Błocki lecture notes; current focused searches3November2026",
+      "scope_comparison": "The actual theorem for arbitrary bounded hyperconvex domains gives Lp decay for every finite p. This does not imply the requested compact-uniform decay of the negative Green function when its pole approaches a rough boundary. Boundary-zero statements fix the pole and move the evaluation point. Extra exhaustion/boundary assumptions in located papers are not allowed here.",
+      "primary_body_access_gap": false,
+      "url": "https://gamma.im.uj.edu.pl/~blocki/publ/ln/wykl.pdf"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual theorem for arbitrary bounded hyperconvex domains gives Lp decay for every finite p. This does not imply the requested compact-uniform decay of the negative Green function when its pole approaches a rough boundary. Boundary-zero statements fix the pole and move the evaluation point. Extra exhaustion/boundary assumptions in located papers are not allowed here.",
+  "latest_version_check": "Błocki lecture notes; current focused searches3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

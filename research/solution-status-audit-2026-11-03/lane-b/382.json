@@ -1,0 +1,63 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 312,
+  "source_sha256": "a011b7ca719948476798387e63fb910b3a4ad38a011be190b0c22cbe04eef063",
+  "statement_sha256": "bb9bb0abf1e0725a3dac4acd160ea0e9518879ac810a77a0fa2c99b5e2968b57",
+  "original_target": {
+    "id": "382",
+    "title": "Nonlinear Landau damping near a Maxwellian on the whole space",
+    "area": "Plasma kinetics; dispersive relaxation",
+    "file": "problems/382-maxwellian-whole-space-landau-damping.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "a011b7ca719948476798387e63fb910b3a4ad38a011be190b0c22cbe04eef063",
+    "statement_sha256": "bb9bb0abf1e0725a3dac4acd160ea0e9518879ac810a77a0fa2c99b5e2968b57",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "382",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Maxwellian\" \"Landau damping\" \"whole space\" 2026",
+    "\"nonlinear Landau damping\" \"Maxwellian\" \"2026\" unscreened",
+    "\"Landau damping\" \"Maxwellian\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2603.16767v3",
+      "version": "v3 5May2026; abs latest confirmed",
+      "locators": "Section1.1 unscreened discussion; Theorem1.1 equations1.8–1.9; Remark1.3",
+      "body_inspected": true,
+      "scope": "Two-species screened operator and quasi-neutrality. Explicitly retains nonlinear unscreened whole-space Maxwellian question."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2205.04540",
+      "version": "v2 29January2024",
+      "locators": "Section1.1 equations1.3–1.6, Theorem1.1 PDFpp2–3",
+      "body_inspected": true,
+      "scope": "Poisson equilibrium 1/[pi²(1+|v|²)²] with polynomial tails, not Gaussian Maxwellian."
+    },
+    {
+      "url": "https://hal.science/hal-00376547v1/file/Landau-damping-beta1.pdf",
+      "version": "Mouhot–Villani2009 early version",
+      "locators": "Theorem2.5",
+      "body_inspected": true,
+      "scope": "Nonlinear analytic theorem on spatial torus, not whole space."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022123626000212",
+      "version": "JFA15April2026",
+      "locators": "publisher abstract and search-visible theorem summary only",
+      "body_inspected": false,
+      "scope": "Nguyen Landau damping and survival threshold concerns linearized system; no nonlinear full-resolution claim located."
+    }
+  ],
+  "registry_checks": "No Landau damping alias in Palomar/Hexagon/OpenAI full metadata.",
+  "scope_comparison": "Exact unscreened Coulomb nonlinear Maxwellian with neutral localized analytic perturbations. Screened, polynomial-tail, periodic, linearized, or collisional models do not imply the quantified assertion.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

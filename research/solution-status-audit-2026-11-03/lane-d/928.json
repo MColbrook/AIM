@@ -1,0 +1,104 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "928",
+  "manifest_index": 772,
+  "checked_date": "2026-11-03",
+  "source_sha256": "d4050e5dc06b9d9838185925d460cc59097ac16065209c305153f33317d9fb10",
+  "statement_sha256": "65ee99ea9977afc36f3fdd830b5ddfc7fe17a93d683fa06a45a2bc8204f05c59",
+  "original_target": {
+    "id": "928",
+    "title": "Does the closed completely positive cone generate the energy-constrained completion?",
+    "area": "Operators, matrices and computation",
+    "file": "problems/928-does-the-closed-completely-positive-cone-generate-the-energy-constrained-completion.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c9fe61540d4c4717",
+    "group": "operators",
+    "source_sha256": "d4050e5dc06b9d9838185925d460cc59097ac16065209c305153f33317d9fb10",
+    "statement_sha256": "65ee99ea9977afc36f3fdd830b5ddfc7fe17a93d683fa06a45a2bc8204f05c59",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\mathcal H_A,\\mathcal H_B`$ be separable complex Hilbert spaces, with $`\\mathcal H_A`$ infinite-dimensional. Let $`G\\ge0`$ be self-adjoint on $`\\mathcal H_A`$, with compact resolvent, minimum eigenvalue zero and eigenvalues tending to infinity. Write $`\\mathcal T_1(\\mathcal H)`$ for trace-class operators.\n\nLet $`Y`$ be the real vector space of Hermiticity-preserving complex-linear maps $`T:\\mathcal T_1(\\mathcal H_A)\\to\\mathcal T_1(\\mathcal H_B)`$ with finite ordinary diamond norm. Fix $`E>0`$, and equip $`Y`$ with\n```math\n\\|T\\|_{\\diamond,E}^{G}\n =\\sup_{\\substack{\\rho\\ge0,\\ \\mathrm{Tr}\\rho=1\\\\\n \\mathrm{Tr}((G\\otimes I_R)\\rho)\\le E}}\n \\|(T\\otimes\\mathrm{id}_R)(\\rho)\\|_1,\n```\n\nwhere $`\\rho`$ acts on $`\\mathcal H_A\\otimes\\mathcal H_R`$ and $`\\mathcal H_R`$ is an infinite-dimensional separable ancillary space.\n\nLet $`X_G`$ be the completion of $`Y`$ in this norm, and let $`C_G`$ be the closure in $`X_G`$ of the cone of completely positive maps belonging to $`Y`$. Is\n```math\nX_G=C_G-C_G?\n```\n\nThe question asks for an exact difference of two elements of the closed cone. Density of such differences is already known. No trace-preservation condition is imposed.",
+  "full_original_page": "# 928. Does the closed completely positive cone generate the energy-constrained completion?\n\n**Area:** Operators, matrices and computation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\mathcal H_A,\\mathcal H_B`$ be separable complex Hilbert spaces, with $`\\mathcal H_A`$ infinite-dimensional. Let $`G\\ge0`$ be self-adjoint on $`\\mathcal H_A`$, with compact resolvent, minimum eigenvalue zero and eigenvalues tending to infinity. Write $`\\mathcal T_1(\\mathcal H)`$ for trace-class operators.\n\nLet $`Y`$ be the real vector space of Hermiticity-preserving complex-linear maps $`T:\\mathcal T_1(\\mathcal H_A)\\to\\mathcal T_1(\\mathcal H_B)`$ with finite ordinary diamond norm. Fix $`E>0`$, and equip $`Y`$ with\n```math\n\\|T\\|_{\\diamond,E}^{G}\n =\\sup_{\\substack{\\rho\\ge0,\\ \\mathrm{Tr}\\rho=1\\\\\n \\mathrm{Tr}((G\\otimes I_R)\\rho)\\le E}}\n \\|(T\\otimes\\mathrm{id}_R)(\\rho)\\|_1,\n```\n\nwhere $`\\rho`$ acts on $`\\mathcal H_A\\otimes\\mathcal H_R`$ and $`\\mathcal H_R`$ is an infinite-dimensional separable ancillary space.\n\nLet $`X_G`$ be the completion of $`Y`$ in this norm, and let $`C_G`$ be the closure in $`X_G`$ of the cone of completely positive maps belonging to $`Y`$. Is\n```math\nX_G=C_G-C_G?\n```\n\nThe question asks for an exact difference of two elements of the closed cone. Density of such differences is already known. No trace-preservation condition is imposed.\n\n## Application\n\nThis asks whether limits of quantum operations controlled on energy-constrained inputs retain a decomposition into positive components with the same approximation property.\n\n## References\n\n- M. E. Shirokov, *On completion of the cone of completely positive linear maps with respect to the energy-constrained diamond norm*, **Lobachevskii Journal of Mathematics** 40(10) (2019), 1549–1568. [Published article](https://doi.org/10.1134/S1995080219100238); [author manuscript](https://arxiv.org/html/1810.10922v2), Theorems 1B and 3B, equation (31), and the conjecture in §5.\n- L. van Luijk, *Energy-Limited Quantum Dynamics*, **Communications in Mathematical Physics** 406 (2025), article 120. [Published article](https://doi.org/10.1007/s00220-025-05282-w), Lemma 2.19(6), the following paragraph and footnote 11.\n\n## Status review\n\n\n**Known cases:** The CP components must lie in the closed cone obtained by completing ordinary bounded CP maps. Van Luijk Lemma 2.19(6) allows a larger finite-energy-norm cone and therefore does not prove generation of this particular closed cone.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe CP components must lie in the closed cone obtained by completing ordinary bounded CP maps. Van Luijk Lemma 2.19(6) allows a larger finite-energy-norm cone and therefore does not prove generation of this particular closed cone.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked **30 October 2026**. Shirokov identifies the closed cone with $`\\mathfrak F_G^0`$ and the completion with $`\\mathfrak Y_G`$. The 2025 theorem gives positive components in the larger finite-energy-constrained-norm cone. It does not require each component to belong to $`C_G`$; that additional requirement is the residual question here.\n\nCurrent searches found no matching complete resolution or announcement. Semantic comparisons with all-status AIM/OpenAI records and the developing collection distinguished finite-dimensional channel decompositions, channel capacity and Trotter approximation. No equivalent target was located. This is a dated, bounded literature check.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-c9fe61540d4c4717**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "energy-constrained",
+    "Shirokov",
+    "completely positive cone",
+    "closed cone"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Shirokov\" \"completion\" \"cone\" diamond norm conjecture",
+    "\"Shirokov\" \"completion\" \"cone\" diamond norm conjecture; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2405.10259",
+      "locator": "Paragraph following Lemma2.19(6), line654; publisher counterpart line742 and footnote11",
+      "comparison": "The actual decomposition gives CP maps with finite ECD norm, not CP maps in the closure of bounded CP maps. Shirokov1810.10922v2 Section5 conjecture explicitly demands F_G^0 components. Dense differences do not give exact cone generation."
+    }
+  ],
+  "rationale": "The actual decomposition gives CP maps with finite ECD norm, not CP maps in the closure of bounded CP maps. Shirokov1810.10922v2 Section5 conjecture explicitly demands F_G^0 components. Dense differences do not give exact cone generation.",
+  "limitations": [
+    "Bounded negative search is not proof of openness; candidate scope inspected, not complete proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "928",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "energy-constrained",
+          "Shirokov",
+          "completely positive cone",
+          "closed cone"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "energy-constrained",
+          "Shirokov",
+          "completely positive cone",
+          "closed cone"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00347v1",
+            "title": "Gaussian weights on fractals and Edelman's ghosts and shadows",
+            "url": "https://hexagonmath.org/abs/2610.00347v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "energy-constrained",
+        "Shirokov",
+        "completely positive cone",
+        "closed cone"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Gaussian integrals on fractals/Edelman ghosts and shadows do not establish exact generation by the closed CP cone in energy-constrained diamond-norm completion.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.721Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 267,
+  "source_sha256": "b07c53740222546d32c85b7c8643cbe5c135c1b5f930d8cc1405ccf7e8c6fb1a",
+  "statement_sha256": "2b0230151435162d911ddcc0c061a642113009015febe128c9dfa3f16ae9204c",
+  "original_target": {
+    "id": "329",
+    "title": "Simes error control for two-sided Gaussian tests",
+    "area": "Multiple testing and statistical inference",
+    "file": "problems/329-two-sided-gaussian-simes.md",
+    "status": "Open",
+    "last_checked": "2026-09-18",
+    "group": "probability-statistics",
+    "source_sha256": "b07c53740222546d32c85b7c8643cbe5c135c1b5f930d8cc1405ccf7e8c6fb1a",
+    "statement_sha256": "2b0230151435162d911ddcc0c061a642113009015febe128c9dfa3f16ae9204c",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "329",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Simes\" \"two-sided\" Gaussian conjecture 2026",
+    "\"Simes\" \"global null\" 2026 Gaussian solved",
+    "\"Simes\" \"two-sided\" Gaussian site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2611.02513v1",
+      "version": "v1 submitted 2 November 2026",
+      "locators": "Theorem 2.1; section 3; Theorems 4.1/6.1",
+      "body_inspected": true,
+      "scope": "Covariance-uniform sufficiently small levels for each fixed dimension, trivariate interval about .05, and restricted covariance graph/block asymptotics."
+    },
+    {
+      "url": "https://arxiv.org/html/2610.40899v1",
+      "version": "v1 29 October 2026",
+      "locators": "sections 2.3–2.4, 3.2",
+      "body_inspected": true,
+      "scope": "Marginal/conditional evidence paired per coordinate then Bonferroni: different global procedure."
+    },
+    {
+      "url": "https://www.math.uwaterloo.ca/~wang/papers/2024Chi-Ramdas-Wang-BJ.pdf",
+      "version": "Bernoulli 2025 author manuscript",
+      "locators": "Remark 11",
+      "body_inspected": true,
+      "scope": "Distinguishes zero-mean two-sided Simes from one-sided negative dependence and mixed-null BH."
+    }
+  ],
+  "registry_checks": "No Simes alias Palomar/Hexagon full metadata. Current arXiv, Zenodo, HAL, GitHub and author searches executed.",
+  "scope_comparison": "All alpha, all n, all PSD covariance are required. November 2 theorem cutoff depends on m and does not establish every level. Mixed-means BH counterexamples do not refute all-null Simes.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. November 2 primary preprint is new partial progress only.",
+  "new_partial_source": true
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "464",
+  "manifest_index": 368,
+  "original_target": {
+    "id": "464",
+    "title": "Hölder regularity under directional nonlocal ellipticity alone",
+    "area": "Nonlocal PDEs; heterogeneous jump diffusion",
+    "file": "problems/464-rough-jump-kernel-holder-regularity.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "5a6a29c2887f7429f4f217477c23be33a18f6a2c4c490733ace180faa3468463",
+    "statement_sha256": "1fc27d04817aa40ea28e7a6838110aeca5f24ad50afab7cef6141e31a8a602c4",
+    "state": "unreviewed"
+  },
+  "source_sha256": "5a6a29c2887f7429f4f217477c23be33a18f6a2c4c490733ace180faa3468463",
+  "statement_sha256": "1fc27d04817aa40ea28e7a6838110aeca5f24ad50afab7cef6141e31a8a602c4",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:17:42.865649+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Schwab–Silvestre's actual kernel assumption A3 requires a positive-measure lower bound on a subset of each annulus. This is stronger than the directional second-moment ellipticity alone allowed locally. No full matching theorem found in the agent's bounded current check.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1412.3790",
+      "locator": "Section2 assumptionA3",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "directional ellipticity",
+    "very irregular kernels"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "directional ellipticity",
+        "very irregular kernels"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "directional ellipticity",
+        "very irregular kernels"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Agent's read-only focused current primary checks; shared retained Palomar/Hexagon listings routed by root. Search detail for this initial batch was not retained in agent's message.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "No retained exact query log for this relayed initial batch."
+  ],
+  "canonical_update_required": false
+}

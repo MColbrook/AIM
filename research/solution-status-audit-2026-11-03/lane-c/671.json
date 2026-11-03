@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "671",
+  "manifest_index": 515,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "671",
+    "title": "Are all isometries of the Mabuchi completion induced by smooth Kähler-potential isometries?",
+    "area": "Complex geometry and pluripotential theory",
+    "file": "problems/671-are-all-isometries-of-the-mabuchi-completion-induced-by-smooth-kahler-potential-isometries.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0748c27bcb1ed1ac",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "54dfe39cedd9a8cd20ac547cb1ee858393e2169890a686b3bf097a446ae5a1b7",
+    "statement_sha256": "15eebb6361e3fd56e56df6fe73b989ab1e9d9b2203e86281353511df704e2141",
+    "state": "unreviewed"
+  },
+  "source_sha256": "54dfe39cedd9a8cd20ac547cb1ee858393e2169890a686b3bf097a446ae5a1b7",
+  "statement_sha256": "15eebb6361e3fd56e56df6fe73b989ab1e9d9b2203e86281353511df704e2141",
+  "actual_source_sha256": "54dfe39cedd9a8cd20ac547cb1ee858393e2169890a686b3bf097a446ae5a1b7",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`(X,\\omega)`$ be a compact connected Kähler manifold of positive complex dimension $`n`$. Put\n```math\n\\mathcal H_\\omega=\\{u\\in C^\\infty(X;\\mathbb R):\\ \\omega_u:=\\omega+i\\partial\\bar\\partial u>0\\},\n\\qquad\nV=\\int_X\\omega^n.\n```\n\nThe Mabuchi norm of a tangent vector $`\\xi\\in T_u\\mathcal H_\\omega=C^\\infty(X;\\mathbb R)`$ is\n```math\n\\|\\xi\\|_u^2=\\frac1V\\int_X \\xi^2\\,\\omega_u^n.\n```\n\nDefine the path-length distance\n```math\nd_2(u,v)=\\inf_\\gamma\\int_0^1\\|\\dot\\gamma(t)\\|_{\\gamma(t)}\\,dt,\n```\n\nwhere the infimum runs over smooth paths $`\\gamma:[0,1]\\to\\mathcal H_\\omega`$ from $`u`$ to $`v`$. Let $`(\\mathcal E_\\omega^2,d_2)`$ denote its metric completion.\n\nSuppose $`F:\\mathcal E_\\omega^2\\to\\mathcal E_\\omega^2`$ is a surjective isometry:\n```math\nd_2(F(u),F(v))=d_2(u,v)\\qquad(u,v\\in\\mathcal E_\\omega^2).\n```\n\nMust $`F(\\mathcal H_\\omega)=\\mathcal H_\\omega`$, with $`G=F|_{\\mathcal H_\\omega}`$ a global differentiable $`L^2`$ isometry in the following sense: $`G`$ is a bijection, it is $`C^1`$ in the Fréchet topology of smooth functions, and\n```math\n\\|D_uG(\\xi)\\|_{G(u)}=\\|\\xi\\|_u\n\\qquad(u\\in\\mathcal H_\\omega,\\ \\xi\\in C^\\infty(X;\\mathbb R))?\n```\n\nHere $`C^1`$ includes continuity of $`G`$ and of $`(u,\\xi)\\mapsto D_uG(\\xi)`$ in the indicated Fréchet topologies.\n\nEquivalently, is every surjective isometry of the completion the unique continuous extension of a global differentiable $`L^2`$ isometry of $`\\mathcal H_\\omega`$? No preservation of smooth potentials or differentiability is assumed for $`F`$. The spaces contain potentials differing by additive constants; they have not been quotiented by constants.\n\nThis is the completion-isometry question stated by Darvas immediately after Theorem 1.4 in [1, p. 4094]. The extension formulation makes the desired automatic regularity explicit.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Mabuchi\" \"completion\" \"isometries\" proof 2026",
+    "\"Mabuchi\" \"completion\" \"isometries\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "PublishedJEMS23(2021),4091–4108; arXivlatestv1,16February2019",
+      "url": "https://ems.press/content/serial-article-files/32607",
+      "locator": "Theorem1.4 and following paragraph, printed4094/PDF3, lines203–219",
+      "primary_body_access_gap": false,
+      "scope_comparison": "The primary body explicitly leaves completion-isometry classification open. The smooth differentiable classification assumes regularity absent from an arbitrary surjective isometry of the E2 completion. Nonexistence of local geodesic-reversing symmetries and geodesic-line results do not establish preservation of all smooth potentials."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The primary body explicitly leaves completion-isometry classification open. The smooth differentiable classification assumes regularity absent from an arbitrary surjective isometry of the E2 completion. Nonexistence of local geodesic-reversing symmetries and geodesic-line results do not establish preservation of all smooth potentials.",
+  "latest_version_check": "PublishedJEMS23(2021),4091–4108; arXivlatestv1,16February2019",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

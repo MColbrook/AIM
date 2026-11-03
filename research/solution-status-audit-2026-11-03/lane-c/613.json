@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "613",
+  "manifest_index": 475,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "613",
+    "title": "Unbounded weak chromatic number for geometric tetrahedral complexes",
+    "area": "Combinatorial topology and geometric hypergraphs",
+    "file": "problems/613-tetrahedral-weak-chromatic.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "0db800d74c212ec90d6f5f79b1c28cb91a83c2429d99bbdb4996cc0f80242b39",
+    "statement_sha256": "e27c8e891fb1694221c8ed49045c13f01b1e570bef7f32d4b573c3bc1538246c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "0db800d74c212ec90d6f5f79b1c28cb91a83c2429d99bbdb4996cc0f80242b39",
+  "statement_sha256": "e27c8e891fb1694221c8ed49045c13f01b1e570bef7f32d4b573c3bc1538246c",
+  "actual_source_sha256": "0db800d74c212ec90d6f5f79b1c28cb91a83c2429d99bbdb4996cc0f80242b39",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`H=(V,E)`$ be a finite $`4`$-uniform hypergraph. A geometric embedding into $`\\mathbb R^3`$ is an injection $`\\phi:V\\to\\mathbb R^3`$ such that each $`\\mathop{\\mathrm{conv}}\\nolimits\\phi(e)`$ is a nondegenerate tetrahedron and\n\n```math\n\\mathop{\\mathrm{conv}}\\nolimits\\phi(e)\\cap\\mathop{\\mathrm{conv}}\\nolimits\\phi(f)\n=\\mathop{\\mathrm{conv}}\\nolimits\\phi(e\\cap f)\\qquad(e,f\\in E),\n```\n\nwith $`\\mathop{\\mathrm{conv}}\\nolimits\\varnothing=\\varnothing`$.\n\nThe weak chromatic number is the minimum number of vertex colors for which no hyperedge is monochromatic. Is it unbounded over hypergraphs admitting such an embedding? Equivalently, for every integer $`m`$, does such a hypergraph exist with weak chromatic number greater than $`m`$?",
+  "full_local_page_read": true,
+  "queries": [
+    "\"tetrahedral\" \"weak chromatic\" unbounded 2026",
+    "\"tetrahedral\" \"weak chromatic\" unbounded (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1, 17 March 2026",
+      "scope_comparison": "Unbounded weak chromatic number is established in ambient dimensions at least four. The local target is nondegenerate tetrahedra with exact straight geometric intersection in dimension three, where the primary discussion identifies a limitation. PL embeddings with subdivisions are broader.",
+      "locator": "Corollary 1.7 and discussion lines 89–103",
+      "url": "https://arxiv.org/html/2603.16298",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Unbounded weak chromatic number is established in ambient dimensions at least four. The local target is nondegenerate tetrahedra with exact straight geometric intersection in dimension three, where the primary discussion identifies a limitation. PL embeddings with subdivisions are broader.",
+  "latest_version_check": "v1, 17 March 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1058",
+  "manifest_index": 902,
+  "checked_date": "2026-11-03",
+  "source_sha256": "5b7080729f915bbc058d2024bb5499402e0e37c95a6529be7c1b1e6c5f0e5170",
+  "statement_sha256": "581b551045b1f3eb4a6f8e5ec3e53650de4d88e473bdabe265f2d0749950ade9",
+  "original_target": {
+    "id": "1058",
+    "title": "A periodic solution for every nonautonomous superlinear oscillator",
+    "area": "Nonlinear waves, fluids and kinetic equations",
+    "file": "problems/1058-a-periodic-solution-for-every-nonautonomous-superlinear-oscillator.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b5b48d85f5c3bf5b",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "5b7080729f915bbc058d2024bb5499402e0e37c95a6529be7c1b1e6c5f0e5170",
+    "statement_sha256": "581b551045b1f3eb4a6f8e5ec3e53650de4d88e473bdabe265f2d0749950ade9",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix $`T>0`$. Let $`f:\\mathbb R^2\\to\\mathbb R`$ and $`p:\\mathbb R^3\\to\\mathbb R`$ be $`T`$-periodic in their first variable and satisfy the Carathéodory conditions: measurability in time, continuity in the state variables for almost every time, and an integrable bound on each compact state set over one period. Assume local uniqueness for every Cauchy problem of\n\n```math\nx''+f(t,x)+p(t,x,x')=0.\n```\n\nSuppose that\n\n```math\n\\lim_{|x|\\to\\infty}\\frac{f(t,x)}x=+\\infty\n\\quad\\text{uniformly for }t\\in[0,T],\n\\qquad\n|p(t,x,v)|<\\gamma(t)+C|x|\\quad\\text{for every }(t,x,v),\n```\n\nwhere $`C>0`$ and $`\\gamma>0`$ is $`T`$-periodic and integrable over one period. The perturbation may depend on velocity, but its bound is uniform over all velocities. The displayed pointwise bounds use representatives satisfying Gidoni's (A3)–(A4).\n\nMust there be a real $`T`$-periodic solution $`x\\in W^{2,1}_{\\mathrm{loc}}(\\mathbb R)`$ satisfying the equation almost everywhere? Use its $`C^1`$ representative; both $`x`$ and $`x'`$ must match after one period. Constants and solutions whose least period divides $`T`$ count. No global-flow, trapping, equilibrium-at-zero, or additional continuation hypothesis is imposed.",
+  "full_original_page": "# 1058. A periodic solution for every nonautonomous superlinear oscillator\n\n**Area:** Nonlinear waves, fluids and kinetic equations\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix $`T>0`$. Let $`f:\\mathbb R^2\\to\\mathbb R`$ and $`p:\\mathbb R^3\\to\\mathbb R`$ be $`T`$-periodic in their first variable and satisfy the Carathéodory conditions: measurability in time, continuity in the state variables for almost every time, and an integrable bound on each compact state set over one period. Assume local uniqueness for every Cauchy problem of\n\n```math\nx''+f(t,x)+p(t,x,x')=0.\n```\n\nSuppose that\n\n```math\n\\lim_{|x|\\to\\infty}\\frac{f(t,x)}x=+\\infty\n\\quad\\text{uniformly for }t\\in[0,T],\n\\qquad\n|p(t,x,v)|<\\gamma(t)+C|x|\\quad\\text{for every }(t,x,v),\n```\n\nwhere $`C>0`$ and $`\\gamma>0`$ is $`T`$-periodic and integrable over one period. The perturbation may depend on velocity, but its bound is uniform over all velocities. The displayed pointwise bounds use representatives satisfying Gidoni's (A3)–(A4).\n\nMust there be a real $`T`$-periodic solution $`x\\in W^{2,1}_{\\mathrm{loc}}(\\mathbb R)`$ satisfying the equation almost everywhere? Use its $`C^1`$ representative; both $`x`$ and $`x'`$ must match after one period. Constants and solutions whose least period divides $`T`$ count. No global-flow, trapping, equilibrium-at-zero, or additional continuation hypothesis is imposed.\n\n## Application\n\nThis is a periodically forced nonlinear oscillator with a strongly restoring force. The question asks whether some periodic response must survive even when other trajectories may escape in finite time.\n\n## References\n\n1. P. Gidoni, [*Existence of a periodic solution for superlinear second order ODEs*](https://arxiv.org/abs/2108.13722), arXiv:2108.13722v1 (2021), Sections 2–3, assumptions (A1)–(A4), Corollary 5 and Remark 3. Published in *Journal of Differential Equations* **345** (2023), 401–417, [doi:10.1016/j.jde.2022.11.054](https://doi.org/10.1016/j.jde.2022.11.054).\n2. S. Wang, F. Chen and D. Qian, [*The existence of periodic solution for superlinear second order ODEs by a new fixed point approach*](https://doi.org/10.1016/j.jde.2024.07.031), *Journal of Differential Equations* **410** (2024), 481–512, Theorem 1.1 and assumption (A3′).\n3. S. Wang, F. F. Chen and C. Liu, [*The existence of periodic solutions for nonconservative superlinear second order ODEs: a rotation number and spiral analysis approach*](https://doi.org/10.3934/era.2025003), *Electronic Research Archive* **33** (2025), 50–67, Theorem 1.1 and (H2).\n4. A. Cagnetta and P. Gidoni, [*Existence of a periodic solution for superquadratic Hamiltonian systems with possible finite-time blow-up*](https://arxiv.org/abs/2604.22707), arXiv:2604.22707v1 (2026), Theorem 3.1 and assumption (A3).\n\n## Status review\n\n\n**Known cases:** No continuation/reference-curve premise is allowed. The April 2026 Hamiltonian theorem imposes additional structural/rotation conditions; earlier periodic-solution criteria do not show they hold automatically for every allowed oscillator.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nNo continuation/reference-curve premise is allowed. The April 2026 Hamiltonian theorem imposes additional structural/rotation conditions; earlier periodic-solution criteria do not show they hold automatically for every allowed oscillator.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked 26 October 2026. Gidoni explicitly asks whether the reference-curve continuation condition (A5*) always follows from (A1)–(A4); Corollary 5 makes that equivalent to the existence question above. This entry concerns the general perturbed equation and makes no separate openness claim for the Hamiltonian subclass $`p=0`$.\n\nThe 2024 and 2025 existence theorems retain a bounded-set continuation condition. The 2026 planar theorem also retains an origin-crossing continuation assumption. These conditional results do not establish the displayed universal claim. Bounded current searches and all-status AIM/FURTHER/OpenAI comparisons located no complete resolution or duplicate.\n\nThe exact primary formulation and selected later theorem hypotheses were independently checked. Full 2023 publication/preprint parity and the complete 2024 article body remain access limits; the precise 2021 primary statement was available. Complete proofs of the cited results were not audited.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-b5b48d85f5c3bf5b**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Gidoni periodic",
+    "superlinear oscillator",
+    "Cagnetta",
+    "possible finite-time blow-up"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "Gidoni superlinear oscillator periodic solution continuation 2026"
+    },
+    {
+      "query": "Gidoni superlinear periodic solution A5",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2604.22707v1",
+      "locator": "Theorem3.1assumptionsA1–A6/A3;original2108.13722v1Remark3andCorollary5"
+    }
+  ],
+  "scope_comparison": "2026theoremstillassumescontinuabilityofallsolutionscrossingoriginon[0,T]andadditionalrotation/structuralconditions. Itallowsotherfinite-timeblowupwithoutprovingthisreferencecurveconditionautomaticallyforallCaratheodorysuperlinearperturbedoscillators. OriginalRemark3explicitlyleavesA5*automaticityopen. No full match.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative searches do not certify continued openness; exact source/currentcandidate theorem bodies compared. Completeproof certification notclaimed.",
+  "announcement_routing": {
+    "localID": "1058",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Gidoni periodic",
+          "superlinear oscillator",
+          "Cagnetta",
+          "possible finite-time blow-up"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Gidoni periodic",
+          "superlinear oscillator",
+          "Cagnetta",
+          "possible finite-time blow-up"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Gidoni periodic",
+        "superlinear oscillator",
+        "Cagnetta",
+        "possible finite-time blow-up"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

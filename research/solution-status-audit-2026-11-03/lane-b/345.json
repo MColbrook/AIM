@@ -1,0 +1,41 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 282,
+  "source_sha256": "764172ae05bab899b07623042323e3b27bba8e9d21f62c1c190e57caed777a17",
+  "statement_sha256": "e2c1c4837b0f5c4a68abd2e6a5294e1a3b75eb90dcee6fc5bf5a43570af47887",
+  "original_target": {
+    "id": "345",
+    "title": "The sharp support–concentration bound for subset sums",
+    "area": "Combinatorial probability, information theory and packing algorithms",
+    "file": "problems/345-subset-sum-support-concentration.md",
+    "status": "Open",
+    "last_checked": "2026-09-19",
+    "group": "probability-statistics",
+    "source_sha256": "764172ae05bab899b07623042323e3b27bba8e9d21f62c1c190e57caed777a17",
+    "statement_sha256": "e2c1c4837b0f5c4a68abd2e6a5294e1a3b75eb90dcee6fc5bf5a43570af47887",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "345",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"subset sums\" \"concentration\" conjecture 2026 proof",
+    "\"subset sums\" \"support\" \"concentration\" site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2609.01529v1",
+      "version": "v1 1 September 2026, current abstract checked",
+      "locators": "Conjecture 1.1; Theorems 1.5–1.6",
+      "body_inspected": true,
+      "scope": "Retains H0<=2 H-infinity; support-entropy coefficient depends on input and positive-order constants deteriorate toward order zero."
+    }
+  ],
+  "registry_checks": "Palomar no subset-sums match. Hexagon 2610.00599 is lower support size for zero-sum-free sets in finite groups; unrelated worst-case decision algorithms also routed, not accepted as full candidates. Current arXiv, Zenodo, HAL and GitHub searches.",
+  "scope_comparison": "Need N(w)rho(w)²<=1 exactly for arbitrary repeated, zero, negative real weights with fair independent bits. Input-dependent entropy comparisons, finite-group set bounds and faster decision algorithms do not prove this exact support/atom relation.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Primary current paper retains the exact target as a conjecture."
+}

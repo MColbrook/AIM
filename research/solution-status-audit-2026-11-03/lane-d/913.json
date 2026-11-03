@@ -1,0 +1,98 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "913",
+  "manifest_index": 757,
+  "checked_date": "2026-11-03",
+  "source_sha256": "1fc2888d7a332cd2edd8898fb36bc42ae353d2a9dd30a50fa9e7d33245e51c3c",
+  "statement_sha256": "371f0501684338c2f35e62c2f7f64807f9a0cb857c31e07e9ce5ad4f8643a4ad",
+  "original_target": {
+    "id": "913",
+    "title": "Does amenability of a locally compact quantum group imply co-amenability of its dual?",
+    "area": "Operator algebras and noncommutative harmonic analysis",
+    "file": "problems/913-does-amenability-of-a-locally-compact-quantum-group-imply-co-amenability-of-its-dual.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8c3838a5a2ea868c",
+    "group": "operators",
+    "source_sha256": "1fc2888d7a332cd2edd8898fb36bc42ae353d2a9dd30a50fa9e7d33245e51c3c",
+    "statement_sha256": "371f0501684338c2f35e62c2f7f64807f9a0cb857c31e07e9ce5ad4f8643a4ad",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\mathbb G`$ be any locally compact quantum group in the sense of Kustermans and Vaes, with von Neumann algebra $`L^\\infty(\\mathbb G)`$, coproduct $`\\Delta`$, and Pontryagin dual $`\\widehat{\\mathbb G}`$. Amenability means that there is an invariant state $`m`$ on $`L^\\infty(\\mathbb G)`$, so $`(m\\otimes\\mathrm{id})\\Delta(x)=m(x)1`$ for all $`x\\in L^\\infty(\\mathbb G)`$.\n\nMust $`\\widehat{\\mathbb G}`$ be **co-amenable**? Equivalently, must $`L^1(\\widehat{\\mathbb G})`$ have a contractive approximate identity, or must the reduced $`C^*`$-algebra $`C_0(\\widehat{\\mathbb G})`$ admit a counit? The reverse implication, co-amenability of the dual implies amenability of $`\\mathbb G`$, is known. The question concerns all locally compact quantum groups, with no compactness, discreteness or Kac-type assumption.",
+  "full_original_page": "# 913. Does amenability of a locally compact quantum group imply co-amenability of its dual?\n\n**Area:** Operator algebras and noncommutative harmonic analysis\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\mathbb G`$ be any locally compact quantum group in the sense of Kustermans and Vaes, with von Neumann algebra $`L^\\infty(\\mathbb G)`$, coproduct $`\\Delta`$, and Pontryagin dual $`\\widehat{\\mathbb G}`$. Amenability means that there is an invariant state $`m`$ on $`L^\\infty(\\mathbb G)`$, so $`(m\\otimes\\mathrm{id})\\Delta(x)=m(x)1`$ for all $`x\\in L^\\infty(\\mathbb G)`$.\n\nMust $`\\widehat{\\mathbb G}`$ be **co-amenable**? Equivalently, must $`L^1(\\widehat{\\mathbb G})`$ have a contractive approximate identity, or must the reduced $`C^*`$-algebra $`C_0(\\widehat{\\mathbb G})`$ admit a counit? The reverse implication, co-amenability of the dual implies amenability of $`\\mathbb G`$, is known. The question concerns all locally compact quantum groups, with no compactness, discreteness or Kac-type assumption.\n\n## Application\n\nThis is the quantum-group analogue of Leptin's characterization of amenable locally compact groups by approximate identities in their Fourier algebras. An affirmative answer would identify ordinary amenability with the stronger dual co-amenability condition used in quantum harmonic analysis.\n\n## References\n\n- J. Crann, [*Amenability and covariant injectivity of locally compact quantum groups II*](https://arxiv.org/html/1507.03296v4), *Canad. J. Math.* **69** (2017), 1064–1086, Introduction. The [original v1](https://arxiv.org/abs/1507.03296v1) also poses the general duality problem while proving the compact/discrete case.\n- J. L. De Ro, [*Equivariant W*-correspondences*](https://cris.vub.be/ws/portalfiles/portal/131616327/Joeri_De_Ro_PhD_thesis.pdf), PhD thesis, Vrije Universiteit Brussel (2025), Section 1.8.1, Proposition 1.8.4 and following paragraph, printed p. 50 (PDF p. 59). This states the known implication and explicitly retains its converse as open in full generality.\n- A. Viselter, [*Amenability of locally compact quantum groups via the long-time behavior of convolution semigroups*](https://arxiv.org/abs/2608.03396), preprint (2026). Its characterization distinguishes amenability and strong amenability; it does not state their general equivalence.\n\n## Status review\n\n\n**Known cases:** Compact/discrete quantum-group duality is established. Covariant injectivity and long-time convolution-semigroup characterizations do not prove general equivalence of amenability and strong amenability, hence do not give coamenability of the dual for every locally compact quantum group.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nCompact/discrete quantum-group duality is established. Covariant injectivity and long-time convolution-semigroup characterizations do not prove general equivalence of amenability and strong amenability, hence do not give coamenability of the dual for every locally compact quantum group.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nCrann's original and final versions prove a new injectivity characterization of amenability and a simpler proof of Tomatsu's compact/discrete duality result, while explicitly leaving the general implication open. The 2025 thesis distinguishes co-amenability, amenability and strong amenability, and expressly says the converse to the known dual implication is not known in full generality. A bounded search through 22 October 2026 found no later complete theorem or announced counterexample for arbitrary locally compact quantum groups. The 2026 convolution-semigroup work and a recent colloquium concern distinct characterizations. This check is not exhaustive certification. The [original body receipt](../FURTHER_problems/_tracking/parallel/rough-filtering/arxiv-body-secondpass-0203-remote-attested-review.json), [current-status audit](../FURTHER_problems/_tracking/quantum-duality-2026-10-22-status.json) and [duplicate audit](../FURTHER_problems/_tracking/quantum-duality-2026-10-22-duplicates.json) retain the evidence and limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-8c3838a5a2ea868c**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"amenability\" \"co-amenability\" \"dual\" \"quantum\" 2026",
+    "\"amenability\" \"co-amenability\" \"dual\" \"quantum\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2608.03396v1",
+      "locator": "TheoremsA–B, lines43–52",
+      "comparison": "TheoremA characterizes ordinary amenability for second countable quantum groups. TheoremB assumes strong amenability (dual coamenability) separately; no general equivalence is proved."
+    }
+  ],
+  "rationale": "TheoremA characterizes ordinary amenability for second countable quantum groups. TheoremB assumes strong amenability (dual coamenability) separately; no general equivalence is proved. No full matching claim found in bounded searches.",
+  "limitations": [
+    "Bounded negative search does not prove openness."
+  ],
+  "announcement_routing": {
+    "localID": "913",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "quantum group",
+          "co-amenability",
+          "coamenability",
+          "strong amenability"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "quantum group",
+          "co-amenability",
+          "coamenability",
+          "strong amenability"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00649v1",
+            "title": "A bridge between analysis on local fields and quantum groups: the noncompact case",
+            "url": "https://hexagonmath.org/abs/2610.00649v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "quantum group",
+        "co-amenability",
+        "coamenability",
+        "strong amenability"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "The local-field/quantum-group bridge uses particular representation-theoretic quantum groups; it does not assert amenability implies dual co-amenability for every locally compact quantum group.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.709Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

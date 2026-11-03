@@ -1,0 +1,107 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "004",
+  "manifest_index": 2,
+  "source_sha256": "3695e24bb2e64d96d57d538be0203686f0bed3e1b4e306de7af4a9bc62bd4535",
+  "statement_sha256": "ceae87473e5a4147509df211ba527fdd9afea0f38c5db852815dae308fb31152",
+  "original_target": {
+    "id": "004",
+    "title": "Pólya–Szegő polygonal Faber–Krahn conjecture",
+    "area": "Spectral shape optimization",
+    "file": "problems/004-polygonal-faber-krahn.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "spectral",
+    "source_sha256": "3695e24bb2e64d96d57d538be0203686f0bed3e1b4e306de7af4a9bc62bd4535",
+    "statement_sha256": "ceae87473e5a4147509df211ba527fdd9afea0f38c5db852815dae308fb31152",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T11:44:35.177559+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Full target is global minimality of the regular n-gon among all simple planar n-gons for every n>=5. The public computer-assisted regular-pentagon release explicitly proves only strict local minimality modulo similarities. Torsional-rigidity and tangential-polygon statements are different targets.",
+  "primary_sources": [
+    {
+      "url": "https://github.com/xfliu/polya-szego-conjecture",
+      "locator": "README, What is proved and scope paragraph",
+      "body_inspected": true,
+      "scope": "Only nearby pentagons, not global pentagons or all n."
+    }
+  ],
+  "queries": [
+    {
+      "query": "polygonal Faber",
+      "providers": [
+        "arXiv",
+        "Zenodo",
+        "HAL",
+        "GitHub",
+        "Palomar",
+        "Hexagon"
+      ],
+      "method": "Focused web searches plus public current-provider metadata routing"
+    },
+    {
+      "query": "pentagon",
+      "providers": [
+        "arXiv",
+        "Zenodo",
+        "HAL",
+        "GitHub",
+        "Palomar",
+        "Hexagon"
+      ],
+      "method": "Focused web searches plus public current-provider metadata routing"
+    },
+    {
+      "query": "Polya",
+      "providers": [
+        "arXiv",
+        "Zenodo",
+        "HAL",
+        "GitHub",
+        "Palomar",
+        "Hexagon"
+      ],
+      "method": "Focused web searches plus public current-provider metadata routing"
+    },
+    {
+      "query": "Pólya",
+      "providers": [
+        "arXiv",
+        "Zenodo",
+        "HAL",
+        "GitHub",
+        "Palomar",
+        "Hexagon"
+      ],
+      "method": "Focused web searches plus public current-provider metadata routing"
+    }
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "revision": 735,
+      "entries": 954,
+      "complete_listing": true,
+      "scope": "Searched current public summaries; full definitions only where candidate relevant."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "entries": 646,
+      "complete_listing": true,
+      "scope": "Current metadata searched; Xi/character-sum Polya and point-billiard hits are different targets."
+    },
+    "OpenAI": {
+      "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+      "scope": "Current manuscript routing index inspected, not proof audit of every manuscript."
+    }
+  },
+  "limitations": [
+    "Bounded search cannot establish that no solution exists.",
+    "Provider metadata coverage is not a full proof review."
+  ],
+  "canonical_update_required": false
+}

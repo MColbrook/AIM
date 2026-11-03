@@ -1,0 +1,78 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "061",
+  "manifest_index": 44,
+  "original_target": {
+    "id": "061",
+    "title": "Invertibility of the Pestov–Uhlmann reconstruction operator",
+    "area": "Integral geometry and computational tomography",
+    "file": "problems/061-pestov-uhlmann-fredholm-invertibility.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-08",
+    "group": "inverse",
+    "source_sha256": "61a7e764b832407d1ee8e1a3c95efdb0f5d84f928a09509672f7fb186d46646b",
+    "statement_sha256": "7d63e45e21b710c5a1453e276bbe226a2fdacf58c3bb014cd2323ee278192f12",
+    "state": "unreviewed"
+  },
+  "source_sha256": "61a7e764b832407d1ee8e1a3c95efdb0f5d84f928a09509672f7fb186d46646b",
+  "statement_sha256": "7d63e45e21b710c5a1453e276bbe226a2fdacf58c3bb014cd2323ee278192f12",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:36:53.660069+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The exact Fredholm-kernel question remains Open problem3 in the primary book, p339. W being smoothing gives Fredholmness but not zero kernel. Monard's numerical Neumann inversion uses a contraction estimate near constant curvature, which does not prove invertibility for every simple surface.",
+  "primary_sources": [
+    {
+      "url": "https://www.dpmms.cam.ac.uk/~gpp24/GIP2D_driver.pdf",
+      "locator": "§15.1, printed p339, Open problem3.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/pdf/1309.6042",
+      "locator": "§3.3, error-operator contraction and Neumann series3.4–3.5.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "Pestov",
+    "Uhlmann"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Pestov",
+        "Uhlmann"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-09-13-000002",
+          "title": "An Infinite Simple Group with Property (T) That Is Sofic and Hyperlinear"
+        }
+      ],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Pestov",
+        "Uhlmann"
+      ],
+      "metadata_hits": [],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted web searches; arXiv, Zenodo, HAL, GitHub, shared OpenAI current index and requested Colbrook author lists screened. No matching complete claim located.",
+  "limitations": [
+    "Bounded search cannot establish absence of unindexed solutions.",
+    "No end-to-end proof or Lean verification; clearly excluding source hypotheses can be established by a primary abstract."
+  ],
+  "canonical_update_required": false
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "798",
+  "manifest_index": 642,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "798",
+    "title": "Uniqueness of the Blaschke critical conformal structure",
+    "area": "Projective differential geometry / geometric variational problems",
+    "file": "problems/798-uniqueness-of-the-blaschke-critical-conformal-structure.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-73e547ec77403dd4",
+    "group": "geometry-topology",
+    "source_sha256": "9de4e1e7cc0606348f964dca64f26656409f192239f21cd8cfe45f94a9f393c8",
+    "statement_sha256": "19c05a72b7989a560ebeffc3792cbb3105e13f6f7ba4e1d0c66804d63f2441d3",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9de4e1e7cc0606348f964dca64f26656409f192239f21cd8cfe45f94a9f393c8",
+  "statement_sha256": "19c05a72b7989a560ebeffc3792cbb3105e13f6f7ba4e1d0c66804d63f2441d3",
+  "actual_source_sha256": "9de4e1e7cc0606348f964dca64f26656409f192239f21cd8cfe45f94a9f393c8",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Sigma`$ be a connected closed oriented smooth surface with $`\\chi(\\Sigma)<0`$, and let $`\\mathfrak p`$ be a properly convex projective structure. This means that $`\\Sigma`$ is a quotient $`\\Omega/\\Gamma`$, where $`\\Omega\\subset\\mathbb{RP}^2`$ is convex and bounded in an affine chart and $`\\Gamma`$ acts freely and cocompactly by projective transformations. The projective structure specifies an equivalence class of torsion-free connections with the same unparametrized geodesics.\n\nHere is an explicit definition of Mettler's conformally invariant functional. For a tensor $`T\\in\\Gamma(S^2T^*\\Sigma\\otimes T\\Sigma)`$ put\n\n```math\n(T_0)^k{}_{ij}=T^k{}_{ij}-\\frac13\\left(\\delta_i^kT^\\ell{}_{j\\ell}+\\delta_j^kT^\\ell{}_{i\\ell}\\right).\n```\n\nChoose any $`\\nabla\\in\\mathfrak p`$ and any smooth Riemannian metric $`g`$. Write $`D^g`$ for its Levi-Civita connection and define\n\n```math\nB=(\\nabla-D^g)_0,\\qquad\nX_g^k=\\frac34 g^{ij}B^k{}_{ij},\\qquad\nA_{[g]}=(\\nabla-D^g-g\\otimes X_g)_0,\n\\qquad(g\\otimes X_g)^k{}_{ij}=g_{ij}X_g^k.\n```\n\nThe tensor $`A_{[g]}`$ is independent of the representative $`\\nabla`$ and of replacing $`g`$ by $`e^{2f}g`$. The functional\n\n```math\n\\mathcal E_{\\mathfrak p}([g])\n =\\int_\\Sigma |A_{[g]}|_g^2\\,d\\mu_g\n```\n\ntherefore depends only on the smooth conformal structure $`[g]`$. Call $`[g]`$ critical when\n\n```math\n\\left.\\frac d{dt}\\right|_{t=0}\\mathcal E_{\\mathfrak p}([g_t])=0\n```\n\nfor every smooth family of Riemannian metrics $`g_t`$ with $`g_0=g`$. These variations may change the conformal structure; the space is not quotiented by diffeomorphisms.\n\nLet $`g_B`$ be the Blaschke metric of the properly convex projective surface. It is the metric induced by the canonical complete hyperbolic affine sphere asymptotic to the cone over $`\\Omega`$, normalized to affine mean curvature $`-1`$; its induced metric descends to $`\\Sigma`$. Its conformal class is known to be critical.\n\n**Must every critical conformal structure satisfy $`[g]=[g_B]`$?**\n\nThis is Mettler's published Remark 5.5, without an added closedness assumption on the Weyl connection associated with the competing conformal structure.",
+  "full_local_page_read": true,
+  "queries": [
+    "Mettler \"Blaschke\" \"critical\" uniqueness 2026",
+    "\"Mettler\" \"critical\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Blaschke\" \"critical\" (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Mettler\" \"extremal conformal\" 2026 uniqueness"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Author reformat created26May2026, final2020 article; new2605.10308v1 dated11May2026 remains only version on current abs record.",
+      "url": "https://www.mettler.xyz/docs/articles/A18_print.pdf",
+      "scope_comparison": "Remark5.5 retains precisely uniqueness of the Blaschke conformal class as critical point of Ep. Its predecessor theorem assumes a closed associated Weyl structure. The new 2026 functional is defined using Phi_g on metrics; Corollary3.4 and §4.2 solve conformal variations inside each fixed class, via a Poisson equation, with uniqueness up to homothety. This neither varies all conformal structures for Ep nor removes the closed-Weyl condition. Harmonic-map uniqueness concerns Erho; Remark5.4 explicitly leaves its relation to Ep unresolved. No complete matching claim found.",
+      "locator": "Actual concluding Remarks5.4–5.6 pp36–37; https://arxiv.org/html/2605.10308v1 §3.2 Corollary3.4 and §4.2 proof of TheoremB",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Remark5.5 retains precisely uniqueness of the Blaschke conformal class as critical point of Ep. Its predecessor theorem assumes a closed associated Weyl structure. The new 2026 functional is defined using Phi_g on metrics; Corollary3.4 and §4.2 solve conformal variations inside each fixed class, via a Poisson equation, with uniqueness up to homothety. This neither varies all conformal structures for Ep nor removes the closed-Weyl condition. Harmonic-map uniqueness concerns Erho; Remark5.4 explicitly leaves its relation to Ep unresolved. No complete matching claim found.",
+  "latest_version_check": "Author reformat created26May2026, final2020 article; new2605.10308v1 dated11May2026 remains only version on current abs record.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

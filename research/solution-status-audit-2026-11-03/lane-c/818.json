@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "818",
+  "manifest_index": 662,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "818",
+    "title": "Hyperbolicity of general vortex thermostats",
+    "area": "Geometric dynamics / nonequilibrium statistical mechanics",
+    "file": "problems/818-hyperbolicity-of-general-vortex-thermostats.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-9796630f3987038e",
+    "group": "geometry-topology",
+    "source_sha256": "79f9892f1c04fec0fbcafcc3c01a8c34b8e73fe8635fae2fc76d39244fcfa78a",
+    "statement_sha256": "e7d09863ff89e16ddde849702fce87a92d9c51dd06e2912b6f522e667e9fed8a",
+    "state": "unreviewed"
+  },
+  "source_sha256": "79f9892f1c04fec0fbcafcc3c01a8c34b8e73fe8635fae2fc76d39244fcfa78a",
+  "statement_sha256": "e7d09863ff89e16ddde849702fce87a92d9c51dd06e2912b6f522e667e9fed8a",
+  "actual_source_sha256": "79f9892f1c04fec0fbcafcc3c01a8c34b8e73fe8635fae2fc76d39244fcfa78a",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`(M,g)`$ be any connected closed oriented smooth Riemannian surface with $`\\chi(M)<0`$. Write $`SM`$ for its unit tangent bundle, $`X`$ for the geodesic vector field, $`V`$ for positive rotation of the unit vector, and $`H=[V,X]`$.\n\nChoose positive coprime integers $`m,n`$, put $`\\ell=m/n`$, and choose an $`n`$-th root $`P\\to M`$ of $`SM`$. Explicitly, $`P`$ is a principal circle bundle and $`\\rho:P\\to SM`$ is an $`n`$-fold covering over $`M`$ satisfying\n\n```math\n\\rho(p\\cdot e^{it})=\\rho(p)\\cdot e^{int}.\n```\n\nLift $`X,H,V`$ to $`P`$ using $`d\\rho`$. In particular, the lifted $`V`$ is $`1/n`$ times the infinitesimal generator of the principal circle action on $`P`$.\n\nFor a smooth real one-form $`\\theta`$ on $`M`$, let $`\\vartheta(p)=\\theta_x(v)`$ when $`\\rho(p)=(x,v)`$. Let $`a\\in C^\\infty(P;\\mathbb R)`$ satisfy, with $`K_g`$ pulled back to $`P`$,\n\n```math\nVVa=-(1+\\ell)^2a,\n```\n\n```math\nK_g=-1-X\\vartheta-HV\\vartheta\n +\\ell\\left(a^2+\\frac{(Va)^2}{(1+\\ell)^2}\\right),\n```\n\n```math\n\\frac{XVa}{1+\\ell}\n =Ha+\\frac{\\ell\\vartheta Va}{1+\\ell}-\\ell aV\\vartheta.\n```\n\nThese are the real equations for the general vortex thermostats of Mettler and Paternain, after normalizing the Hermitian metric by a real gauge transformation. They allow fractional differentials of degree $`1+\\ell`$.\n\n**Is the flow $`\\phi_t`$ of every vector field**\n\n```math\nF=X+(a-V\\vartheta)V\n```\n\n**in this class Anosov?** Precisely, must there exist continuous $`d\\phi_t`$-invariant line bundles $`E^s,E^u`$ with\n\n```math\nTP=\\mathbb RF\\oplus E^s\\oplus E^u\n```\n\nand constants $`C,c>0`$ such that, for every $`t\\ge0`$,\n\n```math\n\\|d\\phi_t|_{E^s}\\|\\le Ce^{-ct},\\qquad\n\\|d\\phi_{-t}|_{E^u}\\|\\le Ce^{-ct}?\n```\n\nThe constants may depend on all the chosen data. The question includes arbitrary $`\\theta`$; it does not assume that all closed orbits are already hyperbolic saddles.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"vortex thermostats\" Anosov 2026",
+    "\"vortex thermostats\" Anosov (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"vortex thermostats\" Anosov (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"vortex thermostats\" 2026 Anosov quasi Fuchsian"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Current author reformat created26May2026, journalETDS42(2022)1781–1806. Later2501.10591 latestv3dated4February2026 checked against actual theorem.",
+      "url": "https://www.mettler.xyz/docs/articles/A20_print.pdf",
+      "scope_comparison": "General source provides dominated splitting and Anosovness if closed orbits all saddles; holomorphic-bundle isomorphism is explicitly equivalent to theta=0. Arbitrary theta in target is not covered. Later quasi-Fuchsian theorem uses holomorphic quadratic differentials solving coupled equations without theta and on SM; it does not treat every fractional root-bundle thermostat. Torus non-Anosov examples fail chi<0 and vortex constraints. No complete matching announcement found.",
+      "locator": "Actual TheoremsA–B§1.4 and real equations5.2§5; https://arxiv.org/html/2501.10591v3 Theorem1.1",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "General source provides dominated splitting and Anosovness if closed orbits all saddles; holomorphic-bundle isomorphism is explicitly equivalent to theta=0. Arbitrary theta in target is not covered. Later quasi-Fuchsian theorem uses holomorphic quadratic differentials solving coupled equations without theta and on SM; it does not treat every fractional root-bundle thermostat. Torus non-Anosov examples fail chi<0 and vortex constraints. No complete matching announcement found.",
+  "latest_version_check": "Current author reformat created26May2026, journalETDS42(2022)1781–1806. Later2501.10591 latestv3dated4February2026 checked against actual theorem.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

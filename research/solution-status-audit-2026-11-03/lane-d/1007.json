@@ -1,0 +1,99 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1007",
+  "manifest_index": 851,
+  "checked_date": "2026-11-03",
+  "source_sha256": "2652dff178ed24b8c77a6bbfc86cd688b549b273c21a5182e51baa5633ce5b5a",
+  "statement_sha256": "1fd3aaef38cc41c44f36789523850b71924136dd6bc96177617fc7a5b4fccd4e",
+  "original_target": {
+    "id": "1007",
+    "title": "Embedded eigenvalues in asymptotically flat twisted strips",
+    "area": "Spectral geometry and waveguides",
+    "file": "problems/1007-embedded-eigenvalues-in-asymptotically-flat-twisted-strips.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-037f4347aa864e41",
+    "group": "spectral",
+    "source_sha256": "2652dff178ed24b8c77a6bbfc86cd688b549b273c21a5182e51baa5633ce5b5a",
+    "statement_sha256": "1fd3aaef38cc41c44f36789523850b71924136dd6bc96177617fc7a5b4fccd4e",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Consider the all-Dirichlet Laplace–Beltrami operator $`H`$ on the abstract Riemannian strip $`\\Omega_0=\\mathbb R\\times(-a,a)`$, with metric induced by the ruled-surface immersion\n\n```math\n\\Omega=\\{\\Gamma(s)+tN_{\\Theta}(s):s\\in\\mathbb R,\\ -a<t<a\\}\\subset\\mathbb R^{n+1},\n```\n\n\nwith $`n\\geq2`$, $`a>0`$, a unit-speed $`C^{1,1}`$ reference curve $`\\Gamma`$, and a Lipschitz unit normal field $`N_{\\Theta}`$ built from a relatively parallel normal frame as in Krejčiřík–Zahradová. Thus self-intersections of the image do not identify points of $`\\Omega_0`$. Write $`k(s)`$ for the curvature vector and $`\\Theta(s)`$ for the unit twisting vector. Under **all the hypotheses of their Corollary 5.3**—in particular $`k\\cdot\\Theta=0`$, $`\\Theta'\\not\\equiv0`$, $`a\\|\\Theta'\\|_{L^\\infty}\\leq\\sqrt2`$, and $`|\\Theta'(s)|\\to0`$ as $`|s|\\to\\infty`$—does $`H`$ have **no eigenvalues strictly above** $`E_1=(\\pi/2a)^2`$?\n\nThis is the unresolved point-spectrum part of their published Open Problem 5.6. The source asks about $`[E_1,\\infty)`$, but its proven Hardy inequality $`H-E_1\\geq c/(1+s^2)`$ already excludes an eigenfunction at $`E_1`$. The separate resonance question in Open Problem 5.6 is not part of this entry.",
+  "full_original_page": "# 1007. Embedded eigenvalues in asymptotically flat twisted strips\n\n**Area:** Spectral geometry and waveguides\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nConsider the all-Dirichlet Laplace–Beltrami operator $`H`$ on the abstract Riemannian strip $`\\Omega_0=\\mathbb R\\times(-a,a)`$, with metric induced by the ruled-surface immersion\n\n```math\n\\Omega=\\{\\Gamma(s)+tN_{\\Theta}(s):s\\in\\mathbb R,\\ -a<t<a\\}\\subset\\mathbb R^{n+1},\n```\n\n\nwith $`n\\geq2`$, $`a>0`$, a unit-speed $`C^{1,1}`$ reference curve $`\\Gamma`$, and a Lipschitz unit normal field $`N_{\\Theta}`$ built from a relatively parallel normal frame as in Krejčiřík–Zahradová. Thus self-intersections of the image do not identify points of $`\\Omega_0`$. Write $`k(s)`$ for the curvature vector and $`\\Theta(s)`$ for the unit twisting vector. Under **all the hypotheses of their Corollary 5.3**—in particular $`k\\cdot\\Theta=0`$, $`\\Theta'\\not\\equiv0`$, $`a\\|\\Theta'\\|_{L^\\infty}\\leq\\sqrt2`$, and $`|\\Theta'(s)|\\to0`$ as $`|s|\\to\\infty`$—does $`H`$ have **no eigenvalues strictly above** $`E_1=(\\pi/2a)^2`$?\n\nThis is the unresolved point-spectrum part of their published Open Problem 5.6. The source asks about $`[E_1,\\infty)`$, but its proven Hardy inequality $`H-E_1\\geq c/(1+s^2)`$ already excludes an eigenfunction at $`E_1`$. The separate resonance question in Open Problem 5.6 is not part of this entry.\n\n## Application\n\nThe model tests whether geometric twisting can prevent a waveguide from supporting a localized bound state whose energy lies inside its propagating spectrum.\n\n## Known results and scope\n\nTheorem 5.1 gives the positive Hardy bound. Corollary 5.3 proves $`\\sigma(H)=\\sigma_{\\mathrm{ess}}(H)=[E_1,\\infty)`$ and excludes discrete eigenvalues below the continuum; it does **not** determine whether $`\\sigma_{\\mathrm p}(H)\\cap(E_1,\\infty)`$ is empty. Results for planar mixed-boundary strips, solid tubes, quasi-conical domains or asymptotically diverging twist do not answer this all-Dirichlet, asymptotically flat ruled-strip question.\n\n## References\n\n1. D. Krejčiřík and K. Zahradová, [*Quantum strips in higher dimensions*](https://files.ele-math.com/articles/oam-14-41.pdf), *Operators and Matrices* **14** (2020), 635–665, [DOI:10.7153/oam-2020-14-41](https://doi.org/10.7153/oam-2020-14-41), Eq. (3.1), Theorem 5.1, Corollary 5.3 and Open Problem 5.6 (printed p. 654). [Original arXiv version](https://arxiv.org/abs/1906.02431v1).\n2. D. Krejčiřík, [*Spectral geometry: old questions and new answers*](https://arxiv.org/html/2609.28602v1), arXiv:2609.28602v1 (2026), Section 2.3. This survey's embedded-eigenvalue discussion uses different domain geometries.\n\n## Status review\n\n\n**Known cases:** The asymptotically flat nontrivially twisted strip has all Corollary 5.3 hypotheses and only eigenvalues strictly above threshold are asked. Other waveguide geometries and the known Hardy threshold exclusion do not settle embedded point spectrum here.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe asymptotically flat nontrivially twisted strip has all Corollary 5.3 hypotheses and only eigenvalues strictly above threshold are asked. Other waveguide geometries and the known Hardy threshold exclusion do not settle embedded point spectrum here.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe published paper retains the exact question. Targeted later-primary, proof, counterexample and announcement searches through 23 October 2026 found no matching complete answer for the stated strip class. A semantic check found no matching AIM or admitted FURTHER problem; AIM 095 concerns a different perturbed-periodic Schrödinger setting. These checks are bounded and cannot establish absence of all results. The [source and status audit](../FURTHER_problems/_tracking/arxiv2139-two-candidate-independent-audit-2026-10-23.json) records the verified scope and limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-037f4347aa864e41**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "twisted strips",
+    "Zahradova",
+    "embedded eigenvalues"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"twisted strips\" \"embedded eigenvalues\" 2026"
+    },
+    {
+      "query": "\"twisted strips\" \"embedded eigenvalues\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://files.ele-math.com/articles/oam-14-41.pdf",
+      "locator": "published2020 OpenProblem5.6 printedp654, Corollary5.3; 2609.28602v1Section2.3"
+    }
+  ],
+  "scope_comparison": "Actual published question retains absence of embedded spectrum under every Corollary5.3 hypothesis. Hardy bound excludes threshold only. Diverging-twist strips, solid tubes, and quasi-conical survey examples have different geometric asymptotics and do not settle the target above threshold.",
+  "recommendation": "Retain partial status; bounded current searches located no matching complete resolution.",
+  "limitations": "Not proof of openness or certification of all cited proofs; inaccessible irrelevant/restricted comparisons do not themselves create a hold.",
+  "announcement_routing": {
+    "localID": "1007",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "twisted strips",
+          "Zahradova",
+          "embedded eigenvalues"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "twisted strips",
+          "Zahradova",
+          "embedded eigenvalues"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "twisted strips",
+        "Zahradova",
+        "embedded eigenvalues"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 286,
+  "source_sha256": "d57425d5b47af06f829447374fc57da6290a4baa6f0f95888e4b83a946ffad3a",
+  "statement_sha256": "a53aebd4b113161031ba51611220e56a58f8da429b8fcb012d8d048b74ade687",
+  "original_target": {
+    "id": "349",
+    "title": "The ball as the least densely packable convex solid",
+    "area": "Convex geometry and particle packing",
+    "file": "problems/349-ulam-convex-solid-packing.md",
+    "status": "Open",
+    "last_checked": "2026-09-19",
+    "group": "diffusion-materials",
+    "source_sha256": "d57425d5b47af06f829447374fc57da6290a4baa6f0f95888e4b83a946ffad3a",
+    "statement_sha256": "a53aebd4b113161031ba51611220e56a58f8da429b8fcb012d8d048b74ade687",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "349",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Ulam\" \"packing\" conjecture 2026 proof",
+    "\"Ulam\" \"packing conjecture\" proof site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1305.0289v2",
+      "version": "v2 9 December 2014; published Geometry & Topology 2015",
+      "locators": "Theorem 3 p.10; section 1",
+      "body_inspected": true,
+      "scope": "Direction-dependent positive lambda interval for Minkowski perturbations of the ball, not arbitrary endpoint body."
+    },
+    {
+      "url": "https://msp.org/gt/2015/19-1/gt-v19-n1-p07-p.pdf",
+      "version": "published 2015",
+      "locators": "Problem 3 and local/global discussion pp.344–345",
+      "body_inspected": true,
+      "scope": "Global three-dimensional pessimal packing problem distinguished from local results."
+    }
+  ],
+  "registry_checks": "Palomar Ulam matches are Kuratowski-Ulam topology; Hexagon Ulam floating-body problem; OpenAI Ulam stability group-theory results. No matching packing metadata. Focused arXiv, primary author/publisher, Zenodo, HAL and GitHub searches.",
+  "scope_comparison": "Target includes all convex solids under arbitrary O(3) congruences, no symmetry/near-sphere condition. Local directional/lattice results do not establish global lower density pi/sqrt18. Reinhardt planar packing and random protocols are different objectives.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; primary local theorem does not extend to all shapes."
+}

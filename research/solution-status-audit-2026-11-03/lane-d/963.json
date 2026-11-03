@@ -1,0 +1,116 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "963",
+  "manifest_index": 807,
+  "checked_date": "2026-11-03",
+  "source_sha256": "0bd8e63507cedf5338d9e9ceaa7e73fc6305c90728ec0d5e423b19ce7e1c1bcd",
+  "statement_sha256": "5d53e01c4d900fe0a9d23ca8ade701e7eac5f795b9c96f38b6a54695a1c2b9ce",
+  "original_target": {
+    "id": "963",
+    "title": "Sharp metric entropy for an infinitely flat scalar conservation law",
+    "area": "Nonlinear conservation laws and quantitative compactness",
+    "file": "problems/963-sharp-metric-entropy-for-an-infinitely-flat-scalar-conservation-law.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-fcf1f790b571c652",
+    "group": "pdes-materials",
+    "source_sha256": "0bd8e63507cedf5338d9e9ceaa7e73fc6305c90728ec0d5e423b19ce7e1c1bcd",
+    "statement_sha256": "5d53e01c4d900fe0a9d23ca8ade701e7eac5f795b9c96f38b6a54695a1c2b9ce",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Define\n\n```math\na(0)=0,\\qquad a(s)=e^{-1/s^2}\\ (s\\ne0),\\qquad f(u)=\\int_0^u a(s)\\,ds.\n```\n\nLet $`S_t`$ be the Kružkov entropy-solution semigroup for\n\n```math\n\\partial_tu+\\partial_x f(u)=0\\qquad\\text{on }(0,\\infty)\\times\\mathbb R.\n```\n\nThus the bounded distributional solutions satisfy, for every $`k\\in\\mathbb R`$,\n\n```math\n\\partial_t|u-k|+\\partial_x\\big[\\mathrm{sgn}(u-k)(f(u)-f(k))\\big]\\le0,\n```\n\nand attain the initial datum in $`L^1(\\mathbb R)`$. Set\n\n```math\n\\mathcal C=\\{u_0\\in L^\\infty(\\mathbb R):\\mathrm{ess\\,supp}u_0\\subset[-1,1],\\ \\|u_0\\|_\\infty\\le1\\},\n\\qquad K=S_1(\\mathcal C).\n```\n\nFor $`\\varepsilon>0`$, let $`N_\\varepsilon(K)`$ be the minimum number of subsets of $`L^1(\\mathbb R)`$, each of diameter at most $`2\\varepsilon`$, needed to cover $`K`$, and put $`H_\\varepsilon(K)=\\log_2N_\\varepsilon(K)`$.\n\n**Determine the asymptotic order of $`H_\\varepsilon(K)`$ as $`\\varepsilon\\downarrow0`$:** obtain upper and lower estimates with the same dependence on $`\\varepsilon`$, up to positive multiplicative constants independent of $`\\varepsilon`$. No particular rate is conjectured here.\n\nThis is a restricted prototype of the sharpness question in [1], with the flux, amplitude, support and observation time fixed. Signed initial data are allowed, with no initial bounded-variation assumption. The covering convention above is part of the question; changes in the argument of a rapidly growing rate cannot silently be absorbed into multiplicative constants.",
+  "full_original_page": "# 963. Sharp metric entropy for an infinitely flat scalar conservation law\n\n**Area:** Nonlinear conservation laws and quantitative compactness\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nDefine\n\n```math\na(0)=0,\\qquad a(s)=e^{-1/s^2}\\ (s\\ne0),\\qquad f(u)=\\int_0^u a(s)\\,ds.\n```\n\nLet $`S_t`$ be the Kružkov entropy-solution semigroup for\n\n```math\n\\partial_tu+\\partial_x f(u)=0\\qquad\\text{on }(0,\\infty)\\times\\mathbb R.\n```\n\nThus the bounded distributional solutions satisfy, for every $`k\\in\\mathbb R`$,\n\n```math\n\\partial_t|u-k|+\\partial_x\\big[\\mathrm{sgn}(u-k)(f(u)-f(k))\\big]\\le0,\n```\n\nand attain the initial datum in $`L^1(\\mathbb R)`$. Set\n\n```math\n\\mathcal C=\\{u_0\\in L^\\infty(\\mathbb R):\\mathrm{ess\\,supp}u_0\\subset[-1,1],\\ \\|u_0\\|_\\infty\\le1\\},\n\\qquad K=S_1(\\mathcal C).\n```\n\nFor $`\\varepsilon>0`$, let $`N_\\varepsilon(K)`$ be the minimum number of subsets of $`L^1(\\mathbb R)`$, each of diameter at most $`2\\varepsilon`$, needed to cover $`K`$, and put $`H_\\varepsilon(K)=\\log_2N_\\varepsilon(K)`$.\n\n**Determine the asymptotic order of $`H_\\varepsilon(K)`$ as $`\\varepsilon\\downarrow0`$:** obtain upper and lower estimates with the same dependence on $`\\varepsilon`$, up to positive multiplicative constants independent of $`\\varepsilon`$. No particular rate is conjectured here.\n\nThis is a restricted prototype of the sharpness question in [1], with the flux, amplitude, support and observation time fixed. Signed initial data are allowed, with no initial bounded-variation assumption. The covering convention above is part of the question; changes in the argument of a rapidly growing rate cannot silently be absorbed into multiplicative constants.\n\n## Application\n\nCovering entropy measures the number of bits needed to represent an entire solution family at a given accuracy. Sharp estimates help identify how much information a numerical method must retain when the flux is extremely weakly nonlinear near an inflection point.\n\n## References\n\n1. Fabio Ancona, Olivier Glass and Khai T. Nguyen, *Quantitative compactness estimate for scalar conservation laws with nonconvex fluxes*, in [*Hyperbolic Problems: Theory, Numerics, Applications (HYP2018)*](https://www.aimsciences.org/book/AM/volume/26), edited by A. Bressan, M. Lewicka, D. Wang and Y. Zheng, AIMS Series on Applied Mathematics **10** (2020), 248–255. Definition 1.1 and data class (3), p. 249; Theorem 3.1, p. 253; Remark 1, p. 254.\n2. Rossana Capuani, Prerona Dutta and Khai T. Nguyen, [*Metric entropy for functions of bounded total generalized variation*](https://arxiv.org/abs/1912.00219v3), latest inspected preprint v3, 18 November 2020. Section 3.2, Theorem 3.7, Remark 3.8, Proposition 3.2 and Remark 3.9. Published in *SIAM Journal on Mathematical Analysis* **53** (2021), 1168–1190; final-body parity remains unreviewed.\n3. Fabio Ancona, Olivier Glass and Khai T. Nguyen, [*On Kolmogorov entropy compactness estimates for scalar conservation laws without uniform convexity*](https://arxiv.org/abs/1806.07758), eligible 2018 preprint. The inspected author-version assumptions and Theorems 1.2 and 1.5 concern convex fluxes or a single inflection with finite polynomial degeneracy.\n4. Fabio Ancona, Alessio Basti and Fabio Camilli, [*Kolmogorov epsilon-entropy of numerical solutions for scalar conservation laws with convex flux*](https://arxiv.org/abs/2605.07427v1), 8 May 2026, model assumption (2.2) and Theorem 2.1.\n\n## Status review\n\n\n**Known cases:** The fixed infinitely flat nonconvex flux and exact epsilon-order are essential. Polynomial-degeneracy and convex numerical-scheme entropy bounds do not furnish matching rates for this class.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe fixed infinitely flat nonconvex flux and exact epsilon-order are essential. Polynomial-degeneracy and convex numerical-scheme entropy bounds do not furnish matching rates for this class.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nHere $`f''(u)=2u^{-3}e^{-1/u^2}`$ for $`u\\ne0`$, so $`f`$ is concave to the left of zero and convex to its right. Every derivative at zero vanishes. It has no affine interval and satisfies the weak genuine nonlinearity condition used for compactness in [1]. Bounded characteristic speed, the maximum principle and that compactness result give finite covering numbers for $`K`$.\n\nThe finite-polynomial sharp estimates in [1] and [3] do not include this flux. The general PDE application in [2] supplies an upper bound, and its Remark 3.8 states that this bound is generally not optimal. Sharp lower estimates for a larger generalized-variation class do not automatically give lower estimates for its smaller PDE-image subset. Splitting positive and negative states also does not decouple entropy solutions across sign-changing shocks. The numerical results in [4] assume a uniformly strictly convex flux.\n\nNo matching complete rate or announcement for this precise prototype was located in the recorded bounded checks. Several final-body and cited-proof checks remain pending; these reviews do not certify that no resolution exists.\n\nThe [source review](../FURTHER_problems/_tracking/parallel/continuum/flat-inflection-entropy-review.json), [independent audit](../FURTHER_problems/_tracking/parallel/complex-bayesian/cross-flat-inflection-entropy-review.json), [current comparisons](../FURTHER_problems/_tracking/flat-inflection-entropy-current-comparisons-2026-10-19.json), [semantic comparison](../FURTHER_problems/_tracking/flat-inflection-entropy-duplicates-review-2026-10-19.json), [catalogue review](../FURTHER_problems/_tracking/flat-inflection-entropy-catalogue-review-2026-10-19.json) and [coordinator review](../FURTHER_problems/_tracking/flat-inflection-entropy-coordinator-review-2026-10-19.json) record scope and limits. These are AI checks, not human peer review.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-fcf1f790b571c652**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scope passages inspected, not full proof certification."
+  ],
+  "aliases": [
+    "metric entropy",
+    "Ancona",
+    "nonconvex flux"
+  ],
+  "queries": [
+    "\"metric entropy\" \"infinitely flat\" conservation law",
+    "\"metric entropy\" \"infinitely flat\" conservation law; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"metric entropy\" \"Ancona\" \"nonconvex\" 2026",
+    "\"Ancona\" \"nonconvex fluxes\" \"entropy\" 2026"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1912.00219v3",
+      "locator": "18Nov2020v3 Theorem3.7/Remark3.8 nativepp22–23 lines3011–3045",
+      "comparison": "PDE image upper bound explicitly not optimal in general; subsequent polynomial-degeneracy sharp discussion requires a finite nonzero derivative at inflection, excluding exp(-1/s^2). Larger variation-class lower bounds need not hold for PDE-image subset."
+    },
+    {
+      "url": "https://arxiv.org/html/2605.07427v1",
+      "locator": "8May2026 equation2.2/section2 lines94–100",
+      "comparison": "Actual 2026 entropy theorem assumes uniformly strictly convex f''>=c>0 and numerical-grid conditions, excluding fixed infinitely flat sign-changing convexity."
+    }
+  ],
+  "rationale": "No matching exact epsilon-order for this fixed nonconvex infinitely flat flux located; changes in argument epsilon cannot be absorbed into rate constants.",
+  "announcement_routing": {
+    "localID": "963",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "metric entropy",
+          "Ancona",
+          "nonconvex flux"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "metric entropy",
+          "Ancona",
+          "nonconvex flux"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "metric entropy",
+        "Ancona",
+        "nonconvex flux"
+      ],
+      "hits": [
+        {
+          "entry": "146",
+          "title": "Sinai's positive-entropy conjecture for the standard map",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Positive-Metric-Entropy-for-the-Standard-Map-at-Large-Parameters-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "329",
+          "title": "A counterexample to Pietsch's metric-entropy duality conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Counterexamples-to-the-duality-conjecture-for-metric-entropy-September-24-2026/main.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Sinai positive entropy is for a dynamical standard map, and Pietsch entropy duality is a convex-body covering problem. Neither estimates the Kolmogorov entropy of the solution semigroup for the specified infinitely flat scalar flux.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.741Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

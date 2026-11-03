@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "542",
+  "manifest_index": 422,
+  "original_target": {
+    "id": "542",
+    "title": "Optimal stable manifold widths of Besov balls",
+    "area": "Stable nonlinear approximation and numerical analysis",
+    "file": "problems/542-stable-manifold-widths-besov.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "numerical-analysis",
+    "source_sha256": "0cc39b0c4e22dafcd0c6a626a20fb889c085a5bfc7bdd5d0e312e7a1dd332875",
+    "statement_sha256": "46c94a66137a34cdfd9f1109d892ed6d5e7c09d231dd392b554c63c038e647fd",
+    "state": "unreviewed"
+  },
+  "source_sha256": "0cc39b0c4e22dafcd0c6a626a20fb889c085a5bfc7bdd5d0e312e7a1dd332875",
+  "statement_sha256": "46c94a66137a34cdfd9f1109d892ed6d5e7c09d231dd392b554c63c038e647fd",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:46:33.265569+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Theorem 4.1 supplies Hilbert-space upper bounds at gamma=2; section 6.4 equation 6.15 leaves the general Besov/Sobolev upper bound, especially p!=2. Ordinary manifold widths with continuous maps, decoder-only Lipschitz/Hölder widths, and n-dependent stability constants do not satisfy the target's two fixed-gamma Lipschitz maps.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2009.09907",
+      "locator": "Theorem 4.1, section 6.4 equation 6.15; current v1, 21 September 2020",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2402.04407v4",
+      "locator": "Definition of ordinary manifold width and Theorem 2; v4, 5 July 2024",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"stable manifold widths\" \"Besov\" 2026",
+    "\"stable manifold widths\" Besov upper (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"stable manifold widths\" \"Besov\" solution announcement"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "stable manifold widths"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "stable manifold widths"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Final 2022 body parity limited to publisher metadata/abstract."
+  ],
+  "canonical_update_required": false
+}

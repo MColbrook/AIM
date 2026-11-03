@@ -1,0 +1,45 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 259,
+  "source_sha256": "2e8e9fd5bada3705215c6ca60b41164006ba341679e6d7321c9c86efe5e5d3d1",
+  "statement_sha256": "76da71057f089737abc8ebc560f0acd7bd20e618c8d1236877e3b252b2dfe00d",
+  "original_target": {
+    "id": "318",
+    "title": "Bolthausen–Sznitman ancestry for a fixed-size selected population",
+    "area": "Population genetics and stochastic selection",
+    "file": "problems/318-selected-brownian-population-genealogy.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "stochastic2",
+    "source_sha256": "2e8e9fd5bada3705215c6ca60b41164006ba341679e6d7321c9c86efe5e5d3d1",
+    "statement_sha256": "76da71057f089737abc8ebc560f0acd7bd20e618c8d1236877e3b252b2dfe00d",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "318",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Original exact-size binary Brownian branching with kill-leftmost, equilibrium offset law, one common c(log N)^3 clock and all fixed sample/time-window finite-dimensional partition limits. Legrand–Maillard v4 §2.6 still describes coalescent genealogy as an expected extension of their displacement result. Absorbed drifting BBM with fluctuating population and exponential-offspring discrete models are different processes; spatial-profile and position-fluctuation limits do not preserve ancestry. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "N branching Brownian motion selection genealogy Bolthausen Sznitman proof 2026",
+    "\"N-BBM\" genealogy (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2402.04917v4",
+      "version": "v4,9April2026",
+      "locator": "§2.6 Genealogy of the N-BBM, printedp13",
+      "body_inspected": true
+    }
+  ],
+  "source_gaps": [
+    "HTMLv4 timed out; current versioned PDF fallback inspected."
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "genealog|Bolthausen|Brunet",
+    "result": "No matching N-BBM genealogy claim. Hexagon perceptron Parisi formula uses unrelated genealogical tools."
+  }
+}

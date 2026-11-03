@@ -1,0 +1,60 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "028",
+  "manifest_index": 22,
+  "source_sha256": "a32e16357802ea847364abd2bd39d791144fb08cad213f71174274ebb5128134",
+  "statement_sha256": "9957dd03ee2db1cae29f50ba1a6e5af3eab0ea7082f0b6ffc39bc3464a70f80f",
+  "original_target": {
+    "id": "028",
+    "title": "Is the matrix-multiplication exponent two?",
+    "area": "Numerical linear algebra and algebraic complexity",
+    "file": "problems/028-matrix-multiplication-exponent.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-13",
+    "group": "operators",
+    "source_sha256": "a32e16357802ea847364abd2bd39d791144fb08cad213f71174274ebb5128134",
+    "statement_sha256": "9957dd03ee2db1cae29f50ba1a6e5af3eab0ea7082f0b6ffc39bc3464a70f80f",
+    "state": "unreviewed"
+  },
+  "full_local_statement_read": true,
+  "full_page_review_claimed": false,
+  "reviewed_UTC": "2026-11-03T11:54:06.372579+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "No full match for omega2 over C. Current OpenAI, RafaelPass and Palomar statements prove at most9/4, not2. Fixed small matrix tensor rank and rectangular bounds are insufficient.",
+  "queries": [
+    "Is the matrix-multiplication exponent two? proof counterexample2026",
+    "Is the matrix-multiplication exponent two? (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "query_method": "The displayed strings describe focused named/mathematical searches; actual query variants are retained in the session source-search responses. Source-host searches and current Palomar/Hexagon full-metadata alias checks were separately performed.",
+  "primary_sources": [
+    {
+      "url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/build/paper.tex",
+      "inspection": "Primary statement/abstract or body as recorded in scope comparison; no full proof certification."
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.28627",
+      "inspection": "Primary statement/abstract or body as recorded in scope comparison; no full proof certification."
+    }
+  ],
+  "provider_checks": {
+    "Palomar_Hexagon": {
+      "routing": "../_sources/028-provider-routing.json",
+      "Palomar_complete_metadata": 954,
+      "Hexagon_complete_metadata": 646,
+      "scope": "Listing/metadata routing only. Individual relevant theorem/interface comparisons detailed above."
+    },
+    "OpenAI": {
+      "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+      "scope": "Current CONTENTS/overview searched; candidate theorem if relevant."
+    },
+    "arXiv_Zenodo_HAL_GitHub": "Focused primary-host and unrestricted web searches; bounded and indexing-dependent."
+  },
+  "known_gap": null,
+  "limitations": [
+    "No matching result in bounded search is not a proof of mathematical openness.",
+    "Irrelevant/restricted results were not audited as full proofs."
+  ],
+  "canonical_update_required": false
+}

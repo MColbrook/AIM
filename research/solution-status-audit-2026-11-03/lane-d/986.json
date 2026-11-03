@@ -1,0 +1,101 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "986",
+  "manifest_index": 830,
+  "checked_date": "2026-11-03",
+  "source_sha256": "3e6c4b9b5b31cbac0f210c40330a1fbe0e6b088f726902228d7cc123147adac5",
+  "statement_sha256": "d901fb0e7970a2264e8128fcdfc5e5846e3a4beec4ce8772005b5c2c618d7a8b",
+  "original_target": {
+    "id": "986",
+    "title": "Sharp next speed correction for stochastic Fisher–KPP fronts",
+    "area": "Stochastic partial differential equations and population fronts",
+    "file": "problems/986-sharp-next-speed-correction-for-stochastic-fisherkpp-fronts.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b3b560471ca4b36b",
+    "group": "probability-statistics",
+    "source_sha256": "3e6c4b9b5b31cbac0f210c40330a1fbe0e6b088f726902228d7cc123147adac5",
+    "statement_sha256": "d901fb0e7970a2264e8128fcdfc5e5846e3a4beec4ce8772005b5c2c618d7a8b",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "On the real line, consider the stochastic Fisher–KPP equation\n```math\n\\partial_t u_\\epsilon\n=\\partial_x^2u_\\epsilon+u_\\epsilon(1-u_\\epsilon)\n+\\epsilon\\sqrt{u_\\epsilon(1-u_\\epsilon)}\\,\\dot W,\n\\qquad t>0,\\ x\\in\\mathbb R,\n```\nwhere $`\\dot W`$ is Gaussian space–time white noise with covariance\n$`\\delta(t-s)\\delta(x-y)`$, and the stochastic integral is interpreted in the Itô–Walsh sense. Fix the continuous initial profile\n```math\nu_\\epsilon(0,x)=\n\\begin{cases}\n1,&x\\leq0,\\\\\n1-x,&0<x<1,\\\\\n0,&x\\geq1.\n\\end{cases}\n```\n\nFor each $`\\epsilon>0`$, take the $`[0,1]`$-valued solution, which is unique in law. Its right edge and deterministic asymptotic speed are\n```math\nR_\\epsilon(t)=\\sup\\{x\\in\\mathbb R:u_\\epsilon(t,x)>0\\},\n\\qquad\nv_\\epsilon=\\lim_{t\\to\\infty}\\frac{R_\\epsilon(t)}t\n\\quad\\text{almost surely}.\n```\nThe compact-interface property and existence of this speed are known; see [3, Theorem 2.1], which recalls the results of [4].\n\nFor $`0<\\epsilon<e^{-1}`$, set $`L_\\epsilon=\\log(\\epsilon^{-2})`$. Is it true that\n```math\n\\lim_{\\epsilon\\downarrow0}\n\\frac{L_\\epsilon^3}{\\log L_\\epsilon}\n\\left(v_\\epsilon-2+\\frac{\\pi^2}{L_\\epsilon^2}\\right)\n=6\\pi^2\\,?\n```\n\nThis is a precise canonical case of the next-order prediction in [2, Eq. (1.28)], based on the phenomenological theory in [1]. The factor $`\\log|\\log\\epsilon|`$ used there equals $`\\log(L_\\epsilon/2)`$, so replacing it by $`\\log L_\\epsilon`$ gives the same limit. The constant $`2`$ is the deterministic minimal Fisher–KPP travelling-wave speed; no support-edge speed at zero noise is being defined.",
+  "full_original_page": "# 986. Sharp next speed correction for stochastic Fisher–KPP fronts\n\n**Area:** Stochastic partial differential equations and population fronts\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nOn the real line, consider the stochastic Fisher–KPP equation\n```math\n\\partial_t u_\\epsilon\n=\\partial_x^2u_\\epsilon+u_\\epsilon(1-u_\\epsilon)\n+\\epsilon\\sqrt{u_\\epsilon(1-u_\\epsilon)}\\,\\dot W,\n\\qquad t>0,\\ x\\in\\mathbb R,\n```\nwhere $`\\dot W`$ is Gaussian space–time white noise with covariance\n$`\\delta(t-s)\\delta(x-y)`$, and the stochastic integral is interpreted in the Itô–Walsh sense. Fix the continuous initial profile\n```math\nu_\\epsilon(0,x)=\n\\begin{cases}\n1,&x\\leq0,\\\\\n1-x,&0<x<1,\\\\\n0,&x\\geq1.\n\\end{cases}\n```\n\nFor each $`\\epsilon>0`$, take the $`[0,1]`$-valued solution, which is unique in law. Its right edge and deterministic asymptotic speed are\n```math\nR_\\epsilon(t)=\\sup\\{x\\in\\mathbb R:u_\\epsilon(t,x)>0\\},\n\\qquad\nv_\\epsilon=\\lim_{t\\to\\infty}\\frac{R_\\epsilon(t)}t\n\\quad\\text{almost surely}.\n```\nThe compact-interface property and existence of this speed are known; see [3, Theorem 2.1], which recalls the results of [4].\n\nFor $`0<\\epsilon<e^{-1}`$, set $`L_\\epsilon=\\log(\\epsilon^{-2})`$. Is it true that\n```math\n\\lim_{\\epsilon\\downarrow0}\n\\frac{L_\\epsilon^3}{\\log L_\\epsilon}\n\\left(v_\\epsilon-2+\\frac{\\pi^2}{L_\\epsilon^2}\\right)\n=6\\pi^2\\,?\n```\n\nThis is a precise canonical case of the next-order prediction in [2, Eq. (1.28)], based on the phenomenological theory in [1]. The factor $`\\log|\\log\\epsilon|`$ used there equals $`\\log(L_\\epsilon/2)`$, so replacing it by $`\\log L_\\epsilon`$ gives the same limit. The constant $`2`$ is the deterministic minimal Fisher–KPP travelling-wave speed; no support-edge speed at zero noise is being defined.\n\n## Application\n\nThe equation models the spread of an advantageous genetic type along a one-dimensional habitat, including demographic fluctuations. The proposed coefficient would quantify the next effect of weak noise on the invasion speed beyond the established leading slowdown.\n\n## References\n\n1. É. Brunet, B. Derrida, A. H. Mueller and S. Munier, *Phenomenological theory giving the full statistics of the position of fluctuating pulled fronts*, Physical Review E 73(5) (2006), 056126. [DOI](https://doi.org/10.1103/PhysRevE.73.056126), [author version](https://arxiv.org/abs/cond-mat/0512021). The prediction is phenomenological.\n2. C. Mueller, L. Mytnik and J. Quastel, *Effect of noise on front propagation in reaction-diffusion equations of KPP type*, Inventiones Mathematicae 184(2) (2011), 405–453. [DOI](https://doi.org/10.1007/s00222-010-0292-5), [arXiv version](https://arxiv.org/abs/0902.3423v1). Equation (1.28) is on p. 6 of this arXiv version; Theorem 1.1 is on p. 8. The Fisher drift and Wright–Fisher variance are Eqs. (1.9)–(1.10).\n3. C. Barnes, L. Mytnik and Z. Sun, *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift*, Annales de l’Institut Henri Poincaré, Probabilités et Statistiques 60(4) (2024), 2382–2414. [DOI](https://doi.org/10.1214/23-AIHP1393), [author-hosted article](https://zhenyao-sun.github.io/Files/Papers/2024AIHP.pdf). See Theorem 2.1 for the solution and speed, and Theorem 1.1 for the separate non-Lipschitz-drift estimates.\n4. C. Mueller, L. Mytnik and L. Ryzhik, *The Speed of a Random Front for Stochastic Reaction–Diffusion Equations with Strong Noise*, Communications in Mathematical Physics 384 (2021), 699–732. [DOI](https://doi.org/10.1007/s00220-021-04084-0).\n5. P. Maillard, *Speed and fluctuations of N-particle branching Brownian motion with spatial selection*, Probability Theory and Related Fields 166 (2016), 1061–1173. [DOI](https://doi.org/10.1007/s00440-016-0701-9), [arXiv:1304.0562v4](https://arxiv.org/abs/1304.0562v4) (2018), Theorem 1.1 and §1.3.\n\n## Status review\n\n\n**Known cases:** The precise next logarithmic correction for the stochastic Wright-Fisher-noise equation is needed. Leading Brunet-Derrida speed estimates, deterministic Bramson delays and non-Lipschitz drift front results do not identify this limit.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe precise next logarithmic correction for the stochastic Wright-Fisher-noise equation is needed. Leading Brunet-Derrida speed estimates, deterministic Bramson delays and non-Lipschitz drift front results do not identify this limit.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe leading Brunet–Derrida correction is proved in [2], with remainder $`O(\\log L_\\epsilon/L_\\epsilon^3)`$. Those bounds do not determine the displayed coefficient. The matched power-law estimates in [3] concern drifts comparable to $`u^p`$ with $`p<1`$; they do not settle this sharper Fisher-drift limit.\n\nThe particle-model theorem in [5] concerns finite-dimensional fluctuations on time scales of order $`\\log^3N`$. Its §1.3 explicitly distinguishes that result from a stationary long-time speed limit. It does not establish the displayed SPDE limit.\n\nCurrent and announced-resolution searches on 27 October 2026 located no matching complete solution. The all-status AIM collection, indexed OpenAI announcements and developing collection were checked for equivalent formulations. These are bounded negative checks; the dated review records exact versions and the limits of access and reading.\n\nReview evidence: [dated source, current-status and duplicate-comparison record](../FURTHER_problems/_tracking/C133-073-noisy-KPP-next-speed-coefficient-C-gate-20261027/KPP-OWNER-READY-PROPOSAL.json).\n\nIndependent review: [exact formulation, speed normalization and all-status model comparison](../FURTHER_problems/_tracking/C133-KPP-root-independent-admission-gate-20261027/ROOT-INDEPENDENT-MODEL-SPEED-NORMALIZATION-CURRENT-AND-DUPLICATE-PASS.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-b3b560471ca4b36b**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "stochastic Fisher",
+    "Brunet",
+    "front speed"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"stochastic Fisher KPP\" \"speed\" \"next order\"",
+      "engines": "web general"
+    },
+    {
+      "query": "\"stochastic Fisher KPP\" \"speed\" \"next order\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ],
+      "engines": "web focused"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/0902.3423v1",
+      "locator": "equation1.28 and following discussion, PDFp6 / lines280–296"
+    }
+  ],
+  "scope_comparison": "The displayed 6pi² loglog/log³ term is a phenomenological conjecture. The article proves a correction bound of the same order, not this coefficient and asymptotic for the exact Wright–Fisher-noise SPDE. Deterministic-cutoff and non-Lipschitz drift models do not imply this exact target.",
+  "recommendation": "Retain partial status; no matching complete resolution located in this bounded current search.",
+  "limitations": "Bounded literature and announcement search, not proof of openness; snapshot routing checks are metadata-only unless a specific primary claim is discussed.",
+  "announcement_routing": {
+    "localID": "986",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "stochastic Fisher",
+          "Brunet",
+          "front speed"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "stochastic Fisher",
+          "Brunet",
+          "front speed"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "stochastic Fisher",
+        "Brunet",
+        "front speed"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

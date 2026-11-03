@@ -1,0 +1,68 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "500",
+  "manifest_index": 394,
+  "original_target": {
+    "id": "500",
+    "title": "The Singer conjecture for all closed aspherical manifolds",
+    "area": "Geometric topology, spectral geometry and $`L^2`$-invariants",
+    "file": "problems/500-the-singer-conjecture-for-all-closed-aspherical-manifolds.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0261c956264167e5",
+    "group": "geometry-topology",
+    "source_sha256": "075084701c15850398b03361f63931f35951b81d77f1988ab4c4769ee89855c2",
+    "statement_sha256": "0febbf93d30de8579c581299bea3558afe52da2286a42fb388c11cd1536e91f5",
+    "state": "unreviewed"
+  },
+  "source_sha256": "075084701c15850398b03361f63931f35951b81d77f1988ab4c4769ee89855c2",
+  "statement_sha256": "0febbf93d30de8579c581299bea3558afe52da2286a42fb388c11cd1536e91f5",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:35:51.140842+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Published DiCerbo–Lombardi Theorem1.3 requires smooth projective variety, semismall Albanese map and residually finite fundamental group. Theorem1.4 concerns algebraic universal cover, not arbitrary topological aspherical manifolds. Current OpenAI315 index is dimension4 only, not all dimensions.",
+  "primary_sources": [
+    {
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CDC1B251983D2C5192306E2A0A1FC8DC/S0308210524000520a.pdf/singer_conjecture_for_varieties_with_semismall_albanese_map_and_residually_finite_fundamental_group.pdf",
+      "locator": "Theorems1.3–1.4 printedp123",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Singer conjecture\" \"all dimensions\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Singer conjecture\" \"2026\" solution counterexample"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Singer conjecture"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Singer conjecture"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

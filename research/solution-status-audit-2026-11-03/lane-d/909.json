@@ -1,0 +1,99 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "909",
+  "manifest_index": 753,
+  "checked_date": "2026-11-03",
+  "source_sha256": "23e1ff4a21ba852fda1c6d6cbf4663d7358ec64ab0b2df64fd94059c5599ea1d",
+  "statement_sha256": "319954833d84f887c5caee1f4f2d1661329371f062660ea99c745f6d71021e88",
+  "original_target": {
+    "id": "909",
+    "title": "Can every non-RNP Banach space be renormed so all unit-ball slices have diameter two?",
+    "area": "Geometry of Banach spaces",
+    "file": "problems/909-can-every-non-rnp-banach-space-be-renormed-so-all-unit-ball-slices-have-diameter-two.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-7438221c37fe12f7",
+    "group": "operators",
+    "source_sha256": "23e1ff4a21ba852fda1c6d6cbf4663d7358ec64ab0b2df64fd94059c5599ea1d",
+    "statement_sha256": "319954833d84f887c5caee1f4f2d1661329371f062660ea99c745f6d71021e88",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`X`$ be a real Banach space without the Radon–Nikodým property. Does $`X`$ have an equivalent norm $`\\|\\cdot\\|'`$ such that **every slice of its closed unit ball has diameter two** in that norm? For $`x^*\\in X^*\\setminus\\{0\\}`$ and $`\\varepsilon>0`$, a slice is\n\n```math\nS(B',x^*,\\varepsilon)=\\{x\\in B':x^*(x)>\\sup_{y\\in B'}x^*(y)-\\varepsilon\\},\\qquad B'=\\{x:\\|x\\|'\\leq1\\}.\n```\n\n\nThe assertion is about the existence of *one* equivalent norm for which all slices have diameter exactly $`2`$. It is stronger than known renormings that make slice radii close to $`1`$, and distinct from asking whether slice diameter two implies the diameter-two property for weakly open subsets.",
+  "full_original_page": "# 909. Can every non-RNP Banach space be renormed so all unit-ball slices have diameter two?\n\n**Area:** Geometry of Banach spaces\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`X`$ be a real Banach space without the Radon–Nikodým property. Does $`X`$ have an equivalent norm $`\\|\\cdot\\|'`$ such that **every slice of its closed unit ball has diameter two** in that norm? For $`x^*\\in X^*\\setminus\\{0\\}`$ and $`\\varepsilon>0`$, a slice is\n\n```math\nS(B',x^*,\\varepsilon)=\\{x\\in B':x^*(x)>\\sup_{y\\in B'}x^*(y)-\\varepsilon\\},\\qquad B'=\\{x:\\|x\\|'\\leq1\\}.\n```\n\n\nThe assertion is about the existence of *one* equivalent norm for which all slices have diameter exactly $`2`$. It is stronger than known renormings that make slice radii close to $`1`$, and distinct from asking whether slice diameter two implies the diameter-two property for weakly open subsets.\n\n## Application\n\nThe Radon–Nikodým property is characterized by dentability, whereas a slice-diameter-two norm places every unit-ball slice at the opposite diameter extreme. A positive answer would characterize failure of the Radon–Nikodým property through an equivalent norm with this uniform slice geometry.\n\n## References\n\n1. M. D. Acosta, J. Becerra-Guerrero and G. López-Pérez, [*Stability Results of Diameter Two Properties*](https://journalofconvexanalysis.com/articles/jca22001/), *J. Convex Anal.* **22** (2015), no. 1, 1–17, explicit question on p. 3. [Primary PDF](https://journalofconvexanalysis.com/articles/jca22001/jca22001.pdf?v=2).\n2. G. López-Pérez, E. Martínez Vañó and A. Rueda Zoca, [*Big Weak Open Radius Versus Big Slice Diameter*](https://arxiv.org/html/2510.15461), *Mediterranean Journal of Mathematics* (2026), [DOI 10.1007/s00009-026-03143-x](https://doi.org/10.1007/s00009-026-03143-x), Introduction, which still identifies this exact renorming statement as a conjecture.\n\n## Status review\n\n\n**Known cases:** The 2026 big-radius paper retains the non-RNP renorming question. Slice radius near one does not give one equivalent norm with every slice of diameter exactly two. The known failure of slice-diameter-two to imply a weak-open-set property addresses another direction.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe 2026 big-radius paper retains the non-RNP renorming question. Slice radius near one does not give one equivalent norm with every slice of diameter exactly two. The known failure of slice-diameter-two to imply a weak-open-set property addresses another direction.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nBounded searches through 20 October 2026 found no exact proof, counterexample or public resolution announcement and no matching AIM or admitted FURTHER problem. The separate implication from slice diameter two to diameter two has a known counterexample. See the [primary reading](../FURTHER_problems/_tracking/rnp-slice-diameter-renorming-primary-2026-10-20.json), [later-status check](../FURTHER_problems/_tracking/rnp-slice-diameter-renorming-current-2026-10-20.json), [duplicate review](../FURTHER_problems/_tracking/rnp-slice-diameter-renorming-duplicates-2026-10-20.json) and [decision](../FURTHER_problems/_tracking/rnp-slice-diameter-renorming-coordinator-2026-10-20.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-7438221c37fe12f7**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"non-RNP\" \"renorming\" \"slice\" \"diameter two\" 2026",
+    "\"non-RNP\" \"renorming\" \"slice\" \"diameter two\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2510.15461",
+      "locator": "Introduction lines17–25",
+      "comparison": "Explicitly retains every-non-RNP equivalent slice-D2P norm as conjectural. Big radius one is distinguished from diameter two. Newly routed 2607.12471 only constructs special strongly regular spaces with weakly open radius near one; uniform diameter-property separations do not prove universal renormability.",
+      "inspected": "Actual indicated body passages"
+    }
+  ],
+  "rationale": "Explicitly retains every-non-RNP equivalent slice-D2P norm as conjectural. Big radius one is distinguished from diameter two. Newly routed 2607.12471 only constructs special strongly regular spaces with weakly open radius near one; uniform diameter-property separations do not prove universal renormability. No full matching resolution located in bounded current searches.",
+  "limitations": [
+    "Bounded search is not proof of continued openness; this review checks mathematical scope rather than certifying every cited proof."
+  ],
+  "announcement_routing": {
+    "localID": "909",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "non-RNP",
+          "slice-D2P",
+          "slice diameter",
+          "Radon-Nikodym"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "non-RNP",
+          "slice-D2P",
+          "slice diameter",
+          "Radon-Nikodym"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00611v1",
+            "title": "Continuity, Testing Regions and Fragility of Quantum Channel Divergences",
+            "url": "https://hexagonmath.org/abs/2610.00611v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "non-RNP",
+        "slice-D2P",
+        "slice diameter",
+        "Radon-Nikodym"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Quantum channel divergence continuity/testing regions does not produce an equivalent norm on every non-RNP Banach space making all ball slices diameter two.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.706Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

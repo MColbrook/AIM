@@ -1,0 +1,49 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 269,
+  "source_sha256": "4a09a359815eefd3d09e3be063e41192e6cca31db4717e274f4cb8384cd331ba",
+  "statement_sha256": "e1bf436a0b5409186c2bb7d3a5937a4374f36c16a1764196f9d7f34925396202",
+  "original_target": {
+    "id": "331",
+    "title": "The optimal asymptotic rate of binary error-correcting codes",
+    "area": "Coding theory and reliable data transmission",
+    "file": "problems/331-binary-code-asymptotic-rate.md",
+    "status": "Open",
+    "last_checked": "2026-09-18",
+    "group": "inverse3",
+    "source_sha256": "4a09a359815eefd3d09e3be063e41192e6cca31db4717e274f4cb8384cd331ba",
+    "statement_sha256": "e1bf436a0b5409186c2bb7d3a5937a4374f36c16a1764196f9d7f34925396202",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "331",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"asymptotic\" \"binary codes\" \"exact\" rate 2026 arxiv",
+    "\"binary codes\" \"rate\" solved site:zenodo.org OR site:hal.science OR site:github.com 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.21263v1",
+      "version": "v1 submitted 15 October 2026",
+      "locators": "Theorem 1.1; Remark 1.2; numerical comparisons",
+      "body_inspected": true,
+      "scope": "Determines asymptotic Delsarte LP rate R_D, a relaxation upper bound; not actual realizable code rate R_2."
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.03736",
+      "version": "v1 September 2026",
+      "locators": "half-rate claim",
+      "body_inspected": false,
+      "scope": "LP half-rate point, subsumed by October theorem body checked above."
+    }
+  ],
+  "registry_checks": "Palomar/Hexagon binary-code/Blinovsky aliases; focused arXiv, HAL, Zenodo, GitHub searches executed.",
+  "scope_comparison": "All nonlinear binary code families and every distance require matching constructions. Feasible Delsarte LP lower bounds do not construct actual codes.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. October 15 theorem computes a relaxation and cannot justify Solved for the original target.",
+  "new_partial_source": true
+}

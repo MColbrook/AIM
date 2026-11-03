@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "815",
+  "manifest_index": 659,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "815",
+    "title": "Constant nonzero Bismut holomorphic sectional curvature",
+    "area": "Hermitian differential geometry",
+    "file": "problems/815-constant-nonzero-bismut-holomorphic-sectional-curvature.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-933bf49159697a88",
+    "group": "geometry-topology",
+    "source_sha256": "f99adf48c1f12bcda2586b60579afd456d82821d8f16dec2d72b50e913a9b679",
+    "statement_sha256": "b6e94715ee1510507e214d766c881524be87b3dd576d464ba9c63a0d63e59f31",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f99adf48c1f12bcda2586b60579afd456d82821d8f16dec2d72b50e913a9b679",
+  "statement_sha256": "b6e94715ee1510507e214d766c881524be87b3dd576d464ba9c63a0d63e59f31",
+  "actual_source_sha256": "f99adf48c1f12bcda2586b60579afd456d82821d8f16dec2d72b50e913a9b679",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`(M,J,g)`$ be a compact connected Hermitian manifold of complex dimension $`n\\ge2`$, without boundary. Thus $`J`$ is an integrable complex structure and $`g(Ju,Jv)=g(u,v)`$. Write $`\\omega(u,v)=g(Ju,v)`$ for its fundamental two-form.\n\nLet $`\\nabla^B`$ be its **Bismut connection**, also called the Strominger connection: it is the unique connection preserving $`g`$ and $`J`$ whose torsion tensor $`T^B`$ has $`g(T^B(u,v),w)`$ totally alternating. Let $`H^B`$ denote its holomorphic sectional curvature.\n\nSuppose there exists one real constant $`c\\ne0`$ such that\n```math\nH^B_p(v)=c\n\\qquad\\text{for every }p\\in M\n\\text{ and every nonzero }v\\in T^{1,0}_pM.\n```\n\nMust $`g`$ be Kähler, equivalently $`d\\omega=0`$?\n\nThe same constant is required at every point and in every complex tangent direction. This is the Bismut connection question for the given metric. It does not assume local conformal Kählerness, parallel torsion, or any extra curvature symmetry. Complex dimension two is known; the unresolved part concerns higher dimensions.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Bismut\" \"constant holomorphic sectional curvature\" 2026",
+    "\"Bismut\" \"constant holomorphic sectional curvature\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Bismut\" \"constant holomorphic sectional curvature\" (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Bismut\" \"constant\" \"holomorphic sectional\" 2026 nonzero"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "version_or_date": "Current abs latestonlyv1 dated27September2026; actual Theorem2 and BismutCorollary4 read.",
+      "scope_comparison": "Theorem2 assumes the chosen Hermitian connection has parallel torsion; Corollary4 explicitly assumes Bismut torsion-parallel. Nonzero global holomorphic sectional curvature then implies Kahler, but no theorem removes parallel torsion for arbitrary compact Hermitian metrics. Other2026 balanced-BTP papers refer mainly to Chern holomorphic sectional curvature, a different connection. Local-conformal Kahler and dimension-two results are restricted. No full match located.",
+      "url": "https://arxiv.org/html/2609.33374v1",
+      "locator": "Introduction Conjecture2,actual Theorems1–2 and Corollary4"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem2 assumes the chosen Hermitian connection has parallel torsion; Corollary4 explicitly assumes Bismut torsion-parallel. Nonzero global holomorphic sectional curvature then implies Kahler, but no theorem removes parallel torsion for arbitrary compact Hermitian metrics. Other2026 balanced-BTP papers refer mainly to Chern holomorphic sectional curvature, a different connection. Local-conformal Kahler and dimension-two results are restricted. No full match located.",
+  "latest_version_check": "Current abs latestonlyv1 dated27September2026; actual Theorem2 and BismutCorollary4 read.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

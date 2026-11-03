@@ -1,0 +1,105 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "985",
+  "manifest_index": 829,
+  "checked_date": "2026-11-03",
+  "source_sha256": "4b3f449bde0d51e202671e56b3571fbe1ca8dac1b2fe8889815f3665d1129a3d",
+  "statement_sha256": "57ff4ed9ddbda34b6008c2047365ee46a0f332635e69bc8305695750487f1da1",
+  "original_target": {
+    "id": "985",
+    "title": "Can the weak-to-strong moment bound be uniform over finite $`\\ell_r`$ norms?",
+    "area": "Probability, asymptotic convex geometry and log-concave measures",
+    "file": "problems/985-can-the-weak-to-strong-moment-bound-be-uniform-over-finite-ell-r-norms.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ae598b3340e45dac",
+    "group": "probability-statistics",
+    "source_sha256": "4b3f449bde0d51e202671e56b3571fbe1ca8dac1b2fe8889815f3665d1129a3d",
+    "statement_sha256": "57ff4ed9ddbda34b6008c2047365ee46a0f332635e69bc8305695750487f1da1",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`F`$ be a finite-dimensional normed space that embeds linearly and isometrically into $`\\ell_r`$ for some $`1\\le r<\\infty`$, and let $`X`$ be an $`F`$-valued log-concave random vector. For $`p\\ge1`$, set\n\n```math\n\\sigma_p(X;F)=\\sup_{\\varphi\\in F^*,\\,\\|\\varphi\\|_*\\le1}\n                 \\bigl(\\mathbb E|\\varphi(X)|^p\\bigr)^{1/p}.\n```\n\n\n**Does there exist one absolute constant $`C`$, independent of $`r`$, $`F`$, $`p`$ and $`X`$, such that**\n\n```math\n\\bigl(\\mathbb E\\|X\\|^p\\bigr)^{1/p}\n\\le C\\bigl(\\mathbb E\\|X\\|+\\sigma_p(X;F)\\bigr)?\n```\n\n\nThe question is stated in the Geometric Tomography report of the 2020 BIRS proceedings [1, printed p. 29]. It asks whether the known coefficient proportional to $`r`$ can be replaced by an absolute one. It does not assume that $`X`$ is centered or isotropic.",
+  "full_original_page": "# 985. Can the weak-to-strong moment bound be uniform over finite $`\\ell_r`$ norms?\n\n**Area:** Probability, asymptotic convex geometry and log-concave measures\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`F`$ be a finite-dimensional normed space that embeds linearly and isometrically into $`\\ell_r`$ for some $`1\\le r<\\infty`$, and let $`X`$ be an $`F`$-valued log-concave random vector. For $`p\\ge1`$, set\n\n```math\n\\sigma_p(X;F)=\\sup_{\\varphi\\in F^*,\\,\\|\\varphi\\|_*\\le1}\n                 \\bigl(\\mathbb E|\\varphi(X)|^p\\bigr)^{1/p}.\n```\n\n\n**Does there exist one absolute constant $`C`$, independent of $`r`$, $`F`$, $`p`$ and $`X`$, such that**\n\n```math\n\\bigl(\\mathbb E\\|X\\|^p\\bigr)^{1/p}\n\\le C\\bigl(\\mathbb E\\|X\\|+\\sigma_p(X;F)\\bigr)?\n```\n\n\nThe question is stated in the Geometric Tomography report of the 2020 BIRS proceedings [1, printed p. 29]. It asks whether the known coefficient proportional to $`r`$ can be replaced by an absolute one. It does not assume that $`X`$ is centered or isotropic.\n\n## Application\n\nAn absolute constant would control strong moments, and hence norm tails, of log-concave vectors from their mean norm and the moments of linear observations uniformly across these spaces. It would remove the loss as $`r`$ grows.\n\n## Known results and scope\n\nLatała and Strzelecka proved the displayed inequality with a coefficient $`C_2r`$ for every finite $`r`$ [2, Theorem 2]. Their Conjecture 1 asks for an absolute coefficient for every finite-dimensional norm. In fact, the uniform finite-$`r`$ question would imply that general conjecture: approximate any finite-dimensional norm by a finite maximum of dual functionals, then by their $`\\ell_r`$ norm and let $`r\\to\\infty`$. This equivalence is a direct approximation observation, not a claim made in [1].\n\nHmadi and Liakopoulos [3, pp. 3–4] still describe the all-norm comparison as open. Their 2026 estimate improves the dimension dependence but retains a dimension-dependent coefficient. The adjacent question in [1] about making the Euclidean first-moment coefficient exactly one is a different target.\n\n## References\n\n1. Banff International Research Station, [*2020 Proceedings*](https://www.birs.ca/files/publications/proceedings/birs_2020_proceedings.pdf), Geometric Tomography (20w5037), report of Rafał Latała's presentation, printed p. 29 (PDF p. 33).\n2. R. Latała and M. Strzelecka, [*Weak and strong moments of $`\\ell_r`$-norms of log-concave vectors*](https://arxiv.org/pdf/1501.01649v2), *Proceedings of the American Mathematical Society* **144** (2016), no. 8, 3597–3608, Conjecture 1 and Theorem 2. [DOI](https://doi.org/10.1090/proc/13003).\n3. A. Hmadi and D.-M. Liakopoulos, [*Moment comparisons, Sudakov inequalities and entropy of centroid bodies*](https://arxiv.org/pdf/2608.10853v1), arXiv:2608.10853v1 (2026), pp. 3–4 and Theorem 1.3.\n\n## Status review\n\n\n**Known cases:** The constant must be independent of r as well as dimension and moment. The August 2026 bounds and established r-dependent theorem do not give the requested absolute constant.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe constant must be independent of r as well as dimension and moment. The August 2026 bounds and established r-dependent theorem do not give the requested absolute constant.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe [independent bounded source audit](../FURTHER_problems/_tracking/parallel/continuum/author-books-cue-breadth-20261022/latala-strong-weak-moments-native33-bounded-audit-20261023.json) and [coordinator check](../FURTHER_problems/_tracking/birs-uniform-logconcave-moments-coordinator-audit-2026-10-23.json) record the exact proceedings wording, its proven $`r`$-dependent predecessor, later partial bound, status and duplicate searches. The searches do not certify that every later result has been found. The proceedings receipt covers one bounded page passage, not the whole volume.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-ae598b3340e45dac**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "weak–strong",
+    "Latala",
+    "Strzelecka",
+    "Hmadi"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"weak strong moments\" \"log concave\" \"r\" 2026",
+      "engines": "web general"
+    },
+    {
+      "query": "\"weak strong moments\" \"log concave\" \"r\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ],
+      "engines": "web focused"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.10853v1",
+      "locator": "Theorem1.3 equations1.7–1.8, lines125–137; introduction lines112–114"
+    }
+  ],
+  "scope_comparison": "Latest located general bound retains n^(1/4)sqrt(log(en))log(e+log(en)) in front of the first moment. This is dimension dependent and does not give an absolute constant independent of r and dimension for all log-concave laws.",
+  "recommendation": "Retain partial status; no matching complete resolution located in this bounded current search.",
+  "limitations": "Bounded literature and announcement search, not proof of openness; snapshot routing checks are metadata-only unless a specific primary claim is discussed.",
+  "announcement_routing": {
+    "localID": "985",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "weak–strong",
+          "Latala",
+          "Strzelecka",
+          "Hmadi"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "weak–strong",
+          "Latala",
+          "Strzelecka",
+          "Hmadi"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "weak–strong",
+        "Latala",
+        "Strzelecka",
+        "Hmadi"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

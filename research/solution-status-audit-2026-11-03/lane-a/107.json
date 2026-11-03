@@ -1,0 +1,68 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "107",
+  "manifest_index": 80,
+  "original_target": {
+    "id": "107",
+    "title": "A sharp universal inequality for clamped-plate eigenvalues",
+    "area": "Elastic vibration",
+    "file": "problems/107-clamped-plate-universal-bound.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "spectral2",
+    "source_sha256": "076046dd50a2a55fe13ee00e41900104ce5d6954f9357e89dc9c6b133331096f",
+    "statement_sha256": "07624b3e3a99f10bae7c6bb7e9e2d125fcdfc71b8a14f71bfe9c3f77c625a410",
+    "state": "unreviewed"
+  },
+  "source_sha256": "076046dd50a2a55fe13ee00e41900104ce5d6954f9357e89dc9c6b133331096f",
+  "statement_sha256": "07624b3e3a99f10bae7c6bb7e9e2d125fcdfc71b8a14f71bfe9c3f77c625a410",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:55:50.107361+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Chen–Cheng–Wei equation1.5 has coefficient8(d+2)/d² and Conjecture1.1 proposes8/d. Their Theorem1.1 is a different consecutive-gap inequality. Later curved-manifold/average-energy estimates and a first-eigenvalue shape theorem do not establish the stated universal all-index8/d sum inequality.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1610.05889",
+      "locator": "Introduction equations1.5/1.6 and Theorem1.1, printed p3.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "clamped plate",
+    "universal inequality"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "clamped plate",
+        "universal inequality"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "clamped plate",
+        "universal inequality"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches of arXiv, Zenodo, HAL, GitHub plus shared current Palomar, Hexagon and OpenAI metadata, and requested Colbrook author lists.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

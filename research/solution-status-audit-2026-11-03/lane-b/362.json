@@ -1,0 +1,50 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 297,
+  "source_sha256": "7f231640b3e97d22620dafb2af034ca3a87e2fe0fee6d417aeb08936b7f93fbc",
+  "statement_sha256": "db5eda80fb7114b7e235d7dd325369a1c2f49f353a8f7998963756eb44c61d7b",
+  "original_target": {
+    "id": "362",
+    "title": "Global classical solutions for repulsive relativistic Vlasov–Poisson",
+    "area": "Plasma kinetics",
+    "file": "problems/362-relativistic-vlasov-poisson-global.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "7f231640b3e97d22620dafb2af034ca3a87e2fe0fee6d417aeb08936b7f93fbc",
+    "statement_sha256": "db5eda80fb7114b7e235d7dd325369a1c2f49f353a8f7998963756eb44c61d7b",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "362",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"relativistic Vlasov Poisson\" \"global\" \"2026\" general",
+    "\"relativistic Vlasov Poisson\" global site:zenodo.org OR site:hal.science OR site:github.com 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2003.14191v3",
+      "version": "v3 2 March 2022, current abs history checked",
+      "locators": "Theorems 1.1–1.2; introduction",
+      "body_inspected": true,
+      "scope": "Radial or cylindrical data with extra angular-momentum integrability; not arbitrary compact smooth data."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Global-classical-solutions-of-the-three-dimensional-relativistic-Vlasov-Maxwell-system-September-23-2026/paper.pdf",
+      "version": "current main read 3 November 2026, manuscript 23 September 2026",
+      "sha256": "56691a44941097fa1a5131470d44c5bc23930faeda22836e177d2391252817d8",
+      "locators": "equation 1.1 p.2, Theorem 1.1 p.3",
+      "body_inspected": true,
+      "access": "Public PDF fetched/extracted in RAM only.",
+      "scope": "Full relativistic Vlasov–Maxwell with dynamic electromagnetic field; no theorem for arbitrary electrostatic Poisson evolution."
+    }
+  ],
+  "registry_checks": "No relativistic-Vlasov alias Palomar/Hexagon metadata. OpenAI current family362 candidate actual body checked. Focused arXiv, Zenodo, HAL, GitHub, primary author/publisher searches.",
+  "scope_comparison": "Poisson electrostatic closure is not a subsystem of unrestricted Maxwell evolution for arbitrary data: setting magnetic B=0 requires curl E=0 persist, but Ampere E_t=-j generally creates curl when curl j differs from zero. Maxwell theorem therefore cannot be applied to arbitrary repulsive VP by choosing electrostatic initial fields. Nonrelativistic velocity and symmetric point-charge theorems also differ.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. The apparently stronger Maxwell headline concerns a different evolution, so original target stays Open."
+}

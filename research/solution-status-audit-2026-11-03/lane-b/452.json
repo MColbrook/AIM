@@ -1,0 +1,48 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 362,
+  "source_sha256": "8006fe96babb85154d11b3830959a5cc8cd95a299c1c326cd64909dae0bde4a1",
+  "statement_sha256": "1de8617703aec1b78bc5201de3b79958fe28bffd99f7b99e4dfccd9f23c9c7c6",
+  "original_target": {
+    "id": "452",
+    "title": "Bounded-Hessian Liouville rigidity in dimensions three and four",
+    "area": "Fully nonlinear elliptic PDEs; blow-up analysis",
+    "file": "problems/452-fully-nonlinear-bounded-hessian-liouville.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "8006fe96babb85154d11b3830959a5cc8cd95a299c1c326cd64909dae0bde4a1",
+    "statement_sha256": "1de8617703aec1b78bc5201de3b79958fe28bffd99f7b99e4dfccd9f23c9c7c6",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "452",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"bounded Hessian\" \"Liouville\" \"2026\"",
+    "\"fully nonlinear\" \"Liouville\" \"three\" \"four\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2501.19075",
+      "version": "v1,31Jan2025,currentabs checked;currenttitleA note ontheLiouvilletheorem",
+      "locator": "Theorem1.1",
+      "theorem_body_checked": true,
+      "scope": "ExplicituniformellipticCONVEXF;exteriorquadratic-growthasymptotics. Doesnotremovestructureassumption."
+    },
+    {
+      "url": "https://arxiv.org/html/2603.10797",
+      "version": "2026currentHTML",
+      "locator": "TheoremB",
+      "theorem_body_checked": true,
+      "scope": "Allowsn2general,butn>=3requiresconvexorconcaveF. Othernewtheoremssmalloscillation/periodicsettingnotallF."
+    }
+  ],
+  "registry_checks": "CompletePalomar/Hexagon/OpenAI/Colbrookcachesscanned. Liouville-function,GaussianmultiplicativechaosandinfinityharmonicLiouvilletheoremsaredifferentoperators.",
+  "scope_comparison": "Needbothn3,4andallC∞uniformellipticF,nostructuralconvexityandnohomogeneityassumptiononu beyondboundedHessian. ConvexF,n2,homogeneousprofilesorHessianspecialequationsinsufficient.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

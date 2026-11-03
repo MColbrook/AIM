@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "725",
+  "manifest_index": 569,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "725",
+    "title": "Logarithmic comparison and strong Euler homogeneity of free divisors",
+    "area": "Complex analysis and potential theory",
+    "file": "problems/725-logarithmic-comparison-and-strong-euler-homogeneity-of-free-divisors.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e8b8511ca4f01ffc",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "d3ddfeb92d1d5ada14fcbabbcc519a47babaa1bb7b750d15f766adfedb86157b",
+    "statement_sha256": "dd3083274ee6f9368515a32308412ed2c3c291b3067bff91dfbe7cfcc67f538e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d3ddfeb92d1d5ada14fcbabbcc519a47babaa1bb7b750d15f766adfedb86157b",
+  "statement_sha256": "dd3083274ee6f9368515a32308412ed2c3c291b3067bff91dfbe7cfcc67f538e",
+  "actual_source_sha256": "d3ddfeb92d1d5ada14fcbabbcc519a47babaa1bb7b750d15f766adfedb86157b",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`X`$ be a complex analytic manifold of finite complex dimension $`n`$, and let $`D\\subset X`$ be a reduced analytic hypersurface. Assume $`D`$ is a **free divisor**: the sheaf of logarithmic vector fields\n```math\n\\mathrm{Der}_X(-\\log D)\n =\\{\\delta:\\delta(f)\\in(f)\\}\n```\n\nis locally free of rank $`n`$, where $`f`$ is a reduced local defining equation.\n\nWrite $`\\Omega_X^\\bullet(*D)`$ for meromorphic differential forms with poles along $`D`$, equipped with the exterior differential. Its logarithmic subcomplex consists locally of forms $`\\eta`$ for which both $`f\\eta`$ and $`f\\,d\\eta`$ are holomorphic. Suppose the inclusion\n```math\n\\Omega_X^\\bullet(\\log D)\\longrightarrow\\Omega_X^\\bullet(*D)\n```\n\nis a quasi-isomorphism of complexes of sheaves on $`X`$, namely the logarithmic comparison theorem (LCT).\n\nMust $`D`$ be **strongly Euler-homogeneous**? Explicitly, for every $`p\\in D`$, must there exist a holomorphic vector-field germ\n```math\n\\delta\\in\\mathfrak m_{X,p}\\mathrm{Der}_{X,p},\n \\qquad \\delta(f)=f?\n```\n\nHere $`\\mathfrak m_{X,p}`$ is the maximal ideal of germs vanishing at $`p`$; thus the vector field must vanish at $`p`$. The property does not depend on the chosen reduced equation.\n\nLCT is assumed on a neighbourhood, as a sheaf statement. A quasi-isomorphism at a single stalk is not substituted. There is no assumption of isolated singularities, linearity or Koszul freeness, and no converse is requested.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"2504.21829\" logarithmic comparison Euler homogeneity",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"logarithmic comparison\" \"Euler\"",
+    "site:palomar-registry.org OR site:hexagonmath.org \"Euler\" \"free divisors\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v5 accepted12February2026, latest version confirmed via arXiv history; JLMS113(2026)e70451 doi10.1112/jlms.70451",
+      "scope_comparison": "The exact arbitrary-dimensional free-divisor LCT⇒strong Euler-homogeneity assertion remains Conjecture1.2 in the accepted body. New theorems add punctured-neighborhood/discrete exceptional-set homogeneity, weak Koszul-freeness, n=4, or linear freeness in n=5. Local target has none of these added restrictions. Example7.2 fails LCT and so is not a counterexample to the conditional. The older math/0311506 general claim is withdrawn due to incorrect Lemma8 and cannot supply a solution.",
+      "url": "https://arxiv.org/html/2504.21829v5",
+      "locator": "Conjecture1.2; Definition1.4; Theorems6.3,6.5,6.10; §7 Example7.2/Corollary7.3",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The exact arbitrary-dimensional free-divisor LCT⇒strong Euler-homogeneity assertion remains Conjecture1.2 in the accepted body. New theorems add punctured-neighborhood/discrete exceptional-set homogeneity, weak Koszul-freeness, n=4, or linear freeness in n=5. Local target has none of these added restrictions. Example7.2 fails LCT and so is not a counterexample to the conditional. The older math/0311506 general claim is withdrawn due to incorrect Lemma8 and cannot supply a solution.",
+  "latest_version_check": "v5 accepted12February2026, latest version confirmed via arXiv history; JLMS113(2026)e70451 doi10.1112/jlms.70451",
+  "gap_retraction_check": "arXiv math/0311506 explicitly withdrawn: proof of Lemma8 incorrect. Latest2504.21829v5 retains Conjecture1.2; restricted new results are not independent validation of a general proof.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

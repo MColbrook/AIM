@@ -2,9 +2,9 @@
 
 **Area:** Nonlinear elliptic PDEs / geometric analysis
 
-**Status:** 🔵 OPEN
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-22
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -32,7 +32,17 @@ This equation constructs Ricci-flat Kähler metrics and is a central nonlinear e
 2. Y. Wang, *A Liouville Theorem for the Complex Monge–Ampère Equation*, preprint (2013), main theorem assuming a quadratic asymptote with an o(|z|²) error. [arXiv:1303.2403](https://arxiv.org/abs/1303.2403).
 3. H. Chen, J. Hu and L. Sheng, *Pogorelov interior estimates and a Liouville theorem for the complex Monge–Ampère equation*, preprint (16 September 2026), §1 discussion of Székelyhidi’s quadratic-growth question and Theorem 1.3. [Full text](https://arxiv.org/html/2609.18265v1).
 
+4. J. Chu and Y. Liu, [*Quadratic growth rigidity for the complex Monge–Ampère equation*](https://arxiv.org/abs/2610.26016), arXiv:2610.26016v1 (19 October 2026), Theorem 1.2. [Primary manuscript](https://arxiv.org/pdf/2610.26016v1).
+5. J. Hu and L. Sheng, [*Interior C² Estimates and a Liouville Theorem for the Complex Monge–Ampère Equation*](https://arxiv.org/abs/2610.28375), arXiv:2610.28375v1 (20 October 2026), Theorem 1.1, Remark 1.2 and Appendix A, Theorem A.1. [Primary manuscript](https://arxiv.org/pdf/2610.28375v1).
+
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Chu and Liu’s Theorem 1.2 asserts quadratic rigidity under precisely the displayed two-sided growth assumption, without real convexity, completeness or a prescribed quadratic asymptote. Hu and Sheng independently announce the same smooth conclusion in their Theorem 1.1 and Appendix A, Theorem A.1; the latter explicitly concludes that the potential is a real quadratic polynomial.
+
+[Claimed solution](https://arxiv.org/pdf/2610.26016v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/410.json). The theorem hypotheses and current announcement were checked. The external proofs have not been independently verified end-to-end here; no Lean verification or human peer review is asserted.
+
+### Earlier status record
+
 
 **Literature check:** Open in cited literature; no later resolution located.
 

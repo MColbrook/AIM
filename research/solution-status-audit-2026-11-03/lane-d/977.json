@@ -1,0 +1,142 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "977",
+  "manifest_index": 821,
+  "checked_date": "2026-11-03",
+  "source_sha256": "670c352c78c47a2680817ca58337f2a6ba88ab6a6da7063aa97e434d94b0b29f",
+  "statement_sha256": "cca197da8d60d2989ea933b4e177fba8a496a0f7a10cee20694e61acd8bda34a",
+  "original_target": {
+    "id": "977",
+    "title": "First-exit measures of randomly rotated planar curves",
+    "area": "Probability, geometric measure theory and planar geometry",
+    "file": "problems/977-first-exit-measures-of-randomly-rotated-planar-curves.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-54f55e1377e018e7",
+    "group": "probability-statistics",
+    "source_sha256": "670c352c78c47a2680817ca58337f2a6ba88ab6a6da7063aa97e434d94b0b29f",
+    "statement_sha256": "cca197da8d60d2989ea933b4e177fba8a496a0f7a10cee20694e61acd8bda34a",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\gamma:[0,\\infty)\\to\\mathbb R^2`$ be continuous, with $`\\gamma(0)=0`$ and unbounded image. Let $`\\Omega\\subset\\mathbb R^2`$ be nonempty, bounded, open and simply connected. No simplicity or rectifiability of the curve, or regularity of the boundary, is assumed.\n\nFor $`z\\in\\Omega`$ and rotation $`R_\\theta`$, define\n\n```math\n\\tau_z(\\theta)=\\inf\\{t\\ge0:z+R_\\theta\\gamma(t)\\notin\\Omega\\},\\qquad\nH_z(\\theta)=z+R_\\theta\\gamma(\\tau_z(\\theta)).\n```\n\nContinuity and unboundedness make $`0<\\tau_z(\\theta)<\\infty`$ and $`H_z(\\theta)\\in\\partial\\Omega`$. Let $`\\mu_z`$ be the law of $`H_z(\\Theta)`$ when $`\\Theta`$ is uniform on $`[0,2\\pi)`$.\n\nMust\n\n```math\n\\dim_{\\mathrm H}\\mu_z\\le1\n\\quad\\text{for Lebesgue-almost every }z\\in\\Omega?\n```\n\nHere $`\\dim_{\\mathrm H}\\mu=\\inf\\{\\dim_{\\mathrm H}E:E\\text{ Borel},\\ \\mu(E)=1\\}`$. The full-measure carrier may depend on $`z`$, and the exceptional roots may depend on $`\\gamma,\\Omega`$.",
+  "full_original_page": "# 977. First-exit measures of randomly rotated planar curves\n\n**Area:** Probability, geometric measure theory and planar geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\gamma:[0,\\infty)\\to\\mathbb R^2`$ be continuous, with $`\\gamma(0)=0`$ and unbounded image. Let $`\\Omega\\subset\\mathbb R^2`$ be nonempty, bounded, open and simply connected. No simplicity or rectifiability of the curve, or regularity of the boundary, is assumed.\n\nFor $`z\\in\\Omega`$ and rotation $`R_\\theta`$, define\n\n```math\n\\tau_z(\\theta)=\\inf\\{t\\ge0:z+R_\\theta\\gamma(t)\\notin\\Omega\\},\\qquad\nH_z(\\theta)=z+R_\\theta\\gamma(\\tau_z(\\theta)).\n```\n\nContinuity and unboundedness make $`0<\\tau_z(\\theta)<\\infty`$ and $`H_z(\\theta)\\in\\partial\\Omega`$. Let $`\\mu_z`$ be the law of $`H_z(\\Theta)`$ when $`\\Theta`$ is uniform on $`[0,2\\pi)`$.\n\nMust\n\n```math\n\\dim_{\\mathrm H}\\mu_z\\le1\n\\quad\\text{for Lebesgue-almost every }z\\in\\Omega?\n```\n\nHere $`\\dim_{\\mathrm H}\\mu=\\inf\\{\\dim_{\\mathrm H}E:E\\text{ Borel},\\ \\mu(E)=1\\}`$. The full-measure carrier may depend on $`z`$, and the exceptional roots may depend on $`\\gamma,\\Omega`$.\n\n## Application\n\nThis asks how concentrated boundary exit locations must be when the only randomness is the orientation of a prescribed path. It extends a familiar dimension phenomenon for Brownian harmonic measure to a much wider class of paths.\n\n## References\n\n1. I. Benjamini and A. Shamov, [Where does a random process hit a fractal barrier?](https://arxiv.org/pdf/1608.00505v2), §2 and Question2.2, pp.1–2. Published in *Electronic Communications in Probability* **23** (2018), article25, 1–5, DOI [10.1214/18-ECP131](https://doi.org/10.1214/18-ECP131).\n2. T. Orponen and A. Rutar, [Visibility problem in the plane](https://arxiv.org/html/2606.06965v2) (2026), Definition1.1 and Question1.4. A nearby question about dimensions of entire visible sets.\n\n## Status review\n\n\n**Known cases:** The dimension is that of a full carrier of the first-exit probability measure for almost every root. The recent visible-set dimension construction does not control this exit law, and singularity alone is weaker.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe dimension is that of a full carrier of the first-exit probability measure for almost every root. The recent visible-set dimension construction does not control this exit law, and singularity alone is weaker.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThis is the stronger dimension question, rather than the source’s separate singularity conjecture. It concerns the dimension of an exit probability measure, not the whole boundary or its topological support. The 2026 visible-set counterexample in [2] does not directly settle this measure question.\n\nBounded resolution, announcement and semantic duplicate checks through 29 October 2026 found no matching completion. The latest archived source v2 was read. The published typeset body was inaccessible and was not claimed checked.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-54f55e1377e018e7**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scopes inspected, not complete proof certification."
+  ],
+  "aliases": [
+    "Benjamini",
+    "Shamov",
+    "first-exit",
+    "Visibility problem"
+  ],
+  "queries": [
+    "\"randomly rotated\" \"curves\" \"exit\" measure",
+    "\"randomly rotated\" \"curves\" \"exit\" measure; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"Benjamini\" \"Shamov\" \"rotated\" measure 2026"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1608.00505v2",
+      "locator": "4Aug2016v2 section2/Question2.2 nativepp1–2 lines18–37",
+      "comparison": "Actual source asks dimension of full exit-measure carrier for almost every root, separately from weaker singularity conjecture."
+    },
+    {
+      "url": "https://arxiv.org/html/2606.06965v2",
+      "locator": "Definition1.1/main visible-set problem and incidence theorem1.11",
+      "comparison": "Dimensions of entire ray-visible sets are not dimensions of orientation-pushforward first-exit measures for arbitrary curves."
+    }
+  ],
+  "rationale": "No matching measure-dimension theorem located; boundary/support or visibility dimension does not suffice.",
+  "announcement_routing": {
+    "localID": "977",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Benjamini",
+          "Shamov",
+          "first-exit",
+          "Visibility problem"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-09-10-000004",
+            "title": "Density-one prescribed-rank spectra of prime-cover graphs",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-10-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-29-000017",
+            "title": "shaikidris/prime-star-spectra-formalization",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000017-v2.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Benjamini",
+          "Shamov",
+          "first-exit",
+          "Visibility problem"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00358v1",
+            "title": "Prescribed Eigenvalues in Power Bands of Finite Prime-Cover Graphs",
+            "url": "https://hexagonmath.org/abs/2610.00358v1"
+          },
+          {
+            "id": "hexagon:2610.00349v1",
+            "title": "Prime-Star Localization and Second-Order Spectra of Finite Divisibility Cover Graphs",
+            "url": "https://hexagonmath.org/abs/2610.00349v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Benjamini",
+        "Shamov",
+        "first-exit",
+        "Visibility problem"
+      ],
+      "hits": [
+        {
+          "entry": "213",
+          "title": "No infinite critical clusters on quasi-transitive graphs",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Critical-bond-and-site-percolation-on-the-cubic-lattice-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "214",
+          "title": "The Benjamini--Schramm nonuniqueness conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive-graphs-September-24-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Prime-cover graph spectral limits and critical percolation on quasi-transitive graphs concern graph processes, not first-exit distributions of randomly rotated planar curves.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.745Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

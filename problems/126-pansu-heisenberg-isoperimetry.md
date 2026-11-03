@@ -2,9 +2,9 @@
 
 **Area:** Sub-Riemannian geometric optimization
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -35,6 +35,13 @@ The Heisenberg geometry is a basic model of constrained motion. A sharp perimete
 2. R. L. Frank and B. Helffer, *On Courant and Pleijel theorems for sub-Riemannian Laplacians* (2025), [Journal de l'École polytechnique — Mathématiques 12](https://doi.org/10.5802/jep.307), §11.4. Retains Pansu's conjecture and reviews conditional results; its vector-field normalization differs by a central-coordinate scaling.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The source claims sharp horizontal isoperimetry for every measurable finite-perimeter positive-finite-volume set, with no regularity or symmetry restriction. Its fields use t-normalization twice that of the local statement. The change(x,y,t)->(x,y,-2t) carries the local horizontal fields to the source fields and the displayed bubble to the source Pansu ball. Both volume and horizontal perimeter acquire factor2, so the equal-volume comparison is exactly preserved.
+
+[Claimed solution](https://arxiv.org/pdf/2610.07632v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/126.json). Source locator: Theorem1.1 and normalization(1.1)–(1.3). The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative sharp Heisenberg isoperimetry
 

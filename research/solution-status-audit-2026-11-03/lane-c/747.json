@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "747",
+  "manifest_index": 591,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "747",
+    "title": "Uniqueness of weak multi-species Nernst–Planck–Poisson solutions in three dimensions",
+    "area": "Electrochemistry and energy storage",
+    "file": "problems/747-uniqueness-of-weak-multi-species-nernstplanckpoisson-solutions-in-three-dimensions.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a52878be70077b5a",
+    "group": "electrochemistry-energy-storage",
+    "source_sha256": "2cad654b1a3726f8c049378ebdc6fb5ee50794d23b50282f3adb2464f4f220d4",
+    "statement_sha256": "310fc995109b1b1fdd039b4f260de06dd0fb517bc14bb246acde4b0d500de253",
+    "state": "unreviewed"
+  },
+  "source_sha256": "2cad654b1a3726f8c049378ebdc6fb5ee50794d23b50282f3adb2464f4f220d4",
+  "statement_sha256": "310fc995109b1b1fdd039b4f260de06dd0fb517bc14bb246acde4b0d500de253",
+  "actual_source_sha256": "2cad654b1a3726f8c049378ebdc6fb5ee50794d23b50282f3adb2464f4f220d4",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^3`$ be a bounded connected open set with $`C^2`$ boundary, and let $`P\\ge1`$ and $`z_1,\\ldots,z_P\\in\\mathbb Z`$. For each finite $`T>0`$, let the measurable scalar diffusivities satisfy\n\n```math\n0<d_*(T)\\le d_i(t,x)\\le d^*(T)<\\infty\n\\quad\\text{a.e. on }Q_T=(0,T)\\times\\Omega.\n```\n\nThey may differ between species and depend on space and time. Let $`f_i(t,x,y)`$ be continuous on $`[0,\\infty)\\times\\overline\\Omega\\times[0,\\infty)^P`$, continuously differentiable in $`y`$ with continuous derivatives on that set, uniformly bounded, and quasi-positive: $`f_i(t,x,y)\\ge0`$ whenever $`y_i=0`$. Fix nonnegative $`\\tau\\in L^\\infty(\\partial\\Omega)`$ with $`\\int_{\\partial\\Omega}\\tau\\,dS>0`$, time-independent $`\\xi\\in L^q(\\partial\\Omega)`$ for some $`q>2`$, and nonnegative $`c_i^0\\in L^p(\\Omega)`$ for some finite $`p\\ge2`$.\n\nConsider the system, with physical constants scaled to one,\n\n```math\n\\partial_t c_i-\\nabla\\cdot\\bigl(d_i(\\nabla c_i+z_i c_i\\nabla\\Phi)\\bigr)=f_i(t,x,c),\n\\qquad -\\Delta\\Phi=\\sum_{i=1}^Pz_i c_i,\n```\n\nwith no-flux boundary conditions for each concentration and $`\\partial_\\nu\\Phi+\\tau\\Phi=\\xi`$ for the potential.\n\nHere a weak solution means $`c_i\\ge0`$ and, for every finite $`T>0`$,\n\n```math\nc_i\\in C([0,T];L^1(\\Omega))\\cap L^1(0,T;W^{1,3/2}(\\Omega)),\\qquad c_i(0)=c_i^0,\n```\n\n```math\n\\Phi\\in L^\\infty(0,T;H^1(\\Omega))\\cap L^2(0,T;H^2_{\\rm loc}(\\Omega))\n\\cap C([0,T];L^r(\\Omega))\\quad\\text{for every }1\\le r<6,\n```\n\nand $`F_i=d_i(\\nabla c_i+z_i c_i\\nabla\\Phi)\\in L^1(Q_T;\\mathbb R^3)`$. The equations and boundary conditions mean\n\n```math\n\\int_{Q_T}\\bigl(-c_i\\partial_t\\psi+F_i\\cdot\\nabla\\psi\\bigr)\n=\\int_\\Omega c_i^0\\psi(0)+\\int_{Q_T}f_i(t,x,c)\\psi\n```\n\nfor every smooth $`\\psi`$ on $`[0,T]\\times\\overline\\Omega`$ with $`\\psi(T)=0`$, and\n\n```math\n\\int_\\Omega\\nabla\\Phi(t)\\cdot\\nabla\\varphi\n+\\int_{\\partial\\Omega}(\\tau\\Phi(t)-\\xi)\\varphi\n=\\int_\\Omega\\left(\\sum_{i=1}^Pz_i c_i(t)\\right)\\varphi\n```\n\nfor every smooth $`\\varphi`$ on $`\\overline\\Omega`$, for almost every $`t`$. Smooth tests may equivalently be restrictions of ambient smooth functions.\n\n**For every such set of data, is there at most one weak solution in this class?** Equality of potentials is literal: the nonzero nonnegative Robin coefficient fixes the additive constant. No equality of diffusivities, restriction to two species, smallness, or additional boundedness of the concentrations is assumed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"diffusion electromigration\" \"uniqueness\" \"weak\" 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"Bothe\" \"Pierre\" \"uniqueness\" electrodiffusion",
+    "site:palomar-registry.org OR site:hexagonmath.org \"electromigration\" uniqueness"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "scope_comparison": "Actual new uniqueness theorem is periodic two-species equal-constant-diffusion fluid-coupled NPNS in a Leray–Hopf class with additional Serrin velocity criterion. Local pure NPP allows arbitrary species/time-space measurable unequal scalar diffusion, bounded reactions and Robin electric data, in broad L1 weak class. Setting velocity zero does not remove fluid momentum constraint for every NPP solution. Original auxiliary prescribed-field/regularized uniqueness is not coupled weak uniqueness. No matching complete result located.",
+      "locator": "§4 Definition4.1/Theorem4.3; equations4.1–4.4; originalintroduction/weakidentities8–9",
+      "version_or_date": "v1,1July2026; 1311.1652v1 originalbody inspected",
+      "url": "https://arxiv.org/html/2607.00225v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual new uniqueness theorem is periodic two-species equal-constant-diffusion fluid-coupled NPNS in a Leray–Hopf class with additional Serrin velocity criterion. Local pure NPP allows arbitrary species/time-space measurable unequal scalar diffusion, bounded reactions and Robin electric data, in broad L1 weak class. Setting velocity zero does not remove fluid momentum constraint for every NPP solution. Original auxiliary prescribed-field/regularized uniqueness is not coupled weak uniqueness. No matching complete result located.",
+  "latest_version_check": "v1,1July2026; 1311.1652v1 originalbody inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

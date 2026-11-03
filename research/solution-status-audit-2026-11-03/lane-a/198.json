@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "198",
+  "manifest_index": 155,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "198",
+    "title": "The optimal Lieb–Oxford constant",
+    "area": "Electronic density-functional theory",
+    "file": "problems/198-optimal-lieb-oxford.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "spectral3",
+    "source_sha256": "78668fbc82ebeeb731ff6264e98f8f7fc90d10d8e3acaf82e96c44f63f64de2f",
+    "statement_sha256": "b39b4b5bd2efac9c8402ebbeb7a2dfa0dbf9d2b8dc86c1aae63d92051856242e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "78668fbc82ebeeb731ff6264e98f8f7fc90d10d8e3acaf82e96c44f63f64de2f",
+  "statement_sha256": "b39b4b5bd2efac9c8402ebbeb7a2dfa0dbf9d2b8dc86c1aae63d92051856242e",
+  "actual_source_sha256": "78668fbc82ebeeb731ff6264e98f8f7fc90d10d8e3acaf82e96c44f63f64de2f",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For every integer $`N\\ge1`$, consider symmetric probability measures $`P`$ on $`(\\mathbb R^3)^N`$ whose one-particle density $`\\rho_P`$ is defined by $`\\int\\rho_P=N`$ and whose one-coordinate marginal has density $`\\rho_P/N`$. Require $`\\rho_P\\in L^{4/3}(\\mathbb R^3)`$ and all the following Coulomb integrals to be finite. Define\n\n```math\nE_{\\rm ind}(P)=\\int\\sum_{i<j}\\frac{1}{|x_i-x_j|}\\,dP-\\frac12\\iint\\frac{\\rho_P(x)\\rho_P(y)}{|x-y|}\\,dx\\,dy.\n```\n\nDetermine the sharp universal constant\n\n```math\nC_{\\rm LO}=\\sup_{N,P}\\frac{-E_{\\rm ind}(P)}{\\int_{\\mathbb R^3}\\rho_P(x)^{4/3}\\,dx}.\n```\n\nSharpness means both a universal inequality with this constant and admissible distributions approaching equality. No numerical conjecture for its exact value is assumed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"optimal Lieb Oxford constant\" 2026",
+    "\"optimal Lieb Oxford constant\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"optimal Lieb Oxford constant\" (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The full target determines the optimal Coulomb indirect-energy constant over all particle numbers and symmetric probability laws, including an approaching-equality construction. The actual current primary body gives a numerical upper bound1.5765, discusses a distinct lower bound and a better exchange-only constant; it does not identify a common exact optimum. Finite-N or Hartree–Fock restrictions and gradient-corrected inequalities do not meet the displayed universal quotient. No later exact complete claim was located.",
+      "primary_body_access_gap": false,
+      "locator": "Introduction;Section5,Eq79 and numerical optimization discussion",
+      "version_or_date": "arXiv:2203.12473v3,13September2022,currentlatest;finalLMP112(2022)92",
+      "url": "https://arxiv.org/html/2203.12473"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The full target determines the optimal Coulomb indirect-energy constant over all particle numbers and symmetric probability laws, including an approaching-equality construction. The actual current primary body gives a numerical upper bound1.5765, discusses a distinct lower bound and a better exchange-only constant; it does not identify a common exact optimum. Finite-N or Hartree–Fock restrictions and gradient-corrected inequalities do not meet the displayed universal quotient. No later exact complete claim was located.",
+  "latest_version_check": "arXiv:2203.12473v3,13September2022,currentlatest;finalLMP112(2022)92",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

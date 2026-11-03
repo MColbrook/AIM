@@ -1,0 +1,162 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "979",
+  "manifest_index": 823,
+  "checked_date": "2026-11-03",
+  "source_sha256": "1cea2f888dcea835e30772fce064512acf5b0d2ab6eb87ebb6cc0289e3bcc438",
+  "statement_sha256": "1af16801329bd5f00c2ee245138b7b46573c6c16a7d56bc2a40c6e65afc56eb1",
+  "original_target": {
+    "id": "979",
+    "title": "Boundary independence of the half-line KPZ lower-tail rate",
+    "area": "Probability, statistics and learning",
+    "file": "problems/979-boundary-independence-of-the-half-line-kpz-lower-tail-rate.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-72dae1cc0ab2901f",
+    "group": "probability-statistics",
+    "source_sha256": "1cea2f888dcea835e30772fce064512acf5b0d2ab6eb87ebb6cc0289e3bcc438",
+    "statement_sha256": "1af16801329bd5f00c2ee245138b7b46573c6c16a7d56bc2a40c6e65afc56eb1",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For each fixed finite $`A>-1/2`$, let $`Z_A`$ solve the stochastic heat equation on $`x\\geq0`$, in the Itô mild sense,\n```math\n\\partial_t Z_A=\\partial_x^2Z_A+\\sqrt2\\,Z_A\\xi,\n\\qquad \\partial_xZ_A(t,0)=A Z_A(t,0),\n\\qquad Z_A(0,\\cdot)=\\delta_0,\n```\n\nwhere $`\\xi`$ is standard space-time white noise. Use the Robin heat kernel with unit boundary delta mass to fix the initial normalization, and put\n```math\nH_A(t)=\\log Z_A(t,0)+t/12.\n```\n\nFor every fixed $`s<0`$, do the finite limits\n```math\nI_A(s)=-\\lim_{t\\to\\infty}t^{-2}\\log\\mathbb P\\{H_A(t)<st\\}\n```\n\nexist and have the same value for all such $`A`$? The parameter stays fixed as time grows.",
+  "full_original_page": "# 979. Boundary independence of the half-line KPZ lower-tail rate\n\n**Area:** Probability, statistics and learning\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor each fixed finite $`A>-1/2`$, let $`Z_A`$ solve the stochastic heat equation on $`x\\geq0`$, in the Itô mild sense,\n```math\n\\partial_t Z_A=\\partial_x^2Z_A+\\sqrt2\\,Z_A\\xi,\n\\qquad \\partial_xZ_A(t,0)=A Z_A(t,0),\n\\qquad Z_A(0,\\cdot)=\\delta_0,\n```\n\nwhere $`\\xi`$ is standard space-time white noise. Use the Robin heat kernel with unit boundary delta mass to fix the initial normalization, and put\n```math\nH_A(t)=\\log Z_A(t,0)+t/12.\n```\n\nFor every fixed $`s<0`$, do the finite limits\n```math\nI_A(s)=-\\lim_{t\\to\\infty}t^{-2}\\log\\mathbb P\\{H_A(t)<st\\}\n```\n\nexist and have the same value for all such $`A`$? The parameter stays fixed as time grows.\n\n## Application\n\nThis asks whether interaction with a boundary changes the exponential cost of a large downward fluctuation of a randomly growing interface, or its associated directed polymer.\n\n## References\n\n- A. Krajenbrink and P. Le Doussal, *Large fluctuations of the KPZ equation in a half-space*, SciPost Phys. **5**, 032 (2018), [DOI](https://doi.org/10.21468/SciPostPhys.5.4.032), [primary v2](https://arxiv.org/html/1804.08800v2), **Section 9.3**.\n- The same authors, *Replica Bethe Ansatz solution to the Kardar-Parisi-Zhang equation on the half-line*, SciPost Phys. **8**, 035 (2020), [DOI](https://doi.org/10.21468/SciPostPhys.8.3.035), [primary v4](https://arxiv.org/html/1905.05718), Sections 2.1-2.2.\n- L.-C. Tsai, *Exact lower-tail large deviations of the KPZ equation*, Duke Math. J. **171** (2022), 1879-1922, [DOI](https://doi.org/10.1215/00127094-2022-0008), Corollary 1.4 ([archived Corollary 1.3](https://arxiv.org/html/1809.03410v1)).\n\n## Status review\n\n\n**Known cases:** The parameter A is fixed in the entire open interval above -1/2 and the fixed-depth rate must exist. The critical-boundary formula, typical fluctuations and half-space universality do not prove this boundary-independence assertion.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe parameter A is fixed in the entire open interval above -1/2 and the fixed-depth rate must exist. The critical-boundary formula, typical fluctuations and half-space universality do not prove this boundary-independence assertion.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\n**Partial progress; checked 28 October 2026.** The critical case $`A=-1/2`$ is known. It lies outside the question. Typical $`t^{1/3}`$ fluctuations and deep-tail exponents do not establish the full fixed-$`s`$ rate. No matching complete result, announcement or AIM/private duplicate was found. Independence on this open interval alone does not identify the rate with its critical-boundary value.\n\nReview evidence: [owner](../FURTHER_problems/_tracking/focused-halfspace-KPZ-left-rate-boundary-independence-C229-A-20261028/OWNER-EXACT-FIXED-ROBIN-HALFLINE-KPZ-LONGTIME-LEFT-RATE-INDEPENDENCE-PRIMARY-PARTIALS-CURRENT-DUPLICATE-PROPOSAL.json), [independent model review](../FURTHER_problems/_tracking/focused-halfspace-KPZ-left-rate-boundary-independence-C229-A-20261028/C-INDEPENDENT-ROBIN-SHE-NOISE-TIME2-CONVERSION-AND-FIXED-A-LONGTIME-LOWER-RATE-MODEL-PEER-PASS.json), [coordinating review](../FURTHER_problems/_tracking/focused-halfspace-KPZ-left-rate-boundary-independence-C229-A-20261028/ROOT-EXACT-LONGTIME-SHE-BOUNDARY-RATE-CRITICAL-PARTIAL-AND-CURRENT-FINAL-REVIEW.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-72dae1cc0ab2901f**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scopes inspected, not complete proof certification."
+  ],
+  "aliases": [
+    "half-space KPZ",
+    "Robin",
+    "lower-tail"
+  ],
+  "queries": [
+    "\"half-space KPZ\" \"lower tail\" \"boundary\" 2026",
+    "\"half-space KPZ\" \"lower tail\" \"boundary\"; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"half-space\" \"KPZ\" \"large deviations\" Robin 2026"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1804.08800v2",
+      "locator": "26Jul2018v2 section9.3 Furtherconjecture",
+      "comparison": "Source distinguishes fixed-A>-1/2 universality of long-time rate from solved critical/special-boundary and short-time formulas."
+    },
+    {
+      "url": "https://yujinhkim.github.io/data/half-space-kpz.pdf",
+      "locator": "Published2021 main setting/abstract and Theorem1.3",
+      "comparison": "Lower-tail estimates require A=-1/2, outside target. A half-space directed-landscape/fixed-point scaling limit would be a different limiting object and does not itself establish fixed-depth t^2 SHE rate for every fixed finite A."
+    }
+  ],
+  "rationale": "No all-fixed-Robin-parameter long-time rate-existence/independence claim located.",
+  "announcement_routing": {
+    "localID": "979",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "half-space KPZ",
+          "Robin",
+          "lower-tail"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-19-000018",
+            "title": "A certificate for the triangle variational problem",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-19-000018-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-07-000001",
+            "title": "A counterexample to Vaught's conjecture for infinitary logic",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-07-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-20-000012",
+            "title": "Microscopic–bulk crossover and conditional affine laws",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-20-000012-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-20-000011",
+            "title": "Microscopic boundary, prefixes and longest runs",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-20-000011-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-18-000006",
+            "title": "Birnbaum’s principles in Venn diagrams: Extended version with Lean verification",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-18-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-14-000007",
+            "title": "Robin1984",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-14-000007-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-26-000010",
+            "title": "Vulkin-prog/paper-c-lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-26-000010-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-26-000012",
+            "title": "Vulkin-prog/paper-c-lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-26-000012-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-20-000007",
+            "title": "Vulkin-prog/paper-c-lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-20-000007-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "half-space KPZ",
+          "Robin",
+          "lower-tail"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00702v1",
+            "title": "Robin's Inequality at Colossally Abundant Numbers and Nicolas' Inequality at Their Largest Prime Factor",
+            "url": "https://hexagonmath.org/abs/2610.00702v1"
+          },
+          {
+            "id": "hexagon:2610.00519v1",
+            "title": "Robin's Inequality and Superabundant Counterexamples",
+            "url": "https://hexagonmath.org/abs/2610.00519v1"
+          },
+          {
+            "id": "hexagon:2610.00188v1",
+            "title": "A counterexample to Vaught's Conjecture for $L_{\\omega_1,\\omega}$",
+            "url": "https://hexagonmath.org/abs/2610.00188v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "half-space KPZ",
+        "Robin",
+        "lower-tail"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "The Robin hits concern arithmetic divisor inequalities, Vaught hits infinitary logic, and the microscopic-prefix hits rare digit patterns. None concerns Robin boundary parameter in a half-line KPZ lower-tail rate. Triangle variational and Birnbaum-principle certificates also have different objects.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.745Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

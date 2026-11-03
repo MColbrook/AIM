@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "218",
+  "manifest_index": 166,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "218",
+    "title": "Fast dynamo action of the unit ABC flow",
+    "area": "Magnetohydrodynamics",
+    "file": "problems/218-abc-fast-dynamo.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "28b4fc1947581c3e578cc580f659e900d5727c2b9180dffa5c8a9064c1fca2f6",
+    "statement_sha256": "0e79e435d2908ebddc0aa02283464f8e8bc5b48ea47d090075b0e8864844eede",
+    "state": "unreviewed"
+  },
+  "source_sha256": "28b4fc1947581c3e578cc580f659e900d5727c2b9180dffa5c8a9064c1fca2f6",
+  "statement_sha256": "0e79e435d2908ebddc0aa02283464f8e8bc5b48ea47d090075b0e8864844eede",
+  "actual_source_sha256": "28b4fc1947581c3e578cc580f659e900d5727c2b9180dffa5c8a9064c1fca2f6",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "On $`\\mathbb T^3=(\\mathbb R/2\\pi\\mathbb Z)^3`$, fix\n\n```math\nu=(\\sin z+\\cos y,\\ \\sin x+\\cos z,\\ \\sin y+\\cos x).\n```\n\nFor magnetic diffusivity $`\\eta>0`$, let $`L_\\eta B=\\eta\\Delta B+\\nabla\\times(u\\times B)`$ on complex, mean-zero, divergence-free $`L^2`$ vector fields, with domain $`H^2`$ in that space. Write $`s(\\eta)=\\sup\\{\\mathop{\\mathrm{Re}}\\nolimits\\lambda:\\lambda\\in\\sigma(L_\\eta)\\}`$.\n\nProve or disprove that this fixed velocity field is a fast kinematic dynamo in the spectral sense:\n\n```math\n\\liminf_{\\eta\\downarrow0}s(\\eta)>0.\n```\n\nThe velocity and its three coefficients remain fixed while diffusivity tends to zero.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"ABC flow\" fast dynamo rigorous proof 2026",
+    "\"ABC flow\" fast dynamo rigorous proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"ABC flow\" fast dynamo rigorous proof (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Theorem2 and following paragraph;2610.01501IntroductionABCproblem",
+      "primary_body_access_gap": false,
+      "url": "https://link.springer.com/article/10.1007/s10884-026-10483-5",
+      "version_or_date": "Final2026JournalofDynamicsDifferentialEquations,DOI10.1007/s10884-026-10483-5;Boffi etal2610.01501v1,1October2026",
+      "scope_comparison": "The target is positive spectral liminf as diffusivity tends to zero for one fixed steady unitABCfield. Actual2026Theorem2 concerns a randomized time-dependent ABC velocity at zero diffusivity (ideal dynamo), and explicitly leaves magnetic diffusivity open. Time-periodic pulsed-diffusion constructions or limsupdynamos change the flow/operator and do not establish the fixedABCspectral liminf. October2026FEECprimarydiscussion still identifies this ABCquestion as unresolved. No matching complete fixed-flow announcement was found."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The target is positive spectral liminf as diffusivity tends to zero for one fixed steady unitABCfield. Actual2026Theorem2 concerns a randomized time-dependent ABC velocity at zero diffusivity (ideal dynamo), and explicitly leaves magnetic diffusivity open. Time-periodic pulsed-diffusion constructions or limsupdynamos change the flow/operator and do not establish the fixedABCspectral liminf. October2026FEECprimarydiscussion still identifies this ABCquestion as unresolved. No matching complete fixed-flow announcement was found.",
+  "latest_version_check": "Final2026JournalofDynamicsDifferentialEquations,DOI10.1007/s10884-026-10483-5;Boffi etal2610.01501v1,1October2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

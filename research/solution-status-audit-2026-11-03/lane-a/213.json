@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "213",
+  "manifest_index": 163,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "213",
+    "title": "A spectral gap for almost every pair of quantum gates",
+    "area": "Spectral theory / quantum dynamics",
+    "file": "problems/213-su-two-random-gate-gap.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "spectral3",
+    "source_sha256": "ad0d3564d02e2e3830370726195f7e0192e87693df00d2fb901fd30b68b91abf",
+    "statement_sha256": "3f4227b6d3603c67079e9a3ccc58e2ad588f765682b3828085513940582bfd8f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ad0d3564d02e2e3830370726195f7e0192e87693df00d2fb901fd30b68b91abf",
+  "statement_sha256": "3f4227b6d3603c67079e9a3ccc58e2ad588f765682b3828085513940582bfd8f",
+  "actual_source_sha256": "ad0d3564d02e2e3830370726195f7e0192e87693df00d2fb901fd30b68b91abf",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`G=\\mathrm{SU}(2)=\\{U\\in\\mathbb C^{2\\times2}:U^*U=I,\\det U=1\\}`$, with Haar probability measure $`\\mu`$. For $`a,b\\in G`$, define the lazy averaging operator on $`L^2(G,\\mu)`$ by\n\n```math\nP_{a,b}f(g)=\\frac12 f(g)+\\frac18\\bigl(f(ag)+f(a^{-1}g)+f(bg)+f(b^{-1}g)\\bigr).\n```\n\nIs it true that for $`(\\mu\\otimes\\mu)`$-almost every pair $`(a,b)`$ there exists $`\\delta(a,b)>0`$ such that\n\n```math\n\\|P_{a,b}f\\|_2\\le(1-\\delta(a,b))\\|f\\|_2\n\\quad\\text{whenever }f\\in L^2(G,\\mu),\\quad\\int_G f\\,d\\mu=0?\n```\n\nThe gap may depend on the chosen pair; no positive bound uniform over all pairs is requested.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"SU(2)\" \"spectral gap\" \"almost every\" 2026",
+    "\"SU(2)\" \"spectral gap\" \"almost every\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"SU(2)\" \"spectral gap\" \"almost every\" (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "scope_comparison": "The target asks whether Haar-almost every fixed pair has a pair-dependent L2 gap for its symmetric lazy finite-support walk. Current October19v2actualTheorem1.1 still proves only zero or full measure without choosing the alternative;algebraic examples have zero Haar measure. Baer–Haah's2026constant-gap Theorem1.3 samples fresh rotation angles or fresh local Haar gates at each step, rather than fixing two Haar generators. Thus neither resolves the exact almost-everywhere pair target. No full matching announcement was found.",
+      "url": "https://arxiv.org/html/2603.17869v2",
+      "locator": "Theorem1.1,Definition2.1;2607.20919v2Theorem1.3andwalkdefinitions",
+      "version_or_date": "arXiv:2603.17869v2,19October2026,currentlatest,titlechangedto A zero-one law for the spectral gap property of pairs in SU(2)"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The target asks whether Haar-almost every fixed pair has a pair-dependent L2 gap for its symmetric lazy finite-support walk. Current October19v2actualTheorem1.1 still proves only zero or full measure without choosing the alternative;algebraic examples have zero Haar measure. Baer–Haah's2026constant-gap Theorem1.3 samples fresh rotation angles or fresh local Haar gates at each step, rather than fixing two Haar generators. Thus neither resolves the exact almost-everywhere pair target. No full matching announcement was found.",
+  "latest_version_check": "arXiv:2603.17869v2,19October2026,currentlatest,titlechangedto A zero-one law for the spectral gap property of pairs in SU(2)",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

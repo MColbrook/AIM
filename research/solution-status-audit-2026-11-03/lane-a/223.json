@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "223",
+  "manifest_index": 171,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "223",
+    "title": "Giga’s embedded curve-diffusion conjecture",
+    "area": "Surface diffusion and geometric evolution",
+    "file": "problems/223-embedded-curve-diffusion.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "diffusion-materials",
+    "source_sha256": "07b0b4be687af7022355a73c65f14af69c0211460d9402f8a486bca2879fb619",
+    "statement_sha256": "6dfa78a19f088e2c9b182dea8c5e69fe92f4a3cdc68db193236ae2e345006a61",
+    "state": "unreviewed"
+  },
+  "source_sha256": "07b0b4be687af7022355a73c65f14af69c0211460d9402f8a486bca2879fb619",
+  "statement_sha256": "6dfa78a19f088e2c9b182dea8c5e69fe92f4a3cdc68db193236ae2e345006a61",
+  "actual_source_sha256": "07b0b4be687af7022355a73c65f14af69c0211460d9402f8a486bca2879fb619",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\gamma:S^1\\times[0,T)\\to\\mathbb R^2`$ be the maximal smooth evolution of a smooth closed regular curve by curve diffusion:\n\n```math\n\\partial_t\\gamma\\cdot\\nu=-\\partial_s^2\\kappa,\n```\n\nwhere $`s`$ is arclength, $`\\nu`$ is a chosen unit normal and $`\\kappa`$ is the signed curvature in the compatible convention. Tangential velocity only reparametrizes the curve.\n\nIf $`\\gamma(\\cdot,t)`$ is an embedding for every $`0\\leq t<T`$, must $`T=\\infty`$? Equivalently, must every finite-time singular evolution have lost embeddedness at a strictly earlier regular time?",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Giga conjecture\" \"curve diffusion\" 2026",
+    "\"Giga conjecture\" \"curve diffusion\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Giga conjecture\" \"curve diffusion\" (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Convergence for global curve diffusion flows\" pdf Giga"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "Theorem1.1 assumes global existence and proves exponential convergence. The conjecture displayed immediately afterward is the exact local target: embedded at every regular time implies infinite maximal lifetime. Near-circle and symmetry hypotheses are extra restrictions. Global convergence under assumed T=infinity is not a proof of that assumption; no matching current claim was found.",
+      "version_or_date": "Final Mathematics in Engineering4(1),2022; published9March2021; current searches3November2026.",
+      "locator": "Theorem1.1 pp1–2; Giga conjecture p2; conditional consequence p3",
+      "url": "https://www.aimspress.com/aimspress-data/mine/2022/1/PDF/mine-04-01-001.pdf",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Theorem1.1 assumes global existence and proves exponential convergence. The conjecture displayed immediately afterward is the exact local target: embedded at every regular time implies infinite maximal lifetime. Near-circle and symmetry hypotheses are extra restrictions. Global convergence under assumed T=infinity is not a proof of that assumption; no matching current claim was found.",
+  "latest_version_check": "Final Mathematics in Engineering4(1),2022; published9March2021; current searches3November2026.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "721",
+  "manifest_index": 565,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "721",
+    "title": "Real C¹,¹ regularity of complex Hessian obstacle envelopes",
+    "area": "Complex analysis, potential theory and nonlinear obstacle problems",
+    "file": "problems/721-real-c1-1-regularity-of-complex-hessian-obstacle-envelopes.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-d367b11ee7252273",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "ad2b96577f8f1f053ff99cf30bba7c20140b973b8f9f09ae18f4898ade319f23",
+    "statement_sha256": "c9ba4a4523d72923db9a35e30a3bbcbf87a9030bf27fd9ce6a7b1bd249d4fff5",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ad2b96577f8f1f053ff99cf30bba7c20140b973b8f9f09ae18f4898ade319f23",
+  "statement_sha256": "c9ba4a4523d72923db9a35e30a3bbcbf87a9030bf27fd9ce6a7b1bd249d4fff5",
+  "actual_source_sha256": "ad2b96577f8f1f053ff99cf30bba7c20140b973b8f9f09ae18f4898ade319f23",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Omega\\Subset\\mathbb C^n`$ be a bounded smooth strongly $`m`$-pseudoconvex domain, where $`2\\le m\\le n`$. Thus $`\\Omega`$ admits a smooth defining function $`\\rho`$ that is strictly $`m`$-subharmonic near $`\\overline\\Omega`$ and satisfies $`|\\nabla\\rho|>0`$ on its boundary. For real $`h\\in C^2(\\overline\\Omega)`$, define\n\n```math\nP_{m,\\Omega}h=\\left(\\sup\\{v\\in\\mathrm{SH}_m(\\Omega):v\\le h\\text{ on }\\Omega\\}\\right)^*.\n```\n\nHere the star denotes upper semicontinuous regularization, and $`\\mathrm{SH}_m`$ is the standard class of $`m`$-subharmonic functions. For smooth functions, this means that the first $`m`$ elementary symmetric functions of the eigenvalues of the complex Hessian are nonnegative.\n\nMust $`P_{m,\\Omega}h`$ have locally Lipschitz first derivatives with respect to all real coordinates, that is,\n\n```math\nP_{m,\\Omega}h\\in C^{1,1}_{\\mathrm{loc}}(\\Omega)?\n```",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Hessian\" \"obstacle envelope\" \"C1,1\" proof 2026",
+    "\"Hessian\" \"obstacle envelope\" \"C1,1\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2606.19713",
+      "version_or_date": "arXiv2606.19713v1,18June2026;1703.07727v2withdrawal inspected",
+      "locator": "Lemma8.1 lines2074–2080;arXiv1703.07727comments/versionhistory",
+      "scope_comparison": "The actual June bounded-domain envelope lemma supplies C0 continuity, not real C1,1 control. Compact-background complex Hessian estimates differ in setup and do not automatically bound all real second derivatives. The exact-looking2017psh envelope proof is withdrawn for a main-proof mistake and cannot settle the m=n subcase. No active full matching bounded-domain theorem found.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual June bounded-domain envelope lemma supplies C0 continuity, not real C1,1 control. Compact-background complex Hessian estimates differ in setup and do not automatically bound all real second derivatives. The exact-looking2017psh envelope proof is withdrawn for a main-proof mistake and cannot settle the m=n subcase. No active full matching bounded-domain theorem found.",
+  "latest_version_check": "arXiv2606.19713v1,18June2026;1703.07727v2withdrawal inspected",
+  "gap_retraction_check": "OfficialarXiv1703.07727v2 record explicitly withdrawn19June2017 with comment There is a mistake in the proof of main result. JEPerratumPDF reachable, but find error gave no match; no independent certification of corrected auxiliary results.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

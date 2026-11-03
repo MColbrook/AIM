@@ -1,0 +1,52 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 315,
+  "source_sha256": "3bab60ad76d171e601d1c909723428b1904ec86f3fb268f508236d549e30ec2c",
+  "statement_sha256": "1980ae2fdf902e34dd1513235b91b729f2f008c5ce36b2d880d9758d6c3f2843",
+  "original_target": {
+    "id": "386",
+    "title": "Is geometric visibility enough for conditional wave continuation from boundary Cauchy data?",
+    "area": "Inverse problems and hyperbolic PDE",
+    "file": "problems/386-is-geometric-visibility-enough-for-conditional-wave-continuation-from-boundary-cauchy-data.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-421dc569288d76f9",
+    "group": "inverse3",
+    "source_sha256": "3bab60ad76d171e601d1c909723428b1904ec86f3fb268f508236d549e30ec2c",
+    "statement_sha256": "1980ae2fdf902e34dd1513235b91b729f2f008c5ce36b2d880d9758d6c3f2843",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "386",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"conditionally stable\" \"visibility\" wave \"2026\"",
+    "\"wave\" \"visibility\" \"Cauchy\" (site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Conditionally stable unique continuation\" visibility",
+    "\"wave equation\" \"stability landscape\" boundary",
+    "\"Stefanov\" \"conditional\" \"2026\" continuation"
+  ],
+  "sources": [
+    {
+      "url": "https://www.math.purdue.edu/~stefanop/publications/Unique_Continuation.pdf",
+      "version": "author full manuscript, MathEng2019 DOI10.3934/mine.2019.4.789",
+      "locators": "Theorem3.1 equations6–9; Section3.3 PDFpp5–6",
+      "body_inspected": true,
+      "scope": "Boundary Cauchy estimate needs pseudoconvex phi; special Euclidean annulus sharpness, not general visibility sufficiency."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2510.20359",
+      "version": "current PDF checked3November2026; original23October2025",
+      "locators": "Section2.1 Lemma1 equation12; Section2.2 Theorem2",
+      "body_inspected": true,
+      "scope": "Data on interior volume omegaT; Lipschitz extension uses a finite-dimensional boundary trace space. Different setup."
+    }
+  ],
+  "registry_checks": "No relevant boundary Cauchy/visibility alias Palomar/Hexagon/OpenAI or shared Colbrook author metadata; generic visibility matches unrelated.",
+  "scope_comparison": "Target exact optimal conditional Holder continuation region under lateral boundary Dirichlet and normal data for smooth variable metric, using only ray visibility. Volumetric observation or qualitative uniqueness does not imply it.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

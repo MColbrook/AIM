@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "811",
+  "manifest_index": 655,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "811",
+    "title": "The strong maximal-rank conjecture for linear series on a general curve",
+    "area": "Geometry and topology",
+    "file": "problems/811-the-strong-maximal-rank-conjecture-for-linear-series-on-a-general-curve.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-80ffedebd7cab58b",
+    "group": "geometry-topology",
+    "source_sha256": "3ac217b6f4eed66acb719dec607c1f9389b7467790924f5ac0df380faf62667d",
+    "statement_sha256": "dd64c2a42c6013defca8faa0e06a75940084f4c4d9ec61fd307c6e6f39e9461c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "3ac217b6f4eed66acb719dec607c1f9389b7467790924f5ac0df380faf62667d",
+  "statement_sha256": "dd64c2a42c6013defca8faa0e06a75940084f4c4d9ec61fd307c6e6f39e9461c",
+  "actual_source_sha256": "3ac217b6f4eed66acb719dec607c1f9389b7467790924f5ac0df380faf62667d",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Work over $`\\mathbb C`$. Fix integers $`g,r,d\\ge1`$ and $`k\\ge2`$, and put\n```math\ns=g-d+r,\\qquad \\rho=g-(r+1)(g-d+r).\n```\n\nAssume\n```math\ns\\ge0,\\qquad 0\\le\\rho<r-2.\n```\n\nLet $`C`$ be a general smooth connected projective curve of genus $`g`$, and write\n```math\nW_d^r(C)=\\{L\\in\\mathrm{Pic}^d(C):h^0(C,L)\\ge r+1\\},\n```\n\nwhere $`\\mathrm{Pic}^d(C)`$ parametrizes degree-$`d`$ line bundles and $`h^0`$ is the complex dimension of the space of global sections. Under these hypotheses $`W_d^r(C)`$ has dimension $`\\rho`$, and its line bundles have exactly $`r+1`$ sections and are very ample. Thus the linear series are complete.\n\nFor each $`L\\in W_d^r(C)`$, consider multiplication of sections\n```math\n\\mu_{k,L}:\\mathrm{Sym}^k H^0(C,L)\\longrightarrow H^0(C,L^{\\otimes k}).\n```\n\nThe source and target have dimensions\n```math\na=\\binom{r+k}{k},\\qquad b=kd+1-g.\n```\n\nLet\n```math\n\\Sigma_k(C)=\n\\{L\\in W_d^r(C):\\mathrm{rank}\\mu_{k,L}<\\min(a,b)\\},\n\\qquad e=\\rho-1-|a-b|.\n```\n\n\n**Must $`\\Sigma_k(C)`$ be empty when $`e<0`$, and nonempty of Krull dimension $`e`$ when $`e\\ge0`$?**\n\nThis is the original Aprodu--Farkas strong maximal-rank conjecture [1]. Generality concerns the curve: for each fixed admissible quadruple, the assertion is to hold on a nonempty Zariski open subset of its moduli space. The failure locus includes all the specified line bundles on that curve. The assertion does not require the locus to be irreducible or smooth.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"strong maximal rank conjecture\" 2026 solution",
+    "\"strong maximal rank conjecture\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"strong maximal rank conjecture\" (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Introduction Theorems1.1–1.3 and paragraph restricting paper to quadratic multiplication",
+      "version_or_date": "Current official record onlyv1,23May2026; actual Theorems1.1–1.3 read on3November2026.",
+      "scope_comparison": "The paper treats k=2 only; higher degrees in target are expressly outside it. For r>=4 much of theorem asserts existence of one component of expected dimension, not the dimension of entire failure locus. Its counterexamples(g,r,d)=(7,4,10),(4,4,8) have rho=2,4 and fail strict rho<r−2=2. Thus these do not refute original constrained conjecture. Ordinary maximal rank for general L is not the strong all-L statement. No exact full matching announcement located.",
+      "url": "https://arxiv.org/html/2605.24612v1",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The paper treats k=2 only; higher degrees in target are expressly outside it. For r>=4 much of theorem asserts existence of one component of expected dimension, not the dimension of entire failure locus. Its counterexamples(g,r,d)=(7,4,10),(4,4,8) have rho=2,4 and fail strict rho<r−2=2. Thus these do not refute original constrained conjecture. Ordinary maximal rank for general L is not the strong all-L statement. No exact full matching announcement located.",
+  "latest_version_check": "Current official record onlyv1,23May2026; actual Theorems1.1–1.3 read on3November2026.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

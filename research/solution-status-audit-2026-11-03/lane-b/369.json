@@ -1,0 +1,48 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 302,
+  "source_sha256": "84e669ca93ca4c231d8617b43b5bb2e1b9236d6d270207ad6832406abfb13254",
+  "statement_sha256": "8c601e46a45ed7b5fd5fb8a4a8a13fa97e3ef16eaf352e2318b9f3097d24ab75",
+  "original_target": {
+    "id": "369",
+    "title": "Does a bounded interface slope prevent two-phase Muskat singularities?",
+    "area": "Porous-media interfaces; free boundaries",
+    "file": "problems/369-muskat-bounded-slope-continuation.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "84e669ca93ca4c231d8617b43b5bb2e1b9236d6d270207ad6832406abfb13254",
+    "statement_sha256": "8c601e46a45ed7b5fd5fb8a4a8a13fa97e3ef16eaf352e2318b9f3097d24ab75",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "369",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Muskat\" \"bounded slope\" continuation 2026",
+    "\"Muskat\" \"bounded slope\" site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://cims.nyu.edu/~vicol/CGSV1.pdf",
+      "version": "published 2017 author text",
+      "locators": "Theorem 1.2; equation 1.2 and slope modulus condition",
+      "body_inspected": true,
+      "scope": "Finite-slope continuation requires a common time-uniform modulus of slope continuity; small-slope theorem separate."
+    },
+    {
+      "url": "https://arxiv.org/html/2604.12785v1",
+      "version": "v1 April 2026",
+      "locators": "Theorem 1.1",
+      "body_inspected": true,
+      "scope": "Multiphase global estimates assume small initial data."
+    }
+  ],
+  "registry_checks": "No Muskat alias Palomar/Hexagon/OpenAI full metadata. Current arXiv, author/publisher, Zenodo, HAL, GitHub searches.",
+  "scope_comparison": "Need two-phase equal-viscosity whole-plane graph continuation under slope L-infinity only. No common slope modulus may be added. Small initial slope, half-plane bottom contact, one-phase or overturned interfaces do not meet target.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Actual recent theorem retains small-data premise."
+}

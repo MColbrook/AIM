@@ -1,0 +1,92 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "967",
+  "manifest_index": 811,
+  "checked_date": "2026-11-03",
+  "source_sha256": "05ef4f7ed493475ba7033ad66bb9e49ad5031fdddd57e2d3b08e62e6fa536bce",
+  "statement_sha256": "1349044a7bafac87a34673b88e4190b0aec3f0d3197ddf07160658f804649fc0",
+  "original_target": {
+    "id": "967",
+    "title": "A Dirichlet law for Voronoi volumes on the Brownian sphere",
+    "area": "Probability; continuum random geometry",
+    "file": "problems/967-a-dirichlet-law-for-voronoi-volumes-on-the-brownian-sphere.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-097f07a047b0edb4",
+    "group": "probability-statistics",
+    "source_sha256": "05ef4f7ed493475ba7033ad66bb9e49ad5031fdddd57e2d3b08e62e6fa536bce",
+    "statement_sha256": "1349044a7bafac87a34673b88e4190b0aec3f0d3197ddf07160658f804649fc0",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`(M,d,\\mu)`$ be the ordinary unit-area Brownian sphere, also called the Brownian map. It is the random compact metric probability space obtained as the measured Gromov–Hausdorff–Prokhorov scaling limit of uniform rooted planar quadrangulations, with uniform vertex probability measure and graph distances scaled by $`n^{-1/4}`$ for $`n`$ faces. A fixed conventional multiplicative constant in the metric does not affect the cells below.\n\nFor each fixed integer $`k\\ge3`$, conditional on $`(M,d,\\mu)`$, sample $`X_1,\\ldots,X_k`$ independently with common law $`\\mu`$. Define the labeled strict Voronoi cells and their masses by\n```math\nC_i=\\{z\\in M:d(z,X_i)<d(z,X_j)\\text{ for every }j\\ne i\\},\n\\qquad V_i=\\mu(C_i).\n```\n\nDistance ties have zero $`\\mu`$-measure almost surely, so $`\\sum_iV_i=1`$.\n\n**Does the joint law, averaging over both the random sphere and the sampled sites, satisfy**\n```math\n(V_1,\\ldots,V_k)\\ \\overset{d}=\\ \\mathrm{Dirichlet}(1,\\ldots,1)\n\\qquad\\text{for every }k\\ge3?\n```\n\nEquivalently, $`(V_1,\\ldots,V_{k-1})`$ should have constant density $`(k-1)!`$ on\n```math\n\\{(v_1,\\ldots,v_{k-1}):v_i>0,\\ \\textstyle\\sum_{i<k}v_i<1\\},\n\\qquad V_k=1-\\sum_{i<k}V_i.\n```\n\nThe labels follow the sampling order. The asserted distribution is averaged over the sphere as well as the sites; no conditional distribution given the sphere is prescribed.\n\nThis is the genus-zero, $`k\\ge3`$ branch of Conjecture 4 in [1], also stated for the Brownian sphere in [2].",
+  "full_original_page": "# 967. A Dirichlet law for Voronoi volumes on the Brownian sphere\n\n**Area:** Probability; continuum random geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`(M,d,\\mu)`$ be the ordinary unit-area Brownian sphere, also called the Brownian map. It is the random compact metric probability space obtained as the measured Gromov–Hausdorff–Prokhorov scaling limit of uniform rooted planar quadrangulations, with uniform vertex probability measure and graph distances scaled by $`n^{-1/4}`$ for $`n`$ faces. A fixed conventional multiplicative constant in the metric does not affect the cells below.\n\nFor each fixed integer $`k\\ge3`$, conditional on $`(M,d,\\mu)`$, sample $`X_1,\\ldots,X_k`$ independently with common law $`\\mu`$. Define the labeled strict Voronoi cells and their masses by\n```math\nC_i=\\{z\\in M:d(z,X_i)<d(z,X_j)\\text{ for every }j\\ne i\\},\n\\qquad V_i=\\mu(C_i).\n```\n\nDistance ties have zero $`\\mu`$-measure almost surely, so $`\\sum_iV_i=1`$.\n\n**Does the joint law, averaging over both the random sphere and the sampled sites, satisfy**\n```math\n(V_1,\\ldots,V_k)\\ \\overset{d}=\\ \\mathrm{Dirichlet}(1,\\ldots,1)\n\\qquad\\text{for every }k\\ge3?\n```\n\nEquivalently, $`(V_1,\\ldots,V_{k-1})`$ should have constant density $`(k-1)!`$ on\n```math\n\\{(v_1,\\ldots,v_{k-1}):v_i>0,\\ \\textstyle\\sum_{i<k}v_i<1\\},\n\\qquad V_k=1-\\sum_{i<k}V_i.\n```\n\nThe labels follow the sampling order. The asserted distribution is averaged over the sphere as well as the sites; no conditional distribution given the sphere is prescribed.\n\nThis is the genus-zero, $`k\\ge3`$ branch of Conjecture 4 in [1], also stated for the Brownian sphere in [2].\n\n## Application\n\nThe masses quantify how independent typical sites divide the area of a continuum random surface. Their law connects stochastic geometry with scaling limits of random maps and two-dimensional random geometry.\n\n## References\n\n1. Guillaume Chapuy, [*On tessellations of random maps and the $`t_g`$-recurrence*](https://doi.org/10.1007/s00440-018-0865-6), **Probability Theory and Related Fields 174** (2019), 477–500. Checked [arXiv:1603.07714v2](https://arxiv.org/html/1603.07714v2), revised 17 September 2018: equation (3), Theorems 2–3 and Conjecture 4.\n2. Jean-François Le Gall, [*Geometry of Brownian surfaces*](https://seminaire-poincare.pages.math.cnrs.fr/2023/02.pdf), **Séminaire Poincaré XXIV** (2023), 1–32, §3.4, p. 15.\n3. Zhenyao Sun, [*A marked scheme representation for Voronoi volumes in the Brownian map*](https://arxiv.org/html/2610.34255v1), arXiv:2610.34255v1, 25 October 2026. Sections 1.1–1.2, Theorem 1.1 and its following qualification; §2 addresses distance ties.\n4. Mathieu Mourichoux, [*Constructing the Brownian sphere from a continuum random unicycle*](https://arxiv.org/html/2511.08524), arXiv:2511.08524, 2025. Proposition 3.16 and §6.2 provide a comparison with delayed cells in a distance-biased model.\n\n## Status review\n\n\n**Known cases:** The October 2026 marked-scheme representation supplies integral formulae rather than evaluating the entire joint Voronoi law. Delayed distance-biased cells and selected mixed moments do not identify the ordinary sphere law.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe October 2026 marked-scheme representation supplies integral formulae rather than evaluating the entire joint Voronoi law. Delayed distance-biased cells and selected mixed moments do not identify the ordinary sphere law.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChapuy obtains moment identities consistent with the proposed law, including the three-site mixed moment $`\\mathbb E[V_1V_2V_3]=1/60`$. These identities do not determine every joint distribution.\n\nThe October 2026 work [3] gives a scheme-integral representation of a negative-power transform of the same ordinary Voronoi volumes. It evaluates the diagonal parameter case and explicitly leaves the proposed Dirichlet law undetermined. This is partial progress toward the displayed target.\n\nThe Dirichlet $`(1/4,1/4)`$ law in [4] concerns delayed cells in a distance-biased two-pointed sphere. Results for continuum random trees concern another limiting space. These do not resolve the present sphere law. Current searches and comparisons with the all-status AIM, OpenAI and further-problem lists found no matching full solution or announced resolution; the review does not certify the external proofs or prove absence of a solution.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-097f07a047b0edb4**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scope passages inspected, not full proof certification."
+  ],
+  "aliases": [
+    "Voronoi volumes",
+    "Brownian sphere",
+    "marked scheme"
+  ],
+  "queries": [
+    "\"Brownian sphere\" \"Voronoi\" \"Dirichlet\" 2026",
+    "\"Brownian sphere\" \"Voronoi\" \"Dirichlet\"; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"Voronoi volumes\" \"Sun\" Brownian 2026"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.34255v1",
+      "locator": "25Oct2026v1 Theorem1.1 equation1.7–1.8 lines157–170 and following qualification",
+      "comparison": "Actual theorem gives an integral representation of a negative-power volume transform, evaluates equal parameters, and leaves identification of full Dirichlet law undetermined. Selected moments, delayed cells and distance-biased sphere laws do not establish all k>=3 ordinary-cell volumes."
+    }
+  ],
+  "rationale": "Recent work directly matches the objects but explicitly stops short of evaluating the joint law; no full matching claim found.",
+  "announcement_routing": {
+    "localID": "967",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Voronoi volumes",
+          "Brownian sphere",
+          "marked scheme"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Voronoi volumes",
+          "Brownian sphere",
+          "marked scheme"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Voronoi volumes",
+        "Brownian sphere",
+        "marked scheme"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

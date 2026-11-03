@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "676",
+  "manifest_index": 520,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "676",
+    "title": "Attenuating the singularities of positive closed currents by finite modifications",
+    "area": "Complex analysis and Kähler geometry",
+    "file": "problems/676-attenuating-the-singularities-of-positive-closed-currents-by-finite-modifications.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-129ac77e20d498bf",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "e4f9d518b3d1c974cff47e972a6ebb6074c2ac1eea5aef4a3951130ae1cccd0d",
+    "statement_sha256": "615e244ebe41c02a6feb8507db7f8d60ff529546e111312a0abae9ba2923470a",
+    "state": "unreviewed"
+  },
+  "source_sha256": "e4f9d518b3d1c974cff47e972a6ebb6074c2ac1eea5aef4a3951130ae1cccd0d",
+  "statement_sha256": "615e244ebe41c02a6feb8507db7f8d60ff529546e111312a0abae9ba2923470a",
+  "actual_source_sha256": "e4f9d518b3d1c974cff47e972a6ebb6074c2ac1eea5aef4a3951130ae1cccd0d",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`X`$ be a connected compact Kähler manifold of complex dimension $`n\\ge3`$, let $`T`$ be a positive closed real $`(1,1)`$-current on $`X`$, and let $`\\varepsilon>0`$.\n\nIs there a finite composition of blowups along smooth complex centers $`\\pi:Y\\to X`$ and a finite effective real divisor $`D=\\sum_{j=1}^N a_jD_j`$, with $`a_j\\ge0`$ and simple normal crossing support, such that\n\n```math\n\\pi^*T=[D]+R,\\qquad R\\ge0,\\quad dR=0,\n\\qquad \\sup_{y\\in Y}\\nu(R,y)<\\varepsilon?\n```\n\nHere $`[D_j]`$ is integration over the irreducible divisor $`D_j`$, and $`\\nu(R,y)`$ is the usual point Lelong number, measuring the logarithmic singularity of a local plurisubharmonic potential. Use a normalization in which a simple logarithmic pole along a smooth divisor has Lelong number one. Pullback is defined using local potentials. Simple normal crossings means that the divisor support is locally a union of coordinate hyperplanes. The empty divisor is allowed.\n\nBoth the modification and the divisor may depend on $`T`$ and $`\\varepsilon`$. There is no bound prescribed on the number of blowups. One finite modification must control the residual Lelong numbers at **every point**, rather than only generic points of divisors or a finite selection of valuations.\n\nThe corresponding statement is known for compact complex surfaces. Currents with everywhere zero Lelong number need no modification, and analytic logarithmic singularities can be resolved. The question permits general nonanalytic singularities. It is the explicitly closed-current, compact Kähler subclass of the survey's higher-dimensional question; no equivalence with arbitrary nonclosed Hermitian backgrounds is asserted.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"positive currents\" \"attenuation\" \"Lelong\" modification 2026",
+    "\"positive currents\" \"attenuation\" \"Lelong\" modification (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"attenuation\" \"Lelong\" \"blow\" 2026",
+    "\"attenuation\" \"singularities\" currents Lelong Guedj 2026"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "arXiv:2603.14348v1, March 2026",
+      "locator": "Theorems4.10–4.11 lines919–1007; compare Guedj IJM2005 Theorem1.1",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2603.14348v1",
+      "scope_comparison": "The b-divisor theorem gives a correspondence modulo I-equivalence and realizes classes by some nonunique current; it does not give a finite modification with uniformly small residual Lelong numbers for each fixed original T. The actual Guedj theorem has compact complex SURFACE hypothesis. Regularization or flow replaces the current. None establishes the n>=3 fixed-current finite-model assertion."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The b-divisor theorem gives a correspondence modulo I-equivalence and realizes classes by some nonunique current; it does not give a finite modification with uniformly small residual Lelong numbers for each fixed original T. The actual Guedj theorem has compact complex SURFACE hypothesis. Regularization or flow replaces the current. None establishes the n>=3 fixed-current finite-model assertion.",
+  "latest_version_check": "arXiv:2603.14348v1, March 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

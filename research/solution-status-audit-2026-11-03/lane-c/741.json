@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "741",
+  "manifest_index": 585,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "741",
+    "title": "Global triangular reaction–diffusion systems under transport noise",
+    "area": "Stochastic reaction–diffusion equations; mathematical chemistry",
+    "file": "problems/741-global-triangular-reactiondiffusion-systems-under-transport-noise.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e8059098b0909dd9",
+    "group": "diffusion-materials",
+    "source_sha256": "d5920fb9d39f6b7172a8917c5807a6513e1a3869f5ab00e648cb47d747a82037",
+    "statement_sha256": "1eea9f7c16fd149cd6f8d0d975a5695e28f2f034dbbf533d398b5bcce78b1b35",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d5920fb9d39f6b7172a8917c5807a6513e1a3869f5ab00e648cb47d747a82037",
+  "statement_sha256": "1eea9f7c16fd149cd6f8d0d975a5695e28f2f034dbbf533d398b5bcce78b1b35",
+  "actual_source_sha256": "d5920fb9d39f6b7172a8917c5807a6513e1a3869f5ab00e648cb47d747a82037",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`d\\ge2`$, $`N\\ge2`$ and $`K\\ge1`$ be integers, and let $`\\nu_i>0`$. On the torus $`\\mathbb T^d`$, consider the Itô system\n\n```math\ndu_i=(\\nu_i\\Delta u_i+f_i(u))\\,dt+\n\\sum_{k=1}^K\\bigl[b_{ki}(x)\\cdot\\nabla u_i+g_{ki}(u)\\bigr]\\,dW^k_t,\n\\qquad i=1,\\ldots,N.\n```\n\nHere $`W^1,\\ldots,W^K`$ are independent real Brownian motions. The vector fields $`b_{ki}`$ are smooth and divergence free, may differ between species, are not all zero, and satisfy, for some $`\\eta>0`$,\n\n```math\n\\nu_i I-\\frac12\\sum_{k=1}^K b_{ki}(x)\\otimes b_{ki}(x)\\ge\\eta I\n\\qquad(x\\in\\mathbb T^d,\\ i=1,\\ldots,N).\n```\n\nThe functions $`f_i:\\mathbb R^N\\to\\mathbb R`$ and $`g_i=(g_{ki})_{k=1}^K:\\mathbb R^N\\to\\mathbb R^K`$ are smooth. Each $`g_i`$ is globally Lipschitz, and for $`y\\in[0,\\infty)^N`$ with $`y_i=0`$,\n\n```math\nf_i(y)\\ge0,\\qquad g_i(y)=0.\n```\n\nAssume that some finite $`h\\ge3`$ and $`C,c_0,c_1\\ge0`$ satisfy, for nonnegative $`y,z`$,\n\n```math\n|f_i(y)-f_i(z)|\n\\le C(1+|y|^{h-1}+|z|^{h-1})|y-z|,\n\\qquad\n\\sum_{i=1}^N f_i(y)\\le c_0+c_1\\sum_{i=1}^N y_i.\n```\n\nAssume also that there are an invertible lower triangular matrix $`R`$ with nonnegative entries and a vector $`r\\in\\mathbb R^N`$ such that\n\n```math\nRf(y)\\le\\left(1+\\sum_{i=1}^N y_i\\right)r\n\\qquad(y\\in[0,\\infty)^N),\n```\n\ncomponentwise. For every deterministic smooth nonnegative initial condition, **is the unique maximal local strong solution global almost surely**, with\n\n```math\n\\sup_{0\\le t\\le T}\\|u(t)\\|_{L^\\infty(\\mathbb T^d;\\mathbb R^N)}<\\infty\n\\quad\\text{almost surely for every finite }T?\n```\n\nLocal solutions are the spatially regular parabolic solutions satisfying the integrated Itô system, continuous in space and time up to their lifetime. Smooth coefficients and initial data give spatial regularity before that lifetime; the question excludes finite-time concentration blowup. All diffusivities and transport fields satisfying the displayed conditions are allowed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"triangular\" \"transport noise\" \"global\" 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"triangular\" \"transport noise\"",
+    "site:palomar-registry.org OR site:hexagonmath.org \"triangular\" \"transport noise\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "Actual transport-noise Theorem3.4 is existential in chosen nu,theta and concludes probability>1−epsilon for complex-balanced networks without boundary equilibria. Local asks almost-sure global existence for every prescribed finite smooth species-dependent divergence-free transport field under parabolicity and triangular control. Milesis–Salins has concentration-dependent sigma(u), not b·grad u; its theorem does not allow derivative noise. These quantifiers/model classes do not meet the target. No complete matching announcement located.",
+      "version_or_date": "v1,13August2026; Milesis–Salins2604.06645v2,26May2026 inspected",
+      "url": "https://arxiv.org/html/2608.13332v1",
+      "primary_body_access_gap": false,
+      "locator": "Theorem3.4; Milesis–Salins equation1/Assumptions3/Theorem5.2"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual transport-noise Theorem3.4 is existential in chosen nu,theta and concludes probability>1−epsilon for complex-balanced networks without boundary equilibria. Local asks almost-sure global existence for every prescribed finite smooth species-dependent divergence-free transport field under parabolicity and triangular control. Milesis–Salins has concentration-dependent sigma(u), not b·grad u; its theorem does not allow derivative noise. These quantifiers/model classes do not meet the target. No complete matching announcement located.",
+  "latest_version_check": "v1,13August2026; Milesis–Salins2604.06645v2,26May2026 inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

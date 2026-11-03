@@ -1,0 +1,73 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 335,
+  "source_sha256": "65664a458594a17c7a2e6e7488b1d29a709e09b24ebf54f0de4659ae0fb4a611",
+  "statement_sha256": "b933dcb698d60e2c5ff218f6915bd70f49a1ab57b10d71676a85b0bf0a6b2cfa",
+  "original_target": {
+    "id": "413",
+    "title": "Energy-admissible weak solutions of the undamped hyperbolic p-Laplacian from smooth data",
+    "area": "Nonlinear wave equations and continuum mechanics",
+    "file": "problems/413-energy-admissible-weak-solutions-of-the-undamped-hyperbolic-p-laplacian-from-smooth-data.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-97a20263f834f6da",
+    "group": "continuum2",
+    "source_sha256": "65664a458594a17c7a2e6e7488b1d29a709e09b24ebf54f0de4659ae0fb4a611",
+    "statement_sha256": "b933dcb698d60e2c5ff218f6915bd70f49a1ab57b10d71676a85b0bf0a6b2cfa",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "413",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"hyperbolic p-Laplacian\" \"weak\" \"2026\"",
+    "\"hyperbolic p-Laplacian\" \"undamped\" existence",
+    "\"hyperbolic p-Laplacian\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"undamped\" \"p-Laplacian\" \"weak solutions\" 2026",
+    "\"hyperbolic\" \"p-Laplacian\" \"energy\" \"2026\" weak existence"
+  ],
+  "sources": [
+    {
+      "url": "https://ems.press/content/serial-article-files/48230",
+      "version": "publishedJEMS26(2024)4615–4697",
+      "locators": "Remark1.5 printedp4626",
+      "body_inspected": true,
+      "scope": "Purely elastic scheme yields bounds but nonlinear flux identification needs measure-valued relaxation; ordinary weak existence without dissipation remains challenge."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2305.19880",
+      "version": "currentPDF; JDE415(2025)434–486",
+      "locators": "Theorems1.1–1.4, energies1.3–1.4; Section2",
+      "body_inspected": true,
+      "scope": "Higher-order coercive elastic regularizer retained. Scheme stability not convergence to unregularized hyperbolicpLaplacian; convergence theorem assumes linear highest-order energy."
+    },
+    {
+      "url": "https://www.math.uni-konstanz.de/~dreher/papers/D-11.pdf",
+      "version": "author20July2005; HokkaidoMathJ2007",
+      "locators": "Theorems1.2,1.4–1.5; Proposition9.1",
+      "body_inspected": true,
+      "scope": "1D local strong solutions and finite-time classical breakdown, not nonexistence of global ordinary energy weak solutions."
+    },
+    {
+      "url": "https://doi.org/10.11948/20250387",
+      "version": "2026 publisher",
+      "locators": "publisher abstract and Section2 search-visible statement",
+      "body_inspected": false,
+      "scope": "Adds damping, logarithmic source and nonlinear boundary conditions; excluded at equation/model scope, not full theorem checked."
+    },
+    {
+      "url": "https://cubo.ufro.cl/index.php/cubo/article/download/4228/2439",
+      "version": "CUBO28(2026)79–97",
+      "locators": "title and model introduction",
+      "body_inspected": true,
+      "scope": "Higher-order reaction-diffusion with singular potential, not undamped nonlinear wave."
+    }
+  ],
+  "registry_checks": "No relevant pLaplacian alias Palomar/Hexagon/OpenAI/Colbrook metadata; general hyperbolic matches unrelated. Current arXiv, publishers/authors and Zenodo/HAL/GitHub queries.",
+  "scope_comparison": "Target everyp>2,n>=2 smooth bounded domain and arbitrarycompact smooth data, global ordinary constitutive flux and nonincreasing energy, no damping/source/higherorderregularizer. Classical breakdown does not refute weak continuation.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

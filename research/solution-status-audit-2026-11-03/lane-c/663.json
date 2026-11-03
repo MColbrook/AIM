@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "663",
+  "manifest_index": 508,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "663",
+    "title": "Polynomial-time mean estimation with simultaneous directional accuracy",
+    "area": "Robust statistics and high-dimensional probability",
+    "file": "problems/663-polynomial-time-mean-estimation-with-simultaneous-directional-accuracy.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-3e76d5fdd9724f49",
+    "group": "probability-statistics",
+    "source_sha256": "89d0e39c89ad95d5ccfa8bc0cecc847513c8cee21191ecb23c87ddaacd9bdf26",
+    "statement_sha256": "270d85859efb7371d4b49706cc1ce2c68930e396bd0f3cfc5a9e1116540e37ff",
+    "state": "unreviewed"
+  },
+  "source_sha256": "89d0e39c89ad95d5ccfa8bc0cecc847513c8cee21191ecb23c87ddaacd9bdf26",
+  "statement_sha256": "270d85859efb7371d4b49706cc1ce2c68930e396bd0f3cfc5a9e1116540e37ff",
+  "actual_source_sha256": "89d0e39c89ad95d5ccfa8bc0cecc847513c8cee21191ecb23c87ddaacd9bdf26",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix known constants $`q>2`$ and $`\\kappa\\ge1`$. Does there exist a randomized algorithm, with running time polynomial in $`N,d,\\log(1/\\delta)`$ for fixed $`q,\\kappa`$, and constants $`c_0,c,C>0`$ depending only on $`q,\\kappa`$, with the following property?\n\nLet $`X_1,\\ldots,X_N`$ be independent copies of an unknown random vector $`X\\in\\mathbb R^d`$ whose law is absolutely continuous with respect to $`d`$-dimensional Lebesgue measure, with mean $`\\mu`$, covariance $`\\Sigma`$, and ordered eigenvalues $`\\lambda_1\\ge\\cdots\\ge\\lambda_d\\ge0`$. Assume, for every unit vector $`u`$,\n```math\n\\bigl(\\mathbb E|\\langle X-\\mu,u\\rangle|^q\\bigr)^{1/q}\n \\le \\kappa\\bigl(\\mathbb E|\\langle X-\\mu,u\\rangle|^2\\bigr)^{1/2}.\n```\n\nGiven only the samples, $`q,\\kappa`$ and a confidence parameter\n$`e^{-c_0N}\\le\\delta\\le1/2`$, the algorithm must return $`\\widehat\\mu`$ such that, with probability at least $`1-\\delta`$ over the observations and its internal randomness, simultaneously for every unit $`u`$,\n```math\n|\\langle\\widehat\\mu-\\mu,u\\rangle|\n \\le C\\left[\n \\sqrt{\\frac{u^\\top\\Sigma u\\,\\log(1/\\delta)}{N}}\n +\\sqrt{\\frac{\\sum_{i=k}^d\\lambda_i}{N}}\\right],\n \\qquad\n k=\\max\\{1,\\lceil c\\log(1/\\delta)\\rceil\\}.\n```\n\nAn empty sum is zero. The algorithm receives neither $`\\mu`$ nor $`\\Sigma`$.\n\nHere polynomial running time counts real arithmetic operations and comparisons, with random bits permitted. This explicitly specifies a computational interpretation of the source's question; it asserts no equivalence with a finite-bit formulation. The integer rounding is explicit, and the constants may change. The density assumption is retained from the source; no algorithmic reduction from singular laws is asserted.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"mean estimation\" \"direction dependent\" efficient 2026",
+    "\"mean estimation\" \"direction dependent\" efficient (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://ems.press/content/serial-article-files/47642",
+      "locator": "Theorem1; Remark(Computation), printed2218/PDF7, lines447–454",
+      "version_or_date": "PublishedJEMS26(2024); current primaryPDF inspected",
+      "scope_comparison": "The theorem supplies statistical existence and the computation remark explicitly asks for an efficient estimator with its directional performance. Euclidean sub-Gaussian estimators do not automatically give every-direction variance and spectral-tail accuracy. Affine/private variants with different assumptions are not full matches.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The theorem supplies statistical existence and the computation remark explicitly asks for an efficient estimator with its directional performance. Euclidean sub-Gaussian estimators do not automatically give every-direction variance and spectral-tail accuracy. Affine/private variants with different assumptions are not full matches.",
+  "latest_version_check": "PublishedJEMS26(2024); current primaryPDF inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

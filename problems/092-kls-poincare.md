@@ -2,9 +2,9 @@
 
 **Area:** High-dimensional probability and sampling
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -30,6 +30,13 @@ A dimension-free spectral gap would strengthen guarantees for sampling log-conca
 - OpenAI, [manuscript PDF](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-dimension-free-logarithmic-Sobolev-inequality-for-subgaussian-log-concave-measures-September-23-2026/paper.pdf), result family 093 (2026). Statement locator: `Theorem thm:main; subgaussian condition eq:intro-subgaussian`.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The current theorem bounds CP(mu) by one absolute constant for every dimension and isotropic log-concave measure, including extended-real convex potentials and uniform convex-body measures. Its locally-Lipschitz L2 class contains every local smooth compactly supported test. No subgaussian assumption remains. A current Palomar registration separately advertises the same compact-test target; local Lean replay is not asserted.
+
+[Claimed solution](https://arxiv.org/pdf/2610.05474v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/092.json). Source locator: Theorem1.1 and definition(5). The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative dimension-free Poincare inequality
 

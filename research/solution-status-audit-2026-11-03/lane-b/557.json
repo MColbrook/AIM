@@ -1,0 +1,78 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "557",
+  "manifest_index": 433,
+  "original_target": {
+    "id": "557",
+    "title": "Unbounded chromatic number of associahedron graphs",
+    "area": "Discrete and computational geometry",
+    "file": "problems/557-associahedron-chromatic.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "optimization-information",
+    "source_sha256": "f644f9d59cbd31ebc3c20748b77e3793cfab390da7e89d8c43ad9b895bb9d458",
+    "statement_sha256": "2e844518021359d601683bd255b9157470a9f297a499baadfbf8674bd55975b4",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f644f9d59cbd31ebc3c20748b77e3793cfab390da7e89d8c43ad9b895bb9d458",
+  "statement_sha256": "2e844518021359d601683bd255b9157470a9f297a499baadfbf8674bd55975b4",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:56:06.241219+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The new double-logarithmic upper bound is substantial partial progress but does not determine whether the chromatic number is unbounded. Its section5 explicitly asks whether an absolute constant suffices. The October simpler logarithmic theorem is also only an upper bound.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2609.39015v1",
+      "locator": "Proof-end upper bound10log2log2n and section5 open question; v1 30September2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2610.11426v1",
+      "locator": "Theorem1 bound6log2n+18; v1 8October2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://garden.irmacs.sfu.ca/op/chromatic_number_of_associahedron",
+      "locator": "Author-posted unboundedness conjecture",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"associahedron\" \"chromatic\" \"unbounded\" 2026",
+    "\"associahedron\" \"chromatic\" \"unbounded\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "Oum Wood associahedron chromatic number log log September 30 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "associahedr"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "associahedr"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

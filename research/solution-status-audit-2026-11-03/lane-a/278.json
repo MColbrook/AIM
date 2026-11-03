@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "278",
+  "manifest_index": 221,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "278",
+    "title": "Beat factor two for scheduling on unrelated machines",
+    "area": "Scheduling and production planning",
+    "file": "problems/278-unrelated-machine-makespan.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "7e8d48669ff1c29ca5c61b59c08c9202137d7ff9852efaab1f0fe7ab06f4674a",
+    "statement_sha256": "44682905c0b8cce3a1e26345de45a50dab2b850c34e19c39ec40a2252e4a9ec0",
+    "state": "unreviewed"
+  },
+  "source_sha256": "7e8d48669ff1c29ca5c61b59c08c9202137d7ff9852efaab1f0fe7ab06f4674a",
+  "statement_sha256": "44682905c0b8cce3a1e26345de45a50dab2b850c34e19c39ec40a2252e4a9ec0",
+  "actual_source_sha256": "7e8d48669ff1c29ca5c61b59c08c9202137d7ff9852efaab1f0fe7ab06f4674a",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Input consists of $`m`$ machines, $`n`$ jobs, and nonnegative rational processing times $`p_{ij}`$ for running job $`j`$ on machine $`i`$. An assignment $`f:\\{1,\\ldots,n\\}\\to\\{1,\\ldots,m\\}`$ has makespan $`C(f)=\\max_i\\sum_{j:f(j)=i}p_{ij}`$. Is there an absolute $`\\varepsilon>0`$ and an algorithm, polynomial in the binary input length, that always returns $`f`$ with $`C(f)\\le(2-\\varepsilon)\\min_g C(g)`$? A randomized algorithm succeeding with probability at least $`2/3`$ also counts.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"unrelated machines\" \"2\" approximation breakthrough 2026",
+    "\"unrelated machines\" \"2\" approximation breakthrough (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"unrelated machines\" \"2\" approximation breakthrough (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "Theorem1conditionallyturnsa(2−1/alpha)makespanalgorithm into an(alpha+epsilon)generalSantaClausalgorithm; it does not provide the premise. Positive algorithms in the paper restrict values/matroid structure. Truthful-mechanism lower bounds impose extra requirements and do not exclude arbitrary approximation algorithms. No below-two general unrelated-machines claim found.",
+      "locator": "Theorem1andLemma10;Section1problem distinctions and restricted2-value reductions",
+      "url": "https://arxiv.org/html/2307.08453",
+      "version_or_date": "arXiv2307.08453v1,17July2023;SODA2024publication;currentfocused3November2026searches.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Theorem1conditionallyturnsa(2−1/alpha)makespanalgorithm into an(alpha+epsilon)generalSantaClausalgorithm; it does not provide the premise. Positive algorithms in the paper restrict values/matroid structure. Truthful-mechanism lower bounds impose extra requirements and do not exclude arbitrary approximation algorithms. No below-two general unrelated-machines claim found.",
+  "latest_version_check": "arXiv2307.08453v1,17July2023;SODA2024publication;currentfocused3November2026searches.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

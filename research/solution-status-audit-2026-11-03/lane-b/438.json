@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 353,
+  "source_sha256": "7da1f168b4c74a39e027b4b10299fbdf86aa22b55f933b3b4374b09b2ad4fb5c",
+  "statement_sha256": "2b44133bf434328be55a30b3ef15e2a133a96992ac6188f97b87add76b81a60f",
+  "original_target": {
+    "id": "438",
+    "title": "Regular MEMS extremal states without an asymptotic curvature condition",
+    "area": "Semilinear elliptic PDEs and electrostatic microdevices",
+    "file": "problems/438-mems-extremal-without-crandall-rabinowitz.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "pdes-materials",
+    "source_sha256": "7da1f168b4c74a39e027b4b10299fbdf86aa22b55f933b3b4374b09b2ad4fb5c",
+    "statement_sha256": "2b44133bf434328be55a30b3ef15e2a133a96992ac6188f97b87add76b81a60f",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "438",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"MEMS\" \"curvature condition\" regularity 2026",
+    "\"MEMS\" \"stable solutions\" \"2026\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"MEMS\" \"Bruera\" \"Cabré\" \"condition\" 2026",
+    "\"MEMS\" \"Crandall-Rabinowitz\" \"2026\" removed"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2507.20916v2",
+      "version": "v2,26Mar2026,currentabs checked",
+      "locator": "Theorem1.3,eq1.9,Remark1.4,AppendixA",
+      "theorem_body_checked": true,
+      "scope": "Dimensions3–6 retaincurvaturecondition;noextra conditiond1–2."
+    },
+    {
+      "url": "https://arxiv.org/html/2602.21115v1",
+      "version": "v1,24Feb2026;publishedJDE4715Aug2026114381",
+      "locator": "Theorem1.1 and1.3",
+      "theorem_body_checked": true,
+      "scope": "RemovescurvatureconditionforstableRADIALsolutionsonunitBALL,notallgeneralsmoothdomains."
+    },
+    {
+      "url": "https://arxiv.org/html/2603.03161",
+      "date": "2026survey",
+      "locator": "§3.5.3",
+      "theorem_body_checked": true,
+      "scope": "Statesremainingconditionremovalquestion."
+    }
+  ],
+  "registry_checks": "Complete Palomar/Hexagon metadata and pinned OpenAI/Colbrook author listings searched for topic aliases; no full matching announcement.",
+  "scope_comparison": "Targetarbitrarysmootheddomain,3<=d<=6,positiveconvexnondecreasingC2singularnonintegrablef,extremalsolutionseparatedfrom1withoutcurvatureliminf>1. Radialballandlowerdimensioncasesdonotcover.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

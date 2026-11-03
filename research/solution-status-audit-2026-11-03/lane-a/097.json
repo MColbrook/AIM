@@ -1,0 +1,114 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "097",
+  "manifest_index": 71,
+  "source_sha256": "ca3cb80cdbfe634c9068703ff1765cedea212643744170c5e2c902b757305841",
+  "statement_sha256": "ba2f169a26f399899afce4edecd7ab1b50afb3ea1cece32659fcc612e158eaa8",
+  "original_target": {
+    "id": "097",
+    "title": "Simon’s multidimensional weighted square-integrability conjecture",
+    "area": "Quantum scattering and transport",
+    "file": "problems/097-simon-weighted-l2.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "spectral2",
+    "source_sha256": "ca3cb80cdbfe634c9068703ff1765cedea212643744170c5e2c902b757305841",
+    "statement_sha256": "ba2f169a26f399899afce4edecd7ab1b50afb3ea1cece32659fcc612e158eaa8",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:40:53.006743+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "recommended_status": "Solved",
+  "resolution_basis": "unverified-announcement",
+  "claim": {
+    "authors": [
+      "Simon Becker",
+      "Mengxuan Yang"
+    ],
+    "title": "Lenses make many points: Pure point spectrum disproves Simon's L² conjecture",
+    "url": "https://arxiv.org/pdf/2610.31637v1",
+    "version": "v1,22 October2026; current primary submission history still onlyv1 on3November2026",
+    "locator": "Theorem1.1, equations1.1 and definition of I_d,sigma"
+  },
+  "scope_comparison": "Theorem1.1 constructs for every d>=2 a real smooth bounded nonnegative V, on domain H²(Rd), with I_d,0(V)=integral |x|^(1-d)|V|² finite and Pc(H)=0 while sigma(H)=[0,infinity). Since (1+|x|)^(1-d)<=|x|^(1-d) for x!=0, it satisfies the local less singular weighted condition. Pc=Pac+Psc=0 contradicts infinite ac multiplicity at almost every positive energy, not merely absence of a transport estimate. Thus a counterexample meets every stated local hypothesis.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.31637v1",
+      "locator": "§1 definitionI_d,sigma, Theorem1.1 lines41–58",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.31637",
+      "locator": "Current version and submission-history record; onlyv1; no withdrawal comment",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "Simon weighted L2 conjecture2026",
+    "2610.31637 gap correction withdrawal",
+    "2610.31637 error",
+    "2610.31637 withdrawn",
+    "Becker Yang Simon conjecture site:zenodo.org OR site:github.com OR site:hal.science"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "entries": 954,
+      "complete_listing": true,
+      "query_terms": [
+        "Simon",
+        "lens-type",
+        "Lenses make many points",
+        "weighted square",
+        "square-integrability"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-11-01-000011",
+          "title": "The Murty–Simon conjecture on diameter-2-critical graphs"
+        },
+        {
+          "id": "PALOMAR-2026-10-22-000043",
+          "title": "The Bondy–Simonovits even cycle theorem"
+        },
+        {
+          "id": "PALOMAR-2026-10-16-000024",
+          "title": "Füredi's stability theorem and the Erdős–Simonovits stability theorem"
+        },
+        {
+          "id": "PALOMAR-2026-10-13-000006",
+          "title": "Erdős 1105: anti-Ramsey numbers for cycles and paths"
+        },
+        {
+          "id": "PALOMAR-2026-10-11-000005",
+          "title": "A 7-vertex tournament whose Sperner capacity exceeds the order of its largest transitive subtournament: T₇, induced by the Paley tournament on 23 vertices on 0, 1, 2, 3, 9, 14, 18, has t = 4 and √18 ≤ C ≤ 5; every tournament on at most six vertices has C = t, so seven is the least order"
+        }
+      ],
+      "scope": "Routing summaries, no exact corresponding Lean artifact identified. Unrelated Simon-name hits do not establish formalization of this potential construction."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "entries": 646,
+      "complete_listing": true,
+      "query_terms": [
+        "Simon",
+        "lens-type",
+        "Lenses make many points",
+        "weighted square",
+        "square-integrability"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing summaries, no exact corresponding Lean artifact identified. Unrelated Simon-name hits do not establish formalization of this potential construction."
+    }
+  },
+  "current_resolution_check": "No matching retraction, corrected restriction or identified gap located in bounded exact-ID/title searches and primary submission history.",
+  "limitations": [
+    "The external35-page proof is not independently verified end-to-end here.",
+    "No human refereeing or Lean verification is asserted."
+  ],
+  "canonical_update_required": true
+}

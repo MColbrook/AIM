@@ -2,9 +2,9 @@
 
 **Area:** Nonholonomic control / sub-Riemannian geometry
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -29,6 +29,13 @@ Singular trajectories are the exceptional motions that evade ordinary first-orde
 2. A. Belotto da Silva, A. Figalli, A. Parusiński and L. Rifford, *Strong Sard conjecture and regularity of singular minimizing geodesics for analytic sub-Riemannian structures in dimension 3* (2022), [Inventiones Mathematicae](https://doi.org/10.1007/s00222-022-01111-2), main theorems. Resolves an analytic three-dimensional setting.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The announced smooth rank-two bracket-generating distribution on R4 has abnormal endpoints equal to R4 from one basepoint; a global frame gives the same L2 control endpoint map. Constant distribution rank is maintained; the local target does not require equiregularity or analyticity. Full endpoint set is not volume-null. Minimizing Sard property is different and is not claimed refuted.
+
+[Claimed solution](https://arxiv.org/pdf/2609.05991v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/123.json). Source locator: Theorem1.1 and control-space equivalence in the introduction. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative: smooth bracket-generating counterexample
 

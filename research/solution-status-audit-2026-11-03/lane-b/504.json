@@ -1,0 +1,84 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "504",
+  "manifest_index": 397,
+  "original_target": {
+    "id": "504",
+    "title": "Must every smooth volume-preserving flow on the three-sphere have a periodic orbit?",
+    "area": "Geometry and topology",
+    "file": "problems/504-must-every-smooth-volume-preserving-flow-on-the-three-sphere-have-a-periodic-orbit.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-d3398ebc51f66665",
+    "group": "geometry-topology",
+    "source_sha256": "1d80041056073214b9e3c65722ef1a92b72b2583ac8466adee015cdda6e79e55",
+    "statement_sha256": "25ae0206274cd105f2a991f44631104075d322b9a4f1197bdfb07f3d8fde35e0",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1d80041056073214b9e3c65722ef1a92b72b2583ac8466adee015cdda6e79e55",
+  "statement_sha256": "25ae0206274cd105f2a991f44631104075d322b9a4f1197bdfb07f3d8fde35e0",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:35:51.832774+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2310.19918 Section6 after Conjecture6.2 distinguishes singular-contact counterexamples from smooth volume-preserving Seifert problem. Older math/9504230 has C1 aperiodic or C-infinity discrete periodic-orbit constructions by primary metadata; neither is a C-infinity nowhere-zero smooth-volume-preserving aperiodic S3 flow.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2310.19918",
+      "locator": "Section6 following Conjecture6.2, lines449–453",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/math/9504230",
+      "locator": "Regularity/scope metadata only",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"smooth volume preserving\" \"Seifert\" solution (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Seifert",
+        "aperiodic flow"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-09-25-000004",
+          "title": "Classical Seifert–van Kampen theorem for the fundamental groupoid"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Seifert",
+        "aperiodic flow"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2609.00152v1",
+          "title": "A Lean Formalization of the Classical Seifert van Kampen Groupoid Theorem"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

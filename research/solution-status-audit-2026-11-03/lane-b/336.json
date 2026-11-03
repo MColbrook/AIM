@@ -1,0 +1,48 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 274,
+  "source_sha256": "d3d62731f9f2a64c760a2dfeecda0e54177215c38248a1a5cba595792cdd3845",
+  "statement_sha256": "efdef53b0151209fdd0afa21579a00a8731508d19ea34cb2728eb32a41af1168",
+  "original_target": {
+    "id": "336",
+    "title": "Capacity of the binary skew-symmetric broadcast channel",
+    "area": "Network information theory and broadcast communication",
+    "file": "problems/336-binary-skew-symmetric-broadcast.md",
+    "status": "Open",
+    "last_checked": "2026-09-18",
+    "group": "inverse3",
+    "source_sha256": "d3d62731f9f2a64c760a2dfeecda0e54177215c38248a1a5cba595792cdd3845",
+    "statement_sha256": "efdef53b0151209fdd0afa21579a00a8731508d19ea34cb2728eb32a41af1168",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "336",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"binary skew-symmetric\" capacity 2026 solved",
+    "\"binary skew-symmetric\" site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://chandra.ie.cuhk.edu.hk/pub/papers/BC/GK-outer.pdf",
+      "version": "current author manuscript, January 2026 listing",
+      "locators": "section III-A pp.5–6; Theorem 7; section IV",
+      "body_inspected": true,
+      "scope": "Same fixed BSSC (receiver labels exchanged), explicit unknown sum capacity and improved outer bound not matched by inner rate."
+    },
+    {
+      "url": "https://arxiv.org/html/2606.12839v1",
+      "version": "v1 11 June 2026",
+      "locators": "Definitions 1–3; Theorem 4",
+      "body_inspected": true,
+      "scope": "Capacity for disjoint sums of component channels satisfying primary class assumptions; target cannot be a nontrivial output-disjoint sum."
+    }
+  ],
+  "registry_checks": "Palomar/Hexagon skew-symmetric matches concern paths, matrices and quantum theta functions, not BSSC. arXiv, primary author, Zenodo, HAL, GitHub searches executed.",
+  "scope_comparison": "Need entire private-message capacity region of the exact fair crossover channel. Numerical sum-rate bounds and local tensorization are insufficient. Both inputs share possible Y=0 and Z=1 outputs, violating nontrivial sum output-disjointness.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Theorems and explicit unknown-status passage in current author body are consistent with remaining gap."
+}

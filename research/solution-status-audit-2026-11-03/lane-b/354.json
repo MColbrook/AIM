@@ -1,0 +1,41 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 289,
+  "source_sha256": "3224ca4f631315c9ac21b6f158a2cde53ece49cfd33f9a0d9433f28d92d216c7",
+  "statement_sha256": "ef8cd148b3d594582024df8ca396e910c1c3322fe0975962b326864772f81a70",
+  "original_target": {
+    "id": "354",
+    "title": "Self-sustained oscillations in the full voltage–conductance neuron equation",
+    "area": "Mathematical neuroscience; kinetic equations",
+    "file": "problems/354-voltage-conductance-periodic.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "3224ca4f631315c9ac21b6f158a2cde53ece49cfd33f9a0d9433f28d92d216c7",
+    "statement_sha256": "ef8cd148b3d594582024df8ca396e910c1c3322fe0975962b326864772f81a70",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "354",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"voltage conductance\" periodic solution 2026 full",
+    "\"voltage-conductance\" periodic site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2607.22112v1",
+      "version": "v1 24 July 2026, current abs history checked",
+      "locators": "equations 1.1–1.6; Theorem 1.1",
+      "body_inspected": true,
+      "scope": "Global weak existence with entropy/moment bounds for any connectivity and initial datum; no periodic orbit or nonconstant firing rate constructed."
+    }
+  ],
+  "registry_checks": "No voltage alias Palomar/Hexagon/OpenAI metadata. Current arXiv, author/publisher, HAL, Zenodo, GitHub queries executed.",
+  "scope_comparison": "Need some fixed positive parameters with a nonstationary self-sustained T-periodic density of full voltage/conductance transport-diffusion-reset PDE. Global initial-value existence, numerical cycles and periodic reduced/fast-conductance limits do not imply existence in the full PDE.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Actual global existence theorem covers the same PDE but does not construct the required periodic solution."
+}

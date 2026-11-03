@@ -6,7 +6,7 @@
 
 ## AIM 561: hydrogen splitting
 
-Reviewed [the full proof](../../solutions/562-hydrogen-trotter-disproof/PROOF.md) associated with PR #18 head `823ea0c6f9151792238d8ccbe7d64ea7d66faf5d`, against its preserved statement and the current AIM 561 target. The [main review](561-review.md) supplies the target routing and source record.
+Reviewed [the full proof](../../../cut_problems/research/solutions/562-hydrogen-trotter-disproof/PROOF.md) associated with PR #18 head `823ea0c6f9151792238d8ccbe7d64ea7d66faf5d`, against its preserved statement and the current AIM 561 target. The [main review](../../../cut_problems/research/solution_reviews/2026-10-02-active-prs/561-review.md) supplies the target routing and source record.
 
 The signs are consistent: $`T_h=\lambda_h W_h^{-1}U_h=e^{-ihV}e^{-ih\Delta}`$, and the state has energy $`-1/4`$, so the comparison after $`n`$ steps is exactly the requested $`e^{iH}\psi`$. The normalization of the radial Fourier transform independently gives $`\widehat\psi=1/(2\pi(|\xi|^2+1/4)^2)`$. The state belongs to the domain needed for $`K\psi=V\psi`$; the proof does not assume the nonexistent $`V^2\psi\in L^2`$.
 

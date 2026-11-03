@@ -1,0 +1,106 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1030",
+  "manifest_index": 874,
+  "checked_date": "2026-11-03",
+  "source_sha256": "054cd5c6b51250e665b891559d08260822950f49c6379c887813d08f343d5260",
+  "statement_sha256": "960cbb73a633035c364355301b861a317f7cc9f1d6f5bddd95648beec573b651",
+  "original_target": {
+    "id": "1030",
+    "title": "Uniform Weyl asymptotics for self-generated spinless magnetic fields",
+    "area": "Semiclassical spectral theory and magnetic Schrödinger operators",
+    "file": "problems/1030-uniform-weyl-asymptotics-for-self-generated-spinless-magnetic-fields.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f195e30a22b0b5bd",
+    "group": "spectral",
+    "source_sha256": "054cd5c6b51250e665b891559d08260822950f49c6379c887813d08f343d5260",
+    "statement_sha256": "960cbb73a633035c364355301b861a317f7cc9f1d6f5bddd95648beec573b651",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix a real potential $`V\\in L^{5/2}(\\mathbb R^3)`$, and write $`V_+=\\max\\{V,0\\}`$. For $`h>0`$ and $`\\beta\\ge0`$, define\n```math\nE^{\\rm S}(\\beta,h,V)\n=\\inf_{A\\in H^1(\\mathbb R^3;\\mathbb R^3)}\n\\left\\{\n\\mathrm{Tr}\\bigl(( -ih\\nabla+A)^2-V\\bigr)_-\n+\\beta\\int_{\\mathbb R^3}|\\mathrm{curl}A|^2\\,dx\n\\right\\}.\n```\n\nHere $`t_-=\\min\\{t,0\\}`$: the trace is the signed sum of the negative eigenvalues, using the variational/Friedrichs formulation of Appendix A in [1]. The operator acts on scalar $`L^2(\\mathbb R^3)`$.\n\nProve or disprove\n```math\n\\lim_{h\\downarrow0}\\ \\sup_{\\beta\\ge0}\n\\left|\nh^3E^{\\rm S}(\\beta,h,V)\n+\\frac{1}{15\\pi^2}\\int_{\\mathbb R^3}V_+(x)^{5/2}\\,dx\n\\right|=0.\n```\n\nThe potential is fixed before taking the limit. Uniformity is required over the field-energy penalty, including $`\\beta=0`$; no quantitative remainder or uniformity over potentials is requested.",
+  "full_original_page": "# 1030. Uniform Weyl asymptotics for self-generated spinless magnetic fields\n\n**Area:** Semiclassical spectral theory and magnetic Schrödinger operators\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix a real potential $`V\\in L^{5/2}(\\mathbb R^3)`$, and write $`V_+=\\max\\{V,0\\}`$. For $`h>0`$ and $`\\beta\\ge0`$, define\n```math\nE^{\\rm S}(\\beta,h,V)\n=\\inf_{A\\in H^1(\\mathbb R^3;\\mathbb R^3)}\n\\left\\{\n\\mathrm{Tr}\\bigl(( -ih\\nabla+A)^2-V\\bigr)_-\n+\\beta\\int_{\\mathbb R^3}|\\mathrm{curl}A|^2\\,dx\n\\right\\}.\n```\n\nHere $`t_-=\\min\\{t,0\\}`$: the trace is the signed sum of the negative eigenvalues, using the variational/Friedrichs formulation of Appendix A in [1]. The operator acts on scalar $`L^2(\\mathbb R^3)`$.\n\nProve or disprove\n```math\n\\lim_{h\\downarrow0}\\ \\sup_{\\beta\\ge0}\n\\left|\nh^3E^{\\rm S}(\\beta,h,V)\n+\\frac{1}{15\\pi^2}\\int_{\\mathbb R^3}V_+(x)^{5/2}\\,dx\n\\right|=0.\n```\n\nThe potential is fixed before taking the limit. Uniformity is required over the field-energy penalty, including $`\\beta=0`$; no quantitative remainder or uniformity over potentials is requested.\n\n## Application\n\nThis would show that optimizing a self-generated magnetic field leaves the leading semiclassical energy of spinless noninteracting fermions unchanged, even when the field-energy penalty becomes arbitrarily small.\n\n## References\n\n1. László Erdős, Søren Fournais and Jan Philip Solovej, *Stability and semiclassics in self-generated fields*, Journal of the European Mathematical Society **15** (2013), no. 6, 2093–2113. [DOI](https://doi.org/10.4171/JEMS/416), [publisher PDF](https://ems.press/content/serial-article-files/31927?nt=1), [author preprint](https://arxiv.org/abs/1105.0506v3). Equation (1), equation (6), Theorem 2.2 and Remark 3, printed pages 2094–2098; Appendix A, printed pages 2107–2108.\n\n## Status review\n\n\n**Known cases:** Uniformity includes zero magnetic-field penalty for the scalar spinless operator. The known beta-h large asymptotics and spin-dependent Pauli results do not cover this all-penalty endpoint.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nUniformity includes zero magnetic-field penalty for the scalar spinless operator. The known beta-h large asymptotics and spin-dependent Pauli results do not cover this all-penalty endpoint.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nTheorem 2.2 of [1] proves the stated leading term when $`\\beta h\\to\\infty`$. Remark 3 explicitly conjectures uniformity for $`\\beta\\in[0,\\infty)`$ in the spinless case. Equation (6) gives a universal lower bound with a nonsharp constant, and choosing $`A=0`$ gives the nonmagnetic upper comparison.\n\nMonotonicity gives\n```math\nE^{\\rm S}(0,h,V)\\le E^{\\rm S}(\\beta,h,V)\n\\le \\mathrm{Tr}(-h^2\\Delta-V)_-.\n```\n\nConsequently, the all-$`\\beta`$ assertion is equivalent to the corresponding leading limit at $`\\beta=0`$, using the usual nonmagnetic Weyl asymptotics. This equivalence is an elementary inference from the definition. The Pauli analogue has different behaviour and is outside this problem.\n\nNo matching complete published or announced resolution was located in the bounded searches on 24 October 2026. Comparisons included later self-generated-field asymptotics, Scott-correction results, Lieb–Thirring bounds and planar constant-field estimates. A full later monograph chapter was inaccessible; the audit retains this search gap. These checks do not certify that no unindexed result exists.\n\nThe [planar variable-field Dirichlet eigenvalue problem](424-does-the-sharp-liyau-bound-hold-for-varying-magnetic-fields.md) is related but has a different dimension, domain, spectral target and quantification. AIM 018 asks for the sharp nonmagnetic three-dimensional Lieb–Thirring inequality; the OpenAI announcement on sharp one-dimensional matrix inequalities also has a different target. All-status catalogue and FURTHER comparisons found no equivalent existing statement.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f195e30a22b0b5bd**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "spinless",
+    "self-generated",
+    "Fournais",
+    "Solovej"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"spinless\" \"self-generated\" Weyl 2026"
+    },
+    {
+      "query": "\"spinless\" \"self-generated\" Weyl",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    },
+    {
+      "query": "spinless self generated magnetic fields uniform Weyl asymptotics zero penalty"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://ems.press/content/serial-article-files/31927?nt=1",
+      "locator": "published2013Theorem2.2equation9/Remark3printed2098; equation6printed2097"
+    }
+  ],
+  "scope_comparison": "Actual theorem needs beta*h->infinity; Remark3 conjectures all-beta spinless asymptotics. Universal magnetic Lieb–Thirring nonsharp C and A=0 upper comparison leave beta=0 unresolved. Fixed magnetic fields, Pauli spin terms, Scott corrections and planar constant fields have different uniformity/operators. Monotonicity correctly reduces target to zero penalty, without supplying its missing sharp limit.",
+  "recommendation": "Retain partial status; no matching full proof/counterexample announcement located.",
+  "limitations": "Bounded negative evidence, not proof of continued openness. No full proof certification of restricted comparisons claimed.",
+  "announcement_routing": {
+    "localID": "1030",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "spinless",
+          "self-generated",
+          "Fournais",
+          "Solovej"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "spinless",
+          "self-generated",
+          "Fournais",
+          "Solovej"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "spinless",
+        "self-generated",
+        "Fournais",
+        "Solovej"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

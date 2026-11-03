@@ -1,0 +1,193 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "255",
+  "manifest_index": 200,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "255",
+    "title": "Small-time global null control of no-slip Navier–Stokes flow",
+    "area": "Fluid control / distributed actuation",
+    "file": "problems/255-localized-navier-stokes-global-null-control.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "inverse3",
+    "source_sha256": "ef1f27319e0a786b78b9775e5303e4152ebd275b8e94805e3b4736a6ce8e6605",
+    "statement_sha256": "788718cdea9716e46034b48f93b491039ff7f306209dde12149ee111fbcbaf0c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ef1f27319e0a786b78b9775e5303e4152ebd275b8e94805e3b4736a6ce8e6605",
+  "statement_sha256": "788718cdea9716e46034b48f93b491039ff7f306209dde12149ee111fbcbaf0c",
+  "actual_source_sha256": "ef1f27319e0a786b78b9775e5303e4152ebd275b8e94805e3b4736a6ce8e6605",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^3`$ be a bounded connected smooth domain, $`\\varnothing\\ne\\omega\\Subset\\Omega`$ an open set, and $`T>0`$. Let $`H`$ be the $`L^2(\\Omega)^3`$ closure of smooth compactly supported divergence-free vector fields. For every $`u_0\\in H`$, does there exist $`f\\in L^2(\\omega\\times(0,T))^3`$ and a Leray–Hopf weak solution of\n\n```math\n\\partial_tu+(u\\cdot\\nabla)u-\\Delta u+\\nabla p=\\mathbf1_\\omega f,\\qquad \\nabla\\cdot u=0,\n```\n\nwith $`u=0`$ on $`\\partial\\Omega`$, $`u(0)=u_0`$, and $`u(T)=0`$? Here the solution must belong to $`L^\\infty(0,T;H)\\cap L^2(0,T;H_0^1(\\Omega)^3)`$, be weakly continuous in $`L^2`$, and satisfy the usual energy inequality with forcing. No smallness bound is imposed on $`u_0`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Navier Stokes\" \"null controllability\" \"no slip\" 2026",
+    "\"Navier Stokes\" \"null controllability\" \"no slip\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Navier Stokes\" \"null controllability\" \"no slip\" (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Los Lions (I)\" \"Fernández\"",
+    "site:institucional.us.es/blogimus/2026/04/ \"Los Lions\" \"conjetura\"",
+    "\"Navier-Stokes\" \"global\" \"no-slip\" controllability 2026",
+    "\"Global Controllability of the Navier–Stokes Equations in the Presence of Curved Boundary\" Liao",
+    "\"Liao\" \"Sueur\" \"Zhang\" \"controllability\" cylinder no-slip arxiv"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://institucional.us.es/blogimus/2026/04/los-lions-i/",
+      "version_or_date": "17 April 2026; full indexed primary article body retrieved3November2026",
+      "locator": "Una conjetura: displayed Navier–Stokes system, following quantified conjecture and status paragraphs",
+      "inspection": "The actual primary body displays forcing f1_omega, divergence zero, homogeneous Dirichlet u=0 on the entire boundary, arbitrary u0 and arbitrary positive T; asks terminal u(T)=0. It says progress is partial and the conjecture remains open as of its date. Unlike a title/abstract, the indexed result exposed the full model and conjecture paragraphs. The blog does not itself spell out the exact Leray–Hopf and L2-control function classes added by the local precise formulation."
+    },
+    {
+      "url": "https://arxiv.org/abs/1612.08087v2",
+      "version_or_date": "5 March 2017; publishedJEMS22(2020),1625–1673",
+      "locator": "primary abstract and version history",
+      "inspection": "Coron–Marbach–Sueur use controls on a boundary part meeting every component, with Navier slip-with-friction on the uncontrolled part. The target has zero Dirichlet data everywhere and only interior distributed forcing."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00021-022-00689-0",
+      "version_or_date": "Version of record6June2022, JMFM24:71",
+      "locator": "publisher primary abstract lines32–35",
+      "inspection": "Liao–Sueur–Zhang assume an axisymmetric finite circular cylinder and control on both top and bottom, together with small distributed phantom control. No-slip is imposed only on the lateral boundary. These explicit model restrictions exclude the paper as a full target solution."
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.07366v1",
+      "version_or_date": "12May2025",
+      "locator": "primary abstract",
+      "inspection": "The newer Liao–Sueur–Zhang result is approximate null/Lagrangian control of a nonresistive MHD system with Navier type boundaries and high-Sobolev initial data. It changes equations, boundary conditions and conclusion."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Partial results only in the sources inspected. The original article access gap is closed through its full indexed primary body; no plausible full matching announcement remains uninspected. This is a bounded search conclusion, not proof of continued openness.",
+  "latest_version_check": "Original primary article dated17April2026 recovered through full indexed body on3November2026; explicit primary model restrictions in the 2017/2022/2025 comparators exclude full scope. No plausible later matching full announcement was found in bounded searches.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ],
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:54:28.098Z",
+      "reviewer": "lane-d helper, root assigned255and271",
+      "previous_record": {
+        "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+        "localID": "255",
+        "manifest_index": 200,
+        "checked_date": "2026-11-03",
+        "original_target": {
+          "id": "255",
+          "title": "Small-time global null control of no-slip Navier–Stokes flow",
+          "area": "Fluid control / distributed actuation",
+          "file": "problems/255-localized-navier-stokes-global-null-control.md",
+          "status": "Open",
+          "last_checked": "2026-09-13",
+          "group": "inverse3",
+          "source_sha256": "ef1f27319e0a786b78b9775e5303e4152ebd275b8e94805e3b4736a6ce8e6605",
+          "statement_sha256": "788718cdea9716e46034b48f93b491039ff7f306209dde12149ee111fbcbaf0c",
+          "state": "unreviewed"
+        },
+        "source_sha256": "ef1f27319e0a786b78b9775e5303e4152ebd275b8e94805e3b4736a6ce8e6605",
+        "statement_sha256": "788718cdea9716e46034b48f93b491039ff7f306209dde12149ee111fbcbaf0c",
+        "actual_source_sha256": "ef1f27319e0a786b78b9775e5303e4152ebd275b8e94805e3b4736a6ce8e6605",
+        "source_hash_matches_manifest": true,
+        "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^3`$ be a bounded connected smooth domain, $`\\varnothing\\ne\\omega\\Subset\\Omega`$ an open set, and $`T>0`$. Let $`H`$ be the $`L^2(\\Omega)^3`$ closure of smooth compactly supported divergence-free vector fields. For every $`u_0\\in H`$, does there exist $`f\\in L^2(\\omega\\times(0,T))^3`$ and a Leray–Hopf weak solution of\n\n```math\n\\partial_tu+(u\\cdot\\nabla)u-\\Delta u+\\nabla p=\\mathbf1_\\omega f,\\qquad \\nabla\\cdot u=0,\n```\n\nwith $`u=0`$ on $`\\partial\\Omega`$, $`u(0)=u_0`$, and $`u(T)=0`$? Here the solution must belong to $`L^\\infty(0,T;H)\\cap L^2(0,T;H_0^1(\\Omega)^3)`$, be weakly continuous in $`L^2`$, and satisfy the usual energy inequality with forcing. No smallness bound is imposed on $`u_0`$.",
+        "full_local_page_read": true,
+        "queries": [
+          "\"Navier Stokes\" \"null controllability\" \"no slip\" 2026",
+          "\"Navier Stokes\" \"null controllability\" \"no slip\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+          "\"Navier Stokes\" \"null controllability\" \"no slip\" (site:palomar-registry.org OR site:hexagonmath.org)",
+          "\"Los Lions (I)\" \"Fernández\""
+        ],
+        "searched_channels": [
+          "general web and primary author/publisher routing",
+          "arXiv",
+          "Zenodo",
+          "HAL",
+          "GitHub",
+          "Palomar (site search)",
+          "Hexagon (site search)"
+        ],
+        "sources": [
+          {
+            "scope_comparison": "Focused searches located no arbitrary-data arbitrary-positive-time distributed-force Leray–Hopf no-slip theorem. Current primary wave-map discussion still lists Lions control as open, but refers to boundary control rather than exactly this distributed-force formulation. Slip-boundary and local/small-data results do not match. Exact model body access in the local primary article remains a gap; no complete resolution is inferred from index or survey labels.",
+            "locator": "Una conjetura; actual referenced no-slip model body still requires recovery",
+            "version_or_date": "Author UniversitySeville article17April2026; indexed but direct access404 at recheck3November2026.",
+            "url": "https://institucional.us.es/blogimus/2026/04/los-lions-i/",
+            "primary_body_access_gap": true
+          }
+        ],
+        "outcome": "hold",
+        "recommended_status": "Open",
+        "rationale": "Focused searches located no arbitrary-data arbitrary-positive-time distributed-force Leray–Hopf no-slip theorem. Current primary wave-map discussion still lists Lions control as open, but refers to boundary control rather than exactly this distributed-force formulation. Slip-boundary and local/small-data results do not match. Exact model body access in the local primary article remains a gap; no complete resolution is inferred from index or survey labels.",
+        "latest_version_check": "Author UniversitySeville article17April2026; indexed but direct access404 at recheck3November2026.",
+        "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+        "limitations": [
+          "Bounded search conclusion, not a guarantee of continued openness.",
+          "No index-only result was promoted to a complete match."
+        ]
+      },
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "recommended_status": "Open",
+      "queries": [
+        "site:institucional.us.es/blogimus/2026/04/ \"Los Lions\" \"conjetura\"",
+        "\"Navier-Stokes\" \"global\" \"no-slip\" controllability 2026",
+        "\"Global Controllability of the Navier–Stokes Equations in the Presence of Curved Boundary\" Liao",
+        "\"Liao\" \"Sueur\" \"Zhang\" \"controllability\" cylinder no-slip arxiv"
+      ],
+      "sources": [
+        {
+          "url": "https://institucional.us.es/blogimus/2026/04/los-lions-i/",
+          "version_or_date": "17 April 2026; full indexed primary article body retrieved3November2026",
+          "locator": "Una conjetura: displayed Navier–Stokes system, following quantified conjecture and status paragraphs",
+          "inspection": "The actual primary body displays forcing f1_omega, divergence zero, homogeneous Dirichlet u=0 on the entire boundary, arbitrary u0 and arbitrary positive T; asks terminal u(T)=0. It says progress is partial and the conjecture remains open as of its date. Unlike a title/abstract, the indexed result exposed the full model and conjecture paragraphs. The blog does not itself spell out the exact Leray–Hopf and L2-control function classes added by the local precise formulation."
+        },
+        {
+          "url": "https://arxiv.org/abs/1612.08087v2",
+          "version_or_date": "5 March 2017; publishedJEMS22(2020),1625–1673",
+          "locator": "primary abstract and version history",
+          "inspection": "Coron–Marbach–Sueur use controls on a boundary part meeting every component, with Navier slip-with-friction on the uncontrolled part. The target has zero Dirichlet data everywhere and only interior distributed forcing."
+        },
+        {
+          "url": "https://link.springer.com/article/10.1007/s00021-022-00689-0",
+          "version_or_date": "Version of record6June2022, JMFM24:71",
+          "locator": "publisher primary abstract lines32–35",
+          "inspection": "Liao–Sueur–Zhang assume an axisymmetric finite circular cylinder and control on both top and bottom, together with small distributed phantom control. No-slip is imposed only on the lateral boundary. These explicit model restrictions exclude the paper as a full target solution."
+        },
+        {
+          "url": "https://arxiv.org/abs/2505.07366v1",
+          "version_or_date": "12May2025",
+          "locator": "primary abstract",
+          "inspection": "The newer Liao–Sueur–Zhang result is approximate null/Lagrangian control of a nonresistive MHD system with Navier type boundaries and high-Sobolev initial data. It changes equations, boundary conditions and conclusion."
+        }
+      ],
+      "scope_comparison": "No matching arbitrary-domain, arbitrary-data, arbitrary-positive-time theorem using only localized L2 interior forcing and a Leray–Hopf solution with homogeneous no-slip boundary was located. The actual original model body is now recovered, and plausible title-matched global no-slip comparators have explicit extra boundary controls or symmetry restrictions. They do not settle the target.",
+      "rationale": "Partial results only in the sources inspected. The original article access gap is closed through its full indexed primary body; no plausible full matching announcement remains uninspected. This is a bounded search conclusion, not proof of continued openness."
+    }
+  ],
+  "review_level": "primary_body_and_search",
+  "primary_body_access_gap_resolved": true,
+  "remaining_material_source_gaps": [],
+  "full_original_page": "# 255 — Small-time global null control of no-slip Navier–Stokes flow\n\n**Area:** Fluid control / distributed actuation\n\n**Status:** 🔵 OPEN\n\n**Last checked:** 2026-09-13\n\n## Problem statement\n\nLet $`\\Omega\\subset\\mathbb R^3`$ be a bounded connected smooth domain, $`\\varnothing\\ne\\omega\\Subset\\Omega`$ an open set, and $`T>0`$. Let $`H`$ be the $`L^2(\\Omega)^3`$ closure of smooth compactly supported divergence-free vector fields. For every $`u_0\\in H`$, does there exist $`f\\in L^2(\\omega\\times(0,T))^3`$ and a Leray–Hopf weak solution of\n\n```math\n\\partial_tu+(u\\cdot\\nabla)u-\\Delta u+\\nabla p=\\mathbf1_\\omega f,\\qquad \\nabla\\cdot u=0,\n```\n\nwith $`u=0`$ on $`\\partial\\Omega`$, $`u(0)=u_0`$, and $`u(T)=0`$? Here the solution must belong to $`L^\\infty(0,T;H)\\cap L^2(0,T;H_0^1(\\Omega)^3)`$, be weakly continuous in $`L^2`$, and satisfy the usual energy inequality with forcing. No smallness bound is imposed on $`u_0`$.\n\n## Application\n\nThis asks whether localized forcing can stop an arbitrary finite-energy viscous flow in any prescribed positive time while the vessel wall remains fixed.\n\n## References\n\n1. E. Fernández-Cara, *Los Lions (I)* (17 April 2026), [author's University of Seville article](https://institucional.us.es/blogimus/2026/04/los-lions-i/), section “Una conjetura”. Writes this distributed-force, homogeneous-Dirichlet model and explicitly says Lions' conjecture remains open.\n2. J.-M. Coron, F. Marbach and F. Sueur, *Small-time global exact controllability of the Navier–Stokes equation with Navier slip-with-friction boundary conditions* (2020), [JEMS 22, 1625–1673](https://doi.org/10.4171/JEMS/952), introduction and main theorem. Establishes the related slip-boundary result and explains the boundary-layer issue.\n\n## Status review\n\n**Literature check:** Open in cited literature; no later resolution located.\n\nSmall-data local control, large-time dissipation followed by local control, and global results with Navier slip conditions do not give the quantified no-slip statement. Searches included “Navier Stokes global null controllability 2026 no-slip”, “localized distributed Lions conjecture”, and “global controllability curved boundary no-slip”. No arbitrary-data, arbitrary-time theorem in this class was located.\n",
+  "announcement_snapshot_followup": {
+    "checked_UTC": "2026-11-03T13:54:28.109Z",
+    "scope": "Complete current Palomar954, Hexagon646 and pinned OpenAI overview read-only alias scan",
+    "predicates": [
+      "controllab AND Navier in title/abstract"
+    ],
+    "hits": [],
+    "qualification": "Bounded literal routing; no inference of absence beyond recorded aliases."
+  },
+  "scope_comparison": "No matching arbitrary-domain, arbitrary-data, arbitrary-positive-time theorem using only localized L2 interior forcing and a Leray–Hopf solution with homogeneous no-slip boundary was located. The actual original model body is now recovered, and plausible title-matched global no-slip comparators have explicit extra boundary controls or symmetry restrictions. They do not settle the target.",
+  "history_note": "Earlier failed access attempts and their source-gap wording are retained verbatim in followup_reviews[0].previous_record; top-level sources describe the completed follow-up."
+}

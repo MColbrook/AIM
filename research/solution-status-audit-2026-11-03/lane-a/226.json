@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "226",
+  "manifest_index": 174,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "226",
+    "title": "One cubic NLS trajectory with unbounded Sobolev norm",
+    "area": "Nonlinear wave turbulence",
+    "file": "problems/226-cubic-nls-unbounded-orbit.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "6640d1d50257143206055887dad613a6fd57429042557291ac6f515e76276492",
+    "statement_sha256": "b29edbb9c893c37faa559f7689c1fa75880354c4695125c537930842c236ada8",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6640d1d50257143206055887dad613a6fd57429042557291ac6f515e76276492",
+  "statement_sha256": "b29edbb9c893c37faa559f7689c1fa75880354c4695125c537930842c236ada8",
+  "actual_source_sha256": "6640d1d50257143206055887dad613a6fd57429042557291ac6f515e76276492",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "On $`\\mathbb T^2=(\\mathbb R/2\\pi\\mathbb Z)^2`$, does there exist $`u_0\\in C^\\infty(\\mathbb T^2;\\mathbb C)`$ such that the global solution of\n\n```math\ni\\partial_tu+\\Delta u=|u|^2u,\\qquad u(0)=u_0,\n```\n\nsatisfies\n\n```math\n\\limsup_{t\\to\\infty}\\|u(t)\\|_{H^2(\\mathbb T^2)}=\\infty?\n```\n\nHere $`\\|u\\|_{H^2}^2=\\sum_{k\\in\\mathbb Z^2}(1+|k|^2)^2|\\widehat u(k)|^2`$. A single fixed initial datum and its entire forward trajectory must realize the unbounded growth.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"cubic NLS\" \"single orbit\" unbounded Sobolev 2026",
+    "\"cubic NLS\" \"single orbit\" unbounded Sobolev (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"cubic NLS\" \"single orbit\" unbounded Sobolev (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"cubic nonlinear Schrödinger\" \"unbounded\" \"2026\" torus"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://diposit.ub.edu/bitstreams/4cd40dfd-10f5-4876-8b7d-b46751475686/download",
+      "version_or_date": "Giuliani–Guardia manuscript22November2023; focused current searches3November2026; Herr–Kwak final Inventiones245(2026)513–629 establishes global well-posedness.",
+      "locator": "Section1.4 pp7–9 and Corollary1.5 p7",
+      "scope_comparison": "Corollary1.5 gives a single unbounded orbit for an infinite system of coupled penduli with selected weak couplings, not the standard cubic NLS on T2. Section1.4 separates these models. Arbitrarily large finite growth from data depending on the growth factor also does not give one C-infinity datum with unbounded H2 forward orbit. Current searches found no exact complete announcement.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Corollary1.5 gives a single unbounded orbit for an infinite system of coupled penduli with selected weak couplings, not the standard cubic NLS on T2. Section1.4 separates these models. Arbitrarily large finite growth from data depending on the growth factor also does not give one C-infinity datum with unbounded H2 forward orbit. Current searches found no exact complete announcement.",
+  "latest_version_check": "Giuliani–Guardia manuscript22November2023; focused current searches3November2026; Herr–Kwak final Inventiones245(2026)513–629 establishes global well-posedness.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

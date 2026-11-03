@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "732",
+  "manifest_index": 576,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "732",
+    "title": "Does the silver exponent remain optimal when gradient steps may be negative?",
+    "area": "Continuous optimization; complexity of first-order methods",
+    "file": "problems/732-does-the-silver-exponent-remain-optimal-when-gradient-steps-may-be-negative.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ba8ecac366a14c8c",
+    "group": "continuous-optimization",
+    "source_sha256": "95c68758f02bc9f7c1a3b177fe94caf7295d998a452664d4589b0205b4eff3fd",
+    "statement_sha256": "03305890ae29e633164a0134add1682a35ff7e934616cadc4dabb5674e0ca491",
+    "state": "unreviewed"
+  },
+  "source_sha256": "95c68758f02bc9f7c1a3b177fe94caf7295d998a452664d4589b0205b4eff3fd",
+  "statement_sha256": "03305890ae29e633164a0134add1682a35ff7e934616cadc4dabb5674e0ca491",
+  "actual_source_sha256": "95c68758f02bc9f7c1a3b177fe94caf7295d998a452664d4589b0205b4eff3fd",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix an integer $`n\\ge1`$ and a real stepsize schedule $`h=(h_1,\\ldots,h_n)\\in\\mathbb R^n`$. The schedule is chosen before the objective is queried; it may depend on the horizon $`n`$. For any dimension $`d\\ge1`$, differentiable convex $`f:\\mathbb R^d\\to\\mathbb R`$ with $`1`$-Lipschitz gradient and a nonempty minimizer set, run plain gradient descent\n\n```math\nx_k=x_{k-1}-h_k\\nabla f(x_{k-1}),\\qquad k=1,\\ldots,n.\n```\n\nNegative and zero steps are allowed. Define the normalized worst-case error\n\n```math\nR_n(h)=\\sup_{d\\ge1}\\ \\sup_f\\ \\sup_{x_\\star\\in\\mathrm{argmin}f}\\\n\\sup_{x_0\\ne x_\\star}\n\\frac{f(x_n)-f(x_\\star)}{\\tfrac12\\|x_0-x_\\star\\|^2}.\n```\n\nPut $`p_{\\rm sil}=\\log_2(1+\\sqrt2)`$. **Is it true that for every $`\\delta>0`$ there are constants $`c_\\delta>0`$ and $`n_\\delta\\ge1`$ such that**\n\n```math\nR_n(h)\\ge c_\\delta n^{-p_{\\rm sil}-\\delta}\n\\quad\\text{for every }n\\ge n_\\delta\\text{ and every }h\\in\\mathbb R^n?\n```\n\nThe constants are independent of the dimension, objective and schedule. The output is the last iterate. Schedules chosen from observed gradients, momentum, auxiliary iterates and selection of the best earlier iterate are outside this question.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"silver rate\" \"negative\" gradient descent 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"silver\" \"signed\" gradient descent",
+    "site:palomar-registry.org OR site:hexagonmath.org \"silver\" \"negative\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "pp1–2 equations1–4; Theorems6.2/7.2 restrictions; Ye–Liu Theorem1.1/§5",
+      "scope_comparison": "Actual workingpaper real-schedule lower bound has exponent1.5570595, weaker than desired log2(1+sqrt2)+arbitrary delta≈1.27155+delta. Signed/nonnegative minimax equality is only dimension1 all horizons or all dimensions N<=5. Ye–Liu's silver bound assumes H>=0 and leaves negative steps. These do not establish all real schedules/all large horizons in local target. No full matching announcement located.",
+      "url": "https://www.primalspace.me/papers/gradient-descent-dimension-gaps/horizon-dimension-bounds.pdf",
+      "version_or_date": "LoganBell authorworkingpaper September2026; 2609.09152v2 inspected separately",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual workingpaper real-schedule lower bound has exponent1.5570595, weaker than desired log2(1+sqrt2)+arbitrary delta≈1.27155+delta. Signed/nonnegative minimax equality is only dimension1 all horizons or all dimensions N<=5. Ye–Liu's silver bound assumes H>=0 and leaves negative steps. These do not establish all real schedules/all large horizons in local target. No full matching announcement located.",
+  "latest_version_check": "LoganBell authorworkingpaper September2026; 2609.09152v2 inspected separately",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

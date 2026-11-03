@@ -1,0 +1,2056 @@
+{
+  "audit_date": "2026-10-21",
+  "reviewer_role": "Independent AI-assisted prior-art scope audit",
+  "repository_revision": "5af1f89",
+  "pr_range": [
+    90,
+    125
+  ],
+  "counts": {
+    "targets": 36,
+    "replace": 0,
+    "noverifiedearliercompletematch": 36,
+    "earlier_exact_announcements_without_retrieved_proof": 1
+  },
+  "method": "Read original target statements, submitted theorem claims/references and target comparisons; read prior reviews as leads; run fresh per-target web searches; compare actual primary-source scope and dates. No submitted code executed. No repository or pull-request changes.",
+  "records": [
+    {
+      "pr": 90,
+      "aim": 577,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/c9929805cece044705abaaebe1cebddac1ba11a6/problems/577-repeated-gue-strong-freeness.md",
+      "package_paths": [
+        "research/solutions/kaiwen-jin-577"
+      ],
+      "target_summary": "Operator-norm convergence in probability to a free semicircular pair for A=X tensor I and B=I tensor X on three tensor sites, where both two-site embeddings use the same GUE realization X.",
+      "fresh_query_terms": [
+        "\"same\" \"GUE\" \"three tensor\" \"strong\" freeness",
+        "repeated GUE strong freeness tensor legs random matrix",
+        "\"GUE\" \"same\" \"tensor\" \"repeated\" freeness"
+      ],
+      "sources": [
+        {
+          "title": "Strong convergence for tensor GUE random matrices",
+          "authors": "Benoît Collins; Wangjun Yuan",
+          "date": "2024-07-12 preprint; Bernoulli 32(3), 2026",
+          "url": "https://arxiv.org/html/2407.09065v1",
+          "theorem_locator": "Theorem 2; Section 5, question (2)",
+          "exact_scope_comparison": "The established model uses independent GUE matrices. Section 5 singles out reusing the same GUE on different tensor legs as a further question."
+        },
+        {
+          "title": "A new approach to strong convergence II: The classical ensembles",
+          "authors": "Chi-Fang Chen; Jorge Garza-Vargas; Ramon van Handel",
+          "date": "2024-12 preprint; v3 revised 2026-06-06",
+          "url": "https://arxiv.org/html/2412.00593v3",
+          "theorem_locator": "Section 9.4, model preceding Theorem 9.8",
+          "exact_scope_comparison": "Theorem 9.8 allows overlapping tensor supports, but the matrices indexed by v are independent. This does not specialize to three embeddings of one random matrix."
+        },
+        {
+          "title": "Toeplitz exactness for strong convergence",
+          "authors": "David Gao; Srivatsav Kunnawalkam Elayavalli",
+          "date": "2026-04-15; v3 2026-04-22",
+          "url": "https://arxiv.org/html/2604.14106v3",
+          "theorem_locator": "Corollary 1.4; Definition 2.1",
+          "exact_scope_comparison": "This upgrades strong covariance convergence to operator-valued semicircular convergence. It supplies general machinery, not a verified repeated-GUE application: model-specific covariance convergence still has to be established."
+        },
+        {
+          "title": "Strong convergence to operator-valued semicirculars",
+          "authors": "David Jekel; Yoonkyeong Lee; Brent Nelson; Jennifer Pi",
+          "date": "2025-06-24; v3 2026-07-31",
+          "url": "https://arxiv.org/html/2506.19940v3",
+          "theorem_locator": "Theorem B / Theorem 4.12; Section 5 applications",
+          "exact_scope_comparison": "The theorem handles dependent Gaussian models subject to strong covariance-law convergence and a small Choi norm. Its applications treat weighted/band Wigner ensembles; no earlier proof verifying these conditions for the exact repeated pair was located. These hypotheses are part of what the submitted argument checks."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/577-review.md",
+          "lines_read_as_leads": [
+            "Primary versions checked: BBvH arXiv2108.06312v2 Theorem2.1, GK2604.14106v3 Corollary1.4 (the generation assumption is on the limiting base), JLNP2506.19940v3 covariance definitions and strong/weak convergence statements. Collins–Yuan2407.09065v1 and Chen–Garza-Vargas–van Handel2412.00593v3 are correctly identified as background rather than an independent-matrix theorem applied to dependent matrices. Haagerup–Thorbjørnsen's deterministic pencil and Gaussian Poincare tools have the stated role. No independence across N or full-operator-norm smallness of the cross map is assumed. The exact AIM577 target asks only this ordered pair on three sites, so omission of longer chains is no remaining part of this problem."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T12:15:39Z",
+      "pinned_head_sha": "d3d08ea6cb9b28c84245712fd29c50f5c091b370",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/90",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/kaiwen-jin-577"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 91,
+      "aim": 501,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/1b7c7fd251c1643bb41f0e3cef38704bcef410fd/problems/501-integral-flat-norm-codimension-one.md",
+      "package_paths": [
+        "research/solutions/501-integral-flat-norm-codimension-one"
+      ],
+      "target_summary": "Integral optimal flat-norm decomposition of every compactly supported integral codimension-one current, without requiring that the current be a boundary.",
+      "fresh_query_terms": [
+        "\"integral\" \"flat norm\" \"codimension one\" solution",
+        "integrality flat norm decomposition codimension one integral current conjecture",
+        "\"integral flat norm\" rounding BV nonzero boundary"
+      ],
+      "sources": [
+        {
+          "title": "Flat norm decomposition of integral currents",
+          "authors": "Sharif Ibrahim; Bala Krishnamoorthy; Kevin R. Vixie",
+          "date": "2014-11-04 preprint; published 2016-05-23",
+          "url": "https://jocg.org/index.php/jocg/article/view/3018",
+          "theorem_locator": "Section 1.1; Theorem 3.7; Corollary 3.8; Section 5",
+          "exact_scope_comparison": "The boundary case and the planar one-dimensional case are established. Higher-dimensional integrality is conditional on triangulation control. These restrictions leave the target's arbitrary-dimensional nonboundary case."
+        },
+        {
+          "title": "Boundary rectifiability and compactness of integral currents via BV functions",
+          "authors": "Giacomo Del Nin",
+          "date": "2026-06-09",
+          "url": "https://arxiv.org/abs/2606.11185",
+          "theorem_locator": "Abstract and main rectifiability/compactness results",
+          "exact_scope_comparison": "This gives integral-current structural criteria, not an optimal integral flat-norm decomposition for the target class."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/501-review.md",
+          "lines_read_as_leads": [],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T12:58:41Z",
+      "pinned_head_sha": "557794107a8a12577008cf5ffa010b6fccbca0d3",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/91",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/501-integral-flat-norm-codimension-one"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 92,
+      "aim": 504,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/1b7c7fd251c1643bb41f0e3cef38704bcef410fd/problems/504-ising-disks-excursion-tail.md",
+      "package_paths": [
+        "research/solutions/504-ising-disks-excursion-tail"
+      ],
+      "target_summary": "The exact limiting exponential excursion-tail assertion for the size of an Ising-disk excursion, in the specified recurrent excursion process.",
+      "fresh_query_terms": [
+        "\"Ising disks\" \"excursion\" exponential",
+        "Baryshnikov Onaran Ising disks exponential excursion tails conjecture",
+        "\"Ising disks\" \"Conjecture\" \"7.11\""
+      ],
+      "sources": [
+        {
+          "title": "Ising disks: topology preserving Glauber dynamics",
+          "authors": "Yuliy Baryshnikov; Eren Onaran",
+          "date": "2024-10-30 preprint; v3 2026-03-26; published 2026",
+          "url": "https://arxiv.org/html/2410.22611v3",
+          "theorem_locator": "Lemma 7.10; Conjecture 7.11",
+          "exact_scope_comparison": "Lemma 7.10 supplies a one-sided estimate. The exact excursion limit remains explicitly Conjecture 7.11 in the March 2026 version, rather than a proved result."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/504-review.md",
+          "lines_read_as_leads": [],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T13:04:51Z",
+      "pinned_head_sha": "01f7a36c56ffb3d94bf103a68c387ef6ac9efe9b",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/92",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/504-ising-disks-excursion-tail"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 93,
+      "aim": 499,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/1b7c7fd251c1643bb41f0e3cef38704bcef410fd/problems/499-rips-shadow-fundamental-group.md",
+      "package_paths": [
+        "research/resolved/499-rips-shadow-fundamental-group"
+      ],
+      "target_summary": "Disprove universal injectivity on fundamental groups of the canonical Rips shadow projection, using a finite Euclidean sample; submitted example has six points in R3.",
+      "fresh_query_terms": [
+        "\"Rips\" \"shadow\" \"injectivity\" counterexample",
+        "Rips shadow fundamental group counterexample six points three dimensions",
+        "\"Vietoris\" \"shadow\" \"counterexample\" fundamental"
+      ],
+      "sources": [
+        {
+          "title": "Vietoris–Rips complexes of planar point sets",
+          "authors": "Erin W. Chambers; Vin de Silva; Jeff Erickson; Robert Ghrist",
+          "date": "2007 preprint; DCG 44, 2010",
+          "url": "https://www2.math.upenn.edu/~ghrist/preprints/ripsplanar.pdf",
+          "theorem_locator": "Planar shadow theorem; Proposition 5.4",
+          "exact_scope_comparison": "The planar theorem is an isomorphism result. Proposition 5.4 has an R4 example with simply connected Rips complex and shadow fundamental group Z: it obstructs surjectivity, not injectivity."
+        },
+        {
+          "title": "The Shadow of Vietoris–Rips Complexes in Limits",
+          "authors": "Kazuhiro Kawamura; Sushovan Majhi; Atish Mitra",
+          "date": "2026-01-04",
+          "url": "https://arxiv.org/html/2601.01359v1",
+          "theorem_locator": "Assumption (H); Section 4.3, Theorem 4.11",
+          "exact_scope_comparison": "The theorem identifies inverse-limit homotopy groups under the paper's sampling assumptions. It is not an assertion about the injectivity of every fixed finite-sample shadow map."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/499-review.md",
+          "lines_read_as_leads": [],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T14:21:49Z",
+      "pinned_head_sha": "9cd0516e31464c112e8d66a9c0bfd7e172e68f14",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/93",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/resolved/499-rips-shadow-fundamental-group"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 94,
+      "aim": 500,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/1b7c7fd251c1643bb41f0e3cef38704bcef410fd/problems/500-higher-dimensional-ising-clumps.md",
+      "package_paths": [
+        "research/solutions/500-higher-dimensional-ising-clumps"
+      ],
+      "target_summary": "A four-dimensional counterexample to the proposed irreducibility extension for topology-preserving Ising-clump moves.",
+      "fresh_query_terms": [
+        "\"higher-dimensional\" \"Ising\" \"clumps\" counterexample",
+        "higher dimensional Ising clump irreducibility four manifold"
+      ],
+      "sources": [
+        {
+          "title": "Ising disks: topology preserving Glauber dynamics",
+          "authors": "Yuliy Baryshnikov; Eren Onaran",
+          "date": "2024-10-30 preprint; v3 2026-03-26; published 2026",
+          "url": "https://arxiv.org/html/2410.22611v3",
+          "theorem_locator": "Theorem 6.5; Conjecture 6.9",
+          "exact_scope_comparison": "The proved irreducibility result and the higher-dimensional extension are distinguished; the latter is explicitly conjectural. General contractible-manifold constructions do not themselves prove an obstruction for the specified cubical moves."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/500-review.md",
+          "lines_read_as_leads": [],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T14:31:00Z",
+      "pinned_head_sha": "a82eec0914141bb1e5bc5eb75f9abbf30e44bfec",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/94",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/500-higher-dimensional-ising-clumps"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 95,
+      "aim": 512,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/512-spherical-rips-first-transition.md",
+      "package_paths": [
+        "research/solutions/512-kaiwen-jin-spherical-rips-first-transition"
+      ],
+      "target_summary": "The full homotopy-type formula on the first open interval after the regular-simplex threshold for the ordinary Vietoris–Rips complex of every round sphere, beyond the known n=1,2 cases.",
+      "fresh_query_terms": [
+        "\"sphere\" \"Rips\" \"first transition\" homotopy 2026",
+        "Vietoris Rips spheres homotopy type SO alternating group join first transition"
+      ],
+      "sources": [
+        {
+          "title": "The connectivity of Vietoris–Rips complexes of spheres",
+          "authors": "Henry Adams; Johnathan Bush; Žiga Virk",
+          "date": "2024-07 preprint; published 2025",
+          "url": "https://arxiv.org/abs/2407.15818v2",
+          "theorem_locator": "Conjecture 7.2; Sections 2.5 and 3",
+          "exact_scope_comparison": "Connectivity estimates do not identify the asserted full homotopy type for all dimensions."
+        },
+        {
+          "title": "Critical Diameters and Vietoris-Rips Filtrations",
+          "authors": "Facundo Mémoli; Qingsong Wang",
+          "date": "2026-09-26",
+          "url": "https://arxiv.org/html/2609.33009v1",
+          "theorem_locator": "Theorem 4.5; Section 4.3",
+          "exact_scope_comparison": "The critical-diameter/simplex classification and stability intervals do not establish the target's postcritical join formula. The exact threshold, an open interval above it, and metric thickenings cannot be interchanged."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/512-review.md",
+          "lines_read_as_leads": [
+            "The proof-critical primary texts were checked: [Mémoli–Wang](https://arxiv.org/html/2609.33009v1), Propositions 2.5, 2.6 and 2.9, Theorems 4.5 and 5.1; [Ji–Meng](https://arxiv.org/html/2309.03142v3), Lemma 4.3; [Corvellec](https://msp.org/pjm/1999/187-2/pjm-v187-n2-p04-s.pdf), Theorem 2.4; and [Ebert–Randal-Williams](https://arxiv.org/pdf/1705.03774v2), Theorem 2.2. In particular, the spectrum gap covers all labels, the collar respects function values, and realization requires no compatible choices of inverse homotopies. The AAF and ABV versioned metadata and their distinct thickening/ordinary-complex context agree with the bibliography. The Lim–Mémoli–Okutan comparison is credited through the explicit MW comparison. Standard CW approximation and Whitehead are used with their CW hypotheses."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T15:30:37Z",
+      "pinned_head_sha": "566560482b63bbfcaf289efdf231991f9b4c2a7c",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/95",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/512-kaiwen-jin-spherical-rips-first-transition"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 96,
+      "aim": 513,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/513-aspherical-motion-planning-center.md",
+      "package_paths": [
+        "research/solutions/513-kaiwen-jin-flat-counterexample"
+      ],
+      "target_summary": "Counterexample to the proposed maximal topological-complexity formula determined by the rank of the center of an aspherical manifold group; submitted example is an oriented flat five-manifold.",
+      "fresh_query_terms": [
+        "\"topological complexity\" \"centre\" \"counterexample\" aspherical manifold",
+        "topological complexity aspherical center rank real Bott counterexample"
+      ],
+      "sources": [
+        {
+          "title": "Topological complexity, asphericity and connected sums",
+          "authors": "Christoforos Neofytidis",
+          "date": "2022-12 preprint; published 2025-03-15",
+          "url": "https://arxiv.org/html/2212.08962v2",
+          "theorem_locator": "Question 5.8; Theorem 5.9",
+          "exact_scope_comparison": "The center-rank formula is posed as a question; the nilpotent special result does not settle oriented flat five-manifolds."
+        },
+        {
+          "title": "Higher topological complexity of Seifert fibered manifolds",
+          "authors": "Navnath Daundkar; Rekha Santhanam; Soumyadip Thandar",
+          "date": "2023-04-03 preprint; v3 2026-01-30; published online 2026-02-16",
+          "url": "https://arxiv.org/html/2304.01274v3",
+          "theorem_locator": "Seifert-fibered manifold results",
+          "exact_scope_comparison": "Three-dimensional Seifert-fibered cases do not furnish the target's five-dimensional counterexample."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/513-review.md",
+          "lines_read_as_leads": [],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T15:45:59Z",
+      "pinned_head_sha": "4655a5f9b31788994fe60892844b8c3cec0f337b",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/96",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/513-kaiwen-jin-flat-counterexample"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 97,
+      "aim": 514,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/514-aspherical-connected-sum-complexity.md",
+      "package_paths": [
+        "research/solutions/514-kaiwen-jin-aspherical-connected-sums"
+      ],
+      "target_summary": "Unreduced TC(M#N)=2n+1 for all closed aspherical n-manifolds M,N, in the original dimensional range and conventions.",
+      "fresh_query_terms": [
+        "\"aspherical\" \"connected sum\" \"2n+1\" topological complexity 2026",
+        "topological complexity connected sums aspherical manifolds solved 2026"
+      ],
+      "sources": [
+        {
+          "title": "Topological complexity, asphericity and connected sums",
+          "authors": "Christoforos Neofytidis",
+          "date": "2022-12 preprint; published 2025-03-15",
+          "url": "https://arxiv.org/html/2212.08962v2",
+          "theorem_locator": "Question 5.5(b); Corollary 1.3",
+          "exact_scope_comparison": "The question remains general; Corollary 1.3 covers a special negatively curved setting."
+        },
+        {
+          "title": "Higher topological complexity of Seifert fibered manifolds",
+          "authors": "Navnath Daundkar; Rekha Santhanam; Soumyadip Thandar",
+          "date": "2023-04-03 preprint; v3 2026-01-30; published online 2026-02-16",
+          "url": "https://arxiv.org/html/2304.01274v3",
+          "theorem_locator": "Section 5, Proposition 5.3",
+          "exact_scope_comparison": "This treats three-manifold classes; its wedge result and connected-sum bounds do not give the all-dimensions connected-sum equality."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-02/514-review.md",
+          "lines_read_as_leads": [
+            "The audit found no missing hypothesis or unresolved proof step for the recorded target. Standard analytic dependencies remain dependencies. This is a mathematical review, not a proof-assistant certificate; no human peer review, publication acceptance or novelty determination is claimed."
+          ],
+          "used_as_novelty_evidence": false
+        },
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/514-review.md",
+          "lines_read_as_leads": [
+            "[Farber](https://arxiv.org/pdf/math/0111197v1) gives the unreduced convention and dimension bound. [Farber–Grant–Lupton–Oprea](https://arxiv.org/pdf/1711.10132v2), Sections2.5–2.9/Theorem2.1, supplies the labelled diagonal-join framework; its asphericity hypothesis is not misapplied to the sum, since the needed direction for that space is proved directly. [Lück](https://arxiv.org/pdf/0902.2480v3), Lemma3.1 and Theorem5.3, supplies torsion freeness and finite n-dimensional CW type for the summands. [Neofytidis](https://arxiv.org/pdf/2212.08962v2), Question5.5(b), is the requested target. The DS free-product paper and DST Proposition5.3 were checked as contextual wedge results rather than substituted for the connected-sum assertion. May's revised author text is the cited source for standard homotopy-pushout facts."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T16:39:03Z",
+      "pinned_head_sha": "5d53c3a78588eb1cb31362a337ab5b0e146eee91",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/97",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/514-kaiwen-jin-aspherical-connected-sums"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 98,
+      "aim": 525,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/525-positive-norm-tc-weight.md",
+      "package_paths": [
+        "research/solutions/525-positive-norm-tc-weight"
+      ],
+      "target_summary": "A counterexample to the proposed implication from positive simplicial seminorm to maximal TC-weight, using degree four on a product of two genus-two surfaces.",
+      "fresh_query_terms": [
+        "\"positive norm\" \"TC weight\" Neofytidis counterexample",
+        "\"positive norm\" \"topological complexity\" weight"
+      ],
+      "sources": [
+        {
+          "title": "Topological complexity, asphericity and connected sums",
+          "authors": "Christoforos Neofytidis",
+          "date": "2022-12 preprint; published 2025-03-15",
+          "url": "https://arxiv.org/html/2212.08962v2",
+          "theorem_locator": "Question 5.1(a); Definitions 2.1/2.4; Theorems 2.2/3.4",
+          "exact_scope_comparison": "The implication is a question. Positive norm calculations for products of surfaces alone do not compute the required TC-weight or disprove this implication."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/525-review.md",
+          "lines_read_as_leads": [],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T17:29:38Z",
+      "pinned_head_sha": "71a40d1b23893948a5e9e6f800130b198ee70f07",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/98",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/525-positive-norm-tc-weight"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 99,
+      "aim": 531,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/531-torus-grid-transition-homology.md",
+      "package_paths": [
+        "research/solutions/yuiyuiui-531-integral-counterexample"
+      ],
+      "target_summary": "An integral-homology counterexample to the proposed torus-grid rank pattern; submitted certificate gives rank two in degree four for parameters (13,5), instead of twenty-six.",
+      "fresh_query_terms": [
+        "\"torus grids\" \"integral\" \"homology\" Rips 13",
+        "\"torus grid\" homology counterexample 13 5",
+        "\"22250420\" torus",
+        "torus grid third homology inclusion counterexample 3k-1"
+      ],
+      "sources": [
+        {
+          "title": "Vietoris–Rips complexes of torus grids",
+          "authors": "Henry Adams; Adenike Yeside Adetowubo; Hector Barriga-Acosta; Ziqin Feng; John Sterling",
+          "date": "2025-02-10; v2 2025-08-03; published 2025",
+          "url": "https://arxiv.org/html/2502.07134v2",
+          "theorem_locator": "Section 3.6; Question 8.4",
+          "exact_scope_comparison": "The paper poses the relevant pattern rather than proving the submitted integral counterexample. Coefficient-field computations and nearby parameter regimes must not be read as an integral certificate."
+        },
+        {
+          "title": "Vietoris–Rips complexes of torus grids",
+          "authors": "John Sterling",
+          "date": "2025-04-20",
+          "url": "https://auetd.auburn.edu/handle/10415/9659",
+          "theorem_locator": "Master's-thesis abstract; homology tables and stated homotopy theorems",
+          "exact_scope_comparison": "The thesis computes a finite range and proves other torus-grid regimes; no explicit complete proof of the submitted integral rank counterexample was located."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "The original target links Zenodo record 22250420 as a different third-homology inclusion-map announcement. This pass attempted the public record and fresh record/topic searches, but could not retrieve a primary record or proof. No conclusion about that unavailable proof was imported from the old status review.",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/531-review.md",
+          "lines_read_as_leads": [
+            "The target was checked against [Adams and coauthors](https://arxiv.org/html/2502.07134v2), including the integral interpretation of Question8.4 and the distinction between the displayed finite-field data and integer homology. The geometric nerve and relative-chain arguments are supplied explicitly in the submitted manuscript. Generator and verifier use only Python's standard library."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T17:32:12Z",
+      "pinned_head_sha": "e2dea2b4ec0c80368c680466fe1d7dded861212c",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/99",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/yuiyuiui-531-integral-counterexample"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 100,
+      "aim": 529,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/529-preferential-attachment-betti-limit.md",
+      "package_paths": [
+        "research/solutions/529-preferential-attachment-betti-limit"
+      ],
+      "target_summary": "An almost-sure limiting law for preferential-attachment clique-complex Betti numbers in the stated normalization, together with finite moments of all orders and rejection of the suggested power tail.",
+      "fresh_query_terms": [
+        "\"preferential attachment\" \"Betti\" \"limiting distribution\"",
+        "Siu preferential attachment Betti limit distribution power law"
+      ],
+      "sources": [
+        {
+          "title": "The Topological Behavior of Preferential Attachment Graphs",
+          "authors": "Chunyin Siu",
+          "date": "2024-06 preprint; SIAM J. Appl. Algebra Geom. 9(2), 2025",
+          "url": "https://arxiv.org/abs/2406.17619v2",
+          "theorem_locator": "Section 1.2; Theorem 4.1; Sections 9–10",
+          "exact_scope_comparison": "Growth-order statements and numerical limiting-law discussion do not establish the full distributional/moment conclusion."
+        },
+        {
+          "title": "The asymptotics of the expected Betti numbers of preferential attachment clique complexes",
+          "authors": "Chunyin Siu; Gennady Samorodnitsky; Christina Lee Yu; Rongyi He",
+          "date": "Advances in Applied Probability 57(3), 2025",
+          "url": "https://doi.org/10.1017/apr.2024.66",
+          "theorem_locator": "Expected-Betti asymptotic theorem; Section 9",
+          "exact_scope_comparison": "Expected values are a different conclusion from an almost-sure random limit with all moments. The concluding discussion leaves finer limiting distributions open."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/529-review.md",
+          "lines_read_as_leads": [
+            "The link topology is also needed to identify the series with Betti numbers. Repeated removal of vertices below the minimum link degree preserves the two relevant homology groups. A remaining core on at most $`2q`$ vertices is either a cone or the boundary of a cross-polytope, with its unique induced octahedral base. Larger exceptional cores have an extra factor in their probability and contribute $`o(T^{1-2qx})`$ in L1. Each fixed base eventually has an earlier common-neighbor cone, making its inclusion into the preceding complex null on the needed homology; the divergent independent-apex supply proves this almost surely. The link birth-minus-death exact sequence then leaves precisely the common-neighbor base count asymptotically. Choosing a finite base cutoff first and using the uniform second moments controls the random waiting times; no unjustified finite expected waiting time is assumed.",
+            "The exact environment parameters and model equivalence were checked in [Siu](https://arxiv.org/html/2406.17619v2), Definition5.1, Theorem5.2 and Lemma5.3. The submission independently supplies its posterior check. The link rank identity matches [Siu–Samorodnitsky–Yu–He](https://arxiv.org/pdf/2305.11259v3), Proposition14 and its Mayer–Vietoris proof. In the cited [Durrett author draft](https://sites.math.duke.edu/~rtd/PTE/PTE5_011119.pdf), Theorems2.5.6, 2.5.9 and2.3.7 give the independent-series convergence, Kronecker and Borel–Cantelli facts with the stated hypotheses. The original services.math.duke.edu URL did not fetch in the web tool; the author's sites.math.duke.edu copy has the exact January11,2019 version. [Dey–Terlov](https://arxiv.org/abs/2605.28776v1) has the cited title/authors and is triangle-count context, not a substitute for a high-dimensional theorem."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T17:59:41Z",
+      "pinned_head_sha": "0da42f3f8c186fa9b965b3e6c0745f3b12885086",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/100",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/529-preferential-attachment-betti-limit"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 101,
+      "aim": 537,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/537-persistence-fiber-betti-numbers.md",
+      "package_paths": [
+        "research/solutions/537-persistence-fiber-betti-numbers"
+      ],
+      "target_summary": "Equality of Betti numbers over F2 between every finite connected simplicial complex and the specified persistent-homology fiber with no finite bars.",
+      "fresh_query_terms": [
+        "\"persistent homology\" \"fiber\" \"Betti\" \"conjecture\" 2026",
+        "persistence fiber no finite bars Betti numbers connected complexes"
+      ],
+      "sources": [
+        {
+          "title": "Algorithmic reconstruction of the fiber of persistent homology on cell complexes",
+          "authors": "Jacob Leygonie; Gregory Henselman-Petrusek",
+          "date": "2021-10 preprint; JACT 8, 2024",
+          "url": "https://link.springer.com/article/10.1007/s41468-024-00165-w",
+          "theorem_locator": "Conjecture 1; Sections 1–1.2",
+          "exact_scope_comparison": "The homology-identification claim is explicitly conjectural; algorithmic reconstruction and computed examples do not prove it for every complex."
+        },
+        {
+          "title": "The fiber of multiparameter persistent homology for simplicial complexes",
+          "authors": "Heather A. Harrington; Ulrike Tillmann; Maria Torras-Pérez",
+          "date": "2026-08-05",
+          "url": "https://arxiv.org/html/2608.04640v1",
+          "theorem_locator": "Theorem 5.3; Proposition 5.9",
+          "exact_scope_comparison": "Polyhedral fiber structure and dimension bounds do not identify the fiber's Betti numbers with those of the input complex."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/537-review.md",
+          "lines_read_as_leads": [
+            "The exact target was checked in [Leygonie–Henselman-Petrusek's published primary text](https://link.springer.com/article/10.1007/s41468-024-00165-w), Conjecture1 and its barcode definition. [Björner–Wachs–Welker's author text](https://www.mathematik.uni-marburg.de/~welker/preprints/fiber.pdf), Section4, gives the relevant homology rather than contractible-fibre context. [Harrington–Tillmann–Torras-Pérez](https://arxiv.org/html/2608.04640v1) is correctly contextualized as a polyhedral-fibre result. Hatcher and Munkres are used only for standard homology and compact-to-Hausdorff topology; the needed finite-poset comparison is proved explicitly."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T18:12:52Z",
+      "pinned_head_sha": "ed0c8eff31e6a22c9bc5509c0413e9e513aeff8e",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/101",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/537-persistence-fiber-betti-numbers"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 102,
+      "aim": 532,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/532-torus-grid-half-diameter-homotopy.md",
+      "package_paths": [
+        "research/solutions/532-torus-grid-half-diameter-homotopy"
+      ],
+      "target_summary": "The complete half-diameter torus-grid homotopy formula for every k>=3, including the S3 summand and all specified higher-dimensional sphere summands.",
+      "fresh_query_terms": [
+        "\"torus grids\" \"half\" homotopy sphere Rips",
+        "torus grids K 2k k homotopy wedge spheres"
+      ],
+      "sources": [
+        {
+          "title": "Vietoris–Rips complexes of torus grids",
+          "authors": "Henry Adams; Adenike Yeside Adetowubo; Hector Barriga-Acosta; Ziqin Feng; John Sterling",
+          "date": "2025-02-10; v2 2025-08-03; published 2025",
+          "url": "https://arxiv.org/html/2502.07134v2",
+          "theorem_locator": "Table 1; Question 8.6",
+          "exact_scope_comparison": "The family in Question 8.6 is conjectural. Computed homology or isolated homotopy equivalences in other regimes do not prove the all-k homotopy formula."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/532-review.md",
+          "lines_read_as_leads": [
+            "The union $`L^-`$ of the punctured bands has a good subcomplex cover with nerve the join of two cycle graphs, hence is homotopy equivalent to $`S^3`$. To compare it with $`K^-`$, the proof shows that every Rips clique projects into a closed coordinate semicircle in at least one coordinate. The circle-vector inner products are nonnegative for pairs in a clique. If the origin is in their convex hull, the squared first-coordinate sum for an appropriate weighted vector is strictly positive; otherwise a separating vector already supplies an open hemisphere. Both cases give the required coordinate semicircle.",
+            "The finite-cylinder induction is explicit. Adding the last column gives a union of its stars, and the intersection with the previous cylinder has a nerve equal to a simplex boundary: every proper collection admits a cone point one column earlier, while the whole collection has empty intersection. Its attaching map is null because the previous cylinder is connected through the required dimension. Thus the cylinder is a wedge of its adjacent-band spheres. Removing the selected facets kills precisely those spheres; homology vanishes and simple connectivity is unchanged since the removed facets have dimension at least five. The punctured cylinder is contractible. Finite rectangles are handled by the taxicab-ball nerve and the coordinate-clamping retraction of its union to the rectangle.",
+            "The target, closed-scale convention and taxicab-grid nerve lemma were checked in [Adams and coauthors](https://arxiv.org/html/2502.07134v2), especially Corollary4.3 and the null-union lemma. Björner's Topological Methods, Theorems10.6(i) and10.7, has the needed finite subcomplex/open good-cover forms. The Hatcher cellular-approximation, Hurewicz and homology-Whitehead applications have their connectivity/CW hypotheses proved in the submission. All cited bibliography entries and manuscript/PDF titles agree."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T18:37:43Z",
+      "pinned_head_sha": "cdebeeb97d00ca40e2250d85b557598789db7b1b",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/102",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/532-torus-grid-half-diameter-homotopy"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 103,
+      "aim": 520,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/520-persistence-diagram-coarse-embedding.md",
+      "package_paths": [
+        "research/solutions/520-kaiwen-jin-coarse-persistence-diagrams"
+      ],
+      "target_summary": "Failure of coarse embedding into Hilbert space for the whole space of finite persistence diagrams, with no uniform cardinality/support bound, under every p-Wasserstein metric for 1<=p<=2.",
+      "fresh_query_terms": [
+        "persistence diagrams Wasserstein coarse Hilbert embedding nonembedding 2026",
+        "persistence diagrams coarse Hilbert embedding p 1 2"
+      ],
+      "sources": [
+        {
+          "title": "Coarse Embeddability of Wasserstein Space and the Space of Persistence Diagrams",
+          "authors": "Neil Pritchard; Thomas Weighill",
+          "date": "2023-07 preprint; published 2024; volume 74, 2025",
+          "url": "https://link.springer.com/article/10.1007/s00454-024-00674-6",
+          "theorem_locator": "Theorem 24; Section 6",
+          "exact_scope_comparison": "The equivalence with coarse embeddability of planar Wasserstein space leaves p in [1,2] open; p>2 nonembedding and bounded-cardinality results have different scope."
+        },
+        {
+          "title": "A Hilbert space embedding of persistence diagrams and barcodes",
+          "authors": "Peter Bubenik",
+          "date": "2026-08",
+          "url": "https://arxiv.org/html/2608.08858v1",
+          "theorem_locator": "Introduction, main embedding construction and discussion of coarse embeddability",
+          "exact_scope_comparison": "An injective Lipschitz Hilbert representation does not imply a coarse embedding: a uniform lower-control function tending to infinity is also needed. The paper does not supply that missing conclusion for the target's metrics."
+        },
+        {
+          "title": "Persistence Spheres: a Bi-continuous Linear Representation of Measures for Partial Optimal Transport",
+          "authors": "Matteo Pegoraro",
+          "date": "2026-03-16; v2 2026-07-29",
+          "url": "https://arxiv.org/abs/2603.15384",
+          "theorem_locator": "Sections 7–8",
+          "exact_scope_comparison": "Bi-continuity and linear representability do not give the global coarse lower bound required here."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/520-review.md",
+          "lines_read_as_leads": [
+            "The actual [Naor–Schechtman author text](https://web.math.princeton.edu/~naor/homepage%20files/planar-earthmover.pdf), Theorem3.7, was checked for its signed balanced grid spaces and uniform coarse-$`L^2`$ statement. [Nowak](https://arxiv.org/pdf/math/0404401), Theorem3.4 and its negative-kernel proof, supplies the needed unchanged finite-subset controls. [Pritchard–Weighill](https://link.springer.com/article/10.1007/s00454-024-00674-6) identifies exactly the remaining interval and the all-finite-diagram convention. The Andoni–Naor–Neiman reference has correct authors/title/arXiv metadata and serves as surrounding context rather than an unproved reduction."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T19:25:14Z",
+      "pinned_head_sha": "de58527e481c71125a9a1868c56b5843b76826da",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/103",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/520-kaiwen-jin-coarse-persistence-diagrams"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 104,
+      "aim": 547,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/547-minimal-persistence-grid-morse-bound.md",
+      "package_paths": [
+        "research/solutions/547-minimal-persistence-grid-morse-bound"
+      ],
+      "target_summary": "For every coordinate j, the number of distinct j-coordinate values in the minimal grid of a realizable homology-module tuple is bounded by its homological Morse quantity L; arbitrary filters and tied values are allowed.",
+      "fresh_query_terms": [
+        "minimal persistence grid homological Morse bounds Harrington Tillmann Torras 2026",
+        "minimal persistence grid coordinate count homological Morse conjecture"
+      ],
+      "sources": [
+        {
+          "title": "The fiber of multiparameter persistent homology for simplicial complexes",
+          "authors": "Heather A. Harrington; Ulrike Tillmann; Maria Torras-Pérez",
+          "date": "2026-08-05",
+          "url": "https://arxiv.org/html/2608.04640v1",
+          "theorem_locator": "Definition 5.7; Proposition 5.9; Lemma 5.10; unnumbered conjecture in Remark 5.12",
+          "exact_scope_comparison": "The fiber-dimension bound is established, but the sharper minimal-grid coordinate bound is singled out as a further conjecture. A Morse inequality alone is not that grid theorem."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/547-review.md",
+          "lines_read_as_leads": [
+            "The definitions and exact Morse quantity were compared with [Harrington–Tillmann–Torras-Pérez primary manuscript](https://arxiv.org/html/2608.04640v1), including the minimal-grid lemma, the Koszul convention, the quantity in Section1.4 and Remark5.12. The underlying Morse-inequality citation is contextual; the needed local cone calculation and top-dimensional injection are proved directly in this submission. No extra generic-position or dimension-positive hypothesis is introduced."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T19:41:08Z",
+      "pinned_head_sha": "78e2c3a174f566dcdb63a2c3579ffafb34e28a4c",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/104",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/547-minimal-persistence-grid-morse-bound"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 105,
+      "aim": 565,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/565-macbeath-center-asymmetry.md",
+      "package_paths": [
+        "research/solutions/565-macbeath-center-asymmetry"
+      ],
+      "target_summary": "Counterexample to the dimension-dependent asymmetry inclusion centered at the Macbeath point; submitted witness is a three-dimensional square pyramid.",
+      "fresh_query_terms": [
+        "Macbeath point square pyramid asymmetry conjecture counterexample",
+        "\"Macbeath\" \"counterexample\" Ivanov",
+        "\"Macbeath point\" \"inclusion\" \"counterexample\""
+      ],
+      "sources": [
+        {
+          "title": "Quantitative Steinitz theorem and polarity",
+          "authors": "Grigory Ivanov",
+          "date": "2024-03-21; v3 2025-05-10; DCG 75, 2026",
+          "url": "https://arxiv.org/html/2403.14761v3",
+          "theorem_locator": "Section 2, Conjecture 2.1",
+          "exact_scope_comparison": "The Macbeath-centered inclusion is conjectural; the proved existence of a different useful polarity center does not establish or refute it."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/565-review.md",
+          "lines_read_as_leads": [
+            "[Ivanov's versioned primary text](https://arxiv.org/html/2403.14761v3), Conjecture2.1, was checked for the Macbeath functional, uniqueness requirement and exact dimensional inclusion. The citation metadata/version matches. No other external theorem is needed for the explicit volume calculation and counterexample."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T20:43:21Z",
+      "pinned_head_sha": "b5f09f361de0b7d745f3412dc392507fc4c30039",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/105",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/565-macbeath-center-asymmetry"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 106,
+      "aim": 593,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/593-red-blue-segment-grid.md",
+      "package_paths": [
+        "research/solutions/aim-593-segment-grids"
+      ],
+      "target_summary": "From two color classes of 3k pairwise disjoint segments, with every red segment crossing every blue segment, extract the specified k-by-k rectangular topological grid; submission asserts the stronger 2k-1 threshold.",
+      "fresh_query_terms": [
+        "\"rectangular grid\" \"segments\" \"Jain\" \"Ricci\"",
+        "\"geometric thickness\" \"2-degenerate\" \"grid\" question",
+        "\"rectangular\" \"segments\" \"3k\" grid",
+        "\"red\" \"blue\" \"segments\" \"rectangular grid\""
+      ],
+      "sources": [
+        {
+          "title": "On the geometric thickness of 2-degenerate graphs",
+          "authors": "Rahul Jain; Marco Ricci; Jonathan Rollin; André Schulz",
+          "date": "SoCG 2023; J. Comput. Geom. 15(2), 2024, posted 2025-02-10",
+          "url": "https://jocg.org/index.php/jocg/article/view/5176",
+          "theorem_locator": "Section 3.1; Section 4, Question 1",
+          "exact_scope_comparison": "The grid-extraction statement is posed as Question 1. The geometric-thickness construction uses a related configuration but is not a proof of the requested grid statement."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-02/593-review.md",
+          "lines_read_as_leads": [
+            "The audit found no missing hypothesis or unresolved proof step for the recorded target. Standard analytic dependencies remain dependencies. This is a mathematical review, not a proof-assistant certificate; no human peer review, publication acceptance or novelty determination is claimed."
+          ],
+          "used_as_novelty_evidence": false
+        },
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/593-review.md",
+          "lines_read_as_leads": [
+            "Taking $`n=3k,p=k`$ supplies at least $`2k+1`$ coherent blues, from which any $`k`$ are retained. This proves exactly the original sufficient bound. Taking $`n=2k-1,p=k`$ gives the stated stronger sufficient bound. The latter conflicts with a lower-bound caption in the question's source, which the submission expressly flags. The receiving review checked the actual journal Figure26 as well as the definition: in its depicted case two steep descending red segments and one near-horizontal red, together with two vertical blue segments and one blue from the southwest group, already have the common crossing orders of a3-by-3 grid. Thus the caption does not invalidate the supplied direction/order proof or change the original target.",
+            "The [Jain–Ricci–Rollin–Schulz journal article](https://jocg.org/index.php/jocg/article/view/5176) has the quoted authors, pages and publication date; its2024 issue was published on10February2025. The original embedded-grid definition, coherent-orientation lemma and Question1 were checked against the [primary arXiv text](https://arxiv.org/html/2302.14721v1) and the downloaded journal PDF. Printed page120/PDF page27, Figure26, was visually inspected for the noted discrepancy. The submitted argument proves all its geometric steps directly and does not assume the source's disputed optimality caption."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-13T23:33:41Z",
+      "pinned_head_sha": "f3f7506966f071d9591f0169e7c07f5a1df2a767",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/106",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/aim-593-segment-grids"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 107,
+      "aim": 610,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/610-reflexive-polytope-facet-bound.md",
+      "package_paths": [
+        "research/solutions/aim-610-reflexive-facet-counterexample"
+      ],
+      "target_summary": "A reflexive-polytope counterexample to the universal 6^(d/2) facet bound; submitted witness has dimension forty-five.",
+      "fresh_query_terms": [
+        "\"reflexive\" \"facet\" \"counterexample\" \"Nill\"",
+        "\"reflexive\" \"facets\" \"6\" \"Nill\" conjecture"
+      ],
+      "sources": [
+        {
+          "title": "Facet Numbers of Non-Centrally Symmetric Reflexive Polytopes Arising from Posets",
+          "authors": "Aki Mori; Kenta Mori; Hidefumi Ohsugi",
+          "date": "2025-11 preprint; published 2026",
+          "url": "https://arxiv.org/html/2511.22981v1",
+          "theorem_locator": "Conjecture 1.1; poset-polytope main theorems",
+          "exact_scope_comparison": "The unrestricted facet bound is still conjectural. Results for poset-derived subclasses and counterexamples among nonreflexive one-interior-point polytopes do not settle the stated reflexive class."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/610-review.md",
+          "lines_read_as_leads": [
+            "[Nill's original text](https://arxiv.org/pdf/math/0405448v1), Conjecture5.2, states the unrestricted reflexive vertex bound; duality converts it to the requested facet bound. The [Mori–Mori–Ohsugi primary paper](https://arxiv.org/html/2511.22981) and [Haase–Melnikov](https://arxiv.org/pdf/math/0406485v1) have the cited titles and contextual statements. The construction does not rely on the general reflexive-embedding theorem: integrality, polarity and facet counting are proved directly."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T00:37:09Z",
+      "pinned_head_sha": "b8c005ee5480e2030ae189b2035d3eb9e24401a2",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/107",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/aim-610-reflexive-facet-counterexample"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 108,
+      "aim": 596,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/596-fat-convex-transversal-pq.md",
+      "package_paths": [
+        "research/solutions/aim-596-fat-convex-transversals"
+      ],
+      "target_summary": "A finite (p,k+2)-theorem for k-flat piercing of arbitrary rho-fat convex bodies, for every fixed d,k,rho in the original range.",
+      "fresh_query_terms": [
+        "\"fat convex\" \"transversals\" flats piercing",
+        "\"Finite k-Transversals of Infinite Families\" Chakraborty Ghosh Nandi arxiv",
+        "\"Finite k-Transversals of Infinite Families of Fat Convex Sets\""
+      ],
+      "sources": [
+        {
+          "title": "k-Dimensional Transversals for Fat Convex Sets",
+          "authors": "Attila Jung; Dömötör Pálvölgyi",
+          "date": "2023-11-27; v3 2024-12-06; SoCG 2025; published 2026",
+          "url": "https://arxiv.org/html/2311.15646v3",
+          "theorem_locator": "Finite fractional Helly theorem; ball (p,k+2)-theorem; concluding finite-fat-body conjecture (Conjecture 7 in this version; Conjecture 1 in journal version)",
+          "exact_scope_comparison": "Finite fractional Helly for fat bodies and the finite piercing theorem for balls leave the arbitrary-fat-body finite piercing conclusion unproved."
+        },
+        {
+          "title": "A note on infinite versions of (p,q)-theorems",
+          "authors": "Attila Jung; Dömötör Pálvölgyi",
+          "date": "2024-12-05",
+          "url": "https://arxiv.org/html/2412.04066v1",
+          "theorem_locator": "Main infinite-family theorem",
+          "exact_scope_comparison": "An infinite-family transversal theorem is not a bound uniform over all finite families. The two quantifier structures are different."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "Search also found the Chakraborty–Ghosh–Nandi infinite-family title. Only a secondary abstract was accessible in this pass, so it is a lead, not a relied-on primary theorem.",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/596-review.md",
+          "lines_read_as_leads": [],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T00:58:04Z",
+      "pinned_head_sha": "b0f3f707f434785784adc3792bfd93a4c2a5597a",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/108",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/aim-596-fat-convex-transversals"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 109,
+      "aim": 630,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/630-extrapolation-relative-density.md",
+      "package_paths": [
+        "research/solutions/aim-630-extrapolation-relative-density"
+      ],
+      "target_summary": "Relative density in R for every real extrapolation parameter outside [0,1], and in C for every nonreal parameter, for the finite-operation set generated by 0 and 1.",
+      "fresh_query_terms": [
+        "\"relative density\" \"extrapolation\" convexity fixed parameter",
+        "\"fixed-parameter extrapolation\" \"relative\" 2026"
+      ],
+      "sources": [
+        {
+          "title": "Fixed-Parameter Extrapolation and Aperiodic Order",
+          "authors": "Stephen Fenner; Frederic Green; Steven Homer",
+          "date": "2012-12-12 preprint; extended v6 2020; DCG 76, 2026",
+          "url": "https://link.springer.com/article/10.1007/s00454-025-00816-4",
+          "theorem_locator": "Open Question 11.3; Sections 6 and 8–9",
+          "exact_scope_comparison": "The all-parameter relative-density statement remains a question. The proved relative-density subclasses do not cover every real exterior or nonreal parameter."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/630-review.md",
+          "lines_read_as_leads": [],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T03:18:26Z",
+      "pinned_head_sha": "5301ae4e418e9268de0680487b4741ee9bbcca08",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/109",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/aim-630-extrapolation-relative-density"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 110,
+      "aim": 628,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/628-odd-euler-flag-no-square.md",
+      "package_paths": [
+        "research/solutions/628-odd-euler-flag-no-square"
+      ],
+      "target_summary": "A finite flag-no-square closed connected topological four-manifold with odd Euler characteristic.",
+      "fresh_query_terms": [
+        "\"flag-no-square\" \"odd\" \"Euler\" manifold",
+        "\"flag-no-square\" \"odd Euler characteristic\" construction"
+      ],
+      "sources": [
+        {
+          "title": "On flag-no-square 4-manifolds",
+          "authors": "Daniel Kalmanovich; Eran Nevo; Gadadhar Sorcar",
+          "date": "2023-10 preprint; DCG 76, 2026",
+          "url": "https://arxiv.org/html/2310.13495v1",
+          "theorem_locator": "Problem 4.1",
+          "exact_scope_comparison": "Existing four-manifold constructions leave the odd-Euler case open. Three-dimensional constructions and flag subdivisions without the no-square property do not answer this existence question."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/628-review.md",
+          "lines_read_as_leads": [
+            "The regular flag-no-square tessellation, residual-finiteness construction and arbitrary graph-displacement quotients are stated explicitly in [Kalmanovich–Nevo–Sorcar's primary version](https://arxiv.org/html/2310.13495v1), whose Lemma1.3 also gives the star-connected sum and Euler formula. It identifies the cited Przytycki–Świątkowski Remark4.4(2) as the construction source. The PS author-PDF fetch failed in this web tool; its published metadata and the matching construction as quoted in KNS were verified, and no additional unsupported PS hypothesis is used. [Heckman's author notes](https://www.math.ru.nl/~heckman/CoxeterGroups.pdf), Example1.27, Theorem4.17, Corollary4.19 and Proposition5.8, supply the600-cell antipodal symmetry, stabilizer/fundamental-chamber and hyperbolic coverage facts. The new radial bound and folding argument were reconstructed directly."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T03:26:19Z",
+      "pinned_head_sha": "d80c3a8d997fdead30bedef850ee5d7360974f39",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/110",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/628-odd-euler-flag-no-square"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 111,
+      "aim": 629,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/629-extrapolation-discreteness.md",
+      "package_paths": [
+        "research/solutions/629-extrapolation-discreteness"
+      ],
+      "target_summary": "The complete complex-parameter characterization: the generated extrapolation set is discrete exactly for strong PV parameters, including the required conjugate conditions.",
+      "fresh_query_terms": [
+        "\"extrapolation\" \"discrete\" \"Fenner\" convexity",
+        "\"fixed-parameter extrapolation\" \"discreteness\" Campbell"
+      ],
+      "sources": [
+        {
+          "title": "Fixed-Parameter Extrapolation and Aperiodic Order",
+          "authors": "Stephen Fenner; Frederic Green; Steven Homer",
+          "date": "2012-12-12 preprint; extended v6 2020; DCG 76, 2026",
+          "url": "https://link.springer.com/article/10.1007/s00454-025-00816-4",
+          "theorem_locator": "Definition 4.1; Theorem 4.12; Conjecture 11.1",
+          "exact_scope_comparison": "Theorem 4.12 gives sufficiency. The claimed converse for all complex parameters is the stated conjecture."
+        },
+        {
+          "title": "Pinch's conjecture on a-convexity",
+          "authors": "John M. Campbell",
+          "date": "2026-09-25",
+          "url": "https://arxiv.org/html/2609.30771v1",
+          "theorem_locator": "Theorem 2",
+          "exact_scope_comparison": "This proves necessity when the parameter is already a totally real algebraic integer. It does not prove algebraicity/total reality from discreteness in general, or classify nonreal parameters. Hence it is earlier partial progress, not a full replacement."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/629-review.md",
+          "lines_read_as_leads": [
+            "For an irreducible monic minimal polynomial $`m`$ and a prescribed residue polynomial $`f`$, positivity is already feasible at every root of $`m`$ inside $`(0,1)`$. A continuous auxiliary function can be chosen locally at those roots, at the endpoints with integer values, and elsewhere, then glued by a partition of unity because both strict inequalities are affine in that function. Compactness gives positive margins. The integer Bernstein approximation preserves those margins, yielding an integer polynomial strictly between zero and one on the interval with the desired exact value at $`\\lambda`$ modulo $`m`$.",
+            "The polynomial characterization was checked in [Fenner–Green–Homer's published text](https://link.springer.com/article/10.1007/s00454-025-00816-4), Theorem3.6/Corollary3.8. Its extended version [arXiv:1212.2889v6](https://arxiv.org/pdf/1212.2889v6), Theorem8.2, does apply to arbitrary complex parameters and supplies the necessary algebraic integrality. [Campbell](https://arxiv.org/html/2609.30771v1), Theorem2, is correctly credited for the prior totally real restriction. [Draganov](https://arxiv.org/abs/1804.08248v2) has the quoted integer-Bernstein title and version; the precise weaker approximation lemma used here is proved within the submission."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T03:44:53Z",
+      "pinned_head_sha": "c1f79e312f2b7bae2636469c506376a873100691",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/111",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/629-extrapolation-discreteness"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 112,
+      "aim": 640,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/640-random-balanced-cayley-expansion.md",
+      "package_paths": [
+        "research/solutions/640-random-balanced-cayley-obstruction"
+      ],
+      "target_summary": "Disproof of the asserted F2 coboundary expansion for all groups with O(log D(G)) random balanced-Cayley layers; submitted obstruction uses elementary abelian two-groups.",
+      "fresh_query_terms": [
+        "\"random\" \"Cayley\" \"balanced\" \"Boolean\" polynomial expansion",
+        "\"Random Balanced Cayley Complexes\" counterexample cohomology"
+      ],
+      "sources": [
+        {
+          "title": "Random Balanced Cayley Complexes",
+          "authors": "Roy Meshulam",
+          "date": "2022-11-03 preprint; published 2023; JACT 8, 2024",
+          "url": "https://meshulam.net.technion.ac.il/files/2023/08/RBC_final.pdf",
+          "theorem_locator": "Conjecture 8.1; main spectral theorem",
+          "exact_scope_comparison": "The main theorem concerns real spectral gaps. The F2 coboundary assertion is Conjecture 8.1; real spectral expansion does not exclude binary cohomological obstructions."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/640-review.md",
+          "lines_read_as_leads": [
+            "[Meshulam's primary manuscript](https://arxiv.org/html/2211.02085v1), Sections1–2 and Conjecture8.1, was checked for the ordered group-product convention, complete lower skeleton, cochain expansion and definition of $`D(G)`$. The binary groups have orders tending to infinity as required; one fixed allowed dimension already contradicts universal constants. The submitted algebraic obstruction is self-contained and does not assume a probabilistic independence statement."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T10:40:13Z",
+      "pinned_head_sha": "3d9df8678f27469a74af9ca2d81ec5ec11157316",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/112",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/640-random-balanced-cayley-obstruction"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 113,
+      "aim": 644,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/644-medial-regime-topological-complexity.md",
+      "package_paths": [
+        "research/solutions/644-medial-regime-topological-complexity"
+      ],
+      "target_summary": "Reduced topological complexity equals two with probability tending to one along all sample sizes in the homogeneous medial regime with fixed parameter.",
+      "fresh_query_terms": [
+        "\"medial regime\" \"topological complexity\" all n",
+        "Barmak Farber homogeneous medial regime topological complexity all sample sizes"
+      ],
+      "sources": [
+        {
+          "title": "Topology of medial regime random simplicial complexes",
+          "authors": "Jonathan Ariel Barmak; Michael Farber",
+          "date": "2026-08-08",
+          "url": "https://arxiv.org/html/2608.07969v1",
+          "theorem_locator": "Theorems 16 and 19; Section 10, Question 2",
+          "exact_scope_comparison": "Theorem 16 gives the upper bound; Theorem 19 gives equality on a density-one subsequence. The introduction and Section 10 explicitly distinguish equality for all n, which is the target."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/644-review.md",
+          "lines_read_as_leads": [
+            "Expose all raw variables outside the chosen family. Successful boundaries and all coface-blocking tests are measurable at that stage because each immediate coface contains at most one selected face. Conditional on a boundary, its potential coface requires exactly $`2^r`$ further raw variables. The expected number of unsafe faces is at most $`\\mathbb EW/n`$. With high probability, at least a quarter of the diverging mean remains both successful and safe. After exposing the remaining nonsafe selected variables, each safe variable can toggle only its own face: every larger coface is blocked by an already exposed failed immediate coface. The unexposed variables are still independent Bernoulli variables because the safe set was chosen without using them. Thus the conditional Euler characteristic is a fixed integer plus a signed binomial variable of diverging length.",
+            "[Barmak–Farber's primary manuscript](https://arxiv.org/html/2608.07969v1), Corollary10, Theorem16 and Lemma17, was checked for the exact lower-model hypotheses and reduced TC convention. It supplies connectivity and the upper bound, not the new anti-concentration result. The older Farber article is background. The [DLMF Gaussian formulas](https://dlmf.nist.gov/7.2) cited for the elementary integral have the indicated section; the Fourier and variance estimates themselves are given explicitly."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T10:45:53Z",
+      "pinned_head_sha": "fbad49f5635de525a998198814613a1bbf8b91f5",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/113",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/644-medial-regime-topological-complexity"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 114,
+      "aim": 635,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/635-bounded-crossing-heilbronn.md",
+      "package_paths": [
+        "research/solutions/635-bounded-crossing-heilbronn"
+      ],
+      "target_summary": "A uniformly vanishing mod-two area bound for a nonzero cycle in every unit-square drawing of the complete graph with any fixed bound on pairwise edge intersections.",
+      "fresh_query_terms": [
+        "\"small\" \"mod-two\" \"area\" \"cycles\" drawing",
+        "\"topological\" \"Heilbronn\" bounded crossing area"
+      ],
+      "sources": [
+        {
+          "title": "Disjoint faces in simple drawings of the complete graph and topological Heilbronn problems",
+          "authors": "Alfredo Hubard; Andrew Suk",
+          "date": "2022-12-02 preprint; DCG 74, 2025",
+          "url": "https://arxiv.org/abs/2212.01311",
+          "theorem_locator": "Section 5, Problem 5.1",
+          "exact_scope_comparison": "The general bounded-intersection mod-two question is posed rather than solved. The proved simple-drawing face estimates use stronger intersection restrictions."
+        },
+        {
+          "title": "Note on disjoint faces in simple topological graphs",
+          "authors": "Ji Zeng",
+          "date": "2023-08 preprint; published 2024",
+          "url": "https://arxiv.org/abs/2308.04742",
+          "theorem_locator": "Theorem 1.1; Corollary 1.2",
+          "exact_scope_comparison": "The sharper small-four-face estimate is for simple topological graphs, where each pair meets at most once. It does not cover every fixed crossing bound."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/635-review.md",
+          "lines_read_as_leads": [
+            "[Hubard–Suk](https://arxiv.org/pdf/2212.01311v1), Proposition5.1 and the subsequent bounded-intersection question, were checked for the mod-two area notion and unrestricted-drawing obstruction. [Zeng](https://arxiv.org/pdf/2308.04742v3), Corollary1.2, really concerns a small plane4-face in the simple-drawing case, as distinguished in the introduction. Assouad is correctly credited for the set-system context, but the needed dual-shattering and trace bounds are proved directly. Morris's planar Euler formula and Tao's elementary measure context are standard and match their uses; the pinned AIM statement is the submitted target."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T10:59:09Z",
+      "pinned_head_sha": "062917a6f33965d876974e7d9df3e22ae6feec33",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/114",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/635-bounded-crossing-heilbronn"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 115,
+      "aim": 643,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/643-low-degree-simplicial-zero-spectrum.md",
+      "package_paths": [
+        "research/solutions/643-low-degree-simplicial-zero-spectrum"
+      ],
+      "target_summary": "Counterexample to zero lying in the upper-Laplacian spectrum of every pure low-upper-degree complex; submitted pure three-complex has triangle degree at most three and infinite lower-face incidence.",
+      "fresh_query_terms": [
+        "\"simplicial branching\" \"Conjecture 4.2\" counterexample",
+        "\"Simplicial branching random walks\" Rosenthal zero spectrum conjecture",
+        "\"upper Laplacian\" \"low\" \"degree\" \"zero\" counterexample"
+      ],
+      "sources": [
+        {
+          "title": "Simplicial branching random walks",
+          "authors": "Ron Rosenthal",
+          "date": "2014-12-17 preprint; published online 2023-11-10; JACT 8, 2024",
+          "url": "https://link.springer.com/article/10.1007/s41468-023-00148-3",
+          "theorem_locator": "Journal Conjecture 4.2 and Theorem 1.2; in arXiv:1412.5406v1 the related endpoint assertion is Conjecture 4.3, printed p.20, and the arboreal theorem is Theorem 1.1",
+          "exact_scope_comparison": "The arboreal-complex spectral theorem does not prove or refute the universal low-degree statement. Lower-face local finiteness is material: a theorem imposing it would not cover the submitted counterexample."
+        },
+        {
+          "title": "Simplicial branching random walks and their applications",
+          "authors": "Ron Rosenthal",
+          "date": "2014-12-17",
+          "url": "https://arxiv.org/pdf/1412.5406v1",
+          "theorem_locator": "Conjectures 4.3–4.4; Theorem 1.1",
+          "exact_scope_comparison": "The preprint explicitly conjectures the degree-at-most-d endpoint eigenvalue for general complexes, separating an arboreal variant. It does not contain the submitted counterexample."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/643-review.md",
+          "lines_read_as_leads": [
+            "Both references were checked. The immutable AIM link specifies the actual target. [Rosenthal's cited v1](https://arxiv.org/pdf/1412.5406v1) has the printed title, author and 2014 date; Theorem 1.1 supplies the regular arboreal background, Section 2 the weighting and Conjecture 4.3 the degree-at-most-d endpoint claim. Its proof is not imported by the new counterexample. There is no missing proof-critical citation. All six rendered PDF pages are legible, and the displayed construction, estimates and conclusion agree with the source. Build and byte-integrity evidence are maintained separately by the integrating reviewer."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T13:06:44Z",
+      "pinned_head_sha": "bdbc3d0176c1c4e59be4db5b3d58a02ae27300c5",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/115",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/643-low-degree-simplicial-zero-spectrum"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 116,
+      "aim": 645,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/645-finite-three-ample-nonsimply-connected.md",
+      "package_paths": [
+        "research/solutions/645-finite-three-ample-nonsimply-connected"
+      ],
+      "target_summary": "Existence of a finite three-ample simplicial complex with nontrivial fundamental group; finite is an essential target hypothesis.",
+      "fresh_query_terms": [
+        "\"three-ample\" \"fundamental\" finite complex",
+        "\"three-ample\" simplicial \"finite\"",
+        "\"3-ample\" complex simply connected"
+      ],
+      "sources": [
+        {
+          "title": "Connectivity of ample, conic and random simplicial complexes",
+          "authors": "Jonathan Ariel Barmak",
+          "date": "2021-03-05 preprint; IMRN 2023",
+          "url": "https://mate.dm.uba.ar/~jbarmak/conicqfinalpp.pdf",
+          "theorem_locator": "Theorem 1; following paragraph; Example 6",
+          "exact_scope_comparison": "Theorem 1 constructs an infinite three-ample complex with a homologically nontrivial four-cycle. Example 6 is finite and three-conic, not three-ample. Neither is a finite three-ample example."
+        },
+        {
+          "title": "Ample simplicial complexes",
+          "authors": "Chaim Even-Zohar; Michael Farber; Lewis Mead",
+          "date": "published 2021; volume 2022",
+          "url": "https://link.springer.com/article/10.1007/s40879-021-00521-5",
+          "theorem_locator": "Proposition 4.1 and following paragraph",
+          "exact_scope_comparison": "Four-ampleness implies simple connectivity. The three-ample nonsimply-connected case was explicitly unresolved there; a two-ample example does not settle it."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/645-review.md",
+          "lines_read_as_leads": [
+            "All three references were checked against primary texts: [Farber](https://arxiv.org/pdf/2301.07404), Example 2.5, actually asks for a finite example; [Barmak v1](https://arxiv.org/pdf/2103.03952v1), Theorem 1 and Example 6, give the infinite comparison and four-cycle model, not the finite conclusion; [Hatcher](https://pi.math.cornell.edu/~hatcher/AT/AT.pdf), Theorem 1.7 and printed p.34, supply the circle group and functoriality. Bibliographic identities and cited scope agree. The probability estimate and construction are self-contained, so a sampled face list is unnecessary. All three rendered PDF pages are legible and consistent with the complete source. Build/integrity receipts are recorded separately during integration."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T13:10:50Z",
+      "pinned_head_sha": "c70ec0a591029633fd15aa2568c3b71e9adbd3fe",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/116",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/645-finite-three-ample-nonsimply-connected"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 117,
+      "aim": 650,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/650-random-digraph-path-betti-central-limit.md",
+      "package_paths": [
+        "research/solutions/650-random-digraph-path-betti-central-limit"
+      ],
+      "target_summary": "Central limit theorem for the actual centered and variance-normalized rational nonregular first path Betti number for every sequence np→infinity and n^(2/3)p→0, with independent ordered edges and reciprocals allowed.",
+      "fresh_query_terms": [
+        "\"path homology\" \"central limit\" Chaplin random digraph",
+        "\"path homology\" \"central limit theorem\"",
+        "Chaplin path Betti number random directed graphs limit theorem"
+      ],
+      "sources": [
+        {
+          "title": "First Betti number of the path homology of random directed graphs",
+          "authors": "Thomas Chaplin",
+          "date": "2021-11-26 preprint; published 2022; JACT 8, 2024",
+          "url": "https://link.springer.com/article/10.1007/s41468-022-00108-3",
+          "theorem_locator": "Conjecture B.2; Section 3.1; Propositions 4.2–4.4",
+          "exact_scope_comparison": "The exact CLT is Conjecture B.2, rather than a consequence of the stated positivity and expected-value bounds. Classical random-clique-complex CLTs concern a different chain complex."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/650-review.md",
+          "lines_read_as_leads": [
+            "All three references and REFERENCES.md were checked: [Chaplin](https://arxiv.org/pdf/2111.13493), Conjecture B.2 and Section 3.3, give the actual nonregular target/background; [Dobler v1](https://arxiv.org/pdf/2111.01603v1), Theorem 1.1, has the stated real-Borel continuity theorem. The [author-hosted Chatterjee notes](https://souravchatterjee.su.domains/stat310a-lecture-notes.pdf) were downloaded independently after the web reader failed; Proposition 5.11.1, printed pp.53-54, indeed gives the standard normal characteristic function under the printed convention. Journal/preprint metadata and source locators agree, with no missing mathematical premise. All six PDF pages were visually inspected and are legible and consistent with the source; build/hash receipts are separate integration evidence."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T13:42:35Z",
+      "pinned_head_sha": "6dd971c850a3088134f2fccb747b26a1a027eef2",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/117",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/650-random-digraph-path-betti-central-limit"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 118,
+      "aim": 648,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/648-polyhedral-most-isolated-point-location.md",
+      "package_paths": [
+        "research/solutions/648-polyhedral-most-isolated-point-location"
+      ],
+      "target_summary": "The spatial distribution of the most isolated point of a three-dimensional convex polyhedral sample: normalized surface area when all dihedral angles exceed pi/2, and normalized length on the minimum-angle edges when the minimum is below pi/2.",
+      "fresh_query_terms": [
+        "\"most isolated\" \"polyhedron\" location Penrose",
+        "\"most isolated point\" polyhedron",
+        "polytope random sample isolated point location distribution surface edges 2026"
+      ],
+      "sources": [
+        {
+          "title": "Largest nearest-neighbour link and connectivity threshold in a polytopal random sample",
+          "authors": "Mathew D. Penrose; Xiaochuan Yang; Frankie Higgs",
+          "date": "2023-01-06 two-author preprint; three-author version published 2023-12-16, volume 2024",
+          "url": "https://link.springer.com/article/10.1007/s41468-023-00154-5",
+          "theorem_locator": "Introduction, p.1724; Corollary 2.3",
+          "exact_scope_comparison": "The leading distance scale distinguishes face/edge regimes, but the point-location limit is conjectural. A scalar radius limit is not the required spatial law."
+        },
+        {
+          "title": "Fluctuations of the connectivity threshold and largest nearest-neighbour link",
+          "authors": "Mathew D. Penrose; Xiaochuan Yang",
+          "date": "2024-06 preprint; Annals of Applied Probability 35(6), 2025",
+          "url": "https://arxiv.org/html/2406.00647v3",
+          "theorem_locator": "Introduction; Theorem 1.1",
+          "exact_scope_comparison": "Radius fluctuation and hitting-time results under smooth-boundary assumptions do not identify the extremal point's distribution for three-dimensional polyhedra."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/648-review.md",
+          "lines_read_as_leads": [
+            "All four references were checked against primary texts. The [published Penrose--Yang--Higgs article](https://bura.brunel.ac.uk/bitstream/2438/25870/6/FullText.pdf), obtained independently from the author institution, has the claimed authors, pages and source spatial question. Its earlier two-author arXiv version must not be mistaken for the published three-author text. [Penrose--Yang v3](https://arxiv.org/pdf/2406.00647v3) has the stated smooth-domain/planar scope, not the present polyhedral theorem. [Durrett's author fifth-edition text](https://sites.math.duke.edu/~rtd/PTE/PTE5_011119.pdf) supplies the ordinary integration, convergence and characteristic-function tools; [Hunter's notes](https://www.math.ucdavis.edu/~hunter/measure_theory/measure_notes_old.pdf), Section 2.8, the linear volume transformation used for the edge Jacobian. The new local geometry and probability argument is written out. No missing proof-critical reference was identified."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T14:30:22Z",
+      "pinned_head_sha": "fe73ab8e534dc819c44fd54cf355fe123805030c",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/118",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/648-polyhedral-most-isolated-point-location"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 119,
+      "aim": 540,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/540-hyperbolic-ball-barrier-parameter.md",
+      "package_paths": [
+        "research/solutions/540-hyperbolic-ball-barrier-parameter"
+      ],
+      "target_summary": "The least parameter among all arbitrary-triple self-concordant barriers of a hyperbolic radius-R ball is Theta(R^2); no rotational symmetry is assumed.",
+      "fresh_query_terms": [
+        "\"hyperbolic\" \"barrier\" \"quadratic\" self-concordant",
+        "hyperbolic ball self concordant barrier optimal lower bound parameter"
+      ],
+      "sources": [
+        {
+          "title": "Negative curvature obstructs the existence of good barriers for interior-point methods",
+          "authors": "Christopher Criscitiello; Harold Nieuwboer; Michael Walter",
+          "date": "2026-04-08",
+          "url": "https://arxiv.org/html/2604.07319v1",
+          "theorem_locator": "Corollary 1.4 and following open question; Section 2.3",
+          "exact_scope_comparison": "Corollary 1.4 gives an Omega(sqrt(R)) lower bound and explicitly asks whether it is tight. It does not give the quadratic lower bound."
+        },
+        {
+          "title": "Interior-Point Methods on Manifolds: Theory and Applications",
+          "authors": "Hiroshi Hirai; Harold Nieuwboer; Michael Walter",
+          "date": "2023-03 preprint; published 2026",
+          "url": "https://doi.org/10.1007/s10208-026-09756-8",
+          "theorem_locator": "Definition 4.1; Theorem 1.6",
+          "exact_scope_comparison": "The construction gives a quadratic-order upper bound. It does not prove optimality against all barriers."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "A search hit at clopen.solutions/OP-00354 repeats Kaiwen Jin's exact abstract and points back to this AIM manuscript, posted 14 October 2026. It is the same submission, not an independent earlier solution.",
+      "same_author_postings": {
+        "finding": "A later registry copy points back to the identical AIM manuscript posted 2026-10-14; registry history records it 2026-10-18.",
+        "url": "https://clopen.solutions/OP-00354/",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/540-review.md",
+          "lines_read_as_leads": [
+            "The upper construction is genuinely imported from [Hirai--Nieuwboer--Walter v2](https://arxiv.org/pdf/2303.04771v2): Theorem 5.16(i) is the mixed-slot bound for squared distance with constant eight at curvature minus one, and Theorem 1.6 gives the printed epigraph function and pointwise Newton bound. Polarization in the last two slots loses no constant. Restriction to the totally geodesic constant-S slice preserves the covariant tensors, supplies the exact function used, and bounds the parameter by 1+2R squared. Its displayed Hessian is positive also at the center, and boundary divergence gives ambient closedness of the epigraph.",
+            "All three bibliography entries were examined. [Criscitiello--Nieuwboer--Walter v1](https://arxiv.org/pdf/2604.07319v1), Corollary 1.4 and its following paragraph, give the benchmark and distinguish weaker geodesic self-concordance; [Hirai v2](https://arxiv.org/pdf/2212.10981v2) is accurately credited as construction context. The source versions and cited theorem content are consistent; no proof-critical reference is missing. All five rendered PDF pages are legible and consistent with the source; build/integrity receipts are handled separately in integration."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T15:40:58Z",
+      "pinned_head_sha": "de7478fb7a79bf2b815e447c7aa60e645a8f4630",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/119",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/540-hyperbolic-ball-barrier-parameter"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 120,
+      "aim": 649,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/649-random-digraph-path-homology-vanishing.md",
+      "package_paths": [
+        "research/solutions/649-random-digraph-path-homology-vanishing"
+      ],
+      "target_summary": "Rational nonregular first path homology vanishes with high probability for every p=n^alpha with -2/3<alpha<=0, in the independent ordered-edge model.",
+      "fresh_query_terms": [
+        "\"path homology\" \"vanishing\" \"2/3\"",
+        "random directed graph path homology vanishing threshold Chaplin conjecture"
+      ],
+      "sources": [
+        {
+          "title": "First Betti number of the path homology of random directed graphs",
+          "authors": "Thomas Chaplin",
+          "date": "2021-11-26 preprint; published 2022; JACT 8, 2024",
+          "url": "https://link.springer.com/article/10.1007/s41468-022-00108-3",
+          "theorem_locator": "Theorem 1.4; Conjecture B.1; Section 3.1",
+          "exact_scope_comparison": "The established upper vanishing range is alpha>-1/3. The interval above -2/3 is the conjectural extension. Regular homology, tournaments, and models forbidding reciprocals have different hypotheses."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/649-review.md",
+          "lines_read_as_leads": [
+            "Both bibliography entries were checked against primary texts. [Chaplin](https://arxiv.org/pdf/2111.13493), Conjecture B.1 and Proposition 4.17, supplies the target and earlier upper regime. [Tropp's exact author preprint](https://tropp.caltech.edu/papers/Tro11-User-Friendly-preprint.pdf), Theorems 1.4 and 1.6, gives both Bernstein forms with the displayed dimensions, centered independent summands and variance conventions. The manuscript checks these conditions in each application. No numerical or unpublished theorem is imported, and no missing necessary citation was identified. All ten rendered pages were inspected; the proof, bibliography and equations are legible and consistent with the source. Build/integrity receipts are separate integration evidence."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T15:47:36Z",
+      "pinned_head_sha": "33832cdd99c080db769f5f069da150cd0ef3cd5d",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/120",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/649-random-digraph-path-homology-vanishing"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 121,
+      "aim": 647,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/647-polytopal-connectivity-last-isolated-point.md",
+      "package_paths": [
+        "research/solutions/647-polytopal-connectivity-last-isolated-point"
+      ],
+      "target_summary": "The no-isolated-vertices and connectivity radii are exactly equal with probability tending to one for every fixed compact convex polytope in every dimension d>=3.",
+      "fresh_query_terms": [
+        "\"polytopal\" \"connectivity\" \"hitting\"",
+        "polytope random geometric graph last isolated vertex connectivity equality all dimensions"
+      ],
+      "sources": [
+        {
+          "title": "Largest nearest-neighbour link and connectivity threshold in a polytopal random sample",
+          "authors": "Mathew D. Penrose; Xiaochuan Yang; Frankie Higgs",
+          "date": "2023-01-06 two-author preprint; three-author version published 2023-12-16, volume 2024",
+          "url": "https://link.springer.com/article/10.1007/s41468-023-00154-5",
+          "theorem_locator": "Theorems 2.1 and 2.5; Remark 2.9",
+          "exact_scope_comparison": "Theorems give equal leading scales, while Remark 2.9 identifies exact hitting-time equality as a further question. Asymptotic ratio one does not entail equality."
+        },
+        {
+          "title": "Fluctuations of the connectivity threshold and largest nearest-neighbour link",
+          "authors": "Mathew D. Penrose; Xiaochuan Yang",
+          "date": "2024-06 preprint; Annals of Applied Probability 35(6), 2025",
+          "url": "https://arxiv.org/html/2406.00647v3",
+          "theorem_locator": "Theorem 1.1; equation (1.5); boundary assumptions in Section 1",
+          "exact_scope_comparison": "For d>=3 the boundary is smooth; polygonal boundaries are allowed only in d=2. Thus its hitting-time equality does not cover arbitrary higher-dimensional polytopes."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/647-review.md",
+          "lines_read_as_leads": [
+            "The local-cone territories genuinely follow from the published finite-face construction, not from the earlier preprint's different numbering. I retrieved the [published article from Brunel](https://bura.brunel.ac.uk/bitstream/2438/25870/6/FullText.pdf) and checked Lemma 3.13, Lemmas 3.16-3.17 and their territory definition. Its exclusion of nonincident facets proves exact cone agreement in the enlarged local ball. Tube-volume and exponential-normal-coordinate integrals give the stated face-dimension factors.",
+            "All three references were checked. Gardner's original survey was downloaded independently: Theorem 4.1 and (11), printed p.362, cover bounded measurable sets and thus the compact sets actually used. The published Penrose--Yang--Higgs identities, theorem numbers and geometry agree; its probabilistic supercritical-radius conclusion is not imported. [Penrose--Yang v3](https://arxiv.org/pdf/2406.00647v3), Theorem 1.1/(1.5), provides the earlier smooth/polygon cases only. The bibliography and target comparison make the appropriate distinction. No missing proof-critical reference was identified. All nine PDF pages were inspected and are legible and source-consistent; build/hash receipts are separate integration evidence."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T15:49:35Z",
+      "pinned_head_sha": "06fcc7689bee3a0d73076bcf3bf9643ac3b234d2",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/121",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/647-polytopal-connectivity-last-isolated-point"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 122,
+      "aim": 571,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/571-half-integral-collinear-count.md",
+      "package_paths": [
+        "research/solutions/571-half-integral-collinear-count"
+      ],
+      "target_summary": "The exact degree-seven polynomial count, for every i>=3, of affine-unimodular classes of half-integral polygons with i collinear interior lattice points, integral polygons included.",
+      "fresh_query_terms": [
+        "\"half-integral\" \"collinear\" count conjecture",
+        "\"collinear interior\" \"Bohnert\" Springer proof"
+      ],
+      "sources": [
+        {
+          "title": "Classifying Rational Polygons with Small Denominator and Few Interior Lattice Points",
+          "authors": "Martin Bohnert; Justus Springer",
+          "date": "2024-10 preprint; published 2026-03-07",
+          "url": "https://link.springer.com/article/10.1007/s00454-026-00822-0",
+          "theorem_locator": "Section 2; Conjecture 3.7",
+          "exact_scope_comparison": "The strip/classification results reduce the enumeration but the all-i polynomial is conjectural. Finite tabulation, including the 2024 dataset, cannot prove the infinite family."
+        },
+        {
+          "title": "Half-integral polygons with few interior lattice points",
+          "authors": "Justus Springer; Martin Bohnert",
+          "date": "2024 computational dataset",
+          "url": "https://zenodo.org/records/13928298",
+          "theorem_locator": "Dataset description and collinear_i files",
+          "exact_scope_comparison": "The finite computed catalogue is useful evidence for individual values; it is not a proof of the all-i polynomial."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "A search also returned Springer's dissertation Conjecture 1.3.7 as a repetition of the conjecture. Its public PDF URL failed to fetch during verification, so it is not relied on as an inspected primary source.",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/571-review.md",
+          "lines_read_as_leads": [
+            "I verified the primary software semantics in the actual pinned [Normaliz 3.11.1 manual](https://github.com/Normaliz/Normaliz/blob/v3.11.1/doc/Normaliz.pdf): inhomogeneous constants occupy the last column with the printed sign; explicit inequalities suppress the implicit positive orthant; the ambient lattice is the full integer lattice subject to equations; and HilbertSeries with the stated grading counts all grades of that polyhedron. BigInt is requested through the collective compute call and NoGradingDenom preserves the original grading. [Bruns--Ichim--Soger v4](https://arxiv.org/pdf/1206.1916v4), Section 5.3, explains the exact complete rational series through disjoint semi-open simplicial decomposition. The pinned PyNormaliz version and its interface match the calls. [Bohnert--Springer's publisher full text](https://link.springer.com/article/10.1007/s00454-026-00822-0), Proposition 3.5 and Conjecture 3.7, matches the exact geometry and formula, including denominator-dividing-two polygons and integer affine equivalence."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T18:59:50Z",
+      "pinned_head_sha": "c6ec4842bef76b3ef16cf783628d5ea669396046",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/122",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/571-half-integral-collinear-count"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 123,
+      "aim": 602,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/602-surface-girth-facial-linear-bound.md",
+      "package_paths": [
+        "research/solutions/602-surface-girth-facial-linear-bound"
+      ],
+      "target_summary": "An absolute Cgℓ upper bound for every simple entire facial cycle of every girth-ℓ saturated fixed embedding on either orientable or nonorientable positive-genus surfaces, including noncellular embeddings.",
+      "fresh_query_terms": [
+        "\"Faces in Girth-Saturated\" linear bound",
+        "girth saturated surfaces facial cycles linear genus girth bound"
+      ],
+      "sources": [
+        {
+          "title": "Faces in Girth-Saturated Graphs on Surfaces",
+          "authors": "Maria Axenovich; Leon Kießle; Arsenii Sagdeev; Maksim Zhukovskii",
+          "date": "2024-10 preprint; published 2026-04-09",
+          "url": "https://link.springer.com/article/10.1007/s00454-026-00833-x",
+          "theorem_locator": "Theorem 2; Section 6, Question 2",
+          "exact_scope_comparison": "Theorem 2 gives an upper bound 24(2g+1)ℓ^2. The target removes one power of ℓ uniformly in genus; a bound linear in genus for fixed ℓ is not this joint bound."
+        },
+        {
+          "title": "Stabbing non-piercing sets and face lengths in large girth plane graphs",
+          "authors": "Dömötör Pálvölgyi; Kristóf Zólomy",
+          "date": "2025-04; v2 2025-08-30",
+          "url": "https://arxiv.org/html/2504.10618v2",
+          "theorem_locator": "Theorems 2 and 3; Section 4",
+          "exact_scope_comparison": "Theorem 3 does prove c_g times girth for every fixed orientable genus. It does not control c_g by an absolute constant times g, nor cover the target's nonorientable class. The subsequent remarks explicitly distinguish the joint O(g times girth) question."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/602-review.md",
+          "lines_read_as_leads": [
+            "All five references were checked against their primary versions. [Axenovich et al. v3](https://arxiv.org/pdf/2410.13481v3) gives the benchmark and source question; [Palvolgyi--Zolomy v2](https://arxiv.org/pdf/2504.10618v2), Theorem 3, gives a fixed orientable-genus constant, not the uniform conclusion. [Bousquet et al. v3](https://arxiv.org/pdf/2001.04517v3), Theorem 4, permits a ball subfamily and the exact fractional minor-density bound used. The [Ding--Seymour--Winkler author original](https://math.dartmouth.edu/~pw/papers/hyperg.ps) was downloaded and converted locally: Section 5 explicitly uses base-two logarithms and (5.4), printed p.10, is precisely the primal VC fractional-cover inequality. Its (5.1)/(5.3) support the integer-copy bridge, including repeated-edge collapse. [Erickson's notes](https://jeffe.cs.illinois.edu/teaching/comptop/2017/notes/surface-classification.pdf) provide the stated surface classification and Euler conventions. Bibliographic identities and attributed scope agree; no missing necessary premise was identified."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T20:03:43Z",
+      "pinned_head_sha": "7cbd266c5b2d93272de8fa9450155ceba814a8f0",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/123",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/602-surface-girth-facial-linear-bound"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 124,
+      "aim": 627,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/627-periodic-costas.md",
+      "package_paths": [
+        "research/solutions/627-periodic-costas"
+      ],
+      "target_summary": "Disprove Rubio–Torres Conjecture 1 for genuinely periodic multidimensional Costas bijections with ordinary difference vectors in every translated window; submitted order-six example has side lengths (2,3,2,3).",
+      "fresh_query_terms": [
+        "\"periodic Costas\" counterexample order six",
+        "site:prove2.me \"PeriodicCostas\" \"counterexample\"",
+        "site:prove2.me \"Rubio\" \"six\"",
+        "\"periodic Costas\" shivm"
+      ],
+      "sources": [
+        {
+          "title": "Multidimensional Costas Arrays and Their Periodicity",
+          "authors": "Ivelisse Rubio; Jaziel Torres",
+          "date": "2022-08 preprint; IEEE Transactions on Information Theory 69(8), 2023",
+          "url": "https://arxiv.org/abs/2208.02378",
+          "theorem_locator": "Definitions 2–4; Section 4, Conjecture 1",
+          "exact_scope_comparison": "This is the original ordinary-window bijection conjecture; circular injection constructions are a different definition."
+        },
+        {
+          "title": "Rubio–Torres Conjecture 1: periodic Costas arrays have order 2^k",
+          "authors": "shivm; platform endorsements by Shuze Chen and shivm",
+          "date": "2026-10-04",
+          "url": "https://prove2.me/theorems/f2732909-8aec-45d0-afe0-8943f5d2c80e",
+          "theorem_locator": "Status, attribution/date; displayed formal statement; linked definition PeriodicCostasArray",
+          "exact_scope_comparison": "An earlier public record labels the exact conjecture Disproved. Its definition matches the target, including ordinary differences and all translated windows. However the exposed formal statement is the original conjecture with a sorry placeholder; no disproof witness or checked proof was available in the accessible record."
+        },
+        {
+          "title": "Periodic multidimensional Costas arrays (Rubio–Torres)",
+          "authors": "shivm",
+          "date": "2026-10-04",
+          "url": "https://prove2.me/theorems/5f294414-46d5-4ae5-9378-1569c8761695",
+          "theorem_locator": "Definition code: IsPermutationArray, periodicDots, NoRepeatedDifferences, IsPeriodicCostas",
+          "exact_scope_comparison": "The definitions confirm scope fidelity of the earlier announcement, but definitions are not a proof of its disproof."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "No verified earlier complete proof was retrieved, so do not delete the hosted solution on this audit alone. Record/attribute the 4 October exact disproof announcement and investigate its underlying witness before any novelty claim.",
+      "additional_notes": "Priority unresolved prior-art lead: the earlier exact disproof announcement warrants attribution and retrieval of its actual counterexample/proof. Do not infer that the submitted order-six witness duplicates that unavailable witness. The public graph link returned no readable proof; no browser surface was available. A platform status/endorsement alone was not treated as an independently checked complete solution.",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "unresolved_prior_claim": {
+        "url": "https://prove2.me/theorems/f2732909-8aec-45d0-afe0-8943f5d2c80e",
+        "claim_date": "2026-10-04",
+        "claimant": "shivm",
+        "exact_statement_match": true,
+        "complete_proof_retrieved": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/627-review.md",
+          "lines_read_as_leads": [
+            "Both references were checked. [Rubio--Torres v1](https://arxiv.org/pdf/2208.02378v1) gives the actual bijective definitions and Conjecture 1. The [Prove2Me record](https://prove2.me/theorems/f2732909-8aec-45d0-afe0-8943f5d2c80e) really records shivm's earlier 4 October 2026 disproof announcement. That record is credited as an announcement only; its formal proof was not replayed, and this submission supplies its own short analytic witness. All three PDF pages, including both complete tables, were visually inspected and are legible and consistent with the source. Build/hash receipts are separate integration evidence."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T20:10:23Z",
+      "pinned_head_sha": "dd18040eb5e89b0fd13c6a233839e40783332b9c",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/124",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/627-periodic-costas"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    },
+    {
+      "pr": 125,
+      "aim": 572,
+      "original_problem_url": "https://github.com/MColbrook/AIM/blob/a153f469ee0ea64e876b2ad97c79d252c19a3e22/problems/572-half-integral-ehrhart-count.md",
+      "package_paths": [
+        "research/solutions/572-half-integral-ehrhart-count"
+      ],
+      "target_summary": "The exact cubic count of distinct Ehrhart counting functions of half-integral polygons with i>=2 interior and at least two boundary lattice points, including integral polygons and period collapse, without a collinearity restriction.",
+      "fresh_query_terms": [
+        "\"Ehrhart functions\" \"half-integral\" conjecture",
+        "half integral polygons count Ehrhart quasipolynomials Bohnert Springer conjecture 6.8"
+      ],
+      "sources": [
+        {
+          "title": "Classifying Rational Polygons with Small Denominator and Few Interior Lattice Points",
+          "authors": "Martin Bohnert; Justus Springer",
+          "date": "2024-10 preprint; published 2026-03-07",
+          "url": "https://link.springer.com/article/10.1007/s00454-026-00822-0",
+          "theorem_locator": "Section 6, Conjecture 6.8",
+          "exact_scope_comparison": "The exact formula remains conjectural; the complete computational classification verifies it only for i<=16. Counting all polygon classes also differs from counting distinct Ehrhart functions."
+        },
+        {
+          "title": "Generalizations of Scott's inequality and Pick's formula to rational polygons",
+          "authors": "Martin Bohnert; Justus Springer",
+          "date": "2024-11",
+          "url": "https://arxiv.org/abs/2411.11187",
+          "theorem_locator": "Section 3",
+          "exact_scope_comparison": "Inequalities and Ehrhart coefficient relations do not classify all realizable signatures or give the requested all-i count."
+        }
+      ],
+      "recommendation": "noverifiedearliercompletematch",
+      "recommendation_explanation": "Do not replace this manuscript on the basis of this literature search: no independently checked earlier complete solution matching the original target was located.",
+      "additional_notes": "",
+      "same_author_postings": {
+        "finding": "No independently verified earlier external posting of this identical manuscript located in these searches.",
+        "independent_prior_solution": false
+      },
+      "prior_review_leads": [
+        {
+          "path": "research/solution_reviews/2026-10-15-active-prs/572-review.md",
+          "lines_read_as_leads": [
+            "All eight references and proof-critical interfaces were checked. [Scott's original paper](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0004972700022826) has the precise exceptional triangle and the sharper bound away from it. [Bohnert's coefficient paper v2](https://arxiv.org/pdf/2405.13404v2), Proposition 2.1, has the entire odd/even formula. [Bohnert--Springer v1](https://arxiv.org/pdf/2411.11187v1), Theorems 1.1/1.4, Proposition 3.3 and the width table in the proof, supplies exactly the imported bounds and five maxima. [Bohnert's area paper v2](https://arxiv.org/pdf/2305.11485v2), Lemma 2.12, has the minimizing-direction section bound. The [published classification](https://link.springer.com/article/10.1007/s00454-026-00822-0), Proposition 6.4 and the complete-catalogue statements, together with [the Fine-interior paper v2](https://arxiv.org/pdf/2412.17545v2), Theorems 2.5/3.2/4.1 and Remark 3.16, matches the external catalogue scope used in the proof. [Hamm--Hofscheier--Kasprzyk v1](https://arxiv.org/pdf/2411.19183v1), Lemma 6.5, supplies the exact integer strip row-pair identity. The [Zenodo version 1.0.0 record](https://zenodo.org/records/13928298) explicitly supplies full function files through sixteen, not merely collinear polygons, and the official coefficient/file conventions and checksums."
+          ],
+          "used_as_novelty_evidence": false
+        }
+      ],
+      "submission_date": "2026-10-14T20:26:28Z",
+      "pinned_head_sha": "905240cb576dd1e0562bf200eccd6085685471da",
+      "pr_url": "https://github.com/MColbrook/AIM/pull/125",
+      "search_date": "2026-10-21",
+      "search_limitations": "Negative search results are not a novelty proof. This is a prior-art scope audit, not independent mathematical certification of the submitted proof. A related theorem, computed finite range, or different model is not a complete earlier match.",
+      "submitted_material_examined": {
+        "package_paths": [
+          "research/solutions/572-half-integral-ehrhart-count"
+        ],
+        "abstracts_theorem_claims_references_and_target_comparisons": true
+      }
+    }
+  ]
+}

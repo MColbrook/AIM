@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "266",
+  "manifest_index": 210,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "266",
+    "title": "Does stronger ferromagnetic coupling always slow Ising relaxation?",
+    "area": "Statistical mechanics and Monte Carlo sampling",
+    "file": "problems/266-ising-gap-monotonicity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "774edcd626824baaa4ed18aba4f224c270b7d96e15ac437715e7e078dafbc521",
+    "statement_sha256": "61fbc095fcc0bf82b617ae41037497041edb0ed890fbc9ab68ab8bce07fdfad0",
+    "state": "unreviewed"
+  },
+  "source_sha256": "774edcd626824baaa4ed18aba4f224c270b7d96e15ac437715e7e078dafbc521",
+  "statement_sha256": "61fbc095fcc0bf82b617ae41037497041edb0ed890fbc9ab68ab8bce07fdfad0",
+  "actual_source_sha256": "774edcd626824baaa4ed18aba4f224c270b7d96e15ac437715e7e078dafbc521",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`G=(V,E)`$ be a finite simple graph with at least one vertex. For $`J\\in[0,\\infty)^E`$ let $`\\pi_J(\\sigma)\\propto\\exp(\\sum_{uv\\in E}J_{uv}\\sigma_u\\sigma_v)`$ on $`\\{-1,1\\}^V`$, with zero external field. Each vertex, at rate one, resamples its spin from the conditional law under $`\\pi_J`$. Write $`\\gamma(J)`$ for the smallest positive eigenvalue of the negative generator. For every edge $`e`$ and $`s\\ge0`$, must $`\\gamma(J+s\\mathbf1_e)\\le\\gamma(J)`$?",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Ising\" \"spectral gap\" coupling monotonicity 2026",
+    "\"Ising\" \"spectral gap\" coupling monotonicity (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Ising\" \"spectral gap\" coupling monotonicity (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Current primary Nacu arXivmath/0305056PDF,2003.",
+      "url": "https://arxiv.org/pdf/math/0305056",
+      "scope_comparison": "Theorem1 establishes increasing relaxation time under each edge coupling on a graph consisting of a single cycle. Rate-one-per-vertex conversion is compatible with the local inverse-gap statement, but the cycle hypothesis is essential to the proof. General-graph equilibrium correlation monotonicity and quantum spin-chain gap claims are different. No full finite-graph resolution found.",
+      "primary_body_access_gap": false,
+      "locator": "Theorem1 pp1–2 and heat-bath rate convention;Section3proof"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem1 establishes increasing relaxation time under each edge coupling on a graph consisting of a single cycle. Rate-one-per-vertex conversion is compatible with the local inverse-gap statement, but the cycle hypothesis is essential to the proof. General-graph equilibrium correlation monotonicity and quantum spin-chain gap claims are different. No full finite-graph resolution found.",
+  "latest_version_check": "Current primary Nacu arXivmath/0305056PDF,2003.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

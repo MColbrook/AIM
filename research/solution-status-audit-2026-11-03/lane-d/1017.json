@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1017",
+  "manifest_index": 861,
+  "checked_date": "2026-11-03",
+  "source_sha256": "5edbe8964b8e979b5453e750b5d1761af04c631a6b75e89302ac32cbe38b9f5f",
+  "statement_sha256": "a4ab14809d7a04c52c3a17713eee4b795be70e675d4578d27d30c6cef5fec23f",
+  "original_target": {
+    "id": "1017",
+    "title": "Fractal Weyl upper bound for hyperbolic manifolds with cusps",
+    "area": "Spectral theory and spectral geometry",
+    "file": "problems/1017-fractal-weyl-upper-bound-for-hyperbolic-manifolds-with-cusps.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-49dcd1f94b436809",
+    "group": "spectral",
+    "source_sha256": "5edbe8964b8e979b5453e750b5d1761af04c631a6b75e89302ac32cbe38b9f5f",
+    "statement_sha256": "a4ab14809d7a04c52c3a17713eee4b795be70e675d4578d27d30c6cef5fec23f",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`X=\\Gamma\\backslash\\mathbb H^{n+1}`$ be a smooth noncompact hyperbolic manifold, where $`\\Gamma`$ is a geometrically finite discrete isometry group, and suppose $`X`$ has a cusp. Use the nonnegative Laplacian and the spectral parameter in\n\n```math\n(\\Delta_X-n^2/4-\\sigma^2)^{-1}.\n```\n\n\nLet $`\\mathcal R(X)`$ contain its eigenvalue parameters and resonances, with the source's multiplicities. Let $`K\\subset T^*X`$ consist of the maximally extended, bounded, unit-speed geodesics and set $`m=\\dim_H K`$.\n\nDoes every $`C_0>0`$ admit $`C_1=C_1(X,C_0)>0`$ such that, for every $`r\\in\\mathbb R`$,\n\n```math\n\\#\\{\\sigma\\in\\mathcal R(X):|\\sigma-r|\\le C_0\\}\n\\le C_1(1+|r|)^{(m-1)/2}?\n```\n\n\nThe window is a fixed complex disk centered on the real spectral axis. The exponent has no epsilon loss, and the constant need not be uniform over manifolds. This is the cusped restriction of Datchev's published conjecture. It does not impose the paper's separate nontrapping assumptions or replace $`m`$ by a limit-set dimension formula.",
+  "full_original_page": "# 1017. Fractal Weyl upper bound for hyperbolic manifolds with cusps\n\n**Area:** Spectral theory and spectral geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`X=\\Gamma\\backslash\\mathbb H^{n+1}`$ be a smooth noncompact hyperbolic manifold, where $`\\Gamma`$ is a geometrically finite discrete isometry group, and suppose $`X`$ has a cusp. Use the nonnegative Laplacian and the spectral parameter in\n\n```math\n(\\Delta_X-n^2/4-\\sigma^2)^{-1}.\n```\n\n\nLet $`\\mathcal R(X)`$ contain its eigenvalue parameters and resonances, with the source's multiplicities. Let $`K\\subset T^*X`$ consist of the maximally extended, bounded, unit-speed geodesics and set $`m=\\dim_H K`$.\n\nDoes every $`C_0>0`$ admit $`C_1=C_1(X,C_0)>0`$ such that, for every $`r\\in\\mathbb R`$,\n\n```math\n\\#\\{\\sigma\\in\\mathcal R(X):|\\sigma-r|\\le C_0\\}\n\\le C_1(1+|r|)^{(m-1)/2}?\n```\n\n\nThe window is a fixed complex disk centered on the real spectral axis. The exponent has no epsilon loss, and the constant need not be uniform over manifolds. This is the cusped restriction of Datchev's published conjecture. It does not impose the paper's separate nontrapping assumptions or replace $`m`$ by a limit-set dimension formula.\n\n## Application\n\nThe estimate would bound the number of high-frequency scattering modes by the geometry of bounded rays. Cusps permit long excursions and complicate the connection between trapped dynamics and resonance counts.\n\n## Status review\n\n\n**Known cases:** Cusps, the exact trapped-set dimension exponent and no epsilon loss are essential. Convex-cocompact resonance improvements and selected Hecke-triangle results do not cover every cusped geometrically finite manifold.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nCusps, the exact trapped-set dimension exponent and no epsilon loss are essential. Convex-cocompact resonance improvements and selected Hecke-triangle results do not cover every cusped geometrically finite manifold.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe source identifies no-cusp quotients and surfaces with cusps but no funnels as known cases. The mixed cusp-and-funnel surface class and higher-dimensional cusp geometries motivate the proposed target. Selected later convex-cocompact counting theorems omit cusps. Cusped partial estimates also exist: the checked Hecke-family result allows an epsilon loss, and a primary Pohl extended-abstract excerpt reports a cumulative bound with a logarithmic factor for certain geometrically finite cusped classes. These observations do not establish the exact displayed estimate for the whole class.\n\nA finite current and announcement review through 25 October 2026 located no matching full result. This is a bounded literature assessment, not proof of openness or verification of the cited proofs. The published printed909 formula was visually checked; the older 2012 preprint has a different displayed normalization and is not substituted for it.\n\n## References\n\n1. K. Datchev, [Resonance free regions for nontrapping manifolds with cusps](https://msp.org/apde/2016/9-4/apde-v9-n4-p06-s.pdf), Analysis & PDE9(4),2016,907–953, conjecture printed909 and known cases printed910.\n2. F. Naud, A. Pohl and L. Soares, [Fractal Weyl bounds and Hecke triangle groups](https://arxiv.org/abs/1810.04489), v1,2018, Theorem1.1 and Corollaries1.2–1.3; selected theorem reading by the book peer.\n3. L. Soares, [Resonance counting and spectral gaps for hyperbolic surfaces via Fourier decay](https://arxiv.org/html/2610.17276v1), v1,12October2026, Introduction and Theorem1.2; convex-cocompact scope.\n4. A. Pohl, [OW2319 extended abstract](https://user.math.uni-bremen.de/apohl/files/Pohl_extended_abstract_OW2319.pdf), primary indexed theorem excerpt observed by root; full body access timed out, so exact broader theorem scope remains unverified here.\n\n**Admission review:** 25 October 2026. The recorded primary-statement, current-status and semantic duplicate checks were completed before admission. Public AIM-head and complete OpenAI-CONTENTS comparisons were refreshed without a change. The dated, bounded search and access limits above remain part of this assessment.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-49dcd1f94b436809**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "fractal Weyl",
+    "cusps",
+    "Datchev",
+    "Pohl"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"fractal Weyl\" \"cusps\" 2026"
+    },
+    {
+      "query": "\"fractal Weyl\" \"cusps\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://msp.org/apde/2016/9-4/apde-v9-n4-p06-s.pdf",
+      "locator": "published2016 conjectureprinted909; primary2610.17276v1abstract12October2026"
+    }
+  ],
+  "scope_comparison": "Actual published conjecture uses fixed disks and exact (m-1)/2 exponent. Latest Soares result explicitly assumes convex cocompact surfaces, excluding cusps. Hecke-family epsilon-loss and logarithmic cumulative bounds do not establish the lossless fixed-window count for every geometrically finite cusp manifold. Restricted inaccessible supporting abstract does not create a full-match hold.",
+  "recommendation": "Retain partial status; bounded current searches locate no complete matching resolution.",
+  "limitations": "Bounded negative evidence, not proof of continued openness. Exact statement and original references/status retained. Shared providers are metadata routing only except primary candidates explicitly described.",
+  "announcement_routing": {
+    "localID": "1017",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "fractal Weyl",
+          "cusps",
+          "Datchev",
+          "Pohl"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "fractal Weyl",
+          "cusps",
+          "Datchev",
+          "Pohl"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "fractal Weyl",
+        "cusps",
+        "Datchev",
+        "Pohl"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

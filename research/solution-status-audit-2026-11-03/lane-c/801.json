@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "801",
+  "manifest_index": 645,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "801",
+    "title": "How many prequantized balls can fit by contact embedding?",
+    "area": "Geometry and topology",
+    "file": "problems/801-how-many-prequantized-balls-can-fit-by-contact-embedding.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-77384f76b1d6cfbb",
+    "group": "geometry-topology",
+    "source_sha256": "653a73653bbaac33c35de6c14814fd55125248d84686bcdc1a0c8de246c38fb8",
+    "statement_sha256": "7856b9c68cfb1171168a95247fa13ca8bd718d7864b83673bde39acc9e28dc0c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "653a73653bbaac33c35de6c14814fd55125248d84686bcdc1a0c8de246c38fb8",
+  "statement_sha256": "7856b9c68cfb1171168a95247fa13ca8bd718d7864b83673bde39acc9e28dc0c",
+  "actual_source_sha256": "653a73653bbaac33c35de6c14814fd55125248d84686bcdc1a0c8de246c38fb8",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\ge1`$ and let $`X=\\mathbb R^{2n}\\times S^1`$ carry the standard contact structure\n```math\n\\ker\\!\\left(dz+\\frac12\\sum_{j=1}^{n}(x_j\\,dy_j-y_j\\,dx_j)\\right).\n```\n\nFor the Euclidean ball $`B^{2n}(a)\\subset\\mathbb R^{2n}`$, write $`\\widehat B^{2n}(a)=B^{2n}(a)\\times S^1`$. Fix radii with $`\\pi R^2>\\pi r^2>1`$. Is there a finite maximum $`k`$ for which the disjoint union of $`k`$ copies of $`\\widehat B^{2n}(r)`$ admits a contact embedding into $`\\widehat B^{2n}(R)`$? If so, what is that maximum as a function of $`n,r,R`$?\n\nHere “contact embedding” follows the source's convention: a contact isotopy beginning with inclusion moves the union into the target. The source poses this as Problem 258*. Its symplectic analogue has packing and volume constraints, but those results do not determine the contact answer.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"contact packing\" prequantized balls maximum 2026 solution",
+    "\"contact packing\" prequantized balls maximum (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"contact packing\" prequantized balls maximum (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"contact\" \"packing\" \"prequantized\" balls"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "§II definitions immediately before Problem258*, actual Problem258* and comparison with Chiu/Fraser single-ball theorems",
+      "scope_comparison": "The source's contact isotopy beginning with inclusion and regime piR²>pir²>1 exactly match. Its single-ball obstruction forbids embedding a larger prequantized ball into a smaller ball, but gives no finite bound on a disjoint union of fixed smaller balls in a larger ball. Symplectic volume constraints do not automatically constrain contact isotopies. The primary source explicitly distinguishes its multi-ball problem. No full finite-maximum formula or arbitrary-packing announcement was found.",
+      "primary_body_access_gap": false,
+      "version_or_date": "EMS Magazine123(2022), exact primary problem and definitions read on2026-11-03. Current focused searches located no matching later packing solution.",
+      "url": "https://euromathsoc.org/magazine/articles/78"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The source's contact isotopy beginning with inclusion and regime piR²>pir²>1 exactly match. Its single-ball obstruction forbids embedding a larger prequantized ball into a smaller ball, but gives no finite bound on a disjoint union of fixed smaller balls in a larger ball. Symplectic volume constraints do not automatically constrain contact isotopies. The primary source explicitly distinguishes its multi-ball problem. No full finite-maximum formula or arbitrary-packing announcement was found.",
+  "latest_version_check": "EMS Magazine123(2022), exact primary problem and definitions read on2026-11-03. Current focused searches located no matching later packing solution.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

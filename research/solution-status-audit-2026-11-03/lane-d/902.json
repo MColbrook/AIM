@@ -1,0 +1,133 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "902",
+  "manifest_index": 746,
+  "checked_date": "2026-11-03",
+  "source_sha256": "312816c0758813fbc73e742e80532e0034b94a1c82f2fa9dd69b11298dd1e0b6",
+  "statement_sha256": "e2809262c473c1417698e090b85d1d1469003dd0d87e7f5f7d33d4e83423308e",
+  "original_target": {
+    "id": "902",
+    "title": "Do small independent perturbations preserve Fourier uniqueness at square-root nodes?",
+    "area": "Fourier analysis and stable signal reconstruction",
+    "file": "problems/902-do-small-independent-perturbations-preserve-fourier-uniqueness-at-square-root-nodes.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-4d3dad6b33b3d4b5",
+    "group": "operators",
+    "source_sha256": "312816c0758813fbc73e742e80532e0034b94a1c82f2fa9dd69b11298dd1e0b6",
+    "statement_sha256": "e2809262c473c1417698e090b85d1d1469003dd0d87e7f5f7d33d4e83423308e",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Does there exist a constant $`0<\\theta<1`$ with the following property? For every pair of real sequences $`(\\varepsilon_n)_{n\\geq1}`$ and $`(\\delta_n)_{n\\geq1}`$ satisfying\n\n```math\n|\\varepsilon_n|+|\\delta_n|<\\theta\\qquad(n\\geq1),\n```\n\n\nthe samples\n\n```math\nf(0),\\quad f\\bigl(\\sqrt{n+\\varepsilon_n}\\bigr),\\quad\n\\widehat f(0),\\quad \\widehat f\\bigl(\\sqrt{n+\\delta_n}\\bigr)\n\\qquad(n\\geq1)\n```\n\n\ndetermine every real-valued even Schwartz function $`f`$ on $`\\mathbb R`$ uniquely? Equivalently, if all displayed samples of such an $`f`$ vanish, must $`f\\equiv0`$? The spatial and Fourier perturbation sequences are independent. This is the uniform zero-kernel formulation of Ramos and Sousa's Conjecture 6.2.",
+  "full_original_page": "# 902. Do small independent perturbations preserve Fourier uniqueness at square-root nodes?\n\n**Area:** Fourier analysis and stable signal reconstruction\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nDoes there exist a constant $`0<\\theta<1`$ with the following property? For every pair of real sequences $`(\\varepsilon_n)_{n\\geq1}`$ and $`(\\delta_n)_{n\\geq1}`$ satisfying\n\n```math\n|\\varepsilon_n|+|\\delta_n|<\\theta\\qquad(n\\geq1),\n```\n\n\nthe samples\n\n```math\nf(0),\\quad f\\bigl(\\sqrt{n+\\varepsilon_n}\\bigr),\\quad\n\\widehat f(0),\\quad \\widehat f\\bigl(\\sqrt{n+\\delta_n}\\bigr)\n\\qquad(n\\geq1)\n```\n\n\ndetermine every real-valued even Schwartz function $`f`$ on $`\\mathbb R`$ uniquely? Equivalently, if all displayed samples of such an $`f`$ vanish, must $`f\\equiv0`$? The spatial and Fourier perturbation sequences are independent. This is the uniform zero-kernel formulation of Ramos and Sousa's Conjecture 6.2.\n\n## Application\n\nThe Radchenko–Viazovska formula reconstructs even Schwartz functions from their values and Fourier-transform values at the unperturbed square-root nodes. This conjecture asks whether the uniqueness part survives bounded errors in the squared sampling locations, a stability question at critical sampling density relevant to signal reconstruction.\n\n## References\n\n1. J. P. G. Ramos and M. Sousa, [*Perturbed interpolation formulae and applications*](https://msp.org/apde/2023/16-10/apde-v16-n10-p03-s.pdf), *Analysis & PDE* **16** (2023), no. 10, 2327–2384, [DOI](https://doi.org/10.2140/apde.2023.16.2327), Section 6C, printed p. 2381, Conjecture 6.2.\n2. G. Cassese and J. P. G. Ramos, [*On the regularity of Fourier interpolation formulas*](https://arxiv.org/pdf/2503.15733), arXiv:2503.15733v1 (2025), Theorem 1.2.\n3. T. K. Lysen, [*Critical and asymmetric Fourier uniqueness pairs*](https://arxiv.org/pdf/2509.17600), arXiv:2509.17600v2 (2025), Section 2.1 and its sufficient conditions.\n4. D. Berghaus, A. Bondarenko, D. Radchenko, K. Seip and Q. Sun, [*The basis functions of Fourier interpolation*](https://arxiv.org/pdf/2512.18677), arXiv:2512.18677v1 (2025), Section 1.\n\n## Status review\n\n\n**Known cases:** The known direct-shift perturbation theorem requires decaying common shifts; the target allows independent bounded radicand perturbations. Critical-pair density conditions and deleting an exact node do not cover all these perturbations. The target is uniqueness, not a reconstruction-rate requirement.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe known direct-shift perturbation theorem requires decaying common shifts; the target allows independent bounded radicand perturbations. Critical-pair density conditions and deleting an exact node do not cover all these perturbations. The target is uniqueness, not a reconstruction-rate requirement.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe 2025 result in Reference 2 treats common **direct** shifts of $`\\sqrt n`$ that decay as $`n^{-5/4-\\eta}`$, for some $`\\eta>0`$; it does not cover two independent perturbation sequences bounded inside the radicands. Reference 3 gives sufficient conditions for certain critical pairs, but its density condition does not apply to every admissible perturbation sequence here. Reference 4 obtains nonuniqueness after deleting an exact sampling node and adding extraneous zeros, a different configuration. A targeted search through 2026-10-22 found no proof, counterexample or announced complete resolution of Conjecture 6.2, and no matching AIM, FURTHER or Prove2Me problem was found in the bounded duplicate checks. The original wording puts $`f`$ before $`\\theta`$; linearity makes its zero-kernel statement equivalent to one radius working for every $`f`$. The [scope and status audit](../FURTHER_problems/_tracking/fourier-maximal-perturbations-status-2026-10-22.json) records this reasoning and the search limits. The neighboring Conjecture 6.3 is not part of this problem.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-4d3dad6b33b3d4b5**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Ramos\" \"Sousa\" \"Conjecture 6.2\" Fourier",
+    "\"Fourier uniqueness\" \"perturbations\" (site:zenodo.org OR site:hal.science OR site:github.com)",
+    "Fourier uniqueness perturbations square root nodes; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"Ramos\" \"Sousa\" \"maximal perturbations\" (proof OR solved OR counterexample OR announcement)",
+    "Fourier uniqueness Ramos Sousa perturbation; domains palomar-registry.org,hexagonmath.org",
+    "site:msp.org/apde/2023/16-10/ \"Conjecture 6.2\""
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2503.15733v1",
+      "locator": "Theorem1.2, lines117–122",
+      "version": "v1,19 March2025; metadata rechecked still v1",
+      "comparison": "Common RADICAND perturbations sqrt(n+epsilon_n), |epsilon_n|<c(1+n)^(-5/4-delta); not direct shifts sqrt(n)+epsilon_n. No independent uniformly bounded sequences."
+    },
+    {
+      "url": "https://arxiv.org/html/2103.12015v5",
+      "locator": "Theorem1 equations1.5–1.6, lines93–101",
+      "version": "v5,11 October2022",
+      "comparison": "Independent radicand sequences do occur, but require |epsilon_n|+|hat epsilon_n| <= delta(1+n)^(-d-s/2-2-eta). Take d=1 for even Schwartz functions; decay condition still excludes arbitrary bounded perturbations."
+    },
+    {
+      "url": "https://arxiv.org/html/2509.17600v2",
+      "locator": "Theorem1/Corollary1, lines184–206",
+      "comparison": "Additional uniform gap inequalities are not consequences of arbitrary independent bounded radicand shifts."
+    },
+    {
+      "url": "https://arxiv.org/html/2512.18677v1",
+      "locator": "After Theorem1.5, lines220–223",
+      "comparison": "Nonuniqueness removes sqrt(n) and adds extraneous zeros; it does not provide a matching small bounded perturbation of every required square-root node."
+    },
+    {
+      "url": "https://arxiv.org/html/2410.04557v1",
+      "locator": "Theorems1–2, lines97–99 and135–152",
+      "comparison": "Hyperbola-supported measures and separated lattice-cross gaps; not Fourier uniqueness of arbitrary real even Schwartz functions on R at perturbed square-root nodes."
+    },
+    {
+      "url": "https://msp.org/apde/2023/16-10/apde-v16-n10-p.pdf",
+      "locator": "Published Conjecture6.2, printed p2381; primary publisher indexed full statement retrieved by focused search",
+      "comparison": "Published version explicitly has independent epsilon and delta sequences. ArXiv2005.10337v1 has common sequence, so avoid substituting prepublication wording."
+    }
+  ],
+  "rationale": "No complete matching claim found; correct existing comparison error while retaining partial status and exact statement.",
+  "recommended_replacement_wording": "Cassese–Ramos Theorem1.2 treats one common sequence of radicand perturbations with |epsilon_n|<c(1+n)^(-5/4-eta). Ramos–Stoller Theorem1 also permits independent radicand sequences under polynomial decay. Neither covers two independent uniformly bounded radicand sequences.",
+  "source_gaps": [
+    "Individual publisher article PDF yielded no readable lines; published Conjecture6.2 was available from primary publisher issue-PDF search extraction."
+  ],
+  "announcement_routing": {
+    "localID": "902",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Fourier uniqueness",
+          "maximal perturbations",
+          "square-root nodes",
+          "Ramos",
+          "Sousa"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-08-27-000015",
+            "title": "Arthur742Ramos/HigherLambdaModel",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000015-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Fourier uniqueness",
+          "maximal perturbations",
+          "square-root nodes",
+          "Ramos",
+          "Sousa"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Fourier uniqueness",
+        "maximal perturbations",
+        "square-root nodes",
+        "Ramos",
+        "Sousa"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "HigherLambdaModel concerns untyped lambda calculus and Kan-complex homotopy models; Ramos is a name collision, not a Fourier uniqueness perturbation theorem.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.700Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

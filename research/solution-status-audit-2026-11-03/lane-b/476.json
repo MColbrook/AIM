@@ -1,0 +1,68 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "476",
+  "manifest_index": 376,
+  "original_target": {
+    "id": "476",
+    "title": "Barenblatt attraction for porous-medium diffusion with time memory",
+    "area": "PDEs with memory; nonlinear diffusion asymptotics",
+    "file": "problems/476-time-fractional-pme-barenblatt-attraction.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "c1165944fed8b06500be6b79b698827d1f762ac80e42db00bf092f039519f770",
+    "statement_sha256": "41444c3a8b35d6c176d83b39075d8ffd686e282b71c34053fb3fcda13f330051",
+    "state": "unreviewed"
+  },
+  "source_sha256": "c1165944fed8b06500be6b79b698827d1f762ac80e42db00bf092f039519f770",
+  "statement_sha256": "41444c3a8b35d6c176d83b39075d8ffd686e282b71c34053fb3fcda13f330051",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:21:22.512538+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2604.09281v1 Section8 Asymptotic behavior for general initial data leaves the nonlinear memory attraction question open, distinguishing alpha=1 and linear m=1 theorems. Current version onlyv1,10April2026. No full matching announcement located.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2604.09281v1",
+      "locator": "Section8 Asymptotic behavior, lines1273–1275",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"time-fractional porous\" \"asymptotic\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "time-fractional",
+        "Barenblatt"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "time-fractional",
+        "Barenblatt"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

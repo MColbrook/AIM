@@ -2,9 +2,9 @@
 
 **Area:** Monge–Ampère PDEs / optimal transport
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -26,6 +26,13 @@ Optimal transport to complex polyhedral geometries underlies mesh generation and
 2. S. Chen and J. Liu, *Regularity of singular set in optimal transportation*, Inventiones Mathematicae 242 (2025), 1–44, introduction and principal regularity theorems. [DOI](https://doi.org/10.1007/s00222-025-01353-w); [preprint](https://arxiv.org/abs/2210.13841).
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Affirmative codimension-two regularity for full transport interfaces.
+
+[Claimed solution](https://arxiv.org/pdf/2610.18756v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/392.json). Source locator: Theorem1.1; §1 Sigma definition; §5 Proposition5.3/Lemma5.4. The comparison records the hypotheses, quantifiers and any reduction to the original target. The full external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative codimension-two transport-interface regularity
 

@@ -1,0 +1,87 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "952",
+  "manifest_index": 796,
+  "checked_date": "2026-11-03",
+  "source_sha256": "89dadaf7876858f091aafac7551828d939e2a33b921e1efaac2069084e33c293",
+  "statement_sha256": "e10d63f4ee570eca3d1ddf9a4a53eb3eb716045f9e9fd609cf968d9ad7858354",
+  "original_target": {
+    "id": "952",
+    "title": "Mass conservation for critical fractional p-Laplacian diffusion",
+    "area": "Nonlinear nonlocal diffusion",
+    "file": "problems/952-mass-conservation-for-critical-fractional-p-laplacian-diffusion.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b762cb1cf883ff40",
+    "group": "pdes-materials",
+    "source_sha256": "89dadaf7876858f091aafac7551828d939e2a33b921e1efaac2069084e33c293",
+    "statement_sha256": "e10d63f4ee570eca3d1ddf9a4a53eb3eb716045f9e9fd609cf968d9ad7858354",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For every integer $`N\\ge2`$, let\n\n```math\n\\frac{N}{2N-1}\\le s<1,\\qquad p=p_c=\\frac{2N}{N+s}.\n```\n\n\nFor every nonnegative $`u_0\\in L^1(\\mathbb R^N)`$, let $`u(t)=S_tu_0`$ be the standard $`L^1`$ contraction-semigroup solution of\n\n```math\n\\partial_tu+\\mathcal L_{s,p}u=0,\\qquad\n \\mathcal L_{s,p}f(x)=\\mathrm{PV}\\int_{\\mathbb R^N}\n \\frac{\\Phi_p(f(x)-f(y))}{|x-y|^{N+sp}}\\,dy,\n```\n\n\nwhere $`\\Phi_p(r)=|r|^{p-2}r`$ for $`r\\ne0`$ and $`\\Phi_p(0)=0`$.\nMust\n\n```math\n\\int_{\\mathbb R^N}u(x,t)\\,dx\n =\\int_{\\mathbb R^N}u_0(x)\\,dx\n \\qquad\\text{for every }t>0?\n```\n\n\nThe parameter range is exactly the remaining critical regime $`sp\\ge1`$, including equality. There is no such remaining range in dimension one.\n\nFor precision, $`S_t`$ is the $`L^1`$ extension by contraction of the $`L^2`$ gradient flow of the lower semicontinuous convex energy\n\n```math\nE(f)=\\frac1{2p}\\iint_{\\mathbb R^N\\times\\mathbb R^N}\n       \\frac{|f(x)-f(y)|^p}{|x-y|^{N+sp}}\\,dx\\,dy,\n```\n\n\nwith $`E=+\\infty`$ outside its finite-energy domain. Thus $`S_tu_0`$ is the $`L^1`$ limit of the flows for nonnegative $`L^1\\cap L^2`$ approximations to $`u_0`$ [3, Section 2.1]. Pointwise principal values need not exist for every datum. No compact support, boundedness, radial symmetry or moment condition is assumed.",
+  "full_original_page": "# 952. Mass conservation for critical fractional p-Laplacian diffusion\n\n**Area:** Nonlinear nonlocal diffusion\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor every integer $`N\\ge2`$, let\n\n```math\n\\frac{N}{2N-1}\\le s<1,\\qquad p=p_c=\\frac{2N}{N+s}.\n```\n\n\nFor every nonnegative $`u_0\\in L^1(\\mathbb R^N)`$, let $`u(t)=S_tu_0`$ be the standard $`L^1`$ contraction-semigroup solution of\n\n```math\n\\partial_tu+\\mathcal L_{s,p}u=0,\\qquad\n \\mathcal L_{s,p}f(x)=\\mathrm{PV}\\int_{\\mathbb R^N}\n \\frac{\\Phi_p(f(x)-f(y))}{|x-y|^{N+sp}}\\,dy,\n```\n\n\nwhere $`\\Phi_p(r)=|r|^{p-2}r`$ for $`r\\ne0`$ and $`\\Phi_p(0)=0`$.\nMust\n\n```math\n\\int_{\\mathbb R^N}u(x,t)\\,dx\n =\\int_{\\mathbb R^N}u_0(x)\\,dx\n \\qquad\\text{for every }t>0?\n```\n\n\nThe parameter range is exactly the remaining critical regime $`sp\\ge1`$, including equality. There is no such remaining range in dimension one.\n\nFor precision, $`S_t`$ is the $`L^1`$ extension by contraction of the $`L^2`$ gradient flow of the lower semicontinuous convex energy\n\n```math\nE(f)=\\frac1{2p}\\iint_{\\mathbb R^N\\times\\mathbb R^N}\n       \\frac{|f(x)-f(y)|^p}{|x-y|^{N+sp}}\\,dx\\,dy,\n```\n\n\nwith $`E=+\\infty`$ outside its finite-energy domain. Thus $`S_tu_0`$ is the $`L^1`$ limit of the flows for nonnegative $`L^1\\cap L^2`$ approximations to $`u_0`$ [3, Section 2.1]. Pointwise principal values need not exist for every datum. No compact support, boundedness, radial symmetry or moment condition is assumed.\n\n## Application\n\nThis determines whether critical nonlinear diffusion can transport a positive amount of finite initial mass to spatial infinity in finite time.\n\n## Known progress\n\nMass conservation holds for $`p>p_c`$ [3, Theorem 5.1] and for $`p=p_c`$ with $`sp<1`$ [2, Theorem 9.1]. The latter theorem's proof and following open problem explicitly retain the complementary range. The expanded survey does likewise [1, Open Problem 4]. Contractivity provides an upper bound on mass, so equality remains the issue.\n\nResults for the local $`p`$-Laplacian, spectral fractional porous-medium equations, time-fractional equations or Dirac initial measures do not settle this function-data semigroup question.\n\n## References\n\n1. J. L. Vázquez, *A survey on mass conservation, self-similarity and related topics in nonlinear diffusion*, [arXiv:2311.18357v2](https://arxiv.org/html/2311.18357v2), Section 12.2, Theorem 12.4 and Open Problem 4; revised 23 December 2025. [Journal DOI](https://doi.org/10.4171/EMSS/121), online first 14 October 2026. The checked author version governs the statement here.\n2. J. L. Vázquez, *Growing solutions of the fractional p-Laplacian equation in the Fast Diffusion range*, Nonlinear Analysis 214 (2022), 112575, [DOI](https://doi.org/10.1016/j.na.2021.112575), [published text](https://repositorio.uam.es/bitstream/handle/10486/700583/growing_vazquez_NA_2021.pdf?sequence=1), Theorem 9.1 and following open problem, pp.30–32.\n3. J. L. Vázquez, *The fractional p-Laplacian evolution equation in R^N in the sublinear case*, Calculus of Variations and Partial Differential Equations 60 (2021), Paper 140; [arXiv:2011.01521v2](https://arxiv.org/html/2011.01521v2), Sections 2.1 and 5.\n\n## Status review\n\n\n**Known cases:** The remaining critical regime has sp>=1. The October 2026 survey still identifies the critical gap; supercritical mass conservation and the critical sp<1 theorem are outside this residual.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe remaining critical regime has sp>=1. The October 2026 survey still identifies the critical gap; supercritical mass conservation and the critical sp<1 theorem are outside this residual.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nIndependent primary-statement review and current searches on 25 October 2026 found no matching resolution or complete announcement. The review included all 1,703 pinned AIM/OpenAI statement records and all 911 preceding local findings. In particular, AIM473 concerns a different spectral fractional porous-medium operator. These bounded checks do not certify every proof or parity between the published 2026 survey and its expanded author version.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-b762cb1cf883ff40**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "fractional p-Laplacian",
+    "Vazquez"
+  ],
+  "queries": [
+    "\"fractional p-Laplacian\" \"critical\" \"mass conservation\"",
+    "\"fractional p-Laplacian\" \"critical\" \"mass conservation\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2311.18357v2",
+      "locator": "23Dec2025v2 section12.2 Theorem12.4/OpenProblem4 lines2039–2040",
+      "comparison": "Actual expanded survey explicitly retains sp>=1 at critical p as unresolved; conservation proof uses sp<1. Subsequent searches returned other operators or stationary equations, not all nonnegative L1 semigroup data."
+    }
+  ],
+  "rationale": "Actual expanded survey explicitly retains sp>=1 at critical p as unresolved; conservation proof uses sp<1. Subsequent searches returned other operators or stationary equations, not all nonnegative L1 semigroup data.",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scopes inspected, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "952",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "fractional p-Laplacian",
+          "Vazquez"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "fractional p-Laplacian",
+          "Vazquez"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "fractional p-Laplacian",
+        "Vazquez"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

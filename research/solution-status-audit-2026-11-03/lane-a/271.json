@@ -1,0 +1,183 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "271",
+  "manifest_index": 215,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "271",
+    "title": "A diameter bound for diffusion to uniform equilibrium",
+    "area": "Diffusion on symmetric networks",
+    "file": "problems/271-transitive-mixing-diameter.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "50f1ad14b78cf4c95f2da7559839af6410080fe2295d451d43b0cf6e6497fd72",
+    "statement_sha256": "2d63837a06bf83efb52dbc3466c91f58d43959c5d2f3c607cb525df1cbf83010",
+    "state": "unreviewed"
+  },
+  "source_sha256": "50f1ad14b78cf4c95f2da7559839af6410080fe2295d451d43b0cf6e6497fd72",
+  "statement_sha256": "2d63837a06bf83efb52dbc3466c91f58d43959c5d2f3c607cb525df1cbf83010",
+  "actual_source_sha256": "50f1ad14b78cf4c95f2da7559839af6410080fe2295d451d43b0cf6e6497fd72",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`G`$ be any connected finite vertex-transitive simple graph with at least two vertices, degree $`d`$ and graph diameter $`D`$. Let $`A_G`$ be its adjacency matrix. For the lazy simple random walk $`P=\\tfrac12I+\\tfrac1{2d}A_G`$, let $`t_{\\rm mix}`$ be the smallest integer $`t`$ for which $`\\max_x\\|P^t(x,\\cdot)-\\mathrm{Unif}(V(G))\\|_{\\rm TV}\\le1/4`$. Is there a universal constant $`C`$ with $`t_{\\rm mix}\\le C dD^2`$ for every such $`G`$?",
+  "full_local_page_read": true,
+  "queries": [
+    "\"vertex transitive\" mixing \"diameter\" 2026",
+    "\"vertex transitive\" mixing \"diameter\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"vertex transitive\" mixing \"diameter\" (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"vertex-transitive\" \"mixing time\" \"diameter\" 2026",
+    "\"mixing\" \"d D\" \"transitive\" diameter conjecture",
+    "\"Geometric bounds on the fastest mixing Markov chain\" arxiv",
+    "\"Peres\" \"mixing\" \"diameter\" 2025 2026 conjecture"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf",
+      "version_or_date": "Second edition2017; fetched3November2026",
+      "locator": "Chapter26 Question8, printed p361; Theorem13.26, printed p191, equation(13.22)",
+      "inspection": "Actual Question8 asks universal c*degree*diameter^2 for lazy simple random walk on a transitive graph, exactly the target. Theorem13.26 gives the corresponding relaxation-time bound, not mixing time.",
+      "local_text": "../lane-d/_sources/271-mcmt2e.txt",
+      "receipt": "../lane-d/_sources/271-mcmt2e.txt.receipt.json"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00440-023-01257-x",
+      "version_or_date": "published30January2024, PTRF188,1017–1062",
+      "locator": "TheoremB (Almost Mixing), §1.1–1.2 and following paragraph; TheoremD",
+      "inspection": "TheoremB constructs a NEW weighted chain Q with changed invariant distribution pi-prime close to pi. Its diameter result therefore does not fix the ordinary lazy simple random walk or exact uniform equilibrium. TheoremD uses time-inhomogeneous transition matrices. Neither is the stated all-transitive ordinary-walk theorem."
+    },
+    {
+      "url": "https://www.evidencepress.org/releases/diameter-hitting-time-robustness/",
+      "version_or_date": "22October2026, version1.0.0-candidate",
+      "locator": "Specialist main-results table and graph constructions, lines27–46",
+      "inspection": "The announcement refutes Zuckerman hitting-time robustness under nonreversible multiplicative perturbations, not the mixing bound here. The diameter-three graph has portal and bulk vertices in different graph roles and is not shown vertex-transitive; its own mixing bound50(m+1) with degree3m is compatible with C*d*D^2. The cubic robustness result gives no target violating mixing estimate."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The primary-source access gap is closed by RAM extraction of the actual book. The exact current comparator TheoremB is excluded by its new-chain/new-stationary-law quantifiers. Keep Open canonical recommendation; partial evidence outcome describes existing restricted advances.",
+  "latest_version_check": "Original second-edition2017 book Question8 and Theorem13.26 recovered3November2026; current comparator is the30January2024 version of record. The22October2026 robustness announcement concerns a different graph/chain problem.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ],
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:54:28.113Z",
+      "reviewer": "lane-d helper, root assigned255and271",
+      "previous_record": {
+        "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+        "localID": "271",
+        "manifest_index": 215,
+        "checked_date": "2026-11-03",
+        "original_target": {
+          "id": "271",
+          "title": "A diameter bound for diffusion to uniform equilibrium",
+          "area": "Diffusion on symmetric networks",
+          "file": "problems/271-transitive-mixing-diameter.md",
+          "status": "Open",
+          "last_checked": "2026-09-13",
+          "group": "stochastic3",
+          "source_sha256": "50f1ad14b78cf4c95f2da7559839af6410080fe2295d451d43b0cf6e6497fd72",
+          "statement_sha256": "2d63837a06bf83efb52dbc3466c91f58d43959c5d2f3c607cb525df1cbf83010",
+          "state": "unreviewed"
+        },
+        "source_sha256": "50f1ad14b78cf4c95f2da7559839af6410080fe2295d451d43b0cf6e6497fd72",
+        "statement_sha256": "2d63837a06bf83efb52dbc3466c91f58d43959c5d2f3c607cb525df1cbf83010",
+        "actual_source_sha256": "50f1ad14b78cf4c95f2da7559839af6410080fe2295d451d43b0cf6e6497fd72",
+        "source_hash_matches_manifest": true,
+        "full_original_statement": "Let $`G`$ be any connected finite vertex-transitive simple graph with at least two vertices, degree $`d`$ and graph diameter $`D`$. Let $`A_G`$ be its adjacency matrix. For the lazy simple random walk $`P=\\tfrac12I+\\tfrac1{2d}A_G`$, let $`t_{\\rm mix}`$ be the smallest integer $`t`$ for which $`\\max_x\\|P^t(x,\\cdot)-\\mathrm{Unif}(V(G))\\|_{\\rm TV}\\le1/4`$. Is there a universal constant $`C`$ with $`t_{\\rm mix}\\le C dD^2`$ for every such $`G`$?",
+        "full_local_page_read": true,
+        "queries": [
+          "\"vertex transitive\" mixing \"diameter\" 2026",
+          "\"vertex transitive\" mixing \"diameter\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+          "\"vertex transitive\" mixing \"diameter\" (site:palomar-registry.org OR site:hexagonmath.org)"
+        ],
+        "searched_channels": [
+          "general web and primary author/publisher routing",
+          "arXiv",
+          "Zenodo",
+          "HAL",
+          "GitHub",
+          "Palomar (site search)",
+          "Hexagon (site search)"
+        ],
+        "sources": [
+          {
+            "scope_comparison": "Focused searches locate relaxation-time diameter bounds, moderate-growth subclasses and optimized-chain geometric results. These do not by their stated scope establish t_mix<=C dD² for every ordinary lazy uniform walk. The original book full-body fetch timed out, and comparator access remains incomplete in this pass; retain explicit source gap instead of claiming completed theorem verification.",
+            "locator": "Introduction and main geometric diameter bound; exact ordinary-walk question inMCMTChapter26Q8requiresfullbody recovery",
+            "primary_body_access_gap": true,
+            "version_or_date": "Final2024geometric optimized-chain comparator; originalMCMT2eprimaryPDF timed out at recheck.",
+            "url": "https://link.springer.com/article/10.1007/s00440-023-01257-x"
+          }
+        ],
+        "outcome": "hold",
+        "recommended_status": "Open",
+        "rationale": "Focused searches locate relaxation-time diameter bounds, moderate-growth subclasses and optimized-chain geometric results. These do not by their stated scope establish t_mix<=C dD² for every ordinary lazy uniform walk. The original book full-body fetch timed out, and comparator access remains incomplete in this pass; retain explicit source gap instead of claiming completed theorem verification.",
+        "latest_version_check": "Final2024geometric optimized-chain comparator; originalMCMT2eprimaryPDF timed out at recheck.",
+        "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+        "limitations": [
+          "Bounded search conclusion, not a guarantee of continued openness.",
+          "No index-only result was promoted to a complete match."
+        ]
+      },
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "recommended_status": "Open",
+      "queries": [
+        "\"vertex-transitive\" \"mixing time\" \"diameter\" 2026",
+        "\"mixing\" \"d D\" \"transitive\" diameter conjecture",
+        "\"Geometric bounds on the fastest mixing Markov chain\" arxiv",
+        "\"Peres\" \"mixing\" \"diameter\" 2025 2026 conjecture"
+      ],
+      "sources": [
+        {
+          "url": "https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf",
+          "version_or_date": "Second edition2017; fetched3November2026",
+          "locator": "Chapter26 Question8, printed p361; Theorem13.26, printed p191, equation(13.22)",
+          "inspection": "Actual Question8 asks universal c*degree*diameter^2 for lazy simple random walk on a transitive graph, exactly the target. Theorem13.26 gives the corresponding relaxation-time bound, not mixing time.",
+          "local_text": "../lane-d/_sources/271-mcmt2e.txt",
+          "receipt": "../lane-d/_sources/271-mcmt2e.txt.receipt.json"
+        },
+        {
+          "url": "https://link.springer.com/article/10.1007/s00440-023-01257-x",
+          "version_or_date": "published30January2024, PTRF188,1017–1062",
+          "locator": "TheoremB (Almost Mixing), §1.1–1.2 and following paragraph; TheoremD",
+          "inspection": "TheoremB constructs a NEW weighted chain Q with changed invariant distribution pi-prime close to pi. Its diameter result therefore does not fix the ordinary lazy simple random walk or exact uniform equilibrium. TheoremD uses time-inhomogeneous transition matrices. Neither is the stated all-transitive ordinary-walk theorem."
+        },
+        {
+          "url": "https://www.evidencepress.org/releases/diameter-hitting-time-robustness/",
+          "version_or_date": "22October2026, version1.0.0-candidate",
+          "locator": "Specialist main-results table and graph constructions, lines27–46",
+          "inspection": "The announcement refutes Zuckerman hitting-time robustness under nonreversible multiplicative perturbations, not the mixing bound here. The diameter-three graph has portal and bulk vertices in different graph roles and is not shown vertex-transitive; its own mixing bound50(m+1) with degree3m is compatible with C*d*D^2. The cubic robustness result gives no target violating mixing estimate."
+        }
+      ],
+      "scope_comparison": "Exact original question and known relaxation theorem are now read. Current optimized-chain and adversarial-perturbation results change either the transition law, equilibrium, graph class or quantity. No matching complete solution or announcement was found in bounded current searches.",
+      "rationale": "The primary-source access gap is closed by RAM extraction of the actual book. The exact current comparator TheoremB is excluded by its new-chain/new-stationary-law quantifiers. Keep Open canonical recommendation; partial evidence outcome describes existing restricted advances."
+    }
+  ],
+  "review_level": "primary_body_and_search",
+  "primary_body_access_gap_resolved": true,
+  "remaining_material_source_gaps": [],
+  "full_original_page": "# 271. A diameter bound for diffusion to uniform equilibrium\n\n**Area:** Diffusion on symmetric networks\n\n**Status:** 🔵 OPEN\n\n**Last checked:** 2026-09-13\n\n## Problem statement\n\nLet $`G`$ be any connected finite vertex-transitive simple graph with at least two vertices, degree $`d`$ and graph diameter $`D`$. Let $`A_G`$ be its adjacency matrix. For the lazy simple random walk $`P=\\tfrac12I+\\tfrac1{2d}A_G`$, let $`t_{\\rm mix}`$ be the smallest integer $`t`$ for which $`\\max_x\\|P^t(x,\\cdot)-\\mathrm{Unif}(V(G))\\|_{\\rm TV}\\le1/4`$. Is there a universal constant $`C`$ with $`t_{\\rm mix}\\le C dD^2`$ for every such $`G`$?\n\n## Application\n\nThe bound would estimate homogenization time from network size in space and local connectivity, without computing its full transition spectrum.\n\n## References\n\n- [David A. Levin and Yuval Peres, with contributions by Elizabeth L. Wilmer, *Markov Chains and Mixing Times*, second edition (2017)](https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf), Chapter 26, Question 8 and Theorem 13.26.\n- [Sam Olesker-Taylor and Luca Zanetti, *Geometric bounds on the fastest mixing Markov chain* (2024)](https://link.springer.com/article/10.1007/s00440-023-01257-x), Introduction and diameter bounds for optimized chains.\n\n## Status review\n\n**Literature check:** Open in cited literature; no later resolution located.\n\nA bound of this order for relaxation time is known. Recent geometric results allow changing edge weights, transition rates, or the stationary law; the present question fixes the ordinary lazy walk and its uniform equilibrium.\n\nSearch topics checked on 2026-09-13: `vertex transitive lazy walk mixing diameter squared degree conjecture 2025 2026`. No later resolution of this exact statement was located; this is a literature check, not a certification that no proof exists.\n",
+  "announcement_snapshot_followup": {
+    "checked_UTC": "2026-11-03T13:54:28.114Z",
+    "scope": "Complete current Palomar954, Hexagon646 and pinned OpenAI overview read-only alias scan",
+    "predicates": [
+      "mixing AND (diameter OR vertex-transitive) in title/abstract"
+    ],
+    "hits": [],
+    "qualification": "Bounded literal routing; no inference of absence beyond recorded aliases."
+  },
+  "scope_comparison": "Exact original question and known relaxation theorem are now read. Current optimized-chain and adversarial-perturbation results change either the transition law, equilibrium, graph class or quantity. No matching complete solution or announcement was found in bounded current searches.",
+  "history_note": "Earlier failed access attempts and their source-gap wording are retained verbatim in followup_reviews[0].previous_record; top-level sources describe the completed follow-up."
+}

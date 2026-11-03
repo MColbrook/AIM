@@ -1,0 +1,59 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "758",
+  "manifest_index": 602,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "758",
+    "title": "Arbitrary-friction incremental contact in three-dimensional isotropic elasticity",
+    "area": "Contact mechanics and variational inequalities",
+    "file": "problems/758-arbitrary-friction-incremental-contact-in-three-dimensional-isotropic-elasticity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-cafb218500248da0",
+    "group": "fracture-damage-plasticity-contact",
+    "source_sha256": "a4a213cb56f4c0258b4f4029a228b60c42a03e2eb48fb6fa51435a0da0a2a987",
+    "statement_sha256": "997175ca01443f7fe2d42123b561ad889a84f6a4d4e9f60914f3150d39016624",
+    "state": "unreviewed"
+  },
+  "source_sha256": "a4a213cb56f4c0258b4f4029a228b60c42a03e2eb48fb6fa51435a0da0a2a987",
+  "statement_sha256": "997175ca01443f7fe2d42123b561ad889a84f6a4d4e9f60914f3150d39016624",
+  "actual_source_sha256": "a4a213cb56f4c0258b4f4029a228b60c42a03e2eb48fb6fa51435a0da0a2a987",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^3`$ be a bounded connected $`C^{1,1}`$ domain. Partition its boundary into disjoint relatively open parts $`\\Gamma_U,\\Gamma_T,\\Gamma_C`$ whose closures cover $`\\partial\\Omega`$. Assume $`\\Gamma_U`$ and $`\\Gamma_C`$ have positive surface measure, $`\\Gamma_C`$ has Lipschitz boundary as a boundary patch, and $`\\mathrm{dist}(\\Gamma_U,\\Gamma_C)>0`$.\n\nWrite $`n`$ for the outward normal and $`v_n=v\\cdot n`$, $`v_t=v-v_n n`$ for boundary traces. Put\n\n```math\nV=\\{v\\in H^1(\\Omega;\\mathbb R^3):\\mathrm{Tr}v=0\\text{ on }\\Gamma_U\\},\n\\qquad \\varepsilon(v)=\\tfrac12(\\nabla v+\\nabla v^T).\n```\n\nLet $`G,\\lambda\\in W^{1,\\infty}(\\Omega)`$ be real isotropic elastic moduli satisfying $`G\\ge c>0`$ and $`3\\lambda+2G\\ge c>0`$. Define\n\n```math\na(u,v)=\\int_\\Omega\\left(2G\\varepsilon(u):\\varepsilon(v)\n                    +\\lambda\\mathrm{div}u\\mathrm{div}v\\right)\\,dx.\n```\n\nPrescribe $`F\\in L^2(\\Omega;\\mathbb R^3)`$, $`T\\in L^2(\\Gamma_T;\\mathbb R^3)`$, a gap $`g\\in H^{1/2}(\\Gamma_C)`$, a tangential previous-step displacement $`w_t\\in H^{1/2}(\\Gamma_C;\\mathbb R^3)`$ with $`w_t\\cdot n=0`$, and a friction coefficient $`f\\in W^{1,\\infty}(\\Gamma_C)`$ with $`f\\ge0`$. Set\n\n```math\n\\ell(v)=\\int_\\Omega F\\cdot v\\,dx+\\int_{\\Gamma_T}T\\cdot\\mathrm{Tr}v\\,dS,\n\\qquad\nK=\\{t\\in H^{-1/2}(\\Gamma_C):t\\le0\\}.\n```\n\nHere $`H^{-1/2}(\\Gamma_C)`$ is the dual of $`H^{1/2}(\\Gamma_C)`$, and $`t\\le0`$ means nonpositive as a distribution. Such a $`t`$ is the unknown normal reaction. For each $`t\\in K`$, let $`u_t\\in V`$ be the unique minimizer of\n\n```math\nE_t(v)=\\tfrac12 a(v,v)-\\ell(v)-\\langle t,v_n\\rangle\n                   +\\langle-ft,|v_t-w_t|\\rangle.\n```\n\nThe brackets are duality pairings on $`\\Gamma_C`$. Positivity of $`-ft`$, Korn's inequality and strict convexity make this frozen-reaction problem well defined. The subscript on $`u_t`$ indexes the reaction; $`(u_t)_n`$ below denotes its normal boundary trace.\n\nDoes there always exist $`t\\in K`$ such that\n\n```math\n\\left\\langle (u_t)_n-g,\\widehat t-t\\right\\rangle\\ge0\n\\qquad\\text{for every }\\widehat t\\in K,\n```\n\nwith no smallness condition on $`f`$?\n\nThis is the unregularized incremental Signorini–Coulomb problem against a rigid obstacle. The same normal reaction determines both nonpenetration and the friction threshold. The question includes homogeneous isotropic elasticity. It asks for existence; a negative answer must provide admissible fixed data with no solution.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Coulomb\" \"three-dimensional\" arbitrary friction existence 2026 Ballard Iurlano",
+    "\"incremental\" Coulomb \"existence\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "Coulomb friction (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"23171696\" \"Coulomb\"",
+    "\"Evidence Press\" \"compact cross\" Coulomb"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "5 October 2026, v2.1.0-candidate, current release inspected 3 November; 2303.16298v2 theorem body inspected. Zenodo and GitHub manuscript fetches failed.",
+      "primary_body_access_gap": true,
+      "locator": "Specialist statement, Theorems 4.1, 5.2–5.3 scope; explicit limitations; Ballard–Iurlano Theorem 2.13 and Remark 2.19",
+      "scope_comparison": "The complete primary announcement limits its existence claim to compact normal–tangential cross compliance, realized by two smooth anchored elastic bodies with closed matched interface and lambda+mu matching. It expressly excludes general 3D contact, contact edges and rough coefficients. The target is the arbitrary rigid-obstacle 3D model with W1,infinity coefficients and an arbitrary admissible contact patch, so those structural hypotheses are absent. The original actual Theorem 2.13 assumes N=2. A weak-product obstruction is not a fixed-data nonexistence example. No matching full claim identified; the announcement manuscript body remains an access gap, so its proof is not certified.",
+      "url": "https://www.evidencepress.org/releases/compact-cross-compliance-contact/"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The complete primary announcement limits its existence claim to compact normal–tangential cross compliance, realized by two smooth anchored elastic bodies with closed matched interface and lambda+mu matching. It expressly excludes general 3D contact, contact edges and rough coefficients. The target is the arbitrary rigid-obstacle 3D model with W1,infinity coefficients and an arbitrary admissible contact patch, so those structural hypotheses are absent. The original actual Theorem 2.13 assumes N=2. A weak-product obstruction is not a fixed-data nonexistence example. No matching full claim identified; the announcement manuscript body remains an access gap, so its proof is not certified.",
+  "latest_version_check": "5 October 2026, v2.1.0-candidate, current release inspected 3 November; 2303.16298v2 theorem body inspected. Zenodo and GitHub manuscript fetches failed.",
+  "gap_retraction_check": "Current release calls itself unrefereed and awaiting independent verification. Its supplied review concerns expanded endpoint arguments; failure of weak-product property is explicitly not a contact nonexistence proof. Full manuscript unavailable in these fetches.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

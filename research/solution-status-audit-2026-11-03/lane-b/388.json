@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 317,
+  "source_sha256": "bf7e066fb2464d381db68bde1d186e4d0f9ab88d5914250c3534aecc8edacd01",
+  "statement_sha256": "40a0f9f084e6e3960898efaef2fb1fd4e034f67c66db291c60e90bf41f5fa298",
+  "original_target": {
+    "id": "388",
+    "title": "Global smooth evolution of small semigeostrophic perturbations",
+    "area": "Geophysical PDEs / optimal transport",
+    "file": "problems/388-semigeostrophic-small-data-global-smoothness.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "continuum2",
+    "source_sha256": "bf7e066fb2464d381db68bde1d186e4d0f9ab88d5914250c3534aecc8edacd01",
+    "statement_sha256": "40a0f9f084e6e3960898efaef2fb1fd4e034f67c66db291c60e90bf41f5fa298",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "388",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"semigeostrophic\" \"small\" \"global\" \"2026\"",
+    "\"semigeostrophic\" \"global smooth\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"semigeostrophic\" \"global\" \"small\" smooth",
+    "\"semigeostrophic\" \"global regularity\" 2026",
+    "\"semigeostrophic\" Silini 2026 smooth"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2601.04797",
+      "version": "v3 6June2026",
+      "locators": "Theorem5.6 equations5.23–5.24; Section5 preceding continuation assumptions",
+      "body_inspected": true,
+      "scope": "Finite logarithmic lower bound for Hessian-pinned perturbative lifespan; no infinite-time result for one fixed smallness threshold."
+    },
+    {
+      "url": "https://arxiv.org/html/2610.02071",
+      "version": "v2 19October2026",
+      "locators": "Theorem1.6 equation1.12; Section6.1",
+      "body_inspected": true,
+      "scope": "Global-in-time Holder estimate for time derivatives of potentials under two-sided density bounds in3D, not smooth density/Hessian regularity."
+    },
+    {
+      "url": "https://cvgmt.sns.it/media/doc/paper/2665/MA_semigeo.pdf",
+      "version": "Figalli CIME2014 survey current author copy",
+      "locators": "concluding questions PDFp33",
+      "body_inspected": true,
+      "scope": "Specifically asks global smooth flow for initial density close to1 in strong norm."
+    }
+  ],
+  "registry_checks": "No semigeostrophic/semi-geostrophic alias Palomar/Hexagon/OpenAI/Colbrook author metadata. Current arXiv, CVGMT, primary publishers plus Zenodo/HAL/GitHub focused search.",
+  "scope_comparison": "For fixed k and epsilon, every small smooth T2 perturbation must remain smooth on every finite interval. For every fixed T choosing epsilon(T) and finite lifespan asymptotics do not meet these quantifiers.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 318,
+  "source_sha256": "05e7072814450e906c3aba3cb9315a0ae95a6645e5940090abd8f6df6932d872",
+  "statement_sha256": "006401812aad4ce7c8ec606b16a773161d427e193fa242a5c0cd34fb129ca6bc",
+  "original_target": {
+    "id": "389",
+    "title": "Uniqueness of bounded semigeostrophic potential vorticity",
+    "area": "Geophysical PDEs / nonlinear transport",
+    "file": "problems/389-semigeostrophic-bounded-vorticity-uniqueness.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "continuum2",
+    "source_sha256": "05e7072814450e906c3aba3cb9315a0ae95a6645e5940090abd8f6df6932d872",
+    "statement_sha256": "006401812aad4ce7c8ec606b16a773161d427e193fa242a5c0cd34fb129ca6bc",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "389",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"semigeostrophic\" \"bounded\" \"uniqueness\" 2026",
+    "\"semigeostrophic\" \"weak uniqueness\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"semigeostrophic\" uniqueness 2026 site:arxiv.org",
+    "\"Lavier\" \"incompressible\" \"semi-geostrophic\" arxiv",
+    "\"semigeostrophic\" \"uniqueness\" site:zenodo.org"
+  ],
+  "sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00526-021-02133-z",
+      "version": "published16January2022",
+      "locators": "Introduction; Theorem3.5 and3.6; Section7",
+      "body_inspected": true,
+      "scope": "Unique smooth time trajectories only for well-prepared discrete measures. General compactly supported measures yield existence/subsequence convergence. Introduction distinguishes local Holder and uniformly convex weak-strong uniqueness."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2411.00575",
+      "version": "current routing; IMAJAM90(2025)443–464",
+      "locators": "Remark1.1 PDFp4; read intoRAM via Node/pdftotext3November2026",
+      "body_inspected": true,
+      "scope": "Explicitly retains weak-solution uniqueness; discrete numerical convergence only subsequential, entropy-regularized scheme different.",
+      "pdf_sha256": "e9a4f34169b60f71d452a5149e2fe678d9fa4f57390e8f85c7dd00d9d6f9c4ef"
+    },
+    {
+      "url": "https://arxiv.org/html/2601.04797",
+      "version": "v3 6June2026",
+      "locators": "Theorem5.6 and weak-strong transfer introduction",
+      "body_inspected": true,
+      "scope": "2D torus prepared smooth perturbative branch, conditional weak-strong comparison, not3D arbitrary bounded weak pair."
+    }
+  ],
+  "registry_checks": "No relevant semigeostrophic alias Palomar/Hexagon/OpenAI or Colbrook caches. Bounded current searches arXiv, Zenodo, HAL, GitHub, primary author/publisher sites.",
+  "scope_comparison": "Target every compactly supported bounded initial probability density with transport to fixed3D ball; two arbitrary narrowly continuous bounded compactly supported distributional solutions. A unique regular flow of one prescribed velocity does not imply uniqueness for nonlinear velocity depending on rho.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Lavier full body successfully inspected via RAM fallback after browser extraction limit."
+}

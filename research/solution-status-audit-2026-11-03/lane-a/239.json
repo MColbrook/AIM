@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "239",
+  "manifest_index": 185,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "239",
+    "title": "Uniqueness of the homogeneous cooling state for inelastic hard spheres",
+    "area": "Granular-gas kinetic theory",
+    "file": "problems/239-inelastic-cooling-profile-uniqueness.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-13",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "30ee73f3f74fd1c380785c153e0dae46026573765093859b8989053194828673",
+    "statement_sha256": "4c45488b1c448248ac066383f1b1ea4c0f6437c7fc013a1a829142a8950d59ab",
+    "state": "unreviewed"
+  },
+  "source_sha256": "30ee73f3f74fd1c380785c153e0dae46026573765093859b8989053194828673",
+  "statement_sha256": "4c45488b1c448248ac066383f1b1ea4c0f6437c7fc013a1a829142a8950d59ab",
+  "actual_source_sha256": "30ee73f3f74fd1c380785c153e0dae46026573765093859b8989053194828673",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For a coefficient of normal restitution $`\\alpha\\in(0,1)`$, define the three-dimensional hard-sphere collision operator weakly by\n\n```math\n\\int Q_\\alpha(F,F)\\varphi\\,dv=\\frac12\\iiint_{\\mathbb R^3\\times\\mathbb R^3\\times S^2}|(v-w)\\cdot\\omega|F(v)F(w)[\\varphi(v')+\\varphi(w')-\\varphi(v)-\\varphi(w)]\\,d\\omega\\,dv\\,dw,\n```\n\nwhere $`v'=v-\\frac{1+\\alpha}{2}((v-w)\\cdot\\omega)\\omega`$ and $`w'=w+\\frac{1+\\alpha}{2}((v-w)\\cdot\\omega)\\omega`$, and $`d\\omega`$ is surface area.\n\nFor every $`\\alpha\\in(0,1)`$, is there exactly one nonnegative density $`F`$ satisfying\n\n```math\nQ_\\alpha(F,F)=\\nabla_v\\cdot(vF),\\qquad \\int F\\,dv=1,\\qquad \\int vF\\,dv=0,\n```\n\nin distributions, with $`\\int(1+|v|^3)F\\,dv<\\infty`$ and $`\\int F|\\log F|\\,dv<\\infty`$? The coefficient of the dilation term is fixed at one, which fixes the velocity scale. No rotational symmetry is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"inelastic hard spheres\" uniqueness restitution 2026",
+    "\"inelastic hard spheres\" uniqueness restitution (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"inelastic hard spheres\" uniqueness restitution (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "scope_comparison": "The actual uniqueness theorem requires restitution alpha>=alpha_* for an explicit alpha_*>0 close to1. Rescaling fixes the dilation coefficient but does not extend this parameter interval to all alpha in(0,1). Bath-forced/diffusively heated or one-dimensional collision models differ. No matching all-restitution three-dimensional hard-sphere announcement found.",
+      "locator": "Sections1.2–1.4 stationary equation1.16 and main theorem; Theorem1.3(i) p12",
+      "version_or_date": "arXivmath/0701449v1,16January2007, current primary PDF; final2009 publication.",
+      "url": "https://arxiv.org/pdf/math/0701449"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual uniqueness theorem requires restitution alpha>=alpha_* for an explicit alpha_*>0 close to1. Rescaling fixes the dilation coefficient but does not extend this parameter interval to all alpha in(0,1). Bath-forced/diffusively heated or one-dimensional collision models differ. No matching all-restitution three-dimensional hard-sphere announcement found.",
+  "latest_version_check": "arXivmath/0701449v1,16January2007, current primary PDF; final2009 publication.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

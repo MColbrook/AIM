@@ -2,9 +2,9 @@
 
 **Area:** Coding theory and discrete geometry
 
-**Status:** 🟡 PARTIAL
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-24
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -31,10 +31,10 @@ Lee distance measures the total magnitude of coordinate errors. Perfect Lee code
 1. P. Horak and D. Kim, [50 Years of the Golomb–Welch Conjecture](https://doi.org/10.1109/TIT.2017.2786675), *IEEE Transactions on Information Theory* **64**(4) (2018), 3048–3061. Section II, Conjecture 3, and Sections III–IV; [author manuscript](https://arxiv.org/html/1706.03589v3).
 2. K. H. Leung and Y. Zhou, [No lattice tiling of $`\mathbb Z^n`$ by Lee sphere of radius 2](https://doi.org/10.1016/j.jcta.2019.105157), *Journal of Combinatorial Theory, Series A* **171** (2020), 105157. [Preprint](https://arxiv.org/abs/1808.08520).
 
+3. B. Chen, J. Huang and G. Luo, [*The Golomb–Welch conjecture for arbitrary centre sets*](https://arxiv.org/pdf/2610.34291v1), arXiv:2610.34291v1 (25 October 2026), equation (1) and Theorem 1.1; proof completion in §5.6.
+
 ## Status review
 
-**Known cases:** The conjecture holds for $`3\leq n\leq5`$ and every $`r\geq2`$, and for sufficiently large radius at each fixed dimension; [1] supplies explicit ranges. For radius two, [2] excludes lattice tilings in every dimension $`n\geq3`$. It also excludes arbitrary tilings when $`2n^2+2n+1`$ is prime, using the prime-cardinality tiling theorem.
+**Complete solution announced; unverified.** Chen, Huang and Luo, Theorem 1.1 of [arXiv:2610.34291v1](https://arxiv.org/pdf/2610.34291v1), announce nonexistence of the displayed translational tiling for every integer $`n\ge3`$ and $`r\ge2`$. Their centre set is arbitrary: no lattice, linearity, periodicity or density assumption is imposed. This matches the full strong conjecture stated here. The companion lattice-only result is not the basis for this status.
 
-**Remaining target:** Exclude arbitrary perfect Lee codes for every remaining pair $`(n,r)`$, or construct a counterexample. The all-dimensional lattice result at radius two does not dispose of general nonlinear codes. Quasi-perfect codes have different packing and covering radii and do not settle this question.
-
-The 2026 primary paper [2-quasi-perfect Lee codes and abelian Ramanujan graphs](https://arxiv.org/html/2601.12393v1), Section 1, explicitly retains the conjecture as open. Searches through 24 September 2026 found no supported general solution announcement or repository duplicate. GitHub results include formalizations expressly limited to the known dimension-three, radius-two lattice case, and an unsupported statement in a conjecture-scoring discussion that the problem was proved in 2023; that discussion provides neither a proof nor a corresponding citation. Palomar returned no matching record. Zenodo's native API returned HTTP 403; indexed searches found no matching announcement.
+The current version and theorem scope were checked on 3 November 2026. The announced proof has not been independently verified or Lean-checked in this audit. [Scope check](../research/solution-status-audit-2026-11-03/lane-b/567.json). Earlier low-dimensional, large-radius and lattice cases remain historical partial progress.

@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "800",
+  "manifest_index": 644,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "800",
+    "title": "Do geometric bounds give a uniform linear count of connecting geodesics?",
+    "area": "Riemannian geometry and quantitative topology",
+    "file": "problems/800-do-geometric-bounds-give-a-uniform-linear-count-of-connecting-geodesics.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-773386dd76f6f489",
+    "group": "geometry-topology",
+    "source_sha256": "e4f5c114b4ecc07ea8ae93d570cc5a70edd4490eb62afa7bc46eba8b37c76868",
+    "statement_sha256": "b1afa27b1e59fa1d5b28d9483094378380513899e345829770274cfffcadb730",
+    "state": "unreviewed"
+  },
+  "source_sha256": "e4f5c114b4ecc07ea8ae93d570cc5a70edd4490eb62afa7bc46eba8b37c76868",
+  "statement_sha256": "b1afa27b1e59fa1d5b28d9483094378380513899e345829770274cfffcadb730",
+  "actual_source_sha256": "e4f5c114b4ecc07ea8ae93d570cc5a70edd4490eb62afa7bc46eba8b37c76868",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix an integer $`n\\ge3`$, $`k\\in\\mathbb R`$ and $`v,D>0`$. Let $`M`$ range over simply connected, closed $`n`$-dimensional Riemannian manifolds with sectional curvature at least $`k`$, volume at least $`v`$ and diameter at most $`D`$. **Is there a constant $`C=C(k,v,D,n)`$ such that, for every $`M`$ in this class, every $`p,q\\in M`$ and every integer $`m\\ge1`$, at least $`m`$ geodesics from $`p`$ to $`q`$ have length at most $`Cm`$?**\n\nThis is the unresolved higher-dimensional part of Conjecture 3 in the 22frg800 workshop report contained in the BIRS 2022 proceedings [1, printed p. 229]. The [standalone workshop report](https://www.birs.ca/workshops/2022/22frg800/report22frg800.pdf) labels the same statement Conjecture 2.1. The report asks about geodesics joining $`p`$ and $`q`$; its separate periodic-geodesic proposal adds a geometrically-distinct qualifier that is not part of this question.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"linear bounds\" connecting geodesics curvature volume diameter 2026 solution",
+    "\"linear bounds\" connecting geodesics curvature volume diameter (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"linear bounds\" connecting geodesics curvature volume diameter (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Linear Bounds for the Lengths of Geodesics\" 2025 2026"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Actual Theorem1.1,Corollaries1.2–1.3 and Introduction, plus §2 contraction construction",
+      "scope_comparison": "The actual theorem and corollary use a c for contracting every length<=2diam loop through loops of length<=c diam. Resulting length coefficient is exp(c exp(G(n,k,v,D))). The c is not bounded in the paper solely by the four target parameters; the Introduction explicitly lists it as an extra constraint. Two-sided curvature bounds or dimension-two estimates are restricted cases. No matching unconditional uniform linear count found.",
+      "primary_body_access_gap": false,
+      "version_or_date": "Current abs record onlyv1 dated14October2024; publisher finalJGA35(2025)217 checked, institutionalPDF403. HTML displayAugust2026 is not a new arXiv revision.",
+      "url": "https://arxiv.org/html/2410.10975v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual theorem and corollary use a c for contracting every length<=2diam loop through loops of length<=c diam. Resulting length coefficient is exp(c exp(G(n,k,v,D))). The c is not bounded in the paper solely by the four target parameters; the Introduction explicitly lists it as an extra constraint. Two-sided curvature bounds or dimension-two estimates are restricted cases. No matching unconditional uniform linear count found.",
+  "latest_version_check": "Current abs record onlyv1 dated14October2024; publisher finalJGA35(2025)217 checked, institutionalPDF403. HTML displayAugust2026 is not a new arXiv revision.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

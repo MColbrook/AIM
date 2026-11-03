@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "618",
+  "manifest_index": 480,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "618",
+    "title": "Reconstructing simplicial spheres from facet adjacency",
+    "area": "Combinatorial topology and polyhedral geometry",
+    "file": "problems/618-kalai-sphere-reconstruction.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "7740bbae3385853a5c6350fa634fcce05a3c34a1de09de11e41faaf81cd5bc81",
+    "statement_sha256": "1ef76c115e4e61e4cba4b28e99c0f96f7889a852af1878e08dabdd35f7a837ee",
+    "state": "unreviewed"
+  },
+  "source_sha256": "7740bbae3385853a5c6350fa634fcce05a3c34a1de09de11e41faaf81cd5bc81",
+  "statement_sha256": "1ef76c115e4e61e4cba4b28e99c0f96f7889a852af1878e08dabdd35f7a837ee",
+  "actual_source_sha256": "7740bbae3385853a5c6350fa634fcce05a3c34a1de09de11e41faaf81cd5bc81",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`K`$ and $`L`$ be finite simplicial complexes whose geometric realizations are homeomorphic to $`S^d`$, where $`d\\ge3`$. Their facet-ridge graphs have one vertex per $`d`$-dimensional facet; two graph vertices are adjacent exactly when their facets share a $`(d-1)`$-face.\n\nProve or disprove that every graph isomorphism\n\n```math\n\\varphi:\\mathop{\\mathrm{FR}}\\nolimits(K)\\longrightarrow\\mathop{\\mathrm{FR}}\\nolimits(L)\n```\n\nis induced by a unique simplicial isomorphism $`K\\to L`$. No shellability or polytopality assumption is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Kalai\" \"sphere reconstruction\" solved shellable 2026",
+    "\"Kalai\" \"sphere reconstruction\" solved shellable (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "version_or_date": "v2, 4 July 2025",
+      "url": "https://arxiv.org/html/2401.04220",
+      "scope_comparison": "The actual theorem proves reconstruction for shellable simplicial spheres. The local target quantifies over arbitrary spheres of dimension at least three and every facet-ridge graph isomorphism, requiring its unique simplicial extension. Shellability is a genuine extra hypothesis.",
+      "locator": "Problem 1.1; Theorem 1.2"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual theorem proves reconstruction for shellable simplicial spheres. The local target quantifies over arbitrary spheres of dimension at least three and every facet-ridge graph isomorphism, requiring its unique simplicial extension. Shellability is a genuine extra hypothesis.",
+  "latest_version_check": "v2, 4 July 2025",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

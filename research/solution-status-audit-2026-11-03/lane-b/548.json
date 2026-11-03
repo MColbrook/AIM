@@ -1,0 +1,122 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "548",
+  "manifest_index": 427,
+  "original_target": {
+    "id": "548",
+    "title": "Separation of measures by Cartan–Hadamard sliced distances",
+    "area": "Statistical inference and optimal transport on manifolds",
+    "file": "problems/548-cartan-hadamard-sliced-separation.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "probability-statistics",
+    "source_sha256": "10d30f24643216d6c87b1adbde9e30f322a2cfa40ef35766da8ffb5107e2e1f4",
+    "statement_sha256": "346594af1a1521c22bbb7a26517b6c5910b79de0eb322c8694aaf6978b126a1f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "10d30f24643216d6c87b1adbde9e30f322a2cfa40ef35766da8ffb5107e2e1f4",
+  "statement_sha256": "346594af1a1521c22bbb7a26517b6c5910b79de0eb322c8694aaf6978b126a1f",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:50:53.426475+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The final JMLR Definition5 and section5.1 retain the general separation conjecture, proving pullback-Euclidean cases only. Both G/H families and the entire direction sphere are required. Hierarchical hybrid transforms retain component injectivity assumptions. The AISTATS2026 work studies Busemann functions on Wasserstein spaces, with closed forms for one-dimensional distributions/Gaussians, not all finite-dimensional Hadamard manifolds.",
+  "primary_sources": [
+    {
+      "url": "https://jmlr.org/papers/volume26/24-0359/24-0359.pdf",
+      "locator": "Definition5, section5.1 pp24–25, Lemma25/Proposition26 p27",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2404.15378",
+      "locator": "Hierarchical hybrid construction; v3, 8 October2024",
+      "body_inspected": true
+    },
+    {
+      "url": "https://proceedings.mlr.press/v300/bonet26a.html",
+      "locator": "AISTATS2026 metadata and abstract",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Cartan-Hadamard\" \"sliced\" \"injectivity\" 2026",
+    "\"Cartan-Hadamard\" \"sliced\" separation measures (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Cartan-Hadamard\" \"sliced\" injectivity proof announcement",
+    "\"Busemann Functions in the Wasserstein Space\" 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "sliced Hadamard",
+        "Cartan",
+        "Busemann"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-20-000011",
+          "title": "Normalizers of congruence subgroups at mixed level: Γ_{H₁}(N₁) ∩ Γ_{H₂}(N₂)"
+        },
+        {
+          "id": "PALOMAR-2026-10-18-000017",
+          "title": "Normalizers of the congruence subgroups Γ_H"
+        },
+        {
+          "id": "PALOMAR-2026-10-18-000013",
+          "title": "Modular automorphisms of Cartan modular curves of prime level"
+        },
+        {
+          "id": "PALOMAR-2026-09-01-000005",
+          "title": "The compositum of the two Mahler minimizers: exact measure, conjugate census, house, and minimal product recurrence, with the Bedford-Kim plastic family, Lehmer's polynomial, and the E_m Coxeter bridge"
+        },
+        {
+          "id": "PALOMAR-2026-09-18-000008",
+          "title": "Several complex variables: local theory, Hartogs phenomena, Weierstrass theory, domains of holomorphy and pseudoconvexity"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "sliced Hadamard",
+        "Cartan",
+        "Busemann"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00658v3",
+          "title": "Riemannian three-manifolds as hypersurfaces of Euclidean four-space: the realizability operator, its symbol, and its linearisation at the round sphere"
+        },
+        {
+          "id": "hexagon:2610.00537v1",
+          "title": "A note of the Cartan determinant conjecture"
+        },
+        {
+          "id": "hexagon:2610.00378v2",
+          "title": "Smooth Local Isometric Embeddings of Riemannian Manifolds in Optimal Dimension"
+        },
+        {
+          "id": "hexagon:2610.00392v2",
+          "title": "Cartan determinants in finite representation type over arbitrary fields"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "AISTATS publisher PDF returned unsupported octet-stream; clear abstract-level different target was not treated as a full claim."
+  ],
+  "canonical_update_required": false
+}

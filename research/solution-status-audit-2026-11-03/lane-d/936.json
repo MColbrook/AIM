@@ -1,0 +1,211 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "936",
+  "manifest_index": 780,
+  "checked_date": "2026-11-03",
+  "source_sha256": "0ac5c7bd96ba2a50900b43e900cc9c40962e8f70a8975dd91e5ab81bacb218af",
+  "statement_sha256": "9c10374d60bc57ed93c10d8af1b91fa385c231fe9e741b10385974e885395467",
+  "original_target": {
+    "id": "936",
+    "title": "Are general Dunkl translations bounded on Lp?",
+    "area": "Harmonic analysis and reflection operators",
+    "file": "problems/936-are-general-dunkl-translations-bounded-on-lp.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ff542bf4be3462b0",
+    "group": "operators",
+    "source_sha256": "0ac5c7bd96ba2a50900b43e900cc9c40962e8f70a8975dd91e5ab81bacb218af",
+    "statement_sha256": "9c10374d60bc57ed93c10d8af1b91fa385c231fe9e741b10385974e885395467",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`R\\subset\\mathbb R^d\\setminus\\{0\\}`$ be a finite reduced root system, $`G`$ its reflection group, $`R_+`$ a positive subsystem, and $`k:R\\to[0,\\infty)`$ invariant under $`G`$. Set\n```math\n\\sigma_\\alpha x=x-2\\frac{\\langle\\alpha,x\\rangle}{|\\alpha|^2}\\alpha,\n\\quad w_k(x)=\\prod_{\\alpha\\in R_+}|\\langle\\alpha,x\\rangle|^{2k(\\alpha)},\n\\quad d\\mu_k=c_kw_k(x)\\,dx,\n```\n\nwhere $`c_k^{-1}=\\int e^{-|x|^2/2}w_k(x)\\,dx`$. Define\n```math\nT_jf=\\partial_jf+\\sum_{\\alpha\\in R_+}k(\\alpha)\\alpha_j\n\\frac{f-f\\circ\\sigma_\\alpha}{\\langle\\alpha,x\\rangle}.\n```\n\nLet $`E_k(x,z)`$ be the normalized analytic kernel satisfying\n$`T_jE_k(\\cdot,z)=z_jE_k(\\cdot,z)`$, $`E_k(0,z)=1`$. For\n```math\n\\mathcal F_kf(\\xi)=\\int f(x)E_k(-i\\xi,x)\\,d\\mu_k(x),\n```\n\ndefine $`\\tau^y`$ initially on $`L^2(d\\mu_k)`$ through\n```math\n\\mathcal F_k(\\tau^yf)(\\xi)=E_k(iy,\\xi)\\mathcal F_kf(\\xi).\n```\n\nFor every such $`R,k`$, every finite $`1\\le p<\\infty`$, $`p\\ne2`$, and every fixed $`y\\in\\mathbb R^d`$, does a finite $`C=C(R,k,p,y)`$ exist with\n```math\n\\|\\tau^yf\\|_{L^p(d\\mu_k)}\\le C\\|f\\|_{L^p(d\\mu_k)}\n\\quad(f\\in\\mathcal S(\\mathbb R^d))?\n```\n\nEquivalently, does each translation extend boundedly to this $`L^p`$ space? Functions need not be radial. No uniform bound over $`y`$, positivity or contraction is required.",
+  "full_original_page": "# 936. Are general Dunkl translations bounded on Lp?\n\n**Area:** Harmonic analysis and reflection operators\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`R\\subset\\mathbb R^d\\setminus\\{0\\}`$ be a finite reduced root system, $`G`$ its reflection group, $`R_+`$ a positive subsystem, and $`k:R\\to[0,\\infty)`$ invariant under $`G`$. Set\n```math\n\\sigma_\\alpha x=x-2\\frac{\\langle\\alpha,x\\rangle}{|\\alpha|^2}\\alpha,\n\\quad w_k(x)=\\prod_{\\alpha\\in R_+}|\\langle\\alpha,x\\rangle|^{2k(\\alpha)},\n\\quad d\\mu_k=c_kw_k(x)\\,dx,\n```\n\nwhere $`c_k^{-1}=\\int e^{-|x|^2/2}w_k(x)\\,dx`$. Define\n```math\nT_jf=\\partial_jf+\\sum_{\\alpha\\in R_+}k(\\alpha)\\alpha_j\n\\frac{f-f\\circ\\sigma_\\alpha}{\\langle\\alpha,x\\rangle}.\n```\n\nLet $`E_k(x,z)`$ be the normalized analytic kernel satisfying\n$`T_jE_k(\\cdot,z)=z_jE_k(\\cdot,z)`$, $`E_k(0,z)=1`$. For\n```math\n\\mathcal F_kf(\\xi)=\\int f(x)E_k(-i\\xi,x)\\,d\\mu_k(x),\n```\n\ndefine $`\\tau^y`$ initially on $`L^2(d\\mu_k)`$ through\n```math\n\\mathcal F_k(\\tau^yf)(\\xi)=E_k(iy,\\xi)\\mathcal F_kf(\\xi).\n```\n\nFor every such $`R,k`$, every finite $`1\\le p<\\infty`$, $`p\\ne2`$, and every fixed $`y\\in\\mathbb R^d`$, does a finite $`C=C(R,k,p,y)`$ exist with\n```math\n\\|\\tau^yf\\|_{L^p(d\\mu_k)}\\le C\\|f\\|_{L^p(d\\mu_k)}\n\\quad(f\\in\\mathcal S(\\mathbb R^d))?\n```\n\nEquivalently, does each translation extend boundedly to this $`L^p`$ space? Functions need not be radial. No uniform bound over $`y`$, positivity or contraction is required.\n\n## Application\n\nSuch bounds would support convolution and potential estimates in harmonic analysis with reflection symmetries.\n\n## References\n\n1. D. V. Gorbachev, V. I. Ivanov and S. Yu. Tikhonov, *Riesz potential and maximal function for Dunkl transform*, [arXiv:1708.09733v1](https://arxiv.org/abs/1708.09733v1), 2017, Introduction, equations (1.2)–(1.4) and following question on p.4.\n2. J. Dziubański and A. Hejna, *Remarks on Dunkl Translations of Non-radial Kernels*, Journal of Fourier Analysis and Applications **29** (2023), article52, [DOI:10.1007/s00041-023-10034-2](https://doi.org/10.1007/s00041-023-10034-2), Introduction and §§2.1–2.3; its question is stated for strictly positive multiplicities.\n\n## Status review\n\n\n**Known cases:** General fixed translations on nonradial functions are the target, including p=1. The September multiplier theorem adds dyadic Sobolev hypotheses; radial and product/rank-one translation results do not settle arbitrary root systems.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nGeneral fixed translations on nonradial functions are the target, including p=1. The September multiplier theorem adds dyadic Sobolev hypotheses; radial and product/rank-one translation results do not settle arbitrary root systems.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe $`p=2`$ bound is known, and $`k=0`$ gives ordinary translations. The [2026 multiplier theorem](https://arxiv.org/html/2609.14298v1) imposes an additional dyadic Sobolev condition and does not itself settle this question. No matching complete or announced resolution was located in bounded checks through 28 October 2026.\n\nThe [source review](../FURTHER_problems/_tracking/focused-Dunkl-Lp-translation-C163-Root-20261028/ROOT-PRECISE-DUNKL-SOURCE-VERSION-CURRENT-ANNOUNCEMENT-GATE.json), [independent formulation check](../FURTHER_problems/_tracking/focused-Dunkl-Lp-translation-C163-Root-20261028/C-INDEPENDENT-FIXED-Y-FINITE-P-FORMULATION-AND-CURRENT-THEOREM-SCOPE-PEER-END.json) and [all-status comparison](../FURTHER_problems/_tracking/focused-Dunkl-Lp-translation-C163-Root-20261028/ROOT-FRESH-983MODELS616P-1704ROWS-EXACT-STRUCTURAL-DUPLICATE-GATE.json) retain the scope and limits. These are AI checks, not human peer review or a proof certificate.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-ff542bf4be3462b0**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Dunkl",
+    "non-radial",
+    "translation"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Dunkl translations\" \"bounded\" \"non-radial\" 2026",
+    "\"Dunkl translations\" \"bounded\" \"non-radial\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2609.14298v1",
+      "locator": "Theorem1.1, lines78–82",
+      "comparison": "Actual multiplier theorem requires a uniform dyadic Sobolev condition and gives only weak(1,1) at endpoint, not strong L1 for every fixed nonradial translation multiplier. Rank-one/product and radial subclasses do not cover every root system."
+    }
+  ],
+  "rationale": "Actual multiplier theorem requires a uniform dyadic Sobolev condition and gives only weak(1,1) at endpoint, not strong L1 for every fixed nonradial translation multiplier. Rank-one/product and radial subclasses do not cover every root system.",
+  "limitations": [
+    "Bounded search does not establish continued openness; selected primary scope statements checked, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "936",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Dunkl",
+          "non-radial",
+          "translation"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-11-03-000015",
+            "title": "A call-by-name to call-by-value CPS adequacy theorem",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-11-03-000015-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000022",
+            "title": "Erdős Problem 656: translated restricted pair sums",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000022-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000018",
+            "title": "Algebraic points on a circle plus at most three arbitrary points are Euclidean Ramsey",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000018-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000007",
+            "title": "Continuum hypothesis independence: a Flypitch reproduction",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000007-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-15-000003",
+            "title": "The Häggkvist–Janssen bound on the list chromatic index of complete graphs",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-15-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-13-000003",
+            "title": "Optimality and uniqueness of Romik's ambidextrous sofa, formalized in Lean 4",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-13-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-12-000007",
+            "title": "Classical theorems of Fröhlich and Spencer: the Kosterlitz–Thouless transition, massless phases of abelian gauge theories, and Anderson localization",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-12-000007-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-02-000008",
+            "title": "Optimality, uniqueness and stability of Gerver's sofa from one coercive certificate, formalized in Lean 4",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-02-000008-v5.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-07-000006",
+            "title": "The CLARK Tile: An Aperiodic Monotile in Five Dimensions",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-07-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-31-000016",
+            "title": "Arthur742Ramos/KuroshSubgroupTheorem",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000016-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-31-000002",
+            "title": "Arthur742Ramos/GraphCoveringTheory",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000002-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Dunkl",
+          "non-radial",
+          "translation"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00734v1",
+            "title": "Density coexistence for hard spheres with a long-range attractive pair interaction",
+            "url": "https://hexagonmath.org/abs/2610.00734v1"
+          },
+          {
+            "id": "hexagon:2610.00616v1",
+            "title": "Binary Reconstruction from the Fourth Deck: Torsion Phases, Local Gluing, and Sign Extinction",
+            "url": "https://hexagonmath.org/abs/2610.00616v1"
+          },
+          {
+            "id": "hexagon:2610.00592v1",
+            "title": "Stability and Convergence of a Regularized Immersed Boundary Method under Dynamic Cartesian Refinement. Part II: General Prescribed Motion",
+            "url": "https://hexagonmath.org/abs/2610.00592v1"
+          },
+          {
+            "id": "hexagon:2610.00471v3",
+            "title": "Residual-dimension obstructions for null-projected supersymmetric Yang--Mills theories",
+            "url": "https://hexagonmath.org/abs/2610.00471v3"
+          },
+          {
+            "id": "hexagon:2610.00351v1",
+            "title": "Prime noise, polynomial observations and trace-preserving completion of multiplicative functions",
+            "url": "https://hexagonmath.org/abs/2610.00351v1"
+          },
+          {
+            "id": "hexagon:2610.00347v1",
+            "title": "Gaussian weights on fractals and Edelman's ghosts and shadows",
+            "url": "https://hexagonmath.org/abs/2610.00347v1"
+          },
+          {
+            "id": "hexagon:2610.00341v6",
+            "title": "Yang--Mills Mass Gap on the Lattice and One Cube from the Continuum",
+            "url": "https://hexagonmath.org/abs/2610.00341v6"
+          },
+          {
+            "id": "hexagon:2610.00163v1",
+            "title": "An exponential improvement for Borsuk's problem",
+            "url": "https://hexagonmath.org/abs/2610.00163v1"
+          },
+          {
+            "id": "hexagon:2609.00110v1",
+            "title": "Frobenius orbit maps and rank-four group schemes",
+            "url": "https://hexagonmath.org/abs/2609.00110v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Dunkl",
+        "non-radial",
+        "translation"
+      ],
+      "hits": [
+        {
+          "entry": "155",
+          "title": "A counterexample to periodic tiling in dimension three",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-translational-tile-with-no-fully-periodic-tiling-in-dimension-three-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "231",
+          "title": "The free uniform spanning forest is a factor of IID",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-free-uniform-spanning-forest-is-a-factor-of-IID-September-25-2026/The-free-uniform-spanning-forest-is-a-factor-of-IID-September-25-2026.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "General translation words, graph/logic/computability claims, sofa motions and unrelated spectral models do not assert uniform Lp bounds for general Dunkl translation operators across root systems and multiplicities.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.726Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

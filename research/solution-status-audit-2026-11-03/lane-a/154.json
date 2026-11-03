@@ -1,0 +1,69 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "154",
+  "manifest_index": 121,
+  "original_target": {
+    "id": "154",
+    "title": "Approximation preserving a compressible elastic energy",
+    "area": "Nonlinear elasticity and variational approximation",
+    "file": "problems/154-elastic-energy-approximation.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "1a3f1e06cf2b4217ee4f127266803881a6350f99910dec99eb26d0d0671cfcca",
+    "statement_sha256": "fbec688ee45618b951d595f79bb474e82a62353336d7ef23afdd78f877ba43f4",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1a3f1e06cf2b4217ee4f127266803881a6350f99910dec99eb26d0d0671cfcca",
+  "statement_sha256": "fbec688ee45618b951d595f79bb474e82a62353336d7ef23afdd78f877ba43f4",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:32:24.166943+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual Hencl2502.01336 Section2 Openproblem4 is the exact E1 energy with determinant inverse power. Unweighted W1p approximation, bi-Sobolev E2, and incompressible constraints are explicitly separate problems and do not imply convergence of this compressible energy. No matching general theorem located.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2502.01336",
+      "locator": "Section2 Openproblem4 E1, comparison to E2/Openproblem5",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Ball Evans\" \"compressible\" \"energy\" 2026 approximation",
+    "\"Ball-Evans\" \"energy\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Ball-Evans",
+        "elastic energy"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Ball-Evans",
+        "elastic energy"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

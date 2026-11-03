@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "040",
+  "manifest_index": 30,
+  "source_sha256": "86426849ba983e6b7a72fc86c29e71ad500d68eb1446b912c292391544b44dab",
+  "statement_sha256": "5d6bcfae98c908e373fc4135a66e328510efd2a044b6e6a91f45d82df9f7538d",
+  "original_target": {
+    "id": "040",
+    "title": "Uniformly effective algebraic multigrid for diagonally dominant systems",
+    "area": "Numerical PDE solvers and preconditioning",
+    "file": "problems/040-universal-algebraic-multigrid.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-15",
+    "outcome": "Qualified randomized AMG construction; deterministic/unqualified target remains.",
+    "proof": "https://arxiv.org/pdf/1506.08204v2",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md",
+    "group": "operators",
+    "source_sha256": "86426849ba983e6b7a72fc86c29e71ad500d68eb1446b912c292391544b44dab",
+    "statement_sha256": "5d6bcfae98c908e373fc4135a66e328510efd2a044b6e6a91f45d82df9f7538d",
+    "state": "unreviewed"
+  },
+  "full_local_statement_read": true,
+  "reviewed_UTC": "2026-11-03T12:19:22.616387+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "A high-probability non-Galerkin AMG construction is already recorded with its probability convention. It is not an unconditional/all-seeds or deterministic algorithm of the originally requested form. Generic nearly-linear Laplacian solvers do not automatically specify the required multigrid components. No new full guarantee found.",
+  "search_terms": [
+    "SWCDDM multigrid2026"
+  ],
+  "host_checks": [
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1506.08204v2",
+      "scope": "Theorem/primary statement scope compared; no full proof audit implied."
+    },
+    {
+      "url": "https://arxiv.org/abs/2602.05394",
+      "scope": "Theorem/primary statement scope compared; no full proof audit implied."
+    }
+  ],
+  "provider_routing": "../_sources/040-provider-routing.json",
+  "provider_listing_counts": {
+    "Palomar": 954,
+    "Hexagon": 646
+  },
+  "limitations": [
+    "Bounded searches and metadata-routing negatives cannot guarantee that no solution exists."
+  ],
+  "canonical_update_required": false
+}

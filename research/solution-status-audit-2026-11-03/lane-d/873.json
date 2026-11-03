@@ -1,0 +1,116 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "873",
+  "manifest_index": 717,
+  "checked_date": "2026-11-03",
+  "source_sha256": "6a71532fe52cd0d1bff59f4f3da077d941a64c13ff075bfda846582eeacedfc4",
+  "statement_sha256": "81276fab96a44ca77806dec1d61a656dfabbd29082d59687cebd5b6f1802e91d",
+  "original_target": {
+    "id": "873",
+    "title": "Scalar-flat realization of extendible Bartnik boundary data",
+    "area": "Mathematical relativity / scalar curvature",
+    "file": "problems/873-scalar-flat-realization-of-extendible-bartnik-boundary-data.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-042d2def81f9ad6a",
+    "group": "mathematical-relativity",
+    "source_sha256": "6a71532fe52cd0d1bff59f4f3da077d941a64c13ff075bfda846582eeacedfc4",
+    "statement_sha256": "81276fab96a44ca77806dec1d61a656dfabbd29082d59687cebd5b6f1802e91d",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\gamma`$ be a smooth Riemannian metric on $`\\mathbb S^2`$, and let $`H:\\mathbb S^2\\to(0,\\infty)`$ be smooth. Suppose these data are realized as the induced boundary metric and boundary mean curvature of a smooth connected Riemannian three-manifold $`(M,g)`$ with the following properties:\n\n- Its boundary is identified with $`\\mathbb S^2`$, and it is complete as a manifold with boundary.\n- It has exactly one asymptotically flat end: outside a compact set there are coordinates in which, for some $`\\tau>1/2`$,\n\n```math\n\\partial^\\alpha(g_{ij}-\\delta_{ij})=O(r^{-\\tau-|\\alpha|}),\\qquad |\\alpha|\\le2.\n```\n\n- Its scalar curvature satisfies $`R_g\\ge0`$ and $`R_g\\in L^1(M,dV_g)`$.\n\nMean curvature is the trace of the second fundamental form for the unit normal pointing into the exterior manifold, toward its asymptotically flat end.\n\nMust there exist a smooth connected manifold $`(\\widetilde M,\\widetilde g)`$ with the same completeness and asymptotic properties, whose boundary has exactly the metric $`\\gamma`$ and mean curvature $`H`$, but with\n\n```math\nR_{\\widetilde g}\\equiv0?\n```\n\nThe topology of $`\\widetilde M`$ need not equal that of $`M`$. Compact minimal surfaces are allowed, and no bound on the ADM mass is prescribed. This is the strictly mean-convex spherical case of Anderson's Conjecture 2.4.",
+  "full_original_page": "# 873. Scalar-flat realization of extendible Bartnik boundary data\n\n**Area:** Mathematical relativity / scalar curvature\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\gamma`$ be a smooth Riemannian metric on $`\\mathbb S^2`$, and let $`H:\\mathbb S^2\\to(0,\\infty)`$ be smooth. Suppose these data are realized as the induced boundary metric and boundary mean curvature of a smooth connected Riemannian three-manifold $`(M,g)`$ with the following properties:\n\n- Its boundary is identified with $`\\mathbb S^2`$, and it is complete as a manifold with boundary.\n- It has exactly one asymptotically flat end: outside a compact set there are coordinates in which, for some $`\\tau>1/2`$,\n\n```math\n\\partial^\\alpha(g_{ij}-\\delta_{ij})=O(r^{-\\tau-|\\alpha|}),\\qquad |\\alpha|\\le2.\n```\n\n- Its scalar curvature satisfies $`R_g\\ge0`$ and $`R_g\\in L^1(M,dV_g)`$.\n\nMean curvature is the trace of the second fundamental form for the unit normal pointing into the exterior manifold, toward its asymptotically flat end.\n\nMust there exist a smooth connected manifold $`(\\widetilde M,\\widetilde g)`$ with the same completeness and asymptotic properties, whose boundary has exactly the metric $`\\gamma`$ and mean curvature $`H`$, but with\n\n```math\nR_{\\widetilde g}\\equiv0?\n```\n\nThe topology of $`\\widetilde M`$ need not equal that of $`M`$. Compact minimal surfaces are allowed, and no bound on the ADM mass is prescribed. This is the strictly mean-convex spherical case of Anderson's Conjecture 2.4.\n\n## Application\n\nIn time-symmetric general relativity, nonnegative scalar curvature represents a nonnegative matter density, while scalar-flat data describe vacuum. The question asks whether boundary geometry already compatible with an exterior containing matter can also be realized by a vacuum exterior. It concerns a basic existence condition in the Bartnik quasi-local mass programme.\n\n## References\n\n1. M. T. Anderson, *Recent progress and problems on the Bartnik quasi-local mass*, Pure and Applied Mathematics Quarterly **15** (2019), 851–873. Conjecture 2.4, p. 859. [Published article](https://doi.org/10.4310/PAMQ.2019.v15.n3.a4), [eligible preprint v1](https://arxiv.org/abs/1903.03822v1), Conjecture 2.4, p. 6.\n2. P. Miao and N. Xie, *Bartnik mass via vacuum extensions*, International Journal of Mathematics **30** (2019), 1940006. Theorems 1.1–1.3 and Remark 1.1. [Published article](https://doi.org/10.1142/S0129167X19400068), [preprint v2](https://arxiv.org/abs/1907.02039v2).\n3. S. McCormick, *The asymptotically flat scalar-flat Yamabe problem with boundary*, Journal of Geometric Analysis **27** (2017), 2269–2277. The separate boundary-metric and mean-curvature prescriptions. [Published article](https://doi.org/10.1007/s12220-017-9760-0), [preprint](https://arxiv.org/abs/1603.05318).\n4. A. Ellithy, *Local Well-posedness of the Bartnik Static Extension Problem near Schwarzschild spheres*, Calculus of Variations and Partial Differential Equations **65** (2026), article 7; published online 4 December 2025. [Published article](https://doi.org/10.1007/s00526-025-03175-3).\n5. Z. An and L.-H. Huang, *Strict Stability of the ADM Mass and Static Vacuum Extensions*, preprint (2026). Theorem 2. [arXiv v1](https://arxiv.org/abs/2609.28101v1).\n\n## Status review\n\n\n**Known cases:** Existing scalar-flat extensions require positive intrinsic Gauss curvature or local perturbation of a static background. Separate prescriptions of the boundary metric or mean curvature do not preserve both simultaneously. Capacity-maximization results solve a different extremal problem.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nExisting scalar-flat extensions require positive intrinsic Gauss curvature or local perturbation of a static background. Separate prescriptions of the boundary metric or mean curvature do not preserve both simultaneously. Capacity-maximization results solve a different extremal problem.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\n**Literature check: 18 October 2026.** The exact question is retained in the published 2019 source. Shi–Tam and Miao–Xie provide scalar-flat extensions when $`K_\\gamma>0`$; arbitrary smooth intrinsic metrics in the displayed conditional problem are not covered by that hypothesis. The later static-extension results above apply to sufficiently small perturbations of existing background data. Later counterexamples to unrestricted static-vacuum extension concern the stronger static system and do not give a counterexample to scalar-flat realization alone.\n\nA conformal correction with boundary value one preserves $`\\gamma`$ but generally changes $`H`$ through its normal derivative. Prescribing mean curvature instead leaves the boundary conformal metric free. Neither separate prescription establishes the simultaneous exact-data assertion here.\n\nThe all-status AIM/OpenAI statement comparison found no duplicate at its recorded extent. The cached Prove2Me comparison checked all 186 listing pages with six aliases and found no match. The existing [scalar-flat apparent-horizon problem](880-scalar-flat-apparent-horizon-extensions-with-prescribed-schwarzschild-mass.md) has minimal boundary and prescribed mass, foliation and Schwarzschild-tail requirements; its target differs from this conditional positive-mean-curvature realization question.\n\nThe [source and current-results review](../FURTHER_problems/_tracking/coordinator-relativity/scalar-flat-realization-review-2026-10-18.json), [independent selected-primary audit](../FURTHER_problems/_tracking/parallel/rough-filtering/cross-scalar-flat-realization-review.json), [semantic comparison](../FURTHER_problems/_tracking/coordinator-relativity/scalar-flat-realization-duplicates-2026-10-18.json), [catalogue receipt](../FURTHER_problems/_tracking/coordinator-relativity/scalar-flat-realization-catalogue-2026-10-18.json) and [coordinator decision](../FURTHER_problems/_tracking/coordinator-relativity/scalar-flat-realization-coordinator-2026-10-18.json) record the exact reading extents. The complete published 23-page survey has not been compared with its 14-page preprint; its published question was checked directly. These checks do not certify absence of every later result.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-042d2def81f9ad6a**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"Bartnik\" \"scalar flat\" \"Conjecture 2.4\" solution",
+    "\"scalar flat\" \"Bartnik\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1903.03822",
+      "locator": "Conjecture2.4 and definitions of P and C_gamma,H",
+      "inspection": "Primary body poses nonnegative-scalar extension implies scalar-flat extension with exact same boundary gamma,H. No positive intrinsic Gauss-curvature assumption in local target. Separate conformal metric/mean-curvature prescription and local static-background results do not automatically keep both data. Recent static theorem bodies still pending."
+    }
+  ],
+  "scope_comparison": "Primary body poses nonnegative-scalar extension implies scalar-flat extension with exact same boundary gamma,H. No positive intrinsic Gauss-curvature assumption in local target. Separate conformal metric/mean-curvature prescription and local static-background results do not automatically keep both data. Recent static theorem bodies still pending.",
+  "rationale": "Bounded searches did not identify a complete matching resolution; hold while specific body gaps stated above remain.",
+  "source_gaps": [
+    "Specific remaining body/locator comparison described in source inspection.",
+    "Snapshot announcement routing pending for this batch."
+  ],
+  "announcement_routing": {
+    "localID": "873",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Bartnik",
+          "scalar-flat realization"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Bartnik",
+          "scalar-flat realization"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Bartnik",
+        "scalar-flat realization"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.070Z",
+      "previous_outcome": "hold",
+      "localID": "873",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "queries": [
+        "\"scalar-flat\" \"Bartnik\" \"static\" 2026 extension",
+        "\"Strict Stability of the ADM Mass and Static Vacuum Extensions\" arxiv"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2609.28101v1",
+          "version": "23 September 2026",
+          "locator": "primary abstract lines16–17; HTMLintroduction49",
+          "inspection": "An–Huang prove static extensions for nearby Euclidean boundary data and local mass minimization near strictly stable static exteriors. Nearness/stability are additional premises; no arbitrary extendible Bartnik data theorem is asserted."
+        },
+        {
+          "url": "https://arxiv.org/abs/2602.12383v1",
+          "version": "12 February 2026",
+          "locator": "primary abstract",
+          "inspection": "Jauregui derives critical-point conditions assuming a capacity-maximizing extension and analyzes harmonic-static metrics locally; it is not an extension existence theorem for arbitrary target data."
+        }
+      ],
+      "scope_comparison": "Exact original Conjecture2.4 body read. Restricted local and variational claims can be excluded without auditing their entire proofs. No plausible full matching unresolved body gap remains."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "103",
+  "manifest_index": 76,
+  "original_target": {
+    "id": "103",
+    "title": "The disk maximizes the first magnetic Neumann eigenvalue",
+    "area": "Magnetic spectral optimization",
+    "file": "problems/103-magnetic-neumann-disk.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-08",
+    "group": "spectral2",
+    "source_sha256": "fa0afebb1106f4d75637159018d1c212a6385ab5bf17c904a2a81cb2388ebb33",
+    "statement_sha256": "fe720b736c5abb1ad53eac0fbce3c1ffc268a9d4232af4dd1fee892013c4fd86",
+    "state": "unreviewed"
+  },
+  "source_sha256": "fa0afebb1106f4d75637159018d1c212a6385ab5bf17c904a2a81cb2388ebb33",
+  "statement_sha256": "fe720b736c5abb1ad53eac0fbce3c1ffc268a9d4232af4dd1fee892013c4fd86",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:55:49.550554+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Lena–Sundqvist September paper settles magnetic-field monotonicity and deGennes bound for the disk itself, not comparison with every simply connected domain at fixed area. The shape theorem known while disk ground state is radial leaves nonradial angular-momentum branches. Disk-only conjectures are not Fournais–Helffer all-shapes.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/2609.08774",
+      "locator": "Abstract and §1 active angular-momentum branches.",
+      "body_inspected": false
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s12220-026-02363-7",
+      "locator": "§1 magnetic-Neumann shape comparison discussion.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "magnetic Neumann",
+    "Fournais",
+    "Helffer"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "magnetic Neumann",
+        "Fournais",
+        "Helffer"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "magnetic Neumann",
+        "Fournais",
+        "Helffer"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches of arXiv, Zenodo, HAL, GitHub plus shared current Palomar, Hexagon and OpenAI metadata, and requested Colbrook author lists.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

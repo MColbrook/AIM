@@ -1,0 +1,99 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1065",
+  "manifest_index": 909,
+  "checked_date": "2026-11-03",
+  "source_sha256": "59b94da5ceb37b5b0386572a9864cd59c5de35f6b8a31e417a66cd6ef6aa82b6",
+  "statement_sha256": "043257491e43e3447612d3e28593f246c2222633eb61b73eb6636ce21c73b220",
+  "original_target": {
+    "id": "1065",
+    "title": "Does critical spatial damping prevent small-data blow-up for two-dimensional compressible Euler when its strength exceeds one?",
+    "area": "Nonlinear hyperbolic PDE and compressible flow",
+    "file": "problems/1065-does-critical-spatial-damping-prevent-small-data-blow-up-for-two-dimensional-compressible-euler-when.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f53021b2c4ee4885",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "59b94da5ceb37b5b0386572a9864cd59c5de35f6b8a31e417a66cd6ef6aa82b6",
+    "statement_sha256": "043257491e43e3447612d3e28593f246c2222633eb61b73eb6636ce21c73b220",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For $`x\\in\\mathbb R^2`$, consider the isentropic compressible Euler system with critical space-dependent damping\n\n```math\n\\rho_t+\\nabla\\!\\cdot(\\rho u)=0,\\qquad\n(\\rho u)_t+\\nabla\\!\\cdot(\\rho u\\otimes u)+\\nabla(\\rho^\\gamma/\\gamma)\n+\\frac{\\mu\\rho u}{1+|x|}=0,\n```\n\nwhere $`\\gamma\\ge2`$ and $`\\mu>1`$. For smooth, compactly supported perturbations of the constant state, $`\\rho(0,x)=1+\\varepsilon\\rho_0(x)>0`$ and $`u(0,x)=\\varepsilon u_0(x)`$ with $`\\mathrm{curl}u_0=0`$, does every sufficiently small $`\\varepsilon>0`$ give a global classical solution? We retain the pressure normalization $`P=\\rho^\\gamma/\\gamma`$ used for the cited paper's critical value $`\\mu=1`$. A counterexample for any $`\\mu>1`$ in this data class would refute the proposed spatial-damping analogue of the time-dependent threshold.",
+  "full_original_page": "# 1065. Does critical spatial damping prevent small-data blow-up for two-dimensional compressible Euler when its strength exceeds one?\n\n**Area:** Nonlinear hyperbolic PDE and compressible flow\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor $`x\\in\\mathbb R^2`$, consider the isentropic compressible Euler system with critical space-dependent damping\n\n```math\n\\rho_t+\\nabla\\!\\cdot(\\rho u)=0,\\qquad\n(\\rho u)_t+\\nabla\\!\\cdot(\\rho u\\otimes u)+\\nabla(\\rho^\\gamma/\\gamma)\n+\\frac{\\mu\\rho u}{1+|x|}=0,\n```\n\nwhere $`\\gamma\\ge2`$ and $`\\mu>1`$. For smooth, compactly supported perturbations of the constant state, $`\\rho(0,x)=1+\\varepsilon\\rho_0(x)>0`$ and $`u(0,x)=\\varepsilon u_0(x)`$ with $`\\mathrm{curl}u_0=0`$, does every sufficiently small $`\\varepsilon>0`$ give a global classical solution? We retain the pressure normalization $`P=\\rho^\\gamma/\\gamma`$ used for the cited paper's critical value $`\\mu=1`$. A counterexample for any $`\\mu>1`$ in this data class would refute the proposed spatial-damping analogue of the time-dependent threshold.\n\n## Application\n\nThe cited paper proves finite-time blow-up for $`0<\\mu\\le1`$ at the critical spatial decay $`1/(1+|x|)`$, under a positive-moment condition on the initial perturbation. For the corresponding time-dependent damping $`\\mu/(1+t)`$, small-data global existence is known on the $`\\mu>1`$ side in two dimensions. Remark 1.2 of the spatial paper expects the same threshold and lifespan pattern but says this remains to be confirmed. The question above isolates the unproved global-existence side; it does not assert that the spatial and temporal equations are interchangeable.\n\n## References\n\n- J. Zhou, L. Ma and N.-A. Lai, [*Blow-up for the compressible Euler system with critical space-dependent damping in $`\\mathbb R^2`$*](https://doi.org/10.3934/dcdss.2026153), *Discrete Contin. Dyn. Syst. Ser. S* **29** (2026), 673–687. See system (1) on printed p. 673, Theorem 1.1 on pp. 675–676 and Remark 1.2 on p. 676.\n- F. Hou and H. Yin, [*On the global existence and blowup of smooth solutions to the multi-dimensional compressible Euler equations with time-depending damping*](https://doi.org/10.1088/1361-6544/aa6d93), *Nonlinearity* **30** (2017), 2485–2517. Its two-dimensional $`\\mu>1`$ global result assumes curl-free initial velocity and **time**-dependent damping; it provides the comparison, not a solution of the spatial problem.\n\n## Status review\n\n\n**Known cases:** The damping is mu/(1+|x|) in two dimensions with mu>1. Critical time-damping, one-dimensional spatiotemporal models and blowup for mu<=1 do not decide the proposed spatial small-data threshold.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe damping is mu/(1+|x|) in two dimensions with mu>1. Critical time-damping, one-dimensional spatiotemporal models and blowup for mu<=1 do not decide the proposed spatial small-data threshold.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe source's Remark 1.2 is an expectation rather than a theorem. The 2026 paper settles a blow-up range $`0<\\mu\\le1`$ under additional data conditions, leaving the general small-data $`\\mu>1`$ spatial case open within its analysis. Bounded searches through 22 October 2026 for the exact DOI/title, its authors, the critical $`1/(1+|x|)`$ coefficient, small-data global existence and announced follow-ups found no matching resolution. One-dimensional spatial or spatiotemporal damping results and two-dimensional **time**-damping results have different hypotheses. This bounded search does not certify exhaustive present-day openness. The [body receipt](../FURTHER_problems/_tracking/parallel/complex-bayesian/journal-primary-body-second-pass-0666-J346-cached-backfill-body-review.json), [status check](../FURTHER_problems/_tracking/euler-critical-spatial-damping-status-2026-10-22.json) and [duplicate check](../FURTHER_problems/_tracking/euler-critical-spatial-damping-duplicates-2026-10-22.json) record the scope.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f53021b2c4ee4885**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "critical spatial damping",
+    "Zhou Ma Lai",
+    "compressible Euler damping"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"Euler\" \"critical space-dependent damping\" \"mu\" 2026 global"
+    },
+    {
+      "query": "Euler critical spatial damping mu greater one",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.aimsciences.org/article/doi/10.3934/dcdss.2026153",
+      "locator": "2026publishedabstractrange0<=mu<=1;primarynativecachedRemark1.2printed676physical4read"
+    }
+  ],
+  "scope_comparison": "Actualpaperprovesblowupfor0<=mu<=1andRemark1.2expectssameborderlineastime-dampingwithoutproof. Targetmu>1,spacecoefficient1/(1+|x|),allsmallcurlfreecompactperturbationsgamma>=2. Temporalmu/(1+t)and1Dspatiotemporaltheoremsdo not coverit. No full matchingannouncement.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative search doesnotproveopenness. Actualcomparison theorem/operator/quantifiersinspected, nofullproofcertification. 1065nativepublisherbodyRemark1.2readfromexistingcacheandcurrentabstractrechecked.",
+  "announcement_routing": {
+    "localID": "1065",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "critical spatial damping",
+          "Zhou Ma Lai",
+          "compressible Euler damping"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "critical spatial damping",
+          "Zhou Ma Lai",
+          "compressible Euler damping"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "critical spatial damping",
+        "Zhou Ma Lai",
+        "compressible Euler damping"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

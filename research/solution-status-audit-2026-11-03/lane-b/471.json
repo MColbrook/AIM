@@ -1,0 +1,73 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "471",
+  "manifest_index": 373,
+  "original_target": {
+    "id": "471",
+    "title": "Flatness of three-dimensional fractional minimizing cones for every interaction order",
+    "area": "Nonlocal variational PDEs; phase interfaces",
+    "file": "problems/471-fractional-minimizing-cones-three-dimensional.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "354e3ed7062018ac0a749c2d5bcd8921cbcad2437b150dd5160f4f71382fa646",
+    "statement_sha256": "b1024950efe4b14c48f693c6ece556d6deaf53d332e2d8e8579c6cf965b5af32",
+    "state": "unreviewed"
+  },
+  "source_sha256": "354e3ed7062018ac0a749c2d5bcd8921cbcad2437b150dd5160f4f71382fa646",
+  "statement_sha256": "b1024950efe4b14c48f693c6ece556d6deaf53d332e2d8e8579c6cf965b5af32",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:17:44.318496+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The actual2608.21340v1 Theorem1.1 applies only0<s<s_*, including locally minimizing cones but not the intervening orders. Current submission is onlyv1,21August2026. Near-one results remain complementary, not all-order flatness.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2608.21340v1",
+      "locator": "Theorem1.1",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.21340",
+      "locator": "Current version history",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"minimal cones\" \"flat\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) 2026 fractional"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "minimal cones",
+        "Tsiamis"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "minimal cones",
+        "Tsiamis"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "527",
+  "manifest_index": 410,
+  "original_target": {
+    "id": "527",
+    "title": "Arbitrarily slow strong approximation of a smooth scalar stochastic equation",
+    "area": "Numerical analysis of stochastic differential equations",
+    "file": "problems/527-arbitrarily-slow-strong-approximation-of-a-smooth-scalar-stochastic-equation.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-46b826d1084f3de2",
+    "group": "numerical-analysis",
+    "source_sha256": "5c40595b6893ac6af233a6baf4536697f25d58cd9243c5b7b72390e1de7fe219",
+    "statement_sha256": "3a9fad7376f0247eb677a7711dae2aba47ca80465a4e08416648f518bfb848ad",
+    "state": "unreviewed"
+  },
+  "source_sha256": "5c40595b6893ac6af233a6baf4536697f25d58cd9243c5b7b72390e1de7fe219",
+  "statement_sha256": "3a9fad7376f0247eb677a7711dae2aba47ca80465a4e08416648f518bfb848ad",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:35.906216+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The source Theorem 8 and Remark 4(ii) explicitly leave the smooth bounded autonomous scalar case. The higher-dimensional lower bound requires d>=2; CIR/square-root coefficients and time-dependent coefficients do not satisfy the scalar target assumptions.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2403.00637v1",
+      "locator": "Theorem 8, Remark 4(ii); current v1, 1 March 2024",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/1702.03229v2",
+      "locator": "Theorem 1.2, d in {2,3,...}",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"scalar\" \"arbitrarily slow\" \"stochastic\" 2026",
+    "\"scalar\" \"arbitrarily slow\" SDE solution (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"scalar\" \"arbitrarily slow\" \"2026\" SDE proof"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "arbitrarily slow"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "arbitrarily slow"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Final 2024 publication parity was not reverified."
+  ],
+  "canonical_update_required": false
+}

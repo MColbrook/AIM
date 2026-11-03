@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "661",
+  "manifest_index": 507,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "661",
+    "title": "Large Lipschitz graph pieces from single-scale projections",
+    "area": "Geometric measure theory and harmonic analysis",
+    "file": "problems/661-large-lipschitz-graph-pieces-from-single-scale-projections.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c15ec6d2cd76af6a",
+    "group": "geometry-topology",
+    "source_sha256": "f419b420e898274c5f7adc3c2c3d6fb5efc4ed186ee97666d35da2bb00947efe",
+    "statement_sha256": "95f6bedfcf46e0b957254af1a95cb80f03a896a6f70b12598397b0f03a8a9349",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f419b420e898274c5f7adc3c2c3d6fb5efc4ed186ee97666d35da2bb00947efe",
+  "statement_sha256": "95f6bedfcf46e0b957254af1a95cb80f03a896a6f70b12598397b0f03a8a9349",
+  "actual_source_sha256": "f419b420e898274c5f7adc3c2c3d6fb5efc4ed186ee97666d35da2bb00947efe",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix integers $`2\\le n<d`$. For every $`\\delta>0`$ and $`C_0\\ge1`$, do there exist constants\n```math\nL=L(n,d,\\delta,C_0)\\ge1,\\qquad\n\\theta=\\theta(n,d,\\delta,C_0)>0\n```\n\nwith the following property?\n\nLet $`E\\subset\\mathbb R^d`$ be closed and $`n`$-Ahlfors–David regular with constant at most $`C_0`$: writing $`\\mathcal H^n`$ for $`n`$-dimensional Hausdorff measure,\n```math\nC_0^{-1}r^n\\le\\mathcal H^n(E\\cap B(x,r))\\le C_0r^n\n\\quad(x\\in E,\\ 0<r<\\mathrm{diam}E).\n```\n\nThe diameter may be infinite. Here $`B(x,r)`$ is an open Euclidean ball.\n\nLet $`G(d,n)`$ be the set of $`n`$-dimensional linear subspaces of $`\\mathbb R^d`$, and let $`\\pi_V`$ denote orthogonal projection onto $`V`$. Suppose that for some $`V_0\\in G(d,n)`$,\n```math\n\\mathcal H^n\\!\\left(\\pi_V(E\\cap B(0,1))\\right)\\ge\\delta\n\\quad\\text{whenever }\\|\\pi_V-\\pi_{V_0}\\|_{\\mathrm{op}}<\\delta .\n```\n\nMust there be an $`n`$-dimensional $`L`$-Lipschitz graph $`\\Gamma\\subset\\mathbb R^d`$ such that\n```math\n\\mathcal H^n(E\\cap\\Gamma)\\ge\\theta?\n```\n\nPrecisely, such a graph has the form $`\\Gamma=\\{v+g(v):v\\in W\\}`$, where $`W\\in G(d,n)`$ and $`g:W\\to W^\\perp`$ is $`L`$-Lipschitz. The graph's orientation is free. The constants are chosen before $`E`$ and $`V_0`$.\n\nThis is the $`n\\ge2`$ residual of [1, Question 1]. The conclusion follows the source: its measured intersection is $`E\\cap\\Gamma`$, without an additional restriction to $`B(0,1)`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"big projections\" \"single scale\" \"Lipschitz graphs\" 2026",
+    "\"big projections\" \"single scale\" \"Lipschitz graphs\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2408.03919v1",
+      "locator": "Remark1.4, lines146–150",
+      "version_or_date": "v1,7August2024; latest record inspected",
+      "scope_comparison": "The single-scale announcement proves the planar branch. Remark1.4 identifies higher-dimensional n-projection counterparts as a prospective extension. The local target is n>=2 and only projected-set lower bounds at one scale. All-ball/all-scale projection theorems or projected-measure norm assumptions are stronger.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The single-scale announcement proves the planar branch. Remark1.4 identifies higher-dimensional n-projection counterparts as a prospective extension. The local target is n>=2 and only projected-set lower bounds at one scale. All-ball/all-scale projection theorems or projected-measure norm assumptions are stronger.",
+  "latest_version_check": "v1,7August2024; latest record inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

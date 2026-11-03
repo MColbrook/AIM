@@ -1,0 +1,80 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "067",
+  "manifest_index": 47,
+  "original_target": {
+    "id": "067",
+    "title": "How many intensity measurements guarantee complex phase retrieval?",
+    "area": "Inverse problems; phase retrieval and quantum tomography",
+    "file": "problems/067-how-many-intensity-measurements-guarantee-complex-phase-retrieval.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-171c662c4b5e87bb",
+    "group": "inverse",
+    "source_sha256": "9b0e9c8bdf29ce11f7656dd8c7f28c531240a25d9fb6cb34c3f992945f2153c5",
+    "statement_sha256": "74ce9c6e578887348f58018d0edce839a6e122517a661965f27812e981a1c4e6",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9b0e9c8bdf29ce11f7656dd8c7f28c531240a25d9fb6cb34c3f992945f2153c5",
+  "statement_sha256": "74ce9c6e578887348f58018d0edce839a6e122517a661965f27812e981a1c4e6",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:36:54.058415+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Huang–Kim v3 determines only N*(4)=11. Xu v3 explicitly concerns almost-everywhere recovery, a weaker signal quantifier. Hexagon2609.00126 concerns orthonormal-basis measurements in dimension4; stationary Schrödinger phase retrieval is not the finite-vector all-dimensional minimum. None gives N*(M) for every M.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2607.27719v3",
+      "locator": "Introduction and Theorem1.1, dimension4.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2608.15003v3",
+      "locator": "Definition1.1 and main theorem, almost-everywhere quantifier.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "phase retrieval"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "phase retrieval"
+      ],
+      "metadata_hits": [],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "phase retrieval"
+      ],
+      "metadata_hits": [
+        {
+          "id": "2610.00146",
+          "title": "Phase retrieval for stationary Schrödinger evolutions"
+        },
+        {
+          "id": "2609.00126",
+          "title": "Pauli problem in dimension 4"
+        }
+      ],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted web searches; arXiv, Zenodo, HAL, GitHub, shared OpenAI current index and requested Colbrook author lists screened. No matching complete claim located.",
+  "limitations": [
+    "Bounded search cannot establish absence of unindexed solutions.",
+    "No end-to-end proof or Lean verification; clearly excluding source hypotheses can be established by a primary abstract."
+  ],
+  "canonical_update_required": false
+}

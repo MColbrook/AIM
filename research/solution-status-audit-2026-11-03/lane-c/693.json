@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "693",
+  "manifest_index": 537,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "693",
+    "title": "An analytic twist map with an irrational invariant circle that is not C1",
+    "area": "Conservative dynamics and small divisors",
+    "file": "problems/693-an-analytic-twist-map-with-an-irrational-invariant-circle-that-is-not-c1.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-6b381ca6998045ca",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "4d4328ff5107c337e375da42f7c22b55377da4464869dea500227b4230bd4453",
+    "statement_sha256": "643e8656126b6da0c679b3713b23e05028a6592b5f3d9de4692296d581b6a5bc",
+    "state": "unreviewed"
+  },
+  "source_sha256": "4d4328ff5107c337e375da42f7c22b55377da4464869dea500227b4230bd4453",
+  "statement_sha256": "643e8656126b6da0c679b3713b23e05028a6592b5f3d9de4692296d581b6a5bc",
+  "actual_source_sha256": "4d4328ff5107c337e375da42f7c22b55377da4464869dea500227b4230bd4453",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Write $`\\mathbb T=\\mathbb R/\\mathbb Z`$. Does there exist a real-analytic diffeomorphism $`f:\\mathbb T\\times\\mathbb R\\to\\mathbb T\\times\\mathbb R`$, isotopic to the identity and preserving $`dx\\wedge dy`$, with the following properties?\n\nA lift $`F=(F_1,F_2):\\mathbb R^2\\to\\mathbb R^2`$ satisfies\n\n```math\nF_1(x+1,y)=F_1(x,y)+1,\\qquad F_2(x+1,y)=F_2(x,y),\\qquad \\partial_yF_1(x,y)>0,\n```\n\nand for every $`x`$, the map $`y\\mapsto F_1(x,y)`$ is a diffeomorphism of $`\\mathbb R`$ onto itself. There is a Lipschitz function $`\\gamma:\\mathbb T\\to\\mathbb R`$ whose essential graph $`\\Gamma=\\{(x,\\gamma(x)):x\\in\\mathbb T\\}`$ is invariant under $`f`$, is not a $`C^1`$ embedded curve, and has irrational rotation number under the restricted dynamics. More explicitly, the induced orientation-preserving circle homeomorphism\n\n```math\ng(x)=\\pi_1 f(x,\\gamma(x))\n```\n\nhas $`\\mathrm{rot}(g)=\\lim_{n\\to\\infty}(G^n(x)-x)/n\\pmod{\\mathbb Z}\\notin\\mathbb Q/\\mathbb Z`$, for a lift $`G`$.\n\nNo prescribed irrational number, minimality, closeness to an integrable map, or corner at a specified point is required. The twist inequality is pointwise; a uniform positive lower bound is not added. Failure of $`C^1`$ embedded-curve regularity is equivalent here to failure of $`C^1`$ regularity of the Lipschitz graph function.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"analytic twist\" \"invariant\" \"non-differentiable\" proof 2026",
+    "\"analytic twist\" \"invariant\" \"non-differentiable\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The actual analytic rough-graph construction has conformal symplectic factor lambda strictly between0and1, so F*Omega=lambdaOmega. It is dissipative, not area preserving as required by the target. Smooth non-KAM examples failing C^(2+epsilon) do not imply non-C1 geometry. No complete analytic conservative global-twist example identified.",
+      "locator": "TheoremC(ii) lines155–168 and ECS formula6 lines138–139",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2610.35068v1",
+      "version_or_date": "arXiv2610.35068v1,26October2026"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The actual analytic rough-graph construction has conformal symplectic factor lambda strictly between0and1, so F*Omega=lambdaOmega. It is dissipative, not area preserving as required by the target. Smooth non-KAM examples failing C^(2+epsilon) do not imply non-C1 geometry. No complete analytic conservative global-twist example identified.",
+  "latest_version_check": "arXiv2610.35068v1,26October2026",
+  "gap_retraction_check": "Local page records2608.05239v2 withdrawal and v3 replacement. That family is not promoted; latest considered complete candidate here is2610.35068v1 with explicit mismatching dissipation.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

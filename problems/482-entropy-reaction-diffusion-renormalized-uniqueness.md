@@ -4,7 +4,7 @@
 
 **Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -47,6 +47,8 @@ General reaction networks already admit global renormalized concentration fields
 
 ## Status review
 
+**Attribution corrected 2026-10-21:** The manuscript is by Kaiwen Jin. [PR 177](https://github.com/MColbrook/AIM/pull/177) restores its author and contact fields without changing the mathematics; see the [correction review](../research/solution_reviews/2026-10-21-active-prs/177-attribution-review.md).
+
 Reviewed 15 October 2026 against the original target in [PR #163](https://github.com/MColbrook/AIM/pull/163). The unrestricted finite-entropy renormalized reaction–diffusion uniqueness assertion is false.
 
 [Proof or source](../research/solutions/entropy-cubic-nonuniqueness/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/482-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
@@ -60,3 +62,5 @@ The following historical notes are retained; the current decision and review dat
 **Literature check:** Open in cited literature; no later resolution located.
 
 Fischer proves uniqueness conditional on a strong solution, while the 2023 discussion and the August 2026 preprint explicitly retain unconditional uniqueness as unresolved. Searches on 2026-09-22 for renormalized reaction–diffusion uniqueness found further weak–strong results, including interface problems, but no unconditional theorem for this entropy class. This question fixes linear diffusion and concerns uniqueness; it does not restate the separate smooth-existence question for high-order mass-action reactions.
+
+**Local incorporation, 3 November 2026:** The dated upstream evidence is incorporated for this exact historical problem identity. The October audits and execution dates remain their original dates; this incorporation is not a new full proof audit or a fresh Normaliz replay.

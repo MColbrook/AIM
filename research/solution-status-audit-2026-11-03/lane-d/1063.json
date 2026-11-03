@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1063",
+  "manifest_index": 907,
+  "checked_date": "2026-11-03",
+  "source_sha256": "fd3121e13490c250dc1585989100bc1212a75b70e5c64e3ba89bf03784af8013",
+  "statement_sha256": "8f25ed02134df044e985d3f969dee07390fb886bf33c6528b81b5fa4f426643a",
+  "original_target": {
+    "id": "1063",
+    "title": "Free vibrations at every prescribed irrational period",
+    "area": "Nonlinear wave equations and variational methods",
+    "file": "problems/1063-free-vibrations-at-every-prescribed-irrational-period.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e4e231b718375b04",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "fd3121e13490c250dc1585989100bc1212a75b70e5c64e3ba89bf03784af8013",
+    "statement_sha256": "8f25ed02134df044e985d3f969dee07390fb886bf33c6528b81b5fa4f426643a",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For $`p>2`$ and $`T>0`$, put $`Q_T=(0,T)\\times(0,\\pi)`$. Consider the real, unforced, defocusing wave equation\n```math\nu_{tt}-u_{xx}+|u|^{p-2}u=0,\\qquad\n u(t,0)=u(t,\\pi)=0,\\qquad\n u(t+T,x)=u(t,x).\n```\n\n\nHere a weak solution means a real function $`u\\in L^p(Q_T)`$, extended $`T`$-periodically in time, for which\n```math\n\\int_0^T\\!\\!\\int_0^\\pi\n \\left[u(\\varphi_{tt}-\\varphi_{xx})+\n       |u|^{p-2}u\\,\\varphi\\right]\\,dx\\,dt=0\n```\n\nfor every smooth, $`T`$-periodic test function $`\\varphi`$ on\n$`\\mathbb R\\times[0,\\pi]`$ with $`\\varphi(t,0)=\\varphi(t,\\pi)=0`$.\nNo integrability of the derivatives of $`u`$ is assumed.\n\n**For every $`p>2`$ and every prescribed $`T>0`$ with $`T/\\pi\\notin\\mathbb Q`$, does there exist such a weak solution that is not identically zero?**\n\nThe period $`T`$ need not be the least positive period. There is no smallness condition, no external forcing, and no Diophantine restriction on the irrational number $`T/\\pi`$. The cubic case is $`p=4`$.",
+  "full_original_page": "# 1063. Free vibrations at every prescribed irrational period\n\n**Area:** Nonlinear wave equations and variational methods\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor $`p>2`$ and $`T>0`$, put $`Q_T=(0,T)\\times(0,\\pi)`$. Consider the real, unforced, defocusing wave equation\n```math\nu_{tt}-u_{xx}+|u|^{p-2}u=0,\\qquad\n u(t,0)=u(t,\\pi)=0,\\qquad\n u(t+T,x)=u(t,x).\n```\n\n\nHere a weak solution means a real function $`u\\in L^p(Q_T)`$, extended $`T`$-periodically in time, for which\n```math\n\\int_0^T\\!\\!\\int_0^\\pi\n \\left[u(\\varphi_{tt}-\\varphi_{xx})+\n       |u|^{p-2}u\\,\\varphi\\right]\\,dx\\,dt=0\n```\n\nfor every smooth, $`T`$-periodic test function $`\\varphi`$ on\n$`\\mathbb R\\times[0,\\pi]`$ with $`\\varphi(t,0)=\\varphi(t,\\pi)=0`$.\nNo integrability of the derivatives of $`u`$ is assumed.\n\n**For every $`p>2`$ and every prescribed $`T>0`$ with $`T/\\pi\\notin\\mathbb Q`$, does there exist such a weak solution that is not identically zero?**\n\nThe period $`T`$ need not be the least positive period. There is no smallness condition, no external forcing, and no Diophantine restriction on the irrational number $`T/\\pi`$. The cubic case is $`p=4`$.\n\n## Application\n\nThis asks whether a nonlinear string with a defocusing restoring force admits a free oscillation at every prescribed repetition time. It would extend the existence theory from selected periods to all irrational ratios between the time period and the spatial length.\n\n## References\n\n1. M. Struwe, *Variational Methods: Applications to Nonlinear Partial Differential Equations and Hamiltonian Systems*, fourth edition, Springer, 2008, Chapter I, §6, equations (6.8)–(6.10), Theorem 6.6 and the following remark, printed p. 65. The remark's reference to Theorem 6.7 appears to be a numbering error; it follows the displayed periodic-wave Theorem 6.6. [Book](https://doi.org/10.1007/978-3-540-74013-1). [University course copy](https://www.ljll.fr/smets/ULM/Struwe.pdf).\n2. E. Feireisl, *Wave equations, examples and qualitative properties*, institutional lecture notes, §6.1.1 and Definition 6.1, pp. 41–42, for the weak periodic Dirichlet formulation. The supplied notes are undated. [Notes](https://www.math.cas.cz/oldim/fichier/course/filepdf/course_pdf_20121128091130_33.pdf).\n3. M. Berti and P. Bolle, *Cantor families of periodic solutions for wave equations via a variational principle*, Advances in Mathematics **217** (2008), 1671–1727. Theorem 1.1 in the cited 2006 preprint gives the frequency scope used below. [Article](https://doi.org/10.1016/j.aim.2007.11.004). [Versioned repository preprint](https://web.ma.utexas.edu/mp_arc/c/06/06-160.pdf).\n4. A. Nowakowski and A. Rogowski, *Wave equation in higher dimensions—periodic solutions*, Electronic Journal of Qualitative Theory of Differential Equations **2018**, no. 103, 1–31, Introduction, p. 3. [Article](https://doi.org/10.14232/ejqtde.2018.1.103). [Official text](https://www.math.u-szeged.hu/ejqtde/p6921.pdf).\n5. F. Ficek and M. Maliborski, *Periodic solutions for the 1D cubic wave equation with Dirichlet boundary conditions*, Nonlinearity **38** (2025), 065016, Introduction and Conclusions. [Article](https://doi.org/10.1088/1361-6544/add831). [Author-hosted published text](https://homepage.univie.ac.at/filip.ficek/papers/Ficek_2025_Nonlinearity.pdf).\n6. F. Ficek and M. Maliborski, *New class of time-periodic solutions to the 1D cubic wave equation*, arXiv:2506.10839v1 (2025), Theorem 1. [Preprint](https://arxiv.org/abs/2506.10839v1).\n7. F. Ficek, *Time-periodic solutions to the cubic wave equation: an elementary constructive approach*, arXiv:2510.20054v1 (2025), Theorem 1 and Remarks 1–2. [Preprint](https://arxiv.org/abs/2510.20054v1).\n8. F. Ficek and M. Maliborski, *Nonlinear Oscillations of Strings and Beams*, Progress of Theoretical and Experimental Physics **2026**, 021A01, §2.1 and §3. [Article](https://doi.org/10.1093/ptep/ptag002). [Author-hosted published text](https://homepage.univie.ac.at/filip.ficek/papers/Ficek_2026_PTEP.pdf).\n\n## Status review\n\n\n**Known cases:** Every prescribed irrational period is included, without a Diophantine restriction or smallness. Rational-period existence, Cantor families and numerical continuation do not cover all irrational periods for this weak class.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nEvery prescribed irrational period is included, without a Diophantine restriction or smallness. Rational-period existence, Cantor families and numerical continuation do not cover all irrational periods for this weak class.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nStruwe explicitly asks for the irrational-period extension of the rational-period weak-solution theorem. The $`L^p`$ condition here is imposed on one time period, rather than on the entire infinite time axis.\n\nCantor-family results establish existence for selected frequencies and hypotheses; their frequency quantifiers do not give every prescribed irrational period. The 2018 higher-dimensional paper explicitly warns that its theorems need not establish existence for a given fixed irrational frequency and nonlinearity.\n\nThe 2025 numerical study of the cubic problem suggests that large-amplitude solutions fill the frequency gaps. This is evidence for the conjecture, not a proof for every frequency. The June 2025 computer-assisted theorem proves three solutions at the rational frequency $`\\Omega=69/40`$, where $`T=2\\pi/\\Omega`$. The October 2025 constructive theorem gives the rational frequencies $`\\Omega=(2k+1)/(2k)`$ for integers $`k\\ge79\\,675`$, together with rational rescalings. These results do not cover the prescribed irrational ratios in this question. The 2026 strings-and-beams paper studies finite Galerkin systems and refers back to the computer-assisted examples; it does not state the all-prescribed-period theorem.\n\nThe review on 24 October 2026 checked the original statement, the weak-solution definition, these primary results and recent related work, and searches for proofs, counterexamples and announcements under prescribed irrational periods, free vibrations, pure-power wave equations and the relevant authors. No matching full resolution or announcement was located. This is a bounded literature check; it does not certify absence of unindexed work. Prove2Me site searches located no matching entry, while a direct live site request had timed out.\n\nThe linked one-page abstract for Filip Ficek’s [Equadiff 2026 talk](https://amca-admin.rachel.puxdesign.cz/Equadiff/media/amca/2026/abstracts/contributed-talks/ficek_abstract.pdf) was also checked. Its existence claim cites the June 2025 theorem above and does not announce an arbitrary-period result.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-e4e231b718375b04**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "irrational period wave",
+    "Ficek Maliborski",
+    "free vibrations",
+    "Struwe"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"wave equation\" \"every\" \"irrational period\" 2026"
+    },
+    {
+      "query": "nonlinear wave every prescribed irrational period Ficek",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2510.20054v1",
+      "locator": "Theorem1andRemarks1–2lines74–98;2026PTEPstringsandbeamsactualprimaryabstract"
+    }
+  ],
+  "scope_comparison": "ConstructivetheoremgivesrationalOmega=(2k+1)/(2k),k>=79675,andrationalrescalings;June2025threecomputer-assistedOmega69/40also rational. Cantor-frequencyfamiliesnotallirrationalsandcubic-onlynotallp>2. 2026Galerkin/numericalstructuresdonotgiveeveryprescribedT. No matchingfullclaimlocated;originalbookcurrentPDFtimeoutisretainedsourceaccesslimit.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative search does not establish continued openness. Candidate theorem bodies with plausible thematic overlap inspected; not full proof certification. 1061October20KITPDFwebaccess unavailable, no plausible all-datafullclaim observed;1063StruwePDFtimeout means booksourceparitynotfullyrechecked.",
+  "announcement_routing": {
+    "localID": "1063",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "irrational period wave",
+          "Ficek Maliborski",
+          "free vibrations",
+          "Struwe"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "irrational period wave",
+          "Ficek Maliborski",
+          "free vibrations",
+          "Struwe"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "irrational period wave",
+        "Ficek Maliborski",
+        "free vibrations",
+        "Struwe"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

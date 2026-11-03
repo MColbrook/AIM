@@ -1,0 +1,70 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "052",
+  "manifest_index": 35,
+  "original_target": {
+    "id": "052",
+    "title": "Global uniqueness from inverse backscattering data",
+    "area": "Inverse scattering / monostatic imaging",
+    "file": "problems/052-inverse-backscattering.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse",
+    "source_sha256": "d2c68328db9fdf022e76923fe4ec9b1521329feec8ef13b87978777545cea504",
+    "statement_sha256": "e5537319e5b78333827c80e19b85b40dafe7e84d141cf369f7dae8e944ab76b8",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d2c68328db9fdf022e76923fe4ec9b1521329feec8ef13b87978777545cea504",
+  "statement_sha256": "e5537319e5b78333827c80e19b85b40dafe7e84d141cf369f7dae8e944ab76b8",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:28:38.256331+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no_full_match",
+  "recommended_status": "Open",
+  "scope_comparison": "Unrestricted stationary real potential in R3 must be determined by a(-theta,theta,k). Nursultanov–Oksanen–Stefanov requires a small time-dependent potential. Si Theorem1.1 claims fixed incident direction and ALL observation directions, not backscattering; its introduction distinguishes these data. Liu2610.08011 concerns interior Green-function data in two dimensions.",
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00023-025-01579-7",
+      "locator": "Introduction, equation1 and smallness assumption.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2609.19698v1",
+      "locator": "Theorem1.1 and four data configurations in Introduction.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "backscattering"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "entries": 954,
+      "complete_listing": true,
+      "query_terms": [
+        "backscattering"
+      ],
+      "metadata_hits": [],
+      "scope": "Current complete public metadata routing; no same-target announcement hit."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "entries": 646,
+      "complete_listing": true,
+      "query_terms": [
+        "backscattering"
+      ],
+      "metadata_hits": [],
+      "scope": "Current complete public metadata routing; no same-target announcement hit."
+    }
+  },
+  "other_provider_search": "Focused current web and site-restricted searches of arXiv, Zenodo, HAL and GitHub; only relevant primary claims promoted to scope checks. Shared OpenAI and requested Colbrook author indexes screened; no matching new full resolution.",
+  "limitations": [
+    "Bounded current search, not proof that no unindexed solution exists.",
+    "No independent end-to-end proof or Lean-kernel verification."
+  ],
+  "canonical_update_required": false
+}

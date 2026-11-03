@@ -1,0 +1,44 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 236,
+  "source_sha256": "5b895c70ffa12bed51d088156ac0f6a3ea4118560e2140f83c429a999640be2e",
+  "statement_sha256": "82e581f62723d613583709fb4422574ed9c5d732256ec6a22a2e2076e3268cf1",
+  "original_target": {
+    "id": "294",
+    "title": "Balanced Gaussian simplex noise stability for four or more classes",
+    "area": "Gaussian geometry and noise robustness",
+    "file": "problems/294-gaussian-simplex.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "stochastic3",
+    "source_sha256": "5b895c70ffa12bed51d088156ac0f6a3ea4118560e2140f83c429a999640be2e",
+    "statement_sha256": "82e581f62723d613583709fb4422574ed9c5d732256ec6a22a2e2076e3268cf1",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "294",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Full target q>=4, n>=q-1, every0<rho<1 and all balanced measurable partitions. Heilman's current TheoremA.1 covers exactly3 classes and0<rho<=2/5; q4 hyperstability requires an additional condition. Neither resolves the original arbitrary balanced partition problem. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "balanced standard simplex Gaussian partition q four noise stability proof 2026",
+    "\"standard simplex\" noise stability (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.00333",
+      "version": "current HTML accessed3November2026",
+      "locator": "AppendixA, TheoremA.1",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "standard.simplex|Gaussian.*partition|plurality.*stablest",
+    "palomar_matches": 3,
+    "hexagon_matches": 1,
+    "result": "All false-positive Gaussian partition/KPZ/c-separation records; no candidate for the balanced simplex inequality."
+  }
+}

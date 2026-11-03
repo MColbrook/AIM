@@ -1,0 +1,59 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 346,
+  "source_sha256": "16acbd5cf00eedb55f6f6e4e92eb1ec16bc96e148b36f8f61b638c0a6ac30a4e",
+  "statement_sha256": "79f472bcb8e7c6e32f15d74a4f1ddbf9e62a10c9c072a5044f5167606525a916",
+  "original_target": {
+    "id": "427",
+    "title": "Strong comparison for ordered p-harmonic fields",
+    "area": "Nonlinear elliptic PDEs and comparison principles",
+    "file": "problems/427-p-harmonic-strong-comparison.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "pdes-materials",
+    "source_sha256": "16acbd5cf00eedb55f6f6e4e92eb1ec16bc96e148b36f8f61b638c0a6ac30a4e",
+    "statement_sha256": "79f472bcb8e7c6e32f15d74a4f1ddbf9e62a10c9c072a5044f5167606525a916",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "427",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"p-harmonic\" \"strong comparison\" \"2026\"",
+    "\"strong comparison\" \"p-harmonic\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) proof",
+    "\"Capogna\" \"Zhou\" \"Strong comparison\" arxiv"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1707.06272",
+      "version": "v1,currentPDF textdated29Oct2021",
+      "locator": "Theorem1,p2 and discussionp3",
+      "theorem_body_checked": true,
+      "scope": "Requires one comparison function C2 and its horizontal gradient bounded below near contact. Hence does not include common critical contact."
+    },
+    {
+      "url": "https://arxiv.org/html/2609.02626",
+      "version": "v1,Sep2026",
+      "locator": "Theorem1.1,§1",
+      "theorem_body_checked": true,
+      "scope": "Fractional subquadratic p-Laplacian equation; not the local unweighted operator."
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jde.2025.113932",
+      "date": "5Feb2026",
+      "locator": "publisher model/introduction preview",
+      "theorem_body_checked": false,
+      "scope": "Weighted/metric Green-function setting; no unweighted higher-dimensional all-p-harmonic resolution inferred."
+    }
+  ],
+  "registry_checks": "Complete cached Palomar/Hexagon metadata and pinned OpenAI/Colbrook author listings scanned for target terms; no full matching claim. Palomar planar Steklov isospectrality is a different question.",
+  "scope_comparison": "The full target specifically allows both gradients to vanish at contact for any d>=3,p!=2. Noncritical comparison, constant comparison, weighted or nonlocal results do not settle it.",
+  "limitations": [
+    "Bjorn etal institutional fullPDF timed out; candidate Capogna theorem body was readable and excludes critical case."
+  ],
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

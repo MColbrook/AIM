@@ -1,0 +1,98 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "880",
+  "manifest_index": 724,
+  "checked_date": "2026-11-03",
+  "source_sha256": "da291e9f17c9f4dbd68dcb9bb985046952dc413f4b9cde242b13a545d6150c6f",
+  "statement_sha256": "3205e7c3dd7e896b2ed10c07a06a4ab4a11f0046f922ec91b405ec156f632a56",
+  "original_target": {
+    "id": "880",
+    "title": "Scalar-flat apparent-horizon extensions with prescribed Schwarzschild mass",
+    "area": "Mathematical relativity / scalar curvature",
+    "file": "problems/880-scalar-flat-apparent-horizon-extensions-with-prescribed-schwarzschild-mass.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-97d0206d85c24016",
+    "group": "mathematical-relativity",
+    "source_sha256": "da291e9f17c9f4dbd68dcb9bb985046952dc413f4b9cde242b13a545d6150c6f",
+    "statement_sha256": "3205e7c3dd7e896b2ed10c07a06a4ab4a11f0046f922ec91b405ec156f632a56",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\gamma`$ be a smooth Riemannian metric on $`\\mathbb S^2`$ for which the lowest eigenvalue of $`-\\Delta_\\gamma+K_\\gamma`$ is positive, where $`K_\\gamma`$ is its Gauss curvature. Write $`A=\\mathrm{area}_\\gamma(\\mathbb S^2)`$. For every $`m>\\sqrt{A/(16\\pi)}`$, does there exist a smooth Riemannian metric $`G`$ on $`M=\\mathbb S^2\\times[0,\\infty)`$ with all the following properties?\n\n- $`(M,G)`$ is complete as a manifold with boundary and has one asymptotically flat end.\n- $`R_G=0`$ everywhere, and $`\\partial M`$ is minimal with induced metric isometric to $`\\gamma`$.\n- Outside a compact set, $`G`$ is isometric to an exterior region of the mass-$`m`$ Schwarzschild metric\n\n```math\nG_m=\\left(1-\\frac{2m}{r}\\right)^{-1}dr^2+r^2g_{\\mathbb S^2},\\qquad r>2m,\n```\n\n  where $`g_{\\mathbb S^2}`$ is the unit round metric.\n- There is a global smooth foliation of $`M`$ by spheres, starting at $`\\partial M`$, whose interior leaves have strictly positive mean curvature toward the end and which eventually coincides with the standard Schwarzschild spheres.\n\nThe strict inequality on $`m`$ is part of the question; equality is not requested. The spectral condition allows metrics whose Gauss curvature is negative on part of the sphere.",
+  "full_original_page": "# 880. Scalar-flat apparent-horizon extensions with prescribed Schwarzschild mass\n\n**Area:** Mathematical relativity / scalar curvature\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\gamma`$ be a smooth Riemannian metric on $`\\mathbb S^2`$ for which the lowest eigenvalue of $`-\\Delta_\\gamma+K_\\gamma`$ is positive, where $`K_\\gamma`$ is its Gauss curvature. Write $`A=\\mathrm{area}_\\gamma(\\mathbb S^2)`$. For every $`m>\\sqrt{A/(16\\pi)}`$, does there exist a smooth Riemannian metric $`G`$ on $`M=\\mathbb S^2\\times[0,\\infty)`$ with all the following properties?\n\n- $`(M,G)`$ is complete as a manifold with boundary and has one asymptotically flat end.\n- $`R_G=0`$ everywhere, and $`\\partial M`$ is minimal with induced metric isometric to $`\\gamma`$.\n- Outside a compact set, $`G`$ is isometric to an exterior region of the mass-$`m`$ Schwarzschild metric\n\n```math\nG_m=\\left(1-\\frac{2m}{r}\\right)^{-1}dr^2+r^2g_{\\mathbb S^2},\\qquad r>2m,\n```\n\n  where $`g_{\\mathbb S^2}`$ is the unit round metric.\n- There is a global smooth foliation of $`M`$ by spheres, starting at $`\\partial M`$, whose interior leaves have strictly positive mean curvature toward the end and which eventually coincides with the standard Schwarzschild spheres.\n\nThe strict inequality on $`m`$ is part of the question; equality is not requested. The spectral condition allows metrics whose Gauss curvature is negative on part of the sphere.\n\n## Application\n\nThese would be time-symmetric vacuum initial data with a prescribed apparent-horizon geometry and an exactly Schwarzschild exterior. The question asks whether one can retain the sharp mass flexibility of the known construction while eliminating its region of positive scalar curvature.\n\n## References\n\n1. A. Carlotto, *The general relativistic constraint equations*, Living Reviews in Relativity **24** (2021), article2, corrected publication2022/2024. OpenProblem3.21, p.104, and Theorem3.20, p.103. [Published survey](https://doi.org/10.1007/s41114-020-00030-z).\n2. C. Mantoulidis and R. Schoen, *On the Bartnik mass of apparent horizons*, Classical and Quantum Gravity **32** (2015),205002. Initial extension theorem and following vacuum question. [DOI](https://doi.org/10.1088/0264-9381/32/20/205002), [eligible preprint v3](https://arxiv.org/abs/1412.0382v3).\n3. P. Miao and N. Xie, *Bartnik mass via vacuum extensions*, International Journal of Mathematics **30** (2019),1940006. Theorem1.3 and Remark1.1. [DOI](https://doi.org/10.1142/S0129167X19400068), [eligible preprint v2](https://arxiv.org/abs/1907.02039v2).\n\n## Status review\n\n\n**Known cases:** The nonnegative-scalar-curvature construction permits positive scalar curvature in a collar. Miao-Xie achieve scalar-flat minimal-boundary extensions for positive Gauss curvature but not the entire spectral class with prescribed Schwarzschild mass and global mean-convex foliation. Exterior gluing alone leaves interior scalar curvature unchanged.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe nonnegative-scalar-curvature construction permits positive scalar curvature in a collar. Miao-Xie achieve scalar-flat minimal-boundary extensions for positive Gauss curvature but not the entire spectral class with prescribed Schwarzschild mass and global mean-convex foliation. Exterior gluing alone leaves interior scalar curvature unchanged.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\n**Literature check: 17 October2026.** Carlotto explicitly asks for the scalar-flat analogue of the full extension theorem. Mantoulidis–Schoen provide all the listed geometric and mass properties with nonnegative scalar curvature, positive somewhere in their construction. Miao–Xie obtain scalar-flat extensions with minimal boundary and mass arbitrarily close to $`\\sqrt{A/(16\\pi)}`$ when $`K_\\gamma>0`$, but do not require an exactly Schwarzschild exterior or give the full spectral class here.\n\nOrdinary exterior scalar-curvature gluing preserves the scalar curvature in the untouched interior; applying it to the known nonnegative-curvature extension does not remove that interior region. Recent local static-vacuum extension and mass-stability results impose perturbative hypotheses around existing data and do not provide the displayed unrestricted construction.\n\nThe independent selected-primary audit passed, and the cached all-status catalogue comparison found no matching listing among the checked aliases. Coordinator review of the exact formulation, current theorem scope and duplicate comparisons passed.\n\n[Owner review](../FURTHER_problems/_tracking/parallel/complex-bayesian/scalar-flat-horizon-review.json), [independent audit](../FURTHER_problems/_tracking/parallel/rough-filtering/cross-scalar-flat-horizon-review.json), [duplicate comparison](../FURTHER_problems/_tracking/parallel/complex-bayesian/scalar-flat-horizon-duplicate-snapshot.json), [catalogue comparison](../FURTHER_problems/_tracking/parallel/complex-bayesian/scalar-flat-horizon-prove2-0154-review.json) and [coordinator review](../FURTHER_problems/_tracking/scalar-flat-horizon-coordinator-review-2026-10-17.json) preserve source versions and reading limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-97d0206d85c24016**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"scalar flat\" \"apparent horizons\" prescribed Schwarzschild conjecture",
+    "\"scalar flat\" \"apparent horizons\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1907.02039v2",
+      "locator": "Theorem1.3 and Remark1.1",
+      "inspection": "Actual theorem assumes K_gamma>0, obtains scalar-flat minimal-boundary AF extension with mass arbitrarily near area bound. Local target permits partly negative Gauss curvature under spectral positivity and prescribes every Schwarzschild mass/tail plus global mean-convex foliation. Mantoulidis–Schoen extension allows R>0 collar."
+    }
+  ],
+  "scope_comparison": "Actual theorem assumes K_gamma>0, obtains scalar-flat minimal-boundary AF extension with mass arbitrarily near area bound. Local target permits partly negative Gauss curvature under spectral positivity and prescribes every Schwarzschild mass/tail plus global mean-convex foliation. Mantoulidis–Schoen extension allows R>0 collar.",
+  "rationale": "No full matching resolution identified in bounded searches; exact remaining theorem-body comparisons recorded explicitly.",
+  "source_gaps": [
+    "Specific pending source-body comparisons described above.",
+    "Snapshot routing pending this batch."
+  ],
+  "announcement_routing": {
+    "localID": "880",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "apparent horizon",
+          "scalar-flat extension"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "apparent horizon",
+          "scalar-flat extension"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "apparent horizon",
+        "scalar-flat extension"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.072Z",
+      "previous_outcome": "hold",
+      "localID": "880",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "scope_comparison": "The actual Miao–Xie Theorem1.3 was already read and explicitly requires strictly positive intrinsic Gauss curvature. Target permits partly negative Gauss curvature under spectral positivity and requires every prescribed exterior mass/tail plus the global foliation. The extra curvature premise is sufficient to exclude the theorem as a full match without further proof reading. Routing aliases returned no candidate. The earlier generic pending-source wording identified no essential plausible full-match gap; retain partial under bounded search."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

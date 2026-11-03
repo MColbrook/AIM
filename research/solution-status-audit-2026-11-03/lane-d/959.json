@@ -1,0 +1,100 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "959",
+  "manifest_index": 803,
+  "checked_date": "2026-11-03",
+  "source_sha256": "2dd03e295062a24315b494be4bbe8e7794bc12e3bba415dbee93c1160f109560",
+  "statement_sha256": "182dba1e5e47f1b022d679d23d4c56ba5d8a7a3b6fbd9989bcbb529f0c79953e",
+  "original_target": {
+    "id": "959",
+    "title": "Uniform Lipschitz regularity without separation of microscopic scales",
+    "area": "PDEs and materials",
+    "file": "problems/959-uniform-lipschitz-regularity-without-separation-of-microscopic-scales.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e971f49470a88189",
+    "group": "pdes-materials",
+    "source_sha256": "2dd03e295062a24315b494be4bbe8e7794bc12e3bba415dbee93c1160f109560",
+    "statement_sha256": "182dba1e5e47f1b022d679d23d4c56ba5d8a7a3b6fbd9989bcbb529f0c79953e",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix integers $`d\\ge2`$ and $`n\\ge1`$. Let\n```math\nA:\\mathbb R^d\\times(\\mathbb R^d)^n\\longrightarrow\\mathbb R^{d\\times d}\n```\n\nsatisfy the source's conditions (1.4)–(1.6): for some $`\\Lambda\\in(0,1]`$, $`L>0`$, and $`\\gamma\\in(0,1]`$,\n```math\n\\Lambda|\\xi|^2\\le \\xi\\cdot A(x,y_1,\\ldots,y_n)\\xi\n \\le\\Lambda^{-1}|\\xi|^2,\n```\n\n$`A`$ is one-periodic in each microscopic vector $`y_i`$, and\n```math\n|A(x,y)-A(x',y')|\n \\le L\\left(|x-x'|+\\sum_{i=1}^n|y_i-y_i'|\\right)^\\gamma.\n```\n\nFor arbitrary $`\\varepsilon=(\\varepsilon_1,\\ldots,\\varepsilon_n)\\in(0,1]^n`$, put\n```math\nA_\\varepsilon(x)=A(x,x/\\varepsilon_1,\\ldots,x/\\varepsilon_n).\n```\n\nLet $`B_r`$ denote the ball of radius $`r`$ about the origin. Suppose $`u_\\varepsilon\\in H^1(B_1)`$ solves\n```math\n-\\mathrm{div}(A_\\varepsilon\\nabla u_\\varepsilon)=0\n\\quad\\text{weakly in }B_1.\n```\n\n\nDoes the endpoint $`\\alpha=1`$ of the source's estimate (1.8) hold? Namely, is there a finite constant $`C`$, independent of all scale parameters and of the solution, such that\n```math\n|u_\\varepsilon(x)-u_\\varepsilon(y)|\n \\le C|x-y|\\,\\|u_\\varepsilon\\|_{L^2(B_1)}\n\\qquad(x,y\\in B_{1/2})?\n```\n\n\nNo relation, separation, rationality or Diophantine condition is imposed on the scale ratios. The coefficient and its fixed regularity and ellipticity data may enter the constant. The pointwise estimate is for a continuous representative of the weak solution. This is an interior Lipschitz estimate; a finite-$`p`$ gradient bound is a weaker conclusion.",
+  "full_original_page": "# 959. Uniform Lipschitz regularity without separation of microscopic scales\n\n**Area:** PDEs and materials\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix integers $`d\\ge2`$ and $`n\\ge1`$. Let\n```math\nA:\\mathbb R^d\\times(\\mathbb R^d)^n\\longrightarrow\\mathbb R^{d\\times d}\n```\n\nsatisfy the source's conditions (1.4)–(1.6): for some $`\\Lambda\\in(0,1]`$, $`L>0`$, and $`\\gamma\\in(0,1]`$,\n```math\n\\Lambda|\\xi|^2\\le \\xi\\cdot A(x,y_1,\\ldots,y_n)\\xi\n \\le\\Lambda^{-1}|\\xi|^2,\n```\n\n$`A`$ is one-periodic in each microscopic vector $`y_i`$, and\n```math\n|A(x,y)-A(x',y')|\n \\le L\\left(|x-x'|+\\sum_{i=1}^n|y_i-y_i'|\\right)^\\gamma.\n```\n\nFor arbitrary $`\\varepsilon=(\\varepsilon_1,\\ldots,\\varepsilon_n)\\in(0,1]^n`$, put\n```math\nA_\\varepsilon(x)=A(x,x/\\varepsilon_1,\\ldots,x/\\varepsilon_n).\n```\n\nLet $`B_r`$ denote the ball of radius $`r`$ about the origin. Suppose $`u_\\varepsilon\\in H^1(B_1)`$ solves\n```math\n-\\mathrm{div}(A_\\varepsilon\\nabla u_\\varepsilon)=0\n\\quad\\text{weakly in }B_1.\n```\n\n\nDoes the endpoint $`\\alpha=1`$ of the source's estimate (1.8) hold? Namely, is there a finite constant $`C`$, independent of all scale parameters and of the solution, such that\n```math\n|u_\\varepsilon(x)-u_\\varepsilon(y)|\n \\le C|x-y|\\,\\|u_\\varepsilon\\|_{L^2(B_1)}\n\\qquad(x,y\\in B_{1/2})?\n```\n\n\nNo relation, separation, rationality or Diophantine condition is imposed on the scale ratios. The coefficient and its fixed regularity and ellipticity data may enter the constant. The pointwise estimate is for a continuous representative of the weak solution. This is an interior Lipschitz estimate; a finite-$`p`$ gradient bound is a weaker conclusion.\n\n## Application\n\nThe coefficient describes diffusion in a material with several interacting microscopic structures. A scale-uniform gradient bound would control local concentration of fields even when neighboring microscopic lengths become comparable or nearly resonant.\n\n## Known progress\n\nThe source proves the displayed estimate for every fixed $`\\alpha<1`$, and proves the Lipschitz endpoint for a variable-separated laminate structure. It also reviews well-separated and special reperiodizable scale configurations.\n\nFor coefficients without the slow $`x`$ variable, Niu and Zhuge's later work proves uniform Calderón–Zygmund estimates for every finite $`p`$, without separation, and some mesoscopic Lipschitz estimates. Niu, Xu and Zhuge's 2026 work obtains the full interior Lipschitz estimate for real-analytic coefficients under a double-logarithmic separation condition. Its introduction and Theorem 1.2 explicitly leave complete removal of that condition open.\n\nThe 2026 extension to infinitely many scales retains a scale-separation condition in its Lipschitz theorem. None of these results establishes the unrestricted endpoint above.\n\n## Status review\n\n\n**Known cases:** The endpoint requires a scale-independent microscopic Lipschitz estimate with no separation at all. Current finite-p bounds, mesoscopic estimates, double-log separation and infinitely-many-scale theorems do not give that endpoint.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe endpoint requires a scale-independent microscopic Lipschitz estimate with no separation at all. Current finite-p bounds, mesoscopic estimates, double-log separation and infinitely-many-scale theorems do not give that endpoint.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe eligible assumptions, estimate (1.8), Section 1.4 question and laminate theorem were read, together with the actual latest finite-$`p`$, double-logarithmic and infinite-scale main statements. Official version histories and the author's current publication list were checked. Primary-source searches for full proofs, counterexamples and announcements, including bounded Prove2Me searches, found no matching unrestricted resolution on 24 October 2026.\n\nCatalogue comparisons distinguish this deterministic multiscale regularity problem from stochastic Bourgain–Spencer approximation, local approximation widths for arbitrary rough elliptic operators, elastic G-closure, conductivity bounds, and boundary diffusion kernel estimates. This is a statement-level status review, not a verification of each cited proof.\n\n## References\n\n1. W. Niu and J. Zhuge, [Compactness and stable regularity in multiscale homogenization](https://arxiv.org/abs/2112.02400), Theorems 1.1–1.2 and Section 1.4; [published article](https://doi.org/10.1007/s00208-022-02378-9), *Mathematische Annalen* (2023).\n2. W. Niu and J. Zhuge, [Uniform Calderón–Zygmund estimates in multiscale elliptic homogenization](https://arxiv.org/abs/2405.15149), latest v2 (28 January 2026), introduction and Theorem 1.1.\n3. W. Niu, Y. Xu and J. Zhuge, [Optimal convergence rates in multiscale elliptic homogenization](https://arxiv.org/abs/2509.09410), introduction and Theorem 1.2; *Communications on Pure and Applied Mathematics* **79** (2026), 2158–2222, [DOI](https://doi.org/10.1002/cpa.70047).\n4. Z. Shen, Y. Xu and J. Zhuge, [Quantitative homogenization of elliptic equations with infinitely many scales](https://arxiv.org/abs/2605.02561), v1 (4 May 2026), Theorem 1.5 and Remark 1.7.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-e971f49470a88189**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Niu",
+    "Zhuge",
+    "multiscale elliptic"
+  ],
+  "queries": [
+    "\"multiscale\" \"Lipschitz\" \"separation\" homogenization 2026",
+    "\"multiscale\" \"Lipschitz\" \"separation\" homogenization; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2509.09410",
+      "locator": "Theorem1.2 lines155–161, equation1.9; general x-dependent proof lines1996–2004",
+      "comparison": "Full Lipschitz estimate actually requires double-log separation eps_i/eps_i+1 >= M log log eps_i^-1 plus analytic coefficient assumptions. This is not arbitrary ratios with only fixed Holder regularity; finite-p estimates are weaker."
+    }
+  ],
+  "rationale": "Full Lipschitz estimate actually requires double-log separation eps_i/eps_i+1 >= M log log eps_i^-1 plus analytic coefficient assumptions. This is not arbitrary ratios with only fixed Holder regularity; finite-p estimates are weaker.",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scopes inspected, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "959",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Niu",
+          "Zhuge",
+          "multiscale elliptic"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-13-000001",
+            "title": "Optimal universal 1 → 2 qubit cloning at fidelity 5/6, the universal-NOT, and asymmetric cloning",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-13-000001-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Niu",
+          "Zhuge",
+          "multiscale elliptic"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Niu",
+        "Zhuge",
+        "multiscale elliptic"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "The quantum-cloning record explicitly quantifies finite Kraus qubit channels and clone fidelities. It is not a uniform microscopic-scale PDE Lipschitz bound.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.737Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

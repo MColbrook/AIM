@@ -1,0 +1,99 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1044",
+  "manifest_index": 888,
+  "checked_date": "2026-11-03",
+  "source_sha256": "f46b37364b45fe572313f723393e513bff03cab4bca45fbc301a515fcc448bfa",
+  "statement_sha256": "d5fe1e3d660a496a09f58edac1a3f594b9cf8fc5aaa2a226e98aef6aa0300482",
+  "original_target": {
+    "id": "1044",
+    "title": "Forward scattering of the minimal mass gKdV blow-up solution",
+    "area": "Nonlinear waves, fluids and kinetic equations",
+    "file": "problems/1044-forward-scattering-of-the-minimal-mass-gkdv-blow-up-solution.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-19e1bbc2cd6265de",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "f46b37364b45fe572313f723393e513bff03cab4bca45fbc301a515fcc448bfa",
+    "statement_sha256": "d5fe1e3d660a496a09f58edac1a3f594b9cf8fc5aaa2a226e98aef6aa0300482",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Consider the real focusing, mass-critical generalized Korteweg–de Vries equation on $`\\mathbb R`$,\n```math\nu_t+(u_{xx}+u^5)_x=0,\n\\qquad Q(x)=\\left(\\frac{3}{\\cosh^2(2x)}\\right)^{1/4}.\n```\n\nLet $`S`$ be the distinguished solution constructed in Theorem 1.3(i) of [1]. It satisfies\n```math\nS\\in C((0,\\infty);H^1(\\mathbb R)),\\qquad\n\\|S(t)\\|_2=\\|Q\\|_2,\n```\nand blows up in $`H^1`$ as $`t\\downarrow0`$. Does there exist $`v_+\\in L^2(\\mathbb R)`$ such that\n```math\n\\lim_{t\\to+\\infty}\n\\left\\|S(t)-e^{-t\\partial_x^3}v_+\\right\\|_{L^2(\\mathbb R)}=0?\n```\n\nThe linear group solves $`v_t+v_{xxx}=0`$. This asks about the positive-time branch of this particular threshold solution, with no time-dependent translation or rescaling in the limit. The solitary wave $`Q(x-t)`$ has the same mass but does not have the required backward blow-up.",
+  "full_original_page": "# 1044. Forward scattering of the minimal mass gKdV blow-up solution\n\n**Area:** Nonlinear waves, fluids and kinetic equations\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nConsider the real focusing, mass-critical generalized Korteweg–de Vries equation on $`\\mathbb R`$,\n```math\nu_t+(u_{xx}+u^5)_x=0,\n\\qquad Q(x)=\\left(\\frac{3}{\\cosh^2(2x)}\\right)^{1/4}.\n```\n\nLet $`S`$ be the distinguished solution constructed in Theorem 1.3(i) of [1]. It satisfies\n```math\nS\\in C((0,\\infty);H^1(\\mathbb R)),\\qquad\n\\|S(t)\\|_2=\\|Q\\|_2,\n```\nand blows up in $`H^1`$ as $`t\\downarrow0`$. Does there exist $`v_+\\in L^2(\\mathbb R)`$ such that\n```math\n\\lim_{t\\to+\\infty}\n\\left\\|S(t)-e^{-t\\partial_x^3}v_+\\right\\|_{L^2(\\mathbb R)}=0?\n```\n\nThe linear group solves $`v_t+v_{xxx}=0`$. This asks about the positive-time branch of this particular threshold solution, with no time-dependent translation or rescaling in the limit. The solitary wave $`Q(x-t)`$ has the same mass but does not have the required backward blow-up.\n\n## Application\n\nThis would describe a transition from concentration at the threshold mass to dispersive radiation. Corollary 1.5 of [1] also shows that scattering of $`S`$ would establish forward scattering for the paper's near-soliton **Exit** regime.\n\n## References\n\n1. Yvan Martel, Frank Merle and Pierre Raphaël, [*Blow up for the critical gKdV equation. II: Minimal mass dynamics*](https://doi.org/10.4171/JEMS/547), *Journal of the European Mathematical Society* **17** (2015), no. 8, 1855–1925. Theorem 1.3 is on printed p. 1858; the explicit scattering conjecture and its precise $`L^2`$ meaning are on p. 1859, immediately before Corollary 1.5 and in footnote 2. [Published text](https://ems.press/content/serial-article-files/32056?nt=1).\n2. Matthew Kowalski and Minjie Shan, [*On dispersive decay for the generalized Korteweg–de Vries equation*](https://arxiv.org/abs/2510.01728), v1 (2025), introduction and §4. Its focusing small-data input and defocusing all-data bound do not supply the missing estimate for $`S`$.\n3. Satoshi Masaki and Jun-ichi Segata, [*Scattering problem for the generalized Korteweg-de Vries equation*](https://arxiv.org/abs/2408.00261), v1 (2024), Theorems 1.6–1.7. These scattering statements assume $`8/5<\\alpha<2`$ for the nonlinearity $`|u|^{2\\alpha}u`$, excluding the quintic endpoint $`\\alpha=2`$.\n\n## Status review\n\n\n**Known cases:** The target is positive-time L2 scattering of the specific backward-blowing-up minimal mass element. Same-mass solitons, small-data scattering, subcritical nonlinear powers and constructions of other blowup rates do not answer it.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe target is positive-time L2 scattering of the specific backward-blowing-up minimal mass element. Same-mass solitons, small-data scattering, subcritical nonlinear powers and constructions of other blowup rates do not answer it.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe existence, positive-time lifespan and uniqueness up to flow symmetries of the minimal-mass finite-time blow-up element are established in [1]. Positive-time $`H^1`$ membership alone does not give a finite forward scattering norm. Corollary 1.5 assumes the requested scattering.\n\nTargeted literature and announcement searches through 24 October 2026 found no complete resolution for this specific solution. Later results checked concern small data, a different sign or exponent, conditional scattering, or backward blow-up asymptotics. The final 2026 journal version of [3] was inaccessible in this check, so its theorem statements were not verified against v1. Comparisons with the AIM list and the developing collection found no matching target.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-19e1bbc2cd6265de**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "minimal mass dynamics",
+    "Martel Merle",
+    "gKdV scattering"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "gKdV \"minimal mass\" \"forward scattering\" 2026"
+    },
+    {
+      "query": "gKdV minimal mass scattering S Martel Merle Raphael",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1204.4624",
+      "locator": "latestv2 28September2014,Theorem1.3 andp4conjecture/Corollary1.5footnote3;2510.01728v1Theorems1.1–1.2"
+    }
+  ],
+  "scope_comparison": "The chosen real focusing quintic threshold solution is globally H1 positive-time, but the conjecture requires finite forward scattering norm/AiryL2limit. Kowalski–Shan explicitly imports small-data focusing or all-data defocusing global scattering; neither includes this S. Subcritical exponent Masaki–Segata and backward asymptotic results do not settle forward branch.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded current negative search does not certify openness. Exact statement/current-comparison theorem scope inspected; not certification of entire proofs. 1046 original publisher body recovered from existing native cache, authorPDFcurrentaccess timed out.",
+  "announcement_routing": {
+    "localID": "1044",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "minimal mass dynamics",
+          "Martel Merle",
+          "gKdV scattering"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "minimal mass dynamics",
+          "Martel Merle",
+          "gKdV scattering"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "minimal mass dynamics",
+        "Martel Merle",
+        "gKdV scattering"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

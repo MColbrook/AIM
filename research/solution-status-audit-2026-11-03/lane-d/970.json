@@ -1,0 +1,125 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "970",
+  "manifest_index": 814,
+  "checked_date": "2026-11-03",
+  "source_sha256": "0b82f85d1750ff584a434bbe044f6d759bcf96a3408689c01cfb3d8006d0dd27",
+  "statement_sha256": "6510d7b880a80aff681738c4f6f8b6a1a4afd287b981c705988af56cb3899d2c",
+  "original_target": {
+    "id": "970",
+    "title": "Uniform sine–Gordon Mayer bounds below the collapse threshold",
+    "area": "Probability, statistical mechanics and constructive field theory",
+    "file": "problems/970-uniform-sinegordon-mayer-bounds-below-the-collapse-threshold.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-268412ba065c3535",
+    "group": "probability-statistics",
+    "source_sha256": "0b82f85d1750ff584a434bbe044f6d759bcf96a3408689c01cfb3d8006d0dd27",
+    "statement_sha256": "6510d7b880a80aff681738c4f6f8b6a1a4afd287b981c705988af56cb3899d2c",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Put $`X=\\mathbb R^2\\times\\{-1,1\\}`$, with Lebesgue measure in position and counting measure in charge, and write $`\\xi_i=(x_i,\\sigma_i)`$. Fix $`\\beta\\in[6\\pi,8\\pi)`$. For $`m>0`$ set\n```math\n\\dot c_s^{m^2}(x)=\\frac{e^{-m^2s-|x|^2/(4s)}}{4\\pi s},\n\\qquad\n\\dot u_s^{m^2}(\\xi_i,\\xi_j)\n=\\beta\\sigma_i\\sigma_j\\dot c_s^{m^2}(x_i-x_j),\n```\n\nand\n```math\nw_t^{m^2}(\\xi)-w_s^{m^2}(\\xi)\n=\\frac12\\sum_{i,j=1}^n\\int_s^t\\dot u_r^{m^2}(\\xi_i,\\xi_j)\\,dr .\n```\n\nFor $`\\varepsilon>0`$ and $`t>\\varepsilon^2`$, define the exact kernels\n```math\n\\widetilde v_t^1(\\xi\\mid\\varepsilon,m)\n=\\exp\\!\\left\\{-\\frac{\\beta}{2}\n\\left(\\int_{\\varepsilon^2}^t\\dot c_s^{m^2}(0)\\,ds\n+\\frac{\\log(\\varepsilon^2)}{4\\pi}\\right)\\right\\}\n```\n\nand, for $`n\\ge2`$,\n```math\n\\begin{aligned}\n\\widetilde v_t^n(\\xi_1,\\ldots,\\xi_n\\mid\\varepsilon,m)\n={}&\\frac12\\int_{\\varepsilon^2}^t\n\\sum_{\\substack{I_1\\dot\\cup I_2=[n]\\\\I_1,I_2\\ne\\varnothing}}\n\\sum_{\\substack{i\\in I_1\\\\j\\in I_2}}\n\\dot u_s^{m^2}(\\xi_i,\\xi_j)\\,\n\\widetilde v_s^{|I_1|}(\\xi_{I_1}\\mid\\varepsilon,m)\n\\widetilde v_s^{|I_2|}(\\xi_{I_2}\\mid\\varepsilon,m)\\\\\n&\\hspace{15mm}\\times\ne^{-(w_t^{m^2}(\\xi)-w_s^{m^2}(\\xi))}\\,ds .\n\\end{aligned}\n```\n\nThe partition sum is over ordered pairs of nonempty complementary subsets; the factor $`1/2`$ is retained. Here $`[n]=\\{1,\\ldots,n\\}`$ and $`\\xi_I`$ is the tuple with indices in $`I`$. For $`n\\ge2`$, use\n```math\n\\|f\\|_n=\\sup_{\\xi_1\\in X}\\int_{X^{n-1}}\n|f(\\xi_1,\\ldots,\\xi_n)|\\,d\\xi_2\\cdots d\\xi_n .\n```\n\n\nLet $`n_0`$ be the largest positive integer with\n```math\n2(n_0-1)-\\frac{\\beta n_0}{4\\pi}\\le0.\n```\n\nDoes there exist a constant $`C_\\beta`$, depending only on $`\\beta`$, such that for every $`n>n_0`$ and $`t>0`$ there is a measurable majorant\n$`h_t^n:X^n\\to[0,\\infty]`$, independent of $`\\varepsilon,m`$, satisfying\n```math\n|\\widetilde v_t^n(\\xi\\mid\\varepsilon,m)|\\le h_t^n(\\xi)\n\\quad(0<\\varepsilon^2<t<m^{-2}),\n\\qquad\n\\|h_t^n\\|_n\\le n^{n-2}t^{-1}\n\\left(C_\\beta t^{1-\\beta/(8\\pi)}\\right)^n?\n```\n\nThe constant must be uniform in $`n,t,\\varepsilon,m`$; the majorant may depend on $`\\beta,n,t`$.\n\nThis is the explicit Proposition 4.1-form interpretation of the “similar estimates” conjectured in Remark 4.2. It concerns the exact kernels above, rather than kernels modified by additional subcluster subtractions. The source proves these bounds for $`\\beta<6\\pi`$ with $`n=2`$ excluded; the question here isolates the remaining range.",
+  "full_original_page": "# 970. Uniform sine–Gordon Mayer bounds below the collapse threshold\n\n**Area:** Probability, statistical mechanics and constructive field theory\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nPut $`X=\\mathbb R^2\\times\\{-1,1\\}`$, with Lebesgue measure in position and counting measure in charge, and write $`\\xi_i=(x_i,\\sigma_i)`$. Fix $`\\beta\\in[6\\pi,8\\pi)`$. For $`m>0`$ set\n```math\n\\dot c_s^{m^2}(x)=\\frac{e^{-m^2s-|x|^2/(4s)}}{4\\pi s},\n\\qquad\n\\dot u_s^{m^2}(\\xi_i,\\xi_j)\n=\\beta\\sigma_i\\sigma_j\\dot c_s^{m^2}(x_i-x_j),\n```\n\nand\n```math\nw_t^{m^2}(\\xi)-w_s^{m^2}(\\xi)\n=\\frac12\\sum_{i,j=1}^n\\int_s^t\\dot u_r^{m^2}(\\xi_i,\\xi_j)\\,dr .\n```\n\nFor $`\\varepsilon>0`$ and $`t>\\varepsilon^2`$, define the exact kernels\n```math\n\\widetilde v_t^1(\\xi\\mid\\varepsilon,m)\n=\\exp\\!\\left\\{-\\frac{\\beta}{2}\n\\left(\\int_{\\varepsilon^2}^t\\dot c_s^{m^2}(0)\\,ds\n+\\frac{\\log(\\varepsilon^2)}{4\\pi}\\right)\\right\\}\n```\n\nand, for $`n\\ge2`$,\n```math\n\\begin{aligned}\n\\widetilde v_t^n(\\xi_1,\\ldots,\\xi_n\\mid\\varepsilon,m)\n={}&\\frac12\\int_{\\varepsilon^2}^t\n\\sum_{\\substack{I_1\\dot\\cup I_2=[n]\\\\I_1,I_2\\ne\\varnothing}}\n\\sum_{\\substack{i\\in I_1\\\\j\\in I_2}}\n\\dot u_s^{m^2}(\\xi_i,\\xi_j)\\,\n\\widetilde v_s^{|I_1|}(\\xi_{I_1}\\mid\\varepsilon,m)\n\\widetilde v_s^{|I_2|}(\\xi_{I_2}\\mid\\varepsilon,m)\\\\\n&\\hspace{15mm}\\times\ne^{-(w_t^{m^2}(\\xi)-w_s^{m^2}(\\xi))}\\,ds .\n\\end{aligned}\n```\n\nThe partition sum is over ordered pairs of nonempty complementary subsets; the factor $`1/2`$ is retained. Here $`[n]=\\{1,\\ldots,n\\}`$ and $`\\xi_I`$ is the tuple with indices in $`I`$. For $`n\\ge2`$, use\n```math\n\\|f\\|_n=\\sup_{\\xi_1\\in X}\\int_{X^{n-1}}\n|f(\\xi_1,\\ldots,\\xi_n)|\\,d\\xi_2\\cdots d\\xi_n .\n```\n\n\nLet $`n_0`$ be the largest positive integer with\n```math\n2(n_0-1)-\\frac{\\beta n_0}{4\\pi}\\le0.\n```\n\nDoes there exist a constant $`C_\\beta`$, depending only on $`\\beta`$, such that for every $`n>n_0`$ and $`t>0`$ there is a measurable majorant\n$`h_t^n:X^n\\to[0,\\infty]`$, independent of $`\\varepsilon,m`$, satisfying\n```math\n|\\widetilde v_t^n(\\xi\\mid\\varepsilon,m)|\\le h_t^n(\\xi)\n\\quad(0<\\varepsilon^2<t<m^{-2}),\n\\qquad\n\\|h_t^n\\|_n\\le n^{n-2}t^{-1}\n\\left(C_\\beta t^{1-\\beta/(8\\pi)}\\right)^n?\n```\n\nThe constant must be uniform in $`n,t,\\varepsilon,m`$; the majorant may depend on $`\\beta,n,t`$.\n\nThis is the explicit Proposition 4.1-form interpretation of the “similar estimates” conjectured in Remark 4.2. It concerns the exact kernels above, rather than kernels modified by additional subcluster subtractions. The source proves these bounds for $`\\beta<6\\pi`$ with $`n=2`$ excluded; the question here isolates the remaining range.\n\n## Application\n\nSuch bounds would control the high-order tail of the renormalized sine–Gordon potential uniformly as the ultraviolet cutoff is removed. They ask for more than existence of the sine–Gordon measure.\n\n## References\n\n1. R. Bauerschmidt and C. Webb, [*The Coleman correspondence at the free fermion point*](https://ems.press/content/serial-article-files/48083), J. Eur. Math. Soc. **26** (2024), 3137–3241, §4, Equations (4.3), (4.7)–(4.13), Proposition 4.1 and Remark 4.2, pp.3177–3178. DOI: [10.4171/JEMS/1329](https://doi.org/10.4171/JEMS/1329). The [latest preprint, v3](https://arxiv.org/html/2010.07096v3), dated 20 August 2025, retains the conjecture.\n2. G. Benfatto, [*An iterated Mayer expansion for the Yukawa gas*](https://doi.org/10.1007/BF01009027), J. Stat. Phys. **41** (1985), 671–684. Remark 4.2 of reference 1 attributes the conjecture to p.672; this attribution was checked in that remark.\n3. W. Kroschinsky and D. H. U. Marchetti, [*On the Mayer series of two-dimensional Yukawa gas at inverse temperature in the interval of collapse*](https://arxiv.org/abs/1901.00819), J. Stat. Phys. **177** (2019), 324–364. DOI: [10.1007/s10955-019-02370-9](https://doi.org/10.1007/s10955-019-02370-9).\n4. S.-J. Meyer, [*An FBSDE Construction of the Sine-Gordon EQFT for* $`\\beta^2<(6/7)8\\pi`$ *and Perturbative Renormalization in the Full Subcritical Regime*](https://arxiv.org/abs/2607.20632), 2026.\n5. J. Pelaič, [*The subcritical finite-volume massive sine-Gordon model*](https://arxiv.org/abs/2508.13778), v2, 2025.\n\n## Status review\n\n\n**Known cases:** The exact unsubtracted Mayer kernels and uniform majorant for all n above the threshold are required. Full-subcritical finite-volume constructions and further subcluster renormalization do not give these estimates for the original kernels.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe exact unsubtracted Mayer kernels and uniform majorant for all n above the threshold are required. Full-subcritical finite-volume constructions and further subcluster renormalization do not give these estimates for the original kernels.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe latest Bauerschmidt–Webb version explicitly separates this expansion question from known measure constructions. Kroschinsky–Marchetti's extension above $`6\\pi`$ has a neutral-subcluster cancellation assumption whose proof is left open. Meyer's 2026 results concern finite-order modified effective potentials and a measure-construction theorem below the full threshold. Pelaič constructs finite-volume massive measures by a different renormalization approach. These statements do not establish the exact all-order, cutoff-independent majorants requested here.\n\nThe [owner review](../FURTHER_problems/_tracking/journal1169-sine-Gordon-Mayer-owner-current-scope-audit-2026-10-23.json), [independent scope review](../FURTHER_problems/_tracking/sine-gordon-exact-mayer-independent-peer-2026-10-23.json), and [semantic duplicate review](../FURTHER_problems/_tracking/sine-gordon-exact-mayer-duplicate-review-2026-10-23.json) record the precise checks and their limits. No matching proof, counterexample or announced resolution was found in those bounded checks.\n\nThe [coordinator review](../FURTHER_problems/_tracking/sine-gordon-exact-mayer-coordinator-review-2026-10-23.json) also checked the final formulas and scope. The original 1985 body and first arXiv version were not available for a matching body check; the canonical question is the directly read JEMS/current v3 remark. Current Prove2Me access timed out. No exhaustive absence of a resolution or full proof certification is claimed.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-268412ba065c3535**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "sine-Gordon",
+    "Mayer",
+    "Bauerschmidt",
+    "Webb"
+  ],
+  "queries": [
+    "\"sine Gordon\" \"Mayer\" \"6\" \"8\" 2026",
+    "\"sine Gordon\" \"Mayer\" \"6\" \"8\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2010.07096v3",
+      "locator": "20Aug2025v3 Proposition4.1/Remark4.2 lines1019–1032",
+      "comparison": "Exact unsubtracted all-n estimate is still explicitly conjectured beyond beta<6pi. Fresh2606.06657v1 Proposition2.7 lines451–454 restricts d>=2 to beta<(d+1)2pi, thus d2 beta<6pi (target starts at6pi). 2607.20632v1 Theorem1.1 lines199–209 controls modified approximate potentials with field-size-dependent finite-order bounds, not these exact all-order kernels."
+    },
+    {
+      "url": "https://arxiv.org/html/2606.06657v1",
+      "locator": "4Jun2026v1 Proposition2.7 lines451–454",
+      "comparison": "Direct similar-kernel candidate excluded because d2 coupling is beta<6pi."
+    },
+    {
+      "url": "https://arxiv.org/html/2607.20632v1",
+      "locator": "22Jul2026v1 Theorem1.1 and discussion lines195–209",
+      "comparison": "Modified multipole ansatz approximate potential with field-size bounds, not exact all-order unsubtracted coefficients."
+    }
+  ],
+  "rationale": "Exact unsubtracted all-n estimate is still explicitly conjectured beyond beta<6pi. Fresh2606.06657v1 Proposition2.7 lines451–454 restricts d>=2 to beta<(d+1)2pi, thus d2 beta<6pi (target starts at6pi). 2607.20632v1 Theorem1.1 lines199–209 controls modified approximate potentials with field-size-dependent finite-order bounds, not these exact all-order kernels.",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary statements inspected, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "970",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "sine-Gordon",
+          "Mayer",
+          "Bauerschmidt",
+          "Webb"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-08-29-000014",
+            "title": "ukiyois/hs-virial-nbc-identity",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000014-v2.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "sine-Gordon",
+          "Mayer",
+          "Bauerschmidt",
+          "Webb"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00544v2",
+            "title": "The Height-Conductor Ratio on Curve Towers: Closed Forms for the Fermat Tower, the One-Third Barrier, and the Attainable Set",
+            "url": "https://hexagonmath.org/abs/2610.00544v2"
+          },
+          {
+            "id": "hexagon:2610.00287v1",
+            "title": "Integral tail signatures and the Hilbert--Smith conjecture",
+            "url": "https://hexagonmath.org/abs/2610.00287v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "sine-Gordon",
+        "Mayer",
+        "Bauerschmidt",
+        "Webb"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Hard-sphere Mayer/NBC cancellation changes the pair potential and instability/collapse mechanism; it is not the uniform sine–Gordon bound at the target beta range. Tower conductors and Hilbert–Smith topology are unrelated.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.742Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

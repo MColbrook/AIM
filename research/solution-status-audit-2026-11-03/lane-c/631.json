@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "631",
+  "manifest_index": 490,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "631",
+    "title": "Rank-one and quasiconvex relaxation of two quadratic wells in the plane",
+    "area": "Calculus of variations / composite materials",
+    "file": "problems/631-rank-one-and-quasiconvex-relaxation-of-two-quadratic-wells-in-the-plane.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-be4685dda927af2d",
+    "group": "pdes-materials",
+    "source_sha256": "971e9ae93854637524784730bf74cf0b630b372cb7bd968195daae730dbec5ac",
+    "statement_sha256": "fcfeb8f4538cfa12258c5d48f7143f4511fc41480a63a1484313eb2dc4091bc0",
+    "state": "unreviewed"
+  },
+  "source_sha256": "971e9ae93854637524784730bf74cf0b630b372cb7bd968195daae730dbec5ac",
+  "statement_sha256": "fcfeb8f4538cfa12258c5d48f7143f4511fc41480a63a1484313eb2dc4091bc0",
+  "actual_source_sha256": "971e9ae93854637524784730bf74cf0b630b372cb7bd968195daae730dbec5ac",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`m\\ge2`$ be any integer. Equip $`M=\\mathbb R^{2\\times m}`$ with the Frobenius inner product $`F:G=\\sum_{i,j}F_{ij}G_{ij}`$. Let $`L_1,L_2:M\\to M`$ be arbitrary self-adjoint strictly positive-definite linear maps, let $`F_1,F_2\\in M`$, and let $`k_1,k_2\\in\\mathbb R`$. Define\n\n```math\nW(F)=\\min\\{W_1(F),W_2(F)\\},\\qquad\nW_j(F)=(F-F_j):L_j(F-F_j)+k_j.\n```\n\nFor $`Q=(0,1)^2`$, define the periodic relaxation\n\n```math\nQW(F)=\\inf_{\\varphi\\in C^\\infty_{\\mathrm{per}}(Q;\\mathbb R^m)}\n\\int_Q W(F+\\nabla\\varphi(x))\\,dx,\n\\qquad (\\nabla\\varphi)_{ij}=\\partial_i\\varphi_j.\n```\n\nLet $`RW`$ be the largest rank-one-convex function below $`W`$. Explicitly, a function $`g:M\\to\\mathbb R`$ is rank-one convex if\n\n```math\ng((1-t)A+tB)\\le(1-t)g(A)+tg(B)\n\\quad(0\\le t\\le1,\\ \\mathrm{rank}(A-B)\\le1).\n```\n\nMust $`QW(F)=RW(F)`$ for every $`F\\in M`$ and every choice above?\n\nThe question permits different, anisotropic quadratic forms. It imposes no frame indifference, symmetry of $`F`$, fixed volume fraction or restriction to a single loading. The scalar case $`m=1`$ reduces to ordinary convex relaxation and is omitted as known. The displayed periodic formula is the quasiconvex relaxation for these finite continuous quadratic-growth energies.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"two quadratic wells\" \"rank one\" quasiconvex 2026",
+    "\"two quadratic wells\" \"rank one\" quasiconvex (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2008.03394v1",
+      "primary_body_access_gap": false,
+      "scope_comparison": "The exact arbitrary positive-definite anisotropic quadratic-well/full-gradient envelope equality remains the source question. Results for symmetric-strain isotropic wells, one shared quadratic form, finite-compatible wells or generic rank-one convex counterexamples do not settle this restricted family.",
+      "version_or_date": "v1,7August2020; latest record inspected",
+      "locator": "Problem1, equations2.1–2.5, lines46–65"
+    }
+  ],
+  "outcome": "no-match",
+  "recommended_status": "Open",
+  "rationale": "The exact arbitrary positive-definite anisotropic quadratic-well/full-gradient envelope equality remains the source question. Results for symmetric-strain isotropic wells, one shared quadratic form, finite-compatible wells or generic rank-one convex counterexamples do not settle this restricted family.",
+  "latest_version_check": "v1,7August2020; latest record inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

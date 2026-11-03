@@ -1,0 +1,94 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "173",
+  "manifest_index": 136,
+  "original_target": {
+    "id": "173",
+    "title": "Monotonicity of transport speed on Galton–Watson trees",
+    "area": "Transport on random branching networks",
+    "file": "problems/173-galton-watson-speed-monotonicity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "ccee734cd87bb803791ed2c79d9a5e4cde23b6ccb392eb147281f3d24abc62a7",
+    "statement_sha256": "1d41e3a04644b3e9c6f798bb7a2c93879383f714bb76b2ac5d293f290b07e370",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ccee734cd87bb803791ed2c79d9a5e4cde23b6ccb392eb147281f3d24abc62a7",
+  "statement_sha256": "1d41e3a04644b3e9c6f798bb7a2c93879383f714bb76b2ac5d293f290b07e370",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:40.005170+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The September 2026 Theorem 1 announces strict speed decrease for the offspring law uniform on {2,3} only on lambda in [0,351/200]; it does not cover [0,2.5) for that law, much less every finite offspring law. The current Lyons–Peres book still asks general Question 17.33. Locally infinite offspring results are a different class.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2609.29894v1",
+      "locator": "Theorem 1 and section 9, restricted offspring law and parameter interval",
+      "body_inspected": true
+    },
+    {
+      "url": "https://rdlyons.pages.iu.edu/prbtree/book.pdf",
+      "locator": "Question 17.33, printed page 592; downloaded in RAM and text retained",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.08181",
+      "locator": "Abstract, locally infinite Galton–Watson trees",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Galton-Watson\" \"speed\" \"monotonicity\" \"2026\"",
+    "\"Galton Watson\" \"speed monotonicity\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Galton",
+        "speed monotonicity"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-29-000008",
+          "title": "The Moser–Tardos theorem (algorithmic Lovász Local Lemma)"
+        },
+        {
+          "id": "PALOMAR-2026-09-25-000002",
+          "title": "The quasi-isometry classes of Galton–Watson trees: Lean formalisation"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Galton",
+        "speed monotonicity"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00168v1",
+          "title": "Mobility Edge for Sparse Complex Gaussian Matrices"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "The new result's computer certificate was not independently executed."
+  ],
+  "canonical_update_required": false
+}

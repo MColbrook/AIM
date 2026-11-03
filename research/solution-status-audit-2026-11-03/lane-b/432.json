@@ -1,0 +1,60 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 349,
+  "source_sha256": "f8006f638fbde456a94174b5c0b522f7159dee15fc155c55f225c8be974e4fa5",
+  "statement_sha256": "9e8e248ddcf539def1429365c137114d1c18b3a1912007b85aa97696bcc97eab",
+  "original_target": {
+    "id": "432",
+    "title": "A resonance gap for arbitrary uniformly hyperbolic trapping in three dimensions",
+    "area": "Scattering PDEs and wave decay",
+    "file": "problems/432-hyperbolic-trapping-resonance-gap-three-dimensions.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "spectral3",
+    "source_sha256": "f8006f638fbde456a94174b5c0b522f7159dee15fc155c55f225c8be974e4fa5",
+    "statement_sha256": "9e8e248ddcf539def1429365c137114d1c18b3a1912007b85aa97696bcc97eab",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "432",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"hyperbolic trapping\" \"spectral gap\" \"2026\"",
+    "\"resonance gap\" \"three\" \"2026\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Vacossin\" \"spectral gap\" dimension 2 arxiv",
+    "\"hyperbolic trapping\" \"three dimensions\" gap 2026",
+    "\"hyperbolic trapped\" \"resonance\" \"dimension\" \"2026\" gap"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2201.08259",
+      "version": "currentHTML,publishedAPDE2024",
+      "locator": "§2.2 Schrodingeroperators,Theorem3",
+      "theorem_body_checked": true,
+      "scope": "V compactlysupported on R2,hyperbolic topologically1D trappedset; no arbitraryR3 extension."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s12591-026-00783-z",
+      "date": "7July2026",
+      "locator": "setting/introduction conditionalpressure theorem and Kerrapplication",
+      "theorem_body_checked": true,
+      "scope": "Normallyhyperbolic Kerr-(deSitter) geometry andpressure negativity,notarbitraryuniformhyperbolic trappedset."
+    },
+    {
+      "url": "https://math.mit.edu/~dyatlov/",
+      "date": "currentpublications2026",
+      "locator": "Spectralgapsfornormallyhyperbolictrapping description",
+      "scope": "Codimension1smoothstable/unstablefoliations,notfullarbitraryfractaltrapping."
+    }
+  ],
+  "registry_checks": "Complete cached Palomar/Hexagon metadata and pinned OpenAI/Colbrook author listings scanned for target terms; no full matching claim. Palomar planar Steklov isospectrality is a different question.",
+  "scope_comparison": "NeedallcompactuniformlyhyperbolicKE for scalarSchrodingeronR3 positive regularE,no pressuresign ornormalhyperbolicity assumption. Existing2D/fractaluncertainty andpressure/normal results insufficient.",
+  "limitations": [
+    "MSP PDF had no readablelines; arXiv fulltheorem used instead."
+  ],
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

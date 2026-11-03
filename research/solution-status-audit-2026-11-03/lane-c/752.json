@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "752",
+  "manifest_index": 596,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "752",
+    "title": "Weak–strong uniqueness at the energy level for a curved viscoelastic shell",
+    "area": "Fluid–structure interaction",
+    "file": "problems/752-weakstrong-uniqueness-at-the-energy-level-for-a-curved-viscoelastic-shell.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-dcc2e415d8c9da90",
+    "group": "fluid-structure-interaction",
+    "source_sha256": "f68d6ba7f5cc13671b4d82d87ddab171bf2148d3abe30d8c51f298893a4511cb",
+    "statement_sha256": "b9347bba344382c08d3d3cd2be3aefc7390b3d26e043db06b06b219adcff59bc",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f68d6ba7f5cc13671b4d82d87ddab171bf2148d3abe30d8c51f298893a4511cb",
+  "statement_sha256": "b9347bba344382c08d3d3cd2be3aefc7390b3d26e043db06b06b219adcff59bc",
+  "actual_source_sha256": "f68d6ba7f5cc13671b4d82d87ddab171bf2148d3abe30d8c51f298893a4511cb",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Use the periodic curved-reference setting of Breit–Mensah–Schwarzacher–Su. Let $`\\Omega\\subset\\mathbb R^3`$ be a bounded smooth reference domain whose boundary has a smooth regular embedding $`\\varphi:\\omega=\\mathbb T^2\\to\\partial\\Omega`$. Write $`n`$ for the reference outer unit normal and choose a tubular radius $`L>0`$. A displacement $`\\eta`$ gives the normal graph\n\n```math\n\\varphi_\\eta(t,y)=\\varphi(y)+\\eta(t,y)n(y),\\qquad\n\\partial\\Omega_\\eta(t)=\\varphi_\\eta(t,\\omega).\n```\n\nRestrict to the admissible normal-graph regime $`\\|\\eta\\|_{L^\\infty((0,T)\\times\\omega)}<L`$, so the Hanzawa map defines the moving domain. The reference surface is curved; the flat-plate result is already known. All structure functions and tests are periodic, with the source's convention for periodic function spaces.\n\nSet all positive physical constants to one. The system is\n\n```math\nv_t+(v\\cdot\\nabla)v=\\Delta v-\\nabla\\pi+f,\n\\qquad \\nabla\\cdot v=0\\quad\\text{in }\\Omega_\\eta(t),\n```\n\n```math\n\\eta_{tt}-\\partial_t\\Delta_y\\eta+\\Delta_y^2\\eta\n=g-n^T\\tau\\circ\\varphi_\\eta\\,n_\\eta\n |\\partial_1\\varphi_\\eta\\times\\partial_2\\varphi_\\eta|,\n\\qquad v\\circ\\varphi_\\eta=\\eta_t n,\n\\qquad \\tau=\\nabla v+\\nabla v^T-\\pi I.\n```\n\nThe classical stress formula describes smooth solutions; the following pressure-free identity defines the coupled equations for weak solutions. Put $`I=(0,T)`$. A weak solution has\n\n```math\n\\eta\\in W^{1,\\infty}(I;L^2(\\omega))\n\\cap W^{1,2}(I;H^1(\\omega))\\cap L^\\infty(I;H^2(\\omega)),\n\\qquad\nv\\in L^\\infty(I;L^2(\\Omega_\\eta))\\cap L^2(I;H^1_{\\rm div}(\\Omega_\\eta)),\n```\n\nthe stated kinematic trace, and initial values $`(\\eta_0,\\eta_*,v_0)`$. For every smooth scalar test $`b`$ and smooth ambient divergence-free vector test $`\\phi`$, both vanishing at $`T`$ and satisfying $`\\phi\\circ\\varphi_\\eta=bn`$, require\n\n```math\n\\begin{aligned}\n&-\\int_0^T\\!\\int_{\\Omega_\\eta(t)}v\\cdot\\phi_t\n-\\int_0^T\\!\\int_\\omega\\eta_t b_t\n-\\int_0^T\\!\\int_{\\Omega_\\eta(t)}v\\otimes v:\\nabla\\phi\n+\\int_0^T\\!\\int_{\\Omega_\\eta(t)}\\nabla v:\\nabla\\phi\\\\\n&\\quad+\\int_0^T\\!\\int_\\omega\\nabla_y\\eta_t\\cdot\\nabla_y b\n+\\int_0^T\\!\\int_\\omega\\Delta_y\\eta\\,\\Delta_y b\\\\\n&=\\int_{\\Omega_{\\eta_0}}v_0\\cdot\\phi(0)\n+\\int_\\omega\\eta_*b(0)\n+\\int_0^T\\!\\int_{\\Omega_\\eta(t)}f\\cdot\\phi\n+\\int_0^T\\!\\int_\\omega gb .\n\\end{aligned}\n```\n\nRequire also, for almost every $`t`$, the physical energy inequality\n\n```math\nE(t)+\\int_0^t\\!\\int_{\\Omega_\\eta(s)}|\\nabla v|^2\n+\\int_0^t\\!\\int_\\omega|\\nabla_y\\eta_t|^2\n\\le E(0)+\\int_0^t\\!\\int_{\\Omega_\\eta(s)}f\\cdot v\n+\\int_0^t\\!\\int_\\omega g\\eta_t,\n```\n\nwhere\n\n```math\nE(t)=\\tfrac12\\int_{\\Omega_\\eta(t)}|v|^2\n+\\tfrac12\\int_\\omega(|\\eta_t|^2+|\\Delta_y\\eta|^2).\n```\n\nFix compatible common data as in the source's (2.15) and (3.1): $`\\eta_0\\in H^3(\\omega)`$, $`\\eta_*\\in H^1(\\omega)`$, $`v_0\\in H^1_{\\rm div}(\\Omega_{\\eta_0})`$ with $`v_0\\circ\\varphi_{\\eta_0}=\\eta_*n`$, $`g\\in L^2(I;L^2(\\omega))`$, and an ambient force $`f\\in L^\\infty(I;L^2_{\\rm loc}(\\mathbb R^3))\\cap L^2(I;H^1_{\\rm loc}(\\mathbb R^3))`$. Suppose a strong solution $`(\\eta_s,v_s,\\pi_s)`$ exists on this interval, with\n\n```math\n\\begin{aligned}\n\\eta_s&\\in W^{1,\\infty}(I;H^1)\\cap W^{1,2}(I;H^2)\n\\cap L^\\infty(I;H^3)\\cap W^{2,2}(I;L^2)\\cap L^2(I;H^4),\\\\\nv_s&\\in W^{1,2}(I;L^2(\\Omega_{\\eta_s}))\n\\cap L^2(I;H^2(\\Omega_{\\eta_s}))\\cap L^\\infty(I;H^1(\\Omega_{\\eta_s})),\\\\\n\\pi_s&\\in L^2(I;H^1(\\Omega_{\\eta_s})).\n\\end{aligned}\n```\n\nThe spaces for $`\\eta_s`$ are on $`\\omega`$; the strong solution satisfies the equations almost everywhere and is itself a weak solution in the stated sense.\n\n**Must every weak solution $`(\\eta_w,v_w)`$ with these same data coincide with $`(\\eta_s,v_s)`$ throughout their common admissible interval?** No additional assumption $`\\eta_w\\in L^\\infty(I;C^{0,1}(\\omega))`$ is made. Equality means $`\\eta_w=\\eta_s`$ and therefore equality of the fluid domains and of their velocities almost everywhere.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"curved\" \"shell\" \"weak strong uniqueness\" 2026 Lipschitz",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"shell\" \"weak\" \"Lipschitz\" uniqueness",
+    "site:palomar-registry.org OR site:hexagonmath.org \"curved\" \"shell\" uniqueness"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://journals.sns.it/index.php/annaliscienze/article/download/7110/2598/5226",
+      "version_or_date": "Final43pagepaper online6October2025 doi10.2422/2036-2145.202407_010; compressible2605.04314v1 comparator",
+      "primary_body_access_gap": false,
+      "scope_comparison": "Actual final weak–strong estimate assumes weak shell eta1 spatially uniformly Lipschitz; local seeks removal in curved periodic3D incompressible viscoelastic normal-graph energy class. H2T2 energy does not give Lipschitz. Flatplate geometry differs, perfectlyelastic-shell uniqueness comparesstrongsolutions; compressible2026model changesPDE and retains extra weakgeometry. No fullunconditional announcement located.",
+      "locator": "Theorem5.1 p34 exact extraeta1 L∞C0,1; proofBogovskiip33–34; introductionp4"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual final weak–strong estimate assumes weak shell eta1 spatially uniformly Lipschitz; local seeks removal in curved periodic3D incompressible viscoelastic normal-graph energy class. H2T2 energy does not give Lipschitz. Flatplate geometry differs, perfectlyelastic-shell uniqueness comparesstrongsolutions; compressible2026model changesPDE and retains extra weakgeometry. No fullunconditional announcement located.",
+  "latest_version_check": "Final43pagepaper online6October2025 doi10.2422/2036-2145.202407_010; compressible2605.04314v1 comparator",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

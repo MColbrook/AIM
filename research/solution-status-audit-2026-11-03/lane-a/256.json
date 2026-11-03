@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "256",
+  "manifest_index": 201,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "256",
+    "title": "A data-independent time for global control of the defocusing cubic wave",
+    "area": "Nonlinear wave control / vibration suppression",
+    "file": "problems/256-uniform-time-cubic-wave-control.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "inverse3",
+    "source_sha256": "19fc64d21108589ef440bd7137841f8d91fbd3fc7ebe3626a985d25465f996be",
+    "statement_sha256": "75aa3a32cf97fba603ebe7f0db0ceef37b7b8aa0979ae97bc53011f5a4b43778",
+    "state": "unreviewed"
+  },
+  "source_sha256": "19fc64d21108589ef440bd7137841f8d91fbd3fc7ebe3626a985d25465f996be",
+  "statement_sha256": "75aa3a32cf97fba603ebe7f0db0ceef37b7b8aa0979ae97bc53011f5a4b43778",
+  "actual_source_sha256": "19fc64d21108589ef440bd7137841f8d91fbd3fc7ebe3626a985d25465f996be",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^3`$ be bounded and smooth, and let $`\\omega\\subset\\Omega`$ be open. Assume the geometric control condition: for some $`T_0<\\infty`$, every unit-speed generalized ray of the Dirichlet wave equation meets $`\\omega`$ within time $`T_0`$.\n\nIs there a time $`T_*=T_*(\\Omega,\\omega)`$ such that every two states in $`H_0^1(\\Omega)\\times L^2(\\Omega)`$ can be joined in time $`T_*`$ by an energy-class solution of\n\n```math\nu_{tt}-\\Delta u+u^3=\\mathbf1_\\omega f,\\qquad u|_{\\partial\\Omega}=0,\n```\n\nusing $`f\\in L^2(\\omega\\times(0,T_*))`$? Energy class means $`(u,u_t)\\in C([0,T_*];H_0^1\\times L^2)`$. The time may depend on the geometry but must be independent of the sizes of both endpoint states.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"cubic wave\" \"uniform time\" control 2026",
+    "\"cubic wave\" \"uniform time\" control (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"cubic wave\" \"uniform time\" control (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Global propagation of analyticity\" Laurent Loyola arxiv"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "Actual Theorem1.4 gives geometric-time observability for each a-priori radius R0 with constant depending on that radius. It is not a global endpoint controllability theorem with one geometry-only time for all energies. The wave-map paper explicitly keeps the cubic-wave uniform-time question open and proves a different manifold-constrained1D problem. No full matching claim found.",
+      "locator": "Theorem1.4; Coron–Krieger–Xiang2509.12779 introduction Open Problem Dehman–Lebeau–Zuazua",
+      "version_or_date": "Current arXiv2407.02866 rendering; finalJEP13(2026)1323–1387 doi10.5802/jep.348.",
+      "url": "https://arxiv.org/html/2407.02866",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Actual Theorem1.4 gives geometric-time observability for each a-priori radius R0 with constant depending on that radius. It is not a global endpoint controllability theorem with one geometry-only time for all energies. The wave-map paper explicitly keeps the cubic-wave uniform-time question open and proves a different manifold-constrained1D problem. No full matching claim found.",
+  "latest_version_check": "Current arXiv2407.02866 rendering; finalJEP13(2026)1323–1387 doi10.5802/jep.348.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

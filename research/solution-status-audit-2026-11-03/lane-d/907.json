@@ -1,0 +1,108 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "907",
+  "manifest_index": 751,
+  "checked_date": "2026-11-03",
+  "source_sha256": "b8edae470382758c6bd432e5641f27cc6cb0ba8f1ed53af6a97114fa139d878a",
+  "statement_sha256": "2759ed369d17eb77651869b55b68d7986b104b01280fa74914d11790e1ab9c78",
+  "original_target": {
+    "id": "907",
+    "title": "Weak cancellation in a simple stably finite C*-algebra",
+    "area": "Operator algebras",
+    "file": "problems/907-weak-cancellation-in-a-simple-stably-finite-c-algebra.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-70841d96258727ed",
+    "group": "operators",
+    "source_sha256": "b8edae470382758c6bd432e5641f27cc6cb0ba8f1ed53af6a97114fa139d878a",
+    "statement_sha256": "2759ed369d17eb77651869b55b68d7986b104b01280fa74914d11790e1ab9c78",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Does there exist a simple, unital, stably finite complex $`C^*`$-algebra $`A`$ and $`x,y,z\\in\\mathrm{Cu}(A)`$ such that\n\n```math\nx+z\\ll y+z,\\qquad x\\not\\ll y?\n```\n\n\nHere simplicity excludes nontrivial closed two-sided ideals. Stable finiteness means that every isometry in every matrix algebra $`M_n(A)`$ is unitary. Let $`\\mathcal K`$ be the compact operators on a separable infinite-dimensional complex Hilbert space. The ordinary Cuntz semigroup uses positive elements of the spatial stabilization $`A\\otimes\\mathcal K`$: $`a\\precsim b`$ when $`r_nbr_n^*\\to a`$ in norm for a sequence $`r_n\\in A\\otimes\\mathcal K`$. Quotient by mutual subequivalence, order by $`\\precsim`$, and add by block sum. The relation $`x\\ll y`$ means that every increasing sequence whose supremum dominates $`y`$ has a term dominating $`x`$.\n\nNo separability, nuclearity, exactness or comparison hypothesis is imposed.",
+  "full_original_page": "# 907. Weak cancellation in a simple stably finite C*-algebra\n\n**Area:** Operator algebras\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nDoes there exist a simple, unital, stably finite complex $`C^*`$-algebra $`A`$ and $`x,y,z\\in\\mathrm{Cu}(A)`$ such that\n\n```math\nx+z\\ll y+z,\\qquad x\\not\\ll y?\n```\n\n\nHere simplicity excludes nontrivial closed two-sided ideals. Stable finiteness means that every isometry in every matrix algebra $`M_n(A)`$ is unitary. Let $`\\mathcal K`$ be the compact operators on a separable infinite-dimensional complex Hilbert space. The ordinary Cuntz semigroup uses positive elements of the spatial stabilization $`A\\otimes\\mathcal K`$: $`a\\precsim b`$ when $`r_nbr_n^*\\to a`$ in norm for a sequence $`r_n\\in A\\otimes\\mathcal K`$. Quotient by mutual subequivalence, order by $`\\precsim`$, and add by block sum. The relation $`x\\ll y`$ means that every increasing sequence whose supremum dominates $`y`$ has a term dominating $`x`$.\n\nNo separability, nuclearity, exactness or comparison hypothesis is imposed.\n\n## Application\n\nThe question tests cancellation of positive-operator comparison under finiteness and simplicity.\n\n## Known progress\n\nStable rank one guarantees weak cancellation [1, Theorem 10.3], so an example must lie beyond that case. Familiar failures from infinite algebras or nonsimple cones do not meet the stated hypotheses.\n\nRecent rank approximation [2, Theorem A] concerns traces. The nuclear regularity equivalence [3, Corollary 7.4] uses additional hypotheses and does not force regularity for every algebra above. Corrections concerning the unitary invariant $`\\mathrm{Cu}_1`$ concern a different invariant [4].\n\n## References\n\n1. E. Gardella and F. Perera, *The modern theory of Cuntz semigroups of C*-algebras*, EMS Surveys in Mathematical Sciences 13 (2026), 133–214, [DOI](https://doi.org/10.4171/EMSS/84), [published text](https://ems.press/content/serial-article-files/52386), Question 16.5, p.206; definitions in Sections 2–4 and 10. The published question includes **unital**.\n2. H. Thiel, *Ranks of operators and pureness of C*-algebras*, [arXiv:2610.06761v1](https://arxiv.org/html/2610.06761v1), Theorem A and Corollary B.\n3. S. Evington, S. Hua, C. Schafhauser, A. Seth, A. Tikuisis and S. White, *Regular simple nuclear C*-algebras*, [arXiv:2610.09390v1](https://arxiv.org/html/2610.09390v1), Corollary 7.4.\n4. L. Cantier, *The unitary Cuntz semigroup on the classification of non-simple C*-algebras*, J. Math. Anal. Appl. 522 (2023), 127003, [DOI](https://doi.org/10.1016/j.jmaa.2023.127003), erratum section.\n\n## Status review\n\n\n**Known cases:** Stable rank one supplies weak cancellation, and simple nuclear regularity theorems impose extra assumptions. Abstract Cu-semigroups, infinite or nonsimple cone examples, and the unitary Cuntz semigroup do not realize the requested ordinary Cu failure for a simple unital stably finite algebra.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nStable rank one supplies weak cancellation, and simple nuclear regularity theorems impose extra assumptions. Abstract Cu-semigroups, infinite or nonsimple cone examples, and the unitary Cuntz semigroup do not realize the requested ordinary Cu failure for a simple unital stably finite algebra.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nIndependent primary-statement review and current searches found no matching resolution or complete announcement. The comparison included all 1,703 pinned AIM/OpenAI statement records and all 910 preceding local findings, across all statuses. The closest regularity and proper-infiniteness announcements impose different hypotheses. This is a bounded status check, not a certification of every cited proof.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-70841d96258727ed**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"weak cancellation\" \"simple\" \"stably finite\" Cuntz 2026",
+    "\"weak cancellation\" \"simple\" \"stably finite\" Cuntz; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.06761v1",
+      "locator": "TheoremA and CorollaryB, lines51–70",
+      "comparison": "Uniform rank approximation over ordinary traces and strict-comparison-implies-pure results do not construct an ordinary Cu weak-cancellation failure in a simple unital stably finite algebra. 2610.09390 Section7 explicitly assumes separable nuclear pure conditions. Abstract Cu examples need realization; infinite/nonsimple examples have wrong hypotheses.",
+      "inspected": "Actual indicated body passages"
+    }
+  ],
+  "rationale": "Uniform rank approximation over ordinary traces and strict-comparison-implies-pure results do not construct an ordinary Cu weak-cancellation failure in a simple unital stably finite algebra. 2610.09390 Section7 explicitly assumes separable nuclear pure conditions. Abstract Cu examples need realization; infinite/nonsimple examples have wrong hypotheses. No full matching resolution located in bounded current searches.",
+  "limitations": [
+    "Bounded search is not proof of continued openness; this review checks mathematical scope rather than certifying every cited proof."
+  ],
+  "announcement_routing": {
+    "localID": "907",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "weak cancellation",
+          "Cuntz semigroup",
+          "stably finite"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "weak cancellation",
+          "Cuntz semigroup",
+          "stably finite"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "weak cancellation",
+        "Cuntz semigroup",
+        "stably finite"
+      ],
+      "hits": [
+        {
+          "entry": "291",
+          "title": "Toms--Winter and equivariant Jiang--Su stability",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Equivariant-Jiang-Su-Stability-for-Amenable-Actions-in-the-Unital-Stably-Finite-Case-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Cuntz-comparison-and-Jiang-Su-absorption-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Nuclear-dimension-and-Jiang-Su-stability-without-elementary-subquotients-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Tracial-projection-methods-and-uniform-property-Gamma-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "294",
+          "title": "A counterexample to Kaplansky's quasitrace conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-counterexample-to-Kaplanskys-quasitrace-conjecture-September-23-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Toms–Winter/Jiang–Su absorption imposes nuclearity/regularity hypotheses absent from the target; Kaplansky quasitrace counterexamples do not assert Murray–von Neumann weak cancellation for every simple stably finite C*-algebra.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.704Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

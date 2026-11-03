@@ -1,0 +1,180 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "947",
+  "manifest_index": 791,
+  "checked_date": "2026-11-03",
+  "source_sha256": "8f03a4d6f5541b7fcd2ba756307394f25f827c7344a9de91c7bf40b18068d8f2",
+  "statement_sha256": "cae59308606f5993d1287bbb1a28eb38c0984053004685453fcc17bf17846d0e",
+  "original_target": {
+    "id": "947",
+    "title": "Backward Euler convergence for small-BV hyperbolic systems",
+    "area": "PDEs and materials / hyperbolic conservation laws",
+    "file": "problems/947-backward-euler-convergence-for-small-bv-hyperbolic-systems.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8d39676ce4d3c66e",
+    "group": "pdes-materials",
+    "source_sha256": "8f03a4d6f5541b7fcd2ba756307394f25f827c7344a9de91c7bf40b18068d8f2",
+    "statement_sha256": "cae59308606f5993d1287bbb1a28eb38c0984053004685453fcc17bf17846d0e",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`N\\ge2`$ and $`g\\in C^\\infty(\\mathbb R^N;\\mathbb R^N)`$ satisfy\n$`\\|Dg(u)\\|_{\\mathrm{op}}\\le1`$ everywhere, with $`Dg`$ globally Lipschitz.\nSet $`F(u)=2u+g(u)`$. Suppose $`DF`$ is strictly hyperbolic near $`0`$, and each characteristic family is genuinely nonlinear or linearly degenerate there. Write $`S_t`$ for the standard small-total-variation admissible semigroup for\n```math\nu_t+\\partial_xF(u)=0,\\qquad x\\in\\mathbb R.\n```\n\nFor $`h>0`$ and $`v\\in L^1(\\mathbb R;\\mathbb R^N)`$, define $`E_hv`$ to be the unique absolutely continuous $`L^1`$ solution $`w`$ of\n```math\nw+h\\,DF(w)\\partial_xw=v\\qquad\\text{almost everywhere}.\n```\n\nThe global assumptions on $`g`$ make this step well-defined by Chiri–Zhang's Theorem 2.1.\n\nIs there $`\\delta>0`$, depending on $`F`$, such that every\n$`u_0\\in L^1(\\mathbb R;\\mathbb R^N)\\cap BV(\\mathbb R;\\mathbb R^N)`$\nwith $`\\mathrm{TV}(u_0)\\le\\delta`$ satisfies\n```math\n\\lim_{m\\to\\infty}\\left\\|E_{t/m}^{\\,m}u_0-S_tu_0\\right\\|_{L^1}=0\n\\qquad\\text{for every fixed }t>0?\n```\n\nHere $`E_h^{\\,m}`$ means $`m`$ successive implicit time steps; space remains continuous. Uniform BV bounds on the iterates are not assumed, and no convergence rate is requested.",
+  "full_original_page": "# 947. Backward Euler convergence for small-BV hyperbolic systems\n\n**Area:** PDEs and materials / hyperbolic conservation laws\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`N\\ge2`$ and $`g\\in C^\\infty(\\mathbb R^N;\\mathbb R^N)`$ satisfy\n$`\\|Dg(u)\\|_{\\mathrm{op}}\\le1`$ everywhere, with $`Dg`$ globally Lipschitz.\nSet $`F(u)=2u+g(u)`$. Suppose $`DF`$ is strictly hyperbolic near $`0`$, and each characteristic family is genuinely nonlinear or linearly degenerate there. Write $`S_t`$ for the standard small-total-variation admissible semigroup for\n```math\nu_t+\\partial_xF(u)=0,\\qquad x\\in\\mathbb R.\n```\n\nFor $`h>0`$ and $`v\\in L^1(\\mathbb R;\\mathbb R^N)`$, define $`E_hv`$ to be the unique absolutely continuous $`L^1`$ solution $`w`$ of\n```math\nw+h\\,DF(w)\\partial_xw=v\\qquad\\text{almost everywhere}.\n```\n\nThe global assumptions on $`g`$ make this step well-defined by Chiri–Zhang's Theorem 2.1.\n\nIs there $`\\delta>0`$, depending on $`F`$, such that every\n$`u_0\\in L^1(\\mathbb R;\\mathbb R^N)\\cap BV(\\mathbb R;\\mathbb R^N)`$\nwith $`\\mathrm{TV}(u_0)\\le\\delta`$ satisfies\n```math\n\\lim_{m\\to\\infty}\\left\\|E_{t/m}^{\\,m}u_0-S_tu_0\\right\\|_{L^1}=0\n\\qquad\\text{for every fixed }t>0?\n```\n\nHere $`E_h^{\\,m}`$ means $`m`$ successive implicit time steps; space remains continuous. Uniform BV bounds on the iterates are not assumed, and no convergence rate is requested.\n\n## Application\n\nThe question asks whether implicit time stepping selects the standard admissible shock evolution of a nonlinear system, even though each step is uniquely solvable. It connects continuum conservation laws with the reliability of their time approximations.\n\n## References\n\n1. A. Bressan, *Open Questions in the Theory of One Dimensional Hyperbolic Conservation Laws*, in **Nonlinear Conservation Laws and Applications** (2011), pp. 1–22, §4(4), Eq. (4.7), [chapter DOI](https://doi.org/10.1007/978-1-4419-9554-4_1); [author chapter](https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/c/168431/files/2023/07/claw-questions.pdf), native p. 15.\n2. M. T. Chiri and M. Zhang, *On backward Euler approximations for systems of conservation laws*, **NoDEA** 31 (2024), article 37, [DOI](https://doi.org/10.1007/s00030-023-00920-5). [Accepted manuscript](https://cvgmt.sns.it/media/doc/paper/5361/BackEuler-Revision.pdf), revised 29 December 2023, assumptions (1.7) and Theorem 2.1.\n3. A. Bressan, *One Dimensional Hyperbolic Conservation Laws: Past and Future*, [author revision dated 10 September 2024](https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/c/168431/files/2024/09/Erice-revised2024.pdf), §3(7), native pp. 13–14.\n\n## Status review\n\n\n**Known cases:** Unique implicit steps and individual shock-profile construction do not establish convergence of all small-BV iterates. A-posteriori estimates assume the retained variation control missing in this problem.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nUnique implicit steps and individual shock-profile construction do not establish convergence of all small-BV iterates. A-posteriori estimates assume the retained variation control missing in this problem.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe 2011 source asks about general backward Euler convergence. The displayed normalization specifies the class in reference 2 where every implicit step has a unique $`L^1`$ Carathéodory solution. It is a precise version of that source question; no equivalence of discretizations under a Galilean change is asserted.\n\nReference 2 establishes fixed-step existence, uniqueness and selected shock profiles. Its estimates do not establish the limit above. Reference 3 still states convergence and uniform BV bounds as open after citing that published work. Known scalar and straight-rarefaction-curve cases do not cover all systems here.\n\nNearby AIM viscosity, rough-data uniqueness, BV blowup and universal error-rate questions have different approximations or conclusions. No matching complete solution or announcement was located. Final publisher/author byte parity is not certified; the formulation is supported by the primary author chapter, accepted step theorem and later survey. The [owner packet](../FURTHER_problems/_tracking/B296-backward-Euler-small-BV-precise-current-allstatus-owner-C-END-20261026.json) and [independent review](../FURTHER_problems/_tracking/B296-backward-Euler-root-independent-normalized-formulation-current-allstatus-PASS-END-20261026.json) preserve the exact comparisons and limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-8d39676ce4d3c66e**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "backward Euler",
+    "Chiri",
+    "Zhang",
+    "Guerra"
+  ],
+  "queries": [
+    "\"backward Euler\" \"conservation laws\" convergence 2026",
+    "\"backward Euler\" \"conservation laws\" convergence; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2010.00428",
+      "locator": "Introduction lines65–76 and postprocessing lines147–160; section6.3",
+      "comparison": "Approximate solution must retain small total variation; algorithm stops when it leaves the BV semigroup domain. That is an extra assumption, whereas target requires unconditional convergence of continuum backward-Euler iterates for every small-BV datum."
+    },
+    {
+      "url": "https://arxiv.org/abs/1803.00493v2",
+      "locator": "Latest revision27Feb2019; scalar discontinuous-flux model",
+      "comparison": "Discontinuous scalar-flux contraction setting differs from arbitrary strictly hyperbolic systems."
+    }
+  ],
+  "rationale": "Conditional a posteriori control and scalar Crandall–Liggett theory do not establish the target's system convergence without uniform variation assumptions.",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected scope statements inspected, not certification of every proof."
+  ],
+  "announcement_routing": {
+    "localID": "947",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "backward Euler",
+          "Chiri",
+          "Zhang",
+          "Guerra"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-11-02-000010",
+            "title": "Absolutely maximally entangled states of seven parties: for d >= 2, AME(7, d) exists exactly when d >= 3",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-11-02-000010-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-28-000022",
+            "title": "Nowhere-zero 3-flows in 6-edge-connected graphs",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-28-000022-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000005",
+            "title": "Formalization of a sharp cone square-function estimate via superorthogonality",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000005-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000012",
+            "title": "Connected counterexamples to the exact color-critical two-eigenvalue bound",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000012-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-11-000012",
+            "title": "Unimodality of the independence sequence of a finite forest (Erdős Problem 993)",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-11-000012-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-19-000001",
+            "title": "NKBesicovitch",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-19-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-07-000002",
+            "title": "A proof of the Bollobás–Nikiforov conjecture in Lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-07-000002-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-06-000002",
+            "title": "The sharp finite-field Nikodym exponent",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-06-000002-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "backward Euler",
+          "Chiri",
+          "Zhang",
+          "Guerra"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00592v1",
+            "title": "Stability and Convergence of a Regularized Immersed Boundary Method under Dynamic Cartesian Refinement. Part II: General Prescribed Motion",
+            "url": "https://hexagonmath.org/abs/2610.00592v1"
+          },
+          {
+            "id": "hexagon:2610.00582v1",
+            "title": "Stability and Convergence of a Regularized Immersed Boundary Method under Dynamic Cartesian Refinement. Part I: Fixed Geometry",
+            "url": "https://hexagonmath.org/abs/2610.00582v1"
+          },
+          {
+            "id": "hexagon:2610.00544v2",
+            "title": "The Height-Conductor Ratio on Curve Towers: Closed Forms for the Fermat Tower, the One-Third Barrier, and the Attainable Set",
+            "url": "https://hexagonmath.org/abs/2610.00544v2"
+          },
+          {
+            "id": "hexagon:2610.00426v1",
+            "title": "An explicit upper-bound certificate for the essential minimum of the Zhang–Zagier height",
+            "url": "https://hexagonmath.org/abs/2610.00426v1"
+          },
+          {
+            "id": "hexagon:2610.00297v1",
+            "title": "Bounds for Erdős Problem #188: $7\\le k\\le 60$",
+            "url": "https://hexagonmath.org/abs/2610.00297v1"
+          },
+          {
+            "id": "hexagon:2610.00305v1",
+            "title": "Three conjectures on the first two graph eigenvalues",
+            "url": "https://hexagonmath.org/abs/2610.00305v1"
+          },
+          {
+            "id": "hexagon:2610.00154v1",
+            "title": "Parisi formula for Ising and Spherical Perceptrons",
+            "url": "https://hexagonmath.org/abs/2610.00154v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "backward Euler",
+        "Chiri",
+        "Zhang",
+        "Guerra"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "The immersed-boundary claims analyze a regularized fluid/structure discretization under Cartesian refinement. They do not prove backward-Euler convergence for every small-BV hyperbolic conservation-law system. Other finite-field, graph and height matches are name/term collisions.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.732Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

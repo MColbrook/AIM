@@ -1,0 +1,78 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "075",
+  "manifest_index": 54,
+  "original_target": {
+    "id": "075",
+    "title": "The no-slip inviscid limit in two dimensions",
+    "area": "Fluid dynamics and boundary layers",
+    "file": "problems/075-no-slip-inviscid-limit.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "pdes-materials",
+    "source_sha256": "3bffbd8b76731c6de47e37a267c19d9f97790c20605e82ac3630338e2accd2cc",
+    "statement_sha256": "a01928257466e1153e07e784c52d22f130ffa7bb2bc0761f1f90bc0580c5d568",
+    "state": "unreviewed"
+  },
+  "source_sha256": "3bffbd8b76731c6de47e37a267c19d9f97790c20605e82ac3630338e2accd2cc",
+  "statement_sha256": "a01928257466e1153e07e784c52d22f130ffa7bb2bc0761f1f90bc0580c5d568",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:36:55.167123+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "October Fast separation Remark1.3 explicitly distinguishes the unresolved no-slip bounded-domain limit. Its logarithmic separation time tends to infinity, so it does not refute convergence on each fixed finite interval. Yesterday's anisotropic viscosity paper retains horizontal viscosity in its limit; this is not the isotropic NS-to-Euler target. Hexagon2610.00314 uses nonsmooth Lp-vorticity whole-space data, not a fixed smooth compactly supported datum in a bounded domain.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.20540v1",
+      "locator": "Theorem1.1 and Remarks1.2/1.3, lines119–128.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://doi.org/10.1007/s00021-026-01067-w",
+      "locator": "Primary indexed abstract; horizontally viscous limiting system.",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "inviscid limit",
+    "no-slip"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "inviscid limit",
+        "no-slip"
+      ],
+      "metadata_hits": [],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "inviscid limit",
+        "no-slip"
+      ],
+      "metadata_hits": [
+        {
+          "id": "2610.00582",
+          "title": "Stability and Convergence of a Regularized Immersed Boundary Method under Dynamic Cartesian Refinement. Part I: Fixed Geometry"
+        }
+      ],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted web searches; arXiv, Zenodo, HAL, GitHub, shared OpenAI current index and requested Colbrook author lists screened. No matching complete claim located.",
+  "limitations": [
+    "Bounded search cannot establish absence of unindexed solutions.",
+    "No end-to-end proof or Lean verification; clearly excluding source hypotheses can be established by a primary abstract."
+  ],
+  "canonical_update_required": false
+}

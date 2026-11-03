@@ -1,0 +1,81 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "114",
+  "manifest_index": 86,
+  "original_target": {
+    "id": "114",
+    "title": "A universal central limit law for quantum-graph nodal surplus",
+    "area": "Wave networks and quantum chaos",
+    "file": "problems/114-quantum-graph-nodal-clt.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-05",
+    "group": "spectral2",
+    "source_sha256": "0f3b07740a6992d59d9736540f842f1b4e15e4da39bfc91eb1797db52eb62e74",
+    "statement_sha256": "d31e787c3f535e30a726b8016d939a41fd51680c834809aecbb2e15cd79c12c2",
+    "state": "unreviewed"
+  },
+  "source_sha256": "0f3b07740a6992d59d9736540f842f1b4e15e4da39bfc91eb1797db52eb62e74",
+  "statement_sha256": "d31e787c3f535e30a726b8016d939a41fd51680c834809aecbb2e15cd79c12c2",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:55:50.504198+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The retained Holden construction refutes the Gaussian part but has variance asymptotically proportional to cycle rank; the local page explicitly retains universal variance bounds as the remaining target. Existing31Lean results are supporting finite/probabilistic statements, not a full formalization of that counterexample or of universal variance. Discrete signed-matrix nodal examples do not settle metric Kirchhoff variance. No new complete resolution of the remaining variance question located.",
+  "primary_sources": [
+    {
+      "url": "https://par.nsf.gov/servlets/purl/10339942",
+      "locator": "Conjecture3.1, metric-graph universal law and variance.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://ems.press/content/serial-article-files/47031?nt=1",
+      "locator": "Introduction; discrete signing versus metric graph scope.",
+      "body_inspected": true
+    },
+    {
+      "url": "research/solutions/114-nodal-surplus-counterexample/README.md",
+      "locator": "Retained local submitted proof/reviews and limited Lean scope on current problem page; not reverified end-to-end in this status audit.",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "nodal surplus",
+    "nodal count",
+    "quantum graph"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "nodal surplus",
+        "nodal count",
+        "quantum graph"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "nodal surplus",
+        "nodal count",
+        "quantum graph"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches of arXiv, Zenodo, HAL, GitHub plus shared current Palomar, Hexagon and OpenAI metadata, and requested Colbrook author lists.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

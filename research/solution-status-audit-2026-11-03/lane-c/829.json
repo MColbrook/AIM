@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "829",
+  "manifest_index": 673,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "829",
+    "title": "Magnetic flatness from everywhere-collapsed Green directions",
+    "area": "Magnetic dynamics / geometric rigidity",
+    "file": "problems/829-magnetic-flatness-from-everywhere-collapsed-green-directions.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ac4da1dca26f1eeb",
+    "group": "geometry-topology",
+    "source_sha256": "a9fe198dd9b081f56cd9fd2a4363c1bd344c9202cbcdec61a1f5a0374d7bc148",
+    "statement_sha256": "c2413641be2cb4e111389dc9f38d3e814008b17ad6e2d426433d50a1cfca440a",
+    "state": "unreviewed"
+  },
+  "source_sha256": "a9fe198dd9b081f56cd9fd2a4363c1bd344c9202cbcdec61a1f5a0374d7bc148",
+  "statement_sha256": "c2413641be2cb4e111389dc9f38d3e814008b17ad6e2d426433d50a1cfca440a",
+  "actual_source_sha256": "a9fe198dd9b081f56cd9fd2a4363c1bd344c9202cbcdec61a1f5a0374d7bc148",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`(M,g)`$ be a closed connected oriented smooth Riemannian surface, let\n$`J`$ be rotation by $`\\pi/2`$ in its oriented tangent planes, and let\n$`f\\in C^\\infty(M,\\mathbb R)`$. The unit-speed magnetic trajectories solve\n\n```math\n\\nabla_{\\dot\\gamma}\\dot\\gamma=f(\\gamma)J\\dot\\gamma.\n```\n\nWrite $`SM`$ for the unit tangent bundle, $`\\varphi_t`$ for this flow and\n$`K_g`$ for Gaussian curvature. Set\n\n```math\nq(x,v)=K_g(x)-df_x(Jv)+f(x)^2,\\qquad (x,v)\\in SM.\n```\n\nThe transverse scalar Jacobi equation along the trajectory from $`z\\in SM`$ is\n\n```math\n\\ddot y(t)+q(\\varphi_tz)y(t)=0.\n```\n\nAssume this equation has no conjugate points: for every $`z`$, its solution\n$`s_z`$ with $`s_z(0)=0`$ and $`\\dot s_z(0)=1`$ has $`s_z(t)\\ne0`$ for every\n$`t\\ne0`$. Let $`c_z`$ be the solution with $`c_z(0)=1`$, $`\\dot c_z(0)=0`$.\nFor $`T\\ne0`$ define\n\n```math\nb_T(z)=-\\frac{c_z(T)}{s_z(T)}.\n```\n\nThus the solution starting from $`(y(0),\\dot y(0))=(1,b_T(z))`$ vanishes at\ntime $`T`$. The no-conjugate-points hypothesis gives finite Green limits\n\n```math\nr_+(z)=\\lim_{T\\to+\\infty}b_T(z),\\qquad\nr_-(z)=\\lim_{T\\to-\\infty}b_T(z).\n```\n\nThese define the two Green lines $`\\mathbb R(1,r_+(z))`$ and\n$`\\mathbb R(1,r_-(z))`$ for the transverse Jacobi cocycle.\n\n**Question.** Does\n\n```math\nr_+(z)=r_-(z)\\quad\\text{for every }z\\in SM\n```\n\nimply $`q\\equiv0`$ on $`SM`$?\n\nThe hypothesis is equality at every point, with no curvature sign, no-focal-point,\nentropy or action assumption added. The conjugate-point convention is the\ntransverse scalar equation displayed above. In the source it is expressed using\nGreen lines in the annihilator of the flow direction in $`T^*(SM)`$.\n\nThe conclusion would force $`f`$ to be constant and $`K_g=-f^2`$. It describes\nthe flat zero-field system or a constant-curvature horocycle magnetic system.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"magnetic\" \"Green bundles\" collapse 2026",
+    "\"magnetic\" \"Green bundles\" collapse (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"magnetic\" \"Green bundles\" collapse (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "scope_comparison": "The exact target assumes no conjugate points and everywhere collapsed magnetic Green bundles, and asks whether q=K-df(Jv)+f^2 vanishes without a sign condition. The current final primary body explicitly poses that question. Corollary 1.10 requires kappa0<=0; Theorem 1.9's forward implication is not the desired converse. The June 2026 entropy Theorem B requires no focal points, a stronger hypothesis. General thermostat counterexamples with velocity-dependent force do not match the magnetic target. No complete matching announcement was found.",
+      "url": "https://www.cambridge.org/core/journals/ergodic-theory-and-dynamical-systems/article/thermostats-without-conjugate-points/FAF8B02A195D989291689D2158C4DF8B",
+      "version_or_date": "Echevarria Cuesta–Marshall Reber, published 2026, DOI 10.1017/etds.2026.10285; Garcia–Guglielmo arXiv:2606.18434v2, 23 June 2026",
+      "locator": "Theorem 1.9, Corollary 1.10 and Section 1.3 final magnetic question; 2606.18434v2 Theorem B"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The exact target assumes no conjugate points and everywhere collapsed magnetic Green bundles, and asks whether q=K-df(Jv)+f^2 vanishes without a sign condition. The current final primary body explicitly poses that question. Corollary 1.10 requires kappa0<=0; Theorem 1.9's forward implication is not the desired converse. The June 2026 entropy Theorem B requires no focal points, a stronger hypothesis. General thermostat counterexamples with velocity-dependent force do not match the magnetic target. No complete matching announcement was found.",
+  "latest_version_check": "Echevarria Cuesta–Marshall Reber, published 2026, DOI 10.1017/etds.2026.10285; Garcia–Guglielmo arXiv:2606.18434v2, 23 June 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

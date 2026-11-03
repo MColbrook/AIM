@@ -1,0 +1,73 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "053",
+  "manifest_index": 36,
+  "original_target": {
+    "id": "053",
+    "title": "Recover an arbitrary sound speed from one incident direction",
+    "area": "Inverse scattering / acoustic tomography",
+    "file": "problems/053-fixed-angle-sound-speed.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse",
+    "source_sha256": "1b4dfd91b0fae76c306fc9071c9a2b95c94b3d5d97201ef01a68a5c86bd777e6",
+    "statement_sha256": "f971ba95ef8f30e81853405bf32768437f6215892ef8d5a329f008e3ced930e7",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1b4dfd91b0fae76c306fc9071c9a2b95c94b3d5d97201ef01a68a5c86bd777e6",
+  "statement_sha256": "f971ba95ef8f30e81853405bf32768437f6215892ef8d5a329f008e3ced930e7",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:28:38.319115+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no_full_match",
+  "recommended_status": "Open",
+  "scope_comparison": "Oksanen–Rakesh–Salo August theorem requires pseudoconvexity and the no-caustics EIC and complementary measurements. The scalar-speed specialization following Theorem2.8 removes the spanning condition but not those geometric hypotheses or complementary data. Si's September result has a frequency-independent zeroth-order Schrödinger potential V; the target acoustic contrast is multiplied by k² and cannot be substituted into its fixed-V all-frequency hypothesis.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2608.13670v1",
+      "locator": "Theorem2.8 and remarks lines365–426; complementary solution §2.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2609.19698v1",
+      "locator": "Equation1.1 and Theorem1.1, frequency-independent V.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "fixed angle",
+    "sound speed"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "entries": 954,
+      "complete_listing": true,
+      "query_terms": [
+        "fixed angle",
+        "sound speed"
+      ],
+      "metadata_hits": [],
+      "scope": "Current complete public metadata routing; no same-target announcement hit."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "entries": 646,
+      "complete_listing": true,
+      "query_terms": [
+        "fixed angle",
+        "sound speed"
+      ],
+      "metadata_hits": [],
+      "scope": "Current complete public metadata routing; no same-target announcement hit."
+    }
+  },
+  "other_provider_search": "Focused current web and site-restricted searches of arXiv, Zenodo, HAL and GitHub; only relevant primary claims promoted to scope checks. Shared OpenAI and requested Colbrook author indexes screened; no matching new full resolution.",
+  "limitations": [
+    "Bounded current search, not proof that no unindexed solution exists.",
+    "No independent end-to-end proof or Lean-kernel verification."
+  ],
+  "canonical_update_required": false
+}

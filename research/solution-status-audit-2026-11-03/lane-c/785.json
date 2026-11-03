@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "785",
+  "manifest_index": 629,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "785",
+    "title": "Does a planar mask attain the sharp quantitative isoperimetric constant?",
+    "area": "Geometric analysis and shape optimization",
+    "file": "problems/785-does-a-planar-mask-attain-the-sharp-quantitative-isoperimetric-constant.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-4a42d7c05d79981c",
+    "group": "geometry-topology",
+    "source_sha256": "0faf069b4dc855dcb64d9c03f519ff8ea101b7ff5b736f8f9ba8c73a93ad1a36",
+    "statement_sha256": "3946625c2532ad6f9a9c637547401acea9b543f75480cbe042687467bb0f2247",
+    "state": "unreviewed"
+  },
+  "source_sha256": "0faf069b4dc855dcb64d9c03f519ff8ea101b7ff5b736f8f9ba8c73a93ad1a36",
+  "statement_sha256": "3946625c2532ad6f9a9c637547401acea9b543f75480cbe042687467bb0f2247",
+  "actual_source_sha256": "0faf069b4dc855dcb64d9c03f519ff8ea101b7ff5b736f8f9ba8c73a93ad1a36",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For a planar set $`E`$ of positive finite area and finite perimeter, let $`B`$ be a disk with $`|B|=|E|`$. Define its normalized isoperimetric deficit and Fraenkel asymmetry by\n```math\n\\delta(E)=\\frac{P(E)-P(B)}{P(B)},\\qquad\n \\lambda(E)=\\min_{x\\in\\mathbb R^2}\\frac{|E\\mathbin\\triangle (B+x)|}{|E|}.\n```\n\nThe quotient $`F(E)=\\delta(E)/\\lambda(E)^2`$ is considered for sets that differ from every disk by positive area. Cicalese and Leonardi [1] conjecture that a *mask* is a global minimizer:\n```math\n\\inf_{E\\subset\\mathbb R^2\\!,\\ E\\text{ not a disk}}F(E)\n \\stackrel{?}{=}\n \\inf_{M\\in\\mathcal M_{\\rm mask}}F(M).\n```\n\nHere $`\\mathcal M_{\\rm mask}`$ is the planar family described in [1] and [2, Section 5]: two perpendicular reflection axes, two optimal disks for $`\\lambda`$, and boundary pieces forming eight circular arcs. Does this family contain an unrestricted optimizer, and hence yield the sharp constant in $`\\lambda(E)^2\\leq C\\delta(E)`$? The frequently quoted ratio near $`0.39314`$ is a numerical candidate, not an exact proved global value.",
+  "full_local_page_read": true,
+  "queries": [
+    "quantitative isoperimetric mask conjecture Fraenkel optimizer 2026",
+    "quantitative isoperimetric mask conjecture Fraenkel optimizer 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "quantitative isoperimetric mask conjecture Fraenkel optimizer 2026 (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Theorem1.2 andfollowingcomparisonparagraph;definition(3)versus(5)",
+      "version_or_date": "v1,November2025;currentarXivrecordinspected3November2026",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2511.15232v1",
+      "scope_comparison": "The actual theorem minimizes deficit divided by squared barycentric asymmetry with a diameter constraint. Its optimizer has two components and no circular arc; the following paragraph contrasts the Fraenkel-asymmetry mask as still conjectured. The target minimizes over unrestricted finite-perimeter sets using an optimal disk center, so neither that theorem, convex-stadium optimality, nor existence of some optimizer identifies a mask. No matching complete global-optimality announcement found."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual theorem minimizes deficit divided by squared barycentric asymmetry with a diameter constraint. Its optimizer has two components and no circular arc; the following paragraph contrasts the Fraenkel-asymmetry mask as still conjectured. The target minimizes over unrestricted finite-perimeter sets using an optimal disk center, so neither that theorem, convex-stadium optimality, nor existence of some optimizer identifies a mask. No matching complete global-optimality announcement found.",
+  "latest_version_check": "v1,November2025;currentarXivrecordinspected3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

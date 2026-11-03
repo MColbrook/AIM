@@ -1,0 +1,95 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "935",
+  "manifest_index": 779,
+  "checked_date": "2026-11-03",
+  "source_sha256": "88eb81fd4e4a124857ef78ce35bf506badb79ffcc30a291826994d5503f14a93",
+  "statement_sha256": "11191442622711d441951f91c1f397ce21efd4f5a141c772f0b3d2bf6675c85f",
+  "original_target": {
+    "id": "935",
+    "title": "The numerical index of real Lebesgue spaces",
+    "area": "Functional analysis / bounded linear operators",
+    "file": "problems/935-the-numerical-index-of-real-lebesgue-spaces.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-fc28301b7c478124",
+    "group": "operators",
+    "source_sha256": "88eb81fd4e4a124857ef78ce35bf506badb79ffcc30a291826994d5503f14a93",
+    "statement_sha256": "11191442622711d441951f91c1f397ce21efd4f5a141c772f0b3d2bf6675c85f",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`1<p<\\infty`$, $`p\\ne2`$, and let $`X=L_p([0,1];\\mathbb R)`$ have its usual Lebesgue norm. Write $`S_X`$ and $`S_{X^*}`$ for the unit spheres of $`X`$ and its continuous real dual. For a bounded real-linear operator $`T:X\\to X`$, define\n```math\nv(T)=\\sup\\{|x^*(Tx)|:x\\in S_X,\\ x^*\\in S_{X^*},\\ x^*(x)=1\\},\n\\qquad n(X)=\\inf_{\\|T\\|=1}v(T).\n```\n\nIs it true that, for every such $`p`$,\n```math\nn\\!\\left(L_p([0,1];\\mathbb R)\\right)=M_p,\n\\qquad\nM_p=\\max_{0\\le t\\le1}\\frac{|t^{p-1}-t|}{1+t^p}\\,?\n```\n\nThis is the ordinary numerical index of all bounded real-linear operators. The unresolved lower-bound direction asks whether $`v(T)\\ge M_p\\|T\\|`$ always holds.",
+  "full_original_page": "# 935. The numerical index of real Lebesgue spaces\n\n**Area:** Functional analysis / bounded linear operators\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`1<p<\\infty`$, $`p\\ne2`$, and let $`X=L_p([0,1];\\mathbb R)`$ have its usual Lebesgue norm. Write $`S_X`$ and $`S_{X^*}`$ for the unit spheres of $`X`$ and its continuous real dual. For a bounded real-linear operator $`T:X\\to X`$, define\n```math\nv(T)=\\sup\\{|x^*(Tx)|:x\\in S_X,\\ x^*\\in S_{X^*},\\ x^*(x)=1\\},\n\\qquad n(X)=\\inf_{\\|T\\|=1}v(T).\n```\n\nIs it true that, for every such $`p`$,\n```math\nn\\!\\left(L_p([0,1];\\mathbb R)\\right)=M_p,\n\\qquad\nM_p=\\max_{0\\le t\\le1}\\frac{|t^{p-1}-t|}{1+t^p}\\,?\n```\n\nThis is the ordinary numerical index of all bounded real-linear operators. The unresolved lower-bound direction asks whether $`v(T)\\ge M_p\\|T\\|`$ always holds.\n\n## Application\n\nThe numerical index measures the best uniform recovery of operator norm from evaluations by norming functionals. Its exact value quantifies this loss for bounded operators on a standard Lebesgue function space.\n\n## References\n\n1. M. Martín, J. Merí and M. Popov, *On the numerical radius of operators in Lebesgue spaces*, **Journal of Functional Analysis 261** (2011), 149–168, §5, Problem 5.1. [DOI](https://doi.org/10.1016/j.jfa.2011.03.007); [eligible arXiv record](https://arxiv.org/abs/1011.4785); [author preprint](https://www.ugr.es/~mmartins/Curriculum/Papers/pre-MarMerPop(2).pdf).\n2. R. Chiclana, *The Numerical Index of Two-Dimensional Real $`\\ell_p`$ Spaces*, [arXiv:2606.01675v1](https://arxiv.org/pdf/2606.01675v1), submitted 1 June 2026, introduction pp1–2 and Theorem 1.1. This gives the corresponding formula for real two-dimensional $`\\ell_p^2`$ and explicitly distinguishes the still-open general real $`L_p`$ problem.\n\n## Status review\n\n\n**Known cases:** The June 2026 Chiclana result is exactly two-dimensional real ell-p; its introduction retains the general real Lebesgue-space numerical index problem. Rank-one, absolute and complex indices do not supply the missing lower bound.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe June 2026 Chiclana result is exactly two-dimensional real ell-p; its introduction retains the general real Lebesgue-space numerical index problem. Rank-one, absolute and complex indices do not supply the missing lower bound.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe June 2026 primary source explicitly retains the general real $`L_p`$ problem. Bounded searches through 25 October 2026 found no complete solution, counterexample or announced solution for the target above. The two-dimensional result does not settle the infinite-dimensional statement. Complex, rank-one and absolute numerical indices are separate questions and are not asserted open here.\n\n## Duplicate check\n\nThe target was compared with the current and all-status AIM/OpenAI statements, all recorded finding decisions, and admitted problem pages. The existing question about a complex reflexive space with numerical index one is a different existential problem.\n\n## Review provenance\n\nDiscovered in the full recovered-body scan of arXiv:1011.4785v1. Exact retained positive passages were jointly read with the coordinator; definitions were checked against the author primary, and the coordinator independently read the selected June 2026 primary passages and version record. This records a bounded source/current-status review, not verification of every cited proof or an exhaustive guarantee of openness.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-fc28301b7c478124**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "numerical index",
+    "real Lebesgue",
+    "Chiclana",
+    "Lp-spaces"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"numerical index\" \"real\" \"Lebesgue\" 2026",
+    "\"numerical index\" \"real\" \"Lebesgue\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2606.01675v1",
+      "locator": "Theorem1.1 and Related work, lines53–83",
+      "comparison": "Actual theorem computes n(ell_p^2) only; the following paragraph retains general real Lp exact-value problem. Rank-one, complex, or absolute numerical indices change operator class or field; no general lower bound M_p found."
+    }
+  ],
+  "rationale": "Actual theorem computes n(ell_p^2) only; the following paragraph retains general real Lp exact-value problem. Rank-one, complex, or absolute numerical indices change operator class or field; no general lower bound M_p found.",
+  "limitations": [
+    "Bounded negative search is not proof of openness; candidate scope inspected, not complete proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "935",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "numerical index",
+          "real Lebesgue",
+          "Chiclana",
+          "Lp-spaces"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "numerical index",
+          "real Lebesgue",
+          "Chiclana",
+          "Lp-spaces"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "numerical index",
+        "real Lebesgue",
+        "Chiclana",
+        "Lp-spaces"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

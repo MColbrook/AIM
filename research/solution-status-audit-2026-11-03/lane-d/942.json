@@ -1,0 +1,91 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "942",
+  "manifest_index": 786,
+  "checked_date": "2026-11-03",
+  "source_sha256": "4e5afc96df9568d640f58ac27cbefc1935c892a9837e3b3cc7f0cbeb416c4af8",
+  "statement_sha256": "7162a3007291f275a3b44f6d5599eee35520ac8671dd4c1e006306298fb37755",
+  "original_target": {
+    "id": "942",
+    "title": "Classical existence near a critical nonisentropic vortex sheet",
+    "area": "Compressible flow and free boundaries",
+    "file": "problems/942-classical-existence-near-a-critical-nonisentropic-vortex-sheet.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-49e34272a6a8d95e",
+    "group": "pdes-materials",
+    "source_sha256": "4e5afc96df9568d640f58ac27cbefc1935c892a9837e3b3cc7f0cbeb416c4af8",
+    "statement_sha256": "7162a3007291f275a3b44f6d5599eee35520ac8671dd4c1e006306298fb37755",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Consider two-dimensional compressible Euler flow with\n```math\n(\\partial_t+\\mathbf u\\cdot\\nabla)p+2p\\,\\nabla\\cdot\\mathbf u=0,\n\\qquad \\rho(\\partial_t+\\mathbf u\\cdot\\nabla)\\mathbf u+\\nabla p=0,\n\\qquad(\\partial_t+\\mathbf u\\cdot\\nabla)s=0,\n\\qquad\\rho=p^{1/2}e^{-s/2}.\n```\n\nFix the planar states\n```math\n\\bar U^+=(1,3/\\sqrt2,0,2\\log2),\\qquad\n\\bar U^-=(1,-3/\\sqrt2,0,-2\\log2),\n\\quad U=(p,u_1,u_2,s).\n```\n\nTheir sound speeds are $`c_+=2`$ and $`c_-=1`$. Thus the tangential velocity parameter is the critical value $`\\bar v=(c_++c_-)/\\sqrt2`$, lying strictly inside the supersonic stable region\n```math\n2\\bar v>(c_+^{2/3}+c_-^{2/3})^{3/2}.\n```\n\n\nIs there an integer $`m\\ge13`$ and a number $`\\delta>0`$ with the following property? Every smooth initial graph $`\\varphi_0`$ and smooth upper/lower initial states, expressed on the half-plane $`\\mathbb R^2_+=\\{(y_1,y_2):y_2>0\\}`$, whose perturbations have compact support in the closed unit half-disk and satisfy\n```math\n\\sum_{\\pm}\\|U_0^\\pm-\\bar U^\\pm\\|_{H^{m+1/2}(\\mathbb R^2_+)}\n+\\|\\varphi_0\\|_{H^{m+1}(\\mathbb R)}<\\delta,\n```\n\nand the all-order compatibility conditions described below, admit a classical vortex-sheet solution on $`[0,1]`$?\n\nHere a solution consists of a graph $`x_2=\\varphi(t,x_1)`$, Euler solutions on its two sides, and orientation-preserving/reflected straightening maps $`x_2=\\Phi^\\pm(t,y_1,y_2)`$ with\n```math\n\\Phi^\\pm(t,y_1,0)=\\varphi(t,y_1),\\qquad\n\\pm\\partial_{y_2}\\Phi^\\pm>0.\n```\n\nThe pulled-back states $`U^\\pm`$ and maps satisfy\n```math\nU^\\pm-\\bar U^\\pm,\\ \\Phi^\\pm\\mp y_2\\in\nH^4((0,1)\\times\\mathbb R^2_+),\\qquad\n\\varphi\\in H^5((0,1)\\times\\mathbb R),\n```\n\nhave the specified initial traces and positive pressure, and obey Euler on each side and the vortex-sheet conditions\n```math\np^+=p^-,\\qquad\n\\partial_t\\varphi=\\mathbf u^+\\cdot(-\\partial_1\\varphi,1)\n=\\mathbf u^-\\cdot(-\\partial_1\\varphi,1).\n```\n\nThe straightening maps obey the usual eikonal gauge\n$`\\partial_t\\Phi^\\pm+u_1^\\pm\\partial_1\\Phi^\\pm-u_2^\\pm=0`$.\n\nCompatibility means the smooth version of Definition 4.1 of Morando–Trebeschi–Wang: there are smooth initial extensions $`\\dot\\Phi_0^\\pm:=\\Phi_0^\\pm\\mp y_2`$ of $`\\varphi_0`$, supported in the closed half-disk of radius $`\\sqrt2`$, satisfying\n```math\n\\|\\dot\\Phi_0^\\pm\\|_{H^{m+3/2}(\\mathbb R^2_+)}\\le C_m\\|\\varphi_0\\|_{H^{m+1}(\\mathbb R)},\\qquad\n\\pm\\partial_2\\Phi_0^\\pm\\ge7/8,\n```\n\nwhere $`C_m`$ is fixed independently of the data, such that the formal time derivatives determined recursively by pulled-back Euler and the eikonal equations satisfy the source's pressure and map matching conditions to every order. Explicitly, if $`\\dot\\Phi_k^\\pm=\\partial_t^k(\\Phi^\\pm\\mp y_2)|_{t=0}`$ and $`\\dot p_k^\\pm=\\partial_t^k(p^\\pm-1)|_{t=0}`$ are these formal jets, require\n```math\n\\partial_2^j(\\dot\\Phi_k^+-\\dot\\Phi_k^-)|_{y_2=0}=0,\n\\qquad\n\\partial_2^j(\\dot p_k^+-\\dot p_k^-)|_{y_2=0}=0\n\\quad(j,k\\ge0).\n```\n\nFor smooth compactly supported jets these all-order equalities also ensure the weighted Hardy integrability conditions in that definition. Perturbations supported away from the initial interface with $`\\varphi_0=0`$ give nontrivial compatible data.\n\n\nThis is an existence-only prototype of the critical case explicitly left open in [1, Introduction] and [2, p. 572]. The specified initial traces include a choice of the controlled extensions in the compatibility condition. Their constant $`C_m`$ is fixed before the data are chosen. The graph has initial support in $`[-1,1]`$.",
+  "full_original_page": "# 942. Classical existence near a critical nonisentropic vortex sheet\n\n**Area:** Compressible flow and free boundaries\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nConsider two-dimensional compressible Euler flow with\n```math\n(\\partial_t+\\mathbf u\\cdot\\nabla)p+2p\\,\\nabla\\cdot\\mathbf u=0,\n\\qquad \\rho(\\partial_t+\\mathbf u\\cdot\\nabla)\\mathbf u+\\nabla p=0,\n\\qquad(\\partial_t+\\mathbf u\\cdot\\nabla)s=0,\n\\qquad\\rho=p^{1/2}e^{-s/2}.\n```\n\nFix the planar states\n```math\n\\bar U^+=(1,3/\\sqrt2,0,2\\log2),\\qquad\n\\bar U^-=(1,-3/\\sqrt2,0,-2\\log2),\n\\quad U=(p,u_1,u_2,s).\n```\n\nTheir sound speeds are $`c_+=2`$ and $`c_-=1`$. Thus the tangential velocity parameter is the critical value $`\\bar v=(c_++c_-)/\\sqrt2`$, lying strictly inside the supersonic stable region\n```math\n2\\bar v>(c_+^{2/3}+c_-^{2/3})^{3/2}.\n```\n\n\nIs there an integer $`m\\ge13`$ and a number $`\\delta>0`$ with the following property? Every smooth initial graph $`\\varphi_0`$ and smooth upper/lower initial states, expressed on the half-plane $`\\mathbb R^2_+=\\{(y_1,y_2):y_2>0\\}`$, whose perturbations have compact support in the closed unit half-disk and satisfy\n```math\n\\sum_{\\pm}\\|U_0^\\pm-\\bar U^\\pm\\|_{H^{m+1/2}(\\mathbb R^2_+)}\n+\\|\\varphi_0\\|_{H^{m+1}(\\mathbb R)}<\\delta,\n```\n\nand the all-order compatibility conditions described below, admit a classical vortex-sheet solution on $`[0,1]`$?\n\nHere a solution consists of a graph $`x_2=\\varphi(t,x_1)`$, Euler solutions on its two sides, and orientation-preserving/reflected straightening maps $`x_2=\\Phi^\\pm(t,y_1,y_2)`$ with\n```math\n\\Phi^\\pm(t,y_1,0)=\\varphi(t,y_1),\\qquad\n\\pm\\partial_{y_2}\\Phi^\\pm>0.\n```\n\nThe pulled-back states $`U^\\pm`$ and maps satisfy\n```math\nU^\\pm-\\bar U^\\pm,\\ \\Phi^\\pm\\mp y_2\\in\nH^4((0,1)\\times\\mathbb R^2_+),\\qquad\n\\varphi\\in H^5((0,1)\\times\\mathbb R),\n```\n\nhave the specified initial traces and positive pressure, and obey Euler on each side and the vortex-sheet conditions\n```math\np^+=p^-,\\qquad\n\\partial_t\\varphi=\\mathbf u^+\\cdot(-\\partial_1\\varphi,1)\n=\\mathbf u^-\\cdot(-\\partial_1\\varphi,1).\n```\n\nThe straightening maps obey the usual eikonal gauge\n$`\\partial_t\\Phi^\\pm+u_1^\\pm\\partial_1\\Phi^\\pm-u_2^\\pm=0`$.\n\nCompatibility means the smooth version of Definition 4.1 of Morando–Trebeschi–Wang: there are smooth initial extensions $`\\dot\\Phi_0^\\pm:=\\Phi_0^\\pm\\mp y_2`$ of $`\\varphi_0`$, supported in the closed half-disk of radius $`\\sqrt2`$, satisfying\n```math\n\\|\\dot\\Phi_0^\\pm\\|_{H^{m+3/2}(\\mathbb R^2_+)}\\le C_m\\|\\varphi_0\\|_{H^{m+1}(\\mathbb R)},\\qquad\n\\pm\\partial_2\\Phi_0^\\pm\\ge7/8,\n```\n\nwhere $`C_m`$ is fixed independently of the data, such that the formal time derivatives determined recursively by pulled-back Euler and the eikonal equations satisfy the source's pressure and map matching conditions to every order. Explicitly, if $`\\dot\\Phi_k^\\pm=\\partial_t^k(\\Phi^\\pm\\mp y_2)|_{t=0}`$ and $`\\dot p_k^\\pm=\\partial_t^k(p^\\pm-1)|_{t=0}`$ are these formal jets, require\n```math\n\\partial_2^j(\\dot\\Phi_k^+-\\dot\\Phi_k^-)|_{y_2=0}=0,\n\\qquad\n\\partial_2^j(\\dot p_k^+-\\dot p_k^-)|_{y_2=0}=0\n\\quad(j,k\\ge0).\n```\n\nFor smooth compactly supported jets these all-order equalities also ensure the weighted Hardy integrability conditions in that definition. Perturbations supported away from the initial interface with $`\\varphi_0=0`$ give nontrivial compatible data.\n\n\nThis is an existence-only prototype of the critical case explicitly left open in [1, Introduction] and [2, p. 572]. The specified initial traces include a choice of the controlled extensions in the compatibility condition. Their constant $`C_m`$ is fixed before the data are chosen. The graph has initial support in $`[-1,1]`$.\n\n## Application\n\nA vortex sheet separates two gas flows with continuous pressure and normal velocity, while tangential velocity and entropy can jump. The question tests whether a critical velocity inside the linearly stable region still permits a classical evolution for small compatible disturbances.\n\n## References\n\n1. A. Morando, P. Trebeschi and T. Wang, [*Two-Dimensional Vortex Sheets for the Nonisentropic Euler Equations: Nonlinear Stability*, latest arXiv v2](https://arxiv.org/abs/1808.09290v2), 31 October 2018, Theorem 1.1, the following critical-case discussion, and Section 4. Published in *Journal of Differential Equations* **266** (2019), 5397–5430, [DOI](https://doi.org/10.1016/j.jde.2018.10.029).\n2. A. Morando, P. Trebeschi and T. Wang, *Existence and stability of nonisentropic compressible vortex sheets*, in [*Hyperbolic Problems: Theory, Numerics, Applications*, proceedings of HYP2018](https://www.aimsciences.org/aimsmath-upload/book/202172319108234.pdf), 2020, pp. 569–576, especially p. 572.\n3. A. Morando, P. Secchi, P. Trebeschi and D. Zhang, [*Two-dimensional nonisentropic compressible vortex sheets*](https://doi.org/10.3934/dcdss.2025138), *Discrete and Continuous Dynamical Systems – S* **19** (2026), 157–197, Theorem 4.2(ii) and Remark 4.3.\n\n## Status review\n\n\n**Known cases:** The specified nonisentropic critical Euler background needs nonlinear classical existence. Current-vortex magnetic models and the 2026 constant-coefficient linear front result do not cover it.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe specified nonisentropic critical Euler background needs nonlinear classical existence. Current-vortex magnetic models and the 2026 constant-coefficient linear front result do not cover it.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe nonlinear theorem in [1] excludes the displayed critical value. Its input and compatibility conditions motivate this fixed-background prototype, which asks for an unspecified finite input regularity and only classical output. It does not prescribe the original theorem's exact derivative loss or ask for uniqueness or global stability.\n\nThe critical theorem in [3] treats a constant-coefficient linear front equation with prescribed forcing. It has an additional derivative loss and does not supply the variable-coefficient estimates or nonlinear existence required here. Remark 4.3 explicitly discusses a possible future nonlinear resolution.\n\nThe complete eight-page proceedings chapter and pinned 30-page original v2 were read for question discovery. The exact formulation, compatibility conditions and relevant 2026 theorems were separately inspected; an independent audit required and checked the initial extension bound now included above. The 34-page final journal body has not been compared throughout. No matching complete solution or announcement was located in the recorded bounded searches and semantic duplicate checks. These checks do not establish exhaustive absence of a solution or certify every cited proof.\n\nThe [source review](../FURTHER_problems/_tracking/parallel/continuum/critical-vortex-sheet-review.json), [independent audit](../FURTHER_problems/_tracking/parallel/rough-filtering/cross-critical-vortex-sheet-review.json), [duplicate comparison](../FURTHER_problems/_tracking/critical-vortex-sheet-duplicates-review-2026-10-19.json) and [coordinator review](../FURTHER_problems/_tracking/critical-vortex-sheet-coordinator-review-2026-10-19.json) record the evidence and limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-49e34272a6a8d95e**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "nonisentropic",
+    "vortex sheet",
+    "critical vortex"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"nonisentropic vortex sheets\" \"critical\" nonlinear 2026",
+    "\"nonisentropic vortex sheets\" \"critical\" nonlinear; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2611.01036v1",
+      "locator": "ConditionsI.7 and TheoremI.1, lines89–103; v1 31October2026",
+      "comparison": "Fresh 31October geometric-optics candidate explicitly assumes 2v != sqrt(2)(cR+cL), excluding exact background asked here. Its conclusions concern formal leading high-frequency profiles, not arbitrary compatible-data classical existence. Constant-coefficient linear front theorem also does not give nonlinear existence."
+    }
+  ],
+  "rationale": "Fresh 31October geometric-optics candidate explicitly assumes 2v != sqrt(2)(cR+cL), excluding exact background asked here. Its conclusions concern formal leading high-frequency profiles, not arbitrary compatible-data classical existence. Constant-coefficient linear front theorem also does not give nonlinear existence.",
+  "limitations": [
+    "Bounded search does not establish continued openness; selected primary scope statements checked, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "942",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "nonisentropic",
+          "vortex sheet",
+          "critical vortex"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "nonisentropic",
+          "vortex sheet",
+          "critical vortex"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "nonisentropic",
+        "vortex sheet",
+        "critical vortex"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

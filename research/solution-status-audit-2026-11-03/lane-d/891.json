@@ -1,0 +1,175 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "891",
+  "manifest_index": 735,
+  "checked_date": "2026-11-03",
+  "source_sha256": "1f7ac31ff3d942a5c9dfd24ff7b1bf3fcb1d85e8fd982cfea8fa945a94003e44",
+  "statement_sha256": "085a53e452997f4c6c2966ff079c4bf3612a3377af41530e55ec4e7c2efe2cff",
+  "original_target": {
+    "id": "891",
+    "title": "Exponential coordinate complexity for finite-cotype normed spaces",
+    "area": "Banach-space geometry and norm approximation",
+    "file": "problems/891-exponential-coordinate-complexity-for-finite-cotype-normed-spaces.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-07353b9d329f1b19",
+    "group": "operators",
+    "source_sha256": "1f7ac31ff3d942a5c9dfd24ff7b1bf3fcb1d85e8fd982cfea8fa945a94003e44",
+    "statement_sha256": "085a53e452997f4c6c2966ff079c4bf3612a3377af41530e55ec4e7c2efe2cff",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix $`2\\leq q<\\infty`$, $`B\\geq1`$, and $`D>1`$. For a finite-dimensional real normed space $`E`$, let $`C_q(E)`$ be the least constant in the Rademacher cotype inequality\n```math\n\\left(\\sum_{i=1}^{m}\\|x_i\\|_E^q\\right)^{1/q}\n \\leq C_q(E)\n \\left(\\mathbb E_\\varepsilon\n \\left\\|\\sum_{i=1}^{m}\\varepsilon_i x_i\\right\\|_E^2\\right)^{1/2}\n \\quad(m\\geq1,\\ x_1,\\ldots,x_m\\in E),\n```\n\nwhere the signs $`\\varepsilon_i`$ are independent and uniform on $`\\{-1,1\\}`$.\n\nWrite $`k_E(D)`$ for the least positive integer $`k`$ for which there are real linear functionals $`f_1,\\ldots,f_k\\in E^*`$ satisfying\n```math\n\\max_{1\\leq j\\leq k}|f_j(x)|\n \\leq\\|x\\|_E\n \\leq D\\max_{1\\leq j\\leq k}|f_j(x)|\n \\qquad(x\\in E).\n```\n\nThus $`k_E(D)`$ is the smallest coordinate dimension of a linear embedding of $`E`$ into $`\\ell_\\infty^k`$ with distortion at most $`D`$.\n\nDo there exist $`c=c(q,B,D)>0`$ and $`n_0=n_0(q,B,D)`$ such that\n```math\n\\boxed{\\quad k_E(D)\\geq \\exp(cn)\\quad}\n```\n\nfor every integer $`n\\geq n_0`$ and every $`n`$-dimensional real normed space $`E`$ with $`C_q(E)\\leq B`$?\n\nThe constants must be uniform over this class of norms. The dimension threshold permits the unavoidable small-dimensional exceptions. No assumption on the cotype or type constants of $`E^*`$ is imposed.",
+  "full_original_page": "# 891. Exponential coordinate complexity for finite-cotype normed spaces\n\n**Area:** Banach-space geometry and norm approximation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix $`2\\leq q<\\infty`$, $`B\\geq1`$, and $`D>1`$. For a finite-dimensional real normed space $`E`$, let $`C_q(E)`$ be the least constant in the Rademacher cotype inequality\n```math\n\\left(\\sum_{i=1}^{m}\\|x_i\\|_E^q\\right)^{1/q}\n \\leq C_q(E)\n \\left(\\mathbb E_\\varepsilon\n \\left\\|\\sum_{i=1}^{m}\\varepsilon_i x_i\\right\\|_E^2\\right)^{1/2}\n \\quad(m\\geq1,\\ x_1,\\ldots,x_m\\in E),\n```\n\nwhere the signs $`\\varepsilon_i`$ are independent and uniform on $`\\{-1,1\\}`$.\n\nWrite $`k_E(D)`$ for the least positive integer $`k`$ for which there are real linear functionals $`f_1,\\ldots,f_k\\in E^*`$ satisfying\n```math\n\\max_{1\\leq j\\leq k}|f_j(x)|\n \\leq\\|x\\|_E\n \\leq D\\max_{1\\leq j\\leq k}|f_j(x)|\n \\qquad(x\\in E).\n```\n\nThus $`k_E(D)`$ is the smallest coordinate dimension of a linear embedding of $`E`$ into $`\\ell_\\infty^k`$ with distortion at most $`D`$.\n\nDo there exist $`c=c(q,B,D)>0`$ and $`n_0=n_0(q,B,D)`$ such that\n```math\n\\boxed{\\quad k_E(D)\\geq \\exp(cn)\\quad}\n```\n\nfor every integer $`n\\geq n_0`$ and every $`n`$-dimensional real normed space $`E`$ with $`C_q(E)\\leq B`$?\n\nThe constants must be uniform over this class of norms. The dimension threshold permits the unavoidable small-dimensional exceptions. No assumption on the cotype or type constants of $`E^*`$ is imposed.\n\n## Application\n\nThe maximum of finitely many linear measurements gives a polyhedral approximation of a norm. This question asks whether a uniform finite-cotype assumption forces exponentially many such measurements when the multiplicative approximation error is fixed. It connects the geometry of high-dimensional norms with the size of linear-inequality representations.\n\n## References\n\n1. G. Pisier, *Quantum expanders and geometry of operator spaces*, Journal of the European Mathematical Society **16** (2014), 1183–1219, introduction, printed pp. 1185–1186. [Publisher](https://doi.org/10.4171/JEMS/458).\n2. G. Pisier, *Random matrices and subexponential operator spaces*, Israel Journal of Mathematics **203** (2014), 223–273, §6, opening paragraphs. The exact cited preprint is arXiv:1212.2053v3 (22 June 2013). [Preprint](https://arxiv.org/abs/1212.2053v3); [published article](https://doi.org/10.1007/s11856-014-1069-0).\n3. A. Naor, *Metric dimension reduction: A snapshot of the Ribe program*, Proceedings of the International Congress of Mathematicians 2018, Question 6 and the following real-polytope formulation. [arXiv:1809.02376v1](https://arxiv.org/abs/1809.02376v1).\n4. G. Schechtman and N. Tomczak-Jaegermann, *Polylog dimensional subspaces of $`\\ell_\\infty^N`$*, Geometric Aspects of Functional Analysis, Israel Seminar 2017–2019, Volume II, Lecture Notes in Mathematics **2266** (2020), 325–334. Theorem 1 is cited from arXiv:1812.03678v1 (2018). [Preprint](https://arxiv.org/abs/1812.03678v1); [publication](https://doi.org/10.1007/978-3-030-46762-3_15).\n5. H. Huang and K. Tikhomirov, *Cotype of random polytopes*, arXiv:2603.04749v1 (2026), Theorems A–B. [Preprint](https://arxiv.org/abs/2603.04749v1).\n6. A. Hmadi, *Dimension-free cotype for isotropic log-concave random polytope spaces*, arXiv:2607.10373v1 (2026), Theorems 1.1–1.2. [Preprint](https://arxiv.org/abs/2607.10373v1).\n\n## Status review\n\n\n**Known cases:** Finite cotype on the space alone is the target. Existing exponential bounds use nontrivial type of the dual; random polytopes with few vertices do not give few facets while preserving the required cotype constant. The OpenAI cotype-cotype and entropy-duality claims have additional premises or different conclusions.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nFinite cotype on the space alone is the target. Existing exponential bounds use nontrivial type of the dual; random polytopes with few vertices do not give few facets while preserving the required cotype constant. The OpenAI cotype-cotype and entropy-duality claims have additional premises or different conclusions.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nPisier's §6 explicitly asks whether the exponential lower bound holds under a uniformly bounded finite-cotype constant. A uniform nontrivial-type assumption on the dual is a known stronger sufficient hypothesis. The entry states the real finite-dimensional question, consistent with the real formulation of Pisier's dichotomy in Naor's Question 6.\n\nSchechtman and Tomczak-Jaegermann obtain growing almost-isometric $`\\ell_\\infty`$ sections when $`n/(\\log N\\log\\log N)^2`$ tends to infinity. This is partial progress toward the threshold $`n/\\log N`$ associated with the exponential bound.\n\nThe 2026 random-polytope theorems establish finite cotype for norms whose unit balls are convex hulls of relatively few random vertices. A small $`\\ell_\\infty`$ embedding instead corresponds to few facets. Those theorems do not supply the required uniform cotype control for the polar norms.\n\nThe nearby OpenAI announcements on [cotype–cotype under the approximation property](https://github.com/openai/math/blob/main/lean/docs/326.md) and [metric-entropy duality](https://github.com/openai/math/blob/main/lean/docs/329.md) were compared at the level of their exact announced statements. The former assumes finite cotype of both a space and its dual; the latter constructs a covering-number inequality between convex bodies and their polars. Neither announced statement supplies the requested coordinate bound or a counterexample with the stated uniform cotype hypotheses. Their full proofs were not audited here.\n\nChecks on 24 October 2026 included the cited primary statements, current version records, Pisier dichotomy and finite-cotype embedding aliases, and all-status AIM/OpenAI/FURTHER comparisons. Prove2Me indexed searches found no matching entry; direct requests timed out, so its live contents were not exhaustively checked. This is a bounded literature check.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-07353b9d329f1b19**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"finite cotype\" \"exponential\" \"coordinate\" Pisier 2026",
+    "\"finite cotype\" \"exponential\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1212.2053v3",
+      "locator": "§6 opening, lines578–580",
+      "inspection": "Primary body explicitly asks exponential complexity assuming only finite cotype of E, versus known nontrivial type of dual.2026Gaussian/log-concave polytope constructions control norms with few vertices, not few facets needed by ell_infty embeddings. Announced cotype–cotype/entropy-duality nearby statements require original theorem-body checks."
+    },
+    {
+      "url": "https://arxiv.org/html/2603.04749v1",
+      "locator": "§1.1 TheoremA and definition1",
+      "inspection": "Polytope is convex hull of plus/minus Gaussian sample vertices; this is not a polar/facet bound."
+    },
+    {
+      "url": "https://arxiv.org/html/2607.10373v1",
+      "locator": "Theorems1.1–1.2",
+      "inspection": "Log-concave analogue remains same vertex-generated norm framework; does not bound coordinate count in polar norm."
+    }
+  ],
+  "scope_comparison": "Primary body explicitly asks exponential complexity assuming only finite cotype of E, versus known nontrivial type of dual.2026Gaussian/log-concave polytope constructions control norms with few vertices, not few facets needed by ell_infty embeddings. Announced cotype–cotype/entropy-duality nearby statements require original theorem-body checks.",
+  "rationale": "No complete matching result identified in bounded searches; preserve specific source-body gaps described above.",
+  "source_gaps": [
+    "Specific source-body/announcement comparisons pending as described.",
+    "Snapshot routing pending this batch."
+  ],
+  "announcement_routing": {
+    "localID": "891",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "cotype",
+          "metric-entropy duality",
+          "Pisier dichotomy"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "cotype",
+          "metric-entropy duality",
+          "Pisier dichotomy"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2611.00024v1",
+            "title": "Modular Dvoretzky, Type-Cotype, Khinchin-Kahane and Grothendieck Inequality Problems",
+            "url": "https://hexagonmath.org/abs/2611.00024v1"
+          },
+          {
+            "id": "hexagon:2610.00685v1",
+            "title": "Ultrametric Bourgain-Figiel-Milman, Enflo Type and Mendel-Naor Cotype Problems",
+            "url": "https://hexagonmath.org/abs/2610.00685v1"
+          },
+          {
+            "id": "hexagon:2610.00653v1",
+            "title": "Non-Archimedean John, Non-Archimedean Dvoretzky-Milman, Non-Archimedean Type-Cotype and Non-Archimedean Kwapien Problems",
+            "url": "https://hexagonmath.org/abs/2610.00653v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "cotype",
+        "metric-entropy duality",
+        "Pisier dichotomy"
+      ],
+      "hits": [
+        {
+          "entry": "326",
+          "title": "The cotype--cotype conjecture under the approximation property",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-cotype-cotype-conjecture-under-the-approximation-property-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "329",
+          "title": "A counterexample to Pietsch's metric-entropy duality conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Counterexamples-to-the-duality-conjecture-for-metric-entropy-September-24-2026/main.pdf"
+          ]
+        },
+        {
+          "entry": "332",
+          "title": "Metric Markov cotype two for $\\ell_1$",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Metric-Markov-Cotype-Two-of-l1-October-5-2026/l1-markov-cotype.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.074Z",
+      "previous_outcome": "hold",
+      "localID": "891",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/openai/math/main/preprints/The-cotype-cotype-conjecture-under-the-approximation-property-September-23-2026/paper.pdf",
+          "version": "23 September 2026",
+          "locator": "Theorem1.1 printed p2",
+          "inspection": "K-convexity characterization assumes finite cotype of BOTH X and X*, with AP. Target assumes a uniform cotype constant only for E and explicitly imposes none on E*. No coordinate-count conclusion is asserted.",
+          "local_text": "_sources/openai-326.txt"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Counterexamples-to-the-duality-conjecture-for-metric-entropy-September-24-2026/main.pdf",
+          "version": "24 September 2026",
+          "locator": "Theorem1.1 printed p1",
+          "inspection": "Constructs arbitrary symmetric convex bodies violating entropy duality against a cube. It does not assert a family with uniformly bounded Rademacher C_q(E), nor a subexponential k_E(D) counterexample.",
+          "local_text": "_sources/openai-329.txt"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Metric-Markov-Cotype-Two-of-l1-October-5-2026/l1-markov-cotype.pdf",
+          "version": "5 October 2026",
+          "locator": "Definition1.1, Theorem1.2 and Corollary6.2",
+          "inspection": "Metric Markov cotype of l1 and nonlinear Lipschitz extensions into l1 concern different invariants and give no linear ell_infinity coordinate-complexity bound for every finite-cotype E.",
+          "local_text": "_sources/openai-332.txt"
+        }
+      ],
+      "scope_comparison": "Actual theorem bodies of all three nearby announcements compared. Target asks the UNIFORM EXPONENTIAL LOWER BOUND on k_E(D), for fixed q,B,D. None asserts this conclusion or a uniformly bounded-cotype counterexample. Recent random-polytopes statements were already compared. Holds resolved; no matching announcement found."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": [],
+  "announcement_hit_disposition": "The three Hexagon works explicitly ASK noncommutative/ultrametric/non-Archimedean analogues and are not resolution announcements for real uniformly finite-cotype coordinate complexity. Actual OpenAI theorem comparisons are recorded in followup-holds-4.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.690Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

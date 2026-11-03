@@ -1,0 +1,70 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "738",
+  "manifest_index": 582,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "738",
+    "title": "Is the extinction-to-propagation threshold sharp for bistable fractional diffusion?",
+    "area": "Fractional reaction-diffusion equations",
+    "file": "problems/738-is-the-extinction-to-propagation-threshold-sharp-for-bistable-fractional-diffusion.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-9d059c7a18c1a2fc",
+    "group": "diffusion-materials",
+    "source_sha256": "483e04c906dfb26c30aec046828e56c13468ea88fd4f685dd9399551d1cdc098",
+    "statement_sha256": "0b0ad428d488e82db666b4841ef72f77748f85a902c743fc3db49a858b0b79f6",
+    "state": "unreviewed"
+  },
+  "source_sha256": "483e04c906dfb26c30aec046828e56c13468ea88fd4f685dd9399551d1cdc098",
+  "statement_sha256": "0b0ad428d488e82db666b4841ef72f77748f85a902c743fc3db49a858b0b79f6",
+  "actual_source_sha256": "483e04c906dfb26c30aec046828e56c13468ea88fd4f685dd9399551d1cdc098",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "On the real line, consider $`u_t+(-\\Delta)^\\alpha u=f(u)`$ with $`0<\\alpha<1`$, where $`f`$ is bistable, for example $`f(u)=r u(u-\\theta)(1-u)`$ on $`0<u<1`$, with $`r>0`$ and $`0<\\theta<1/2`$. Start from $`u(0,x)=(\\theta+\\varepsilon)\\mathbf 1_{(-L,L)}(x)`$, where $`0<\\varepsilon\\leq1-\\theta`$ and $`L>0`$.\n\nFor fixed $`\\varepsilon`$, let $`L^{\\mathrm{ext}}_\\varepsilon`$ be the supremum of lengths for which $`u(t,\\cdot)\\to0`$ uniformly, and let $`L^{\\mathrm{prop}}_\\varepsilon`$ be the infimum of lengths for which $`u(t,\\cdot)\\to1`$ locally uniformly. Under the assumptions of Faye and Zhao, both thresholds are positive and finite. Must\n\n```math\nL^{\\mathrm{ext}}_\\varepsilon=L^{\\mathrm{prop}}_\\varepsilon\n```\n\n\nhold for every admissible $`\\varepsilon`$, at least for the cubic bistable reaction above? This asks whether there is a single critical interval length separating extinction from propagation.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"fractional Laplacian\" \"sharp threshold\" bistable Faye Zhao 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"bistable\" \"fractional\" \"threshold\"",
+    "site:palomar-registry.org OR site:hexagonmath.org \"fractional\" \"threshold\" bistable"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "Publisher Figure1 describes numerically computed equality for selected cubic parameters, not an all-alpha/all-amplitude theorem. Local asks equality of extinction/propagation lengths for each admissible amplitude on R for fractional Laplacian, distinct from bounded convolution dispersal. Current author page links HALv3; HAL denies access with Anubis, publisher full HTML sends no-login page. No complete claim located, but theorem-body comparison remains a source gap; retain partial status without declaring completed scope audit.",
+      "version_or_date": "Author current link hal04644409v3; final earlyaccess20March2026 revised4March2026 doi10.3934/dcdss.2026099",
+      "url": "https://hal.science/hal-04644409v3/document",
+      "primary_body_access_gap": true,
+      "locator": "Publisher abstract/Figure1 inspected; requested primary introduction/Proposition2.2 unavailable"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The HALv3 introduction explicitly leaves fractional-Laplacian sharpness open, even for the cubic case. Separate positive finite extinction and propagation thresholds and small-amplitude bounds with logarithmic separation do not establish equality at every amplitude. Numerical Figure1 does not establish the universal assertion.",
+  "latest_version_check": "Author current link hal04644409v3; final earlyaccess20March2026 revised4March2026 doi10.3934/dcdss.2026099",
+  "gap_retraction_check": "Source access hold: actual Faye–Zhao proposition body not obtained, HALv3 blocked and publisher fulltext login gate. Numerical figure wording must not be promoted to an analytic full resolution.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ],
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T14:04:04.919804+00:00",
+      "reviewer": "lane-c; root persisted final relay",
+      "url": "https://hal.science/hal-04644409v3/document",
+      "locator": "Introduction pp3–4, Proposition2.1 p4, Theorem1 p5",
+      "primary_body_read_in_earlier_lane_turn": true,
+      "scope_comparison": "The HALv3 introduction explicitly leaves fractional-Laplacian sharpness open, even for the cubic case. Separate positive finite extinction and propagation thresholds and small-amplitude bounds with logarithmic separation do not establish equality at every amplitude. Numerical Figure1 does not establish the universal assertion.",
+      "limitations": "Earlier RAM PDF body inspected; no body bytes/SHA retained. Publisher-final parity remains unverified; do not change the final-edition Proposition2.2 citation based on HALv3's Proposition2.1."
+    }
+  ],
+  "review_state": "bounded_review_complete",
+  "material_full_claim_access_gap": false
+}

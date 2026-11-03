@@ -6,7 +6,7 @@ Checked through 22 September 2026. The35 entries contain31 PDE-related questions
 
 ### 1. Observability of an acoustic shell at equal bulk and surface speeds
 
-Admitted page: [equal-speed-wentzell-wave-observability](../../../problems/385-equal-speed-wentzell-wave-observability.md)
+Admitted page: [equal-speed-wentzell-wave-observability](../../../cut_problems/problems/385-equal-speed-wentzell-wave-observability.md)
 
 1. L. Baudouin, J. Dardé, S. Ervedoza and A. Mercado, *A unified strategy for observability of waves in an annulus with various boundary conditions*, Mathematical Reports 24 (2022), 59–112, §2 and Theorem 2.4. [Journal PDF](https://imar.ro/journals/Mathematical_Reports/Pdfs/2022/1-2/5.pdf).
 2. S. E. Chorfi, L. Maniar and R. Morales, *Controllability and Inverse Problems for Hyperbolic and Dispersive Equations with Dynamic Boundary Conditions*, preprint (2025), §3.1 and §5.1. [arXiv:2505.14795](https://arxiv.org/abs/2505.14795).
@@ -15,7 +15,7 @@ Review: The 2025 review explicitly leaves equal bulk and surface coefficients un
 
 ### 2. Boundary observation of a Schrödinger field with slower surface dispersion
 
-Admitted page: [slow-surface-schrodinger-observability](../../../problems/386-slow-surface-schrodinger-observability.md)
+Admitted page: [slow-surface-schrodinger-observability](../../../cut_problems/problems/386-slow-surface-schrodinger-observability.md)
 
 1. A. Mercado and R. Morales, *Exact Controllability for a Schrödinger Equation with Dynamic Boundary Conditions*, SIAM Journal on Control and Optimization 61 (2023), 3501–3525, main observability and controllability theorems. [DOI](https://doi.org/10.1137/21M1439407); [author preprint](https://arxiv.org/abs/2301.02573).
 2. S. E. Chorfi, L. Maniar and R. Morales, *Controllability and Inverse Problems for Hyperbolic and Dispersive Equations with Dynamic Boundary Conditions*, preprint (2025), equations (4.1)–(4.4) and §5.1. [arXiv:2505.14795](https://arxiv.org/abs/2505.14795).
@@ -24,7 +24,7 @@ Review: The SIAM theorem assumes the surface coefficient exceeds the bulk coeffi
 
 ### 3. The sharp local maneuvering time for a shallow-water tank
 
-Admitted page: [shallow-water-tank-sharp-control-time](../../../problems/387-shallow-water-tank-sharp-control-time.md)
+Admitted page: [shallow-water-tank-sharp-control-time](../../../cut_problems/problems/387-shallow-water-tank-sharp-control-time.md)
 
 1. J.-M. Coron, *Time for local controllability of a 1-D tank containing a fluid modeled by the shallow water equations*, Problem 7.1, pp. 247–250, in V. D. Blondel and A. Megretski (eds.), *Unsolved Problems in Mathematical Systems and Control Theory*, Princeton University Press (2004). [Publisher book](https://doi.org/10.1515/9781400826155).
 2. J.-M. Coron, A. Koenig and H.-M. Nguyen, *Lack of local controllability for a water-tank system when the time is not large enough*, Annales de l’Institut Henri Poincaré C (2024 online), §1 and main noncontrollability theorem. [DOI](https://doi.org/10.4171/AIHPC/123); [publisher PDF](https://ems.press/content/serial-article-files/47556).
@@ -97,7 +97,7 @@ Review: The SIAM theorem proves the conclusion under the additional nonfocal ass
 
 ### 11. Exact null control of a harmonically confined kinetic equation from a wedge
 
-Admitted page: [harmonic-kolmogorov-wedge-null-control](../../../problems/395-harmonic-kolmogorov-wedge-null-control.md)
+Admitted page: [harmonic-kolmogorov-wedge-null-control](../../../cut_problems/problems/395-harmonic-kolmogorov-wedge-null-control.md)
 
 1. K. Beauchard, M. Egidi and K. Pravda-Starov, *Geometric conditions for the null-controllability of hypoelliptic quadratic parabolic equations with moving control supports*, Comptes Rendus Mathématique 358 (2020), 651–700, preprint §2.4, Proposition 2.4(iii). [DOI](https://doi.org/10.5802/crmath.79); [arXiv:1908.10603](https://arxiv.org/abs/1908.10603).
 2. P. Alphonse and J. Martin, *Approximate Null Controllability with Uniform Cost for the Hypoelliptic Ornstein–Uhlenbeck Equations*, SIAM Journal on Control and Optimization 61 (2023), 1679–1711, §2.3, Example 2.7. [DOI](https://doi.org/10.1137/22M1487412); [arXiv:2201.01516](https://arxiv.org/abs/2201.01516).
@@ -106,7 +106,7 @@ Review: The 2020 source explicitly leaves null controllability above the rotatio
 
 ### 12. Polynomial decay for KdV with three critical linear modes
 
-Admitted page: [critical-kdv-odd-mode-polynomial-decay](../../../problems/396-critical-kdv-odd-mode-polynomial-decay.md)
+Admitted page: [critical-kdv-odd-mode-polynomial-decay](../../../cut_problems/problems/396-critical-kdv-odd-mode-polynomial-decay.md)
 
 1. J. Niu and S. Xiang, *Small-time local controllability of a KdV system for all critical lengths*, preprint, version 2 (16 December 2025), §2.4.5. [arXiv:2501.13640](https://arxiv.org/abs/2501.13640).
 2. H.-M. Nguyen, *Decay for the nonlinear KdV equations at critical lengths*, Journal of Differential Equations 295 (2021), 249–291, main decay theorems and discussion of the dimension of the undamped subspace. [DOI](https://doi.org/10.1016/j.jde.2021.05.057); [arXiv:2012.08792](https://arxiv.org/abs/2012.08792).
@@ -115,7 +115,7 @@ Review: The December 2025 paper expressly identifies polynomial decay for odd un
 
 ### 13. Approximate velocity control of a viscoelastic fluid with prescribed transport
 
-Admitted page: [oseen-oldroyd-approximate-boundary-control](../../../problems/397-oseen-oldroyd-approximate-boundary-control.md)
+Admitted page: [oseen-oldroyd-approximate-boundary-control](../../../cut_problems/problems/397-oseen-oldroyd-approximate-boundary-control.md)
 
 1. E. Fernández-Cara, *Remarks on control and inverse problems for PDEs*, SeMA Journal 82 (2025), 267–288, §7, equation (25), Theorem 7 and Problem 14. [Full text](https://doi.org/10.1007/s40324-024-00363-7).
 2. A. Doubova and E. Fernández-Cara, *On the control of viscoelastic Jeffreys fluids*, Systems & Control Letters 61 (2012), 573–579, approximate controllability result for the linear memory system. [DOI](https://doi.org/10.1016/j.sysconle.2012.02.003).
@@ -125,7 +125,7 @@ Review: Problem 14 asks whether the approximate velocity-control theorem survive
 
 ### 14. Boundary control to equilibrium for a parabolic obstacle problem
 
-Admitted page: [parabolic-obstacle-boundary-control](../../../problems/398-parabolic-obstacle-boundary-control.md)
+Admitted page: [parabolic-obstacle-boundary-control](../../../cut_problems/problems/398-parabolic-obstacle-boundary-control.md)
 
 1. B. Geshkovski, *Control in moving interfaces and deep learning*, doctoral thesis, Universidad Autónoma de Madrid (2021), §1.5.1, pp. 37–39, equations (1.5.1)–(1.5.3). [Thesis](https://repositorio.uam.es/bitstream/10486/696540/1/geshkovski_borjan.pdf).
 2. D. Pighin and E. Zuazua, *Controllability under positivity constraints of semilinear heat equations*, Mathematical Control and Related Fields 8 (2018), 935–964, §7, discussion of controllability of the obstacle problem. [DOI](https://doi.org/10.3934/mcrf.2018041); [arXiv:1711.07678](https://arxiv.org/abs/1711.07678).
@@ -134,7 +134,7 @@ Review: The thesis expressly poses boundary exact control to the stationary obst
 
 ### 15. Best convex shape for insulation of fixed thickness and perimeter
 
-Admitted page: [fixed-thickness-insulation-convex-perimeter](../../../problems/399-fixed-thickness-insulation-convex-perimeter.md)
+Admitted page: [fixed-thickness-insulation-convex-perimeter](../../../cut_problems/problems/399-fixed-thickness-insulation-convex-perimeter.md)
 
 1. F. Della Pietra, C. Nitsch and C. Trombetti, *An optimal insulation problem*, Mathematische Annalen 382 (2022), 745–759, §5, Open Problem 1 and the preceding compactness discussion. [Full text](https://doi.org/10.1007/s00208-020-02058-6).
 2. D. Bucur, M. Nahon, C. Nitsch and C. Trombetti, *Shape optimization of a thermal insulation problem*, Calculus of Variations and Partial Differential Equations 61 (2022), article 186, introduction and Theorem 1. [Full text](https://doi.org/10.1007/s00526-022-02298-1).
@@ -161,7 +161,7 @@ Review: The cited sources establish necessity and sufficiency in dimension two a
 
 ### 18. Logarithmic convexity for subdiffusion with non-gradient drift
 
-Admitted page: [fractional-drift-logarithmic-convexity](../../resolved/655-fractional-drift-logarithmic-convexity.md)
+Admitted page: [fractional-drift-logarithmic-convexity](../../../cut_problems/research/resolved/655-fractional-drift-logarithmic-convexity.md)
 
 1. S.-E. Chorfi, *Logarithmic convexity of evolution equations and application to inverse problems*, preprint (2025), §4, Theorem 6 and §5, open problem 2. [Full text](https://arxiv.org/html/2506.19954v1).
 2. S.-E. Chorfi, L. Maniar and M. Yamamoto, *Logarithmic convexity of non-symmetric time-fractional diffusion equations*, Mathematical Methods in the Applied Sciences 48 (2025), 2011–2021, gradient-drift assumption and main logarithmic convexity theorem. [DOI](https://doi.org/10.1002/mma.10421).
@@ -170,7 +170,7 @@ Review: The 2025 primary sources explicitly leave removal of the gradient-drift 
 
 ### 19. Logarithmic convexity for two coupled subdiffusion orders
 
-Admitted page: [mixed-order-fractional-logarithmic-convexity](../../../problems/402-mixed-order-fractional-logarithmic-convexity.md)
+Admitted page: [mixed-order-fractional-logarithmic-convexity](../../../cut_problems/problems/402-mixed-order-fractional-logarithmic-convexity.md)
 
 1. S.-E. Chorfi, *Logarithmic convexity of evolution equations and application to inverse problems*, preprint (2025), §5, open problem 1, displaying this mixed-order system. [Full text](https://arxiv.org/html/2506.19954v1).
 2. S.-E. Chorfi, L. Maniar and M. Yamamoto, *The backward problem for time-fractional evolution equations*, Applicable Analysis 103 (2024), 2194–2212, logarithmic convexity and conditional stability theorems. [DOI](https://doi.org/10.1080/00036811.2023.2290273); [arXiv:2211.16493](https://arxiv.org/abs/2211.16493).
@@ -198,7 +198,7 @@ Review: The SIAM source asks for local uniform convergence beyond its weighted L
 
 ### 22. An algebraic vanishing-noise rate for kinetic mean-field games
 
-Admitted page: [kinetic-mfg-vanishing-viscosity-rate](../../../problems/405-kinetic-mfg-vanishing-viscosity-rate.md)
+Admitted page: [kinetic-mfg-vanishing-viscosity-rate](../../../cut_problems/problems/405-kinetic-mfg-vanishing-viscosity-rate.md)
 
 1. W. Tang and Y. P. Zhang, *The Convergence Rate of Vanishing Viscosity Approximations for Mean Field Games*, SIAM Journal on Mathematical Analysis 57 (2025), 3217–3254, §7, problem 4(b). [DOI](https://doi.org/10.1137/24M1640008); [Author PDF](https://www.columbia.edu/~wt2319/VV.pdf).
 2. M. Griffin-Pickering and A. R. Mészáros, *A variational approach to first order kinetic mean field games with local couplings*, Communications in Partial Differential Equations 47 (2022), 1945–2022, equation (1.1), §3.2 and existence/uniqueness theorems. [DOI](https://doi.org/10.1080/03605302.2022.2101003); [arXiv:2112.03141](https://arxiv.org/abs/2112.03141).
@@ -276,7 +276,7 @@ Review: The negative-velocity part of the original Coron–Guerrero conjecture h
 
 ### 30. Intercritical norm inflation for the dispersion-managed Schrödinger equation
 
-Admitted page: [intercritical-dispersion-managed-norm-inflation](../../../problems/413-intercritical-dispersion-managed-norm-inflation.md)
+Admitted page: [intercritical-dispersion-managed-norm-inflation](../../../cut_problems/problems/413-intercritical-dispersion-managed-norm-inflation.md)
 
 1. M. Kowalski, *On ill-posedness for the Gabitov–Turitsyn equation*, preprint (2025), equation (GT), Definition 1.3 and §6.4. [Full text](https://arxiv.org/html/2510.11887v1).
 2. J. Kawakami and J. Murphy, *Small and large data scattering for the dispersion-managed NLS*, Discrete and Continuous Dynamical Systems 47 (2026), 256–285, introduction and scattering theorems. [DOI](https://doi.org/10.3934/dcds.2025118).
@@ -305,7 +305,7 @@ Review: Remark 1.6 explicitly identifies removal of the gradient-field assumptio
 
 ### 33. Positive equilibrium attraction for an irreversible catalytic reaction
 
-Admitted page: [catalytic-reaction-diffusion-positive-attractor](../../../problems/416-catalytic-reaction-diffusion-positive-attractor.md)
+Admitted page: [catalytic-reaction-diffusion-positive-attractor](../../../cut_problems/problems/416-catalytic-reaction-diffusion-positive-attractor.md)
 
 1. T. L. Nguyen and B. Q. Tang, *Stability analysis of irreversible chemical reaction-diffusion systems with boundary equilibria*, Zeitschrift für angewandte Mathematik und Physik 77 (2026), 199, equation (1.1), the conjecture after Table 1, Theorem 2.1 and §2.3. [DOI and full text](https://doi.org/10.1007/s00033-026-02847-0).
 2. K. Fellner, J. Morgan and B. Q. Tang, *Uniform-in-time bounds for quadratic reaction-diffusion systems with mass dissipation in higher dimensions*, Discrete and Continuous Dynamical Systems, Series S 14 (2021), 635–651, main boundedness theorem. [DOI](https://doi.org/10.3934/dcdss.2020334).

@@ -1,0 +1,91 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "964",
+  "manifest_index": 808,
+  "checked_date": "2026-11-03",
+  "source_sha256": "b4c02fceed8d5ea26830f2650db5b10a1661b4d14222a34d3a4fde859591dca4",
+  "statement_sha256": "e2750aa3e39d7b9769679dd9164dbbc893a4680f75b6c8c0b32380b4c09a77be",
+  "original_target": {
+    "id": "964",
+    "title": "Power concavity of fractional torsion on convex domains",
+    "area": "PDEs, fluids and materials",
+    "file": "problems/964-power-concavity-of-fractional-torsion-on-convex-domains.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-fd42b218cf0091e1",
+    "group": "pdes-materials",
+    "source_sha256": "b4c02fceed8d5ea26830f2650db5b10a1661b4d14222a34d3a4fde859591dca4",
+    "statement_sha256": "e2750aa3e39d7b9769679dd9164dbbc893a4680f75b6c8c0b32380b4c09a77be",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For every integer $`d\\ge2`$, every $`\\alpha\\in(0,1)\\cup(1,2)`$, and every nonempty bounded open convex set $`D\\subset\\mathbb R^d`$, let $`u_D`$ be the continuous solution of the restricted fractional Dirichlet problem\n\n```math\n(-\\Delta)^{\\alpha/2}u_D=1\\quad\\hbox{in }D,\n\\qquad u_D=0\\quad\\hbox{on }\\mathbb R^d\\setminus D.\n```\n\nThe operator acts on the zero extension to all of $`\\mathbb R^d`$:\n\n```math\n(-\\Delta)^{\\alpha/2}f(x)\n=c_{d,\\alpha}\\,\\mathrm{PV}\\!\\int_{\\mathbb R^d}\n\\frac{f(x)-f(y)}{|x-y|^{d+\\alpha}}\\,dy,\n\\qquad\nc_{d,\\alpha}=\\frac{2^\\alpha\\Gamma((d+\\alpha)/2)}\n{\\pi^{d/2}|\\Gamma(-\\alpha/2)|}.\n```\n\nSet $`p_\\alpha=1`$ when $`0<\\alpha<1`$, and $`p_\\alpha=1/\\alpha`$ when $`1<\\alpha<2`$. Must $`u_D^{p_\\alpha}`$ be concave on $`D`$? Equivalently, must\n\n```math\nu_D((1-t)x+ty)^{p_\\alpha}\n\\ge (1-t)u_D(x)^{p_\\alpha}+t u_D(y)^{p_\\alpha}\n```\n\nhold for all $`x,y\\in D`$ and $`0\\le t\\le1`$?\n\nThese are the two regimes of Kulczycki's Conjecture 7.2. The exterior condition specifies the restricted fractional Laplacian, rather than a spectral fractional power of the Dirichlet Laplacian.",
+  "full_original_page": "# 964. Power concavity of fractional torsion on convex domains\n\n**Area:** PDEs, fluids and materials\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor every integer $`d\\ge2`$, every $`\\alpha\\in(0,1)\\cup(1,2)`$, and every nonempty bounded open convex set $`D\\subset\\mathbb R^d`$, let $`u_D`$ be the continuous solution of the restricted fractional Dirichlet problem\n\n```math\n(-\\Delta)^{\\alpha/2}u_D=1\\quad\\hbox{in }D,\n\\qquad u_D=0\\quad\\hbox{on }\\mathbb R^d\\setminus D.\n```\n\nThe operator acts on the zero extension to all of $`\\mathbb R^d`$:\n\n```math\n(-\\Delta)^{\\alpha/2}f(x)\n=c_{d,\\alpha}\\,\\mathrm{PV}\\!\\int_{\\mathbb R^d}\n\\frac{f(x)-f(y)}{|x-y|^{d+\\alpha}}\\,dy,\n\\qquad\nc_{d,\\alpha}=\\frac{2^\\alpha\\Gamma((d+\\alpha)/2)}\n{\\pi^{d/2}|\\Gamma(-\\alpha/2)|}.\n```\n\nSet $`p_\\alpha=1`$ when $`0<\\alpha<1`$, and $`p_\\alpha=1/\\alpha`$ when $`1<\\alpha<2`$. Must $`u_D^{p_\\alpha}`$ be concave on $`D`$? Equivalently, must\n\n```math\nu_D((1-t)x+ty)^{p_\\alpha}\n\\ge (1-t)u_D(x)^{p_\\alpha}+t u_D(y)^{p_\\alpha}\n```\n\nhold for all $`x,y\\in D`$ and $`0\\le t\\le1`$?\n\nThese are the two regimes of Kulczycki's Conjecture 7.2. The exterior condition specifies the restricted fractional Laplacian, rather than a spectral fractional power of the Dirichlet Laplacian.\n\n## Application\n\nThe function $`u_D(x)`$ is the expected exit time from $`D`$ for an isotropic symmetric $`\\alpha`$-stable process. The question asks for uniform shape information about this lifetime across convex domains and nonlocal diffusion orders.\n\n## References\n\n1. T. Kulczycki, [*On concavity of solutions of the Dirichlet problem for the equation $`(-\\Delta)^{1/2}\\varphi=1`$ in convex planar regions*](https://doi.org/10.4171/JEMS/695), Journal of the European Mathematical Society 19 (2017), 1361–1420. Equations (3)–(4), Theorem 1.5, Conjecture 7.2 and Remark 7.3; native PDF pages 2–3 and 57–58.\n2. M. Gallo and M. Squassina, [*Concavity and perturbed concavity for p-Laplace equations*](https://doi.org/10.1016/j.jde.2025.113452), Journal of Differential Equations 440 (2025), 113452, §7.3, pages 55–56. Restates the conjectured exponent as $`\\min\\{1/(2s),1\\}`$ for operator order $`2s=\\alpha`$.\n3. J. Li and S. Shi, [*Strict Concavity of the Torsion Function for the Restricted Half-Laplacian in Bounded Convex Domains*](https://arxiv.org/abs/2608.19586v2), preprint (2026), Theorem 1.1. Announces the separate $`\\alpha=1`$ case in every dimension.\n4. N. De Nitti, X. Fernández-Real, F. Grube and H. Prasad, [*Superharmonicity of the fractional ground state*](https://arxiv.org/abs/2608.11686v2), preprint (2026), Theorem 1.1 and Proposition 1.7. Concerns an eigenfunction equation with right-hand side $`\\lambda u`$.\n\n## Status review\n\n\n**Known cases:** The half-Laplacian announcement covers alpha=1, explicitly excluded here. The eigenfunction equation and local p-Laplace concavity results are different; the two non-half fractional torsion regimes remain unaddressed in the matching results.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe half-Laplacian announcement covers alpha=1, explicitly excluded here. The eigenfunction equation and local p-Laplace concavity results are different; the two non-half fractional torsion regimes remain unaddressed in the matching results.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nBalls satisfy the proposed concavity by the explicit torsion formula in Kulczycki's Remark 1.3. The classical $`\\alpha=2`$ square-root-concavity theorem is also known. The separate half-Laplacian case $`\\alpha=1`$ is excluded from this target because Li–Shi announce its resolution.\n\nFor $`1<\\alpha<2`$, ordinary concavity can fail on narrow convex cones; the conjecture asks for concavity after taking the smaller power $`1/\\alpha`$. Kulczycki's Remark 7.3 also rules out improving the exponent uniformly over all bounded convex domains. The inequalities in Theorem 1.5 do not establish the requested power concavity.\n\nThe 2025 discussion and its perturbative eigenfunction results, and the 2026 ground-state results and counterexamples, do not give the asserted constant-forcing torsion theorem for arbitrary convex domains. Searches for proofs, counterexamples and 2025–2026 announcements located no matching resolution of these two regimes. This records the scope of the literature check; it does not certify the complete proofs of the cited preprints.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-fd42b218cf0091e1**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scope passages inspected, not full proof certification."
+  ],
+  "aliases": [
+    "fractional torsion",
+    "Kulczycki",
+    "power concavity"
+  ],
+  "queries": [
+    "\"fractional torsion\" \"power concavity\" 2026",
+    "\"fractional torsion\" \"power concavity\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2608.19586v2",
+      "locator": "1Sep2026v2 equation1.1/Theorem1.1 lines62–87",
+      "comparison": "Actual announced strict Hessian negativity treats exactly alpha=1, deliberately excluded from local target. No generalization to alpha!=1 stated. Ground-state eigenfunction superharmonicity and second shape derivative of energy are different conclusions."
+    }
+  ],
+  "rationale": "No claim located covering both remaining fractional torsion power-concavity regimes and all convex domains.",
+  "announcement_routing": {
+    "localID": "964",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "fractional torsion",
+          "Kulczycki",
+          "power concavity"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "fractional torsion",
+          "Kulczycki",
+          "power concavity"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "fractional torsion",
+        "Kulczycki",
+        "power concavity"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

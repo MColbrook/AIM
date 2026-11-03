@@ -1,0 +1,73 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "079",
+  "manifest_index": 58,
+  "original_target": {
+    "id": "079",
+    "title": "Global regularity of two-dimensional ideal incompressible MHD",
+    "area": "Magnetohydrodynamics",
+    "file": "problems/079-ideal-mhd-two-dimensions.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "pdes-materials",
+    "source_sha256": "1b345429cb21910da4bb5a82dc0dc3e71f362d5abce9bcc9d1c1e6cc3f0e451b",
+    "statement_sha256": "062523cc92dbb02933e6745c7e5bb2518deaab7f496fd388df61a8c7415bc8d0",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1b345429cb21910da4bb5a82dc0dc3e71f362d5abce9bcc9d1c1e6cc3f0e451b",
+  "statement_sha256": "062523cc92dbb02933e6745c7e5bb2518deaab7f496fd388df61a8c7415bc8d0",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:46:54.966610+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Current ideal/non-resistive MHD searches yielded damping, horizontal dissipation, positive viscosity, small perturbations and interface problems. These change either the two zero dissipation coefficients, whole-plane geometry or arbitrary-Schwartz-data condition. Hirata's criterion requires magnetic regularity along evolution and is not unconditional global continuation.",
+  "primary_sources": [
+    {
+      "url": "https://doi.org/10.1007/s00033-024-02411-8",
+      "locator": "Primary continuation-criterion formulation.",
+      "body_inspected": false
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jde.2026.114428",
+      "locator": "Primary abstract: viscous non-resistive system in a strip; excluded.",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "magnetohydrodynamic",
+    "ideal MHD"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "magnetohydrodynamic",
+        "ideal MHD"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; exact target and excluding hypotheses compared above. Loose name/word hits may be unrelated."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "magnetohydrodynamic",
+        "ideal MHD"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; exact target and excluding hypotheses compared above. Loose name/word hits may be unrelated."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches with arXiv, Zenodo, HAL and GitHub; shared complete Palomar/Hexagon and OpenAI metadata screened, plus requested Colbrook author listings.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

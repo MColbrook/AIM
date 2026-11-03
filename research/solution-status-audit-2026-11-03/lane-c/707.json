@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "707",
+  "manifest_index": 551,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "707",
+    "title": "Smooth Chern–Ricci collapse on non-Kähler elliptic bundles",
+    "area": "Complex geometry and geometric partial differential equations",
+    "file": "problems/707-smooth-chernricci-collapse-on-non-kahler-elliptic-bundles.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-983f21a8e62469d9",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "a014e1931f073ca47184fb5ad794c45109d5709abf9694ac8a096406676c0e4c",
+    "statement_sha256": "cb3e19c6b8fa3375801d13a55d7bf2f2b79c9de1567387300ccadd444167856d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "a014e1931f073ca47184fb5ad794c45109d5709abf9694ac8a096406676c0e4c",
+  "statement_sha256": "cb3e19c6b8fa3375801d13a55d7bf2f2b79c9de1567387300ccadd444167856d",
+  "actual_source_sha256": "a014e1931f073ca47184fb5ad794c45109d5709abf9694ac8a096406676c0e4c",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`M`$ be a connected compact non-Kähler complex surface with a holomorphic elliptic bundle $`f:M\\to\\Sigma`$, where $`\\Sigma`$ is a compact Riemann surface of genus at least two. Here a bundle is locally biholomorphic over the base to $`E\\times U`$ for a fixed elliptic curve $`E`$. Let $`\\omega_0`$ be an arbitrary smooth positive Gauduchon metric, so $`\\partial\\bar\\partial\\omega_0=0`$.\n\nLet $`\\omega(t)`$ be the unnormalized Chern–Ricci flow\n\n```math\n\\partial_t\\omega=-\\mathrm{Ric}^{\\mathrm{Ch}}(\\omega),\\qquad \\omega(0)=\\omega_0,\n\\qquad \\mathrm{Ric}^{\\mathrm{Ch}}(\\omega)=-i\\partial\\bar\\partial\\log\\det(g).\n```\n\nThis flow exists for all $`t\\ge0`$ in the stated setting. Write $`\\omega_\\Sigma`$ for the unique Kähler metric on $`\\Sigma`$ with $`\\mathrm{Ric}(\\omega_\\Sigma)=-\\omega_\\Sigma`$. Is it true that\n\n```math\n\\frac{\\omega(t)}t\\longrightarrow f^*\\omega_\\Sigma\n\\quad\\text{in }C^\\infty(M),\n\\qquad\n\\sup_M\\left|\\mathrm{Rm}^{\\mathrm{Ch}}\\!\\left(\\frac{\\omega(t)}t\\right)\\right|_{\\omega(t)/t}\\le C\n\\quad(t\\ge t_0)\n```\n\nfor some finite $`C`$ and $`t_0>0`$? The constants may depend on the bundle and the entire initial metric. The curvature is the full curvature tensor of the Chern connection, measured in the evolving normalized metric. Smooth tensor convergence is measured in any fixed smooth background metric; the limit is semipositive and vanishes in the fibre directions.\n\nThe requested conclusions are global smooth convergence and bounded normalized curvature. Uniform convergence and Gromov–Hausdorff convergence are already known. Smooth convergence restricted to individual fibres does not supply all transverse and mixed derivatives. No restriction of $`\\omega_0`$ to a special $`\\partial\\bar\\partial`$ class is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Chern Ricci\" \"elliptic bundle\" smooth curvature proof 2026",
+    "\"Chern Ricci\" \"elliptic bundle\" smooth curvature (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2106.16141v2",
+      "locator": "Theorem1.3 lines137–141;§6",
+      "scope_comparison": "The actual theorem assumes omega=omegaTV+i partialbarpartial psi. It gives full smooth collapse and normalized curvature only in that Vaisman/Tricerri class. Arbitrary Gauduchon metrics in different partialbarpartial classes remain allowed by target. Fibrewise convergence and Kato-surface GH results do not imply all transverse derivatives or full normalized curvature bounds.",
+      "version_or_date": "arXiv2106.16141v2;JFA285(2023),110015"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual theorem assumes omega=omegaTV+i partialbarpartial psi. It gives full smooth collapse and normalized curvature only in that Vaisman/Tricerri class. Arbitrary Gauduchon metrics in different partialbarpartial classes remain allowed by target. Fibrewise convergence and Kato-surface GH results do not imply all transverse derivatives or full normalized curvature bounds.",
+  "latest_version_check": "arXiv2106.16141v2;JFA285(2023),110015",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

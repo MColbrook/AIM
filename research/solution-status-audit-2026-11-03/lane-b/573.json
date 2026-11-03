@@ -1,0 +1,93 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "573",
+  "manifest_index": 445,
+  "original_target": {
+    "id": "573",
+    "title": "Unimodal connectivity by 2–3 and 3–2 Pachner moves",
+    "area": "Computational topology and triangulated 3-manifolds",
+    "file": "problems/573-unimodal-pachner-connectivity.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "954696e876fb968e0c7d96d57fb5533939bb22ab06c0f803312eee43e8440719",
+    "statement_sha256": "43788e4b99f12227fb82d2a07b71c0ce1ffcb804a973ceb344f86a5c972542bf",
+    "state": "unreviewed"
+  },
+  "source_sha256": "954696e876fb968e0c7d96d57fb5533939bb22ab06c0f803312eee43e8440719",
+  "statement_sha256": "43788e4b99f12227fb82d2a07b71c0ce1ffcb804a973ceb344f86a5c972542bf",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T14:03:57.768755+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Current Conjecture8 is exactly the monotone2-3 then3-2 target and remains explicit. Theorem9 uses descending2-0 moves instead; it does not produce the common increasing2-3 refinement required by the local problem.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2012.02398v3",
+      "locator": "Section3 Conjecture8 and Theorem9; section3.2 remaining adaptation; current v3,14April2025",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"unimodal\" \"Pachner\" 2026 solution",
+    "\"unimodal\" \"Pachner\" connectivity [domains arxiv.org,zenodo.org,hal.science,github.com]",
+    "\"unimodal\" \"Pachner\" solution Burton He 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Pachner",
+        "unimodal"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-11-000012",
+          "title": "Unimodality of the independence sequence of a finite forest (Erdős Problem 993)"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Pachner",
+        "unimodal"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00670v1",
+          "title": "Nonunimodal Laurent coefficients of cluster monomials"
+        },
+        {
+          "id": "hexagon:2610.00579v1",
+          "title": "Analytic q-inequalities and a proof of Bergeron's conjecture"
+        },
+        {
+          "id": "hexagon:2610.00325v1",
+          "title": "A Nonunimodal Acyclic Polynomial with All Roots in the Left Half-Plane"
+        },
+        {
+          "id": "hexagon:2610.00326v1",
+          "title": "A Bipartite Graph with a Nonunimodal Acyclic Polynomial"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Final DCG2026 body not freshly compared; latest preprint conjecture and theorem inspected."
+  ],
+  "canonical_update_required": false
+}

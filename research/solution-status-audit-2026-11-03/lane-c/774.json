@@ -1,0 +1,59 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "774",
+  "manifest_index": 618,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "774",
+    "title": "Is the separation modulus of every sufficiently symmetric normed space set by its dual volume ratio?",
+    "area": "Metric geometry and Banach spaces",
+    "file": "problems/774-is-the-separation-modulus-of-every-sufficiently-symmetric-normed-space-set-by-its-dual-volume-ratio.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-24a48a1ec991ddab",
+    "group": "geometry-topology",
+    "source_sha256": "15ba2ef5c9e419d5751db05df1eb180a9729b2aa5380bc32ce2da75d19c0eb5d",
+    "statement_sha256": "b35c4c8804ebfab42025db45957d0097ed146f98e864795dd671e27ada6a8b9c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "15ba2ef5c9e419d5751db05df1eb180a9729b2aa5380bc32ce2da75d19c0eb5d",
+  "statement_sha256": "b35c4c8804ebfab42025db45957d0097ed146f98e864795dd671e27ada6a8b9c",
+  "actual_source_sha256": "15ba2ef5c9e419d5751db05df1eb180a9729b2aa5380bc32ce2da75d19c0eb5d",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For a metric space $`X`$, let $`\\mathrm{SEP}(X)`$ be the least $`\\sigma`$ such that, at every scale $`\\Delta>0`$, a random partition of $`X`$ into sets of diameter at most $`\\Delta`$ can be chosen with\n\n```math\n\\Pr[x\\text{ and }y\\text{ lie in different cells}]\\leq \\sigma\\,\\frac{d_X(x,y)}{\\Delta}\\qquad(x,y\\in X).\n```\n\n\nLet $`X`$ be a finite-dimensional real normed space with **enough symmetries**: every linear operator commuting with every surjective linear isometry of $`X`$ is a scalar multiple of the identity. Write $`n=\\dim X`$, and let $`\\mathrm{vr}(X^*)`$ be the volume ratio of the unit ball of its dual: the $`n`$th root of its volume divided by that of a maximum-volume ellipsoid inside it.\n\n**Naor's Conjecture 6:** Are there universal positive constants $`c,C`$ such that every such $`X`$ satisfies\n\n```math\nc\\,\\mathrm{vr}(X^*)\\sqrt n\\leq\\mathrm{SEP}(X)\\leq C\\,\\mathrm{vr}(X^*)\\sqrt n?\n```\n\n\nThe constants must be independent of the space and its dimension. The memoir states a relation up to lower-order dimension factors and gives a constant-factor argument for spaces with a coordinate $`1`$-symmetric basis. The universal constant-factor assertion above is the remaining target.",
+  "full_local_page_read": true,
+  "queries": [
+    "separation modulus enough symmetries volume ratio Naor conjecture 6 2026",
+    "separation modulus enough symmetries volume ratio Naor conjecture 6 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "separation modulus enough symmetries volume ratio Naor conjecture 6 2026 (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"10.1112/mtk.70070\"",
+    "\"mtk.70070\" separation convex polytope"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": true,
+      "locator": "Conjecture6,eq(1.8),p6;Theorem12;Corollary79;2508.03853Theorem2",
+      "url": "https://ems.press/content/book-files/47359",
+      "version_or_date": "Published EMSMemoirs11(2024), final244pagePDF inspected;2508.03853v1 actualTheorem2 also inspected",
+      "scope_comparison": "The actual memoir conjecture asks universal constants throughout the enough-symmetries class. Its Theorem12 has lower-order dimension factors; coordinate1-symmetric bases are a special case. The later actual theorem computes SEP for unitarily invariant matrix norms, not all normed spaces with scalar isometry commutant. A cited restricted-polytope DOI10.1112/mtk.70070 was inaccessible and exact-title routing failed, so no theorem-body assessment of it is claimed. Focused current searches found no complete matching general estimate."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual memoir conjecture asks universal constants throughout the enough-symmetries class. Its Theorem12 has lower-order dimension factors; coordinate1-symmetric bases are a special case. The later actual theorem computes SEP for unitarily invariant matrix norms, not all normed spaces with scalar isometry commutant. A cited restricted-polytope DOI10.1112/mtk.70070 was inaccessible and exact-title routing failed, so no theorem-body assessment of it is claimed. Focused current searches found no complete matching general estimate.",
+  "latest_version_check": "Published EMSMemoirs11(2024), final244pagePDF inspected;2508.03853v1 actualTheorem2 also inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1053",
+  "manifest_index": 897,
+  "checked_date": "2026-11-03",
+  "source_sha256": "b7ab338104773ad734b336b76ea76324e926cb602e112dd428165af3ddb6b6b3",
+  "statement_sha256": "39b9c280336ac51b214fd44379e3225413f727092457a86eaf9fe1bca5a5632d",
+  "original_target": {
+    "id": "1053",
+    "title": "Uniqueness of finite-entropy solutions of the Vicsek–BGK equation",
+    "area": "Kinetic equations and collective motion",
+    "file": "problems/1053-uniqueness-of-finite-entropy-solutions-of-the-vicsekbgk-equation.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a34c40fa63efd9ef",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "b7ab338104773ad734b336b76ea76324e926cb602e112dd428165af3ddb6b6b3",
+    "statement_sha256": "39b9c280336ac51b214fd44379e3225413f727092457a86eaf9fe1bca5a5632d",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`X=(\\mathbb R/\\mathbb Z)^2`$, let $`\\Theta=\\mathbb R/(2\\pi\\mathbb Z)`$ with probability measure $`dm(\\theta)=d\\theta/(2\\pi)`$, and write $`e(\\theta)=(\\cos\\theta,\\sin\\theta)`$. For a nonnegative density $`f(t,x,\\theta)`$, define\n\n```math\n\\rho_f(t,x)=\\int_\\Theta f(t,x,\\theta)\\,dm(\\theta),\\qquad\nJ_f(t,x)=\\int_\\Theta e(\\theta)f(t,x,\\theta)\\,dm(\\theta),\n```\n\nand, for every $`J\\in\\mathbb R^2`$, set\n\n```math\nZ(J)=\\int_\\Theta \\exp(e(\\eta)\\cdot J)\\,dm(\\eta),\\qquad\nM_J(\\theta)=\\frac{\\exp(e(\\theta)\\cdot J)}{Z(J)}.\n```\n\nConsider the local Vicsek–BGK equation with transport speed and relaxation rate equal to one:\n\n```math\n\\partial_t f+e(\\theta)\\cdot\\nabla_x f=\\rho_f M_{J_f}-f.\n```\n\nFor every nonnegative $`f_0\\in L^1(X\\times\\Theta)`$ satisfying\n\n```math\n\\int_{X\\times\\Theta}f_0|\\log f_0|\\,dx\\,dm<\\infty,\n```\n\nand every finite $`T>0`$, are any two solutions in the following class with initial datum $`f_0`$ equal?\n\nRequire $`f\\ge0`$, $`f\\in C([0,T];L^1(X\\times\\Theta))`$, preservation of the initial mass, and\n\n```math\n\\mathrm*{ess\\,sup}_{0<t<T}\n\\int_{X\\times\\Theta}f(t)|\\log f(t)|\\,dx\\,dm<\\infty,\n```\n\nwhere $`0|\\log0|=0`$. The equation is required in the precise mild sense\n\n```math\nf(t,x,\\theta)=e^{-t}f_0(x-te(\\theta),\\theta)\n+\\int_0^t e^{-(t-s)}\n\\rho_f(s,x-(t-s)e(\\theta))\nM_{J_f(s,x-(t-s)e(\\theta))}(\\theta)\\,ds,\n```\n\nas an identity in $`L^1(X\\times\\Theta)`$ for every $`t\\in[0,T]`$. Spatial translations are taken modulo $`\\mathbb Z^2`$. The integral is an $`L^1`$ integral. The translated collision gain has norm equal to the conserved mass $`m_0`$, and the displayed integrand has norm $`e^{-(t-s)}m_0`$, because $`\\int M_J\\,dm=1`$.\n\nNo bound on $`\\rho_f`$ in $`L^\\infty_x`$, smallness condition, lower density bound, nonzero-moment assumption, or closeness to equilibrium is imposed. The finite-entropy requirement is a boundedness condition on finite time intervals; no monotonicity of the entropy is assumed. The alignment distribution uses the full local moment $`J_f`$, not $`J_f/|J_f|`$, and is defined also at $`J_f=0`$.",
+  "full_original_page": "# 1053. Uniqueness of finite-entropy solutions of the Vicsek–BGK equation\n\n**Area:** Kinetic equations and collective motion\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`X=(\\mathbb R/\\mathbb Z)^2`$, let $`\\Theta=\\mathbb R/(2\\pi\\mathbb Z)`$ with probability measure $`dm(\\theta)=d\\theta/(2\\pi)`$, and write $`e(\\theta)=(\\cos\\theta,\\sin\\theta)`$. For a nonnegative density $`f(t,x,\\theta)`$, define\n\n```math\n\\rho_f(t,x)=\\int_\\Theta f(t,x,\\theta)\\,dm(\\theta),\\qquad\nJ_f(t,x)=\\int_\\Theta e(\\theta)f(t,x,\\theta)\\,dm(\\theta),\n```\n\nand, for every $`J\\in\\mathbb R^2`$, set\n\n```math\nZ(J)=\\int_\\Theta \\exp(e(\\eta)\\cdot J)\\,dm(\\eta),\\qquad\nM_J(\\theta)=\\frac{\\exp(e(\\theta)\\cdot J)}{Z(J)}.\n```\n\nConsider the local Vicsek–BGK equation with transport speed and relaxation rate equal to one:\n\n```math\n\\partial_t f+e(\\theta)\\cdot\\nabla_x f=\\rho_f M_{J_f}-f.\n```\n\nFor every nonnegative $`f_0\\in L^1(X\\times\\Theta)`$ satisfying\n\n```math\n\\int_{X\\times\\Theta}f_0|\\log f_0|\\,dx\\,dm<\\infty,\n```\n\nand every finite $`T>0`$, are any two solutions in the following class with initial datum $`f_0`$ equal?\n\nRequire $`f\\ge0`$, $`f\\in C([0,T];L^1(X\\times\\Theta))`$, preservation of the initial mass, and\n\n```math\n\\mathrm*{ess\\,sup}_{0<t<T}\n\\int_{X\\times\\Theta}f(t)|\\log f(t)|\\,dx\\,dm<\\infty,\n```\n\nwhere $`0|\\log0|=0`$. The equation is required in the precise mild sense\n\n```math\nf(t,x,\\theta)=e^{-t}f_0(x-te(\\theta),\\theta)\n+\\int_0^t e^{-(t-s)}\n\\rho_f(s,x-(t-s)e(\\theta))\nM_{J_f(s,x-(t-s)e(\\theta))}(\\theta)\\,ds,\n```\n\nas an identity in $`L^1(X\\times\\Theta)`$ for every $`t\\in[0,T]`$. Spatial translations are taken modulo $`\\mathbb Z^2`$. The integral is an $`L^1`$ integral. The translated collision gain has norm equal to the conserved mass $`m_0`$, and the displayed integrand has norm $`e^{-(t-s)}m_0`$, because $`\\int M_J\\,dm=1`$.\n\nNo bound on $`\\rho_f`$ in $`L^\\infty_x`$, smallness condition, lower density bound, nonzero-moment assumption, or closeness to equilibrium is imposed. The finite-entropy requirement is a boundedness condition on finite time intervals; no monotonicity of the entropy is assumed. The alignment distribution uses the full local moment $`J_f`$, not $`J_f/|J_f|`$, and is defined also at $`J_f=0`$.\n\n## Application\n\nThis kinetic model describes agents moving at fixed speed and changing direction at random times, with the new direction sampled from a von Mises distribution determined by the local population flux. Uniqueness would make this evolution unambiguous for the finite-entropy populations for which global solutions are known, including spatially unbounded densities.\n\n## References\n\n1. S. Merino-Aceituno, C. Schmeiser and R. Winter, *Stability of equilibria of the spatially inhomogeneous Vicsek-BGK equation across a bifurcation*, SIAM Journal on Mathematical Analysis **57**(6) (2025), 6017–6038. [DOI](https://doi.org/10.1137/24M1715908); [published PDF](https://orca.cardiff.ac.uk/id/eprint/182475/1/24m1715908.pdf); [author manuscript](https://arxiv.org/abs/2404.00347v3). Model (1.1)–(1.2), Theorem 2.6, Remark 2.7 on p.6023, and the mild identity at the end of §5 on p.6035.\n\nThe statement fixes dimension two and transport parameter one within the source question. Replacing its circle area measure by $`dm`$ is the exact change of density $`f=2\\pi F`$; the moments, mass and equation are preserved when the von Mises density is changed consistently.\n\n## Status review\n\n\n**Known cases:** The class includes arbitrary finite-entropy mild solutions without a bounded spatial density. The published remark retains uniqueness as open; equilibrium stability and conditional bounded-density arguments do not cover it.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe class includes arbitrary finite-entropy mild solutions without a bounded spatial density. The published remark retains uniqueness as open; equilibrium stability and conditional bounded-density arguments do not cover it.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe published Remark 2.7 explicitly leaves uniqueness for the finite-entropy solutions of Theorem 2.6 unresolved. Theorem 2.6 supplies global existence in this class, while the strong stability results require regularity and proximity to an equilibrium. A spatial density bound would permit a stronger uniqueness argument and is deliberately absent here.\n\nSearches through 17 October 2026 located no complete solution or announced counterexample for this exact class. The 2026 Evans–Morris–Yoldaş theorem for a different BGK model uses a fixed Maxwellian and two-sided Maxwellian bounds; it does not establish uniqueness for this local flux-dependent sampling law with merely finite entropy. Results for the angularly diffusive Vicsek–Fokker–Planck equation, spatial convolution, or BGK laws normalized by $`J/|J|`$ concern different operators.\n\nAIM227 concerns entropy-admissible renormalized hard-sphere Boltzmann solutions with Euclidean velocities and a binary collision integral. Its announced resolution does not settle this compact-velocity nonlinear relaxation equation. The admitted local Vicsek continuation problem concerns angular diffusion and smooth data, while the active Brownian uniqueness problem includes degenerate spatial cross-diffusion. Neither is the present target.\n\nAn independent selected-primary audit confirmed the exact published question, circle-measure conversion, entropy class, initial trace and damped mild formula. The fresh 186-page catalogue scan returned three matching name contexts: one reinforcement-learning reference and two textbook Boltzmann–BGK Maxwellian contexts. None concerns this local angular von Mises uniqueness question. These are listing-description comparisons, rather than certifications of mission proofs.\n\nThe [independent audit](../FURTHER_problems/_tracking/parallel/rough-filtering/cross-vicsek-bgk-entropy-review.json) and [catalogue comparison](../FURTHER_problems/_tracking/parallel/continuum/vicsek-bgk-prove2me0096-comparison.json) record their exact extents, current searches and limits. The coordinator also read the actual final 2025 model, complete Theorem 2.6/Remark 2.7 and the published mild-solution conclusion. Thus the retained question is checked in the published edition, without assuming preprint parity. The complete 21-page author text was read for discovery; only the recorded selected portions of the final 22-page article were inspected. The audit preserves a caveat about a displayed moment estimate in the existence proof; these checks do not independently certify that entire proof. No matching complete uniqueness result or announcement was found in the dated bounded checks. [Detailed review packet](../FURTHER_problems/_tracking/parallel/continuum/vicsek-bgk-entropy-review.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-a34c40fa63efd9ef**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Vicsek-BGK",
+    "Merino-Aceituno Schmeiser",
+    "finite entropy uniqueness"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"Vicsek-BGK\" \"uniqueness\" entropy 2026"
+    },
+    {
+      "query": "Vicsek BGK finite entropy uniqueness",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://orca.cardiff.ac.uk/id/eprint/182475/1/24m1715908.pdf",
+      "locator": "2025publishedTheorem2.6/Remark2.7printed6023physical6;model1.1–1.2"
+    }
+  ],
+  "scope_comparison": "Theorem2.6 provides globalfiniteentropy mildexistence but Remark2.7explicitlyretainsuniquenessgap. Smoothnear-equilibriumHmxstability and boundedspatialdensity uniqueness require extra assumptions absent here. FixedMaxwellianBGK,normalizedmoments or spatialconvolutions change collisionlaw. No complete match located.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative search cannot establish openness. Primarycurrentcomparison theorem scope inspected; no proof certification. 1054publisherPDFnotfetched, authorcurrentTheorem1.4readandR0dependenceexplicit.",
+  "announcement_routing": {
+    "localID": "1053",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Vicsek-BGK",
+          "Merino-Aceituno Schmeiser",
+          "finite entropy uniqueness"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Vicsek-BGK",
+          "Merino-Aceituno Schmeiser",
+          "finite entropy uniqueness"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Vicsek-BGK",
+        "Merino-Aceituno Schmeiser",
+        "finite entropy uniqueness"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

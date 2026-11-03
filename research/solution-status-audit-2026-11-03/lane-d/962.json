@@ -1,0 +1,117 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "962",
+  "manifest_index": 806,
+  "checked_date": "2026-11-03",
+  "source_sha256": "9e6950a89445e9e7c383c56b8012cd9cacb4cd11196494a57b699a7bf1d380da",
+  "statement_sha256": "c253b719e9094bbc0aeef2b0d513ffcb13a76529dad1c26f7f3d4ab2707e9c19",
+  "original_target": {
+    "id": "962",
+    "title": "Connectedness of planar cubic elliptic solution sets",
+    "area": "Nonlinear elliptic equations and control",
+    "file": "problems/962-connectedness-of-planar-cubic-elliptic-solution-sets.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f90aa36e8beb09ea",
+    "group": "pdes-materials",
+    "source_sha256": "9e6950a89445e9e7c383c56b8012cd9cacb4cd11196494a57b699a7bf1d380da",
+    "statement_sha256": "c253b719e9094bbc0aeef2b0d513ffcb13a76529dad1c26f7f3d4ab2707e9c19",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^2`$ be any nonempty bounded smooth open set. Define\n\n```math\n\\mathcal S(\\Omega)=\\{u\\in C^2(\\overline\\Omega;\\mathbb R):-\\Delta u=u^3\\text{ in }\\Omega\\}.\n```\n\nNo boundary values are prescribed. Is $`\\mathcal S(\\Omega)`$ connected in the norm topology\n\n```math\n\\|u\\|_{C^2(\\overline\\Omega)}=\\sum_{|\\alpha|\\le2}\\sup_{x\\in\\overline\\Omega}|D^\\alpha u(x)|?\n```\n\nConnectedness alone is asked. No sign condition or geometric restriction such as star-shapedness or simple connectedness is imposed.",
+  "full_original_page": "# 962. Connectedness of planar cubic elliptic solution sets\n\n**Area:** Nonlinear elliptic equations and control\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\Omega\\subset\\mathbb R^2`$ be any nonempty bounded smooth open set. Define\n\n```math\n\\mathcal S(\\Omega)=\\{u\\in C^2(\\overline\\Omega;\\mathbb R):-\\Delta u=u^3\\text{ in }\\Omega\\}.\n```\n\nNo boundary values are prescribed. Is $`\\mathcal S(\\Omega)`$ connected in the norm topology\n\n```math\n\\|u\\|_{C^2(\\overline\\Omega)}=\\sum_{|\\alpha|\\le2}\\sup_{x\\in\\overline\\Omega}|D^\\alpha u(x)|?\n```\n\nConnectedness alone is asked. No sign condition or geometric restriction such as star-shapedness or simple connectedness is imposed.\n\n## Application\n\nThe set describes all steady states available to a self-amplifying reaction--diffusion equation when its boundary values can vary. Its topology matters for quasistatic boundary control. The source develops this connection in one dimension; an unrestricted higher-dimensional controllability theorem is not asserted here.\n\n## References\n\n1. Jean-Michel Coron, *Control and Nonlinearity*, AMS Mathematical Surveys and Monographs **136** (2007), [doi:10.1090/surv/136](https://doi.org/10.1090/surv/136), Open Problem7.16, printed page233. [Author copy](https://www.ljll.fr/~coron/Documents/Coron-book.pdf), physical PDF page248. The complete source chapter7 has been read; the rest of the book and publisher/errata parity remain separate obligations.\n\n## Status review\n\n\n**Known cases:** The solution space has arbitrary boundary traces and arbitrary smooth domains. The elementary scaling path applies to star-shaped domains; fixed-boundary multiplicity and local approximation do not show connectedness here.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe solution space has arbitrary boundary traces and arbitrary smooth domains. The elementary scaling path applies to star-shaped domains; fixed-boundary multiplicity and local approximation do not show connectedness here.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked on18October2026. Bounded current-result and announcement searches, an independent selected-primary audit, semantic comparisons with all-status AIM/OpenAI/FURTHER entries and two catalogue scans found no exact resolution or duplicate at their recorded extents.\n\nFor a domain star-shaped about $`x_0\\in\\Omega`$, the path $`u_t(x)=t u(x_0+t(x-x_0))`$ solves the same equation and converges to zero in $`C^2`$ as $`t\\downarrow0`$. The domain contraction is essential. Fixed-Dirichlet uniqueness or multiplicity, whole-space positive Lane--Emden nonexistence and local Runge approximation concern different questions.\n\nThe [source packet](../FURTHER_problems/_tracking/parallel/complex-bayesian/B281-cubic-elliptic-connectedness-review.json), [independent audit](../FURTHER_problems/_tracking/parallel/rough-filtering/cross-B281-cubic-elliptic-connectedness-review.json), [semantic comparison](../FURTHER_problems/_tracking/cubic-elliptic-duplicates-review-2026-10-18.json), [catalogue receipt](../FURTHER_problems/_tracking/cubic-elliptic-catalogue-review-2026-10-18.json) and [coordinator review](../FURTHER_problems/_tracking/cubic-elliptic-coordinator-review-2026-10-18.json) record exact evidence and access limits. These AI checks do not assert human peer review or exhaustive proof verification.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f90aa36e8beb09ea**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "no-match",
+  "review_level": "bounded_search_source_gap",
+  "limitations": [
+    "Original book primary fetch timed out; do not count fully checked. Bounded negative search is not proof of openness."
+  ],
+  "aliases": [
+    "cubic elliptic",
+    "solution set",
+    "Coron"
+  ],
+  "queries": [
+    "\"Coron\" \"cubic\" \"connectedness\" elliptic solutions",
+    "\"Coron\" \"cubic\" \"connectedness\" elliptic solutions; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"connected\" \"solution set\" \"Coron\" Laplace",
+    "\"Coron\" \"7.16\" connected"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://www.ljll.fr/~coron/Documents/Coron-book.pdf",
+      "locator": "OpenProblem7.16 printed233 per retained local page; fresh fetch/find timed out",
+      "comparison": "Full local page read. Original source body was not freshly recovered, so this is not a completed primary-body audit."
+    }
+  ],
+  "rationale": "Bounded exact/author/equation searches located no plausible full claim. Fixed-boundary existence or multiplicity and star-shaped scaling paths do not establish connectedness on every smooth planar domain with all boundary traces. Original primary-body access remains a gap.",
+  "announcement_routing": {
+    "localID": "962",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "cubic elliptic",
+          "solution set",
+          "Coron"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-08-26-000003",
+            "title": "JaTaSn/lattice-line-covers",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-26-000003-v2.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "cubic elliptic",
+          "solution set",
+          "Coron"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "cubic elliptic",
+        "solution set",
+        "Coron"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:57:05.494Z",
+      "previous_outcome": "no-match",
+      "localID": "962",
+      "review_level": "bounded_search_source_gap",
+      "queries": [
+        "Coron \"Open Problem 7.16\" connected",
+        "\"Coron-book.pdf\"",
+        "\"Coron\" \"7.16\" \"connected\" -site:scribd.com",
+        "\"Control and Nonlinearity\" filetype:pdf book Coron"
+      ],
+      "source_gap_followup": "The direct public author URL returned7722bytes of non-PDF HTML on3November2026; pdftotext exited1 and produced zero text. Its failed receipt is _sources/962-Coron.txt.receipt.json and is NOT primary-body evidence. Author/publisher alternatives failed or provided metadata only. Historical local selected visual/text receipts were read, but their referenced actual PDF and PNG no longer exist at those paths. No plausible full matching claim was identified; preserve this as bounded no-match with original-source access limitation, not a completed primary-body review."
+    }
+  ],
+  "announcement_hit_disposition": "The lattice-line-cover claim partitions the integer plane by arithmetic lines; its phrase solution set is not the free-boundary-data planar cubic elliptic solution space.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.740Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

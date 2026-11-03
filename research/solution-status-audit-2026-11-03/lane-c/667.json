@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "667",
+  "manifest_index": 511,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "667",
+    "title": "Does Cameron–Martin coercivity ensure a strong posterior mode?",
+    "area": "Bayesian inverse problems and infinite-dimensional probability",
+    "file": "problems/667-does-cameronmartin-coercivity-ensure-a-strong-posterior-mode.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b6812e2054a22dd3",
+    "group": "bayesian-inverse-uncertainty-quantification",
+    "source_sha256": "5b4e853c53f5ee79c8ab05872bc4ae3fe75e034a392c76e082d1ce8e3fa463a3",
+    "statement_sha256": "2cc91ccead6901ac9d199569e6d54d6b45cc36a06664f745c28a54613b4db791",
+    "state": "unreviewed"
+  },
+  "source_sha256": "5b4e853c53f5ee79c8ab05872bc4ae3fe75e034a392c76e082d1ce8e3fa463a3",
+  "statement_sha256": "2cc91ccead6901ac9d199569e6d54d6b45cc36a06664f745c28a54613b4db791",
+  "actual_source_sha256": "5b4e853c53f5ee79c8ab05872bc4ae3fe75e034a392c76e082d1ce8e3fa463a3",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`X`$ be a real separable Banach space, let $`\\mu_0`$ be a centred nondegenerate Gaussian Borel probability measure on $`X`$, and let $`(E,\\|\\cdot\\|_E)`$ be its Cameron–Martin Hilbert space. Let $`\\Phi:X\\to\\mathbb R`$ be continuous. Assume separately that\n\n```math\n0<Z:=\\int_X e^{-\\Phi(x)}\\,\\mu_0(dx)<\\infty,\n\\qquad \\mu(dx):=Z^{-1}e^{-\\Phi(x)}\\mu_0(dx).\n```\n\nFor $`h\\in E`$, define the posterior Onsager–Machlup functional\n\n```math\nI(h):=\\Phi(h)+\\frac12\\|h\\|_E^2.\n```\n\nSuppose there are constants $`A\\in\\mathbb R`$ and $`c>0`$ such that\n\n```math\nA+I(h)\\ge c\\|h\\|_E^2\\qquad\\text{for every }h\\in E.\n```\n\nMust $`\\mu`$ have a **strong mode**? Explicitly, with closed balls in the given $`X`$ norm,\n\n```math\nB_r(x):=\\{z\\in X:\\|z-x\\|_X\\le r\\},\n\\qquad M_r:=\\sup_{x\\in X}\\mu(B_r(x)),\n```\n\nmust there exist $`x_*\\in X`$ for which\n\n```math\n\\lim_{r\\downarrow0}\\frac{\\mu(B_r(x_*))}{M_r}=1?\n```\n\nThis is the question immediately preceding Proposition 4.1 of [1]. Retain the uniform positive quadratic margin $`c`$ in its coercivity assumption. No global lower bound or uniform continuity of $`\\Phi`$ is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Cameron Martin\" \"coercivity\" \"strong mode\" proof 2026",
+    "\"Cameron Martin\" \"coercivity\" \"strong mode\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v3,1November2023; classifier latestv4,14August2025 checked",
+      "url": "https://arxiv.org/html/2304.13622v3",
+      "locator": "Section4.1, lines349–364, Proposition4.1",
+      "primary_body_access_gap": false,
+      "scope_comparison": "The displayed positive quadratic margin is the proposition's E-coercivity assumption, which supplies a weak mode. The paragraph before it expressly leaves strong modes open. Strong-mode theorems use stronger ambient lower bounds. Counterexamples that fail the positive Cameron-Martin margin cannot refute this target."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The displayed positive quadratic margin is the proposition's E-coercivity assumption, which supplies a weak mode. The paragraph before it expressly leaves strong modes open. Strong-mode theorems use stronger ambient lower bounds. Counterexamples that fail the positive Cameron-Martin margin cannot refute this target.",
+  "latest_version_check": "v3,1November2023; classifier latestv4,14August2025 checked",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

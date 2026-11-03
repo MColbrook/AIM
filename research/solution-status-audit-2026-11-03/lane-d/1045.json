@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1045",
+  "manifest_index": 889,
+  "checked_date": "2026-11-03",
+  "source_sha256": "dafeaa87ad02e7e7cb8b89fb5a22822bfae03fa5dcf0a21d031f5fef6ffc02e4",
+  "statement_sha256": "a20d6a72a03a840209e52c064f01d4cd55fe37c42a3ab0f553349b89b26ee048",
+  "original_target": {
+    "id": "1045",
+    "title": "Does the period of Wright's slowly oscillating cycle increase with the parameter?",
+    "area": "Delay differential equations and population dynamics",
+    "file": "problems/1045-does-the-period-of-wright-s-slowly-oscillating-cycle-increase-with-the-parameter.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-2321ce8a88ccd56a",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "dafeaa87ad02e7e7cb8b89fb5a22822bfae03fa5dcf0a21d031f5fef6ffc02e4",
+    "statement_sha256": "a20d6a72a03a840209e52c064f01d4cd55fe37c42a3ab0f553349b89b26ee048",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For $`\\alpha>\\pi/2`$, consider Wright's equation with delay one,\n```math\ny'(t)=-\\alpha y(t-1)\\bigl(1+y(t)\\bigr).\n```\n\nLet $`y_\\alpha:\\mathbb R\\to(-1,\\infty)`$ be its nonconstant slowly oscillating periodic solution, unique up to time translation [1, Theorem 1.1]. Write $`L(\\alpha)`$ for its least positive period. After a phase shift, slow oscillation means that some $`q>1`$ satisfies $`L(\\alpha)-q>1`$, with\n```math\ny_\\alpha(0)=y_\\alpha(q)=0,\\qquad\ny_\\alpha(t)>0\\ (0<t<q),\\qquad\ny_\\alpha(t)<0\\ (q<t<L(\\alpha)).\n```\n\n**Prove or disprove that**\n```math\n\\pi/2<\\alpha_1<\\alpha_2\n\\quad\\Longrightarrow\\quad\nL(\\alpha_1)<L(\\alpha_2).\n```\n\n\nThis is Conjecture 7.1 of [1]. Its subsequent discussion explicitly uses the strict comparison above. The question concerns period values; it does not assert that $`L'(\\alpha)>0`$ everywhere.",
+  "full_original_page": "# 1045. Does the period of Wright's slowly oscillating cycle increase with the parameter?\n\n**Area:** Delay differential equations and population dynamics\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor $`\\alpha>\\pi/2`$, consider Wright's equation with delay one,\n```math\ny'(t)=-\\alpha y(t-1)\\bigl(1+y(t)\\bigr).\n```\n\nLet $`y_\\alpha:\\mathbb R\\to(-1,\\infty)`$ be its nonconstant slowly oscillating periodic solution, unique up to time translation [1, Theorem 1.1]. Write $`L(\\alpha)`$ for its least positive period. After a phase shift, slow oscillation means that some $`q>1`$ satisfies $`L(\\alpha)-q>1`$, with\n```math\ny_\\alpha(0)=y_\\alpha(q)=0,\\qquad\ny_\\alpha(t)>0\\ (0<t<q),\\qquad\ny_\\alpha(t)<0\\ (q<t<L(\\alpha)).\n```\n\n**Prove or disprove that**\n```math\n\\pi/2<\\alpha_1<\\alpha_2\n\\quad\\Longrightarrow\\quad\nL(\\alpha_1)<L(\\alpha_2).\n```\n\n\nThis is Conjecture 7.1 of [1]. Its subsequent discussion explicitly uses the strict comparison above. The question concerns period values; it does not assert that $`L'(\\alpha)>0`$ everywhere.\n\n## Application\n\nThe equation models population growth with delayed density feedback. The question asks how the duration of sustained oscillations changes with feedback strength when the delay is fixed.\n\n## Status review\n\n\n**Known cases:** Strict monotonicity of the least period over every alpha>pi/2 is required. Uniqueness of the slowly oscillating orbit, near-Hopf monotonicity and asymptotic period estimates do not establish it globally.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nStrict monotonicity of the least period over every alpha>pi/2 is required. Uniqueness of the slowly oscillating orbit, near-Hopf monotonicity and asymptotic period estimates do not establish it globally.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nMonotonicity is proved for $`\\pi/2<\\alpha\\le\\pi/2+0.006830`$. Balázs and Röst restate the global question as Conjecture 13; their Theorem 14 also treats small intervals on higher Hopf branches [2, §4.1]. Those higher branches concern rapidly oscillating solutions and do not extend the parameter range for the cycle defined here.\n\nThe uniqueness theorem for this cycle [1] leaves its period dependence undetermined. Numerical evidence and large-parameter estimates are also distinguished from a monotonicity proof in [1, §7].\n\nCurrent searches covered the equation, period monotonicity and period-function terminology, the conjecture numbers, author publications, proof/counterexample claims and announcements. No matching complete result was found. This is a dated literature review, not a guarantee that no proof exists.\n\nAll 953 recorded findings and 587 saved pages were checked alongside the current all-status AIM/OpenAI comparison snapshot. AIM 322 asks about attraction to equilibrium in a locally stable parameter range for a class of feedback functions. AIM 285 concerns Nicholson's different equation. Neither asks the supercritical cycle-period question above. The evidence and access qualifications are retained in the [review record](../FURTHER_problems/_tracking/Wright-period-monotonicity-Root-20261027/ROOT-FORMULATION-CURRENT-AND-SEMANTIC-DUPLICATE-PASS.json).\n\n## References\n\n1. Jonathan Jaquette, *A proof of Jones' conjecture*, **Journal of Differential Equations 266** (2019), 3818–3859, [DOI 10.1016/j.jde.2018.09.017](https://doi.org/10.1016/j.jde.2018.09.017). Checked source: [arXiv:1801.09806v1](https://arxiv.org/html/1801.09806), Eq. (2), Theorem 1.1 and §7, Conjecture 7.1; [author PDF](https://sites.math.rutgers.edu/~jaquette/JonesPreprint.pdf), pp. 2 and 37–38. The arXiv record lists only v1. The published HTML retains the same conjecture; full PDF parity was not certified.\n2. István Balázs and Gergely Röst, *Hopf bifurcation for Wright-type delay differential equations: The simplest formula, period estimates, and the absence of folds*, **Communications in Nonlinear Science and Numerical Simulation 84** (2020), 105188, [DOI 10.1016/j.cnsns.2020.105188](https://doi.org/10.1016/j.cnsns.2020.105188); [accepted manuscript](https://publicatio.bibl.u-szeged.hu/18524/3/31123767.pdf), §4.1, Conjecture 13 and Theorem 14.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-2321ce8a88ccd56a**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Wright period",
+    "Jaquette",
+    "Jones conjecture",
+    "Balazs Rost"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "Wright equation \"period\" \"monotonicity\" 2026 conjecture"
+    },
+    {
+      "query": "Wright period monotonicity Conjecture 7.1",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1801.09806",
+      "locator": "Section7Conjecture7.1lines1187–1201;BalazsRostacceptedPDFSection4.1Conj13Theorem14p8"
+    }
+  ],
+  "scope_comparison": "SOPS uniqueness/Jones theorem proves no period monotonicity. Verified monotonic interval is only pi/2<alpha<=pi/2+0.00683; other Hopf branches are rapidly oscillating and not extension to allalpha. Large-alpha asymptotics do not force strict pairwise monotonicity. No complete matching claim found.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded current negative search does not certify openness. Exact statement/current-comparison theorem scope inspected; not certification of entire proofs. 1046 original publisher body recovered from existing native cache, authorPDFcurrentaccess timed out.",
+  "announcement_routing": {
+    "localID": "1045",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Wright period",
+          "Jaquette",
+          "Jones conjecture",
+          "Balazs Rost"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Wright period",
+          "Jaquette",
+          "Jones conjecture",
+          "Balazs Rost"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Wright period",
+        "Jaquette",
+        "Jones conjecture",
+        "Balazs Rost"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

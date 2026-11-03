@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "745",
+  "manifest_index": 589,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "745",
+    "title": "Global positive classical evolution for the non-isothermal binary PNPF system",
+    "area": "Electrochemistry and nonlinear partial differential equations",
+    "file": "problems/745-global-positive-classical-evolution-for-the-non-isothermal-binary-pnpf-system.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0980eccbbd8017d8",
+    "group": "electrochemistry-energy-storage",
+    "source_sha256": "197740e437fb78f2726b14428572772177d43f7524babaa1b2475e1da4f22ece",
+    "statement_sha256": "01f3b66b6b3133bac4f6949b51005033b06666f35f0167b3beb066ed007b0921",
+    "state": "unreviewed"
+  },
+  "source_sha256": "197740e437fb78f2726b14428572772177d43f7524babaa1b2475e1da4f22ece",
+  "statement_sha256": "01f3b66b6b3133bac4f6949b51005033b06666f35f0167b3beb066ed007b0921",
+  "actual_source_sha256": "197740e437fb78f2726b14428572772177d43f7524babaa1b2475e1da4f22ece",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix $`c>1`$. On $`\\mathbb R^3`$, consider positive concentrations $`p,n`$, absolute temperature $`\\theta`$, particle velocities $`v_p,v_n`$, and potential $`\\phi`$, satisfying\n```math\n\\begin{aligned}\np_t+\\nabla\\!\\cdot(pv_p)&=0,&pv_p&=-\\nabla(p\\theta)-p\\nabla\\phi,\\\\\nn_t+\\nabla\\!\\cdot(nv_n)&=0,&nv_n&=-\\nabla(n\\theta)+n\\nabla\\phi,\\\\\n-\\Delta\\phi&=p-n,&\\phi(x,t)&\\longrightarrow0\\quad(|x|\\to\\infty),\\\\\nc(p+n)\\theta_t+c(pv_p+nv_n)\\!\\cdot\\nabla\\theta\n&=\\Delta\\theta+p|v_p|^2+n|v_n|^2-p\\theta\\nabla\\!\\cdot v_p-n\\theta\\nabla\\!\\cdot v_n.\n\\end{aligned}\n```\nAssume $`p_0-1,n_0-1,\\theta_0-1\\in C_c^\\infty(\\mathbb R^3)`$ and $`\\min(p_0,n_0,\\theta_0)\\ge\\eta>0`$. Their amplitude is unrestricted. The initial potential is determined by the decaying Newtonian solution of $`-\\Delta\\phi_0=p_0-n_0`$.\n\n**Question.** Does the unique local positive classical solution extend for all time? In a continuation formulation, can one establish for every finite $`T`$ both\n```math\n\\sup_{0\\le t\\le T}\\left(\\|(p-1,n-1,\\theta-1)(t)\\|_{H^2}+\\|\\nabla\\phi(t)\\|_{L^2}\\right)<\\infty,\n\\qquad\n\\inf_{\\mathbb R^3\\times[0,T]}\\min(p,n,\\theta)>0?\n```\nA finite-time loss of regularity or positivity for such data would answer the question negatively.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Poisson Nernst Planck Fourier\" \"large\" \"global\" 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"non-isothermal\" \"PNPF\" global",
+    "site:palomar-registry.org OR site:hexagonmath.org \"Poisson\" \"Fourier\" global"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2001.08393v1",
+      "primary_body_access_gap": false,
+      "scope_comparison": "Actual PNPF Theorem1 imposes small H2 perturbation and electrostatic-gradient norm. Concluding remarks retain arbitrary-data wellposedness/temperature lower-bound obstacle. Local arbitrary-amplitude compact positive perturbations in R3 with Joule/compression terms are not covered. 2608.21640 is torus non-isothermal NPNS/passive-temperature model with small variation, changing both thermal equation and data hypotheses. No complete matching announcement located.",
+      "locator": "equation11 pp6–7; Theorem1/(18) p7; §6 concluding remarks p19",
+      "version_or_date": "v1,23January2020; JDE269(2020)7287–7310; 2608.21640v1 inspected as comparator"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual PNPF Theorem1 imposes small H2 perturbation and electrostatic-gradient norm. Concluding remarks retain arbitrary-data wellposedness/temperature lower-bound obstacle. Local arbitrary-amplitude compact positive perturbations in R3 with Joule/compression terms are not covered. 2608.21640 is torus non-isothermal NPNS/passive-temperature model with small variation, changing both thermal equation and data hypotheses. No complete matching announcement located.",
+  "latest_version_check": "v1,23January2020; JDE269(2020)7287–7310; 2608.21640v1 inspected as comparator",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

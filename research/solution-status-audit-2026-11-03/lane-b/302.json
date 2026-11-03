@@ -1,0 +1,44 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 243,
+  "source_sha256": "f62d699909587827c69628c1a54921ab71f16c38bdbcf4e11222b896d70fff33",
+  "statement_sha256": "223279b287f1f5a2fb54cde4f3c4f1a0b9a0c92ad2a5e29d9cbbe2ed7526ad31",
+  "original_target": {
+    "id": "302",
+    "title": "Does entanglement-assisted capacity equal the Lovász bound?",
+    "area": "Quantum information and zero-error communication",
+    "file": "problems/302-entanglement-assisted-lovasz.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "spectral3",
+    "source_sha256": "f62d699909587827c69628c1a54921ab71f16c38bdbcf4e11222b896d70fff33",
+    "statement_sha256": "223279b287f1f5a2fb54cde4f3c4f1a0b9a0c92ad2a5e29d9cbbe2ed7526ad31",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "302",
+  "outcome": "no-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Original regularizes alpha_star over all strong powers and arbitrary finite-dimensional shared states, asking Theta_star(G)=theta(G). Li–Zuiddam Conjecture19 states exactly this; its contradiction concerns two conjectures jointly and does not decide which one fails. Located one-shot, maximally-entangled/projective and quantum-channel separations have stricter or different models. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "entanglement assisted Shannon capacity Lovasz theta graph equality 2026 counterexample",
+    "\"entanglement assisted\" \"Lovasz\" capacity (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1810.00744v3",
+      "version": "v3,18October2020",
+      "locator": "§2.5; Conjecture19; Corollary27",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "entanglement.assist.*(Lov.sz|capacity)|Lov.sz.*(entangle|capacity)",
+    "palomar_matches": 1,
+    "hexagon_matches": 0,
+    "result": "Palomar ordinary Lovasz bound and pentagon formalization has no general entanglement-assisted equality."
+  }
+}

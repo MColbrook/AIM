@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "771",
+  "manifest_index": 615,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "771",
+    "title": "Stationary theta networks on Riemannian two-spheres",
+    "area": "Riemannian geometry / stationary length networks",
+    "file": "problems/771-stationary-theta-networks-on-riemannian-two-spheres.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-18d40213b01b34fc",
+    "group": "geometry-topology",
+    "source_sha256": "20b7df4211e81d5485526f61642a55a83716d9d033942ad2fcae8c2c634e2ec7",
+    "statement_sha256": "b680ce325a541dc788b460fa08fadbb262556af1b4e5d7b90268df076d4cb6a2",
+    "state": "unreviewed"
+  },
+  "source_sha256": "20b7df4211e81d5485526f61642a55a83716d9d033942ad2fcae8c2c634e2ec7",
+  "statement_sha256": "b680ce325a541dc788b460fa08fadbb262556af1b4e5d7b90268df076d4cb6a2",
+  "actual_source_sha256": "20b7df4211e81d5485526f61642a55a83716d9d033942ad2fcae8c2c634e2ec7",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`g`$ be any smooth Riemannian metric on $`S^2`$. Must there exist two distinct points $`p,q\\in S^2`$, positive lengths $`L_1,L_2,L_3`$, and three embedded unit-speed geodesic arcs\n\n```math\n\\gamma_i:[0,L_i]\\longrightarrow(S^2,g),\\qquad\n\\gamma_i(0)=p,\\quad\\gamma_i(L_i)=q,\n```\n\nwhose interiors are pairwise disjoint and satisfy\n\n```math\n\\sum_{i=1}^3\\dot\\gamma_i(0)=0,\n\\qquad\n\\sum_{i=1}^3\\bigl(-\\dot\\gamma_i(L_i)\\bigr)=0?\n```\n\nThus the union is an embedded graph homeomorphic to the Greek letter $`\\Theta`$, with three edges and two triple junctions. The outgoing unit tangents at each junction meet at angles $`2\\pi/3`$. The arcs need not minimize distance globally between $`p`$ and $`q`$. Their lengths must remain positive and the two vertices distinct.",
+  "full_local_page_read": true,
+  "queries": [
+    "embedded stationary geodesic theta net every sphere metric 2026",
+    "embedded stationary geodesic theta net every sphere metric 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "embedded stationary geodesic theta net every sphere metric 2026 (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"geodesic\" \"theta\" \"2026\" network sphere"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Introduction before Theorem 1.1; sphere multiplicity theorem and §2 Definition2.2",
+      "url": "https://link.springer.com/article/10.1007/s12220-024-01765-9",
+      "version_or_date": "Final JGA 34 (2024), article319, full publisher HTML inspected",
+      "scope_comparison": "The actual existence and multiplicity theorem assumes the sphere metric is sufficiently C2-close to the round metric. The introduction explicitly retains theta-network existence for arbitrary positively curved spheres, hence also the target with every smooth metric. A stationary graph of unspecified topology, eyeglasses/figure-eight alternatives, density for generic metrics, or singular doubled-polygon examples do not force three positive embedded edges and two distinct balanced junctions for every smooth g. No full matching claim found."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual existence and multiplicity theorem assumes the sphere metric is sufficiently C2-close to the round metric. The introduction explicitly retains theta-network existence for arbitrary positively curved spheres, hence also the target with every smooth metric. A stationary graph of unspecified topology, eyeglasses/figure-eight alternatives, density for generic metrics, or singular doubled-polygon examples do not force three positive embedded edges and two distinct balanced junctions for every smooth g. No full matching claim found.",
+  "latest_version_check": "Final JGA 34 (2024), article319, full publisher HTML inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

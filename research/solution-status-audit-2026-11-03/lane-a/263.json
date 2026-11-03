@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "263",
+  "manifest_index": 207,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "263",
+    "title": "Decidability of exact hyperplane reachability for a linear ODE",
+    "area": "Continuous dynamics / formal verification",
+    "file": "problems/263-continuous-skolem-decidability.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "inverse3",
+    "source_sha256": "73ea1c549f3007e924762194b36ddd746213d0f09ce8a49376bceb15dccc48c2",
+    "statement_sha256": "387338c9a991b11b3858a45f1b73e54dcebf7657a0076069c5a98a2e927c4fb0",
+    "state": "unreviewed"
+  },
+  "source_sha256": "73ea1c549f3007e924762194b36ddd746213d0f09ce8a49376bceb15dccc48c2",
+  "statement_sha256": "387338c9a991b11b3858a45f1b73e54dcebf7657a0076069c5a98a2e927c4fb0",
+  "actual_source_sha256": "73ea1c549f3007e924762194b36ddd746213d0f09ce8a49376bceb15dccc48c2",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Is there an algorithm which, for every positive integer $`n`$, rational matrix $`A\\in\\mathbb Q^{n\\times n}`$ and rational vectors $`x_0,c\\in\\mathbb Q^n`$, halts and correctly decides whether\n\n```math\n\\exists t\\geq0:\\quad c^T e^{tA}x_0=0?\n```\n\nThe matrix exponential is $`e^{tA}=\\sum_{j\\geq0}(tA)^j/j!`$. Thus the question asks whether the exact solution of $`x'=Ax`$, $`x(0)=x_0`$, ever intersects the hyperplane $`c^Tx=0`$. Inputs are finite binary encodings of rational numbers; time is a real variable and is not discretized.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"continuous Skolem\" decidability 2026",
+    "\"continuous Skolem\" decidability (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"continuous Skolem\" decidability (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "ICALP2016primary manuscript; current3November2026searches;2026survey fullPDF accessfailed.",
+      "url": "https://people.mpi-sws.org/~joel/publications/cont-skolem16.pdf",
+      "scope_comparison": "Theorem7 decides only bounded-time continuous Skolem assuming Schanuel's conjecture. The target is unconditional, arbitrary dimension and unbounded real time. Discrete recurrence and positive-characteristic results change the input problem; low-order restrictions do not cover every rational matrix. No exact complete algorithm/undecidability claim found. The2026survey URL remains an access limitation, not the basis of a full result.",
+      "primary_body_access_gap": false,
+      "locator": "Section1 matrix/ODE equivalence;Theorem7 p6"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Theorem7 decides only bounded-time continuous Skolem assuming Schanuel's conjecture. The target is unconditional, arbitrary dimension and unbounded real time. Discrete recurrence and positive-characteristic results change the input problem; low-order restrictions do not cover every rational matrix. No exact complete algorithm/undecidability claim found. The2026survey URL remains an access limitation, not the basis of a full result.",
+  "latest_version_check": "ICALP2016primary manuscript; current3November2026searches;2026survey fullPDF accessfailed.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

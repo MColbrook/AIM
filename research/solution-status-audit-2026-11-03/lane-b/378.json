@@ -1,0 +1,49 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 310,
+  "source_sha256": "318c02e318669d3b7a0230ca2644dfe95de7402013c5ce463014d13ab163aee5",
+  "statement_sha256": "7cfb3c2b7ee5c1fe490982facd3ee4819495ef9825f5d2e4b03f6ebfdd5e4d77",
+  "original_target": {
+    "id": "378",
+    "title": "Hard-sphere Boltzmann shock profiles at arbitrary Mach number",
+    "area": "Rarefied gas dynamics; kinetic shock layers",
+    "file": "problems/378-boltzmann-arbitrary-mach-shocks.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "318c02e318669d3b7a0230ca2644dfe95de7402013c5ce463014d13ab163aee5",
+    "statement_sha256": "7cfb3c2b7ee5c1fe490982facd3ee4819495ef9825f5d2e4b03f6ebfdd5e4d77",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "378",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Boltzmann\" \"shock profiles\" \"arbitrary\" \"2026\"",
+    "\"Boltzmann\" \"large-amplitude\" \"shock\" existence 2026",
+    "\"Boltzmann\" \"large-amplitude shocks\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1612.05676",
+      "version": "v1 16 December 2016; JDE2018 DOI10.1016/j.jde.2018.01.049",
+      "locators": "Corollary1.6; Proposition1.8; Section1.3 lines229–236",
+      "body_inspected": true,
+      "scope": "Center manifold profiles local to one Maxwellian give small amplitude. Large-amplitude existence explicitly retained as open."
+    },
+    {
+      "url": "https://homepage.univie.ac.at/christian.schmeiser/review.pdf",
+      "version": "author review current public copy checked 3 November2026",
+      "locators": "Sections6.1–6.3, Theorems6.2,6.6 PDFpp43–46",
+      "body_inspected": true,
+      "scope": "Strong-shock theorem is scalar macroscopic conservation law with collision comparison principle and scalar equilibrium parameter. Not hard-sphere Boltzmann with five conserved moments."
+    }
+  ],
+  "registry_checks": "Palomar and Hexagon complete metadata: no shock or Boltzmann alias. OpenAI CONTENTS Boltzmann entries concern periodic nonuniqueness and kinetic limits, not stationary shock profiles.",
+  "scope_comparison": "Target all Mach M>1 and exact hard-sphere collision operator, weighted L1 heteroclinic Maxwellians, no small jump. Small shocks, scalar BGK/fermion shocks and stability assuming profiles do not cover it.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "834",
+  "manifest_index": 678,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "834",
+    "title": "Controlled global Coulomb gauges in ordinary Lorentz weak L4",
+    "area": "Gauge theory and geometric analysis",
+    "file": "problems/834-controlled-global-coulomb-gauges-in-ordinary-lorentz-weak-l4.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b8fe9561e90cae5f",
+    "group": "geometry-topology",
+    "source_sha256": "07ee6ef83b99bfbcef7f4d5ed2f62b2e5c70cb74beb8e2ec347f74464f26107f",
+    "statement_sha256": "3fa5bc4e44e6df744c0a0cde39d5c04fc2ed8fc7a2558ae4237b46215fe7e839",
+    "state": "unreviewed"
+  },
+  "source_sha256": "07ee6ef83b99bfbcef7f4d5ed2f62b2e5c70cb74beb8e2ec347f74464f26107f",
+  "statement_sha256": "3fa5bc4e44e6df744c0a0cde39d5c04fc2ed8fc7a2558ae4237b46215fe7e839",
+  "actual_source_sha256": "07ee6ef83b99bfbcef7f4d5ed2f62b2e5c70cb74beb8e2ec347f74464f26107f",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix a compact Riemannian four-manifold $`(M,g)`$. For each finite $`\\Lambda>0`$, does there exist $`C(M,\\Lambda)<\\infty`$ with the following property?\n\nEvery $`W^{1,2}`$ connection $`\\nabla`$ on an $`\\mathrm{SU}(2)`$ principal bundle over $`M`$, with $`\\|F_\\nabla\\|_{L^2(M)}\\le\\Lambda`$, admits a global, possibly singular $`W^{1,(4,\\infty)}`$ section as in Theorem A of [1], such that its connection form $`\\alpha`$ satisfies\n\n```math\nd^*\\alpha=0\\quad\\text{in distributions},\\qquad\n\\|\\alpha\\|_{L^{4,\\infty}(M)}\\le C(M,\\Lambda).\n```\n\nHere the norm is the ordinary Lorentz weak norm\n\n```math\n\\|\\alpha\\|_{L^{4,\\infty}(M)}\n=\\sup_{t>0} t\\,\\mathrm{Vol}_g\\{x:|\\alpha(x)|>t\\}^{1/4}.\n```\n\nThere is no curvature-smallness or Yang–Mills equation assumption. Singular sections are allowed; a smooth global trivialization and a prescribed singular set are not required.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"global Coulomb\" \"Lorentz\" gauge Wang 2026",
+    "\"global Coulomb\" \"Lorentz\" gauge Wang (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"global Coulomb\" \"Lorentz\" gauge Wang (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Definition1.1,Remark1.2 and following paragraph; Theorem1.2",
+      "version_or_date": "arXiv:1808.01685v1,5August2018,onlyversion; final CPAM73(2020)2556–2633",
+      "url": "https://arxiv.org/html/1808.01685v1",
+      "scope_comparison": "The exact target requires ordinary Lorentz weak L4 together with distributional Coulomb condition for all finite curvature bounds, allowing singular sections. Wang's actual Theorem1.2 instead estimates the calligraphic integrability-radius space. The paragraph after Remark1.2 explicitly says this space is neither stronger nor weaker than ordinary Lorentz L4,infinity, so it does not yield the target norm. Small-energy or stationary Yang–Mills restrictions also do not cover all connections and all finite Lambda. No new complete matching announcement was found."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The exact target requires ordinary Lorentz weak L4 together with distributional Coulomb condition for all finite curvature bounds, allowing singular sections. Wang's actual Theorem1.2 instead estimates the calligraphic integrability-radius space. The paragraph after Remark1.2 explicitly says this space is neither stronger nor weaker than ordinary Lorentz L4,infinity, so it does not yield the target norm. Small-energy or stationary Yang–Mills restrictions also do not cover all connections and all finite Lambda. No new complete matching announcement was found.",
+  "latest_version_check": "arXiv:1808.01685v1,5August2018,onlyversion; final CPAM73(2020)2556–2633",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

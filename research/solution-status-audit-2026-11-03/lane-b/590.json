@@ -1,0 +1,78 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "590",
+  "manifest_index": 455,
+  "original_target": {
+    "id": "590",
+    "title": "Can bound entanglement produce a device-independent secret key?",
+    "area": "Quantum information and cryptography",
+    "file": "problems/590-revised-peres.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-13",
+    "group": "optimization-information",
+    "source_sha256": "2dc872d5e9f668caf3154463af4329c584ba1ded2c93030f96cecf4c284a185e",
+    "statement_sha256": "770ecddb63d277212733c4c16c46df248feb85077cb0fa5971ff56be0653a4eb",
+    "state": "unreviewed"
+  },
+  "source_sha256": "2dc872d5e9f668caf3154463af4329c584ba1ded2c93030f96cecf4c284a185e",
+  "statement_sha256": "770ecddb63d277212733c4c16c46df248feb85077cb0fa5971ff56be0653a4eb",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T14:07:57.690419+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The local conjecture quantifies all bound-entangled states and all device-independent key protocols. The older no-key theorem treats a particular protocol, and OpenAI272 constructs one dimension-ten PPT no-key state in its stated protocol class. An existential no-key state does not establish universal prohibition or a positive-key counterexample.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/2005.12325",
+      "locator": "SectionIII Conjecture11 p12 and sectionIII.B Protocol1; current v1 25May2020",
+      "body_inspected": true
+    },
+    {
+      "url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/CONTENTS.md",
+      "locator": "Family272, explicit dimension-ten state and protocol scope",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"revised Peres conjecture\" \"2026\" key",
+    "\"revised Peres\" conjecture key [domains arxiv.org,zenodo.org,hal.science,github.com]",
+    "\"bound entangled\" \"device independent\" \"secret key\" \"2026\""
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "revised Peres",
+        "bound entangled",
+        "device independent"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "revised Peres",
+        "bound entangled",
+        "device independent"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Latest OpenAI272 body not refetched because its indexed existential quantifier already excludes the universal target; local prior theorem review was read. No Lean verification asserted."
+  ],
+  "canonical_update_required": false
+}

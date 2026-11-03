@@ -40,7 +40,7 @@ The known estimate quoted in the source assumes $`\gamma\ge1`$. Searches for Cue
 
 ## 5. Nonempty spectrum for a magnetic complex Airy operator at every field strength
 
-Admitted page: [magnetic-airy-half-plane-spectrum](../../../problems/423-magnetic-airy-half-plane-spectrum.md)
+Admitted page: [magnetic-airy-half-plane-spectrum](../../../cut_problems/problems/423-magnetic-airy-half-plane-spectrum.md)
 
 1. Y. Almog, [Magnetic Schrödinger operator](https://nsa.fjfi.cvut.cz/problems/04_AIM_2015/2015-02/2015-02_AIM_Almog_2.pdf), AIM nonselfadjoint spectral theory problem 2015-02, p. 1.
 2. B. Helffer, [On spectral problems related to a time dependent model in superconductivity with electric current](https://doi.org/10.5802/jedp.56), *Journées Équations aux Dérivées Partielles* (2009), Exposé 3, 1–16, discussion of the Almog–Helffer–Pan magnetic models.
@@ -49,7 +49,7 @@ Almog records nonempty spectrum for sufficiently small and sufficiently large $`
 
 ## 6. Reality of the spectrum for a spherical strip with PT-symmetric boundary conditions
 
-Admitted page: [spherical-pt-robin-real-spectrum](../../../problems/424-spherical-pt-robin-real-spectrum.md)
+Admitted page: [spherical-pt-robin-real-spectrum](../../../cut_problems/problems/424-spherical-pt-robin-real-spectrum.md)
 
 1. P. Siegl, [PT-symmetric Laplace–Beltrami operator in the strip on a sphere](https://nsa.fjfi.cvut.cz/problems/01_ESF_2010/2010-10/2010-10_ESF_Siegl.pdf), ESF nonselfadjoint spectral theory problem 2010-10, equation (2).
 2. D. Krejčiřík and P. Siegl, [PT-symmetric models in curved manifolds](https://arxiv.org/abs/1001.2988), *Journal of Physics A* **43** (2010), 485204, §4.4.2 and Propositions 4.3–4.4.
@@ -58,7 +58,7 @@ The paper proves reality for the comparison operator without its potential and f
 
 ## 7. Excess Floquet multiplicity for complex periodic Schrödinger equations
 
-Admitted page: [complex-hill-excess-multiplicity](../../../problems/425-complex-hill-excess-multiplicity.md)
+Admitted page: [complex-hill-excess-multiplicity](../../../cut_problems/problems/425-complex-hill-excess-multiplicity.md)
 
 1. R. Weikard, [Open problem for complex-valued periodic potentials](https://nsa.fjfi.cvut.cz/problems/04_AIM_2015/2015-27/2015-27_AIM_Weikard.pdf), AIM problem 2015-27, p. 1.
 2. F. Gesztesy and R. Weikard, [Picard potentials and Hill’s equation on a torus](https://doi.org/10.1007/BF02547336), *Acta Mathematica* **176** (1996), 73–107, Floquet and multiplicity framework cited by the problem note.
@@ -86,7 +86,7 @@ Both 2026 papers explicitly identify the classical higher-dimensional assertion 
 
 ## 10. Completeness of modes for slowly growing imaginary Schrödinger potentials
 
-Admitted page: [imaginary-sublinear-potential-completeness](../../../problems/428-imaginary-sublinear-potential-completeness.md)
+Admitted page: [imaginary-sublinear-potential-completeness](../../../cut_problems/problems/428-imaginary-sublinear-potential-completeness.md)
 
 1. Y. Almog, [Completeness of eigenfunctions for Schrödinger operators with complex potentials](https://nsa.fjfi.cvut.cz/problems/04_AIM_2015/2015-01/2015-01_AIM_Almog_1.pdf), AIM problem 2015-01.
 2. S. Tumanov, [Completeness theorem for the system of eigenfunctions of the complex Schrödinger operator with power potential](https://arxiv.org/abs/2101.01680), *Journal of Differential Equations* **319** (2022), 80–99, introduction, Theorem 1 and its corollary.
@@ -205,7 +205,7 @@ The survey identifies the missing interior boundedness estimate in dimensions 6�
 
 ## 23. A single blow-up point for singular extremal states on convex domains
 
-Admitted page: [convex-domain-extremal-single-singularity](../../../problems/440-convex-domain-extremal-single-singularity.md)
+Admitted page: [convex-domain-extremal-single-singularity](../../../cut_problems/problems/440-convex-domain-extremal-single-singularity.md)
 
 1. H. Brezis, [Some of my favorite open problems](https://doi.org/10.4171/RLM/1008), *Rendiconti Lincei—Matematica e Applicazioni* (2023), §6, Open Problem 6.2.
 2. H. Brezis and J. L. Vázquez, [Blow-up solutions of some nonlinear elliptic problems](https://sites.math.rutgers.edu/~brezis/PUBlications/152.pdf), *Revista Matemática de la Universidad Complutense de Madrid* **10** (1997), 443–469, §8, Problem 5.

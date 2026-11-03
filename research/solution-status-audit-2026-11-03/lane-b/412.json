@@ -1,0 +1,46 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "412",
+  "manifest_index": 334,
+  "source_sha256": "865e58270f41f03172ca2a961b6d895bc5c443a89ab72a0e940760b2d4cbd4c0",
+  "statement_sha256": "2b1dd9b798b4db9bdd6502fe10143aa3a51f686d4ca0d297745044c7c1aaac55",
+  "original_target": {
+    "id": "412",
+    "title": "Sharp vanishing-viscosity control time for downstream transport",
+    "area": "PDE control / advection–diffusion",
+    "file": "problems/412-positive-transport-sharp-uniform-control-time.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: negative, claimed",
+    "proof": "https://arxiv.org/pdf/2609.35355v1",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_115_140.md",
+    "group": "inverse3",
+    "source_sha256": "865e58270f41f03172ca2a961b6d895bc5c443a89ab72a0e940760b2d4cbd4c0",
+    "statement_sha256": "2b1dd9b798b4db9bdd6502fe10143aa3a51f686d4ca0d297745044c7c1aaac55",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "unverified-announcement",
+  "ready_for_parent": true,
+  "recommended_status": "Solved",
+  "answer": "Negative for T between L/M and2L/M.",
+  "required_status_qualification": "Solved on the basis of an unverified announcement. The full target is claimed in the cited source; the external proof has not been independently verified here.",
+  "scope_comparison": "Theorem1.3 treats M>0 and the left Dirichlet boundary control with zero right boundary on the same interval and L2 null-control cost. For TM/L<2, cost tends to+infinity; choose any1<TM/L<2, contradicting the original forall T>L/M assertion. For TM/L>2 the paper claims cost tends0. Unresolved endpointT=2L/M is not needed to refute the original universal assertion and is retained explicitly.",
+  "queries": [
+    "\"2609.35355\" correction error withdrawn",
+    "\"Coron Guerrero\" control time (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "primary_sources": [
+    {
+      "version": "v1,28September2026",
+      "locator": "Definition cost(2); Theorem1.3 positive speed; scaling(22); Theorem7.1",
+      "body_inspected": true,
+      "url": "https://arxiv.org/html/2609.35355v1"
+    }
+  ],
+  "known_gap_check": "Prior local applicability reviews read; no concrete scope or proof gap was recorded. Current primary bodies and bounded correction/version searches did not locate withdrawal. Whole external proofs remain unverified.",
+  "verification": "Applicability review only; no new whole-proof, Lean or certificate replay."
+}

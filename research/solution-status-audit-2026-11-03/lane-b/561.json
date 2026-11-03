@@ -1,0 +1,95 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "561",
+  "manifest_index": 436,
+  "original_target": {
+    "id": "561",
+    "title": "Linear-size equal-weight discretization of the L1 norm",
+    "area": "Approximation theory and numerical analysis",
+    "file": "problems/561-linear-size-equal-weight-discretization-of-the-l1-norm.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c1934f05b9ec012f",
+    "group": "numerical-analysis",
+    "source_sha256": "b9ca4211d3a0e6315e8c3db76ded59ca71578aa9a266b8baa9c6ac20111b2e33",
+    "statement_sha256": "d9e2131f3ac04bee940094304da067d17d250353364d1f6c2ebd0205e563485b",
+    "state": "unreviewed"
+  },
+  "source_sha256": "b9ca4211d3a0e6315e8c3db76ded59ca71578aa9a266b8baa9c6ac20111b2e33",
+  "statement_sha256": "d9e2131f3ac04bee940094304da067d17d250353364d1f6c2ebd0205e563485b",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:59:50.946855+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The latest survey v2 explicitly retains logarithm removal for 1<=p<2; its L1 Theorem6.1 uses KNlog(KN), rather than an absolute CKN equal-weight rule for all f. L2 sparsification, weighted rules and sparse-only RIP do not meet the target.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2603.02459v2",
+      "locator": "Section6 equation6.2 and Theorem6.1; current v2 21October2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2606.00347v1",
+      "locator": "Sections1.3–1.7, p>2 rules or p<2 sparse RIP, retained logarithms",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"L1\" \"Nikol\" \"discretization\" \"linear\" 2026 logarithm",
+    "\"L1\" \"Nikol\" \"discretization\" logarithm [domains arxiv.org,zenodo.org,hal.science,github.com]",
+    "\"sampling discretization\" \"L1\" \"2026\" logarithm removal"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "discretization",
+        "Nikolskii"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-14-000002",
+          "title": "The sparsification theorem of Batson, Spielman and Srivastava"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "discretization",
+        "Nikolskii"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00593v1",
+          "title": "Stability and Convergence of a Regularized Immersed Boundary Method under Dynamic Cartesian Refinement. Part III: Fluid-Driven Rigid-Body Motion"
+        },
+        {
+          "id": "hexagon:2610.00592v1",
+          "title": "Stability and Convergence of a Regularized Immersed Boundary Method under Dynamic Cartesian Refinement. Part II: General Prescribed Motion"
+        },
+        {
+          "id": "hexagon:2610.00582v1",
+          "title": "Stability and Convergence of a Regularized Immersed Boundary Method under Dynamic Cartesian Refinement. Part I: Fixed Geometry"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Final SAT2026 PDF inaccessible through web; current arXiv v2 includes final journal heading and exact open passage."
+  ],
+  "canonical_update_required": false
+}

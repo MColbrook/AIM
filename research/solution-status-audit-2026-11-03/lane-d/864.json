@@ -1,0 +1,85 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "864",
+  "manifest_index": 708,
+  "checked_date": "2026-11-03",
+  "source_sha256": "ba43e9b7ca53c3569ba285e12dd50791ba6f022a1c114b261abae0559b9229ca",
+  "statement_sha256": "866ac3cf1501ce0d72317654dd4884435f1305c30f499fb07780af1334884d6f",
+  "original_target": {
+    "id": "864",
+    "title": "Does regular quantization force a compact Kähler metric to be homogeneous?",
+    "area": "Geometry and topology",
+    "file": "problems/864-does-regular-quantization-force-a-compact-kahler-metric-to-be-homogeneous.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f506b96e1e501d68",
+    "group": "geometry-topology",
+    "source_sha256": "ba43e9b7ca53c3569ba285e12dd50791ba6f022a1c114b261abae0559b9229ca",
+    "statement_sha256": "866ac3cf1501ce0d72317654dd4884435f1305c30f499fb07780af1334884d6f",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`M`$ be a compact connected complex manifold of dimension $`n\\ge1`$, with Kähler form $`\\omega`$ and associated metric $`g_\\omega`$. Suppose a positive holomorphic line bundle $`L\\to M`$ has a smooth Hermitian metric $`h`$ with curvature\n```math\n-\\frac{i}{2\\pi}\\partial\\bar\\partial\\log h(e,e)=\\omega\n```\n\nin each local nonvanishing holomorphic frame $`e`$.\n\nFor each positive integer $`m`$, equip $`H^0(M,L^m)`$, the space of global holomorphic sections, with\n```math\n\\langle s,t\\rangle_m=\n \\int_M h^m(s,t)\\frac{\\omega^n}{n!}.\n```\n\nFor an orthonormal basis $`s_{m,1},\\ldots,s_{m,N_m}`$, define the basis-independent Rawnsley distortion function\n```math\n\\rho_m(x)=\\sum_{j=1}^{N_m}h^m(s_{m,j}(x),s_{m,j}(x)).\n```\n\nAssume that $`\\rho_m`$ is a positive constant on $`M`$ for **every sufficiently large integer $`m`$**. This is regular quantization of the fixed metric.\n\nMust the group of global holomorphic isometries\n```math\n\\mathrm{Aut}(M)\\cap\\mathrm{Isom}(M,g_\\omega)\n```\n\nact transitively on $`M`$?\n\nThe same $`\\omega`$, $`L`$ and $`h`$ are used throughout. No Einstein, toric, first-Chern-ray, curvature-sign or simple-connectivity assumption is made. Existence of a varying sequence of balanced metrics approximating $`g_\\omega`$ is a different premise.",
+  "full_original_page": "# 864. Does regular quantization force a compact Kähler metric to be homogeneous?\n\n**Area:** Geometry and topology\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`M`$ be a compact connected complex manifold of dimension $`n\\ge1`$, with Kähler form $`\\omega`$ and associated metric $`g_\\omega`$. Suppose a positive holomorphic line bundle $`L\\to M`$ has a smooth Hermitian metric $`h`$ with curvature\n```math\n-\\frac{i}{2\\pi}\\partial\\bar\\partial\\log h(e,e)=\\omega\n```\n\nin each local nonvanishing holomorphic frame $`e`$.\n\nFor each positive integer $`m`$, equip $`H^0(M,L^m)`$, the space of global holomorphic sections, with\n```math\n\\langle s,t\\rangle_m=\n \\int_M h^m(s,t)\\frac{\\omega^n}{n!}.\n```\n\nFor an orthonormal basis $`s_{m,1},\\ldots,s_{m,N_m}`$, define the basis-independent Rawnsley distortion function\n```math\n\\rho_m(x)=\\sum_{j=1}^{N_m}h^m(s_{m,j}(x),s_{m,j}(x)).\n```\n\nAssume that $`\\rho_m`$ is a positive constant on $`M`$ for **every sufficiently large integer $`m`$**. This is regular quantization of the fixed metric.\n\nMust the group of global holomorphic isometries\n```math\n\\mathrm{Aut}(M)\\cap\\mathrm{Isom}(M,g_\\omega)\n```\n\nact transitively on $`M`$?\n\nThe same $`\\omega`$, $`L`$ and $`h`$ are used throughout. No Einstein, toric, first-Chern-ray, curvature-sign or simple-connectivity assumption is made. Existence of a varying sequence of balanced metrics approximating $`g_\\omega`$ is a different premise.\n\n## Application\n\nRegular quantization asks for spatially uniform distortion at every sufficiently fine quantization scale. The question would determine whether this exact uniformity forces a global geometric symmetry of a compact phase space.\n\n## References\n\n- F. Cannas Aghedu and A. Loi, *The Simanca metric admits a regular quantization*, **Annals of Global Analysis and Geometry** 56 (2019), 583–596. [Published article](https://doi.org/10.1007/s10455-019-09680-x); [arXiv:1809.04431v4](https://arxiv.org/html/1809.04431v4), Introduction, regular-quantization definition, footnote 2 and compact-case question.\n- S. Huang, *Generalized Einstein Laurent polynomials, Toric Kähler–Einstein Rigidity, and Finite Exponential Families* (September 2026 working paper), [arXiv:2609.18067v1](https://arxiv.org/html/2609.18067v1), Corollary 6.8 and the end of Section 6.5.\n\n## Status review\n\n\n**Known cases:** The September 2026 toric positive-first-Chern-ray theorem explicitly retains unrestricted regular quantization. Noncompact Simanca examples do not refute compact homogeneity, and varying balanced approximations do not imply the fixed-metric regular-quantization premise.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe September 2026 toric positive-first-Chern-ray theorem explicitly retains unrestricted regular quantization. Noncompact Simanca examples do not refute compact homogeneity, and varying balanced approximations do not imply the fixed-metric regular-quantization premise.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked **30 October 2026**. The source explicitly leaves the compact question open. Its nonhomogeneous Simanca example is noncompact and does not answer this formulation.\n\nThe September 2026 working paper announces a positive result for compact smooth toric manifolds under an additional positive first-Chern-ray condition, and explicitly retains the unrestricted regular-quantization question. That announcement is compared for scope, without independently certifying its proof.\n\nNo matching general resolution or complete announcement was located in current searches. Semantic checks against the AIM/OpenAI all-status corpus and developing collection distinguished tangent splitting, contact/Fano classifications, Hermitian balanced forms and local homogeneity of complex-bilinear metrics. No equivalent target was found; this is a dated check rather than a guarantee against an unlocated result.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f506b96e1e501d68**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"regular quantization\" \"compact\" homogeneous solved 2026",
+    "\"regular quantization\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:hexagonmath.org OR site:palomar-registry.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2609.18067v1",
+      "locator": "v1 September2026, Corollary6.8",
+      "inspection": "Latest candidate body explicitly assumes smooth compact toric manifold and c1(X)=lambda c1(L) with lambda>0. Local target fixes the metric and bundle but assumes neither toric nor positive first-Chern ray. Noncompact Simanca example and changing balanced approximations do not refute it."
+    }
+  ],
+  "scope_comparison": "Latest candidate body explicitly assumes smooth compact toric manifold and c1(X)=lambda c1(L) with lambda>0. Local target fixes the metric and bundle but assumes neither toric nor positive first-Chern ray. Noncompact Simanca example and changing balanced approximations do not refute it.",
+  "rationale": "The stated full target has no matching complete result in the recorded bounded searches. Inspected primary bodies retain the stated conjecture or give restricted progress; recommended status stays Partially resolved. This does not certify openness or independently verify complete proofs.",
+  "source_gaps": [],
+  "announcement_routing": {
+    "localID": "864",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "regular quantization",
+          "Simanca"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "regular quantization",
+          "Simanca"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "regular quantization",
+        "Simanca"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "726",
+  "manifest_index": 570,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "726",
+    "title": "Smooth solutions and fibrewise positivity for homogeneous complex Monge–Ampère",
+    "area": "Complex analysis and potential theory",
+    "file": "problems/726-smooth-solutions-and-fibrewise-positivity-for-homogeneous-complex-mongeampere.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-eee53365fdf11c4f",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "9dc096aa2c577c4cc11182fb0d0a1e2e7ae520cd4529bcb6837bdded13122f15",
+    "statement_sha256": "993eb5252c13ff281d5b9c640d1dd9c9acd037cd50a0a8d8edeaa04d4990efd7",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9dc096aa2c577c4cc11182fb0d0a1e2e7ae520cd4529bcb6837bdded13122f15",
+  "statement_sha256": "993eb5252c13ff281d5b9c640d1dd9c9acd037cd50a0a8d8edeaa04d4990efd7",
+  "actual_source_sha256": "9dc096aa2c577c4cc11182fb0d0a1e2e7ae520cd4529bcb6837bdded13122f15",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\mathbb D\\subset\\mathbb C`$ be the unit disc, and let $`\\omega_{\\mathrm{FS}}`$ be the Fubini–Study form on $`\\mathbb P^1`$, normalized to have area one. Write $`\\pi:\\mathbb P^1\\times\\overline{\\mathbb D}\\to\\mathbb P^1`$ for projection.\n\nDoes there exist a real function $`\\varphi\\in C^\\infty(\\mathbb P^1\\times\\partial\\mathbb D)`$ such that\n\n```math\n\\omega_{\\mathrm{FS}}+dd^c_z\\varphi(\\cdot,\\tau)>0\n\\qquad(\\tau\\in\\partial\\mathbb D),\n```\n\nbut the unique weak Dirichlet solution\n\n```math\n\\Omega:=\\pi^*\\omega_{\\mathrm{FS}}+dd^c\\Phi\\ge0,\n\\qquad \\Omega^2=0,\n\\qquad \\Phi|_{\\mathbb P^1\\times\\partial\\mathbb D}=\\varphi\n```\n\nis smooth on $`\\mathbb P^1\\times\\overline{\\mathbb D}`$ and its fibre form\n\n```math\n\\omega_{\\mathrm{FS}}+dd^c_z\\Phi(\\cdot,\\tau_0)\n```\n\nvanishes at some point $`z_0\\in\\mathbb P^1`$, for some $`\\tau_0\\in\\mathbb D`$?\n\nHere $`d^c=\\frac{i}{4\\pi}(\\bar\\partial-\\partial)`$. The weak solution is the plurisubharmonic Perron envelope; the equation uses the Bedford–Taylor product. The boundary family is arbitrary and need not have rotational symmetry.\n\nThis uses the source's definition of maximal rank as strict positivity in the fibre directions. It does not require the total form $`\\Omega`$ to vanish at the point of degeneration.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"homogeneous complex Monge Ampere\" \"maximal rank\" smooth 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"Monge\" \"fibrewise\" smooth rank",
+    "site:palomar-registry.org OR site:hexagonmath.org \"maximal rank\" \"Monge\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1,29August2022; published JGA34(2024) doi10.1007/s12220-024-01654-1; selected preprint body",
+      "scope_comparison": "Actual lower-bound Theorem1.1 requires small C2 boundary norm and Theorem1.2 close endpoints. The local existence question allows arbitrary positive boundary data and requires global C∞ potential on P1×closed disc with a vanishing fibre form. Ross–WittNyström's actual Question3.2 explicitly adds smoothness to known degenerate weak examples. C-convex ring/flat-affine/annulus results change the geometry. Fresh Hu2026 Liouville/interior-C2 results concern nonhomogeneous equations and growth, not this boundary problem. No complete matching announcement located.",
+      "primary_body_access_gap": false,
+      "locator": "pp3–4 Theorems1.1–1.2; Ross–WittNyström2019 Question3.2 p501",
+      "url": "https://arxiv.org/pdf/2208.13651v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual lower-bound Theorem1.1 requires small C2 boundary norm and Theorem1.2 close endpoints. The local existence question allows arbitrary positive boundary data and requires global C∞ potential on P1×closed disc with a vanishing fibre form. Ross–WittNyström's actual Question3.2 explicitly adds smoothness to known degenerate weak examples. C-convex ring/flat-affine/annulus results change the geometry. Fresh Hu2026 Liouville/interior-C2 results concern nonhomogeneous equations and growth, not this boundary problem. No complete matching announcement located.",
+  "latest_version_check": "v1,29August2022; published JGA34(2024) doi10.1007/s12220-024-01654-1; selected preprint body",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 339,
+  "source_sha256": "ae138bfff775c347438312e0315f7a372e502fe9c4b562cc7d8c1cd735c72573",
+  "statement_sha256": "bdc1b8d35dbdcbed0ba187dd4c9038c955da269e7ae3f66b4eec7eb91d947c11",
+  "original_target": {
+    "id": "420",
+    "title": "Sharp gradient regularity for higher-dimensional p-Poisson equations",
+    "area": "Nonlinear elliptic PDEs and nonlinear diffusion",
+    "file": "problems/420-sharp-p-poisson-gradient-regularity.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "pdes-materials",
+    "source_sha256": "ae138bfff775c347438312e0315f7a372e502fe9c4b562cc7d8c1cd735c72573",
+    "statement_sha256": "bdc1b8d35dbdcbed0ba187dd4c9038c955da269e7ae3f66b4eec7eb91d947c11",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "420",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"p-Poisson\" \"regularity\" \"2026\" endpoint",
+    "\"C-p-prime\" \"2026\"",
+    "\"p-Poisson\" \"C\" regularity conjecture (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"p-Poisson\" \"optimal\" \"2026\" regularity",
+    "\"p-Poisson\" conjecture solution (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2609.09966v1",
+      "version": "v1,9 Sep2026; current abs checked",
+      "locator": "Conjecture1.1 and Theorem1.2",
+      "theorem_body_checked": true,
+      "scope": "Exactly the requested endpoint estimate, but only p in (2,2+epsilon_d). No conclusion for every p>2."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S002203962501085X",
+      "date": "15 April2026,JDE460114058",
+      "locator": "Introduction and Theorem1 preview",
+      "theorem_body_checked": true,
+      "scope": "Alternative proof of the planar result; dimension2 fails the requested d>=3 universal quantifier."
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.12012",
+      "version": "v1,8Oct2026",
+      "locator": "model metadata",
+      "theorem_body_checked": false,
+      "scope": "Fractional (s,p)-Poisson equation; not the local p-Laplacian endpoint problem."
+    }
+  ],
+  "registry_checks": "No p-Poisson/Cp-prime full match in complete Palomar/Hexagon metadata or pinned OpenAI/Colbrook listings.",
+  "scope_comparison": "Target requires all d>=3, all p>2, bounded source and the exact closed-half-ball C1,1/(p-1) estimate. Near2 and planar results leave this unchanged.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open with the near2 result as partial."
+}

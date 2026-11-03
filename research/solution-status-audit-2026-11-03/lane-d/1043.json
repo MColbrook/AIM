@@ -1,0 +1,112 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1043",
+  "manifest_index": 887,
+  "checked_date": "2026-11-03",
+  "source_sha256": "3b1cd7007268ac27624977d7b9192823043c08d114a749acc67758e8b952400d",
+  "statement_sha256": "479c3be9c25e8cf92fa00f57eb5d508d886c6cbb88a1f853e729b424322b0d7f",
+  "original_target": {
+    "id": "1043",
+    "title": "An L³ maximal estimate for planar Zakharov–Kuznetsov flow",
+    "area": "Nonlinear waves, fluids and kinetic equations",
+    "file": "problems/1043-an-l3-maximal-estimate-for-planar-zakharovkuznetsov-flow.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-09b43f6041aa2e94",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "3b1cd7007268ac27624977d7b9192823043c08d114a749acc67758e8b952400d",
+    "statement_sha256": "479c3be9c25e8cf92fa00f57eb5d508d886c6cbb88a1f853e729b424322b0d7f",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For $`f\\in\\mathcal S(\\mathbb R^2)`$ define the linear Zakharov–Kuznetsov evolution by\n\n```math\n\\widehat{U(t)f}(\\xi,\\eta)=e^{it\\xi(\\xi^2+\\eta^2)}\\widehat f(\\xi,\\eta).\n```\n\n\nDoes every $`s>2/3`$ admit a constant $`C_s<\\infty`$ such that\n\n```math\n\\left(\\int_{\\mathbb R}\\left[\\sup_{y\\in\\mathbb R,\\,0\\le t\\le1}\n|U(t)f(x,y)|\\right]^3\\,dx\\right)^{1/3}\n\\le C_s\\|f\\|_{H^s(\\mathbb R^2)}\n\\qquad\\text{for all }f\\in\\mathcal S(\\mathbb R^2)?\n```\n\n\nHere $`\\|f\\|_{H^s}=\\|(1+\\xi^2+\\eta^2)^{s/2}\\widehat f\\|_2`$, with a fixed unitary Fourier normalization. The constant is independent of $`f`$. This is [1, Conjecture 4.1], using its space–time maximal norm. The endpoint $`s=2/3`$ is not requested.",
+  "full_original_page": "# 1043. An L³ maximal estimate for planar Zakharov–Kuznetsov flow\n\n**Area:** Nonlinear waves, fluids and kinetic equations\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor $`f\\in\\mathcal S(\\mathbb R^2)`$ define the linear Zakharov–Kuznetsov evolution by\n\n```math\n\\widehat{U(t)f}(\\xi,\\eta)=e^{it\\xi(\\xi^2+\\eta^2)}\\widehat f(\\xi,\\eta).\n```\n\n\nDoes every $`s>2/3`$ admit a constant $`C_s<\\infty`$ such that\n\n```math\n\\left(\\int_{\\mathbb R}\\left[\\sup_{y\\in\\mathbb R,\\,0\\le t\\le1}\n|U(t)f(x,y)|\\right]^3\\,dx\\right)^{1/3}\n\\le C_s\\|f\\|_{H^s(\\mathbb R^2)}\n\\qquad\\text{for all }f\\in\\mathcal S(\\mathbb R^2)?\n```\n\n\nHere $`\\|f\\|_{H^s}=\\|(1+\\xi^2+\\eta^2)^{s/2}\\widehat f\\|_2`$, with a fixed unitary Fourier normalization. The constant is independent of $`f`$. This is [1, Conjecture 4.1], using its space–time maximal norm. The endpoint $`s=2/3`$ is not requested.\n\n## Application\n\nThe bound controls dispersive wave amplitudes after maximizing over transverse position and a fixed time interval. The source explains its relevance to a proof of quartic Zakharov–Kuznetsov local well-posedness at low Sobolev regularity.\n\n## References\n\n1. F. Linares and J. P. G. Ramos, [*Maximal function estimates and local well-posedness for the generalized Zakharov–Kuznetsov equation*](https://arxiv.org/html/2005.12485v1), arXiv:2005.12485v1 (26 May 2020), equations (1.3)–(1.5), Proposition 1.1, Theorem 1.2 and §4.1, Conjecture 4.1 (PDF p. 19). Published in *SIAM Journal on Mathematical Analysis* **53**(1) (2021), 914–936, [DOI](https://doi.org/10.1137/20M1344524). The conjecture numbering and formulation here refer to the preprint.\n2. S. Correia and P. Leite, [*Sharp local existence and nonlinear smoothing for dispersive equations with higher-order nonlinearities*](https://doi.org/10.1007/s00209-025-03768-w), *Mathematische Zeitschrift* **310**, article 60 (2025), Theorem 1.3.\n3. J. Nowicki-Koth, [*Low-regularity global well-posedness theory for the generalized Zakharov–Kuznetsov equation on $`\\mathbb R\\times\\mathbb T`$ and polynomial growth of higher Sobolev norms*](https://arxiv.org/html/2603.24737v1), arXiv:2603.24737v1 (2026), Theorems 1.1–1.2 and Remark 3.4.\n\n## Status review\n\n\n**Known cases:** The Lx3 Ly,t-infinity linear maximal estimate must hold for every s>2/3. Existing s>3/4 bounds and nonlinear wellposedness/smoothing results do not supply it.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe Lx3 Ly,t-infinity linear maximal estimate must hold for every s>2/3. Existing s>3/4 bounds and nonlinear wellposedness/smoothing results do not supply it.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked 23 October 2026. Source [1] gives this bound for $`s>3/4`$ and a necessary condition $`s\\ge2/3`$. Results [2]–[3] concern nonlinear evolution; such results do not imply the conjectured linear estimate.\n\nThe [coordinator audit](../FURTHER_problems/_tracking/zk-l3-maximal-coordinator-review-2026-10-23.json) and [independent review](../FURTHER_problems/_tracking/parallel/continuum/author-books-cue-breadth-20261022/zk-maximal-linares-ramos-independent-bounded-check-20261023.json) found no matching later proof, counterexample or announced solution in bounded searches. They compare recent Strichartz and Benjamin–Ono–Zakharov–Kuznetsov results by their actual norms and propagators. The latest arXiv revision is v1. The final SIAM body was unavailable; full published-version parity is not claimed.\n\nThe [all-status duplicate audit](../FURTHER_problems/_tracking/zk-l3-maximal-all-status-duplicate-review-2026-10-23.json) distinguishes AIM 356–357's coupled three-dimensional Zakharov system and the [existing cylindrical quartic question](../cut_problems/FURTHER_problems/waves-fluids-kinetics/lead-fb522d0b2c439706.md). This target is a linear estimate on the plane. Dated, bounded checks cannot guarantee that no unindexed resolution exists.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-09b43f6041aa2e94**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Zakharov Kuznetsov",
+    "Linares",
+    "Ramos",
+    "maximal function estimates"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"Zakharov\" \"maximal\" \"2/3\" 2026"
+    },
+    {
+      "query": "\"Zakharov-Kuznetsov\" \"maximal\" \"2/3\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2005.12485v1",
+      "locator": "Section4.1Conjecture4.1 lines665–681; v1May26,2020"
+    }
+  ],
+  "scope_comparison": "Interpolation gives s>3/4 while exact conjecture is planar Lx3 Ly,t-infinity for all s>2/3. Nonlinear local/global well-posedness on plane/cylinder, Strichartz norms and different BO-ZK propagators do not imply this linear maximal estimate. No full matching announcement found.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative search is not proof of continued openness; primary problem/current comparison bodies inspected at locators. Full proof certification not claimed.",
+  "announcement_routing": {
+    "localID": "1043",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Zakharov Kuznetsov",
+          "Linares",
+          "Ramos",
+          "maximal function estimates"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-08-27-000015",
+            "title": "Arthur742Ramos/HigherLambdaModel",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000015-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Zakharov Kuznetsov",
+          "Linares",
+          "Ramos",
+          "maximal function estimates"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Zakharov Kuznetsov",
+        "Linares",
+        "Ramos",
+        "maximal function estimates"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "HigherLambdaModel formalizes untyped lambda calculus; its author Ramos/name collision does not concern the planar linear Zakharov–Kuznetsov maximal estimate.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.766Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

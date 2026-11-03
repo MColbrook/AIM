@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "281",
+  "manifest_index": 224,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "281",
+    "title": "Existence of a planar sandpile avalanche-size exponent",
+    "area": "Avalanches and self-organized criticality",
+    "file": "problems/281-planar-sandpile-size-exponent.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "d800c729296501d84dbe3c6fc76898ab5b738dbaf57216927a5a52926fe288e4",
+    "statement_sha256": "45e709c9f486a6521a851195720c7c4051954ad6bda54cbcf21cfea1444b777f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d800c729296501d84dbe3c6fc76898ab5b738dbaf57216927a5a52926fe288e4",
+  "statement_sha256": "45e709c9f486a6521a851195720c7c4051954ad6bda54cbcf21cfea1444b777f",
+  "actual_source_sha256": "d800c729296501d84dbe3c6fc76898ab5b738dbaf57216927a5a52926fe288e4",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\nu`$ be the infinite-volume weak limit of uniform recurrent Abelian sandpile configurations on wired square boxes in $`\\mathbb Z^2`$. Stable heights are $`0,1,2,3`$; wiring identifies the exterior with a sink before taking the limit. Sample from $`\\nu`$, add one grain at the origin and stabilize, toppling a site with at least four grains by sending one grain to each nearest neighbor. Let $`S`$ be the total number of topplings, counting repeated topplings of a site separately; $`S<\\infty`$ almost surely is known. Does there exist $`a\\in[0,\\infty)`$ such that $`\\lim_{k\\to\\infty}\\log\\nu(S\\ge k)/\\log k=-a`$? The target is existence of the exponent, without requiring a conjectural numerical value.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"planar sandpile\" \"exponent\" avalanche topplings 2026",
+    "\"planar sandpile\" \"exponent\" avalanche topplings (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"planar sandpile\" \"exponent\" avalanche topplings (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Theorem1.1 and Section1.3.3; totalodometerversusradiusdefinition",
+      "scope_comparison": "The new October theorem proves almost-sure planar stabilization and bounds the avalanche RADIUS tail by C(log(M+2))^(−a). It does not establish a logarithmic power exponent for the TOTAL number of topplings including repeats. The local statement's finiteness premise should cite this new result instead of implying that the old cited sources established it. High-dimensional exponents and group-structure formalizations do not match the planar observable. No full target match found.",
+      "url": "https://arxiv.org/html/2610.13940",
+      "version_or_date": "arXiv2610.13940v2,14October2026,current primarybody."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The new October theorem proves almost-sure planar stabilization and bounds the avalanche RADIUS tail by C(log(M+2))^(−a). It does not establish a logarithmic power exponent for the TOTAL number of topplings including repeats. The local statement's finiteness premise should cite this new result instead of implying that the old cited sources established it. High-dimensional exponents and group-structure formalizations do not match the planar observable. No full target match found.",
+  "latest_version_check": "arXiv2610.13940v2,14October2026,current primarybody.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

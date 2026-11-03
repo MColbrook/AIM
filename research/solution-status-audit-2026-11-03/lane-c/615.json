@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "615",
+  "manifest_index": 477,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "615",
+    "title": "Does finite-state strong mixing force Bernoulli isomorphism?",
+    "area": "Stationary stochastic processes and ergodic theory",
+    "file": "problems/615-does-finite-state-strong-mixing-force-bernoulli-isomorphism.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c2175c321caa0269",
+    "group": "probability-statistics",
+    "source_sha256": "577b14dcbf9b8b7811e992c9963e664ed72557144179289aece10bae0f9579ee",
+    "statement_sha256": "5b2e1b473685b82b7dacb39d638792b96e921c9b2cc989b5dfd74881a494eaa8",
+    "state": "unreviewed"
+  },
+  "source_sha256": "577b14dcbf9b8b7811e992c9963e664ed72557144179289aece10bae0f9579ee",
+  "statement_sha256": "5b2e1b473685b82b7dacb39d638792b96e921c9b2cc989b5dfd74881a494eaa8",
+  "actual_source_sha256": "577b14dcbf9b8b7811e992c9963e664ed72557144179289aece10bae0f9579ee",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`A`$ be a finite nonempty alphabet, and let $`\\mu`$ be a shift-invariant Borel probability measure on $`A^{\\mathbb Z}`$. Write $`(Sx)_k=x_{k+1}`$. Define\n\n```math\n\\alpha_\\mu(n)=\\sup\\{|\\mu(E\\cap F)-\\mu(E)\\mu(F)|:\n E\\in\\sigma(x_k:k\\le0),\\ F\\in\\sigma(x_k:k\\ge n)\\}.\n```\n\nIf $`\\alpha_\\mu(n)\\to0`$, must $`(A^{\\mathbb Z},\\mu,S)`$ be isomorphic modulo null sets to a Bernoulli shift?\n\nHere a Bernoulli shift means $`(B^{\\mathbb Z},\\nu^{\\mathbb Z},S)`$ for some standard probability space $`(B,\\nu)`$. An isomorphism is a measure-preserving measurable bijection between invariant conull subsets, with measurable inverse, that intertwines the shifts. No finite coding radius, output alphabet, coordinatewise form or prescribed entropy is imposed. Degenerate point-mass systems are allowed and are already Bernoulli.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"alpha-mixing\" \"Bernoulli\" conjecture 2026",
+    "\"alpha-mixing\" \"Bernoulli\" conjecture (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "ICM 2026 proceedings, 2026",
+      "scope_comparison": "The 2026 primary discussion explicitly retains alpha-mixing implying Bernoulli. The uniform past-future coefficient differs from ordinary mixing, and beta-mixing or rate assumptions are stronger. A CLT counterexample for an observable does not disprove Bernoulli isomorphism.",
+      "locator": "Section 5.1, lines 512–514",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1806004",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "no-match",
+  "recommended_status": "Open",
+  "rationale": "The 2026 primary discussion explicitly retains alpha-mixing implying Bernoulli. The uniform past-future coefficient differs from ordinary mixing, and beta-mixing or rate assumptions are stronger. A CLT counterexample for an observable does not disprove Bernoulli isomorphism.",
+  "latest_version_check": "ICM 2026 proceedings, 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 366,
+  "source_sha256": "07f0b9e6693ec1b98915fda8d130b768b5c66221b3bf58deefc9a3ce3b0897a9",
+  "statement_sha256": "4cb436cb37624f1f00148390a6db729f2e68cee3353d9c58541b19b0f80abfbe",
+  "original_target": {
+    "id": "459",
+    "title": "Higher regularity for concave stable nonlocal equations",
+    "area": "Nonlinear diffusion PDEs; stochastic control",
+    "file": "problems/459-concave-nonlocal-higher-regularity.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "07f0b9e6693ec1b98915fda8d130b768b5c66221b3bf58deefc9a3ce3b0897a9",
+    "statement_sha256": "4cb436cb37624f1f00148390a6db729f2e68cee3353d9c58541b19b0f80abfbe",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "459",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"concave\" \"nonlocal\" \"higher regularity\" \"2026\"",
+    "\"smooth kernels\" \"1+s\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"concave\" \"nonlocal\" \"C^{1+s\" regularity"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2411.12455",
+      "version": "currentbookmanuscript",
+      "sha256": "4106a02c43de788943dcf6201ce615f4fe1a4b5962a80026fea2e09c245195b9",
+      "locator": "§3.6p253OpenQuestion3.1eq3.6.1",
+      "theorem_body_checked": true,
+      "scope": "ExactBellmanconcaveequationasksC1+s+alpha forsmoothkernels;currentregularityCmax{1,2s}+alpha. ReadinRAMwithoutstoringPDF."
+    },
+    {
+      "url": "https://diposit.ub.edu/server/api/core/bitstreams/532b0cb1-d42a-4ac8-9220-d3940037b24e/content",
+      "date": "CPAM2025accepted25Oct2024",
+      "locator": "Introductionpp1–2,Theorem1.1",
+      "theorem_body_checked": true,
+      "scope": "Localone-sidedsemiconvexitydoesnotgivetherequestedtwo-sidedhigherHolderregularity;explicitlyretainsgapbeyondC1+epsilonorC2s+epsilon."
+    }
+  ],
+  "registry_checks": "Complete Palomar/HexagonmetadataandpinnedOpenAI/Colbrookauthorlistingsscannedfortopicaliases;nomatchingfullclaim.",
+  "scope_comparison": "Allsmoothangularstablekernelfamilies,evenuniformellipticbounds,inf(-La u)=0,boundedviscositysolutions;needestimateC1+s+alpha independentfamilysize. LinearSchauder,obstaclefreeboundaryregularityandone-sidedsemiconvexitynotfull.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

@@ -1,0 +1,17 @@
+const fs=require('fs'),path=require('path'),w=require('./review_writer.cjs');
+const complete=new Set(['841','842','843','844','847','848','852','854','855','856','859','864','865','867','869','870','871']);
+const gaps={840:'Later hyperbolic-stability and pseudolocality theorem bodies not freshly compared.',845:'2026 Barbassa subfoliation/distribution theorem body remains to be inspected.',846:'Exact original Question1 locator and later primitive-multiple-scheme theorem bodies incomplete.',849:'August2026 strong nondegeneracy theorem not yet located in body.',850:'Li–Zhou theorem statement exact body locator pending (abstract and proof inspected).',851:'Original Question5.12 full body not reached; metadata and local target only.',853:'Actual Pedroza theorem body still pending; metadata/local scope only.',857:'September2026 B3 theorem body not freshly inspected; native B4 conjecture read.',858:'2026 edge-and-coplanarity theorem body pending.',860:'2026 exact-field theorem body pending.',861:'2026 Squishy Grid theorem body pending.',862:'2025 uniqueness and2026 J-equation actual theorem bodies pending.',863:'Mark–Tosun chosen-contact-surgery theorem body pending.',866:'2026 mapping-torus corollary and OpenAI scalar-curvature candidate body pending.',868:'Frenck TheoremsB–C and all alternatives exact body pending; TheoremA read.'};
+for(const t of w.targets.slice(0,32)){
+ const f=path.join(__dirname,t.id+'.json'),r=JSON.parse(fs.readFileSync(f,'utf8'));
+ r.source_gaps=complete.has(t.id)?[]:[gaps[Number(t.id)]||'Specific primary-source scope comparison incomplete.'];
+ r.announcement_coverage_note='Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.';
+ r.announcement_hit_disposition='No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target.';
+ if(complete.has(t.id)){
+  r.review_level='primary_body_and_search';r.outcome='partial';
+  r.rationale='The stated full target has no matching complete result in the recorded bounded searches. Inspected primary bodies retain the stated conjecture or give restricted progress; recommended status stays Partially resolved. This does not certify openness or independently verify complete proofs.';
+ }
+ if(t.id==='852')r.sources.push({url:'https://arxiv.org/html/2610.20508',locator:'Theorem3.1, inequalities(13)–(14)',inspection:'Small-slope theorem requires fixed C1/C2 limsup thresholds. Together with fixed large-slope regime and simply-connected hypothetical-triple growth, it does not give an exhaustive unrestricted growth/topology dichotomy.'});
+ if(t.id==='869')r.sources[0].inspection='Publisher Theorem1.1 body read: every initial flat surface but Haar almost every g in SL2; does not assert g=identity for every surface.';
+ fs.writeFileSync(f,JSON.stringify(r,null,2)+'\n');
+}
+console.log(JSON.stringify(w.cursor(),null,2));

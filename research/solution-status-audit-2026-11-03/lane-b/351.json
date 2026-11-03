@@ -1,0 +1,50 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 287,
+  "source_sha256": "92205e6fdb309d943c628f5eddcb452fd6f64f463e6fc1dbfea33b2d62bc9dfa",
+  "statement_sha256": "4d4ea10f98a999fb6c82cebb4a8f7308d584233ca24c864d3dcde81e968dd11e",
+  "original_target": {
+    "id": "351",
+    "title": "Can one small initial velocity component prevent Navier–Stokes blow-up?",
+    "area": "Fluid mechanics and nonlinear partial differential equations",
+    "file": "problems/351-can-one-small-initial-velocity-component-prevent-navierstokes-blow-up.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0799eb2a69ecf3fa",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "92205e6fdb309d943c628f5eddcb452fd6f64f463e6fc1dbfea33b2d62bc9dfa",
+    "statement_sha256": "4d4ea10f98a999fb6c82cebb4a8f7308d584233ca24c864d3dcde81e968dd11e",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "351",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Navier\" \"small\" \"initial\" \"component\" 2026 Chemin",
+    "\"one\" \"initially small component\" Navier 2026",
+    "\"Navier-Stokes\" \"initial\" \"one component\" site:zenodo.org OR site:hal.science OR site:github.com \"2026\""
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2302.02836v3",
+      "version": "v3; published CMP 405 (2024)",
+      "locators": "Question Q; Theorems A/A-prime; ensuing discussion",
+      "body_inspected": true,
+      "scope": "Norm inflation/symmetry breaking from zero third component, does not assert singularity."
+    },
+    {
+      "url": "https://arxiv.org/html/2606.11720v1",
+      "version": "v1 June 2026, current abstract/version route checked",
+      "locators": "Appendix F Assumptions F.1–F.2; Propositions F.1–F.4 and conditional strict-shadow route",
+      "body_inspected": true,
+      "scope": "Structural vertical-duality/factorization conditions retained; no unconditional global lifespan from initial one-component smallness."
+    }
+  ],
+  "registry_checks": "No initial-component alias Palomar/Hexagon/OpenAI full metadata. Focused current arXiv, author, Zenodo, HAL and GitHub searches. Only canonical problem page read; FURTHER work untouched.",
+  "scope_comparison": "Original needs universal initial inhomogeneous H1/2 component epsilon, arbitrary other components, unforced R3 and specified vorticity working class. Later-time component criteria and norm inflation do not prove/refute this. General/forced blow-up announcements do not supply arbitrarily small critical initial component.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Conditional theorem target in June source and symmetry-breaking theorem have distinct quantifiers."
+}

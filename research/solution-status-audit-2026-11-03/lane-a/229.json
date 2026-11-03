@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "229",
+  "manifest_index": 176,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "229",
+    "title": "Finite-time growth of total variation in physical gas dynamics",
+    "area": "Nonlinear hyperbolic conservation laws",
+    "file": "problems/229-p-system-finite-time-bv.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "6a5f766a692d2d1759732d897094b4a8adf9e06e4a2fb578ae84053f91d78c2f",
+    "statement_sha256": "13c3074bdf9ff47e17180966731deeb7f1838720c5b533265b5bcd6b4fb38e42",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6a5f766a692d2d1759732d897094b4a8adf9e06e4a2fb578ae84053f91d78c2f",
+  "statement_sha256": "13c3074bdf9ff47e17180966731deeb7f1838720c5b533265b5bcd6b4fb38e42",
+  "actual_source_sha256": "6a5f766a692d2d1759732d897094b4a8adf9e06e4a2fb578ae84053f91d78c2f",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Can finite-time blowup of total variation occur for an exact entropy solution of the polytropic $`p`$-system while its state remains bounded away from vacuum and concentration?\n\nSpecifically, determine whether there exist $`\\gamma>1`$, $`T<\\infty`$ and a distributional solution on $`[0,T)\\times\\mathbb R`$ of\n\n```math\nv_t-u_x=0,\\qquad u_t+(v^{-\\gamma})_x=0,\n```\n\nwith initial data of finite total variation, with $`0<a\\leq v\\leq b<\\infty`$ and $`|u|\\leq M`$, such that for every $`T'<T`$,\n\n```math\n\\mathop{\\mathrm{ess\\,sup}}_{t\\leq T'}[\\mathop{\\mathrm{TV}}\\nolimits v(t)+\\mathop{\\mathrm{TV}}\\nolimits u(t)]<\\infty,\n```\n\nbut this bound diverges as $`T'\\uparrow T`$. Require local $`L^1`$ continuity in time and the mechanical entropy inequality\n\n```math\n\\partial_t\\left(\\frac{u^2}{2}+\\frac{v^{1-\\gamma}}{\\gamma-1}\\right)+\\partial_x(uv^{-\\gamma})\\leq0.\n```\n\nHere $`v`$ is specific volume, $`u`$ is velocity, and $`\\mathop{\\mathrm{TV}}\\nolimits`$ is spatial total variation on $`\\mathbb R`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"p-system\" \"BV blowup\" entropy polytropic 2026",
+    "\"p-system\" \"BV blowup\" entropy polytropic (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"p-system\" \"BV blowup\" entropy polytropic (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"2609.09353\" polytropic entropy"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2609.09353",
+      "version_or_date": "arXiv2609.09353v1,8September2026, current version inspected3November2026.",
+      "locator": "Theorem1.3,Section8.1.1 choice of pressure,Theorem1.4 and Section10",
+      "scope_comparison": "The new convex-integration construction chooses a pressure law not globally convex (Section8.1 explicitly states this); it does not use v^(−gamma). Theorem1.4 instead obstructs T_N configurations for genuinely nonlinear p-systems. That obstruction does not prove general BV boundedness, and the construction does not establish the polytropic mechanical-entropy solution with initially finite and locally bounded BV stipulated here. The earlier April/final2026 claim lacks the natural convex entropy. No matching full claim found.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The new convex-integration construction chooses a pressure law not globally convex (Section8.1 explicitly states this); it does not use v^(−gamma). Theorem1.4 instead obstructs T_N configurations for genuinely nonlinear p-systems. That obstruction does not prove general BV boundedness, and the construction does not establish the polytropic mechanical-entropy solution with initially finite and locally bounded BV stipulated here. The earlier April/final2026 claim lacks the natural convex entropy. No matching full claim found.",
+  "latest_version_check": "arXiv2609.09353v1,8September2026, current version inspected3November2026.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

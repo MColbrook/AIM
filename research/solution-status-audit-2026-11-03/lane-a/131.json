@@ -1,0 +1,70 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "131",
+  "manifest_index": 102,
+  "original_target": {
+    "id": "131",
+    "title": "Almost-everywhere global existence for Newtonian gravitation",
+    "area": "Celestial mechanics / singular dynamics",
+    "file": "problems/131-almost-sure-global-newtonian-motion.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse2",
+    "source_sha256": "5eb61e7b9f04301ce29bbc091b73d4a75a7db93846222567534f67faaa3f6d60",
+    "statement_sha256": "24e85976599e383370681aeffdedfddb2e5d8c2181d407c334a65d7eaf63ca76",
+    "state": "unreviewed"
+  },
+  "source_sha256": "5eb61e7b9f04301ce29bbc091b73d4a75a7db93846222567534f67faaa3f6d60",
+  "statement_sha256": "24e85976599e383370681aeffdedfddb2e5d8c2181d407c334a65d7eaf63ca76",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:19:11.410127+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The actual Xue source Conjecture1.1 is measure-zero breakdown and explicitly distinguishes it from solved existence of noncollision singularities. Its N=4 theorem and collision-only measure-zero theorem do not cover N>=5 noncollision initial states. Current focused searches found no full matching measure theorem.",
+  "primary_sources": [
+    {
+      "url": "https://www.math.harvard.edu/media/CDM_Xue.pdf",
+      "locator": "Section1.1 Conjecture1.1, PDFp3",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Newtonian\" \"global existence\" \"almost\" 2026 n-body",
+    "\"noncollision singularities\" \"measure zero\" 2026",
+    "\"noncollision\" \"measure\" (site:arxiv.org OR site:zenodo.org OR site:hal.science) 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "noncollision",
+        "Painlevé"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "noncollision",
+        "Painlevé"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

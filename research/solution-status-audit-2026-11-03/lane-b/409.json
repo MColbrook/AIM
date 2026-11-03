@@ -1,0 +1,52 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 332,
+  "source_sha256": "fc4169a93b9b32c72f30ff5f4732e27ecb88d73f3c96d1160df140a02307c77f",
+  "statement_sha256": "fcd7f2dc25430588b6f0cc641a701da64f13af0d1d65594ebdf158a687227f49",
+  "original_target": {
+    "id": "409",
+    "title": "Continuous selection of small-time null controls for analytic systems",
+    "area": "Nonlinear control / feedback design",
+    "file": "problems/409-analytic-controls-continuous-selection.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "inverse3",
+    "source_sha256": "fc4169a93b9b32c72f30ff5f4732e27ecb88d73f3c96d1160df140a02307c77f",
+    "statement_sha256": "fcd7f2dc25430588b6f0cc641a701da64f13af0d1d65594ebdf158a687227f49",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "409",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"analytic\" \"continuous\" \"null controls\" Marbach 2026",
+    "\"analytic systems\" \"continuous\" \"selection\" controls Marbach",
+    "\"null controls\" \"continuous\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) analytic",
+    "\"continuous selection\" \"controls\" \"analytic\" 2026 Marbach",
+    "\"small time\" \"continuous controls\" \"analytic\" conjecture",
+    "\"null controllability\" \"continuous\" \"selection\" \"2026\" analytic"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2602.19272",
+      "version": "v1 22February2026; latestabsconfirmed",
+      "locators": "Definition4.16 and OpenProblem4.17; Lemma4.19",
+      "body_inspected": true,
+      "scope": "Exact analyticL1STLNC-to-continuousselection implicationstatedopen; knownsufficientcontinuouscontrolvariations donotproveit forallanalytic systems."
+    },
+    {
+      "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-19-000002-v1.json",
+      "version": "v1 19October2026 current sharedlistingmetadata",
+      "locators": "abstract, classification theoremnames LinearStochastic.Palomar.classification and ito_unique",
+      "body_inspected": false,
+      "scope": "LinearstochasticsystemswithBrowniancontrolclassification, distinctfromarbitrarydeterministicanalyticnonlinearsingle-inputsystem; excludedatmetadatascope, notbodychecked."
+    }
+  ],
+  "registry_checks": "No relevantcontinuousselection/nullcontrolalias Hexagon/OpenAI/Colbrook. Palomar small-timeentryexplicitlylinearstochastic. Focused arXiv, primaryauthor/publisher, Zenodo, HAL, GitHubsearches.",
+  "scope_comparison": "For eachTactualL1normcontinuousmaponballwithU(0)=0, finitejetcontrollability andnoncontinuousselection insufficient. Controllability oflinearizedsystems notassumed.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

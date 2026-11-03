@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "797",
+  "manifest_index": 641,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "797",
+    "title": "Does robust quasi-isometric embedding of a free group into SL3(R) force Anosov growth?",
+    "area": "Geometric structures, Lie groups and hyperbolic dynamics",
+    "file": "problems/797-does-robust-quasi-isometric-embedding-of-a-free-group-into-sl3-r-force-anosov-growth.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-7185f93c841e80de",
+    "group": "geometry-topology",
+    "source_sha256": "c0367af194c515ddc9b1ae975164ada64ae4c8d1b4f1b053f7c0ebefe643fd99",
+    "statement_sha256": "026b2397b11a4eea27a6220455c23710495d3acb277d8f1769664c031ffaec44",
+    "state": "unreviewed"
+  },
+  "source_sha256": "c0367af194c515ddc9b1ae975164ada64ae4c8d1b4f1b053f7c0ebefe643fd99",
+  "statement_sha256": "026b2397b11a4eea27a6220455c23710495d3acb277d8f1769664c031ffaec44",
+  "actual_source_sha256": "c0367af194c515ddc9b1ae975164ada64ae4c8d1b4f1b053f7c0ebefe643fd99",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`F_2=\\langle a,b\\rangle`$ be the free group on two generators. Write $`|w|`$ for the length of the reduced word $`w`$ in $`a,a^{-1},b,b^{-1}`$. For $`A,B\\in\\mathrm{SL}_3(\\mathbb R)`$, let $`w(A,B)`$ be the matrix obtained by substitution. For a real invertible matrix $`g`$, let $`\\sigma_1(g)\\geq\\sigma_2(g)\\geq\\sigma_3(g)>0`$ be its singular values for the standard Euclidean inner product.\n\nFix $`A_0,B_0\\in\\mathrm{SL}_3(\\mathbb R)`$. Suppose that there is an open neighborhood $`U`$ of $`(A_0,B_0)`$ in $`\\mathrm{SL}_3(\\mathbb R)^2`$ such that for every $`(A,B)\\in U`$ there are constants $`c_{A,B}>0`$ and $`C_{A,B}\\geq0`$ satisfying\n```math\n\\log\\frac{\\sigma_1(w(A,B))}{\\sigma_3(w(A,B))}\n\\geq c_{A,B}|w|-C_{A,B}\n\\qquad\\text{for every }w\\in F_2.\n```\n\nMust there exist $`c>0`$ and $`C\\geq0`$ such that\n```math\n\\log\\frac{\\sigma_1(w(A_0,B_0))}{\\sigma_2(w(A_0,B_0))}\n\\geq c|w|-C\n\\qquad\\text{for every }w\\in F_2?\n```\n\n\nProve the implication or construct a counterexample. The hypothesis is robust quasi-isometric embedding; its constants may depend on the nearby pair. The conclusion is the singular-value characterization of a projective Anosov representation. Applying it to inverse words also gives the same lower bound for $`\\log(\\sigma_2/\\sigma_3)`$.\n\nThese conventions agree with the geometric definitions. For determinant-one matrices, $`\\log\\sigma_1\\leq\\log(\\sigma_1/\\sigma_3)\\leq3\\log\\sigma_1`$, and a fixed finite set of generators gives the upper word-length bound automatically. Thus the hypothesis is equivalent to quasi-isometric orbit growth throughout an open set of representations. Openness is taken in the full space of matrix pairs, with no invariant subspace or relation imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"robust quasi-isometric\" \"SL3\" Anosov 2026 free",
+    "\"robust\" \"free\" \"Anosov\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"robust quasi-isometric\" (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"robust quasi-isometric embeddings of virtually free groups\" 2603.25098"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "arXiv2603.25098v1,26March2026; current abs submission history inspected: only v1.",
+      "url": "https://arxiv.org/html/2603.25098v1",
+      "scope_comparison": "The paper explicitly retains the real free-group problem. Theorem1.1 requires a nonarchimedean field. Theorem1.2 uses virtually free groups with nontrivial torsion, with openness in Hom of that constrained group; restricting to a free finite-index subgroup does not establish openness in all SL3(R)^2 pairs. Theorem1.3 includes A,A^{-1},B but omits B^{-1}; it is a semigroup theorem. These hypotheses do not satisfy the target's every reduced F2 word and robustness in the full pair space. No exact full theorem or announcement found.",
+      "locator": "Introduction preceding Theorem1.1; actual Theorems1.1–1.3 and following construction discussion",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The paper explicitly retains the real free-group problem. Theorem1.1 requires a nonarchimedean field. Theorem1.2 uses virtually free groups with nontrivial torsion, with openness in Hom of that constrained group; restricting to a free finite-index subgroup does not establish openness in all SL3(R)^2 pairs. Theorem1.3 includes A,A^{-1},B but omits B^{-1}; it is a semigroup theorem. These hypotheses do not satisfy the target's every reduced F2 word and robustness in the full pair space. No exact full theorem or announcement found.",
+  "latest_version_check": "arXiv2603.25098v1,26March2026; current abs submission history inspected: only v1.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "719",
+  "manifest_index": 563,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "719",
+    "title": "Can a rational Julia set be an indecomposable continuum?",
+    "area": "Complex analysis and potential theory",
+    "file": "problems/719-can-a-rational-julia-set-be-an-indecomposable-continuum.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-d13ffa7af57a9e59",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "6ea6baed4f503d761606ac19dab8dd4ae1a7f78b91627796bf68a34af2ea7382",
+    "statement_sha256": "b9da5d88ea62dcbb736f6dd876529a07cbba47d754217903fd8673f4c9229743",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6ea6baed4f503d761606ac19dab8dd4ae1a7f78b91627796bf68a34af2ea7382",
+  "statement_sha256": "b9da5d88ea62dcbb736f6dd876529a07cbba47d754217903fd8673f4c9229743",
+  "actual_source_sha256": "6ea6baed4f503d761606ac19dab8dd4ae1a7f78b91627796bf68a34af2ea7382",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\widehat{\\mathbb C}`$ be the Riemann sphere. Does there exist a rational map\n\n```math\nR=\\frac{p}{q}:\\widehat{\\mathbb C}\\longrightarrow\\widehat{\\mathbb C},\n\\qquad p,q\\in\\mathbb C[z],\\quad \\gcd(p,q)=1,\\quad\n\\max\\{\\deg p,\\deg q\\}\\ge2,\n```\n\nwhose **entire Julia set** $`J(R)`$ is an indecomposable continuum?\n\nHere $`J(R)`$ is the complement of the open set on which the iterates $`\\{R^n:n\\ge0\\}`$ form a normal family, with convergence measured in the spherical metric. A continuum is a nonempty compact connected metric space. It is **indecomposable** if it cannot be expressed as the union of two proper compact connected subsets. For a rational map of degree at least two, the Julia set is perfect and nondegenerate.\n\nThus one rational map of any degree at least two gives a positive answer; a negative answer must exclude every such map. The coefficients are unrestricted complex numbers. Connectedness is part of the requested conclusion. No polynomial, hyperbolicity, local-connectivity or no-buried-point hypothesis is imposed.\n\nThis is the first clause of Question 14 in reference 1. Its second clause concerns an indecomposable *subcontinuum* with nonempty relative interior; that is a separate question in the unrestricted rational case.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Julia set\" \"indecomposable continuum\" rational proof 2026",
+    "\"Julia set\" \"indecomposable continuum\" rational (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2607.18143v2",
+      "version_or_date": "arXiv2607.18143v2,22August2026",
+      "locator": "§4 examplesIII;§7 Propositions4–5 and Remark7",
+      "scope_comparison": "The actual current paper explicitly calls rational-map entire-Julia indecomposability unsolved. It excludes a particular Knaster candidate and distinguishes a topological branched covering with Thurston obstruction from a rational map. Indecomposable subcontinua or conditional polynomial-like criteria do not construct or rule out every entire rational Julia set. No complete matching current claim found.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual current paper explicitly calls rational-map entire-Julia indecomposability unsolved. It excludes a particular Knaster candidate and distinguishes a topological branched covering with Thurston obstruction from a rational map. Indecomposable subcontinua or conditional polynomial-like criteria do not construct or rule out every entire rational Julia set. No complete matching current claim found.",
+  "latest_version_check": "arXiv2607.18143v2,22August2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

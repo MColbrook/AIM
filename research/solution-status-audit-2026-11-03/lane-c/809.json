@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "809",
+  "manifest_index": 653,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "809",
+    "title": "Boundary volume in the conformal orbit of a free boundary minimal submanifold",
+    "area": "Minimal submanifolds and conformal geometry",
+    "file": "problems/809-boundary-volume-in-the-conformal-orbit-of-a-free-boundary-minimal-submanifold.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-805d2a1e8241c6b3",
+    "group": "geometry-topology",
+    "source_sha256": "d1ff72f3959b694179b8c2704ce85ee8a8317fc6cb920ceabb3cf28aa5e8d2de",
+    "statement_sha256": "814a5b977a1ff803dd0c9d1393e8f5561f4503336fac996d9d31c919893091af",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d1ff72f3959b694179b8c2704ce85ee8a8317fc6cb920ceabb3cf28aa5e8d2de",
+  "statement_sha256": "814a5b977a1ff803dd0c9d1393e8f5561f4503336fac996d9d31c919893091af",
+  "actual_source_sha256": "d1ff72f3959b694179b8c2704ce85ee8a8317fc6cb920ceabb3cf28aa5e8d2de",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For every pair of integers $`3\\le k<n`$, let $`\\Sigma`$ be a compact connected smooth $`k`$-manifold with nonempty boundary, and let\n```math\nX:\\Sigma\\longrightarrow\\overline{B^n}\n```\n\nbe a smooth immersion. Give $`\\Sigma`$ the induced Euclidean metric $`g=X^*g_{\\mathrm E}`$. Assume\n```math\nX^{-1}(S^{n-1})=\\partial\\Sigma,\\qquad\n\\Delta_gX=0,\\qquad dX(\\eta)=X\\quad\\hbox{on }\\partial\\Sigma,\n```\n\nwhere $`\\eta`$ is the outward unit conormal of $`\\partial\\Sigma`$ in $`\\Sigma`$. Thus $`X`$ is a free boundary minimal immersion into the unit ball.\n\nFor every conformal diffeomorphism $`f:\\overline{B^n}\\to\\overline{B^n}`$, must\n```math\n\\mathrm{Vol}_{k-1}\\!\\left(\\partial\\Sigma,\n   ((f\\circ X)^*g_{\\mathrm E})|_{T\\partial\\Sigma}\\right)\n\\le\n\\mathrm{Vol}_{k-1}\\!\\left(\\partial\\Sigma,g|_{T\\partial\\Sigma}\\right)\n```\n\nhold? The volumes are computed on the parameter manifold, so that an immersed boundary is counted with its multiplicity. No orientability, embeddedness, topology, or first-Steklov-eigenvalue hypothesis is imposed.\n\nEquivalently, for every $`y\\in\\mathbb R^n`$ with $`|y|>1`$, ask whether\n```math\n\\int_{\\partial\\Sigma}\n \\left(\\frac{|y|^2-1}{|X-y|^2}\\right)^{k-1}\\,dA_g\n\\le \\int_{\\partial\\Sigma}dA_g.\n```\n\nThis is the higher dimensional part of Fraser–Schoen's Conjecture 3.7 in *Minimal surfaces and eigenvalue problems* (2013), restated as Open Question 9 in Li's survey arXiv:1907.05053v3, pages 25–26. The case $`k=2`$ is known. The known second-order decrease at the identity does not establish the inequality for every conformal diffeomorphism. This question concerns boundary volume; the separate question about the interior $`k`$-volume is not included.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"boundary volume\" \"free boundary\" conformal 2026 solution",
+    "\"boundary volume\" \"free boundary\" conformal (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"boundary volume\" \"free boundary\" conformal (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "§1.1 actual Theorems1.5–1.6 and retained Fraser–Schoen boundary question; Remarks5.4,5.9–5.10",
+      "version_or_date": "Current official record onlyv1 dated24December2025; served HTML internally saysAugust24,2026, not a separate revision. Selected actual body read, PDF/HTML parity not certified.",
+      "scope_comparison": "Theorem1.5 maximizes modified spherical-cap energy for k=2 or hemisphereR=pi/2. Higher-dimensional limiting quantities in Remark5.10 are coordinate-dependent boundary integrals, not boundary(k−1)-volume of arbitrary Euclidean free-boundary minimal immersions. The exact global boundary-mass question is retained in§1.1. Local second variations and interior-area comparisons do not give every conformal map inequality. No full matching current announcement found.",
+      "url": "https://arxiv.org/html/2512.20857v1",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem1.5 maximizes modified spherical-cap energy for k=2 or hemisphereR=pi/2. Higher-dimensional limiting quantities in Remark5.10 are coordinate-dependent boundary integrals, not boundary(k−1)-volume of arbitrary Euclidean free-boundary minimal immersions. The exact global boundary-mass question is retained in§1.1. Local second variations and interior-area comparisons do not give every conformal map inequality. No full matching current announcement found.",
+  "latest_version_check": "Current official record onlyv1 dated24December2025; served HTML internally saysAugust24,2026, not a separate revision. Selected actual body read, PDF/HTML parity not certified.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

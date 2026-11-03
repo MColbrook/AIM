@@ -1,0 +1,71 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "054",
+  "manifest_index": 37,
+  "original_target": {
+    "id": "054",
+    "title": "Determine a smooth sound-soft obstacle from one far-field pattern",
+    "area": "Inverse obstacle scattering / acoustic detection",
+    "file": "problems/054-single-wave-obstacle.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse",
+    "source_sha256": "e853d640a0057afdb48b891777edd3b89d6eab81e83a85707d2818827540710f",
+    "statement_sha256": "883390f555dc26fd56ae8741f9daa75cb0a0794ee38671073f7a8ed4abb0ddaf",
+    "state": "unreviewed"
+  },
+  "source_sha256": "e853d640a0057afdb48b891777edd3b89d6eab81e83a85707d2818827540710f",
+  "statement_sha256": "883390f555dc26fd56ae8741f9daa75cb0a0794ee38671073f7a8ed4abb0ddaf",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:28:38.386741+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no_full_match",
+  "recommended_status": "Open",
+  "scope_comparison": "Liimatainen–Lin–Ola Theorem1.2 is a PLANAR interior boundary problem and permits its single Dirichlet datum to depend on both configurations; Remark1.4 states this explicitly. This does not establish uniqueness in R3 for a prescribed fixed-frequency incident plane wave on every smooth obstacle. Colbrook Pompeiu–Schiffer overdetermined eigenfunction result is a different statement.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.12206v1",
+      "locator": "Theorem1.2 and Remark1.4, lines105–128.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "sound-soft",
+    "Schiffer",
+    "inverse obstacle"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "entries": 954,
+      "complete_listing": true,
+      "query_terms": [
+        "sound-soft",
+        "Schiffer",
+        "inverse obstacle"
+      ],
+      "metadata_hits": [],
+      "scope": "Current complete public metadata routing; no same-target announcement hit."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "entries": 646,
+      "complete_listing": true,
+      "query_terms": [
+        "sound-soft",
+        "Schiffer",
+        "inverse obstacle"
+      ],
+      "metadata_hits": [],
+      "scope": "Current complete public metadata routing; no same-target announcement hit."
+    }
+  },
+  "other_provider_search": "Focused current web and site-restricted searches of arXiv, Zenodo, HAL and GitHub; only relevant primary claims promoted to scope checks. Shared OpenAI and requested Colbrook author indexes screened; no matching new full resolution.",
+  "limitations": [
+    "Bounded current search, not proof that no unindexed solution exists.",
+    "No independent end-to-end proof or Lean-kernel verification."
+  ],
+  "canonical_update_required": false
+}

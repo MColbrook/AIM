@@ -1,0 +1,75 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "233",
+  "manifest_index": 180,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "233",
+    "title": "The attainable stiffness tensors of two-phase elastic composites",
+    "area": "Composite materials and homogenization",
+    "file": "problems/233-elastic-two-phase-g-closure.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "diffusion-materials",
+    "source_sha256": "1374aa829f294132c50791f655a943904e2a71ea1ed2eb2b5bb0e1fd935644b1",
+    "statement_sha256": "f643c7ad552a2113db2d23166f1dec5abb3432c667c79cbea2d9501332627153",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1374aa829f294132c50791f655a943904e2a71ea1ed2eb2b5bb0e1fd935644b1",
+  "statement_sha256": "f643c7ad552a2113db2d23166f1dec5abb3432c667c79cbea2d9501332627153",
+  "actual_source_sha256": "1374aa829f294132c50791f655a943904e2a71ea1ed2eb2b5bb0e1fd935644b1",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix isotropic tensors $`C_iE=2\\mu_iE+\\lambda_i\\mathop{\\mathrm{tr}}\\nolimits(E)I`$ on symmetric $`3\\times3`$ strains, with $`\\mu_i>0`$, $`3\\lambda_i+2\\mu_i>0`$, and $`C_2-C_1`$ positive definite. Fix a volume fraction $`\\theta\\in(0,1)`$. For every measurable periodic indicator $`\\chi:(\\mathbb R/\\mathbb Z)^3\\to\\{0,1\\}`$ with $`\\int_{[0,1]^3}\\chi=\\theta`$, let $`C_\\chi=\\chi C_1+(1-\\chi)C_2`$ and define its effective tensor by\n\n```math\nE:C_\\chi^{\\mathrm{hom}}E=\\inf_{\\varphi\\in H^1_{\\mathrm{per}}([0,1]^3;\\mathbb R^3)}\\int_{[0,1]^3}(E+e(\\varphi)):C_\\chi:(E+e(\\varphi))\\,dx,\n```\n\nwhere $`e(\\varphi)=(D\\varphi+D\\varphi^T)/2`$.\n\nGive explicit necessary and sufficient conditions on a tensor $`C`$ for membership in the finite-dimensional closure\n\n```math\nG_\\theta(C_1,C_2)=\\mathop{\\mathrm{cl}}\\nolimits\\{C_\\chi^{\\mathrm{hom}}:\\chi\\text{ as above}\\}.\n```\n\nHere $`\\mathop{\\mathrm{cl}}\\nolimits`$ denotes closure in the finite-dimensional space of elasticity tensors, including limits of attainable effective tensors. The characterization must cover arbitrary microstructures and the full tensor, rather than one selected loading energy.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"elastic G closure\" \"isotropic\" 2026",
+    "\"elastic G closure\" \"isotropic\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"elastic G closure\" \"isotropic\" (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"two phase\" \"elastic\" \"G-closure\" 2026"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Reference intro pp6034–6035 and Hashin–Shtrikman bounds; DOI access attempted",
+      "version_or_date": "Filomat2024 primary reference; full theorem body access remains to be recovered in this bounded pass.",
+      "url": "https://doi.org/10.2298/FIL2417033B",
+      "scope_comparison": "No focused current search located a complete characterization of simultaneous full-tensor attainability for all3D ordered isotropic phases at fixed volume fraction. Selected loading/complementary-energy bounds and elastic-plate optimization do not by their stated scope characterize the full G-closure. Primary DOI/theorem body access remains a source gap; negative search and abstract routing alone are not marked completed theorem verification.",
+      "primary_body_access_gap": true
+    }
+  ],
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "rationale": "Recovered exact primary source confirms selected-energy bounds, not a complete full-tensor G-closure characterization. Focused current searches located no matching complete announcement.",
+  "latest_version_check": "Filomat2024 primary reference; full theorem body access remains to be recovered in this bounded pass.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ],
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:50:57.871238+00:00",
+      "reviewer": "root",
+      "primary_source": "https://www.pmf.ni.ac.rs/filomat-content/2024/38-17/38-17-7-22426.pdf",
+      "body_inspected": true,
+      "locator": "Introduction pp6034–6035 and Proposition1.1 p6036",
+      "comparison": "The source explicitly retains the full elasticity G-closure question. Sharp bounds attained separately for each selected loading need not be simultaneously attained by one full effective tensor. Isotropic ordered phases match the target; scalar-conductivity and elastic-plate characterizations are different field equations.",
+      "current_queries": [
+        "\"elastic\" \"G-closure\" \"2026\" \"isotropic\"",
+        "\"two-phase\" \"elastic\" \"G-closure\" characterization (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+      ],
+      "newer_primary_comparator": "https://onlinelibrary.wiley.com/doi/10.1002/mma.70951",
+      "newer_comparator_scope": "2026 elastic-plate optimization article still distinguishes energy bounds from unknown full G-closure; indexed primary section2 inspected."
+    }
+  ],
+  "review_state": "bounded_review_complete",
+  "primary_body_access_gap_resolved": true
+}

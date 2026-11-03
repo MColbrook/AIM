@@ -1,0 +1,50 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 283,
+  "source_sha256": "35c732888678e143cb04404f6f155a15628a43e9260edcf94d38a0e084b1da17",
+  "statement_sha256": "8f05695446a713e6575dcbefbc35a83d8531bf3c2d850483d495f4f34e007fa9",
+  "original_target": {
+    "id": "346",
+    "title": "The near-linear bound for planar halving lines",
+    "area": "Computational geometry and parametric selection",
+    "file": "problems/346-planar-halving-lines.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-13",
+    "group": "inverse3",
+    "source_sha256": "35c732888678e143cb04404f6f155a15628a43e9260edcf94d38a0e084b1da17",
+    "statement_sha256": "8f05695446a713e6575dcbefbc35a83d8531bf3c2d850483d495f4f34e007fa9",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "346",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"halving lines\" \"near-linear\" 2026 solved",
+    "\"halving lines\" proof site:zenodo.org OR site:hal.science OR site:github.com 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/openai/math/main/preprints/A-power-saving-for-planar-halving-lines-September-25-2026/main.pdf",
+      "version": "current main read 3 November 2026, manuscript 25 September 2026",
+      "sha256": "61d7aa1ffad4b7968e5882374ce0e542d3221cf8e7c48b51c52256e1331bb4d9",
+      "locators": "Theorem 1.1 PDF p.2",
+      "body_inspected": true,
+      "access": "Read public PDF and extract in RAM; no external PDF stored.",
+      "scope": "One absolute epsilon>0 gives exponent 4/3-epsilon for all even general-position point sets; nonquantitative constants."
+    },
+    {
+      "url": "https://github.com/openai/math/blob/main/lean/docs/183.md",
+      "version": "current public scope record",
+      "locators": "Power savings comparator scope",
+      "body_inspected": true,
+      "scope": "Corresponding fixed power saving, not arbitrary near-linear exponent; no kernel replay performed."
+    }
+  ],
+  "registry_checks": "Palomar/Hexagon halving aliases did not yield a full near-linear source; unrelated arithmetic/learning halving matches excluded. Current scholarly/repository searches executed.",
+  "scope_comparison": "Original needs every eta>0 exponent 1+eta. An unspecified single positive saving from 4/3 does not provide arbitrarily small exponent increment; lower constructions remain subpower above linear and do not disprove.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Current primary theorem still supports only the existing partial status."
+}

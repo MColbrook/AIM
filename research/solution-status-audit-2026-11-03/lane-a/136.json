@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "136",
+  "manifest_index": 107,
+  "original_target": {
+    "id": "136",
+    "title": "Capacity of the Gaussian relay channel with independent receiver noises",
+    "area": "Network information theory / cooperative communication",
+    "file": "problems/136-gaussian-relay-capacity.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse2",
+    "source_sha256": "d3cfd0559514cc645dbd6aac3a2ba29f1110461b303c6aa5b043b5bfb99844d5",
+    "statement_sha256": "78380babf42fd38f3eac579f0dd864e99c5a030cb1387d1e3dbfef778b788356",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d3cfd0559514cc645dbd6aac3a2ba29f1110461b303c6aa5b043b5bfb99844d5",
+  "statement_sha256": "78380babf42fd38f3eac579f0dd864e99c5a030cb1387d1e3dbfef778b788356",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:19:12.071060+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2101.11139 Theorem2 strictly improves the Gaussian cutset converse but does not match achievable rates for all positive gains/powers. Cover-problem saturation results use an orthogonal noiseless bit pipe and do not determine this ordinary full-duplex Gaussian relay capacity; 2026 hybrid-duplex paper gives achievable rates only.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2101.11139",
+      "locator": "Theorem2 and Section2.2 product/orthogonal receiver distinctions",
+      "body_inspected": true
+    },
+    {
+      "url": "https://ieeexplore.ieee.org/abstract/document/11113337/",
+      "locator": "2026 publication abstract: achievable rate, hybrid duplex",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Gaussian relay\" \"capacity\" 2026 solved",
+    "\"Gaussian relay\" \"2026\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Gaussian relay",
+        "relay capacity"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Gaussian relay",
+        "relay capacity"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "601",
+  "manifest_index": 464,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "601",
+    "title": "Polynomial-query convex optimization with almost linear memory",
+    "area": "Continuous optimization and first-order oracle complexity",
+    "file": "problems/601-polynomial-query-convex-optimization-with-almost-linear-memory.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a16c71c960582bfb",
+    "group": "optimization-information",
+    "source_sha256": "d74f895c68da46013f2977424eb4a5addb03d03b102e599cc69176bd61f0ca71",
+    "statement_sha256": "28279eb48618841bc5e01f373ae8f72d491506e3c74585a2457bbc19349df9cc",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d74f895c68da46013f2977424eb4a5addb03d03b102e599cc69176bd61f0ca71",
+  "statement_sha256": "28279eb48618841bc5e01f373ae8f72d491506e3c74585a2457bbc19349df9cc",
+  "actual_source_sha256": "d74f895c68da46013f2977424eb4a5addb03d03b102e599cc69176bd61f0ca71",
+  "full_original_statement": "Write $`B_2^d=\\{x\\in\\mathbb R^d:\\|x\\|_2\\le1\\}`$ and, for integers $`d\\ge3`$, put\n```math\n\\varepsilon_d=\\exp\\!\\bigl(- (\\log d)^2\\bigr),\n```\n\nwhere $`\\log`$ is the natural logarithm. Let $`\\mathcal F_d`$ consist of all convex, globally $`1`$-Lipschitz functions $`F:\\mathbb R^d\\to\\mathbb R`$ having a global minimizer in $`B_2^d`$.\n\nDo constants $`C,k>0`$ and $`d_0\\ge3`$ exist such that, for every integer $`d\\ge d_0`$, there is a deterministic first-order oracle algorithm with the following guarantee?\n\nIt uses at most $`M_d=\\lceil C d(\\log d)^2\\rceil`$ persistent bits and at most $`T_d=\\lceil d^k\\rceil`$ oracle calls, and for every $`F\\in\\mathcal F_d`$ returns $`\\widehat x\\in\\mathbb R^d`$ satisfying\n```math\nF(\\widehat x)-\\min_{x\\in\\mathbb R^d}F(x)\\le\\varepsilon_d.\n```\n\nEach query at $`x_t\\in\\mathbb R^d`$ returns the exact pair $`(F(x_t),g_t)`$, with $`g_t\\in\\partial F(x_t)`$. The guarantee must hold for every choice of valid returned subgradients, as in the source's minimax convention. [1, §2]\n\nPrecisely, the persistent state is $`\\mu_t\\in\\{0,1\\}^{M_d}`$, initially zero. For maps fixed before observing $`F`$,\n```math\nx_t=\\phi_{d,t}(\\mu_t),\\qquad\n\\mu_{t+1}=\\psi_{d,t}(\\mu_t,F(x_t),g_t),\\qquad\n\\widehat x=\\zeta_d(\\mu_{T_d+1}).\n```\n\nThe maps may depend on $`d,t`$ and use unrestricted real computation and temporary memory between calls; only the retained state is limited to $`M_d`$ bits. Neither query locations nor the final output have additional storage outside this state. The time index is available to the maps. No bound on arithmetic work or a uniform finite-program implementation is requested. Fewer calls can be padded. These conventions reproduce the deterministic bottleneck model in [1], with the final-state index written consistently.\n\nThis is a fixed-accuracy specialization of Question 2 in [1], rather than a claim that its entire memory-query tradeoff is unresolved. All dimensions form one problem family.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"convex optimization\" \"almost linear\" memory polynomial queries 2026",
+    "\"convex optimization\" \"almost linear\" memory polynomial queries (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"convex optimization\" \"limited memory\" polynomial query solved"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1, 21 July 2026; current arXiv record checked",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2607.24827v1",
+      "locator": "Theorem 1, lines 237–247",
+      "scope_comparison": "Theorem 1 excludes budgets up to a specified polynomial in d and memory, at inverse-polynomial error. Even a valid transfer to the local narrower global-minimizer class would not refute existence of some exponent k. The target allows arbitrary fixed k and quasipolynomially small error; feasibility lower bounds and consistency assumptions require separate transfers."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem 1 excludes budgets up to a specified polynomial in d and memory, at inverse-polynomial error. Even a valid transfer to the local narrower global-minimizer class would not refute existence of some exponent k. The target allows arbitrary fixed k and quasipolynomially small error; feasibility lower bounds and consistency assumptions require separate transfers.",
+  "latest_version_check": "v1, 21 July 2026; current arXiv record checked",
+  "gap_retraction_check": "No matching complete candidate was identified; version records showed no withdrawal banner. Cited partial proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

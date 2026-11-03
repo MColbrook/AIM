@@ -1,0 +1,122 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "916",
+  "manifest_index": 760,
+  "checked_date": "2026-11-03",
+  "source_sha256": "b9147cee9504415487294d7487f12abc1170751ccdf137b91a1ecc0d419e67e7",
+  "statement_sha256": "6d09d8045a6666a18786e7088bb404490890b009bd658bf883225f315a314d5d",
+  "original_target": {
+    "id": "916",
+    "title": "Do spherical Fourier partial sums converge almost everywhere for every $`L^2`$ function on a multidimensional torus?",
+    "area": "Harmonic analysis and Fourier series",
+    "file": "problems/916-do-spherical-fourier-partial-sums-converge-almost-everywhere-for-every-l-2-function-on-a-multidimens.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-9d08bf8f2e78505f",
+    "group": "operators",
+    "source_sha256": "b9147cee9504415487294d7487f12abc1170751ccdf137b91a1ecc0d419e67e7",
+    "statement_sha256": "6d09d8045a6666a18786e7088bb404490890b009bd658bf883225f315a314d5d",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For $`d\\ge2`$ and $`f\\in L^2(\\mathbb T^d)`$, define its circular (spherical when $`d>2`$) partial Fourier sums by\n\n```math\nS_R f(x)=\\sum_{k\\in\\mathbb Z^d:\\,\\lVert k\\rVert_2\\le R}\\widehat f(k)e^{ik\\cdot x}.\n```\n\n\nMust $`S_Rf(x)\\to f(x)`$ as $`R\\to\\infty`$ for almost every $`x\\in\\mathbb T^d`$? Weisz asks whether the maximal inequality and almost-everywhere convergence of his Theorem 4.4 extend to $`p=2`$ with circular partial sums. The displayed convergence question is the central unresolved part; an $`L^2`$ bound for the corresponding maximal operator would be a stronger route to it.",
+  "full_original_page": "# 916. Do spherical Fourier partial sums converge almost everywhere for every $`L^2`$ function on a multidimensional torus?\n\n**Area:** Harmonic analysis and Fourier series\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor $`d\\ge2`$ and $`f\\in L^2(\\mathbb T^d)`$, define its circular (spherical when $`d>2`$) partial Fourier sums by\n\n```math\nS_R f(x)=\\sum_{k\\in\\mathbb Z^d:\\,\\lVert k\\rVert_2\\le R}\\widehat f(k)e^{ik\\cdot x}.\n```\n\n\nMust $`S_Rf(x)\\to f(x)`$ as $`R\\to\\infty`$ for almost every $`x\\in\\mathbb T^d`$? Weisz asks whether the maximal inequality and almost-everywhere convergence of his Theorem 4.4 extend to $`p=2`$ with circular partial sums. The displayed convergence question is the central unresolved part; an $`L^2`$ bound for the corresponding maximal operator would be a stronger route to it.\n\n## Application\n\nA positive answer would extend the almost-everywhere Fourier convergence theorem from one dimension and from polygonal summation regions to Euclidean balls in frequency space.\n\n## References\n\n- F. Weisz, [*Summability of Multi-Dimensional Trigonometric Fourier Series*](https://surveys-in-approximation-theory.com/papers/17/17.pdf), *Surveys in Approximation Theory* **7** (2012), 1–179. See printed pp. 17 and 20, Theorems 4.4 and 4.6 and the subsequent question; [publisher record](https://surveys-in-approximation-theory.com/papers/17/index.html).\n- K.-M. Perfekt, [*Rectangular Summation of Multiple Fourier Series and Multi-parametric Capacity*](https://link.springer.com/article/10.1007/s11118-020-09861-5), *Potential Analysis* **55** (2021), 389–402. Its introduction explicitly distinguishes the open spherical $`L^2`$ question from its rectangular-sum results.\n\n## Status review\n\n\n**Known cases:** Triangular, cubic or rectangular partial sums and generalized localization are not spherical almost-everywhere convergence for every L2 function. Restriction and local-smoothing advances do not by themselves establish this zero-regularity endpoint for all multidimensional tori.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nTriangular, cubic or rectangular partial sums and generalized localization are not spherical almost-everywhere convergence for every L2 function. Restriction and local-smoothing advances do not by themselves establish this zero-regularity endpoint for all multidimensional tori.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe original survey separates known triangular/cubic almost-everywhere convergence from the circular $`L^2`$ case. Perfekt's later paper still states the latter as open. The [2019 generalized-localization result](https://journals.eco-vector.com/0869-5652/article/view/17855/en_US) handles a restricted vanishing-on-an-open-set conclusion, not global convergence. Bounded searches through 22 October 2026 found no matching complete proof, counterexample or announcement; this negative result is not exhaustive. The [publisher-PDF body receipt](../FURTHER_problems/_tracking/parallel/complex-bayesian/journal-primary-body-second-pass-0679-J321-remote-pdf-body-review.json), [scope/status audit](../FURTHER_problems/_tracking/spherical-l2-fourier-2026-10-22-status.json) and [duplicate audit](../FURTHER_problems/_tracking/spherical-l2-fourier-2026-10-22-duplicates.json) record the checks.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-9d08bf8f2e78505f**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"spherical\" \"Fourier series\" \"L2\" almost everywhere convergence 2026",
+    "\"spherical\" \"Fourier series\" \"L2\" almost everywhere convergence; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://www.irishmathsoc.org/bull93/wef/Articles/Twomey/Twomey-wef.pdf",
+      "locator": "Introduction printedp43 and abstract, primary indexed body",
+      "comparison": "Recent comparator requires extra logarithmic Fourier regularity and studies Bochner-Riesz means on R^n, not ordinary spherical sums for all zero-regularity L2 functions on tori. Rectangular/polygonal sums and one-dimensional LlogL convergence do not match."
+    }
+  ],
+  "rationale": "Recent comparator requires extra logarithmic Fourier regularity and studies Bochner-Riesz means on R^n, not ordinary spherical sums for all zero-regularity L2 functions on tori. Rectangular/polygonal sums and one-dimensional LlogL convergence do not match. No full matching claim found in bounded searches.",
+  "limitations": [
+    "Weisz full survey and Perfekt paper not freshly inspected; publisher request for Perfekt timed out. This is a bounded comparator scope review, not a fully checked source audit."
+  ],
+  "announcement_routing": {
+    "localID": "916",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "spherical Fourier",
+          "circular Fourier",
+          "multiple Fourier",
+          "Fourier convergence"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "spherical Fourier",
+          "circular Fourier",
+          "multiple Fourier",
+          "Fourier convergence"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "spherical Fourier",
+        "circular Fourier",
+        "multiple Fourier",
+        "Fourier convergence"
+      ],
+      "hits": [
+        {
+          "entry": "075",
+          "title": "The $L\\log L$ Fourier-convergence conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Almost-everywhere-Fourier-convergence-in-L-log-L-September-23-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:57:05.476Z",
+      "previous_outcome": "partial",
+      "localID": "916",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "sources": [
+        {
+          "url": "https://surveys-in-approximation-theory.com/papers/17/17.pdf",
+          "version": "2012 published survey, fetched3November2026",
+          "locator": "Theorems4.4 and4.6; printedp20 paragraph followingTheorem4.6",
+          "inspection": "Actual original explicitly asks p=2 and circular partial sums, separate from triangular/cubic sum convergence. Ordinary circular sums at p=2 remain the exact local target in this source.",
+          "local_text": "_sources/916-Weisz.txt",
+          "receipt": "_sources/916-Weisz.txt.receipt.json"
+        }
+      ],
+      "scope_comparison": "Fresh RAM extraction recovered the original full question body, resolving the earlier source gap. Newer Bochner–Riesz/logarithmic regularity comparator is restricted as previously recorded. OpenAI075 is ordinary one-dimensional Fourier convergence in LlogL, not circular zero-regularity L2 convergence on T^d,d>=2. Bounded searches found no complete matching claim."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": [],
+  "announcement_hit_disposition": "OpenAI075 explicitly concerns ordinary symmetric Fourier sums on the ONE-DIMENSIONAL circle for LlogL. It does not settle circular/spherical partial sums of all L2 functions on multidimensional tori.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.711Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

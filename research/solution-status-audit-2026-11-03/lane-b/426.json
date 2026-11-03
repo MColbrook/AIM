@@ -1,0 +1,48 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 345,
+  "source_sha256": "e7290bfc090e20c7f6d60042951b8947072737e479c25e0742f289e1175a5425",
+  "statement_sha256": "c7cd7ad16b04bda85acdf1425382ceea655df35cd237643236f90fa3feb4fbaa",
+  "original_target": {
+    "id": "426",
+    "title": "The sharp vector Riesz inequality for multidimensional potential fields",
+    "area": "Harmonic analysis and elliptic potential fields",
+    "file": "problems/426-vector-riesz-sharp-norm.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "operators",
+    "source_sha256": "e7290bfc090e20c7f6d60042951b8947072737e479c25e0742f289e1175a5425",
+    "statement_sha256": "c7cd7ad16b04bda85acdf1425382ceea655df35cd237643236f90fa3feb4fbaa",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "426",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"vector Riesz\" \"sharp\" norm 2026 proof",
+    "\"Riesz transforms\" \"cot\" 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2604.09365v2",
+      "version": "v2,4May2026;currentabs checked",
+      "locator": "§5.1–5.2,eq5.13 and following discussion",
+      "theorem_body_checked": true,
+      "scope": "Explicitly exact norm remains open, even reald2. Gives upper bounds exceeding cot and asymptotics."
+    },
+    {
+      "url": "https://arxiv.org/html/2608.18068",
+      "version": "currentHTML,v1Aug2026",
+      "locator": "Theorem1.1",
+      "theorem_body_checked": true,
+      "scope": "Weak(1,1)vectorRiesz constant<=2 independentd. Does not imply the exact strongLp cot constant."
+    }
+  ],
+  "registry_checks": "Complete Palomar and Hexagon metadata and pinned OpenAI/Colbrook listings scanned for target names/aliases; no matching full claim. Palomar Gaussian weak(1,1) formalization2610.26478 has a different measure/endpoint, not strongLp cot.",
+  "scope_comparison": "Target all1<p<infty, real scalarinputs, Euclidean vector norm, everyd>=2; one component, weakendpoint, Gaussian transforms or approximateconstants insufficient.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

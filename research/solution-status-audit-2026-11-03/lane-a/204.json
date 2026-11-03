@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "204",
+  "manifest_index": 160,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "204",
+    "title": "Antiferromagnetic order in the half-filled square-lattice Hubbard model",
+    "area": "Correlated electrons; quantum materials",
+    "file": "problems/204-hubbard-antiferromagnetism.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "spectral3",
+    "source_sha256": "9a569fb843dc4f5e6307051a467d876883600bc49db82206a1f01cf20b3698b8",
+    "statement_sha256": "d846178b8776b36c236e3e1e9ae2b1b1ed7fe937ef90ace33e152848172113ca",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9a569fb843dc4f5e6307051a467d876883600bc49db82206a1f01cf20b3698b8",
+  "statement_sha256": "d846178b8776b36c236e3e1e9ae2b1b1ed7fe937ef90ace33e152848172113ca",
+  "actual_source_sha256": "9a569fb843dc4f5e6307051a467d876883600bc49db82206a1f01cf20b3698b8",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For even $`L\\ge4`$ and $`U>0`$, on $`\\Lambda_L=(\\mathbb Z/L\\mathbb Z)^2`$ consider\n\n```math\nH_{L,U}=-\\sum_{\\{x,y\\}\\text{ nearest neighbors}}\\sum_{s=\\uparrow,\\downarrow}(c_{xs}^\\dagger c_{ys}+c_{ys}^\\dagger c_{xs})+U\\sum_x n_{x\\uparrow}n_{x\\downarrow}.\n```\n\nThe fermionic operators satisfy $`\\{c_{xs},c_{yt}^\\dagger\\}=\\delta_{xy}\\delta_{st}`$, $`\\{c_{xs},c_{yt}\\}=0`$, and $`n_{xs}=c_{xs}^\\dagger c_{xs}`$. Restrict to exactly $`L^2`$ electrons and let $`\\psi_{L,U}`$ be its normalized ground state. Define $`S_x^3=(n_{x\\uparrow}-n_{x\\downarrow})/2`$.\n\nDoes every fixed $`U>0`$ satisfy\n\n```math\n\\liminf_{\\substack{L\\to\\infty\\\\L\\text{ even}}}\\frac1{L^4}\\left\\langle\\psi_{L,U},\\left(\\sum_x(-1)^{x_1+x_2}S_x^3\\right)^2\\psi_{L,U}\\right\\rangle>0?\n```",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Hubbard\" \"antiferromagnetic order\" rigorous half filled 2026",
+    "\"Hubbard\" \"antiferromagnetic order\" rigorous half filled (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Hubbard\" \"antiferromagnetic order\" rigorous half filled (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Langmann–Lenells,finalLMP116(2026)50",
+      "scope_comparison": "The exact target is positive thermodynamic staggered spin-square liminf in the exact half-filled square-lattice Hubbard ground state for each fixed U>0. Actual Theorem1.1 computes the asymptotic of the mean-field gap Delta(U), defined as the solution of the Hartree–Fock integral equation1.2. The surrounding text explicitly places this in that approximation. Mean-field order, a finite-cluster experiment, spin correlation signs or the singlet theorem do not supply the exact infinite-volume lower bound. No complete matching announcement was located.",
+      "locator": "IntroductionEq1.1–1.3,Theorem1.1",
+      "primary_body_access_gap": false,
+      "url": "https://link.springer.com/article/10.1007/s11005-026-02085-5"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The exact target is positive thermodynamic staggered spin-square liminf in the exact half-filled square-lattice Hubbard ground state for each fixed U>0. Actual Theorem1.1 computes the asymptotic of the mean-field gap Delta(U), defined as the solution of the Hartree–Fock integral equation1.2. The surrounding text explicitly places this in that approximation. Mean-field order, a finite-cluster experiment, spin correlation signs or the singlet theorem do not supply the exact infinite-volume lower bound. No complete matching announcement was located.",
+  "latest_version_check": "Langmann–Lenells,finalLMP116(2026)50",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

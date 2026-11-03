@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "796",
+  "manifest_index": 640,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "796",
+    "title": "Is the soul map continuous for all open manifolds of nonnegative sectional curvature?",
+    "area": "Riemannian geometry and spaces of metrics",
+    "file": "problems/796-is-the-soul-map-continuous-for-all-open-manifolds-of-nonnegative-sectional-curvature.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-6f08a515d3548c59",
+    "group": "geometry-topology",
+    "source_sha256": "fb5f86aaf3c51aff14f99410da938c6cc9bb05be6e54919eae99bc2b59b14ea5",
+    "statement_sha256": "d9026ce35c0e3aa26167e558e26c6c89c699da8d533a2b99e3b507e5a9999255",
+    "state": "unreviewed"
+  },
+  "source_sha256": "fb5f86aaf3c51aff14f99410da938c6cc9bb05be6e54919eae99bc2b59b14ea5",
+  "statement_sha256": "d9026ce35c0e3aa26167e558e26c6c89c699da8d533a2b99e3b507e5a9999255",
+  "actual_source_sha256": "fb5f86aaf3c51aff14f99410da938c6cc9bb05be6e54919eae99bc2b59b14ea5",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`V`$ be a connected open smooth manifold admitting a complete Riemannian metric of nonnegative sectional curvature. Let $`\\mathcal M_{\\sec\\geq0}(V)`$ be the moduli space of such metrics modulo diffeomorphisms, with the quotient of smooth convergence uniformly on compact subsets of $`V`$. Each metric has a compact, totally convex soul $`S\\subset V`$; although its construction uses a basepoint, its isometry class is independent of that choice.\n\nLet $`\\mathscr V`$ contain one representative of each diffeomorphism type that occurs as a soul of such a metric on $`V`$. Give $`\\coprod_{S\\in\\mathscr V}\\mathcal M_{\\sec\\geq0}(S)`$ the disjoint-union topology. Is the map\n```math\n\\mathrm{soul}:\\mathcal M_{\\sec\\geq0}(V)\n\\longrightarrow\\coprod_{S\\in\\mathscr V}\\mathcal M_{\\sec\\geq0}(S),\n\\qquad [g]\\longmapsto[g|_{S_g}],\n```\n\ncontinuous for every such $`V`$? A counterexample would also settle the question. The curvature assumption is sectional $`\\sec\\geq0`$, including zero curvature.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"soul map\" continuity nonnegative curvature 2026",
+    "\"soul map\" continuity (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"soul map\" (site:palomar-registry.org OR site:hexagonmath.org)",
+    "Belegradek \"soul map\" continuity 2026 2025"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Published AIF72(2022),109–122; final publisher text inspected 2026-11-03. Focused current searches found no matching later full theorem.",
+      "url": "https://aif.centre-mersenne.org/item/10.5802/aif.3471.pdf",
+      "scope_comparison": "The actual definition uses compact-open smooth topology and disjoint union of soul moduli, matching the local target. Theorem1.1 assumes V indecomposable (a soul normal sphere bundle has no section); the proof uses this assumption for continuity of the embedded soul. The codimension-one result is another special case. Neither covers every open V. Compact RCD soul-map continuity concerns the splitting soul of a universal cover of a compact RCD structure, with measured GH topology, rather than the Cheeger–Gromoll soul map of arbitrary open sectional-nonnegative manifolds. No matching complete announcement located in the bounded search.",
+      "locator": "Introduction pp109–110, Theorem1.1 and proof §2 p112",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual definition uses compact-open smooth topology and disjoint union of soul moduli, matching the local target. Theorem1.1 assumes V indecomposable (a soul normal sphere bundle has no section); the proof uses this assumption for continuity of the embedded soul. The codimension-one result is another special case. Neither covers every open V. Compact RCD soul-map continuity concerns the splitting soul of a universal cover of a compact RCD structure, with measured GH topology, rather than the Cheeger–Gromoll soul map of arbitrary open sectional-nonnegative manifolds. No matching complete announcement located in the bounded search.",
+  "latest_version_check": "Published AIF72(2022),109–122; final publisher text inspected 2026-11-03. Focused current searches found no matching later full theorem.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

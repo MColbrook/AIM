@@ -2,9 +2,9 @@
 
 **Area:** Boundary-mode degeneracy
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -26,6 +26,13 @@ This asks whether arbitrarily many lowest boundary-vibration modes can coincide 
 2. M. Karpukhin, G. Kokarev and I. Polterovich, [Multiplicity bounds for Steklov eigenvalues on Riemannian surfaces](https://doi.org/10.5802/aif.2918), Annales de l’Institut Fourier 64 (2014), Theorem 1: topological upper bounds.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Fix b=1 and prescribe a1=...=aN=1 with next eigenvalue>2. TheoremA claims a smooth metric on a connected orientable surface of sufficiently large genus with those exact first N positive ordinary Steklov eigenvalues. Thus first multiplicity equals N with fixed boundary count. Genus may grow as permitted; length rescaling preserves multiplicity. The final theorem absorbs boundary weights into a smooth conformal metric and has no nonconstant interior conductivity.
+
+[Claimed solution](https://zenodo.org/api/records/22949635/files/Prescribed_Steklov_Spectra_nifa.pdf/content) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/111.json). Source locator: TheoremA, ordinary unweighted model(1.1). The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative unbounded first Steklov multiplicity
 

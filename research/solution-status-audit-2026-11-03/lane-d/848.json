@@ -1,0 +1,82 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "848",
+  "manifest_index": 692,
+  "checked_date": "2026-11-03",
+  "source_sha256": "37101da718f39f48db3b3b33448348594495cb3a3d0a9afac17d22709236f081",
+  "statement_sha256": "8b1956c978529615f88ab0dcc3ad4b12b2e559f6e9c813d07c3e142f4ec4ae17",
+  "original_target": {
+    "id": "848",
+    "title": "Relative connectedness of annuli in Ricci-nonnegative ends",
+    "area": "Geometric analysis and heat kernels on manifolds",
+    "file": "problems/848-relative-connectedness-of-annuli-in-ricci-nonnegative-ends.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-d42e81c2afb0b2b0",
+    "group": "geometry-topology",
+    "source_sha256": "37101da718f39f48db3b3b33448348594495cb3a3d0a9afac17d22709236f081",
+    "statement_sha256": "8b1956c978529615f88ab0dcc3ad4b12b2e559f6e9c813d07c3e142f4ec4ae17",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`M`$ be a complete, noncompact Riemannian manifold without boundary whose Ricci curvature is nonnegative outside a compact set. It has finitely many ends [1, Proposition 7.10]. Represent an individual end by a complete manifold $`M_i`$ that agrees outside a compact region with the corresponding unbounded component of $`M\\setminus K`$, as in [1, Definition 7.7].\n\nMust **every** $`M_i`$ have *relatively connected annuli* (RCA)? In the notation of [1, Definition 5.1], this asks whether there are a basepoint $`o_i`$ and a constant $`C_A>1`$ such that, for every $`r\\geq C_A^2`$ and any $`x,y\\in M_i`$ at distance $`r`$ from $`o_i`$, a continuous path from $`x`$ to $`y`$ stays in\n```math\nB_{M_i}(o_i,C_A r)\\setminus B_{M_i}(o_i,r/C_A).\n```\n\nThis is the endwise question of [1, Remark 7.11]; it does not require a manifold with several ends to satisfy RCA as a whole.",
+  "full_original_page": "# 848. Relative connectedness of annuli in Ricci-nonnegative ends\n\n**Area:** Geometric analysis and heat kernels on manifolds\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`M`$ be a complete, noncompact Riemannian manifold without boundary whose Ricci curvature is nonnegative outside a compact set. It has finitely many ends [1, Proposition 7.10]. Represent an individual end by a complete manifold $`M_i`$ that agrees outside a compact region with the corresponding unbounded component of $`M\\setminus K`$, as in [1, Definition 7.7].\n\nMust **every** $`M_i`$ have *relatively connected annuli* (RCA)? In the notation of [1, Definition 5.1], this asks whether there are a basepoint $`o_i`$ and a constant $`C_A>1`$ such that, for every $`r\\geq C_A^2`$ and any $`x,y\\in M_i`$ at distance $`r`$ from $`o_i`$, a continuous path from $`x`$ to $`y`$ stays in\n```math\nB_{M_i}(o_i,C_A r)\\setminus B_{M_i}(o_i,r/C_A).\n```\n\nThis is the endwise question of [1, Remark 7.11]; it does not require a manifold with several ends to satisfy RCA as a whole.\n\n## Application\n\nRCA permits comparison of geometry and analysis around large annuli. Combined with curvature assumptions, it leads to volume comparison, doubling, Poincaré inequalities and Harnack estimates on ends [1, Proposition 7.10 and Corollary 7.13]. An affirmative answer would remove a separate geometric hypothesis from such estimates for this Ricci-curvature class.\n\n## Known results and scope\n\nThe source proves RCA for ends under asymptotically nonnegative **sectional** curvature, and under nonnegative Ricci curvature outside a compact set **together with finite first Betti number** [1, Proposition 7.8]. Its more general Proposition 7.10 gives volume comparison *if* an end has RCA. Neither implication answers Remark 7.11 without those extra assumptions. Multi-ended connected sums illustrate why RCA of the whole manifold is a different demand.\n\n## References\n\n1. A. Grigor'yan and L. Saloff-Coste, [*Stability results for Harnack inequalities*](https://www.numdam.org/item/10.5802/aif.2116.pdf), *Annales de l'Institut Fourier* **55** (2005), no. 3, 825–890, [doi:10.5802/aif.2116](https://doi.org/10.5802/aif.2116). Definitions 5.1 and 7.7, Propositions 7.8 and 7.10, Remark 7.11, and Corollary 7.13.\n2. A. Grigor'yan and L. Saloff-Coste, [*Heat kernel on manifolds with ends*](https://www.numdam.org/item/10.5802/aif.2480.pdf), *Annales de l'Institut Fourier* **59** (2009), no. 5, 1917–1997. Its Ricci-outside-compact example continues to assume RCA on each end.\n\n## Status review\n\n\n**Known cases:** The source proves endwise relatively connected annuli with finite first Betti number or stronger asymptotically nonnegative sectional curvature. Later heat-kernel and Riesz-transform applications retain RCA as an extra premise; these are not proofs of the unrestricted Ricci-outside-compact implication.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe source proves endwise relatively connected annuli with finite first Betti number or stronger asymptotically nonnegative sectional curvature. Later heat-kernel and Riesz-transform applications retain RCA as an extra premise; these are not proofs of the unrestricted Ricci-outside-compact implication.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nBounded searches through 21 October 2026 found no complete resolution or matching announcement of the exact endwise assertion. In the 2009 continuation [2], RCA remains an explicit additional hypothesis for the Ricci-outside-compact example. A [September 2026 Riesz-transform paper](https://arxiv.org/abs/2609.23398) likewise assumes RCA on its components, but that separate setting does not prove the question open. AIM and admitted FURTHER pages contained no equivalent target. These checks cannot rule out unindexed work.\n\nThe [primary-source audit](../FURTHER_problems/_tracking/ricci-end-annuli-primary-2026-10-21.json), [current-status audit](../FURTHER_problems/_tracking/ricci-end-annuli-status-2026-10-21.json), and [duplicate/scope audit](../FURTHER_problems/_tracking/ricci-end-annuli-duplicates-2026-10-21.json) record the selected evidence and limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-d42e81c2afb0b2b0**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"relatively connected annuli\" Ricci ends proof counterexample 2026",
+    "\"relatively connected annuli\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:hexagonmath.org OR site:palomar-registry.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://www.numdam.org/item/10.5802/aif.2116.pdf",
+      "locator": "2005 published, Remark 7.11 p.885/PDF61; Proposition 7.8",
+      "inspection": "Primary remark asks exact endwise RCA implication. Finite first Betti number or sectional curvature hypotheses are extra; later uses assuming RCA do not prove unrestricted statement."
+    }
+  ],
+  "scope_comparison": "Primary remark asks exact endwise RCA implication. Finite first Betti number or sectional curvature hypotheses are extra; later uses assuming RCA do not prove unrestricted statement.",
+  "rationale": "The stated full target has no matching complete result in the recorded bounded searches. Inspected primary bodies retain the stated conjecture or give restricted progress; recommended status stays Partially resolved. This does not certify openness or independently verify complete proofs.",
+  "source_gaps": [],
+  "announcement_routing": {
+    "localID": "848",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "connected annuli"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "connected annuli"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "connected annuli"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target."
+}

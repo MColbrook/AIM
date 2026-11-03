@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "244",
+  "manifest_index": 190,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "244",
+    "title": "An overlap-free edge unfolding for every convex polyhedron",
+    "area": "Computational geometry / sheet fabrication",
+    "file": "problems/244-durer-edge-unfolding.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "inverse3",
+    "source_sha256": "73cd30d0d216b4c111490e77bea0380f2935160289bd2f5a8f08bc92d35e0616",
+    "statement_sha256": "68e83815bbfeb46c883aad13ff80a959e3f174d14256aefdeeab1d240b4d0850",
+    "state": "unreviewed"
+  },
+  "source_sha256": "73cd30d0d216b4c111490e77bea0380f2935160289bd2f5a8f08bc92d35e0616",
+  "statement_sha256": "68e83815bbfeb46c883aad13ff80a959e3f174d14256aefdeeab1d240b4d0850",
+  "actual_source_sha256": "73cd30d0d216b4c111490e77bea0380f2935160289bd2f5a8f08bc92d35e0616",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`P\\subset\\mathbb R^3`$ be a convex polytope with nonempty interior, and let $`G`$ be the graph formed by its vertices and edges. Does there always exist a spanning tree $`T\\subset G`$ such that cutting $`\\partial P`$ along $`T`$ and developing the resulting intrinsic Euclidean surface into the plane produces a single net whose face interiors are pairwise disjoint?\n\nEach face must retain its original shape and size. Cuts may use only original edges; the question permits contact along boundaries of unfolded faces, but no overlapping interiors.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Durer\" \"edge unfolding\" conjecture 2026",
+    "\"Durer\" \"edge unfolding\" conjecture (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Durer\" \"edge unfolding\" conjecture (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Theorem1.1 and Corollary1.2 p2",
+      "version_or_date": "Author manuscript typeset21April2014; finalGeometryTopology18(2014)3055–3090; current searches3November2026.",
+      "scope_comparison": "Theorem1.1 proves a monotone-tree unfolding only after sufficiently large affine stretching; this changes lengths and face shapes. The local statement fixes the original convex polyhedron and permits only edge cuts. Nested-prismatoid and affine results do not settle every original polyhedron, and no current full proof or counterexample was located.",
+      "url": "https://ghomi.math.gatech.edu/Papers/durer.pdf"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Theorem1.1 proves a monotone-tree unfolding only after sufficiently large affine stretching; this changes lengths and face shapes. The local statement fixes the original convex polyhedron and permits only edge cuts. Nested-prismatoid and affine results do not settle every original polyhedron, and no current full proof or counterexample was located.",
+  "latest_version_check": "Author manuscript typeset21April2014; finalGeometryTopology18(2014)3055–3090; current searches3November2026.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

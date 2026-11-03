@@ -1,0 +1,91 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "978",
+  "manifest_index": 822,
+  "checked_date": "2026-11-03",
+  "source_sha256": "f22f5acb6e15306b205579c4faabd665292822aa6b08cd2338e54fa3924b8dee",
+  "statement_sha256": "340259ad0d5ec81c29866400e6c394a38b75dc4da8847acd584d2c0ca2803968",
+  "original_target": {
+    "id": "978",
+    "title": "Does dyadic lower decoupling imply general lower decoupling?",
+    "area": "Probability in Banach spaces and stochastic integration",
+    "file": "problems/978-does-dyadic-lower-decoupling-imply-general-lower-decoupling.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-63dcea83def42a81",
+    "group": "probability-statistics",
+    "source_sha256": "f22f5acb6e15306b205579c4faabd665292822aa6b08cd2338e54fa3924b8dee",
+    "statement_sha256": "340259ad0d5ec81c29866400e6c394a38b75dc4da8847acd584d2c0ca2803968",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`X`$ be a separable Banach space and $`0<p<\\infty`$, with\n$`\\|Z\\|_p=(\\mathbb E\\|Z\\|_X^p)^{1/p}`$.\nDefine $`D_p(X)`$ as the least constant in\n```math\n\\left\\|\\sum_{n=1}^N r_n a_{n-1}\\right\\|_p\n\\le D_p(X)\\left\\|\\sum_{n=1}^N r'_n a_{n-1}\\right\\|_p,\n```\n\nfor all finite lengths, independent Rademacher sequences $`r,r'`$, and predictable coefficients\n$`a_0\\in X`$, $`a_{n-1}=h_{n-1}(r_1,\\ldots,r_{n-1})`$.\n\nDefine $`D_p^{\\mathrm{gen}}(X)`$ analogously by\n```math\n\\left\\|\\sum_{n=1}^N d_n\\right\\|_p\n\\le D_p^{\\mathrm{gen}}(X)\\left\\|\\sum_{n=1}^N e_n\\right\\|_p,\n```\n\nuniformly over finite $`L^p(X)`$ sequences $`d,e`$ adapted to the same filtration $`(\\mathcal F_n)`$, where $`e`$ is a decoupled tangent sequence of $`d`$: some $`\\mathcal H\\supseteq\\sigma(d_1,\\ldots,d_N)`$ makes the $`e_n`$ conditionally independent and satisfies\n```math\n\\mathcal L(d_n\\mid\\mathcal F_{n-1})\n=\\mathcal L(e_n\\mid\\mathcal F_{n-1})\n=\\mathcal L(e_n\\mid\\mathcal H)\n\\quad\\text{almost surely}.\n```\n\n\nFor every such $`X,p`$, must\n```math\nD_p(X)<\\infty\\quad\\Longrightarrow\\quad D_p^{\\mathrm{gen}}(X)<\\infty?\n```\n\nThis asks for finiteness; a uniform comparison constant is a stronger question.",
+  "full_original_page": "# 978. Does dyadic lower decoupling imply general lower decoupling?\n\n**Area:** Probability in Banach spaces and stochastic integration\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`X`$ be a separable Banach space and $`0<p<\\infty`$, with\n$`\\|Z\\|_p=(\\mathbb E\\|Z\\|_X^p)^{1/p}`$.\nDefine $`D_p(X)`$ as the least constant in\n```math\n\\left\\|\\sum_{n=1}^N r_n a_{n-1}\\right\\|_p\n\\le D_p(X)\\left\\|\\sum_{n=1}^N r'_n a_{n-1}\\right\\|_p,\n```\n\nfor all finite lengths, independent Rademacher sequences $`r,r'`$, and predictable coefficients\n$`a_0\\in X`$, $`a_{n-1}=h_{n-1}(r_1,\\ldots,r_{n-1})`$.\n\nDefine $`D_p^{\\mathrm{gen}}(X)`$ analogously by\n```math\n\\left\\|\\sum_{n=1}^N d_n\\right\\|_p\n\\le D_p^{\\mathrm{gen}}(X)\\left\\|\\sum_{n=1}^N e_n\\right\\|_p,\n```\n\nuniformly over finite $`L^p(X)`$ sequences $`d,e`$ adapted to the same filtration $`(\\mathcal F_n)`$, where $`e`$ is a decoupled tangent sequence of $`d`$: some $`\\mathcal H\\supseteq\\sigma(d_1,\\ldots,d_N)`$ makes the $`e_n`$ conditionally independent and satisfies\n```math\n\\mathcal L(d_n\\mid\\mathcal F_{n-1})\n=\\mathcal L(e_n\\mid\\mathcal F_{n-1})\n=\\mathcal L(e_n\\mid\\mathcal H)\n\\quad\\text{almost surely}.\n```\n\n\nFor every such $`X,p`$, must\n```math\nD_p(X)<\\infty\\quad\\Longrightarrow\\quad D_p^{\\mathrm{gen}}(X)<\\infty?\n```\n\nThis asks for finiteness; a uniform comparison constant is a stronger question.\n\n## Application\n\nThis tests whether estimates for binary-noise martingales already control general dependent Banach-valued noise, clarifying hypotheses for stochastic integration.\n\n## References\n\n1. S. Cox and S. Geiss, [*On Decoupling in Banach Spaces*](https://doi.org/10.1007/s10959-021-01085-6), *Journal of Theoretical Probability* **34** (2021), 1179-1212. Open Problem 1.1, Definitions 1.5 and 2.5, and Remark 5.6(b).\n2. [Author preprint](https://arxiv.org/abs/1805.12377), v1 (2018), Definitions 2.6 and 6.3, Section 9.4(b).\n\n## Status review\n\n\n**Known cases:** Dyadic lower decoupling must transfer to arbitrary tangent conditional laws. Filtration enlargement and fixed-law restrictions in the source, and subsequent Wiener-space results, do not establish the general transfer.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nDyadic lower decoupling must transfer to arbitrary tangent conditional laws. Filtration enlargement and fixed-law restrictions in the source, and subsequent Wiener-space results, do not establish the general transfer.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe published article retains this implication as unresolved. Its filtration-enlargement and restricted conditional-law results, including Brownian integration estimates, do not establish transfer to arbitrary laws. No matching proof, counterexample or complete-resolution announcement was located in bounded checks through the date above.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-63dcea83def42a81**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scopes inspected, not complete proof certification."
+  ],
+  "aliases": [
+    "Cox",
+    "Geiss",
+    "lower decoupling"
+  ],
+  "queries": [
+    "\"dyadic\" \"decoupling\" \"general\" Banach Cox Geiss",
+    "\"dyadic\" \"decoupling\" \"general\" Banach Cox Geiss; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s10959-021-01085-6",
+      "locator": "14Mar2021 published OpenProblem1.1 lines85–96",
+      "comparison": "Actual theorem solves filtration-enlargement subproblem A and only partially conditional-law transfer B. The requested dyadic-to-general finiteness remains the precise open problem. Current Geiss research listing routes Wiener-space coupling/anticipating-integrand work, not arbitrary tangent laws."
+    }
+  ],
+  "rationale": "No full transfer announcement located; harmonic-analysis Fourier decoupling is a different notion.",
+  "announcement_routing": {
+    "localID": "978",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Cox",
+          "Geiss",
+          "lower decoupling"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Cox",
+          "Geiss",
+          "lower decoupling"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Cox",
+        "Geiss",
+        "lower decoupling"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

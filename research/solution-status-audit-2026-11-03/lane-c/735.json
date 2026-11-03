@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "735",
+  "manifest_index": 579,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "735",
+    "title": "Excess energy for collapsing elastic phase boundaries",
+    "area": "Nonlinear elasticity and solid–solid phase transitions",
+    "file": "problems/735-excess-energy-for-collapsing-elastic-phase-boundaries.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-52e41be6f37ecd2d",
+    "group": "diffusion-materials",
+    "source_sha256": "c68e031b9f83f35589884928eaca93fe1d248f8d3a53dc5578eb59f8265ba549",
+    "statement_sha256": "3690f2a76451c371f92f977234a00d916c3ed3b4a0de7ef13a698bc365830e67",
+    "state": "unreviewed"
+  },
+  "source_sha256": "c68e031b9f83f35589884928eaca93fe1d248f8d3a53dc5578eb59f8265ba549",
+  "statement_sha256": "3690f2a76451c371f92f977234a00d916c3ed3b4a0de7ef13a698bc365830e67",
+  "actual_source_sha256": "c68e031b9f83f35589884928eaca93fe1d248f8d3a53dc5578eb59f8265ba549",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Does there exist an integer $`d\\ge2`$, a number $`\\kappa>0`$ and a density $`W:\\mathbb R^{d\\times d}\\to[0,\\infty)`$ satisfying the conditions below for which\n```math\n\\min\\{K_{\\mathrm{dp}}^A,K_{\\mathrm{dp}}^B\\}>2K?\n```\n\nSet $`A=I_d`$, $`B=\\mathrm{diag}(1,\\ldots,1,1+\\kappa)`$ and $`\\mathcal K=SO(d)A\\cup SO(d)B`$. Use Frobenius norms. Require $`W`$ to be continuous, $`W(RF)=W(F)`$ for every $`R\\in SO(d)`$, $`W(A)=W(B)=0`$, and\n```math\nc_1\\mathrm{dist}(F,\\mathcal K)^2\n\\le W(F)\\le c_2\\mathrm{dist}(F,\\mathcal K)^2\n\\qquad(F\\in\\mathbb R^{d\\times d})\n```\nfor some $`c_1,c_2>0`$. Require $`W`$ to be $`C^2`$ on a neighborhood of $`\\mathcal K`$ and, for some $`c_3>0`$,\n```math\n|W(F)-W(G)|\\le c_3(1+|F|+|G|)|F-G|\n\\qquad(F,G\\in\\mathbb R^{d\\times d}).\n```\nThese are the published paper's H1–H7.\n\nHere are the precise cell constants. For a bounded open set $`D\\subset\\mathbb R^d`$ and $`y\\in H^2(D;\\mathbb R^d)`$, put\n```math\n\\begin{aligned}\n\\bar\\eta_{\\varepsilon,d}&=\\varepsilon^{-1+1/(2d)},\\\\\n\\mathcal E_\\varepsilon(y;D)\n&=\\varepsilon^{-2}\\int_D W(\\nabla y)\\,dx\n+\\varepsilon^2\\int_D|\\nabla^2y|^2\\,dx\\\\\n&\\quad+\\bar\\eta_{\\varepsilon,d}^{\\,2}\n \\int_D\\bigl(|\\nabla^2y|^2-|\\partial_{dd}^2y|^2\\bigr)\\,dx.\n\\end{aligned}\n```\nLet $`Q=(-1/2,1/2)^d`$ and $`Q'=(-1/2,1/2)^{d-1}`$. Define the continuous map $`y_0`$ by $`y_0(x)=Ax`$ when $`x_d\\ge0`$ and $`y_0(x)=Bx`$ when $`x_d<0`$. Then\n```math\nK=\\inf_{\\substack{y_\\varepsilon\\in H^2(Q;\\mathbb R^d)\\\\\ny_\\varepsilon\\to y_0\\ {\\rm in}\\ L^1(Q)}}\n\\liminf_{\\varepsilon\\downarrow0}\\mathcal E_\\varepsilon(y_\\varepsilon;Q).\n```\n\nLet $`\\mathcal W_d`$ consist of positive families $`(w_\\varepsilon)`$ with $`w_\\varepsilon\\to0`$ and $`\\liminf_{\\varepsilon\\downarrow0}w_\\varepsilon/\\varepsilon>0`$. Write\n```math\nz^A=e_d\\mathbf1_{\\{x_d>0\\}},\\qquad\nz^B=-e_d\\mathbf1_{\\{x_d>0\\}},\\qquad D_h=Q'\\times(-h,h).\n```\nFor $`M\\in\\{A,B\\}`$, set\n```math\nK_{\\mathrm{dp}}^M\n=\\sup_{h>0}\\ \\sup_{(w_\\varepsilon)\\in\\mathcal W_d}\n\\inf_{\\substack{y_\\varepsilon\\in H^2(D_h;\\mathbb R^d)\\\\\n(y_\\varepsilon-Mx)/w_\\varepsilon\\to z^M\\ {\\rm in\\ measure}}}\n\\limsup_{\\varepsilon\\downarrow0}\\mathcal E_\\varepsilon(y_\\varepsilon;D_h).\n```\nAll limits use the positive parameter $`\\varepsilon\\downarrow0`$. There are no prescribed boundary traces in these infima.\n\nAn affirmative answer requires both double-profile constants to exceed $`2K`$. This entry asks for one admissible choice of $`(d,\\kappa,W)`$; it makes no assertion for every fixed parameter pair. The H1–H7 class is the paper's full linearization setting, chosen explicitly here.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"collapsing\" \"double\" \"profile\" \"Davoli\" Friedrich energy gap",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"double profiles\" \"energy\" elasticity",
+    "site:palomar-registry.org OR site:hexagonmath.org \"double-profile\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Final JEMS27(2025)615–707, online11October2023; later2607.15133v1 inspected",
+      "primary_body_access_gap": false,
+      "url": "https://ems.press/content/serial-article-files/49943",
+      "locator": "(3.25)–(3.28), Propositions3.16–3.17 and following conjecture pp644–646",
+      "scope_comparison": "Actual general inequality min(KdpA,KdpB)>=2K and equality require extra one-dimensional reduction condition(3.28). Following paragraph explicitly lacks example and conjectures both costs>2K. Local asks one H1–H7 frame-indifferent two-rotational-well example with refined anisotropic K and exact sup-sup-inf-limsup order. Later heterogeneous point-well theorem omits frame indifference/assumes recovery reduction; it does not provide or rule out this example. No full match located."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual general inequality min(KdpA,KdpB)>=2K and equality require extra one-dimensional reduction condition(3.28). Following paragraph explicitly lacks example and conjectures both costs>2K. Local asks one H1–H7 frame-indifferent two-rotational-well example with refined anisotropic K and exact sup-sup-inf-limsup order. Later heterogeneous point-well theorem omits frame indifference/assumes recovery reduction; it does not provide or rule out this example. No full match located.",
+  "latest_version_check": "Final JEMS27(2025)615–707, online11October2023; later2607.15133v1 inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

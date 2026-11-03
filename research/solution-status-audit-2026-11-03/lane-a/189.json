@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "189",
+  "manifest_index": 149,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "189",
+    "title": "Uniqueness of the planar spin-glass ground-state pair",
+    "area": "Disordered magnetic materials",
+    "file": "problems/189-planar-spin-glass-ground-states.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "f61d866ab9831261b7dc4cd55cd004cb6bb2c4ac87b962e7a6178843e92cbb11",
+    "statement_sha256": "4461ecc366a861eedad9eebbbb559ad70161a6af1c37e028eb4533e1a7569013",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f61d866ab9831261b7dc4cd55cd004cb6bb2c4ac87b962e7a6178843e92cbb11",
+  "statement_sha256": "4461ecc366a861eedad9eebbbb559ad70161a6af1c37e028eb4533e1a7569013",
+  "actual_source_sha256": "f61d866ab9831261b7dc4cd55cd004cb6bb2c4ac87b962e7a6178843e92cbb11",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For each nearest-neighbor edge $`e`$ of $`\\mathbb Z^2`$, sample $`J_e`$ independently from the standard Gaussian distribution. A spin configuration $`\\sigma\\in\\{-1,1\\}^{\\mathbb Z^2}`$ is a ground state if flipping any finite set of spins cannot decrease its energy; explicitly,\n\n```math\n\\sum_{\\{x,y\\}\\in\\partial_E A}J_{\\{x,y\\}}\\sigma_x\\sigma_y\\ge0\n\\quad\\text{for every finite }A\\subset\\mathbb Z^2,\n```\n\nwhere $`\\partial_E A`$ contains edges with exactly one endpoint in $`A`$. Is it almost surely true that the set of all ground states is exactly $`\\{\\sigma,-\\sigma\\}`$ for some $`\\sigma`$? The assertion concerns all infinite-volume ground states, without restricting the boundary conditions used to construct them.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"planar spin glass\" \"ground states\" uniqueness 2026",
+    "\"planar spin glass\" \"ground states\" uniqueness (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"planar spin glass\" \"ground states\" uniqueness (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"2012.11801\" gap ground state uniqueness",
+    "\"Quantitative Disorder Effects\" ground states uniqueness conjecture"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2012.11801v6",
+      "primary_body_access_gap": false,
+      "locator": "Unnumbered main Theorem,Eq8;Proof of Lemma Eq17–19;appended Errata after references",
+      "version_or_date": "arXiv:2012.11801v6,19May2021,currentlatest; final JPSJ90,033002(2021)with appended errata",
+      "scope_comparison": "The target concerns all full-plane Gaussian infinite-volume ground states modulo sign, with arbitrary state construction. Itoi's unchanged title/abstract claims uniqueness in all dimensions, but the latest primary version's appended erratum explicitly restricts the theorem to a finite lattice, removes the L→infinity limit from Eq8, says infinite-volume convergence was assumed in the proof and is not rigorously proved, and leaves RSB unresolved. Thus this is an older claim with acknowledged gap, not a complete matching announcement. Dario–Harel–Peled's2024primary Sections2.3.2/9 retain the full-plane conjecture and prove restricted translation-covariant results. No later repaired full proof was located."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The target concerns all full-plane Gaussian infinite-volume ground states modulo sign, with arbitrary state construction. Itoi's unchanged title/abstract claims uniqueness in all dimensions, but the latest primary version's appended erratum explicitly restricts the theorem to a finite lattice, removes the L→infinity limit from Eq8, says infinite-volume convergence was assumed in the proof and is not rigorously proved, and leaves RSB unresolved. Thus this is an older claim with acknowledged gap, not a complete matching announcement. Dario–Harel–Peled's2024primary Sections2.3.2/9 retain the full-plane conjecture and prove restricted translation-covariant results. No later repaired full proof was located.",
+  "latest_version_check": "arXiv:2012.11801v6,19May2021,currentlatest; final JPSJ90,033002(2021)with appended errata",
+  "gap_retraction_check": "Author's explicit erratum in v6 acknowledges the infinite-volume step is unproved; finite-lattice theorem does not resolve all infinite-volume ground states. v5 was withdrawn; v6 restores manuscript with this erratum.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

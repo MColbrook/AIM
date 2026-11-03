@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "772",
+  "manifest_index": 616,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "772",
+    "title": "Does the universal minimal flow lose information for every nonprecompact group?",
+    "area": "Topological dynamics of continuous symmetry groups",
+    "file": "problems/772-does-the-universal-minimal-flow-lose-information-for-every-nonprecompact-group.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-1ef2d32d41e2dd3d",
+    "group": "geometry-topology",
+    "source_sha256": "4698f29aba8dae31990b04f3d68a062c3eba5a5a06ec7f4c19f32ae6e2d13d08",
+    "statement_sha256": "1cb8ba897604dbabbde14a0b0bcaa57bf4d58104347b5049d8e24dd1839ca7e6",
+    "state": "unreviewed"
+  },
+  "source_sha256": "4698f29aba8dae31990b04f3d68a062c3eba5a5a06ec7f4c19f32ae6e2d13d08",
+  "statement_sha256": "1cb8ba897604dbabbde14a0b0bcaa57bf4d58104347b5049d8e24dd1839ca7e6",
+  "actual_source_sha256": "4698f29aba8dae31990b04f3d68a062c3eba5a5a06ec7f4c19f32ae6e2d13d08",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`G`$ be a Hausdorff topological group. It is *precompact* if, for every identity neighbourhood $`U`$, some finite $`F\\subset G`$ satisfies $`G=FU`$.\n\nUse continuous right actions of $`G`$ on nonempty compact Hausdorff spaces. An *ambit* is such a space with a distinguished point having dense orbit. Let $`(S(G),e)`$ be the greatest ambit: it admits a continuous pointed $`G`$-map onto every ambit. Let $`M(G)`$ be the universal minimal flow; every orbit is dense, and it maps equivariantly onto every minimal compact $`G`$-flow.\n\nFor $`g\\in G`$, put $`R_g(x)=xg`$ on $`M(G)`$, and define\n```math\nE(M(G))=\\overline{\\{R_g:g\\in G\\}}\\ \\subset M(G)^{M(G)},\n```\n\nwhere the closure uses pointwise convergence. Give this space the right action $`(p\\cdot g)(x)=p(x)g`$ and distinguished point $`\\mathrm{id}`$. There is a canonical continuous surjection\n```math\n\\Phi:(S(G),e)\\longrightarrow(E(M(G)),\\mathrm{id}).\n```\n\nIf $`G`$ is not precompact, must $`\\Phi`$ fail to be injective? This is Pestov's conjecture [1, Conjecture1.1]. It concerns the canonical pointed map, rather than an arbitrary homeomorphism of the underlying spaces. No discreteness, local compactness, separability, or metrizability assumption is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "Pestov conjecture greatest ambit universal minimal flow nonprecompact 2026",
+    "Pestov conjecture greatest ambit universal minimal flow nonprecompact 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "Pestov conjecture greatest ambit universal minimal flow nonprecompact 2026 (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Pestov\" \"non-precompact\" solution"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Conjecture1.1 and Theorem1.2, printedp3; Bernoulli disjointness Corollary1.4,p3",
+      "url": "https://emis.de/ft/33933",
+      "version_or_date": "Published CMUC60 (2019),1–24 full PDF inspected; also Bernoulli disjointness author full PDF, January2019, Duke170(2021)",
+      "scope_comparison": "The actual published conjecture is precisely that the canonical map S(G)→E(M(G)) is an isomorphism iff G is precompact. Theorem1.2 covers specified countable-structure automorphism groups. The actual Bernoulli-disjointness corollary proves failure for every infinite discrete group, including uncountable discrete groups, but leaves arbitrary nondiscrete Hausdorff groups outside its assumptions. Recent descriptions of universal minimal flows or other Pestov questions do not assert this canonical-map theorem. No full matching resolution located."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual published conjecture is precisely that the canonical map S(G)→E(M(G)) is an isomorphism iff G is precompact. Theorem1.2 covers specified countable-structure automorphism groups. The actual Bernoulli-disjointness corollary proves failure for every infinite discrete group, including uncountable discrete groups, but leaves arbitrary nondiscrete Hausdorff groups outside its assumptions. Recent descriptions of universal minimal flows or other Pestov questions do not assert this canonical-map theorem. No full matching resolution located.",
+  "latest_version_check": "Published CMUC60 (2019),1–24 full PDF inspected; also Bernoulli disjointness author full PDF, January2019, Duke170(2021)",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

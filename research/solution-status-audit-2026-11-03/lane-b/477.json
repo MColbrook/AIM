@@ -1,0 +1,82 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "477",
+  "manifest_index": 377,
+  "original_target": {
+    "id": "477",
+    "title": "A bounded critical norm continuation criterion for stochastic Navier–Stokes",
+    "area": "Stochastic fluid PDEs; regularity criteria",
+    "file": "problems/477-stochastic-navier-stokes-bounded-critical-norm.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "stochastic3",
+    "source_sha256": "c6bbedf1ae37310e4d99545d2334dcd0323c4f69e6ce6b35efa3939bf3a89ee5",
+    "statement_sha256": "9f977822a2557ff90dfc3311b3241794c4458cdf1ead2bfadc818bc4fd61c66f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "c6bbedf1ae37310e4d99545d2334dcd0323c4f69e6ce6b35efa3939bf3a89ee5",
+  "statement_sha256": "9f977822a2557ff90dfc3311b3241794c4458cdf1ead2bfadc818bc4fd61c66f",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:21:22.639410+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2501.18561v5 Problem11 is the exact sup-vs-limit endpoint question. Actual2607.15140v4 Theorems1.1/4.1 select noise and give probability>1-epsilon on a torus, not arbitrary finitely many compactly supported fields onR3. Ohnishi2026 publisher-indexed actual Theorem3.6 requires a small Gevrey ball onT3 plus assumptions2.1–2.3; excludes target.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2501.18561",
+      "locator": "Problem11, lines3404–3410",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2607.15140v4",
+      "locator": "Theorems1.1 and4.1",
+      "body_inspected": true
+    },
+    {
+      "url": "https://www.sciencepubco.com/index.php/IJAMS/article/download/37129/19916/85097",
+      "locator": "Theorem3.6 p22, publisher-indexed theorem-body extract; full PDF timeout",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"stochastic\" \"bounded critical\" \"Besov\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"37129\" \"Theorem 3.6\" \"torus\""
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "critical Besov",
+        "transport noise",
+        "Agresti"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "critical Besov",
+        "transport noise",
+        "Agresti"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Ohnishi full PDF timed out; only indexed actual theorem extract read. SSRN6555299 body403; torus abstract only, not used as proof."
+  ],
+  "canonical_update_required": false
+}

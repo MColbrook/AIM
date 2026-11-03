@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "639",
+  "manifest_index": 495,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "639",
+    "title": "Sharp complexity of noisy continuous sensing of a Sobolev ellipsoid",
+    "area": "Numerical analysis / information-based complexity",
+    "file": "problems/639-sharp-complexity-of-noisy-continuous-sensing-of-a-sobolev-ellipsoid.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-451423a47a56d254",
+    "group": "numerical-analysis",
+    "source_sha256": "eb8a7297ad1419cd7ecde7acb870f1f3ac2a76d30acd1a66d8a0ef431800487d",
+    "statement_sha256": "33943eccf78ad50e5e4a8e43a39fb77f399de25c76bcfbac47433a85edf3c347",
+    "state": "unreviewed"
+  },
+  "source_sha256": "eb8a7297ad1419cd7ecde7acb870f1f3ac2a76d30acd1a66d8a0ef431800487d",
+  "statement_sha256": "33943eccf78ad50e5e4a8e43a39fb77f399de25c76bcfbac47433a85edf3c347",
+  "actual_source_sha256": "eb8a7297ad1419cd7ecde7acb870f1f3ac2a76d30acd1a66d8a0ef431800487d",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`B=\\{x\\in\\ell_2(\\mathbb N;\\mathbb R):\\|x\\|_2\\le1\\}`$, with its norm topology, and define the compact operator\n\n```math\nD:B\\longrightarrow\\ell_2,\\qquad (Dx)_j=\\frac{x_j}{j}.\n```\n\nAn algorithm makes at most $`n`$ deterministic scalar measurements. For every fixed previous answer vector $`h\\in\\mathbb R^{i-1}`$, its next query $`\\lambda_i(\\cdot;h):B\\to[-1,1]`$ must be continuous. It receives answers satisfying\n\n```math\n|y_i-\\lambda_i(x;y_1,\\ldots,y_{i-1})|\\le\\delta,\n\\qquad i=1,\\ldots,n.\n```\n\nThe errors are adversarial: every answer vector satisfying these inequalities is allowed. The reconstruction $`\\phi:\\mathbb R^n\\to\\ell_2`$ is arbitrary. No continuity in the previous answers, common Lipschitz bound, randomness, or computational cost restriction is imposed.\n\nDefine\n\n```math\ne_n(\\delta)=\\inf_{\\lambda_1,\\ldots,\\lambda_n,\\phi}\n\\sup_{\\substack{x\\in B,\\ y\\in\\mathbb R^n\\\\\n|y_i-\\lambda_i(x;y_1,\\ldots,y_{i-1})|\\le\\delta\\ (1\\le i\\le n)}}\n\\|Dx-\\phi(y)\\|_2.\n```\n\nDetermine the joint order of $`e_n(\\delta)`$ for $`n\\ge1`$ and $`0<\\delta\\le1/2`$, up to positive multiplicative constants independent of **both** $`n`$ and $`\\delta`$. In other words, find an explicit comparison function $`F(n,\\delta)`$ and absolute constants $`0<c\\le C<\\infty`$ such that $`cF(n,\\delta)\\le e_n(\\delta)\\le CF(n,\\delta)`$ throughout that range. No particular formula for $`F`$ is conjectured here.\n\nThe bounds currently available from [1] are\n\n```math\n\\frac{c}{n\\log_2(1/\\delta)}\\le e_n(\\delta)\\le\\frac{C}{n}.\n```\n\nThus the order in $`n`$ is known for each fixed positive noise level. The constants in that comparison do not settle the joint limit as the noise decreases.\n\nThere is also the lower bound $`e_n(\\delta)\\ge2^{-n}`$. Indeed, the adversarial transcript argument in the solution of AIM 553, restricted to the unit sphere in the first $`2^n`$ coordinates, gives an antipodal pair with identical exact answers. On that sphere $`\\|Dx\\|_2\\ge2^{-n}`$. The same pair is admissible with zero measurement error in the noisy model. Together with [1, §5.1], this already gives $`e_n(0)\\asymp2^{-n}`$; the noise-free order is not a new problem in this entry.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"noisy nonlinear information\" \"diagonal\" ellipsoid 2026",
+    "\"noisy nonlinear information\" \"diagonal\" ellipsoid (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00041-026-10249-z",
+      "primary_body_access_gap": false,
+      "scope_comparison": "The publisher body explicitly calls infinite-dimensional diagonal continuous-noisy behavior unknown. Noise-free exponential error, fixed-delta order1/n, finite-rank correction and discontinuous-query entropy bounds do not identify the joint(n,delta) order with uniform constants for D_j=1/j.",
+      "version_or_date": "Published2026; current publisher body inspected",
+      "locator": "Section5.2, equation9 and final paragraph, lines367–403"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The publisher body explicitly calls infinite-dimensional diagonal continuous-noisy behavior unknown. Noise-free exponential error, fixed-delta order1/n, finite-rank correction and discontinuous-query entropy bounds do not identify the joint(n,delta) order with uniform constants for D_j=1/j.",
+  "latest_version_check": "Published2026; current publisher body inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

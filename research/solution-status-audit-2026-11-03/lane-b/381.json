@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 311,
+  "source_sha256": "ab9ad386bd696f2ee5e592431ad10f04ccfb78309d7dbb0c11da78648d005639",
+  "statement_sha256": "4d99d01d5a14966851dd303a2d874287314eaa6e39cf6d042869d8b2617c17b4",
+  "original_target": {
+    "id": "381",
+    "title": "Attainment of the three-dimensional neo-Hookean energy in the regular admissible class",
+    "area": "Nonlinear elasticity; critical-growth energy minimization",
+    "file": "problems/381-neo-hookean-critical-attainment.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "ab9ad386bd696f2ee5e592431ad10f04ccfb78309d7dbb0c11da78648d005639",
+    "statement_sha256": "4d99d01d5a14966851dd303a2d874287314eaa6e39cf6d042869d8b2617c17b4",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "381",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"neo-Hookean\" minimizer attainment 2026 Lavrentiev",
+    "\"neo-Hookean\" \"attainment\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2603.22873v1",
+      "version": "v1 24 March2026; abs page still v1 on3November2026",
+      "locators": "Theorem1.1 equation1.5; Remark following; Theorem4.2",
+      "body_inspected": true,
+      "scope": "Strict gap between infimum on regular class and infimum on its weak closure, under extra H growth bounds; does not show original infimum fails attainment."
+    },
+    {
+      "url": "https://arxiv.org/html/2311.02952",
+      "version": "SIAMJMathAnal56(2024), DOI10.1137/23M1614547; current HTML",
+      "locators": "Section1.2 definitionB and F, Theorem1.1",
+      "body_inspected": true,
+      "scope": "Modified F includes singular inverse derivative on enlarged BV-inverse class. Compactness and lower semicontinuity of F; original regular-class attainment becomes an additional regularity problem."
+    },
+    {
+      "url": "https://arxiv.org/html/2405.12156",
+      "version": "current HTML; PRSEonline2025",
+      "locators": "Theorems2.3,2.4 and homeomorphism-closure corollary",
+      "body_inspected": true,
+      "scope": "Inverse regularity and conclusions require INV or additional admissible-class hypotheses."
+    }
+  ],
+  "registry_checks": "No neo-Hookean alias in Palomar/Hexagon/OpenAI metadata; searched arXiv, CVGMT primary author updates, Zenodo, HAL, GitHub.",
+  "scope_comparison": "Must attain original E in displayed divergence-identity class for every permissible convex H and boundary data. Gap between two infima alone does not refute attainment within the smaller class.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

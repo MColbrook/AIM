@@ -1,0 +1,99 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "993",
+  "manifest_index": 837,
+  "checked_date": "2026-11-03",
+  "source_sha256": "36656e2ba34b70825fa24f61465840cb1546dbb91546a16324c15f4a95153b6e",
+  "statement_sha256": "91ded132b422f2659ff2196b992cf2548cf03e29bdc1e02fa891654719b777d4",
+  "original_target": {
+    "id": "993",
+    "title": "Uniqueness of a reflected rough equation with one scalar input",
+    "area": "Rough paths and constrained dynamics",
+    "file": "problems/993-uniqueness-of-a-reflected-rough-equation-with-one-scalar-input.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0265708709c26efe",
+    "group": "rough-paths-singular-stochastic-equations",
+    "source_sha256": "36656e2ba34b70825fa24f61465840cb1546dbb91546a16324c15f4a95153b6e",
+    "statement_sha256": "91ded132b422f2659ff2196b992cf2548cf03e29bdc1e02fa891654719b777d4",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`d\\ge2`$, $`2<p<3`$, and let $`D\\subset\\mathbb R^d`$ be a bounded connected domain with smooth boundary. Let $`n`$ be its inward unit normal, $`f\\in C_b^\\infty(\\mathbb R^d;\\mathbb R^d)`$, and $`y_0\\in\\overline D`$. Given a continuous scalar path $`x:[0,1]\\to\\mathbb R`$ with $`x_0=0`$ and finite $`p`$-variation, use its canonical scalar enhancement\n\n```math\n\\mathbf X_{s,t}=\\left(x_t-x_s,\\frac12(x_t-x_s)^2\\right).\n```\n\nDoes the normally reflected equation\n\n```math\nY_t=y_0+\\int_0^t f(Y_s)\\,d\\mathbf X_s+K_t,\n\\qquad Y_t\\in\\overline D,\n\\qquad K_0=0,\n\\qquad dK_t=n(Y_t)\\,d|K|_t\n```\n\nhave at most one solution pair $`(Y,K)`$? Here $`K`$ is continuous and has bounded variation; its variation measure is supported on $`\\{t:Y_t\\in\\partial D\\}`$. The continuous path $`Y`$ has finite $`p`$-variation and is controlled by $`x`$ with derivative $`f(Y)`$: the remainder $`Y_t-Y_s-f(Y_s)(x_t-x_s)`$ has finite $`p/2`$-variation. The integral is the usual controlled rough integral, obtained from compensated sums\n\n```math\n\\sum_{[s,t]\\in\\mathcal P}\n\\left(f(Y_s)(x_t-x_s)+\\frac12 Df(Y_s)f(Y_s)(x_t-x_s)^2\\right).\n```\n\nThere is one scalar input and no independent drift or time channel. Zeros and boundary tangencies of $`f`$ are allowed. This is the smooth bounded-domain, step-two part of the broader scalar-driver question in the source.\n\nUniqueness for a one-dimensional **state** is known even with several driving signals. The present question instead has a multidimensional state and a scalar driver. The known multidimensional counterexample uses both a rough scalar signal and an independent bounded-variation input, including in its fixed-time-drift version.",
+  "full_original_page": "# 993. Uniqueness of a reflected rough equation with one scalar input\n\n**Area:** Rough paths and constrained dynamics\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`d\\ge2`$, $`2<p<3`$, and let $`D\\subset\\mathbb R^d`$ be a bounded connected domain with smooth boundary. Let $`n`$ be its inward unit normal, $`f\\in C_b^\\infty(\\mathbb R^d;\\mathbb R^d)`$, and $`y_0\\in\\overline D`$. Given a continuous scalar path $`x:[0,1]\\to\\mathbb R`$ with $`x_0=0`$ and finite $`p`$-variation, use its canonical scalar enhancement\n\n```math\n\\mathbf X_{s,t}=\\left(x_t-x_s,\\frac12(x_t-x_s)^2\\right).\n```\n\nDoes the normally reflected equation\n\n```math\nY_t=y_0+\\int_0^t f(Y_s)\\,d\\mathbf X_s+K_t,\n\\qquad Y_t\\in\\overline D,\n\\qquad K_0=0,\n\\qquad dK_t=n(Y_t)\\,d|K|_t\n```\n\nhave at most one solution pair $`(Y,K)`$? Here $`K`$ is continuous and has bounded variation; its variation measure is supported on $`\\{t:Y_t\\in\\partial D\\}`$. The continuous path $`Y`$ has finite $`p`$-variation and is controlled by $`x`$ with derivative $`f(Y)`$: the remainder $`Y_t-Y_s-f(Y_s)(x_t-x_s)`$ has finite $`p/2`$-variation. The integral is the usual controlled rough integral, obtained from compensated sums\n\n```math\n\\sum_{[s,t]\\in\\mathcal P}\n\\left(f(Y_s)(x_t-x_s)+\\frac12 Df(Y_s)f(Y_s)(x_t-x_s)^2\\right).\n```\n\nThere is one scalar input and no independent drift or time channel. Zeros and boundary tangencies of $`f`$ are allowed. This is the smooth bounded-domain, step-two part of the broader scalar-driver question in the source.\n\nUniqueness for a one-dimensional **state** is known even with several driving signals. The present question instead has a multidimensional state and a scalar driver. The known multidimensional counterexample uses both a rough scalar signal and an independent bounded-variation input, including in its fixed-time-drift version.\n\n## Application\n\nA state constrained by a hard wall can be driven by one irregular control or one external noise realization. Uniqueness would ensure that the prescribed input and initial state determine a single trajectory under normal reflection.\n\n## References\n\n1. P. Gassiat, *Non-uniqueness for reflected rough differential equations*, Annales de l’Institut Henri Poincaré, Probabilités et Statistiques **57**(3) (2021), 1369–1387. [DOI](https://doi.org/10.1214/20-AIHP1121), [primary preprint v2](https://arxiv.org/pdf/2001.11914v2). Remark 2.7(3), PDF p. 6 and its referee footnote, explicitly leave the scalar-driver case open; Assertion $`(A)_{d,m,p}`$ is on PDF p. 2.\n2. S. Aida, *Rough Differential Equations Containing Path-Dependent Bounded Variation Terms*, Journal of Theoretical Probability **37** (2024), 2130–2183. [Published text](https://doi.org/10.1007/s10959-024-01319-3). Remark 2.8(6) distinguishes state dimension from driver dimension; Definition 5.5 and Theorem 5.6 give the nearby existence theory.\n\n## Status review\n\n\n**Known cases:** There is one scalar rough input with its canonical enhancement and no independent drift channel. The known multidimensional nonuniqueness uses a second bounded-variation signal; one-dimensional-state uniqueness is also different.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThere is one scalar rough input with its canonical enhancement and no independent drift channel. The known multidimensional nonuniqueness uses a second bounded-variation signal; one-dimensional-state uniqueness is also different.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nSearches and selected current primary comparisons on 17 October 2026 located no matching resolution. All 22 pages and both figures of the pinned Gassiat v2 were read; parity with the 19-page published version has not been checked. Selected passages of Aida’s 2024 paper were read. The AIM and OpenAI announcement snapshots and existing FURTHER category pages had no equivalent target under the recorded comparisons.\n\nA separate primary scope audit checked the solution class, controlled integral, normal-reflection measure and scalar-input distinction. The complete Prove2Me listing-description comparison returned 74 Skorokhod contexts; every returned context was reviewed, with exact overlaps merged without dropping text. They concern topology, stopping-time embeddings, prescribed-input queueing reflection or other stochastic models, rather than the displayed equation. No matching announcement was located.\n\nThe displayed enhancement is weakly geometric; no assumption that every finite-variation-norm approximation can be taken smooth in the exact $`p`$-variation topology is needed. Current searches and selected later theorem comparisons are bounded and do not certify every external proof. See the [source review](../FURTHER_problems/_tracking/parallel/rough-filtering/scalar-reflected-rde-review.json), [independent audit](../FURTHER_problems/_tracking/parallel/continuum/cross-reflected-rde-review.json) and [catalogue comparison](../FURTHER_problems/_tracking/parallel/rough-filtering/scalar-reflected-rde-prove2-review.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-0265708709c26efe**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "reflected rough",
+    "Gassiat",
+    "scalar driver"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"reflected rough\" \"scalar\" uniqueness 2026"
+    },
+    {
+      "query": "\"reflected rough\" \"scalar\" uniqueness",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2001.11914v2",
+      "locator": "Remark2.7(3), PDFp6 and referee footnote; Theorems2.1–2.2pp3–4"
+    }
+  ],
+  "scope_comparison": "Actual counterexample has rough lambda plus independent increasing gamma (or fixed dt). Remark2.7(3) explicitly leaves scalar-driver uniqueness with boundary tangencies open. The target has no independent time/drift channel and allows tangencies, so neither this counterexample nor non-tangent uniqueness resolves it.",
+  "recommendation": "Retain partial status; no matching complete resolution located in this bounded current search.",
+  "limitations": "Bounded search is not proof of openness. Full original local page retained; shared announcement metadata scanned for aliases, primary scope used for plausible candidates.",
+  "announcement_routing": {
+    "localID": "993",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "reflected rough",
+          "Gassiat",
+          "scalar driver"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "reflected rough",
+          "Gassiat",
+          "scalar driver"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "reflected rough",
+        "Gassiat",
+        "scalar driver"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

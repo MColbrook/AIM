@@ -1,0 +1,77 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "182",
+  "manifest_index": 142,
+  "original_target": {
+    "id": "182",
+    "title": "A single critical activity for the continuum Widom–Rowlinson model",
+    "area": "Probability, continuum statistical mechanics, and phase transitions",
+    "file": "problems/182-a-single-critical-activity-for-the-continuum-widomrowlinson-model.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-4cd0cb59eed5bed5",
+    "group": "stochastic2",
+    "source_sha256": "918149a2db12cb5adafa3f880ca462843bd4f0c79f1d65eddef30040947283d9",
+    "statement_sha256": "8faf4bd7ca4bf5cf4d4ae5034e5c5371d8abc9538605a8a826f502c14dfc2bb3",
+    "state": "unreviewed"
+  },
+  "source_sha256": "918149a2db12cb5adafa3f880ca462843bd4f0c79f1d65eddef30040947283d9",
+  "statement_sha256": "8faf4bd7ca4bf5cf4d4ae5034e5c5371d8abc9538605a8a826f502c14dfc2bb3",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:49:29.118359+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Section 3.2.1 of Dereudre–Houdebert explicitly says the single-threshold symmetric diagonal is unresolved; the sharp theorem fixes beta and varies z. Jahnel–Kamecke Corollary2.2 proves coexistence at sufficiently large activity, not a single transition on z=beta=lambda. Random-field lattice results have a different space and disorder. No new full diagonal uniqueness/nonuniqueness theorem was located.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1807.04988v5",
+      "locator": "Section3.2.1, Proposition3.2, following conjecture; section3.2.2 explicitly disclaims resolving it",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2505.05319v1",
+      "locator": "Theorem2.1 and homogeneous Corollary2.2",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Widom-Rowlinson\" \"critical\" \"uniqueness\" \"2026\"",
+    "\"Widom-Rowlinson\" \"single\" \"threshold\" solution",
+    "\"Widom-Rowlinson\" \"diagonal\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Widom Rowlinson\" \"diagonal\" \"2026\" threshold"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Widom",
+        "Rowlinson"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Widom",
+        "Rowlinson"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

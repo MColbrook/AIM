@@ -1,0 +1,51 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "338",
+  "manifest_index": 276,
+  "source_sha256": "24085a4b99c6f61f1a121dcded34cfd15d5a5f8e6937bed1003ce5e7c7b31472",
+  "statement_sha256": "8ea3a02a0022184d55e1d9ce1b9b7e6d72c2818186b0a1c0b379c212fff14f15",
+  "original_target": {
+    "id": "338",
+    "title": "Decidability of local asymptotic stability for polynomial ODEs",
+    "area": "Nonlinear control and algorithmic verification",
+    "file": "problems/338-polynomial-local-stability-decidability.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: negative",
+    "proof": "https://arxiv.org/pdf/2610.12434v1",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md",
+    "group": "inverse2",
+    "source_sha256": "24085a4b99c6f61f1a121dcded34cfd15d5a5f8e6937bed1003ce5e7c7b31472",
+    "statement_sha256": "8ea3a02a0022184d55e1d9ce1b9b7e6d72c2818186b0a1c0b379c212fff14f15",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "unverified-announcement",
+  "ready_for_parent": true,
+  "recommended_status": "Solved",
+  "answer": "Negative; no total Turing decider for local asymptotic stability.",
+  "required_status_qualification": "Solved on the basis of an unverified announcement, arXiv:2610.12434v1 (8October2026). The full target is claimed; the external proof has not been independently verified here.",
+  "scope_comparison": "Undecidability is claimed on rational homogeneous fields of fixed dimension and odd degree, an effectively encoded subclass. The local target includes Lyapunov stability and forward-complete attraction. Homogeneous scaling phi(t,lambda x)=lambda phi(lambda^(d-1)t,x) makes local asymptotic stability equivalent to GAS by scaling every initial point into the attracting neighbourhood, including completeness. A total local decider would decide this undecidable subclass. Lyapunov stability alone is not substituted for asymptotic stability.",
+  "queries": [
+    "local asymptotic stability polynomial undecidable 2610.12434 correction",
+    "\"2610.12434\" error correction withdrawn",
+    "\"polynomial stability undecidable\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.12434v1",
+      "version": "v1, 8October2026; current abstract history lists only v1",
+      "locator": "§1.1 finite rational encoding; Theorems1.1/1.5; §2.4 identity(2.1); §§13–15",
+      "body_inspected": true
+    }
+  ],
+  "known_gap_check": "Prior local applicability review read. No specific mathematical gap recorded there; whole-proof verification remains outstanding. Current primary history and bounded correction/withdrawal searches found no withdrawal or limitation replacing the full claim.",
+  "verification": "Source-to-target scope review only; no independent whole-proof certification, finite artifact replay or Lean build.",
+  "limitations": [
+    "Bounded searches/version review do not guarantee correctness.",
+    "The user's policy permits Solved with an explicit unverified-announcement qualification."
+  ]
+}

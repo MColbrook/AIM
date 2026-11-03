@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "807",
+  "manifest_index": 651,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "807",
+    "title": "A holomorphic torsion identity for cusped hyperbolic three-manifolds",
+    "area": "Hyperbolic geometry and topological invariants",
+    "file": "problems/807-a-holomorphic-torsion-identity-for-cusped-hyperbolic-three-manifolds.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-7c1a12d538ddaacd",
+    "group": "geometry-topology",
+    "source_sha256": "8bab7f3b8d8f12107e6c40146c471a5712cdb2bc182eba56efc9f20d5111b06a",
+    "statement_sha256": "df369710f629b03e443fa8591f94908775bfc4739d151c39a66f1309147c48fd",
+    "state": "unreviewed"
+  },
+  "source_sha256": "8bab7f3b8d8f12107e6c40146c471a5712cdb2bc182eba56efc9f20d5111b06a",
+  "statement_sha256": "df369710f629b03e443fa8591f94908775bfc4739d151c39a66f1309147c48fd",
+  "actual_source_sha256": "8bab7f3b8d8f12107e6c40146c471a5712cdb2bc182eba56efc9f20d5111b06a",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`M_0`$ be an oriented complete hyperbolic three-manifold of finite volume, with curvature $`-1`$ and $`h\\ge1`$ torus cusps. Choose peripheral bases $`(m_i,l_i)`$. Write $`u=0`$ for the complete point of the local complex deformation space $`D(M_0)`$. For nearby, possibly incomplete structures $`M_u`$, write $`v_i=\\tau_i(u)u_i`$ for the holomorphic peripheral logarithm relation; $`\\mathrm{Im}\\tau_i(0)>0`$.\n\nFor $`n\\ge3`$, let\n\n```math\nT_n(u)=\\mathcal T(M_u,\\rho_u^{\\,2(n-1)},\\{m_i\\}),\n\\qquad E(u)=\\exp(2\\pi f(u)).\n```\n\nHere $`\\rho_u^{\\,k}`$ is the $`k`$th symmetric power of a lift of the holonomy, of dimension $`k+1`$; even $`k`$ makes the representation independent of the lift. The complex Reidemeister torsion uses Park's convention and the homology bases induced by the meridians. The Yoshida function $`f`$ is normalized as in [1, §6.2], with $`\\pi^2f(0)=\\mathrm{Vol}(M_0)+2\\pi^2i\\mathrm{CS}(M_0)`$ modulo $`i\\pi^2\\mathbb Z`$. Thus $`E`$ is the holomorphic, branch-independent function in Theorem 6.2.\n\nUse **exactly** the deformation Zograf product $`F_n(M_u)`$ of [1, equation (6-3)]: it is formed from primitive loxodromic holonomy conjugacy classes deforming loxodromic classes of the complete structure, with factors $`1-q_\\gamma(u)^m`$, $`m\\ge n`$. Newly loxodromic classes are excluded. Its complex-length multiplier at the complete structure is $`q_\\gamma(0)=\\exp[-(\\ell_\\gamma+i\\theta_\\gamma)]`$. This definition does not assert a fixed primitive-class indexing in $`\\pi_1(M_0)`$ under Dehn filling.\n\nSet $`\\eta(\\tau)=e^{\\pi i\\tau/12}\\prod_{m\\ge1}(1-e^{2\\pi im\\tau})`$. **Is there a neighborhood $`V`$ of $`0`$ such that, for every integer $`n\\ge3`$, some constant $`c_{M_0,n}`$ with $`|c_{M_0,n}|=1`$ satisfies**\n\n```math\nT_n(u)^{-12}\\prod_{i=1}^h\\eta(\\tau_i(u))^{-24}\n=c_{M_0,n}\\,E(u)^{6n^2-6n+1}F_n(M_u)^{12}\n\\qquad(u\\in V)?\n```\n\nThe constant may depend on $`M_0,n`$, but not on $`u`$. This is the even symmetric-power conjecture [1, Conjecture 1.2]; the odd representation formula is a separate question.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Park\" \"torsion\" \"Zograf\" cusped 2026 solution",
+    "\"Park\" \"torsion\" \"Zograf\" cusped (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Park\" \"torsion\" \"Zograf\" cusped (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Park\" \"Zograf\" \"conjecture\" 2026"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://msp.org/gt/2019/23-7/gt-v23-n7-p10-p.pdf",
+      "primary_body_access_gap": false,
+      "locator": "Actual Conjecture1.2 p3689,Theorem1.1p3688,Theorem5.2p3721; separate Conjecture8.2p3732",
+      "version_or_date": "FinalGeometryTopology23(2019)3687–3734,30December2019; current focused author/publisher searches3November2026 found no later exact identity.",
+      "scope_comparison": "Conjecture1.2 is precisely even representation2(n−1),eta exponent−24 and productFn^12 over a neighborhood with phase independent of u. Theorem1.1 proves modulus equality at the complete structure; closed Theorem5.2 has no cusps. Neither fixes the deformation-dependent phase. IMPORTANT local status-label correction: final Conjecture8.2 is the ODD representation2n−1 theta-productGn formula, not the even target; even target remains Conjecture1.2 in the final paper. Exact statement preserved unchanged. No matching current full announcement found."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Conjecture1.2 is precisely even representation2(n−1),eta exponent−24 and productFn^12 over a neighborhood with phase independent of u. Theorem1.1 proves modulus equality at the complete structure; closed Theorem5.2 has no cusps. Neither fixes the deformation-dependent phase. IMPORTANT local status-label correction: final Conjecture8.2 is the ODD representation2n−1 theta-productGn formula, not the even target; even target remains Conjecture1.2 in the final paper. Exact statement preserved unchanged. No matching current full announcement found.",
+  "latest_version_check": "FinalGeometryTopology23(2019)3687–3734,30December2019; current focused author/publisher searches3November2026 found no later exact identity.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

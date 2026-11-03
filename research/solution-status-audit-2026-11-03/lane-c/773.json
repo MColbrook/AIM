@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "773",
+  "manifest_index": 617,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "773",
+    "title": "Does hinge comparison alone characterize nonnegative Alexandrov curvature?",
+    "area": "Metric geometry and synthetic curvature",
+    "file": "problems/773-does-hinge-comparison-alone-characterize-nonnegative-alexandrov-curvature.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-1f0bf4e715d8b6b3",
+    "group": "geometry-topology",
+    "source_sha256": "5e5fcecb3ad34874b8088e7b62c9a872e730466fb50c1600c03c0874541419c8",
+    "statement_sha256": "b26ff6805e47061197d623a6e9610eb35654751e916ea5ea1d5e9822edd4d83a",
+    "state": "unreviewed"
+  },
+  "source_sha256": "5e5fcecb3ad34874b8088e7b62c9a872e730466fb50c1600c03c0874541419c8",
+  "statement_sha256": "b26ff6805e47061197d623a6e9610eb35654751e916ea5ea1d5e9822edd4d83a",
+  "actual_source_sha256": "5e5fcecb3ad34874b8088e7b62c9a872e730466fb50c1600c03c0874541419c8",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`(X,d)`$ be a complete geodesic metric space: every pair of points can be joined by a distance-minimizing geodesic. For any $`p,x,y\\in X`$ with $`p\\ne x,y`$, choose any two unit-speed minimizing geodesics\n```math\n\\alpha:[0,a]\\to X,\\qquad \\beta:[0,b]\\to X,\n\\qquad a=d(p,x),\\quad b=d(p,y),\n```\n\nfrom $`p`$ to $`x`$ and $`y`$, respectively. Suppose their joint-limit angle exists:\n```math\n\\theta(\\alpha,\\beta)=\n\\lim_{\\substack{s\\downarrow0\\\\t\\downarrow0}}\n\\arccos\\!\\left(\n\\frac{s^2+t^2-d(\\alpha(s),\\beta(t))^2}{2st}\n\\right).\n```\n\nAssume, for **every such choice** of points and geodesics, that\n```math\n\\theta(\\alpha,\\beta)\\ge\n\\widetilde\\theta_p(x,y):=\n\\arccos\\!\\left(\n\\frac{d(p,x)^2+d(p,y)^2-d(x,y)^2}\n{2d(p,x)d(p,y)}\n\\right).\n```\n\n\nMust $`X`$ have Alexandrov curvature bounded below by zero, denoted $`\\mathrm{CBB}(0)`$? Explicitly, must every $`p,x_1,x_2,x_3\\in X`$ with $`p\\ne x_i`$ satisfy\n```math\n\\widetilde\\theta_p(x_1,x_2)+\n\\widetilde\\theta_p(x_2,x_3)+\n\\widetilde\\theta_p(x_3,x_1)\\le2\\pi?\n```\n\n\nThis is Open Question 8.51 in the current author version of [1]. It already appears as Open Question 7.9.1 in the 2019 first version [2]. The assumptions concern all minimizing-geodesic choices and the actual joint limit, rather than only a limiting upper angle. No local compactness, finite dimension, manifold structure or reference measure is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "hinge comparison Alexandrov curvature question 8.51 2026",
+    "hinge comparison Alexandrov curvature question 8.51 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "hinge comparison Alexandrov curvature question 8.51 2026 (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"hinge comparison\" \"2026\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Theorem8.14(c), OpenQuestion8.51, pp107–108; MarotTheorem1",
+      "url": "https://anton-petrunin.github.io/book/arXiv.pdf",
+      "version_or_date": "Current author book PDF,303pages, inspected3November2026; also Marot2511.08138v4 currentrecordchecked",
+      "scope_comparison": "The current actual Question8.51 retains the hinge-only implication for complete geodesic spaces with all hinge angles defined. The converse in Theorem8.14(c) additionally needs adjacent-angle comparison. Marot's actual theorem assumes a complete surface with bounded integral curvature, a lower curvature-measure condition, and no cusp. Distributional RCD characterizations add finite-dimensional measure/analytic structure. None provides the missing adjacent-angle assertion for this unrestricted metric class; no full matching claim found."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The current actual Question8.51 retains the hinge-only implication for complete geodesic spaces with all hinge angles defined. The converse in Theorem8.14(c) additionally needs adjacent-angle comparison. Marot's actual theorem assumes a complete surface with bounded integral curvature, a lower curvature-measure condition, and no cusp. Distributional RCD characterizations add finite-dimensional measure/analytic structure. None provides the missing adjacent-angle assertion for this unrestricted metric class; no full matching claim found.",
+  "latest_version_check": "Current author book PDF,303pages, inspected3November2026; also Marot2511.08138v4 currentrecordchecked",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "567",
+  "manifest_index": 440,
+  "original_target": {
+    "id": "567",
+    "title": "Perfect Lee codes beyond dimension two",
+    "area": "Coding theory and discrete geometry",
+    "file": "problems/567-golomb-welch.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "optimization-information",
+    "source_sha256": "82393ae8d1c7e465a62baff7b164f8be0dd7e1ea5b8e5d76e983de3ef630cc51",
+    "statement_sha256": "fc7be6e928d2f233a088fd0d292feefd717dc2e839a43008ced24efdde886b33",
+    "state": "unreviewed"
+  },
+  "source_sha256": "82393ae8d1c7e465a62baff7b164f8be0dd7e1ea5b8e5d76e983de3ef630cc51",
+  "statement_sha256": "fc7be6e928d2f233a088fd0d292feefd717dc2e839a43008ced24efdde886b33",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:59:51.236151+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "recommended_status": "Solved",
+  "scope_comparison": "Equation1 and Theorem1.1 exclude the exact arbitrary-center Lee-ball tiling for all n>=3,r>=2, with no lattice, periodicity or density assumption. Final section5.6 claims exhaustion of every remaining parameter range. The lattice-only companion is not the basis for this full match.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.34291v1",
+      "locator": "Equation1, Theorem1.1, Lemma2.1 and section5.6 proof completion;25October2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.34291",
+      "locator": "Current v1 only, no withdrawal or later revision",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Golomb Welch\" solution proof 2026 nonlinear",
+    "\"Golomb Welch\" proof [domains arxiv.org,zenodo.org,hal.science,github.com]",
+    "\"2610.34291\" gap error",
+    "\"Chen\" \"Huang\" \"Luo\" \"arbitrary centre sets\" correction"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Golomb",
+        "Lee code"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Golomb",
+        "Lee code"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00316v2",
+          "title": "Tools for proving that graphs are not graceful"
+        },
+        {
+          "id": "hexagon:2610.00317v1",
+          "title": "No lattice tiling of $\\mathbb{Z}^{35}$ or $\\mathbb{Z}^{805}$ by Lee balls of radius three"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Theorem scope and completion route inspected independently by root and lane-b; no independent line-by-line proof or Lean verification."
+  ],
+  "canonical_update_required": true,
+  "new_discovery": true,
+  "full_match_type": "unverified-announcement",
+  "required_status_qualification": "Complete solution announced; proof not independently verified in this audit.",
+  "root_scope_check": true
+}

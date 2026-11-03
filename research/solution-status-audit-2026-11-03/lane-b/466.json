@@ -1,0 +1,69 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "466",
+  "manifest_index": 370,
+  "original_target": {
+    "id": "466",
+    "title": "Multidimensional weak uniqueness for porous-medium flow with fractional pressure",
+    "area": "Nonlocal PDEs; porous-medium transport",
+    "file": "problems/466-fractional-pressure-pme-multidimensional-uniqueness.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "9006abc2da329b5918a5755cfb022eb765842edcb491f670143e15cbe834f695",
+    "statement_sha256": "8241f4fd34cb1723566efb00be86d615fdc6dde8267a3f8fd055b6c14f776332",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9006abc2da329b5918a5755cfb022eb765842edcb491f670143e15cbe834f695",
+  "statement_sha256": "8241f4fd34cb1723566efb00be86d615fdc6dde8267a3f8fd055b6c14f776332",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:17:43.556297+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The actual2025 gradient-flow Theorem1.1 proves uniqueness of discrete minimizers followed by subsequential convergence. It is not uniqueness of all multidimensional continuous bounded energy weak PDE solutions. No full matching result located.",
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00526-025-02942-6",
+      "locator": "Theorem1.1, discrete minimization and subsequential limit",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "Lévy-type pressure",
+    "nonlocal pressure"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Lévy-type pressure",
+        "nonlocal pressure"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Lévy-type pressure",
+        "nonlocal pressure"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

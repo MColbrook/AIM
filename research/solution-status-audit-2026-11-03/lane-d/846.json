@@ -1,0 +1,115 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "846",
+  "manifest_index": 690,
+  "checked_date": "2026-11-03",
+  "source_sha256": "2e79ff9932247fc9ecdf7bbccbe4b5cc61283be808798c161edbbb591644936c",
+  "statement_sha256": "737f6fe9398b4bda7e17e51cefd0ca1fd2fb95dba16f701bc4c993cb98c86cf8",
+  "original_target": {
+    "id": "846",
+    "title": "Maximal extensions of fine moduli spaces of coherent sheaves",
+    "area": "Complex algebraic geometry",
+    "file": "problems/846-maximal-extensions-of-fine-moduli-spaces-of-coherent-sheaves.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-d00c0c7438adaa8f",
+    "group": "geometry-topology",
+    "source_sha256": "2e79ff9932247fc9ecdf7bbccbe4b5cc61283be808798c161edbbb591644936c",
+    "statement_sha256": "737f6fe9398b4bda7e17e51cefd0ca1fd2fb95dba16f701bc4c993cb98c86cf8",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix a smooth irreducible projective complex variety $`X`$, a very ample line bundle on $`X`$, a rank $`r\\ge0`$, and Chern classes. Consider nonempty classes $`\\mathcal S`$ of isomorphism classes of coherent sheaves with these invariants. Call $`\\mathcal S`$ **open** if, in every flat algebraic family with those invariants, the locus of fibers belonging to $`\\mathcal S`$ is Zariski open.\n\nA **global fine moduli variety** for $`\\mathcal S`$ means an integral algebraic variety $`M`$ with a coherent sheaf $`\\mathcal E`$ on $`M\\times X`$, flat over $`M`$, such that:\n\n1. Its fibers classify $`\\mathcal S`$ bijectively on closed points.\n2. Every flat family $`\\mathcal F`$ of members of $`\\mathcal S`$ over an algebraic variety $`T`$ induces a morphism $`f:T\\to M`$. Around each point of $`T`$, the family $`\\mathcal F`$ is isomorphic to the pullback $`(f\\times\\mathrm{id}_X)^*\\mathcal E`$.\n\nThe family $`\\mathcal E`$ exists globally on $`M\\times X`$; the pullback identifications are only required Zariski-locally on $`T`$. Use the source's category of integral algebraic varieties, with the usual finite-type and separated conventions.\n\n**Does every open class $`\\mathcal S`$ admitting a global fine moduli variety lie in a maximal such open class $`\\mathcal S_{\\max}`$, with the same $`X`$, rank and Chern classes?** Here maximal means that no strictly larger open class admits a global fine moduli variety.\n\nThe parameter variety need not be proper or projective, and the sheaves need not be stable or simple. Maximality is inclusion of sheaf classes. The separately asked existence of an infinite strictly increasing chain is not asserted equivalent to this question. An increasing union need not itself have a finite-type fine moduli variety.",
+  "full_original_page": "# 846. Maximal extensions of fine moduli spaces of coherent sheaves\n\n**Area:** Complex algebraic geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix a smooth irreducible projective complex variety $`X`$, a very ample line bundle on $`X`$, a rank $`r\\ge0`$, and Chern classes. Consider nonempty classes $`\\mathcal S`$ of isomorphism classes of coherent sheaves with these invariants. Call $`\\mathcal S`$ **open** if, in every flat algebraic family with those invariants, the locus of fibers belonging to $`\\mathcal S`$ is Zariski open.\n\nA **global fine moduli variety** for $`\\mathcal S`$ means an integral algebraic variety $`M`$ with a coherent sheaf $`\\mathcal E`$ on $`M\\times X`$, flat over $`M`$, such that:\n\n1. Its fibers classify $`\\mathcal S`$ bijectively on closed points.\n2. Every flat family $`\\mathcal F`$ of members of $`\\mathcal S`$ over an algebraic variety $`T`$ induces a morphism $`f:T\\to M`$. Around each point of $`T`$, the family $`\\mathcal F`$ is isomorphic to the pullback $`(f\\times\\mathrm{id}_X)^*\\mathcal E`$.\n\nThe family $`\\mathcal E`$ exists globally on $`M\\times X`$; the pullback identifications are only required Zariski-locally on $`T`$. Use the source's category of integral algebraic varieties, with the usual finite-type and separated conventions.\n\n**Does every open class $`\\mathcal S`$ admitting a global fine moduli variety lie in a maximal such open class $`\\mathcal S_{\\max}`$, with the same $`X`$, rank and Chern classes?** Here maximal means that no strictly larger open class admits a global fine moduli variety.\n\nThe parameter variety need not be proper or projective, and the sheaves need not be stable or simple. Maximality is inclusion of sheaf classes. The separately asked existence of an infinite strictly increasing chain is not asserted equivalent to this question. An increasing union need not itself have a finite-type fine moduli variety.\n\n## Application\n\nFine moduli varieties organize algebraic families through a universal sheaf. The question asks whether every such family can be enlarged to a maximal parameter space, including families outside the usual stability constructions.\n\n## References\n\n1. J.-M. Drézet, *Variétés de modules alternatives*, Annales de l'Institut Fourier 49(1) (1999), 57–139, [DOI](https://doi.org/10.5802/aif.1669). The published introduction, Question 1, and Section 2.6 ask the problem. The [author revision](https://webusers.imj-prg.fr/~jean-marc.drezet/papers/altern.pdf), Question 1 on p. 4, Definitions 3 and 5 on p. 7, and Section 2.6 on p. 13, retains the exact model and question.\n2. J.-M. Drézet, *Exotic fine moduli spaces of coherent sheaves*, [author note](https://www.impan.pl/~pragacz/download/drezet1.pdf), Sections 2.1 and 5.1. Its terminology distinguishes locally defined families from a global universal family; its maximal examples do not give the general extension theorem.\n\n## Status review\n\n\n**Known cases:** Special maximal fine-moduli constructions do not imply that every open fine-moduli class has a maximal extension. Taking an increasing union need not preserve finite type or a global universal sheaf. No matching general extension theorem or counterexample was located.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nSpecial maximal fine-moduli constructions do not imply that every open fine-moduli class has a maximal extension. Taking an increasing union need not preserve finite type or a global universal sheaf. No matching general extension theorem or counterexample was located.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe original question and its definitions were read directly and received a separate model check. Current searches for maximal-extension theorems, counterexamples and announced solutions found no matching complete resolution as of the check date. Later constructions on particular varieties or nonreduced multiple schemes do not establish the stated general extension claim.\n\nAll-status AIM/OpenAI entries and the developing collection were compared semantically. Numerical Chern-character questions, stability-condition constructions and cohomology of Higgs moduli spaces ask different questions. The [coordinating review](../FURTHER_problems/_tracking/B-AIF1669-maximal-fine-moduli-source-current-gate-20261029/ROOT-FINAL-GLOBAL-FINE-MAXIMAL-EXTENSION-PRIMARY-CURRENT-SEMANTIC-REVIEW.json) records the comparisons and access limits. The author revision and published article have different lengths; byte or whole-body parity is not claimed.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-d00c0c7438adaa8f**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "source_gaps": [
+    "Exact original Question1 locator and later primitive-multiple-scheme theorem bodies incomplete."
+  ],
+  "queries": [
+    "\"Drezet\" \"maximal\" \"fine moduli\" question solution",
+    "\"maximal\" \"fine moduli\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://webusers.imj-prg.fr/~jean-marc.drezet/papers/altern.pdf",
+      "locator": "Introduction; definition of global versus local fine moduli; author revision",
+      "inspection": "Read opening definitions and construction descriptions. Retrieved text locator for Question 1 did not resolve; exact question body still needs page-specific inspection."
+    },
+    {
+      "url": "https://hal.science/hal-03588709/document",
+      "locator": "search routing only",
+      "inspection": "Later primitive-multiple-scheme moduli constructions concern special spaces; theorem bodies not inspected."
+    }
+  ],
+  "scope_comparison": "Target is maximal extension for every open coherent-sheaf class with fixed invariants and global universal family on integral finite-type separated parameter variety. Existence of special maximal examples is not universal extension; infinite union does not automatically preserve finite type.",
+  "rationale": "No full candidate identified, but exact primary question locator and later-result body remain incomplete; retain hold.",
+  "announcement_routing": {
+    "localID": "846",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "fine moduli",
+          "Drezet"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "fine moduli",
+          "Drezet"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "fine moduli",
+        "Drezet"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target.",
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:30:43.553Z",
+      "previous_outcome": "hold",
+      "localID": "846",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "sources": [
+        {
+          "url": "https://webusers.imj-prg.fr/~jean-marc.drezet/papers/altern.pdf",
+          "locator": "Questions 1, physical page 4, lines 167–171; Section 2.6 physical page 13, lines 625–634"
+        },
+        {
+          "url": "https://arxiv.org/abs/2202.12569",
+          "version": "v3, 10 January 2026",
+          "locator": "primary abstract"
+        }
+      ],
+      "comparison": "Exact original question and maximality definition are now read. The latest primitive-multiple-scheme result changes the underlying scheme from X_n to X_(n+1) and assumes extension hypotheses; it does not maximally enlarge every open class of sheaves on one fixed variety with a global universal family. Earlier source gap is closed, and no full candidate was found."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

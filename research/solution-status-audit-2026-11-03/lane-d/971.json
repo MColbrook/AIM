@@ -1,0 +1,216 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "971",
+  "manifest_index": 815,
+  "checked_date": "2026-11-03",
+  "source_sha256": "c56a695d9e32c2e3bbc63ce116e9cd12ad9d7cf9efd7da7a9e8c33f2942a04f4",
+  "statement_sha256": "73a9f2ce04028fdf34108c6136d80ebab4b3962a18be75e7c8c048a0651c27f4",
+  "original_target": {
+    "id": "971",
+    "title": "Three-fold complete mixability of a planar convex body's uniform law",
+    "area": "Probability, coupling and convex geometry",
+    "file": "problems/971-three-fold-complete-mixability-of-a-planar-convex-body-s-uniform-law.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-277fb00b925fc5fd",
+    "group": "probability-statistics",
+    "source_sha256": "c56a695d9e32c2e3bbc63ce116e9cd12ad9d7cf9efd7da7a9e8c33f2942a04f4",
+    "statement_sha256": "73a9f2ce04028fdf34108c6136d80ebab4b3962a18be75e7c8c048a0651c27f4",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`C\\subset\\mathbb R^2`$ be any compact convex set with nonempty interior. Write $`U_C`$ for its uniform probability law and $`b_C`$ for its centroid:\n\n```math\nU_C(A)=\\frac{|A\\cap C|}{|C|},\\qquad\nb_C=\\frac1{|C|}\\int_C x\\,dx.\n```\n\nHere $`|\\cdot|`$ denotes planar Lebesgue area. Does there always exist a Borel probability measure $`H`$ on $`C^3`$ with all three coordinate marginals equal to $`U_C`$ and\n\n```math\nH\\{(x_1,x_2,x_3):x_1+x_2+x_3=3b_C\\}=1?\n```\n\nEquivalently, can three dependent points, each uniform on $`C`$, always have an exactly constant sum? The value of that sum is forced by taking expectations. No independence, deterministic transport, boundary smoothness or symmetry is required.\n\nThis is the planar, three-fold case of Wang's Open Problem 5. The source asks the broader question in every dimension $`d`$, with every number of points $`n\\ge d+1`$. This entry does not assert that the planar three-fold case is equivalent to that entire programme.",
+  "full_original_page": "# 971. Three-fold complete mixability of a planar convex body's uniform law\n\n**Area:** Probability, coupling and convex geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`C\\subset\\mathbb R^2`$ be any compact convex set with nonempty interior. Write $`U_C`$ for its uniform probability law and $`b_C`$ for its centroid:\n\n```math\nU_C(A)=\\frac{|A\\cap C|}{|C|},\\qquad\nb_C=\\frac1{|C|}\\int_C x\\,dx.\n```\n\nHere $`|\\cdot|`$ denotes planar Lebesgue area. Does there always exist a Borel probability measure $`H`$ on $`C^3`$ with all three coordinate marginals equal to $`U_C`$ and\n\n```math\nH\\{(x_1,x_2,x_3):x_1+x_2+x_3=3b_C\\}=1?\n```\n\nEquivalently, can three dependent points, each uniform on $`C`$, always have an exactly constant sum? The value of that sum is forced by taking expectations. No independence, deterministic transport, boundary smoothness or symmetry is required.\n\nThis is the planar, three-fold case of Wang's Open Problem 5. The source asks the broader question in every dimension $`d`$, with every number of points $`n\\ge d+1`$. This entry does not assert that the planar three-fold case is equivalent to that entire programme.\n\n## Application\n\nConstant-sum couplings express an extreme form of negative dependence, useful in variance reduction and risk aggregation. For this geometric question, three individually uniform samples would have a sample mean exactly equal to the body's centroid.\n\n## References\n\n1. Ruodu Wang, [*Current open questions in complete mixability*](https://arxiv.org/abs/1411.6190v3), Definitions 1–3 and Section 2.5, Open Problem 5, physical pp. 3–4 and 16–17 of the inspected 24-page version. Published in Probability Surveys **12** (2015), 13–32, [DOI 10.1214/14-PS250](https://doi.org/10.1214/14-PS250). Final-edition body parity remains pending; the served arXiv version's header and internal date differ, as recorded in the source review.\n2. Ruodu Wang, [author's working-paper guide to joint mixability and negative dependence](https://www.math.uwaterloo.ca/~wang/pages/WPS3.html), especially WP08 and the later results on other questions in the survey.\n3. Peter Keevash and Jeck Lim, [*On the largest sum-free subset of the lattice cube*](https://arxiv.org/html/2605.00816v1), Definitions 1.2–1.3 and Theorem 1.5 (2026). This comparison concerns uniform measures on cube slices.\n4. Andrzej Komisarski and Jacques Labuschagne, [*The Distributions of the Mean of Random Vectors with Fixed Marginal Distribution*](https://doi.org/10.1007/s10959-023-01277-2), abstract and Theorem 1. This comparison constructs a common marginal rather than prescribing the uniform law of an arbitrary convex body.\n\n## Status review\n\n\n**Known cases:** A prescribed uniform law on an arbitrary planar convex body must admit three marginals with constant vector sum. Scalar mixability and cube-slice or constructed-marginal results do not establish this.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nA prescribed uniform law on an arbitrary planar convex body must admit three marginals with constant vector sum. Scalar mixability and cube-slice or constructed-marginal results do not establish this.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nNo matching complete resolution or announced solution was located in the recorded bounded checks. Triangles have an elementary construction: cyclically permute a uniform point's barycentric coordinates. Disks have a construction using rotations by $`120`$ degrees; affine transformations give ellipses.\n\nThe source observes that each one-dimensional projection of a planar convex body's uniform law has a concave density and can be mixed separately. Those separate couplings need not come from a compatible joint law of planar points. A generic triangulation also produces different triangle centroids, so combining its couplings does not automatically give the required constant sum.\n\nThe newer cube-slice coupling result applies to a particular family of measures, often with distinct marginals. The result allowing averages to have arbitrary distributions chooses its common marginal. Neither inspected statement proves the displayed assertion for a prescribed arbitrary $`U_C`$.\n\nThe [source review](../FURTHER_problems/_tracking/parallel/rough-filtering/planar-convex-uniform-three-mixability-review.json), [independent selected audit](../FURTHER_problems/_tracking/parallel/complex-bayesian/cross-planar-convex-three-mixability-review.json), [current comparisons](../FURTHER_problems/_tracking/convex-body-mixability-current-comparisons-2026-10-19.json), [semantic comparison](../FURTHER_problems/_tracking/convex-body-mixability-duplicates-review-2026-10-19.json), [split catalogue review](../FURTHER_problems/_tracking/convex-body-mixability-catalogue-review-2026-10-19.json) and [coordinator review](../FURTHER_problems/_tracking/convex-body-mixability-coordinator-review-2026-10-19.json) record the checks and their limits. These are AI checks, not human peer review.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-277fb00b925fc5fd**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "mixability",
+    "convex body",
+    "Wang"
+  ],
+  "queries": [
+    "\"complete mixability\" \"convex body\" three",
+    "\"complete mixability\" \"convex body\" three; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"complete mixability\" convex Wang"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1411.6190v3",
+      "locator": "OpenProblem5/section2.5 nativepp16–17 lines825–854",
+      "comparison": "Source explicitly distinguishes all planar projection mixings from compatible vector-valued constant-sum coupling. Author's current working-paper guide lists scalar concave-density results, not prescribed uniform laws on all planar convex bodies. Cube-slice and chosen-common-marginal results change feasible laws."
+    }
+  ],
+  "rationale": "Source explicitly distinguishes all planar projection mixings from compatible vector-valued constant-sum coupling. Author's current working-paper guide lists scalar concave-density results, not prescribed uniform laws on all planar convex bodies. Cube-slice and chosen-common-marginal results change feasible laws.",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary statements inspected, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "971",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "mixability",
+          "convex body",
+          "Wang"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-11-01-000009",
+            "title": "A formal proof of an affine reverse Faber-Krahn inequality",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-11-01-000009-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-27-000004",
+            "title": "A proof of Kroó’s conjecture",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-27-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000005",
+            "title": "Formalization of a sharp cone square-function estimate via superorthogonality",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000005-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-15-000005",
+            "title": "Wagner's planarity criterion and list colouring of planar and K5-minor-free graphs",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-15-000005-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-13-000003",
+            "title": "Optimality and uniqueness of Romik's ambidextrous sofa, formalized in Lean 4",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-13-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-01-000002",
+            "title": "A Short Proof of Ball's Plank Theorem",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-01-000002-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-25-000027",
+            "title": "MAF composition criteria, exact enumeration of child-selection autocatalytic cores, and degradation regions of linear diluted source networks",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-25-000027-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-20-000008",
+            "title": "Erdős 973: power sums cannot all be exponentially small",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-20-000008-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-18-000009",
+            "title": "A convex body variant of Soberon's counterexample to the Grünbaum conjecture.",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-18-000009-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-18-000005",
+            "title": "Yu-Wang-Samworth 2015: population-gap eigenspace and singular-subspace perturbation bounds",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-18-000005-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "mixability",
+          "convex body",
+          "Wang"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2611.00014v1",
+            "title": "The Möbius pseudodistance of the annulus and an improved lower bound for Korenblum's constant",
+            "url": "https://hexagonmath.org/abs/2611.00014v1"
+          },
+          {
+            "id": "hexagon:2611.00013v1",
+            "title": "Projected stated (SL_n)-skein algebras and the Huang–Wang conjectures",
+            "url": "https://hexagonmath.org/abs/2611.00013v1"
+          },
+          {
+            "id": "hexagon:2610.00696v3",
+            "title": "A contact and coefficient correction for Korenblum's constant",
+            "url": "https://hexagonmath.org/abs/2610.00696v3"
+          },
+          {
+            "id": "hexagon:2610.00579v1",
+            "title": "Analytic q-inequalities and a proof of Bergeron's conjecture",
+            "url": "https://hexagonmath.org/abs/2610.00579v1"
+          },
+          {
+            "id": "hexagon:2610.00548v1",
+            "title": "The rank of 3×3 matrix multiplication over F2 is 23",
+            "url": "https://hexagonmath.org/abs/2610.00548v1"
+          },
+          {
+            "id": "hexagon:2610.00536v1",
+            "title": "Illumination of complex convex bodies",
+            "url": "https://hexagonmath.org/abs/2610.00536v1"
+          },
+          {
+            "id": "hexagon:2610.00459v1",
+            "title": "All $\\tau_k$-maximal graphs have the same size",
+            "url": "https://hexagonmath.org/abs/2610.00459v1"
+          },
+          {
+            "id": "hexagon:2610.00327v1",
+            "title": "A Three-Polynomial Counterexample to the Generalized Effective Hypercube Nullstellensatz",
+            "url": "https://hexagonmath.org/abs/2610.00327v1"
+          },
+          {
+            "id": "hexagon:2610.00165v1",
+            "title": "Multi-coverings by lattice translates of convex bodies",
+            "url": "https://hexagonmath.org/abs/2610.00165v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "mixability",
+        "convex body",
+        "Wang"
+      ],
+      "hits": [
+        {
+          "entry": "092",
+          "title": "The optimal order of convex-body covering density",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-single-lattice-covering-bound-of-order-n-log-n-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Translative-covering-densities-of-order-n-log-n-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "360",
+          "title": "Villani’s convexity conjecture and regular optimal transport",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Global-Support-and-Convex-Injectivity-Domains-under-Weak-MTW-September-25-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Uniform-Bi-Holder-Transport-from-Weak-MTW-September-25-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "374",
+          "title": "Sharp one-third stability of optimal transport maps",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Sharp-One-Third-Stability-of-Brenier-Maps-September-25-2026/article.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Convex-body mass partitions by four hyperplanes in R4, plank/lattice-covering/illumination bounds and Faber–Krahn estimates do not produce a THREE-MARGINAL coupling of a planar uniform convex-body law with fixed sum. OpenAI360 assumes closed weak-MTW manifolds and concerns transport-map regularity; OpenAI374 is stability of two-marginal Brenier maps. Other graph, skein, q-polynomial and matrix-rank hits are unrelated.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.743Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

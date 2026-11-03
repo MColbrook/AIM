@@ -1,0 +1,71 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "119",
+  "manifest_index": 91,
+  "original_target": {
+    "id": "119",
+    "title": "Local scalar geodesic tomography on smooth surfaces",
+    "area": "Geometric inverse problems / local tomography",
+    "file": "problems/119-local-ray-injectivity-surfaces.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse2",
+    "source_sha256": "39ffad04f29bb01b2542a16bb2181266d76f04d6d3d931c193ceeb3275bd9b35",
+    "statement_sha256": "340ab64915f6ca1654c93a7fbe40e9f34a689f13d408547ecce908223d9b9b7c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "39ffad04f29bb01b2542a16bb2181266d76f04d6d3d931c193ceeb3275bd9b35",
+  "statement_sha256": "340ab64915f6ca1654c93a7fbe40e9f34a689f13d408547ecce908223d9b9b7c",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:55:51.086184+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The primary book §15.1 Openproblem1 is exactly the local shallow-ray smooth-surface scalar question. Uhlmann–Vasy's local result assumes dimension>=3, while flat/analytic special cases do not establish arbitrary smooth metrics in dimension2. Instability of Lorentzian light-ray transforms changes both equation and geometry.",
+  "primary_sources": [
+    {
+      "url": "https://www.dpmms.cam.ac.uk/~gpp24/GIP2D_driver.pdf",
+      "locator": "§15.1 printed p338, Openproblem1; extracted primary text inspected.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "local geodesic",
+    "local tomography",
+    "ray transform"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "local geodesic",
+        "local tomography",
+        "ray transform"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "local geodesic",
+        "local tomography",
+        "ray transform"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches of arXiv, Zenodo, HAL, GitHub plus shared current Palomar, Hexagon and OpenAI metadata, and requested Colbrook author lists.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

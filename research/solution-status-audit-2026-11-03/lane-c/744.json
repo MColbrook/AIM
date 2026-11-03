@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "744",
+  "manifest_index": 588,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "744",
+    "title": "Global strong electrodiffusion with unequal ionic diffusivities",
+    "area": "Electrochemistry and fluid transport",
+    "file": "problems/744-global-strong-electrodiffusion-with-unequal-ionic-diffusivities.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-00526cc3d22a73c4",
+    "group": "electrochemistry-energy-storage",
+    "source_sha256": "40556a5487a04d4a2c7a0f0b0ad63d39bcac55c05f6951c7f94c63e8f241ac45",
+    "statement_sha256": "658b5d631bbdda37328cba4fcc8d997ba5c25e75def521bc245cc917f56503c4",
+    "state": "unreviewed"
+  },
+  "source_sha256": "40556a5487a04d4a2c7a0f0b0ad63d39bcac55c05f6951c7f94c63e8f241ac45",
+  "statement_sha256": "658b5d631bbdda37328cba4fcc8d997ba5c25e75def521bc245cc917f56503c4",
+  "actual_source_sha256": "40556a5487a04d4a2c7a0f0b0ad63d39bcac55c05f6951c7f94c63e8f241ac45",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^3`$ be any bounded connected domain with smooth boundary. Fix an integer $`m\\ge3`$, charges $`z_i\\in\\{-1,1\\}`$ with both signs present, and arbitrary positive constants $`D_i,\\epsilon,\\nu,K`$. The diffusivities $`D_i`$ need not be equal.\n\nPrescribe smooth time independent boundary concentrations $`\\gamma_i>0`$ and voltage $`W`$. For smooth strictly positive initial concentrations $`c_{i,0}`$ with $`c_{i,0}|_{\\partial\\Omega}=\\gamma_i`$, and a smooth divergence free initial velocity $`u_0`$ vanishing on the boundary, consider\n\n```math\n\\begin{aligned}\n\\partial_t c_i+u\\cdot\\nabla c_i\n &=D_i\\nabla\\cdot(\\nabla c_i+z_ic_i\\nabla\\Phi),\\qquad i=1,\\ldots,m,\\\\\n-\\epsilon\\Delta\\Phi&=\\rho:=\\sum_{i=1}^m z_i c_i,\\\\\n\\partial_tu-\\nu\\Delta u+\\nabla p&=-K\\rho\\nabla\\Phi,\\qquad \\nabla\\cdot u=0,\n\\end{aligned}\n```\n\nwith $`c_i=\\gamma_i`$, $`\\Phi=W`$ and $`u=0`$ on $`\\partial\\Omega`$.\n\nDoes the unique local strong solution extend to every finite time? Here, writing\n\n```math\nV=\\{v\\in H^1_0(\\Omega;\\mathbb R^3):\\nabla\\cdot v=0\\},\n```\n\nrequire, for every $`T<\\infty`$,\n\n```math\n\\begin{aligned}\nc_i&\\ge0,\\qquad\nc_i\\in L^\\infty(0,T;H^1(\\Omega))\\cap L^2(0,T;H^2(\\Omega)),\\\\\nu&\\in L^\\infty(0,T;V)\\cap L^2(0,T;H^2(\\Omega;\\mathbb R^3)\\cap V).\n\\end{aligned}\n```\n\nThe equations hold in distributions, boundary conditions in the trace sense, and initial data as time traces. At each time the displayed Dirichlet Poisson problem determines $`\\Phi`$; pressure is defined up to a function of time. No bound uniform as $`T\\to\\infty`$ or $`\\epsilon\\to0`$ is requested.\n\nThe source explicitly raises global smoothness for the general three dimensional Stokes coupling. Its Theorem 2 gives the continuation criterion $`\\int_0^T\\|\\rho(t)\\|_{L^2}^4\\,dt<\\infty`$. Theorems 3 and 4 establish global existence for two oppositely charged species with arbitrary diffusivities, and for arbitrarily many unit charge species with a common diffusivity. The question above retains unit charges and asks to remove the common diffusivity restriction for mixtures.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Nernst Planck\" \"unequal diffusivities\" \"global\" 2026 Stokes",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"Nernst\" \"unequal\" diffusivities",
+    "site:palomar-registry.org OR site:hexagonmath.org \"Nernst\" \"diffusivities\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://web.math.princeton.edu/~const/cilfin.pdf",
+      "primary_body_access_gap": false,
+      "scope_comparison": "Actual reservoir theorem treats m2 arbitrary diffusivity or arbitrary m common diffusivity. Local m>=3 arbitrary unequal Di not covered by its cubic-dissipation argument. Xu's claim is whole-space with every ionic diffusion coefficient normalized1; it does not match arbitrary bounded reservoir boundary/unequal diffusivity. New two-dimensional Couette stability is also two species and small perturbations. No full matching announcement located.",
+      "locator": "Introductionp2; Definition1/Theorems2–4; Xuequations1.1–1.6",
+      "version_or_date": "Final author manuscript ARMA240(2021)1147–1168; Xu2404.16433v5,11January2026 inspected"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual reservoir theorem treats m2 arbitrary diffusivity or arbitrary m common diffusivity. Local m>=3 arbitrary unequal Di not covered by its cubic-dissipation argument. Xu's claim is whole-space with every ionic diffusion coefficient normalized1; it does not match arbitrary bounded reservoir boundary/unequal diffusivity. New two-dimensional Couette stability is also two species and small perturbations. No full matching announcement located.",
+  "latest_version_check": "Final author manuscript ARMA240(2021)1147–1168; Xu2404.16433v5,11January2026 inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

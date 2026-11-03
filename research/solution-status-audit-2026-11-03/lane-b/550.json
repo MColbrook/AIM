@@ -1,0 +1,75 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "550",
+  "manifest_index": 429,
+  "original_target": {
+    "id": "550",
+    "title": "Perfect recovery threshold for unregularized quadratic-network training",
+    "area": "High-dimensional statistics and nonconvex learning",
+    "file": "problems/550-quadratic-network-recovery-threshold.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "probability-statistics",
+    "source_sha256": "f676aef0118bfa4c97d485fe11d4838e9b9366a02a1de7aa2fe48d85eb5a26bf",
+    "statement_sha256": "098ffb591ebf1032cc999ab0f61decec6289070b6956f6e2889c45c88982bdb0",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f676aef0118bfa4c97d485fe11d4838e9b9366a02a1de7aa2fe48d85eb5a26bf",
+  "statement_sha256": "098ffb591ebf1032cc999ab0f61decec6289070b6956f6e2889c45c88982bdb0",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:56:05.991230+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The published section3.4.2 Conjecture15 retains the exact perfect-recovery transition. The latest arXiv Conjecture11 explicitly distinguishes lambda→0+ from lambda=0, and its appendix leaves aging-threshold equality open. No unconditional limit existence/order-of-limits and sharp unregularized theorem was located.",
+  "primary_sources": [
+    {
+      "url": "https://www.jmlr.org/papers/volume27/26-0672/26-0672.pdf",
+      "locator": "Section3.4.2 pp38–40, Conjecture15 equations74–76",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2601.10483v2",
+      "locator": "Conjecture11 equations74–76 and aging appendix; current v2 8July2026",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"unregularized\" \"quadratic\" \"perfect recovery\" Martin Biroli Bach 2026",
+    "\"quadratic\" \"unregularized\" \"Martin\" recovery (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"quadratic\" \"unregularized\" recovery threshold proof 2026 Martin Biroli Bach"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "unregularized",
+        "quadratic network"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "unregularized",
+        "quadratic network"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

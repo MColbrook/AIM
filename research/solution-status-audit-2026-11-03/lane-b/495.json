@@ -1,0 +1,75 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "495",
+  "manifest_index": 390,
+  "original_target": {
+    "id": "495",
+    "title": "Cardy's crossing formula for the real planar Bargmann–Fock field",
+    "area": "Probability, smooth Gaussian fields and continuum percolation",
+    "file": "problems/495-cardy-s-crossing-formula-for-the-real-planar-bargmannfock-field.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-4cdedd0d0ac7c490",
+    "group": "probability-statistics",
+    "source_sha256": "5547afca1be8dd0f0a3ca97d89cac8d1ff0f2db93283ea4212c810e199050ea2",
+    "statement_sha256": "c714eb0bb5f68c6473cb4b6925f81dff4f04e158c1c061c74399ad1c8ae998fd",
+    "state": "unreviewed"
+  },
+  "source_sha256": "5547afca1be8dd0f0a3ca97d89cac8d1ff0f2db93283ea4212c810e199050ea2",
+  "statement_sha256": "c714eb0bb5f68c6473cb4b6925f81dff4f04e158c1c061c74399ad1c8ae998fd",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:31:43.733183+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2207.13448 Conjecture6.4 second bullet is the exact Gaussian-field Cardy question. Published AHL Theorems1.3–1.4 give threshold and RSW estimates, not exact limiting crossing probability. Current OpenAI223/224 square-lattice random-cluster/Poisson–Voronoi models differ from this Gaussian field.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2207.13448",
+      "locator": "Conjecture6.4 second bullet",
+      "body_inspected": true
+    },
+    {
+      "url": "https://ahl.centre-mersenne.org/item/10.5802/ahl.29.pdf",
+      "locator": "Theorems1.3–1.4 printedp172",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Bargmann-Fock\" \"Cardy\" formula (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Bargmann-Fock",
+        "Cardy"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Bargmann-Fock",
+        "Cardy"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "ProjectEuclid final survey PDF anti-bot; actual public preprint survey body used without publication-byte-parity assertion."
+  ],
+  "canonical_update_required": false
+}

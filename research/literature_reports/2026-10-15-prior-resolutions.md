@@ -38,9 +38,9 @@ The source evidence varies: recent preprints, an explicitly labeled candidate pr
 | [195](#aim-195) | [The bosonic Laughlin contact-interaction gap](../../problems/195-laughlin-gap.md) | 🔵 OPEN | Claimed affirmative spectral gap |
 | [214](#aim-214) | [Optimal spectral signings of regular graphs](../../problems/214-bilu-linial-signing.md) | 🟡 PARTIAL | Negative: cubic signing counterexample |
 | [216](#aim-216) | [Boundary-flux commutators for rough conductors](../../problems/216-rough-coefficient-boundary-commutator.md) | 🔵 OPEN | Reported negative answer from a published elliptic example |
-| [241](#aim-241) | [Uniqueness of a hemispheric saddle profile on a magnetic sphere](../../problems/241-spherical-ferromagnet-profile-uniqueness.md) | 🔵 OPEN | Reported negative uniqueness result |
+| [241](#aim-241) | [Uniqueness of a hemispheric saddle profile on a magnetic sphere](../../cut_problems/problems/241-spherical-ferromagnet-profile-uniqueness.md) | 🔵 OPEN | Reported negative uniqueness result |
 | [250](#aim-250) | [A periodic nonsingular billiard trajectory in every triangle](../../problems/250-periodic-triangular-billiard.md) | 🟡 PARTIAL | Affirmative periodic billiard orbit |
-| [251](#aim-251) | [Asymptotic density of reflected wavefronts in a disk](../../problems/251-disk-wavefront-density.md) | 🔵 OPEN | Reported affirmative late-time wavefront density |
+| [251](#aim-251) | [Asymptotic density of reflected wavefronts in a disk](../../cut_problems/problems/251-disk-wavefront-density.md) | 🔵 OPEN | Reported affirmative late-time wavefront density |
 | [298](#aim-298) | [The Li–Li multiple-unicast conjecture](../../problems/298-li-li-multiple-unicast.md) | 🔵 OPEN | Negative: network coding beats multicommodity routing |
 | [325](#aim-325) | [A constant bound for fixed-order prefix discrepancy](../../problems/325-strong-komlos-prefix-discrepancy.md) | 🔵 OPEN | Negative: fixed-order prefix discrepancy is unbounded |
 | [330](#aim-330) | [The sharp matroid secretary conjecture](../../problems/330-sharp-matroid-secretary.md) | 🔵 OPEN | Claimed affirmative sharp matroid-secretary guarantee |
@@ -53,11 +53,11 @@ The source evidence varies: recent preprints, an explicitly labeled candidate pr
 | [393](#aim-393) | [Singular-set dimension of polyhedral partial-transport free boundaries](../../problems/393-polyhedral-partial-transport-free-boundary.md) | 🔵 OPEN | Affirmative partial-transport free-boundary regularity |
 | [394](#aim-394) | [Villani’s convex-injectivity-domain conjecture](../../problems/394-villani-mtw-convex-injectivity-domains.md) | 🔵 OPEN | Affirmative convex injectivity domains |
 | [412](#aim-412) | [Sharp vanishing-viscosity control time for downstream transport](../../problems/412-positive-transport-sharp-uniform-control-time.md) | 🔵 OPEN | Negative: transport time alone does not suffice |
-| [425](#aim-425) | [Excess Floquet multiplicity for complex periodic Schrödinger equations](../../problems/425-complex-hill-excess-multiplicity.md) | 🔵 OPEN | Affirmative existential example via published primary source and elementary translation |
+| [425](#aim-425) | [Excess Floquet multiplicity for complex periodic Schrödinger equations](../../cut_problems/problems/425-complex-hill-excess-multiplicity.md) | 🔵 OPEN | Affirmative existential example via published primary source and elementary translation |
 | [433](#aim-433) | [A nonlinear Weyl lemma at the minimal p-harmonic integrability threshold](../../problems/433-very-weak-p-harmonic-energy-regularity.md) | 🔵 OPEN | Negative: very weak p-harmonic solutions need not have p-energy |
 | [446](#aim-446) | [The sharp Beurling–Ahlfors bound for planar elliptic systems](../../problems/446-beurling-ahlfors-sharp-norm.md) | 🔵 OPEN | Claimed affirmative sharp Beurling–Ahlfors norm |
 | [462](#aim-462) | [A finite-integrability ABP estimate for general nonlocal Pucci operators](../../problems/462-nonlocal-pucci-finite-integrability-abp.md) | 🔵 OPEN | Negative: no general finite-integrability ABP estimate |
-| [521](#aim-521) | [Six-point persistence on the Euclidean two-sphere](../../problems/521-six-point-sphere-persistence.md) | 🔵 OPEN | Negative for the literal proposed persistence region |
+| [521](#aim-521) | [Six-point persistence on the Euclidean two-sphere](../../cut_problems/problems/521-six-point-sphere-persistence.md) | 🔵 OPEN | Negative for the literal proposed persistence region |
 | [578](#aim-578) | [A real nearest matrix with spectrum in the closed left half-plane](../../problems/578-nearest-hurwitz-real-minimizer.md) | 🔵 OPEN | Negative: the complex minimum can be strictly smaller |
 | [619](#aim-619) | [Spanning triangulated spheres with holes in surface triangulations](../../problems/619-spanning-holed-sphere-triangulation.md) | 🟡 PARTIAL | Negative: a ten-vertex genus-two obstruction |
 

@@ -1,0 +1,130 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "948",
+  "manifest_index": 792,
+  "checked_date": "2026-11-03",
+  "source_sha256": "eb77d8056fa1b7c86e9b8dacee0398934f107a8bfb1c9b1e056c484ef0e7685b",
+  "statement_sha256": "c9a5d603a87e61eb8641704e251c9a2a991b63734557aee995dcb271e8fb7d7e",
+  "original_target": {
+    "id": "948",
+    "title": "Sharpness of the Beran conductivity upper bound at fixed three-point parameter",
+    "area": "Homogenization, composite materials, and variational bounds",
+    "file": "problems/948-sharpness-of-the-beran-conductivity-upper-bound-at-fixed-three-point-parameter.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8d8806fcaa64eb1d",
+    "group": "pdes-materials",
+    "source_sha256": "eb77d8056fa1b7c86e9b8dacee0398934f107a8bfb1c9b1e056c484ef0e7685b",
+    "statement_sha256": "c9a5d603a87e61eb8641704e251c9a2a991b63734557aee995dcb271e8fb7d7e",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Consider statistically homogeneous, geometrically isotropic two-phase composites in $`\\mathbb R^3`$, with isotropic phase conductivities $`\\sigma_1 I`$ and $`\\sigma_2 I`$, where $`\\sigma_1>\\sigma_2>0`$. Geometric isotropy means that all phase correlation functions are invariant under rotations, as in Milton, §15.6. Only geometries with a deterministic homogenized scalar conductivity are included. Assemblages and limits with separated microscopic scales are allowed through the closure below.\n\nFor a geometry $`G`$, write $`f_1=f(G)\\in(0,1)`$ for its phase-1 volume fraction and $`f_2=1-f_1`$. Normalize its three-point microstructural parameter $`\\zeta_1=\\zeta(G)`$ by the contrast expansion for that same geometry:\n```math\n\\sigma_G^*(1+t,1)\n=1+f_1t-\\frac{f_1f_2}{3}t^2\n+\\frac{f_1f_2(f_2+2\\zeta_1)}9t^3+O(t^4).\n```\n\nThis is the parameter in Milton's equation (15.33); it satisfies $`0\\leq\\zeta_1\\leq1`$. Put $`\\zeta_2=1-\\zeta_1`$.\n\nThe Beran bound, equation (26.5), states that\n```math\n\\sigma_G^*(\\sigma_1,\\sigma_2)\\leq\nU(f_1,\\zeta_1;\\sigma_1,\\sigma_2)\n:=f_1\\sigma_1+f_2\\sigma_2\n-\\frac{f_1f_2(\\sigma_1-\\sigma_2)^2}\n{f_2\\sigma_1+f_1\\sigma_2+2(\\zeta_1\\sigma_1+\\zeta_2\\sigma_2)}.\n```\n\nFor fixed $`\\sigma_1,\\sigma_2`$, let $`\\mathcal A_{\\sigma_1,\\sigma_2}`$ be the closure in $`\\mathbb R^3`$ of the triples\n```math\n\\bigl(f(G),\\zeta(G),\\sigma_G^*(\\sigma_1,\\sigma_2)\\bigr)\n```\n\nrealized by the admissible geometries above.\n\n**Is the Beran upper bound universally sharp in this joint attainable closure?** Precisely, for every $`f\\in(0,1)`$, $`\\zeta\\in[0,1]`$, and $`\\sigma_1>\\sigma_2>0`$, is\n```math\n\\bigl(f,\\zeta,U(f,\\zeta;\\sigma_1,\\sigma_2)\\bigr)\n\\in\\mathcal A_{\\sigma_1,\\sigma_2}?\n```\n\nEquivalently, can one find admissible geometries whose volume fractions tend to $`f`$, whose three-point parameters tend to $`\\zeta`$, and whose effective conductivities tend to this bound? The question concerns sharpness using only these parameters, rather than a bound for one prescribed full correlation function or one restricted cell model.",
+  "full_original_page": "# 948. Sharpness of the Beran conductivity upper bound at fixed three-point parameter\n\n**Area:** Homogenization, composite materials, and variational bounds\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nConsider statistically homogeneous, geometrically isotropic two-phase composites in $`\\mathbb R^3`$, with isotropic phase conductivities $`\\sigma_1 I`$ and $`\\sigma_2 I`$, where $`\\sigma_1>\\sigma_2>0`$. Geometric isotropy means that all phase correlation functions are invariant under rotations, as in Milton, §15.6. Only geometries with a deterministic homogenized scalar conductivity are included. Assemblages and limits with separated microscopic scales are allowed through the closure below.\n\nFor a geometry $`G`$, write $`f_1=f(G)\\in(0,1)`$ for its phase-1 volume fraction and $`f_2=1-f_1`$. Normalize its three-point microstructural parameter $`\\zeta_1=\\zeta(G)`$ by the contrast expansion for that same geometry:\n```math\n\\sigma_G^*(1+t,1)\n=1+f_1t-\\frac{f_1f_2}{3}t^2\n+\\frac{f_1f_2(f_2+2\\zeta_1)}9t^3+O(t^4).\n```\n\nThis is the parameter in Milton's equation (15.33); it satisfies $`0\\leq\\zeta_1\\leq1`$. Put $`\\zeta_2=1-\\zeta_1`$.\n\nThe Beran bound, equation (26.5), states that\n```math\n\\sigma_G^*(\\sigma_1,\\sigma_2)\\leq\nU(f_1,\\zeta_1;\\sigma_1,\\sigma_2)\n:=f_1\\sigma_1+f_2\\sigma_2\n-\\frac{f_1f_2(\\sigma_1-\\sigma_2)^2}\n{f_2\\sigma_1+f_1\\sigma_2+2(\\zeta_1\\sigma_1+\\zeta_2\\sigma_2)}.\n```\n\nFor fixed $`\\sigma_1,\\sigma_2`$, let $`\\mathcal A_{\\sigma_1,\\sigma_2}`$ be the closure in $`\\mathbb R^3`$ of the triples\n```math\n\\bigl(f(G),\\zeta(G),\\sigma_G^*(\\sigma_1,\\sigma_2)\\bigr)\n```\n\nrealized by the admissible geometries above.\n\n**Is the Beran upper bound universally sharp in this joint attainable closure?** Precisely, for every $`f\\in(0,1)`$, $`\\zeta\\in[0,1]`$, and $`\\sigma_1>\\sigma_2>0`$, is\n```math\n\\bigl(f,\\zeta,U(f,\\zeta;\\sigma_1,\\sigma_2)\\bigr)\n\\in\\mathcal A_{\\sigma_1,\\sigma_2}?\n```\n\nEquivalently, can one find admissible geometries whose volume fractions tend to $`f`$, whose three-point parameters tend to $`\\zeta`$, and whose effective conductivities tend to this bound? The question concerns sharpness using only these parameters, rather than a bound for one prescribed full correlation function or one restricted cell model.\n\n## Application\n\nThe answer would identify whether volume fraction and one three-point statistic suffice to determine the largest effective conductivity allowed by this bound, or whether a stricter universal constraint on composite design is needed.\n\n## References\n\n1. G. W. Milton, *The Theory of Composites*, Cambridge University Press, 2002, §§14.2 and 15.6, equation (15.33), and §26.2, equation (26.5), printed p. 555 (native PDF p. 580). [Author-hosted book](https://www.math.utah.edu/~milton/TheoryCompositesNOPRINT.pdf).\n2. C. Kern, O. D. Miller and G. W. Milton, *Tight Bounds on the Effective Complex Permittivity of Isotropic Composites and Related Problems*, Physical Review Applied **14**, 054068 (2020), equation (7) and the discussions of attainability in §§II and V. [Published article](https://doi.org/10.1103/PhysRevApplied.14.054068). [Latest arXiv revision, v2 (2023)](https://arxiv.org/abs/2006.03830v2).\n3. K. J. Deshmukh and G. W. Milton, *Bounds on the Uniaxial Effective Complex Permittivity of Two-phase Composites and Optimal or Near Optimal Microstructures*, arXiv:2507.09398v1 (2025), §§1 and 7. [Preprint](https://arxiv.org/abs/2507.09398v1).\n\n## Status review\n\n\n**Known cases:** Universal attainment in the joint (fraction, three-point parameter, conductivity) closure is needed. Partial first-arc attainment, second-arc improvement and uniaxial complex-permittivity results have different targets.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nUniversal attainment in the joint (fraction, three-point parameter, conductivity) closure is needed. Partial first-arc attainment, second-arc improvement and uniaxial complex-permittivity results have different targets.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nMilton explicitly asks whether equation (26.5) can be improved away from special attainable cases. Those examples are historical evidence of partial sharpness; no exhaustive list of currently known attainable parameter values is asserted here.\n\nThe upper bound above is the first-arc expression in Kern–Miller–Milton, equation (7), with $`u_1=(f_2+2\\zeta_1)/3`$ and $`u_2=(f_1+2\\zeta_2)/3`$. Their partial attainment and numerical approximation of that arc do not establish universal sharpness. Their optimal improvement of the second arc addresses a different bound. The latest arXiv revision retains this distinction. Deshmukh–Milton concerns uniaxial permittivity and two-dimensional sensitivity bounds; its conclusion still discusses gaps in the analogous isotropic arc construction.\n\nTargeted searches through 24 October 2026 did not locate a proof, announced full resolution, or a strict universal improvement of this fixed-parameter upper bound. This records the scope of the literature check, not a certification of every proof in the cited works.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-8d8806fcaa64eb1d**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Beran",
+    "Kern",
+    "Miller",
+    "Milton",
+    "three-point"
+  ],
+  "queries": [
+    "\"Beran\" \"three-point\" bound sharpness 2026",
+    "\"Beran\" \"three-point\" bound sharpness; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"Beran bound\" conductivity sharp Milton"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2006.03830v2",
+      "locator": "9Dec2023v2; sectionII lines132–133 and206; equations7,8",
+      "comparison": "First arc is almost optimal; after extra optimal examples it expressly remains unclear if the construction attains every first-arc point. Optimal second-arc replacement has different target."
+    },
+    {
+      "url": "https://arxiv.org/html/2507.09398v1",
+      "locator": "12Jul2025v1; Introduction, sections3,7",
+      "comparison": "Uniaxial effective permittivity and conjectured transverse circular arcs do not prove universal geometric isotropic joint (f,zeta,conductivity) attainment."
+    }
+  ],
+  "rationale": "Known near attainment, special microstructures and anisotropic bounds leave the fixed-three-point universal sharpness question unmatched.",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected scope statements inspected, not certification of every proof."
+  ],
+  "announcement_routing": {
+    "localID": "948",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Beran",
+          "Kern",
+          "Miller",
+          "Milton",
+          "three-point"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-11-000008",
+            "title": "Integrability of Liouville theory: the Kupiainen–Rhodes–Vargas proof of the DOZZ formula",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-11-000008-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-27-000013",
+            "title": "Arthur742Ramos/jacobian-conjecture-lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000013-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-25-000005",
+            "title": "teal-sea/zeta-lab",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-25-000005-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Beran",
+          "Kern",
+          "Miller",
+          "Milton",
+          "three-point"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00330v1",
+            "title": "A  construction of the sphere-packing magic functions in dimensions 8 and 24",
+            "url": "https://hexagonmath.org/abs/2610.00330v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Beran",
+        "Kern",
+        "Miller",
+        "Milton",
+        "three-point"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Sphere-packing magic functions, Liouville DOZZ, Jacobian algebra and Davenport–Heilbronn functions do not construct microstructures attaining the Beran conductivity bound at a prescribed three-point parameter.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.733Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

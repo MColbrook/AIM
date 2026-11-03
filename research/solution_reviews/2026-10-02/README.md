@@ -10,16 +10,16 @@ Original IDs refer to revision aa776a01d7d48a79f93251af11fde9454b0aea95. At this
 | --- | --- | --- | --- | --- |
 | 024 | 653 | [#11](https://github.com/MColbrook/AIM/pull/11) | Counterexample | [Exponential interior decay for smooth Steklov domains](024-review.md) |
 | 218 | 654 | [#14](https://github.com/MColbrook/AIM/pull/14) | Affirmative proof | [Bounded harmonic lifting for complex media](218-review.md) |
-| 405 | 655 | [#1](https://github.com/MColbrook/AIM/pull/1) | Counterexample | [Logarithmic convexity for subdiffusion with non-gradient drift](405-review.md) |
+| 405 | 655 | [#1](https://github.com/MColbrook/AIM/pull/1) | Counterexample | [Logarithmic convexity for subdiffusion with non-gradient drift](../../../cut_problems/research/solution_reviews/2026-10-02/405-review.md) |
 | 435 | 656 | [#15](https://github.com/MColbrook/AIM/pull/15) | Counterexample | [Poisson kernel bounds for elliptic boundary diffusion on Lipschitz domains](435-review.md) |
 | 457 | 657 | [#10](https://github.com/MColbrook/AIM/pull/10) | Affirmative proof | [Finite-density time sampling of an infinite observation window](457-review.md) |
 | 471 | 658 | [#5](https://github.com/MColbrook/AIM/pull/5) | Counterexample | [Does directional ellipticity force a fractional energy bound?](471-review.md) |
-| 488 | 659 | [#6](https://github.com/MColbrook/AIM/pull/6) | Affirmative proof | [Full-space minimizers for subcritical fourth-order aggregation energy](488-review.md) |
+| 488 | 659 | [#6](https://github.com/MColbrook/AIM/pull/6) | Affirmative proof | [Full-space minimizers for subcritical fourth-order aggregation energy](../../../cut_problems/research/solution_reviews/2026-10-02/488-review.md) |
 | 506 | 660 | [#13](https://github.com/MColbrook/AIM/pull/13) | Counterexample | [Small-ball ratios for general symmetric product priors](506-review.md) |
-| 514 | 661 | [#2](https://github.com/MColbrook/AIM/pull/2) | Counterexample | [Path connectivity of the infinity Z-Gromov–Wasserstein space](514-review.md) |
+| 514 | 661 | [#2](https://github.com/MColbrook/AIM/pull/2) | Counterexample | [Path connectivity of the infinity Z-Gromov–Wasserstein space](../../../cut_problems/research/solution_reviews/2026-10-02/514-review.md) |
 | 558 | 662 | [#10](https://github.com/MColbrook/AIM/pull/10) | Counterexample | [Variance ordering for Gaussian alpha-divergence approximations](558-review.md) |
-| 560 | 663 | [#12](https://github.com/MColbrook/AIM/pull/12) | Affirmative proof | [Monotone variance in the Gaussian approximation to DrMMD flow](560-review.md) |
-| 593 | 664 | [#8](https://github.com/MColbrook/AIM/pull/8) | Affirmative proof | [Logarithmic controlled bandwidth for locally analytic functions](593-review.md) |
+| 560 | 663 | [#12](https://github.com/MColbrook/AIM/pull/12) | Affirmative proof | [Monotone variance in the Gaussian approximation to DrMMD flow](../../../cut_problems/research/solution_reviews/2026-10-02/560-review.md) |
+| 593 | 664 | [#8](https://github.com/MColbrook/AIM/pull/8) | Affirmative proof | [Logarithmic controlled bandwidth for locally analytic functions](../../../cut_problems/research/solution_reviews/2026-10-02/593-review.md) |
 | 618 | 665 | [#4](https://github.com/MColbrook/AIM/pull/4) | Affirmative proof | [Smooth-gradient approximation of finite-Fisher-information scores](618-review.md) |
 
 ## Reproduced supporting checks

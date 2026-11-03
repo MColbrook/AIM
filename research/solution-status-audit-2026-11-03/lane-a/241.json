@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "241",
+  "manifest_index": 187,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "241",
+    "title": "Global minimality of the radial hedgehog for unequal Frank constants",
+    "area": "Liquid crystals and the calculus of variations",
+    "file": "problems/241-global-minimality-of-the-radial-hedgehog-for-unequal-frank-constants.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-1f3802a7508b4463",
+    "group": "diffusion-materials",
+    "source_sha256": "90d72c4b78940dcf5129428081aa5c6dc73811a576163922904a46668fe8b74f",
+    "statement_sha256": "f6b2aa74da5f2f8d6b3c1e6b84ae331a1e78a877711e89ef7ea5d250e104304e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "90d72c4b78940dcf5129428081aa5c6dc73811a576163922904a46668fe8b74f",
+  "statement_sha256": "f6b2aa74da5f2f8d6b3c1e6b84ae331a1e78a877711e89ef7ea5d250e104304e",
+  "actual_source_sha256": "90d72c4b78940dcf5129428081aa5c6dc73811a576163922904a46668fe8b74f",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`B=B_1(0)\\subset\\mathbb R^3`$, and set\n```math\n\\mathcal A=\\{n\\in H^1(B;\\mathbb S^2):\\mathrm{Tr}n(x)=x\\text{ on }\\partial B\\}.\n```\n\nFor $`a,b>0`$, define\n```math\nE_{a,b}(n)=\\frac12\\int_B\\left[(\\mathrm{div}n)^2\n+a(n\\cdot\\mathrm{curl}n)^2+b|n\\times\\mathrm{curl}n|^2\\right]dx.\n```\n\nDetermine exactly the set\n```math\n\\mathcal M=\\left\\{(a,b)\\in(0,\\infty)^2:\nE_{a,b}(n)\\ge E_{a,b}(n_*)=8\\pi\\quad\\text{for every }n\\in\\mathcal A\\right\\},\n\\qquad n_*(x)=x/|x|.\n```\n\nThe value assigned to $`n_*`$ at the origin is immaterial. Competitors have no symmetry or prescribed defect structure. This is the Oseen–Frank problem with $`K_1=1,K_2=a,K_3=b`$; multiplying all three constants by the same positive number does not change minimality. The omitted saddle-splay term is a null Lagrangian with constant integral on this fixed trace class.\n\nIt is known that every $`a\\ge1,b>0`$ belongs to $`\\mathcal M`$, whereas $`8(a-1)+b<0`$ excludes membership. A September 2026 preprint further proves that there is a universal, unspecified $`\\delta\\in(0,1/8]`$ such that $`1\\le a+\\delta\\min(a,b)`$ implies membership. This is partial progress toward the exact region. The question does not assert that the second-variation inequality $`8(a-1)+b\\ge0`$ suffices for global minimality, and it asks for no uniqueness conclusion.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"radial hedgehog\" \"minimality\" Frank 2026",
+    "\"radial hedgehog\" \"minimality\" Frank (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"radial hedgehog\" \"minimality\" Frank (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Theorems1.1–1.2,Remark1.3 and discussion after Theorem1.1",
+      "scope_comparison": "Theorem1.1 supplies a sufficient regime1<=a+delta min(a,b) with unspecified universaldelta. Theorem1.2's explicit1/8requires continuity outside the origin, which not every admissible H1 competitor has. The exact two-parameter global-minimality set is not determined by these inequalities or second variation. No complete matching announcement found.",
+      "url": "https://arxiv.org/html/2609.36972",
+      "version_or_date": "arXiv2609.36972v1,29September2026, current version."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem1.1 supplies a sufficient regime1<=a+delta min(a,b) with unspecified universaldelta. Theorem1.2's explicit1/8requires continuity outside the origin, which not every admissible H1 competitor has. The exact two-parameter global-minimality set is not determined by these inequalities or second variation. No complete matching announcement found.",
+  "latest_version_check": "arXiv2609.36972v1,29September2026, current version.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

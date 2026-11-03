@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "248",
+  "manifest_index": 194,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "248",
+    "title": "The Calabi–Croke inequality for smooth Riemannian two-spheres",
+    "area": "Riemannian geometry; geometric variational problems",
+    "file": "problems/248-the-calabicroke-inequality-for-smooth-riemannian-two-spheres.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b93463a5ef71e8ee",
+    "group": "inverse3",
+    "source_sha256": "4ff1423ab22b158efd82fdea1db19e94b0dcf6aedf0f941f9db1ff9688b21b53",
+    "statement_sha256": "8959c423ffe747055777081394b0374bcde3ef6a13a4cd754e0f8c458699ff58",
+    "state": "unreviewed"
+  },
+  "source_sha256": "4ff1423ab22b158efd82fdea1db19e94b0dcf6aedf0f941f9db1ff9688b21b53",
+  "statement_sha256": "8959c423ffe747055777081394b0374bcde3ef6a13a4cd754e0f8c458699ff58",
+  "actual_source_sha256": "4ff1423ab22b158efd82fdea1db19e94b0dcf6aedf0f941f9db1ff9688b21b53",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`g`$ be any smooth Riemannian metric on the closed two-sphere $`S^2`$. Write $`A(g)=\\int_{S^2}dA_g`$ for its area, and define\n\n```math\n\\ell_{\\min}(g)=\\inf\\{\\mathrm{Length}_g(\\gamma):\n\\gamma\\text{ is a nonconstant periodic }g\\text{-geodesic}\\}.\n```\n\nPeriodic geodesics return with the same position and velocity. They need not be simple curves, and no noncontractibility condition is imposed.\n\n**Question.** Does every such metric satisfy\n\n```math\n\\ell_{\\min}(g)^2\\le 2\\sqrt3\\,A(g)?\n```\n\nThere is no curvature, symmetry, convex-embedding or Zoll assumption. The metric is Riemannian and smooth everywhere. This question asks for the inequality, without an equality classification.\n\nThe constant is suggested by the singular sphere obtained by gluing two unit equilateral Euclidean triangles along their boundaries. Its area is $`\\sqrt3/2`$ and its shortest periodic geodesic has length $`\\sqrt3`$. This model is not itself a smooth metric in the quantified class.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Calabi Croke\" inequality 2026",
+    "\"Calabi Croke\" inequality (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Calabi Croke\" inequality (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Sharp upper bounds\" \"punctured spheres\" pdf Jabbour"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The actual counterexample is a Finsler metric with six singularities; the smoothing discussion does not produce a smooth Riemannian counterexample. Punctured-sphere results require completeness after removing points, absent for a closed smooth sphere. Local Zoll optimality does not imply a global bound. The local2026Chicago source URL returned404 and the published punctured PDF timed out; this pass verifies the actual counterexample body and records these access limits. No exact full claim found.",
+      "locator": "Theorem1,Remark2 pp1–2 and Section5",
+      "version_or_date": "arXiv2106.01849v1,3June2021; current searches3November2026.",
+      "url": "https://arxiv.org/pdf/2106.01849v1",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The actual counterexample is a Finsler metric with six singularities; the smoothing discussion does not produce a smooth Riemannian counterexample. Punctured-sphere results require completeness after removing points, absent for a closed smooth sphere. Local Zoll optimality does not imply a global bound. The local2026Chicago source URL returned404 and the published punctured PDF timed out; this pass verifies the actual counterexample body and records these access limits. No exact full claim found.",
+  "latest_version_check": "arXiv2106.01849v1,3June2021; current searches3November2026.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

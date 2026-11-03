@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "642",
+  "manifest_index": 497,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "642",
+    "title": "Hunt's hypothesis for driftless subordinators",
+    "area": "Probability and potential theory",
+    "file": "problems/642-hunt-s-hypothesis-for-driftless-subordinators.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-57e9893a2f4942a6",
+    "group": "probability-statistics",
+    "source_sha256": "0357cd7ae876b1f9a21751a5d74d9fdb85768b6dd310a0bd4ed4648fe16136e3",
+    "statement_sha256": "da46e94146eeeaadc7f935c21b0702b72156473eeea5229d57c6c9e23b295a8b",
+    "state": "unreviewed"
+  },
+  "source_sha256": "0357cd7ae876b1f9a21751a5d74d9fdb85768b6dd310a0bd4ed4648fe16136e3",
+  "statement_sha256": "da46e94146eeeaadc7f935c21b0702b72156473eeea5229d57c6c9e23b295a8b",
+  "actual_source_sha256": "0357cd7ae876b1f9a21751a5d74d9fdb85768b6dd310a0bd4ed4648fe16136e3",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\nu`$ be a Borel measure on $`(0,\\infty)`$ with\n```math\n\\int_0^\\infty (1\\wedge r)\\,\\nu(dr)<\\infty,\n\\qquad \\nu((0,\\infty))=\\infty.\n```\n\nLet $`S=(S_t)_{t\\ge0}`$ be the conservative subordinator with $`S_0=0`$ and Laplace transform\n```math\n\\mathbb E e^{-\\lambda S_t}\n=\\exp\\!\\left[-t\\int_0^\\infty(1-e^{-\\lambda r})\\,\\nu(dr)\\right]\n\\quad(\\lambda,t\\ge0).\n```\n\nThus its deterministic drift and killing rate are zero. For $`x\\in\\mathbb R`$, let $`\\mathbb P^x`$ be the law of $`x+S`$, and for a Borel set $`A\\subset\\mathbb R`$ put\n```math\nT_A=\\inf\\{t>0:x+S_t\\in A\\},\\qquad\\inf\\varnothing=\\infty.\n```\n\nIs the following implication true for every such $`\\nu`$ and every Borel set $`A`$?\n```math\n\\boxed{\\quad\n\\bigl[\\mathbb P^x(T_A=0)=0\\ \\text{for every }x\\in\\mathbb R\\bigr]\n\\ \\Longrightarrow\\\n\\bigl[\\mathbb P^x(T_A<\\infty)=0\\ \\text{for every }x\\in\\mathbb R\\bigr].\n\\quad}\n```\n\nThe hypothesis says that $`A`$ is thin and the conclusion that it is polar. Requiring this for Borel thin sets is equivalent to Hunt's hypothesis (H), usually expressed using all semipolar sets; the reduction is the cited Lemma 2.1. No density, regular variation or symmetry assumption is imposed on $`\\nu`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Hunt\" \"driftless subordinators\" hypothesis 2026",
+    "\"Hunt\" \"driftless subordinators\" hypothesis (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1908.06825v1",
+      "primary_body_access_gap": false,
+      "scope_comparison": "Question5 explicitly asks whether every pure-jump subordinator with infinite Levy measure satisfies(H). Results for special/subordinate subclasses or decompositions into two(H) clocks do not establish arbitrary sums; closure under sums is separately posed as Question7.",
+      "version_or_date": "v1,19August2019; latest record inspected",
+      "locator": "Section5 Question5, lines771–783"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Question5 explicitly asks whether every pure-jump subordinator with infinite Levy measure satisfies(H). Results for special/subordinate subclasses or decompositions into two(H) clocks do not establish arbitrary sums; closure under sums is separately posed as Question7.",
+  "latest_version_check": "v1,19August2019; latest record inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

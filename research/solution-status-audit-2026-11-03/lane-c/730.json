@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "730",
+  "manifest_index": 574,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "730",
+    "title": "The sharp generic bound on iterated Fuller singularities",
+    "area": "Geometric optimal control / continuous optimization",
+    "file": "problems/730-the-sharp-generic-bound-on-iterated-fuller-singularities.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-6c7ca27e24a96240",
+    "group": "continuous-optimization",
+    "source_sha256": "f2908f994df945e689cb435560a89c9cffc8931e456bdac18a5a1649a762b966",
+    "statement_sha256": "24a3b9452fbf431a027750d84b770d8030ed24c0b050928954ac73c2cf15d3a8",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f2908f994df945e689cb435560a89c9cffc8931e456bdac18a5a1649a762b966",
+  "statement_sha256": "24a3b9452fbf431a027750d84b770d8030ed24c0b050928954ac73c2cf15d3a8",
+  "actual_source_sha256": "f2908f994df945e689cb435560a89c9cffc8931e456bdac18a5a1649a762b966",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For a positive integer $`n`$, let $`M`$ be a smooth connected $`n`$-manifold and consider\n```math\n\\dot q=f_0(q)+u f_1(q),\\qquad u\\in[-1,1],\\qquad f_0,f_1\\in\\mathrm{Vec}(M).\n```\n\nAn extremal triple $`(q,u,\\lambda)`$ satisfies the Pontryagin maximum principle: $`\\lambda`$ is an absolutely continuous, everywhere nonzero covector lift of $`q`$, and, almost everywhere,\n```math\nH(\\lambda,u)=\\max_{v\\in[-1,1]}H(\\lambda,v),\\qquad\n\\dot\\lambda=\\vec H(\\lambda,u),\\qquad\nH(\\lambda,v)=\\langle\\lambda,f_0(q)+vf_1(q)\\rangle.\n```\n\n\nFor $`q:[0,T]\\to M`$, $`T>0`$, let $`O_q\\subset[0,T]`$ be the largest relatively open set on which there exists some control associated with $`q`$ that is smooth, and put $`\\Sigma=[0,T]\\setminus O_q`$. Set\n```math\n\\Sigma_0=\\mathrm{Iso}(\\Sigma),\\qquad\n\\Sigma_k=\\mathrm{Iso}\\!\\left(\\Sigma\\setminus\\bigcup_{j<k}\\Sigma_j\\right)\n\\quad(k\\ge1),\n```\n\nwhere $`\\mathrm{Iso}`$ denotes isolated points.\n\n**Determine the least dimension-only integer $`K(n)\\ge0`$ such that, for every $`M`$, an open dense subset of $`\\mathrm{Vec}(M)^2`$, in the Whitney $`C^\\infty`$ topology, satisfies**\n```math\n\\Sigma=\\bigcup_{k=0}^{K(n)}\\Sigma_k\n```\n\n**for every extremal triple.**\n\nBoarotto–Sigalotti prove $`K(n)\\le(n-1)^2`$ and explicitly ask for the sharp bound. Their three-dimensional order-two improvement concerns time-minimizing trajectories; the question here retains all PMP extremals.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"iterated Fuller\" \"sharp\" \"bound\" 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"Fuller singularities\" bound",
+    "site:palomar-registry.org OR site:hexagonmath.org \"Fuller\" singularities"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Theorem3/Remark4 and following sharp-bound question p3; §2.1 PMP; §6",
+      "scope_comparison": "Actual Theorem3 provides open dense Whitney C∞ pairs and every PMP extremal with order at most(n−1)^2. The paragraph following Remark4 expressly asks the sharp bound. The improved dimension3 discussion imposes time optimality; even-number-of-controls theorems change scalar control/frame hypotheses. Neither identifies least K(n) for all the local extremal triples. No complete matching announcement located.",
+      "url": "https://arxiv.org/pdf/1705.10055v3",
+      "version_or_date": "v3,22May2018; AIHPC36(2019)327–346",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual Theorem3 provides open dense Whitney C∞ pairs and every PMP extremal with order at most(n−1)^2. The paragraph following Remark4 expressly asks the sharp bound. The improved dimension3 discussion imposes time optimality; even-number-of-controls theorems change scalar control/frame hypotheses. Neither identifies least K(n) for all the local extremal triples. No complete matching announcement located.",
+  "latest_version_check": "v3,22May2018; AIHPC36(2019)327–346",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

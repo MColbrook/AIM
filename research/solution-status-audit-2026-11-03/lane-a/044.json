@@ -1,0 +1,42 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "044",
+  "manifest_index": 32,
+  "source_sha256": "802398c97521431d5009096094c690fc74b817c194dc2f71dbaffc6065c1c7b8",
+  "statement_sha256": "09966dbb20d732b7e1c89c25416af7a0fe18846c751566f087df92868bcda8f7",
+  "original_target": {
+    "id": "044",
+    "title": "Quadratic-scale bit complexity for well-conditioned sparse systems",
+    "area": "Sparse numerical linear algebra",
+    "file": "problems/044-sparse-linear-solve-bit-complexity.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: affirmative bit-complexity bound",
+    "proof": "https://arxiv.org/pdf/2609.38101v1",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md",
+    "group": "operators",
+    "source_sha256": "802398c97521431d5009096094c690fc74b817c194dc2f71dbaffc6065c1c7b8",
+    "statement_sha256": "09966dbb20d732b7e1c89c25416af7a0fe18846c751566f087df92868bcda8f7",
+    "state": "unreviewed"
+  },
+  "full_local_statement_read": true,
+  "reviewed_UTC": "2026-11-03T12:18:12.055513+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "pre-existing-complete-claim-current-scope-reviewed",
+  "recommended_status": "Solved",
+  "answer": "Affirmative announcement; unverified",
+  "scope_comparison": "The deterministic bit algorithm has sparse input and Otilde(nm log(kappa/epsilon)) complexity for logarithmic-bit fixed/floating inputs. Rational inputs with O(c logn)-bit numerator/denominator admit O(c logn)-bit grid rounding preserving conditioning and inverse-polynomial tolerance. Choosing residual tolerance smaller by kappa, with rounding slack, gives the required relative solution error. Polynomial conditioning makes the extra logarithm polylogn. The deterministic guarantee implies success probability0.99.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/2609.38101v1",
+      "locator": "Main finite-precision theorem and§§3.3–4",
+      "body_inspected": true
+    }
+  ],
+  "search_scope": "Individual named/mathematical primary-host searches plus exact-source correction/withdrawal queries and current Palomar/Hexagon metadata. No universal search completeness is asserted.",
+  "known_gap_check": "No concrete defeating gap established by this bounded scope review. Entire external proof and essential certificates remain unverified.",
+  "verification": "Exact original target compared with actual primary theorem/model body and required reduction. No local kernel, numerical-certificate or full proof replay.",
+  "additional_qualification": null,
+  "canonical_update_required": true
+}

@@ -1,0 +1,110 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "858",
+  "manifest_index": 702,
+  "checked_date": "2026-11-03",
+  "source_sha256": "c44c5b85a2e7230b6aab33bdc4eea349995e48c9110e229e4c768830154a4104",
+  "statement_sha256": "26af9c3028fe272d8463a97992db8dfabc6b8c2015866e4c5b9e8f57e1785974",
+  "original_target": {
+    "id": "858",
+    "title": "Infinitesimal rigidity of weakly convex decomposable polyhedra",
+    "area": "Geometric rigidity and structural mechanics",
+    "file": "problems/858-infinitesimal-rigidity-of-weakly-convex-decomposable-polyhedra.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e7c0230007bf449f",
+    "group": "geometry-topology",
+    "source_sha256": "c44c5b85a2e7230b6aab33bdc4eea349995e48c9110e229e4c768830154a4104",
+    "statement_sha256": "26af9c3028fe272d8463a97992db8dfabc6b8c2015866e4c5b9e8f57e1785974",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`P\\subset\\mathbb R^3`$ be a finite compact polyhedral body with nonempty interior, bounded by a connected embedded closed polyhedral surface. Write its original vertex set as $`V=\\{p_1,\\ldots,p_n\\}`$. Assume:\n\n- Every $`p_i`$ is an extreme point of $`\\mathrm{conv}(V)`$ (weak convexity).\n- The solid $`P`$ admits a finite conforming partition into nondegenerate closed tetrahedra with vertices in $`V`$, covering $`P`$, with disjoint interiors and intersections that are common faces, edges or vertices (decomposability).\n\nLet $`S`$ be the induced triangulation of $`\\partial P`$. For every assignment of velocities $`q_i\\in\\mathbb R^3`$ satisfying\n\n```math\n(p_i-p_j)\\cdot(q_i-q_j)=0\n \\quad\\text{for every edge }ij\\text{ of }S,\n```\n\n\nmust there exist $`a,\\omega\\in\\mathbb R^3`$ such that\n\n```math\nq_i=a+\\omega\\times p_i\\qquad(1\\le i\\le n)?\n```\n\n\nOnly boundary edges constrain the flex; interior tetrahedralization edges may vary. No genericity, star-shapedness, codecomposability or ball-topology assumption is imposed. The original Definition 1.8 specifies the boundary-triangulation convention and its independence of the chosen vertex-preserving boundary triangulation [1].",
+  "full_original_page": "# 858. Infinitesimal rigidity of weakly convex decomposable polyhedra\n\n**Area:** Geometric rigidity and structural mechanics\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`P\\subset\\mathbb R^3`$ be a finite compact polyhedral body with nonempty interior, bounded by a connected embedded closed polyhedral surface. Write its original vertex set as $`V=\\{p_1,\\ldots,p_n\\}`$. Assume:\n\n- Every $`p_i`$ is an extreme point of $`\\mathrm{conv}(V)`$ (weak convexity).\n- The solid $`P`$ admits a finite conforming partition into nondegenerate closed tetrahedra with vertices in $`V`$, covering $`P`$, with disjoint interiors and intersections that are common faces, edges or vertices (decomposability).\n\nLet $`S`$ be the induced triangulation of $`\\partial P`$. For every assignment of velocities $`q_i\\in\\mathbb R^3`$ satisfying\n\n```math\n(p_i-p_j)\\cdot(q_i-q_j)=0\n \\quad\\text{for every edge }ij\\text{ of }S,\n```\n\n\nmust there exist $`a,\\omega\\in\\mathbb R^3`$ such that\n\n```math\nq_i=a+\\omega\\times p_i\\qquad(1\\le i\\le n)?\n```\n\n\nOnly boundary edges constrain the flex; interior tetrahedralization edges may vary. No genericity, star-shapedness, codecomposability or ball-topology assumption is imposed. The original Definition 1.8 specifies the boundary-triangulation convention and its independence of the chosen vertex-preserving boundary triangulation [1].\n\n## Application\n\nThis would give a geometric criterion excluding first-order mechanisms in nonconvex triangulated shells and bar frameworks, extending the classical convex rigidity theorem.\n\n## Known progress\n\nPublished Theorem 1.7 proves the triangular-face case with an additional weak codecomposability hypothesis: a containing convex polyhedron $`Q`$ has every original vertex of $`P`$ among its vertices, and $`Q\\setminus P`$ can be tetrahedralized using only vertices of $`Q`$. For nontriangular faces, compatible interior and exterior boundary triangulations matter [1, p.174].\n\nThe 2024 experiments retain the general conjecture; apparent flexible examples fail one of its hypotheses [2, Sections 3.2–3.4]. The 2026 generic rigidity theorem concerns different constraints and does not cover every exceptional realization [3, Theorem 1.2 and Table 1].\n\n## References\n\n1. I. Izmestiev and J.-M. Schlenker, *Infinitesimal rigidity of polyhedra with vertices in convex position*, Pacific Journal of Mathematics 248 (2010), no.1, 171–190, [DOI](https://doi.org/10.2140/pjm.2010.248.171), [published text](https://msp.org/pjm/2010/248-1/pjm-v248-n1-p10-p.pdf), Conjecture 1.5 and pp.172–175. [Original arXiv:0711.1981v1](https://arxiv.org/pdf/0711.1981v1), Definition 1.8, p.3.\n2. J. Kevo, *Are All Weakly Convex and Decomposable Polyhedral Surfaces Infinitesimally Rigid?*, Rose-Hulman Undergraduate Mathematics Journal 25 (2024), no.1, Article 6, [journal page](https://scholar.rose-hulman.edu/rhumj/vol25/iss1/6/), [arXiv:2311.06934v2](https://arxiv.org/html/2311.06934v2).\n3. M. Himmelmann, B. Schulze and M. Winter, *Rigidity of polytopes with edge length and coplanarity constraints*, [arXiv:2505.00874v3](https://arxiv.org/pdf/2505.00874v3) (2026), Theorem 1.2 and Table 1.\n\n## Status review\n\n\n**Known cases:** The available rigidity theorem adds weak codecomposability, and recent experimental work does not prove the full weakly convex decomposable conjecture. Edge-and-coplanarity rigidity results constrain more than the boundary-edge velocity equations in this target.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe available rigidity theorem adds weak codecomposability, and recent experimental work does not prove the full weakly convex decomposable conjecture. Edge-and-coplanarity rigidity results constrain more than the boundary-edge velocity equations in this target.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nIndependent primary-statement review and current searches on 25 October 2026 found no matching complete proof, counterexample or announcement. All 1,703 pinned AIM/OpenAI statement records and all 912 preceding local findings were included in duplicate review. This is a bounded status check, not certification of the cited proofs.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-e7c0230007bf449f**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"weakly convex\" \"decomposable\" rigidity conjecture solved",
+    "\"weakly convex\" \"decomposable\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:hexagonmath.org OR site:palomar-registry.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://msp.org/pjm/2010/248-1/pjm-v248-n1-p10-p.pdf",
+      "locator": "2010 published, Conjecture1.5, Theorem1.7 and discussion pp173–174",
+      "inspection": "The published theorem adds weak codecomposability and compatible triangular faces. Local target constrains only boundary-edge first variations and assumes no codecomposability. Numerical T-polyhedra search and generic stronger-constraint results are partial."
+    }
+  ],
+  "scope_comparison": "The published theorem adds weak codecomposability and compatible triangular faces. Local target constrains only boundary-edge first variations and assumes no codecomposability. Numerical T-polyhedra search and generic stronger-constraint results are partial.",
+  "rationale": "No complete matching resolution identified in bounded indexed searches. Required direct announcement coverage pending; not certified open.",
+  "source_gaps": [
+    "2026 edge-and-coplanarity theorem body pending."
+  ],
+  "announcement_routing": {
+    "localID": "858",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "decomposable polyhed",
+          "weakly convex"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "decomposable polyhed",
+          "weakly convex"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "decomposable polyhed",
+        "weakly convex"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target.",
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:35:56.817Z",
+      "previous_outcome": "hold",
+      "localID": "858",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "queries": [
+        "\"weakly convex\" polyhedra \"coplanarity\" 2026 rigidity"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2505.00874v3",
+          "version": "9 March 2026",
+          "locator": "primary abstract lines16–17 and history",
+          "inspection": "Himmelmann–Schulze–Winter impose preservation of edge lengths AND planarity of faces. Their positive theorem is GENERIC convex rigidity in dimension3. Neither assumption is present in the target of every weakly convex decomposable polyhedron under boundary-edge constraints only."
+        }
+      ],
+      "scope_comparison": "Additional coplanarity constraints and genericity explicitly exclude the recent theorem as a full match. Earlier Conjecture1.5 / Theorem1.7 body gives the precise partial codecomposable case. No material full-candidate access gap remains."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

@@ -1,0 +1,119 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "177",
+  "manifest_index": 139,
+  "original_target": {
+    "id": "177",
+    "title": "A deterministic nontrivial growth exponent for planar DLA",
+    "area": "Aggregation and fractal growth",
+    "file": "problems/177-dla-growth-exponent.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "a1ec166dfac7acd9ba394b957bff6b58024fdf9fe0cc987994eb6fae81aab054",
+    "statement_sha256": "76329c68f3a9b3d1b1facce50e1b92c7241061d073ede818289ece90d8350dd0",
+    "state": "unreviewed"
+  },
+  "source_sha256": "a1ec166dfac7acd9ba394b957bff6b58024fdf9fe0cc987994eb6fae81aab054",
+  "statement_sha256": "76329c68f3a9b3d1b1facce50e1b92c7241061d073ede818289ece90d8350dd0",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:40.104073+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The 2025 published source explicitly retains existence and nontriviality of the DLA growth exponent and proves the Kesten upper bound only. The new layers-model theorem concerns finite layered graphs, not planar lattice harmonic measure from infinity. A secondary result that mislabels arXiv 2605.00997 was rejected after its actual abstract was checked (random-walk convex hulls, not DLA).",
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00220-025-05276-8",
+      "locator": "Introduction after equation 1 and Theorem 1",
+      "body_inspected": true
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/journal-of-applied-probability/article/diffusion-limited-aggregation-in-the-layers-model/3A58EFC965F0DE2D46E3384F87FBCB10",
+      "locator": "Introduction and Theorem 1, finite layers model",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.00997",
+      "locator": "Actual abstract, random-walk convex hull edge probability",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"DLA\" \"growth exponent\" \"2026\" proof",
+    "\"diffusion limited aggregation\" \"exponent\" \"2026\" rigorous"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "diffusion limited",
+        "DLA",
+        "aggregation"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-11-01-000030",
+          "title": "Uniform attachment with freezing: equivalence in law of the forward and reversed constructions"
+        },
+        {
+          "id": "PALOMAR-2026-11-01-000026",
+          "title": "Full beta lambda calculus and finite Turing machine computability"
+        },
+        {
+          "id": "PALOMAR-2026-10-26-000001",
+          "title": "Regular subgraphs of almost regular graphs (Alon–Friedland–Kalai)"
+        },
+        {
+          "id": "PALOMAR-2026-10-15-000001",
+          "title": "Sharp universal support criterion for sub-Gaussian laws"
+        },
+        {
+          "id": "PALOMAR-2026-09-25-000027",
+          "title": "MAF composition criteria, exact enumeration of child-selection autocatalytic cores, and degradation regions of linear diluted source networks"
+        },
+        {
+          "id": "PALOMAR-2026-09-20-000004",
+          "title": "Typical dictionaries, exact marks and compound Poisson clusters"
+        },
+        {
+          "id": "PALOMAR-2026-08-22-000010",
+          "title": "CBirkbeck/uniform-sheafy-tate-domains-lean"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "diffusion limited",
+        "DLA",
+        "aggregation"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00639v1",
+          "title": "Asymptotic growth of rank-two scattering coefficients in the Badlands"
+        },
+        {
+          "id": "hexagon:2610.00558v1",
+          "title": "Uniform sheafy Tate rings that are not stably uniform"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

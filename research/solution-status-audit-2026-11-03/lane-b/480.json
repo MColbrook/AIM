@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "480",
+  "manifest_index": 379,
+  "original_target": {
+    "id": "480",
+    "title": "Weak uniqueness for fourth-order aggregation–diffusion",
+    "area": "Degenerate parabolic PDEs; cell adhesion",
+    "file": "problems/480-fourth-order-aggregation-weak-uniqueness.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "979146f63d8f875d7062ddb148322cf6a7df6dabfa7a6088c6201c1643b429dd",
+    "statement_sha256": "9124efbf4374c063ed4ca76f1da25ed316a64e5839ca5fa28190f74cee9df2ea",
+    "state": "unreviewed"
+  },
+  "source_sha256": "979146f63d8f875d7062ddb148322cf6a7df6dabfa7a6088c6201c1643b429dd",
+  "statement_sha256": "9124efbf4374c063ed4ca76f1da25ed316a64e5839ca5fa28190f74cee9df2ea",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:21:22.882634+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual published CEFF24 equation1.1 and Definition2.1 specify the relevant m=2 weak class; Theorem2.2 proves existence, and p4 leaves uniqueness explicitly open. No full-class weak uniqueness result located.",
+  "primary_sources": [
+    {
+      "url": "https://ricerca.univaq.it/bitstream/11697/244199/1/CEFF24_fourth_order.pdf",
+      "locator": "p4, Definition2.1 pp5–6, Theorem2.2",
+      "body_inspected": true
+    },
+    {
+      "url": "https://doi.org/10.1137/25M1726248",
+      "locator": "SIAM Review abstract page only",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"fourth-order aggregation\" \"uniqueness\" 2026",
+    "\"fourth-order aggregation\" \"uniqueness\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "fourth-order aggregation",
+        "aggregation diffusion"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "fourth-order aggregation",
+        "aggregation diffusion"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

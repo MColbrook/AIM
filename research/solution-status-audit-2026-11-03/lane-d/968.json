@@ -1,0 +1,92 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "968",
+  "manifest_index": 812,
+  "checked_date": "2026-11-03",
+  "source_sha256": "3a287d29dffaf08d90a493cffc2a8402e87488037bfeea64a07ce7d8864042e8",
+  "statement_sha256": "1327aa0b29ec5d38ca8bf8376ab786c0acf5f4c5e41893ed3cf25c2b981a25ee",
+  "original_target": {
+    "id": "968",
+    "title": "Must the maximal conditioned Brownian lifetime occur at boundary points?",
+    "area": "Probability and potential theory",
+    "file": "problems/968-must-the-maximal-conditioned-brownian-lifetime-occur-at-boundary-points.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-129bff4fcc8adc60",
+    "group": "probability-statistics",
+    "source_sha256": "3a287d29dffaf08d90a493cffc2a8402e87488037bfeea64a07ce7d8864042e8",
+    "statement_sha256": "1327aa0b29ec5d38ca8bf8376ab786c0acf5f4c5e41893ed3cf25c2b981a25ee",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^2`$ be a bounded, smooth, simply connected domain, and let $`G_\\Omega`$ be the Dirichlet Green function of $`-\\Delta`$. For distinct $`x,y\\in\\Omega`$ define\n\n```math\nL_\\Omega(x,y)=\\frac{\\int_\\Omega G_\\Omega(x,z)G_\\Omega(z,y)\\,dz}{G_\\Omega(x,y)}.\n```\n\n\nThis is, up to the standard Brownian-generator normalization, the expected lifetime of Brownian motion started at $`x`$, conditioned to approach $`y`$ before exit. Does the supremum of $`L_\\Omega(x,y)`$ over interior pairs equal the supremum of its limits at pairs of boundary points? Equivalently, can a pair of interior points give a strictly larger value than every boundary pair? For a general smooth domain, “opposite” is not an extra formal condition; only the boundary location is asserted.",
+  "full_original_page": "# 968. Must the maximal conditioned Brownian lifetime occur at boundary points?\n\n**Area:** Probability and potential theory\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\Omega\\subset\\mathbb R^2`$ be a bounded, smooth, simply connected domain, and let $`G_\\Omega`$ be the Dirichlet Green function of $`-\\Delta`$. For distinct $`x,y\\in\\Omega`$ define\n\n```math\nL_\\Omega(x,y)=\\frac{\\int_\\Omega G_\\Omega(x,z)G_\\Omega(z,y)\\,dz}{G_\\Omega(x,y)}.\n```\n\n\nThis is, up to the standard Brownian-generator normalization, the expected lifetime of Brownian motion started at $`x`$, conditioned to approach $`y`$ before exit. Does the supremum of $`L_\\Omega(x,y)`$ over interior pairs equal the supremum of its limits at pairs of boundary points? Equivalently, can a pair of interior points give a strictly larger value than every boundary pair? For a general smooth domain, “opposite” is not an extra formal condition; only the boundary location is asserted.\n\n## Application\n\nThe quotient compares a twice-iterated Green function with the ordinary Green function. Its maximum controls a positivity threshold for a coupled elliptic problem and describes the longest possible expected lifetime of the conditioned diffusion.\n\n## Known scope\n\nThe boundary-pair property holds for disks and balls. For planar simply connected domains, an older theorem proves that **if one starting point is already on the boundary**, moving the other to the boundary does not lower the supremum. That does not settle the global interior-pair comparison. Multiply connected planar domains and simply connected domains in higher dimensions can violate the broader claim, which is why the question here is restricted to the planar simply connected case.\n\n## References\n\n1. G. Sweers, [*Positivity for the Navier bilaplace, an anti-eigenvalue and an expected lifetime*](https://www.aimsciences.org/article/doi/10.3934/dcdss.2014.7.839), *Discrete and Continuous Dynamical Systems - S* **7** (2014), 839–855, Section 5, Conjectures 3–4.\n2. M. Erven, [*On the Lifetime of a Conditioned Brownian Motion*](https://kups.ub.uni-koeln.de/4565/), doctoral thesis, University of Cologne (2012), Section 3.5.2, Conjecture 3.33 and the multiply connected counterexample.\n3. G. Sweers, [*On a conjecture for the 3G-function*](https://www.math.uni-hamburg.de/projekte/dmv2015/abstracts.html), DMV Annual Meeting abstract (2015), explicitly separates the open planar question from higher-dimensional counterexamples.\n4. P. Griffin, T. McConnell and G. Verchota, [*Conditioned Brownian motion in simply connected planar domains*](https://www.numdam.org/article/AIHPB_1993__29_2_229_0.pdf), *Annales de l'Institut Henri Poincaré, Probabilités et Statistiques* **29** (1993), 229–249; a partial boundary-start result.\n\n## Status review\n\n\n**Known cases:** The domain is smooth, planar and simply connected. Disk/lens and boundary-start results are partial; multiply connected and higher-dimensional counterexamples do not cover it.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe domain is smooth, planar and simply connected. Disk/lens and boundary-start results are partial; multiply connected and higher-dimensional counterexamples do not cover it.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nA [bounded source, announcement and semantic-duplicate review](../FURTHER_problems/_tracking/conditioned-brownian-planar-boundary-lifetime-status-2026-10-21.json) found no matching complete proof or counterexample for the stated smooth planar simply connected scope and no equivalent AIM/FURTHER problem. This search cannot rule out unindexed work.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-129bff4fcc8adc60**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "conditioned Brownian",
+    "Sweers",
+    "3G-function"
+  ],
+  "queries": [
+    "\"conditioned Brownian\" \"lifetime\" boundary conjecture 2026",
+    "\"conditioned Brownian\" \"lifetime\" boundary conjecture; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"conditioned Brownian motion\" boundary points simply connected conjecture"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "primary_sources": [
+    {
+      "url": "https://www-ian.math.uni-magdeburg.de/home/grunau/papers/CBMandMaxP1.pdf",
+      "locator": "Abstract, Conjecture3; compare Erven2012 introduction https://d-nb.info/1038170036/34",
+      "comparison": "Actual disk theorem and boundary-start result do not compare all interior pairs for every planar simply connected domain. Erven's counterexample explicitly uses multiply connected domain. Bañuelos–Carroll extremal bound concerns boundary-conditioned/hyperbolic-geodesic and area extremum, not unrestricted interior-pair comparison."
+    }
+  ],
+  "rationale": "Actual disk theorem and boundary-start result do not compare all interior pairs for every planar simply connected domain. Erven's counterexample explicitly uses multiply connected domain. Bañuelos–Carroll extremal bound concerns boundary-conditioned/hyperbolic-geodesic and area extremum, not unrestricted interior-pair comparison.",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary statements inspected, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "968",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "conditioned Brownian",
+          "Sweers",
+          "3G-function"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "conditioned Brownian",
+          "Sweers",
+          "3G-function"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "conditioned Brownian",
+        "Sweers",
+        "3G-function"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

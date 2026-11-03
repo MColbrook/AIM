@@ -1,0 +1,118 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "850",
+  "manifest_index": 694,
+  "checked_date": "2026-11-03",
+  "source_sha256": "1cf5952395d1af001fbbcee4c62f6fd9346074adbeaa1fad8c4d65075eca489d",
+  "statement_sha256": "3bec911022d800392fd8b1772b2883f064795697ff80d973080728b9904e962f",
+  "original_target": {
+    "id": "850",
+    "title": "Must every analytic compactification of complex affine space be Moishezon?",
+    "area": "Complex geometry and meromorphic functions",
+    "file": "problems/850-must-every-analytic-compactification-of-complex-affine-space-be-moishezon.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-d960713f1bd0a7d6",
+    "group": "geometry-topology",
+    "source_sha256": "1cf5952395d1af001fbbcee4c62f6fd9346074adbeaa1fad8c4d65075eca489d",
+    "statement_sha256": "3bec911022d800392fd8b1772b2883f064795697ff80d973080728b9904e962f",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For every integer $`n\\ge1`$, let $`X`$ be a connected compact complex manifold of complex dimension $`n`$. Suppose a proper closed complex-analytic subset $`A\\subset X`$ satisfies\n```math\nX\\setminus A\\simeq\\mathbb C^n\n```\n\nbiholomorphically. Must\n```math\n\\mathrm{trdeg}_{\\mathbb C}\\mathcal M(X)=n,\n```\n\nwhere $`\\mathcal M(X)`$ is the field of global meromorphic functions on $`X`$? Equivalently, must there be $`n`$ algebraically independent such functions? This is the Moishezon conclusion in [1, printed p.245].\n\nThe ambient space is smooth, while $`A`$ may be singular or reducible. “Analytic Zariski-open” means precisely the complement of a closed analytic subset, not an arbitrary open embedding. There is no Kähler, equivariance, smooth-boundary or second-Betti-number assumption. The conclusion does not assert that $`X`$ itself is projective.",
+  "full_original_page": "# 850. Must every analytic compactification of complex affine space be Moishezon?\n\n**Area:** Complex geometry and meromorphic functions\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor every integer $`n\\ge1`$, let $`X`$ be a connected compact complex manifold of complex dimension $`n`$. Suppose a proper closed complex-analytic subset $`A\\subset X`$ satisfies\n```math\nX\\setminus A\\simeq\\mathbb C^n\n```\n\nbiholomorphically. Must\n```math\n\\mathrm{trdeg}_{\\mathbb C}\\mathcal M(X)=n,\n```\n\nwhere $`\\mathcal M(X)`$ is the field of global meromorphic functions on $`X`$? Equivalently, must there be $`n`$ algebraically independent such functions? This is the Moishezon conclusion in [1, printed p.245].\n\nThe ambient space is smooth, while $`A`$ may be singular or reducible. “Analytic Zariski-open” means precisely the complement of a closed analytic subset, not an arbitrary open embedding. There is no Kähler, equivariance, smooth-boundary or second-Betti-number assumption. The conclusion does not assert that $`X`$ itself is projective.\n\n## Application\n\nThe question asks whether attaching an analytic compact boundary to complex affine space always preserves maximal meromorphic function dimension. Local affine coordinates need not automatically extend meromorphically through the boundary, so this tests a global algebraicity property of the compactification.\n\n## References\n\n1. Jun-Muk Hwang and Dror Varolin, [*A compactification of $`(\\mathbb C^*)^4`$ with no non-constant meromorphic functions*](https://www.numdam.org/item/10.5802/aif.1884.pdf), *Annales de l'Institut Fourier* **52** (2002), 245–253, conjecture and distinctions on printed pp.245–246. [DOI](https://doi.org/10.5802/aif.1884).\n2. Chi Li and Zhengyi Zhou, [*Kähler compactification of $`\\mathbb C^n`$ and Reeb dynamics*, published author-hosted text](https://sites.math.rutgers.edu/~cl1412/papers/Reeb.pdf), Introduction and Theorem1.1. [Published article](https://doi.org/10.1007/s00222-025-01377-2).\n\n## Status review\n\n\n**Known cases:** Smooth Kahler-boundary compactification and equivariant cases are restricted. Non-Moishezon compactifications of (C-star)^4 have a different open part, while nonprojective Moishezon compactifications still satisfy the requested conclusion. No full affine-space result was located.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nSmooth Kahler-boundary compactification and equivariant cases are restricted. Non-Moishezon compactifications of (C-star)^4 have a different open part, while nonprojective Moishezon compactifications still satisfy the requested conclusion. No full affine-space result was located.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nSource [1] reports the dimension-two and equivariant cases as known; the cited proofs of those cases were not reread here. The directly inspected Theorem1.1 of [2] proves that a compactification with a smooth Kähler boundary is the standard pair $`(\\mathbb P^n,\\mathbb P^{n-1})`$. It does not settle the question for an arbitrary analytic boundary.\n\nThe non-Moishezon examples in [1] compactify $`(\\mathbb C^*)^4`$, whose open part differs from $`\\mathbb C^4`$. The paper also refutes a different statement about faithful additive-group orbits. Neither is a counterexample to the displayed conjecture. A nonprojective Moishezon example would also not refute it.\n\nBounded current and announcement searches found no unrestricted complete proof or counterexample. Full nearest-statement comparisons found no equivalent AIM, OpenAI-announcement or existing FURTHER entry. Results assuming projectivity, Kähler geometry, nef adjoints or a split tangent bundle were not promoted to the unrestricted compactification statement. These checks do not certify absence of every possible resolution.\n\nThe [owner review](../FURTHER_problems/_tracking/AIF107/PRECISE-PROPOSAL.json), [independent model review](../FURTHER_problems/_tracking/AIF107/C-INDEPENDENT-CONNECTED-SMOOTH-AMBIENT-ANALYTIC-BOUNDARY-AND-MOISHEZON-CONCLUSION-MODEL-PEER-PASS.json) and [coordinator review](../FURTHER_problems/_tracking/ROOT-FINAL-AIF107-affine-compactification-Moishezon-admission-review-20261030.json) record the evidence and inspected extents.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-d960713f1bd0a7d6**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"compactification\" \"affine space\" \"Moishezon\" conjecture 2026",
+    "\"compactification\" \"Moishezon\" \"C^n\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:hexagonmath.org OR site:palomar-registry.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://www.numdam.org/item/10.5802/aif.1884.pdf",
+      "locator": "2002 published, introduction conjecture and Theorem1 pp245–246",
+      "inspection": "Primary conjecture matches analytic compactification of C^n. Counterexample compactifies (C*)^4, with different open part. Li–Zhou 2025 paper opened: smooth Kähler boundary restricts its conclusion; arbitrary singular/reducible analytic A not covered."
+    },
+    {
+      "url": "https://sites.math.rutgers.edu/~cl1412/papers/Reeb.pdf",
+      "version": "Published 2025; accepted3September2025",
+      "locator": "Introduction and Theorem1.1",
+      "inspection": "Full primary opened; theorem assumes smooth Kähler compactifying hypersurface."
+    }
+  ],
+  "scope_comparison": "Primary conjecture matches analytic compactification of C^n. Counterexample compactifies (C*)^4, with different open part. Li–Zhou 2025 paper opened: smooth Kähler boundary restricts its conclusion; arbitrary singular/reducible analytic A not covered.",
+  "rationale": "No complete matching resolution identified in bounded searches. Hold pending announcement-source coverage and any specific body gaps stated above; no assertion of continued openness.",
+  "source_gaps": [
+    "Li–Zhou theorem statement exact body locator pending (abstract and proof inspected)."
+  ],
+  "announcement_routing": {
+    "localID": "850",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "compactification",
+          "Moishezon"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "compactification",
+          "Moishezon"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00383v1",
+            "title": "Non-flat toroidal compactifications of the universal abelian variety in genus five and above",
+            "url": "https://hexagonmath.org/abs/2610.00383v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "compactification",
+        "Moishezon"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target.",
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:28:50.995Z",
+      "previous_outcome": "hold",
+      "localID": "850",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "sources": [
+        {
+          "url": "https://sites.math.rutgers.edu/~cl1412/papers/Reeb.pdf",
+          "version": "2025finalaccepted3September",
+          "locator": "Theorem1.1printedsecondpage"
+        }
+      ],
+      "comparison": "ExactTheorem1.1requirescompactifyingYbeaKahlersubmanifold. Targetarbitraryanalyticcompactificationmayhavesingular/reducibleboundary;thisextraassumptionexcludesfullclaim. Preciselocatornowread. No fullcandidate."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

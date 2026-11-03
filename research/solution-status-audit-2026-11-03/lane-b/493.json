@@ -1,0 +1,69 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "493",
+  "manifest_index": 389,
+  "original_target": {
+    "id": "493",
+    "title": "Minimax entropy estimation beyond two derivatives",
+    "area": "Nonparametric statistics and information estimation",
+    "file": "problems/493-high-smoothness-entropy-estimation.md",
+    "status": "Open",
+    "last_checked": "2026-09-23",
+    "group": "probability-statistics",
+    "source_sha256": "df37d5772cb1bcd7c11c7cf4b3d5fc5af4bf806965fd3a51522e3e5c5dfd8c8c",
+    "statement_sha256": "c9b7c5a65fa503f047e689fa6ddf38e2b51ced7e5004dd00d80544e3412664cb",
+    "state": "unreviewed"
+  },
+  "source_sha256": "df37d5772cb1bcd7c11c7cf4b3d5fc5af4bf806965fd3a51522e3e5c5dfd8c8c",
+  "statement_sha256": "c9b7c5a65fa503f047e689fa6ddf38e2b51ced7e5004dd00d80544e3412664cb",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:31:43.595975+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual1711.02141v4 Theorem1 covers only0<s<=2. Section4.2 identifies the high-smoothness/zeros obstruction; current version history remainsv4,11November2019. No matching minimax estimator or full theorem for required s>2 located in bounded current searches.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1711.02141v4",
+      "locator": "Theorem1 and Section4.2 lines633–648",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"entropy estimation\" \"high smoothness\" minimax (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"entropy estimation\" \"high-smoothness\" proof"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "entropy estimation",
+        "high smoothness"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "entropy estimation",
+        "high smoothness"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

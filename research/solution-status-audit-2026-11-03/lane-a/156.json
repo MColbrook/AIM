@@ -1,0 +1,84 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "156",
+  "manifest_index": 123,
+  "original_target": {
+    "id": "156",
+    "title": "Concentration of eikonal entropy production on jump curves",
+    "area": "Variational interfaces and nonlinear PDE",
+    "file": "problems/156-eikonal-entropy-concentration.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "ddf944923e0ba6fbfaa48d00e9d8f5cfc1778722a7cda5555acfb173b799d566",
+    "statement_sha256": "d3c0f5d58a103cff5b603b5ec9344d8ed744821936cb77afc1ff79e1183a4bda",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ddf944923e0ba6fbfaa48d00e9d8f5cfc1778722a7cda5555acfb173b799d566",
+  "statement_sha256": "d3c0f5d58a103cff5b603b5ec9344d8ed744821936cb77afc1ff79e1183a4bda",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:32:24.358991+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2604.01439v1 requires Lp entropy density with p sufficiently large and boundary conditions, not arbitrary Radon entropy measures. DeNittiOctober2026 disproves a DIFFERENT DeLellis–Otto Lebesgue-point conjecture. His actual Theorem1.1(i),(ii) expressly has |mu_eta|(E)=nu(E)=0 on exceptional off-jump set; pp4–5 identify eikonal Conjecture1(b-prime). It therefore does not refute this entropy-measure concentration target.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2604.01439v1",
+      "locator": "Theorems1.1–1.3 and boundary hypotheses",
+      "body_inspected": true
+    },
+    {
+      "url": "https://cvgmt.sns.it/media/doc/paper/8044/LebesgueJumpE.pdf",
+      "locator": "Theorem1.1(i)–(ii), equations1.14/1.18, pp4–5 eikonal comparison",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"eikonal\" \"entropy production\" \"2026\" rectifiability",
+    "\"eikonal\" \"concentration\" \"entropy\" (site:zenodo.org OR site:hal.science OR site:github.com) 2026",
+    "\"Non-Lebesgue points outside the jump set\" arxiv"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "eikonal",
+        "entropy production"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "eikonal",
+        "entropy production"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00682v1",
+          "title": "Arithmetic Expression Spaces: Expansion and Motion, Eikonal Equation, Horocycle Pullbacks, Commutativization, Contact Structure, and Tearing"
+        },
+        {
+          "id": "hexagon:2610.00190v1",
+          "title": "Aging in Spherical Spin Glass Dynamics"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

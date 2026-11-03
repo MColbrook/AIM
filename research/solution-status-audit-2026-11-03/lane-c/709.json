@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "709",
+  "manifest_index": 553,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "709",
+    "title": "Moderate measures and Hölder continuous Monge–Ampère potentials",
+    "area": "Complex analysis and potential theory",
+    "file": "problems/709-moderate-measures-and-holder-continuous-mongeampere-potentials.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-994dad94582f2891",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "f747a5b3e2225a0847bd009d33b00cca0b9e1c141183fa19e02159a3888500ed",
+    "statement_sha256": "05adc517f9ebccb85f1d053793e9f79b96904bd10de10b3ea9104121532dec05",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f747a5b3e2225a0847bd009d33b00cca0b9e1c141183fa19e02159a3888500ed",
+  "statement_sha256": "05adc517f9ebccb85f1d053793e9f79b96904bd10de10b3ea9104121532dec05",
+  "actual_source_sha256": "f747a5b3e2225a0847bd009d33b00cca0b9e1c141183fa19e02159a3888500ed",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`(X,\\omega)`$ be a compact Kähler manifold of complex dimension $`n\\ge2`$, normalized by $`\\int_X\\omega^n=1`$. Write $`dd^c=i\\partial\\bar\\partial`$. A function $`\\psi`$ is $`\\omega`$-plurisubharmonic if $`\\omega+dd^c\\psi\\ge0`$ as a current.\n\nLet $`\\mu`$ be a positive Borel probability measure on $`X`$. Suppose that $`\\mu`$ is **moderate**: there exist $`a,C>0`$ such that\n```math\n\\int_X e^{-a\\psi}\\,d\\mu\\le C\n\\quad\\text{for every }\\psi\\in\\mathrm{PSH}(X,\\omega),\\quad\\sup_X\\psi=0.\n```\n\nThe constants are uniform over this normalized family.\n\nMust there exist some $`\\alpha\\in(0,1]`$ and a Hölder continuous $`\\omega`$-plurisubharmonic function $`\\varphi\\in C^{0,\\alpha}(X)`$ such that\n```math\n(\\omega+dd^c\\varphi)^n=\\mu?\n```\n\nThe equation uses the Bedford–Taylor operator. No Hölder continuity of the super-potential of $`\\mu`$ is assumed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"moderate measures\" \"Holder\" Monge Ampere proof 2026",
+    "\"moderate measures\" \"Holder\" Monge Ampere (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/pdf/1204.4883v1",
+      "locator": "Theorem1.1 and Problem1.3 pp2–3;moderate definitionp4",
+      "scope_comparison": "The actual characterization is Holder super-potential iff Holder Monge–Ampere potential, while Problem1.3 separately asks whether MODERATE implies Holder potential. Uniform exponential integrability is the local hypothesis, and not the stronger super-potential continuity. Continuous-solution theorems for capacity-dominated measures do not establish any Holder exponent. No full matching current claim identified.",
+      "version_or_date": "arXiv1204.4883v1,22April2012;currentsearches3November2026"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual characterization is Holder super-potential iff Holder Monge–Ampere potential, while Problem1.3 separately asks whether MODERATE implies Holder potential. Uniform exponential integrability is the local hypothesis, and not the stronger super-potential continuity. Continuous-solution theorems for capacity-dominated measures do not establish any Holder exponent. No full matching current claim identified.",
+  "latest_version_check": "arXiv1204.4883v1,22April2012;currentsearches3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

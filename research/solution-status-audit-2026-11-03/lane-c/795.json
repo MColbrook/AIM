@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "795",
+  "manifest_index": 639,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "795",
+    "title": "Is the transport twistor interior of every simple surface Stein?",
+    "area": "Complex geometry; inverse problems",
+    "file": "problems/795-is-the-transport-twistor-interior-of-every-simple-surface-stein.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-6c1184a53267571c",
+    "group": "geometry-topology",
+    "source_sha256": "135bb4437598beed1f7fa6ecde2ca2a07373776847c49089586d875b84741dd0",
+    "statement_sha256": "0966b60b50e3868e65d6b261d14aba462269056541037b012bd773c50d0ec7f2",
+    "state": "unreviewed"
+  },
+  "source_sha256": "135bb4437598beed1f7fa6ecde2ca2a07373776847c49089586d875b84741dd0",
+  "statement_sha256": "0966b60b50e3868e65d6b261d14aba462269056541037b012bd773c50d0ec7f2",
+  "actual_source_sha256": "135bb4437598beed1f7fa6ecde2ca2a07373776847c49089586d875b84741dd0",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\overline{\\mathbb D}=\\{z\\in\\mathbb C:|z|\\le1\\}`$ and let $`\\sigma\\in C^\\infty(\\overline{\\mathbb D};\\mathbb R)`$. Assume the Riemannian surface $`(\\overline{\\mathbb D},g)`$, with $`g=e^{2\\sigma}|dz|^2`$, is **simple**: its boundary is strictly convex, all maximal unit-speed geodesics exit in finite forward and backward time, and there are no conjugate points. There is no curvature-sign or smallness assumption.\n\nOn $`Z^\\circ=\\mathbb D_z\\times\\mathbb D_\\mu`$, give the open bidisk the integrable complex structure $`J_\\sigma`$ specified by\n\n```math\nT^{0,1}_{J_\\sigma}Z^\\circ\n=\\mathrm{span}_{\\mathbb C}\\{\\partial_{\\bar\\mu},\\Xi_\\sigma\\},\n```\n\nwhere Wirtinger derivatives act in the displayed coordinates and\n\n```math\n\\Xi_\\sigma=e^{-\\sigma}\\left[\n\\mu^2\\partial_z+\\partial_{\\bar z}\n+(\\mu^2\\partial_z\\sigma-\\partial_{\\bar z}\\sigma)\n(\\bar\\mu\\partial_{\\bar\\mu}-\\mu\\partial_\\mu)\n\\right].\n```\n\nThis is the interior of the transport twistor space of $`g`$; its complex structure is part of the question, rather than the usual product complex structure of the bidisk.\n\n**Must $`(Z^\\circ,J_\\sigma)`$ be a Stein surface for every such $`\\sigma`$?** One equivalent formulation asks for a smooth, bounded-below exhaustion $`\\psi:Z^\\circ\\to\\mathbb R`$ whose sublevel sets are relatively compact and whose Levi form $`i\\partial_{J_\\sigma}\\bar\\partial_{J_\\sigma}\\psi`$ is positive definite everywhere. No extension of $`\\psi`$ across the degenerate boundary $`|\\mu|=1`$ is required.\n\nThe disk formulation covers arbitrary smooth compact oriented simple surfaces by global isothermal coordinates.",
+  "full_local_page_read": true,
+  "queries": [
+    "transport twistor simple surface Stein 2026",
+    "transport twistor simple surface Stein 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "transport twistor simple surface Stein 2026 (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "url": "https://sigma-journal.com/2026/045/sigma26-045.pdf",
+      "locator": "Theorems1.2–1.4,pp6;Question3.7,p13;§2.5",
+      "version_or_date": "FinalSIGMA22(2026),045,45pages,fullpublisherPDFselectedstatementsinspected",
+      "scope_comparison": "The actual global blow-down theorem assumes constant curvature or a sufficiently small C-infinity perturbation. Local blow-down charts apply generally but do not provide a global strictly plurisubharmonic exhaustion. Question3.7 retains a related global construction for arbitrary simple surfaces. A biholomorphism onto an arbitrary domain in C2 alone need not imply Steinness; bundle triviality is also insufficient. Non-simple rotationally symmetric examples and Shafarevich-cover counterexamples do not settle the specified simple transport-twistor class. No full matching result found."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual global blow-down theorem assumes constant curvature or a sufficiently small C-infinity perturbation. Local blow-down charts apply generally but do not provide a global strictly plurisubharmonic exhaustion. Question3.7 retains a related global construction for arbitrary simple surfaces. A biholomorphism onto an arbitrary domain in C2 alone need not imply Steinness; bundle triviality is also insufficient. Non-simple rotationally symmetric examples and Shafarevich-cover counterexamples do not settle the specified simple transport-twistor class. No full matching result found.",
+  "latest_version_check": "FinalSIGMA22(2026),045,45pages,fullpublisherPDFselectedstatementsinspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

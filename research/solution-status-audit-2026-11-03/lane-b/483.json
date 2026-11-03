@@ -1,0 +1,86 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "483",
+  "manifest_index": 381,
+  "original_target": {
+    "id": "483",
+    "title": "Automatic conservation laws for renormalized nonlinear diffusion",
+    "area": "Nonlinear diffusion PDEs; chemical mass conservation",
+    "file": "problems/483-nonlinear-diffusion-renormalization-mass-conservation.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "92f467f04d2d237a08ba32fcf43e7b490bd29f5339b76310df3dc3154d81ef57",
+    "statement_sha256": "90fa8951df60a628fdf38c3f5c06d5c66f5688a1683d5d05fbe74a54d03c800c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "92f467f04d2d237a08ba32fcf43e7b490bd29f5339b76310df3dc3154d81ef57",
+  "statement_sha256": "90fa8951df60a628fdf38c3f5c06d5c66f5688a1683d5d05fbe74a54d03c800c",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:21:23.174130+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual published Definition1.1 equations1.4–1.6 and Remark1.2 distinguish the extra conservation axiom from the truncated identity for nonlinear exponents. Theorem1.3 constructs selected conservative solutions, not all identity-only solutions. Theorem1.7 assumes additional integrability. No automatic conservation theorem for exact local class located.",
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00332-023-09926-w",
+      "locator": "Definition1.1, Remark1.2, Theorems1.3 and1.7",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"renormalized\" \"nonlinear diffusion\" \"mass conservation\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "renormalized",
+        "renormalised"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-27-000014",
+          "title": "Regularity structures and dynamical Phi^4_3"
+        },
+        {
+          "id": "PALOMAR-2026-10-05-000008",
+          "title": "Superdiffusive central limit theorem for a Brownian particle in a critically-correlated incompressible random drift"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "renormalized",
+        "renormalised"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00642v1",
+          "title": "Near-Null Limits and Contact Distributions for Maxwell Composite Operators"
+        },
+        {
+          "id": "hexagon:2610.00314v1",
+          "title": "Non-unique vanishing-viscosity solutions of 2D Euler with vorticity in $L^p$"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

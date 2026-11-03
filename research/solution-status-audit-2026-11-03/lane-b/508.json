@@ -1,0 +1,76 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "508",
+  "manifest_index": 399,
+  "original_target": {
+    "id": "508",
+    "title": "Monotonicity of unordered graph motion-planning complexity",
+    "area": "Applied topology and robot motion planning",
+    "file": "problems/508-unordered-graph-motion-monotonicity.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "aaffef7374430470aa511ccaeaaa4a1ce2c2d2b549acc57c279c5c1c3c3b5dfa",
+    "statement_sha256": "c4cc339801ab8bd2acecff70b79f7d210bb21116347395979e93d98fffe399b7",
+    "state": "unreviewed"
+  },
+  "source_sha256": "aaffef7374430470aa511ccaeaaa4a1ce2c2d2b549acc57c279c5c1c3c3b5dfa",
+  "statement_sha256": "c4cc339801ab8bd2acecff70b79f7d210bb21116347395979e93d98fffe399b7",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:35:52.263951+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2302.04346v2 Section1.2 asks monotonicity at EVERY k of reduced topological complexity of unordered graph configurations. The proved theorem is eventual stabilization. Ordered-configuration monotonicity and homological stability are different spaces/invariants.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2302.04346v2",
+      "locator": "Section1.2 Monotonicity, line90",
+      "body_inspected": true
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s41468-026-00232-4",
+      "locator": "Published30April2026 metadata and abstract only",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"unordered\" \"configuration\" \"monotonicity\" complexity (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "unordered configuration",
+        "graph braid",
+        "motion planning"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "unordered configuration",
+        "graph braid",
+        "motion planning"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Final published body inaccessible; public latest preprint inspected, not byte parity."
+  ],
+  "canonical_update_required": false
+}

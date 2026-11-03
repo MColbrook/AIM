@@ -1,0 +1,104 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "945",
+  "manifest_index": 789,
+  "checked_date": "2026-11-03",
+  "source_sha256": "db8a12b95630c193e5890054b54c2e3076912d0fbb575fe3a9d961726c9773c5",
+  "statement_sha256": "3dbf55803bb1a4a16404ee67b62c6e55ab4817355fa7b1dcf34b21545df80683",
+  "original_target": {
+    "id": "945",
+    "title": "Stochastic homogenization for ordered stable min-max Hamiltonians",
+    "area": "PDEs, fluids and materials",
+    "file": "problems/945-stochastic-homogenization-for-ordered-stable-min-max-hamiltonians.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-6b522f12046bcadc",
+    "group": "pdes-materials",
+    "source_sha256": "db8a12b95630c193e5890054b54c2e3076912d0fbb575fe3a9d961726c9773c5",
+    "statement_sha256": "3dbf55803bb1a4a16404ee67b62c6e55ab4817355fa7b1dcf34b21545df80683",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix arbitrary integers $`d\\ge1`$ and $`\\ell\\ge1`$. On a probability space $`(\\Omega,\\mathcal F,\\mathbb P)`$ with a measure-preserving ergodic $`\\mathbb R^d`$ -action $`(\\tau_y)`$, let $`C_i,D_i:\\mathbb R^d\\times\\mathbb R^d\\times\\Omega\\to\\mathbb R`$, $`1\\le i\\le\\ell`$, be random Hamiltonians. In the momentum variable, $`C_i`$ has convex sublevel sets and $`D_i`$ has convex superlevel sets. Require the pointwise ordering\n```math\nC_1\\ge\\cdots\\ge C_\\ell,\\qquad D_1\\le\\cdots\\le D_\\ell,\n```\n\nand define\n```math\nH_1=\\max\\{C_1,D_1\\},\\qquad\nH_k=\\max\\{C_k,\\min\\{D_k,H_{k-1}\\}\\},\\quad 2\\le k\\le\\ell.\n```\n\nAll these operations are pointwise in $`(p,x,\\omega)`$.\n\nFor every branch $`G\\in\\{C_i,D_i:1\\le i\\le\\ell\\}`$ impose:\n\n1. **Stationarity:** $`G(p,x,\\tau_y\\omega)=G(p,x+y,\\omega)`$ for every $`p,x,y,\\omega`$, using the common ergodic action.\n2. **Printed branch coercivity:**\n ```math\n\\liminf_{|p|\\to\\infty}\\mathrm*{ess\\,inf}_{(x,\\omega)\\in\\mathbb R^d\\times\\Omega}|G(p,x,\\omega)|=+\\infty.\n```\n\n3. **Continuity and bounds:** for every compact $`K\\subset\\mathbb R^d`$, $`G`$ is bounded on $`K\\times\\mathbb R^d\\times\\Omega`$. For each $`(\\omega,K)`$, there exists a modulus $`\\rho_{\\omega,K}`$, shared by the finite family, such that\n ```math\n|G(p,x,\\omega)-G(q,y,\\omega)|\\le\\rho_{\\omega,K}(|p-q|+|x-y|),\\quad p,q\\in K,\\ x,y\\in\\mathbb R^d.\n```\n\n4. **Stable pairing:** at each $`(x,\\omega)`$, every pair $`(C_i,D_i)`$ and every adjacent pair $`(C_j,D_{j+1})`$, $`1\\le j<\\ell`$, is stable in the following sense. For quasiconvex $`V`$ and quasiconcave $`\\Lambda`$, put $`\\Delta=\\{p:\\Lambda(p)\\ge V(p)\\}`$. Stability means either $`\\Delta=\\varnothing`$, or there is a real $`c`$ with $`V=c`$ on $`\\partial\\Delta`$ and $`V>c`$ on $`\\Delta^c`$.\n\nCarry explicitly the ambient hypothesis from the discovery source's Section1.1: ** $`H_\\ell`$ is positively coercive in momentum, uniformly in $`(x,\\omega)`$ **. Equivalently,\n```math\n\\lim_{R\\to\\infty}\\inf_{\\substack{|p|\\ge R\\\\x\\in\\mathbb R^d,\\ \\omega\\in\\Omega}}H_\\ell(p,x,\\omega)=+\\infty.\n```\n\nThis ambient hypothesis is separately stated, not asserted to follow from the absolute-value branch condition.\n\nDoes every such $`H_\\ell`$ stochastically homogenize? Precisely, does there exist a deterministic continuous $`\\overline H_\\ell:\\mathbb R^d\\to\\mathbb R`$ such that, for every $`u_0\\in\\mathrm{BUC}(\\mathbb R^d)`$, the viscosity solutions of\n```math\n\\partial_tu^\\epsilon+H_\\ell(Du^\\epsilon,x/\\epsilon,\\omega)=0,\\qquad u^\\epsilon(\\cdot,0,\\omega)=u_0,\n```\n\nconverge almost surely, locally uniformly on $`\\mathbb R^d\\times(0,\\infty)`$, to the viscosity solution of\n```math\n\\partial_t\\overline u+\\overline H_\\ell(D\\overline u)=0,\\qquad\\overline u(\\cdot,0)=u_0?\n```\n\nNo contact-monotonicity hypothesis, rate, corrector-existence conclusion or explicit formula for $`\\overline H_\\ell`$ is included.",
+  "full_original_page": "# 945. Stochastic homogenization for ordered stable min-max Hamiltonians\n\n**Area:** PDEs, fluids and materials\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix arbitrary integers $`d\\ge1`$ and $`\\ell\\ge1`$. On a probability space $`(\\Omega,\\mathcal F,\\mathbb P)`$ with a measure-preserving ergodic $`\\mathbb R^d`$ -action $`(\\tau_y)`$, let $`C_i,D_i:\\mathbb R^d\\times\\mathbb R^d\\times\\Omega\\to\\mathbb R`$, $`1\\le i\\le\\ell`$, be random Hamiltonians. In the momentum variable, $`C_i`$ has convex sublevel sets and $`D_i`$ has convex superlevel sets. Require the pointwise ordering\n```math\nC_1\\ge\\cdots\\ge C_\\ell,\\qquad D_1\\le\\cdots\\le D_\\ell,\n```\n\nand define\n```math\nH_1=\\max\\{C_1,D_1\\},\\qquad\nH_k=\\max\\{C_k,\\min\\{D_k,H_{k-1}\\}\\},\\quad 2\\le k\\le\\ell.\n```\n\nAll these operations are pointwise in $`(p,x,\\omega)`$.\n\nFor every branch $`G\\in\\{C_i,D_i:1\\le i\\le\\ell\\}`$ impose:\n\n1. **Stationarity:** $`G(p,x,\\tau_y\\omega)=G(p,x+y,\\omega)`$ for every $`p,x,y,\\omega`$, using the common ergodic action.\n2. **Printed branch coercivity:**\n ```math\n\\liminf_{|p|\\to\\infty}\\mathrm*{ess\\,inf}_{(x,\\omega)\\in\\mathbb R^d\\times\\Omega}|G(p,x,\\omega)|=+\\infty.\n```\n\n3. **Continuity and bounds:** for every compact $`K\\subset\\mathbb R^d`$, $`G`$ is bounded on $`K\\times\\mathbb R^d\\times\\Omega`$. For each $`(\\omega,K)`$, there exists a modulus $`\\rho_{\\omega,K}`$, shared by the finite family, such that\n ```math\n|G(p,x,\\omega)-G(q,y,\\omega)|\\le\\rho_{\\omega,K}(|p-q|+|x-y|),\\quad p,q\\in K,\\ x,y\\in\\mathbb R^d.\n```\n\n4. **Stable pairing:** at each $`(x,\\omega)`$, every pair $`(C_i,D_i)`$ and every adjacent pair $`(C_j,D_{j+1})`$, $`1\\le j<\\ell`$, is stable in the following sense. For quasiconvex $`V`$ and quasiconcave $`\\Lambda`$, put $`\\Delta=\\{p:\\Lambda(p)\\ge V(p)\\}`$. Stability means either $`\\Delta=\\varnothing`$, or there is a real $`c`$ with $`V=c`$ on $`\\partial\\Delta`$ and $`V>c`$ on $`\\Delta^c`$.\n\nCarry explicitly the ambient hypothesis from the discovery source's Section1.1: ** $`H_\\ell`$ is positively coercive in momentum, uniformly in $`(x,\\omega)`$ **. Equivalently,\n```math\n\\lim_{R\\to\\infty}\\inf_{\\substack{|p|\\ge R\\\\x\\in\\mathbb R^d,\\ \\omega\\in\\Omega}}H_\\ell(p,x,\\omega)=+\\infty.\n```\n\nThis ambient hypothesis is separately stated, not asserted to follow from the absolute-value branch condition.\n\nDoes every such $`H_\\ell`$ stochastically homogenize? Precisely, does there exist a deterministic continuous $`\\overline H_\\ell:\\mathbb R^d\\to\\mathbb R`$ such that, for every $`u_0\\in\\mathrm{BUC}(\\mathbb R^d)`$, the viscosity solutions of\n```math\n\\partial_tu^\\epsilon+H_\\ell(Du^\\epsilon,x/\\epsilon,\\omega)=0,\\qquad u^\\epsilon(\\cdot,0,\\omega)=u_0,\n```\n\nconverge almost surely, locally uniformly on $`\\mathbb R^d\\times(0,\\infty)`$, to the viscosity solution of\n```math\n\\partial_t\\overline u+\\overline H_\\ell(D\\overline u)=0,\\qquad\\overline u(\\cdot,0)=u_0?\n```\n\nNo contact-monotonicity hypothesis, rate, corrector-existence conclusion or explicit formula for $`\\overline H_\\ell`$ is included.\n\n## Application\n\nThis asks whether fine stationary random heterogeneity produces deterministic large-scale front dynamics for this structured nonconvex Hamiltonian class.\n\n## References\n\n- H. Gao, *Stochastic homogenization of certain nonconvex Hamilton-Jacobi equations*, J. Differential Equations **267** (2019), 2918-2949, [DOI](https://doi.org/10.1016/j.jde.2019.03.036), [primary v1](https://arxiv.org/html/1803.08633v1), Section 1.1, equations (1.1)-(1.2), assumptions (A1)-(A4), Definition 1 and **Conjecture 1**.\n- H. Gao, *Random homogenization of coercive Hamilton-Jacobi equations in 1d*, Calc. Var. Partial Differential Equations **55** (2016), article 30, [primary](https://arxiv.org/abs/1507.07048). Known one-dimensional case.\n- A. Davini, R. Saona and B. Ziliotto, *Stochastic homogenization of HJ equations: a differential game approach*, [primary v2](https://arxiv.org/html/2406.18404v2), Theorem 2.2 and Remark 2.3. Its finite-range and oriented-dynamics assumptions differ.\n\n## Status review\n\n\n**Known cases:** Stable ordered pairings without contact monotonicity are the target. The finite-range oriented differential-game theorem and the one-dimensional theorem impose restrictions absent here. No general announcement found.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nStable ordered pairings without contact monotonicity are the target. The finite-range oriented differential-game theorem and the one-dimensional theorem impose restrictions absent here. No general announcement found.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\n**Partial progress; checked 29 October 2026.** Gao proves the target with the additional contact-monotonicity condition (M); the one-dimensional case is also known. No matching full result, counterexample, announcement or AIM/private duplicate was located.\n\nThe ambient positive coercivity is explicit because absolute-value branch growth alone does not imply it. This carries the source's Section 1.1 hypothesis; it does not restrict the dimension or add (M). Final published-body parity was unavailable; the sole archived primary and published abstract were checked.\n\nReview evidence: [owner](../FURTHER_problems/_tracking/B-180308633-Hamilton-Jacobi-exact-hypotheses-independent-peer-20261028/OWNER-PROPOSAL.json), [mathematical peer](../FURTHER_problems/_tracking/B-180308633-Hamilton-Jacobi-exact-hypotheses-independent-peer-20261028/PEER.json), [coordinating review](../FURTHER_problems/_tracking/B-180308633-Hamilton-Jacobi-exact-hypotheses-independent-peer-20261028/ROOT-EXACT-COERCIVE-STABLE-MINMAX-CURRENT-AND-SEMANTIC-FINAL-REVIEW.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-6b522f12046bcadc**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Gao",
+    "stable pairs",
+    "nonconvex Hamilton"
+  ],
+  "queries": [
+    "\"Gao\" \"stable\" \"min max\" stochastic homogenization 2026",
+    "\"Gao\" \"stable\" \"min max\" stochastic homogenization; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"stochastic homogenization\" \"stable pairs\" Gao",
+    "\"Gao\" \"stable pair\" \"homogenization\" conjecture",
+    "\"Gao\" \"stable pairs\" homogenization Hamiltonians",
+    "\"1803.08633\" homogenization conjecture"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1803.08633v1",
+      "locator": "Conjecture1, lines133–137 and following monotonicity discussion",
+      "comparison": "Source explicitly separates assumptions A1–A4 from additional M used for the theorem. Removing M for arbitrary ergodic actions/all dimensions remains the exact conjectural step, not supplied by the stated theorem."
+    }
+  ],
+  "rationale": "Current bounded searches returned finite-range/oriented-game or one-dimensional results, not the all-action ordered stable min-max class without M.",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected scope statements inspected, not certification of every proof."
+  ],
+  "announcement_routing": {
+    "localID": "945",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Gao",
+          "stable pairs",
+          "nonconvex Hamilton"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Gao",
+          "stable pairs",
+          "nonconvex Hamilton"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00205v2",
+            "title": "The Dancing Sand Theorem: the 2-part of the sandpile group of the hypercube, for every n",
+            "url": "https://hexagonmath.org/abs/2610.00205v2"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Gao",
+        "stable pairs",
+        "nonconvex Hamilton"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "The Dancing Sand theorem is a finite hypercube sandpile-group invariant; Gao/name overlap is unrelated to ordered stable min-max Hamiltonian homogenization.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.729Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

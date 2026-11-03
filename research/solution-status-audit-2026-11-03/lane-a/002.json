@@ -1,0 +1,89 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "002",
+  "manifest_index": 1,
+  "source_sha256": "c603ec257c5c6145aea3b7fb380feb0a3dad87c084bd4ebb95eb98c7ac0378ef",
+  "statement_sha256": "4fc52a5e0d8c8f802387cba4fc930e9a3f2472b72a6886734416a0a59898ff1a",
+  "original_target": {
+    "id": "002",
+    "title": "Ivrii's measure-zero conjecture for billiards",
+    "area": "Spectral asymptotics and ray dynamics",
+    "file": "problems/002-ivrii-periodic-billiards.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "spectral",
+    "source_sha256": "c603ec257c5c6145aea3b7fb380feb0a3dad87c084bd4ebb95eb98c7ac0378ef",
+    "statement_sha256": "4fc52a5e0d8c8f802387cba4fc930e9a3f2472b72a6886734416a0a59898ff1a",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T11:44:35.176566+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Full target is ordinary specular Euclidean billiards on every strictly convex smooth domain in every dimension, for the union of all periods. Planar announcements, generic/algebraic cases, periods3/4, outer/projective/symplectic billiards do not supply that full assertion.",
+  "primary_sources": [
+    {
+      "url": "https://www.aimsciences.org/article/doi/10.3934/dcds.2024117",
+      "locator": "scope and main periodic-orbit claims",
+      "body_inspected": false,
+      "scope": "Outer and symplectic billiards, a different map."
+    },
+    {
+      "url": "https://users.math.uoc.gr/~frantzikinakis/ErgodicUnder2024/ApplicationsBilliardsII.pdf",
+      "locator": "section2 Ivrii discussion",
+      "body_inspected": true,
+      "scope": "All periods remain the full problem; fixed-period/generic cases distinguished."
+    }
+  ],
+  "queries": [
+    {
+      "query": "Ivrii",
+      "providers": [
+        "arXiv",
+        "Zenodo",
+        "HAL",
+        "GitHub",
+        "Palomar",
+        "Hexagon"
+      ],
+      "method": "Focused web searches plus public current-provider metadata routing"
+    },
+    {
+      "query": "billiard",
+      "providers": [
+        "arXiv",
+        "Zenodo",
+        "HAL",
+        "GitHub",
+        "Palomar",
+        "Hexagon"
+      ],
+      "method": "Focused web searches plus public current-provider metadata routing"
+    }
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "revision": 735,
+      "entries": 954,
+      "complete_listing": true,
+      "scope": "Searched current public summaries; full definitions only where candidate relevant."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "entries": 646,
+      "complete_listing": true,
+      "scope": "Current metadata searched; Xi/character-sum Polya and point-billiard hits are different targets."
+    },
+    "OpenAI": {
+      "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+      "scope": "Current manuscript routing index inspected, not proof audit of every manuscript."
+    }
+  },
+  "limitations": [
+    "Bounded search cannot establish that no solution exists.",
+    "Provider metadata coverage is not a full proof review."
+  ],
+  "canonical_update_required": false
+}

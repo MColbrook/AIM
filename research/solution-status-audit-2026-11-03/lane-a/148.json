@@ -1,0 +1,96 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "148",
+  "manifest_index": 116,
+  "original_target": {
+    "id": "148",
+    "title": "The unregularized Coulomb mean-field limit",
+    "area": "Kinetic theory and plasma physics",
+    "file": "problems/148-uncut-coulomb-mean-field.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "3404abb35a8bf9fbd54bda7e2c0f539f78e2862bbdf23c71eb4daf825e531cac",
+    "statement_sha256": "5810dead5c6956ba1c8438a0aeb3b18168ba86e868e75952977dc453ed1f7d99",
+    "state": "unreviewed"
+  },
+  "source_sha256": "3404abb35a8bf9fbd54bda7e2c0f539f78e2862bbdf23c71eb4daf825e531cac",
+  "statement_sha256": "5810dead5c6956ba1c8438a0aeb3b18168ba86e868e75952977dc453ed1f7d99",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:25:44.826136+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "September2026 published Feistl-Held–Pickl Definition1.1 still cuts off at N^(-5/12+sigma). Actual2605.28979v1 Theorem1.1 concerns signed vanishing Gibbs-equilibrium fluctuations and linearized Vlasov, not arbitrary iid compact smooth data. Actual2608.22038v1 uses OVERDAMPED first-order dynamics, not inertial Newtonian particles. No full uncut3D Vlasov-Poisson limit located.",
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s10955-026-03687-y",
+      "locator": "Definition1.1, Section1.1, exact force cutoff",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2605.28979v1",
+      "locator": "Equations1.1–1.5 and Theorem1.1",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2608.22038v1",
+      "locator": "Section1.1 overdamped model",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Coulomb\" \"mean field\" \"without cutoff\" \"2026\"",
+    "\"Coulomb\" \"without cutoff\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) limit"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Coulomb",
+        "Vlasov"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-12-000007",
+          "title": "Classical theorems of Fröhlich and Spencer: the Kosterlitz–Thouless transition, massless phases of abelian gauge theories, and Anderson localization"
+        },
+        {
+          "id": "PALOMAR-2026-10-08-000006",
+          "title": "Stability of Matter in Lean: Lieb–Thirring, Ionization, the Thermodynamic Limit and Thomas–Fermi Theory"
+        },
+        {
+          "id": "PALOMAR-2026-10-08-000001",
+          "title": "Sharp Wasserstein propagation of chaos from correlated initial data"
+        },
+        {
+          "id": "PALOMAR-2026-08-27-000020",
+          "title": "BrandonMYates/schwarzschild-comparator"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Coulomb",
+        "Vlasov"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

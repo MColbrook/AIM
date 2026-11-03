@@ -293,7 +293,7 @@ The formulation is the $`m=2`$ subcritical model and weak solution class of the 
 
 ## 31. Full-space minimizers for subcritical fourth-order aggregation energy
 
-Admitted page: [fourth-order-aggregation-full-space-minimizer](../../resolved/659-fourth-order-aggregation-full-space-minimizer.md)
+Admitted page: [fourth-order-aggregation-full-space-minimizer](../../../cut_problems/research/resolved/659-fourth-order-aggregation-full-space-minimizer.md)
 
 1. J. A. Carrillo, A. Esposito, C. Falcó and A. Fernández-Jiménez, *Competing effects in fourth-order aggregation–diffusion equations*, Proc. Lond. Math. Soc. **129**, e12623 (2024), Introduction, Theorem 2.1 and §3. [Article](https://doi.org/10.1112/plms.12623).
 2. C. Falcó, R. E. Baker and J. A. Carrillo, *A nonlocal-to-local approach to aggregation-diffusion equations*, SIAM Review **67** (2025), 353–372, §4. [Article](https://doi.org/10.1137/25M1726248).
@@ -302,7 +302,7 @@ The source proves a lower energy bound in this subcritical range and treats crit
 
 ## 32. Finite propagation in fourth-order aggregation–diffusion
 
-Admitted page: [fourth-order-aggregation-finite-propagation](../../../problems/481-fourth-order-aggregation-finite-propagation.md)
+Admitted page: [fourth-order-aggregation-finite-propagation](../../../cut_problems/problems/481-fourth-order-aggregation-finite-propagation.md)
 
 1. J. A. Carrillo, A. Esposito, C. Falcó and A. Fernández-Jiménez, *Competing effects in fourth-order aggregation–diffusion equations*, Proc. Lond. Math. Soc. **129**, e12623 (2024), Introduction, Definition 2.1 and Theorem 2.2. [Article](https://doi.org/10.1112/plms.12623).
 2. C. Falcó, R. E. Baker and J. A. Carrillo, *A nonlocal-to-local approach to aggregation-diffusion equations*, SIAM Review **67** (2025), 353–372, §4. [Article](https://doi.org/10.1137/25M1726248).

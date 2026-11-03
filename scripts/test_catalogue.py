@@ -602,7 +602,7 @@ class CatalogueTests(unittest.TestCase):
 
     def test_gap_in_active_numbering_is_rejected(self):
         self.change_row(lambda rows: rows.pop(1))
-        self.run_catalogue(expected=1, message='Active problem IDs must be consecutive')
+        self.run_catalogue(expected=1, message='IDs must be consecutive across active, retired and cut records')
 
     def test_solved_page_keeps_its_id_and_path(self):
         rows = self.read_json('data/spectral.json')

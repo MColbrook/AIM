@@ -1,0 +1,112 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1016",
+  "manifest_index": 860,
+  "checked_date": "2026-11-03",
+  "source_sha256": "f3cfa9bd674d911ea0901755145e55fd943490428bd1885db2d1c1fa605516ad",
+  "statement_sha256": "34485f471c267a4ab373f77acf41640a919623f266d7e615f845aad3a18bd689",
+  "original_target": {
+    "id": "1016",
+    "title": "The sharp inradius bound for superhomogeneous Dirichlet frequencies",
+    "area": "Spectral theory and spectral geometry",
+    "file": "problems/1016-the-sharp-inradius-bound-for-superhomogeneous-dirichlet-frequencies.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-357f10178e95f713",
+    "group": "spectral",
+    "source_sha256": "f3cfa9bd674d911ea0901755145e55fd943490428bd1885db2d1c1fa605516ad",
+    "statement_sha256": "34485f471c267a4ab373f77acf41640a919623f266d7e615f845aad3a18bd689",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix $`N\\ge2`$, $`1<p<\\infty`$, and a superhomogeneous exponent $`q>p`$ in the range\n```math\n\\begin{cases}\n q<\\dfrac{Np}{N-p},&p<N,\\\\\n q<\\infty,&p=N,\\\\\n q\\le\\infty,&p>N.\n \\end{cases}\n```\n\nFor a nonempty bounded open convex set $`\\Omega\\subset\\mathbb R^N`$, define its ordinary Euclidean inradius and Dirichlet Poincaré–Sobolev frequency by\n```math\nR_\\Omega=\\sup\\{r>0:\\exists x,\\ B_r(x)\\subset\\Omega\\},\\qquad\n \\lambda_{p,q}(\\Omega)=\n \\inf_{\\substack{u\\in C_c^\\infty(\\Omega)\\\\u\\ne0}}\n \\frac{\\int_\\Omega|\\nabla u|^p\\,dx}\n      {\\|u\\|_{L^q(\\Omega)}^p}.\n```\n\nDetermine the exact constant\n```math\nC_{\\mathrm{opt}}(N,p,q)=\n \\inf_{\\substack{\\Omega\\subset\\mathbb R^N\\\\\n                  \\Omega\\text{ nonempty, bounded, open, convex}}}\n R_\\Omega^{\\,p-N+Np/q}\\lambda_{p,q}(\\Omega),\n \\qquad \\frac1\\infty=0.\n```\n\n\nScaling permits the equivalent constraint $`R_\\Omega=1`$. The target is the optimal universal **lower-bound constant**, with no volume, perimeter or capacitary-inradius factor. Neither attainment by a bounded domain nor a particular minimizing shape is presumed.",
+  "full_original_page": "# 1016. The sharp inradius bound for superhomogeneous Dirichlet frequencies\n\n**Area:** Spectral theory and spectral geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix $`N\\ge2`$, $`1<p<\\infty`$, and a superhomogeneous exponent $`q>p`$ in the range\n```math\n\\begin{cases}\n q<\\dfrac{Np}{N-p},&p<N,\\\\\n q<\\infty,&p=N,\\\\\n q\\le\\infty,&p>N.\n \\end{cases}\n```\n\nFor a nonempty bounded open convex set $`\\Omega\\subset\\mathbb R^N`$, define its ordinary Euclidean inradius and Dirichlet Poincaré–Sobolev frequency by\n```math\nR_\\Omega=\\sup\\{r>0:\\exists x,\\ B_r(x)\\subset\\Omega\\},\\qquad\n \\lambda_{p,q}(\\Omega)=\n \\inf_{\\substack{u\\in C_c^\\infty(\\Omega)\\\\u\\ne0}}\n \\frac{\\int_\\Omega|\\nabla u|^p\\,dx}\n      {\\|u\\|_{L^q(\\Omega)}^p}.\n```\n\nDetermine the exact constant\n```math\nC_{\\mathrm{opt}}(N,p,q)=\n \\inf_{\\substack{\\Omega\\subset\\mathbb R^N\\\\\n                  \\Omega\\text{ nonempty, bounded, open, convex}}}\n R_\\Omega^{\\,p-N+Np/q}\\lambda_{p,q}(\\Omega),\n \\qquad \\frac1\\infty=0.\n```\n\n\nScaling permits the equivalent constraint $`R_\\Omega=1`$. The target is the optimal universal **lower-bound constant**, with no volume, perimeter or capacitary-inradius factor. Neither attainment by a bounded domain nor a particular minimizing shape is presumed.\n\n## Application\n\nThe constant gives the best domain-independent control of a nonlinear Dirichlet frequency from the radius of the largest inscribed ball. Such bounds connect Sobolev inequalities and nonlinear eigenvalue estimates with geometric design constraints.\n\n## References\n\n- L. Brasco, *On principal frequencies and inradius in convex sets*, **Bruno Pini Mathematical Analysis Seminar** 9(1) (2018), 78–101. [Published article](https://doi.org/10.6092/issn.2240-2829/8945); [published PDF](https://mathematicalanalysis.unibo.it/article/download/8945/8866/28804), Proposition 6.3, equation (15), p. 99, and Open problems 1, p. 100.\n- G. Pisante and F. Prinari, *Sharp Makai-type inequalities for the best Poincaré–Sobolev constants* (2026), [arXiv:2604.11973v1](https://arxiv.org/html/2604.11973), Theorem 1.1 and Section 1.4.\n- F. Bozzola and L. Brasco, *The Role of Topology and Capacity in Some Bounds for Principal Frequencies*, **Journal of Geometric Analysis** 34 (2024), 299. [Published article](https://doi.org/10.1007/s12220-024-01742-2), Theorems 1.2–1.3.\n\n## Status review\n\n\n**Known cases:** The sharp constant uses only ordinary inradius and q>p. The 2026 sharp Makai-type results impose q<=p and different geometric factors; extremal functions on a fixed domain do not solve optimization over convex shapes.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe sharp constant uses only ordinary inradius and q>p. The 2026 sharp Makai-type results impose q<=p and different geometric factors; extremal functions on a fixed domain do not solve optimization over convex shapes.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked **30 October 2026**. Brasco proves a positive bound and explicitly asks for its sharp constant. The question here selects the $`q>p`$ component of the source's two-part question.\n\nThe 2026 “complete picture” of sharp geometric inequalities is explicitly restricted to $`q\\le p`$ and combinations of two geometric quantities. Later general-domain bounds and existence results for extremal functions do not identify this optimal constant over convex shapes. No matching general determination or complete announcement was found. Particular parameter cases may be known; the full parameter-dependent determination is the target.\n\nSemantic checks against the AIM/OpenAI all-status corpus and developing collection found no equivalent problem. These are dated searches, not a proof that no unlocated result exists.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-357f10178e95f713**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "superhomogeneous",
+    "inradius",
+    "Brasco",
+    "Pisante"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"superhomogeneous\" \"inradius\" sharp 2026"
+    },
+    {
+      "query": "\"superhomogeneous\" \"inradius\" sharp",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2604.11973v1",
+      "locator": "13April2026 introduction1.1 lines66–74; publishedBrasco2018Openproblems1p100"
+    }
+  ],
+  "scope_comparison": "Makai-type sharp results expressly restrict q<=p and optimize perimeter/volume combinations. The target is q>p, ordinary inradius alone, and optimization over convex domains. Fixed-domain Steiner extremal-function existence does not compute this shape-universal constant. Original positive bound and sharpness question remain distinct.",
+  "recommendation": "Retain partial status; bounded current searches locate no complete matching resolution.",
+  "limitations": "Bounded negative evidence, not proof of continued openness. Exact statement and original references/status retained. Shared providers are metadata routing only except primary candidates explicitly described.",
+  "announcement_routing": {
+    "localID": "1016",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "superhomogeneous",
+          "inradius",
+          "Brasco",
+          "Pisante"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "superhomogeneous",
+          "inradius",
+          "Brasco",
+          "Pisante"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00528v1",
+            "title": "$10/24/26$: Factoring a Pythagorean Date",
+            "url": "https://hexagonmath.org/abs/2610.00528v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "superhomogeneous",
+        "inradius",
+        "Brasco",
+        "Pisante"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Factoring a Pythagorean calendar date is arithmetic and does not bound a domain inradius from superhomogeneous Dirichlet frequency.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.761Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

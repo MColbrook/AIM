@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "692",
+  "manifest_index": 536,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "692",
+    "title": "Half-Hölder extension of the Brjuno-corrected infimum radius",
+    "area": "Holomorphic dynamics and small divisors",
+    "file": "problems/692-half-holder-extension-of-the-brjuno-corrected-infimum-radius.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-6a8bc625e7cc1b4f",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "9a818c0a1c4a46db3291cf3ccd0a27fb01028bd6f18365db61e4205c7e75495c",
+    "statement_sha256": "97660d4f4e969d434cf711e3e4587da58944ddc7a8d60960677dfa90488b20bd",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9a818c0a1c4a46db3291cf3ccd0a27fb01028bd6f18365db61e4205c7e75495c",
+  "statement_sha256": "97660d4f4e969d434cf711e3e4587da58944ddc7a8d60960677dfa90488b20bd",
+  "actual_source_sha256": "9a818c0a1c4a46db3291cf3ccd0a27fb01028bd6f18365db61e4205c7e75495c",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`D=\\{z\\in\\mathbb C:|z|<1\\}`$. For irrational $`\\theta\\in(0,1)`$, let $`S_\\theta`$ consist of all injective holomorphic maps $`f:D\\to\\mathbb C`$ with $`f(0)=0`$ and $`f'(0)=\\lambda_\\theta=e^{2\\pi i\\theta}`$. Let $`h_f(z)=z+O(z^2)`$ be the unique formal series satisfying\n\n```math\nf\\circ h_f=h_f\\circ(\\lambda_\\theta z).\n```\n\nWrite $`R(f)`$ for the power-series radius of convergence of $`h_f`$ and define\n\n```math\nr_{\\inf}(\\theta)=\\inf_{f\\in S_\\theta}R(f).\n```\n\nDefine the ordinary continued-fraction quantities\n\n```math\n\\alpha_0=\\theta,\\qquad\n\\alpha_{j+1}=\\frac1{\\alpha_j}-\\left\\lfloor\\frac1{\\alpha_j}\\right\\rfloor,\n\\qquad \\beta_{-1}=1,\\quad\\beta_j=\\prod_{k=0}^j\\alpha_k,\n```\n\nand $`B(\\theta)=\\sum_{j\\ge0}\\beta_{j-1}\\log(1/\\alpha_j)`$. Let $`\\mathcal B`$ be the irrational angles in $`(0,1)`$ with $`B(\\theta)<\\infty`$.\n\nDoes there exist a function $`U:[0,1)\\to\\mathbb R`$ and a finite constant $`C`$ such that\n\n```math\nU(\\theta)=\\log r_{\\inf}(\\theta)+B(\\theta)\\quad(\\theta\\in\\mathcal B),\n\\qquad\n|U(x)-U(y)|\\le C|x-y|^{1/2}\\quad(x,y\\in[0,1))?\n```\n\nThe radius is for the normalized series $`h_f`$, not its inverse. No requirement that the whole convergence disk map into $`D`$ is added. Rational and non-Brjuno angles enter through the requested extension. The infimum is over all $`S_\\theta`$, rather than a fixed polynomial family.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Brjuno\" \"infimum\" \"Holder\" proof 2026",
+    "\"Brjuno\" \"infimum\" \"Holder\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The actual theorem restricts Upsilon to high-type angles HT_N and the quadratic/Inou–Shishikura setting. The local target is a uniform half-Holder extension for the infimum over all injective germs and all Brjuno angles. Bounded logarithmic comparisons with a quadratic radius do not transfer continuity. No full matching current claim identified.",
+      "locator": "Theorem1 PDFp3; definitionUpsilon preceding; Abate OP2 source routing",
+      "primary_body_access_gap": false,
+      "url": "https://www.ma.imperial.ac.uk/~dcheragh/Research/2015-1.pdf",
+      "version_or_date": "Cheraghi–Cheritat2015 author manuscript; current searches3November2026"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual theorem restricts Upsilon to high-type angles HT_N and the quadratic/Inou–Shishikura setting. The local target is a uniform half-Holder extension for the infimum over all injective germs and all Brjuno angles. Bounded logarithmic comparisons with a quadratic radius do not transfer continuity. No full matching current claim identified.",
+  "latest_version_check": "Cheraghi–Cheritat2015 author manuscript; current searches3November2026",
+  "gap_retraction_check": "Eligible Abate author-PDF fetch timed out in this pass; source-search returned exact infimum definition and neighboring statement. High-type theorem body read.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

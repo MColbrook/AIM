@@ -1,0 +1,111 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "475",
+  "manifest_index": 375,
+  "original_target": {
+    "id": "475",
+    "title": "Uniqueness for a point source in time-fractional porous-medium flow",
+    "area": "PDEs with memory; porous-medium diffusion",
+    "file": "problems/475-time-fractional-pme-dirac-uniqueness.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "5773cce231cc049813a3cb811437c647af7c803f76e5c24a1ad6e9e3aaf495fb",
+    "statement_sha256": "0217f234bf5de4da927a444badba61ba2f13fe9da56048e65c662f0f5f3acd73",
+    "state": "unreviewed"
+  },
+  "source_sha256": "5773cce231cc049813a3cb811437c647af7c803f76e5c24a1ad6e9e3aaf495fb",
+  "statement_sha256": "0217f234bf5de4da927a444badba61ba2f13fe9da56048e65c662f0f5f3acd73",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:17:45.005143+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2604.09281v1 Theorem1.5 proves only profile uniqueness; Section8 on Dirac-data weak uniqueness proposes a future adaptation. Actual2507.19217 Remark5/Section4 likewise leave general weak uniqueness to future work. No full matching theorem located.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2604.09281v1",
+      "locator": "Theorem1.5 and Section8",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2507.19217",
+      "locator": "Remark5 and Section4",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"porous medium\" \"Dirac\" \"Caputo\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) uniqueness"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "time-fractional",
+        "Dirac"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-15-000020",
+          "title": "Menger's theorem, Hamiltonian cycles, long cycles and pancyclicity"
+        },
+        {
+          "id": "PALOMAR-2026-10-18-000011",
+          "title": "Dirac's theorem: k vertices of a k-connected graph lie on a common cycle"
+        },
+        {
+          "id": "PALOMAR-2026-10-18-000006",
+          "title": "Chordal, split, threshold and cograph structure"
+        },
+        {
+          "id": "PALOMAR-2026-10-16-000001",
+          "title": "Mader's theorem and Hadwiger's conjecture for t ≤ 4"
+        },
+        {
+          "id": "PALOMAR-2026-09-07-000014",
+          "title": "Dependent finite mixed Nash equilibria in Lean"
+        },
+        {
+          "id": "PALOMAR-2026-09-07-000009",
+          "title": "Native Lean finite Nash equilibria"
+        },
+        {
+          "id": "PALOMAR-2026-09-03-000001",
+          "title": "Ore's and Dirac's Theorems on Hamiltonian Cycles"
+        },
+        {
+          "id": "PALOMAR-2026-08-31-000010",
+          "title": "MaxWellApexLab/BicausalOT-palomar"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "time-fractional",
+        "Dirac"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00008v1",
+          "title": "Finite Nash Equilibria and Dependent Mixed Strategies in Lean"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

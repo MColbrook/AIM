@@ -1,0 +1,80 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "704",
+  "manifest_index": 548,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "704",
+    "title": "Can every Blaschke product be uniformly approximated by interpolating Blaschke products?",
+    "area": "Complex analysis and Hardy spaces",
+    "file": "problems/704-can-every-blaschke-product-be-uniformly-approximated-by-interpolating-blaschke-products.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8e193915bcf7b434",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "7ae99154fff400880886eceadd586422e5b4758943f4a686e16b410da15df638",
+    "statement_sha256": "5c1cee2a748b421e84f17dc1a8548b5b0567bcc1bd3624c79feffb6756d33bac",
+    "state": "unreviewed"
+  },
+  "source_sha256": "7ae99154fff400880886eceadd586422e5b4758943f4a686e16b410da15df638",
+  "statement_sha256": "5c1cee2a748b421e84f17dc1a8548b5b0567bcc1bd3624c79feffb6756d33bac",
+  "actual_source_sha256": "7ae99154fff400880886eceadd586422e5b4758943f4a686e16b410da15df638",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\mathbb D`$ be the open unit disk. A Blaschke product is *interpolating* if its zeros form an interpolating sequence for $`H^\\infty(\\mathbb D)`$: every bounded choice of values on those zeros is attained by a bounded holomorphic function.\n\n**Question (Garnett, Problem 5.4).** For every Blaschke product $`B`$ and every $`\\varepsilon>0`$, is there a **single interpolating Blaschke product** $`I`$ such that\n\n```math\n\\|B-I\\|_{H^\\infty(\\mathbb D)}=\\sup_{z\\in\\mathbb D}|B(z)-I(z)|<\\varepsilon?\n```\n\n\nThe norm is uniform on the entire disk. Approximation only on compact subsets, approximation of $`|B|`$, or approximation by a quotient or product of several interpolating Blaschke products does not answer the question.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Blaschke\" \"single interpolating\" approximation proof 2026",
+    "\"Blaschke\" \"single interpolating\" approximation (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Primary publication abstract and article access;2015survey fallback unavailable",
+      "primary_body_access_gap": true,
+      "url": "https://link.springer.com/article/10.1007/s40315-026-00612-y",
+      "scope_comparison": "A 2026 angular perturbation result routes as a possible nearby candidate, but small argument perturbations of zeros do not by themselves establish H-infinity approximation of the entire Blaschke products. Its theorem body was not accessible; the 2015 survey PDF also timed out. No complete matching norm-approximation claim was identified in focused searches, but the uninspected current body is an explicit source gap.",
+      "version_or_date": "PublishedMay2026,InterpolatingBlaschkeSequenceandPerturbation;checked3November2026"
+    }
+  ],
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual older primary introduction explicitly distinguishes the uniform single-product question from its modulus-only Theorem1. The current 2026 abstract claims equal-modulus small angular perturbations of zero sequences, not H-infinity closeness of entire Blaschke products. Small Euclidean angular perturbations are not uniform pseudohyperbolic control near the boundary and do not by themselves imply the target norm bound. No plausible complete norm-approximation announcement was found.",
+  "latest_version_check": "PublishedMay2026,InterpolatingBlaschkeSequenceandPerturbation;checked3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ],
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:56:59.315578+00:00",
+      "reviewer": "root",
+      "sources": [
+        {
+          "url": "https://msp.org/pjm/2006/228-1/pjm-v228-n1-p05-p.pdf",
+          "locator": "Introduction and Theorem1, printed pp104–105",
+          "body_inspected": true
+        },
+        {
+          "url": "https://link.springer.com/article/10.1007/s40315-026-00612-y",
+          "locator": "Official abstract, 20May2026: equal moduli and arbitrarily small angular perturbations of zeros",
+          "body_inspected": false
+        }
+      ],
+      "comparison": "The actual older primary introduction explicitly distinguishes the uniform single-product question from its modulus-only Theorem1. The current 2026 abstract claims equal-modulus small angular perturbations of zero sequences, not H-infinity closeness of entire Blaschke products. Small Euclidean angular perturbations are not uniform pseudohyperbolic control near the boundary and do not by themselves imply the target norm bound. No plausible complete norm-approximation announcement was found.",
+      "limitations": [
+        "The 2026 subscription body remains unavailable and is not represented as inspected. This is an explicit abstract-level scope exclusion, not a full candidate theorem audit. The 2015 survey timed out; the directly inspected 2006 primary source supplies the exact distinction."
+      ]
+    }
+  ],
+  "review_state": "bounded_review_complete",
+  "material_full_claim_gap": false
+}

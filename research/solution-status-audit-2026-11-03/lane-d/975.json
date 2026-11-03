@@ -1,0 +1,109 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "975",
+  "manifest_index": 819,
+  "checked_date": "2026-11-03",
+  "source_sha256": "711845807883ae2ec8282dcd3d6a4ecf4e215dc383e9e374c20b811e74b86e51",
+  "statement_sha256": "79ec2cc4c1cea99f2b90c51e4a2aad3277e19708cf30d0b8e5698f119013c32f",
+  "original_target": {
+    "id": "975",
+    "title": "Sharp disagreement probabilities for coherent forecasts with a fixed prior",
+    "area": "Probability inequalities and information aggregation",
+    "file": "problems/975-sharp-disagreement-probabilities-for-coherent-forecasts-with-a-fixed-prior.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-39be505120780b79",
+    "group": "probability-statistics",
+    "source_sha256": "711845807883ae2ec8282dcd3d6a4ecf4e215dc383e9e374c20b811e74b86e51",
+    "statement_sha256": "79ec2cc4c1cea99f2b90c51e4a2aad3277e19708cf30d0b8e5698f119013c32f",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix $`p\\in[0,1]`$ and $`0<\\delta\\le1/2`$. Let $`\\mathcal C(p)`$ consist of all joint laws of\n\n```math\nX=\\mathbb P(A\\mid\\mathcal G),\\qquad\nY=\\mathbb P(A\\mid\\mathcal H),\\qquad \\mathbb P(A)=p,\n```\n\nwhere the probability space, event $`A`$ and two sub-$`\\sigma`$-fields are arbitrary. Such a pair is called coherent. In particular, $`X,Y\\in[0,1]`$ and $`\\mathbb EX=\\mathbb EY=p`$, but equal means alone do not establish coherence.\n\nDetermine the exact function\n\n```math\n\\varepsilon(\\delta,p)\n=\\sup_{(X,Y)\\in\\mathcal C(p)}\\mathbb P(|X-Y|\\ge1-\\delta).\n```\n\nIndependence, finite support and exchangeability are not imposed. This asks for the full function, including cases already known; it does not assert that every parameter pair remains untreated or request a unique optimizer.",
+  "full_original_page": "# 975. Sharp disagreement probabilities for coherent forecasts with a fixed prior\n\n**Area:** Probability inequalities and information aggregation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix $`p\\in[0,1]`$ and $`0<\\delta\\le1/2`$. Let $`\\mathcal C(p)`$ consist of all joint laws of\n\n```math\nX=\\mathbb P(A\\mid\\mathcal G),\\qquad\nY=\\mathbb P(A\\mid\\mathcal H),\\qquad \\mathbb P(A)=p,\n```\n\nwhere the probability space, event $`A`$ and two sub-$`\\sigma`$-fields are arbitrary. Such a pair is called coherent. In particular, $`X,Y\\in[0,1]`$ and $`\\mathbb EX=\\mathbb EY=p`$, but equal means alone do not establish coherence.\n\nDetermine the exact function\n\n```math\n\\varepsilon(\\delta,p)\n=\\sup_{(X,Y)\\in\\mathcal C(p)}\\mathbb P(|X-Y|\\ge1-\\delta).\n```\n\nIndependence, finite support and exchangeability are not imposed. This asks for the full function, including cases already known; it does not assert that every parameter pair remains untreated or request a unique optimizer.\n\n## Application\n\nThe quantity bounds how often two forecasts, formed from different information about one event with a specified prior probability, can disagree by a given amount. Fixing the prior retains information lost in a bound optimized over all event probabilities.\n\n## References\n\n1. K. Burdzy and J. Pitman, [Bounds on the probability of radically different opinions](https://doi.org/10.1214/20-ECP296), *Electronic Communications in Probability* **25** (2020), article 14, 1–12. The inspected [arXiv:1903.07773v1](https://arxiv.org/html/1903.07773v1) defines coherence in (1.1)–(1.2), the function in (5.3), and asks the remaining fixed-prior question in Problem 5.4. Published numbering: Problem 5.3.\n2. S. Cichomski and F. Petrov, [A combinatorial proof of the Burdzy–Pitman conjecture](https://arxiv.org/html/2204.07219v1) (2022), Introduction and Section 3: the independent-pair problem.\n3. [Coherent distributions: Hilbert space approach and duality](https://arxiv.org/html/2405.04375v1) (2024), Theorems 1.2–1.3: covariance and power-moment extrema.\n\n## Status review\n\n\n**Known cases:** The complete two-parameter fixed-prior function for arbitrary coherent pairs is needed. Independent-pair results and covariance/power-moment optimization change the feasible class or objective.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe complete two-parameter fixed-prior function for arbitrary coherent pairs is needed. Independent-pair results and covariance/power-moment optimization change the feasible class or objective.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nOpen in the cited source; no matching full resolution or announcement was located in checks through 29 October 2026. The independent-pair theorem changes the admissible class. Covariance and power-moment bounds change the objective and do not by themselves give the displayed function.\n\nThe original mixture examples supply some parameter cases. Their endpoint commentary is not used as a universal formula here: $`\\varepsilon(\\delta,0)=\\varepsilon(\\delta,1)=0`$, while $`\\varepsilon(1/2,1/2)=1`$ follows by taking $`X=1/2`$ and $`Y=1_A`$ with $`\\mathbb P(A)=1/2`$. The formulation follows the pinned preprint; indexed published passages corroborate the question, without a full published-body comparison.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-39be505120780b79**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "coherent distributions",
+    "Burdzy",
+    "Pitman"
+  ],
+  "queries": [
+    "\"coherent forecasts\" \"fixed prior\" disagreement",
+    "\"coherent forecasts\" \"fixed prior\" disagreement; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"Burdzy\" \"Pitman\" \"prior\" probability"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1903.07773v1",
+      "locator": "Equation5.3/Problem5.4 lines375–388; newer comparator https://fedors.info/papers/2022persuasion/persuasion_as_transport.pdf Examples3–4 nativepp20–22",
+      "comparison": "The target is fixed-p probability of radical disagreement. New persuasion Example4 computes expected absolute disagreement 2p(1-p); Example3 power moment with symmetric prior. Neither is the threshold indicator objective. Independent-pair results impose independence absent here."
+    }
+  ],
+  "rationale": "The target is fixed-p probability of radical disagreement. New persuasion Example4 computes expected absolute disagreement 2p(1-p); Example3 power moment with symmetric prior. Neither is the threshold indicator objective. Independent-pair results impose independence absent here.",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary statements inspected, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "975",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "coherent distributions",
+          "Burdzy",
+          "Pitman"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-30-000007",
+            "title": "Parking functions: total variation threshold and critical profile",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-30-000007-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "coherent distributions",
+          "Burdzy",
+          "Pitman"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "coherent distributions",
+        "Burdzy",
+        "Pitman"
+      ],
+      "hits": [
+        {
+          "entry": "369",
+          "title": "The hot spots conjecture for simply connected planar domains",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains-September-24-2026/main.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Parking-function total-variation profiles and Neumann hot-spot geometry do not optimize disagreement of coherent forecasts for a fixed Bernoulli prior.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.743Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

@@ -1,0 +1,125 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "908",
+  "manifest_index": 752,
+  "checked_date": "2026-11-03",
+  "source_sha256": "c4a2b903d092416d747318a059e5e0bc16492847b56a1906f28c979fe6cd6211",
+  "statement_sha256": "383bb06a1e83bd815527eaf62f20d9e45c7ded58c823fe738f28327919acc7c3",
+  "original_target": {
+    "id": "908",
+    "title": "Kahane's sublogarithmic Beurling–Helson conjecture",
+    "area": "Harmonic analysis and Wiener-algebra composition operators",
+    "file": "problems/908-kahane-s-sublogarithmic-beurlinghelson-conjecture.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-74082b8169c81216",
+    "group": "operators",
+    "source_sha256": "c4a2b903d092416d747318a059e5e0bc16492847b56a1906f28c979fe6cd6211",
+    "statement_sha256": "383bb06a1e83bd815527eaf62f20d9e45c7ded58c823fe738f28327919acc7c3",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\mathbb T=\\mathbb R/(2\\pi\\mathbb Z)`$. For a continuous function $`f`$ on $`\\mathbb T`$, write\n\n```math\n\\widehat f(k)=\\frac1{2\\pi}\\int_0^{2\\pi}f(t)e^{-ikt}\\,dt,\\qquad\n  \\|f\\|_{A(\\mathbb T)}=\\sum_{k\\in\\mathbb Z}|\\widehat f(k)|.\n```\n\n\nFor every continuous circle map $`\\varphi:\\mathbb T\\to\\mathbb T`$, does\n\n```math\n\\|e^{in\\varphi}\\|_{A(\\mathbb T)}=o(\\log |n|)\n  \\quad\\text{as }|n|\\to\\infty\n```\n\n\nimply $`\\varphi(t)=\\nu t+\\varphi(0)`$ modulo $`2\\pi`$ for some $`\\nu\\in\\mathbb Z`$? The condition is required for **all sufficiently large positive and negative integers** $`n`$. Nonlinear piecewise-linear maps can have norm of order $`\\log|n|`$, so the proposed little-$`o`$ threshold is sharp in scale.",
+  "full_original_page": "# 908. Kahane's sublogarithmic Beurling–Helson conjecture\n\n**Area:** Harmonic analysis and Wiener-algebra composition operators\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\mathbb T=\\mathbb R/(2\\pi\\mathbb Z)`$. For a continuous function $`f`$ on $`\\mathbb T`$, write\n\n```math\n\\widehat f(k)=\\frac1{2\\pi}\\int_0^{2\\pi}f(t)e^{-ikt}\\,dt,\\qquad\n  \\|f\\|_{A(\\mathbb T)}=\\sum_{k\\in\\mathbb Z}|\\widehat f(k)|.\n```\n\n\nFor every continuous circle map $`\\varphi:\\mathbb T\\to\\mathbb T`$, does\n\n```math\n\\|e^{in\\varphi}\\|_{A(\\mathbb T)}=o(\\log |n|)\n  \\quad\\text{as }|n|\\to\\infty\n```\n\n\nimply $`\\varphi(t)=\\nu t+\\varphi(0)`$ modulo $`2\\pi`$ for some $`\\nu\\in\\mathbb Z`$? The condition is required for **all sufficiently large positive and negative integers** $`n`$. Nonlinear piecewise-linear maps can have norm of order $`\\log|n|`$, so the proposed little-$`o`$ threshold is sharp in scale.\n\n## Application\n\nThe question asks how slowly the Fourier-series norm of powers of a circle map may grow before the map must be affine. A positive answer would extend the classical bounded-norm Beurling–Helson rigidity theorem to the proposed sharp threshold for changes of variable in the Wiener algebra.\n\n## References\n\n1. V. Lebedev, [*Absolutely convergent Fourier series. An improvement of the Beurling–Helson theorem*](https://arxiv.org/html/1112.4892), arXiv:1112.4892v3 (2012), Introduction and theorem. The introduction defines the norm, states Kahane's conjecture and describes the piecewise-linear boundary examples.\n2. T. Sanders, [*The quantitative Beurling–Helson theorem*](https://arxiv.org/html/2604.07324), arXiv:2604.07324v1 (2026), Introduction, Theorem 1.4. It restates the conjecture and proves the affine conclusion under the stronger $`O(\\log^{1/8-\\varepsilon}|n|)`$ bound for any $`\\varepsilon>0`$.\n\n## Status review\n\n\n**Known cases:** The primary current Sanders theorem still assumes O(log-to-the-one-eighth-minus-epsilon) Fourier norm growth, which is stronger than little-o of log. The full sharp sublogarithmic threshold has not been matched by a complete proof or counterexample.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe primary current Sanders theorem still assumes O(log-to-the-one-eighth-minus-epsilon) Fourier norm growth, which is stronger than little-o of log. The full sharp sublogarithmic threshold has not been matched by a complete proof or counterexample.\n\nAdditional comparison sources: [comparison source 1](https://arxiv.org/abs/2604.07324). The primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe 2026 theorem does not settle the little-$`o(\\log|n|)`$ hypothesis. Current searches for an exact-threshold proof, counterexample or announcement, and semantic comparisons with the AIM and FURTHER lists, found none through 2026-10-21. The [review receipt](../FURTHER_problems/_tracking/kahane-beurling-helson-status-2026-10-21.json) gives the checked scope and limits; it does not certify the absence of unindexed work.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-74082b8169c81216**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Kahane\" \"Beurling Helson\" sublogarithmic solved 2026",
+    "\"Kahane\" \"Beurling Helson\" sublogarithmic; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2604.07324v1",
+      "locator": "Theorem1.4, lines73–79",
+      "comparison": "Actual theorem requires O(log^(1/8-epsilon)|n|), stronger than o(log|n|). ProofAtlas exact-target page explicitly says research question, not proof evidence, with an unproved transport bridge; no complete announcement there.",
+      "inspected": "Actual indicated body passages"
+    }
+  ],
+  "rationale": "Actual theorem requires O(log^(1/8-epsilon)|n|), stronger than o(log|n|). ProofAtlas exact-target page explicitly says research question, not proof evidence, with an unproved transport bridge; no complete announcement there. No full matching resolution located in bounded current searches.",
+  "limitations": [
+    "Bounded search is not proof of continued openness; this review checks mathematical scope rather than certifying every cited proof."
+  ],
+  "announcement_routing": {
+    "localID": "908",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Beurling",
+          "Helson",
+          "Kahane",
+          "sublogarithmic"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-11-02-000003",
+            "title": "Discrete Beurling number systems with integer error below every power, without a zero-free half-plane (assuming the short-interval prime number theorem (84))",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-11-02-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-21-000020",
+            "title": "Erdős problem #257: all base irrationality of the reciprocal Mersenne subseries for every infinite reciprocal summable support, with weighted mass and positive cover extensions, achievement set geometry, and exact greedy membership criteria",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000020-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-07-000002",
+            "title": "Two partial balayage principles for weak-type estimates",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-07-000002-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-03-000004",
+            "title": "Regularity of asymptotically axisymmetric Navier–Stokes solutions with analytic forcing",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-03-000004-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Beurling",
+          "Helson",
+          "Kahane",
+          "sublogarithmic"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2611.00024v1",
+            "title": "Modular Dvoretzky, Type-Cotype, Khinchin-Kahane and Grothendieck Inequality Problems",
+            "url": "https://hexagonmath.org/abs/2611.00024v1"
+          },
+          {
+            "id": "hexagon:2610.00688v2",
+            "title": "The Riemann hypothesis as a margin: a two-sided criterion verified to 2*10^29, the fourth-moment anatomy of Mobius cancellation, and one constant seen from every side",
+            "url": "https://hexagonmath.org/abs/2610.00688v2"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Beurling",
+        "Helson",
+        "Kahane",
+        "sublogarithmic"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Beurling number systems are generalized prime systems, not the Beurling–Helson Wiener norm; analytic-forcing Navier–Stokes, p-adic/RH, finite reciprocal sums and noncommutative questions are unrelated alias hits.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.705Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

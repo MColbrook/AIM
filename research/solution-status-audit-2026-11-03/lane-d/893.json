@@ -1,0 +1,111 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "893",
+  "manifest_index": 737,
+  "checked_date": "2026-11-03",
+  "source_sha256": "218d5ea9df7a2ef6e2165901bf1af3cd4d6bcab6845a39a26baa631b0d32da85",
+  "statement_sha256": "b9b1675d93b9f09231490a3e61292cdf26033a1c20a2bde519935f96b0378226",
+  "original_target": {
+    "id": "893",
+    "title": "Weak L2 boundedness for the parabolic Carleson operator",
+    "area": "Operators, matrices and computation",
+    "file": "problems/893-weak-l2-boundedness-for-the-parabolic-carleson-operator.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-16c3c3561677865d",
+    "group": "operators",
+    "source_sha256": "218d5ea9df7a2ef6e2165901bf1af3cd4d6bcab6845a39a26baa631b0d32da85",
+    "statement_sha256": "b9b1675d93b9f09231490a3e61292cdf26033a1c20a2bde519935f96b0378226",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For a complex Schwartz function $`f`$ on $`\\mathbb R^2`$, define\n```math\n\\mathcal C_{\\mathrm{par}}f(x,y)=\\sup_{a,b\\in\\mathbb R}\n\\left|\\mathrm{p.v.}\\int_{\\mathbb R}\nf(x-t,y-t^2)e^{i(at+bt^2)}\\,\\frac{dt}{t}\\right|.\n```\n\nThe principal value removes a symmetric neighborhood of zero. Both modulation coefficients vary independently.\n\nDoes there exist an absolute constant $`C<\\infty`$ such that, for every such $`f`$ and $`\\lambda>0`$,\n```math\n\\lambda^2\\left|\\{(x,y):\\mathcal C_{\\mathrm{par}}f(x,y)>\\lambda\\}\\right|\n\\le C\\|f\\|_{L^2(\\mathbb R^2)}^2?\n```\n\nHere $`|\\cdot|`$ is planar Lebesgue measure. No additional supremum over truncation radii is imposed.",
+  "full_original_page": "# 893. Weak L2 boundedness for the parabolic Carleson operator\n\n**Area:** Operators, matrices and computation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor a complex Schwartz function $`f`$ on $`\\mathbb R^2`$, define\n```math\n\\mathcal C_{\\mathrm{par}}f(x,y)=\\sup_{a,b\\in\\mathbb R}\n\\left|\\mathrm{p.v.}\\int_{\\mathbb R}\nf(x-t,y-t^2)e^{i(at+bt^2)}\\,\\frac{dt}{t}\\right|.\n```\n\nThe principal value removes a symmetric neighborhood of zero. Both modulation coefficients vary independently.\n\nDoes there exist an absolute constant $`C<\\infty`$ such that, for every such $`f`$ and $`\\lambda>0`$,\n```math\n\\lambda^2\\left|\\{(x,y):\\mathcal C_{\\mathrm{par}}f(x,y)>\\lambda\\}\\right|\n\\le C\\|f\\|_{L^2(\\mathbb R^2)}^2?\n```\n\nHere $`|\\cdot|`$ is planar Lebesgue measure. No additional supremum over truncation radii is imposed.\n\n## Application\n\nThe estimate controls the area on which singular integration along parabolic trajectories, with independent oscillatory modulations, greatly amplifies a planar signal.\n\n## References\n\n- J. Roos, *Bounds for anisotropic Carleson operators*, J. Fourier Anal. Appl. **25** (2019), 2324-2355, [DOI](https://doi.org/10.1007/s00041-018-09657-7), [2017 primary](https://arxiv.org/abs/1710.10962), equation (2.4).\n- L. Becker, *Maximal Polynomial Modulations of Singular Radon Transforms*, J. Funct. Anal. **286** (2024), 110299, [DOI](https://doi.org/10.1016/j.jfa.2023.110299), [primary v2](https://arxiv.org/html/2210.17263v2), **Open Problem 1**.\n- M. Hsu and V. Lie, *On the resonant Carleson-Radon transform in all dimensions. The degree one resonant case* (2026), [primary v1](https://arxiv.org/html/2606.27219v1), Problem 2, equation (1.16) and Remark 1.12.\n\n## Status review\n\n\n**Known cases:** Hsu-Lie treat a restricted resonant modulation subspace and retain the full two-parameter parabolic problem. Polynomial Carleson boundedness on the line and parabolic PDE Carleson-measure estimates are different operators. No matching weak-L2 endpoint theorem was located.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nHsu-Lie treat a restricted resonant modulation subspace and retain the full two-parameter parabolic problem. Polynomial Carleson boundedness on the line and parabolic PDE Carleson-measure estimates are different operators. No matching weak-L2 endpoint theorem was located.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\n**Partial progress; checked 28 October 2026.** Mollified kernels and restricted modulations are understood. The June 2026 paper explicitly retains the full two-parameter problem; its main theorem does not cover this modulation space. No matching complete resolution, announcement or AIM/private duplicate was found.\n\nRoos supplies the precutoff boundedness question; Becker states this exact weak endpoint. Multiplication of the input by a linear planar phase gives the displayed quadratic phase along the parabola.\n\nReview evidence: [owner](../FURTHER_problems/_tracking/focused-full-modulation-parabolic-Carleson-weakL2-C226-C-20261028/OWNER-EXACT-TWO-PARAMETER-PARABOLIC-CARLESON-WEAK-L2-PRIMARY-2026-RESONANCE-SCOPE-AND-DUPLICATE-PROPOSAL.json), [independent model review](../FURTHER_problems/_tracking/focused-full-modulation-parabolic-Carleson-weakL2-C226-C-20261028/A-INDEPENDENT-TWO-PARAMETER-WEAK-L2-MODULATION-AND-2026-RESTRICTED-SUBSPACE-MODEL-PEER-PASS.json), [coordinating review](../FURTHER_problems/_tracking/focused-full-modulation-parabolic-Carleson-weakL2-C226-C-20261028/ROOT-EXACT-WEAK-ENDPOINT-CURRENT-RESONANCE-AND-LATER-HELD-ROW-SEMANTIC-FINAL-REVIEW.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-16c3c3561677865d**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"parabolic Carleson\" \"weak\" \"L2\" 2026",
+    "\"parabolic Carleson\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2606.27219v1",
+      "locator": "v1 June2026, Problem2 equation1.16",
+      "inspection": "Actual primary body retains full independent two-parameter linear/quadratic modulation as Problem2; degree-one resonant theorem is a restricted modulation subspace. Local weakL2 estimate is not polynomial Carleson on line or PDE Carleson measure control."
+    }
+  ],
+  "scope_comparison": "Actual primary body retains full independent two-parameter linear/quadratic modulation as Problem2; degree-one resonant theorem is a restricted modulation subspace. Local weakL2 estimate is not polynomial Carleson on line or PDE Carleson measure control.",
+  "rationale": "Inspected primary statement and current candidate bodies do not establish the full target. Recorded bounded searches found no matching complete resolution; this is not a guarantee of openness.",
+  "source_gaps": [],
+  "announcement_routing": {
+    "localID": "893",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Carleson",
+          "Carleson-Radon"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-12-000008",
+            "title": "Formalization of Carleson's theorem via the Lacey-Thiele approach",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-12-000008-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-30-000034",
+            "title": "Formalization of a discrete Carleson theorem of Stein-Wainger type",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000034-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-18-000002",
+            "title": "Endpoint estimates for Stein's purely quadratic Carleson operator",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-18-000002-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Carleson",
+          "Carleson-Radon"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Carleson",
+        "Carleson-Radon"
+      ],
+      "hits": [
+        {
+          "entry": "080",
+          "title": "The Sobolev endpoint in Carleson's Schr\\\"odinger convergence problem",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Endpoint-convergence-for-the-planar-Schrodinger-equation-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Endpoint-pointwise-convergence-for-the-Schrodinger-equation-in-higher-dimensions-September-24-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Palomar Roos formalization is of smooth anisotropically homogeneous multipliers. Actual Roos Theorem1.1 and §2 explicitly exclude the curve multiplier as too rough. Discrete Stein–Wainger operators, one-dimensional purely quadratic Carleson endpoints and Schrodinger Sobolev convergence change the operator; none states independent two-parameter modulation of the planar parabolic Hilbert transform.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.692Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

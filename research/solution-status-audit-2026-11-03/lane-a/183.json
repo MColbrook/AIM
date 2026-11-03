@@ -1,0 +1,76 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "183",
+  "manifest_index": 143,
+  "original_target": {
+    "id": "183",
+    "title": "Competitive exclusion with unequal death rates",
+    "area": "Spatial epidemics and population competition",
+    "file": "problems/183-competing-contact-unequal-deaths.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "1dab39763c2bfc185bd32889365a7f1317c0bdf02c580e3a0b99a6464c19fe37",
+    "statement_sha256": "b4135128657fb4e7f0cd37f0fe657e70ad164bf4bd50cb0d2ba6fd63bcbce471",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1dab39763c2bfc185bd32889365a7f1317c0bdf02c580e3a0b99a6464c19fe37",
+  "statement_sha256": "b4135128657fb4e7f0cd37f0fe657e70ad164bf4bd50cb0d2ba6fd63bcbce471",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:49:29.231884+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The live Durrett section3.1 after Theorem3.1.2 explicitly asks whether the birth/death ratio criterion suffices when death rates differ. The proved theorem and its graphical construction require equal death rates. The Stover stochastic-comparison announcement gives a sufficient restricted survival condition, not arbitrary-ratio competitive exclusion and the full iid-initial-law limiting distribution.",
+  "primary_sources": [
+    {
+      "url": "https://sites.math.duke.edu/~rtd/PASTA/PASTAcurrent.pdf",
+      "locator": "Section3.1, Theorem3.1.2 and following open problem, printed page85",
+      "body_inspected": true
+    },
+    {
+      "url": "https://doi.org/10.1016/j.spl.2020.108763",
+      "locator": "Stover2020 abstract, sufficient survival condition",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"multitype contact process\" \"unequal death\" \"2026\"",
+    "\"multitype contact process\" \"unequal\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"multitype contact process\" \"unequal death rates\" Stover arxiv"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "multitype contact",
+        "unequal death"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "multitype contact",
+        "unequal death"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Live book differs in chapter numbering from the September citation; Stover body was not recovered, but its stated sufficient survival claim is narrower than the target."
+  ],
+  "canonical_update_required": false
+}

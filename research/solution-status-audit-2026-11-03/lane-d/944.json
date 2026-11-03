@@ -1,0 +1,1590 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "944",
+  "manifest_index": 788,
+  "checked_date": "2026-11-03",
+  "source_sha256": "c196403498980e6166ad2d8759ae025e76b23695cb8d828f26a825004785c9fc",
+  "statement_sha256": "901a783ec4b21c5845f6b2e78f1dab99e1caff37ce5612f9ca2f1ca61af565c2",
+  "original_target": {
+    "id": "944",
+    "title": "The Hausdorff dimension of a measure constrained by a higher-order PDE",
+    "area": "Geometric measure theory and PDE-constrained measures",
+    "file": "problems/944-the-hausdorff-dimension-of-a-measure-constrained-by-a-higher-order-pde.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-66f3c1cc70607c16",
+    "group": "pdes-materials",
+    "source_sha256": "c196403498980e6166ad2d8759ae025e76b23695cb8d828f26a825004785c9fc",
+    "statement_sha256": "901a783ec4b21c5845f6b2e78f1dab99e1caff37ce5612f9ca2f1ca61af565c2",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`U\\subset\\mathbb R^d`$ be open and let $`\\mathcal A=\\sum_{|\\gamma|\\leq k}A_\\gamma\\partial^\\gamma`$ be a constant-coefficient linear differential operator from $`\\mathbb R^m`$ to $`\\mathbb R^n`$, with at least one nonzero order-$`k`$ coefficient. Write $`\\mathbb A^k(\\xi)=\\sum_{|\\gamma|=k}A_\\gamma\\xi^\\gamma`$ for its principal symbol. For $`0\\leq\\ell\\leq d-1`$ define\n\n```math\n\\mathcal N_{\\mathcal A}^{\\ell}=\\bigcup_{\\pi\\in\\mathrm{Gr}(\\ell,d)}\\ \\bigcap_{\\xi\\in\\pi^\\perp}\\ker\\mathbb A^k(\\xi),\\qquad\n\\ell_{\\mathcal A}^{*}=\\min\\{\\ell:\\mathcal N_{\\mathcal A}^{\\ell}\\ne\\{0\\}\\}.\n```\n\n\nAt the elliptic endpoint, use the natural convention $`\\mathcal N_{\\mathcal A}^{d}=\\mathbb R^m`$; the source explicitly writes the cone formula only for $`\\ell<d`$. If a nonzero $`\\mathbb R^m`$-valued Radon measure $`\\mu`$ on $`U`$ obeys $`\\mathcal A\\mu=0`$ distributionally, must\n\n```math\n\\dim_H\\mu\\geq\\ell_{\\mathcal A}^{*}?\n```\n\n\nHere $`\\dim_H\\mu=\\sup\\{s:|\\mu|\\ll\\mathcal H^s\\}`$ is the lower Hausdorff dimension used in the source. The displayed dimension inequality is the target; endpoint absolute continuity at $`\\ell_{\\mathcal A}^{*}`$ would require a separate argument.",
+  "full_original_page": "# 944. The Hausdorff dimension of a measure constrained by a higher-order PDE\n\n**Area:** Geometric measure theory and PDE-constrained measures\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`U\\subset\\mathbb R^d`$ be open and let $`\\mathcal A=\\sum_{|\\gamma|\\leq k}A_\\gamma\\partial^\\gamma`$ be a constant-coefficient linear differential operator from $`\\mathbb R^m`$ to $`\\mathbb R^n`$, with at least one nonzero order-$`k`$ coefficient. Write $`\\mathbb A^k(\\xi)=\\sum_{|\\gamma|=k}A_\\gamma\\xi^\\gamma`$ for its principal symbol. For $`0\\leq\\ell\\leq d-1`$ define\n\n```math\n\\mathcal N_{\\mathcal A}^{\\ell}=\\bigcup_{\\pi\\in\\mathrm{Gr}(\\ell,d)}\\ \\bigcap_{\\xi\\in\\pi^\\perp}\\ker\\mathbb A^k(\\xi),\\qquad\n\\ell_{\\mathcal A}^{*}=\\min\\{\\ell:\\mathcal N_{\\mathcal A}^{\\ell}\\ne\\{0\\}\\}.\n```\n\n\nAt the elliptic endpoint, use the natural convention $`\\mathcal N_{\\mathcal A}^{d}=\\mathbb R^m`$; the source explicitly writes the cone formula only for $`\\ell<d`$. If a nonzero $`\\mathbb R^m`$-valued Radon measure $`\\mu`$ on $`U`$ obeys $`\\mathcal A\\mu=0`$ distributionally, must\n\n```math\n\\dim_H\\mu\\geq\\ell_{\\mathcal A}^{*}?\n```\n\n\nHere $`\\dim_H\\mu=\\sup\\{s:|\\mu|\\ll\\mathcal H^s\\}`$ is the lower Hausdorff dimension used in the source. The displayed dimension inequality is the target; endpoint absolute continuity at $`\\ell_{\\mathcal A}^{*}`$ would require a separate argument.\n\n## Application\n\nPDE constraints restrict how a singular measure can concentrate. A positive answer would make the rectifiability threshold from the principal symbol a sharp general lower bound on dimension, including higher-order systems where existing wave-cone bounds are weaker.\n\n## Known results and scope\n\nThe cited paper obtains the sharp threshold for first-order systems and second-order scalar operators. Its cubic scalar example $`\\partial_1^3+\\partial_2^3+\\partial_3^3`$ has the existing lower threshold $`\\ell_{\\mathcal A}=1`$ but $`\\ell_{\\mathcal A}^{*}=2`$, illustrating the unresolved gap. Later quantitative estimates for first-order operators and results requiring a fixed polar or additional symbol condition do not supply the bound for arbitrary higher-order $`\\mathcal A`$-free measures.\n\n## References\n\n1. A. Arroyo-Rabasa, G. De Philippis, J. Hirsch and F. Rindler, [*Dimensional estimates and rectifiability for measures satisfying linear PDE constraints*](https://link.springer.com/article/10.1007/s00039-019-00497-1), *Geometric and Functional Analysis* **29** (2019), 639–658, Eq. (1.1), Eq. (1.8) and Conjecture 1.6. [arXiv:1811.01847v2](https://arxiv.org/abs/1811.01847v2).\n2. D. Bate and S. Weigt, [*Alberti representations, rectifiability of metric spaces and higher integrability of measures satisfying a PDE*](https://arxiv.org/html/2501.02948v1), arXiv:2501.02948v1 (2025), Theorem 2.7 and Corollary 2.9 (additional polar and symbol hypotheses).\n3. G. De Philippis, L. Gennaioli, A. Pigati and F. Rindler, [*Scale-invariant bounds on thin sets for measures satisfying a first-order PDE and the anisotropic Michael–Simon inequality*](https://arxiv.org/html/2609.34573v1), arXiv:2609.34573v1 (2026), Introduction and Theorem 1.3 (first-order scope).\n\n## Status review\n\n\n**Known cases:** The September 2026 theorem is first-order. June complex-elliptic BV-A dimensional estimates impose another symbol setting and do not cover all higher-order constrained measures with the stated cone threshold.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe September 2026 theorem is first-order. June complex-elliptic BV-A dimensional estimates impose another symbol setting and do not cover all higher-order constrained measures with the stated cone threshold.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe publisher's full HTML retains Conjecture 1.6 and its precise threshold. Targeted later-primary and announcement searches through 23 October 2026 found no theorem or announced counterexample covering the general higher-order statement; the cited later results have narrower hypotheses. A semantic check found no matching AIM or admitted FURTHER problem. This is a bounded status review, not a proof of absence. Publisher HTML was checked; a native published-PDF validation gap remains, so PDF byte parity is not claimed. The [source and status audit](../FURTHER_problems/_tracking/hambrook-taylor-afree-admission-audit-2026-10-23.json) records the comparison and limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-66f3c1cc70607c16**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "A-free",
+    "dimensional",
+    "Hausdorff",
+    "wave cone"
+  ],
+  "queries": [
+    "\"higher order\" \"A-free measures\" \"dimension\" conjecture 2026",
+    "\"higher order\" \"A-free measures\" \"dimension\" conjecture; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2609.34573v1",
+      "locator": "Theorem 1.3, first-order operator definition",
+      "comparison": "The operator is explicitly sum A_j partial_j; convex polar-cone/singular-value hypotheses yield thin-set estimates. This does not establish ell_A^* lower dimension for every higher-order constant-coefficient A-free measure."
+    },
+    {
+      "url": "https://arxiv.org/html/2606.16762v2",
+      "locator": "Theorem C, equations (10)–(12); Remark1.7 lines142–160",
+      "comparison": "Constant-rank plus acute convex cone and aperture restrictions; first-order improvement removes aperture only for first-order operators. No all-operator higher-order Hausdorff threshold theorem."
+    }
+  ],
+  "rationale": "Selected 2026 theorem bodies impose first-order or polar-cone/constant-rank restrictions absent from the full target. No matching announcement located.",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected scope statements inspected, not certification of every proof."
+  ],
+  "announcement_routing": {
+    "localID": "944",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "A-free",
+          "dimensional",
+          "Hausdorff",
+          "wave cone"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-11-01-000018",
+            "title": "Rational structures on quivers and a generalization of Gelfand's equivalence: Theorem B",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-11-01-000018-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-30-000012",
+            "title": "Uniform attachment with freezing: Scaling limits — Lean formalization",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-30-000012-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-29-000042",
+            "title": "Generic IP-transitive points in weakly mixing systems",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-29-000042-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-29-000034",
+            "title": "On the local geometry of the tight 39-point code in 𝕆P²",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-29-000034-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-29-000025",
+            "title": "Weak mixing times minimality: transitivity of the product",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-29-000025-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-28-000014",
+            "title": "The Critical 2D KPZ Process",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-28-000014-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-28-000008",
+            "title": "Finite-Lp vorticity nonuniqueness for two-dimensional Euler",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-28-000008-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-27-000014",
+            "title": "Regularity structures and dynamical Phi^4_3",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-27-000014-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-27-000012",
+            "title": "Dynamic dimensional reduction in the Abelian sandpile",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-27-000012-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-27-000009",
+            "title": "The optimal Hessian bound for convex four-body central configurations",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-27-000009-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-27-000004",
+            "title": "A proof of Kroó’s conjecture",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-27-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-27-000003",
+            "title": "Slow Equilibration and Persistent Stationary Correlations in Spherical Spin Glasses",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-27-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-23-000010",
+            "title": "Log-square quadrupolar correlation decay in two-dimensional RP2 and RP3 models",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-23-000010-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-23-000004",
+            "title": "Multiplicative bases and standardness of representation-finite algebras",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-23-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-23-000001",
+            "title": "Brouwer characterization of Cantor space",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-23-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-22-000034",
+            "title": "Continuous open images of Polish spaces",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000034-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-22-000030",
+            "title": "The least physical dimension of an inflation-symmetric model set, with the cubic, quartic and degree-12 inflations of x^3 - x - 1 and x^4 - x - 1",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000030-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-22-000013",
+            "title": "Fixed-force anomalous dissipation",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000013-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-21-000024",
+            "title": "Symplectic Stafford: the affine same-divisor theorem",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000024-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-21-000012",
+            "title": "Hermite's signature theorem and the coprime compositum, with the degree-12 compositum of x^3 - x - 1 and x^4 - x - 1",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000012-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-21-000004",
+            "title": "Formalization of a curved three-dimensional simplex Hilbert transform",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-20-000017",
+            "title": "The regionally proximal relation for commutative semigroup actions",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-20-000017-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-19-000012",
+            "title": "Kuhn poker: the value −1/18, all optimal strategies, and the solution at every ante and bet",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-19-000012-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-19-000011",
+            "title": "Falconer's distance problem for stretched logarithmic gauges",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-19-000011-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-19-000004",
+            "title": "Omega-bounded Sigma-products and a sharp compactness criterion",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-19-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-19-000002",
+            "title": "A Unified Kalman-Type Classification of Controllability for Linear Stochastic Systems",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-19-000002-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-18-000027",
+            "title": "Paracompact expansion and collectionwise separation",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000027-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-18-000025",
+            "title": "GromovMilman",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000025-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-18-000015",
+            "title": "The local dynamical structure of Δ* sets via a new Furstenberg family algebra",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000015-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-17-000015",
+            "title": "Countable-coordinate factorization for compact products",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000015-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-17-000013",
+            "title": "Growth series of the triangle Coxeter groups (p, q, infinity), with the PGL(2,Z) instance: Padovan sphere sizes and growth rate the plastic number",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000013-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-17-000011",
+            "title": "Compact Hausdorff countable-network metrization",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000011-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-17-000006",
+            "title": "Low-dimensional exact counterexamples to the Recht–Ré inequality",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-17-000003",
+            "title": "Sneider's Gδ-diagonal metrization theorem",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000005",
+            "title": "Formalization of a sharp cone square-function estimate via superorthogonality",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000005-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-14-000009",
+            "title": "Selection of the electromagnetic source tensor by covariance, conservation and the exchange law",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-14-000009-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000023",
+            "title": "Waist",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000023-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000014",
+            "title": "Finite quantum designs: mutually unbiased bases, SIC-POVMs, and the Welch and Gerzon bounds",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000014-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000013",
+            "title": "Finite Observations and Recognition of the Compact Albert Algebra",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000013-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000006",
+            "title": "Hilbert–Smith and p-adic exclusion with second countability",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-15-000017",
+            "title": "The crystallographic restriction in every dimension: GL(N, ℤ) has an element of order m if and only if ψ(m) ≤ N",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-15-000017-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-15-000014",
+            "title": "The MDS conjecture over finite fields of even order",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-15-000014-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-15-000002",
+            "title": "Smirnov's local-to-global metrization theorem",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-15-000002-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-14-000003",
+            "title": "Fixed-dimensional separated Euclidean distances below 0.74 n squared",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-14-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-14-000001",
+            "title": "The full Nagata–Smirnov metrization theorem",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-14-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-13-000004",
+            "title": "Perfect surjections and paracompactness",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-13-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-12-000007",
+            "title": "Classical theorems of Fröhlich and Spencer: the Kosterlitz–Thouless transition, massless phases of abelian gauge theories, and Anderson localization",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-12-000007-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-12-000003",
+            "title": "Dowker's countable paracompactness, product normality and strict insertion characterization",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-12-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-11-000013",
+            "title": "Michael's biquotient-map product and characterization theorems",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-11-000013-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-09-000014",
+            "title": "Hörmander's hypoellipticity theorem and the Rothschild–Stein theory",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-09-000014-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-02-000008",
+            "title": "Optimality, uniqueness and stability of Gerver's sofa from one coercive certificate, formalized in Lean 4",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-02-000008-v5.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-08-000002",
+            "title": "A strongly tempered Meyer space of countably infinite Hamel dimension",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-08-000002-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-07-000006",
+            "title": "The CLARK Tile: An Aperiodic Monotile in Five Dimensions",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-07-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-07-000003",
+            "title": "Alexandroff Property of Metric Indecomposable Continua",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-07-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-06-000010",
+            "title": "Monotone-Light Factorization of Compact Hausdorff Surjections",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-06-000010-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-06-000008",
+            "title": "A Hausdorff–packing criterion for self-pinned distance sets",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-06-000008-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-06-000006",
+            "title": "FluidSingularSets",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-06-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-06-000005",
+            "title": "Non-Cut Points of Hausdorff Continua",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-06-000005-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-06-000002",
+            "title": "Sierpinski Closed Partitions of Continua",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-06-000002-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-05-000009",
+            "title": "Boundary Bumping for Closed Subsets of Continua",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-05-000009-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-02-000011",
+            "title": "Uniqueness of four-body convex central configurations for all masses",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-02-000011-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-03-000006",
+            "title": "Escauriaza–Seregin–Šverák and Ladyzhenskaya–Prodi–Serrin regularity",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-03-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-03-000004",
+            "title": "Regularity of asymptotically axisymmetric Navier–Stokes solutions with analytic forcing",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-03-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-30-000035",
+            "title": "Metric–Pfaffian Stabilizers and Fixed-Hodge Field Recovery",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000035-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-30-000019",
+            "title": "Deciding D-stability is coNP-hard",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000019-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-28-000004",
+            "title": "Conditional Hilbert-space classification of Gromov--Hausdorff space",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-28-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-22-000003",
+            "title": "CaffarelliKohnNirenberg",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-22-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-21-000001",
+            "title": "An atomic decomposition of one-dimensional metric currents without boundary",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-21-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-02-000011",
+            "title": "A machine-checked bound of 0.6934 for Besicovitch's 1/2-problem",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-02-000011-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-19-000001",
+            "title": "NKBesicovitch",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-19-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-18-000009",
+            "title": "A convex body variant of Soberon's counterexample to the Grünbaum conjecture.",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-18-000009-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-18-000008",
+            "title": "Several complex variables: local theory, Hartogs phenomena, Weierstrass theory, domains of holomorphy and pseudoconvexity",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-18-000008-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-15-000007",
+            "title": "MarkovProcess",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-15-000007-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-12-000002",
+            "title": "A Tight Upper Bound for Fully Dynamic Matching on the Line",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-12-000002-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-14-000010",
+            "title": "Certified naturality and the obstruction to unrestricted naturality in a typed two-dimensional calculus",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-14-000010-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-13-000001",
+            "title": "Rational invariants of three frames in the split Albert algebra: a Lean formalization",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-13-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-11-000001",
+            "title": "Independent Bonnet--Myers diameter and compactness theorem",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-11-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-10-000005",
+            "title": "The classification of compact 1-manifolds",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-10-000005-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-10-000003",
+            "title": "Irreducible improper phi-regret in Lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-10-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-09-000003",
+            "title": "Rerandomized Subsampled Trigonometric Transforms",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-09-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-06-000004",
+            "title": "Double-contracted second Bianchi identity for metric-compatible torsion-free connections",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-06-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-06-000003",
+            "title": "Spherical maximal functions: theorems of Stein and Bourgain",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-06-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-05-000004",
+            "title": "Exact four-dimensional projection quality of the OneTwo Sobol' table at 65,536 points",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-05-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-04-000002",
+            "title": "Combinatorial core of the K₃,₃,₁-redundancy theorem for tetrahedral balls",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-04-000002-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-03-000004",
+            "title": "Radial harmonic functions on a real inner product space: the classification, the Laplacian of radial functions, and the stability of circular orbits for power-law central forces; Ehrenfest's dimensionality argument (1917) as the application",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-03-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-03-000003",
+            "title": "Tverberg's Partition Theorem, 1D Theorem, and Colorful 1D Theorem",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-03-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-02-000007",
+            "title": "Levi–Civita connections and metric-determined curvature invariants in Lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-02-000007-v3.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-02-000014",
+            "title": "The trace form of a tensor product of algebras and the signature product rule, with the trace forms of Q[x]/(x^3 - x - 1), Q[x]/(x^4 - x - 1) and their compositum as instances",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-02-000014-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-01-000008",
+            "title": "Only two morphic numbers: the Aarts-Fokkink-Kruijtzer classification of the golden ratio and the plastic number",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-01-000008-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-31-000012",
+            "title": "mrdouglasny/OSforGFF-comparator",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000012-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-29-000018",
+            "title": "ehrlich-b/composition-algebras",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000018-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-29-000015",
+            "title": "ehrlich-b/composition-algebras",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000015-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-29-000011",
+            "title": "mccorvie/classification-of-surfaces",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000011-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-29-000010",
+            "title": "BochaoKong/classical-complex-wpt",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000010-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-29-000005",
+            "title": "Arthur742Ramos/TopologicalComputationalPaths",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000005-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-29-000004",
+            "title": "yuhangshi888/zeta-simple-zeros-673316977",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-28-000001",
+            "title": "yuningyang19/parameter_free_gradient_p",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-28-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-27-000017",
+            "title": "Arthur742Ramos/SpinorLean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000017-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-27-000015",
+            "title": "Arthur742Ramos/HigherLambdaModel",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000015-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-27-000014",
+            "title": "sneed-and-feed/lean-theorems-1",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000014-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-27-000013",
+            "title": "Arthur742Ramos/jacobian-conjecture-lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000013-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-25-000001",
+            "title": "balancedscorpion/shifted-square-root-fourier-classification",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-25-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-23-000006",
+            "title": "ehrlich-b/euclidean-jordan",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-23-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-23-000005",
+            "title": "ehrlich-b/euclidean-jordan",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-23-000005-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-22-000006",
+            "title": "ehrlich-b/sequential-products-lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-22-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-21-000009",
+            "title": "ehrlich-b/sequential-products-lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-21-000009-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-21-000001",
+            "title": "ehrlich-b/sequential-products-lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-21-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-19-000004",
+            "title": "vo-rodrigues/wallace-problem-palomar",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-19-000004-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "A-free",
+          "dimensional",
+          "Hausdorff",
+          "wave cone"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00687v1",
+            "title": "The Law of Forgetting in Moments of Sato-Tate Measures: Invariant Tensors, Maximal Tori, and the Rank Law",
+            "url": "https://hexagonmath.org/abs/2610.00687v1"
+          },
+          {
+            "id": "hexagon:2611.00015v1",
+            "title": "Positive polytopes and the full Fock–Goncharov conjecture",
+            "url": "https://hexagonmath.org/abs/2611.00015v1"
+          },
+          {
+            "id": "hexagon:2611.00011v1",
+            "title": "Improved and sharp bounds for illumination",
+            "url": "https://hexagonmath.org/abs/2611.00011v1"
+          },
+          {
+            "id": "hexagon:2610.00701v1",
+            "title": "The Shared Randomness Cost of Optimal One Use Loop Communication",
+            "url": "https://hexagonmath.org/abs/2610.00701v1"
+          },
+          {
+            "id": "hexagon:2610.00700v1",
+            "title": "Shared Randomness and Normalization in One-Use Loop Communication",
+            "url": "https://hexagonmath.org/abs/2610.00700v1"
+          },
+          {
+            "id": "hexagon:2610.00682v1",
+            "title": "Arithmetic Expression Spaces: Expansion and Motion, Eikonal Equation, Horocycle Pullbacks, Commutativization, Contact Structure, and Tearing",
+            "url": "https://hexagonmath.org/abs/2610.00682v1"
+          },
+          {
+            "id": "hexagon:2610.00654v1",
+            "title": "Collision Geometry and Holonomy of Finite Blaschke Model Spaces",
+            "url": "https://hexagonmath.org/abs/2610.00654v1"
+          },
+          {
+            "id": "hexagon:2610.00650v1",
+            "title": "Symmetric Volume Descent from U4 and a Four-Dimensional Lower Bound",
+            "url": "https://hexagonmath.org/abs/2610.00650v1"
+          },
+          {
+            "id": "hexagon:2610.00593v1",
+            "title": "Stability and Convergence of a Regularized Immersed Boundary Method under Dynamic Cartesian Refinement. Part III: Fluid-Driven Rigid-Body Motion",
+            "url": "https://hexagonmath.org/abs/2610.00593v1"
+          },
+          {
+            "id": "hexagon:2610.00587v1",
+            "title": "Lefschetz coefficients of quantum theta functions",
+            "url": "https://hexagonmath.org/abs/2610.00587v1"
+          },
+          {
+            "id": "hexagon:2610.00580v2",
+            "title": "The Generalized Vanishing Conjecture: The Two-Variable Theorem and the First Failing Dimension",
+            "url": "https://hexagonmath.org/abs/2610.00580v2"
+          },
+          {
+            "id": "hexagon:2610.00582v1",
+            "title": "Stability and Convergence of a Regularized Immersed Boundary Method under Dynamic Cartesian Refinement. Part I: Fixed Geometry",
+            "url": "https://hexagonmath.org/abs/2610.00582v1"
+          },
+          {
+            "id": "hexagon:2610.00570v1",
+            "title": "A continuum whose hyperspace of regular subcontinua is homeomorphic to the irrationals",
+            "url": "https://hexagonmath.org/abs/2610.00570v1"
+          },
+          {
+            "id": "hexagon:2610.00567v1",
+            "title": "The regular pentagonal system and the Smith--Ward problem",
+            "url": "https://hexagonmath.org/abs/2610.00567v1"
+          },
+          {
+            "id": "hexagon:2610.00561v2",
+            "title": "Volume Computation and Comparison for Four-Dimensional Bodies of Constant Width",
+            "url": "https://hexagonmath.org/abs/2610.00561v2"
+          },
+          {
+            "id": "hexagon:2610.00551v1",
+            "title": "Uniqueness of four-body convex central configurations for all masses",
+            "url": "https://hexagonmath.org/abs/2610.00551v1"
+          },
+          {
+            "id": "hexagon:2610.00559v1",
+            "title": "Finite Truncated Lattice-Length Data on Three-Dimensional Flat Tori",
+            "url": "https://hexagonmath.org/abs/2610.00559v1"
+          },
+          {
+            "id": "hexagon:2610.00552v1",
+            "title": "Area law for three-dimensional U(1) lattice gauge theory with the Wilson action at every coupling",
+            "url": "https://hexagonmath.org/abs/2610.00552v1"
+          },
+          {
+            "id": "hexagon:2610.00540v1",
+            "title": "A note of the Gorenstein symmetry conjecture (II)",
+            "url": "https://hexagonmath.org/abs/2610.00540v1"
+          },
+          {
+            "id": "hexagon:2610.00539v1",
+            "title": "A note of the Gorenstein symmetry conjecture (I)",
+            "url": "https://hexagonmath.org/abs/2610.00539v1"
+          },
+          {
+            "id": "hexagon:2610.00538v1",
+            "title": "Nonlinear Wave Limits of Reversible Finite-State Cellular Automata",
+            "url": "https://hexagonmath.org/abs/2610.00538v1"
+          },
+          {
+            "id": "hexagon:2610.00536v1",
+            "title": "Illumination of complex convex bodies",
+            "url": "https://hexagonmath.org/abs/2610.00536v1"
+          },
+          {
+            "id": "hexagon:2610.00515v1",
+            "title": "Optimizing a cube–ball lower bound for the reverse Brunn–Minkowski constant",
+            "url": "https://hexagonmath.org/abs/2610.00515v1"
+          },
+          {
+            "id": "hexagon:2610.00512v1",
+            "title": "The continuum limit of three-dimensional SU(2) lattice Yang–Mills theory on a torus V: Short-distance and weak-coupling asymptotics",
+            "url": "https://hexagonmath.org/abs/2610.00512v1"
+          },
+          {
+            "id": "hexagon:2610.00511v1",
+            "title": "The continuum limit of three-dimensional SU(2) lattice Yang–Mills theory on a torus IV: Wilson flow and continuum measure",
+            "url": "https://hexagonmath.org/abs/2610.00511v1"
+          },
+          {
+            "id": "hexagon:2610.00510v1",
+            "title": "The continuum limit of three-dimensional SU(2) lattice Yang–Mills theory on a torus III: Regional renormalization and large-field control",
+            "url": "https://hexagonmath.org/abs/2610.00510v1"
+          },
+          {
+            "id": "hexagon:2610.00509v1",
+            "title": "The continuum limit of three-dimensional SU(2) lattice Yang–Mills theory on a torus II: Fluctuation integration and local reconstruction",
+            "url": "https://hexagonmath.org/abs/2610.00509v1"
+          },
+          {
+            "id": "hexagon:2610.00506v1",
+            "title": "The continuum limit of three-dimensional SU(2) lattice Yang–Mills theory on a torus I: Foundations and classical fields",
+            "url": "https://hexagonmath.org/abs/2610.00506v1"
+          },
+          {
+            "id": "hexagon:2610.00505v1",
+            "title": "Multiplicative bases and deformations of representation-finite algebras",
+            "url": "https://hexagonmath.org/abs/2610.00505v1"
+          },
+          {
+            "id": "hexagon:2610.00481v1",
+            "title": "A counterexample to Liu's conjecture on Fano indices in dimension four",
+            "url": "https://hexagonmath.org/abs/2610.00481v1"
+          },
+          {
+            "id": "hexagon:2610.00480v1",
+            "title": "Nilpotent-free spaces of 3 x 3 matrices over the field with three elements",
+            "url": "https://hexagonmath.org/abs/2610.00480v1"
+          },
+          {
+            "id": "hexagon:2610.00477v1",
+            "title": "Weil classes on abelian sixfolds of Weil type for $\\mathbb{Q}(i)$ with discriminant $-3$",
+            "url": "https://hexagonmath.org/abs/2610.00477v1"
+          },
+          {
+            "id": "hexagon:2610.00472v2",
+            "title": "The Welch function is not third-order sum-free",
+            "url": "https://hexagonmath.org/abs/2610.00472v2"
+          },
+          {
+            "id": "hexagon:2610.00470v1",
+            "title": "Gluing defects for projected coarse graining in finite spin-foam models",
+            "url": "https://hexagonmath.org/abs/2610.00470v1"
+          },
+          {
+            "id": "hexagon:2610.00453v1",
+            "title": "Faster-than-power-law decay of order parameter correlations in the two-dimensional RP2 model: a rigorous result by vibe-proving",
+            "url": "https://hexagonmath.org/abs/2610.00453v1"
+          },
+          {
+            "id": "hexagon:2610.00450v1",
+            "title": "Superfluid Stiffness and Nonclassical Rotational Inertia of the Dilute Hard-Sphere Bose Gas",
+            "url": "https://hexagonmath.org/abs/2610.00450v1"
+          },
+          {
+            "id": "hexagon:2610.00436v1",
+            "title": "Counterexamples to the weakly Gorenstein symmetry conjecture",
+            "url": "https://hexagonmath.org/abs/2610.00436v1"
+          },
+          {
+            "id": "hexagon:2610.00435v1",
+            "title": "Area Nondecreasing Drawstrings and \tCounterexamples to Euclidean Rigidity and Zero Mass Stability",
+            "url": "https://hexagonmath.org/abs/2610.00435v1"
+          },
+          {
+            "id": "hexagon:2610.00427v1",
+            "title": "Total mutual visibility in Fibonacci and Lucas cubes",
+            "url": "https://hexagonmath.org/abs/2610.00427v1"
+          },
+          {
+            "id": "hexagon:2610.00387v2",
+            "title": "Weil classes on every abelian sixfold of Weil type for $\\mathbb{Q}(\\sqrt{-3})$",
+            "url": "https://hexagonmath.org/abs/2610.00387v2"
+          },
+          {
+            "id": "hexagon:2610.00371v2",
+            "title": "Algebraicity of Weil classes on non-split abelian sixfolds of Weil type over $\\mathbb{Q}(\\sqrt{-3})$ with Hermitian determinant $-2$",
+            "url": "https://hexagonmath.org/abs/2610.00371v2"
+          },
+          {
+            "id": "hexagon:2610.00367v1",
+            "title": "A critical-point criterion for D-stability in every dimension",
+            "url": "https://hexagonmath.org/abs/2610.00367v1"
+          },
+          {
+            "id": "hexagon:2610.00344v1",
+            "title": "Image Reconstruction from Projections using Fourier Slice Theorem",
+            "url": "https://hexagonmath.org/abs/2610.00344v1"
+          },
+          {
+            "id": "hexagon:2610.00395v1",
+            "title": "Additive Rounding for LP-Tight Three-Item Bin Packing",
+            "url": "https://hexagonmath.org/abs/2610.00395v1"
+          },
+          {
+            "id": "hexagon:2610.00397v2",
+            "title": "Reduction of the Gorenstein symmetry conjecture to finite rings",
+            "url": "https://hexagonmath.org/abs/2610.00397v2"
+          },
+          {
+            "id": "hexagon:2610.00392v2",
+            "title": "Cartan determinants in finite representation type over arbitrary fields",
+            "url": "https://hexagonmath.org/abs/2610.00392v2"
+          },
+          {
+            "id": "hexagon:2610.00368v1",
+            "title": "Deciding D-stability is coNP-hard",
+            "url": "https://hexagonmath.org/abs/2610.00368v1"
+          },
+          {
+            "id": "hexagon:2610.00346v1",
+            "title": "Optimal windowed test functions for bounding analytic ranks of elliptic curves",
+            "url": "https://hexagonmath.org/abs/2610.00346v1"
+          },
+          {
+            "id": "hexagon:2610.00347v1",
+            "title": "Gaussian weights on fractals and Edelman's ghosts and shadows",
+            "url": "https://hexagonmath.org/abs/2610.00347v1"
+          },
+          {
+            "id": "hexagon:2610.00341v6",
+            "title": "Yang--Mills Mass Gap on the Lattice and One Cube from the Continuum",
+            "url": "https://hexagonmath.org/abs/2610.00341v6"
+          },
+          {
+            "id": "hexagon:2610.00297v1",
+            "title": "Bounds for Erdős Problem #188: $7\\le k\\le 60$",
+            "url": "https://hexagonmath.org/abs/2610.00297v1"
+          },
+          {
+            "id": "hexagon:2610.00315v2",
+            "title": "Dense Algebraic Loci of Hodge Classes",
+            "url": "https://hexagonmath.org/abs/2610.00315v2"
+          },
+          {
+            "id": "hexagon:2610.00301v2",
+            "title": "The Exact Junta Bound for Degree-Two Boolean Functions on q-ary Hamming Cubes",
+            "url": "https://hexagonmath.org/abs/2610.00301v2"
+          },
+          {
+            "id": "hexagon:2610.00284v1",
+            "title": "A fourteen-dimensional biperfect Lie bialgebra",
+            "url": "https://hexagonmath.org/abs/2610.00284v1"
+          },
+          {
+            "id": "hexagon:2610.00273v1",
+            "title": "The rank-one Dixmier conjecture for elements of mass at most six",
+            "url": "https://hexagonmath.org/abs/2610.00273v1"
+          },
+          {
+            "id": "hexagon:2610.00274v1",
+            "title": "Finite Projective Source Geometry for GL2: Abel Resolvents and Central-Jet Degree Laws",
+            "url": "https://hexagonmath.org/abs/2610.00274v1"
+          },
+          {
+            "id": "hexagon:2610.00260v2",
+            "title": "Stable algebraic families of polarized dynamical systems and exceptional extensions",
+            "url": "https://hexagonmath.org/abs/2610.00260v2"
+          },
+          {
+            "id": "hexagon:2610.00253v1",
+            "title": "$C_2$-cofiniteness of logarithmic $W$-algebras",
+            "url": "https://hexagonmath.org/abs/2610.00253v1"
+          },
+          {
+            "id": "hexagon:2610.00248v1",
+            "title": "Improved Kissing Numbers in Nineteen and Twenty-One Dimensions",
+            "url": "https://hexagonmath.org/abs/2610.00248v1"
+          },
+          {
+            "id": "hexagon:2610.00245v1",
+            "title": "Finite Analytic Characters and Tannakian Source Reconstruction: A Finite Tensor–Quiver Framework for Beyond Endoscopy",
+            "url": "https://hexagonmath.org/abs/2610.00245v1"
+          },
+          {
+            "id": "hexagon:2610.00246v3",
+            "title": "Algebraicity of Weil classes on abelian sixfolds of Weil type for $\\mathbb{Q}(\\sqrt{-3})$ with discriminant $-2$",
+            "url": "https://hexagonmath.org/abs/2610.00246v3"
+          },
+          {
+            "id": "hexagon:2610.00224v1",
+            "title": "Stable Algebraic Families for $\\mathbb{P}^2$",
+            "url": "https://hexagonmath.org/abs/2610.00224v1"
+          },
+          {
+            "id": "hexagon:2610.00218v2",
+            "title": "A Note on Laminar Presentations and Finite Chain Models for Ample Groupoid Homology",
+            "url": "https://hexagonmath.org/abs/2610.00218v2"
+          },
+          {
+            "id": "hexagon:2610.00216v1",
+            "title": "A seven-eighths zero-free half-plane for unitary Weil L-functions",
+            "url": "https://hexagonmath.org/abs/2610.00216v1"
+          },
+          {
+            "id": "hexagon:2610.00213v2",
+            "title": "An order-five Haagerup--Izumi vertex operator algebra at central charge eight",
+            "url": "https://hexagonmath.org/abs/2610.00213v2"
+          },
+          {
+            "id": "hexagon:2610.00212v1",
+            "title": "The Chaise Longue Theorem: Conjecture 1.2 of Degtyarev–Shimada for the Fermat varieties of every degree in every even dimension, and the integral Hodge conjecture for those whose degree is prime, equal to 4, or prime to (n+1)!",
+            "url": "https://hexagonmath.org/abs/2610.00212v1"
+          },
+          {
+            "id": "hexagon:2610.00210v1",
+            "title": "The truncated octahedral conjecture",
+            "url": "https://hexagonmath.org/abs/2610.00210v1"
+          },
+          {
+            "id": "hexagon:2610.00205v2",
+            "title": "The Dancing Sand Theorem: the 2-part of the sandpile group of the hypercube, for every n",
+            "url": "https://hexagonmath.org/abs/2610.00205v2"
+          },
+          {
+            "id": "hexagon:2610.00179v1",
+            "title": "Representation embeddings and the third Brauer--Thrall conjecture",
+            "url": "https://hexagonmath.org/abs/2610.00179v1"
+          },
+          {
+            "id": "hexagon:2610.00155v1",
+            "title": "The Parisi Formula for the Edwards–Anderson Model in the High-Dimensional Limit",
+            "url": "https://hexagonmath.org/abs/2610.00155v1"
+          },
+          {
+            "id": "hexagon:2610.00146v1",
+            "title": "Phase retrieval for stationary Schrödinger evolutions",
+            "url": "https://hexagonmath.org/abs/2610.00146v1"
+          },
+          {
+            "id": "hexagon:2610.00142v1",
+            "title": "Noncommutative Buzano-Dragomir Inequality and Applications",
+            "url": "https://hexagonmath.org/abs/2610.00142v1"
+          },
+          {
+            "id": "hexagon:2610.00143v5",
+            "title": "A note on counterexamples to homological conjectures",
+            "url": "https://hexagonmath.org/abs/2610.00143v5"
+          },
+          {
+            "id": "hexagon:2610.00024v1",
+            "title": "Reflexive equivalence and reflexive-minimal algebras",
+            "url": "https://hexagonmath.org/abs/2610.00024v1"
+          },
+          {
+            "id": "hexagon:2610.00011v2",
+            "title": "A generalized Gerver sofa for angled corridors",
+            "url": "https://hexagonmath.org/abs/2610.00011v2"
+          },
+          {
+            "id": "hexagon:2609.00144v1",
+            "title": "On the Asymptotic \\(W_1\\) Cost of Two-Dimensional Semi-Discrete Matching",
+            "url": "https://hexagonmath.org/abs/2609.00144v1"
+          },
+          {
+            "id": "hexagon:2609.00146v1",
+            "title": "FINITE HAUSDORFF HYPERSPACES AND GROMOV–HAUSDORFF GEOMETRY",
+            "url": "https://hexagonmath.org/abs/2609.00146v1"
+          },
+          {
+            "id": "hexagon:2609.00126v1",
+            "title": "Pauli problem in dimension 4",
+            "url": "https://hexagonmath.org/abs/2609.00126v1"
+          },
+          {
+            "id": "hexagon:2609.00110v1",
+            "title": "Frobenius orbit maps and rank-four group schemes",
+            "url": "https://hexagonmath.org/abs/2609.00110v1"
+          },
+          {
+            "id": "hexagon:2609.00102v1",
+            "title": "Inclusions between p-bounded crystalline loci in dimension two",
+            "url": "https://hexagonmath.org/abs/2609.00102v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "A-free",
+        "dimensional",
+        "Hausdorff",
+        "wave cone"
+      ],
+      "hits": [
+        {
+          "entry": "010",
+          "title": "Fontaine--Mazur modularity at the prime $2$ and $2$-adic pro-modularity",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Unrestricted-pro-modularity-at-the-prime-two-October-6-2026/two-adic-promodularity.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-Dimension-of-the-Two-Adic-Hecke-Algebra-at-Odd-Level-October-5-2026/two-adic-hecke.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "046",
+          "title": "Counterexamples to Shafarevich holomorphic convexity",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-projective-fourfold-with-large-fundamental-group-and-non-Stein-universal-cover-October-5-2026/large-fundamental-group-non-stein.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "057",
+          "title": "Campana's abelianity conjecture and special varieties",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Two-step-monodromy-of-special-quasi-projective-varieties-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-conditional-abelianity-theorem-for-special-fourfold-pairs-with-a-half-weight-divisor-October-5-2026/main.pdf"
+          ]
+        },
+        {
+          "entry": "063",
+          "title": "The generalized Mukai conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+          ]
+        },
+        {
+          "entry": "073",
+          "title": "The Falconer distance conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "074",
+          "title": "Kakeya in three and four dimensions",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-Kakeya-maximal-conjecture-in-three-dimensions-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Every-four-dimensional-Kakeya-set-has-full-Hausdorff-dimension-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "078",
+          "title": "The three-dimensional Bochner--Riesz conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Bochner-Riesz-Multipliers-in-Three-Dimensions-September-24-2026/Bochner-Riesz-Multipliers-in-Three-Dimensions-September-24-2026.pdf"
+          ]
+        },
+        {
+          "entry": "079",
+          "title": "Local smoothing for the Euclidean wave equation",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Local-smoothing-for-the-Euclidean-wave-equation-October-25-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Critical-local-smoothing-for-the-three-dimensional-wave-equation-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "080",
+          "title": "The Sobolev endpoint in Carleson's Schr\\\"odinger convergence problem",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Endpoint-convergence-for-the-planar-Schrodinger-equation-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Endpoint-pointwise-convergence-for-the-Schrodinger-equation-in-higher-dimensions-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "081",
+          "title": "The David--Semmes Riesz-transform problem in higher codimension",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Riesz-transforms-and-uniform-rectifiability-in-higher-codimension-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "090",
+          "title": "Universal optimality of the triangular lattice",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/An-atomic-certificate-for-triangular-lattice-universal-optimality-September-26-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Universal-optimality-of-the-triangular-lattice-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-sharp-Fourier-certificate-for-planar-circle-packing-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Triangular-minimality-for-planar-Coulomb-renormalized-energy-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "091",
+          "title": "The logarithmic Brunn--Minkowski conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-logarithmic-Brunn-Minkowski-conjecture-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "098",
+          "title": "A negative answer to the Lang--Plaut problem",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-doubling-Hilbert-subset-with-no-finite-dimensional-bi-Lipschitz-embedding-September-25-2026/main.pdf"
+          ]
+        },
+        {
+          "entry": "109",
+          "title": "Integer multiplication below $n\\log n$",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Integer-multiplication-below-n-log-n-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "116",
+          "title": "Uniform identity testing for noncommutative formulas",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Uniform-Matrix-Hitting-Points-in-Every-Positive-Characteristic-October-4-2026/uniform-matrix-hitting-points-positive-characteristic.pdf",
+            "https://github.com/openai/math/blob/main/preprints/One-Rational-Matrix-Hitting-Point-for-Noncommutative-Formulas-September-24-2026/One-Rational-Matrix-Hitting-Point-for-Noncommutative-Formulas-September-24-2026.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Polynomial-Hitting-Lists-for-Noncommutative-Rational-Formulas-September-24-2026/Polynomial-Hitting-Lists-for-Noncommutative-Rational-Formulas-September-24-2026.pdf"
+          ]
+        },
+        {
+          "entry": "127",
+          "title": "The asymptotic Gotsman--Linial conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Average-Sensitivity-of-Polynomial-Threshold-Functions-September-25-2026/main.pdf"
+          ]
+        },
+        {
+          "entry": "133",
+          "title": "The complexity of Weisfeiler--Leman refinement",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Parity-lifts-and-bounded-treewidth-witnesses-for-Weisfeiler-Leman-equivalence-September-25-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-complexity-of-identifying-a-graph-by-Weisfeiler-Leman-refinement-September-25-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Unconditional-time-lower-bounds-for-Weisfeiler-Leman-equivalence-September-25-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Variable-dimension-Weisfeiler-Leman-equivalence-on-general-and-subcubic-graphs-September-25-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "146",
+          "title": "Sinai's positive-entropy conjecture for the standard map",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Positive-Metric-Entropy-for-the-Standard-Map-at-Large-Parameters-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "152",
+          "title": "Zero entropy does not guarantee a smooth positive-volume model",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-finite-entropy-system-without-a-smooth-positive-volume-model-September-25-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "156",
+          "title": "Borsuk's conjecture fails in dimension nine",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-nine-dimensional-counterexample-to-Borsuks-covering-assertion-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "166",
+          "title": "The higher-dimensional Erd\\H{o",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-higher-dimensional-Erdos-distinct-distances-conjecture-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "171",
+          "title": "The hypercube Ramsey conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-hypercube-Ramsey-number-has-linear-order-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "172",
+          "title": "Classification of finite Euclidean Ramsey configurations",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-classification-of-finite-Euclidean-Ramsey-configurations-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "177",
+          "title": "Bounded-degree coboundary expanders in every dimension",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Bounded-degree-coboundary-expanders-in-every-dimension-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "195",
+          "title": "A counterexample to the small Cohen--Macaulay module conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-Complete-Local-Domain-Without-a-Small-Cohen-Macaulay-Module-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "196",
+          "title": "A counterexample to Kaplansky's zero-divisor conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-Torsion-Free-Group-Algebra-with-Zero-Divisors-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "198",
+          "title": "A counterexample to the little finitistic-dimension conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/An-algebra-of-infinite-little-finitistic-dimension-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "199",
+          "title": "Counterexamples to conjectures of Auslander--Reiten, Tachikawa, and Nakayama",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/An-explicit-counterexample-to-the-Auslander-Reiten-conjecture-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-counterexample-to-Tachikawas-second-conjecture-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "209",
+          "title": "Integral counterexamples to Gersten’s conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/An-Integral-Counterexample-to-Gerstens-Conjecture-September-25-2026/An-Integral-Counterexample-to-Gerstens-Conjecture-September-25-2026.pdf",
+            "https://github.com/openai/math/blob/main/preprints/An-Integral-Degree-Three-Gersten-Counterexample-September-26-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "210",
+          "title": "Foulkes’ conjecture for sixth powers and quadratic stabilization",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Foulkes-Conjecture-for-the-Sixth-Symmetric-Power-September-25-2026/main.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Quadratic-Stabilization-of-the-Canonical-Foulkes-Howe-Map-September-25-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "215",
+          "title": "Massive continuum limits and exact mass asymptotics for planar $O(n)$ models",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-canonical-massive-continuum-limit-of-the-two-dimensional-O3-model-October-4-2026/massive-continuum-o3.pdf",
+            "https://github.com/openai/math/blob/main/preprints/An-Isolated-Particle-Pole-for-the-Two-Dimensional-O3-Spin-Field-October-4-2026/o3-particle-pole.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026/exact-mass-o4.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Sharp-mass-bounds-for-the-two-dimensional-O4-model-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Exponential-decay-in-two-dimensional-classical-On-models-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "228",
+          "title": "Continuum phase transitions for radial pair potentials",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-continuum-temperature-singularity-for-a-radial-pair-potential-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-radial-continuum-phase-transition-with-algebraic-decay-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "230",
+          "title": "Exact Hausdorff measure for SLE",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/An-exact-Hausdorff-gauge-for-SLE-September-25-2026/An-exact-Hausdorff-gauge-for-SLE-September-25-2026.pdf",
+            "https://github.com/openai/math/blob/main/preprints/An-explicit-exact-Hausdorff-gauge-for-SLE-September-26-2026/An-explicit-exact-Hausdorff-gauge-for-SLE-September-26-2026.pdf"
+          ]
+        },
+        {
+          "entry": "247",
+          "title": "An infinite finitely presented residually finite $2$-group",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/An-infinite-finitely-presented-residually-finite-2-group-October-5-2026/residually-finite-torsion.pdf",
+            "https://github.com/openai/math/blob/main/preprints/An-infinite-finitely-presented-periodic-group-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "249",
+          "title": "A finitely generated counterexample to Eilenberg--Ganea",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-finitely-generated-counterexample-to-the-Eilenberg-Ganea-conjecture-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "251",
+          "title": "Amenability, unitarizability, and Ulam stability",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Unitarizability-Implies-Amenability-for-Countable-Groups-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Strong-Ulam-Stability-Characterizes-Amenability-October-5-2026/strong-ulam-stability.pdf"
+          ]
+        },
+        {
+          "entry": "252",
+          "title": "A non-residually-finite torsion-free hyperbolic group",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/a-torsion-free-hyperbolic-group-that-is-not-residually-finite-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "260",
+          "title": "Spacetime Penrose inequalities and rigidity",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-spacetime-Penrose-inequality-with-charge-and-original-data-rigidity-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in-Spatial-Dimensions-at-Least-Four-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Electromagnetic-tails-and-the-Kerr-Newman-Penrose-inequality-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-nonmaximal-anti-de-Sitter-Penrose-Inequality-and-original-data-rigidity-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-Penrose-inequality-for-maximal-asymptotically-hyperbolic-initial-data-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-local-Penrose-inequality-for-conformal-perturbations-of-Schwarzschild-anti-de-Sitter-data-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-spacetime-Penrose-inequality-and-enclosing-area-September-27-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Conformal-flow-and-the-Riemannian-Penrose-inequality-with-minimizing-frontiers-September-27-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Area-controlled-end-replacement-and-the-Bondi-Penrose-inequality-in-the-CKS-class-September-27-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "261",
+          "title": "Localization and delocalization in the Anderson model",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Pure-Point-Spectrum-for-the-Two-Dimensional-Anderson-Model-at-Every-Positive-Disorder-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "262",
+          "title": "Sharp one-dimensional Lieb--Thirring inequalities",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Equality-cases-in-the-sharp-one-dimensional-matrix-Lieb-Thirring-inequality-October-5-2026/sharp-one-dimensional-lieb-thirring-inequalities-matrix-potentials.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Sharp-one-dimensional-Lieb-Thirring-inequalities-for-matrix-potentials-October-5-2026/sharp-matrix-lieb-thirring.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Sharp-One-Dimensional-Lieb-Thirring-Constants-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "265",
+          "title": "The two-dimensional gapped area law",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-two-dimensional-area-law-from-a-global-spectral-gap-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Polynomial-PEPS-approximation-of-gapped-square-grid-ground-states-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "267",
+          "title": "Positive-temperature Bose--Einstein condensation and quantum depletion",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Bose-Einstein-condensation-at-positive-temperature-in-the-dilute-hard-sphere-gas-October-5-2026/positive-temperature-hard-spheres.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Quantum-Depletion-and-Momentum-Distribution-in-the-Dilute-Hard-Sphere-Bose-Gas-October-5-2026/Quantum-Depletion-in-the-Dilute-Hard-Sphere-Bose-Gas.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Quantum-Depletion-for-Fixed-Bounded-Repulsive-Potentials-October-5-2026/fixed-repulsion-quantum-depletion.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-density-uniform-condensate-bound-for-dilute-Bose-gases-September-27-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Ground-state-condensation-in-the-dilute-hard-sphere-gas-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "271",
+          "title": "Bloch's law and spontaneous ferromagnetic order",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Blochs-Law-for-Finite-Range-Heisenberg-Ferromagnets-in-Three-Dimensions-October-5-2026/bloch-law-heisenberg.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-first-lattice-correction-to-Blochs-law-October-5-2026/first-lattice-correction-bloch-law.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-spherical-magnetization-law-for-the-three-dimensional-quantum-Heisenberg-ferromagnet-October-5-2026/spherical-magnetization.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "276",
+          "title": "The classical capacity of generalized amplitude damping",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Classical-capacity-and-entropy-inequalities-for-generalized-amplitude-damping-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "277",
+          "title": "Threshold repetition for entangled games",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Threshold-parallel-repetition-for-finite-dimensional-entangled-games-September-25-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "282",
+          "title": "Scale-to-conformal enhancement in four-dimensional QFT",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Scale-and-conformal-symmetry-in-four-dimensional-operational-quantum-field-theory-September-26-2026/main.pdf"
+          ]
+        },
+        {
+          "entry": "286",
+          "title": "Arithmetic rigidity of lattice von Neumann algebras",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Arithmeticity-of-twisted-finite-correspondences-for-lattices-over-local-fields-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-arithmetic-category-and-stable-recovery-of-lattice-factors-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "291",
+          "title": "Toms--Winter and equivariant Jiang--Su stability",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Equivariant-Jiang-Su-Stability-for-Amenable-Actions-in-the-Unital-Stably-Finite-Case-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Cuntz-comparison-and-Jiang-Su-absorption-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Nuclear-dimension-and-Jiang-Su-stability-without-elementary-subquotients-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Tracial-projection-methods-and-uniform-property-Gamma-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "293",
+          "title": "A counterexample to the hyperinvariant-subspace problem",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Invariant-projection-counterexamples-for-every-irrational-rotation-September-27-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Backward-intertwiners-and-a-transitive-commutant-September-27-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "297",
+          "title": "A ZFC counterexample to Naimark's problem",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-counterexample-to-Naimarks-problem-in-ZFC-September-24-2026/naimark-counterexample-zfc.pdf"
+          ]
+        },
+        {
+          "entry": "304",
+          "title": "The Hilbert--Smith conjecture in every dimension",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-Hilbert-Smith-conjecture-in-every-finite-dimension-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "305",
+          "title": "Counterexamples to disk embedding and Wall's manifold conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-boundary-only-obstruction-to-four-dimensional-disk-embedding-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-marked-tensor-obstruction-to-four-dimensional-disk-embedding-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-PD4-group-without-an-aspherical-manifold-model-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "315",
+          "title": "The four-dimensional Singer conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-Singer-conjecture-in-dimension-four-September-25-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "320",
+          "title": "A four-dimensional counterexample to Borel rigidity",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Nonhomeomorphic-closed-aspherical-four-manifolds-with-the-same-homotopy-type-October-4-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "321",
+          "title": "A counterexample to Wall's finite D(2) conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-Counterexample-to-Walls-D2-Problem-October-6-2026/wall-d2-counterexample.pdf"
+          ]
+        },
+        {
+          "entry": "323",
+          "title": "Relative independence of the separable quotient problem",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Relative-independence-of-the-separable-quotient-problem-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "333",
+          "title": "Smooth isometric immersions of surfaces into $\\mathbb R^4$",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Smooth-isometric-immersions-of-closed-surfaces-into-Euclidean-four-space-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "346",
+          "title": "Sharp singular-set bounds for stationary integral varifolds",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-Codimension-One-Bound-for-the-Singular-Set-of-a-Stationary-Integral-Varifold-October-5-2026/varifold-singular-dimension.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Almost-everywhere-regularity-of-stationary-integral-varifolds-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "351",
+          "title": "Scalar curvature detects four-dimensional Ricci-flow singularities",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-closed-Ricci-flow-with-bounded-scalar-curvature-and-finite-time-curvature-blowup-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Bounded-scalar-curvature-and-smooth-extension-of-four-dimensional-Ricci-flow-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Path-selection-and-an-elliptic-inequality-on-degenerating-Ricci-flat-trees-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "359",
+          "title": "Negative K\\\"ahler curvature without bounded holomorphic coordinates",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-negatively-pinched-Kahler-threefold-without-bounded-holomorphic-coordinates-September-25-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/One-sided-negative-sectional-curvature-and-the-holomorphic-Liouville-property-September-25-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "361",
+          "title": "Counterexamples to Yau's harmonic dimension bound",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-counterexample-to-integer-degree-harmonic-dimension-comparison-September-25-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-Three-Dimensional-Counterexample-to-Integer-Degree-Harmonic-Dimension-Comparison-September-26-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "362",
+          "title": "Global smoothness for relativistic Vlasov--Maxwell",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Global-classical-solutions-of-the-three-dimensional-relativistic-Vlasov-Maxwell-system-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "363",
+          "title": "Boltzmann nonuniqueness with exact local conservation",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Nonuniqueness-with-local-conservation-for-the-hard-sphere-Boltzmann-equation-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Nonuniqueness-for-the-periodic-hard-sphere-Boltzmann-equation-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "364",
+          "title": "Kinetic limits and fluctuations over the Boltzmann lifespan",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-Boltzmann-Grad-limit-for-stable-radial-potentials-on-regular-kinetic-intervals-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Hard-sphere-fluctuations-on-the-regular-Boltzmann-lifespan-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "365",
+          "title": "Joint metric and connection recovery from one boundary patch",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Determination-of-a-metric-and-a-unitary-connection-from-one-boundary-patch-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Nonuniqueness-for-Bounded-Measurable-Scalar-Conductivities-in-Three-Dimensions-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "368",
+          "title": "The three-dimensional Ball--Evans approximation problem",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Strong-diffeomorphic-approximation-in-three-dimensions-for-1-le-p-le-2-September-24-2026/main.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-2-September-24-2026/main.pdf"
+          ]
+        },
+        {
+          "entry": "376",
+          "title": "Universal computation in forced Navier--Stokes flows",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Finite-Instructions-and-Solenoidal-Shear-Flows-September-27-2026/manuscript.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-Fixed-Particle-Test-for-Computation-in-a-Forced-Viscous-Flow-September-27-2026/manuscript.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Universal-Computation-with-Eventually-Stationary-Navier-Stokes-Forcing-September-27-2026/manuscript.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Geometric-Programs-for-Solenoidal-Forcing-September-27-2026/manuscript.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Prefix-Instructions-and-Incompressible-Flows-September-27-2026/manuscript.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Computation-under-Rapidly-Vanishing-Navier-Stokes-Forcing-September-27-2026/manuscript.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Velocity-Field-Detection-of-Computation-in-Forced-Navier-Stokes-Flows-September-27-2026/manuscript.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Scalar-Potentials-and-Slow-Clocks-for-Forced-Fluid-Computation-September-27-2026/manuscript.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Incompressible-Box-Transport-and-Finite-Computation-October-6-2026/manuscript.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "The broad dimensional/Hausdorff matches concern specific arithmetic objects, Kakeya/distance sets, quantum models, varifolds, geometric flows or other PDEs. Even the varifold singular-set claim assumes a stationary integral varifold, not every vector-valued measure annihilated by an arbitrary higher-order constant-coefficient operator. No hit asserts the local general A-free threshold.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.727Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

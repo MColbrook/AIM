@@ -1,0 +1,54 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 365,
+  "source_sha256": "ea28f7f08689b7f03f4cbc9270c2a8f469e8caf4aadc23be389a183d6bde9cc9",
+  "statement_sha256": "dac14fb7731f56a8a4d6912fc851db89ea1aa81395b52831598d632022ece882",
+  "original_target": {
+    "id": "456",
+    "title": "Global quadratic reaction–diffusion systems with general transport noise",
+    "area": "Stochastic PDEs; chemical and population kinetics",
+    "file": "problems/456-quadratic-mass-controlled-rd-transport-noise.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "stochastic3",
+    "source_sha256": "ea28f7f08689b7f03f4cbc9270c2a8f469e8caf4aadc23be389a183d6bde9cc9",
+    "statement_sha256": "dac14fb7731f56a8a4d6912fc851db89ea1aa81395b52831598d632022ece882",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "456",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"quadratic\" \"mass control\" \"transport noise\" \"2026\"",
+    "\"reaction diffusion\" \"Agresti\" \"2026\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.13332",
+      "version": "v1,Aug2026",
+      "locator": "Theorem3.4and§1eq1.3",
+      "theorem_body_checked": true,
+      "scope": "Complexbalancedentropyreactionnetworks,suitablychosenspecialtransportnoise,globalprobability>1−epsilon.Noeveryadmissiblenoise/probabilityoneconclusion."
+    },
+    {
+      "url": "https://arxiv.org/html/2604.06645",
+      "version": "currenttext24Aug2026",
+      "locator": "§1eqTMCandmodel1,§2assumptions",
+      "theorem_body_checked": true,
+      "scope": "Triangularmasscontrolstrongerthantotalmasscontrol;noisewithoutspatialderivatives. Doesnotincludespecies-dependenttransportfields."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00030-025-01090-2",
+      "date": "2025survey",
+      "locator": "OpenProblem8",
+      "scope": "Exactgeneralquadraticextensionratherthandeterministicalreadyknowncase."
+    }
+  ],
+  "registry_checks": "Complete Palomar/HexagonmetadataandpinnedOpenAI/Colbrookauthorlistingsscannedfortopicaliases;nomatchingfullclaim.",
+  "scope_comparison": "Needallquadraticquasipositivemass-controlledlocallyLipschitzreactions,alladmissiblespecies-dependentdivfreefieldsandLipschitzmultiplicativenoise,globalLinf a.s. Chosennoisehighprobabilityandtriangularstructuresinsufficient.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

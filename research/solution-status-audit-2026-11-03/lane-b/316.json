@@ -1,0 +1,42 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 257,
+  "source_sha256": "0a244f1a800760ce322c15c29435670182a45fb4f0bb196ee68484a9c246c5da",
+  "statement_sha256": "a38c82f11b4981501bb9c708745cb3b9e49d117d4f3cfb7d16356c1d3039b4b5",
+  "original_target": {
+    "id": "316",
+    "title": "Decidability of zeros in integer linear recurrences",
+    "area": "Discrete dynamics and formal verification",
+    "file": "problems/316-discrete-skolem-decidability.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "inverse3",
+    "source_sha256": "0a244f1a800760ce322c15c29435670182a45fb4f0bb196ee68484a9c246c5da",
+    "statement_sha256": "a38c82f11b4981501bb9c708745cb3b9e49d117d4f3cfb7d16356c1d3039b4b5",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "316",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Original arbitrary-order nonsingular integer recurrence with repeated roots allowed, asks an unconditional total zero-emptiness decider. Luca–Ouaknine–Worrell Theorem4.3 explicitly assumes strengthened Cramer prime-gap Conjecture4.2 to bound large zeros. Current low-order and supplied-horizon algorithms, positive-characteristic results, and density-one statements do not give a halting negative answer for all original inputs. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "Skolem problem integer linear recurrence decidability solved 2026",
+    "\"Skolem\" decidability (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2607.15510",
+      "version": "current HTML3November2026",
+      "locator": "Theorem4.3 and Conjecture4.2",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "Skolem|recurrence.*zero",
+    "result": "Matches are Steiner construction, arithmetic recurrence special cases and unrelated records; no general Skolem decider. Hexagon polynomial-root and exact-recurrence-order records do not match."
+  }
+}

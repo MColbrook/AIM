@@ -1,0 +1,54 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 305,
+  "source_sha256": "6d9d1546c55041b278e039b4daf1951f121689ae2e5484e439ba87465da38065",
+  "statement_sha256": "ec4a59db62d1724e54eb2049564f88e816d3bf670b763e49c3375a73a82b1e1a",
+  "original_target": {
+    "id": "372",
+    "title": "The three-dimensional steady Leray problem with unrestricted boundary fluxes",
+    "area": "Steady viscous flow; inlet–outlet boundary conditions",
+    "file": "problems/372-leray-three-dimensional-flux.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "6d9d1546c55041b278e039b4daf1951f121689ae2e5484e439ba87465da38065",
+    "statement_sha256": "ec4a59db62d1724e54eb2049564f88e816d3bf670b763e49c3375a73a82b1e1a",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "372",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Leray problem\" \"three-dimensional\" \"2026\" flux",
+    "\"Leray\" \"flux\" \"2026\" steady Navier Stokes",
+    "\"steady Leray problem\" \"general\" \"three\" 2026 solved",
+    "\"Leray\" \"flux problem\" Korobkov 2026",
+    "\"Leray\" \"flux\" site:zenodo.org OR site:hal.science OR site:github.com \"steady\""
+  ],
+  "sources": [
+    {
+      "url": "https://mif.vu.lt/lt3/dokumentai/dokumentai/Tarybos/2016/03-01/Pileckas.pdf",
+      "version": "Annals181 (2015)769–807 author-hosted published text",
+      "locators": "Theorem 4.1; introduction; planar main theorem",
+      "body_inspected": true,
+      "scope": "Arbitrary total-compatible flux with axially symmetric spatial domain and data; plane case separate."
+    },
+    {
+      "url": "https://www.aimsciences.org/article/doi/10.3934/cpaa.2025090",
+      "version": "current publisher page, CPAA2026",
+      "locators": "abstract/model and stated local/global distinction",
+      "body_inspected": false,
+      "scope": "Time-dependent local strong results and smallness-based global stability, not arbitrary-flux steady existence."
+    }
+  ],
+  "source_access_limits": [
+    "2024 book front-matter endpoint inaccessible; checked underlying actual Annals theorem as fallback. Avrin body not retrieved; publisher model/abstract screen only, not full theorem verification."
+  ],
+  "registry_checks": "No Leray-problem/boundary-flux alias Palomar/Hexagon/OpenAI full metadata. Focused current arXiv, primary author/publisher, Zenodo, HAL, GitHub searches.",
+  "scope_comparison": "Need arbitrary smooth 3D geometry and data with only total boundary flux zero, individual fluxes arbitrary. Axisymmetric result cannot drop symmetry; separate-component zero-flux standard theorem stronger premises. Time-dependent forced blowup and local evolution existence do not decide steady weak existence.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Matching-looking Annals solution title has explicit geometric and data restrictions; access limits to secondary comparators recorded."
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "998",
+  "manifest_index": 842,
+  "checked_date": "2026-11-03",
+  "source_sha256": "5004e30b115f72c286bd2652b115db65350e34e4c9ac2422e7aac5917b86b741",
+  "statement_sha256": "0496cc098b191b84c4430f9fd2b902dae58c2a5fd8bb2273fa5ddf0fe697e88d",
+  "original_target": {
+    "id": "998",
+    "title": "Smooth perturbations at the same high irregularity exponents",
+    "area": "Rough paths and regularisation by noise",
+    "file": "problems/998-smooth-perturbations-at-the-same-high-irregularity-exponents.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-4e24d3efdc0d9bdf",
+    "group": "rough-paths-singular-stochastic-equations",
+    "source_sha256": "5004e30b115f72c286bd2652b115db65350e34e4c9ac2422e7aac5917b86b741",
+    "statement_sha256": "0496cc098b191b84c4430f9fd2b902dae58c2a5fd8bb2273fa5ddf0fe697e88d",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix an integer $`d\\ge1`$, parameters $`\\rho>1/2`$, $`1/2<\\gamma<1`$ and $`0<\\delta<1`$. For a continuous path $`w:[0,1]\\to\\mathbb R^d`$, define\n\n```math\n\\|\\Phi^w\\|_{\\gamma,\\rho}\n=\\sup_{\\substack{\\xi\\in\\mathbb R^d\\setminus\\{0\\}\\\\0\\le s<t\\le1}}\n|\\xi|^\\rho(t-s)^{-\\gamma}\n\\left|\\int_s^t e^{i\\xi\\cdot w(r)}\\,dr\\right|.\n```\n\nSuppose $`w\\in C^\\delta([0,1];\\mathbb R^d)`$ and $`\\|\\Phi^w\\|_{\\gamma,\\rho}<\\infty`$. Must\n\n```math\n\\|\\Phi^{w+\\varphi}\\|_{\\gamma,\\rho}<\\infty\n\\qquad\\text{for every }\\varphi\\in C^\\infty([0,1];\\mathbb R^d)?\n```\n\nSmoothness on the closed interval means smooth extendibility to a neighborhood. The bound may depend on the particular paths and all fixed parameters. The question preserves the **same** two exponents and concerns **every** eligible deterministic path. It imposes no probability model, adaptedness or stronger polynomial-phase irregularity premise.",
+  "full_original_page": "# 998. Smooth perturbations at the same high irregularity exponents\n\n**Area:** Rough paths and regularisation by noise\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix an integer $`d\\ge1`$, parameters $`\\rho>1/2`$, $`1/2<\\gamma<1`$ and $`0<\\delta<1`$. For a continuous path $`w:[0,1]\\to\\mathbb R^d`$, define\n\n```math\n\\|\\Phi^w\\|_{\\gamma,\\rho}\n=\\sup_{\\substack{\\xi\\in\\mathbb R^d\\setminus\\{0\\}\\\\0\\le s<t\\le1}}\n|\\xi|^\\rho(t-s)^{-\\gamma}\n\\left|\\int_s^t e^{i\\xi\\cdot w(r)}\\,dr\\right|.\n```\n\nSuppose $`w\\in C^\\delta([0,1];\\mathbb R^d)`$ and $`\\|\\Phi^w\\|_{\\gamma,\\rho}<\\infty`$. Must\n\n```math\n\\|\\Phi^{w+\\varphi}\\|_{\\gamma,\\rho}<\\infty\n\\qquad\\text{for every }\\varphi\\in C^\\infty([0,1];\\mathbb R^d)?\n```\n\nSmoothness on the closed interval means smooth extendibility to a neighborhood. The bound may depend on the particular paths and all fixed parameters. The question preserves the **same** two exponents and concerns **every** eligible deterministic path. It imposes no probability model, adaptedness or stronger polynomial-phase irregularity premise.\n\n## Application\n\nThe decay of these oscillatory occupation integrals measures the smoothing supplied by a path to irregular differential equations. Preserving the estimate under smooth trends would distinguish fine irregularity from a smooth background signal without weakening the available exponents.\n\n## References\n\n1. Lucio Galeati and Massimiliano Gubinelli, [*Prevalence of $`\\rho`$-irregularity and related properties*](https://arxiv.org/abs/2004.00872v2), inspected accepted author version v2, 20 April 2023. Definition 3 on physical p. 8; Section 5.4 on pp. 47–50, particularly the conjecture paragraph on p. 48 and Theorem 85 on p. 49. Published in *Annales de l'Institut Henri Poincaré, Probabilités et Statistiques* **60** (2024), 2415–2467, [DOI](https://doi.org/10.1214/23-AIHP1399). The final 53-page body was not checked for parity with the inspected 58-page version.\n2. Lucio Galeati and Máté Gerencsér, [*Solution theory of fractional SDEs in complete subcritical regimes*](https://doi.org/10.1017/fms.2024.136), *Forum of Mathematics, Sigma* (2025), Section 9, Assumption 9.2 and Theorem 9.3. Selected published statements concern adapted perturbations of fractional Brownian motion.\n3. Romito and Tolomeo, [*Yet another notion of irregularity through small ball estimates*](https://arxiv.org/abs/2207.02716v1), inspected v1; related published [DOI](https://doi.org/10.1016/j.spa.2026.104895), *Stochastic Processes and their Applications* **195** (2026), article 104895. Selected Propositions 3.1 and 3.3 concern stronger occupation-measure hypotheses and an exponent loss; final-body parity remains unchecked.\n\n## Status review\n\n\n**Known cases:** Every deterministic irregular path and exactly the same two exponents are required. Stronger polynomial-phase premises, exponent-loss estimates and probabilistic adapted-perturbation theorems do not settle this stability assertion.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nEvery deterministic irregular path and exactly the same two exponents are required. Stronger polynomial-phase premises, exponent-loss estimates and probabilistic adapted-perturbation theorems do not settle this stability assertion.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe source [1] explicitly retains this smooth-perturbation expectation under its standing assumption $`\\rho>1/2`$. Lemma 83 proves estimates with a loss in the spatial exponent. Theorem 85 gives preservation of every smaller spatial exponent under the stronger hypothesis of strong irregularity, with a possibly different time exponent. Neither supplies the displayed same-pair assertion for every eligible path.\n\nThe earlier unrestricted low-$`\\rho`$ formulation has a smooth-path counterexample, recorded separately in the research log. That example does not meet the present hypotheses. Almost-sure or prevalent statements, including the selected stochastic result [2], also have different quantifiers. The stronger Besov hypotheses and positive exponent loss in [3] do not prove this endpoint assertion.\n\nNo matching complete solution or announcement was located in the recorded bounded checks. This does not certify that no resolution exists.\n\nThe [source review](../FURTHER_problems/_tracking/parallel/rough-filtering/rho-smooth-shift-endpoint-review.json), [independent selected audit](../FURTHER_problems/_tracking/parallel/continuum/cross-rho-smooth-shift-endpoint-review.json), [current comparisons](../FURTHER_problems/_tracking/rho-smooth-shift-current-comparisons-2026-10-19.json), [semantic comparison](../FURTHER_problems/_tracking/rho-smooth-shift-duplicates-review-2026-10-19.json), [catalogue check](../FURTHER_problems/_tracking/rho-smooth-shift-catalogue-review-2026-10-19.json) and [coordinator review](../FURTHER_problems/_tracking/rho-smooth-shift-coordinator-review-2026-10-19.json) record the checked scope and limits. These are AI checks, not human peer review.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-4e24d3efdc0d9bdf**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "rho-irregularity",
+    "Galeati",
+    "smooth perturbation"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"irregularity\" \"smooth perturbations\" Galeati 2026"
+    },
+    {
+      "query": "\"irregularity\" \"smooth perturbations\" Galeati",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    },
+    {
+      "query": "\"rho-irregularity\" \"smooth\" 2026"
+    },
+    {
+      "query": "\"Prevalence of\" \"irregularity\" \"perturbations\""
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2004.00872v2",
+      "locator": "accepted authorv2 20April2023, Section5.4, Theorem85 physicalp49"
+    }
+  ],
+  "scope_comparison": "Theorem85 assumes stronger polynomial-phase irregularity and preserves only smaller spatial exponents, with a selected time exponent. The target asks every deterministic (gamma,rho)-irregular Hölder path to retain exactly that pair for every smooth perturbation. Probability/prevalence and exponent-loss bounds do not imply it.",
+  "recommendation": "Retain partial status; no matching complete resolution located in this bounded current search.",
+  "limitations": "Bounded search is not proof of openness. Full original local page retained; shared announcement metadata scanned for aliases, primary scope used for plausible candidates.",
+  "announcement_routing": {
+    "localID": "998",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "rho-irregularity",
+          "Galeati",
+          "smooth perturbation"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "rho-irregularity",
+          "Galeati",
+          "smooth perturbation"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "rho-irregularity",
+        "Galeati",
+        "smooth perturbation"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

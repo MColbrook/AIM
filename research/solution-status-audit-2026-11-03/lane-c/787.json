@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "787",
+  "manifest_index": 631,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "787",
+    "title": "Are tangent cones of proper lower-curvature spaces length spaces?",
+    "area": "Metric geometry and synthetic curvature",
+    "file": "problems/787-are-tangent-cones-of-proper-lower-curvature-spaces-length-spaces.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-4aa863c82444ea30",
+    "group": "geometry-topology",
+    "source_sha256": "12dad2939a777fecb4ce4904d929c626df0160c66749fdf78a5262531d9f8e1f",
+    "statement_sha256": "19f904654acbbed95bb5c9c1f7611e27dd490f96090f555b5ad9a5fa457458c5",
+    "state": "unreviewed"
+  },
+  "source_sha256": "12dad2939a777fecb4ce4904d929c626df0160c66749fdf78a5262531d9f8e1f",
+  "statement_sha256": "19f904654acbbed95bb5c9c1f7611e27dd490f96090f555b5ad9a5fa457458c5",
+  "actual_source_sha256": "12dad2939a777fecb4ce4904d929c626df0160c66749fdf78a5262531d9f8e1f",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\kappa\\in\\mathbb R`$, and let $`(X,d)`$ be a proper length space with Alexandrov curvature bounded below by $`\\kappa`$, denoted $`\\mathrm{CBB}(\\kappa)`$. Proper means that every closed bounded subset is compact. Length means that distances are infima of lengths of continuous curves. The curvature assumption is the usual four-point comparison with the two-dimensional model of constant curvature $`\\kappa`$ [1, Definitions 8.1–8.2]; no finite-dimensionality assumption is imposed.\n\nFor $`p\\in X`$, define the **canonical metric tangent cone** $`T_pX`$ as follows. Consider constant-speed minimizing geodesic germs $`\\gamma`$ starting at $`p`$, including the constant germ. Give these germs the pseudodistance\n```math\nD(\\gamma,\\eta)=\\lim_{t\\downarrow0}\n\\frac{d(\\gamma(t),\\eta(t))}{t}.\n```\n\nThe lower curvature bound ensures that these limits exist. Identify pairs at zero pseudodistance and take the metric completion, with metric $`d_T`$.\n\nEquivalently, let $`\\Sigma_pX`$ be the completion of the unit-speed geodesic directions after identifying pairs with zero Alexandrov angle. Then $`T_pX`$ is the Euclidean cone over $`\\Sigma_pX`$, with\n```math\nd_T(r\\xi,s\\eta)^2=r^2+s^2-2rs\\cos\\angle(\\xi,\\eta),\n\\qquad r,s\\ge0,\n```\n\nand all points with radial coordinate zero identified. If there are no nonconstant geodesic germs, the germ definition gives the one-point tangent cone.\n\nMust $`T_pX`$ be a length space for **every** $`p\\in X`$? Explicitly, for every $`v,w\\in T_pX`$ and $`\\varepsilon>0`$, must there be a continuous rectifiable curve $`c:[0,1]\\to T_pX`$ from $`v`$ to $`w`$ with\n```math\n\\mathrm{Length}_{d_T}(c)\\le d_T(v,w)+\\varepsilon?\n```\n\n\nThis is Open Question 13.41 in the current author version of [1], already present as Open Question 11.7.1 in the 2019 first version [2].",
+  "full_local_page_read": true,
+  "queries": [
+    "proper CBB Alexandrov tangent cone length space question13.41 2026",
+    "proper CBB Alexandrov tangent cone length space question13.41 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "proper CBB Alexandrov tangent cone length space question13.41 2026 (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The current actual question asks exactly whether canonical tangent cones of proper length CBB spaces are length spaces. Halbeisen's nonlength tangent example is a nonproper infinite-dimensional construction. Theorem13.4 treats an upper-curvature CAT bound, and finite-dimensional lower-curvature results add a hypothesis absent from this problem. Neither an arbitrary GH blow-up nor ultratangent can be substituted for the completed canonical germ cone. No complete matching resolution located.",
+      "primary_body_access_gap": false,
+      "url": "https://anton-petrunin.github.io/book/arXiv.pdf",
+      "version_or_date": "CurrentauthorPDF303pages inspected3November2026",
+      "locator": "Theorem13.4,Example13.6,pp188–190;OpenQuestion13.41,p207"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The current actual question asks exactly whether canonical tangent cones of proper length CBB spaces are length spaces. Halbeisen's nonlength tangent example is a nonproper infinite-dimensional construction. Theorem13.4 treats an upper-curvature CAT bound, and finite-dimensional lower-curvature results add a hypothesis absent from this problem. Neither an arbitrary GH blow-up nor ultratangent can be substituted for the completed canonical germ cone. No complete matching resolution located.",
+  "latest_version_check": "CurrentauthorPDF303pages inspected3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

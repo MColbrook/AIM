@@ -1,0 +1,96 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "981",
+  "manifest_index": 825,
+  "checked_date": "2026-11-03",
+  "source_sha256": "4148c40a381e1346b3e4d27411965208515f0a5f1d7820f8b3ee4f76ac3a3265",
+  "statement_sha256": "464a70d42852c8c600a6976055f83967a14c83fe37635196c4766595c7b4d24b",
+  "original_target": {
+    "id": "981",
+    "title": "Which distance distributions with a density can a measured metric space realize?",
+    "area": "Probability, statistics and learning",
+    "file": "problems/981-which-distance-distributions-with-a-density-can-a-measured-metric-space-realize.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-84ead59799865473",
+    "group": "probability-statistics",
+    "source_sha256": "4148c40a381e1346b3e4d27411965208515f0a5f1d7820f8b3ee4f76ac3a3265",
+    "statement_sha256": "464a70d42852c8c600a6976055f83967a14c83fe37635196c4766595c7b4d24b",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`f`$ be any probability density on $`[0,\\infty)`$ whose associated probability law has $`0`$ in its support. Does there exist a **deterministic** complete separable metric space $`(S,d)`$ with a Borel probability measure $`\\mu`$ such that, for independent $`X,Y\\sim\\mu`$, the distance $`d(X,Y)`$ has density $`f`$ [1, Problem 1.7]?\n\nAldous, Blanc and Curien call such a distance law *feasible*. They prove feasibility for finitely supported laws that charge $`0`$ and derive approximation and random-space results for certain densities, but leave this deterministic general-density question open [1]. Gross subsequently proved feasibility for every discrete law with $`0`$ in its support and for densities on $`[0,1]`$ bounded above and away from zero. Gross restates the general-density question as Problem 1.3 [2].",
+  "full_original_page": "# 981. Which distance distributions with a density can a measured metric space realize?\n\n**Area:** Probability, statistics and learning\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`f`$ be any probability density on $`[0,\\infty)`$ whose associated probability law has $`0`$ in its support. Does there exist a **deterministic** complete separable metric space $`(S,d)`$ with a Borel probability measure $`\\mu`$ such that, for independent $`X,Y\\sim\\mu`$, the distance $`d(X,Y)`$ has density $`f`$ [1, Problem 1.7]?\n\nAldous, Blanc and Curien call such a distance law *feasible*. They prove feasibility for finitely supported laws that charge $`0`$ and derive approximation and random-space results for certain densities, but leave this deterministic general-density question open [1]. Gross subsequently proved feasibility for every discrete law with $`0`$ in its support and for densities on $`[0,1]`$ bounded above and away from zero. Gross restates the general-density question as Problem 1.3 [2].\n\n## Application\n\nThis is an inverse problem in probability and random geometry: it asks which one-dimensional laws can be encoded by distances between two independent samples from a single measured metric space. A characterization would clarify how much of a metric space can be prescribed through its pairwise-distance statistics.\n\n## References\n\n1. D. Aldous, G. Blanc and N. Curien, [*The distance problem on measured metric spaces*](https://afst.centre-mersenne.org/item/10.5802/afst.1835.pdf), *Ann. Fac. Sci. Toulouse Math.* **34** (2025), no. 5, 1345–1365, DOI: [10.5802/afst.1835](https://doi.org/10.5802/afst.1835), Problem 1.7 on printed p. 1347.\n2. R. Gross, [*The distance problem via subadditivity*](https://ahl.centre-mersenne.org/item/10.5802/ahl.254.pdf), *Ann. Henri Lebesgue* **8** (2025), 1023–1035, DOI: [10.5802/ahl.254](https://doi.org/10.5802/ahl.254), Theorems 1.1–1.2 and Problem 1.3.\n\n## Status review\n\n\n**Known cases:** The realization must be one deterministic complete separable measured metric space for every density with zero in its support. The latest discrete and bounded-positive-density theorem and author July status note leave the general density case open.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe realization must be one deterministic complete separable measured metric space for every density with zero in its support. The latest discrete and bounded-positive-density theorem and author July status note leave the general density case open.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe [bounded audit](../FURTHER_problems/_tracking/j282-aldous-blanc-curien-distance-density-status-2026-10-22.json) compared the original statement with the later partial results and a [July 2026 status note by Gross](https://sarcasticresonance.wordpress.com/2026/07/01/the-distance-problem-is-still-open/). Targeted later-result, announcement and duplicate searches through 22 October 2026 found no resolution of the exact general-density question.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-84ead59799865473**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scopes inspected, not complete proof certification."
+  ],
+  "aliases": [
+    "distance problem via",
+    "measured metric",
+    "Renan Gross"
+  ],
+  "queries": [
+    "\"distance problem\" \"density\" \"Gross\" 2026",
+    "\"distance problem\" \"density\" \"Gross\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/740c43c2-6458-4429-8c7d-5fd9a55dddd7/content",
+      "locator": "Published2025 Theorems1.1–1.2/Problem1.3 printed1025 lines105–133",
+      "comparison": "Discrete all-support and bounded-positive-density subclasses only; author explicitly restates general-density deterministic realization."
+    },
+    {
+      "url": "https://sarcasticresonance.wordpress.com/2026/07/01/the-distance-problem-is-still-open/",
+      "locator": "1Jul2026 author status note",
+      "comparison": "Author separates this measured-distance problem from unit-distance graph announcements and retains general feasibility question."
+    }
+  ],
+  "rationale": "No later matching all-density construction or counterexample located.",
+  "announcement_routing": {
+    "localID": "981",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "distance problem via",
+          "measured metric",
+          "Renan Gross"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "distance problem via",
+          "measured metric",
+          "Renan Gross"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "distance problem via",
+        "measured metric",
+        "Renan Gross"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

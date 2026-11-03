@@ -1,0 +1,69 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "155",
+  "manifest_index": 122,
+  "original_target": {
+    "id": "155",
+    "title": "The full set of zero-energy cubic-to-tetragonal strains",
+    "area": "Materials science and nonlinear elasticity",
+    "file": "problems/155-tetragonal-quasiconvex-hull.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "322d29b68ed501a951f3e861019ff5ee9d58d31c03c9c8b53c098e727d55870d",
+    "statement_sha256": "0a4a8d707f235935bfafa241ac4299cc2a3cbf91f0a57344c3803875b285f9f1",
+    "state": "unreviewed"
+  },
+  "source_sha256": "322d29b68ed501a951f3e861019ff5ee9d58d31c03c9c8b53c098e727d55870d",
+  "statement_sha256": "0a4a8d707f235935bfafa241ac4299cc2a3cbf91f0a57344c3803875b285f9f1",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:32:24.263902+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual July2026 Ball–Galanopoulou Theorem18 characterizes positive diagonal matrices in the tetragonal hull. The Taylor-set upper bound and self-accommodation/interior-point results do not characterize arbitrary non-diagonal matrices. Introduction explicitly retains unknown full hull for at least three wells.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2607.12572v1",
+      "locator": "Introduction and Theorem18",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"cubic to tetragonal\" \"quasiconvex hull\" 2026",
+    "\"cubic-to-tetragonal\" \"quasiconvex\" (site:zenodo.org OR site:hal.science OR site:github.com) 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "tetragonal",
+        "quasiconvex hull"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "tetragonal",
+        "quasiconvex hull"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

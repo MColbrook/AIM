@@ -1,0 +1,70 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "074",
+  "manifest_index": 53,
+  "original_target": {
+    "id": "074",
+    "title": "Large-data global smoothness for the spatially inhomogeneous Boltzmann equation",
+    "area": "Kinetic theory",
+    "file": "problems/074-inhomogeneous-boltzmann-regularity.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "pdes-materials",
+    "source_sha256": "3060209c009bed7a2a3b768aa7c02d3d05e60e1bd25d514a4ed0c30d48c46560",
+    "statement_sha256": "6445b2505ac14f31bc4b2b9aeddb9163e3b5e924e9f35f25b34cdc28dbcff160",
+    "state": "unreviewed"
+  },
+  "source_sha256": "3060209c009bed7a2a3b768aa7c02d3d05e60e1bd25d514a4ed0c30d48c46560",
+  "statement_sha256": "6445b2505ac14f31bc4b2b9aeddb9163e3b5e924e9f35f25b34cdc28dbcff160",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:36:55.052791+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "OpenAI's October periodic hard-sphere nonuniqueness uses a nonnegative datum with unbounded amplitudes at shrinking spatial scales and bounded velocity support. It violates the target's smooth strictly positive Gaussian-lower-bound assumptions. Scattering Theory Theorem1 assumes an existing Maxwellian-bounded mild solution on its lifespan; it does not establish arbitrary-data global smooth existence on T3. Weak entropy nonuniqueness is not smooth-class nonuniqueness.",
+  "primary_sources": [
+    {
+      "url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/Nonuniqueness-with-local-conservation-for-the-hard-sphere-Boltzmann-equation-October-5-2026/paper.pdf",
+      "locator": "Introduction p3, §1.1 and Theorem1.2; initial datum§4.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00023-026-01780-2",
+      "locator": "Theorem1, assumptions1.14 and whole-space scattering.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "Boltzmann"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Boltzmann"
+      ],
+      "metadata_hits": [],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Boltzmann"
+      ],
+      "metadata_hits": [],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted web searches; arXiv, Zenodo, HAL, GitHub, shared OpenAI current index and requested Colbrook author lists screened. No matching complete claim located.",
+  "limitations": [
+    "Bounded search cannot establish absence of unindexed solutions.",
+    "No end-to-end proof or Lean verification; clearly excluding source hypotheses can be established by a primary abstract."
+  ],
+  "canonical_update_required": false
+}

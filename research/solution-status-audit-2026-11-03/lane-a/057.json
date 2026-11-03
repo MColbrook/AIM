@@ -1,0 +1,73 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "057",
+  "manifest_index": 40,
+  "original_target": {
+    "id": "057",
+    "title": "Marked length rigidity in negative curvature",
+    "area": "Geometric inverse problems / periodic ray dynamics",
+    "file": "problems/057-marked-length-rigidity.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse",
+    "source_sha256": "25d09c18cb31459b8e3fc00bf0424b4f42e35e3e46022d2fadb47f9e1876db13",
+    "statement_sha256": "526400f8bf2e6e0dac11e659ee43af262bbd373716f5e1be88c607ebe7b0cfd9",
+    "state": "unreviewed"
+  },
+  "source_sha256": "25d09c18cb31459b8e3fc00bf0424b4f42e35e3e46022d2fadb47f9e1876db13",
+  "statement_sha256": "526400f8bf2e6e0dac11e659ee43af262bbd373716f5e1be88c607ebe7b0cfd9",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:28:38.558598+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no_full_match",
+  "recommended_status": "Open",
+  "scope_comparison": "Marked magnetic action rigidity Theorem1.1 requires C^N closeness and solenoidal injectivity; other theorems impose conformal or surface hypotheses. Coarse group-action rigidity does not assert an isometry for two arbitrary negatively curved n>=3 Riemannian metrics. The target's marking and identity-homotopy gauge are retained.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2604.08262v1",
+      "locator": "Theorem1.1, lines62–70 and subsequent cases.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://mrr.centre-mersenne.org/articles/10.5802/mrr.18/",
+      "locator": "Abstract and Conjecture1.1 in publisher PDF.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "marked length",
+    "length spectrum"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "entries": 954,
+      "complete_listing": true,
+      "query_terms": [
+        "marked length",
+        "length spectrum"
+      ],
+      "metadata_hits": [],
+      "scope": "Current complete public metadata routing; no same-target announcement hit."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "entries": 646,
+      "complete_listing": true,
+      "query_terms": [
+        "marked length",
+        "length spectrum"
+      ],
+      "metadata_hits": [],
+      "scope": "Current complete public metadata routing; no same-target announcement hit."
+    }
+  },
+  "other_provider_search": "Focused current web and site-restricted searches of arXiv, Zenodo, HAL and GitHub; only relevant primary claims promoted to scope checks. Shared OpenAI and requested Colbrook author indexes screened; no matching new full resolution.",
+  "limitations": [
+    "Bounded current search, not proof that no unindexed solution exists.",
+    "No independent end-to-end proof or Lean-kernel verification."
+  ],
+  "canonical_update_required": false
+}

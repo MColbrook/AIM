@@ -1,0 +1,69 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "666",
+  "manifest_index": 510,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "666",
+    "title": "Sharp minimax rates for a Darcy conductivity",
+    "area": "Bayesian inverse problems and uncertainty quantification",
+    "file": "problems/666-sharp-minimax-rates-for-a-darcy-conductivity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-41e33c9bb7232ceb",
+    "group": "bayesian-inverse-uncertainty-quantification",
+    "source_sha256": "325fda5aa3997d9b3a1ee7f5faee31668a0099b5bf13da0f6d28502d51038f18",
+    "statement_sha256": "e103a27f3f442d10aeb0ce3a33a758f61f6776927283161b4d8bbfdb832c51bb",
+    "state": "unreviewed"
+  },
+  "source_sha256": "325fda5aa3997d9b3a1ee7f5faee31668a0099b5bf13da0f6d28502d51038f18",
+  "statement_sha256": "e103a27f3f442d10aeb0ce3a33a758f61f6776927283161b4d8bbfdb832c51bb",
+  "actual_source_sha256": "325fda5aa3997d9b3a1ee7f5faee31668a0099b5bf13da0f6d28502d51038f18",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`D=\\{x\\in\\mathbb R^d:|x|<1\\}`$, where $`d\\ge2`$, and fix an integer $`\\alpha>\\max\\{d/2+2,2d-1\\}`$. Fix $`0<r<1`$ and $`R>\\|1\\|_{H^\\alpha(D)}`$. Define\n\n```math\n\\mathcal F_{\\alpha,r}(R)=\\left\\{f\\in H^\\alpha(D):\\inf_D f>r,\\ \\|f\\|_{H^\\alpha}\\le R,\\ f|_{\\partial D}=1,\\ \\partial_n^j f|_{\\partial D}=0\\ (1\\le j\\le\\alpha-1)\\right\\},\n```\n\nwith boundary derivatives understood as Sobolev traces. For $`f`$ in this class, let $`u_f`$ solve\n\n```math\n\\nabla\\cdot(f\\nabla u_f)=1\\quad\\text{in }D,\\qquad u_f=0\\quad\\text{on }\\partial D.\n```\n\nObserve the Gaussian white-noise experiment\n\n```math\nY_\\varepsilon(h)=\\langle u_f,h\\rangle_{L^2(D)}+\\varepsilon W(h),\\qquad h\\in L^2(D),\n```\n\nwhere $`W`$ is isonormal Gaussian white noise and $`\\varepsilon\\downarrow0`$. Equivalently one observes all coordinates in a fixed orthonormal basis; $`W`$ is not an $`L^2`$-valued error vector.\n\nDetermine the sharp asymptotic order, including any logarithmic factors, of\n\n```math\n\\mathcal R_\\varepsilon=\\inf_{\\widehat f}\\sup_{f\\in\\mathcal F_{\\alpha,r}(R)}\\mathbb E_f\\|\\widehat f(Y_\\varepsilon)-f\\|_{L^2(D)},\n```\n\nwhere the infimum ranges over measurable $`L^2(D)`$-valued estimators. Seek matching upper and lower bounds up to constants depending on the fixed class parameters.\n\nNo radial restriction or nonvanishing-gradient assumption is imposed. A known upper bound is $`\\mathcal R_\\varepsilon\\lesssim\\varepsilon^{2(\\alpha-1)/(2\\alpha+2+d)}`$; its optimality for conductivity loss is not established by the matching lower bound for estimating $`u_f`$ in $`H^2`$ prediction loss.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Darcy\" \"conductivity\" \"minimax\" rate proof 2026",
+    "\"Darcy\" \"conductivity\" \"minimax\" rate (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Current FirstProof human theorem; new3November2026 arXiv2611.01290 routing cue inaccessible",
+      "url": "https://raw.githubusercontent.com/1stproof/batch-3/main/batch-3-human-solution/problem-02/human-solution.tex",
+      "locator": "Problem class lines140–148 and main theorem lines154–158; new-paper primary HTML/PDF/abs all cache misses",
+      "primary_body_access_gap": true,
+      "scope_comparison": "FirstProof gives a sufficiently small Holder-Zygmund neighborhood of the constant and rates only up to logarithms, not the fixed general Sobolev ball and sharp logarithmic unsquared-risk target. Today's2611.01290 indexed abstract concerns linear-functional losses/local critical-Hessian classes; its actual primary theorem body could not be obtained. Held for this fresh source gap rather than calling an index-level check complete."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Scalar linear-functional absolute-risk results over local conductivity classes, with extra critical-Hessian/effective-dimension hypotheses, do not determine whole-conductivity L2 risk over the fixed general Sobolev ball with sharp logarithmic factors. The FirstProof theorem is also a local Holder–Zygmund result up to logarithms.",
+  "latest_version_check": "Current FirstProof human theorem; new3November2026 arXiv2611.01290 routing cue inaccessible",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ],
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T14:04:04.918802+00:00",
+      "reviewer": "lane-c; root persisted final relay",
+      "url": "https://arxiv.org/pdf/2611.01290v1",
+      "locator": "Assumption2.1, Theorems3.1/3.3/3.4/3.7 and Corollary3.8, pp4–8; PDF dated31October2026",
+      "primary_body_read_in_earlier_lane_turn": true,
+      "scope_comparison": "Scalar linear-functional absolute-risk results over local conductivity classes, with extra critical-Hessian/effective-dimension hypotheses, do not determine whole-conductivity L2 risk over the fixed general Sobolev ball with sharp logarithmic factors. The FirstProof theorem is also a local Holder–Zygmund result up to logarithms.",
+      "limitations": "Earlier RAM PDF body inspected; no body bytes or SHA retained. Fresh access later failed. Older final-publication parity is not asserted."
+    }
+  ],
+  "review_state": "bounded_review_complete",
+  "material_full_claim_access_gap": false
+}

@@ -36,9 +36,9 @@ The Durrett text is an evolving manuscript. Entry 285 explicitly normalizes the 
 | [280](../problems/279-general-santa-claus.md) | Bamas et al., arXiv:2307.08453; *Mathematical programming approaches for social welfare maximization*, 4OR (2026), §5.1.3, Open problem 5. |
 | [281](../problems/280-planar-lorentz-mirrors.md) | Elboim–Gloria–Hernández, arXiv:2505.01341, planar localization conjecture; Lefevere–Tasaki, arXiv:2602.07988, different hierarchical geometry. |
 | [282](../problems/281-planar-sandpile-size-exponent.md) | Bhupatiraju–Hanson–Járai, arXiv:1602.06475; Hutchcroft, arXiv:1804.04120, dimensions at least five. |
-| [283](../problems/282-spatial-hawk-dove-coexistence.md) | Durrett–Levin (1994), original spatial model and simulations; the current book explicitly asks for coexistence. |
-| [284](../problems/283-axelrod-multifeature-clustering.md) | Lanchier–Schweinsberg, arXiv:1107.4413, Introduction; Lanchier–Scarlatos, arXiv:1301.0130. The two-state clustering theorem is excluded from the target. |
-| [285](../problems/284-hegselmann-krause-cluster-lattice.md) | Dey–Etesami–Gopalan, arXiv:2508.08299, §3.3, Conjecture 2. Only the Poisson cluster-location case is selected. |
+| [283](../cut_problems/problems/282-spatial-hawk-dove-coexistence.md) | Durrett–Levin (1994), original spatial model and simulations; the current book explicitly asks for coexistence. |
+| [284](../cut_problems/problems/283-axelrod-multifeature-clustering.md) | Lanchier–Schweinsberg, arXiv:1107.4413, Introduction; Lanchier–Scarlatos, arXiv:1301.0130. The two-state clustering theorem is excluded from the target. |
+| [285](../cut_problems/problems/284-hegselmann-krause-cluster-lattice.md) | Dey–Etesami–Gopalan, arXiv:2508.08299, §3.3, Conjecture 2. Only the Poisson cluster-location case is selected. |
 | [286](../problems/285-nicholson-local-global-stability.md) | Röst–Wu (2007), Introduction and Nicholson example; strict local stability avoids neutral characteristic-root endpoints. |
 | [287](../problems/286-binary-lcs-linear-variance.md) | Lember–Matzinger (2009), Introduction and biased binary theorem; the fair binary case is distinct from determining the mean constant in 288. |
 | [288](../problems/287-gaussian-polymer-tracy-widom.md) | Krishnan–Quastel, arXiv:1610.06975; Agarwal, arXiv:2509.21453, intermediate disorder; arXiv:2603.14477 is numerical. |

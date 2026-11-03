@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "202",
+  "manifest_index": 158,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "202",
+    "title": "Does a bound bipolaron ever break rotational symmetry?",
+    "area": "Polarons; nonlinear quantum energy minimization",
+    "file": "problems/202-bipolaron-rotation-symmetry.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-13",
+    "group": "spectral3",
+    "source_sha256": "43d6a97a1e0985150762b25472a42ce5d2a91cd5929f349227bbe3b2b2e640e8",
+    "statement_sha256": "da1dcd9ec54a1495af54d9fbbec1bdf65a2d029e15a13ddfe26d3b5b21017835",
+    "state": "unreviewed"
+  },
+  "source_sha256": "43d6a97a1e0985150762b25472a42ce5d2a91cd5929f349227bbe3b2b2e640e8",
+  "statement_sha256": "da1dcd9ec54a1495af54d9fbbec1bdf65a2d029e15a13ddfe26d3b5b21017835",
+  "actual_source_sha256": "43d6a97a1e0985150762b25472a42ce5d2a91cd5929f349227bbe3b2b2e640e8",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For $`\\psi\\in H^1(\\mathbb R^6)`$ with $`\\|\\psi\\|_2=1`$, set\n\n```math\n\\rho_\\psi(x)=\\int(|\\psi(x,y)|^2+|\\psi(y,x)|^2)\\,dy,\n```\n\n\n\n```math\n\\mathcal P_U(\\psi)=\\iint\\left(|\\nabla_x\\psi|^2+|\\nabla_y\\psi|^2+\\frac{U|\\psi|^2}{|x-y|}\\right)dx\\,dy-\\iint\\frac{\\rho_\\psi(x)\\rho_\\psi(y)}{|x-y|}\\,dx\\,dy.\n```\n\nWrite $`E_2(U)=\\inf\\mathcal P_U`$ and\n\n```math\nE_1=\\inf_{\\substack{\\phi\\in H^1(\\mathbb R^3)\\\\\\|\\phi\\|_2=1}}\\left\\{\\int|\\nabla\\phi|^2-\\iint\\frac{|\\phi(x)|^2|\\phi(y)|^2}{|x-y|}\\,dx\\,dy\\right\\}.\n```\n\nFor every $`U\\ge0`$ with $`E_2(U)<2E_1`$, must every minimizer, after a common translation of its coordinates, obey\n\n```math\n\\psi(Rx,Ry)=\\psi(x,y)\\quad\\text{for every }R\\in O(3)?\n```\n\nEquivalently, determine whether rotational symmetry breaking occurs anywhere in the binding regime.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"bipolaron\" \"rotational symmetry\" breaking 2026",
+    "\"bipolaron\" \"rotational symmetry\" breaking (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"bipolaron\" \"rotational symmetry\" breaking (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Frank–Lieb–Seiringer2013; currentprimaryHTML and November2026 focused searches",
+      "scope_comparison": "The target quantifies over every repulsion U in the binding regime and every minimizer, modulo a common translation. The primary actual theorem assumes U<U_s for some small positive U_s and explicitly leaves possible loss of rotation invariance near Uc open. Scaling the electron–phonon coupling does not turn the small-U regime into every binding U. Numerical bipolarons or symmetry for other functionals do not settle this continuum Pekar–Tomasevich target. No later complete matching announcement was found.",
+      "locator": "Theorem1 and following open question near critical Uc",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/1201.3954"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The target quantifies over every repulsion U in the binding regime and every minimizer, modulo a common translation. The primary actual theorem assumes U<U_s for some small positive U_s and explicitly leaves possible loss of rotation invariance near Uc open. Scaling the electron–phonon coupling does not turn the small-U regime into every binding U. Numerical bipolarons or symmetry for other functionals do not settle this continuum Pekar–Tomasevich target. No later complete matching announcement was found.",
+  "latest_version_check": "Frank–Lieb–Seiringer2013; currentprimaryHTML and November2026 focused searches",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

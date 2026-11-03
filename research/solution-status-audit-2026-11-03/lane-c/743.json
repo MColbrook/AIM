@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "743",
+  "manifest_index": 587,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "743",
+    "title": "Uniqueness of crowded active-particle diffusion from degenerate initial data",
+    "area": "Degenerate diffusion; active matter",
+    "file": "problems/743-uniqueness-of-crowded-active-particle-diffusion-from-degenerate-initial-data.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f69d19c688548b6b",
+    "group": "diffusion-materials",
+    "source_sha256": "9c1e3b63b76aafbe80fc1752efc18d2dc82f289b35a427d2b77613e57b07d7fc",
+    "statement_sha256": "d54ba10a95b2cfe88ae31cf6cd87890c31f72296a959b78a7b70f866afaa1ce7",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9c1e3b63b76aafbe80fc1752efc18d2dc82f289b35a427d2b77613e57b07d7fc",
+  "statement_sha256": "d54ba10a95b2cfe88ae31cf6cd87890c31f72296a959b78a7b70f866afaa1ce7",
+  "actual_source_sha256": "9c1e3b63b76aafbe80fc1752efc18d2dc82f289b35a427d2b77613e57b07d7fc",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\mathbb T=\\mathbb R/(2\\pi\\mathbb Z)`$ and $`\\xi=(x,\\theta)\\in\\mathbb T^2\\times\\mathbb T`$. Put $`e(\\theta)=(\\cos\\theta,\\sin\\theta)`$. Fix the spatial and angular diffusion coefficients and the Péclet number to one. For a nonnegative density $`f`$, write\n\n```math\n\\rho(t,x)=\\int_{\\mathbb T} f(t,x,\\theta)\\,d\\theta.\n```\n\nConsider the periodic initial-value problem\n\n```math\n\\partial_t f+\\nabla_x\\cdot[(1-\\rho)f e(\\theta)]\n =\\nabla_x\\cdot[(1-\\rho)\\nabla_x f+f\\nabla_x\\rho]+\\partial_\\theta^2 f,\n \\qquad f(0)=f_0.\n```\n\nFor every nonnegative $`f_0\\in L^q(\\mathbb T^3)`$, for some $`q>1`$, suppose\n\n```math\n0\\leq\\rho_0:=\\int_{\\mathbb T}f_0\\,d\\theta\\leq1\\quad\\hbox{a.e.},\n\\qquad 0<\\int_{\\mathbb T^2}\\rho_0\\,dx<|\\mathbb T^2|.\n```\n\nMust any two weak solutions with this datum be equal almost everywhere? No positive uniform lower bound on $`1-\\rho_0`$ is imposed; $`\\rho_0=1`$ on a proper set of positive measure is allowed.\n\nHere the weak class is fixed as follows. On every finite interval $`(0,T)`$, require\n\n```math\n\\begin{gathered}\nf\\geq0,\\quad f\\in L^3((0,T)\\times\\mathbb T^3),\\quad\n\\partial_\\theta\\sqrt f\\in L^2((0,T)\\times\\mathbb T^3),\\\\\n\\partial_t f\\in L^{6/5}(0,T;W^{-1,6/5}(\\mathbb T^3)),\\quad\n0\\leq\\rho\\leq1,\\quad\n\\partial_t\\rho\\in L^2(0,T;H^{-1}(\\mathbb T^2)),\\\\\n\\nabla_x\\sqrt{1-\\rho}\\in L^2((0,T)\\times\\mathbb T^2),\\quad\n\\sqrt{1-\\rho}\\nabla_x\\sqrt f\\in L^2((0,T)\\times\\mathbb T^3).\n\\end{gathered}\n```\n\nThe final weighted derivative can be defined without assuming an unweighted spatial derivative of $`\\sqrt f`$: set $`a=\\sqrt{1-\\rho}`$, $`g=\\sqrt f`$, require $`w=ag\\in L^2(0,T;H^1(\\mathbb T^3))`$, and interpret $`a\\nabla_xg=\\nabla_xw-g\\nabla_xa`$. The product $`g\\nabla_xa`$ lies in $`L^2`$, because $`\\int g^2\\,d\\theta=\\rho\\leq1`$. Accordingly the spatial flux is interpreted as\n\n```math\nF=2w\\nabla_xw+2f\\nabla_x\\rho\n  =(1-\\rho)\\nabla_x f+f\\nabla_x\\rho,\n\\qquad \\partial_\\theta f=2\\sqrt f\\,\\partial_\\theta\\sqrt f.\n```\n\nRequire the initial trace $`f(t)\\to f_0`$ in $`W^{-1,6/5}(\\mathbb T^3)`$ and the identity, for every smooth periodic $`\\varphi`$ with compact support in $`[0,T)`$,\n\n```math\n\\int_0^T\\!\\int f\\,\\partial_t\\varphi+\\int f_0\\varphi(0)\n +\\int_0^T\\!\\int(1-\\rho)f e(\\theta)\\cdot\\nabla_x\\varphi\n =\\int_0^T\\!\\int F\\cdot\\nabla_x\\varphi\n  +\\int_0^T\\!\\int\\partial_\\theta f\\,\\partial_\\theta\\varphi.\n```\n\nAll space-angle integrals here are over $`\\mathbb T^3`$. This is the finite-interval weighted Sobolev class of the original existence theory and the corrected 2025 paper. The 2026 regularization theorem uses a local-in-time notation for some derivatives; the question here retains the stated full $`(0,T)`$ bounds.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"active particles\" \"degenerate\" \"uniqueness\" Schulz 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"2610.08434\" uniqueness",
+    "site:palomar-registry.org OR site:hexagonmath.org \"active particles\" uniqueness"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.08434v1",
+      "primary_body_access_gap": false,
+      "scope_comparison": "Actual new Theorem1 proves positive-time smoothing for nonsaturated total mass including initially saturated sets; (3.1) degenerates as t→0. Introduction explicitly leaves uniqueness/nonuniqueness open. Corrected Theorem2 requires f0L2,rho0H1 and esssup rho0<1, excluding local rough trace with rho0=1 on positive-measure proper sets. No theorem identifying two such evolutions from initial trace located.",
+      "locator": "Introduction lines84–86; Theorem1/(3.1); corrected2025 Theorem2/(3.4)",
+      "version_or_date": "v1,6October2026, latest arXivhistory confirmed; corrected2501.11488v3,11September2026"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual new Theorem1 proves positive-time smoothing for nonsaturated total mass including initially saturated sets; (3.1) degenerates as t→0. Introduction explicitly leaves uniqueness/nonuniqueness open. Corrected Theorem2 requires f0L2,rho0H1 and esssup rho0<1, excluding local rough trace with rho0=1 on positive-measure proper sets. No theorem identifying two such evolutions from initial trace located.",
+  "latest_version_check": "v1,6October2026, latest arXivhistory confirmed; corrected2501.11488v3,11September2026",
+  "gap_retraction_check": "Author CVGMT record https://cvgmt.sns.it/paper/7753/ confirms original journal interpolation-lemma error and erratum; corrected arXivv3 inspected. General uniqueness not inferred from superseded uncorrected version or smoothing.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

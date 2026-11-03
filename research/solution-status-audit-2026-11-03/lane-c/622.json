@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "622",
+  "manifest_index": 483,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "622",
+    "title": "What is the one-dimensional convex-bandit minimax cumulative regret?",
+    "area": "Optimization and information",
+    "file": "problems/622-what-is-the-one-dimensional-convex-bandit-minimax-cumulative-regret.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-7003808a838ce848",
+    "group": "optimization-information",
+    "source_sha256": "75a1335e9175bdbeb0c6ccd9449227026d8c04b4d064cc94bd6e7fc742fe1b51",
+    "statement_sha256": "c71439f8e71121ddb85649da3eb8571308051496095baccf48dd66b9cfacef1a",
+    "state": "unreviewed"
+  },
+  "source_sha256": "75a1335e9175bdbeb0c6ccd9449227026d8c04b4d064cc94bd6e7fc742fe1b51",
+  "statement_sha256": "c71439f8e71121ddb85649da3eb8571308051496095baccf48dd66b9cfacef1a",
+  "actual_source_sha256": "75a1335e9175bdbeb0c6ccd9449227026d8c04b4d064cc94bd6e7fc742fe1b51",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`K=[0,1]`$ and let $`\\mathcal F_b`$ be all convex functions $`f:K\\to[0,1]`$, without an added smoothness or Lipschitz condition. In each of $`n`$ rounds a learner chooses $`X_t\\in K`$ and observes only $`Y_t=f_t(X_t)+\\varepsilon_t`$, with conditionally centred subgaussian noise as in Lattimore's Assumption 1.4. Its cumulative regret is\n```math\n\\mathrm{Reg}_n=\\sum_{t=1}^n f_t(X_t)-\\inf_{x\\in K}\\sum_{t=1}^n f_t(x).\n```\n\n\nDetermine the exact order, up to absolute constants, of the minimax expected cumulative regret as $`n\\to\\infty`$ in each of these regimes:\n\n1. **Stochastic:** $`f_t=f`$ for one fixed unknown $`f\\in\\mathcal F_b`$.\n2. **Adversarial:** an arbitrary sequence $`f_1,\\ldots,f_n\\in\\mathcal F_b`$, at least for an oblivious adversary; clarify whether allowing an adversary to adapt to past observations changes the answer.\n\nDo the stochastic and adversarial minimax orders agree? Lattimore asks this in Section 14.xii and reports an $`O(\\sqrt n\\log n)`$ cumulative-regret upper bound in dimension one. Earlier adversarial work establishes the scale $`\\widetilde\\Theta(\\sqrt n)`$, which leaves the exact logarithmic dependence unresolved. The same question can be stated on any fixed nondegenerate compact interval by an affine change of variables.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"one dimensional\" \"convex bandit\" \"minimax\" logarithmic 2026",
+    "\"one dimensional\" \"convex bandit\" \"minimax\" logarithmic (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "version_or_date": "Current author-hosted 2026 book read 3 November 2026",
+      "url": "https://tor-lattimore.com/downloads/cvx-book/cvx.pdf",
+      "scope_comparison": "The primary source asks exactly the minimax cumulative regret and whether stochastic/adversarial settings differ. Its O(sqrt(n) log n) bound and tilde-Theta(sqrt(n)) results leave logarithms undetermined. The adjacent thresholding-bandit result is simple regret, not this cumulative target.",
+      "locator": "Section 14.xii, printed 239/PDF246, lines 20352–20360"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The primary source asks exactly the minimax cumulative regret and whether stochastic/adversarial settings differ. Its O(sqrt(n) log n) bound and tilde-Theta(sqrt(n)) results leave logarithms undetermined. The adjacent thresholding-bandit result is simple regret, not this cumulative target.",
+  "latest_version_check": "Current author-hosted 2026 book read 3 November 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "592",
+  "manifest_index": 457,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "592",
+    "title": "Bounded geometric thickness for unions of two forests",
+    "area": "Computational geometry and graph drawing",
+    "file": "problems/592-arboricity-two-geometric-thickness.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "d5710c9ff9e9013a3dd3dc5a87212b0e70c18e8d138328a70d5b0327ce022d9d",
+    "statement_sha256": "d8211b77edf507c7242c4fa32335013a25bb1eff84538c7fa8bc33b08f69c83b",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d5710c9ff9e9013a3dd3dc5a87212b0e70c18e8d138328a70d5b0327ce022d9d",
+  "statement_sha256": "d8211b77edf507c7242c4fa32335013a25bb1eff84538c7fa8bc33b08f69c83b",
+  "actual_source_sha256": "d5710c9ff9e9013a3dd3dc5a87212b0e70c18e8d138328a70d5b0327ce022d9d",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`G`$ be a finite simple graph whose edge set can be partitioned into two forests, equivalently a graph of arboricity at most $`2`$. Define its geometric thickness $`\\bar\\theta(G)`$ to be the smallest number of edge colors in a straight-line drawing with no same-color crossings. All colors share the same positions of the vertices; vertices are distinct and no edge passes through a nonincident vertex.\n\nDoes there exist an absolute constant $`C`$ such that\n\n```math\n\\bar\\theta(G)\\le C\n```\n\nfor every such graph $`G`$?",
+  "full_local_page_read": true,
+  "queries": [
+    "\"geometric thickness\" \"arboricity\" solved",
+    "\"geometric thickness\" \"two forests\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar.ai OR site:hexagonmath.org)",
+    "\"geometric thickness\" \"arboricity\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web / primary author and publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2302.14721",
+      "version_or_date": "v1, 28 February 2023; journal 2024",
+      "locator": "Theorems 1–2; Section 4, especially final paragraph",
+      "inspection": "Read theorem/conjecture body, not only title or abstract",
+      "scope_comparison": "The constant upper bound applies to 2-degenerate graphs, a proper subclass of arboricity-two graphs. The concluding paragraph explicitly distinguishes Laman graphs and general arboricity-two graphs and leaves their constant boundedness unresolved. O(log n) is not an absolute constant."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "No full matching resolution or complete announcement identified in these bounded searches. The constant upper bound applies to 2-degenerate graphs, a proper subclass of arboricity-two graphs. The concluding paragraph explicitly distinguishes Laman graphs and general arboricity-two graphs and leaves their constant boundedness unresolved. O(log n) is not an absolute constant.",
+  "latest_version_check": "arXiv abstract/version record inspected 2026-11-03; cited version is latest displayed. No withdrawal banner observed.",
+  "gap_retraction_check": "No full matching candidate located to audit for a known gap. This is not independent verification of cited restricted results; no assurance of continued openness.",
+  "announcement_qualification": null,
+  "limitations": [
+    "Search-engine repository coverage is bounded; absence of a hit is not a certified openness claim.",
+    "No theorem was promoted from an index entry alone."
+  ]
+}

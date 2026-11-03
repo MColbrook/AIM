@@ -1,0 +1,84 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "511",
+  "manifest_index": 402,
+  "original_target": {
+    "id": "511",
+    "title": "Markus's affine completeness conjecture",
+    "area": "Affine differential geometry; geometric structures",
+    "file": "problems/511-markus-s-affine-completeness-conjecture.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a290c6622b24f056",
+    "group": "geometry-topology",
+    "source_sha256": "4e5000420d62efbc77493eeb5da1bcb5db5b7201b73d50b7a11aa699084f8a73",
+    "statement_sha256": "c51e7357989439568b017533494e518b248a7e48fc441527c4de72d50be298b1",
+    "state": "unreviewed"
+  },
+  "source_sha256": "4e5000420d62efbc77493eeb5da1bcb5db5b7201b73d50b7a11aa699084f8a73",
+  "statement_sha256": "c51e7357989439568b017533494e518b248a7e48fc441527c4de72d50be298b1",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:35:53.036647+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Official2506.14778v3 remains withdrawn7September2025 with Hessian-of-distance error. Actual2109.14417v1 Cor4.1 assumes rank-one ray geometry;2303.16665v1 Th3.1 assumes dimension3 and centralizing nontrivial affine transformation. Neither covers all volume-preserving torsion-free flat connections.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/2506.14778",
+      "locator": "Currentv3 withdrawal notice",
+      "body_inspected": false
+    },
+    {
+      "url": "https://arxiv.org/html/2109.14417v1",
+      "locator": "Corollary4.1",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2303.16665v1",
+      "locator": "Theorem3.1",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Markus\" \"affine completeness\" proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Markus",
+        "affine completeness"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Markus",
+        "affine completeness"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00715v1",
+          "title": "Density functionals for the Pauli-Fierz Hamiltonian"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

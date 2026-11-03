@@ -2,9 +2,9 @@
 
 **Area:** Sparse numerical linear algebra
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -28,6 +28,13 @@ For matrices with O(n) nonzeros, this asks for approximately quadratic bit work 
 2. N. Amsel et al., [Linear Systems and Eigenvalue Problems: Open Questions from a Simons Workshop](https://arxiv.org/abs/2602.05394), 2026; Problem 2.10.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The deterministic bit algorithm has sparse input and Otilde(nm log(kappa/epsilon)) complexity for logarithmic-bit fixed/floating inputs. Rational inputs with O(c logn)-bit numerator/denominator admit O(c logn)-bit grid rounding preserving conditioning and inverse-polynomial tolerance. Choosing residual tolerance smaller by kappa, with rounding slack, gives the required relative solution error. Polynomial conditioning makes the extra logarithm polylogn. The deterministic guarantee implies success probability0.99.
+
+[Claimed solution](https://arxiv.org/pdf/2609.38101v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/044.json). Source locator: Main finite-precision theorem and§§3.3–4. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative bit-complexity bound
 

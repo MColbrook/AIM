@@ -1,0 +1,117 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "875",
+  "manifest_index": 719,
+  "checked_date": "2026-11-03",
+  "source_sha256": "57bb0cc22064c8a79403c37a693ee67d3441a809fa55e1a12d44ef5d249b41ae",
+  "statement_sha256": "06cafa7adcee8590fb77852f8194d96815e3b0e41fe425771b257caa665753bd",
+  "original_target": {
+    "id": "875",
+    "title": "Path connectedness of the full asymptotically flat vacuum constraint space",
+    "area": "Mathematical relativity",
+    "file": "problems/875-path-connectedness-of-the-full-asymptotically-flat-vacuum-constraint-space.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-626315d0cecdf3ff",
+    "group": "mathematical-relativity",
+    "source_sha256": "57bb0cc22064c8a79403c37a693ee67d3441a809fa55e1a12d44ef5d249b41ae",
+    "statement_sha256": "06cafa7adcee8590fb77852f8194d96815e3b0e41fe425771b257caa665753bd",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix $`0<\\alpha<1`$ and the standard coordinates on $`\\mathbb R^3`$. Write $`\\delta`$ for the Euclidean metric. Let $`\\mathcal C_\\alpha`$ consist of pairs $`(g,k)`$, where $`g`$ is a positive-definite Riemannian metric and $`k`$ is a symmetric covariant two-tensor, satisfying\n\n```math\ng-\\delta\\in C^{2,\\alpha}_{-1},\\qquad k\\in C^{1,\\alpha}_{-2},\n```\n\nand the vacuum Einstein constraint equations with zero cosmological constant,\n\n```math\nR_g+(\\mathrm{tr}_g k)^2-|k|_g^2=0,\n\\qquad\n\\mathrm{div}_g\\bigl(k-(\\mathrm{tr}_g k)g\\bigr)=0.\n```\n\nThese equations are understood classically with the displayed local Hölder regularity. Give $`\\mathcal C_\\alpha`$ the topology induced by $`C^{2,\\alpha}_{-1}\\times C^{1,\\alpha}_{-2}`$, without quotienting by coordinate changes.\n\nFor completeness, $`C^{m,\\alpha}_{-q}`$ means finite weighted Hölder norm, applied componentwise to tensors. One choice of norm, with $`\\rho(x)=(1+|x|^2)^{1/2}`$ and Euclidean derivatives, is\n\n```math\n\\sum_{j=0}^{m}\\sup_x\\rho(x)^{j+q}|D^ju(x)|\n+\\sup_{x\\ne y}\\min\\{\\rho(x),\\rho(y)\\}^{m+\\alpha+q}\n\\frac{|D^m u(x)-D^m u(y)|}{|x-y|^\\alpha}.\n```\n\n**Is $`\\mathcal C_\\alpha`$ path connected for every fixed $`\\alpha\\in(0,1)`$?** Equivalently, can every pair be joined to $`(\\delta,0)`$ by a path of vacuum solutions continuous in these weighted norms?\n\nNo condition $`\\mathrm{tr}_gk=0`$ is imposed. The manifold has one asymptotically flat end and no boundary. This is the path-connectedness part of [1, Open Problem 4.18]. Its momentum variable $`\\pi=k-(\\mathrm{tr}_gk)g`$ gives the same topology: in three dimensions $`k=\\pi-\\tfrac12(\\mathrm{tr}_g\\pi)g`$.",
+  "full_original_page": "# 875. Path connectedness of the full asymptotically flat vacuum constraint space\n\n**Area:** Mathematical relativity\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix $`0<\\alpha<1`$ and the standard coordinates on $`\\mathbb R^3`$. Write $`\\delta`$ for the Euclidean metric. Let $`\\mathcal C_\\alpha`$ consist of pairs $`(g,k)`$, where $`g`$ is a positive-definite Riemannian metric and $`k`$ is a symmetric covariant two-tensor, satisfying\n\n```math\ng-\\delta\\in C^{2,\\alpha}_{-1},\\qquad k\\in C^{1,\\alpha}_{-2},\n```\n\nand the vacuum Einstein constraint equations with zero cosmological constant,\n\n```math\nR_g+(\\mathrm{tr}_g k)^2-|k|_g^2=0,\n\\qquad\n\\mathrm{div}_g\\bigl(k-(\\mathrm{tr}_g k)g\\bigr)=0.\n```\n\nThese equations are understood classically with the displayed local Hölder regularity. Give $`\\mathcal C_\\alpha`$ the topology induced by $`C^{2,\\alpha}_{-1}\\times C^{1,\\alpha}_{-2}`$, without quotienting by coordinate changes.\n\nFor completeness, $`C^{m,\\alpha}_{-q}`$ means finite weighted Hölder norm, applied componentwise to tensors. One choice of norm, with $`\\rho(x)=(1+|x|^2)^{1/2}`$ and Euclidean derivatives, is\n\n```math\n\\sum_{j=0}^{m}\\sup_x\\rho(x)^{j+q}|D^ju(x)|\n+\\sup_{x\\ne y}\\min\\{\\rho(x),\\rho(y)\\}^{m+\\alpha+q}\n\\frac{|D^m u(x)-D^m u(y)|}{|x-y|^\\alpha}.\n```\n\n**Is $`\\mathcal C_\\alpha`$ path connected for every fixed $`\\alpha\\in(0,1)`$?** Equivalently, can every pair be joined to $`(\\delta,0)`$ by a path of vacuum solutions continuous in these weighted norms?\n\nNo condition $`\\mathrm{tr}_gk=0`$ is imposed. The manifold has one asymptotically flat end and no boundary. This is the path-connectedness part of [1, Open Problem 4.18]. Its momentum variable $`\\pi=k-(\\mathrm{tr}_gk)g`$ gives the same topology: in three dimensions $`k=\\pi-\\tfrac12(\\mathrm{tr}_g\\pi)g`$.\n\n## Application\n\nThe constraints describe admissible initial states for the vacuum Einstein evolution. Path connectedness asks whether these states can be continuously deformed into the Euclidean initial state while preserving both constraint equations and the specified asymptotic behavior [1, 2]. It concerns the global structure of the constraint space.\n\n## References\n\n1. A. Carlotto, [*The general relativistic constraint equations*](https://doi.org/10.1007/s41114-020-00030-z), *Living Reviews in Relativity* **24** (2021), 2; current publisher PDF notes corrected publications in 2022 and 2024. Open Problem 4.18, actual PDF p. 123, and Appendix B.\n2. F. C. Marques, [*Deforming three-manifolds with positive scalar curvature*](https://annals.math.princeton.edu/wp-content/uploads/annals-v176-n2-p03-p.pdf), *Annals of Mathematics* **176** (2012), 815–863, [DOI](https://doi.org/10.4007/annals.2012.176.2.3). Theorem 1.4, the following full-space discussion, and Section 9 (weighted norms p. 855 and Theorem 9.7).\n3. A. Carlotto and C. Li, [*Constrained deformations of positive scalar curvature metrics, II*](https://doi.org/10.1002/cpa.22153), *Communications on Pure and Applied Mathematics* **77** (2024), 795–862. Theorem 1.5 and Section 7, especially the trace-free hypothesis in the definition preceding Proposition 7.15.\n4. R. Gicquaud and J. Glöckle, [*On the topology of the space of vacuum initial data sets*](https://arxiv.org/abs/2609.39987v1), arXiv:2609.39987v1 (30 September 2026). Theorem 1.1 and the discussion following its proof concern closed manifolds; this is a current-status comparator.\n\n## Status review\n\n\n**Known cases:** Maximal-data path connectedness and contractibility retain trace-free extrinsic curvature. The recent high-dimensional closed-manifold topology theorem concerns another manifold and topology. No path from arbitrary nonmaximal one-ended data into the maximal subspace is supplied.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nMaximal-data path connectedness and contractibility retain trace-free extrinsic curvature. The recent high-dimensional closed-manifold topology theorem concerns another manifold and topology. No path from arbitrary nonmaximal one-ended data into the maximal subspace is supplied.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked 17 October 2026. Marques proves path connectedness of the **maximal** subspace, which requires $`\\mathrm{tr}_gk=0`$ [2]. The later contractibility theorem [3] also retains that condition and works in its stated weighted Sobolev setting. These results do not supply paths from arbitrary nonmaximal data into that subspace.\n\nThe recent topology theorem [4] concerns closed spin manifolds in dimension at least six and nontrivial higher homotopy groups. It does not settle path connectedness for one-ended data on $`\\mathbb R^3`$.\n\nThe formulation, independent selected-primary audit, announcement comparisons and scoped catalogue checks passed. These are dated literature checks; the review records distinguish selected passages from full-paper reading.\n\n[Owner review](../FURTHER_problems/_tracking/parallel/complex-bayesian/af-vacuum-path-review.json), [independent audit](../FURTHER_problems/_tracking/parallel/continuum/cross-af-vacuum-path-review.json), [duplicate comparison](../FURTHER_problems/_tracking/parallel/complex-bayesian/af-vacuum-path-duplicate-snapshot.json), [catalogue comparison](../FURTHER_problems/_tracking/parallel/complex-bayesian/af-vacuum-path-prove2-0151-review.json) and [coordinator review](../FURTHER_problems/_tracking/af-vacuum-path-coordinator-review-2026-10-17.json) record the evidence and its limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-626315d0cecdf3ff**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"vacuum\" \"constraint space\" \"path connected\" asymptotically flat 2026",
+    "\"asymptotically flat\" \"path connected\" \"vacuum\""
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2609.39987v1",
+      "locator": "v1 30September2026, Theorem1.1 and introduction",
+      "inspection": "Current topology work concerns closed connected manifolds dimension>=6. Local target is unquotiented C2,alpha_-1 x C1,alpha_-2 vacuum space on one-ended R3 with arbitrary trace k. Maximal/trace-free path connectedness does not give deformation from arbitrary nonmaximal data. Precise older maximal theorems and source Openproblem4.18 not yet freshly located."
+    }
+  ],
+  "scope_comparison": "Current topology work concerns closed connected manifolds dimension>=6. Local target is unquotiented C2,alpha_-1 x C1,alpha_-2 vacuum space on one-ended R3 with arbitrary trace k. Maximal/trace-free path connectedness does not give deformation from arbitrary nonmaximal data. Precise older maximal theorems and source Openproblem4.18 not yet freshly located.",
+  "rationale": "Bounded searches did not identify a complete matching resolution; hold while specific body gaps stated above remain.",
+  "source_gaps": [
+    "Specific remaining body/locator comparison described in source inspection.",
+    "Snapshot announcement routing pending for this batch."
+  ],
+  "announcement_routing": {
+    "localID": "875",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "vacuum constraint",
+          "vacuum initial data",
+          "path connectedness"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "vacuum constraint",
+          "vacuum initial data",
+          "path connectedness"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "vacuum constraint",
+        "vacuum initial data",
+        "path connectedness"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.071Z",
+      "previous_outcome": "hold",
+      "localID": "875",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "queries": [
+        "\"Open problem 4.18\" vacuum constraint"
+      ],
+      "sources": [
+        {
+          "url": "https://d-nb.info/1231227362/34",
+          "locator": "Carlotto survey printed p123, OpenProblem4.18; lines3668–3689",
+          "inspection": "Fresh primary exact body defines the unquotiented AF vacuum constraint space on R3 and asks its path connectedness. Preceding paragraph lists known maximal (trace-free) path connectedness and distinguishes it from the full constraint space."
+        },
+        {
+          "url": "https://arxiv.org/html/2609.39987v1",
+          "version": "30 September 2026",
+          "locator": "Theorem1.1 lines86–91",
+          "inspection": "Gicquaud–Glöckle require a CLOSED connected spin manifold of dimension>=6; their nontrivial homotopy groups do not apply to one-ended weighted R3."
+        }
+      ],
+      "scope_comparison": "The original source gap is closed, and the exact current theorem has different underlying manifolds and topology. No matching unrestricted AF R3 solution found in bounded searches."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

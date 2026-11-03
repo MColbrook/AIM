@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 300,
+  "source_sha256": "3d620e46a2680407e7d401b93902df9b5acd62c7b9ff0e7cb34b74a1cefaad0b",
+  "statement_sha256": "de30d484189a1eff99546bdf0cc778a633392182a3d8b6a39cc43c8c86ae82a5",
+  "original_target": {
+    "id": "365",
+    "title": "Hölder regularity for nondivergence kinetic jump equations",
+    "area": "Kinetic transport; anomalous velocity diffusion",
+    "file": "problems/365-fractional-kinetic-krylov-safonov.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "3d620e46a2680407e7d401b93902df9b5acd62c7b9ff0e7cb34b74a1cefaad0b",
+    "statement_sha256": "de30d484189a1eff99546bdf0cc778a633392182a3d8b6a39cc43c8c86ae82a5",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "365",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"kinetic\" \"nondivergence\" \"nonlocal\" \"2026\" Holder",
+    "\"kinetic\" \"nonlocal\" \"Krylov-Safonov\" 2026",
+    "\"nondivergence\" \"kinetic\" \"nonlocal\" site:arxiv.org",
+    "\"kinetic\" \"nondivergence\" \"nonlocal\" site:zenodo.org OR site:hal.science OR site:github.com",
+    "\"kinetic\" \"jump\" \"nondivergence\" Hölder 2026 announcement"
+  ],
+  "sources": [
+    {
+      "url": "https://cvgmt.sns.it/media/doc/paper/6687/Anceschi-Palatucci-Piccinini_revised.pdf",
+      "version": "current revised author PDF",
+      "locators": "equations 1.1–1.2; section 2 symmetric-kernel framework",
+      "body_inspected": true,
+      "scope": "Symmetry between velocity arguments, not merely increment-evenness about each point."
+    },
+    {
+      "url": "https://arxiv.org/html/2609.15534v1",
+      "version": "v1 September 2026",
+      "locators": "equations 1.1–1.2; Theorem 1.1",
+      "body_inspected": true,
+      "scope": "Second-order local nondivergence kinetic operator a:Dvv, not jump kernel."
+    },
+    {
+      "url": "https://arxiv.org/html/2204.06401v1",
+      "version": "v1 13 April 2022",
+      "locators": "section 8.2 Conjecture 8.2",
+      "body_inspected": true,
+      "scope": "Distinguishes nondivergence jump problem from divergence/symmetric cancellation theory."
+    }
+  ],
+  "registry_checks": "No relevant kinetic-jump alias Palomar/Hexagon/OpenAI full metadata; focused scholarly/repository searches executed.",
+  "scope_comparison": "Only measurable increment-even kernels with two-sided pointwise fractional ellipticity are allowed; interchange symmetry/cancellation beyond these premises cannot be added. Local diffusion theorem does not imply a fixed-order nonlocal estimate.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. New September Harnack result is a different local operator."
+}

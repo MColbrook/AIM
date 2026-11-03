@@ -1,0 +1,108 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1012",
+  "manifest_index": 856,
+  "checked_date": "2026-11-03",
+  "source_sha256": "7bb08eb5b7535616f51ef1889c2357a84750689f458b770ccd08a6c2eec37c32",
+  "statement_sha256": "28819a59fdb3c318f5e850e940a4127708d3767cd2cd405485600ee46ae3f6a5",
+  "original_target": {
+    "id": "1012",
+    "title": "Bishop's mean-eigenvalue conjecture for three regions on the sphere",
+    "area": "Spectral geometry and shape optimization",
+    "file": "problems/1012-bishop-s-mean-eigenvalue-conjecture-for-three-regions-on-the-sphere.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-11b7e75a12da58cf",
+    "group": "spectral",
+    "source_sha256": "7bb08eb5b7535616f51ef1889c2357a84750689f458b770ccd08a6c2eec37c32",
+    "statement_sha256": "28819a59fdb3c318f5e850e940a4127708d3767cd2cd405485600ee46ae3f6a5",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`D_1,D_2,D_3`$ be pairwise disjoint nonempty connected open subsets of the round unit sphere $`\\mathbb S^2`$. Define the first Dirichlet eigenvalue by\n```math\n\\lambda_1(D)=\\inf_{0\\ne u\\in H^1_0(D)}\n\\frac{\\int_D|\\nabla_{\\mathbb S^2}u|^2\\,dS}{\\int_D|u|^2\\,dS},\n```\n\nwhere $`H^1_0(D)`$ is the closure of $`C_c^\\infty(D)`$ in the spherical $`H^1`$ norm.\n\nMust every such triple satisfy\n```math\n\\lambda_1(D_1)+\\lambda_1(D_2)+\\lambda_1(D_3)\\ge\\frac{45}{4}?\n```\n\nEquivalently, is the smallest possible **mean** eigenvalue $`15/4`$, attained by the Y-partition into three equal spherical lunes of opening $`2\\pi/3`$?\n\nIn spherical coordinates, each lune has a positive ground state proportional to\n```math\n(\\sin\\theta)^{3/2}\\sin(3\\phi/2),\\qquad 0<\\phi<2\\pi/3,\n```\n\nwith eigenvalue $`(3/2)(5/2)=15/4`$. The competitors have no prescribed area, symmetry or interface. Their union need not exhaust the sphere. Only the optimal value and Y-partition's minimality are asked; no uniqueness assertion for arbitrary open representatives is added.",
+  "full_original_page": "# 1012. Bishop's mean-eigenvalue conjecture for three regions on the sphere\n\n**Area:** Spectral geometry and shape optimization\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`D_1,D_2,D_3`$ be pairwise disjoint nonempty connected open subsets of the round unit sphere $`\\mathbb S^2`$. Define the first Dirichlet eigenvalue by\n```math\n\\lambda_1(D)=\\inf_{0\\ne u\\in H^1_0(D)}\n\\frac{\\int_D|\\nabla_{\\mathbb S^2}u|^2\\,dS}{\\int_D|u|^2\\,dS},\n```\n\nwhere $`H^1_0(D)`$ is the closure of $`C_c^\\infty(D)`$ in the spherical $`H^1`$ norm.\n\nMust every such triple satisfy\n```math\n\\lambda_1(D_1)+\\lambda_1(D_2)+\\lambda_1(D_3)\\ge\\frac{45}{4}?\n```\n\nEquivalently, is the smallest possible **mean** eigenvalue $`15/4`$, attained by the Y-partition into three equal spherical lunes of opening $`2\\pi/3`$?\n\nIn spherical coordinates, each lune has a positive ground state proportional to\n```math\n(\\sin\\theta)^{3/2}\\sin(3\\phi/2),\\qquad 0<\\phi<2\\pi/3,\n```\n\nwith eigenvalue $`(3/2)(5/2)=15/4`$. The competitors have no prescribed area, symmetry or interface. Their union need not exhaust the sphere. Only the optimal value and Y-partition's minimality are asked; no uniqueness assertion for arbitrary open representatives is added.\n\n## Application\n\nThe sum of the ground-state energies measures the total lowest vibration energy of three separated regions on a spherical shell. The conjecture identifies the optimal division without imposing equal areas in advance.\n\n## References\n\n1. B. Helffer, T. Hoffmann-Ostenhof and S. Terracini, [*On spectral minimal partitions: the case of the sphere*](https://arxiv.org/html/0903.3326), Conjecture 1.2 and Eqs.(1.2)–(1.8); *Around the Research of Vladimir Maz'ya III*, International Mathematical Series **13** (2010), 153–178. [DOI](https://doi.org/10.1007/978-1-4419-1345-6_6).\n2. V. Bonnaillie-Noël, B. Helffer and T. Hoffmann-Ostenhof, [*Nodal domains, spectral minimal partitions, and their relation to Aharonov–Bohm operators*](https://arxiv.org/html/1711.01174), §6.2 (2017).\n3. R. Ognibene and B. Velichkov, [*Structure of the free interfaces near triple junction singularities in harmonic maps and optimal partition problems*](https://arxiv.org/html/2412.00781v5), §1.2, Problem 1.5 and Corollary 3.6, v5 (7 September 2026).\n4. M. Sundqvist, [*The Y-partition is the optimal three-partition for the disc and the harmonic oscillator*](https://arxiv.org/html/2609.21964), §1.4 (18 September 2026).\n\n## Status review\n\n\n**Known cases:** The objective is the mean, not the maximum, of three first eigenvalues on the sphere. The 2026 disk/oscillator and triple-junction results explicitly distinguish these objectives and do not prove the sum bound.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe objective is the mean, not the maximum, of three first eigenvalues on the sphere. The 2026 disk/oscillator and triple-junction results explicitly distinguish these objectives and do not prove the sum bound.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe known spherical theorem minimizes the **maximum** of the three eigenvalues. It does not establish the conjectured lower bound on their mean. The September 2026 papers explicitly distinguish these objectives; the new disc and harmonic-oscillator results also concern the maximum.\n\nThe [coordinating review](../FURTHER_problems/_tracking/focused-Bishop-spherical-mean-three-partition-C210-C-20261028/ROOT-INDEPENDENT-UNIT-SPHERE-MEAN-VS-MAX-PRIMARY-LATEST-AND-SEMANTIC-FINAL-REVIEW.json) and [independent model review](../FURTHER_problems/_tracking/focused-Bishop-spherical-mean-three-partition-C210-C-20261028/A-INDEPENDENT-UNIT-SPHERE-MEAN-NORMALIZATION-OPEN-DOMAIN-BRIDGE-AND-MAX-SCOPE-MODEL-PEER.json) check normalization, current sources and semantic duplicates. The regular-domain formulation extends to arbitrary open cells by Dirichlet Rayleigh approximation, without extending an equality classification. No matching mean-value resolution or complete announcement was located.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-11b7e75a12da58cf**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Bishop",
+    "Y-partition",
+    "mean eigenvalue"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"Bishop\" \"mean\" \"Y-partition\" 2026"
+    },
+    {
+      "query": "\"Bishop\" \"mean\" \"Y-partition\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2609.21964v1",
+      "locator": "18September2026 Section1.4 lines198–201; Theorems1.3–1.4"
+    }
+  ],
+  "scope_comparison": "Primary explicitly distinguishes Bishop's mean from HHT maximum. Disc/oscillator proofs optimize max Rayleigh quotient, not sum onS²; triple-junction results do not bridge the objectives. No arbitrary open-cell sum>=45/4 conclusion located.",
+  "recommendation": "Retain partial status; no complete matching proof or announcement found in bounded current checks.",
+  "limitations": "Negative searches do not establish continued openness; explicit narrower primary hypotheses suffice to exclude the cited comparators as full solutions.",
+  "announcement_routing": {
+    "localID": "1012",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Bishop",
+          "Y-partition",
+          "mean eigenvalue"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-04-000001",
+            "title": "Distance-Shell Tomography: Geometric Certificates for Fault-Tolerant Sensing, Moment Compression, and Hypercube Equalization",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-04-000001-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Bishop",
+          "Y-partition",
+          "mean eigenvalue"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Bishop",
+        "Y-partition",
+        "mean eigenvalue"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Finite distance-shell sensing/tomography is not a sharp mean Dirichlet eigenvalue inequality for three spherical regions.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.760Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

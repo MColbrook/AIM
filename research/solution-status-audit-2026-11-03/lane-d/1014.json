@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1014",
+  "manifest_index": 858,
+  "checked_date": "2026-11-03",
+  "source_sha256": "69b62ef59ef421f134551edd973692e743a36d56b93be7d4b59ac0138d1f0e09",
+  "statement_sha256": "e6e26bb79b126699b25f4350e8211e88d42388d5934d5dc065b61279b0b10b02",
+  "original_target": {
+    "id": "1014",
+    "title": "Is every second p-Laplacian nodal line in a disk a diameter?",
+    "area": "Nonlinear spectral geometry",
+    "file": "problems/1014-is-every-second-p-laplacian-nodal-line-in-a-disk-a-diameter.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-2163930443d0ffb9",
+    "group": "spectral",
+    "source_sha256": "69b62ef59ef421f134551edd973692e743a36d56b93be7d4b59ac0138d1f0e09",
+    "statement_sha256": "e6e26bb79b126699b25f4350e8211e88d42388d5934d5dc065b61279b0b10b02",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\Omega=\\{x\\in\\mathbb R^2:|x|<1\\}`$ and fix $`1<p<\\infty`$. A second Dirichlet eigenfunction $`u\\in W^{1,p}_0(\\Omega)\\setminus\\{0\\}`$ satisfies\n\n```math\n-\\mathrm{div}(|\\nabla u|^{p-2}\\nabla u)=\\lambda_{2,p}|u|^{p-2}u \\quad\\text{in }\\Omega.\n```\n\n\nMust the interior nodal set $`\\{x\\in\\Omega:u(x)=0\\}`$ be a diameter of the disk, for **every** such second eigenfunction? The claim is known when $`p=2`$. For general $`p`$, numerical plots suggest a straight line through the center, but proving that the eigenfunction is nonradial or that its nodal set reaches the boundary does not establish this shape.",
+  "full_original_page": "# 1014. Is every second p-Laplacian nodal line in a disk a diameter?\n\n**Area:** Nonlinear spectral geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\Omega=\\{x\\in\\mathbb R^2:|x|<1\\}`$ and fix $`1<p<\\infty`$. A second Dirichlet eigenfunction $`u\\in W^{1,p}_0(\\Omega)\\setminus\\{0\\}`$ satisfies\n\n```math\n-\\mathrm{div}(|\\nabla u|^{p-2}\\nabla u)=\\lambda_{2,p}|u|^{p-2}u \\quad\\text{in }\\Omega.\n```\n\n\nMust the interior nodal set $`\\{x\\in\\Omega:u(x)=0\\}`$ be a diameter of the disk, for **every** such second eigenfunction? The claim is known when $`p=2`$. For general $`p`$, numerical plots suggest a straight line through the center, but proving that the eigenfunction is nonradial or that its nodal set reaches the boundary does not establish this shape.\n\n## Application\n\nThe second mode describes the lowest sign-changing vibration of a nonlinear membrane. Its nodal line separates the two regions of opposite displacement. The conjecture asks whether rotational symmetry of the disk forces this interface to be straight despite the nonlinear eigenvalue equation.\n\n## References\n\n1. B. Kawohl and J. Horák, [*On the geometry of the p-Laplacian operator*](https://www.aimsciences.org/article/doi/10.3934/dcdss.2017040), *Discrete and Continuous Dynamical Systems - S* **10** (2017), 799–813, Section 4, p. 805. The authors explicitly call the disk-diameter statement an open conjecture.\n2. B. Kawohl, [*Variations on the p-Laplacian*](https://www.mi.uni-koeln.de/mi/Forschung/Kawohl/kawohl/variationsPLap.pdf), Section 5, Conjecture (a), states the same problem directly for $`1<p<\\infty`$.\n3. V. Bobkov, [*On the nodal set conjecture for the p-Laplacian in circularly symmetric domains*](https://arxiv.org/html/2602.01210v1), arXiv:2602.01210v1 (2026). The result concerns whether the nodal set meets the boundary; it does not assert the diameter shape.\n4. T. V. Anoop, P. Drábek and Sarath Sasi, [*On the structure of the second eigenfunctions of the p-Laplacian on a ball*](https://doi.org/10.1090/proc/12902), *Proceedings of the American Mathematical Society* **144** (2016), 2503–2512. This proves nonradiality, which does not determine the nodal-line shape.\n\n## Status review\n\n\n**Known cases:** Every second eigenfunction must have a diameter nodal line. The February 2026 boundary-contact theorem and earlier nonradiality results do not fix its shape.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nEvery second eigenfunction must have a diameter nodal line. The February 2026 boundary-contact theorem and earlier nonradiality results do not fix its shape.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nAnoop–Drábek–Sarath established that a second disk eigenfunction is not radial. Bobkov's 2026 boundary-contact theorem is also weaker than the displayed conjecture. A [bounded exact-source, announcement and semantic-duplicate review](../FURTHER_problems/_tracking/disk-p-laplacian-second-nodal-diameter-status-2026-10-21.json) found no complete proof or counterexample and no equivalent AIM/FURTHER problem. The review does not certify the absence of unindexed work.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-2163930443d0ffb9**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "p-Laplacian",
+    "nodal diameter",
+    "Bobkov",
+    "Kawohl"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"p-Laplacian\" \"diameter\" \"nodal\" 2026"
+    },
+    {
+      "query": "\"p-Laplacian\" \"diameter\" \"nodal\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2602.01210v1",
+      "locator": "1February2026 introduction equation1.4 and main theorem"
+    }
+  ],
+  "scope_comparison": "Bobkov proves contact of the closure of nodal set with boundary for circularly symmetric domains. Contact/nonradiality does not force an interior diameter for every second eigenfunction and every1<p<infinity. Known linear p=2 and numerical plots remain restricted evidence.",
+  "recommendation": "Retain partial status; no complete matching proof or announcement found in bounded current checks.",
+  "limitations": "Negative searches do not establish continued openness; explicit narrower primary hypotheses suffice to exclude the cited comparators as full solutions.",
+  "announcement_routing": {
+    "localID": "1014",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "p-Laplacian",
+          "nodal diameter",
+          "Bobkov",
+          "Kawohl"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "p-Laplacian",
+          "nodal diameter",
+          "Bobkov",
+          "Kawohl"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "p-Laplacian",
+        "nodal diameter",
+        "Bobkov",
+        "Kawohl"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "558",
+  "manifest_index": 434,
+  "original_target": {
+    "id": "558",
+    "title": "Arbitrarily large integer-distance sets in general position",
+    "area": "Discrete geometry and arithmetic geometry",
+    "file": "problems/558-integer-distance-general-position.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "2315a252b5e35d246217972ab4cf061fb2f8c1ffe6fda3c4979b712bbc12cd85",
+    "statement_sha256": "ff266a96fe77b39c278664057a2f7fe0d07760ce4462a0f1a0cd927e4f0ac31e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "2315a252b5e35d246217972ab4cf061fb2f8c1ffe6fda3c4979b712bbc12cd85",
+  "statement_sha256": "ff266a96fe77b39c278664057a2f7fe0d07760ce4462a0f1a0cd927e4f0ac31e",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:56:06.309986+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The diameter-dependent quantitative Erdos–Anning theorem does not bound cardinality independently of diameter. Arbitrary finite general-position configurations differ from infinite configurations or the integer-distance graph chromatic number. The public candidate text certifies at least seven points and expressly has no >=8 result.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/2401.06328",
+      "locator": "Served25February2025 preprint section3.1 p6, arbitrary finite question and seven-point record",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2606.18569v1",
+      "locator": "Theorem2.2, bound depends on reference simplex diameter; v1 17June2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://github.com/neelsomani/gpt-erdos/blob/main/data/solutions/130/candidate_solution.md",
+      "locator": "Actual candidate distinguishes clique/chromatic questions and disclaims >=8",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"integer distance sets\" \"general position\" 2026 arbitrarily",
+    "\"integer distance\" \"general position\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "integer distance general position seven eight 2026 solution announcement"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "integer distance",
+        "general position"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-08-29-000013",
+          "title": "sneed-and-feed/lean-theorems-1"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "integer distance",
+        "general position"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00448v1",
+          "title": "A polynomial algorithm for general d-position in trees"
+        },
+        {
+          "id": "hexagon:2610.00223v1",
+          "title": "Long runs and rare patterns of a random completely multiplicative function"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "2026 JoCG final body not freshly inspected; source preprint and 2026 theorem body inspected."
+  ],
+  "canonical_update_required": false
+}

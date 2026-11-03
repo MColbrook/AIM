@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1049",
+  "manifest_index": 893,
+  "checked_date": "2026-11-03",
+  "source_sha256": "4e160d6011162784be261f86787cefc298438a09c344f4801e279df5b72c0e43",
+  "statement_sha256": "3cadb5ae41d4acf86bada8031c2976aed8749fdb0d900bbe7dbef3b72e42522c",
+  "original_target": {
+    "id": "1049",
+    "title": "Scalar integrable PDEs with the same quasilinear part",
+    "area": "Integrable nonlinear evolution equations; formal conservation-law hierarchies",
+    "file": "problems/1049-scalar-integrable-pdes-with-the-same-quasilinear-part.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-7e0d31e19e5ddab4",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "4e160d6011162784be261f86787cefc298438a09c344f4801e279df5b72c0e43",
+    "statement_sha256": "3cadb5ae41d4acf86bada8031c2976aed8749fdb0d900bbe7dbef3b72e42522c",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "In the formal perturbative setting of Arsie, Lorenzoni and Moro, consider scalar integrable evolutionary equations\n\n```math\nu_t=\\sum_{k\\geq 0}\\varepsilon^k F_{k+1}(u,u_x,u_{xx},\\ldots),\n```\n\n\nwhere $`F_{k+1}`$ is a homogeneous differential polynomial of derivative degree $`k+1`$. Write the **quasilinear part** (terms linear in derivatives of $`u`$) as\n\n```math\n\\sum_{k\\geq 0}\\varepsilon^k X_{k+1}(u)u_{(k+1)},\n\\qquad u_{(j)}=\\partial_x^j u.\n```\n\n\nIf two such integrable equations have identical coefficient functions $`X_j(u)`$ for every $`j\\geq1`$, must they be related by a formal Miura transformation\n\n```math\nv=M_0(u)+\\sum_{k\\geq1}\\varepsilon^k M_k(u,u_x,u_{xx},\\ldots),\n```\n\n\nwith locally invertible $`M_0`$ and each $`M_k`$ homogeneous of derivative degree $`k`$? This is Conjecture 1.1 of the cited paper. “Integrable” here refers to the source's formal commuting-flow framework; the question does not assert analytic well-posedness for arbitrary data.",
+  "full_original_page": "# 1049. Scalar integrable PDEs with the same quasilinear part\n\n**Area:** Integrable nonlinear evolution equations; formal conservation-law hierarchies\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nIn the formal perturbative setting of Arsie, Lorenzoni and Moro, consider scalar integrable evolutionary equations\n\n```math\nu_t=\\sum_{k\\geq 0}\\varepsilon^k F_{k+1}(u,u_x,u_{xx},\\ldots),\n```\n\n\nwhere $`F_{k+1}`$ is a homogeneous differential polynomial of derivative degree $`k+1`$. Write the **quasilinear part** (terms linear in derivatives of $`u`$) as\n\n```math\n\\sum_{k\\geq 0}\\varepsilon^k X_{k+1}(u)u_{(k+1)},\n\\qquad u_{(j)}=\\partial_x^j u.\n```\n\n\nIf two such integrable equations have identical coefficient functions $`X_j(u)`$ for every $`j\\geq1`$, must they be related by a formal Miura transformation\n\n```math\nv=M_0(u)+\\sum_{k\\geq1}\\varepsilon^k M_k(u,u_x,u_{xx},\\ldots),\n```\n\n\nwith locally invertible $`M_0`$ and each $`M_k`$ homogeneous of derivative degree $`k`$? This is Conjecture 1.1 of the cited paper. “Integrable” here refers to the source's formal commuting-flow framework; the question does not assert analytic well-posedness for arbitrary data.\n\n## Application\n\nThe coefficients of the highest derivative at each perturbative order are known to be necessary Miura invariants. A positive answer would make those coefficients complete invariants for classifying scalar integrable hierarchies, including dispersive and viscous conservation laws. The original paper checks cases through finite orders and gives familiar Miura-related examples, but these do not establish the all-orders statement.\n\n## References\n\n1. A. Arsie, P. Lorenzoni and A. Moro, [*On integrable conservation laws*](https://arxiv.org/html/1401.1166), arXiv:1401.1166v1 (2014); *Proceedings of the Royal Society A* **471** (2015), 20140124, [doi:10.1098/rspa.2014.0124](https://doi.org/10.1098/rspa.2014.0124). Introduction, equations (1.3) and (1.7), Conjecture 1.1; Section 2, Theorem 2.1 and Corollary 2.2; Section 3, finite-order calculations.\n2. A. Arsie and P. Lorenzoni, [*Flat F-manifolds, Miura invariants, and integrable systems of conservation laws*](https://academic.oup.com/integrablesystems/article/3/1/xyy004/4964995), *Journal of Integrable Systems* **3** (2018), xyy004, Introduction and Section 2. This proves related necessary invariance and still describes the scalar converse as conjectural.\n3. A. Buryak and P. Rossi, [*Deformations of the Riemann hierarchy and the geometry of $`\\overline{\\mathcal M}_{g,n}`$*](https://arxiv.org/html/2504.02079), arXiv:2504.02079v2 (2025), Introduction and Section 4.1. It explicitly treats the Miura-classification assertion from Conjecture 1.1 as conjectural and develops conditional and narrower conservation-law results.\n\n## Status review\n\n\n**Known cases:** Identical quasilinear coefficients must imply a full formal Miura equivalence. Necessary invariance, finite-order computations and the 2025 conditional classification remain narrower; the 2026 Haantjes conjecture concerns another integrability assertion.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nIdentical quasilinear coefficients must imply a full formal Miura equivalence. Necessary invariance, finite-order computations and the 2025 conditional classification remain narrower; the 2026 Haantjes conjecture concerns another integrability assertion.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe 2018 invariance result establishes the **necessary** direction. The 2025 paper invokes the original classification conjecture conditionally and presents a more restricted normal-form conjecture; neither is a proof of the universal converse stated above. A bounded search through 2026-10-21 found no exact-scope proof, counterexample or complete announcement. The [source-bound arXiv packet](../FURTHER_problems/_tracking/parallel/rough-filtering/arxiv-body-secondpass-0183-review.json), [independent primary and status review](../FURTHER_problems/_tracking/arsie-lorenzoni-moro-miura-status-2026-10-21.json), and [semantic duplicate snapshot](../FURTHER_problems/_tracking/arsie-lorenzoni-moro-miura-duplicates-2026-10-21.json) record the checked scope and limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-7e0d31e19e5ddab4**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "quasilinear Miura",
+    "Arsie Lorenzoni Moro",
+    "Riemann hierarchy",
+    "Miura invariants"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "Arsie Lorenzoni Moro quasilinear Miura conjecture 2026 proof"
+    },
+    {
+      "query": "Miura quasilinear classification conjecture Arsie",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2504.02079v2",
+      "locator": "Section4.1lines484–527;Theorems4.4/4.8conditions"
+    }
+  ],
+  "scope_comparison": "Actual2025body explicitly states originalConj1.1 all-ordersMiura classification as conjectural and uses a narrower normal-form assertion conditionally. Necessary invariant direction/finiteorders do not establish sufficiency. 2026Haantjes theorem is gl-regular hydrodynamic-type tensor vanishing for systems, not scalar dispersive formalMiura equivalence.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative search does not establish continued openness; exact problem/current theorem statements compared, no full-proof certification.",
+  "announcement_routing": {
+    "localID": "1049",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "quasilinear Miura",
+          "Arsie Lorenzoni Moro",
+          "Riemann hierarchy",
+          "Miura invariants"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "quasilinear Miura",
+          "Arsie Lorenzoni Moro",
+          "Riemann hierarchy",
+          "Miura invariants"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "quasilinear Miura",
+        "Arsie Lorenzoni Moro",
+        "Riemann hierarchy",
+        "Miura invariants"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

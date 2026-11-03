@@ -2,9 +2,9 @@
 
 **Area:** PDE control / advection–diffusion
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -39,6 +39,13 @@ Advection carries a contaminant or temperature perturbation out of a channel in 
 3. P. Lissy, *Explicit lower bounds for the cost of fast controls for some 1-D parabolic or dispersive equations, and a new lower bound concerning the uniform controllability of the 1-D transport-diffusion equation*, Journal of Differential Equations 259 (2015), 5331–5352, Theorem 1.3 and comparison with positive transport. [Author PDF](https://cermics.enpc.fr/~lissyp/Publi/chal.pdf).
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Negative for T between L/M and2L/M.
+
+[Claimed solution](https://arxiv.org/pdf/2609.35355v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/412.json). Source locator: Definition cost(2); Theorem1.3 positive speed; scaling(22); Theorem7.1. The comparison records the hypotheses, quantifiers and any reduction to the original target. The full external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative, claimed
 

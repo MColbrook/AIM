@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 341,
+  "source_sha256": "7293443b6af5a3d01a2825d04b1bc56f0eed5647c0897bc249fb51f4872b0d7d",
+  "statement_sha256": "a5d0ff13a3e7e70d8e8f2cbe072f6c8959c2a689550516c8b02f8b9724353c46",
+  "original_target": {
+    "id": "422",
+    "title": "Subunit-moment eigenvalue bounds for complex Schrödinger potentials",
+    "area": "Nonselfadjoint Schrödinger PDEs and spectral bounds",
+    "file": "problems/422-complex-schrodinger-subunit-moments.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "spectral3",
+    "source_sha256": "7293443b6af5a3d01a2825d04b1bc56f0eed5647c0897bc249fb51f4872b0d7d",
+    "statement_sha256": "a5d0ff13a3e7e70d8e8f2cbe072f6c8959c2a689550516c8b02f8b9724353c46",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "422",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Cuenin\" \"Frank\" \"subunit\" eigenvalues 2026",
+    "\"Cuenin\" \"Frank\" \"Question 1\" complex potentials",
+    "\"complex potentials\" \"gamma\" \"2026\" Lieb Thirring",
+    "\"complex potentials\" \"eigenvalue\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) \"moment\"",
+    "\"Cuenin\" \"Frank\" \"Violation of locality\" (solution OR conjecture OR 2026)",
+    "\"subunit\" \"Schrödinger\" \"eigenvalue\" 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2409.11285v1",
+      "version": "v1,17Sep2024; current abs onlyv1",
+      "locator": "§1.2 eq6 and Question1 eq7",
+      "theorem_body_checked": true,
+      "scope": "Eq6 known only gamma>=1; Question1 exactly asks target gamma<1, sigma>d/2 and all complex V with algebraic multiplicities."
+    },
+    {
+      "url": "https://arxiv.org/html/2408.15783v2",
+      "version": "v2,29Aug2024",
+      "locator": "Theorem1 eq6;Remarks i–iv",
+      "theorem_body_checked": true,
+      "scope": "Radial V, q between(d+1)/2 and d, a power q/p<1 outside the eigenvalue sum. Does not supply target linear integral homogeneity for arbitrary complex potentials."
+    },
+    {
+      "url": "https://www.math.lmu.de/~frank/papers.php",
+      "date": "page lastmodified26Aug2025;current retrieved",
+      "locator": "Unpublished manuscripts",
+      "scope": "Still lists Cuenin–Frank open-problem manuscript; no resolution indicated. Routing only, not certification."
+    }
+  ],
+  "registry_checks": "Cuenin/complex-potentials/subunit/Lieb–Thirring metadata scanned in Palomar/Hexagon/OpenAI/Colbrook. OpenAI262 concerns real 1D sharp Lieb–Thirring constants, not these nonselfadjoint moments.",
+  "scope_comparison": "Endpoint sigma=d/2 counterexamples do not refute strict sigma>d/2. Gamma>=1 bounds, radial restrictions, and nonlinear powers of the integral fail the requested subunit gamma universal estimate.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

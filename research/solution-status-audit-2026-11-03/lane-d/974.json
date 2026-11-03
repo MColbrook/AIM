@@ -1,0 +1,92 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "974",
+  "manifest_index": 818,
+  "checked_date": "2026-11-03",
+  "source_sha256": "3ac8a3359a34009e01738f30420e691dc03f3a347345d16ca4e1fcfaaa99c243",
+  "statement_sha256": "ea343757edf769692dd8331fb394abe243a6274a60e1fc6e4c219aabebe2f0a1",
+  "original_target": {
+    "id": "974",
+    "title": "Circular law for random convolution on symmetric groups",
+    "area": "Probability and random operator spectra",
+    "file": "problems/974-circular-law-for-random-convolution-on-symmetric-groups.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-393bf2d525efcf96",
+    "group": "probability-statistics",
+    "source_sha256": "3ac8a3359a34009e01738f30420e691dc03f3a347345d16ca4e1fcfaaa99c243",
+    "statement_sha256": "ea343757edf769692dd8331fb394abe243a6274a60e1fc6e4c219aabebe2f0a1",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix a complex random variable $`\\xi`$ with\n\n```math\n\\mathbb E\\xi=0,\\qquad \\mathbb E\\xi^2=0,\\qquad \\mathbb E|\\xi|^2=1.\n```\n\nFor each $`N`$, take independent copies $`\\{\\xi_N(s):s\\in S_N\\}`$, where $`S_N`$ is the symmetric group. Form the $`N!\\times N!`$ convolution matrix\n\n```math\nA_N(h,g)=\\frac{\\xi_N(hg^{-1})}{\\sqrt{N!}},\\qquad h,g\\in S_N,\n\\qquad \\mu_N=\\frac1{N!}\\sum_{j=1}^{N!}\\delta_{\\lambda_j(A_N)}.\n```\n\nEigenvalues are counted with algebraic multiplicity. **Does $`\\mu_N`$ converge weakly in probability to the uniform probability measure on the unit disk?** Explicitly, for every bounded continuous $`\\varphi:\\mathbb C\\to\\mathbb R`$, is\n\n```math\n\\int\\varphi\\,d\\mu_N\\xrightarrow{\\mathbb P}\n\\frac1\\pi\\int_{|z|\\le1}\\varphi(z)\\,dA(z)?\n```\n\nThis is the symmetric-group component of [1, §7 II]. No higher moments, density or independence between different $`N`$ is assumed. Coefficients indexed by group elements are independent; the full matrix entries are dependent. Singular-value convergence is a separate assertion.",
+  "full_original_page": "# 974. Circular law for random convolution on symmetric groups\n\n**Area:** Probability and random operator spectra\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix a complex random variable $`\\xi`$ with\n\n```math\n\\mathbb E\\xi=0,\\qquad \\mathbb E\\xi^2=0,\\qquad \\mathbb E|\\xi|^2=1.\n```\n\nFor each $`N`$, take independent copies $`\\{\\xi_N(s):s\\in S_N\\}`$, where $`S_N`$ is the symmetric group. Form the $`N!\\times N!`$ convolution matrix\n\n```math\nA_N(h,g)=\\frac{\\xi_N(hg^{-1})}{\\sqrt{N!}},\\qquad h,g\\in S_N,\n\\qquad \\mu_N=\\frac1{N!}\\sum_{j=1}^{N!}\\delta_{\\lambda_j(A_N)}.\n```\n\nEigenvalues are counted with algebraic multiplicity. **Does $`\\mu_N`$ converge weakly in probability to the uniform probability measure on the unit disk?** Explicitly, for every bounded continuous $`\\varphi:\\mathbb C\\to\\mathbb R`$, is\n\n```math\n\\int\\varphi\\,d\\mu_N\\xrightarrow{\\mathbb P}\n\\frac1\\pi\\int_{|z|\\le1}\\varphi(z)\\,dA(z)?\n```\n\nThis is the symmetric-group component of [1, §7 II]. No higher moments, density or independence between different $`N`$ is assumed. Coefficients indexed by group elements are independent; the full matrix entries are dependent. Singular-value convergence is a separate assertion.\n\n## Application\n\nThe question tests spectral universality for structured, highly dependent random operators. It asks whether a macroscopic planar eigenvalue law survives replacing Gaussian coefficients by any fixed complex law satisfying the displayed moments.\n\n## References\n\n1. R. Adamczak, *Random non-Abelian G-circulant matrices. Spectrum of random convolution operators on large finite groups*, [arXiv:1712.04772v2](https://arxiv.org/pdf/1712.04772v2), 20 December 2017; Theorems 1.5 and 1.10, §7 II. [Official version history](https://arxiv.org/abs/1712.04772).\n2. M. Gerspach, *Spectra of random non-Abelian real-valued G-circulant matrices*, [author manuscript, Theorems 6–7](https://www.maximgerspach.com/wp-content/uploads/2021/01/NonAbelianGCirculants2.pdf).\n\n## Status review\n\n\n**Known cases:** The non-Gaussian convolution eigenvalues are needed with only the stated second moments. Gaussian circular laws and non-Gaussian singular-value laws do not imply this nonnormal eigenvalue limit.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe non-Gaussian convolution eigenvalues are needed with only the stated second moments. Gaussian circular laws and non-Gaussian singular-value laws do not imply this nonnormal eigenvalue limit.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe Gaussian eigenvalue case and universal singular-value results do not establish this nonnormal eigenvalue statement. Reference [2] treats real Gaussian coefficients for eigenvalues and non-Gaussian coefficients for singular values. A real Gaussian law does not satisfy $`\\mathbb E\\xi^2=0`$.\n\nBounded current-resolution and announcement searches found no matching complete claim. The exact latest preprint is cited; unconfirmed published date/body parity is not asserted. Full nearest-statement comparisons covered 1,146 private findings and 1,704 retained public all-status entries, followed by the distinct transport, CMC and C258 additions. Ginibre couplings, GOE crossings, tensor-column singular values and representation-theoretic tensor squares have different targets. See the [owner and semantic review](../FURTHER_problems/_tracking/focused-Adamczak-symmetric-group-circular-law-C248-A-20261029/OWNER-EXACT-COMPLEX-FINITE-VARIANCE-SN-CIRCULAR-LAW-PRIMARY-CURRENT-AND-FULL-NEAREST-SEMANTIC-PROPOSAL.json) and [independent model peer](../FURTHER_problems/_tracking/focused-Adamczak-symmetric-group-circular-law-C248-A-20261029/C-INDEPENDENT-SYMMETRIC-GROUP-CONVOLUTION-FACTORIAL-NORMALIZATION-COMPLEX-LAW-AND-EIGENVALUE-MODEL-PEER-PASS.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-393bf2d525efcf96**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "G-circulant",
+    "Adamczak",
+    "random convolution"
+  ],
+  "queries": [
+    "\"random convolution\" \"symmetric groups\" \"circular law\"",
+    "\"random convolution\" \"symmetric groups\" \"circular law\"; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"random non-Abelian\" \"circular\" Adamczak 2026"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1712.04772v2",
+      "locator": "20Dec2017v2 section7II nativep25 lines3372–3373; Theorems1.5/1.10",
+      "comparison": "Actual source separates universal singular-value law from Gaussian eigenvalue law. Author publisher abstract's broad description does not remove Gaussian hypothesis in theorem. Real-valued Gerspach Gaussian spectra also do not cover arbitrary complex second-moment law."
+    }
+  ],
+  "rationale": "Actual source separates universal singular-value law from Gaussian eigenvalue law. Author publisher abstract's broad description does not remove Gaussian hypothesis in theorem. Real-valued Gerspach Gaussian spectra also do not cover arbitrary complex second-moment law.",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary statements inspected, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "974",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "G-circulant",
+          "Adamczak",
+          "random convolution"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "G-circulant",
+          "Adamczak",
+          "random convolution"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "G-circulant",
+        "Adamczak",
+        "random convolution"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

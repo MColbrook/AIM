@@ -1,0 +1,82 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "869",
+  "manifest_index": 713,
+  "checked_date": "2026-11-03",
+  "source_sha256": "997a250e799b22a9e6b524b69dc9a63c422099051526f414fc1f9e3d3e83c3d6",
+  "statement_sha256": "4542eb3b8e64d3f0b5b24de4c28acc7eb0fa893423a40b9e5688ab1baf1758dc",
+  "original_target": {
+    "id": "869",
+    "title": "Are saddle-connection lengths uniformly distributed modulo one on every flat surface?",
+    "area": "Translation surfaces and dynamical systems",
+    "file": "problems/869-are-saddle-connection-lengths-uniformly-distributed-modulo-one-on-every-flat-surface.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-fae3bc1353cb66f0",
+    "group": "geometry-topology",
+    "source_sha256": "997a250e799b22a9e6b524b69dc9a63c422099051526f414fc1f9e3d3e83c3d6",
+    "statement_sha256": "4542eb3b8e64d3f0b5b24de4c28acc7eb0fa893423a40b9e5688ab1baf1758dc",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`X`$ be a closed compact Riemann surface of genus at least two, and let $`\\omega`$ be a nonzero holomorphic one-form on $`X`$. A saddle connection is a straight geodesic segment for the translation metric induced by $`\\omega`$, joining zeros of $`\\omega`$ with no zero in its interior. Enumerate **all saddle connections**, counted as geometric connections rather than distinct length values, as $`v_1,v_2,\\ldots`$ in nondecreasing length. Write\n\n```math\n\\ell_n=\\left\\|\\left(\\int_{v_n}\\mathrm{Re}\\omega,\\int_{v_n}\\mathrm{Im}\\omega\\right)\\right\\|_2.\n```\n\nIs $`(\\ell_n)`$ uniformly distributed modulo one for **every** such pair $`(X,\\omega)`$? Equivalently, for every $`0\\leq a<b\\leq1`$, must\n\n```math\n\\lim_{N\\to\\infty}\\frac{1}{N}\\#\\{1\\leq n\\leq N:\\{\\ell_n\\}\\in[a,b)\\}=b-a?\n```\n\nThe source's “every flat surface” formulation imposes no unit-area normalization. Ties in length do not affect the sequence of lengths.",
+  "full_original_page": "# 869. Are saddle-connection lengths uniformly distributed modulo one on every flat surface?\n\n**Area:** Translation surfaces and dynamical systems\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`X`$ be a closed compact Riemann surface of genus at least two, and let $`\\omega`$ be a nonzero holomorphic one-form on $`X`$. A saddle connection is a straight geodesic segment for the translation metric induced by $`\\omega`$, joining zeros of $`\\omega`$ with no zero in its interior. Enumerate **all saddle connections**, counted as geometric connections rather than distinct length values, as $`v_1,v_2,\\ldots`$ in nondecreasing length. Write\n\n```math\n\\ell_n=\\left\\|\\left(\\int_{v_n}\\mathrm{Re}\\omega,\\int_{v_n}\\mathrm{Im}\\omega\\right)\\right\\|_2.\n```\n\nIs $`(\\ell_n)`$ uniformly distributed modulo one for **every** such pair $`(X,\\omega)`$? Equivalently, for every $`0\\leq a<b\\leq1`$, must\n\n```math\n\\lim_{N\\to\\infty}\\frac{1}{N}\\#\\{1\\leq n\\leq N:\\{\\ell_n\\}\\in[a,b)\\}=b-a?\n```\n\nThe source's “every flat surface” formulation imposes no unit-area normalization. Ties in length do not affect the sequence of lengths.\n\n## Application\n\nA universal answer would describe length statistics even on exceptional translation surfaces excluded by almost-everywhere theorems. It would also clarify how far orbitwise equidistribution methods can be strengthened in flat-surface dynamics.\n\n## Context\n\nChaika and Robertson prove uniform distribution for almost every flat surface under each relevant invariant ergodic measure and explicitly pose the universal version as Question 6. Robertson and Dozier later prove that **almost every** surface in the $`\\mathrm{SL}(2,\\mathbb R)`$ orbit of **each** starting surface has the property. The quantifier over individual surfaces remains the issue. An appendix to the original paper settles a separate torus case.\n\n## References\n\n1. J. Chaika and D. Robertson, with an appendix by D. El-Baz and B. Huang, [*Uniform distribution of saddle connection lengths*](https://par.nsf.gov/servlets/purl/10315760), *Journal of Modern Dynamics* **15** (2019), 329–343, [doi:10.3934/jmd.2019023](https://doi.org/10.3934/jmd.2019023). See the author manuscript, Introduction, Question 6, and appendix.\n2. D. Robertson and B. Dozier, [*Uniform distribution of saddle connection lengths in all $`\\mathrm{SL}(2,\\mathbb R)`$ orbits*](https://link.springer.com/article/10.1007/s10711-023-00800-3), *Geometriae Dedicata* **217** (2023), article 65, [doi:10.1007/s10711-023-00800-3](https://doi.org/10.1007/s10711-023-00800-3). See Theorem 1.1.\n\n## Status review\n\n\n**Known cases:** The all-SL2-orbits theorem is almost everywhere within each orbit, not every individual flat surface. Its newer indexed record repeats that almost-everywhere quantifier. No matching every-surface proof or counterexample was located.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe all-SL2-orbits theorem is almost everywhere within each orbit, not every individual flat surface. Its newer indexed record repeats that almost-everywhere quantifier. No matching every-surface proof or counterexample was located.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe final accessible author manuscript still calls Question 6 open. The 2023 theorem has an almost-everywhere conclusion within each orbit, so it does not settle the every-surface target. Targeted proof, counterexample and announcement searches through 23 October 2026 found no complete resolution; existing AIM and admitted FURTHER pages were checked for this target. The publisher's 2019 full text was subscription-gated, so exact published-page parity was not claimed. The [audit](../FURTHER_problems/_tracking/saddle-connection-lengths-every-surface-audit-2026-10-23.json) records these limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-fae3bc1353cb66f0**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"saddle connection lengths\" \"every\" uniform distribution 2026",
+    "\"saddle connection lengths\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:hexagonmath.org OR site:palomar-registry.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s10711-023-00800-3",
+      "locator": "2023 published, Theorem1.1 body not yet located",
+      "inspection": "Publisher Theorem1.1 body read: every initial flat surface but Haar almost every g in SL2; does not assert g=identity for every surface."
+    }
+  ],
+  "scope_comparison": "All SL2 orbits does not mean every individual surface: theorem is almost everywhere within each orbit. Local target every unnormalized genus>=2 translation surface, all geometric saddle connections counted with multiplicity. Body locator remains pending.",
+  "rationale": "The stated full target has no matching complete result in the recorded bounded searches. Inspected primary bodies retain the stated conjecture or give restricted progress; recommended status stays Partially resolved. This does not certify openness or independently verify complete proofs.",
+  "source_gaps": [],
+  "announcement_routing": {
+    "localID": "869",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "saddle connection lengths"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "saddle connection lengths"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "saddle connection lengths"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target."
+}

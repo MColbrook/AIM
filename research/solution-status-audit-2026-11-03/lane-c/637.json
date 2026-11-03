@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "637",
+  "manifest_index": 493,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "637",
+    "title": "The standard simplex inequality for negative Gaussian correlations",
+    "area": "Gaussian probability, geometric analysis, and noise stability",
+    "file": "problems/637-the-standard-simplex-inequality-for-negative-gaussian-correlations.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e672ccf566fc3b55",
+    "group": "probability-statistics",
+    "source_sha256": "9b9b1dbeb14deb6fee50c08807be7297a8e3f6bb2beb58ad256a2bc5fd641116",
+    "statement_sha256": "8ea83164f6c57c474ab257320ea8991be9fc491441a1313a1e62b7c16b18cdaf",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9b9b1dbeb14deb6fee50c08807be7297a8e3f6bb2beb58ad256a2bc5fd641116",
+  "statement_sha256": "8ea83164f6c57c474ab257320ea8991be9fc491441a1313a1e62b7c16b18cdaf",
+  "actual_source_sha256": "9b9b1dbeb14deb6fee50c08807be7297a8e3f6bb2beb58ad256a2bc5fd641116",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`q\\geq3`$ and $`n\\geq q-1`$ be integers, let $`-1<\\rho<0`$, and let $`X,Z`$ be independent standard Gaussian vectors in $`\\mathbb R^n`$. Set\n```math\nY=\\rho X+\\sqrt{1-\\rho^2}\\,Z.\n```\nThus $`X`$ and $`Y`$ both have law $`\\gamma_n=N(0,I_n)`$ and $`\\mathrm{Cov}(X,Y)=\\rho I_n`$. For a measurable partition $`\\mathcal A=(A_1,\\ldots,A_q)`$ of $`\\mathbb R^n`$, define its noise stability by\n```math\nS_\\rho(\\mathcal A)\n=\\sum_{i=1}^q\\mathbb P(X\\in A_i,\\ Y\\in A_i).\n```\nNo balance or prescribed-volume condition is imposed on the competing cells $`A_i`$.\n\nChoose unit vectors $`a_1,\\ldots,a_q\\in\\mathbb R^n`$ satisfying\n```math\n\\langle a_i,a_j\\rangle=-\\frac1{q-1}\\quad(i\\neq j),\n```\nand let $`\\mathcal C=(C_1,\\ldots,C_q)`$ be the centered regular-simplex partition\n```math\nC_i=\\{x:\\langle x,a_i\\rangle=\\max_{1\\leq j\\leq q}\\langle x,a_j\\rangle\\},\n```\nwith ties assigned to one cell; the ties have Gaussian measure zero. Each $`C_i`$ has Gaussian measure $`1/q`$.\n\nIs it true that every such partition satisfies\n```math\nS_\\rho(\\mathcal A)\\geq S_\\rho(\\mathcal C)?\n```\nThis is the negative-correlation part of Isaksson–Mossel's standard simplex conjecture, Conjecture 1.4(ii) in the cited arXiv version. It asks for the centered, balanced simplex as a global minimum over partitions with arbitrary cell masses. The full Gaussian range $`-1<\\rho<0`$ is intended; the narrower bound $`\\rho\\geq-1/(q-1)`$ arises in the discrete applications and is not imposed here.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"standard simplex\" \"negative\" Gaussian conjecture 2026",
+    "\"standard simplex\" \"negative\" Gaussian conjecture (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.00333v1",
+      "primary_body_access_gap": false,
+      "scope_comparison": "Theorem7.1 covers three cells and rho in[-1/2,0), without balance. The target covers all q>=3 and the whole(-1,0) range. Unequal-prescribed-mass comparisons and Gaussian first-moment propeller results do not compare the same centered regular-simplex noise-stability functional.",
+      "version_or_date": "v1,31July2026; latest record inspected",
+      "locator": "Theorem7.1, lines652–658"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem7.1 covers three cells and rho in[-1/2,0), without balance. The target covers all q>=3 and the whole(-1,0) range. Unequal-prescribed-mass comparisons and Gaussian first-moment propeller results do not compare the same centered regular-simplex noise-stability functional.",
+  "latest_version_check": "v1,31July2026; latest record inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

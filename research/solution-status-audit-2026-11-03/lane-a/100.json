@@ -1,0 +1,94 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "100",
+  "manifest_index": 73,
+  "original_target": {
+    "id": "100",
+    "title": "Convexity of atomic ground-state energy in electron number",
+    "area": "Quantum chemistry and density functional theory",
+    "file": "problems/100-atomic-energy-convexity.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "spectral2",
+    "source_sha256": "694a28b2ba90f4d80932f1d7e27d9ba6fcc20265c94f35e502d76f7d0a1085c1",
+    "statement_sha256": "3cab075ce99fcaed4fe25b1a253f178ea172d2063cb1aeb96b9b1db81df0b8ac",
+    "state": "unreviewed"
+  },
+  "source_sha256": "694a28b2ba90f4d80932f1d7e27d9ba6fcc20265c94f35e502d76f7d0a1085c1",
+  "statement_sha256": "3cab075ce99fcaed4fe25b1a253f178ea172d2063cb1aeb96b9b1db81df0b8ac",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:46:55.785348+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "DiMarino–Lewin–Nenna's current v3 counterexample explicitly uses six separated nuclei with small fractional charges. Making total charge an integer still leaves multiple nuclei and is not one attractive -Z/r nucleus with integer Z. General Coulomb-model/molecular nonconvexity, Pauli–Fierz photon models and helium-dianion N=4 results do not settle all N,Z of the fixed one-nucleus target.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2409.08632",
+      "locator": "Abstract and concluding remarks in §5, lines40 and268.",
+      "body_inspected": false
+    },
+    {
+      "url": "https://comptes-rendus.academie-sciences.fr/physique/item/10.5802/crphys.249.pdf",
+      "locator": "§2.1.3, equation6, Simon10A versus molecular/general external fields.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "atomic energy",
+    "convexity in",
+    "electron"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "atomic energy",
+        "convexity in",
+        "electron"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-08-000006",
+          "title": "Stability of Matter in Lean: Lieb–Thirring, Ionization, the Thermodynamic Limit and Thomas–Fermi Theory"
+        }
+      ],
+      "scope": "Routing only; exact target and excluding hypotheses compared above. Loose name/word hits may be unrelated."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "atomic energy",
+        "convexity in",
+        "electron"
+      ],
+      "metadata_hits": [
+        {
+          "id": "2611.00041",
+          "title": "A Bound Helium Dianion Does Not Exist"
+        },
+        {
+          "id": "2610.00715",
+          "title": "Density functionals for the Pauli-Fierz Hamiltonian"
+        },
+        {
+          "id": "2610.00612",
+          "title": "Equality of the Jellium and the Uniform Electron Gas Energies"
+        }
+      ],
+      "scope": "Routing only; exact target and excluding hypotheses compared above. Loose name/word hits may be unrelated."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches with arXiv, Zenodo, HAL and GitHub; shared complete Palomar/Hexagon and OpenAI metadata screened, plus requested Colbrook author listings.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

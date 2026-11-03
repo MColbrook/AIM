@@ -2,9 +2,9 @@
 
 **Area:** Atomistic materials
 
-**Status:** 🔵 OPEN
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-08
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -34,7 +34,16 @@ The equality would derive the energetic preference for a triangular crystal dire
 - [Xavier Blanc and Mathieu Lewin, *The crystallization conjecture: a review* (EMS Surveys in Mathematical Sciences, 2015), §2](https://doi.org/10.4171/EMSS/13).
 - [Andrea Braides and Maria Stella Gelli, *Analytical treatment for the asymptotic analysis of microscopic impenetrability constraints for atomistic systems* (ESAIM: M2AN, 2017), introduction](https://arpi.unipi.it/retrieve/e0d6c929-b5b5-fcf8-e053-d805fe0aa794/m2an160137.pdf).
 
+- Matthew J. Colbrook, *The bulk energy of the planar Lennard–Jones potential*, 31 October 2026, Theorem 1.1. [Zenodo preprint, version 1](https://doi.org/10.5281/zenodo.23835694); [manuscript PDF](https://zenodo.org/api/records/23835694/files/lennard_jones.pdf/content); [public certificate and mathematical scope](https://github.com/MColbrook/Bulk-energy-of-the-planar-Lennard-Jones-potential).
+
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Colbrook’s Theorem 1.1 states the lower bound for every unrestricted finite configuration for the same planar 12–6 potential, and proves that finite triangular patches attain the matching bulk limit. This is the energy equality asked here; it does not assert geometric convergence of every minimizing configuration.
+
+[Claimed solution](https://zenodo.org/api/records/23835694/files/lennard_jones.pdf/content) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/083.json). The manuscript checksum and theorem scope were checked. The external proof, its analytic dependencies and its numerical certificates have not been independently verified here; no Lean verification or human peer review is asserted.
+
+### Earlier status record
+
 
 **Literature check:** Open in cited literature; no later resolution located.
 

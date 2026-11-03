@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "814",
+  "manifest_index": 658,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "814",
+    "title": "Smooth classification of four-manifolds with conformal curvature ratio below eight",
+    "area": "Geometry and topology",
+    "file": "problems/814-smooth-classification-of-four-manifolds-with-conformal-curvature-ratio-below-eight.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-92845684f419166a",
+    "group": "geometry-topology",
+    "source_sha256": "5fd25a20bb2569b8ea162804b0800a94d2dd6a07733550a575f672a701653a68",
+    "statement_sha256": "3e271b07fe13463cc32be87e7bca44e790c196412c65b339f79604335619805f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "5fd25a20bb2569b8ea162804b0800a94d2dd6a07733550a575f672a701653a68",
+  "statement_sha256": "3e271b07fe13463cc32be87e7bca44e790c196412c65b339f79604335619805f",
+  "actual_source_sha256": "5fd25a20bb2569b8ea162804b0800a94d2dd6a07733550a575f672a701653a68",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`M`$ be a smooth, closed, connected, oriented four-manifold with a smooth Riemannian metric $`g`$. Its Schouten tensor is\n```math\nP_g=\\frac12\\left(\\mathrm{Ric}_g-\\frac{R_g}{6}g\\right).\n```\n\nFor an endomorphism $`A`$, write $`\\sigma_2(A)`$ for the second elementary symmetric polynomial of its eigenvalues. Assume\n```math\nY(M,[g])>0,\\qquad\n \\int_M\\sigma_2(g^{-1}P_g)\\,dV_g>0.\n```\n\nHere $`[g]`$ is the conformal class and\n```math\nY(M,[g])=\\inf_{\\widetilde g\\in[g]}\n \\mathrm{Vol}(M,\\widetilde g)^{-1/2}\n \\int_M R_{\\widetilde g}\\,dV_{\\widetilde g}\n```\n\nis its Yamabe constant.\n\nRegard the Weyl tensor $`W_g`$ as an endomorphism of two-forms, with its Hilbert–Schmidt norm, and define\n```math\n\\beta(M,[g])=\n \\frac{\\int_M\\|W_g\\|_{\\mathrm{End}(\\Lambda^2)}^2\\,dV_g}\n      {\\int_M\\sigma_2(g^{-1}P_g)\\,dV_g}.\n```\n\nIf $`\\beta(M,[g])<8`$, must $`M`$ be diffeomorphic to $`S^4`$, $`\\mathbb{CP}^2`$, or $`\\mathbb{CP}^2`$ with the opposite orientation?\n\nNo Einstein, sectional-curvature, simple-connectivity or Betti-number assumption is imposed. The conclusion concerns the smooth manifold, not an isometry or conformal classification of the given metric. The endpoint $`\\beta=8`$ is excluded.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"conformally invariant\" \"beta\" \"8\" four manifolds conjecture 2026",
+    "\"conformally invariant\" \"beta\" \"8\" four manifolds conjecture (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"conformally invariant\" \"beta\" \"8\" four manifolds conjecture (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Chang\" \"Gursky\" \"Zhang\" \"beta\" \"8\" conjecture 2026"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "version_or_date": "arXiv1809.05918v1 dated16September2018; finalMZ294(2020)721–746 identified; HTMLAugust2026 internal date is not a newly submitted revision. Bounded current searches no later exact resolution.",
+      "scope_comparison": "Conjecture1.2 matches beta<8 with positive Yamabe and sigma2 under the same endomorphism Weyl norm and Schouten normalization. Theorem1 gives beta<4; TheoremA only4<=beta<4(1+epsilon) and b2+>0. Below8, Lemma2.5 restricts Betti numbers/intersection form but not all smooth diffeomorphism types. Additional Einstein or sectional-nonnegative assumptions in related classifications are absent from target. No full matching current claim found.",
+      "url": "https://arxiv.org/html/1809.05918v1",
+      "locator": "Actual Theorem1,TheoremsA–C,Conjecture1.2eq1.13 and Lemma2.5/Remark2.6"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Conjecture1.2 matches beta<8 with positive Yamabe and sigma2 under the same endomorphism Weyl norm and Schouten normalization. Theorem1 gives beta<4; TheoremA only4<=beta<4(1+epsilon) and b2+>0. Below8, Lemma2.5 restricts Betti numbers/intersection form but not all smooth diffeomorphism types. Additional Einstein or sectional-nonnegative assumptions in related classifications are absent from target. No full matching current claim found.",
+  "latest_version_check": "arXiv1809.05918v1 dated16September2018; finalMZ294(2020)721–746 identified; HTMLAugust2026 internal date is not a newly submitted revision. Bounded current searches no later exact resolution.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

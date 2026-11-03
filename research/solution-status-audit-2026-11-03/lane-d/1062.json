@@ -1,0 +1,99 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1062",
+  "manifest_index": 906,
+  "checked_date": "2026-11-03",
+  "source_sha256": "d5a5503af2ddfe63afc48cab8119f852b5eb5b9fb9d816463ce16acfdba4ca38",
+  "statement_sha256": "b335519c5022e7a789d9afa69c777fa665eb8ae4daad55a094503a5b3096b6d5",
+  "original_target": {
+    "id": "1062",
+    "title": "Late-time local mass and kinetic energy of Hartree atoms",
+    "area": "Nonlinear waves, fluids and kinetic equations",
+    "file": "problems/1062-late-time-local-mass-and-kinetic-energy-of-hartree-atoms.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e1032734b6c12b57",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "d5a5503af2ddfe63afc48cab8119f852b5eb5b9fb9d816463ce16acfdba4ca38",
+    "statement_sha256": "b335519c5022e7a789d9afa69c777fa665eb8ae4daad55a094503a5b3096b6d5",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix $`Z>0`$. For any $`u_0\\in H^1(\\mathbb R^3;\\mathbb C)`$, let $`u`$ be the global energy-space solution of\n\n```math\ni\\partial_tu=-\\Delta u-\\frac Z{|x|}u+\n\\bigl(|\\cdot|^{-1}*|u|^2\\bigr)u,\\qquad u(0)=u_0.\n```\n\n\nDefine the set of stationary states\n\n```math\n\\mathcal A_Z=\\left\\{\\phi\\in H^1(\\mathbb R^3;\\mathbb C):\n-\\Delta\\phi-\\frac Z{|x|}\\phi+\n\\bigl(|\\cdot|^{-1}*|\\phi|^2\\bigr)\\phi=\\lambda\\phi\n\\text{ for some }\\lambda\\le0\\right\\},\n```\n\n\nwhere the equation is understood distributionally. Set\n\n```math\nM_Z=\\sup_{\\phi\\in\\mathcal A_Z}\\|\\phi\\|_2^2,\n\\qquad K_Z=\\sup_{\\phi\\in\\mathcal A_Z}\\|\\nabla\\phi\\|_2^2.\n```\n\n\nThese constants are finite. Must both inequalities\n\n```math\n\\limsup_{t\\to\\infty}\\int_{|x|\\le r}|u(t,x)|^2\\,dx\\le M_Z,\n\\qquad\n\\limsup_{t\\to\\infty}\\int_{|x|\\le r}|\\nabla u(t,x)|^2\\,dx\\le K_Z\n```\n\n\nhold for every $`u_0`$ and every $`r>0`$? This is published Conjecture 3 of [1]. The stationary set includes excited states, and the target has no radial or small-data restriction.",
+  "full_original_page": "# 1062. Late-time local mass and kinetic energy of Hartree atoms\n\n**Area:** Nonlinear waves, fluids and kinetic equations\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix $`Z>0`$. For any $`u_0\\in H^1(\\mathbb R^3;\\mathbb C)`$, let $`u`$ be the global energy-space solution of\n\n```math\ni\\partial_tu=-\\Delta u-\\frac Z{|x|}u+\n\\bigl(|\\cdot|^{-1}*|u|^2\\bigr)u,\\qquad u(0)=u_0.\n```\n\n\nDefine the set of stationary states\n\n```math\n\\mathcal A_Z=\\left\\{\\phi\\in H^1(\\mathbb R^3;\\mathbb C):\n-\\Delta\\phi-\\frac Z{|x|}\\phi+\n\\bigl(|\\cdot|^{-1}*|\\phi|^2\\bigr)\\phi=\\lambda\\phi\n\\text{ for some }\\lambda\\le0\\right\\},\n```\n\n\nwhere the equation is understood distributionally. Set\n\n```math\nM_Z=\\sup_{\\phi\\in\\mathcal A_Z}\\|\\phi\\|_2^2,\n\\qquad K_Z=\\sup_{\\phi\\in\\mathcal A_Z}\\|\\nabla\\phi\\|_2^2.\n```\n\n\nThese constants are finite. Must both inequalities\n\n```math\n\\limsup_{t\\to\\infty}\\int_{|x|\\le r}|u(t,x)|^2\\,dx\\le M_Z,\n\\qquad\n\\limsup_{t\\to\\infty}\\int_{|x|\\le r}|\\nabla u(t,x)|^2\\,dx\\le K_Z\n```\n\n\nhold for every $`u_0`$ and every $`r>0`$? This is published Conjecture 3 of [1]. The stationary set includes excited states, and the target has no radial or small-data restriction.\n\n## Application\n\nIn this repulsive Hartree model of an atom, the nucleus attracts the electron density while that density repels itself. The question bounds the amount of matter and kinetic energy that can remain near the nucleus at late times, independently of the initial total mass and energy.\n\n## References\n\n1. E. Lenzmann and M. Lewin, [*Dynamical ionization bounds for atoms*](https://msp.org/apde/2013/6-5/apde-v6-n5-p07-p.pdf), *Analysis & PDE* **6**(5) (2013), 1183–1211, [DOI](https://doi.org/10.2140/apde.2013.6.1183). Equations (1-1), (1-3), (1-4), Conjecture 3 and Theorem 4, pp. 1184–1188. [Original arXiv record](https://arxiv.org/abs/1207.6898).\n\n## Status review\n\n\n**Known cases:** The target uses unaveraged late-time limsups bounded by actual stationary suprema for the nuclear Hartree equation. Time-averaged ionization estimates and other scattering models do not imply it.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe target uses unaveraged late-time limsups bounded by actual stationary suprema for the nuclear Hartree equation. Time-averaged ionization estimates and other scattering models do not imply it.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked 23 October 2026. No proof or announced complete solution matching this target was found in bounded current searches. Theorem 4 of [1] gives time-averaged bounds; it does not establish these limsups. The kinetic target uses the actual stationary supremum $`K_Z`$.\n\nThe 2026 mass-critical Hartree scattering result concerns $`|x|^{-2}`$ interactions without a nuclear potential; the long-range linear scattering result also does not supply these bounds. Existing AIM 098/099 concern static fermionic atoms or molecules, AIM 201 concerns pseudo-relativistic boson-star uniqueness, and AIM 441 concerns a different coupled laser model. No equivalent target was found among admitted, pending or rejected FURTHER findings.\n\nThe [coordinator review](../FURTHER_problems/_tracking/hartree-dynamical-ionization-coordinator-review-2026-10-23.json), [independent review](../FURTHER_problems/_tracking/parallel/continuum/author-books-cue-breadth-20261022/hartree-dynamical-ionization-independent-bounded-check-20261023.json) and [all-status duplicate audit](../FURTHER_problems/_tracking/hartree-dynamical-ionization-all-status-duplicates-2026-10-23.json) record the exact passages, current source comparisons and search limits. These are selected-passage and status reviews, not exhaustive absence certificates or complete proof audits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-e1032734b6c12b57**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Hartree dynamical ionization",
+    "Lenzmann Lewin",
+    "local mass kinetic"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "Hartree dynamical ionization unaveraged limsup Lenzmann Lewin 2026"
+    },
+    {
+      "query": "Hartree nuclear dynamical ionization limsup",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://msp.org/apde/2013/6-5/apde-v6-n5-p07-p.pdf",
+      "locator": "Conjecture3eq1.7–1.8/Theorem4eq1.9–1.13printed1187–1188"
+    }
+  ],
+  "scope_comparison": "Timeaveragedbound4Z/generalor2Zradialnotunaveragedlate-timelimsupbyactualstationarysupremaMZ,KZ. Stationarychargeandothermass-criticalHartreescatteringinteraction|x|^-2withoutnucleusare differentmodel/quantifiers. Bothmassandkineticstatementsretained. No complete match.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative search does not establish continued openness. Candidate theorem bodies with plausible thematic overlap inspected; not full proof certification. 1061October20KITPDFwebaccess unavailable, no plausible all-datafullclaim observed;1063StruwePDFtimeout means booksourceparitynotfullyrechecked.",
+  "announcement_routing": {
+    "localID": "1062",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Hartree dynamical ionization",
+          "Lenzmann Lewin",
+          "local mass kinetic"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Hartree dynamical ionization",
+          "Lenzmann Lewin",
+          "local mass kinetic"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Hartree dynamical ionization",
+        "Lenzmann Lewin",
+        "local mass kinetic"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

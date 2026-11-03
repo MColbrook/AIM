@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "627",
+  "manifest_index": 488,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "627",
+    "title": "Generic one-to-one boundary parametrization of the SDP-exact distance region",
+    "area": "Algebraic geometry of continuous optimization",
+    "file": "problems/627-generic-one-to-one-boundary-parametrization-of-the-sdp-exact-distance-region.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b02802c5cb142ede",
+    "group": "optimization-information",
+    "source_sha256": "7f6331c8f025d2659f7d49460e9dbc473543e949e4659b68ec03b2b39073194d",
+    "statement_sha256": "dd61e9b593534c8659eab8fe1e3268ebacb9b3de62452e1679716cd6d75a4133",
+    "state": "unreviewed"
+  },
+  "source_sha256": "7f6331c8f025d2659f7d49460e9dbc473543e949e4659b68ec03b2b39073194d",
+  "statement_sha256": "dd61e9b593534c8659eab8fe1e3268ebacb9b3de62452e1679716cd6d75a4133",
+  "actual_source_sha256": "7f6331c8f025d2659f7d49460e9dbc473543e949e4659b68ec03b2b39073194d",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix $`2\\le m\\le n`$. Choose generic quadratic polynomials\n```math\nf_i(x)=x^TA_ix+2a_i^Tx+\\alpha_i,\\qquad i=1,\\ldots,m,\n```\n\nwith real symmetric $`n\\times n`$ matrices $`A_i`$, vectors $`a_i`$, and scalars $`\\alpha_i`$. Generic means outside a proper algebraic exceptional set of coefficients. Work over $`\\mathbb C`$ in the projective construction below.\n\nLet $`X\\subset\\mathbb P^n_{\\mathbb C}`$ be the complete intersection\n```math\nx^TA_ix+2x_0a_i^Tx+\\alpha_ix_0^2=0\\quad(i=1,\\ldots,m),\n```\n\nand let $`Y\\subset\\mathbb P^m_{\\mathbb C}`$ be the hypersurface\n```math\n\\det\\!\\left(\\lambda_0I_n-\\sum_{i=1}^m\\lambda_iA_i\\right)=0.\n```\n\nConsider\n```math\nF:X\\times Y\\longrightarrow\\mathbb P^n_{\\mathbb C},\\qquad\n([x_0:x],[\\lambda_0:\\lambda])\\longmapsto\n\\left[\\lambda_0x_0:\\lambda_0x-\\sum_{i=1}^m\\lambda_i(A_ix+x_0a_i)\\right].\n```\n\nFor generic coefficients this map is base-point free. Is its fiber a single point over a dense open subset of its image, componentwise if the image is reducible?\n\nEquivalently, is the degree of this projection one, so that its image hypersurface has degree\n```math\nm\\,2^m\\binom{n}{m}?\n```\n\nWhen $`m=n`$, $`X`$ is a finite set and the product is reducible; the question retains the componentwise generic-fiber meaning. It does not assert that arbitrary generic real data have a nonempty real feasible set or that every complex component occurs in its real boundary.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"SDP exactness\" \"Conjecture 5.7\" 2026",
+    "\"SDP exactness\" \"Conjecture 5.7\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "version_or_date": "v2, 5 January 2019",
+      "url": "https://arxiv.org/html/1804.01796v2",
+      "scope_comparison": "The primary statement conjectures degree(pi)=1 for m>=2 and supports it only computationally. Theorem5.6 divides by the unknown degree. The local componentwise generic complex-fiber statement cannot be inferred from individual real Voronoi cells or general QCQP algebraic-degree formulas.",
+      "locator": "Theorem 5.6; Conjecture 5.7, lines 525–534"
+    }
+  ],
+  "outcome": "no-match",
+  "recommended_status": "Open",
+  "rationale": "The primary statement conjectures degree(pi)=1 for m>=2 and supports it only computationally. Theorem5.6 divides by the unknown degree. The local componentwise generic complex-fiber statement cannot be inferred from individual real Voronoi cells or general QCQP algebraic-degree formulas.",
+  "latest_version_check": "v2, 5 January 2019",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

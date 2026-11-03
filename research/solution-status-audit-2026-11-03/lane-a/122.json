@@ -1,0 +1,71 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "122",
+  "manifest_index": 94,
+  "original_target": {
+    "id": "122",
+    "title": "Exact minimum length of an opaque barrier for a square",
+    "area": "Geometric optimization / sensing",
+    "file": "problems/122-shortest-opaque-square-barrier.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse2",
+    "source_sha256": "378305fbd781da897d53f35ed0f59d35ce7b60e7084ed74642395b715bc2ecd7",
+    "statement_sha256": "f068e28ac6fa84587a913707d1ae8d39a7792cb841cf033887f0679445fde3d3",
+    "state": "unreviewed"
+  },
+  "source_sha256": "378305fbd781da897d53f35ed0f59d35ce7b60e7084ed74642395b715bc2ecd7",
+  "statement_sha256": "f068e28ac6fa84587a913707d1ae8d39a7792cb841cf033887f0679445fde3d3",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:15:32.954589+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Kiderlen–Pausinger2026 Theorem1.2(i) gives only the lower bound2+6.3e-5 for arbitrary rectifiable square barriers. It does not match the known upper construction or determine the unrestricted infimum. Connected/interior restrictions cannot settle the local problem.",
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s10474-026-01606-x",
+      "locator": "Theorem1.2(i), Section3.1",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"opaque\" \"square\" \"barrier\" 2026 optimal",
+    "\"opaque square\" (site:zenodo.org OR site:hal.science OR site:github.com) optimal"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "opaque square",
+        "opaque set",
+        "barrier square"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "opaque square",
+        "opaque set",
+        "barrier square"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

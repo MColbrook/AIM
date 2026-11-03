@@ -1,0 +1,41 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 271,
+  "source_sha256": "7d1a60340c84cdd2366f605d0afff9c8457be71adf3ded40461b9ed3fe5ea8ae",
+  "statement_sha256": "797b94848f9a4091f69f16e4670077100734ba816fcd2f94880796f33b59bbb6",
+  "original_target": {
+    "id": "333",
+    "title": "List edge-colouring with no extra colours",
+    "area": "Scheduling, resource allocation and graph colouring",
+    "file": "problems/333-list-edge-colouring.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-18",
+    "group": "stochastic3",
+    "source_sha256": "7d1a60340c84cdd2366f605d0afff9c8457be71adf3ded40461b9ed3fe5ea8ae",
+    "statement_sha256": "797b94848f9a4091f69f16e4670077100734ba816fcd2f94880796f33b59bbb6",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "333",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"list edge coloring conjecture\" proof 2026",
+    "\"list edge\" \"conjecture\" proof site:zenodo.org OR site:hal.science OR site:github.com 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.22895v2",
+      "version": "v2 16 September 2026",
+      "locators": "Theorems 1.1–1.2; section 6",
+      "body_inspected": true,
+      "scope": "Prime-indexed complete graphs K_(p-1), K_(2p) and specified matching deletions, even in online form; not all multigraphs."
+    }
+  ],
+  "registry_checks": "Palomar list-edge alias only routes to bipartite multigraph host completion using Galvin; no unrestricted claim. Hexagon/OpenAI full metadata checked. Focused arXiv, Zenodo, HAL and GitHub searches.",
+  "scope_comparison": "Arbitrary loopless multigraphs and arbitrary edge lists of exactly chromatic-index size are required. Restricted complete/bipartite graphs and asymptotic multiplicative slack do not cover all inputs.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. September latest primary theorem remains a graph-family result."
+}

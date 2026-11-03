@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "594",
+  "manifest_index": 459,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "594",
+    "title": "Connectivity of plane spanning-path reconfiguration",
+    "area": "Computational geometry and geometric reconfiguration",
+    "file": "problems/594-plane-spanning-path-connectivity.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "ca1ee49b05ba200bba5318485af91d9a73164bac3e40d067bb590c75b04db312",
+    "statement_sha256": "4d152649c4cf95dba8df12e100bcc569b10a1bede88c76645a2cd1aebedb5374",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ca1ee49b05ba200bba5318485af91d9a73164bac3e40d067bb590c75b04db312",
+  "statement_sha256": "4d152649c4cf95dba8df12e100bcc569b10a1bede88c76645a2cd1aebedb5374",
+  "actual_source_sha256": "ca1ee49b05ba200bba5318485af91d9a73164bac3e40d067bb590c75b04db312",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`P\\subset\\mathbb R^2`$ be a finite set of at least three points with no three collinear. Form a graph $`\\mathcal F(P)`$ whose vertices are all non-crossing straight-line Hamiltonian paths on $`P`$, viewed as undirected edge sets. Two vertices of $`\\mathcal F(P)`$ are adjacent if one path can be obtained from the other by deleting one edge and inserting one edge, leaving a non-crossing Hamiltonian path. Endpoints may change, and the deleted and inserted edges may cross each other.\n\nProve or disprove that $`\\mathcal F(P)`$ is connected for every such point set $`P`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"plane spanning paths\" connectivity proof 2026",
+    "\"spanning path\" connectivity (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar.ai OR site:hexagonmath.org)",
+    "\"plane spanning paths\" connectivity (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web / primary author and publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2407.03912",
+      "version_or_date": "v1, 4 July 2024",
+      "locator": "Theorems 3–6 and Definitions in Section 2",
+      "inspection": "Read theorem/conjecture body, not only title or abstract",
+      "scope_comparison": "Theorem 6 establishes connectivity only when the point set has at most two convex layers. Theorem 4 controls suffix-independent paths. The local target permits arbitrary finite general-position sets and all spanning paths. Spanning-tree connectivity allows branching and is insufficient."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "No full matching resolution or complete announcement identified in these bounded searches. Theorem 6 establishes connectivity only when the point set has at most two convex layers. Theorem 4 controls suffix-independent paths. The local target permits arbitrary finite general-position sets and all spanning paths. Spanning-tree connectivity allows branching and is insufficient.",
+  "latest_version_check": "arXiv abstract/version record inspected 2026-11-03; cited version is latest displayed. No withdrawal banner observed.",
+  "gap_retraction_check": "No full matching candidate located to audit for a known gap. This is not independent verification of cited restricted results; no assurance of continued openness.",
+  "announcement_qualification": null,
+  "limitations": [
+    "Search-engine repository coverage is bounded; absence of a hit is not a certified openness claim.",
+    "No theorem was promoted from an index entry alone."
+  ]
+}

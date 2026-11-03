@@ -1,0 +1,69 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "468",
+  "manifest_index": 371,
+  "original_target": {
+    "id": "468",
+    "title": "Instantaneous spreading for fractional-pressure flow in several dimensions",
+    "area": "Nonlocal PDEs; propagation of a diffusing front",
+    "file": "problems/468-fractional-pressure-multidimensional-instantaneous-spread.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "0410b7fcf37419b1f3881ec3d654d36c28e3dbf9b171c13833803337cdb0aef0",
+    "statement_sha256": "746b5e5a6c5600ec5c4e5484d057f92e824bd783e1ec72cf9082148b08c9e3e4",
+    "state": "unreviewed"
+  },
+  "source_sha256": "0410b7fcf37419b1f3881ec3d654d36c28e3dbf9b171c13833803337cdb0aef0",
+  "statement_sha256": "746b5e5a6c5600ec5c4e5484d057f92e824bd783e1ec72cf9082148b08c9e3e4",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:17:43.818258+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The actual2026 review Section2 states the infinite propagation theorem only in dimension one. No matching all-energy-solutions theorem for N>=2 and1<m<2 located; finite propagation for m>=2 and profile-level spreading do not answer the local question.",
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09752-y",
+      "locator": "Section2 propagation review, one-dimensional restriction",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "fractional-pressure",
+    "nonlocal pressure"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "fractional-pressure",
+        "nonlocal pressure"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "fractional-pressure",
+        "nonlocal pressure"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

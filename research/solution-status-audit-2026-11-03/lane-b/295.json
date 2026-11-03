@@ -1,0 +1,44 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 237,
+  "source_sha256": "abd036b561bf850e6880eadad5b82e5448ff9ddbe2b8581219ad7ee823a98d6f",
+  "statement_sha256": "01f3ad9654d780732b6a2a56b75e55a93b5fa8f47055130e46df2bc32ab6f23f",
+  "original_target": {
+    "id": "295",
+    "title": "Dirichlet spectral determination of smooth strictly convex planar domains",
+    "area": "Spectral theory and spectral geometry",
+    "file": "problems/295-convex-dirichlet-spectrum.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "spectral",
+    "source_sha256": "abd036b561bf850e6880eadad5b82e5448ff9ddbe2b8581219ad7ee823a98d6f",
+    "statement_sha256": "01f3ad9654d780732b6a2a56b75e55a93b5fa8f47055130e46df2bc32ab6f23f",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "295",
+  "outcome": "no-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Target concerns complete Dirichlet spectra of arbitrary smooth strictly convex planar domains. Hu–Shi–Tang current Theorem1.1.2 gives strictly convex analytic isospectral pairs for Steklov, not Dirichlet. No implication across boundary conditions; local ellipse or symmetric rigidity still restricts domain classes. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "smooth strictly convex Dirichlet isospectral planar domains solved 2026",
+    "\"strictly convex\" \"Dirichlet\" isospectral (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.10557",
+      "version": "current HTML accessed3November2026",
+      "locator": "Theorem1.1.2",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "isospectral|spectral.*rigid|hear.*shape",
+    "palomar_matches": 1,
+    "hexagon_matches": 1,
+    "result": "Palomar Steklov formalization version2 matches the different boundary condition; Hexagon Euclidean independence-density result is unrelated."
+  }
+}

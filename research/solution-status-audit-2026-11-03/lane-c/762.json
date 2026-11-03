@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "762",
+  "manifest_index": 606,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "762",
+    "title": "Maximum total number of lines on a smooth complex surface",
+    "area": "Geometry and topology",
+    "file": "problems/762-maximum-total-number-of-lines-on-a-smooth-complex-surface.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-043542eb7fc9e01a",
+    "group": "geometry-topology",
+    "source_sha256": "b7cdebd81c9e2f4519228ccbed91eda3ba3e8920a6f541a479b218706ed8e051",
+    "statement_sha256": "35a2d0402779b6d38df45a18e43652bc110773bc5556bb79b07056e935230502",
+    "state": "unreviewed"
+  },
+  "source_sha256": "b7cdebd81c9e2f4519228ccbed91eda3ba3e8920a6f541a479b218706ed8e051",
+  "statement_sha256": "35a2d0402779b6d38df45a18e43652bc110773bc5556bb79b07056e935230502",
+  "actual_source_sha256": "b7cdebd81c9e2f4519228ccbed91eda3ba3e8920a6f541a479b218706ed8e051",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For an integer $`d`$, let $`\\mathcal H_d`$ consist of every smooth degree-$`d`$ hypersurface $`X\\subset\\mathbb P^3(\\mathbb C)`$. A line means a complex projective line wholly contained in $`X`$, counted once as a geometric subset. The surface varies over all of $`\\mathcal H_d`$.\n\nWrite $`L(X)`$ for the number of lines contained in $`X`$ and set\n\n```math\nL_d=\\max_{X\\in\\mathcal H_d}L(X).\n```\n\n\nDetermine $`L_d`$ for every integer $`d\\ge5`$. In particular, determine the exact value of $`L_5`$.\n\nThese are finite attained integer maxima. There is no Fermat, symmetry, genericity or prescribed-configuration assumption, and intersecting lines are included.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"smooth quintic\" \"lines\" \"2026\" maximum 85",
+    "\"lines surfaces\" maxima (site:zenodo.org OR site:hal.science OR site:github.com)",
+    "quintic lines (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"2609.26862\" correction OR gap OR withdrawn"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The actual theorem constructs a smooth quintic pencil whose members have exactly 85 lines. This improves the lower bound for the maximum but does not prove 85 is an upper bound over all smooth quintics. Its introduction retains the general d>=5 extremum as unknown and cites the universal quintic upper bound 127. Counting skew lines on fixed Fermat surfaces changes both objective and class. No matching exact L5 or all-degree maximum announcement found.",
+      "version_or_date": "v1, 22 September 2026; current arXiv history inspected 3 November",
+      "primary_body_access_gap": false,
+      "locator": "Introduction and Theorem 1.1; §3 construction",
+      "url": "https://arxiv.org/html/2609.26862v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual theorem constructs a smooth quintic pencil whose members have exactly 85 lines. This improves the lower bound for the maximum but does not prove 85 is an upper bound over all smooth quintics. Its introduction retains the general d>=5 extremum as unknown and cites the universal quintic upper bound 127. Counting skew lines on fixed Fermat surfaces changes both objective and class. No matching exact L5 or all-degree maximum announcement found.",
+  "latest_version_check": "v1, 22 September 2026; current arXiv history inspected 3 November",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

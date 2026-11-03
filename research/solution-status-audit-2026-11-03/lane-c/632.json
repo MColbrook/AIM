@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "632",
+  "manifest_index": 491,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "632",
+    "title": "Classifying Costas polynomials over extension fields",
+    "area": "Finite-field signal design",
+    "file": "problems/632-costas-polynomial.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "optimization-information",
+    "source_sha256": "d5ae1cf59f9ede465b08f26f525f10a09a6ce9de55e334deda995e7144d06c38",
+    "statement_sha256": "b346bdb1445d9f67e830e72fbb7abac4313c742d50b93f72b10e69dc8d61e682",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d5ae1cf59f9ede465b08f26f525f10a09a6ce9de55e334deda995e7144d06c38",
+  "statement_sha256": "b346bdb1445d9f67e830e72fbb7abac4313c742d50b93f72b10e69dc8d61e682",
+  "actual_source_sha256": "d5ae1cf59f9ede465b08f26f525f10a09a6ce9de55e334deda995e7144d06c38",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`q=p^r`$, where $`p`$ is prime and $`r\\ge2`$. Suppose $`f:\\mathbb F_q\\to\\mathbb F_q`$ satisfies $`f(0)=0`$ and, for every $`d\\in\\mathbb F_q\\setminus\\{1\\}`$, the map\n\n```math\nx\\longmapsto f(dx)-f(x)\n```\n\nis a permutation of $`\\mathbb F_q`$. Must there exist a positive integer $`s`$ with $`\\gcd(s,q-1)=1`$ and an invertible $`\\mathbb F_p`$-linear map $`L:\\mathbb F_q\\to\\mathbb F_q`$ such that\n\n```math\nf(x)=L(x^s)\\qquad\\text{for every }x\\in\\mathbb F_q?\n```\n\nEquivalently, representing functions by polynomials modulo $`x^q-x`$, must every Costas polynomial be a permutation monomial followed by a linearized permutation polynomial $`L(x)=\\sum_{j=0}^{r-1}a_jx^{p^j}`$?",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Costas polynomials\" classification extension 2026",
+    "\"Costas polynomials\" classification extension (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2606.07097",
+      "primary_body_access_gap": false,
+      "scope_comparison": "The2026 paper retains the complete Costas-polynomial classification as an equivalent orthomorphism conjecture. Finite enumeration and shifting-condition/prime-field results do not cover all extension fields or all allowed functions.",
+      "version_or_date": "v1,5June2026; latest record inspected",
+      "locator": "Unnamed Conjecture, lines96–102"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The2026 paper retains the complete Costas-polynomial classification as an equivalent orthomorphism conjecture. Finite enumeration and shifting-condition/prime-field results do not cover all extension fields or all allowed functions.",
+  "latest_version_check": "v1,5June2026; latest record inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "901",
+  "manifest_index": 745,
+  "checked_date": "2026-11-03",
+  "source_sha256": "d85f631f48c2a4bf3d338fd579732733ba057c1d1e3f4b34f87d157ad3782734",
+  "statement_sha256": "f43b682ac502516bff975c87edf8c1c5dcae6a5ed6dfaca0b53548ac1f6e9722",
+  "original_target": {
+    "id": "901",
+    "title": "Finite-dimensional detection of almost-periodic Banach cocycles",
+    "area": "Operators, matrices and computation",
+    "file": "problems/901-finite-dimensional-detection-of-almost-periodic-banach-cocycles.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-4880a1c2c2498869",
+    "group": "operators",
+    "source_sha256": "d85f631f48c2a4bf3d338fd579732733ba057c1d1e3f4b34f87d157ad3782734",
+    "statement_sha256": "f43b682ac502516bff975c87edf8c1c5dcae6a5ed6dfaca0b53548ac1f6e9722",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`G`$ be any locally compact Hausdorff group and $`V`$ a real Banach space. Let $`\\pi:G\\to\\mathrm{GL}(V)`$ be a strongly continuous representation by bounded linear isomorphisms, such that every orbit $`\\{\\pi(g)v:g\\in G\\}`$ has compact closure in norm.\n\nSuppose a continuous map $`b:G\\to V`$ satisfies\n```math\nb(gh)=b(g)+\\pi(g)b(h)\n```\n\nand does not belong to the closure of\n```math\nB^1(G,V)=\\{g\\mapsto v-\\pi(g)v:v\\in V\\}\n```\n\nin the topology of uniform convergence on compact subsets of $`G`$.\n\nMust there exist a closed $`\\pi(G)`$-invariant subspace $`W\\subset V`$, with $`0<\\dim(V/W)<\\infty`$, such that\n```math\n\\sup_{g\\in G}\\|b(g)+W\\|_{V/W}=\\infty?\n```\n\nThere is no compact-generation, countability, reflexivity or uniform dimension assumption. Closure need not be sequential.",
+  "full_original_page": "# 901. Finite-dimensional detection of almost-periodic Banach cocycles\n\n**Area:** Operators, matrices and computation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`G`$ be any locally compact Hausdorff group and $`V`$ a real Banach space. Let $`\\pi:G\\to\\mathrm{GL}(V)`$ be a strongly continuous representation by bounded linear isomorphisms, such that every orbit $`\\{\\pi(g)v:g\\in G\\}`$ has compact closure in norm.\n\nSuppose a continuous map $`b:G\\to V`$ satisfies\n```math\nb(gh)=b(g)+\\pi(g)b(h)\n```\n\nand does not belong to the closure of\n```math\nB^1(G,V)=\\{g\\mapsto v-\\pi(g)v:v\\in V\\}\n```\n\nin the topology of uniform convergence on compact subsets of $`G`$.\n\nMust there exist a closed $`\\pi(G)`$-invariant subspace $`W\\subset V`$, with $`0<\\dim(V/W)<\\infty`$, such that\n```math\n\\sup_{g\\in G}\\|b(g)+W\\|_{V/W}=\\infty?\n```\n\nThere is no compact-generation, countability, reflexivity or uniform dimension assumption. Closure need not be sequential.\n\n## Application\n\nThe question asks whether an obstruction to approximate fixed points of an affine Banach-space action can always be witnessed in a finite-dimensional quotient.\n\n## References\n\n- Y. Cornulier and R. Tessera, *On the vanishing of reduced 1-cohomology for Banach representations*, Ann. Inst. Fourier **70** (2020), 1951-2003, [DOI](https://doi.org/10.5802/aif.3363), [2017 primary](https://arxiv.org/html/1711.05566v1), **Definition 4.1 and Question 4.6**; [published text](https://www.numdam.org/item/10.5802/aif.3363.pdf), pp. 1971-1973.\n- A. Thom, *Sublinear growth of 1-cocycles and uniform convexity* (2026), [primary](https://arxiv.org/html/2603.22049v1). Its mixing and Banach-space hypotheses differ from this target.\n\n## Status review\n\n\n**Known cases:** The source proves the finite-quotient detection property for special structured groups and the unitary Hilbert version. Mixing-cocycle or uniform-convexity results impose different representation assumptions. Compact-open closure of coboundaries cannot be replaced by failure to be a single coboundary.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe source proves the finite-quotient detection property for special structured groups and the unitary Hilbert version. Mixing-cocycle or uniform-convexity results impose different representation assumptions. Compact-open closure of coboundaries cannot be replaced by failure to be a single coboundary.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\n**Partial progress; checked 29 October 2026.** The unitary Hilbert version is positive. The source also proves the relevant detection property for compactly generated groups of polynomial growth and other structured classes. These do not exhaust the stated Banach and group hypotheses. No matching complete theorem, counterexample, announcement or AIM/private duplicate was found.\n\nThis is the source's property $`\\mathcal{AP}_{\\mathrm{fd}}`$. Failure to be a single exact coboundary is insufficient; the compact-open closure is essential.\n\nReview evidence: [owner](../FURTHER_problems/_tracking/focused-APfd-finite-factor-detection-C234-C-20261028/OWNER-EXACT-ALMOST-PERIODIC-BANACH-COCYCLE-FINITE-QUOTIENT-DETECTION-APFD-PRIMARY-PUBLISHED-CURRENT-DUPLICATE-PROPOSAL.json), [independent model review](../FURTHER_problems/_tracking/focused-APfd-finite-factor-detection-C234-C-20261028/A-INDEPENDENT-APFD-STRONG-CONTINUITY-COMPACT-OPEN-CLOSURE-AND-FINITE-QUOTIENT-MODEL-PEER-PASS.json), [coordinating review](../FURTHER_problems/_tracking/focused-APfd-finite-factor-detection-C234-C-20261028/ROOT-EXACT-APFD-COMPACT-OPEN-REDUCED-COCYCLE-CURRENT-AND-SEMANTIC-FINAL-REVIEW.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-4880a1c2c2498869**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"almost periodic\" \"Banach\" \"finite dimensional quotient\" cocycle 2026",
+    "\"almost periodic\" \"cocycle\" \"finite\" (site:zenodo.org OR site:hal.science OR site:github.com)",
+    "almost periodic Banach cocycle finite dimensional quotient; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1711.05566v1",
+      "locator": "Questions4.6 and4.7, lines618–627",
+      "comparison": "Exact almost-periodic representation formulation is Question4.7 in cited v1, while Question4.6 asks broader APfd property. Hilbert result does not cover every Banach space/locally compact group."
+    },
+    {
+      "url": "https://arxiv.org/html/2603.22049v1",
+      "locator": "Introduction representation definitions and main theorem setting, lines41 onward",
+      "comparison": "Finitely generated group, superreflexive Banach space, c0/mixing representation; sublinear-growth conclusion is not finite-quotient detection for arbitrary almost-periodic Banach representations."
+    }
+  ],
+  "rationale": "No full matching result located; closest fresh theorem has distinct representation and group hypotheses.",
+  "recommended_citation_correction": "For arXiv1711.05566v1 cite Question4.7 for the displayed exact quantified cocycle question; preserve original target.",
+  "announcement_routing": {
+    "localID": "901",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "almost periodic",
+          "Banach cocycle",
+          "APfd"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-18-000015",
+            "title": "The local dynamical structure of Δ* sets via a new Furstenberg family algebra",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000015-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "almost periodic",
+          "Banach cocycle",
+          "APfd"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "almost periodic",
+        "Banach cocycle",
+        "APfd"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "The Delta-star-set dynamical/Furstenberg-family result does not assert detection of Banach-valued almost-periodic cocycles by all finite-dimensional representations.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.699Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

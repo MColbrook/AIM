@@ -1,0 +1,75 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "465",
+  "manifest_index": 369,
+  "original_target": {
+    "id": "465",
+    "title": "Optimal nonlocal obstacle regularity with a minimally smooth obstacle",
+    "area": "Nonlocal free-boundary PDEs; optimal stopping",
+    "file": "problems/465-nonlocal-obstacle-minimal-smoothness.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "e4b1026e865db4be44f2d314c5fdc92c6527d474e6ccab93dfeec64abfa0760c",
+    "statement_sha256": "292d8da28eef983517e1b536c3b936fe810c2e69f7be66e802617c12d4243027",
+    "state": "unreviewed"
+  },
+  "source_sha256": "e4b1026e865db4be44f2d314c5fdc92c6527d474e6ccab93dfeec64abfa0760c",
+  "statement_sha256": "292d8da28eef983517e1b536c3b936fe810c2e69f7be66e802617c12d4243027",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:17:43.248912+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The primary semiconvexity result Corollary1.3 requires beta>1+2s, leaving local interesting interval1+s<beta<=1+2s uncovered. A newer obstacle preprint23478700 concerns contact-set convergence with additional hypotheses and its PDF was inaccessible; no full matching announcement identified.",
+  "primary_sources": [
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/cpa.22237",
+      "locator": "Corollary1.3, obstacle smoothness threshold",
+      "body_inspected": true
+    },
+    {
+      "url": "https://zenodo.org/records/23478700",
+      "locator": "Record abstract only; PDF inaccessible",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "obstacle regularity",
+    "semiconvexity"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "obstacle regularity",
+        "semiconvexity"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "obstacle regularity",
+        "semiconvexity"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Newer contact-set preprint body inaccessible; abstract's topic/hypotheses excluded full matching regularity theorem."
+  ],
+  "canonical_update_required": false
+}

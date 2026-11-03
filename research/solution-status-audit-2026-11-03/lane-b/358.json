@@ -1,0 +1,49 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 293,
+  "source_sha256": "0ec7d50dbe0264652c8a16291e1271b640bb3ea2733bd26e5fb5addeb44f9905",
+  "statement_sha256": "1d9275ce80627ec5384fd6c62ceae9e96dce66242ba1d6cae6770c32c370df73",
+  "original_target": {
+    "id": "358",
+    "title": "Global regularity of the planar noncorotational FENE fluid",
+    "area": "Polymer rheology; kinetic–fluid coupling",
+    "file": "problems/358-fene-two-dimensional-regularity.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "0ec7d50dbe0264652c8a16291e1271b640bb3ea2733bd26e5fb5addeb44f9905",
+    "statement_sha256": "1d9275ce80627ec5384fd6c62ceae9e96dce66242ba1d6cae6770c32c370df73",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "358",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"FENE\" \"noncorotational\" \"2026\" global regularity",
+    "\"FENE\" \"global\" \"large\" \"two-dimensional\" 2026 non-corotational",
+    "\"FENE\" regularity site:zenodo.org OR site:hal.science OR site:github.com 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://math.nyu.edu/~masmoudi/Fene-global.pdf",
+      "version": "primary author text published Inventiones 2013",
+      "locators": "section 7 Regularity in 2D, PDF p.40",
+      "body_inspected": true,
+      "scope": "Weak global existence theorem and explicit separation of unrestricted planar smoothness; corotational model known."
+    },
+    {
+      "url": "https://arxiv.org/html/2408.00993v1",
+      "version": "v1 August 2024",
+      "locators": "Theorem 2.2 equation 2.1",
+      "body_inspected": true,
+      "scope": "Compressible FENE model, requires E0+E1 small depending on bounded higher energy M; not unrestricted large data."
+    }
+  ],
+  "registry_checks": "No FENE alias Palomar/Hexagon/OpenAI full metadata. Current arXiv, Zenodo, HAL, GitHub, primary author/publisher searches executed.",
+  "scope_comparison": "Need arbitrary smooth planar incompressible noncorotational gradient stretching, no x diffusion or smallness. Weak existence, skew-gradient cancellation, concentrated center-of-mass diffusion, compressible/restricted data and FENE-P closure have different assumptions or regularity.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Actual theorem-body restrictions retain the missing large-data smoothness."
+}

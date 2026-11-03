@@ -4,8 +4,8 @@ Five fresh Codex AI referee agents, each with no role in manuscript preparation,
 
 | AIM | PR | Outcome | Independent audit |
 | --- | --- | --- | --- |
-| 505 | [28](https://github.com/MColbrook/AIM/pull/28) | Uniform upwind estimate disproved | [Audit](505-review.md) |
-| 523 | [29](https://github.com/MColbrook/AIM/pull/29) | General smooth-amplitude bound disproved | [Audit](523-review.md) |
+| 505 | [28](https://github.com/MColbrook/AIM/pull/28) | Uniform upwind estimate disproved | [Audit](../../../cut_problems/research/solution_reviews/2026-10-04-active-prs/505-review.md) |
+| 523 | [29](https://github.com/MColbrook/AIM/pull/29) | General smooth-amplitude bound disproved | [Audit](../../../cut_problems/research/solution_reviews/2026-10-04-active-prs/523-review.md) |
 | 553 | [30](https://github.com/MColbrook/AIM/pull/30) | Sharp asymptotic established; exact non-power-of-two values remain open | [Audit](553-review.md) |
 | 570 | [31](https://github.com/MColbrook/AIM/pull/31) | Universal bound disproved using nonseparable spaces | [Audit](570-review.md) |
 | 641 | [32](https://github.com/MColbrook/AIM/pull/32) | Cubic assertion proved in every dimension; three quartic targets remain open | [Audit](641-review.md) |

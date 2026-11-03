@@ -1,0 +1,44 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 250,
+  "source_sha256": "0032bc025b691d6c66e868ce9b0588fdc496ad65e45ed3d4fab2ece669d48d1f",
+  "statement_sha256": "fc3e5d060bab5b2de37908621f4275e84d42702ea954c8a907fbcf92dd8a5bd2",
+  "original_target": {
+    "id": "309",
+    "title": "Equal-weight decomposition of quantum channels with bounded Kraus rank",
+    "area": "Quantum information and channel simulation",
+    "file": "problems/309-ruskai-audenaert-decomposition.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-17",
+    "group": "spectral3",
+    "source_sha256": "0032bc025b691d6c66e868ce9b0588fdc496ad65e45ed3d4fab2ece669d48d1f",
+    "statement_sha256": "fc3e5d060bab5b2de37908621f4275e84d42702ea954c8a907fbcf92dd8a5bd2",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "309",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Target is every m,n>=2, exactly n equal-weight CPTP components, each Kraus rank<=m. Kumar–Wolf current Conjecture1 retains this strong exact equal-weight claim. Their theorems cover qubit input/output and classical-quantum classes, unequal-weight qutrit decompositions or more than n terms. Counterexamples for actual extreme points do not refute allowed generalized extreme rank-bounded channels. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "strong Ruskai Audenaert equal weight quantum channel decomposition conjecture solved 2026",
+    "\"Ruskai\" \"Audenaert\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2607.23066",
+      "version": "current HTML3November2026",
+      "locator": "Conjecture1; Theorems3–7",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "Ruskai|Audenaert|Kraus.rank|equipartition.*operator",
+    "palomar_matches": 0,
+    "hexagon_matches": 0,
+    "result": "No indexed matching claim."
+  }
+}

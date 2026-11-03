@@ -1,0 +1,44 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 251,
+  "source_sha256": "c1837e95aa89cf2e148e47eb7f478e9f4f14d34596a36ef7ab31c87709f1ae5a",
+  "statement_sha256": "f6b9b924262e5e03af40c8bcaee6261e7c259d2eae9d1e32f934ab9b2f614a01",
+  "original_target": {
+    "id": "310",
+    "title": "Deterministic identity testing for arithmetic circuits",
+    "area": "Symbolic computation and derandomization",
+    "file": "problems/310-deterministic-polynomial-identity-testing.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "operators",
+    "source_sha256": "c1837e95aa89cf2e148e47eb7f478e9f4f14d34596a36ef7ab31c87709f1ae5a",
+    "statement_sha256": "f6b9b924262e5e03af40c8bcaee6261e7c259d2eae9d1e32f934ab9b2f614a01",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "310",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Original unconditional deterministic Turing bit-polynomial white-box PIT for all rational arithmetic circuits with unary gate-degree promise. Shpilka–Tal Theorem1.1 only handles depth4 powering circuits with degree/fanin relation d=Omega(r^2); Theorem1.2 has stronger structure/degree conditions. Restricted formulas, nonassociative algebras and conditional hardness derandomization do not imply the target general circuit algorithm. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "general polynomial identity testing deterministic polynomial time proof 2026",
+    "\"polynomial identity testing\" deterministic (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2602.20832",
+      "version": "current HTML3November2026",
+      "locator": "Theorems1.1–1.2",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "identity.testing|\\bPIT\\b|hitting.set",
+    "palomar_matches": 0,
+    "hexagon_matches": 1,
+    "result": "The Hexagon Bawo pit-game result is a lexical false positive."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "808",
+  "manifest_index": 652,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "808",
+    "title": "Are canonical tangent cones of proper lower-curvature spaces separable?",
+    "area": "Metric geometry and synthetic curvature",
+    "file": "problems/808-are-canonical-tangent-cones-of-proper-lower-curvature-spaces-separable.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-7e38feadbb220f33",
+    "group": "geometry-topology",
+    "source_sha256": "cbd58410d3161ed024bf911f70b29dc2ebf00d7a33816f596d5900bb2e40dfc8",
+    "statement_sha256": "7abc42dfc37c9699a287796e28f801eb4063c17ce47e52b9437d934aeccd84ba",
+    "state": "unreviewed"
+  },
+  "source_sha256": "cbd58410d3161ed024bf911f70b29dc2ebf00d7a33816f596d5900bb2e40dfc8",
+  "statement_sha256": "7abc42dfc37c9699a287796e28f801eb4063c17ce47e52b9437d934aeccd84ba",
+  "actual_source_sha256": "cbd58410d3161ed024bf911f70b29dc2ebf00d7a33816f596d5900bb2e40dfc8",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\kappa\\in\\mathbb R`$ and let $`(X,d)`$ be a nonempty proper geodesic metric space with Alexandrov curvature bounded below by $`\\kappa`$. Proper means that every closed bounded subset is compact; geodesic means that every pair of points can be joined by a minimizing geodesic. No finite-dimensionality assumption is imposed. Properness also makes $`X`$ complete and separable, as required by the source setting.\n\nHere the curvature condition is lower triangle comparison: for every triangle of perimeter less than $`2D_\\kappa`$, the distance from a vertex to a point on a chosen opposite geodesic side is at least the corresponding distance in the comparison triangle in the simply connected surface of constant curvature $`\\kappa`$. Here $`D_\\kappa=\\infty`$ for $`\\kappa\\le0`$ and $`D_\\kappa=\\pi/\\sqrt{\\kappa}`$ for $`\\kappa>0`$ [1, Definition 2.1].\n\nFor $`p\\in X`$, consider nonconstant unit-speed minimizing geodesic germs from $`p`$. For two such germs $`\\gamma,\\eta`$, their Alexandrov angle is\n```math\n\\alpha(\\gamma,\\eta)=\\lim_{s,t\\downarrow0}\n\\arccos\\left(\\frac{s^2+t^2-d(\\gamma(s),\\eta(t))^2}{2st}\\right).\n```\n\nThe lower curvature bound ensures the limit exists. Identify germs whose angle is zero and complete the resulting angular metric space, obtaining the space of directions $`\\Sigma_pX`$. The **canonical tangent cone** is the Euclidean cone $`T_pX=C(\\Sigma_pX)`$, with metric\n```math\nd_T(r\\xi,s\\zeta)^2=r^2+s^2-2rs\\cos\\alpha(\\xi,\\zeta),\n\\qquad r,s\\ge0,\n```\n\nwhere all points with radius zero are identified. If there are no nonconstant germs, use the one-point cone.\n\nMust $`T_pX`$ be **separable for every $`p\\in X`$**? Equivalently, does each of these cone metric spaces have a countable dense subset?\n\nThis is the proper-space tangent-separability question discussed explicitly in [1, Remark 2.3], where its earlier formulation is attributed to Ohta. The canonical completion above is part of the question; an arbitrary pointed Gromov--Hausdorff blow-up or ultratangent is a different object in this generality.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"tangent cone\" separable proper Alexandrov 2026 solution",
+    "\"tangent cone\" separable proper Alexandrov (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"tangent cone\" separable proper Alexandrov (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "§2.1 canonical completed tangent definitions and Remark2.3pp2233–2235; https://comptes-rendus.academie-sciences.fr/mathematique/item/10.5802/crmath.66.pdf actual Theorem1p491",
+      "version_or_date": "FinalJEMS25(2023)2229–2250 primary body inspected; LeGouic finalCRMath358(2020)489–495 compared. Current bounded searches found no full solution.",
+      "scope_comparison": "Remark2.3 retains separability of the entire tangent for proper CBB spaces as unclear. The actual flatness Theorem1 states only that support of log-pushforward at an exponential barycenter lies in Lin_b, a Hilbert subspace. It does not assert all tangent directions arise in that support or all tangents are separable. Finite-dimensional RCD/CBB results and upper-curvature CAT examples have added/different curvature or dimension hypotheses. No matching proof or proper-CBB counterexample found.",
+      "url": "https://ems.press/content/serial-article-files/32870",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Remark2.3 retains separability of the entire tangent for proper CBB spaces as unclear. The actual flatness Theorem1 states only that support of log-pushforward at an exponential barycenter lies in Lin_b, a Hilbert subspace. It does not assert all tangent directions arise in that support or all tangents are separable. Finite-dimensional RCD/CBB results and upper-curvature CAT examples have added/different curvature or dimension hypotheses. No matching proof or proper-CBB counterexample found.",
+  "latest_version_check": "FinalJEMS25(2023)2229–2250 primary body inspected; LeGouic finalCRMath358(2020)489–495 compared. Current bounded searches found no full solution.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

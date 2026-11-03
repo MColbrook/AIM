@@ -1,0 +1,96 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "580",
+  "manifest_index": 448,
+  "original_target": {
+    "id": "580",
+    "title": "Does lower one-dimensional density above one half force planar rectifiability?",
+    "area": "Geometric measure theory",
+    "file": "problems/580-does-lower-one-dimensional-density-above-one-half-force-planar-rectifiability.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b30906ef8b2eafcc",
+    "group": "geometry-topology",
+    "source_sha256": "59afe6978a620d52a22d312bbc502f7be6367bf1f42c70b36c25a74adb98a7e5",
+    "statement_sha256": "c4de4b1cad46eacdd4644d98f48a2104208b844c8a94126a38f71df8c43a7ecd",
+    "state": "unreviewed"
+  },
+  "source_sha256": "59afe6978a620d52a22d312bbc502f7be6367bf1f42c70b36c25a74adb98a7e5",
+  "statement_sha256": "c4de4b1cad46eacdd4644d98f48a2104208b844c8a94126a38f71df8c43a7ecd",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T14:04:53.415945+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Theorem1.3 gives threshold0.7; the registered Palomarv2 improvement is only0.6934, still above the target strict1/2. Exact-half-density counterexamples do not refute strict greater-than-half. Kakeya-dimension formalizations are different.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2404.17536v2",
+      "locator": "Conjecture1.1 and Theorem1.3; current v2 23May2024",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2607.05206v1",
+      "locator": "Introduction theorem and product construction with exact density1/2",
+      "body_inspected": true
+    },
+    {
+      "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-02-000011-v2.json",
+      "locator": "Shared complete current listing, v2 20September2026, sigma_one_plane_le_6934_div_10000; source commit8b0e98aa712374c96da7e619624f5b36ed8d5fd3",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Besicovitch\" \"one half\" \"density\" \"2026\" rectifiable",
+    "\"Besicovitch\" \"1/2\" rectifiability solution [domains arxiv.org,zenodo.org,hal.science,github.com]"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "half-density",
+        "rectifiability",
+        "Besicovitch"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-09-02-000011",
+          "title": "A machine-checked bound of 0.6934 for Besicovitch's 1/2-problem"
+        },
+        {
+          "id": "PALOMAR-2026-09-19-000001",
+          "title": "NKBesicovitch"
+        },
+        {
+          "id": "PALOMAR-2026-08-19-000001",
+          "title": "rkirov/jordan_pick"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "half-density",
+        "rectifiability",
+        "Besicovitch"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Versioned record and pinned GitHub source inaccessible; metadata explicitly advertises only0.6934 and is not treated as a kernel audit."
+  ],
+  "canonical_update_required": false
+}

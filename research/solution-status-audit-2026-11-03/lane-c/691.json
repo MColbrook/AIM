@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "691",
+  "manifest_index": 535,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "691",
+    "title": "Finite-time singularities of the Chern–Ricci flow",
+    "area": "Complex analysis, geometric analysis and nonlinear PDEs",
+    "file": "problems/691-finite-time-singularities-of-the-chernricci-flow.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-69298731684a197e",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "620e486cf08cad7bde871dcd319d80591b614685eec2b0b0562f2f7299eb87c6",
+    "statement_sha256": "948f49133f8cdc287c20f6250d4d211375462ed7318f23635a206732997a2f7b",
+    "state": "unreviewed"
+  },
+  "source_sha256": "620e486cf08cad7bde871dcd319d80591b614685eec2b0b0562f2f7299eb87c6",
+  "statement_sha256": "948f49133f8cdc287c20f6250d4d211375462ed7318f23635a206732997a2f7b",
+  "actual_source_sha256": "620e486cf08cad7bde871dcd319d80591b614685eec2b0b0562f2f7299eb87c6",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`X`$ be a connected compact complex manifold of complex dimension $`n\\ge2`$, with an arbitrary smooth Hermitian metric $`\\omega_0`$. Let $`\\omega(t)`$ be its maximal smooth Chern–Ricci flow\n\n```math\n\\partial_t\\omega(t)=-\\mathrm{Ric}^{\\mathrm{Ch}}(\\omega(t)),\\qquad \\omega(0)=\\omega_0,\n```\n\n\non $`[0,T)`$, where $`0<T<\\infty`$. In holomorphic coordinates, $`\\mathrm{Ric}^{\\mathrm{Ch}}(\\omega)=-i\\partial\\bar\\partial\\log\\det(g)`$ for $`\\omega=i g_{j\\bar k}\\,dz_j\\wedge d\\bar z_k`$.\n\nDefine the singular set $`\\Sigma`$ as the complement of points admitting a neighborhood $`U`$ on which $`\\omega(t)`$ converges locally smoothly, as $`t\\uparrow T`$, to a smooth positive Hermitian metric. For each irreducible closed analytic subvariety $`V\\subseteq X`$ of positive complex dimension $`k`$, set\n\n```math\n\\mathrm{Vol}_t(V)=\\frac1{k!}\\int_V\\omega(t)^k,\n\\qquad\n\\Sigma_0=\\bigcup_{\\mathrm{Vol}_t(V)\\to0\\text{ as }t\\uparrow T} V.\n```\n\n\nIntegration is over the regular locus of $`V`$, equivalently against its integration current, and $`V=X`$ is allowed. Must\n\n```math\n\\Sigma=\\Sigma_0,\n```\n\n\nand must this common set be a closed complex analytic subvariety of $`X`$? No Kähler, Gauduchon or mass-bound hypothesis is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Chern Ricci flow\" \"singularities\" \"Dang\" proof 2026",
+    "\"Chern Ricci flow\" \"singularities\" \"Dang\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "TheoremC requires positive limiting LOWER Monge–Ampere volume and either dimension2 or the two Guan–Li torsion identities in higher dimensions. The earlier TheoremA additionally assumes bounded mass and uniform noncollapse. The target has arbitrary smooth Hermitian initial metric in every dimension, and ordinary actual flow-volume collapse cannot silently be identified with lower-volume assumptions. No full matching claim located.",
+      "locator": "TheoremC lines136–150;2305.16461 Question1.1/TheoremA",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2404.01126v2",
+      "version_or_date": "arXiv2404.01126v2, current body checked3November2026;2305.16461 currentHTML also inspected"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "TheoremC requires positive limiting LOWER Monge–Ampere volume and either dimension2 or the two Guan–Li torsion identities in higher dimensions. The earlier TheoremA additionally assumes bounded mass and uniform noncollapse. The target has arbitrary smooth Hermitian initial metric in every dimension, and ordinary actual flow-volume collapse cannot silently be identified with lower-volume assumptions. No full matching claim located.",
+  "latest_version_check": "arXiv2404.01126v2, current body checked3November2026;2305.16461 currentHTML also inspected",
+  "gap_retraction_check": "PublishedMSPPDF links returned unreadableHTML; current arXiv theorem bodies read as fallback. Final publication parity not certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

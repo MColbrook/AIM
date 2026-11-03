@@ -1,0 +1,111 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1000",
+  "manifest_index": 844,
+  "checked_date": "2026-11-03",
+  "source_sha256": "4308d51cf0a2b85b0c16807bbad7376f687ae63e7348114affe14beb2f266cad",
+  "statement_sha256": "625c48b7a215f4f42af5ede8b8074b8d377ac32b89b52296b4973fd7d049bc4d",
+  "original_target": {
+    "id": "1000",
+    "title": "An invariant law for a stochastic compressible fluid with pure power pressure",
+    "area": "Stochastic fluid dynamics",
+    "file": "problems/1000-an-invariant-law-for-a-stochastic-compressible-fluid-with-pure-power-pressure.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a0b296d0442ec9c0",
+    "group": "rough-paths-singular-stochastic-equations",
+    "source_sha256": "4308d51cf0a2b85b0c16807bbad7376f687ae63e7348114affe14beb2f266cad",
+    "statement_sha256": "625c48b7a215f4f42af5ede8b8074b8d377ac32b89b52296b4973fd7d049bc4d",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "On $`I=(0,1)`$, consider the Itô system\n```math\n\\begin{aligned}\nd\\rho+(\\rho u)_x\\,dt&=0,\\\\\nd(\\rho u)+(\\rho u^2+p(\\rho))_x\\,dt\n&=u_{xx}\\,dt+\\rho\\sum_{k\\ge1}\\sigma_k(x)\\,dW_t^k,\n\\end{aligned}\n```\n\nwith $`u(t,0)=u(t,1)=0`$ and total mass $`\\int_0^1\\rho\\,dx=1`$.\nThe $`W^k`$ are independent standard real Brownian motions. Fix any deterministic noise coefficients satisfying\n```math\n\\sigma_k\\in H^2(I)\\cap H^1_0(I),\\qquad\n\\sum_{k\\ge1}\\|\\partial_{xx}\\sigma_k\\|_{L^2(I)}^2<\\infty.\n```\n\nUse the strong-solution phase space\n```math\n\\mathcal X=\\left\\{(\\rho,u)\\in H^1(I)\\times H^1_0(I):\n\\rho(x)>0\\text{ for every }x\\in[0,1],\\quad\\int_0^1\\rho\\,dx=1\\right\\},\n```\n\nwith its $`L^2(I)\\times L^2(I)`$ metric and Borel sigma-algebra. Positivity refers to the continuous representative of $`\\rho`$; no single lower bound is imposed on every state in $`\\mathcal X`$.\n\nFor every fixed $`\\gamma>1`$, set $`p(\\rho)=\\rho^\\gamma`$. Does the strong-solution Markov semigroup possess an invariant Borel probability measure $`\\mu`$ on $`\\mathcal X`$, satisfying\n```math\n\\int_{\\mathcal X}P_t\\varphi\\,d\\mu=\\int_{\\mathcal X}\\varphi\\,d\\mu\n\\quad(t\\ge0)\n```\n\nfor every bounded Borel test function $`\\varphi`$? No uniqueness assertion is included.",
+  "full_original_page": "# 1000. An invariant law for a stochastic compressible fluid with pure power pressure\n\n**Area:** Stochastic fluid dynamics\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nOn $`I=(0,1)`$, consider the Itô system\n```math\n\\begin{aligned}\nd\\rho+(\\rho u)_x\\,dt&=0,\\\\\nd(\\rho u)+(\\rho u^2+p(\\rho))_x\\,dt\n&=u_{xx}\\,dt+\\rho\\sum_{k\\ge1}\\sigma_k(x)\\,dW_t^k,\n\\end{aligned}\n```\n\nwith $`u(t,0)=u(t,1)=0`$ and total mass $`\\int_0^1\\rho\\,dx=1`$.\nThe $`W^k`$ are independent standard real Brownian motions. Fix any deterministic noise coefficients satisfying\n```math\n\\sigma_k\\in H^2(I)\\cap H^1_0(I),\\qquad\n\\sum_{k\\ge1}\\|\\partial_{xx}\\sigma_k\\|_{L^2(I)}^2<\\infty.\n```\n\nUse the strong-solution phase space\n```math\n\\mathcal X=\\left\\{(\\rho,u)\\in H^1(I)\\times H^1_0(I):\n\\rho(x)>0\\text{ for every }x\\in[0,1],\\quad\\int_0^1\\rho\\,dx=1\\right\\},\n```\n\nwith its $`L^2(I)\\times L^2(I)`$ metric and Borel sigma-algebra. Positivity refers to the continuous representative of $`\\rho`$; no single lower bound is imposed on every state in $`\\mathcal X`$.\n\nFor every fixed $`\\gamma>1`$, set $`p(\\rho)=\\rho^\\gamma`$. Does the strong-solution Markov semigroup possess an invariant Borel probability measure $`\\mu`$ on $`\\mathcal X`$, satisfying\n```math\n\\int_{\\mathcal X}P_t\\varphi\\,d\\mu=\\int_{\\mathcal X}\\varphi\\,d\\mu\n\\quad(t\\ge0)\n```\n\nfor every bounded Borel test function $`\\varphi`$? No uniqueness assertion is included.\n\n## Application\n\nThis would provide a stationary statistical state for a randomly forced viscous compressible gas with a standard nonlinear pressure law.\n\n## References\n\n1. M. Coti Zelati, N. Glatt-Holtz and K. Trivisa, [*Invariant Measures for the Stochastic One-Dimensional Compressible Navier-Stokes Equations*](https://doi.org/10.1007/s00245-019-09594-x), *Applied Mathematics & Optimization* **83** (2021), 1487-1522. Sections 1, 1.1 and 2, especially the noise assumption (2.1); [preprint](https://arxiv.org/abs/1802.04000).\n2. G.-Q. G. Chen, M. Coti Zelati and C. C. Yeung, [*Vanishing Mach Number Limit of Stochastic Compressible Flows*](https://arxiv.org/abs/2311.14660), v1 (2023), Introduction, main results and Section 5.\n3. D. Donatelli, L. Pescatore and S. Spirito, [*Invariant measures for the one-dimensional stochastic Navier-Stokes-Korteweg equations*](https://arxiv.org/abs/2606.07423), v2 (26 October 2026), Remark 1.2 and Sections 1.1 and 2.3. This is a comparison model with capillarity.\n\n## Status review\n\n\n**Known cases:** Pure power pressure near vacuum and the interval strong phase space are essential. The October 26 Korteweg revision assumes capillarity; the original linear-near-zero construction and vanishing-Mach finite-time results do not provide this invariant law.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nPure power pressure near vacuum and the interval strong phase space are essential. The October 26 Korteweg revision assumes capillarity; the original linear-near-zero construction and vanishing-Mach finite-time results do not provide this invariant law.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nSection 1.1 of the published source leaves pure power pressure unresolved. Its invariant-measure construction covers pressure linear near zero, including linear pressure itself; arbitrary polynomial growth at large density does not remove that small-density condition.\n\nThe 2023 vanishing-Mach work treats finite-time solutions for $`\\gamma\\ge1`$, but its invariant-measure result uses $`\\gamma=1`$. The 2026 power-pressure existence theorem for Korteweg fluids has nonzero capillarity, periodic boundary conditions and damping. Stationary weak solutions on trajectory space also differ from an invariant law for this interval strong-solution semigroup. No matching complete or announced resolution was located in bounded current checks through the date above.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-a0b296d0442ec9c0**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "compressible invariant",
+    "Coti Zelati",
+    "Korteweg"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"compressible\" \"invariant\" \"power pressure\" 2026"
+    },
+    {
+      "query": "\"compressible\" \"invariant\" \"power pressure\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    },
+    {
+      "query": "\"invariant measures\" \"compressible\" \"Coti Zelati\" 2026"
+    },
+    {
+      "query": "\"invariant measures\" \"compressible\" \"gamma\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2606.07423v2",
+      "locator": "v2 26October2026 Remark1.2; 1802.04000 Section1.1p3"
+    }
+  ],
+  "scope_comparison": "The new Korteweg invariant-law result uses capillarity, periodic geometry and damping; Remark1.2 distinguishes the zero-capillarity gamma=1 case. Original Section1.1 explicitly leaves pure rho^gamma gamma>1 open. Finite-time vanishing-Mach strong solutions do not construct the invariant probability on the specified interval phase space.",
+  "recommendation": "Retain partial status; bounded current searches located no matching complete resolution.",
+  "limitations": "Not proof of openness or certification of all cited proofs; inaccessible irrelevant/restricted comparisons do not themselves create a hold.",
+  "announcement_routing": {
+    "localID": "1000",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "compressible invariant",
+          "Coti Zelati",
+          "Korteweg"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "compressible invariant",
+          "Coti Zelati",
+          "Korteweg"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "compressible invariant",
+        "Coti Zelati",
+        "Korteweg"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

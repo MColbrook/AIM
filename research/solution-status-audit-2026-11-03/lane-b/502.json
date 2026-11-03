@@ -1,0 +1,73 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "502",
+  "manifest_index": 395,
+  "original_target": {
+    "id": "502",
+    "title": "A strict gap between face and cycle percolation thresholds",
+    "area": "Applied topology and random geometric complexes",
+    "file": "problems/502-face-cycle-percolation-gap.md",
+    "status": "Open",
+    "last_checked": "2026-09-23",
+    "group": "geometry-topology",
+    "source_sha256": "aaacaaa4e4bcfbe55bd450d2c0dec4e13bd927c264aabc162dd8459145469617",
+    "statement_sha256": "7b64a010adc46cdf108d8f78827f53664a95d4ac57dd3fb7bfac0f0775482c15",
+    "state": "unreviewed"
+  },
+  "source_sha256": "aaacaaa4e4bcfbe55bd450d2c0dec4e13bd927c264aabc162dd8459145469617",
+  "statement_sha256": "7b64a010adc46cdf108d8f78827f53664a95d4ac57dd3fb7bfac0f0775482c15",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:35:51.364887+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Published Theorem2 gives non-strict face<=cycle threshold; paragraph after expressly conjectures strict inequality2<=d<D. Theorem3 concerns proximity-star adjacency, not cycle threshold. New2605.14910 studies independent lattice plaquettes, not Poisson Vietoris–Rips complexes.",
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s41468-025-00202-2",
+      "locator": "Theorem2 and following conjecture, Theorem3",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2605.14910",
+      "locator": "Section2 and Theorems3.10–3.11",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"cycle percolation\" \"face\" gap (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "face percolation",
+        "cycle percolation"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "face percolation",
+        "cycle percolation"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

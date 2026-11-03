@@ -1,0 +1,113 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1024",
+  "manifest_index": 868,
+  "checked_date": "2026-11-03",
+  "source_sha256": "d2bcba2878016d5bcc9fe2b6bd6dc68345594e36068886abbc79f4693bbf8e12",
+  "statement_sha256": "f6f00870ef24a2d360e50356ac8eb54b93de8985abdfa043da50404bd54cf571",
+  "original_target": {
+    "id": "1024",
+    "title": "Are critical points of eigenfunctions on closed hyperbolic surfaces always finite?",
+    "area": "Spectral geometry",
+    "file": "problems/1024-are-critical-points-of-eigenfunctions-on-closed-hyperbolic-surfaces-always-finite.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a3ce1d13feb0c67d",
+    "group": "spectral",
+    "source_sha256": "d2bcba2878016d5bcc9fe2b6bd6dc68345594e36068886abbc79f4693bbf8e12",
+    "statement_sha256": "f6f00870ef24a2d360e50356ac8eb54b93de8985abdfa043da50404bd54cf571",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`(S,g)`$ be a compact hyperbolic surface without boundary, with Gaussian curvature $`-1`$. Let $`u`$ be a nonconstant real Laplace eigenfunction,\n```math\n-\\Delta_g u=\\lambda u,\\qquad \\lambda>0.\n```\n\nIs its full critical set\n```math\n\\mathrm{Crit}(u)=\\{x\\in S:du(x)=0\\}\n```\n\nalways finite?\n\nThis is the compact-surface conjecture in [1, Remark 9.6]. The qualifier $`\\lambda>0`$ makes explicit the authors' implicit nonconstant-eigenfunction convention: the zero-eigenvalue constant eigenfunctions have the whole surface as their critical set. The question concerns **all** critical points, including those where $`u\\ne0`$; it is stronger than finiteness of singular points of the nodal set $`u^{-1}(0)`$.",
+  "full_original_page": "# 1024. Are critical points of eigenfunctions on closed hyperbolic surfaces always finite?\n\n**Area:** Spectral geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`(S,g)`$ be a compact hyperbolic surface without boundary, with Gaussian curvature $`-1`$. Let $`u`$ be a nonconstant real Laplace eigenfunction,\n```math\n-\\Delta_g u=\\lambda u,\\qquad \\lambda>0.\n```\n\nIs its full critical set\n```math\n\\mathrm{Crit}(u)=\\{x\\in S:du(x)=0\\}\n```\n\nalways finite?\n\nThis is the compact-surface conjecture in [1, Remark 9.6]. The qualifier $`\\lambda>0`$ makes explicit the authors' implicit nonconstant-eigenfunction convention: the zero-eigenvalue constant eigenfunctions have the whole surface as their critical set. The question concerns **all** critical points, including those where $`u\\ne0`$; it is stronger than finiteness of singular points of the nodal set $`u^{-1}(0)`$.\n\n## Application\n\nThe critical set of a base-surface eigenfunction controls the zero set of a related weight-two eigenfunction on the unit tangent bundle in the constant-curvature Kaluza–Klein construction [1, Remark 9.6]. Its finiteness would rule out critical curves in that closed-surface setting and clarify the topology of lifted nodal sets.\n\n## Known results\n\nJung and Zelditch explain why a local curvature argument is insufficient: rotationally invariant Dirichlet or Neumann eigenfunctions on a compact **submanifold with boundary** of a hyperbolic cylinder can have circles of critical points [1, Remark 9.6]. That example does not meet the closed, boundaryless hypothesis here. Their nearby Theorem 9.5 concerns isolated zeros for certain cusp forms on the noncompact modular surface and does not settle the conjecture. The classical nodal-set theory gives isolated critical points **on the zero level** of a nontrivial eigenfunction on a surface [2, Theorem 2.1], but leaves open whether critical curves can occur at a nonzero level on a closed hyperbolic surface.\n\n## References\n\n1. J. Jung and S. Zelditch, [*Boundedness of the number of nodal domains for eigenfunctions of generic Kaluza–Klein 3-folds*](https://aif.centre-mersenne.org/item/10.5802/aif.3329.pdf), *Annales de l'Institut Fourier* **70** (2020), no. 3, 971–1027, Section 9.3 and Remark 9.6, printed p. 1024. [DOI](https://doi.org/10.5802/aif.3329).\n2. S. Mondal, [*On largeness and multiplicity of the first eigenvalue of hyperbolic surfaces*](https://sugatareading.github.io/reading-homepage/First%20Eigenvalue.pdf), *Mathematische Zeitschrift* **281** (2015), 333–348, Theorem 2.1 (the classical local result for critical points lying on a nodal zero set).\n\n## Status review\n\n\n**Known cases:** The full critical set at nonzero levels is required for every nonconstant eigenfunction. Finiteness of nodal singularities, generic eigenfunctions and bounded-domain theorems do not establish it.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe full critical set at nonzero levels is required for every nonconstant eigenfunction. Finiteness of nodal singularities, generic eigenfunctions and bounded-domain theorems do not establish it.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe [primary-body, convention, later-work and semantic-duplicate review](../FURTHER_problems/_tracking/hyperbolic-eigenfunction-critical-set-status-2026-10-21.json) checked the exact closed-surface statement and distinguished bounded-domain, zero-level and generic-eigenfunction results. No complete proof, counterexample or announcement for the universal positive-eigenvalue claim was located through 21 October 2026 in that bounded search.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-a3ce1d13feb0c67d**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "hyperbolic critical set",
+    "Jung",
+    "Zelditch"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"hyperbolic surfaces\" \"critical points\" finite eigenfunctions 2026"
+    },
+    {
+      "query": "\"hyperbolic surfaces\" \"critical points\" finite eigenfunctions",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.numdam.org/item/10.5802/aif.3329.pdf",
+      "locator": "published2020Remark9.6 printed1024"
+    }
+  ],
+  "scope_comparison": "Exact published conjecture concerns closed compact boundaryless hyperbolic surfaces. Rotational cylinder domains have boundary, and isolated nodal singularities only address u=0. Generic transversality and systole critical-point counts do not prove finiteness of the full critical set for every positive-eigenvalue eigenfunction.",
+  "recommendation": "Retain partial status; no matching full resolution located in bounded current searches.",
+  "limitations": "Negative evidence does not prove openness. Exact original page and hashes retained.",
+  "announcement_routing": {
+    "localID": "1024",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "hyperbolic critical set",
+          "Jung",
+          "Zelditch"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "hyperbolic critical set",
+          "Jung",
+          "Zelditch"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00680v2",
+            "title": "Closed three-manifolds as hypersurfaces of Euclidean fourspace: compactness, the homogeneous geometries, and total absolute curvature",
+            "url": "https://hexagonmath.org/abs/2610.00680v2"
+          },
+          {
+            "id": "hexagon:2610.00399v1",
+            "title": "A covering-strip and moment certificate for Korenblum's constant",
+            "url": "https://hexagonmath.org/abs/2610.00399v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "hyperbolic critical set",
+        "Jung",
+        "Zelditch"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Hypersurface embeddings of closed three-manifolds and Bergman Korenblum bounds do not prove finiteness of critical points of eigenfunctions on arbitrary closed hyperbolic surfaces.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.762Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

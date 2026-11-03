@@ -1,0 +1,82 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "535",
+  "manifest_index": 416,
+  "original_target": {
+    "id": "535",
+    "title": "The thermal near-critical Ising spin-interface limit",
+    "area": "Continuum limits in probability and statistical mechanics",
+    "file": "problems/535-the-thermal-near-critical-ising-spin-interface-limit.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-312b0ccb8e800320",
+    "group": "probability-statistics",
+    "source_sha256": "ce3448f58af95ea96b72e3d27a66a16cbf73fcbe43842cba5a8ec45d08577207",
+    "statement_sha256": "44d430ea1975e18fe1c8eb045bd41b15d22a04c950972ce8b50820138f6ebecc",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ce3448f58af95ea96b72e3d27a66a16cbf73fcbe43842cba5a8ec45d08577207",
+  "statement_sha256": "44d430ea1975e18fe1c8eb045bd41b15d22a04c950972ce8b50820138f6ebecc",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:46:32.943227+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Theorem 1.1 and section 1.5 of 2610.32860 give density and absolute-continuity estimates for subsequential thermal spin-interface limits in a Dobrushin square. The outlook explicitly leaves uniqueness and convergence/driving-function work in preparation. Thermal FK distinguished exploration does not supply full spin coloured-loop reconstruction.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.32860v1",
+      "locator": "Theorem 1.1, section 1.5 uniqueness paragraph; v1, 23 October 2026",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"thermal\" \"Ising\" \"spin interface\" scaling limit 2026",
+    "\"thermal\" \"spin-interface\" convergence (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Yu Feng\" \"thermal\" \"convergence\" Ising 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "thermal",
+        "spin interface"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-08-27-000001",
+          "title": "BrandonMYates/tempered-xi-comparator"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "thermal",
+        "spin interface"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00450v1",
+          "title": "Superfluid Stiffness and Nonclassical Rotational Inertia of the Dilute Hard-Sphere Bose Gas"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Known FK body was not reaudited in full; no contradictory complete spin-interface claim was located."
+  ],
+  "canonical_update_required": false
+}

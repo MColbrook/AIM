@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "710",
+  "manifest_index": 554,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "710",
+    "title": "Are polynomial Fischer operators bijective on all entire functions?",
+    "area": "Complex analysis and potential theory; holomorphic partial differential equations",
+    "file": "problems/710-are-polynomial-fischer-operators-bijective-on-all-entire-functions.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-9e9d5a2c9d052248",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "68225cec55eecd8c3429550e4bbd1939578576287ccfcdbff7af716b7bb8e320",
+    "statement_sha256": "1e5fe22592c77e0b68dfdde6cdfac7ea46221ba6028de21bacb298532d6a2d2d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "68225cec55eecd8c3429550e4bbd1939578576287ccfcdbff7af716b7bb8e320",
+  "statement_sha256": "1e5fe22592c77e0b68dfdde6cdfac7ea46221ba6028de21bacb298532d6a2d2d",
+  "actual_source_sha256": "68225cec55eecd8c3429550e4bbd1939578576287ccfcdbff7af716b7bb8e320",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`d\\ge2`$ and let $`E(\\mathbb C^d)`$ denote all entire holomorphic functions, without a growth restriction. For a nonzero polynomial $`P(z)=\\sum_\\alpha a_\\alpha z^\\alpha`$, define\n\n```math\nP^*(z)=\\sum_\\alpha\\overline{a_\\alpha}z^\\alpha,\n\\qquad P^*(D)=\\sum_\\alpha\\overline{a_\\alpha}\\partial_z^\\alpha.\n```\n\nMust the operator\n\n```math\nF_P:E(\\mathbb C^d)\\longrightarrow E(\\mathbb C^d),\n\\qquad F_P(q)=P^*(D)(Pq)\n```\n\nbe a bijection for every such $`P`$? Thus every entire forcing $`g`$ should have exactly one entire solution $`q`$ to $`P^*(D)(Pq)=g`$.\n\nThe operator uses the whole coefficient-conjugated polynomial, not only its leading homogeneous part. The zero polynomial is excluded. Nonzero constants are immediate affirmative cases.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"polynomial Fischer\" \"entire\" \"bijection\" proof 2026",
+    "\"polynomial Fischer\" \"entire\" \"bijection\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Published2023AnalysisMathPhysics13,91",
+      "locator": "Conjecture11(II) lines432–440",
+      "primary_body_access_gap": false,
+      "url": "https://link.springer.com/article/10.1007/s13324-023-00844-4",
+      "scope_comparison": "The actual primary conjecture uses the WHOLE P* differential operator on every entire function. Current low-order Fischer decompositions use growth restrictions and/or only the principal homogeneous part. Polynomial-data/Fock-space results do not establish existence and uniqueness for all entire forcing. No complete matching new theorem identified."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual primary conjecture uses the WHOLE P* differential operator on every entire function. Current low-order Fischer decompositions use growth restrictions and/or only the principal homogeneous part. Polynomial-data/Fock-space results do not establish existence and uniqueness for all entire forcing. No complete matching new theorem identified.",
+  "latest_version_check": "Published2023AnalysisMathPhysics13,91",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

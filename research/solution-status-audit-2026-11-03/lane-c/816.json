@@ -1,0 +1,61 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "816",
+  "manifest_index": 660,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "816",
+    "title": "Do nearest-point strata of finitely many convex sites have finitely many components?",
+    "area": "Convex geometry and Voronoi topology",
+    "file": "problems/816-do-nearest-point-strata-of-finitely-many-convex-sites-have-finitely-many-components.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-961e9c36db75680a",
+    "group": "geometry-topology",
+    "source_sha256": "f6b65306c7e32f794357c379c2e41dbcc2f8aaf1c7e32bb00fe6b22f4d6e94ed",
+    "statement_sha256": "3192c60d93db364baf9f07f08663c03c9580580fb57769c7779c79221e824842",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f6b65306c7e32f794357c379c2e41dbcc2f8aaf1c7e32bb00fe6b22f4d6e94ed",
+  "statement_sha256": "3192c60d93db364baf9f07f08663c03c9580580fb57769c7779c79221e824842",
+  "actual_source_sha256": "f6b65306c7e32f794357c379c2e41dbcc2f8aaf1c7e32bb00fe6b22f4d6e94ed",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`k,n\\geq2`$, and let $`A_1,\\ldots,A_n`$ be pairwise disjoint nonempty closed convex subsets of Euclidean $`\\mathbb R^k`$. They need not be bounded. Put $`A=\\bigcup_{j=1}^n A_j`$, and for $`x\\in\\mathbb R^k`$ define\n\n```math\nP_A(x)=\\{a\\in A:\\|x-a\\|=\\mathrm{dist}(x,A)\\},\\qquad\nX_p=\\{x\\in\\mathbb R^k:|P_A(x)|=p\\},\\quad 1\\leq p\\leq n.\n```\n\n\nProjection onto each individual $`A_j`$ is unique, so $`|P_A(x)|\\leq n`$. **Must every $`X_p`$ have only finitely many connected components?**\n\nThe source proves that $`X_1`$ has exactly $`n`$ components and that $`X_1\\cup X_2`$ is connected. Neither assertion answers the question for every individual $`X_p`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Moothathu\" \"Voronoi\" components 2026",
+    "\"Moothathu\" \"Voronoi\" components (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Moothathu\" \"Voronoi\" components (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Midsets and Voronoi Type Decomposition\" pdf",
+    "\"Moothathu\" \"Midsets\" pdf wordpress",
+    "\"X_p\" \"convex\" \"Moothathu\" components",
+    "\"Voronoi\" \"closed convex\" \"finitely many\" components"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "version_or_date": "FinalJCA25(2018)1345–1354, accepted29October2017. DirectPDF without query suffix accessible after several blocked variants. Current focused searches no exact later claim.",
+      "scope_comparison": "The primary setup is arbitrary pairwise disjoint closed convex Euclidean sites, not only compact/semialgebraic ones. Finiteness of X1 and connectedness of X1 union X2 do not imply finiteness for each exact multiplicity stratum. Modern finite-point/Delaunay or polygonal/semialgebraic theorems add hypotheses. No matching unrestricted theorem or convex-site counterexample found; direct primary body recovered rather than relying on abstract.",
+      "url": "https://journalofconvexanalysis.com/articles/jca25082/jca25082.pdf",
+      "locator": "§3 nearest-point strata definitions,theorems and closing question p1353"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The primary setup is arbitrary pairwise disjoint closed convex Euclidean sites, not only compact/semialgebraic ones. Finiteness of X1 and connectedness of X1 union X2 do not imply finiteness for each exact multiplicity stratum. Modern finite-point/Delaunay or polygonal/semialgebraic theorems add hypotheses. No matching unrestricted theorem or convex-site counterexample found; direct primary body recovered rather than relying on abstract.",
+  "latest_version_check": "FinalJCA25(2018)1345–1354, accepted29October2017. DirectPDF without query suffix accessible after several blocked variants. Current focused searches no exact later claim.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

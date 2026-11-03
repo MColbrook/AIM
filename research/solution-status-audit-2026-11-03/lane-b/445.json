@@ -1,0 +1,49 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 359,
+  "source_sha256": "1010a78a350bd168b0bdc0b6837df01f09e9f7a885128ccbf0b3e71c85e776b6",
+  "statement_sha256": "d0b74946999be93f6271ae95be570fc201d3a947d8de377914da9875a3ec8a51",
+  "original_target": {
+    "id": "445",
+    "title": "Can bounded positive time-dependent potentials trap a Schrödinger wave?",
+    "area": "Time-dependent Schrödinger PDEs and quantum confinement",
+    "file": "problems/445-positive-time-dependent-potential-localization.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "spectral3",
+    "source_sha256": "1010a78a350bd168b0bdc0b6837df01f09e9f7a885128ccbf0b3e71c85e776b6",
+    "statement_sha256": "d0b74946999be93f6271ae95be570fc201d3a947d8de377914da9875a3ec8a51",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "445",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"quantum ping-pong\" solution 2026",
+    "\"positive\" \"time-dependent potentials\" localization (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Soffer\" \"positive\" \"time\" \"localization\" 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2211.00500v4",
+      "version": "v4,Aug2026",
+      "locator": "Theorems1.1–1.4 and§1.1.1",
+      "theorem_body_checked": true,
+      "scope": "Decay onPcscatteringprojection,dimensionrestrictions≥5/8time-dependentcase;stationary3Dhighenergycutofftheorem. DoesnotprovePb=0frompositivity."
+    },
+    {
+      "url": "https://arxiv.org/html/2408.14269",
+      "version": "currentHTML,2024review",
+      "locator": "§14.2QuantumPingPong",
+      "theorem_body_checked": true,
+      "scope": "Explicitquestionforboundedregularspatiallylocalizedpositivepotentials."
+    }
+  ],
+  "registry_checks": "Palomar/Hexagon/OpenAI/Colbrookcachesscanned;no fullmatchingclaim.",
+  "scope_comparison": "Needexistenceorimpossibilityofnonzerospace-tightstateunderanysmoothnonnegativeuniformlycompactly-supportedVwithallspace-timederivativesboundedonR3. Instantaneouspositivityhasnoboundstateprojectionvanishingconclusion;Scattering-subspaceestimatesdonotdecide.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "287",
+  "manifest_index": 230,
+  "reviewed_UTC": "2026-11-03",
+  "source_sha256": "eab5c861ac14071e76f6a3173437eb528e0493ff3cdbf8e56e216b8c0ae82730",
+  "statement_sha256": "acfb6a25217c1f38d1f4b140bae69b23f7907de418c5009b7e294a7f5672edae",
+  "original_target": {
+    "id": "287",
+    "title": "Tracy–Widom fluctuations for a Gaussian lattice polymer at fixed temperature",
+    "area": "Random media and fluctuating interfaces",
+    "file": "problems/287-gaussian-polymer-tracy-widom.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "eab5c861ac14071e76f6a3173437eb528e0493ff3cdbf8e56e216b8c0ae82730",
+    "statement_sha256": "acfb6a25217c1f38d1f4b140bae69b23f7907de418c5009b7e294a7f5672edae",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "problem_statement": "Let $`(\\omega_{ij})_{i,j\\ge0}`$ be independent standard normal variables. Let $`\\Pi_n`$ be all up-right lattice paths from $`(0,0)`$ to $`(n,n)`$ and set $`Z_n=\\sum_{\\pi\\in\\Pi_n}\\exp(\\sum_{v\\in\\pi}\\omega_v)`$, with each visited vertex counted once. Write $`f=\\lim_{n\\to\\infty}n^{-1}\\mathbb E\\log Z_n`$, whose existence is known. Does there exist $`s>0`$ such that $`(\\log Z_n-nf)/(s n^{1/3})`$ converges in distribution to the standard GUE Tracy–Widom law $`F_2`$? Here $`F_2`$ is the limit law of $`N^{2/3}(\\lambda_{\\max}(M_N)-2)`$ for complex Hermitian Gaussian matrices with density proportional to $`\\exp(-N\\mathop{\\mathrm{Tr}}\\nolimits M_N^2/2)`$. The noise coefficient remains one as $`n`$ grows.",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-match",
+  "recommendation": "Retain Open; bounded searches found no full match, not a certification of openness.",
+  "scope_comparison": "Local target has independent Gaussian vertex noise with coefficient1 fixed as n grows, n f centering and n^(1/3) GUE limit. Agarwal Theorem1.3 takes beta=n^(-alpha), alpha>2/17 or>1/10, excluding alpha=0.",
+  "queries": [
+    "Gaussian directed polymer fixed temperature Tracy Widom universality proof 2026",
+    "Gaussian polymer fixed temperature Tracy Widom (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomarmath.ai OR site:hexagonmath.org)",
+    "Gaussian polymer Tracy Widom (site:palomar-registry.org OR site:hexagonmath.org OR site:github.com/openai/math)"
+  ],
+  "search_date": "2026-11-03",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2509.21453",
+      "version": "v1,25September2025; current unversioned HTML and abstract checked",
+      "locator": "Theorems1.2–1.3; equations(1.1)–(1.2)",
+      "scope": "Intermediate disorder and additional moment/temperature hypotheses; excludes beta=1 fixed."
+    }
+  ],
+  "verification": "Literature and theorem-scope review only; no independent proof verification.",
+  "limitations": [
+    "Searches are bounded and web-index coverage is not exhaustive.",
+    "No newly located full matching announcement; theorem-body checks recorded only for plausible primary candidates.",
+    "Palomar initial guessed hostname corrected to palomar-registry.org in follow-up queries."
+  ]
+}

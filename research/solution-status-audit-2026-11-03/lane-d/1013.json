@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1013",
+  "manifest_index": 857,
+  "checked_date": "2026-11-03",
+  "source_sha256": "dec959c7d5d56c882a41ce328a0de11576f9c87b203adb04a529cd40fd78278a",
+  "statement_sha256": "c02d5daf65951611d2b43e07d2c78cb2f271b2827e682e4c5dbed9990cf0b8cc",
+  "original_target": {
+    "id": "1013",
+    "title": "Spectral lower bounds from multi-set concentration",
+    "area": "Spectral geometry and concentration of measure",
+    "file": "problems/1013-spectral-lower-bounds-from-multi-set-concentration.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-187d304a434b816d",
+    "group": "spectral",
+    "source_sha256": "dec959c7d5d56c882a41ce328a0de11576f9c87b203adb04a529cd40fd78278a",
+    "statement_sha256": "c02d5daf65951611d2b43e07d2c78cb2f271b2827e682e4c5dbed9990cf0b8cc",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For each integer $`k\\ge2`$, does a constant $`c_k>0`$ depending only on $`k`$ have the following property?\n\nLet $`(M,g)`$ be a complete smooth connected Riemannian manifold without boundary, and let $`\\mu=e^{-V}dv_g`$ be a probability measure with smooth $`V`$ and\n\n```math\n\\mathrm{Ric}_g+\\mathrm{Hess}_gV\\ge0.\n```\n\nDefine the variational levels\n\n```math\n\\lambda^{(k)}=\\inf_{\\substack{L\\subset H^1(\\mu)\\\\\\dim L=k+1}}\n\\ \\sup_{0\\ne f\\in L}\\frac{\\int_M|\\nabla f|^2\\,d\\mu}{\\int_M f^2\\,d\\mu},\n\\qquad \\lambda^{(0)}=0.\n```\n\nNo discrete-spectrum assumption is imposed. Put\n\n```math\n\\Delta_k=\\{(a_1,\\ldots,a_k)\\in[0,1]^k:\n s=\\textstyle\\sum_i a_i\\le1,\\quad a_i+s\\ge1\\ \\text{for every }i\\}.\n```\n\nSuppose some $`a>0`$ satisfies this condition: for **every** positively separated Borel tuple $`A_1,\\ldots,A_k`$ with $`(\\mu(A_i))_i\\in\\Delta_k`$, setting $`A=\\bigcup_iA_i`$ and $`A_r=\\{x:d(x,A)<r\\}`$ gives\n\n```math\n\\mu(A_r)\\ge1-(1-\\mu(A))\n \\exp[-\\min(ar^2,\\sqrt a\\,r)]\n\\quad\\left(0<r\\le\\tfrac12\\min_{i\\ne j}d(A_i,A_j)\\right).\n```\n\n**Must $`\\lambda^{(k)}\\ge c_k a`$?**\n\nThis is the positive universal-function question in [1, §5.2]. Rescaling $`g`$ to $`ag`$ normalizes $`a`$ to one, divides Rayleigh quotients by $`a`$ and preserves weighted nonnegative Ricci curvature. Thus a positive bound at $`a=1`$ is equivalent to this formulation. No constant uniform in $`k`$, or sharp value, is requested. The case $`k=1`$ is known.",
+  "full_original_page": "# 1013. Spectral lower bounds from multi-set concentration\n\n**Area:** Spectral geometry and concentration of measure\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor each integer $`k\\ge2`$, does a constant $`c_k>0`$ depending only on $`k`$ have the following property?\n\nLet $`(M,g)`$ be a complete smooth connected Riemannian manifold without boundary, and let $`\\mu=e^{-V}dv_g`$ be a probability measure with smooth $`V`$ and\n\n```math\n\\mathrm{Ric}_g+\\mathrm{Hess}_gV\\ge0.\n```\n\nDefine the variational levels\n\n```math\n\\lambda^{(k)}=\\inf_{\\substack{L\\subset H^1(\\mu)\\\\\\dim L=k+1}}\n\\ \\sup_{0\\ne f\\in L}\\frac{\\int_M|\\nabla f|^2\\,d\\mu}{\\int_M f^2\\,d\\mu},\n\\qquad \\lambda^{(0)}=0.\n```\n\nNo discrete-spectrum assumption is imposed. Put\n\n```math\n\\Delta_k=\\{(a_1,\\ldots,a_k)\\in[0,1]^k:\n s=\\textstyle\\sum_i a_i\\le1,\\quad a_i+s\\ge1\\ \\text{for every }i\\}.\n```\n\nSuppose some $`a>0`$ satisfies this condition: for **every** positively separated Borel tuple $`A_1,\\ldots,A_k`$ with $`(\\mu(A_i))_i\\in\\Delta_k`$, setting $`A=\\bigcup_iA_i`$ and $`A_r=\\{x:d(x,A)<r\\}`$ gives\n\n```math\n\\mu(A_r)\\ge1-(1-\\mu(A))\n \\exp[-\\min(ar^2,\\sqrt a\\,r)]\n\\quad\\left(0<r\\le\\tfrac12\\min_{i\\ne j}d(A_i,A_j)\\right).\n```\n\n**Must $`\\lambda^{(k)}\\ge c_k a`$?**\n\nThis is the positive universal-function question in [1, §5.2]. Rescaling $`g`$ to $`ag`$ normalizes $`a`$ to one, divides Rayleigh quotients by $`a`$ and preserves weighted nonnegative Ricci curvature. Thus a positive bound at $`a=1`$ is equivalent to this formulation. No constant uniform in $`k`$, or sharp value, is requested. The case $`k=1`$ is known.\n\n## Application\n\nThis would turn concentration of several substantial separated pieces into a quantitative obstruction to having too many low-energy scalar modes, extending the usual first-gap concentration principle.\n\n## References\n\n1. N. Gozlan and R. Herry, *Multiple sets exponential concentration and higher order eigenvalues*, Potential Anal. 52 (2020), 203–221. [DOI](https://doi.org/10.1007/s11118-018-9743-1); [primary v1, §§1.1–1.2, Proposition 4.1 and §5.2](https://arxiv.org/html/1804.06133v1).\n2. K. Funano, *Estimates of eigenvalues of Laplacian by a reduced number of subsets*, [primary preprint, Theorem 1.1 and §4](https://arxiv.org/html/1601.07581v1).\n3. K. Funano and Y. Sakurai, *Upper bounds for higher-order Poincaré constants*, [primary v3, Theorem 1.1](https://arxiv.org/html/1907.03617v3).\n\n## Status review\n\n\n**Known cases:** The assertion is an inverse spectral lower bound from multi-set concentration. Existing subset comparisons and higher-order Poincare estimates give a different direction; no matching converse found.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe assertion is an inverse spectral lower bound from multi-set concentration. Existing subset comparisons and higher-order Poincare estimates give a different direction; no matching converse found.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe cited subset estimates give spectral upper bounds; they do not establish this inverse lower bound from the prescribed concentration profile. Recent convex-domain Dirichlet comparisons also change the setting and hypothesis. The separate forward Gaussian-profile question in §5.1 is not this converse. No equivalence with a uniform adjacent-eigenvalue-ratio conjecture is asserted.\n\nBounded current-resolution and complete-announcement searches found no matching result. Full nearest-statement comparisons used 1,163 private findings and 1,704 retained public all-status entries, then the distinct curvature and translator dispositions. Boundary shape optimization, Hodge gaps and coefficient inverse problems differ. Published identity is checked; complete published/preprint body parity is not claimed. See the [owner/current review](../FURTHER_problems/_tracking/focused-inverse-multiset-eigenvalue-C259-A-20261029/OWNER-EXACT-CD0-MULTISET-CONCENTRATION-INVERSE-KTH-MINMAX-LOWER-BOUND-PRIMARY-CURRENT-SEMANTIC-PROPOSAL.json) and [independent model peer](../FURTHER_problems/_tracking/focused-inverse-multiset-eigenvalue-C259-A-20261029/C-INDEPENDENT-COMPLETE-WEIGHTED-CD0-DELTAK-PREFACTOR-HALFSEPARATION-AND-SCALING-MODEL-PEER-PASS.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-187d304a434b816d**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "multi-set concentration",
+    "Gozlan",
+    "Herry",
+    "higher order eigenvalues"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"multiple sets\" \"concentration\" \"eigenvalues\" 2026"
+    },
+    {
+      "query": "\"multiple sets\" \"concentration\" \"eigenvalues\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1804.06133v1",
+      "locator": "17April2018 Proposition4.1/Section5.2"
+    }
+  ],
+  "scope_comparison": "Functional concentration equivalence is not the inverse kth spectral lower bound. Forward eigenvalue=>concentration and reduced-set spectral upper comparisons do not yield lambda(k)>=c_k a under the exact Delta_k masses/prefactor/half-separation quantifiers. No matching converse located.",
+  "recommendation": "Retain partial status; no complete matching proof or announcement found in bounded current checks.",
+  "limitations": "Negative searches do not establish continued openness; explicit narrower primary hypotheses suffice to exclude the cited comparators as full solutions.",
+  "announcement_routing": {
+    "localID": "1013",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "multi-set concentration",
+          "Gozlan",
+          "Herry",
+          "higher order eigenvalues"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "multi-set concentration",
+          "Gozlan",
+          "Herry",
+          "higher order eigenvalues"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "multi-set concentration",
+        "Gozlan",
+        "Herry",
+        "higher order eigenvalues"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

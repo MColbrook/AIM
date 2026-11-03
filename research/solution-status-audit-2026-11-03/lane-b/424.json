@@ -1,0 +1,51 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 343,
+  "source_sha256": "d06e2a45588e50604af5e10d9f9f0f63d3b4b5e50ec50c5921bc501afc62a373",
+  "statement_sha256": "532e5d9b7fbfbab55be4d1afe9c9dac260e05652d162f35008ba998a81828dde",
+  "original_target": {
+    "id": "424",
+    "title": "Does the sharp Li–Yau bound hold for varying magnetic fields?",
+    "area": "Spectral theory and mathematical physics",
+    "file": "problems/424-does-the-sharp-liyau-bound-hold-for-varying-magnetic-fields.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-aba1561af4e8b2e3",
+    "group": "spectral2",
+    "source_sha256": "d06e2a45588e50604af5e10d9f9f0f63d3b4b5e50ec50c5921bc501afc62a373",
+    "statement_sha256": "532e5d9b7fbfbab55be4d1afe9c9dac260e05652d162f35008ba998a81828dde",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "424",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Li-Yau\" \"arbitrary\" \"magnetic\" 2026",
+    "\"magnetic\" \"Berezin\" \"2026\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://cvgmt.sns.it/media/doc/paper/2321/mag-berezin-final.pdf",
+      "locator": "pp1–2 followingeq1.6",
+      "theorem_body_checked": true,
+      "scope": "Sharp arbitrary-field result gamma>=3/2; gamma1 constant field only."
+    },
+    {
+      "url": "https://arxiv.org/html/2610.40223v1",
+      "version": "v1,29Oct2026 15:04:28UTC, currentabs onlyv1",
+      "locator": "Theorem1,Corollaries2–3;Theorem6 eq8–9",
+      "theorem_body_checked": true,
+      "scope": "New sharp order1 sums for curl-free Aharonov–Bohm configurations. For bounded variable fields Theorem6 has field-dependent b=||B||infty shifts and a different individual-eigenvalue estimate, not the requested sharp b-independent sum."
+    }
+  ],
+  "registry_checks": "Complete Palomar and Hexagon metadata and pinned OpenAI/Colbrook listings scanned for target names/aliases; no matching full claim.",
+  "scope_comparison": "Aharonov–Bohm curl-free away from poles, constant fields, orders>=3/2 and b-dependent weakened bounds cannot establish sharp gamma1 for all smooth variable fields.",
+  "limitations": [
+    "Original AIF PDF403; accessible comparator and current candidate theorem bodies inspected."
+  ],
+  "rationale": "Bounded searches found no full matching resolution or announcement. New29Oct paper is a meaningful restricted result; retain Open."
+}

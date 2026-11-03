@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "695",
+  "manifest_index": 539,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "695",
+    "title": "Fatou flowers for isolated tangent-to-identity germs in higher dimension",
+    "area": "Local holomorphic dynamics",
+    "file": "problems/695-fatou-flowers-for-isolated-tangent-to-identity-germs-in-higher-dimension.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-702597abb179b593",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "af7b6a15b912d935085d6fa0567fdb202e65d2093ae6856a06ef884ee868914d",
+    "statement_sha256": "f938b378cf75d3f97f7993c5149dd74a64ddea2672cc757fa5de089d901bb378",
+    "state": "unreviewed"
+  },
+  "source_sha256": "af7b6a15b912d935085d6fa0567fdb202e65d2093ae6856a06ef884ee868914d",
+  "statement_sha256": "f938b378cf75d3f97f7993c5149dd74a64ddea2672cc757fa5de089d901bb378",
+  "actual_source_sha256": "af7b6a15b912d935085d6fa0567fdb202e65d2093ae6856a06ef884ee868914d",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\ge3`$ and let $`f:(\\mathbb C^n,0)\\to(\\mathbb C^n,0)`$ be a holomorphic germ with $`Df(0)=I`$ and with $`0`$ an isolated fixed point. Write\n```math\nf(z)=z+P_\\nu(z)+O(\\|z\\|^{\\nu+1}),\\qquad \\nu\\ge2,\n```\nwhere $`P_\\nu`$ is a nonzero vector of homogeneous polynomials of degree $`\\nu`$.\n\nMust $`f`$ admit a Fatou flower tangent to some direction $`[v]\\in\\mathbb P^{n-1}(\\mathbb C)`$, in the following sense? For some sufficiently small $`\\delta>0`$, let $`\\Delta_1,\\ldots,\\Delta_{\\nu-1}`$ be the connected components of\n```math\nD_{\\delta,\\nu}=\\{\\zeta\\in\\mathbb C:|\\zeta^{\\nu-1}-\\delta|<\\delta\\}.\n```\nFor each $`j`$ there should be an injective holomorphic map $`\\varphi_j:\\Delta_j\\to\\mathbb C^n\\setminus\\{0\\}`$ such that:\n\n- $`\\varphi_j`$ extends continuously to $`0`$ with $`\\varphi_j(0)=0`$;\n- its image lies in a common neighborhood on which $`f`$ is represented and is forward invariant under $`f`$;\n- $`f^{\\circ k}`$ tends to $`0`$ uniformly on compact subsets of that image as $`k\\to\\infty`$;\n- $`[\\varphi_j(\\zeta)]\\to[v]`$ in projective space as $`\\zeta\\to0`$ within $`\\Delta_j`$.\n\nThese are the curve and flower requirements in Definition16 of Abate's published source. No extra pairwise-disjointness condition on the images, robustness under blow-ups, formal asymptotic expansion, analytic invariant curve through $`0`$, or nondegeneracy of $`[v]`$ is added. The direction is allowed to depend on the germ.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Fatou flower\" \"degenerate\" dimension proof 2026",
+    "\"Fatou flower\" \"degenerate\" dimension (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "arXiv2610.01520v1,1October2026",
+      "scope_comparison": "The actual current survey says higher-dimensional analogues remain unknown. Nondegenerate characteristic directions imply curves; an invariant formal curve gives fixed curves or parabolic manifolds, but is not assured for all isolated germs. Examples defeating robust curves or blowup strategies still have attracting structures, not counterexamples to the full flower assertion. No complete n>=3 all-degenerate claim located.",
+      "locator": "Theorem3.5; Remark4.4 lines459–466",
+      "url": "https://arxiv.org/html/2610.01520v1",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual current survey says higher-dimensional analogues remain unknown. Nondegenerate characteristic directions imply curves; an invariant formal curve gives fixed curves or parabolic manifolds, but is not assured for all isolated germs. Examples defeating robust curves or blowup strategies still have attracting structures, not counterexamples to the full flower assertion. No complete n>=3 all-degenerate claim located.",
+  "latest_version_check": "arXiv2610.01520v1,1October2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

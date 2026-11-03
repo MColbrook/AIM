@@ -1,0 +1,51 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 313,
+  "source_sha256": "e1fb7ada86b18c98595d0338fe909a2a7858ad0fffef73b97757e952a38c2897",
+  "statement_sha256": "46c2000a8ed8234bf59922fa5cac448b3cb5824e0a872f30146d25c899b78ba0",
+  "original_target": {
+    "id": "384",
+    "title": "Are nonequilibrium energy correlations governed by the inverse fractional heat operator?",
+    "area": "Anomalous heat transport and stochastic lattice dynamics",
+    "file": "problems/384-are-nonequilibrium-energy-correlations-governed-by-the-inverse-fractional-heat-operator.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-39b05ae501f1b2b5",
+    "group": "diffusion-materials",
+    "source_sha256": "e1fb7ada86b18c98595d0338fe909a2a7858ad0fffef73b97757e952a38c2897",
+    "statement_sha256": "46c2000a8ed8234bf59922fa5cac448b3cb5824e0a872f30146d25c899b78ba0",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "384",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"harmonic chain\" \"stationary\" \"energy correlations\" \"fractional\" 2026",
+    "\"Boundary Thermalization in Superdiffusive Energy Transport\" arxiv",
+    "\"harmonic-chain\" \"nonequilibrium\" \"correlations\" \"2026\" Kundu",
+    "\"energy correlations\" \"momentum exchange\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1808.10870v1",
+      "version": "v1 2018; JStatMech2019013205",
+      "locators": "Section4.4 equation57 PDFpp19–20",
+      "body_inspected": true,
+      "scope": "Numerical conjecture for inverse fractional operator energy covariance, with fitted nu; proof explicitly not supplied."
+    },
+    {
+      "url": "https://arxiv.org/html/2607.13229",
+      "version": "v1 14July2026; current abs onlyv1; MathPhysAnalGeom29(2026)45 DOI10.1007/s11040-026-09586-8",
+      "locators": "Section2.1 definition2.1; Theorem2.6 equation2.16; Theorem2.8",
+      "body_inspected": true,
+      "scope": "Finite-time weak convergence of averaged microscopic energy to fractional heat equation with boundary terms and integrated-current bound; not stationary energy-energy covariance kernel."
+    }
+  ],
+  "registry_checks": "No momentum exchange, energy correlations or thermalization matching alias in Palomar/Hexagon/OpenAI metadata.",
+  "scope_comparison": "Target NESS fourth-order microscopic observable offdiagonal N Cov(e_i,e_j), exact finite-domain operator inverse. Macroscopic mean profile/local equipartition does not identify the required long-range fourth moments.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. No FURTHER files accessed or modified."
+}

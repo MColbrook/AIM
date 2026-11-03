@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "280",
+  "manifest_index": 223,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "280",
+    "title": "Localization of light rays in the planar random mirror model",
+    "area": "Transport in random optical media",
+    "file": "problems/280-planar-lorentz-mirrors.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "c1027947a5f0a554b1abd5f8b395f5b6d3beef1129300772af7d884a191548a0",
+    "statement_sha256": "7da94848579b6fbdbf56e5dd7d3df10168fd708bc3b83a5f88687ec5ab5389ba",
+    "state": "unreviewed"
+  },
+  "source_sha256": "c1027947a5f0a554b1abd5f8b395f5b6d3beef1129300772af7d884a191548a0",
+  "statement_sha256": "7da94848579b6fbdbf56e5dd7d3df10168fd708bc3b83a5f88687ec5ab5389ba",
+  "actual_source_sha256": "c1027947a5f0a554b1abd5f8b395f5b6d3beef1129300772af7d884a191548a0",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Independently at each vertex of $`\\mathbb Z^2`$, put no mirror with probability $`1-p`$, a mirror of slope $`+1`$ with probability $`p/2`$, or a mirror of slope $`-1`$ with probability $`p/2`$. A ray moves along nearest-neighbor lattice edges. At each encountered vertex it continues straight if no mirror is present and otherwise undergoes specular reflection through the indicated diagonal mirror. Launch a ray from the origin pointing east, and subsequently apply these rules also on returns to the origin. For every $`p\\in(0,1]`$, is the set of visited vertices almost surely finite? Equivalently, must the directed trajectory eventually close into a finite orbit?",
+  "full_local_page_read": true,
+  "queries": [
+    "\"planar Lorentz mirror\" localization 2026",
+    "\"planar Lorentz mirror\" localization (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"planar Lorentz mirror\" localization (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Theorem1.1 and Corollary3.3;Section1.2planarconjecture",
+      "scope_comparison": "Actual diffusion theorem requires d>=4, smallp and finite times T<=exp(log²(1/p)); it does not assert planar infinite-time localization. September2026finite-volume numerical transmission and hierarchicalgeometry results also do not settle eventual closure in the original Z2model for allpositivep. No exact complete announcement found.",
+      "url": "https://arxiv.org/html/2505.01341",
+      "version_or_date": "arXiv2505.01341v2,2July2025,currentHTMLinternal24August2026."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Actual diffusion theorem requires d>=4, smallp and finite times T<=exp(log²(1/p)); it does not assert planar infinite-time localization. September2026finite-volume numerical transmission and hierarchicalgeometry results also do not settle eventual closure in the original Z2model for allpositivep. No exact complete announcement found.",
+  "latest_version_check": "arXiv2505.01341v2,2July2025,currentHTMLinternal24August2026.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

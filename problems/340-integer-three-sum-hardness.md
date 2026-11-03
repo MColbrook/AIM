@@ -2,9 +2,9 @@
 
 **Area:** Exact algorithms and computational complexity
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -52,7 +52,16 @@ Integer 3SUM is a reference problem for the limits of exact combinatorial algori
 11. Valerii Sopin, *A new algorithm for solving the rSUM problem*, arXiv:1407.4640v5, February 9, 2015, [manuscript served by IACR 2022/1113](https://eprint.iacr.org/2022/1113.pdf). §3, Theorem 2 and its proof give the input-dependent runtime condition.
 12. Luis Barba, Jean Cardinal, John Iacono, Stefan Langerman, Aurélien Ooms and Noam Solomon, *Subquadratic Algorithms for Algebraic Generalizations of 3SUM*, SoCG 2017, LIPIcs 77, Article 13, [published full text](https://drops.dagstuhl.de/storage/00lipics/lipics-vol077-socg2017/LIPIcs.SoCG.2017.13/LIPIcs.SoCG.2017.13.pdf). §1.2 defines the models; Theorems 8, 13, 15 and 16 separate their guarantees.
 
+13. Josh Alman and Virginia Vassilevska Williams, *Truly Subquadratic 3SUM and Truly Subcubic APSP via Triangles in Sparse Lopsided Graphs*, [arXiv:2610.06783v1](https://arxiv.org/html/2610.06783v1), 5 October 2026, Theorems 2 and 22.
+
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Theorems 2 and 22 claim a uniform deterministic fixed-power speedup for integer 3SUM on logarithmic-word RAM with polynomially bounded integers. Separating the three distinct input roles by label bits costs only a polylogarithmic factor, preserving a smaller fixed positive exponent improvement. The claim is stronger than a logarithmic saving and fits the bounded-error expected-time target.
+
+[Claimed solution](https://arxiv.org/pdf/2610.06783v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/340.json). Theorems 2/22, polynomial integer universe; disjoint-role reduction. The full external proof has not been independently verified here; no local Lean kernel replay or human peer review is asserted. This label records the complete announcement under the requested status policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative
 

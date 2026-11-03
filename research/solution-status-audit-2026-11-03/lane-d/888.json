@@ -1,0 +1,118 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "888",
+  "manifest_index": 732,
+  "checked_date": "2026-11-03",
+  "source_sha256": "de6902f1ff36c1deec7c08718e77fc5981158cf4062e61dc62a4271497aebd7b",
+  "statement_sha256": "7dc301ea643d2a79c339de4d132d827c57f41228b8dcd882e7fe75613f3a1ca8",
+  "original_target": {
+    "id": "888",
+    "title": "A uniform Monte Carlo rate for the extended ensemble Kalman–Bucy filter",
+    "area": "Nonlinear filtering and data assimilation",
+    "file": "problems/888-a-uniform-monte-carlo-rate-for-the-extended-ensemble-kalmanbucy-filter.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a81af787ee12a3e9",
+    "group": "nonlinear-filtering-data-assimilation",
+    "source_sha256": "de6902f1ff36c1deec7c08718e77fc5981158cf4062e61dc62a4271497aebd7b",
+    "statement_sha256": "7dc301ea643d2a79c339de4d132d827c57f41228b8dcd882e7fe75613f3a1ca8",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`d,q\\geq1`$, let $`R_1\\in\\mathbb R^{d\\times d}`$ and $`R_2\\in\\mathbb R^{q\\times q}`$ be symmetric positive definite, and let $`B\\in\\mathbb R^{q\\times d}`$ satisfy $`B^TR_2^{-1}B=\\rho I_d`$ with $`\\rho>0`$. Let $`A:\\mathbb R^d\\to\\mathbb R^d`$ be $`C^2`$, with bounded Jacobian, and suppose\n\n```math\n\\lambda:=-\\sup_x\\lambda_{\\max}(DA(x)+DA(x)^T)>0,\n\\qquad \\|DA(x)-DA(y)\\|_{\\mathrm{op}}\\leq\\kappa|x-y|\n```\n\nfor a fixed $`\\kappa>0`$. Define\n\n```math\n\\lambda_S=\\lambda/\\rho,\\qquad\n\\lambda_R=\\lambda/\\mathrm{tr}(R_1),\\qquad\n\\lambda_K=\\lambda/\\kappa,\\qquad\n\\lambda_{R,S}=\\frac{\\lambda_R\\sqrt{\\lambda_S}}{8e}\n\\left(1+\\frac{2}{\\lambda_R\\lambda_S}\\right)^{-1},\n\\qquad\n\\delta=\\min\\{e\\lambda_{R,S},\\tfrac12\\sqrt{\\lambda_S}\\}.\n```\n\nAssume\n\n```math\n\\min\\{\\lambda_K\\lambda_R/4,\\lambda_{R,S},\\lambda_S/4\\}>1,\n\\qquad \\delta\\geq4.\n```\n\nTake $`X_0\\sim\\mathcal N(m_0,P_0)`$, with $`P_0`$ positive definite and\n\n```math\n\\mathrm{tr}(P_0)^2\\leq\n\\frac{\\lambda_S}{\\lambda_R}\n\\left(\\frac12+\\frac{1}{\\lambda_R\\lambda_S}\\right).\n```\n\nThe signal and its observation are\n\n```math\ndX_t=A(X_t)\\,dt+R_1^{1/2}\\,dW_t,\\qquad\ndY_t=BX_t\\,dt+R_2^{1/2}\\,dV_t,\\qquad Y_0=0.\n```\n\nHere $`W,V`$ are independent standard Brownian motions of dimensions $`d,q`$, independent of $`X_0`$. Define the extended Kalman–Bucy mean and covariance by\n\n```math\nd\\widehat m_t=A(\\widehat m_t)\\,dt+\nP_tB^TR_2^{-1}(dY_t-B\\widehat m_t\\,dt),\n\\qquad\n\\dot P_t=DA(\\widehat m_t)P_t+P_tDA(\\widehat m_t)^T+R_1-P_tB^TR_2^{-1}BP_t,\n\\qquad (\\widehat m_0,P_0)=(m_0,P_0).\n```\n\nFor $`N\\geq2`$, let $`\\xi_0^1,\\ldots,\\xi_0^N`$ be independent samples from $`\\mathcal N(m_0,P_0)`$, independent of the signal and all driving noises, and set\n\n```math\nm_t^N=\\frac1N\\sum_{i=1}^N\\xi_t^i,\n\\qquad p_t^N=\\frac1{N-1}\\sum_{i=1}^N\n(\\xi_t^i-m_t^N)(\\xi_t^i-m_t^N)^T.\n```\n\nUse the particle dynamics\n\n```math\nd\\xi_t^i=\n\\big[A(m_t^N)+DA(m_t^N)(\\xi_t^i-m_t^N)\\big]dt\n+R_1^{1/2}dW_t^i\n+p_t^NB^TR_2^{-1}\\big[dY_t-B\\xi_t^i\\,dt+R_2^{1/2}dV_t^i\\big],\n```\n\nwhere all $`W^i,V^i`$ are mutually independent standard Brownian motions, independent of the signal noises and initial values. The limiting comparison particle $`\\zeta^1`$ starts at $`\\xi_0^1`$ and solves\n\n```math\nd\\zeta_t^1=\n\\big[A(\\widehat m_t)+DA(\\widehat m_t)(\\zeta_t^1-\\widehat m_t)\\big]dt\n+R_1^{1/2}dW_t^1\n+P_tB^TR_2^{-1}\\big[dY_t-B\\zeta_t^1\\,dt+R_2^{1/2}dV_t^1\\big].\n```\n\nFor probability laws on a Euclidean space, write $`W_r`$ for the $`r`$-Wasserstein distance. On mean–matrix pairs use the norm $`\\|(m,P)\\|^2=|m|^2+\\|P\\|_F^2`$. Are there finite constants $`C,N_0`$, depending on the fixed model and initial law but independent of $`N`$ and $`t`$, such that every integer $`N\\geq N_0`$ satisfies\n\n```math\n\\sup_{t\\geq0}\n\\max\\left\\{\nW_\\delta\\big(\\mathrm{Law}(m_t^N,p_t^N),\n                  \\mathrm{Law}(\\widehat m_t,P_t)\\big),\nW_2\\big(\\mathrm{Law}(\\xi_t^1),\\mathrm{Law}(\\zeta_t^1)\\big)\n\\right\\}\\leq C N^{-1/2}?\n```\n\nAll laws here are unconditional, averaging over observations as well as the ensemble. A negative answer must give admissible fixed model data for which no such constants exist.\n\nThis is a restricted form of the explicit optimal-rate conjecture following Theorem 2.3 of Del Moral–Kurtzmann–Tugaut. Gaussian initialization and a bounded Jacobian are imposed explicitly in this formulation. The particle drift is the linearization at the empirical mean displayed above; replacing it by $`A(\\xi_t^i)`$ changes the question. The target is approximation of the extended filter and its comparison diffusion, rather than exact nonlinear Bayesian filtering.",
+  "full_original_page": "# 888. A uniform Monte Carlo rate for the extended ensemble Kalman–Bucy filter\n\n**Area:** Nonlinear filtering and data assimilation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`d,q\\geq1`$, let $`R_1\\in\\mathbb R^{d\\times d}`$ and $`R_2\\in\\mathbb R^{q\\times q}`$ be symmetric positive definite, and let $`B\\in\\mathbb R^{q\\times d}`$ satisfy $`B^TR_2^{-1}B=\\rho I_d`$ with $`\\rho>0`$. Let $`A:\\mathbb R^d\\to\\mathbb R^d`$ be $`C^2`$, with bounded Jacobian, and suppose\n\n```math\n\\lambda:=-\\sup_x\\lambda_{\\max}(DA(x)+DA(x)^T)>0,\n\\qquad \\|DA(x)-DA(y)\\|_{\\mathrm{op}}\\leq\\kappa|x-y|\n```\n\nfor a fixed $`\\kappa>0`$. Define\n\n```math\n\\lambda_S=\\lambda/\\rho,\\qquad\n\\lambda_R=\\lambda/\\mathrm{tr}(R_1),\\qquad\n\\lambda_K=\\lambda/\\kappa,\\qquad\n\\lambda_{R,S}=\\frac{\\lambda_R\\sqrt{\\lambda_S}}{8e}\n\\left(1+\\frac{2}{\\lambda_R\\lambda_S}\\right)^{-1},\n\\qquad\n\\delta=\\min\\{e\\lambda_{R,S},\\tfrac12\\sqrt{\\lambda_S}\\}.\n```\n\nAssume\n\n```math\n\\min\\{\\lambda_K\\lambda_R/4,\\lambda_{R,S},\\lambda_S/4\\}>1,\n\\qquad \\delta\\geq4.\n```\n\nTake $`X_0\\sim\\mathcal N(m_0,P_0)`$, with $`P_0`$ positive definite and\n\n```math\n\\mathrm{tr}(P_0)^2\\leq\n\\frac{\\lambda_S}{\\lambda_R}\n\\left(\\frac12+\\frac{1}{\\lambda_R\\lambda_S}\\right).\n```\n\nThe signal and its observation are\n\n```math\ndX_t=A(X_t)\\,dt+R_1^{1/2}\\,dW_t,\\qquad\ndY_t=BX_t\\,dt+R_2^{1/2}\\,dV_t,\\qquad Y_0=0.\n```\n\nHere $`W,V`$ are independent standard Brownian motions of dimensions $`d,q`$, independent of $`X_0`$. Define the extended Kalman–Bucy mean and covariance by\n\n```math\nd\\widehat m_t=A(\\widehat m_t)\\,dt+\nP_tB^TR_2^{-1}(dY_t-B\\widehat m_t\\,dt),\n\\qquad\n\\dot P_t=DA(\\widehat m_t)P_t+P_tDA(\\widehat m_t)^T+R_1-P_tB^TR_2^{-1}BP_t,\n\\qquad (\\widehat m_0,P_0)=(m_0,P_0).\n```\n\nFor $`N\\geq2`$, let $`\\xi_0^1,\\ldots,\\xi_0^N`$ be independent samples from $`\\mathcal N(m_0,P_0)`$, independent of the signal and all driving noises, and set\n\n```math\nm_t^N=\\frac1N\\sum_{i=1}^N\\xi_t^i,\n\\qquad p_t^N=\\frac1{N-1}\\sum_{i=1}^N\n(\\xi_t^i-m_t^N)(\\xi_t^i-m_t^N)^T.\n```\n\nUse the particle dynamics\n\n```math\nd\\xi_t^i=\n\\big[A(m_t^N)+DA(m_t^N)(\\xi_t^i-m_t^N)\\big]dt\n+R_1^{1/2}dW_t^i\n+p_t^NB^TR_2^{-1}\\big[dY_t-B\\xi_t^i\\,dt+R_2^{1/2}dV_t^i\\big],\n```\n\nwhere all $`W^i,V^i`$ are mutually independent standard Brownian motions, independent of the signal noises and initial values. The limiting comparison particle $`\\zeta^1`$ starts at $`\\xi_0^1`$ and solves\n\n```math\nd\\zeta_t^1=\n\\big[A(\\widehat m_t)+DA(\\widehat m_t)(\\zeta_t^1-\\widehat m_t)\\big]dt\n+R_1^{1/2}dW_t^1\n+P_tB^TR_2^{-1}\\big[dY_t-B\\zeta_t^1\\,dt+R_2^{1/2}dV_t^1\\big].\n```\n\nFor probability laws on a Euclidean space, write $`W_r`$ for the $`r`$-Wasserstein distance. On mean–matrix pairs use the norm $`\\|(m,P)\\|^2=|m|^2+\\|P\\|_F^2`$. Are there finite constants $`C,N_0`$, depending on the fixed model and initial law but independent of $`N`$ and $`t`$, such that every integer $`N\\geq N_0`$ satisfies\n\n```math\n\\sup_{t\\geq0}\n\\max\\left\\{\nW_\\delta\\big(\\mathrm{Law}(m_t^N,p_t^N),\n                  \\mathrm{Law}(\\widehat m_t,P_t)\\big),\nW_2\\big(\\mathrm{Law}(\\xi_t^1),\\mathrm{Law}(\\zeta_t^1)\\big)\n\\right\\}\\leq C N^{-1/2}?\n```\n\nAll laws here are unconditional, averaging over observations as well as the ensemble. A negative answer must give admissible fixed model data for which no such constants exist.\n\nThis is a restricted form of the explicit optimal-rate conjecture following Theorem 2.3 of Del Moral–Kurtzmann–Tugaut. Gaussian initialization and a bounded Jacobian are imposed explicitly in this formulation. The particle drift is the linearization at the empirical mean displayed above; replacing it by $`A(\\xi_t^i)`$ changes the question. The target is approximation of the extended filter and its comparison diffusion, rather than exact nonlinear Bayesian filtering.\n\n## Application\n\nAn ensemble approximates the covariance used to weight incoming noisy measurements. A uniform $`N^{-1/2}`$ bound would quantify how ensemble size controls sampling error during arbitrarily long filtering runs for a stable nonlinear signal.\n\n## References\n\n1. P. Del Moral, A. Kurtzmann and J. Tugaut, [*On the stability and the uniform propagation of chaos of a class of extended ensemble Kalman–Bucy filters*](https://doi.org/10.1137/16M1087497), SIAM Journal on Control and Optimization **55** (2017), 119–155. [Author preprint v2](https://arxiv.org/pdf/1606.08256v2), models (1)–(5), assumptions (7), (15), (20), Theorem 2.3 and the explicit conjecture immediately afterwards, physical PDF pp. 4–6, 10–15. The read copy has 39 pages and body date 7 August 2018 despite its October 2016 arXiv version header; journal pagination is different.\n2. P. Del Moral, A. Kurtzmann and J. Tugaut, [*On the stability and the concentration of extended Kalman–Bucy filters*](https://arxiv.org/pdf/1606.08251v2), model (1), physical PDF p. 4, and Theorems 1.1–1.2, pp. 9–11. The companion model explicitly assumes Gaussian initialization. These theorems concern the limiting filter, without a particle number.\n3. S. W. Ertel, [*On the mean field theory of ensemble Kalman filters for SPDEs*](https://doi.org/10.1137/24M1658954), SIAM/ASA Journal on Uncertainty Quantification **13** (2025); [preprint v4](https://arxiv.org/pdf/2306.16863v4), Theorem 24 and Remarks 25–26, physical pp. 22–25.\n4. E. Calvello, P. Monmarché, A. M. Stuart and U. Vaes, [*Accuracy of the ensemble Kalman filter in the near-linear setting*](https://doi.org/10.1137/25M1732544), SIAM Journal on Numerical Analysis **64** (2026), 391–429, §§1.1–1.2 and 2.1, model (2.1).\n\n## Status review\n\n\n**Known cases:** The source endpoint remains conjectural beyond its unspecified uniform N-to-negative-beta estimate. Conventional nonlinear or transport ensemble filters have different drift/noise or discrete dynamics; finite-horizon results do not give uniform time control of both unconditional Wasserstein errors for this extended linearization-at-the-mean system.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe source endpoint remains conjectural beyond its unspecified uniform N-to-negative-beta estimate. Conventional nonlinear or transport ensemble filters have different drift/noise or discrete dynamics; finite-horizon results do not give uniform time control of both unconditional Wasserstein errors for this extended linearization-at-the-mean system.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe source proves a uniform rate $`N^{-\\beta}`$ for some $`0<\\beta\\leq1/2`$ and explicitly conjectures the endpoint $`\\beta=1/2`$. Its theorem does not establish that endpoint. The formulation above retains its quantitative stability and initial-covariance restrictions and adds the stated regularity and initialization restrictions.\n\nErtel treats the conventional nonlinear deterministic ensemble filter, with bounded observation functions in the quantitative theorem, finite time intervals and fractional moments below the mean-square endpoint. Calvello and collaborators treat discrete time; their finite-horizon accuracy theorem does not provide the present uniform continuous-time estimate. Existing linear-Gaussian results do not cover a nonlinear Jacobian evaluated at the evolving ensemble mean.\n\nThe 17 October 2026 searches and current catalogue comparison found no resolution of this precise question. The closest retained FURTHER problem concerns contraction of a linear-model matrix Riccati diffusion under common noise, with a fixed ensemble size, and asks no optimal sampling rate. Independent selected-primary review checked the exact constants, squared trace restriction, comparison-particle drift, both unconditional Wasserstein targets and the quantitative hypotheses. It also checked that Gaussian initialization and bounded signal Jacobian do not make the covariance-dependent particle coefficients globally Lipschitz or turn the nonlinear model into the known linear case.\n\nFurther selected 2026 comparisons include [a nonlinear-law constant-noise framework](https://arxiv.org/abs/2603.10988) and [a discrete transport-filter Monte Carlo theorem](https://arxiv.org/abs/2606.25346). Their inspected assumptions or finite-horizon restrictions do not supply this continuous-time endpoint.\n\nAll-status AIM/OpenAI and FURTHER comparisons found no equivalent target. The fresh Prove2Me snapshot reconciles 4,629 distinct listings on 186 pages. All 70 target contexts were read, merging overlap without losing matched text; the returned optimization, gas, graphon and game estimates concern different models. This comparison covers public listing descriptions, not every mission proof.\n\nThe [source review](../FURTHER_problems/_tracking/parallel/rough-filtering/extended-ensemble-optimal-rate-review.json), [independent audit](../FURTHER_problems/_tracking/parallel/complex-bayesian/cross-extended-ensemble-optimal-rate-review.json) and [fresh catalogue comparison](../FURTHER_problems/_tracking/parallel/rough-filtering/EnEKF-prove2-batch0082-review.json) preserve exact extents. The original 39-page author text and companion 33-page text were read in full by the source reviewer; parity with the final 2017 journal edition remains unchecked. Some later comparisons are selected readings only. These dated checks found no matching complete resolution or announcement and do not certify every cited proof.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-a81af787ee12a3e9**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"extended ensemble Kalman Bucy\" \"optimal rate\" 2026",
+    "\"extended ensemble\" \"optimal rate\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1606.08256v2",
+      "locator": "Theorem2.3, equations26–27 and paragraph after",
+      "inspection": "Actual theorem gives unspecified beta in(0,1/2] and explicitly conjectures beta=1/2. Local coupled linearization-at-empirical-mean model asks uniform infinite-time N^-1/2 for both unconditional Wasserstein targets. Need verify newer SPDE/discrete/filter-model theorem bodies before completed check."
+    }
+  ],
+  "scope_comparison": "Actual theorem gives unspecified beta in(0,1/2] and explicitly conjectures beta=1/2. Local coupled linearization-at-empirical-mean model asks uniform infinite-time N^-1/2 for both unconditional Wasserstein targets. Need verify newer SPDE/discrete/filter-model theorem bodies before completed check.",
+  "rationale": "No complete matching result identified in bounded searches; preserve specific source-body gaps described above.",
+  "source_gaps": [
+    "Specific source-body/announcement comparisons pending as described.",
+    "Snapshot routing pending this batch."
+  ],
+  "announcement_routing": {
+    "localID": "888",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "extended ensemble",
+          "Kalman-Bucy",
+          "Kalman Bucy"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "extended ensemble",
+          "Kalman-Bucy",
+          "Kalman Bucy"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "extended ensemble",
+        "Kalman-Bucy",
+        "Kalman Bucy"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:48:36.130Z",
+      "previous_outcome": "hold",
+      "localID": "888",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "queries": [
+        "\"Accuracy of the ensemble Kalman filter in the near-linear setting\" arxiv"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2306.16863v4",
+          "version": "3May2024; publishedSUQ2025",
+          "locator": "particle equation(1) pp1–2; Theorem24 PDFp22; Remarks25–26 pp24–25",
+          "inspection": "Theorem24 assumes BOUNDED observation function H and is for every finite T with constants N0(T,p,nu),kappa(T,p,nu). Particles use A(u_i), not linearization at empirical mean. Target observation Bx is unbounded, horizon infinite and drift is linearized at m^N."
+        },
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1732544",
+          "version": "published17March2026",
+          "locator": "§1.1, §2.1 model(2.1), Theorem2.4",
+          "inspection": "Calvello–Monmarche–Stuart–Vaes analyze DISCRETE-TIME EnKF. Their introduction explicitly leaves continuous time and infinite-time-horizon estimates open; target is a continuous-time extended Kalman–Bucy rate."
+        }
+      ],
+      "scope_comparison": "Exact model and finite/infinite-time quantifiers now checked. Neither result gives both target unconditional Wasserstein distances with N^-1/2 uniformly over all times. No material plausible full-candidate access gap remains."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

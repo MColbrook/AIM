@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "728",
+  "manifest_index": 572,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "728",
+    "title": "Do continuous polynomial roots have weak endpoint derivative regularity?",
+    "area": "Complex analysis and potential theory",
+    "file": "problems/728-do-continuous-polynomial-roots-have-weak-endpoint-derivative-regularity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-fce0a07486626e42",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "2c24c78afe37c4a1b934ae1782dca621a100501f6fe93945a42f2c678124862e",
+    "statement_sha256": "836b05efa3173fba39128f7bef7c2967c5f5517abd64cd50dd198337fee475ec",
+    "state": "unreviewed"
+  },
+  "source_sha256": "2c24c78afe37c4a1b934ae1782dca621a100501f6fe93945a42f2c678124862e",
+  "statement_sha256": "836b05efa3173fba39128f7bef7c2967c5f5517abd64cd50dd198337fee475ec",
+  "actual_source_sha256": "2c24c78afe37c4a1b934ae1782dca621a100501f6fe93945a42f2c678124862e",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\geq3`$, let $`I=(a,b)`$ be a bounded interval, and let\n\n```math\nP_t(z)=z^n+a_1(t)z^{n-1}+\\cdots+a_n(t)\n```\n\n\nbe a monic complex polynomial whose coefficients belong to $`C^{n-1,1}([a,b];\\mathbb C)`$. For **every** continuous choice of a root $`\\lambda:I\\to\\mathbb C`$, is\n\n```math\n\\lambda'\\in L^{n/(n-1),\\infty}(I),\\qquad\n\\sup_{s>0}s\\,|\\{t\\in I:|\\lambda'(t)|>s\\}|^{(n-1)/n}<\\infty?\n```\n\n\nThe derivative exists almost everywhere by the known absolute-continuity theorem [2, Theorem 1]. This is the weak-Lebesgue endpoint question stated by Ghisi and Gobbino [1, §4] and again by Parusiński and Rainer [2, Open Problem 2]. The latter also ask for an explicit bound in terms of the coefficients and interval.\n\nThe distinction between **weak** and ordinary $`L^{n/(n-1)}`$ is essential: $`P_t(z)=z^n-t`$ has a root with derivative proportional to $`|t|^{1/n-1}`$, which misses ordinary endpoint integrability but has the critical weak-space scaling. The known theorem gives $`\\lambda'\\in L^q(I)`$ for every $`q<n/(n-1)`$ [2]; those separate bounds do not imply the weak endpoint.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"roots of polynomials\" \"weak\" \"endpoint\" 2026 Parusinski Rainer",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"roots\" \"weak endpoint\"",
+    "site:palomar-registry.org OR site:hexagonmath.org \"polynomial\" \"weak endpoint\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1,30September2026",
+      "scope_comparison": "Actual Theorem1.2 allows C^(d−1,1) coefficients and obtains Lipschitz roots only after changing parameter by t_a; C^d is used for continuity statements. Neither the new parameter nor separate subcritical q<d/(d−1) estimates establishes weak endpoint regularity of each root derivative in the original parameter. Strong-Lp endpoint counterexample z^n−t is compatible with weak endpoint and is not a disproof. No matching solution announcement located.",
+      "primary_body_access_gap": false,
+      "locator": "Theorems1.1–1.3 and §4 proof",
+      "url": "https://arxiv.org/html/2609.39389v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual Theorem1.2 allows C^(d−1,1) coefficients and obtains Lipschitz roots only after changing parameter by t_a; C^d is used for continuity statements. Neither the new parameter nor separate subcritical q<d/(d−1) estimates establishes weak endpoint regularity of each root derivative in the original parameter. Strong-Lp endpoint counterexample z^n−t is compatible with weak endpoint and is not a disproof. No matching solution announcement located.",
+  "latest_version_check": "v1,30September2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

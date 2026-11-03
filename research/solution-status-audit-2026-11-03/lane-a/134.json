@@ -1,0 +1,78 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "134",
+  "manifest_index": 105,
+  "original_target": {
+    "id": "134",
+    "title": "Exact optimal control in the scalar Witsenhausen benchmark",
+    "area": "Decentralized stochastic control",
+    "file": "problems/134-witsenhausen-exact-optimum.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse2",
+    "source_sha256": "bcc6a5464fcc92a9d123f0afa93a41685749dcf0d451a1624326a47047a2227a",
+    "statement_sha256": "1a48c6e5565048edd4ee39a2ef85c102f59b527b580b61287b396d57c1ca1489",
+    "state": "unreviewed"
+  },
+  "source_sha256": "bcc6a5464fcc92a9d123f0afa93a41685749dcf0d451a1624326a47047a2227a",
+  "statement_sha256": "1a48c6e5565048edd4ee39a2ef85c102f59b527b580b61287b396d57c1ca1489",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:19:11.655094+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2509.02381v1 TheoremIII.1 proves only derivative optimality as power tends to zero. Actual2509.11013v1 SectionIV/TableIII uses numerical quadrature for the exact benchmark k=.2,sigmaX=5,noise1 and claims person-by-person conditions, not a certified scalar global optimum. Vector asymptotics and linear-optimality-region claims differ.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2509.02381v1",
+      "locator": "SectionIII TheoremIII.1",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2509.11013v1",
+      "locator": "SectionIV benchmark TableIII and SectionV",
+      "body_inspected": true
+    },
+    {
+      "url": "https://doi.org/10.1109/ICC59461.2026.11587905",
+      "locator": "2026 vector asymptotic article abstract only",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Witsenhausen\" \"global\" \"optimal\" 2026 proof",
+    "\"Witsenhausen\" \"2026\" \"optimal\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Witsenhausen\" \"solution\" 2026 exact optimum"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Witsenhausen"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Witsenhausen"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

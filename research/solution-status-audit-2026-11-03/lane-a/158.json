@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "158",
+  "manifest_index": 124,
+  "original_target": {
+    "id": "158",
+    "title": "Multiplicity one at planar network singularities",
+    "area": "Grain-boundary evolution",
+    "file": "problems/158-network-multiplicity-one.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "ec22b71887f13f8d97879e00eeb2e80abe00c260d863c44b2faec4fa78b74532",
+    "statement_sha256": "299f51132ead38abc8e807cb94d8fea1bdb3b66cfdcbbb9ffbdcc690690a26bc",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ec22b71887f13f8d97879e00eeb2e80abe00c260d863c44b2faec4fa78b74532",
+  "statement_sha256": "299f51132ead38abc8e807cb94d8fea1bdb3b66cfdcbbb9ffbdcc690690a26bc",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:34:39.206086+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Actual2024 network monograph Openproblem9.1 asks exact unrestricted multiplicity-one shrinking limit. Type0 tree evolution assumes unit multiplicity or bounds junction count; smooth short-time flow-out theorems and higher-dimensional conical MCF do not establish every tangent shrinker's embedded unit multiplicity.",
+  "primary_sources": [
+    {
+      "url": "https://people.dm.unipi.it/novaga/papers/mantegazza/tripunto/network-survey.pdf",
+      "locator": "Openproblem9.1 and Section15 item2",
+      "body_inspected": true
+    },
+    {
+      "url": "https://cvgmt.sns.it/media/doc/paper/5081/MNP-2022.pdf",
+      "locator": "Introduction: unit multiplicity assumption",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"network flow\" \"multiplicity one conjecture\" 2026",
+    "\"network flow\" \"multiplicity\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) 2026 curvature"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "network flow",
+        "multiplicity-one"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "network flow",
+        "multiplicity-one"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

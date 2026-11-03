@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "687",
+  "manifest_index": 531,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "687",
+    "title": "Does polynomial Fischer surjectivity force a quadratic-order degree bound?",
+    "area": "Complex analysis and potential theory; polyharmonic equations",
+    "file": "problems/687-does-polynomial-fischer-surjectivity-force-a-quadratic-order-degree-bound.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-452fbe2c811e2e20",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "97d2f1f100ea513835563844e2bd8dbd4c66ef6c417941fffb1d0ec7aed7bfc6",
+    "statement_sha256": "4ebf553aff993980a3c90abe780bf0e2805864b96606f36c42f5a3019f2a27c5",
+    "state": "unreviewed"
+  },
+  "source_sha256": "97d2f1f100ea513835563844e2bd8dbd4c66ef6c417941fffb1d0ec7aed7bfc6",
+  "statement_sha256": "4ebf553aff993980a3c90abe780bf0e2805864b96606f36c42f5a3019f2a27c5",
+  "actual_source_sha256": "97d2f1f100ea513835563844e2bd8dbd4c66ef6c417941fffb1d0ec7aed7bfc6",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\ge2`$, $`k\\ge1`$ be integers and let $`\\psi\\in\\mathbb R[x_1,\\ldots,x_n]`$ be a nonzero polynomial. Write $`\\Delta=\\sum_{j=1}^n\\partial_{x_j}^2`$. Suppose that the linear map\n\n```math\nF_{\\psi,k}:\\mathbb R[x_1,\\ldots,x_n]\\longrightarrow\\mathbb R[x_1,\\ldots,x_n],\\qquad q\\longmapsto\\Delta^k(\\psi q)\n```\n\nis surjective. Must $`\\deg\\psi\\le2k`$?\n\nEquivalently, suppose that **every** real polynomial $`f`$ admits real polynomials $`q_f,h_f`$ with $`f=\\psi q_f+h_f`$ and $`\\Delta^k h_f=0`$. Does the same degree bound follow? No bound on the degrees of $`q_f`$ or $`h_f`$ is assumed. Coefficients are real, and the question asks a necessary condition, not a characterization by degree alone.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Fischer\" \"surjectivity\" polynomial degree Render proof 2026",
+    "\"Fischer\" \"surjectivity\" polynomial degree Render (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Theorems1.1–1.2 lines65–99",
+      "version_or_date": "arXiv2608.29909v1, 2026",
+      "scope_comparison": "The actual new theorem treats planar harmonic extension/additive separation, corresponding to n=2,k=1. It neither treats arbitrary n nor Delta^k of arbitrary order. The target requires a degree bound with no uniform decomposition-degree assumption. Complex coefficient examples and paired-entire Fischer operators also differ. No all-dimensional all-order full claim identified.",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2608.29909v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual new theorem treats planar harmonic extension/additive separation, corresponding to n=2,k=1. It neither treats arbitrary n nor Delta^k of arbitrary order. The target requires a degree bound with no uniform decomposition-degree assumption. Complex coefficient examples and paired-entire Fischer operators also differ. No all-dimensional all-order full claim identified.",
+  "latest_version_check": "arXiv2608.29909v1, 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

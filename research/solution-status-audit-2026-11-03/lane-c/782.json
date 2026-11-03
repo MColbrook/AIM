@@ -1,0 +1,72 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "782",
+  "manifest_index": 626,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "782",
+    "title": "Are compact convex sets in arbitrary linear metric spaces absolute retracts?",
+    "area": "Geometry and topology",
+    "file": "problems/782-are-compact-convex-sets-in-arbitrary-linear-metric-spaces-absolute-retracts.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-385efa0ef5fffe9e",
+    "group": "geometry-topology",
+    "source_sha256": "6e02a1bf9c3df07e31423a6e0f3b99082da1b1c8ca8e2a786062f7d42ff0f6b6",
+    "statement_sha256": "4e2e66598a3f9f3c93fd47462f8990177f3375381d05d75304aa799f15650f2d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6e02a1bf9c3df07e31423a6e0f3b99082da1b1c8ca8e2a786062f7d42ff0f6b6",
+  "statement_sha256": "4e2e66598a3f9f3c93fd47462f8990177f3375381d05d75304aa799f15650f2d",
+  "actual_source_sha256": "6e02a1bf9c3df07e31423a6e0f3b99082da1b1c8ca8e2a786062f7d42ff0f6b6",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`E`$ be a metrizable topological vector space, without assuming local convexity, and let $`C\\subset E`$ be compact and convex. Must $`C`$ be an **absolute retract**? That means that whenever $`C`$ is embedded as a closed subset of a metrizable space $`Y`$, there is a continuous retraction $`Y\\to C`$.\n\nThe question asks for the absolute-retract property of every such $`C`$. It does not ask only whether continuous self-maps of $`C`$ have fixed points.\n\n**Editorial clarification:** Make the intended nonempty compact-convex convention explicit.",
+  "full_local_page_read": true,
+  "queries": [
+    "compact convex AR problem Yuan dominant gap lemma correction 2026",
+    "compact convex AR problem Yuan dominant gap lemma correction 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "compact convex AR problem Yuan dominant gap lemma correction 2026 (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Yuan\" \"absolute retract\" \"2026\" correction",
+    "\"404399495\" correction"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "TheoremA.7 claims every compact p-convex set in a Hausdorff TVS is AR, including p=1 and the nonempty metrizable target. However, its argument uses LemmaA.1's subordinate continuous partition with a unique dominant component everywhere. For K=[0,1], U1=[0,2/3), U2=(1/3,1], subordination forces phi1(0)=1 and phi1(1)=0, so continuity forces a tie. With any refinement a unique maximal index is locally constant and hence constant on K, forcing one proper cover member to contain K. The proposed proof therefore has an explicit unrepaired gap; this is not a counterexample to the AR target. Retain hold rather than certify a complete matching solution.",
+      "primary_body_access_gap": false,
+      "locator": "AppendixLemmaA.1,A.2;TheoremA.6 proofSteps2–3;TheoremA.7,p31",
+      "url": "https://www.researchgate.net/publication/404399495_A_Refined_Construction_of_Partition_of_Unity_Yuan_Dominant_d-Gap_Lemma_on_Compact_Hausdorff_TVSs",
+      "version_or_date": "Author-uploadedMay4,2026 minor-correction and extended-lemma texts, inspected3November2026; no later repair found in bounded searches"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The general AR claim depends on a false unique-dominant partition lemma. On the connected interval with the two proper overlapping open sets, subordination and continuity force a tie; refinement still forces a unique maximal index to be locally constant and hence constant. This is an explicit unrepaired proof obstruction, already documented on the local page, rather than unavailable source text.",
+  "latest_version_check": "Author-uploadedMay4,2026 minor-correction and extended-lemma texts, inspected3November2026; no later repair found in bounded searches",
+  "gap_retraction_check": "Primary full supporting theorem text was inspected. The interval argument refutes LemmaA.1 even before its uniform positive delta claim; A.2 and A.6 depend on it. Bounded current searches found no later repair. User's unverified-announcement policy does not erase a known unresolved proof gap.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ],
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T14:04:04.921799+00:00",
+      "reviewer": "lane-c; root persisted final relay",
+      "url": "https://www.researchgate.net/publication/404399495_A_Refined_Construction_of_Partition_of_Unity_Yuan_Dominant_d-Gap_Lemma_on_Compact_Hausdorff_TVSs",
+      "locator": "LemmaA.1 p26, LemmaA.2, TheoremA.6 steps2–3, TheoremA.7 p31;4May2026 upload",
+      "primary_body_read_in_earlier_lane_turn": true,
+      "scope_comparison": "The general AR claim depends on a false unique-dominant partition lemma. On the connected interval with the two proper overlapping open sets, subordination and continuity force a tie; refinement still forces a unique maximal index to be locally constant and hence constant. This is an explicit unrepaired proof obstruction, already documented on the local page, rather than unavailable source text.",
+      "limitations": "Earlier author-uploaded full text inspected through web extraction; no body cache/SHA retained. No later repair found in bounded searches. This refutes the supporting lemma, not the AR conjecture."
+    }
+  ],
+  "review_state": "bounded_review_complete",
+  "material_full_claim_access_gap": false
+}

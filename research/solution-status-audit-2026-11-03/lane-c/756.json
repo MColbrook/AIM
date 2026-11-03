@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "756",
+  "manifest_index": 600,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "756",
+    "title": "Approximate continuity outside the jump set for bounded-deformation maps",
+    "area": "Calculus of variations / fracture and plasticity",
+    "file": "problems/756-approximate-continuity-outside-the-jump-set-for-bounded-deformation-maps.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-66a100fb14595af8",
+    "group": "fracture-damage-plasticity-contact",
+    "source_sha256": "774b1cb8ca371b4f42dc7e9a925e392e98025f16890c38a3d93f31b82e499a08",
+    "statement_sha256": "a48aa00cba144ee91b010d46b8b2dc84a28af85fd1c2c8efb010e44166c0a978",
+    "state": "unreviewed"
+  },
+  "source_sha256": "774b1cb8ca371b4f42dc7e9a925e392e98025f16890c38a3d93f31b82e499a08",
+  "statement_sha256": "a48aa00cba144ee91b010d46b8b2dc84a28af85fd1c2c8efb010e44166c0a978",
+  "actual_source_sha256": "774b1cb8ca371b4f42dc7e9a925e392e98025f16890c38a3d93f31b82e499a08",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`d\\ge2`$ and let $`u\\in L^1_{\\mathrm{loc}}(\\mathbb R^d;\\mathbb R^d)`$ have distributional symmetric gradient\n\n```math\nEu=\\tfrac12(Du+Du^T)\\in\\mathcal M_{\\mathrm{loc}}(\\mathbb R^d;\\mathbb R^{d\\times d}_{\\mathrm{sym}}).\n```\n\nThus $`u\\in\\mathrm{BD}_{\\mathrm{loc}}(\\mathbb R^d)`$. Define $`C_u`$ to consist of points $`x`$ for which some $`z\\in\\mathbb R^d`$ satisfies\n\n```math\n\\lim_{r\\downarrow0}\\frac1{|B_r(x)|}\\int_{B_r(x)}|u(y)-z|\\,dy=0,\n\\qquad S_u=\\mathbb R^d\\setminus C_u.\n```\n\nDefine $`J_u`$ to consist of points $`x`$ for which there are $`a\\ne b`$ in $`\\mathbb R^d`$ and $`\\nu\\in\\mathbb S^{d-1}`$ such that, writing $`B_r^\\pm(x,\\nu)=\\{y\\in B_r(x):\\pm(y-x)\\cdot\\nu>0\\}`$,\n\n```math\n\\lim_{r\\downarrow0}\\frac1{|B_r(x)|}\\int_{B_r^+(x,\\nu)}|u(y)-a|\\,dy=0,\n\\qquad\n\\lim_{r\\downarrow0}\\frac1{|B_r(x)|}\\int_{B_r^-(x,\\nu)}|u(y)-b|\\,dy=0.\n```\n\nIs it true for every such $`d,u`$ that\n\n```math\n\\mathcal H^{d-1}(S_u\\setminus J_u)=0?\n```\n\nApproximate continuity here means the displayed mean-$`L^1`$ limit. No additional boundedness, higher strain integrability, absence of Cantor strain, or finite jump-set measure is assumed.",
+  "full_local_page_read": true,
+  "queries": [
+    "BD approximate continuity jump set Hausdorff conjecture 2026 2606.12061",
+    "BD approximate continuity jump Hausdorff (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "BD approximate continuity (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"BD\" \"approximate continuity\" \"2026\" Rindler"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1, 10 June 2026; current arXiv record inspected; also original 2020 publisher PDF Conjecture 1.3",
+      "locator": "§3.1 Corollaries 3.2, 3.3 and 3.5; De Philippis–Rindler Conjecture 1.3, p.390",
+      "scope_comparison": "The new statements give absolute continuity of Au with respect to codimension-one measures, traces on rectifiable sets, and identification of its positive-density jump part. These constrain strain measures, not H^(d−1) of all non-Lebesgue nonjump points. The original survey explicitly distinguishes the known weaker |Ev|(Su\\Ju)=0 from the requested H^(d−1)(Su\\Ju)=0 for arbitrary BDloc maps. No theorem inspected supplies that stronger conclusion without additional assumptions.",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2606.12061v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The new statements give absolute continuity of Au with respect to codimension-one measures, traces on rectifiable sets, and identification of its positive-density jump part. These constrain strain measures, not H^(d−1) of all non-Lebesgue nonjump points. The original survey explicitly distinguishes the known weaker |Ev|(Su\\Ju)=0 from the requested H^(d−1)(Su\\Ju)=0 for arbitrary BDloc maps. No theorem inspected supplies that stronger conclusion without additional assumptions.",
+  "latest_version_check": "v1, 10 June 2026; current arXiv record inspected; also original 2020 publisher PDF Conjecture 1.3",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

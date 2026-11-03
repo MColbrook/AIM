@@ -1,0 +1,46 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "462",
+  "manifest_index": 367,
+  "source_sha256": "be562c5c2def29cf2c0d942d7a3386fd2bfef27bf7f7835fddb5b5eede6ab448",
+  "statement_sha256": "4b0235fc82f23fc72a1ae5bc3245404694f472d6f228f54860ade93924d202a5",
+  "original_target": {
+    "id": "462",
+    "title": "A finite-integrability ABP estimate for general nonlocal Pucci operators",
+    "area": "Fully nonlinear nonlocal PDEs; maximum principles",
+    "file": "problems/462-nonlocal-pucci-finite-integrability-abp.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: negative for every strict ellipticity pair, claimed",
+    "proof": "https://arxiv.org/pdf/2610.16162v1",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_115_140.md",
+    "group": "diffusion-materials",
+    "source_sha256": "be562c5c2def29cf2c0d942d7a3386fd2bfef27bf7f7835fddb5b5eede6ab448",
+    "statement_sha256": "4b0235fc82f23fc72a1ae5bc3245404694f472d6f228f54860ade93924d202a5",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "unverified-announcement",
+  "ready_for_parent": true,
+  "recommended_status": "Solved",
+  "answer": "Negative for every strict pair0<lambda<Lambda; linear equality case is not a counterexample.",
+  "required_status_qualification": "Solved on the basis of an unverified announcement. The full target is claimed in the cited source; the external proof has not been independently verified here.",
+  "scope_comparison": "For n>=1,0<sigma<2 and every0<lambda<Lambda, the source constructs a fixed even kernel coefficient a between lambda,Lambda, smooth compactly supported u_j>=0,f_j>=0 in B1, f_j<=1 and support measure->0, with L_a u_j>=-f_j while u_j>=d>0 on B1/4. Set sigma=2s. Pointwise Pucci maximality gives original M+u_j>=(1/2)L_a u_j>=-f_j/2. Thus original continuous right side f=-f_j/2 has sup norm<=1, every finite Lp norm->0, and any positive-power proposed bound fails. Smooth classical functions satisfy the specified viscosity convention. The universal family is refuted for all strict ellipticity pairs; lambda=Lambda is the standard linear fractional Laplacian case and is not claimed negative.",
+  "queries": [
+    "\"2610.16162\" correction error withdrawn",
+    "\"nonlocal\" \"ABP\" counterexample (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "primary_sources": [
+    {
+      "version": "v1,12October2026",
+      "locator": "Theorem1.1; Corollary1.2; operator(1.1)–(1.3)",
+      "body_inspected": true,
+      "url": "https://arxiv.org/html/2610.16162v1"
+    }
+  ],
+  "known_gap_check": "Prior local applicability reviews read; no concrete scope or proof gap was recorded. Current primary bodies and bounded correction/version searches did not locate withdrawal. Whole external proofs remain unverified.",
+  "verification": "Applicability review only; no new whole-proof, Lean or certificate replay."
+}

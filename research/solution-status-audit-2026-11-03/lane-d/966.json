@@ -1,0 +1,92 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "966",
+  "manifest_index": 810,
+  "checked_date": "2026-11-03",
+  "source_sha256": "ce17e242f1401e4cd0f040fba322471dffd37e39f28753d22ec98f844b4b848b",
+  "statement_sha256": "1d3ea6628c52577f1ea10cd584216ea0c21ed0e6481681f9384b5f0f926baea9",
+  "original_target": {
+    "id": "966",
+    "title": "Failure of third differentiability of the planar percolation cluster density",
+    "area": "Probability, random media and phase transitions",
+    "file": "problems/966-failure-of-third-differentiability-of-the-planar-percolation-cluster-density.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-009ea341fdfcfb25",
+    "group": "probability-statistics",
+    "source_sha256": "ce17e242f1401e4cd0f040fba322471dffd37e39f28753d22ec98f844b4b848b",
+    "statement_sha256": "1d3ea6628c52577f1ea10cd584216ea0c21ed0e6481681f9384b5f0f926baea9",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "On the nearest-neighbor square lattice $`\\mathbb Z^2`$, independently declare each edge open with probability $`p\\in[0,1]`$. Let $`C(0)`$ be the connected component of the origin using open edges, and let $`|C(0)|`$ count its vertices. Define\n```math\n\\kappa(p)=\\mathbb E_p\\!\\left[\\frac1{|C(0)|}\\right],\n\\qquad \\frac1\\infty:=0.\n```\n\nThis is the mean number of open clusters per vertex in the infinite-volume limit [1, §4.1]. The critical probability is $`p_c=1/2`$.\n\n**Prove or disprove that the ordinary third derivative $`\\kappa'''(1/2)`$ does not exist as a finite real number.** Since $`\\kappa`$ is twice continuously differentiable near $`1/2`$, the question is whether\n```math\n\\lim_{h\\to0}\\frac{\\kappa''(1/2+h)-\\kappa''(1/2)}h\n```\n\nfails to exist finitely. No particular critical exponent or divergence amplitude is prescribed.\n\nThe conjecture is stated explicitly in [1, p. 325], with further discussion on p. 285. It concerns the next derivative at the critical point; failure of continuous third differentiability somewhere in every neighborhood would be a weaker conclusion.",
+  "full_original_page": "# 966. Failure of third differentiability of the planar percolation cluster density\n\n**Area:** Probability, random media and phase transitions\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nOn the nearest-neighbor square lattice $`\\mathbb Z^2`$, independently declare each edge open with probability $`p\\in[0,1]`$. Let $`C(0)`$ be the connected component of the origin using open edges, and let $`|C(0)|`$ count its vertices. Define\n```math\n\\kappa(p)=\\mathbb E_p\\!\\left[\\frac1{|C(0)|}\\right],\n\\qquad \\frac1\\infty:=0.\n```\n\nThis is the mean number of open clusters per vertex in the infinite-volume limit [1, §4.1]. The critical probability is $`p_c=1/2`$.\n\n**Prove or disprove that the ordinary third derivative $`\\kappa'''(1/2)`$ does not exist as a finite real number.** Since $`\\kappa`$ is twice continuously differentiable near $`1/2`$, the question is whether\n```math\n\\lim_{h\\to0}\\frac{\\kappa''(1/2+h)-\\kappa''(1/2)}h\n```\n\nfails to exist finitely. No particular critical exponent or divergence amplitude is prescribed.\n\nThe conjecture is stated explicitly in [1, p. 325], with further discussion on p. 285. It concerns the next derivative at the critical point; failure of continuous third differentiability somewhere in every neighborhood would be a weaker conclusion.\n\n## Application\n\nThe cluster density measures the average number of separate connected regions in a model of a porous or disordered medium. Its regularity describes a weak thermodynamic singularity at the connectivity transition.\n\n## Status review\n\n\n**Known cases:** The target is the ordinary third derivative at the square bond critical probability. Exact cluster values, numerical scaling, critical percolation existence and interface convergence do not by themselves establish failure of this derivative.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe target is the ordinary third derivative at the square bond critical probability. Exact cluster values, numerical scaling, critical percolation existence and interface convergence do not by themselves establish failure of this derivative.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe function $`\\kappa`$ is analytic away from $`p_c`$ and is $`C^2`$ at $`p_c`$ [1]. The 2020 primary discussion [2, pp. 2–3 of the checked arXiv version] continues to distinguish this rigorous regularity from conjectured failure of the third derivative.\n\nAIM 090 and the related OpenAI result family 223 concern critical crossing probabilities and interface scaling limits. The inspected October 2026 manuscript [3, Theorems 1.1–1.2] treats the critical edge parameter, with no uniformity in the cluster weight asserted. It gives no theorem about the displayed derivative of $`\\kappa`$. Such critical convergence alone does not justify differentiating cluster-count limits as $`p`$ varies. The scaling relations involving the cluster-density exponent require separate care: [1, p. 252] explicitly excludes that exponent from its account of Kesten's proved scaling relations.\n\nThis review compared exact source definitions and selected current formal statements. It does not independently certify the complete proofs of the cited results.\n\n## References\n\n1. Geoffrey Grimmett, [*Percolation*, second edition](https://doi.org/10.1007/978-3-662-03981-6), Springer, 1999. Definition (4.1), p. 77; planar duality and the regularity discussion, p. 285; the explicit third-derivative conjecture after Theorem (11.93), p. 325; scaling notes, p. 252. The definition and conjecture pages were checked in the native publisher chapters, including their rendered formulas.\n2. Dmitry Beliaev, Michael McAuley and Stephen Muirhead, [*Smoothness and monotonicity of the excursion set density of planar Gaussian fields*, arXiv:1905.09759v2](https://arxiv.org/pdf/1905.09759v2), 11 August 2020, introduction pp. 2–3. Published in **Electronic Journal of Probability 25** (2020), article 93, 1–37, [DOI 10.1214/20-EJP470](https://doi.org/10.1214/20-EJP470). The checked 39-page author version is described on arXiv as updated to match the published version; exact byte or pagination parity is not asserted.\n3. OpenAI, [*Conformal Limits of Critical Square-Lattice Random-Cluster Interfaces*](https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/Conformal-Limits-of-Critical-Square-Lattice-Random-Cluster-Interfaces-October-5-2026/paper.pdf), 5 October 2026, §§1.1–1.5 and Theorems 1.1–1.2, pp. 4–7. This is a related current claim, with the scope comparison described above.\n\nThe [coordinator review](../FURTHER_problems/_tracking/B081-cluster-density-entanglement-two-target-gates-C-20261028/ROOT-KAPPA-SOURCE-PIXELS-CURRENT-IMPLICATION-SCOPE-AND-SEMANTIC-PASS-20261028.json) records the current-result comparisons, source extents and all-status duplicate checks.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-009ea341fdfcfb25**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scope passages inspected, not full proof certification."
+  ],
+  "aliases": [
+    "cluster density",
+    "third derivative",
+    "Grimmett"
+  ],
+  "queries": [
+    "\"percolation\" \"cluster density\" \"third derivative\"",
+    "\"percolation\" \"cluster density\" \"third derivative\"; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"cluster density\" \"third\" percolation Grimmett"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1905.09759v2",
+      "locator": "11Aug2020v2 introduction nativepp2–3",
+      "comparison": "Gaussian excursion density C1 theory is a different random field and parameter; discussion distinguishes rigorous C2 cluster-density regularity from the conjectural next derivative. Critical interface scaling limits do not give differentiability in Bernoulli edge parameter."
+    }
+  ],
+  "rationale": "Numerical cluster exponent, exact critical value and interface convergence do not prove failure of the ordinary third derivative at p=1/2; no matching claim found.",
+  "announcement_routing": {
+    "localID": "966",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "cluster density",
+          "third derivative",
+          "Grimmett"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "cluster density",
+          "third derivative",
+          "Grimmett"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "cluster density",
+        "third derivative",
+        "Grimmett"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

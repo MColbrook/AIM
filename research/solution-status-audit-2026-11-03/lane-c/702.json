@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "702",
+  "manifest_index": 546,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "702",
+    "title": "Vekua's harmonic boundary problem in connectivity at least three",
+    "area": "Potential theory and free boundary problems",
+    "file": "problems/702-vekua-s-harmonic-boundary-problem-in-connectivity-at-least-three.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8316cc5bc31839ee",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "fcadf0913ac0bbe2d6e43aa8148ef9553527aecd7cbd4c87d792b5c2b14be155",
+    "statement_sha256": "2184457464c4911623ad015902a73f268b17bcdbfcb3c860499322588bbdc48e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "fcadf0913ac0bbe2d6e43aa8148ef9553527aecd7cbd4c87d792b5c2b14be155",
+  "statement_sha256": "2184457464c4911623ad015902a73f268b17bcdbfcb3c860499322588bbdc48e",
+  "actual_source_sha256": "fcadf0913ac0bbe2d6e43aa8148ef9553527aecd7cbd4c87d792b5c2b14be155",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\ge3`$, and let $`\\Omega\\subset\\mathbb R^2`$ be a bounded connected open set whose boundary consists of $`n`$ pairwise disjoint real-analytic Jordan curves $`\\Gamma_1,\\ldots,\\Gamma_n`$. Is it impossible to find a nonconstant real function\n```math\nu\\in C^2(\\Omega)\\cap C^1(\\overline\\Omega)\n```\n\nand constants $`c_j,d_j\\in\\mathbb R`$ satisfying\n```math\n\\Delta u=0\\quad\\hbox{in }\\Omega,\n\\qquad\nu=c_j,\\quad \\partial_\\nu u=d_j\\quad\\hbox{on }\\Gamma_j,\n\\qquad j=1,\\ldots,n,\n```\n\nwhere $`\\nu`$ is the outward unit normal of $`\\Omega`$?\n\nEquivalently, does existence of such a nonconstant solution force the connectivity to be at most two? The constants may differ between components, and the normal derivatives may have different signs and magnitudes. No positivity, ordering, symmetry or convexity is assumed. This is one family across all $`n\\ge3`$, including the triply connected case.\n\nThis deliberately asks the analytic-boundary restriction of the original Vekua conjecture. Constant functions are excluded. In this regularity class, if one $`d_j`$ vanishes, constant Dirichlet and zero normal data on that analytic component force $`u`$ to be constant by harmonic Cauchy uniqueness. Thus a nonconstant solution automatically has every $`d_j\\ne0`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Vekua\" harmonic boundary connectivity conjecture proof 2026",
+    "\"Vekua\" harmonic boundary connectivity conjecture (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Theorem5.1 and Proposition5.3; PP-Iprime definition; Remark5.2",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2512.06740v3",
+      "scope_comparison": "The actual classification of component-dependent gradients still requires the first Steklov relation partial_nu u=sigma1 u. Its higher-eigenvalue extension assumes no interior critical points. The target allows arbitrary cj,dj on bounded analytic multiconnected domains. Hollow-vortex constructions are unbounded, and common signed flux is excluded by flux conservation. No matching full arbitrary-flux statement found.",
+      "version_or_date": "arXiv2512.06740v3,5May2026"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual classification of component-dependent gradients still requires the first Steklov relation partial_nu u=sigma1 u. Its higher-eigenvalue extension assumes no interior critical points. The target allows arbitrary cj,dj on bounded analytic multiconnected domains. Hollow-vortex constructions are unbounded, and common signed flux is excluded by flux conservation. No matching full arbitrary-flux statement found.",
+  "latest_version_check": "arXiv2512.06740v3,5May2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "551",
+  "manifest_index": 430,
+  "original_target": {
+    "id": "551",
+    "title": "Does the Mumford–Shah calibration dual always attain the segmentation energy?",
+    "area": "Continuous optimization",
+    "file": "problems/551-does-the-mumfordshah-calibration-dual-always-attain-the-segmentation-energy.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ec9bcf83b8c6e1d4",
+    "group": "optimization-information",
+    "source_sha256": "c933f1b70038e34e3a0a6c16b9b1e7e3aeea01c93c29487fb1094c47742cafc2",
+    "statement_sha256": "27e1025e0c54922771ad7a1e4bb2b3934ce3f2d516a05cd3fd66d73a6ab4532f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "c933f1b70038e34e3a0a6c16b9b1e7e3aeea01c93c29487fb1094c47742cafc2",
+  "statement_sha256": "27e1025e0c54922771ad7a1e4bb2b3934ce3f2d516a05cd3fd66d73a6ab4532f",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:56:06.051748+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The current Deangelis theorem proves interior arc/crack-tip/triple-junction regularity, not dual calibration fields or equality P=Q. The new free-boundary integral-energy convex relaxation has a different functional. Pinned OpenAI366 also concerns regularity, rather than the target calibration duality.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2609.26732v2",
+      "locator": "Theorem1.1 and section3.4 classification; current v2 5October2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://www.aimsciences.org/article/doi/10.3934/eect.2025015?viewType=HTML",
+      "locator": "Publisher abstract, free-boundary integral energy",
+      "body_inspected": false
+    },
+    {
+      "url": "https://doi.org/10.1016/j.crme.2017.12.011",
+      "locator": "2018 source p220 conjecture; direct PDF403, local cited formulation read",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Mumford-Shah\" \"duality\" \"2026\" calibration conjecture",
+    "\"Mumford\" \"calibration\" \"duality\" conjecture (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Mumford-Shah\" \"P=Q\" calibration duality solution"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Mumford",
+        "calibration"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-08-30-000002",
+          "title": "pengzhang91/Feige"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Mumford",
+        "calibration"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00662v1",
+          "title": "Integral crystalline Tate classes of codimension two at supersingular points of Mumford's fourfolds"
+        },
+        {
+          "id": "hexagon:2610.00611v1",
+          "title": "Continuity, Testing Regions and Fragility of Quantum Channel Divergences"
+        },
+        {
+          "id": "hexagon:2610.00557v1",
+          "title": "Gibbs Approximation from Coarse-Graining of Finite Systems"
+        },
+        {
+          "id": "hexagon:2610.00387v2",
+          "title": "Weil classes on every abelian sixfold of Weil type for $\\mathbb{Q}(\\sqrt{-3})$"
+        },
+        {
+          "id": "hexagon:2610.00386v1",
+          "title": "A transfer theorem for Weil classes on Prym--Tyurin factors of Galois covers"
+        },
+        {
+          "id": "hexagon:2610.00315v2",
+          "title": "Dense Algebraic Loci of Hodge Classes"
+        },
+        {
+          "id": "hexagon:2610.00246v3",
+          "title": "Algebraicity of Weil classes on abelian sixfolds of Weil type for $\\mathbb{Q}(\\sqrt{-3})$ with discriminant $-2$"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "2018 original direct body access failed; 2026 integral-energy comparator was an explicit abstract-level different target, not a proof audit."
+  ],
+  "canonical_update_required": false
+}

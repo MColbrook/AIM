@@ -1,0 +1,70 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "498",
+  "manifest_index": 393,
+  "original_target": {
+    "id": "498",
+    "title": "Planar Rips complexes as wedges of spheres",
+    "area": "Applied topology and geometric complexes",
+    "file": "problems/498-planar-rips-wedges-of-spheres.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-23",
+    "group": "geometry-topology",
+    "source_sha256": "9fb28e85824c340c502020afd1ff3a7193b0d24d163bfab7725eee3d09f864d3",
+    "statement_sha256": "80abef3d9d09a2d4bfe21ee3af1499d3a9532f66de81efa14f4b5f8537cf3a8f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9fb28e85824c340c502020afd1ff3a7193b0d24d163bfab7725eee3d09f864d3",
+  "statement_sha256": "80abef3d9d09a2d4bfe21ee3af1499d3a9532f66de81efa14f4b5f8537cf3a8f",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:35:50.964003+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Actual2406.01082v2 Conjecture1.2 retains the full target. TheoremC assumes two-dimensional, pure, closed complex; TheoremsA/B cover pseudomanifolds. These restrictions do not cover all planar Rips complexes.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2406.01082",
+      "locator": "Conjecture1.2 and TheoremsA–C",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"planar Rips\" \"spheres\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"planar-Rips\" homotopy counterexample2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "planar Rips",
+        "planar-Rips"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "planar Rips",
+        "planar-Rips"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Published DOI10.4310/HHA.2026.v28.n3.a1 body inaccessible; author preprint used without publication-parity assertion."
+  ],
+  "canonical_update_required": false
+}

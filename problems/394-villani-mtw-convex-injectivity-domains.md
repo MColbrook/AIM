@@ -2,9 +2,9 @@
 
 **Area:** Optimal transport / Riemannian geometry
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -32,6 +32,13 @@ Injectivity-domain convexity is a geometric prerequisite for continuous transpor
 2. G. Khan and J. Zhang, *When Optimal Transport Meets Information Geometry*, preprint (2022), Conjecture 3. [arXiv:2206.14791](https://arxiv.org/abs/2206.14791).
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Affirmative convexity under weak MTW with focal cut points allowed.
+
+[Claimed solution](https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Global-Support-and-Convex-Injectivity-Domains-under-Weak-MTW-September-25-2026/paper.pdf) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/394.json). Source locator: §1.1 equations(1.1)–(1.3), Theorem1.1, printedp2. The comparison records the hypotheses, quantifiers and any reduction to the original target. The full external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative convex injectivity domains under weak MTW
 

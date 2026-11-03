@@ -1,0 +1,91 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "955",
+  "manifest_index": 799,
+  "checked_date": "2026-11-03",
+  "source_sha256": "47880dcf2073b851eedc94f5d45e5332d37fbf15b48517176a8149a7a6fd915b",
+  "statement_sha256": "b7e6d6f7b00dcec72218750f7b457108b632df34a8854de0172c792f7255e5bc",
+  "original_target": {
+    "id": "955",
+    "title": "Weak comparison for singular p-Laplacian evolution",
+    "area": "PDEs, fluids and materials",
+    "file": "problems/955-weak-comparison-for-singular-p-laplacian-evolution.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c5988173ecc2dbcb",
+    "group": "pdes-materials",
+    "source_sha256": "47880dcf2073b851eedc94f5d45e5332d37fbf15b48517176a8149a7a6fd915b",
+    "statement_sha256": "b7e6d6f7b00dcec72218750f7b457108b632df34a8854de0172c792f7255e5bc",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^N`$ be bounded, connected and Lipschitz, $`T>0`$, $`1<p<2`$, and\n```math\n0<\\lambda\\leq\\lambda_{1,p}(\\Omega)\n:=\\inf_{0\\neq w\\in W^{1,p}_0(\\Omega)}\n\\frac{\\int_\\Omega |\\nabla w|^p}{\\int_\\Omega |w|^p}.\n```\n\nTake $`0\\leq f\\leq g`$ in $`L^\\infty(\\Omega\\times(0,T))`$ and $`0\\leq u_0\\leq v_0`$ in $`W^{1,p}_0(\\Omega)\\cap L^2(\\Omega)`$. Consider\n```math\nu_t-\\Delta_pu=\\lambda|u|^{p-2}u+f,\\qquad\n v_t-\\Delta_pv=\\lambda|v|^{p-2}v+g,\n```\n\nwith those initial values and zero lateral Sobolev traces.\n\nMust **every** such weak pair satisfy $`u\\leq v`$ almost everywhere?\nHere each solution $`z`$ belongs to\n$`C([0,T];L^2(\\Omega))\\cap L^p(0,T;W^{1,p}_0(\\Omega))`$, takes its initial value in $`L^2`$, and satisfies\n```math\n\\left[\\int_\\Omega z\\phi\\right]_0^\\tau+\n\\int_0^\\tau\\!\\int_\\Omega\n\\left(-z\\phi_t+|\\nabla z|^{p-2}\\nabla z\\cdot\\nabla\\phi\\right)\n=\\int_0^\\tau\\!\\int_\\Omega(\\lambda|z|^{p-2}z+h)\\phi\n```\n\nfor every $`0<\\tau\\leq T`$ and\n$`\\phi\\in W^{1,2}(0,\\tau;L^2(\\Omega))\\cap L^p(0,\\tau;W^{1,p}_0(\\Omega))`$, with $`h=f`$ or $`g`$.",
+  "full_original_page": "# 955. Weak comparison for singular p-Laplacian evolution\n\n**Area:** PDEs, fluids and materials\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\Omega\\subset\\mathbb R^N`$ be bounded, connected and Lipschitz, $`T>0`$, $`1<p<2`$, and\n```math\n0<\\lambda\\leq\\lambda_{1,p}(\\Omega)\n:=\\inf_{0\\neq w\\in W^{1,p}_0(\\Omega)}\n\\frac{\\int_\\Omega |\\nabla w|^p}{\\int_\\Omega |w|^p}.\n```\n\nTake $`0\\leq f\\leq g`$ in $`L^\\infty(\\Omega\\times(0,T))`$ and $`0\\leq u_0\\leq v_0`$ in $`W^{1,p}_0(\\Omega)\\cap L^2(\\Omega)`$. Consider\n```math\nu_t-\\Delta_pu=\\lambda|u|^{p-2}u+f,\\qquad\n v_t-\\Delta_pv=\\lambda|v|^{p-2}v+g,\n```\n\nwith those initial values and zero lateral Sobolev traces.\n\nMust **every** such weak pair satisfy $`u\\leq v`$ almost everywhere?\nHere each solution $`z`$ belongs to\n$`C([0,T];L^2(\\Omega))\\cap L^p(0,T;W^{1,p}_0(\\Omega))`$, takes its initial value in $`L^2`$, and satisfies\n```math\n\\left[\\int_\\Omega z\\phi\\right]_0^\\tau+\n\\int_0^\\tau\\!\\int_\\Omega\n\\left(-z\\phi_t+|\\nabla z|^{p-2}\\nabla z\\cdot\\nabla\\phi\\right)\n=\\int_0^\\tau\\!\\int_\\Omega(\\lambda|z|^{p-2}z+h)\\phi\n```\n\nfor every $`0<\\tau\\leq T`$ and\n$`\\phi\\in W^{1,2}(0,\\tau;L^2(\\Omega))\\cap L^p(0,\\tau;W^{1,p}_0(\\Omega))`$, with $`h=f`$ or $`g`$.\n\n## Application\n\nOrder preservation would give stability under increases in forcing and initial data; applying it in both directions to equal data would also give uniqueness in this weak class.\n\n## References\n\n- V. Bobkov and P. Takáč, *On maximum and comparison principles for parabolic problems with the p-Laplacian*, RACSAM **113** (2019), 1141–1158, [DOI](https://doi.org/10.1007/s13398-018-0536-6). The question is **Remark 2.3**; the weak formulation is in §2. [Primary text, arXiv v1](https://arxiv.org/html/1803.09562v1).\n- V. Bobkov, [author’s comparison-principles talk](https://smath.ru/upload/iblock/002/TAF-70_Bobkov.pdf), 3–4 June 2025, slides 11–16.\n\n## Status review\n\n\n**Known cases:** The endpoint lambda=first eigenvalue and every weak solution pair with nonnegative data are included. Sign-changing-forcing and larger-lambda counterexamples do not cover this range; author publications reveal no matching new theorem.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe endpoint lambda=first eigenvalue and every weak solution pair with nonnegative data are included. Sign-changing-forcing and larger-lambda counterexamples do not cover this range; author publications reveal no matching new theorem.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\n**Open in the stated nonnegative-data range; checked 28 October 2026.** The source proves nonnegativity, but leaves pairwise weak comparison open. Its counterexamples require sign-changing forcing or $`\\lambda>\\lambda_{1,p}`$. The 2025 talk presents those established parameter ranges. Searches found no complete resolution or announced solution; one-dimensional stationary-versus-evolution strong comparison and fractional elliptic comparison have different hypotheses.\n\nThe formulation preserves the endpoint $`\\lambda=\\lambda_{1,p}`$. It adds no strict positivity or classical-solution assumption. Semantic comparison with all-status AIM and private records found no equivalent question; AIM 427 concerns stationary strong comparison.\n\nReview evidence: [owner](../FURTHER_problems/_tracking/focused-parabolic-singular-p-Laplacian-WCP-C215-A-20261028/OWNER-EXACT-NONNEGATIVE-DATA-SUBQUADRATIC-PARABOLIC-WEAK-COMPARISON-PRIMARY-CURRENT-DUPLICATE-PROPOSAL.json), [independent model review](../FURTHER_problems/_tracking/focused-parabolic-singular-p-Laplacian-WCP-C215-A-20261028/C-INDEPENDENT-EXACT-WEAK-CLASS-NONNEGATIVE-DATA-REACTION-SIGN-AND-EIGENVALUE-RANGE-MODEL-PEER-PASS.json), [coordinating review](../FURTHER_problems/_tracking/focused-parabolic-singular-p-Laplacian-WCP-C215-A-20261028/ROOT-EXACT-SINGULAR-WCP-PRIMARY-CURRENT-AND-SEMANTIC-FINAL-REVIEW.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-c5988173ecc2dbcb**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Bobkov",
+    "Takac",
+    "comparison principles"
+  ],
+  "queries": [
+    "\"Bobkov\" \"Takac\" \"weak comparison\" parabolic 2026",
+    "\"Bobkov\" \"Takac\" \"weak comparison\" parabolic; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1803.09562v1",
+      "locator": "Theorem2.1/Remark2.3 lines107–125; Remark2.14",
+      "comparison": "Actual WCP theorem assumes lambda<=0 or p>2; nonnegative-data p<2 and 0<lambda<=lambda1 is explicitly separate. Counterexamples use sign-changing forcing or lambda>lambda1, excluding target including endpoint."
+    }
+  ],
+  "rationale": "Actual WCP theorem assumes lambda<=0 or p>2; nonnegative-data p<2 and 0<lambda<=lambda1 is explicitly separate. Counterexamples use sign-changing forcing or lambda>lambda1, excluding target including endpoint.",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scopes inspected, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "955",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Bobkov",
+          "Takac",
+          "comparison principles"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Bobkov",
+          "Takac",
+          "comparison principles"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Bobkov",
+        "Takac",
+        "comparison principles"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

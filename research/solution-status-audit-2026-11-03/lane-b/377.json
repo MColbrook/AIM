@@ -1,0 +1,49 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 309,
+  "source_sha256": "beca5d25f9f28ce02d0ad817615e31b64706a36b2a05ebc53614d44636b38102",
+  "statement_sha256": "696195a977dc66ca280c22f5a4d2ca8c1c453bae432392b29d4a16b42d6797d0",
+  "original_target": {
+    "id": "377",
+    "title": "Global weak flow of three-dimensional nematic directors without a hemisphere restriction",
+    "area": "Liquid crystals; coupled fluid and harmonic-map flow",
+    "file": "problems/377-liquid-crystal-three-dimensional-weak.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "beca5d25f9f28ce02d0ad817615e31b64706a36b2a05ebc53614d44636b38102",
+    "statement_sha256": "696195a977dc66ca280c22f5a4d2ca8c1c453bae432392b29d4a16b42d6797d0",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "377",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"nematic\" \"three dimensional\" \"hemisphere\" weak solutions 2026",
+    "\"nematic\" \"weak solutions\" \"hemisphere\" site:zenodo.org OR site:hal.science OR site:github.com",
+    "\"nematic liquid crystal\" \"global weak\" \"2026\" \"three\" arbitrary"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1408.4146v1",
+      "version": "v1 August2014; CPAM2016",
+      "locators": "Theorem1.1; compactness Theorem1.3",
+      "body_inspected": true,
+      "scope": "Initial director lies in upper hemisphere; propagated hemisphere is used in no-defect compactness."
+    },
+    {
+      "url": "https://ejde.math.txstate.edu/Volumes/2026/23/chen.pdf",
+      "version": "EJDE2026/23",
+      "locators": "Theorem1.2 equation1.3, PDFp3",
+      "body_inspected": true,
+      "scope": "3D inhomogeneous liquid-crystal system, small critical Hhalf velocity/director-gradient and viscosity perturbation; not arbitrary data on bounded domain."
+    }
+  ],
+  "registry_checks": "No nematic/hemisphere-relevant alias Palomar/Hexagon/OpenAI full metadata. Focused current arXiv, primary authors/publishers, Zenodo, HAL, GitHub searches.",
+  "scope_comparison": "Target unit-length director stress exact with no defect for arbitrary smooth data, no hemisphere or smallness. Generalized defects, variable-length/tensor closures, 2D density patches and small critical data differ.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Actual 2026 global theorem retains quantitative smallness."
+}

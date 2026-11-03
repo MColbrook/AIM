@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "243",
+  "manifest_index": 189,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "243",
+    "title": "The least-area convex cover of every unit-length planar curve",
+    "area": "Geometric optimization / coverage",
+    "file": "problems/243-convex-worm-cover.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "inverse3",
+    "source_sha256": "0fa38fe2c433702adb088920ddec6db4a90abdf2a28d5792ddb1e10217700813",
+    "statement_sha256": "2d8277720edd690f385d01fa4a9b214225b911605253ca033cc687c9645cae5c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "0fa38fe2c433702adb088920ddec6db4a90abdf2a28d5792ddb1e10217700813",
+  "statement_sha256": "2d8277720edd690f385d01fa4a9b214225b911605253ca033cc687c9645cae5c",
+  "actual_source_sha256": "0fa38fe2c433702adb088920ddec6db4a90abdf2a28d5792ddb1e10217700813",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\mathcal C`$ be the class of compact convex sets $`K\\subset\\mathbb R^2`$ with the following property: for every continuous rectifiable curve $`\\gamma:[0,1]\\to\\mathbb R^2`$ of length one, there are a rotation $`R\\in SO(2)`$ and a translation vector $`a\\in\\mathbb R^2`$ such that\n\n```math\nR\\gamma([0,1])+a\\subset K.\n```\n\nDetermine $`\\inf_{K\\in\\mathcal C}\\mathop{\\mathrm{Area}}\\nolimits(K)`$ and characterize the minimizers up to rigid motion. Curves may self-intersect and need not be closed. This is the convex version of Moser's worm problem.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Moser worm\" \"convex\" solution 2026",
+    "\"Moser worm\" \"convex\" solution (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Moser worm\" \"convex\" solution (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Theorem1.1,Theorems3.1/4.1,Section5 final Lean theorem statement",
+      "scope_comparison": "The actual newer theorem asserts0.239<=alpha<=7170601298323360123534337/29109471743520000000000000≈0.2463322372, a positive gap. Its claimed Lean verification concerns these bounds, not optimal area or minimizing-shape classification. Hence it is new partial progress beyond the local September8triangular-cover citation, not a full resolution. No matching exact optimum announcement found.",
+      "url": "https://arxiv.org/html/2609.21968",
+      "version_or_date": "arXiv2609.21968v1,18September2026."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The actual newer theorem asserts0.239<=alpha<=7170601298323360123534337/29109471743520000000000000≈0.2463322372, a positive gap. Its claimed Lean verification concerns these bounds, not optimal area or minimizing-shape classification. Hence it is new partial progress beyond the local September8triangular-cover citation, not a full resolution. No matching exact optimum announcement found.",
+  "latest_version_check": "arXiv2609.21968v1,18September2026.",
+  "gap_retraction_check": "The preprint's claimed Lean kernel verification was read at the final statement but not locally rebuilt; exact target remains outside its stated scope.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

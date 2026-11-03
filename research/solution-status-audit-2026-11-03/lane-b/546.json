@@ -1,0 +1,77 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "546",
+  "manifest_index": 425,
+  "original_target": {
+    "id": "546",
+    "title": "Uniqueness of the closed genus-one self-shrinker in three dimensions",
+    "area": "Geometric analysis and mean curvature flow",
+    "file": "problems/546-uniqueness-of-the-closed-genus-one-self-shrinker-in-three-dimensions.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-4f24788fe4d0cc1d",
+    "group": "geometry-topology",
+    "source_sha256": "97d6713bca533cbf7b7752bd040c5321f10e961d001c6b3dea378c68db77a80e",
+    "statement_sha256": "2e66af06a4029ad104cd7ae5656de98e00c8326b4141abdc2e862bc44d4d4656",
+    "state": "unreviewed"
+  },
+  "source_sha256": "97d6713bca533cbf7b7752bd040c5321f10e961d001c6b3dea378c68db77a80e",
+  "statement_sha256": "2e66af06a4029ad104cd7ae5656de98e00c8326b4141abdc2e862bc44d4d4656",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:50:53.342998+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Current 2606.20276v2 retains Angenent torus uniqueness and proves conditional rotational-profile comparisons. The lower-entropy genus-one shrinker result explicitly permits noncompact examples; it supplies no compact embedded torus counterexample. Uniqueness of a tangent flow also does not classify every torus.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2606.20276v2",
+      "locator": "Introduction and conditional profile comparisons including Theorem4; current v2, 3 September2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2308.05923v3",
+      "locator": "Theorem1.4, Remark1.5 and Corollary1.7, no compactness assertion",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Angenent torus\" uniqueness 2026",
+    "\"genus-one\" \"self-shrinker\" compact uniqueness (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Angenent torus\" uniqueness proof announcement"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Angenent",
+        "genus-one shrinker"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Angenent",
+        "genus-one shrinker"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Published GT PDF did not yield a readable body; parity not certified."
+  ],
+  "canonical_update_required": false
+}

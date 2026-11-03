@@ -1,0 +1,105 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "896",
+  "manifest_index": 740,
+  "checked_date": "2026-11-03",
+  "source_sha256": "9c978468f88f5171a13a7cc4dd8c873cfb3f235277f2c5fece4d34523188423b",
+  "statement_sha256": "057b0422b922e584f0f196b4df0d8da7ff3281ebcb85ee166074e447a7623da6",
+  "original_target": {
+    "id": "896",
+    "title": "A Riesz basis of interior kernels in every Hardy model space",
+    "area": "Operator theory and complex analysis",
+    "file": "problems/896-a-riesz-basis-of-interior-kernels-in-every-hardy-model-space.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-21ea526e3bba56c9",
+    "group": "operators",
+    "source_sha256": "9c978468f88f5171a13a7cc4dd8c873cfb3f235277f2c5fece4d34523188423b",
+    "statement_sha256": "057b0422b922e584f0f196b4df0d8da7ff3281ebcb85ee166074e447a7623da6",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\mathbb D=\\{z\\in\\mathbb C:|z|<1\\}`$ and let $`H^2(\\mathbb D)`$ be the Hardy Hilbert space, with\n```math\n\\|f\\|_{H^2}^2=\\sup_{0<r<1}\\frac1{2\\pi}\\int_0^{2\\pi}|f(re^{it})|^2\\,dt.\n```\n\nFor a nonconstant inner function $`\\theta`$ (a bounded analytic function whose boundary values have modulus one almost everywhere), put\n```math\nK_\\theta=H^2(\\mathbb D)\\ominus\\theta H^2(\\mathbb D).\n```\n\nIts evaluation kernel at $`\\lambda\\in\\mathbb D`$ is\n```math\nk_\\lambda^\\theta(z)=\\frac{1-\\overline{\\theta(\\lambda)}\\theta(z)}{1-\\overline\\lambda z},\n\\qquad\n\\|k_\\lambda^\\theta\\|_{H^2}^2=\\frac{1-|\\theta(\\lambda)|^2}{1-|\\lambda|^2}>0.\n```\n\n\n**Does every such $`K_\\theta`$ admit a Riesz basis consisting of normalized kernels at points strictly inside $`\\mathbb D`$?** Explicitly, are there distinct nodes $`(\\lambda_j)`$ and constants $`0<A\\le B<\\infty`$ such that, with $`e_j=k_{\\lambda_j}^\\theta/\\|k_{\\lambda_j}^\\theta\\|`$,\n```math\n\\overline{\\mathrm{span}}\\{e_j\\}=K_\\theta,\n\\qquad\nA\\sum_j|a_j|^2\\le\\left\\|\\sum_j a_j e_j\\right\\|_{H^2}^2\n\\le B\\sum_j|a_j|^2\n```\n\nfor every finitely supported complex coefficient sequence?\n\nThe index set may be finite when $`K_\\theta`$ is finite dimensional. The nodes and bounds may depend on $`\\theta`$. No restriction to zeros of $`\\theta`$, meromorphic inner functions, connected level sets or boundary kernels is imposed. This is the existential unconditional-basis question in Fricain's Remark 2.2.12 [1]; normalization converts the Hilbert-space unconditional-basis formulation to the Riesz bounds above.",
+  "full_original_page": "# 896. A Riesz basis of interior kernels in every Hardy model space\n\n**Area:** Operator theory and complex analysis\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\mathbb D=\\{z\\in\\mathbb C:|z|<1\\}`$ and let $`H^2(\\mathbb D)`$ be the Hardy Hilbert space, with\n```math\n\\|f\\|_{H^2}^2=\\sup_{0<r<1}\\frac1{2\\pi}\\int_0^{2\\pi}|f(re^{it})|^2\\,dt.\n```\n\nFor a nonconstant inner function $`\\theta`$ (a bounded analytic function whose boundary values have modulus one almost everywhere), put\n```math\nK_\\theta=H^2(\\mathbb D)\\ominus\\theta H^2(\\mathbb D).\n```\n\nIts evaluation kernel at $`\\lambda\\in\\mathbb D`$ is\n```math\nk_\\lambda^\\theta(z)=\\frac{1-\\overline{\\theta(\\lambda)}\\theta(z)}{1-\\overline\\lambda z},\n\\qquad\n\\|k_\\lambda^\\theta\\|_{H^2}^2=\\frac{1-|\\theta(\\lambda)|^2}{1-|\\lambda|^2}>0.\n```\n\n\n**Does every such $`K_\\theta`$ admit a Riesz basis consisting of normalized kernels at points strictly inside $`\\mathbb D`$?** Explicitly, are there distinct nodes $`(\\lambda_j)`$ and constants $`0<A\\le B<\\infty`$ such that, with $`e_j=k_{\\lambda_j}^\\theta/\\|k_{\\lambda_j}^\\theta\\|`$,\n```math\n\\overline{\\mathrm{span}}\\{e_j\\}=K_\\theta,\n\\qquad\nA\\sum_j|a_j|^2\\le\\left\\|\\sum_j a_j e_j\\right\\|_{H^2}^2\n\\le B\\sum_j|a_j|^2\n```\n\nfor every finitely supported complex coefficient sequence?\n\nThe index set may be finite when $`K_\\theta`$ is finite dimensional. The nodes and bounds may depend on $`\\theta`$. No restriction to zeros of $`\\theta`$, meromorphic inner functions, connected level sets or boundary kernels is imposed. This is the existential unconditional-basis question in Fricain's Remark 2.2.12 [1]; normalization converts the Hilbert-space unconditional-basis formulation to the Riesz bounds above.\n\n## Application\n\nSuch a basis gives stable coordinates and reconstruction from normalized point evaluations in a model space. These spaces represent compressed shifts and contraction operators; particular cases connect to nonharmonic Fourier expansions. The question asks for a suitable stable sampling system for each space, without prescribing an algorithm or bounds uniform over all inner functions.\n\n## References\n\n1. E. Fricain, *Complétude des noyaux reproduisants dans les espaces modèles*, Annales de l'Institut Fourier **52** (2002), 661–686, [DOI](https://doi.org/10.5802/aif.1897), [published PDF](https://www.numdam.org/item/10.5802/aif.1897.pdf), Corollary 2.2.11 and Remark 2.2.12, pp. 678–679.\n2. A. Baranov and Yu. Belov, *Systems of reproducing kernels and their biorthogonal: completeness or incompleteness?*, [arXiv:1005.1197v2](https://arxiv.org/pdf/1005.1197v2) (2011), Section 1.5 and Theorem 4.1. This author version explicitly separates the basis-existence problem from a different biorthogonal-completeness question.\n3. A. Baranov, *Stability of the bases and frames reproducing kernels in model spaces*, Annales de l'Institut Fourier **55** (2005), 2399–2422, [DOI](https://doi.org/10.5802/aif.2165), [published PDF](https://www.numdam.org/item/10.5802/aif.2165.pdf), introductory criteria and connected-level-set discussion, pp. 2401–2403.\n\n## Status review\n\n\n**Known cases:** Complete systems of interior kernels and criteria for specified sequences do not establish existence of a Riesz kernel basis in every model space. Biorthogonal-incompleteness counterexamples concern a chosen exact system, not all possible bases of that space. Meromorphic-inner and doubling-weight results impose additional restrictions.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nComplete systems of interior kernels and criteria for specified sequences do not establish existence of a Riesz kernel basis in every model space. Biorthogonal-incompleteness counterexamples concern a chosen exact system, not all possible bases of that space. Meromorphic-inner and doubling-weight results impose additional restrictions.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked 30 October 2026. Source [1] proves existence of complete interior kernel sequences, which is weaker than the two-sided basis bounds. Source [2] explicitly retains the existential Riesz-basis question. Its counterexamples concern a chosen exact kernel system whose biorthogonal is incomplete; they do not rule out a different suitable basis for the same space. Criteria and stability results in [3] concern specified sequences or restricted inner classes and do not establish existence for every inner function.\n\nBounded current searches, including announced completions, found no matching full resolution. The May 2026 revision of [Bergman's inner-approximation paper](https://arxiv.org/abs/2509.21229v4) was checked at abstract/history level: its stated doubling-weight and meromorphic-inner applications do not assert this unrestricted basis theorem. No full-body review of that comparator is claimed. Boundary Clark kernels, finite partitions into Riesz basic sequences and counterexamples in other reproducing-kernel spaces do not by themselves answer the displayed question.\n\nAll-status AIM, announced-result and private-candidate records were compared. The existing question about uniform approximation of Blaschke products by interpolating products has a different phase-sensitive approximation target; no equivalence with this basis question was asserted in the checked sources. The [coordinating review](../FURTHER_problems/_tracking/ROOT-FINAL-Nikolski-interior-kernel-Riesz-basis-current-and-semantic-admission-20261030.json), [current-source check](../FURTHER_problems/_tracking/AIF109/RIESZ-CURRENT-GATE.json) and [independent model review](../FURTHER_problems/_tracking/AIF109/C-INDEPENDENT-EXISTENTIAL-INTERIOR-NORMALIZED-KERNEL-RIESZ-BOUNDS-MODEL-PEER-PASS.json) record the evidence and limits. These are bounded AI checks, not human peer review or a proof that no unindexed resolution exists.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-21ea526e3bba56c9**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"model spaces\" \"Riesz basis\" \"every\" kernels 2026",
+    "\"model space\" \"Riesz basis\" \"kernel\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1005.1197v2",
+      "locator": "Section 1.5, paragraphs following heading",
+      "version": "v2",
+      "comparison": "Explicitly retains existence of a Riesz basis of reproducing kernels for every model space as open; incompleteness of a chosen biorthogonal system does not rule out another basis."
+    },
+    {
+      "url": "https://arxiv.org/html/2509.21229v4",
+      "locator": "Introduction restriction to meromorphic inner functions; Theorem 1, lines111–126",
+      "version": "v4, 11 May 2026",
+      "comparison": "Constructs meromorphic inner approximants for smooth locally doubling weights. Neither arbitrary inner functions nor interior normalized-kernel Riesz bases in every model space are asserted."
+    }
+  ],
+  "rationale": "No full matching theorem or announcement located in bounded searches; the actual current comparator theorem has additional hypotheses and a different approximation conclusion.",
+  "limitations": [
+    "Bounded searches are not proof of continued openness."
+  ],
+  "announcement_routing": {
+    "localID": "896",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "model space",
+          "Riesz basis",
+          "reproducing kernels",
+          "Nikolski"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "model space",
+          "Riesz basis",
+          "reproducing kernels",
+          "Nikolski"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00654v1",
+            "title": "Collision Geometry and Holonomy of Finite Blaschke Model Spaces",
+            "url": "https://hexagonmath.org/abs/2610.00654v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "model space",
+        "Riesz basis",
+        "reproducing kernels",
+        "Nikolski"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Finite Blaschke collision geometry/holonomy concerns finite-dimensional model spaces; it does not construct a Riesz basis of interior kernels in every infinite Hardy model space.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.697Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

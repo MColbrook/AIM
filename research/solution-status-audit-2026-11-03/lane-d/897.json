@@ -1,0 +1,87 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "897",
+  "manifest_index": 741,
+  "checked_date": "2026-11-03",
+  "source_sha256": "ee8c054382794ab40534548bb0af9ff22ec71d1583cc46e7e25c2d9c3ac44204",
+  "statement_sha256": "67b51e3e5b76952f00fb684546fbbd8615587262bed201aea329981804962987",
+  "original_target": {
+    "id": "897",
+    "title": "Pedersen's sharp fractional-power commutator inequality",
+    "area": "Matrix analysis and operator theory",
+    "file": "problems/897-pedersen-s-sharp-fractional-power-commutator-inequality.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-23c8b6c115624c1d",
+    "group": "operators",
+    "source_sha256": "ee8c054382794ab40534548bb0af9ff22ec71d1583cc46e7e25c2d9c3ac44204",
+    "statement_sha256": "67b51e3e5b76952f00fb684546fbbd8615587262bed201aea329981804962987",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For a complex matrix $`Y`$, write\n```math\n\\|Y\\|_{\\mathrm{op}}=\\sup_{\\|v\\|_2=1}\\|Yv\\|_2.\n```\n\nA matrix $`A`$ is positive semidefinite if $`A=A^*`$ and all its eigenvalues are nonnegative. Its fractional power $`A^r`$ is defined by applying $`t\\mapsto t^r`$ to its eigenvalues.\n\nIs it true that, for every dimension $`n\\geq1`$, every pair of positive semidefinite matrices $`A,B\\in M_n(\\mathbb C)`$, every matrix $`X\\in M_n(\\mathbb C)`$, and every $`0<r<1`$,\n```math\n\\boxed{\\;\n \\|A^rX-XB^r\\|_{\\mathrm{op}}\n \\leq\n \\|X\\|_{\\mathrm{op}}^{\\,1-r}\n \\|AX-XB\\|_{\\mathrm{op}}^{\\,r}\\; ?}\n```\n\n\nThe constant must be one, uniformly in the dimension and in the exponent. The case $`X=0`$ is interpreted directly; for $`X\\ne0`$, the homogeneous formulation is equivalent to imposing $`\\|X\\|_{\\mathrm{op}}=1`$. The scalar choice $`A=1`$, $`B=0`$, $`X=1`$ shows that the constant cannot be smaller than one.\n\nEquivalently, one can take $`A=B`$ and ask about the commutator $`[A,X]=AX-XA`$, allowing the matrix dimension to vary. Indeed, apply the commutator formulation to the positive block matrix $`\\mathrm{diag}(A,B)`$ and the matrix with off-diagonal blocks $`X,X^*`$; the relevant block commutator norms equal the two-matrix norms above.",
+  "full_original_page": "# 897. Pedersen's sharp fractional-power commutator inequality\n\n**Area:** Matrix analysis and operator theory\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor a complex matrix $`Y`$, write\n```math\n\\|Y\\|_{\\mathrm{op}}=\\sup_{\\|v\\|_2=1}\\|Yv\\|_2.\n```\n\nA matrix $`A`$ is positive semidefinite if $`A=A^*`$ and all its eigenvalues are nonnegative. Its fractional power $`A^r`$ is defined by applying $`t\\mapsto t^r`$ to its eigenvalues.\n\nIs it true that, for every dimension $`n\\geq1`$, every pair of positive semidefinite matrices $`A,B\\in M_n(\\mathbb C)`$, every matrix $`X\\in M_n(\\mathbb C)`$, and every $`0<r<1`$,\n```math\n\\boxed{\\;\n \\|A^rX-XB^r\\|_{\\mathrm{op}}\n \\leq\n \\|X\\|_{\\mathrm{op}}^{\\,1-r}\n \\|AX-XB\\|_{\\mathrm{op}}^{\\,r}\\; ?}\n```\n\n\nThe constant must be one, uniformly in the dimension and in the exponent. The case $`X=0`$ is interpreted directly; for $`X\\ne0`$, the homogeneous formulation is equivalent to imposing $`\\|X\\|_{\\mathrm{op}}=1`$. The scalar choice $`A=1`$, $`B=0`$, $`X=1`$ shows that the constant cannot be smaller than one.\n\nEquivalently, one can take $`A=B`$ and ask about the commutator $`[A,X]=AX-XA`$, allowing the matrix dimension to vary. Indeed, apply the commutator formulation to the positive block matrix $`\\mathrm{diag}(A,B)`$ and the matrix with off-diagonal blocks $`X,X^*`$; the relevant block commutator norms equal the two-matrix norms above.\n\n## Application\n\nThe inequality would give the optimal control of fractional-power functional calculus by an original commutator. In particular, if a matrix approximately intertwines two positive matrices, it would quantify how accurately it intertwines their fractional powers. The square-root case also occurs in estimates for almost commuting operators.\n\n## References\n\n1. R. Bhatia, *Matrix Analysis*, Graduate Texts in Mathematics **169**, Springer, 1997, Problem X.5.3, printed p. 317, and the explicit conjecture in the Chapter X notes, printed p. 321. [Book](https://doi.org/10.1007/978-1-4612-0653-8).\n2. T. A. Loring and F. Vides, *Estimating Norms of Commutators*, arXiv:1301.4252v3 (2013), Definition 1.4, Conjecture 1.6 and Lemma 1.7. Published in *Experimental Mathematics* **24** (2015), 106–122; the cited locators refer to the versioned preprint. [Preprint](https://arxiv.org/abs/1301.4252v3).\n3. D. Herrera, *On the commutator modulus of continuity for operator monotone functions*, arXiv:2311.17448v1 (2023), equation (7), Conjectures 1.8–1.9 and Theorems 1.11–1.12. [Preprint](https://arxiv.org/abs/2311.17448v1).\n\n## Status review\n\n\n**Known cases:** The current primary Herrera record still gives factors below 1.01975, and below 1.00891 for square roots, while explicitly retaining the desired constant one. Hilbert-Schmidt constant-one inequalities and special commutator-size results do not settle the operator norm for all positive matrices and exponents.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe current primary Herrera record still gives factors below 1.01975, and below 1.00891 for square roots, while explicitly retaining the desired constant one. Hilbert-Schmidt constant-one inequalities and special commutator-size results do not settle the operator norm for all positive matrices and exponents.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nBhatia records the estimate with constant $`5/4`$ and explicitly conjectures that this factor can be replaced by one. The adjacent Hilbert–Schmidt-norm inequality already has constant one; the question here concerns the operator norm.\n\nLoring and Vides state the square-root case as Conjecture 1.6. Their Lemma 1.7 proves it for a positive contraction $`H`$, a contraction $`X`$, and $`\\|[H,X]\\|_{\\mathrm{op}}\\geq1/4`$; it does not settle all commutator sizes.\n\nHerrera's Theorem 1.11 gives a universal factor strictly below $`1.01975`$, which applies to all the powers in this question. Theorem 1.12 improves the square-root factor to strictly below $`1.00891`$. These are progress toward the required constant one. The stronger conjectures for general operator-monotone functions and for arbitrary unitarily invariant norms are not being added as separate problems here.\n\nThe checks on 24 October 2026 examined the original problem and conjecture, these later primary statements, current arXiv version metadata, and searches under Pedersen, square-root commutators, fractional-power quasicommutators, commutator moduli and the optimal constant. No matching full resolution or announcement was located. Prove2Me site searches found no matching entry; a direct live request timed out, so that site's current content was not exhaustively checked. This is a bounded literature check, not a certification that no unindexed result exists.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-23c8b6c115624c1d**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Pedersen\" \"commutator\" conjecture solved 2026",
+    "\"Pedersen\" \"commutator\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2311.17448v1",
+      "locator": "Theorem 1.11 and Conjectures 1.9–1.10",
+      "version": "v1; unversioned arXiv metadata rechecked 3 November 2026 still v1",
+      "comparison": "Actual operator-monotone commutator theorem yields C<1.01975, not C=1; square-root improvement C<1.00891 does not reach required sharp factor."
+    }
+  ],
+  "rationale": "The desired factor one remains outside inspected theorem; Hilbert-Schmidt inequalities or extra commutator-size hypotheses do not match all operator-norm matrices/exponents.",
+  "limitations": [
+    "No exhaustive proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "897",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Pedersen",
+          "commutator modulus",
+          "fractional-power commutator"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Pedersen",
+          "commutator modulus",
+          "fractional-power commutator"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Pedersen",
+        "commutator modulus",
+        "fractional-power commutator"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

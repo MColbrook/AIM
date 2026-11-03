@@ -1,0 +1,85 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "045",
+  "manifest_index": 33,
+  "original_target": {
+    "id": "045",
+    "title": "Is there a uniform polynomial bound for three commuting contractions?",
+    "area": "Operator theory and multivariable functional calculus",
+    "file": "problems/045-is-there-a-uniform-polynomial-bound-for-three-commuting-contractions.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-d349125a92ada493",
+    "group": "operators",
+    "source_sha256": "ddc4954806d8ff19b9aecc5c5ddfb8b0b25878d32f1c93f401813cf9c19cb3a5",
+    "statement_sha256": "4f744cb12737f3003c283d51eabb5878785bae7d5c4b338b95554f2c390bbd1e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ddc4954806d8ff19b9aecc5c5ddfb8b0b25878d32f1c93f401813cf9c19cb3a5",
+  "statement_sha256": "4f744cb12737f3003c283d51eabb5878785bae7d5c4b338b95554f2c390bbd1e",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:28:38.149870+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no_full_match",
+  "recommended_status": "Open",
+  "scope_comparison": "Arbitrary scalar polynomials, a fixed triple and arbitrary Hilbert-space dimension require a single finite K3. Hartz–Wang introduction still separates unknown C(3) from the homogeneous C(3,n) bounds; Kiri's October theorem has a matrix-size-dependent constant. Failure at constant one does not refute a finite unspecified constant.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2602.14047v1",
+      "locator": "Introduction lines53–73; C(d), C(d,n) and homogenization inequality.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2610.20355v1",
+      "locator": "Abstract and finite-dimensional framework §2.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "Schur-Agler",
+    "Schur–Agler",
+    "commuting contraction",
+    "Paulsen"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "entries": 954,
+      "complete_listing": true,
+      "query_terms": [
+        "Schur-Agler",
+        "Schur–Agler",
+        "commuting contraction",
+        "Paulsen"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only. Hexagon Hua–Bellman noncommuting-contraction determinant positivity is not the commuting-triple scalar polynomial bound."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "entries": 646,
+      "complete_listing": true,
+      "query_terms": [
+        "Schur-Agler",
+        "Schur–Agler",
+        "commuting contraction",
+        "Paulsen"
+      ],
+      "metadata_hits": [
+        {
+          "id": "2610.00620",
+          "title": "Positive definite functions of noncommuting contractions, Hua-Bellman matrices, and a new distance metric"
+        }
+      ],
+      "scope": "Routing only. Hexagon Hua–Bellman noncommuting-contraction determinant positivity is not the commuting-triple scalar polynomial bound."
+    }
+  },
+  "other_provider_search": "Focused current web and site-restricted searches of arXiv, Zenodo, HAL and GitHub; only relevant primary claims promoted to scope checks. Shared OpenAI and requested Colbrook author indexes screened; no matching new full resolution.",
+  "limitations": [
+    "Bounded current search, not proof that no unindexed solution exists.",
+    "No independent end-to-end proof or Lean-kernel verification."
+  ],
+  "canonical_update_required": false
+}

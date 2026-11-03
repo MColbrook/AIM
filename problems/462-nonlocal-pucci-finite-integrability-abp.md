@@ -2,9 +2,9 @@
 
 **Area:** Fully nonlinear nonlocal PDEs; maximum principles
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -41,6 +41,13 @@ Such a maximum principle would control a value function for a jump-process contr
 3. S. Kitano, *$`W^{\sigma,p}`$ a priori estimates for fully nonlinear integro-differential equations* (2022), the restricted matrix-kernel setting. [Preprint](https://arxiv.org/abs/2207.06728).
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Negative for every strict pair0<lambda<Lambda; linear equality case is not a counterexample.
+
+[Claimed solution](https://arxiv.org/pdf/2610.16162v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/462.json). Source locator: Theorem1.1; Corollary1.2; operator(1.1)–(1.3). The comparison records the hypotheses, quantifiers and any reduction to the original target. The full external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. The counterexample applies to strict ellipticity pairs; the equal-ellipticity linear case is not claimed negative.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative for every strict ellipticity pair, claimed
 

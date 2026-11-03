@@ -1,0 +1,91 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 301,
+  "source_sha256": "dfa9c4a53e75871e5cdf0ac97e3fe36a62f2375a60dc1b6a615f3b93c53556a0",
+  "statement_sha256": "c2f9b23cf3d7bc901da3ff5c1dd9a6b98850ef8ebcf0f20d9fe897d825184fc6",
+  "original_target": {
+    "id": "368",
+    "title": "Existence of elastic equilibria under quasiconvexity and infinite compression energy",
+    "area": "Nonlinear elasticity; variational equilibrium",
+    "file": "problems/368-quasiconvex-physical-elastic-minimizers.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "dfa9c4a53e75871e5cdf0ac97e3fe36a62f2375a60dc1b6a615f3b93c53556a0",
+    "statement_sha256": "c2f9b23cf3d7bc901da3ff5c1dd9a6b98850ef8ebcf0f20d9fe897d825184fc6",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "368",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "queries": [
+    "\"quasiconvexity\" \"infinite\" \"compression\" minimizer 2026",
+    "\"quasiconvex\" \"elasticity\" \"existence\" site:arxiv.org 2026",
+    "\"quasiconvex\" \"minimizers\" \"compression\" site:zenodo.org OR site:hal.science OR site:github.com",
+    "\"Beyond polyconvexity\" Schneider pdf",
+    "\"quasiconvex\" \"Ball\" minimizers solution 2026 determinant"
+  ],
+  "sources": [
+    {
+      "url": "https://people.maths.ox.ac.uk/~ball/Articles%20in%20Conference%20Proceedings%20and%20Books/JMB%202002%20re%20Marsden%2060th.pdf",
+      "version": "Ball 2002 primary source",
+      "locators": "section 2.2 Problem 1; equations 2.7/2.10",
+      "body_inspected": true,
+      "scope": "Quasiconvex existence with determinant infinite-energy barrier exact posed family."
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/mma.4123",
+      "version": "Schneider 2016 online, journal 2017",
+      "locators": "abstract describes split-quasiconvex class; theorem text inaccessible",
+      "body_inspected": false,
+      "access": "Wiley endpoint inaccessible in web tool; focused title/author PDF searches found bibliographic/abstract pages only.",
+      "scope": "Abstract indicates extra split-quasiconvex/reversibility assumptions and Sobolev-homeomorphism conclusion; precise relation to full target not body-checked."
+    }
+  ],
+  "registry_checks": "No quasiconvex alias Palomar/Hexagon/OpenAI full metadata. arXiv, primary author/publisher, Zenodo, HAL, GitHub searches executed.",
+  "scope_comparison": "No full matching announcement located. The exact Ball target quantifies every frame-indifferent C1 quasiconvex determinant-barrier energy, p>3, and every finite-energy trace without polyconvexity, upper growth or global injectivity. Schneider's advertised split-quasiconvex/reversibility class is restricted. Its exact theorem body remains unavailable, so this is a bounded abstract-level exclusion with an explicit source-comparison limitation, not completed theorem-body verification.",
+  "rationale": "No full matching announcement located. The exact Ball target quantifies every frame-indifferent C1 quasiconvex determinant-barrier energy, p>3, and every finite-energy trace without polyconvexity, upper growth or global injectivity. Schneider's advertised split-quasiconvex/reversibility class is restricted. Its exact theorem body remains unavailable, so this is a bounded abstract-level exclusion with an explicit source-comparison limitation, not completed theorem-body verification.",
+  "source_gaps": [
+    "Schneider Beyond polyconvexity, DOI 10.1002/mma.4123 theorem body inaccessible."
+  ],
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T14:15:26.155299+00:00",
+      "reviewer": "lane-b; root persisted final relay",
+      "scope_comparison": "No full matching announcement located. The exact Ball target quantifies every frame-indifferent C1 quasiconvex determinant-barrier energy, p>3, and every finite-energy trace without polyconvexity, upper growth or global injectivity. Schneider's advertised split-quasiconvex/reversibility class is restricted. Its exact theorem body remains unavailable, so this is a bounded abstract-level exclusion with an explicit source-comparison limitation, not completed theorem-body verification.",
+      "sources": [
+        {
+          "url": "https://people.maths.ox.ac.uk/~ball/Articles%20in%20Conference%20Proceedings%20and%20Books/JMB%202002%20re%20Marsden%2060th.pdf",
+          "locator": "Original section2.2 Problem1, equations2.7/2.10; inspected earlier",
+          "body_inspected": true
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/10.1002/mma.4123",
+          "locator": "2016 online/2017 journal abstract, split-quasiconvex/reversibility class; body unavailable",
+          "body_inspected": false
+        },
+        {
+          "url": "https://publikationen.bibliothek.kit.edu/1000130237",
+          "locator": "Institutional bibliography, no body deposited",
+          "body_inspected": false
+        }
+      ],
+      "queries": [
+        "\"Beyond polyconvexity\" Schneider pdf",
+        "\"10.1002/mma.4123\" pdf",
+        "\"quasiconvex\" \"elasticity\" \"Ball\" existence solution 2026 -site:researchgate.net",
+        "\"Beyond polyconvexity\" site:zenodo.org OR site:hal.science OR site:github.com"
+      ],
+      "limitations": [
+        "Actual Schneider theorem body remains unavailable after Wiley, linked Fraunhofer, KIT and repository searches. Do not describe it as fully body-checked.",
+        "A Prague proceedings citation was a search-snippet column mismatch, not an alternate Schneider M. version. No such alternate citation is used."
+      ]
+    }
+  ],
+  "review_level": "bounded_search_source_gap",
+  "unrecovered_primary_comparison": "Schneider2017 exact theorem body; abstract indicates a restricted class, with no full-target announcement located."
+}

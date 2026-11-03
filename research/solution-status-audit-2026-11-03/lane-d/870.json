@@ -1,0 +1,85 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "870",
+  "manifest_index": 714,
+  "checked_date": "2026-11-03",
+  "source_sha256": "561bd27bdf6653bbb94240337e34c0df23b15b608beceda3997c44f9525d9c12",
+  "statement_sha256": "9d3bc02e8dc0e755e5765b26045c0d2659a125ed44e5db291a4dccb6ba2025e0",
+  "original_target": {
+    "id": "870",
+    "title": "Bondal–Orlov localization for rational singularities",
+    "area": "Algebraic geometry / derived categories",
+    "file": "problems/870-bondalorlov-localization-for-rational-singularities.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-fb0797e175f030e3",
+    "group": "geometry-topology",
+    "source_sha256": "561bd27bdf6653bbb94240337e34c0df23b15b608beceda3997c44f9525d9c12",
+    "statement_sha256": "9d3bc02e8dc0e755e5765b26045c0d2659a125ed44e5db291a4dccb6ba2025e0",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`k`$ be a field of characteristic zero, and let $`X`$ be a normal integral quasi-projective variety over $`k`$. Let\n```math\np:Y\\longrightarrow X\n```\n\nbe a projective resolution of singularities: $`Y`$ is smooth and $`p`$ is birational. Assume that $`X`$ has rational singularities, expressed by\n```math\np_*\\mathcal O_Y=\\mathcal O_X,\\qquad\nR^ip_*\\mathcal O_Y=0\\quad(i>0).\n```\n\n\nWrite $`D^b_{\\mathrm{coh}}(Z)`$ for the bounded derived category of coherent sheaves on $`Z`$, and set\n```math\n\\mathcal K_p=\\{E\\in D^b_{\\mathrm{coh}}(Y):Rp_*E\\simeq0\\}.\n```\n\nMust the induced functor\n```math\n\\overline{Rp_*}:\nD^b_{\\mathrm{coh}}(Y)/\\mathcal K_p\n\\longrightarrow D^b_{\\mathrm{coh}}(X)\n```\n\nbe an equivalence of triangulated categories for every such $`X`$ and $`p`$, with no restriction on dimension?\n\nThe quotient is the Verdier quotient by the full triangulated subcategory $`\\mathcal K_p`$. Thus the assertion requires both full faithfulness and essential surjectivity. It concerns bounded coherent complexes, rather than only perfect complexes or an unbounded category of quasi-coherent sheaves.",
+  "full_original_page": "# 870. Bondal–Orlov localization for rational singularities\n\n**Area:** Algebraic geometry / derived categories\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`k`$ be a field of characteristic zero, and let $`X`$ be a normal integral quasi-projective variety over $`k`$. Let\n```math\np:Y\\longrightarrow X\n```\n\nbe a projective resolution of singularities: $`Y`$ is smooth and $`p`$ is birational. Assume that $`X`$ has rational singularities, expressed by\n```math\np_*\\mathcal O_Y=\\mathcal O_X,\\qquad\nR^ip_*\\mathcal O_Y=0\\quad(i>0).\n```\n\n\nWrite $`D^b_{\\mathrm{coh}}(Z)`$ for the bounded derived category of coherent sheaves on $`Z`$, and set\n```math\n\\mathcal K_p=\\{E\\in D^b_{\\mathrm{coh}}(Y):Rp_*E\\simeq0\\}.\n```\n\nMust the induced functor\n```math\n\\overline{Rp_*}:\nD^b_{\\mathrm{coh}}(Y)/\\mathcal K_p\n\\longrightarrow D^b_{\\mathrm{coh}}(X)\n```\n\nbe an equivalence of triangulated categories for every such $`X`$ and $`p`$, with no restriction on dimension?\n\nThe quotient is the Verdier quotient by the full triangulated subcategory $`\\mathcal K_p`$. Thus the assertion requires both full faithfulness and essential surjectivity. It concerns bounded coherent complexes, rather than only perfect complexes or an unbounded category of quasi-coherent sheaves.\n\n## Application\n\nA resolution replaces a singular space by a smooth one. The proposed equivalence would describe exactly which bounded coherent-complex information is lost under this replacement and permit categorical constructions from the smooth resolution to descend to the singular space. This is relevant to the derived-category interpretation of operations in the minimal model program.\n\n## References\n\n1. A. I. Efimov, [*Homotopy finiteness of some DG categories from algebraic geometry*](https://doi.org/10.4171/JEMS/979), *Journal of the European Mathematical Society* **22** (2020), 2879–2942. [Eligible author version](https://arxiv.org/pdf/1308.0135v3), p. 5, Conjecture 1.9 and Theorem 1.10.\n2. M. Mauri and E. Shinder, [*Homological Bondal–Orlov localization conjecture for rational singularities*](https://doi.org/10.1017/fms.2023.65), *Forum of Mathematics, Sigma* **11** (2023), e66. [Author version](https://arxiv.org/pdf/2212.06786v2), Conjecture 1.1, Theorem 1.2 and Corollary 1.3.\n3. Y. Shen and T. Sun, [*The Bondal–Orlov Localization Conjecture Holds for Threefolds*](https://arxiv.org/abs/2608.22539), preprint (2026), Theorem 1.0.2 and Corollary 1.0.3.\n\n## Status review\n\n\n**Known cases:** Shen-Sun prove localization with cohomological dimension at most two for the whole pushforward functor. Rational singularities only impose vanishing on the structure sheaf. The threefold theorem and K-theoretic or thick-generation statements do not settle the unrestricted bounded Verdier-quotient equivalence.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nShen-Sun prove localization with cohomological dimension at most two for the whole pushforward functor. Rational singularities only impose vanishing on the structure sheaf. The threefold theorem and K-theoretic or thick-generation statements do not settle the unrestricted bounded Verdier-quotient equivalence.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe pre-2022 source [1] explicitly states the general conjecture. Its theorem proves a special blow-up case with additional conditions on powers of the exceptional ideal.\n\nMauri–Shinder [2] prove that the image of $`Rp_*`$ generates the target derived category by cones and shifts, and obtain surjectivity on its Grothendieck group. These statements do not establish the displayed quotient equivalence. The projection formula does not supply a bounded preimage of every coherent complex: $`Lp^*F`$ can be unbounded when $`F`$ is not perfect.\n\nShen–Sun [3] announce the full localization theorem when $`R^ip_*F=0`$ for every coherent $`F`$ and every $`i>2`$. This covers projective resolutions of quasi-projective threefolds and some higher-dimensional cases, but imposes an additional hypothesis absent from the general question. Rationality requires this vanishing only for $`\\mathcal O_Y`$, not for every coherent sheaf. The paper's introduction retains the general-dimensional conjecture.\n\nCurrent targeted searches and comparison with the reviewed AIM, FURTHER and OpenAI catalogue located no matching complete resolution in unrestricted dimension. Selected primary statements and version histories were checked; external proofs were not fully audited.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-fb0797e175f030e3**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"Bondal Orlov\" localization conjecture solution 2026",
+    "\"Bondal\" \"localization\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:hexagonmath.org OR site:palomar-registry.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.22539",
+      "locator": "v1 23August2026, Theorem1.0.2 and Corollary1.0.3 proof",
+      "inspection": "Actual main theorem requires R^i p_*=0 on every coherent sheaf for i>2. Rational singularities give only structure-sheaf vanishing; arbitrary dimension does not imply condition. Threefold corollary works because fibers dimension<=2. K-theory/generation conclusions do not imply bounded coherent Verdier-quotient equivalence."
+    }
+  ],
+  "scope_comparison": "Actual main theorem requires R^i p_*=0 on every coherent sheaf for i>2. Rational singularities give only structure-sheaf vanishing; arbitrary dimension does not imply condition. Threefold corollary works because fibers dimension<=2. K-theory/generation conclusions do not imply bounded coherent Verdier-quotient equivalence.",
+  "rationale": "The stated full target has no matching complete result in the recorded bounded searches. Inspected primary bodies retain the stated conjecture or give restricted progress; recommended status stays Partially resolved. This does not certify openness or independently verify complete proofs.",
+  "source_gaps": [],
+  "announcement_routing": {
+    "localID": "870",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Bondal",
+          "localization conjecture"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Bondal",
+          "localization conjecture"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Bondal",
+        "localization conjecture"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target."
+}

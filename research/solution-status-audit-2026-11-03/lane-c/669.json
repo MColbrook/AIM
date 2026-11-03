@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "669",
+  "manifest_index": 513,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "669",
+    "title": "Does metric completion preserve minimal Sobolev gradients?",
+    "area": "Nonlinear potential theory on metric spaces",
+    "file": "problems/669-does-metric-completion-preserve-minimal-sobolev-gradients.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-01e261c83de5a707",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "d80f7e202ec6688c1b3b9995915af369630ef8ca2f9e6b04035878b4296111e2",
+    "statement_sha256": "881e9727efc3563d592a994b0b86be31bd343b9b65c0cd34a06bd2912f58cd79",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d80f7e202ec6688c1b3b9995915af369630ef8ca2f9e6b04035878b4296111e2",
+  "statement_sha256": "881e9727efc3563d592a994b0b86be31bd343b9b65c0cd34a06bd2912f58cd79",
+  "actual_source_sha256": "d80f7e202ec6688c1b3b9995915af369630ef8ca2f9e6b04035878b4296111e2",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix $`1<p<\\infty`$. Equip a possibly noncomplete metric space $`X`$ with a positive complete Borel measure $`\\mu`$, finite and nonzero on every ball. Write $`\\widehat X`$ for its metric completion. On Borel subsets $`E\\subset\\widehat X`$, define $`\\widehat\\mu(E)=\\mu(E\\cap X)`$, then complete this measure.\n\nChoose a ball $`B_0\\subset X`$. Assume constants $`C_D,C_P<\\infty`$ and $`\\lambda\\ge1`$ give, for every ball $`B\\subset B_0`$,\n\n```math\n\\mu(2B)\\le C_D\\mu(B),\\qquad\n\\fint_B|v-v_B|\\,d\\mu\\le C_P r_B\\left(\\fint_{\\lambda B}g^p\\,d\\mu\\right)^{1/p}\n```\n\n\nfor every integrable $`v`$ on $`\\lambda B`$ and every upper gradient $`g`$ of $`v`$. Here $`v_B=\\fint_Bv\\,d\\mu`$; an upper gradient controls endpoint differences by its line integral along each rectifiable curve. A $`p`$-weak upper gradient allows a curve family of zero $`p`$-modulus as exceptions.\n\nFor open $`\\Omega\\subset B_0`$, set\n\n```math\n\\Omega^\\wedge=\\widehat X\\setminus\\overline{X\\setminus\\Omega}^{\\,\\widehat X}.\n```\n\n\nLet $`u\\in D^p(\\Omega)`$, the measurable pointwise-defined functions admitting an upper gradient in $`L^p(\\Omega)`$. The extension theorem supplies $`\\widehat u\\in D^p(\\Omega^\\wedge)`$ agreeing with $`u`$ outside a set of zero Sobolev $`C_p^X`$-capacity in $`\\Omega`$, with\n\n```math\ng_{\\widehat u,\\Omega^\\wedge}\\le A_0 g_{u,\\Omega}\\quad\\mu\\text{-a.e. on }\\Omega.\n```\n\n\nThe subscripts specify where the minimal $`p`$-weak upper gradients are computed. **Can this extension always preserve the gradient exactly, with $`A_0=1`$? Or is there an example satisfying all these hypotheses where equality fails on a set of positive $`\\mu`$-measure?** This is Björn–Björn’s Open Problem 4.4.\n\nNo assumption that $`\\Omega`$ is $`p`$-path almost open in $`\\widehat X`$ is imposed. Under that additional assumption, equality is known. The completion complement need not be measurable; only its inner $`\\widehat\\mu`$-measure is always zero.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"completion\" \"minimal upper gradient\" Bjorn proof 2026",
+    "\"completion\" \"minimal upper gradient\" Bjorn (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v2,6October2020; latest record inspected",
+      "url": "https://arxiv.org/html/1705.02253",
+      "locator": "Open problem4.4 and preceding discussion, lines225–231",
+      "primary_body_access_gap": false,
+      "scope_comparison": "The source explicitly asks exact minimal-gradient preservation. Its example losing gradients fails every Poincare inequality and therefore cannot satisfy the target premise. Equality with path-almost-open hypothesis does not settle arbitrary noncomplete locally doubling PI spaces. Equivalence of Sobolev definitions after completeness assumes a different setting."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The source explicitly asks exact minimal-gradient preservation. Its example losing gradients fails every Poincare inequality and therefore cannot satisfy the target premise. Equality with path-almost-open hypothesis does not settle arbitrary noncomplete locally doubling PI spaces. Equivalence of Sobolev definitions after completeness assumes a different setting.",
+  "latest_version_check": "v2,6October2020; latest record inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

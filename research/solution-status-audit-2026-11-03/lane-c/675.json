@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "675",
+  "manifest_index": 519,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "675",
+    "title": "Gradient propagation of smallness below codimension one",
+    "area": "Elliptic PDE and quantitative unique continuation",
+    "file": "problems/675-gradient-propagation-of-smallness-below-codimension-one.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0fe39e7092b83fca",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "f8a24d7694af82a7048dfdd219840ffa205d2d397192ef9e85dc6bce4c9b772f",
+    "statement_sha256": "f252b4944fca4eda6e801486c012505ff8d3c11141c811af6f6ad0914fb02064",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f8a24d7694af82a7048dfdd219840ffa205d2d397192ef9e85dc6bce4c9b772f",
+  "statement_sha256": "f252b4944fca4eda6e801486c012505ff8d3c11141c811af6f6ad0914fb02064",
+  "actual_source_sha256": "f8a24d7694af82a7048dfdd219840ffa205d2d397192ef9e85dc6bce4c9b772f",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix $`n\\ge3`$, a bounded connected domain $`\\Omega\\subset\\mathbb R^n`$, and a real symmetric uniformly elliptic matrix field $`A`$ with Lipschitz entries. For $`s>0`$, use Hausdorff content\n```math\n\\mathcal C_{\\mathcal H}^{s}(E)=\n\\inf\\left\\{\\sum_j r_j^s:E\\subset\\bigcup_j B(x_j,r_j)\\right\\}.\n```\n\nGiven $`0<\\delta\\le2`$ and $`m,\\rho>0`$, let $`E,K\\subset\\Omega`$ satisfy\n```math\n\\mathcal C_{\\mathcal H}^{n-2+\\delta}(E)>m,\\qquad\n\\mathrm{dist}(E,\\partial\\Omega)>\\rho,\\quad\n\\mathrm{dist}(K,\\partial\\Omega)>\\rho.\n```\n\nDoes there exist $`C>0`$ and $`\\gamma\\in(0,1)`$, depending only on $`n,\\Omega,A,\\delta,m,\\rho`$, such that every real weak solution\n```math\n\\mathrm{div}(A\\nabla u)=0,\\qquad\nM=\\sup_\\Omega|\\nabla u|<\\infty,\n```\n\nsatisfies\n```math\n\\sup_K|\\nabla u|\\le\nC\\left(\\sup_E|\\nabla u|\\right)^\\gamma M^{1-\\gamma}?\n```\n\nUse the continuous interior gradient representative. Constants must be independent of the solution and the particular sets beyond the stated data. The coefficient field is fixed; no additional uniformity over coefficient fields or solution-dependent frequency bound is imposed. The endpoint $`\\delta=0`$ is excluded.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"propagation of smallness\" \"gradient\" \"codimension two\" 2026",
+    "\"propagation of smallness\" \"gradient\" \"codimension two\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "arXiv:2508.21214 current HTML, inspected 2026-11-03",
+      "locator": "Theorem1; §4 Corollary3 lines380–406",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2508.21214",
+      "scope_comparison": "Harmonic functions have the desired near-codimension-two power estimate. For Lipschitz elliptic coefficients, the actual Corollary3 gives exp(-C(log(1/epsilon))^(1/3)), explicitly called weaker than the ideal power interpolation. The target quantifies over all uniformly elliptic symmetric Lipschitz A and needs a frequency-independent power, so harmonic success and the stretched-log modulus do not settle it."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Harmonic functions have the desired near-codimension-two power estimate. For Lipschitz elliptic coefficients, the actual Corollary3 gives exp(-C(log(1/epsilon))^(1/3)), explicitly called weaker than the ideal power interpolation. The target quantifies over all uniformly elliptic symmetric Lipschitz A and needs a frequency-independent power, so harmonic success and the stretched-log modulus do not settle it.",
+  "latest_version_check": "arXiv:2508.21214 current HTML, inspected 2026-11-03",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

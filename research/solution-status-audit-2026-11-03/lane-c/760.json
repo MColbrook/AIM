@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "760",
+  "manifest_index": 604,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "760",
+    "title": "Sharp leading Betti coefficient for intersections of real quadrics",
+    "area": "Geometry and topology",
+    "file": "problems/760-sharp-leading-betti-coefficient-for-intersections-of-real-quadrics.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0155948645c0ed40",
+    "group": "geometry-topology",
+    "source_sha256": "923bc25cc595af839a738126fba03592fac480627d3f56452a88dafca83f6614",
+    "statement_sha256": "d0323bacfd16010db594737b18912470c898afc0b912c5bc30217457022d2484",
+    "state": "unreviewed"
+  },
+  "source_sha256": "923bc25cc595af839a738126fba03592fac480627d3f56452a88dafca83f6614",
+  "statement_sha256": "d0323bacfd16010db594737b18912470c898afc0b912c5bc30217457022d2484",
+  "actual_source_sha256": "923bc25cc595af839a738126fba03592fac480627d3f56452a88dafca83f6614",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix an integer $`k\\ge4`$. For each $`n\\ge k`$, let\n```math\nB(k,n)=\\max_{q_1,\\ldots,q_k}\n\\sum_{i\\ge0}\\dim_{\\mathbb F_2}H_i(X;\\mathbb F_2),\n\\qquad\nX=\\{[x]\\in\\mathbb {RP}^{n}:q_1(x)=\\cdots=q_k(x)=0\\},\n```\n\nwhere the maximum is over real homogeneous quadratic forms on $`\\mathbb R^{n+1}`$. Singular common zero sets and dependent forms are allowed.\n\nIs it true that, for every fixed $`k\\ge4`$,\n```math\nB(k,n)=\\frac{2^{k-2}}{(k-1)!}\\,n^{k-1}\n       +O_k(n^{k-2})\n\\qquad(n\\to\\infty)?\n```\n\nThe homology is ordinary singular homology with coefficients in $`\\mathbb F_2`$; the total Betti number of the empty set is zero. The error constant may depend on $`k`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"quadrics\" \"Betti\" \"leading\" 2026 Lerario Basu Rizzie",
+    "\"quadrics\" Betti (site:zenodo.org OR site:hal.science OR site:github.com) conjecture",
+    "quadrics Betti (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"real quadrics\" \"Betti\" \"2026\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v7, 2 November 2017, current arXiv record inspected 3 November 2026; final DCG 59 (2018) metadata referenced",
+      "primary_body_access_gap": false,
+      "locator": "Theorem 25 and Remark 23, PDF p.28; compare Theorem 17",
+      "scope_comparison": "Theorem 25 explicitly assumes generic homogeneous quadrics and gives 2^(k−2) binomial(n,k−1)+O(n^(k−2)), the desired leading coefficient in that class. Remark 23 states that removing genericity requires the slightly worse bound in Theorem 17. The target maximizes over all singular and dependent forms, so the generic theorem does not provide its upper bound. Random hypersurface arrangements concern unions or complements and graded Betti tables are different invariants. No later complete matching extremal-coefficient claim was found.",
+      "url": "https://arxiv.org/pdf/1507.03958v7"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem 25 explicitly assumes generic homogeneous quadrics and gives 2^(k−2) binomial(n,k−1)+O(n^(k−2)), the desired leading coefficient in that class. Remark 23 states that removing genericity requires the slightly worse bound in Theorem 17. The target maximizes over all singular and dependent forms, so the generic theorem does not provide its upper bound. Random hypersurface arrangements concern unions or complements and graded Betti tables are different invariants. No later complete matching extremal-coefficient claim was found.",
+  "latest_version_check": "v7, 2 November 2017, current arXiv record inspected 3 November 2026; final DCG 59 (2018) metadata referenced",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

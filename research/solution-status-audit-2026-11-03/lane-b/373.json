@@ -1,0 +1,42 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 306,
+  "source_sha256": "141b700c8f3729b8769e795f72a95bb9b80e597a8f8e0a6990670b5559766117",
+  "statement_sha256": "5c787579096fc015c0a9702ff71d3cdb32d4dafd4eabae8fa05aa94fd04c9a12",
+  "original_target": {
+    "id": "373",
+    "title": "Quantization of radial finite-time collapse in fully parabolic Keller–Segel",
+    "area": "Chemotaxis; concentration of cell density",
+    "file": "problems/373-keller-segel-collapse-quantization.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "141b700c8f3729b8769e795f72a95bb9b80e597a8f8e0a6990670b5559766117",
+    "statement_sha256": "5c787579096fc015c0a9702ff71d3cdb32d4dafd4eabae8fa05aa94fd04c9a12",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "373",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"fully parabolic\" \"Keller Segel\" \"quantization\" 2026",
+    "\"Keller Segel\" \"quantization\" site:zenodo.org OR site:hal.science OR site:github.com 2026",
+    "\"fully parabolic\" \"mass quantization\" 2026 Soga"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2505.10912v2",
+      "version": "v2 27 June 2025; current abs history checked",
+      "locators": "introduction fully parabolic KS discussion; Corollaries 1.4–1.6; model P",
+      "body_inspected": true,
+      "scope": "Exact KS finite-time atom equality remains a question; own counterexample-style statement is conditional infinite-time growup for local-sensing u_t=Delta(e^-v u)."
+    }
+  ],
+  "registry_checks": "Palomar/Hexagon/OpenAI full metadata aliases checked; no matching Keller–Segel quantization claim. Focused arXiv, primary publisher, Zenodo, HAL and GitHub searches.",
+  "scope_comparison": "Original radial 2D fully parabolic classical finite-time collapse atom m>=8pi must equal8pi. Signal elliptic simplification, critical total-mass existence or infinite-time local-sensing nonquantization cannot answer it.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Primary paper explicitly distinguishes its own different model/time regime."
+}

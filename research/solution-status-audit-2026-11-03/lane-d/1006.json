@@ -1,0 +1,118 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1006",
+  "manifest_index": 850,
+  "checked_date": "2026-11-03",
+  "source_sha256": "833cd232ce02bb4ef7e3c1057e5eb582e182646388fd9b3a9d350d78ab8597b2",
+  "statement_sha256": "73faf9853a2d9a9fb7cdfeabc51c2ee123f2b219d4dc1d3baed4a13d22cae7ef",
+  "original_target": {
+    "id": "1006",
+    "title": "Fourier leakage after symmetric rearrangement",
+    "area": "Harmonic analysis and quantitative uncertainty principles",
+    "file": "problems/1006-fourier-leakage-after-symmetric-rearrangement.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-02cf98bff0f8e0b0",
+    "group": "spectral",
+    "source_sha256": "833cd232ce02bb4ef7e3c1057e5eb582e182646388fd9b3a9d350d78ab8597b2",
+    "statement_sha256": "73faf9853a2d9a9fb7cdfeabc51c2ee123f2b219d4dc1d3baed4a13d22cae7ef",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For a measurable set $`A\\subset\\mathbb R^d`$ of finite positive measure, let $`A^*`$ be the centered ball with $`|A^*|=|A|`$. For $`f\\in L^2(\\mathbb R^d)`$, let $`|f|^*`$ be the radial nonincreasing equimeasurable rearrangement of $`|f|`$, and write $`\\widehat f`$ for the Fourier transform. Fix $`d\\ge2`$. Does there exist $`\\kappa_d>0`$ such that, for all finite-measure sets $`S,\\Sigma\\subset\\mathbb R^d`$ and all $`f`$ supported in $`S`$,\n\n```math\n\\int_{\\mathbb R^d\\setminus\\Sigma^*}\n  \\bigl|\\widehat{|f|^*}(\\xi)\\bigr|^2\\,d\\xi\n\\le \\kappa_d\\exp\\!\\left(\\kappa_d(|S|\\,|\\Sigma|)^{1/d}\\right)\n\\int_{\\mathbb R^d\\setminus\\Sigma}|\\widehat f(\\xi)|^2\\,d\\xi\\;?\n```\n\nThis is the corrected Conjecture 5.3 of Jaming [1]. Both the finite-support hypothesis and the exponential factor are part of the question; the paper gives a counterexample to its older version without them.",
+  "full_original_page": "# 1006. Fourier leakage after symmetric rearrangement\n\n**Area:** Harmonic analysis and quantitative uncertainty principles\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor a measurable set $`A\\subset\\mathbb R^d`$ of finite positive measure, let $`A^*`$ be the centered ball with $`|A^*|=|A|`$. For $`f\\in L^2(\\mathbb R^d)`$, let $`|f|^*`$ be the radial nonincreasing equimeasurable rearrangement of $`|f|`$, and write $`\\widehat f`$ for the Fourier transform. Fix $`d\\ge2`$. Does there exist $`\\kappa_d>0`$ such that, for all finite-measure sets $`S,\\Sigma\\subset\\mathbb R^d`$ and all $`f`$ supported in $`S`$,\n\n```math\n\\int_{\\mathbb R^d\\setminus\\Sigma^*}\n  \\bigl|\\widehat{|f|^*}(\\xi)\\bigr|^2\\,d\\xi\n\\le \\kappa_d\\exp\\!\\left(\\kappa_d(|S|\\,|\\Sigma|)^{1/d}\\right)\n\\int_{\\mathbb R^d\\setminus\\Sigma}|\\widehat f(\\xi)|^2\\,d\\xi\\;?\n```\n\nThis is the corrected Conjecture 5.3 of Jaming [1]. Both the finite-support hypothesis and the exponential factor are part of the question; the paper gives a counterexample to its older version without them.\n\n## Application\n\nThe proposed bound would control how much Fourier energy escapes a frequency set after spatial symmetrization. It would imply the pure volume-product form of the multidimensional Nazarov uncertainty inequality [1, Conjecture 5.4]:\n\n```math\n\\|f\\|_2^2\\le C_d\\exp\\!\\left(C_d(|S|\\,|\\Sigma|)^{1/d}\\right)\n\\left(\\int_{\\mathbb R^d\\setminus S}|f|^2\n+\\int_{\\mathbb R^d\\setminus\\Sigma}|\\widehat f|^2\\right).\n```\n\n## Known results and scope\n\nJaming proves the inequality in the opposite direction for Fourier energy **inside** a set of finite measure [1, Theorem 5.1]. His paper proves that the rearrangement leakage conjecture would imply the displayed uncertainty estimate. The one-dimensional uncertainty estimate is due to Nazarov, and special higher-dimensional cases with a convex set are known [1, discussion after Conjecture 5.4]. These do not establish the corrected rearrangement estimate for arbitrary measurable $`S`$ and $`\\Sigma`$.\n\n## References\n\n1. P. Jaming, [*On the Fourier transform of the symmetric decreasing rearrangements*](https://aif.centre-mersenne.org/item/10.5802/aif.2597.pdf), *Annales de l'Institut Fourier* **61** (2011), 53–77, Theorem 5.1 and Conjectures 5.3–5.4, with the counterexample immediately after.\n\n## Status review\n\n\n**Known cases:** The finite-support assumption and exponential loss belong to the corrected conjecture. The older uncorrected rearrangement inequality is false. The January 2026 Oxford rearrangement talk concerns ordering finite additive sets and is unrelated.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe finite-support assumption and exponential loss belong to the corrected conjecture. The older uncorrected rearrangement inequality is false. The January 2026 Oxford rearrangement talk concerns ordering finite additive sets and is unrelated.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe [primary-body, later-result and duplicate audit](../FURTHER_problems/_tracking/fourier-rearrangement-leakage-status-2026-10-21.json) identifies the corrected conjecture and distinguishes it from the false older variant. Bounded searches found no complete proof or counterexample through 21 October 2026; this does not rule out unindexed work.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-02cf98bff0f8e0b0**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Fourier rearrangement",
+    "Jaming",
+    "Nazarov",
+    "leakage"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"Jaming\" \"rearrangement\" \"Conjecture\" 2026"
+    },
+    {
+      "query": "\"Jaming\" \"rearrangement\" \"Conjecture\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.numdam.org/item/10.5802/aif.2597.pdf",
+      "locator": "published2011 Conjectures5.3–5.4 and correction printedpp71–73"
+    }
+  ],
+  "scope_comparison": "Actual published statement adds finite support and exp(kappa_d(volume product)^(1/d)); the older version is explicitly false. Inside-frequency rearrangement and one-dimensional/convex-set uncertainty bounds do not supply this outside-frequency leakage bound for arbitrary sets in d>=2. Primarypublisher403recoveredNumdam.",
+  "recommendation": "Retain partial status; bounded current searches located no matching complete resolution.",
+  "limitations": "Not proof of openness or certification of all cited proofs; inaccessible irrelevant/restricted comparisons do not themselves create a hold.",
+  "announcement_routing": {
+    "localID": "1006",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Fourier rearrangement",
+          "Jaming",
+          "Nazarov",
+          "leakage"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-09-24-000001",
+            "title": "The Favard-length decay exponent of the four-corner Cantor set is at least 1/4",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-24-000001-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Fourier rearrangement",
+          "Jaming",
+          "Nazarov",
+          "leakage"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00491v1",
+            "title": "Largest Gaps between Eigenvalues of the Gaussian Orthogonal Ensemble",
+            "url": "https://hexagonmath.org/abs/2610.00491v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Fourier rearrangement",
+        "Jaming",
+        "Nazarov",
+        "leakage"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Favard length of a four-corner Cantor set and GOE eigenvalue gaps do not compare Fourier leakage before/after symmetric rearrangement of arbitrary sets/functions.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.757Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

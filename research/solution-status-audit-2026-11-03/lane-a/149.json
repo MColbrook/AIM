@@ -1,0 +1,77 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "149",
+  "manifest_index": 117,
+  "original_target": {
+    "id": "149",
+    "title": "Tagged-particle thermalization with an interacting background",
+    "area": "Kinetic theory and plasma relaxation",
+    "file": "problems/149-lenard-balescu-thermalization.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "673b8d204cf118b236f226832637257f99cce3df0ce6a4d7f81425e1567482b2",
+    "statement_sha256": "c4207492abb293ecfe0fe4d9623c99091720eec4f70d06c4c1b8812a0247f38d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "673b8d204cf118b236f226832637257f99cce3df0ce6a4d7f81425e1567482b2",
+  "statement_sha256": "c4207492abb293ecfe0fe4d9623c99091720eec4f70d06c4c1b8812a0247f38d",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:25:44.960736+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual Duerinckx–LeBihan Theorem1.3 assumes a fixed hierarchy truncation parameter and dimension bound depending on it. It does not control the full N-particle interacting bath at timesN*tau in3D. New2602.16440 is a free-background linear-Landau result in dimension>=4 by its primary abstract, not screened interacting-bath thermalization.",
+  "primary_sources": [
+    {
+      "url": "https://mitia.duerinckx.web.ulb.be/publications-DLB25.pdf",
+      "locator": "Section1.4 Theorem1.3 equation1.22, Section2.5 limitations",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2602.16440",
+      "locator": "Primary abstract only: free gas and dimension>=4",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Lenard Balescu\" \"thermalization\" \"2026\" full particles",
+    "\"Lenard-Balescu\" 2026 derivation particles"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Lenard",
+        "Balescu",
+        "thermalization"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Lenard",
+        "Balescu",
+        "thermalization"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "New free-gas HTML timed out; explicit abstract scope excludes local interacting background."
+  ],
+  "canonical_update_required": false
+}

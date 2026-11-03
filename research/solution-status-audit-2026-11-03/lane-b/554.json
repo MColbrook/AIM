@@ -1,0 +1,84 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "554",
+  "manifest_index": 432,
+  "original_target": {
+    "id": "554",
+    "title": "Optimal cubature error with small mixed smoothness",
+    "area": "Numerical integration and approximation theory",
+    "file": "problems/554-optimal-cubature-error-with-small-mixed-smoothness.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8600775c7f3b8a37",
+    "group": "numerical-analysis",
+    "source_sha256": "676ce061ec9157684a46148e642cc6861d4776dbbbe858f4daa95602d153c58d",
+    "statement_sha256": "5009e0dfc16efd73d318d7418ab16b2f07750a410b99886863fd4be9c546031e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "676ce061ec9157684a46148e642cc6861d4776dbbbe858f4daa95602d153c58d",
+  "statement_sha256": "5009e0dfc16efd73d318d7418ab16b2f07750a410b99886863fd4be9c546031e",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:56:06.180946+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The target is the unrestricted deterministic signed-weight minimax lower bound for supported F^s_{p,theta},d>=3,1<theta<p,1/p<s<1/theta. Source Theorem1.2 gives an upper bound and Remark7.4 leaves a matching lower bound. The October quantum Besov result has another function space and information model; periodic Hilbert log-critical spectral-weight bounds differ from p>theta.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1503.08846",
+      "locator": "Current v2, 6April2016, Theorem1.2 p3 and Remark7.4 p21",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2610.17204v1",
+      "locator": "Introduction retains classical small-smoothness gap; sections5–6 quantum Besov bounds",
+      "body_inspected": true
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00041-023-10021-7",
+      "locator": "Section4.2 Theorem5, periodic Hilbert setting",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Frolov\" \"small smoothness\" lower bound 2026",
+    "\"Frolov\" \"small smoothness\" lower bound (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"small mixed smoothness\" \"lower\" 2026 integration Triebel Lizorkin"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Frolov",
+        "small mixed smoothness",
+        "Triebel-Lizorkin"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Frolov",
+        "small mixed smoothness",
+        "Triebel-Lizorkin"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "2016 final journal body not freshly compared; current preprint theorem and October2026 primary status inspected."
+  ],
+  "canonical_update_required": false
+}

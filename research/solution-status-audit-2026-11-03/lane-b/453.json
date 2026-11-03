@@ -1,0 +1,54 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 363,
+  "source_sha256": "fb0f5748f98031124b3b0474217e356c780e1c49ea73aebd9d7f4bbe7adbf539",
+  "statement_sha256": "21fdd42f57da1fabc68404f34449933d442138949b3add8b1b62bfa57b7550f4",
+  "original_target": {
+    "id": "453",
+    "title": "Bourgain–Spencer accuracy for random elliptic media at finite contrast",
+    "area": "Stochastic homogenization; diffusion in heterogeneous media",
+    "file": "problems/453-bourgain-spencer-nonperturbative-homogenization.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "stochastic3",
+    "source_sha256": "fb0f5748f98031124b3b0474217e356c780e1c49ea73aebd9d7f4bbe7adbf539",
+    "statement_sha256": "21fdd42f57da1fabc68404f34449933d442138949b3add8b1b62bfa57b7550f4",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "453",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Bourgain Spencer\" \"2026\" \"non-perturbative\"",
+    "\"Bourgain-Spencer\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2102.06319",
+      "version": "published2023,currentHTML",
+      "locator": "Theorem2,Definition3.3,eq6.11",
+      "theorem_body_checked": true,
+      "scope": "Nonperturbativeapproximationaccuracyd−eta,not2d−eta."
+    },
+    {
+      "url": "https://arxiv.org/html/2406.09909",
+      "version": "published2025,currentHTML",
+      "locator": "§2.3Theorem2.5,§3theoremsandProposition2.2",
+      "theorem_body_checked": true,
+      "scope": "Weakrandomness/smallcontrastdelta≤1/K yields symbolregularity2d−deltaK−;notallfinitecontrast2d−eta."
+    },
+    {
+      "url": "https://mitia.duerinckx.web.ulb.be/publications.html",
+      "date": "currentauthorlisting2026",
+      "locator": "Bourgain–Spencerwork",
+      "scope": "Primaryauthorroutingfoundknownrestrictedpapers,nonefullfinitecontrast."
+    }
+  ],
+  "registry_checks": "Complete Palomar/HexagonmetadataandpinnedOpenAI/Colbrookauthorlistingsscannedfortopicaliases;nomatchingfullclaim.",
+  "scope_comparison": "Smoothfinite-rangeGaussiangeneratedsymmetricuniformellipticcoefficientsarbitrarycontrast;needconstanttensorsupto2dandall eta>0. d-etaaccuracyandcontrastdependentlossofdeltaKdonotmatch;recursiveproxycarefullypreserved.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

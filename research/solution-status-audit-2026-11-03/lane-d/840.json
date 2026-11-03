@@ -1,0 +1,112 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "840",
+  "manifest_index": 684,
+  "checked_date": "2026-11-03",
+  "source_sha256": "58bd93678691e0c19159a44756647811344a95d2494d64f209dfc906b76f3805",
+  "statement_sha256": "b1fb5edcf47ed12261243ba4987f02cedfea7c5f84a99f79926bf659ce61a7e7",
+  "original_target": {
+    "id": "840",
+    "title": "Exponential-time hyperbolic pseudolocality in higher dimensions",
+    "area": "Geometry and topology",
+    "file": "problems/840-exponential-time-hyperbolic-pseudolocality-in-higher-dimensions.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c9394a2f34ce3739",
+    "group": "geometry-topology",
+    "source_sha256": "58bd93678691e0c19159a44756647811344a95d2494d64f209dfc906b76f3805",
+    "statement_sha256": "b1fb5edcf47ed12261243ba4987f02cedfea7c5f84a99f79926bf659ce61a7e7",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For each integer $`n\\ge3`$, do constants $`A(n),c(n),\\overline R(n)>0`$ exist with the following property?\n\nLet $`g(t)`$, $`0\\le t\\le T`$, be a smooth complete Ricci flow of bounded curvature on a smooth $`n`$-manifold $`M`$, with $`T>0`$ and\n```math\n\\partial_tg=-2\\mathrm{Ric}(g).\n```\n\nSuppose that for some $`x\\in M`$ and $`R\\ge\\overline R(n)`$ the initial pointed ball\n```math\n(B_{g(0)}(x,R),g(0),x)\n```\n\nis isometric to the radius-$`R`$ ball centred at a point in hyperbolic $`n`$-space of sectional curvature $`-1`$.\n\nMust the Riemann curvature tensor satisfy\n```math\n|\\mathrm{Rm}(g(t))|_{g(t)}(x)\\le A(n)\n\\qquad\\text{for }0\\le t\\le\\min\\{T,e^{c(n)R}\\}?\n```\n\nThe constants must be independent of the flow's global curvature bound and of its initial geometry outside the ball. This concerns the given unnormalized flow and a bound at its fixed centre. It does not assert existence of the flow up to $`e^{c(n)R}`$, a decay rate, or a bound on the entire ball.",
+  "full_original_page": "# 840. Exponential-time hyperbolic pseudolocality in higher dimensions\n\n**Area:** Geometry and topology\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor each integer $`n\\ge3`$, do constants $`A(n),c(n),\\overline R(n)>0`$ exist with the following property?\n\nLet $`g(t)`$, $`0\\le t\\le T`$, be a smooth complete Ricci flow of bounded curvature on a smooth $`n`$-manifold $`M`$, with $`T>0`$ and\n```math\n\\partial_tg=-2\\mathrm{Ric}(g).\n```\n\nSuppose that for some $`x\\in M`$ and $`R\\ge\\overline R(n)`$ the initial pointed ball\n```math\n(B_{g(0)}(x,R),g(0),x)\n```\n\nis isometric to the radius-$`R`$ ball centred at a point in hyperbolic $`n`$-space of sectional curvature $`-1`$.\n\nMust the Riemann curvature tensor satisfy\n```math\n|\\mathrm{Rm}(g(t))|_{g(t)}(x)\\le A(n)\n\\qquad\\text{for }0\\le t\\le\\min\\{T,e^{c(n)R}\\}?\n```\n\nThe constants must be independent of the flow's global curvature bound and of its initial geometry outside the ball. This concerns the given unnormalized flow and a bound at its fixed centre. It does not assert existence of the flow up to $`e^{c(n)R}`$, a decay rate, or a bound on the entire ball.\n\n## Application\n\nThis asks how long a large negatively curved region is protected from the influence of arbitrary surrounding geometry under Ricci flow. A time exponential in its initial radius would give substantially stronger local stability than a fixed short-time curvature estimate.\n\n## References\n\n1. A. D. McLeod, *Improved pseudolocality on large hyperbolic balls*, Communications in Analysis and Geometry **30**(10), 2285–2314 (published 2023). [DOI](https://doi.org/10.4310/CAG.2022.v30.n10.a4); [primary preprint, v2](https://arxiv.org/abs/1807.09005v2). Conjecture 1, native p. 4. The surface results in the same paper are proved; this question concerns $`n\\ge3`$.\n2. [Pseudolocality theorems of Ricci flows on incomplete manifolds](https://arxiv.org/abs/2210.15397), v5, Theorems 1.1–1.4. The local existence and entropy hypotheses differ from the statement here.\n3. [On the stability of Ricci flow on hyperbolic 3-manifolds of finite volume](https://arxiv.org/abs/2509.00188), v1, Theorem 1.1. Its global closeness assumption is absent here.\n4. O. C. Schnürer, F. Schulze and M. Simon, *Stability of hyperbolic space under Ricci flow*, [primary preprint](https://arxiv.org/abs/1003.2107), Theorems 1.2–1.4. These impose global smallness and integrability assumptions.\n\n## Status review\n\n\n**Known cases:** The higher-dimensional hyperbolic-pseudolocality statement remains distinct from the established surface theorem. General local-existence estimates and global-small-perturbation hyperbolic stability do not yield an exponential time bound for every given complete flow from a ball hypothesis alone.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe higher-dimensional hyperbolic-pseudolocality statement remains distinct from the established surface theorem. General local-existence estimates and global-small-perturbation hyperbolic stability do not yield an exponential time bound for every given complete flow from a ball hypothesis alone.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked 30 October 2026. The latest source conjecture and the relevant later primary theorem statements were read. Local constructions of a flow and global hyperbolic stability results do not establish the estimate for every given complete flow under only the stated ball hypothesis. Time normalization does not remove their extra spatial assumptions.\n\nBounded searches for later resolutions and complete announcements found no matching result. Semantic checks against AIM, the saved current OpenAI announcement corpus and private findings found no equivalent target. These checks are not a proof of openness. Selected primary statements and hypotheses were compared; no complete proof audit or published-body parity is claimed.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-c9394a2f34ce3739**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"hyperbolic\" \"pseudolocality\" conjecture higher dimensions solution 2026",
+    "\"hyperbolic\" \"pseudolocality\" (site:zenodo.org OR site:hal.science OR site:github.com OR Palomar OR site:hexagonmath.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1807.09005v2",
+      "version": "v2, 26 January 2023",
+      "locator": "Conjecture 1; lines 115–124",
+      "inspection": "Primary conjecture body read. Higher dimensional estimate remains explicitly conjectural in this version; proven theorems are surface results."
+    }
+  ],
+  "scope_comparison": "Exact local quantifiers match Conjecture 1: all n>=3, every given complete bounded-curvature unnormalized Ricci flow, radius-R initial hyperbolic ball, centre bound to min(T,exp(cR)). Two-dimensional proof and global perturbation results do not give this.",
+  "rationale": "No matching later complete resolution in bounded queries. Required direct announcement-source searches have access gaps; do not count as fully reviewed.",
+  "source_gaps": [
+    "Later hyperbolic-stability and pseudolocality theorem bodies not freshly compared."
+  ],
+  "announcement_routing": {
+    "localID": "840",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "pseudolocality",
+          "hyperbolic balls"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "pseudolocality",
+          "hyperbolic balls"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "pseudolocality",
+        "hyperbolic balls"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target.",
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:28:50.988Z",
+      "previous_outcome": "hold",
+      "localID": "840",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2210.15397",
+          "version": "v5,29August2023",
+          "locator": "primaryabstractcreatesoneflowunderalmostEuclideanisoperimetric/entropyhypotheses"
+        },
+        {
+          "url": "https://arxiv.org/abs/2509.00188",
+          "version": "v1,29August2025",
+          "locator": "primaryabstractglobalclosehyperbolic3metricnormalizedDeTurck"
+        }
+      ],
+      "comparison": "Neither source asserts ball-only exponentialprotectionforeverygivencompleteflow; creationofaspecialflow/globalcloseness cannot cover arbitraryoutsidegeometry. Explicitly restrictedprimaryabstractssufficetoexcludecomplete-match;earlierholdwasunnecessary supporting-bodygap. Boundednegativeonly."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

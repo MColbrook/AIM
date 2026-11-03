@@ -1,0 +1,110 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "868",
+  "manifest_index": 712,
+  "checked_date": "2026-11-03",
+  "source_sha256": "af2c21a9d52e5573f65c2cea419e411e7b1e47348ed3a51c32aa46c33dc67ba5",
+  "statement_sha256": "c3825ad0d4f5cc5b1044a61013286ef2153cd2c268a3cada7474cebbf8b0b2ad",
+  "original_target": {
+    "id": "868",
+    "title": "The doubling conjecture for positive scalar curvature",
+    "area": "Geometry and topology",
+    "file": "problems/868-the-doubling-conjecture-for-positive-scalar-curvature.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f9fd3f5adab5bf24",
+    "group": "geometry-topology",
+    "source_sha256": "af2c21a9d52e5573f65c2cea419e411e7b1e47348ed3a51c32aa46c33dc67ba5",
+    "statement_sha256": "c3825ad0d4f5cc5b1044a61013286ef2153cd2c268a3cada7474cebbf8b0b2ad",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`X`$ be a compact smooth manifold with nonempty boundary, and let\n```math\nDX=X\\cup_{\\partial X}X\n```\n\nbe its smooth double. Suppose $`DX`$ admits a Riemannian metric with strictly positive scalar curvature.\n\nMust $`X`$ admit a Riemannian metric $`g`$ such that\n```math\n\\mathrm{Scal}_g>0\\quad\\text{on }X,\n\\qquad H_g>0\\quad\\text{on }\\partial X?\n```\n\n\nHere positive mean curvature uses the source's outward-normal convention: parallel hypersurfaces just inside the boundary have smaller volume, and volume increases when moving outward. Thus the boundary is strictly mean convex. The metric on $`X`$ need not be the restriction of the initially given metric on $`DX`$, and no product structure near the boundary is required.",
+  "full_original_page": "# 868. The doubling conjecture for positive scalar curvature\n\n**Area:** Geometry and topology\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`X`$ be a compact smooth manifold with nonempty boundary, and let\n```math\nDX=X\\cup_{\\partial X}X\n```\n\nbe its smooth double. Suppose $`DX`$ admits a Riemannian metric with strictly positive scalar curvature.\n\nMust $`X`$ admit a Riemannian metric $`g`$ such that\n```math\n\\mathrm{Scal}_g>0\\quad\\text{on }X,\n\\qquad H_g>0\\quad\\text{on }\\partial X?\n```\n\n\nHere positive mean curvature uses the source's outward-normal convention: parallel hypersurfaces just inside the boundary have smaller volume, and volume increases when moving outward. Thus the boundary is strictly mean convex. The metric on $`X`$ need not be the restriction of the initially given metric on $`DX`$, and no product structure near the boundary is required.\n\n## Application\n\nDoubling turns a boundary-value existence question for positive scalar curvature into a closed-manifold existence question. The forward implication is known; the conjecture asks whether it captures all topological obstructions to finding such a boundary metric.\n\n## Known progress\n\nThe statement holds in dimensions at most three. The latest source revision, v2 (25 May 2022), retains Conjecture 7.1, as does the published article.\n\nFrenck's April 2026 preprint proves broad higher-dimensional cases, with a split-injection condition on the image of the fundamental group of each boundary component. Its Theorems A and B impose further dimension, spin or cohomological hypotheses; its Theorem C treats selected four-dimensional cases. These results leave the unrestricted conjecture open. In particular, connected boundary makes one auxiliary condition vacuous but does not remove the fundamental-group splitting requirement. The preprint also rules out a proposed example from the source as a counterexample.\n\n## Status review\n\n\n**Known cases:** Frenck April 2026 Theorems A-C assume conditions on boundary fundamental-group images, dimension, spin or cohomology, or treat selected four-manifolds. They do not establish the arbitrary-manifold doubling implication. The source retains Conjecture 7.1.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nFrenck April 2026 Theorems A-C assume conditions on boundary fundamental-group images, dimension, spin or cohomology, or treat selected four-manifolds. They do not establish the arbitrary-manifold doubling implication. The source retains Conjecture 7.1.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nSelected original, latest and published statement windows and the actual main theorems of the 2026 preprint were read. Searches for the named conjecture, counterexamples, later proofs and announcements, including Prove2Me, found no matching unrestricted resolution on the review date. All-status AIM/OpenAI and FURTHER comparisons distinguish this existence question from integral scalar-curvature inequalities, rational inessentiality, and minimal-graph boundary-limit questions. This is a bounded current-status review, not a certification of every cited proof.\n\n## References\n\n1. J. Rosenberg and S. Weinberger, [Positive scalar curvature on manifolds with boundary and their doubles](https://arxiv.org/abs/2201.01263), Conjecture 7.1 and Remark 1.4. [Published article](https://doi.org/10.4310/PAMQ.2023.v19.n6.a12); [public primary PDF](https://par.nsf.gov/servlets/purl/10505138).\n2. G. Frenck, [The doubling conjecture for positive scalar curvature](https://arxiv.org/abs/2604.12901), v1 (14 April 2026), Theorems A–C and Remark 1.1.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f9fd3f5adab5bf24**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"doubling conjecture\" \"positive scalar curvature\" solved 2026",
+    "\"doubling conjecture\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:hexagonmath.org OR site:palomar-registry.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2604.12901",
+      "locator": "v1 14April2026, TheoremA; TheoremsB–C pending exact read",
+      "inspection": "TheoremA body adds dimension>=5, spin/totally-nonspin and split injection on boundary fundamental group images plus dimension/cohomology alternatives. Does not establish unrestricted doubling implication. Need positive outward mean curvature, metric may differ from restriction."
+    }
+  ],
+  "scope_comparison": "TheoremA body adds dimension>=5, spin/totally-nonspin and split injection on boundary fundamental group images plus dimension/cohomology alternatives. Does not establish unrestricted doubling implication. Need positive outward mean curvature, metric may differ from restriction.",
+  "rationale": "No complete matching resolution identified in bounded searches. Snapshot announcement routing and exact body gaps still to be recorded; no guarantee of continued openness.",
+  "source_gaps": [
+    "Frenck TheoremsB–C and all alternatives exact body pending; TheoremA read."
+  ],
+  "announcement_routing": {
+    "localID": "868",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "doubling conjecture",
+          "mean convex boundary"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "doubling conjecture",
+          "mean convex boundary"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "doubling conjecture",
+        "mean convex boundary"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target.",
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.069Z",
+      "previous_outcome": "hold",
+      "localID": "868",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "queries": [
+        "\"doubling conjecture\" Frenck 2026"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2604.12901v1",
+          "version": "14 April 2026",
+          "locator": "TheoremsA–C; HTMLlines58–117",
+          "inspection": "TheoremB requires dimension>=5, almost spin, split fundamental-group inclusion and H2 isomorphism, with dimension<=11 for disconnected boundary. TheoremC(i) is conditional reduction for sphere boundary; (ii) handles specified connected sums of +/-K3 and psc four-manifolds; (iii) obtains only stabilized results under additional spin/free-group or nonspin/homological-dimension assumptions."
+        }
+      ],
+      "scope_comparison": "All stated alternatives have now been read, including C's conditional and stabilized conclusions. They do not imply the unrestricted doubling conjecture for every compact manifold. Exact theorem comparison closes the hold; remains partial."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

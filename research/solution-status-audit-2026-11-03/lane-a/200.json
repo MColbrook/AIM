@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "200",
+  "manifest_index": 156,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "200",
+    "title": "The quantum PCP conjecture for local Hamiltonians",
+    "area": "Quantum complexity; many-body energy approximation",
+    "file": "problems/200-quantum-pcp.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "spectral3",
+    "source_sha256": "a0d7d9c6452128383bfe07a5446d020efdc1df986d003f65de98f577b2c790a0",
+    "statement_sha256": "6404bd598184c37b41891da8cdb721f8099a0b4a913e04e265435387da9410cf",
+    "state": "unreviewed"
+  },
+  "source_sha256": "a0d7d9c6452128383bfe07a5446d020efdc1df986d003f65de98f577b2c790a0",
+  "statement_sha256": "6404bd598184c37b41891da8cdb721f8099a0b4a913e04e265435387da9410cf",
+  "actual_source_sha256": "a0d7d9c6452128383bfe07a5446d020efdc1df986d003f65de98f577b2c790a0",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Do there exist an integer $`k\\ge2`$ and a constant $`\\varepsilon>0`$ for which the following promise problem is QMA-hard under quantum polynomial-time reductions?\n\nThe input consists of $`m`$ positive semidefinite operators $`0\\le h_j\\le I`$ on $`n`$ qubits, each acting on at most $`k`$ qubits, and rational numbers $`0\\le a<b\\le1`$ with $`b-a\\ge\\varepsilon`$. Local matrices and thresholds have polynomial-length binary descriptions. With\n\n```math\nH=\\frac1m\\sum_{j=1}^m h_j,\n```\n\ndistinguish $`\\lambda_{\\min}(H)\\le a`$ from $`\\lambda_{\\min}(H)\\ge b`$, promised that one holds.\n\nQMA comprises promise problems with polynomial-time quantum verifiers, polynomially many witness qubits, completeness at least $`2/3`$, and soundness at most $`1/3`$. Hardness here means that every such problem reduces to this one by a uniform polynomial-time quantum computation with bounded error.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"quantum PCP\" conjecture proof 2026",
+    "\"quantum PCP\" conjecture proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"quantum PCP\" conjecture proof (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The exact target requires QMA-hardness for some fixed locality and constant relative energy gap under quantum reductions. Actual Theorem1.1 reduces an already-constant-query quantumPCP to a local Hamiltonian, and1.2establishes QPCP[O(1)]-completeness, not equality with all QMA.1.3is conditional and1.4removes adaptivity only. NLTS or good-qLTC statements likewise do not provide the requested QMA reduction. Older games-PCP announcements have a publicly explained proof mistake and concern a different games formulation. No complete matching local-Hamiltonian hardness announcement was located.",
+      "primary_body_access_gap": false,
+      "locator": "Theorems1.1–1.4 and discussion of QPCP[O(1)] completeness",
+      "version_or_date": "arXiv:2403.04841v3,8July2025,currentlatest;Quantum9(2025)1791",
+      "url": "https://arxiv.org/html/2403.04841v3"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The exact target requires QMA-hardness for some fixed locality and constant relative energy gap under quantum reductions. Actual Theorem1.1 reduces an already-constant-query quantumPCP to a local Hamiltonian, and1.2establishes QPCP[O(1)]-completeness, not equality with all QMA.1.3is conditional and1.4removes adaptivity only. NLTS or good-qLTC statements likewise do not provide the requested QMA reduction. Older games-PCP announcements have a publicly explained proof mistake and concern a different games formulation. No complete matching local-Hamiltonian hardness announcement was located.",
+  "latest_version_check": "arXiv:2403.04841v3,8July2025,currentlatest;Quantum9(2025)1791",
+  "gap_retraction_check": "Anand Natarajan's primary Simons talk20March2024 explicitly discusses a mistake in the2018Natarajan–Vidick games-PCP proof: https://simons.berkeley.edu/talks/anand-natarajan-mit-2024-03-20 . This is not a corrected proof of the displayed Hamiltonian target.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

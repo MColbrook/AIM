@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "605",
+  "manifest_index": 468,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "605",
+    "title": "Intermediate-time recovery of the physical measure under deterministic rounding",
+    "area": "Numerical dynamics and ergodic theory",
+    "file": "problems/605-intermediate-time-recovery-of-the-physical-measure-under-deterministic-rounding.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ff1b16e1a12a2943",
+    "group": "numerical-analysis",
+    "source_sha256": "b03628718a0e8dea2cca6e12f74af33d7735e1159009b99ed687b413a77595a5",
+    "statement_sha256": "94ae303882d7aa07497e4b75f78e8d13d96f16915db666400acf1b648eb93d0e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "b03628718a0e8dea2cca6e12f74af33d7735e1159009b99ed687b413a77595a5",
+  "statement_sha256": "94ae303882d7aa07497e4b75f78e8d13d96f16915db666400acf1b648eb93d0e",
+  "actual_source_sha256": "b03628718a0e8dea2cca6e12f74af33d7735e1159009b99ed687b413a77595a5",
+  "full_original_statement": "Fix an integer $`d\\ge2`$. Let $`\\mathcal E_d`$ be the space of $`C^2`$ maps $`f:\\mathbb T\\to\\mathbb T`$, where $`\\mathbb T=\\mathbb R/\\mathbb Z`$, with degree $`d`$ and $`f'(x)>1`$ everywhere. Give this space its usual $`C^2`$ topology. Each such map has a unique absolutely continuous invariant probability measure $`\\mu_f`$.\n\nFor $`N\\ge1`$, put\n```math\nE_N=\\{i/N:0\\le i<N\\},\\qquad\n\\lambda_N=\\frac1N\\sum_{i=0}^{N-1}\\delta_{i/N},\\qquad\nf_N=P_N\\circ f|_{E_N},\n```\n\nwhere $`P_N`$ projects to a nearest grid point, with ties resolved by a fixed convention.\n\n**Is there a residual subset $`\\mathcal G_d\\subseteq\\mathcal E_d`$ such that, for every $`f\\in\\mathcal G_d`$ and every integer sequence $`m=m(N)`$ satisfying**\n```math\n\\frac{\\log N}{m(N)}\\longrightarrow0,\n\\qquad \\frac{m(N)}{\\sqrt N}\\longrightarrow0,\n```\n\n**one has**\n```math\n(f_N^{\\,m(N)})_*\\lambda_N\\ \\stackrel{*}{\\rightharpoonup}\\ \\mu_f?\n```\n\nResidual means containing a countable intersection of open dense subsets. Convergence means convergence against every continuous test function. This asks about a single intermediate iterate of the initial uniform grid law; no time averaging or random rounding is introduced.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Guihéneuf\" \"intermediate\" discretization expanding 2026",
+    "\"Guihéneuf\" \"intermediate\" discretization expanding (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v4, 24 April 2023 per arXiv record; HTML internally dated 24 August 2026",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2206.08000v4",
+      "locator": "Theorem 3; Section 4, lines 357–359",
+      "scope_comparison": "Theorem 3 takes k fixed before N tends to infinity. Section 4 explicitly treats the intermediate window numerically, stating theoretical breakthroughs there seem out of reach. No uniform result covers every sequence log N << m(N) << sqrt N. Deterministic nearest-grid rounding is different from random schemes."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Theorem 3 takes k fixed before N tends to infinity. Section 4 explicitly treats the intermediate window numerically, stating theoretical breakthroughs there seem out of reach. No uniform result covers every sequence log N << m(N) << sqrt N. Deterministic nearest-grid rounding is different from random schemes.",
+  "latest_version_check": "v4, 24 April 2023 per arXiv record; HTML internally dated 24 August 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; version records showed no withdrawal banner. Cited partial proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

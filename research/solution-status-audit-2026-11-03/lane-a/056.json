@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "056",
+  "manifest_index": 39,
+  "original_target": {
+    "id": "056",
+    "title": "Solenoidal injectivity of the geodesic ray transform on 2-tensors",
+    "area": "Tensor tomography / linearized travel-time imaging",
+    "file": "problems/056-tensor-ray-injectivity.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse",
+    "source_sha256": "6549ac50714363300f08bd8715f8e38ca0c362c56a30efc3bb6e732611c2dc54",
+    "statement_sha256": "a3d721058748a952ed2af2751b7c2ce2de4a010a4063f30a845b5b55247142aa",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6549ac50714363300f08bd8715f8e38ca0c362c56a30efc3bb6e732611c2dc54",
+  "statement_sha256": "a3d721058748a952ed2af2751b7c2ce2de4a010a4063f30a845b5b55247142aa",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:28:38.501858+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no_full_match",
+  "recommended_status": "Open",
+  "scope_comparison": "The target is s-injectivity on EVERY smooth simple n>=3 metric. The current low-regularity theorem additionally assumes nonpositive sectional curvature; generic, analytic, surface and convex-foliation results do not remove this restriction.",
+  "primary_sources": [
+    {
+      "url": "https://doi.org/10.1007/s12220-024-01588-8",
+      "locator": "Publisher abstract and introduction; nonpositive sectional curvature hypothesis.",
+      "body_inspected": false,
+      "inspection_level": "Primary publisher abstract states the excluding curvature restriction; no full body obtained from the arXiv HTML endpoint."
+    },
+    {
+      "url": "https://math.stanford.edu/~andras/tensor-rigidity-bdy-normal-accepted.pdf",
+      "locator": "Introduction and boundary-rigidity/tomography assumptions.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "tensor tomography",
+    "ray transform"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "entries": 954,
+      "complete_listing": true,
+      "query_terms": [
+        "tensor tomography",
+        "ray transform"
+      ],
+      "metadata_hits": [],
+      "scope": "Current complete public metadata routing; no same-target announcement hit."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "entries": 646,
+      "complete_listing": true,
+      "query_terms": [
+        "tensor tomography",
+        "ray transform"
+      ],
+      "metadata_hits": [],
+      "scope": "Current complete public metadata routing; no same-target announcement hit."
+    }
+  },
+  "other_provider_search": "Focused current web and site-restricted searches of arXiv, Zenodo, HAL and GitHub; only relevant primary claims promoted to scope checks. Shared OpenAI and requested Colbrook author indexes screened; no matching new full resolution.",
+  "limitations": [
+    "Bounded current search, not proof that no unindexed solution exists.",
+    "No independent end-to-end proof or Lean-kernel verification."
+  ],
+  "canonical_update_required": false
+}

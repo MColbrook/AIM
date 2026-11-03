@@ -1,0 +1,279 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "995",
+  "manifest_index": 839,
+  "checked_date": "2026-11-03",
+  "source_sha256": "eda2a115817ff0b6ee3d7c38e4ddef86ffffacb94af80a83be1c958210a9cf20",
+  "statement_sha256": "94694a059ddb3fde9a0c146fca918ac548f9843bf6fc6f89d2eccf22a0d61daa",
+  "original_target": {
+    "id": "995",
+    "title": "A spectral gap for Brownian loops on the round two-sphere",
+    "area": "Geometric stochastic analysis",
+    "file": "problems/995-a-spectral-gap-for-brownian-loops-on-the-round-two-sphere.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-2c34fb17a5e9ebf8",
+    "group": "rough-paths-singular-stochastic-equations",
+    "source_sha256": "eda2a115817ff0b6ee3d7c38e4ddef86ffffacb94af80a83be1c958210a9cf20",
+    "statement_sha256": "94694a059ddb3fde9a0c146fca918ac548f9843bf6fc6f89d2eccf22a0d61daa",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`S^2`$ have its unit round metric, fix the north pole $`o`$, and let $`\\mu`$ be the law of the duration-one Brownian bridge from $`o`$ to $`o`$, where Brownian motion has generator $`\\frac12\\Delta_{S^2}`$. Thus $`\\mu`$ is a probability measure on $`\\{\\sigma\\in C([0,1];S^2):\\sigma(0)=\\sigma(1)=o\\}`$.\n\nFor $`\\mu`$-almost every path, let $`{\\parallel}_t:T_oS^2\\to T_{\\sigma(t)}S^2`$ be stochastic Levi–Civita parallel translation. Write\n```math\nH_{00}=\\{h\\in H^1([0,1];T_oS^2):h(0)=h(1)=0\\},\\qquad\n\\|h\\|_{H_{00}}^2=\\int_0^1|\\dot h(t)|^2\\,dt .\n```\nFor a real smooth cylindrical function\n```math\nF(\\sigma)=f(\\sigma(t_1),\\ldots,\\sigma(t_k)),\\qquad\nf\\in C^\\infty((S^2)^k),\\quad 0<t_1<\\cdots<t_k<1,\n```\ndefine its Bismut derivative by\n```math\nd_HF(\\sigma)[h]=\\sum_{i=1}^k\n\\langle\\nabla_i f(\\sigma(t_1),\\ldots,\\sigma(t_k)),\n{\\parallel}_{t_i}h(t_i)\\rangle .\n```\nUse the dual norm on $`H_{00}^*`$. Equivalently, if\n```math\na_i(\\sigma)={\\parallel}_{t_i}^{-1}\n\\nabla_i f(\\sigma(t_1),\\ldots,\\sigma(t_k)),\n```\nthen\n```math\n\\|d_HF(\\sigma)\\|_{H_{00}^*}^2\n=\\sum_{i,j=1}^k(\\min(t_i,t_j)-t_it_j)\n\\langle a_i(\\sigma),a_j(\\sigma)\\rangle .\n```\n\n**Question.** Is there a finite constant $`C`$, independent of $`k`$, the evaluation times and $`f`$, such that\n```math\n\\mathrm{Var}_{\\mu}(F)\n\\le C\\int \\|d_HF(\\sigma)\\|_{H_{00}^*}^2\\,\\mu(d\\sigma)\n```\nfor every such smooth cylindrical $`F`$?",
+  "full_original_page": "# 995. A spectral gap for Brownian loops on the round two-sphere\n\n**Area:** Geometric stochastic analysis\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`S^2`$ have its unit round metric, fix the north pole $`o`$, and let $`\\mu`$ be the law of the duration-one Brownian bridge from $`o`$ to $`o`$, where Brownian motion has generator $`\\frac12\\Delta_{S^2}`$. Thus $`\\mu`$ is a probability measure on $`\\{\\sigma\\in C([0,1];S^2):\\sigma(0)=\\sigma(1)=o\\}`$.\n\nFor $`\\mu`$-almost every path, let $`{\\parallel}_t:T_oS^2\\to T_{\\sigma(t)}S^2`$ be stochastic Levi–Civita parallel translation. Write\n```math\nH_{00}=\\{h\\in H^1([0,1];T_oS^2):h(0)=h(1)=0\\},\\qquad\n\\|h\\|_{H_{00}}^2=\\int_0^1|\\dot h(t)|^2\\,dt .\n```\nFor a real smooth cylindrical function\n```math\nF(\\sigma)=f(\\sigma(t_1),\\ldots,\\sigma(t_k)),\\qquad\nf\\in C^\\infty((S^2)^k),\\quad 0<t_1<\\cdots<t_k<1,\n```\ndefine its Bismut derivative by\n```math\nd_HF(\\sigma)[h]=\\sum_{i=1}^k\n\\langle\\nabla_i f(\\sigma(t_1),\\ldots,\\sigma(t_k)),\n{\\parallel}_{t_i}h(t_i)\\rangle .\n```\nUse the dual norm on $`H_{00}^*`$. Equivalently, if\n```math\na_i(\\sigma)={\\parallel}_{t_i}^{-1}\n\\nabla_i f(\\sigma(t_1),\\ldots,\\sigma(t_k)),\n```\nthen\n```math\n\\|d_HF(\\sigma)\\|_{H_{00}^*}^2\n=\\sum_{i,j=1}^k(\\min(t_i,t_j)-t_it_j)\n\\langle a_i(\\sigma),a_j(\\sigma)\\rangle .\n```\n\n**Question.** Is there a finite constant $`C`$, independent of $`k`$, the evaluation times and $`f`$, such that\n```math\n\\mathrm{Var}_{\\mu}(F)\n\\le C\\int \\|d_HF(\\sigma)\\|_{H_{00}^*}^2\\,\\mu(d\\sigma)\n```\nfor every such smooth cylindrical $`F`$?\n\n## Application\n\nThe inequality would control fluctuations of functions of Brownian loops by their energy under path perturbations. It is a basic test of how curvature affects analysis on an infinite-dimensional space, even when the underlying surface is the familiar round sphere.\n\n## References\n\n1. K. D. Elworthy and Xue-Mei Li, [*Geometric stochastic analysis on path spaces*](https://arxiv.org/abs/1911.09764v1), Section 4, physical pp. 18–19 of the inspected 22-page preprint, explicitly mention the sphere spectral-gap question. Related ICM 2006 chapter, vol. III, pp. 575–594, [DOI](https://doi.org/10.4171/022-3/30); final-edition body parity remains pending.\n2. Xin Chen, Xue-Mei Li and Bo Wu, [*A concrete estimate for the weak Poincaré inequality on loop space*](https://www.xuemei.org/Concrete-Estimates.pdf), *Probability Theory and Related Fields* **151** (2011), 559–590, [DOI](https://doi.org/10.1007/s00440-010-0308-5). Its introductory definitions and formula (1.2) specify the bridge gradient above; Theorem 5.1 gives a weaker inequality.\n3. Shigeki Aida, [*Asymptotics of spectral gaps on loop spaces over a class of Riemannian manifolds*](https://www.ms.u-tokyo.ac.jp/~aida/paper/preprint/asymptotics-sgap-corrected-final.pdf), [DOI](https://doi.org/10.1016/j.jfa.2015.09.023), Theorem 3.6 and its global-pole hypothesis; selected corrected author version inspected.\n\n## Status review\n\n\n**Known cases:** The fixed Brownian bridge on the round two-sphere and its specified H00 gradient require a strong Poincare inequality. Weak Poincare estimates, global-pole geometries and negative-curvature counterexamples do not cover this.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe fixed Brownian bridge on the round two-sphere and its specified H00 gradient require a strong Poincare inequality. Weak Poincare estimates, global-pole geometries and negative-curvature counterexamples do not cover this.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThis is the fixed round-sphere prototype of the broader question in [1]. The ordinary H1 norm is explicit here. On the unit sphere, the Ricci endomorphism is the identity, so the corresponding damped norm is uniformly equivalent on endpoint-zero tangent paths. Existence of a gap is unchanged by that norm comparison.\n\nReference [2] proves a weak inequality with an additional squared uniform-norm term and an energy coefficient that grows as that defect tends to zero. It does not give the finite constant requested here. Reference [3] proves a positive result under a global-pole assumption that the round sphere does not satisfy; its restricted-domain asymptotics also differ from the full-loop question.\n\nKnown counterexamples obtained by changing a sphere's metric, and inequalities for hyperbolic spaces, loop-group heat-kernel measures or ground-state reweightings, do not by their inspected statements settle this prototype. No matching complete positive or negative announcement was located in the recorded bounded current checks. These checks do not certify that no resolution exists.\n\nThe cylindrical inequality is equivalent to a gap for its minimal closed Dirichlet form by closure. No assertion about uniqueness of all extensions of the loop operator is part of this question.\n\nThe [source review](../FURTHER_problems/_tracking/parallel/rough-filtering/round-sphere-loop-spectral-gap-review.json), [independent selected audit](../FURTHER_problems/_tracking/parallel/complex-bayesian/cross-round-sphere-loop-spectral-gap-review.json), [current comparisons](../FURTHER_problems/_tracking/sphere-loop-gap-current-comparisons-2026-10-19.json), [semantic comparison](../FURTHER_problems/_tracking/sphere-loop-gap-duplicates-review-2026-10-19.json), [broader comparison](../FURTHER_problems/_tracking/parallel/rough-filtering/round-sphere-loop-duplicates-review.json), [catalogue review](../FURTHER_problems/_tracking/sphere-loop-gap-catalogue-review-2026-10-19.json) and [coordinator review](../FURTHER_problems/_tracking/sphere-loop-gap-coordinator-review-2026-10-19.json) record the evidence and limits. These are AI checks, not human peer review.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-2c34fb17a5e9ebf8**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "loop space",
+    "spectral gap",
+    "Aida",
+    "Chen"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"loop space\" \"sphere\" \"spectral gap\" 2026"
+    },
+    {
+      "query": "\"loop space\" \"sphere\" \"spectral gap\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.xuemei.org/Concrete-Estimates.pdf",
+      "locator": "Theorem5.1 PDFp4; gradient equation1.2 PDFp3"
+    }
+  ],
+  "scope_comparison": "The actual bridge gradient matches H00. Theorem5.1 gives Var<=s^-alpha E+s||F||infty². Its defect and diverging energy coefficient cannot produce the finite uniform strong Poincare constant requested for the round S². Modified metrics, pole geometries and loop-group measures differ.",
+  "recommendation": "Retain partial status; no matching complete resolution located in this bounded current search.",
+  "limitations": "Bounded search is not proof of openness. Full original local page retained; shared announcement metadata scanned for aliases, primary scope used for plausible candidates.",
+  "announcement_routing": {
+    "localID": "995",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "loop space",
+          "spectral gap",
+          "Aida",
+          "Chen"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-28-000016",
+            "title": "An explicit version of Chen's theorem assuming the Generalized Riemann Hypothesis",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-28-000016-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-27-000003",
+            "title": "Slow Equilibration and Persistent Stationary Correlations in Spherical Spin Glasses",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-27-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-22-000028",
+            "title": "Renyi's theorem, Renyi 1948: every large even number is a prime plus a number with at most 8 prime factors",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000028-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-21-000002",
+            "title": "Wu 2008 Lemma 2.2, Chen's double sieve inequality, with the range of the last sum repaired",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000002-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-18-000021",
+            "title": "Graham's bounds for list scheduling and LPT on identical machines: 2 − 1/m, 4/3 − 1/(3m) and their tight instances",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000021-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-09-000006",
+            "title": "Erdős Problem 809: an independent proof of the seven-cycle threshold",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-09-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-03-000003",
+            "title": "The hitting time for loose Hamilton cycles in r-graphs",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-03-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-30-000019",
+            "title": "Deciding D-stability is coNP-hard",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000019-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-30-000004",
+            "title": "Erdős Problem 809: rainbow odd cycles",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-26-000003",
+            "title": "Hamilton cycles in Cayley graphs of polylogarithmic degree",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-26-000003-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-21-000001",
+            "title": "An atomic decomposition of one-dimensional metric currents without boundary",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-21-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-20-000008",
+            "title": "Erdős 973: power sums cannot all be exponentially small",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-20-000008-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "loop space",
+          "spectral gap",
+          "Aida",
+          "Chen"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2611.00002v1",
+            "title": "Rational limits in Markov–Euclid asymptotics",
+            "url": "https://hexagonmath.org/abs/2611.00002v1"
+          },
+          {
+            "id": "hexagon:2610.00725v1",
+            "title": "On majorization inequalities for normalized Jack and Macdonald polynomials",
+            "url": "https://hexagonmath.org/abs/2610.00725v1"
+          },
+          {
+            "id": "hexagon:2610.00670v1",
+            "title": "Nonunimodal Laurent coefficients of cluster monomials",
+            "url": "https://hexagonmath.org/abs/2610.00670v1"
+          },
+          {
+            "id": "hexagon:2610.00668v1",
+            "title": "Counterexamples to log-concavity of cluster monomials and theta structure constants",
+            "url": "https://hexagonmath.org/abs/2610.00668v1"
+          },
+          {
+            "id": "hexagon:2610.00579v1",
+            "title": "Analytic q-inequalities and a proof of Bergeron's conjecture",
+            "url": "https://hexagonmath.org/abs/2610.00579v1"
+          },
+          {
+            "id": "hexagon:2610.00560v3",
+            "title": "A lower explicit threshold for Chen's theorem under GRH",
+            "url": "https://hexagonmath.org/abs/2610.00560v3"
+          },
+          {
+            "id": "hexagon:2610.00465v1",
+            "title": "Nonexistence of lim Cohen–Macaulay modules following [Che26] and [Ang26]",
+            "url": "https://hexagonmath.org/abs/2610.00465v1"
+          },
+          {
+            "id": "hexagon:2610.00411v1",
+            "title": "Beyond the Event Horizon: An Operator-First Theory of Persistent Geometry and Black Hole Dynamics",
+            "url": "https://hexagonmath.org/abs/2610.00411v1"
+          },
+          {
+            "id": "hexagon:2610.00368v1",
+            "title": "Deciding D-stability is coNP-hard",
+            "url": "https://hexagonmath.org/abs/2610.00368v1"
+          },
+          {
+            "id": "hexagon:2610.00334v1",
+            "title": "Poisson laws and arithmetic clusters for rare multiplicative patterns",
+            "url": "https://hexagonmath.org/abs/2610.00334v1"
+          },
+          {
+            "id": "hexagon:2610.00298v1",
+            "title": "Almost all simple lengths are unique up to isometry",
+            "url": "https://hexagonmath.org/abs/2610.00298v1"
+          },
+          {
+            "id": "hexagon:2610.00136v2",
+            "title": "The generalized Fermat equation $x^3+y^3=z^n$",
+            "url": "https://hexagonmath.org/abs/2610.00136v2"
+          },
+          {
+            "id": "hexagon:2609.00001v1",
+            "title": "Strict negativity and non-vanishing of Chen--Larson hypergeometric coefficients",
+            "url": "https://hexagonmath.org/abs/2609.00001v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "loop space",
+        "spectral gap",
+        "Aida",
+        "Chen"
+      ],
+      "hits": [
+        {
+          "entry": "227",
+          "title": "The dynamical phase transition in the Sherrington--Kirkpatrick model",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Universality-of-critical-quench-autocorrelations-in-the-Sherrington-Kirkpatrick-model-October-5-2026/main.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Functional-universality-of-critical-SK-autocorrelations-October-5-2026/critical-sk-autocorrelations.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-spectral-gap-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026/main.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Cutoff-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Critical-slowing-down-in-the-Sherrington-Kirkpatrick-model-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Stretched-exponential-barriers-for-typical-SK-initial-states-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-typical-start-upper-bound-for-low-temperature-SK-Glauber-dynamics-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Critical-mixing-in-the-Sherrington-Kirkpatrick-model-September-25-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "265",
+          "title": "The two-dimensional gapped area law",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-two-dimensional-area-law-from-a-global-spectral-gap-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Polynomial-PEPS-approximation-of-gapped-square-grid-ground-states-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "268",
+          "title": "The spin-one Haldane gap",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-periodic-spin-one-Haldane-gap-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-boundary-field-gap-for-the-spin-one-Heisenberg-chain-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "269",
+          "title": "The Laughlin gap and stability under scalar disorder",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Uniform-Stability-of-the-Spherical-Laughlin-Gap-October-5-2026/uniform-stability-spherical-laughlin-gap.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-Fock-space-inequality-and-the-Laughlin-spectral-gap-September-24-2026/A-Fock-space-inequality-and-the-Laughlin-spectral-gap-September-24-2026.pdf"
+          ]
+        },
+        {
+          "entry": "352",
+          "title": "Finite-time singularity of Calabi flow",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-finite-time-singularity-of-Calabi-flow-on-projective-space-September-24-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Spherical spin-glass equilibration concerns different state spaces and stationary measures from the Brownian loop measure on round S2. Arithmetic Chen-name, graph cycle and polynomial-coefficient matches are unrelated. Quantum SK/Haldane/Laughlin/area-law spectral gaps and Calabi flow do not establish the target infinite-dimensional loop-space Poincare inequality.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.754Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

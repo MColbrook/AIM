@@ -1,0 +1,132 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "490",
+  "manifest_index": 386,
+  "original_target": {
+    "id": "490",
+    "title": "Deterministic parallel perfect matching in general graphs",
+    "area": "Parallel algorithms and combinatorial optimization",
+    "file": "problems/490-general-graph-perfect-matching-nc.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-23",
+    "group": "operators",
+    "source_sha256": "e31d50f9fe95adf3b95226f744026c95283a7278def43c1ca9a77fe089400afd",
+    "statement_sha256": "255ce6076c1a9a6c25610d83f8061d79feec8322259fd2a81c2d5acf59edb3f3",
+    "state": "unreviewed"
+  },
+  "source_sha256": "e31d50f9fe95adf3b95226f744026c95283a7278def43c1ca9a77fe089400afd",
+  "statement_sha256": "255ce6076c1a9a6c25610d83f8061d79feec8322259fd2a81c2d5acf59edb3f3",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:31:43.150414+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Actual ECCC2026/100 revision2 Theorem1.1 is bipartite maximum-weight matching; Theorem1.5 uses noncommutative rank, not ordinary Tutte rank for general graphs. Actual FOCS2017 Theorem1.2 has quasipolynomial processors;1901.10387v5 Theorem2 reduces to a weighted decision oracle. None supplies unconditional deterministic polynomial-processor NC search for general graphs.",
+  "primary_sources": [
+    {
+      "url": "https://eccc.weizmann.ac.il/report/2026/100/revision/2/download",
+      "locator": "Theorems1.1 and1.5,15July2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://ieee-focs.org/FOCS-2017-Papers/3464a696.pdf",
+      "locator": "Theorem1.2",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/1901.10387v5",
+      "locator": "Theorem2",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"general graphs\" \"matching\" \"NC\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "perfect matching",
+        "NC algorithm"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-30-000013",
+          "title": "Machine-Checked Christofides 3/2-Approximation and Polyhedral Complexity Barriers for the Traveling Salesperson Problem in Lean 4"
+        },
+        {
+          "id": "PALOMAR-2026-10-28-000010",
+          "title": "Edmonds' perfect matching polytope and matching polytope"
+        },
+        {
+          "id": "PALOMAR-2026-10-16-000011",
+          "title": "Berge's theorem, the Tutte–Berge formula and the Gallai–Edmonds theorem"
+        },
+        {
+          "id": "PALOMAR-2026-10-17-000004",
+          "title": "Pseudorandom hypergraph matchings (Ehard–Glock–Joos)"
+        },
+        {
+          "id": "PALOMAR-2026-10-16-000004",
+          "title": "Petersen's theorem"
+        },
+        {
+          "id": "PALOMAR-2026-08-21-000002",
+          "title": "lennrt/palomar-formalizations"
+        },
+        {
+          "id": "PALOMAR-2026-08-31-000020",
+          "title": "The Friendship Windmill Structure Theorem (Erdős–Rényi–Sós 1966)"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "perfect matching",
+        "NC algorithm"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00731v1",
+          "title": "A sharp Brégman–Minc bound for permanents"
+        },
+        {
+          "id": "hexagon:2610.00701v1",
+          "title": "The Shared Randomness Cost of Optimal One Use Loop Communication"
+        },
+        {
+          "id": "hexagon:2610.00530v1",
+          "title": "A matching threshold of 2×10⁻³ for the rotated surface code under circuit-level noise"
+        },
+        {
+          "id": "hexagon:2610.00520v1",
+          "title": "Perfect t-embeddings: existence"
+        },
+        {
+          "id": "hexagon:2610.00320v2",
+          "title": "The $\\mathfrak{sl}(2)$ weight system at $c=-3/32$ extends to a graph 4-invariant"
+        },
+        {
+          "id": "hexagon:2610.00240v1",
+          "title": "A cubic variance bound for matching deficiency"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

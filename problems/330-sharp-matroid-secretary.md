@@ -2,9 +2,9 @@
 
 **Area:** Online selection and resource allocation
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -43,7 +43,16 @@ The remaining general question is foundational. Recent claims cover linear matro
 6. José A. Soto and Felipe Valdevenito, *Secretary Problems with Interactive Ordinal Queries*, [arXiv:2609.19016v1](https://arxiv.org/html/2609.19016v1), 2026 preprint. §3.1, Definitions 3.6–3.7; Theorems 3.10 and 3.12.
 7. Kristóf Bérczi, Shaddin Dughmi, Vasilis Livanos, José A. Soto and Victor Verdugo, *The Strong Secretary Conjecture is True for Linear Matroids*, [arXiv:2609.20797v1](https://arxiv.org/html/2609.20797v1), September 17, 2026, preprint. Theorem 1; §4, Corollaries 1–2 and the concluding scope discussion.
 
+8. Zhiyi Huang, *Settling the Matroid Secretary Problem*, [arXiv:2609.30421v1](https://arxiv.org/html/2609.30421v1), 24 September 2026, Theorem 1 and §§4–5.
+
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Theorem 1 claims an online policy for every finite abstract matroid selecting each element of a fixed optimal basis with probability at least 1/e. Linearity gives the expected-weight target. The random-time model can be simulated from a uniformly random permutation and known ground-set size without observing future weights.
+
+[Claimed solution](https://arxiv.org/pdf/2609.30421v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/330.json). Theorem 1, model footnote and §§4–5. The full external proof has not been independently verified here; no local Lean kernel replay or human peer review is asserted. This label records the complete announcement under the requested status policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative
 

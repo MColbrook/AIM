@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1051",
+  "manifest_index": 895,
+  "checked_date": "2026-11-03",
+  "source_sha256": "e44723fa87d27eebcfe1fd302e817c43736d2c3f9547f61d3c9eb47ec7d87233",
+  "statement_sha256": "4c16155efc489ae3303c6edf6a927e8e20ffedf96b61b3837849a909590ebbb6",
+  "original_target": {
+    "id": "1051",
+    "title": "Vanishing-thickness dynamics of straight non-circular rods in Stokes flow",
+    "area": "Nonlinear waves, fluids and kinetic equations",
+    "file": "problems/1051-vanishing-thickness-dynamics-of-straight-non-circular-rods-in-stokes-flow.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-84d9f1f53f8973ec",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "e44723fa87d27eebcfe1fd302e817c43736d2c3f9547f61d3c9eb47ec7d87233",
+    "statement_sha256": "4c16155efc489ae3303c6edf6a927e8e20ffedf96b61b3837849a909590ebbb6",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Consider several separated rigid filaments in a smooth three-dimensional background flow governed by the steady Stokes equations. Each filament has fixed volumetric density and thickness $`\\varepsilon\\to0`$. Höfer, Prange and Sueur [1, Theorem 3.4] establish the limiting coupled fluid–solid dynamics for smooth centre-lines with **nowhere-vanishing curvature**.\n\nCan a corresponding convergence theorem, including the limiting rotational dynamics, be proved when the centre-lines are **line segments and the rod cross-sections are non-circular**? This is the delicate subcase of their Open Problem 3.6 [1, p. 345]. In this geometry, the resistance to spinning about a rod's axis is of order $`\\varepsilon^2`$, while the nondegenerate resistance modes in the original analysis scale as $`|\\log\\varepsilon|^{-1}`$. Thus the limiting resistance matrix used for the curved case cannot simply be inverted for every rotational degree of freedom.",
+  "full_original_page": "# 1051. Vanishing-thickness dynamics of straight non-circular rods in Stokes flow\n\n**Area:** Nonlinear waves, fluids and kinetic equations\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nConsider several separated rigid filaments in a smooth three-dimensional background flow governed by the steady Stokes equations. Each filament has fixed volumetric density and thickness $`\\varepsilon\\to0`$. Höfer, Prange and Sueur [1, Theorem 3.4] establish the limiting coupled fluid–solid dynamics for smooth centre-lines with **nowhere-vanishing curvature**.\n\nCan a corresponding convergence theorem, including the limiting rotational dynamics, be proved when the centre-lines are **line segments and the rod cross-sections are non-circular**? This is the delicate subcase of their Open Problem 3.6 [1, p. 345]. In this geometry, the resistance to spinning about a rod's axis is of order $`\\varepsilon^2`$, while the nondegenerate resistance modes in the original analysis scale as $`|\\log\\varepsilon|^{-1}`$. Thus the limiting resistance matrix used for the curved case cannot simply be inverted for every rotational degree of freedom.\n\n## Application\n\nStraight fibres with non-circular cross-sections occur in suspensions and microfluidic models. A rigorous limit would distinguish their orientation and spin effects from those captured by curved-filament asymptotics, while controlling the fluid–solid coupling as the thickness vanishes.\n\n## References\n\n1. R. M. Höfer, C. Prange and F. Sueur, [*Motion of several slender rigid filaments in a Stokes flow*](https://www.numdam.org/item/10.5802/jep.184.pdf), *Journal de l'École polytechnique — Mathématiques* **9** (2022), 327–380, [DOI 10.5802/jep.184](https://doi.org/10.5802/jep.184). Theorem 3.4 (printed p. 339), Section 3.8 and Open Problem 3.6 (printed p. 345).\n2. N. S. Borker and D. L. Koch, [*Slender body theory for particles with non-circular cross-sections*](https://doi.org/10.1017/jfm.2019.625), *Journal of Fluid Mechanics* **877** (2019), 1098–1133. Related force/resistance asymptotics and straight-rod motions in imposed shear; this does not establish the multi-body finite-density limit in [1].\n\n## Status review\n\n\n**Known cases:** The multi-body finite-density limit must include axial rotation of straight noncircular rods. Curved-filament limits and prescribed-flow resistance approximations do not address the degenerate rotational mode.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe multi-body finite-density limit must include axial rotation of straight noncircular rods. Curved-filament limits and prescribed-flow resistance approximations do not address the degenerate rotational mode.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe [bounded source, status and duplicate audit](../FURTHER_problems/_tracking/straight-noncircular-stokes-filament-status-2026-10-22.json) checks the original problem against later work, announcements and the AIM/FURTHER catalogues through 22 October 2026. No theorem covering this precise Newton–Stokes limit was located. This is a bounded search assessment, not proof of open status.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-84d9f1f53f8973ec**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "slender rigid filaments",
+    "Hofer Prange Sueur",
+    "non-circular rods",
+    "axial rotation"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"straight\" \"non-circular\" \"filaments\" Stokes limit 2026"
+    },
+    {
+      "query": "Stokes straight noncircular rods convergence Hofer Prange Sueur",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.numdam.org/item/10.5802/jep.184.pdf",
+      "locator": "OpenProblem3.6printedp345physical19lines1288–1305;Theorem3.4"
+    }
+  ],
+  "scope_comparison": "Source excludes line-segmentcentreline because axialrotationalresistanceepsilon² not1/logepsilon. Circularrodorientation reduction does not cover noncircularspin. HAL04881114v1actualprimaryabstract studies rigidfixedperiodic filter effectively2D permeability, not coupledfinite-densitymultibodyNewton–Stokesdynamics. Imposedshearforce/resistanceasymptotics do notprovide the requested convergence. No fullmatch.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative search does not establish continued openness; exact problem/current theorem statements compared, no full-proof certification.",
+  "announcement_routing": {
+    "localID": "1051",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "slender rigid filaments",
+          "Hofer Prange Sueur",
+          "non-circular rods",
+          "axial rotation"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "slender rigid filaments",
+          "Hofer Prange Sueur",
+          "non-circular rods",
+          "axial rotation"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "slender rigid filaments",
+        "Hofer Prange Sueur",
+        "non-circular rods",
+        "axial rotation"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

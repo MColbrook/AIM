@@ -1,0 +1,85 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "572",
+  "manifest_index": 444,
+  "original_target": {
+    "id": "572",
+    "title": "Does mixing force exponential decay for smooth Anosov flows?",
+    "area": "Hyperbolic dynamics and statistical relaxation",
+    "file": "problems/572-does-mixing-force-exponential-decay-for-smooth-anosov-flows.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-7582f238bcf88f9b",
+    "group": "geometry-topology",
+    "source_sha256": "d795ef2e80ed4a71fb739b6949c9959e2cc6b6d6585d6303922f6bedada12f47",
+    "statement_sha256": "f24f88e43f2158b69ca9efa05ebbedc5fdf9f6db5f47ccd061e5496682ed08ac",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d795ef2e80ed4a71fb739b6949c9959e2cc6b6d6585d6303922f6bedada12f47",
+  "statement_sha256": "f24f88e43f2158b69ca9efa05ebbedc5fdf9f6db5f47ccd061e5496682ed08ac",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T14:03:57.723818+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Three-dimensional, contact and constant-curvature reparametrization results add hypotheses; neither discrete maps nor one special mixing example proves the universal smooth Anosov-flow assertion. The 2022 broad claim is withdrawn for a fatal lemma flaw.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2503.00454v1",
+      "locator": "TheoremB section1.1, positive reparametrizations of constant-curvature geodesic flow only",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2209.04907",
+      "locator": "Withdrawn v2,25September2022, fatal crucial lemma flaw",
+      "body_inspected": false
+    },
+    {
+      "url": "https://arxiv.org/abs/2604.18891",
+      "locator": "Abstract: three-dimensional time-one diffeomorphism perturbations",
+      "body_inspected": false
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.15717",
+      "locator": "Abstract: one T3 mixing flow with equilibria, not universal nonsingular Anosov",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"mixing\" \"Anosov flows\" \"2026\" exponential all dimensions",
+    "\"Anosov flows\" \"mixing\" \"exponential\" general [domains arxiv.org,zenodo.org,hal.science,github.com]",
+    "\"smooth\" \"Anosov\" \"exponential mixing\" \"2026\" conjecture"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Anosov flow"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Anosov flow"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Melbourne–Varandas DOI body unavailable; clearly restricted newer abstracts not counted as body checks."
+  ],
+  "canonical_update_required": false
+}

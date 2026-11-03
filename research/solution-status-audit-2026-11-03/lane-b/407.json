@@ -1,0 +1,49 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 330,
+  "source_sha256": "3163a2873f9c1fe91b40cc7ef1027ce1467aa83affe05506e23004ccc3304225",
+  "statement_sha256": "11715a6064e1bf8fb62967eaf5945c8102d9210eea9874a01d09a64934281793",
+  "original_target": {
+    "id": "407",
+    "title": "Polynomial growth of every entire minimal graph",
+    "area": "Quasilinear elliptic PDEs / minimal interfaces",
+    "file": "problems/407-entire-minimal-graphs-polynomial-growth.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "continuum2",
+    "source_sha256": "3163a2873f9c1fe91b40cc7ef1027ce1467aa83affe05506e23004ccc3304225",
+    "statement_sha256": "11715a6064e1bf8fb62967eaf5945c8102d9210eea9874a01d09a64934281793",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "407",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"entire minimal graphs\" \"polynomial growth\" 2026",
+    "\"minimal graphs\" \"growth\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) polynomial",
+    "\"minimal graphs\" \"polynomial\" Guo 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2407.11903",
+      "version": "Mooney2024survey currentHTML",
+      "locators": "Section7.1",
+      "body_inspected": true,
+      "scope": "Asks whether all entireminimalgraphshavepolynomialgrowth; distinguishes existenceofexactpolynomialsolutions."
+    },
+    {
+      "url": "https://arxiv.org/html/2404.00115",
+      "version": "currentHTML; GuoCalVar2026 DOI10.1007/s00526-026-03316-2",
+      "locators": "Theorems1.1–1.6",
+      "body_inspected": true,
+      "scope": "Structural restrictions/tangentconeanalysis for exactpolynomialsolutions; no growthupperboundforall smoothentiregraphs."
+    }
+  ],
+  "registry_checks": "No minimalgraph matchingalias Palomar/Hexagon/OpenAI/Colbrookmetadata. OpenAI affineBernstein and Colbrook convexapproximationBernsteindiffer. Focused arXiv, primaryauthor/publisher, Zenodo, HAL, GitHubqueries.",
+  "scope_comparison": "For every smoothsolutioneachn>=8 need somefinite solutiondependent powerupperbound. Knownpolynomial-growth examples or restrictions onexactpolynomials donotcontrolallsolutions.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

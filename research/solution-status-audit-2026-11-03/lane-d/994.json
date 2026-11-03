@@ -1,0 +1,108 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "994",
+  "manifest_index": 838,
+  "checked_date": "2026-11-03",
+  "source_sha256": "97338748e8807da3e38e692af3202f8a43aab3a2e261306d1475715ee6307dd1",
+  "statement_sha256": "9f90a32eca18040d39e6710cbe954a566c8ef20568de601d772b5a04efe91faf",
+  "original_target": {
+    "id": "994",
+    "title": "Interlaced maximal-correlation mixing for a uniformly mixing Markov chain",
+    "area": "Stationary stochastic processes and Markov chains",
+    "file": "problems/994-interlaced-maximal-correlation-mixing-for-a-uniformly-mixing-markov-chain.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-205d9eaf81dea50c",
+    "group": "rough-paths-singular-stochastic-equations",
+    "source_sha256": "97338748e8807da3e38e692af3202f8a43aab3a2e261306d1475715ee6307dd1",
+    "statement_sha256": "9f90a32eca18040d39e6710cbe954a566c8ef20568de601d772b5a04efe91faf",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`(X_k)_{k\\in\\mathbb Z}`$ be a strictly stationary real-valued time-homogeneous Markov chain on a probability space. No finiteness of its state space, reversibility, density, moment or minorization assumption is imposed.\n\nFor two sigma-fields $`\\mathcal A,\\mathcal B`$, put\n```math\n\\phi(\\mathcal A,\\mathcal B)\n=\\sup_{A\\in\\mathcal A,\\ P(A)>0,\\ B\\in\\mathcal B}\n|P(B\\mid A)-P(B)|,\n```\nand let $`\\rho(\\mathcal A,\\mathcal B)`$ be the supremum of $`|\\mathrm{Corr}(f,g)|`$ over real square-integrable $`\\mathcal A`$-measurable $`f`$ and $`\\mathcal B`$-measurable $`g`$ with positive variances. A supremum over no such pair is zero. Define\n```math\n\\phi_X(n)=\\phi\\bigl(\\sigma(X_k:k\\le0),\\sigma(X_k:k\\ge n)\\bigr),\n```\n```math\n\\rho_X^*(n)=\\sup\\rho\\bigl(\\sigma(X_k:k\\in S),\\sigma(X_k:k\\in T)\\bigr),\n```\nwhere the second supremum ranges over all nonempty disjoint sets $`S,T\\subset\\mathbb Z`$ with $`\\inf_{s\\in S,t\\in T}|s-t|\\ge n`$. The sets may interlace and need not be finite.\n\n**Question.** Does $`\\phi_X(n)\\to0`$ imply $`\\rho_X^*(n)\\to0`$ for every such chain?",
+  "full_original_page": "# 994. Interlaced maximal-correlation mixing for a uniformly mixing Markov chain\n\n**Area:** Stationary stochastic processes and Markov chains\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`(X_k)_{k\\in\\mathbb Z}`$ be a strictly stationary real-valued time-homogeneous Markov chain on a probability space. No finiteness of its state space, reversibility, density, moment or minorization assumption is imposed.\n\nFor two sigma-fields $`\\mathcal A,\\mathcal B`$, put\n```math\n\\phi(\\mathcal A,\\mathcal B)\n=\\sup_{A\\in\\mathcal A,\\ P(A)>0,\\ B\\in\\mathcal B}\n|P(B\\mid A)-P(B)|,\n```\nand let $`\\rho(\\mathcal A,\\mathcal B)`$ be the supremum of $`|\\mathrm{Corr}(f,g)|`$ over real square-integrable $`\\mathcal A`$-measurable $`f`$ and $`\\mathcal B`$-measurable $`g`$ with positive variances. A supremum over no such pair is zero. Define\n```math\n\\phi_X(n)=\\phi\\bigl(\\sigma(X_k:k\\le0),\\sigma(X_k:k\\ge n)\\bigr),\n```\n```math\n\\rho_X^*(n)=\\sup\\rho\\bigl(\\sigma(X_k:k\\in S),\\sigma(X_k:k\\in T)\\bigr),\n```\nwhere the second supremum ranges over all nonempty disjoint sets $`S,T\\subset\\mathbb Z`$ with $`\\inf_{s\\in S,t\\in T}|s-t|\\ge n`$. The sets may interlace and need not be finite.\n\n**Question.** Does $`\\phi_X(n)\\to0`$ imply $`\\rho_X^*(n)\\to0`$ for every such chain?\n\n## Application\n\nThis asks whether uniform loss of dependence between a chain's past and future also controls correlations between arbitrary separated collections of observation times. Such control supports limit theorems and statistical inference for dependent data.\n\n## References\n\n1. Richard C. Bradley, [*Basic Properties of Strong Mixing Conditions. A Survey and Some Open Questions*](https://arxiv.org/abs/math/0511078v1), *Probability Surveys* **2** (2005), 107–144, [DOI](https://doi.org/10.1214/154957805100000104). Question 5, physical p. 13 / printed p. 119; coefficient definitions on physical pp. 2 and 7; Theorem 3.3 and the Doeblin discussion on pp. 12–16.\n2. Richard C. Bradley, [*On Mixing Properties of Reversible Markov Chains*](https://arxiv.org/abs/1403.4895), Theorem 1.1. Its ordinary rho-mixing counterexample does not assert phi-mixing.\n3. Yeor Hafouta and Brenden Williams, [*Limit theorems for inhomogeneous phi-mixing Markov chains*](https://arxiv.org/abs/2510.15323v2), v2, 2 August 2026. Selected statements concern additive-function limit theorems rather than arbitrary interlaced sigma-fields.\n\n## Status review\n\n\n**Known cases:** The premise is phi-mixing, not ordinary rho-mixing. Reversible spectral-gap counterexamples and inhomogeneous additive limit theorems do not settle interlaced rho-star mixing under this premise.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe premise is phi-mixing, not ordinary rho-mixing. Reversible spectral-gap counterexamples and inhomogeneous additive limit theorems do not settle interlaced rho-star mixing under this premise.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThis explicitly selects the strictly stationary case of Bradley's Question 5; its literal wording does not repeat stationarity. It differs from Question 2 for general stationary processes. The stronger lower-psi condition in Theorem 3.3(7) already implies the conclusion. Finite-state irreducible aperiodic chains are also known cases. Exponential decay of ordinary phi-mixing for Markov chains does not by itself reduce the interlaced supremum to two endpoints.\n\nA [September 2026 producer announcement](https://github.com/tadamcz/phi-mixing-clt) gives a causal stationary phi-mixing process violating a central limit conjecture. Its public construction does not assert that the observed process is Markov. Encoding its whole past as a state preserves past information and fails to preserve phi-mixing; therefore that announcement does not directly settle this Markov formulation. No independent certification or Lean replay of that construction is claimed here.\n\nNo matching complete solution or announcement was found in the recorded bounded current checks. This does not certify that no solution exists. The inspected source is a 38-page institutional journal-typeset PDF bearing an arXiv v1 stamp; separate final-edition byte parity remains unverified.\n\nThe [source review](../FURTHER_problems/_tracking/parallel/complex-bayesian/markov-phi-interlaced-rho-review.json), [selected independent audit](../FURTHER_problems/_tracking/parallel/continuum/cross-markov-phi-interlaced-rho-review.json), [current comparisons](../FURTHER_problems/_tracking/markov-phi-interlaced-rho-current-comparisons-2026-10-19.json), [semantic comparison](../FURTHER_problems/_tracking/markov-phi-interlaced-rho-duplicates-review-2026-10-19.json), [catalogue review](../FURTHER_problems/_tracking/markov-phi-specific-catalogue-review-2026-10-19.json) and [coordinator review](../FURTHER_problems/_tracking/markov-phi-interlaced-rho-coordinator-review-2026-10-19.json) record the checked scope and remaining coverage limits. These are AI checks, not human peer review.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-205d9eaf81dea50c**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "phi-mixing",
+    "interlaced",
+    "Bradley"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"phi mixing\" \"interlaced\" Markov 2026"
+    },
+    {
+      "query": "\"phi mixing\" \"interlaced\" Markov",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/math/0511078v1",
+      "locator": "Question5 physicalp13 lines732–742; Theorem3.3(7), Theorem3.4"
+    }
+  ],
+  "scope_comparison": "The exact phi=>rho-star implication is distinguished from ordinary rho and lower-psi mixing. Known finite-state/lower-psi cases impose stronger assumptions. The 2026 inhomogeneous limit theorems concern additive observables; stationary process CLT counterexamples need not be Markov and do not settle the universal interlaced Markov target.",
+  "recommendation": "Retain partial status; no matching complete resolution located in this bounded current search.",
+  "limitations": "Bounded search is not proof of openness. Full original local page retained; shared announcement metadata scanned for aliases, primary scope used for plausible candidates.",
+  "announcement_routing": {
+    "localID": "994",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "phi-mixing",
+          "interlaced",
+          "Bradley"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "phi-mixing",
+          "interlaced",
+          "Bradley"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00445v2",
+            "title": "Vanishing of Higher Magnitude Homology for Finite Prefix Models",
+            "url": "https://hexagonmath.org/abs/2610.00445v2"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "phi-mixing",
+        "interlaced",
+        "Bradley"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Magnitude homology of finite prefix models is not interlaced maximal-correlation mixing of a uniformly mixing Markov chain.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.753Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

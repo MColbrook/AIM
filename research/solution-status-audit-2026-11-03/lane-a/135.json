@@ -1,0 +1,80 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "135",
+  "manifest_index": 106,
+  "original_target": {
+    "id": "135",
+    "title": "Symmetric capacity of the binary multiplying two-way channel",
+    "area": "Interactive communication / information theory",
+    "file": "problems/135-binary-multiplying-two-way-capacity.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse2",
+    "source_sha256": "fe425aab05e947c9bf2f3d9fddb871fe567e7b7b0db47649079c94f99acadff4",
+    "statement_sha256": "36116ed48d7ebe593ee21a32573bb83cff075b029e36b15463d10d39a64bb20b",
+    "state": "unreviewed"
+  },
+  "source_sha256": "fe425aab05e947c9bf2f3d9fddb871fe567e7b7b0db47649079c94f99acadff4",
+  "statement_sha256": "36116ed48d7ebe593ee21a32573bb83cff075b029e36b15463d10d39a64bb20b",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:19:11.843601+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "older-claim-not-valid-settlement",
+  "recommended_status": "Open",
+  "scope_comparison": "The exact adaptive vanishing-error symmetric rate remains between unequal known bounds in primary Kim lecture/Tandon literature. An older Schalkwijk1985 converse abstract claims .63056 optimal, but later primary1995 construction achieves .63072, so the old exact-capacity claim is not a valid settlement. Nonadaptive/zero-error/secrecy channels differ.",
+  "primary_sources": [
+    {
+      "url": "https://citeseerx.ist.psu.edu/document?doi=442f81f9e76685461fb97f9b19d12bcaea3a3c54&repid=rep1&type=pdf",
+      "locator": "Kim lecture slide19, unmatched bounds",
+      "body_inspected": true
+    },
+    {
+      "url": "https://ris.utwente.nl/ws/portalfiles/portal/265803473/60_03_1995.pdf",
+      "locator": "1995 primary new coding rate .63072",
+      "body_inspected": true
+    },
+    {
+      "url": "https://kivi.nl/_Resources/Persistent/2/d/e/f/2def48b7375f4e0c4ede08a1eb06aa5aa79e4293/NERG%201985%20Deel%2050%20nr.%2005.pdf",
+      "locator": "1985 claimed converse abstract, contradicted by later achievable rate",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"binary multiplying\" capacity (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"binary multiplying two-way\" capacity 2026 adaptive",
+    "Schalkwijk 1985 binary multiplying converse error capacity .63056"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "binary multiplying",
+        "two-way channel"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "binary multiplying",
+        "two-way channel"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

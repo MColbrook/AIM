@@ -1,0 +1,43 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 284,
+  "source_sha256": "c68f3a279f59774aa0daa79590e85a7a92cf1f0efcec38cfbd0e51d3ee8f5ef9",
+  "statement_sha256": "d3d791b4115e155a380729910868ac01a128ee5d53a915c8f1da2f1d7b68f261",
+  "original_target": {
+    "id": "347",
+    "title": "Polynomial-time proper learning of univariate Gaussian mixtures",
+    "area": "Statistical density estimation and unsupervised learning",
+    "file": "problems/347-univariate-gaussian-mixture-proper-learning.md",
+    "status": "Open",
+    "last_checked": "2026-09-19",
+    "group": "probability-statistics",
+    "source_sha256": "c68f3a279f59774aa0daa79590e85a7a92cf1f0efcec38cfbd0e51d3ee8f5ef9",
+    "statement_sha256": "d3d791b4115e155a380729910868ac01a128ee5d53a915c8f1da2f1d7b68f261",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "347",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"univariate\" \"Gaussian mixtures\" \"proper\" \"2026\" polynomial",
+    "\"proper learning\" \"univariate\" Gaussian \"2026\" arxiv",
+    "\"univariate Gaussian mixtures\" \"proper\" site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.21033v1",
+      "version": "v1 15 October 2026",
+      "locators": "Theorem 3.4; Lemmas H.1–H.2; Corollary H.3",
+      "body_inspected": true,
+      "scope": "Efficient nonproper LDP learner under bounded means/variance range. Proper finite-cover projection explicitly not computationally efficient, cover size exponential in component count."
+    }
+  ],
+  "registry_checks": "No Gaussian-mixture alias Palomar/Hexagon/OpenAI full metadata. Focused arXiv, Zenodo, HAL, GitHub and author searches.",
+  "scope_comparison": "Original needs uniform polynomial in k and 1/epsilon, at most k output components, no parameter restrictions, in real-arithmetic sample model. LDP proper projection retains exponentially many cover members and explicit range parameters. Improper density/sampler output and fixed-k polynomial exponents do not qualify.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. October primary body is partial/different-constraint progress only.",
+  "new_partial_source": true
+}

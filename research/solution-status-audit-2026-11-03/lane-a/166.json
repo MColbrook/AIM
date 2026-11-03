@@ -1,0 +1,83 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "166",
+  "manifest_index": 131,
+  "original_target": {
+    "id": "166",
+    "title": "Anomalous viscous dissipation with fixed large-scale forcing",
+    "area": "Turbulence and energy transfer",
+    "file": "problems/166-large-scale-forced-dissipation.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "3f3b21311540825495d966ee1087bf4fe991137589295ded0d4b0d2b03b892cf",
+    "statement_sha256": "a9d7b51c78846c05d297448e0b9d96fd2ab6ae0fa69fffd6ea0a546ca0358853",
+    "state": "unreviewed"
+  },
+  "source_sha256": "3f3b21311540825495d966ee1087bf4fe991137589295ded0d4b0d2b03b892cf",
+  "statement_sha256": "a9d7b51c78846c05d297448e0b9d96fd2ab6ae0fa69fffd6ea0a546ca0358853",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:34:39.752726+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual Protas2608.04859v1 Question1.2 still asks long-time dissipation and allows more general viscosity-dependent forces. New2026 JDE four-dimensional result explicitly uses F_nu and finite-time intervals. Autonomous passive-scalar velocity and finite-time forced NS examples do not establish one fixed3D finite-frequency force with bounded long-time kinetic energy and long-time-first limit.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2608.04859v1",
+      "locator": "Question1.2 and discussion, Section5.2",
+      "body_inspected": true
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022039625009398",
+      "locator": "Introduction equations and abstract:4D F_nu, finite-time measure",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"anomalous dissipation\" \"fixed\" \"force\" \"2026\"",
+    "\"anomalous dissipation\" \"fixed forcing\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "anomalous dissipation",
+        "fixed forcing"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-22-000013",
+          "title": "Fixed-force anomalous dissipation"
+        },
+        {
+          "id": "PALOMAR-2026-10-02-000009",
+          "title": "Anomalous diffusion by fractal homogenization"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "anomalous dissipation",
+        "fixed forcing"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

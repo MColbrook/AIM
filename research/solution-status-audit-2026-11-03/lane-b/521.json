@@ -1,0 +1,85 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "521",
+  "manifest_index": 405,
+  "original_target": {
+    "id": "521",
+    "title": "Uniqueness of tangent cones for stationary integral varifolds",
+    "area": "Geometric measure theory / minimal interfaces",
+    "file": "problems/521-uniqueness-of-tangent-cones-for-stationary-integral-varifolds.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c3f89b7723f99eb8",
+    "group": "geometry-topology",
+    "source_sha256": "0bacf1b70b85d969f4472cbde77dc4c6d444743e65d6155117405f4752e724e5",
+    "statement_sha256": "8bb03b9e7d59cafcbdd609d434ab99d97b1231458e4cca200221b367fb143bd7",
+    "state": "unreviewed"
+  },
+  "source_sha256": "0bacf1b70b85d969f4472cbde77dc4c6d444743e65d6155117405f4752e724e5",
+  "statement_sha256": "8bb03b9e7d59cafcbdd609d434ab99d97b1231458e4cca200221b367fb143bd7",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:35.707291+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The published 2026 theorem concerns multiplicity-one cylindrical cones. Its former area-minimizing hypothesis was removed, so that is not the exclusion. Other new results require a flat-density gap or change the smooth ambient metric; none gives every-point Euclidean tangent-cone uniqueness for the stated general stationary integral varifolds.",
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00222-026-01445-1",
+      "locator": "Theorems 1.1–1.2 and section 1.1, 21 August 2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2507.13148v1",
+      "locator": "Theorem 2.8, flat-density-gap hypotheses",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2609.20647v1",
+      "locator": "Theorem 1.1, changed smooth ambient metric and multiplicity two plane",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"stationary integral varifolds\" \"tangent cones\" uniqueness 2026",
+    "\"stationary integral varifolds\" \"tangent cones\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "varifold",
+        "tangent cone"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "varifold",
+        "tangent cone"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00601v1",
+          "title": "Collision Systems, with Applications to Geodesic Networks and Point Billiards"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

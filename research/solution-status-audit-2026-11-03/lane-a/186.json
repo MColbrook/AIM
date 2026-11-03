@@ -1,0 +1,94 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "186",
+  "manifest_index": 146,
+  "original_target": {
+    "id": "186",
+    "title": "Two stationary phases in a positive-rate nonlinear voter perturbation",
+    "area": "Spatial population dynamics and phase coexistence",
+    "file": "problems/186-positive-rate-nonlinear-voter.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "8cde957c528936a954f1a5f66ee39093ec2cb803d1ac07df538d73e8c2556c36",
+    "statement_sha256": "516c5460dc8dfb0f830aa5f152a56dafe760f6276448a6b4df62d2903326f265",
+    "state": "unreviewed"
+  },
+  "source_sha256": "8cde957c528936a954f1a5f66ee39093ec2cb803d1ac07df538d73e8c2556c36",
+  "statement_sha256": "516c5460dc8dfb0f830aa5f152a56dafe760f6276448a6b4df62d2903326f265",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:49:29.582109+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The live Durrett section6.8 specifies the same four-neighbor perturbation with a3=5.5, small spontaneous flips, and fast voter motion. Its Open Problem6.8.1 still asks two translation-invariant stationary phases. Finite-time hydrodynamic/mean-curvature convergence and bistability of the limiting reaction do not supply the fixed-positive-epsilon stationary coexistence theorem.",
+  "primary_sources": [
+    {
+      "url": "https://sites.math.duke.edu/~rtd/PASTA/PASTAcurrent.pdf",
+      "locator": "Sections6.8.1–6.8.2, concrete rate example and Open Problem6.8.1, printed pp234–236",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"nonlinear voter\" \"two stationary\" 2026",
+    "\"positive rates\" \"voter\" \"stationary\" \"2026\""
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "nonlinear voter",
+        "positive-rate",
+        "positive rates"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-11-01-000007",
+          "title": "Uniform attachment with freezing: SIR epidemic and infection-tree limits"
+        },
+        {
+          "id": "PALOMAR-2026-10-01-000001",
+          "title": "A two-reaction counterexample to the gross-amplification affinity bound"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "nonlinear voter",
+        "positive-rate",
+        "positive rates"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00437v1",
+          "title": "Unistationarity of Type II_l autocatalytic cores"
+        },
+        {
+          "id": "hexagon:2610.00357v1",
+          "title": "Arithmetic coding against unknown small-prime signs"
+        },
+        {
+          "id": "hexagon:2610.00321v1",
+          "title": "Endotactic permanence and quantitative recovery with vanishing reverse rates"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "The live manuscript is numbered differently from the September citation; a source typo in the rate example is resolved by its displayed beta2 calculation, not a changed target."
+  ],
+  "canonical_update_required": false
+}

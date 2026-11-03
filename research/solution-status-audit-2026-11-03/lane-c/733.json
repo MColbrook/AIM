@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "733",
+  "manifest_index": 577,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "733",
+    "title": "Global positive classical solutions of sixth-order quantum diffusion",
+    "area": "Higher-order quantum diffusion",
+    "file": "problems/733-global-positive-classical-solutions-of-sixth-order-quantum-diffusion.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-077cba7d3c4a2308",
+    "group": "diffusion-materials",
+    "source_sha256": "42db2e0f61fa1172f705498fcb9ac8716bdb7fcdf31c941c3520f860c58fdb2f",
+    "statement_sha256": "b35378fecedf8d78f4c575946c518bf0af5f0d015ac4e47669845d53928af222",
+    "state": "unreviewed"
+  },
+  "source_sha256": "42db2e0f61fa1172f705498fcb9ac8716bdb7fcdf31c941c3520f860c58fdb2f",
+  "statement_sha256": "b35378fecedf8d78f4c575946c518bf0af5f0d015ac4e47669845d53928af222",
+  "actual_source_sha256": "42db2e0f61fa1172f705498fcb9ac8716bdb7fcdf31c941c3520f860c58fdb2f",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix $`d\\in\\{2,3\\}`$, and let $`\\mathbb T^d=(\\mathbb R/\\mathbb Z)^d`$. For every real $`n_0\\in H^2(\\mathbb T^d)`$ with $`\\min_{\\mathbb T^d}n_0>0`$ and $`\\int_{\\mathbb T^d}n_0\\,dx=1`$, consider\n```math\n\\partial_tn=\\nabla\\cdot\\bigl(n\\nabla\\Phi(n)\\bigr),\n\\qquad n(0,\\cdot)=n_0,\n```\nwhere\n```math\n\\Phi(n)=\\frac12\\sum_{i,j=1}^d(\\partial_{ij}\\log n)^2\n+\\frac1n\\sum_{i,j=1}^d\\partial_{ij}\\bigl(n\\partial_{ij}\\log n\\bigr).\n```\nAll spatial conditions are periodic. There are no lower-order diffusion, drift or confinement terms.\n\nDoes the unique positive classical solution extend to every finite time? Precisely, is its maximal lifetime $`T_*`$ always infinite, with\n```math\nn\\in C([0,\\infty);H^2(\\mathbb T^d))\n\\cap C^\\infty((0,\\infty)\\times\\mathbb T^d),\\qquad\n\\inf_{[0,T]\\times\\mathbb T^d}n>0\\quad(T<\\infty)?\n```\nNo smallness assumption on the datum or its entropy or energy is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"sixth-order\" \"quantum diffusion\" \"positive\" \"global\" 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"sixth-order\" \"positivity\" quantum",
+    "site:palomar-registry.org OR site:hexagonmath.org \"sixth-order quantum\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Theorem3 and following question p340; Theorems1–2; §6",
+      "scope_comparison": "Actual Theorem3 provides maximal positive classical evolution and finite-lifetime limiting profile of minimum0; the following paragraph asks whether loss of positivity occurs. Global nonnegative weak existence/exponential convergence do not preclude that event. Matthes–Rott's whole-space minimizing-movement sixth-order result is weak and has no positivity guarantee. Fourth-order DLSS/Fisher-information flow announcements concern a different PDE. No arbitrary-positive-H2 d2/3 global-classical resolution located.",
+      "url": "https://ems.press/content/serial-article-files/16278",
+      "version_or_date": "Bukal–Jüngel–Matthes AIHPC30(2013)337–365 final; current searches3November2026",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual Theorem3 provides maximal positive classical evolution and finite-lifetime limiting profile of minimum0; the following paragraph asks whether loss of positivity occurs. Global nonnegative weak existence/exponential convergence do not preclude that event. Matthes–Rott's whole-space minimizing-movement sixth-order result is weak and has no positivity guarantee. Fourth-order DLSS/Fisher-information flow announcements concern a different PDE. No arbitrary-positive-H2 d2/3 global-classical resolution located.",
+  "latest_version_check": "Bukal–Jüngel–Matthes AIHPC30(2013)337–365 final; current searches3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

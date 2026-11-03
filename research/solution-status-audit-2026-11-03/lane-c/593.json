@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "593",
+  "manifest_index": 458,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "593",
+    "title": "The Berge conjecture for integral lens-space surgeries",
+    "area": "Geometric topology and Dehn surgery",
+    "file": "problems/593-the-berge-conjecture-for-integral-lens-space-surgeries.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-1e8f28681c735c13",
+    "group": "geometry-topology",
+    "source_sha256": "e913c8da8af093568c2f93f6b9ad23c39f7a35fb0b639b3efec893d6876fd843",
+    "statement_sha256": "f7919f27328d167cea3c16bc7ab0c64d120a2ee7c374711a5f280affd6c13896",
+    "state": "unreviewed"
+  },
+  "source_sha256": "e913c8da8af093568c2f93f6b9ad23c39f7a35fb0b639b3efec893d6876fd843",
+  "statement_sha256": "f7919f27328d167cea3c16bc7ab0c64d120a2ee7c374711a5f280affd6c13896",
+  "actual_source_sha256": "e913c8da8af093568c2f93f6b9ad23c39f7a35fb0b639b3efec893d6876fd843",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`K\\subset S^3`$ be a smooth knot and $`n\\in\\mathbb Z`$. Write $`S^3_n(K)`$ for the Dehn filling that identifies the meridian of the attached solid torus with $`n\\mu+\\lambda`$, where $`\\mu`$ is the meridian and $`\\lambda`$ the preferred longitude of the knot exterior.\n\nIf $`S^3_n(K)`$ is a lens space, must $`K`$ be **doubly primitive**?\n\nExplicitly, the conclusion asks for an isotopy of $`K`$ onto the standard genus-two Heegaard surface\n```math\nS^3=H_1\\cup_\\Sigma H_2\n```\n\nand properly embedded essential meridian disks $`D_i\\subset H_i`$ such that\n```math\n|K\\cap\\partial D_i|=1,\\qquad i=1,2,\n```\n\nwith transverse intersections. A lens space means $`L(p,q)`$, $`p\\ge1`$, $`\\gcd(p,q)=1`$, obtained by gluing two solid tori; $`p=1`$ includes $`S^3`$.\n\nThe quantifiers cover every knot and every qualifying integer slope, without a genus or tunnel-number restriction. The target is the knot-classification conclusion, without an additional prescribed identification of the filling.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Berge conjecture\" proof 2026",
+    "\"Berge conjecture\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar.ai OR site:hexagonmath.org)",
+    "\"Berge conjecture\" lens surgery (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web / primary author and publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2609.39260v1",
+      "version_or_date": "v1, 30 September 2026",
+      "locator": "Conjecture 1.1 and Theorem 1.2, introduction",
+      "inspection": "Read theorem/conjecture body, not only title or abstract",
+      "scope_comparison": "Theorem 1.2 covers hyperbolic knots of genus at most five; the tunnel-number-one theorem is also restricted. Greene realizes every possible lens space by a Berge knot, but does not identify every original knot having such surgery. The local target quantifies over every knot and every integer lens-space slope."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "No full matching resolution or complete announcement identified in these bounded searches. Theorem 1.2 covers hyperbolic knots of genus at most five; the tunnel-number-one theorem is also restricted. Greene realizes every possible lens space by a Berge knot, but does not identify every original knot having such surgery. The local target quantifies over every knot and every integer lens-space slope.",
+  "latest_version_check": "arXiv abstract/version record inspected 2026-11-03; cited version is latest displayed. No withdrawal banner observed.",
+  "gap_retraction_check": "No full matching candidate located to audit for a known gap. This is not independent verification of cited restricted results; no assurance of continued openness.",
+  "announcement_qualification": null,
+  "limitations": [
+    "Search-engine repository coverage is bounded; absence of a hit is not a certified openness claim.",
+    "No theorem was promoted from an index entry alone."
+  ]
+}

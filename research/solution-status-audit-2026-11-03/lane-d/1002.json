@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1002",
+  "manifest_index": 846,
+  "checked_date": "2026-11-03",
+  "source_sha256": "d06638577690dde32fb564bbcedf881fbb24e5e0d04503c606c33adca7b96e76",
+  "statement_sha256": "0bb44821d418033f84fd60f58c7a854ed7ae774ce26b2e6d69b3eef78418bb31",
+  "original_target": {
+    "id": "1002",
+    "title": "Canonical geometric stochastic heat: global Brownian-loop invariance",
+    "area": "Singular stochastic equations and geometric probability",
+    "file": "problems/1002-canonical-geometric-stochastic-heat-global-brownian-loop-invariance.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c0c84d688b02fd34",
+    "group": "rough-paths-singular-stochastic-equations",
+    "source_sha256": "d06638577690dde32fb564bbcedf881fbb24e5e0d04503c606c33adca7b96e76",
+    "statement_sha256": "0bb44821d418033f84fd60f58c7a854ed7ae774ce26b2e6d69b3eef78418bb31",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Prove or disprove the following compact-manifold instance of Conjectures 4.5 and 4.7 of Bruned, Gabriel, Hairer and Zambotti, *Geometric stochastic heat equations*.\n\nLet $`(M,g)`$ be any smooth compact connected Riemannian manifold without boundary, and let $`R_g`$ be its scalar curvature, with curvature convention\n```math\nR(X,Y)Z=\\nabla_X\\nabla_YZ-\\nabla_Y\\nabla_XZ-\\nabla_{[X,Y]}Z.\n```\n\nWrite $`S^1=\\mathbb R/\\mathbb Z`$. Choose smooth vector fields $`\\sigma_1,\\ldots,\\sigma_m`$ such that\n```math\n\\sum_i\\sigma_i\\otimes\\sigma_i=g^{-1},\\qquad\n\\sum_i\\nabla_{\\sigma_i}\\sigma_i=0.\n```\n\nSuch a collection exists by taking the tangent projections of the coordinate vectors of a smooth isometric embedding. Let $`\\xi_1,\\ldots,\\xi_m`$ be independent standard space-time white noises on $`\\mathbb R_+\\times S^1`$.\n\nConsider the **canonical BGHZ solution** of\n```math\n\\partial_tu\n=\\nabla_{\\partial_xu}\\partial_xu\n+\\frac18\\mathrm{grad}_gR_g(u)\n+\\sqrt2\\sum_i\\sigma_i(u)\\xi_i.\n\\tag{1}\n```\n\nHere “canonical” means the specific local solution theory of Theorem 1.6 of the pinned arXiv v3, with its finite renormalization fixed by the three conditions in that theorem; an arbitrary finite curvature counterterm is not allowed. For the displayed noise normalization apply that theorem with metric $`g/2`$, vector fields $`\\sqrt2\\sigma_i`$, and smooth drift $`\\frac18\\mathrm{grad}_gR_g`$. Constant metric rescaling leaves the Levi-Civita connection unchanged. Equivalently, this is the canonical theory used in equation (4.4) and Conjectures 4.5/4.7. Its law is independent of the chosen embedding and vector-field representation. The formal products in (1) have this meaning, rather than an unrenormalized classical or Stratonovich interpretation.\n\nLet $`p_t(x,y)`$ be the heat kernel with respect to Riemannian volume of the diffusion with generator $`\\frac12\\Delta_g`$, and put\n```math\nZ=\\int_M p_1(x,x)\\,d\\mathrm{vol}_g(x).\n```\n\nDefine the Brownian loop probability $`\\mu_g`$ by choosing its starting point with density $`Z^{-1}p_1(x,x)`$, then taking the time-one Brownian bridge from that point back to itself. For every $`0<\\alpha<\\frac12`$, it is supported on $`C^\\alpha(S^1,M)`$.\n\nIs it true that, for every such $`(M,g)`$ and every $`0<\\alpha<\\frac12`$, the maximal canonical solution of (1) is nonexplosive from every deterministic $`u_0\\in C^\\alpha(S^1,M)`$, and $`\\mu_g`$ is invariant for its Markov semigroup? Explicitly, if $`u(0)\\sim\\mu_g`$ independently of the driving noises, must $`u(t)\\sim\\mu_g`$ for every $`t\\ge0`$?\n\nThis asks for globality and invariance, with the coefficient $`1/8`$ fixed. It includes no uniqueness assertion across distinct free homotopy components of loop space. In the paper's noise-one convention, the corresponding scalar-curvature coefficient is $`1/32`$, as explained in Remark 1.7.",
+  "full_original_page": "# 1002. Canonical geometric stochastic heat: global Brownian-loop invariance\n\n**Area:** Singular stochastic equations and geometric probability\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nProve or disprove the following compact-manifold instance of Conjectures 4.5 and 4.7 of Bruned, Gabriel, Hairer and Zambotti, *Geometric stochastic heat equations*.\n\nLet $`(M,g)`$ be any smooth compact connected Riemannian manifold without boundary, and let $`R_g`$ be its scalar curvature, with curvature convention\n```math\nR(X,Y)Z=\\nabla_X\\nabla_YZ-\\nabla_Y\\nabla_XZ-\\nabla_{[X,Y]}Z.\n```\n\nWrite $`S^1=\\mathbb R/\\mathbb Z`$. Choose smooth vector fields $`\\sigma_1,\\ldots,\\sigma_m`$ such that\n```math\n\\sum_i\\sigma_i\\otimes\\sigma_i=g^{-1},\\qquad\n\\sum_i\\nabla_{\\sigma_i}\\sigma_i=0.\n```\n\nSuch a collection exists by taking the tangent projections of the coordinate vectors of a smooth isometric embedding. Let $`\\xi_1,\\ldots,\\xi_m`$ be independent standard space-time white noises on $`\\mathbb R_+\\times S^1`$.\n\nConsider the **canonical BGHZ solution** of\n```math\n\\partial_tu\n=\\nabla_{\\partial_xu}\\partial_xu\n+\\frac18\\mathrm{grad}_gR_g(u)\n+\\sqrt2\\sum_i\\sigma_i(u)\\xi_i.\n\\tag{1}\n```\n\nHere “canonical” means the specific local solution theory of Theorem 1.6 of the pinned arXiv v3, with its finite renormalization fixed by the three conditions in that theorem; an arbitrary finite curvature counterterm is not allowed. For the displayed noise normalization apply that theorem with metric $`g/2`$, vector fields $`\\sqrt2\\sigma_i`$, and smooth drift $`\\frac18\\mathrm{grad}_gR_g`$. Constant metric rescaling leaves the Levi-Civita connection unchanged. Equivalently, this is the canonical theory used in equation (4.4) and Conjectures 4.5/4.7. Its law is independent of the chosen embedding and vector-field representation. The formal products in (1) have this meaning, rather than an unrenormalized classical or Stratonovich interpretation.\n\nLet $`p_t(x,y)`$ be the heat kernel with respect to Riemannian volume of the diffusion with generator $`\\frac12\\Delta_g`$, and put\n```math\nZ=\\int_M p_1(x,x)\\,d\\mathrm{vol}_g(x).\n```\n\nDefine the Brownian loop probability $`\\mu_g`$ by choosing its starting point with density $`Z^{-1}p_1(x,x)`$, then taking the time-one Brownian bridge from that point back to itself. For every $`0<\\alpha<\\frac12`$, it is supported on $`C^\\alpha(S^1,M)`$.\n\nIs it true that, for every such $`(M,g)`$ and every $`0<\\alpha<\\frac12`$, the maximal canonical solution of (1) is nonexplosive from every deterministic $`u_0\\in C^\\alpha(S^1,M)`$, and $`\\mu_g`$ is invariant for its Markov semigroup? Explicitly, if $`u(0)\\sim\\mu_g`$ independently of the driving noises, must $`u(t)\\sim\\mu_g`$ for every $`t\\ge0`$?\n\nThis asks for globality and invariance, with the coefficient $`1/8`$ fixed. It includes no uniqueness assertion across distinct free homotopy components of loop space. In the paper's noise-one convention, the corresponding scalar-curvature coefficient is $`1/32`$, as explained in Remark 1.7.\n\n## Application\n\nThis would identify the canonical stochastic dynamics that preserves Brownian loops on a curved target. It is a precise stochastic-quantization question for the one-dimensional nonlinear sigma model.\n\n## References\n\n1. Y. Bruned, F. Gabriel, M. Hairer and L. Zambotti, *Geometric stochastic heat equations*. [arXiv:1902.02884v3](https://arxiv.org/pdf/1902.02884v3), Theorem 1.6 and Remark 1.7, physical page 11; Conjectures 4.5 and 4.7 and Remark 4.6, physical pages 43–44. Related final publication: *J. Amer. Math. Soc.* **35** (2022), 1–80, [DOI 10.1090/jams/977](https://doi.org/10.1090/jams/977); its body has not been compared with the pinned 93-page v3.\n\n## Status review\n\n\n**Known cases:** The specific canonical renormalization and scalar-curvature coefficient must agree, with globality for all deterministic Holder starts. Dirichlet-form invariant constructions and local geometric solution theory do not alone identify that canonical global process.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe specific canonical renormalization and scalar-curvature coefficient must agree, with globality for all deterministic Holder starts. Dirichlet-form invariant constructions and local geometric solution theory do not alone identify that canonical global process.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe source establishes the canonical local solution and explicitly conjectures globality and loop-measure invariance with the displayed curvature coefficient. Dirichlet-form constructions of invariant diffusions do not by themselves identify that exact canonical solution. Current selected primary comparisons found no matching complete resolution. The independent audit, semantic comparisons and all186 cached catalogue bindings passed; the supplied aliases matched no catalogue descriptions. These bounded checks do not prove that no solution exists. The final80-page edition and cited-body gaps remain recorded.\n\nThe [primary review](../FURTHER_problems/_tracking/parallel/rough-filtering/bghz-brownian-loop-review.json), [independent selected audit](../FURTHER_problems/_tracking/parallel/complex-bayesian/cross-bghz-brownian-loop-review.json), [semantic comparison](../FURTHER_problems/_tracking/bghz-brownian-loop-duplicates-review-2026-10-19.json), [catalogue comparison](../FURTHER_problems/_tracking/bghz-brownian-loop-catalogue-review-2026-10-19.json) and [coordinator review](../FURTHER_problems/_tracking/bghz-brownian-loop-coordinator-review-2026-10-19.json) record evidence and limits. These are AI checks, not human peer review.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-c0c84d688b02fd34**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "geometric stochastic heat",
+    "BGHZ",
+    "Brownian loop",
+    "Bruned"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"geometric stochastic heat\" \"invariant\" 2026"
+    },
+    {
+      "query": "\"geometric stochastic heat\" \"invariant\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1902.02884v3",
+      "locator": "Theorem1.6/Remark1.7p11; Conjectures4.5/4.7pp43–44"
+    }
+  ],
+  "scope_comparison": "Pinned canonical local theory retains globality and Brownian-loop invariance as conjectures. Other invariant path diffusions use a different tangent metric/noise, while chain-rule symmetry results address counterterm structure. They do not identify the exact curvature1/8 canonical process globally for every deterministic Hölder start.",
+  "recommendation": "Retain partial status; bounded current searches located no matching complete resolution.",
+  "limitations": "Not proof of openness or certification of all cited proofs; inaccessible irrelevant/restricted comparisons do not themselves create a hold.",
+  "announcement_routing": {
+    "localID": "1002",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "geometric stochastic heat",
+          "BGHZ",
+          "Brownian loop",
+          "Bruned"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "geometric stochastic heat",
+          "BGHZ",
+          "Brownian loop",
+          "Bruned"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "geometric stochastic heat",
+        "BGHZ",
+        "Brownian loop",
+        "Bruned"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

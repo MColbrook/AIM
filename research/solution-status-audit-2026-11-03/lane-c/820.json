@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "820",
+  "manifest_index": 664,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "820",
+    "title": "Do arbitrary Steiner symmetrization processes converge in shape?",
+    "area": "Convex and geometric analysis",
+    "file": "problems/820-do-arbitrary-steiner-symmetrization-processes-converge-in-shape.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-97e271959d863311",
+    "group": "geometry-topology",
+    "source_sha256": "6e97e83f007a540f53dc4550e13799073bb3014ce2e949cf1788c517925d3886",
+    "statement_sha256": "26a9771283be71263b21dfed77fe25f3416bdb3ee1a9352da99af302c67a6583",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6e97e83f007a540f53dc4550e13799073bb3014ce2e949cf1788c517925d3886",
+  "statement_sha256": "26a9771283be71263b21dfed77fe25f3416bdb3ee1a9352da99af302c67a6583",
+  "actual_source_sha256": "6e97e83f007a540f53dc4550e13799073bb3014ce2e949cf1788c517925d3886",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For a nonempty compact set $`K\\subset\\mathbb R^n`$ and a direction $`u\\in S^{n-1}`$, let $`S_uK`$ denote its Steiner symmetral in the paper's compact-set convention. Given an arbitrary direction sequence $`(u_m)_{m\\ge1}`$, form\n\n```math\nK_m=S_{u_m}\\cdots S_{u_1}K.\n```\n\n\n**Question (Bianchi–Burchard–Gronchi–Volčič, Open Problem 6.2).** Must every such process *converge in shape*? In the source's usage, this means that there is a sequence of Euclidean isometries $`(I_m)`$, chosen from the direction sequence and usable for **every** nonempty compact initial set $`K`$, for which $`I_mK_m`$ converges in Hausdorff distance. The limit may depend on $`K`$ and need not be a ball.\n\nThe original Theorem 2.2 proves this when the squared successive angular increments are summable. With only finitely many distinct directions, its Theorem 6.1 gives ordinary convergence without moving the sets. Neither result addresses every direction sequence.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Steiner\" \"converge in shape\" 2026",
+    "\"Steiner\" \"converge in shape\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Steiner\" \"converge in shape\" (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Steiner\" \"shape\" convergence 2026 Ulivelli"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Original1206.2041v1dated10June2012, finalIUMJ61(2012)1695–1710 identified. Current focused searches found conditional2023 and line-segment results, no exact later solution.",
+      "url": "https://arxiv.org/html/1206.2041v1",
+      "scope_comparison": "Theorem2.2 has square-summable successive angle increments and constructs one rotation sequence for every compact K. Finite distinct directions give another conditional theorem. No theorem located removes all restrictions while keeping a single isometry sequence usable for all compact initial sets. Finite unions of segments are a smaller class; ordinary nonconvergence is not failure of shape convergence. Neighboring6.3 concerns compact-vs-convex ball convergence, a separate problem. No full match found.",
+      "locator": "Actual Theorem2.2 and OpenProblem6.2 (distinguished from6.3)",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem2.2 has square-summable successive angle increments and constructs one rotation sequence for every compact K. Finite distinct directions give another conditional theorem. No theorem located removes all restrictions while keeping a single isometry sequence usable for all compact initial sets. Finite unions of segments are a smaller class; ordinary nonconvergence is not failure of shape convergence. Neighboring6.3 concerns compact-vs-convex ball convergence, a separate problem. No full match found.",
+  "latest_version_check": "Original1206.2041v1dated10June2012, finalIUMJ61(2012)1695–1710 identified. Current focused searches found conditional2023 and line-segment results, no exact later solution.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 273,
+  "source_sha256": "de3626c9535d72c79b3f49f65a3ef906d5bd04ccc42bcc4c33e21d54b880fb4c",
+  "statement_sha256": "ab7feda9e5eacb0fd13ac5dc0d74039d01613b9034e2865b321b4f3343eeb812",
+  "original_target": {
+    "id": "335",
+    "title": "The factor-two relation between triangle deletion and packing",
+    "area": "Combinatorial optimization and network modification",
+    "file": "problems/335-tuza-triangle-packing-covering.md",
+    "status": "Open",
+    "last_checked": "2026-09-18",
+    "group": "optimization-information",
+    "source_sha256": "de3626c9535d72c79b3f49f65a3ef906d5bd04ccc42bcc4c33e21d54b880fb4c",
+    "statement_sha256": "ab7feda9e5eacb0fd13ac5dc0d74039d01613b9034e2865b321b4f3343eeb812",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "335",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Tuza\" conjecture proof 2026",
+    "\"Tuza\" conjecture \"165/59\" \"2026\"",
+    "\"Tuza\" \"triangle\" proof site:zenodo.org OR site:hal.science OR site:github.com 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2609.13831v1",
+      "version": "v1 12 September 2026",
+      "locators": "Theorem 1; section 3",
+      "body_inspected": true,
+      "scope": "Every simple graph has tau<=165/59 nu, strictly larger than two."
+    },
+    {
+      "url": "https://github.com/agupta/tuza-maximum-degree-seven/blob/main/README.md",
+      "version": "current companion to v1 6 August 2026",
+      "locators": "scope and verification sections",
+      "body_inspected": true,
+      "scope": "Maximum degree at most seven; certificate catalogue not replayed."
+    },
+    {
+      "url": "https://github.com/BakeLab/Epi-results",
+      "version": "current public release",
+      "locators": "Tuza theorem extension",
+      "body_inspected": true,
+      "scope": "Split graphs with eight-clique part and three active neighbourhood types, arbitrary multiplicities."
+    }
+  ],
+  "registry_checks": "Palomar no Tuza alias; Hexagon Tuza-name matches concern other domination/choosability conjectures. Current scholarly and repository searches executed.",
+  "scope_comparison": "Target requires exact integral factor two for every finite simple graph. 165/59 is weaker; bounded degree, split-graph type restrictions, and Ryser's four-partite hypergraph result do not cover all triangle hypergraphs.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Current primary general-bound theorem is partial only.",
+  "new_partial_source": true
+}

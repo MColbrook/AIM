@@ -1,0 +1,50 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 275,
+  "source_sha256": "88f45ebc38d397e520b41ac101b8f4baa0c28c5deb82e961b2465a8a863743b9",
+  "statement_sha256": "534daa76d3373c94e3fa111daa457bf5e35ec9d5e0b706c79c4b5bb62e12637e",
+  "original_target": {
+    "id": "337",
+    "title": "Reed's bound for the chromatic number",
+    "area": "Combinatorial optimization and conflict scheduling",
+    "file": "problems/337-reed-colouring.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-13",
+    "group": "optimization-information",
+    "source_sha256": "88f45ebc38d397e520b41ac101b8f4baa0c28c5deb82e961b2465a8a863743b9",
+    "statement_sha256": "534daa76d3373c94e3fa111daa457bf5e35ec9d5e0b706c79c4b5bb62e12637e",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "337",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"Reed\" colouring conjecture proof 2026",
+    "\"Reed\" \"colouring conjecture\" proof site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Correspondence-Coloring-Graphs-with-a-Forbidden-Clique-October-5-2026/correspondence-coloring-forbidden-clique.pdf",
+      "version": "current main read 3 November 2026; manuscript 5 October 2026",
+      "sha256": "8809bcac3ea81e7bc15d75c6a034b1256af8fe042453f96004236fbbee2eed0e",
+      "locators": "Theorem 1.1 and Corollary 1.2, PDF p.2",
+      "body_inspected": true,
+      "access": "Public PDF read and pdftotext in RAM; no PDF stored.",
+      "scope": "For each fixed r>=4, constants C_r and Delta_r give DP chromatic <=ceil(C_r Delta/log Delta) only for K_r-free graphs above degree threshold."
+    },
+    {
+      "url": "https://arxiv.org/html/2407.05827v4",
+      "version": "v4 8 September 2026",
+      "locators": "Conjecture 1.1; Theorems 1.2, 1.5",
+      "body_inspected": true,
+      "scope": "Retains exact Reed conjecture; digraph variants and epsilon bounds differ."
+    }
+  ],
+  "registry_checks": "No exact Reed alias match in Palomar/Hexagon metadata. OpenAI full current routing and actual theorem PDF checked. Focused arXiv, Zenodo, HAL, GitHub searches.",
+  "scope_comparison": "For each fixed clique cap, sufficiently large Delta makes C_r/log Delta<=1/2 and implies Reed for that subset. Degree threshold depends on clique cap; arbitrary growing omega and small degrees remain uncovered. Hadwiger counterexamples and planar coloring claims concern different statements.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Current OpenAI theorem is still partial for the whole preserved target."
+}

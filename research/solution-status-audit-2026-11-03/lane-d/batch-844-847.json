@@ -1,0 +1,110 @@
+[
+  {
+    "review_level": "primary_body_with_source_gaps",
+    "outcome": "hold",
+    "recommended_status": "Partially resolved",
+    "source_gaps": [
+      "Direct Palomar/Hexagon query access incomplete; global routing cache pending. Bounded indexed domain searches are not exhaustive."
+    ],
+    "localID": "844",
+    "queries": [
+      "Kajigaya \"Hamiltonian\" \"volume\" \"complex hyperbolic\" solved 2026",
+      "\"Kajigaya\" \"monotone\" \"volume\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+    ],
+    "sources": [
+      {
+        "url": "https://arxiv.org/html/1808.07745v2",
+        "version": "v2, 16 September 2019",
+        "locator": "§4.4, Theorem 4.12, Problem 4.13; equation (37)",
+        "inspection": "Read theorem and adjacent exact question. Unequal radii can decrease volume; equal-radius global minimizing question remains posed."
+      }
+    ],
+    "scope_comparison": "All n>=2 and a>0, every compactly supported Hamiltonian competitor, global hyperbolic volume. Hamiltonian stability is only second variation. Phi preserves symplectic structure, not volume; Euclidean statements cannot transfer directly.",
+    "rationale": "Bounded searches located the original partial theorem, no full matching later resolution."
+  },
+  {
+    "review_level": "primary_body_with_source_gaps",
+    "outcome": "hold",
+    "recommended_status": "Partially resolved",
+    "source_gaps": [
+      "Direct Palomar/Hexagon query access incomplete; global routing cache pending. Bounded indexed domain searches are not exhaustive."
+    ],
+    "localID": "845",
+    "queries": [
+      "\"foliation\" \"splitting\" \"rational first integral\" \"da Costa\"",
+      "\"splitting\" \"foliation\" \"rational first integral\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+    ],
+    "sources": [
+      {
+        "url": "https://arxiv.org/html/2405.17415",
+        "version": "v4, 23 July 2026",
+        "locator": "Corollary 6.23; Problem 3, lines 1768–1772",
+        "inspection": "Latest body asks both no-invariant-hypersurface and no-rational-first-integral clauses. Proven consequence covers degree<=3 or a nonzero tangent vector field."
+      },
+      {
+        "url": "https://ems.press/content/serial-article-files/54233?nt=1",
+        "locator": "publisher PDF",
+        "inspection": "Web open failed; latest arXiv text inspected instead."
+      }
+    ],
+    "scope_comparison": "Need all codimension-one integrable holomorphic foliations on P3 with locally free rank-two tangent sheaf; no degree or vector-field restriction. Nonintegrable distributions or rational foliations with known first integral cannot refute either clause.",
+    "rationale": "No matching full resolution surfaced in queries. Latest source continues to pose exact Problem 3."
+  },
+  {
+    "review_level": "primary_body_with_source_gaps",
+    "outcome": "hold",
+    "recommended_status": "Partially resolved",
+    "source_gaps": [
+      "Direct Palomar/Hexagon query access incomplete; global routing cache pending. Bounded indexed domain searches are not exhaustive."
+    ],
+    "localID": "846",
+    "queries": [
+      "\"Drezet\" \"maximal\" \"fine moduli\" question solution",
+      "\"maximal\" \"fine moduli\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+    ],
+    "sources": [
+      {
+        "url": "https://webusers.imj-prg.fr/~jean-marc.drezet/papers/altern.pdf",
+        "locator": "Introduction; definition of global versus local fine moduli; author revision",
+        "inspection": "Read opening definitions and construction descriptions. Retrieved text locator for Question 1 did not resolve; exact question body still needs page-specific inspection."
+      },
+      {
+        "url": "https://hal.science/hal-03588709/document",
+        "locator": "search routing only",
+        "inspection": "Later primitive-multiple-scheme moduli constructions concern special spaces; theorem bodies not inspected."
+      }
+    ],
+    "scope_comparison": "Target is maximal extension for every open coherent-sheaf class with fixed invariants and global universal family on integral finite-type separated parameter variety. Existence of special maximal examples is not universal extension; infinite union does not automatically preserve finite type.",
+    "rationale": "No full candidate identified, but exact primary question locator and later-result body remain incomplete; retain hold."
+  },
+  {
+    "review_level": "primary_body_with_source_gaps",
+    "outcome": "hold",
+    "recommended_status": "Partially resolved",
+    "source_gaps": [
+      "Direct Palomar/Hexagon query access incomplete; global routing cache pending. Bounded indexed domain searches are not exhaustive."
+    ],
+    "localID": "847",
+    "queries": [
+      "\"ddbar\" \"balanced\" \"counterexample\" 2026",
+      "\"balanced\" \"ddbar\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+      "\"partial\" \"bar\" \"lemma\" \"balanced metric\" 2026 counterexample",
+      "\"balanced metric\" \"lemma\" \"counterexample\" site:github.com/openai/math"
+    ],
+    "sources": [
+      {
+        "url": "https://arxiv.org/html/1712.08901v3",
+        "version": "v3, 22 September 2018",
+        "locator": "Introduction after Theorem 1.2, lines 75–76",
+        "inspection": "Exact implication is posed. Threefold bimeromorphic statement is a separate question."
+      },
+      {
+        "url": "https://par.nsf.gov/servlets/purl/10366057",
+        "locator": "Theorems 1.3–1.4 (search result theorem text)",
+        "inspection": "Counterexample to stronger Fu–Xiao cone identity is on twistor spaces already carrying balanced metrics. Does not yield nonbalanced ddbar manifold; whole paper not audited."
+      }
+    ],
+    "scope_comparison": "Need existence of any positive d-closed (n-1)-power for every compact ddbar complex manifold n>=3, with no Kähler/SKT/canonical-bundle assumption. Failure of cone equality, bimeromorphic invariance, or balancedness on a non-ddbar central fiber is not a counterexample.",
+    "rationale": "No complete matching result or announcement located in bounded queries; primary-source statement and nearest cone-counterexample scope compared."
+  }
+]

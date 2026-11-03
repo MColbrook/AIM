@@ -1,0 +1,65 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 340,
+  "source_sha256": "8d816c7e504840d06c04b726b923cb8a6545537138d022ac79edac24a0853b4f",
+  "statement_sha256": "253aba055e40e337fb1b42c938ba88ac3fdfd4c751b6fb27f030b1f192be0c1b",
+  "original_target": {
+    "id": "421",
+    "title": "Global L2 scattering for the planar hyperbolic cubic Schrödinger equation",
+    "area": "Dispersive PDEs and nonlinear wave envelopes",
+    "file": "problems/421-hyperbolic-cubic-nls-scattering.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "spectral3",
+    "source_sha256": "8d816c7e504840d06c04b726b923cb8a6545537138d022ac79edac24a0853b4f",
+    "statement_sha256": "253aba055e40e337fb1b42c938ba88ac3fdfd4c751b6fb27f030b1f192be0c1b",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "421",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"hyperbolic cubic\" \"scattering\" \"2026\"",
+    "\"hyperbolic\" \"Schrödinger\" \"global\" \"scattering\" 2026",
+    "\"hyperbolic cubic\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2504.15836v1",
+      "version": "v1,April2025",
+      "locator": "Theorem1.1",
+      "theorem_body_checked": true,
+      "scope": "R x T; cubic local H^s wellposedness s>0, higher powers small-data scattering. Not all L2 data on R2."
+    },
+    {
+      "url": "https://www.nature.com/articles/s41598-026-74137-8",
+      "date": "7Oct2026",
+      "locator": "Problem1,Theorem1,eq1.3 and §4",
+      "theorem_body_checked": true,
+      "scope": "Linear variable-coefficient ultrahyperbolic equation, lateral uniqueness via monotonicity and numerical scheme; no cubic all-data scattering."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s44198-026-00400-1",
+      "date": "6Mar2026,updated after9June correction",
+      "locator": "eq1,eq5–9,§2.1–2.2",
+      "theorem_body_checked": true,
+      "scope": "Equation can be renamed/rescaled to scalar hyperbolic cubic NLS. The displayed rational G/F have equal leading numerator/denominator products, generically tending to1 along rays; they do not exhibit an L2(R2) nonscattering example. No all-data theorem."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s44198-026-00442-5",
+      "date": "9June2026",
+      "locator": "Correction record",
+      "scope": "Correction linked and latest article inspected; no matching all-L2 announcement."
+    }
+  ],
+  "registry_checks": "Complete Palomar/Hexagon and pinned OpenAI/Colbrook caches searched for hyperbolic cubic/nonlinear Schroedinger aliases; no full match.",
+  "scope_comparison": "Need arbitrary L2(R2) data, global CL2 with local L4 uniqueness/continuous dependence and both time scattering for the exact scalar equation. Waveguide, linear uniqueness and nonzero-background explicit waves fail these requirements.",
+  "limitations": [
+    "Saut–Wang DOI source redirected to inaccessible SpringerOpen page; target supplied reference retained. Current candidates compared by their actual bodies."
+  ],
+  "rationale": "Bounded searches found no full matching resolution or announcement, including no L2 counterexample in the explicit-wave candidate; retain Open."
+}

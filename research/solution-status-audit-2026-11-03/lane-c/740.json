@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "740",
+  "manifest_index": 584,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "740",
+    "title": "Global convergence to coexistence in a fitness-driven cross-diffusion system",
+    "area": "Population dynamics and degenerate parabolic systems",
+    "file": "problems/740-global-convergence-to-coexistence-in-a-fitness-driven-cross-diffusion-system.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e03b2670b8eeca1c",
+    "group": "diffusion-materials",
+    "source_sha256": "4132b9b0c51d889035ce06199d86d9d4f9dd5a35971f9b6aff8788000625b9b3",
+    "statement_sha256": "57d223d617c9ee60b45be7ee647a0e90aec9cd34ef9156732b6ceaf28591be5c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "4132b9b0c51d889035ce06199d86d9d4f9dd5a35971f9b6aff8788000625b9b3",
+  "statement_sha256": "57d223d617c9ee60b45be7ee647a0e90aec9cd34ef9156732b6ceaf28591be5c",
+  "actual_source_sha256": "4132b9b0c51d889035ce06199d86d9d4f9dd5a35971f9b6aff8788000625b9b3",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`N\\ge2`$, and let $`\\Omega\\subset\\mathbb R^d`$ be a bounded connected smooth domain. Let $`A=(a_{ij})`$ be a constant symmetric positive-definite matrix, and let $`m(x)=(m_i(x))`$ be smooth up to the boundary. Impose the structural condition (5.1) of [1]: for every proper subset $`I=\\{i_1<\\cdots<i_r\\}\\subset\\{1,\\ldots,N\\}`$, every $`j\\notin I`$, and every $`x\\in\\overline\\Omega`$,\n```math\n\\det\\begin{pmatrix}\n A_{II}&m_I(x)\\\\\n A_{jI}&m_j(x)\n\\end{pmatrix}\\ge\\kappa>0.\n```\n\nFor $`I=\\varnothing`$, this means $`m_j(x)\\ge\\kappa`$. Put $`u^\\infty=A^{-1}m`$ and\n```math\nE(u)=\\frac12\\int_\\Omega (u-u^\\infty)\\cdot A(u-u^\\infty)\\,dx.\n```\n\n\nGiven $`u_i^0\\ge0`$ in $`L^2(\\Omega)`$, with $`\\int_\\Omega u_i^0\\,dx>0`$ for every species, consider\n```math\n\\partial_tu_i=-\\nabla\\cdot(u_i\\nabla f_i)+u_if_i,\\qquad\nf=m-Au,\\qquad\nu_i\\partial_\\nu f_i=0,\\qquad u(0)=u^0.\n```\n\n\n**Can the global weak solutions of [1, Theorem 1] be chosen so that**\n```math\nE(u(t))\\le e^{-\\gamma t}E(u^0)\\qquad(t\\ge0)\n```\n\nfor some $`\\gamma>0`$, without the subcritical-initial-entropy condition?\n\nHere retain [1, Definition 2.1] and the entropy-dissipation admissibility (2.3). In particular,\n```math\nu\\in C_w([0,\\infty);L^2(\\Omega)^N)\n \\cap L^2_{\\mathrm{loc}}([0,\\infty);H^1(\\Omega)^N)\n \\cap L^\\infty(0,\\infty;L^2(\\Omega)^N),\\quad u_i\\ge0,\n```\n\nthe equation holds against $`C^1(\\overline\\Omega)^N`$ spatial tests in time distributions, and\n```math\nE(u(t_1))+\\sum_i\\int_{t_0}^{t_1}\\int_\\Omega\nu_i(|\\nabla f_i|^2+|f_i|^2)\\,dx\\,dt\\le E(u(t_0))\n```\n\nfor almost every $`0\\le t_0\\le t_1`$, including $`t_0=0`$.\n\nThe rate may depend on the data and coefficients. The question asks for a suitable global solution for every datum; it does not add uniqueness or quantify over arbitrary non-admissible weak solutions.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"fitness-driven\" \"cross-diffusion\" \"convergence\" 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"fitness-driven\" \"coexistence\"",
+    "site:palomar-registry.org OR site:hexagonmath.org \"fitness-driven\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "Actual Theorem2 assumes subcritical entropy E(u0)<E*, even with structural(5.1); following conjecture asks removal when no species initially absent. Local selects entropy-admissible weak solutions for every nonnegative L2 datum of each positive species mass, allowing coefficient/data-dependent rate. ODE/scalar persistence and other adaptive competition systems do not establish arbitrary multispecies cross-diffusion persistence. No complete matching announcement located.",
+      "version_or_date": "Coimbra authorpreprint16–08; finalJDE261(2016)2784–2808 doi10.1016/j.jde.2016.05.012",
+      "url": "https://www.mat.uc.pt/preprints/ps/p1608.pdf",
+      "primary_body_access_gap": false,
+      "locator": "Definition2.1/Theorem1/(2.3) p5; constant-matrix convention; Theorem2/(2.4) and following conjecture p6"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual Theorem2 assumes subcritical entropy E(u0)<E*, even with structural(5.1); following conjecture asks removal when no species initially absent. Local selects entropy-admissible weak solutions for every nonnegative L2 datum of each positive species mass, allowing coefficient/data-dependent rate. ODE/scalar persistence and other adaptive competition systems do not establish arbitrary multispecies cross-diffusion persistence. No complete matching announcement located.",
+  "latest_version_check": "Coimbra authorpreprint16–08; finalJDE261(2016)2784–2808 doi10.1016/j.jde.2016.05.012",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "267",
+  "manifest_index": 211,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "267",
+    "title": "A constant comparison between systematic and random Ising updates",
+    "area": "Monte Carlo simulation and update scheduling",
+    "file": "problems/267-ising-systematic-scan.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "d149ceaf28344a400e558e172e52df7ed5192e00c2623391e90dfc262828d44f",
+    "statement_sha256": "1226b30322cdf0fd5ed9106bc070508dd0bdba109c5d7b24d7dbcaed9aefb66e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d149ceaf28344a400e558e172e52df7ed5192e00c2623391e90dfc262828d44f",
+  "statement_sha256": "1226b30322cdf0fd5ed9106bc070508dd0bdba109c5d7b24d7dbcaed9aefb66e",
+  "actual_source_sha256": "d149ceaf28344a400e558e172e52df7ed5192e00c2623391e90dfc262828d44f",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For a finite zero-field ferromagnetic Ising measure $`\\pi`$ on an $`n`$-vertex graph, let $`K_v`$ resample the spin at $`v`$ conditionally on all other spins. Set $`P=n^{-1}\\sum_vK_v`$ and $`P_\\alpha=K_{\\alpha(1)}\\cdots K_{\\alpha(n)}`$ for a permutation $`\\alpha`$ of the vertices. For a kernel $`Q`$ define $`t_{\\rm mix}(Q)=\\min\\{t\\in\\mathbb N:\\max_\\sigma\\|Q^t(\\sigma,\\cdot)-\\pi\\|_{\\rm TV}\\le1/4\\}`$. Is there an absolute $`C<\\infty`$ such that $`n\\,t_{\\rm mix}(P_\\alpha)\\le C\\,t_{\\rm mix}(P)`$ for every graph, every finite nonnegative set of couplings, and every $`\\alpha`$? One step of $`P_\\alpha`$ is a complete sweep.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Ising\" \"systematic scan\" \"constant\" comparison 2026",
+    "\"Ising\" \"systematic scan\" \"constant\" comparison (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Ising\" \"systematic scan\" \"constant\" comparison (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Current arXiv2410.11136rendering,2024revised2025 primary.",
+      "url": "https://arxiv.org/html/2410.11136",
+      "scope_comparison": "The actual comparison loses powers of n and logarithmic stationary-mass factors. Its tight counterexample uses an antiferromagnetic model, so it does not refute the ferromagnetic-only absolute constant. Recent spectral-independence results add high-temperature correlation assumptions. No universal all-couplings ferromagnetic constant comparison found.",
+      "primary_body_access_gap": false,
+      "locator": "Theorems1.1–1.3,discussion followingTheorem1.1 and Section4example"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The actual comparison loses powers of n and logarithmic stationary-mass factors. Its tight counterexample uses an antiferromagnetic model, so it does not refute the ferromagnetic-only absolute constant. Recent spectral-independence results add high-temperature correlation assumptions. No universal all-couplings ferromagnetic constant comparison found.",
+  "latest_version_check": "Current arXiv2410.11136rendering,2024revised2025 primary.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

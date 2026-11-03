@@ -1,0 +1,104 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "906",
+  "manifest_index": 750,
+  "checked_date": "2026-11-03",
+  "source_sha256": "655035491d21b14bdd190029dabd15a39ee0d92b73e57d5ca219b5aa7216ded1",
+  "statement_sha256": "e8a5eb7c397165cbc5b2af7a8b80406749fb9db0881e242abe6968ed4a863b41",
+  "original_target": {
+    "id": "906",
+    "title": "Does every reflexive-space $`AC(\\sigma)`$ operator admit a $`BV(\\sigma)`$ functional calculus?",
+    "area": "Operator theory and Banach algebras",
+    "file": "problems/906-does-every-reflexive-space-ac-sigma-operator-admit-a-bv-sigma-functional-calculus.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-6488fd98883e30b1",
+    "group": "operators",
+    "source_sha256": "655035491d21b14bdd190029dabd15a39ee0d92b73e57d5ca219b5aa7216ded1",
+    "statement_sha256": "e8a5eb7c397165cbc5b2af7a8b80406749fb9db0881e242abe6968ed4a863b41",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\sigma\\subset\\mathbb C`$ be a nonempty compact set. Use the Ashton–Doust algebras $`BV(\\sigma)`$ and $`AC(\\sigma)`$: $`BV(\\sigma)`$ consists of complex functions of finite planar variation, with the variation defined using finite ordered point lists and their maximum line-crossing count; $`AC(\\sigma)`$ is the closure of restrictions of complex-coefficient polynomials in the two real coordinates in the $`BV(\\sigma)`$ norm [1, §2].\n\nLet $`X`$ be a reflexive complex Banach space, $`T\\in B(X)`$, and $`\\lambda(z)=z`$ on $`\\sigma`$. By definition, $`T`$ is an $`AC(\\sigma)`$ operator if there exists a bounded unital Banach-algebra homomorphism\n\n```math\n\\Psi:AC(\\sigma)\\longrightarrow B(X),\\qquad \\Psi(\\lambda)=T.\n```\n\n\n**Must $`T`$ also admit a $`BV(\\sigma)`$ functional calculus?** Equivalently, must there exist a bounded unital homomorphism $`\\Theta:BV(\\sigma)\\to B(X)`$ with $`\\Theta(\\lambda)=T`$? This is the question on [1, printed p. 1591], with the definition of an $`AC(\\sigma)`$ operator pinned in [2, Definition 4.1]. It asks for a calculus for $`T`$; it does not assert that every initially selected $`\\Psi`$ must extend, or require $`\\sigma`$ to equal the spectrum of $`T`$.",
+  "full_original_page": "# 906. Does every reflexive-space $`AC(\\sigma)`$ operator admit a $`BV(\\sigma)`$ functional calculus?\n\n**Area:** Operator theory and Banach algebras\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\sigma\\subset\\mathbb C`$ be a nonempty compact set. Use the Ashton–Doust algebras $`BV(\\sigma)`$ and $`AC(\\sigma)`$: $`BV(\\sigma)`$ consists of complex functions of finite planar variation, with the variation defined using finite ordered point lists and their maximum line-crossing count; $`AC(\\sigma)`$ is the closure of restrictions of complex-coefficient polynomials in the two real coordinates in the $`BV(\\sigma)`$ norm [1, §2].\n\nLet $`X`$ be a reflexive complex Banach space, $`T\\in B(X)`$, and $`\\lambda(z)=z`$ on $`\\sigma`$. By definition, $`T`$ is an $`AC(\\sigma)`$ operator if there exists a bounded unital Banach-algebra homomorphism\n\n```math\n\\Psi:AC(\\sigma)\\longrightarrow B(X),\\qquad \\Psi(\\lambda)=T.\n```\n\n\n**Must $`T`$ also admit a $`BV(\\sigma)`$ functional calculus?** Equivalently, must there exist a bounded unital homomorphism $`\\Theta:BV(\\sigma)\\to B(X)`$ with $`\\Theta(\\lambda)=T`$? This is the question on [1, printed p. 1591], with the definition of an $`AC(\\sigma)`$ operator pinned in [2, Definition 4.1]. It asks for a calculus for $`T`$; it does not assert that every initially selected $`\\Psi`$ must extend, or require $`\\sigma`$ to equal the spectrum of $`T`$.\n\n## Application\n\nA $`BV(\\sigma)`$ calculus would assign bounded operators to a larger, idempotent-rich class of functions of $`T`$. In the known real-interval and unit-circle settings, such extensions support spectral representations and functional calculations beyond absolutely continuous functions [1, §5; 2, §1]. The question asks whether this feature persists for arbitrary compact planar $`\\sigma`$ on reflexive spaces.\n\n## Known results and scope\n\nFor real spectra on reflexive spaces, Doust and Terauds [3] prove the classical $`AC`$-to-$`BV`$ extension. The source paper's Theorem 5.1 proves the planar assertion when $`\\sigma`$ belongs to the class of polygonally inscribed curves and is homeomorphic to the unit circle [1, pp. 1591–1592]. Neither result treats every compact planar $`\\sigma`$.\n\nDoust and Stoneham [4] later obtain an $`AC(\\sigma(T))`$ calculus under restrictions on the spectrum of $`T`$; their paper explicitly leaves removal of those geometric restrictions as a challenge. This concerns changing the *domain* of the absolutely-continuous calculus and is distinct from obtaining a $`BV(\\sigma)`$ calculus for arbitrary $`\\sigma`$. No general result settling the present question was found in the bounded current search.\n\n## References\n\n1. S. Al-shakarchi and I. Doust, [*Isomorphisms of $`BV(\\sigma)`$ Spaces*](https://files.ele-math.com/articles/oam-15-101.pdf), *Operators and Matrices* **15** (2021), no. 4, 1581–1596, §2, §5 and Theorem 5.1. [DOI](https://doi.org/10.7153/oam-2021-15-101).\n2. B. Ashton and I. Doust, [*$`AC(\\sigma)`$ Operators*](https://www.theta.ro/jot/archive/2011-065-002/2011-065-002-003.pdf), *Journal of Operator Theory* **65** (2011), no. 2, 255–279, Definition 4.1.\n3. I. Doust and V. Terauds, [*Extensions of an $`AC(\\sigma)`$ functional calculus*](https://arxiv.org/pdf/0803.2131v1), *Journal of Mathematical Analysis and Applications* **362** (2010), no. 1, 100–106. [DOI](https://doi.org/10.1016/j.jmaa.2009.10.001).\n4. I. Doust and A. Stoneham, [*Tietze type extensions for absolutely continuous functions in the plane*](https://arxiv.org/pdf/2308.04628v1), *Studia Mathematica* **285** (2025), 203–234, §11. [DOI](https://doi.org/10.4064/sm230808-29-10).\n\n## Status review\n\n\n**Known cases:** The real-spectrum extension and polygonally inscribed Jordan-curve theorem impose spectral geometry. Later Tietze-type results change the domain of an AC calculus; they do not supply some BV calculus for every planar compact sigma on every reflexive space.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe real-spectrum extension and polygonally inscribed Jordan-curve theorem impose spectral geometry. Later Tietze-type results change the domain of an AC calculus; they do not supply some BV calculus for every planar compact sigma on every reflexive space.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe [independent bounded source audit](../FURTHER_problems/_tracking/journal0881-j063-ac-bv-and-doubling-fock-status-audit-2026-10-23.json) and [coordinator review](../FURTHER_problems/_tracking/j063-ac-bv-calculus-coordinator-audit-2026-10-23.json) record the original question and definitions, the later restricted results, bounded proof and announcement searches, and the AIM/FURTHER duplicate check. The cited 2023 thesis was not fully inspected, so the status statement is appropriately bounded. The original review is a selected body passage, not complete article or journal coverage.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-6488fd98883e30b1**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"AC(sigma)\" \"BV(sigma)\" reflexive extension 2026",
+    "\"AC(sigma)\" \"BV(sigma)\" reflexive extension; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2308.04628v1",
+      "locator": "Section11, lines651–654; Introduction lines40–44",
+      "comparison": "Later Tietze extensions concern obtaining an AC(spectrum(T)) calculus under polygonal/curve spectral geometry, not a BV(sigma) calculus for every compact planar sigma on a reflexive space. Search-routed dual-space extension article explicitly treats real sigma.",
+      "inspected": "Actual indicated body passages"
+    }
+  ],
+  "rationale": "Later Tietze extensions concern obtaining an AC(spectrum(T)) calculus under polygonal/curve spectral geometry, not a BV(sigma) calculus for every compact planar sigma on a reflexive space. Search-routed dual-space extension article explicitly treats real sigma. No full matching resolution located in bounded current searches.",
+  "limitations": [
+    "Bounded search is not proof of continued openness; this review checks mathematical scope rather than certifying every cited proof."
+  ],
+  "announcement_routing": {
+    "localID": "906",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "AC(sigma)",
+          "BV(sigma)",
+          "functional calculus",
+          "Doust"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-08-23-000006",
+            "title": "ehrlich-b/euclidean-jordan",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-23-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-23-000005",
+            "title": "ehrlich-b/euclidean-jordan",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-23-000005-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "AC(sigma)",
+          "BV(sigma)",
+          "functional calculus",
+          "Doust"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "AC(sigma)",
+        "BV(sigma)",
+        "functional calculus",
+        "Doust"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Euclidean Jordan algebra formalizations concern finite-dimensional algebraic spectral calculus, not AC(sigma) to BV(sigma) extensions for every reflexive Banach-space operator.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.703Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

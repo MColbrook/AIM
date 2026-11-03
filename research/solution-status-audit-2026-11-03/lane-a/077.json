@@ -1,0 +1,71 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "077",
+  "manifest_index": 56,
+  "original_target": {
+    "id": "077",
+    "title": "Global smoothness for the real scalar defocusing septic wave equation",
+    "area": "Nonlinear waves",
+    "file": "problems/077-scalar-supercritical-wave.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "pdes-materials",
+    "source_sha256": "ac06dbca446aed375e61ae04ef73c8f344e5ef5e6daa01edf95427de749d0033",
+    "statement_sha256": "d77e11c08c9a241ee26c3d063e0c2515e06e1147f1ade827585c2bde0b1cad39",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ac06dbca446aed375e61ae04ef73c8f344e5ef5e6daa01edf95427de749d0033",
+  "statement_sha256": "d77e11c08c9a241ee26c3d063e0c2515e06e1147f1ade827585c2bde0b1cad39",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:46:54.793388+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "New scalar-wave blowup2610.19757 Theorem1.1 is for d>=4 with a profile assumption. Remark1.3 explicitly says its profile assumption is impossible in d3, and the real scalar d3 septic target is not settled. Defocusing Schrodinger blowup also changes the equation.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.19757v1",
+      "locator": "Theorem1.1 and Remark1.3, lines160–180.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "septic",
+    "defocusing",
+    "scalar wave"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "septic",
+        "defocusing",
+        "scalar wave"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; exact target and excluding hypotheses compared above. Loose name/word hits may be unrelated."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "septic",
+        "defocusing",
+        "scalar wave"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; exact target and excluding hypotheses compared above. Loose name/word hits may be unrelated."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches with arXiv, Zenodo, HAL and GitHub; shared complete Palomar/Hexagon and OpenAI metadata screened, plus requested Colbrook author listings.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

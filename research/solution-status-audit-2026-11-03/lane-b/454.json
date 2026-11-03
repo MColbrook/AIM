@@ -1,0 +1,42 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 364,
+  "source_sha256": "6fb1b75e83cf4bc17c8801e7693200f384433c4b51f947039721efec1ecf04fd",
+  "statement_sha256": "475c7b807dcd3d1c419e006819165b1799cdeec220136afb8b1e80838e4beec4",
+  "original_target": {
+    "id": "454",
+    "title": "Hölder continuity for parabolic SPDEs with merely bounded transport noise",
+    "area": "Stochastic parabolic PDEs; passive scalar transport",
+    "file": "problems/454-rough-transport-spde-holder.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "stochastic3",
+    "source_sha256": "6fb1b75e83cf4bc17c8801e7693200f384433c4b51f947039721efec1ecf04fd",
+    "statement_sha256": "475c7b807dcd3d1c419e006819165b1799cdeec220136afb8b1e80838e4beec4",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "454",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"bounded transport noise\" \"Hölder\" \"2026\"",
+    "\"transport noise\" \"rough\" \"De Giorgi\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"SPDEs\" \"bounded\" \"transport noise\" Holder"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2511.12692v1",
+      "version": "v1,currentabsrecordonlyv1;manuscriptAug2026",
+      "locator": "Theorem1.1eq1.4–1.5,§1.2firstopenproblem",
+      "theorem_body_checked": true,
+      "scope": "C3+delta transportfields,orweakerspatialregularityvariants;explicitlyasksremoveallspatialregularity. KnownLinfboundednessdoesnotimplypathwiseHolder."
+    }
+  ],
+  "registry_checks": "Complete Palomar/HexagonmetadataandpinnedOpenAI/Colbrookauthorlistingsscannedfortopicaliases;nomatchingfullclaim.",
+  "scope_comparison": "Targetmerelyboundedprogressive/measurablea,bwithcoercivity,almostsurejointparabolicHolderoneeventoneverypositivetimeslab;randomexponentallowed. Smoothnoiseflowtheoremorpointwiseprobabilitycontinuityinsufficient.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

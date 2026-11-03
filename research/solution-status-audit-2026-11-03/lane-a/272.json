@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "272",
+  "manifest_index": 216,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "272",
+    "title": "Positive recurrence of every weakly reversible stochastic reaction network",
+    "area": "Stochastic chemical kinetics",
+    "file": "problems/272-reaction-network-positive-recurrence.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "e3ceb080b2bc0b27c12b27883a2064a3a51de2ed1d298d5e3dc165749204a4c6",
+    "statement_sha256": "de8116d500fdc4953046e33219d6f35d65502823bd572a216d0529d01d71a6d4",
+    "state": "unreviewed"
+  },
+  "source_sha256": "e3ceb080b2bc0b27c12b27883a2064a3a51de2ed1d298d5e3dc165749204a4c6",
+  "statement_sha256": "de8116d500fdc4953046e33219d6f35d65502823bd572a216d0529d01d71a6d4",
+  "actual_source_sha256": "e3ceb080b2bc0b27c12b27883a2064a3a51de2ed1d298d5e3dc165749204a4c6",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Take a finite set of reactions $`y\\to y'`$ with complexes $`y,y'\\in\\mathbb N_0^d`$ and constants $`\\kappa_{y\\to y'}>0`$. Assume every directed edge of the complex graph belongs to a directed cycle. At population $`x\\in\\mathbb N_0^d`$, reaction $`y\\to y'`$ changes $`x`$ to $`x+y'-y`$ at rate $`\\kappa_{y\\to y'}\\prod_i(x_i)_{y_i}`$, where $`(m)_j=m!/(m-j)!`$ for $`m\\ge j`$ and zero otherwise. Must the minimal continuous-time chain be nonexplosive and every state in each closed communicating class be positive recurrent? For a nonsingleton class, positive recurrence means finite expected return time after leaving the starting state; absorbing singleton classes are included as stationary classes.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"weakly reversible\" \"positive recurrence\" 2026",
+    "\"weakly reversible\" \"positive recurrence\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"weakly reversible\" \"positive recurrence\" (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The October bulk-stability theorem is planar/bimolecular and assumes1–5 plus no ghost complexes; positive recurrence Corollary4.3 additionally requires compatible boundary dissipation. XuTheoremC is first-order. Single-linkage bimolecular announcements retain those restrictions. None establishes nonexplosion/positive recurrence for every weakly reversible network of arbitrary order and dimension. No full matching announcement located.",
+      "locator": "Theorem4.1 and Corollary4.3;Section4.2boundary conditions;XuTheoremC",
+      "primary_body_access_gap": false,
+      "version_or_date": "arXiv2610.31550v1,22October2026; comparatorXu2601.00176currentTheoremC.",
+      "url": "https://arxiv.org/html/2610.31550"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The October bulk-stability theorem is planar/bimolecular and assumes1–5 plus no ghost complexes; positive recurrence Corollary4.3 additionally requires compatible boundary dissipation. XuTheoremC is first-order. Single-linkage bimolecular announcements retain those restrictions. None establishes nonexplosion/positive recurrence for every weakly reversible network of arbitrary order and dimension. No full matching announcement located.",
+  "latest_version_check": "arXiv2610.31550v1,22October2026; comparatorXu2601.00176currentTheoremC.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

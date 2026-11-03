@@ -1,0 +1,47 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "342",
+  "manifest_index": 279,
+  "source_sha256": "c174f32e743ed5eb75f3ff04ea9dce39101f155a7b3facf303f4bb513d707357",
+  "statement_sha256": "eb7f17e97dbe69e2e52f78ca4658410ff04930a97dddbab05a2c7c1b9093fba0",
+  "original_target": {
+    "id": "342",
+    "title": "Additivity of entanglement of purification",
+    "area": "Quantum information and correlation preparation",
+    "file": "problems/342-entanglement-of-purification-additivity.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: nonadditivity claim with exact finite artifact replay; complete analytic reduction awaiting independent review.",
+    "proof": "https://arxiv.org/abs/2609.29539v1",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md",
+    "group": "spectral3",
+    "source_sha256": "c174f32e743ed5eb75f3ff04ea9dce39101f155a7b3facf303f4bb513d707357",
+    "statement_sha256": "eb7f17e97dbe69e2e52f78ca4658410ff04930a97dddbab05a2c7c1b9093fba0",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "unverified-announcement",
+  "ready_for_parent": true,
+  "recommended_status": "Solved",
+  "answer": "Negative: ordinary von Neumann entanglement of purification is nonadditive.",
+  "required_status_qualification": "Solved on the basis of an unverified announcement. The full target is claimed in the cited source; the external proof has not been independently verified here.",
+  "scope_comparison": "Theorem1 claims E_P^infty(W)<97/100<E_P(W) for the ordinary von Neumann two-qubit Werner state W at1/200. Thus some finite k has E_P(W^k)<k E_P(W). Choose the least such k: equality holds at k-1 and the pair rho=W^(k-1),sigma=W gives the required strict binary additivity failure with party grouping AC:BD. The argument does not identify k=2. The ancilla reduction includes complex purifications with each ancilla at most rank4. Prior local finite certificate replay is evidence only for arithmetic; the analytic proof remains unverified.",
+  "queries": [
+    "entanglement purification 2609.29539 nonadditivity correction withdrawn",
+    "\"entanglement purification\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"2609.29539\" correction withdrawal error"
+  ],
+  "primary_sources": [
+    {
+      "version": "v1; primary record submitted25August2026 and listed September2026; history onlyv1",
+      "locator": "Theorem1; §2; AppendixA.1 ancilla reduction; §3 exact lower-bound certificate",
+      "body_inspected": true,
+      "url": "https://arxiv.org/html/2609.29539v1"
+    }
+  ],
+  "known_gap_check": "Prior local applicability reviews read; no concrete scope or proof gap was recorded. Current primary bodies and bounded correction/version searches did not locate withdrawal. Whole external proofs remain unverified.",
+  "verification": "Applicability review only; no new whole-proof, Lean or certificate replay."
+}

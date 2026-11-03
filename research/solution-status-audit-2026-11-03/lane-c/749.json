@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "749",
+  "manifest_index": 593,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "749",
+    "title": "Critical velocity control for a rigid body moving in a bounded viscous fluid",
+    "area": "Fluid–structure interaction",
+    "file": "problems/749-critical-velocity-control-for-a-rigid-body-moving-in-a-bounded-viscous-fluid.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-760d8203411e01ae",
+    "group": "fluid-structure-interaction",
+    "source_sha256": "bcc339b1cfb2fed830c22492afd0fbb9267b8f4d8ffeea0ac96cbe1080e63bac",
+    "statement_sha256": "474c618300fd499c5d282cad01ed34ee2ae3f056e2fd0d7f31b25b861e1a2147",
+    "state": "unreviewed"
+  },
+  "source_sha256": "bcc339b1cfb2fed830c22492afd0fbb9267b8f4d8ffeea0ac96cbe1080e63bac",
+  "statement_sha256": "474c618300fd499c5d282cad01ed34ee2ae3f056e2fd0d7f31b25b861e1a2147",
+  "actual_source_sha256": "bcc339b1cfb2fed830c22492afd0fbb9267b8f4d8ffeea0ac96cbe1080e63bac",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^3`$ be a bounded connected domain with smooth boundary. Let $`S\\subset\\mathbb R^3`$ be a bounded connected smooth rigid-body shape with centroid at the origin, $`\\overline S\\subset\\Omega`$, and $`\\Omega\\setminus\\overline S`$ connected. Its density is a positive constant $`\\rho_S`$; the fluid density and viscosity are one. Put\n\n```math\nS(t)=h(t)+Q(t)S,\\qquad F(t)=\\Omega\\setminus\\overline{S(t)},\\qquad\n\\rho(t,x)=1_{F(t)}(x)+\\rho_S1_{S(t)}(x),\n```\n\nwhere $`Q(t)\\in SO(3)`$, $`h(0)=0`$ and $`Q(0)=I`$. Fix a finite $`T>0`$ and require $`\\mathrm{dist}(\\overline{S(t)},\\partial\\Omega)\\ge\\delta`$ on $`[0,T]`$ for some $`\\delta>0`$.\n\nUse the velocity field $`u`$ on all of $`\\Omega`$, extended inside the body by its rigid velocity. The weak incompressible Navier–Stokes/Newton system with no-slip conditions is defined as follows. Assume\n\n```math\n(h,Q)\\in W^{1,\\infty}(0,T;\\mathbb R^3\\times SO(3)),\\qquad\nu\\in L^\\infty(0,T;L^2(\\Omega)^3)\\cap L^2(0,T;H^1_0(\\Omega)^3),\n```\n\nRequire $`\\nabla\\cdot u=0`$, and, for almost every $`t`$,\n\n```math\nu(t,x)=\\ell(t)+\\omega(t)\\times(x-h(t))\\quad(x\\in S(t)),\\qquad\nh'=\\ell,\\qquad Q'=\\mathcal S(\\omega)Q,\n```\n\nwith $`\\mathcal S(\\omega)v=\\omega\\times v`$. Let $`a\\in L^2(\\Omega)^3`$ be divergence free, have zero outer normal trace and be a rigid velocity on $`S`$. For every test field\n\n```math\n\\varphi\\in H^1(0,T;L^2(\\Omega)^3)\\cap L^\\infty(0,T;H^1_0(\\Omega)^3),\\quad\n\\nabla\\cdot\\varphi=0,\\quad D\\varphi=0\\text{ in }S(t),\\quad\\varphi(T)=0,\n```\n\nrequire\n\n```math\n-\\int_0^T\\!\\int_\\Omega \\rho u\\cdot\\bigl(\\partial_t\\varphi+(u\\cdot\\nabla)\\varphi\\bigr)\n+2\\int_0^T\\!\\int_\\Omega Du:D\\varphi\n=\\int_\\Omega\\rho(0,x)a(x)\\cdot\\varphi(0,x),\n\\qquad Du=\\tfrac12(\\nabla u+\\nabla u^\\top).\n```\n\nThus the fluid equation has no applied force, and the body's linear and angular momentum are driven by the fluid stress. This formulation includes their initial velocities through the rigid part of $`a`$. It imposes equality of fluid and rigid-body velocities at the interface through $`u\\in H^1_0(\\Omega)^3`$.\n\n**Does the condition**\n\n```math\n\\mathrm*{ess\\,sup}_{0<t<T}\\|u(t,\\cdot)\\|_{L^3(F(t))}<\\infty\n```\n\n**imply** $`h,Q\\in C^\\infty((0,T])`$ and $`u\\in C^\\infty(E)`$, where\n\n```math\nE=\\{(t,x):0<t\\le T,\\ x\\in\\Omega\\cap\\overline{F(t)}\\}?\n```\n\nHere smoothness includes the fluid side of the moving body interface, and derivatives at $`T`$ are interpreted from the left. This is the literal set $`E`$ in the source theorem: the outer container boundary and the initial time are excluded. Derivatives need not match those of the rigid extension across the body interface.\n\nThe critical norm may have any finite size. In particular, no smallness, strong time continuity in $`L^3`$, bounded body acceleration, or fluid-pressure regularity is assumed in addition.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"rigid body\" \"L3\" \"regularity\" \"Maity\" 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"rigid body\" \"critical\" \"Takahashi\"",
+    "site:palomar-registry.org OR site:hexagonmath.org \"rigid body\" \"critical\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "scope_comparison": "Actual Theorem1.4 requires sufficiently small L∞tL3x norm; Remark1.7 explicitly asks removal. Theorem1.3's q>3 Serrin hypothesis is stronger. Local endpoint allows arbitrary finite size, moving smooth body bounded away from container contact, no acceleration/pressure extras, and smoothness on literal fluid-side E excluding outer boundary. Fixed-domain fluid, Oseen, rigid-ball uniqueness or small-body limit theorems differ. HALbody blocked but publisher theorem/remark text obtained; no matching complete announcement located.",
+      "locator": "Theorems1.3–1.4 and Remark1.7 actual publisherbody",
+      "version_or_date": "Final JDE424(2025)726–759 doi10.1016/j.jde.2025.01.073; current3November2026",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0022039625000877"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual Theorem1.4 requires sufficiently small L∞tL3x norm; Remark1.7 explicitly asks removal. Theorem1.3's q>3 Serrin hypothesis is stronger. Local endpoint allows arbitrary finite size, moving smooth body bounded away from container contact, no acceleration/pressure extras, and smoothness on literal fluid-side E excluding outer boundary. Fixed-domain fluid, Oseen, rigid-ball uniqueness or small-body limit theorems differ. HALbody blocked but publisher theorem/remark text obtained; no matching complete announcement located.",
+  "latest_version_check": "Final JDE424(2025)726–759 doi10.1016/j.jde.2025.01.073; current3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

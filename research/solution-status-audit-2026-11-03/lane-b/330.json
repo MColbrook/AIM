@@ -1,0 +1,51 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "330",
+  "manifest_index": 268,
+  "source_sha256": "62260d35c1eea224a727e450f8a42f3d4c3ec5e45d737538b3ed76930a8ad17c",
+  "statement_sha256": "97bdce09017b84777137cd2b859186378b46b41f684e61228617b03f2f8e2d1f",
+  "original_target": {
+    "id": "330",
+    "title": "The sharp matroid secretary conjecture",
+    "area": "Online selection and resource allocation",
+    "file": "problems/330-sharp-matroid-secretary.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: affirmative",
+    "proof": "https://arxiv.org/pdf/2609.30421v1",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md",
+    "group": "stochastic3",
+    "source_sha256": "62260d35c1eea224a727e450f8a42f3d4c3ec5e45d737538b3ed76930a8ad17c",
+    "statement_sha256": "97bdce09017b84777137cd2b859186378b46b41f684e61228617b03f2f8e2d1f",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "unverified-announcement",
+  "ready_for_parent": true,
+  "recommended_status": "Solved",
+  "answer": "Affirmative; OPT/e expected weight for all abstract finite matroids.",
+  "required_status_qualification": "Solved on the basis of an unverified announcement, arXiv:2609.30421v1 (24September2026). The full target is claimed; the external proof has not been independently verified here.",
+  "scope_comparison": "The source claims e-probability competitiveness for all finite abstract matroids in the unknown-matroid ordinal model with feasible irrevocable decisions. Every element of a fixed optimal basis is selected with probability>=1/e, giving expected weight>=OPT/e. Fixed labels break ties without changing optimal total weight. Independently sampled sorted uniform internal arrival times assigned successively to the observed permutation realize the source iid labeled arrival law without future weights. Knowing the matroid and numerical values provides at least the source information; local target imposes no efficiency bound.",
+  "queries": [
+    "sharp strong matroid secretary 2609.30421 proof correction",
+    "\"2609.30421\" error correction withdrawn",
+    "\"matroid secretary\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2609.30421v1",
+      "version": "v1, 24September2026; current abstract history lists only v1",
+      "locator": "Theorem1; §1 model footnote1; §§4–5 final proof",
+      "body_inspected": true
+    }
+  ],
+  "known_gap_check": "Prior local applicability review read. No specific mathematical gap recorded there; whole-proof verification remains outstanding. Current primary history and bounded correction/withdrawal searches found no withdrawal or limitation replacing the full claim.",
+  "verification": "Source-to-target scope review only; no independent whole-proof certification, finite artifact replay or Lean build.",
+  "limitations": [
+    "Bounded searches/version review do not guarantee correctness.",
+    "The user's policy permits Solved with an explicit unverified-announcement qualification."
+  ]
+}

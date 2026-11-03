@@ -1,0 +1,53 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 322,
+  "source_sha256": "634f22e1d7be27fd12c400fb696b8ab4b9d5efb5b9ef16a69bfa51b14d4334e7",
+  "statement_sha256": "bee4231b025561832643f56278b1e0c15d59dd1f28d0d0f604251199b62cf931",
+  "original_target": {
+    "id": "395",
+    "title": "Can one bending experiment locate a cavity in an elastic plate?",
+    "area": "Inverse problems and imaging",
+    "file": "problems/395-can-one-bending-experiment-locate-a-cavity-in-an-elastic-plate.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8db01cfffaa2ac1c",
+    "group": "inverse3",
+    "source_sha256": "634f22e1d7be27fd12c400fb696b8ab4b9d5efb5b9ef16a69bfa51b14d4334e7",
+    "statement_sha256": "bee4231b025561832643f56278b1e0c15d59dd1f28d0d0f604251199b62cf931",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "395",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"cavity\" \"one measurement\" \"plate\" 2026 bending",
+    "\"plate\" \"cavity\" \"one\" uniqueness (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Kirchhoff\" \"cavity\" \"uniqueness\" 2026",
+    "\"Kirchhoff\" \"cavity\" (site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Uniqueness of an inverse cavity problem for the biharmonic equation\" pdf",
+    "\"Uniqueness of an inverse cavity problem\" \"Dong\" pdf -scattering"
+  ],
+  "sources": [
+    {
+      "url": "https://comptes-rendus.academie-sciences.fr/mecanique/item/10.1016/j.crme.2010.07.011.pdf",
+      "version": "published2010",
+      "locators": "p451; Theorems3.1–3.2; equations7–12",
+      "body_inspected": true,
+      "scope": "One-measurement results are outer unknown boundary or rigid inclusion with affine interior displacement. Interior free cavity explicitly left as question."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022039626003062",
+      "version": "JDE469,15July2026,114399 DOI10.1016/j.jde.2026.114399; SSRN5896856posted10December2025",
+      "locators": "publisher search-visible Section3 direct equations3.1 and inverse-problem section; full body403",
+      "body_inspected": false,
+      "scope": "Unbounded plate with point forcing and two measurement sets. Model equations and inverse scope visible, complete theorem body inaccessible; no full target claim."
+    }
+  ],
+  "registry_checks": "No relevant plate cavity/Kirchhoff alias Palomar/Hexagon/OpenAI/Colbrook metadata; substring cavity in concavity unrelated. Searched arXiv, Zenodo, HAL, GitHub and primary publishers/authors.",
+  "scope_comparison": "Target bounded static isotropic bending with unknown free interior cavity and same single outer compatible couple. Exterior plates, in-plane stress, scattering, rigid inclusions and two-experiment results differ.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. 2026 comparator full body access remains limited; available primary formulation explicitly changes domain and data, and is not counted as complete theorem inspection."
+}

@@ -1,0 +1,110 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "946",
+  "manifest_index": 790,
+  "checked_date": "2026-11-03",
+  "source_sha256": "cccae98a41bdf9c4c3064aa35fba58ebf3cf2fb22e3ca31f14e3f3b06d647360",
+  "statement_sha256": "d690608e231f4554bd6a9c6a81212376f3733217738ab285a77fec99854de3a4",
+  "original_target": {
+    "id": "946",
+    "title": "Infinitely many solutions of a forced superlinear Dirichlet problem",
+    "area": "PDEs and materials",
+    "file": "problems/946-infinitely-many-solutions-of-a-forced-superlinear-dirichlet-problem.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-6e4f1a923de86fa6",
+    "group": "pdes-materials",
+    "source_sha256": "cccae98a41bdf9c4c3064aa35fba58ebf3cf2fb22e3ca31f14e3f3b06d647360",
+    "statement_sha256": "d690608e231f4554bd6a9c6a81212376f3733217738ab285a77fec99854de3a4",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`n\\ge3`$, let $`\\Omega\\subset\\mathbb R^n`$ be a smooth bounded domain, and let\n```math\n1<p<\\frac{n+2}{n-2}.\n```\n\nFor every $`w\\in L^2(\\Omega)`$, does the Dirichlet problem\n```math\n-\\Delta u=|u|^{p-1}u+w\\quad\\text{in }\\Omega,\n\\qquad u=0\\quad\\text{on }\\partial\\Omega\n```\n\nhave infinitely many distinct weak solutions in $`H^1_0(\\Omega)`$?\n\nHere a weak solution satisfies\n```math\n\\int_\\Omega\\nabla u\\cdot\\nabla v\\,dx\n =\\int_\\Omega (|u|^{p-1}u+w)v\\,dx\n \\qquad\\text{for every }v\\in H^1_0(\\Omega).\n```\n\nThe subcritical exponent makes this weak formulation well-defined. The conjecture concerns every forcing $`w`$, without symmetry or smallness assumptions, throughout the subcritical range and for arbitrary smooth bounded domains. “Infinitely many” is the requested conclusion; no additional prescribed energy growth or nodal pattern is imposed.",
+  "full_original_page": "# 946. Infinitely many solutions of a forced superlinear Dirichlet problem\n\n**Area:** PDEs and materials\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`n\\ge3`$, let $`\\Omega\\subset\\mathbb R^n`$ be a smooth bounded domain, and let\n```math\n1<p<\\frac{n+2}{n-2}.\n```\n\nFor every $`w\\in L^2(\\Omega)`$, does the Dirichlet problem\n```math\n-\\Delta u=|u|^{p-1}u+w\\quad\\text{in }\\Omega,\n\\qquad u=0\\quad\\text{on }\\partial\\Omega\n```\n\nhave infinitely many distinct weak solutions in $`H^1_0(\\Omega)`$?\n\nHere a weak solution satisfies\n```math\n\\int_\\Omega\\nabla u\\cdot\\nabla v\\,dx\n =\\int_\\Omega (|u|^{p-1}u+w)v\\,dx\n \\qquad\\text{for every }v\\in H^1_0(\\Omega).\n```\n\nThe subcritical exponent makes this weak formulation well-defined. The conjecture concerns every forcing $`w`$, without symmetry or smallness assumptions, throughout the subcritical range and for arbitrary smooth bounded domains. “Infinitely many” is the requested conclusion; no additional prescribed energy growth or nodal pattern is imposed.\n\n## Application\n\nThe equation models a nonlinear equilibrium subject to an external forcing. In the unforced problem, symmetry supports the construction of infinitely many equilibria. The conjecture asks whether their multiplicity survives arbitrary square-integrable forcing.\n\n## Known progress\n\nThe source explains that infinitely many solutions are known for every $`w\\in L^2(\\Omega)`$ when $`1<p<n/(n-2)`$. Its own construction supplies solutions under an additional gluing condition; it does not establish that condition for every smooth bounded domain.\n\nMolle and Passaseo's 2023 Theorem 2.1 proves the full subcritical range for every forcing when $`\\Omega`$ is a cube. Their introduction discusses extensions to domains admitting particular reflection-symmetric, two-colourable tessellations. This geometric result leaves the arbitrary smooth-domain question above open. Cubes are cited as a related domain class; their corners are not being treated as smooth boundary.\n\nA 2026 preprint of Chong Li and Shujie Li announces infinitely many solutions under an Ambrosetti–Rabinowitz condition and additional assumptions, including $`f(x,t)=o(t)`$ as $`t\\to0`$. This fails for arbitrary nonzero additive forcing. Their Remark 1.3 explicitly distinguishes the external-force model. Its stated theorem therefore does not settle this target; this comparison does not certify its proof.\n\n## Status review\n\n\n**Known cases:** The 2023 result restricts the domain to cubes. Li-Li Remark 1.3 explicitly distinguishes its AR nonlinearities from the additive-forcing Bahri-Lions model; it does not settle this all-domain L2 forcing assertion.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe 2023 result restricts the domain to cubes. Li-Li Remark 1.3 explicitly distinguishes its AR nonlinearities from the additive-forcing Bahri-Lions model; it does not settle this all-domain L2 forcing assertion.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe eligible 2021 statement, equation and limits of its construction were checked in native PDF pages 1–3. The complete 2023 publisher HTML introduction and Theorem 2.1 were read. Its scope is explicitly cubic domains; the author repository confirms that restriction. The author's research and publication list, updated August 2026, and targeted searches for a later or announced general solution did not reveal a matching resolution as of this review.\n\nAn author-hosted PDF returned an access denial, and the publisher PDF route did not return a validated native PDF. These gaps are recorded; the 2023 theorem comparison uses the available primary publisher HTML. This review does not certify either paper's full proof.\n\nThe all-status AIM/OpenAI index and the current FURTHER findings were checked. The retrieved MEMS extremal-solution regularity problem, Ising conformal-universality problem and embedded self-shrinker problem have different equations and conclusions.\n\n## References\n\n1. R. Molle and D. Passaseo, *Infinitely many solutions for elliptic equations with non-symmetric nonlinearities*, [arXiv:2112.02298v1](https://arxiv.org/abs/2112.02298v1), 2021. Published in *Calculus of Variations and Partial Differential Equations* **61** (2022), article 115.\n2. R. Molle and D. Passaseo, *On the Bahri–Lions conjecture for elliptic equations with non-symmetric nonlinearities*, *Calculus of Variations and Partial Differential Equations* **62** (2023), article 177, [doi:10.1007/s00526-023-02507-5](https://link.springer.com/article/10.1007/s00526-023-02507-5), especially the introduction and Theorem 2.1.\n3. [Riccardo Molle's research and publication list](https://riccardomollemath.github.io/research/), updated August 2026; [author repository record for the 2023 article](https://art.torvergata.it/handle/2108/323744).\n\n4. C. Li and S. Li, *A proof for the conjecture on superlinear problems with Ambrosetti–Rabinowitz condition*, [arXiv:2601.14825v1](https://arxiv.org/abs/2601.14825v1), 2026, assumptions $`(f_1^\\prime),(f_2),(f_3)`$, Theorem 1.1 and Remark 1.3.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-6e4f1a923de86fa6**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Bahri",
+    "Lions",
+    "Molle",
+    "Passaseo"
+  ],
+  "queries": [
+    "\"Bahri Lions conjecture\" \"forcing\" 2026",
+    "\"Bahri Lions conjecture\" \"forcing\"; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"Bahri Lions\" conjecture Molle Passaseo 2026"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2601.14825v1",
+      "locator": "Theorem1.1 and Remark1.3, lines96–98",
+      "comparison": "Remark1.3 expressly distinguishes its nonlinear perturbation setting from pure power with external forcing. This is not all w in L2 in the Bahri–Lions model."
+    },
+    {
+      "url": "https://art.torvergata.it/retrieve/f5d8ee78-eb3d-476e-ab46-735be3353383/Molle_Passaseo_CalcVar_2023.pdf",
+      "locator": "2023 primary repository version, introduction and cube restriction",
+      "comparison": "Full subcritical exponent range is obtained for cubes; arbitrary smooth bounded domains are not covered. Current author research page updated August2026 routes this result without a later matching title."
+    }
+  ],
+  "rationale": "Cube geometry and a distinct perturbation model do not resolve every smooth domain and arbitrary L2 forcing. No matching complete announcement found.",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected scope statements inspected, not certification of every proof."
+  ],
+  "announcement_routing": {
+    "localID": "946",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Bahri",
+          "Lions",
+          "Molle",
+          "Passaseo"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-29-000040",
+            "title": "Uniform interior C^{1,α} estimates for infinity-harmonic functions in dimensions d ≥ 3",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-29-000040-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Bahri",
+          "Lions",
+          "Molle",
+          "Passaseo"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Bahri",
+        "Lions",
+        "Molle",
+        "Passaseo"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Infinity-harmonic interior estimates change the PDE from the forced superlinear Dirichlet existence problem.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.731Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

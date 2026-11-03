@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "203",
+  "manifest_index": 159,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "203",
+    "title": "Néel order in the square-lattice spin-one-half antiferromagnet",
+    "area": "Quantum magnetism",
+    "file": "problems/203-square-lattice-neel-order.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "spectral3",
+    "source_sha256": "8630e25e5682ef8c40f0ff98632a21ba55e7ac5c62ab38f9eb68049324ae29b1",
+    "statement_sha256": "b782e70b3f7fa8193abd8ff0c10dc40692acd1640853943e4bca03a6eb3cfca9",
+    "state": "unreviewed"
+  },
+  "source_sha256": "8630e25e5682ef8c40f0ff98632a21ba55e7ac5c62ab38f9eb68049324ae29b1",
+  "statement_sha256": "b782e70b3f7fa8193abd8ff0c10dc40692acd1640853943e4bca03a6eb3cfca9",
+  "actual_source_sha256": "8630e25e5682ef8c40f0ff98632a21ba55e7ac5c62ab38f9eb68049324ae29b1",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For even $`L\\ge4`$, let $`\\Lambda_L=(\\mathbb Z/L\\mathbb Z)^2`$. At every site put spin operators $`S_x^a=\\sigma_x^a/2`$, where\n\n```math\n\\sigma^1=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix},\\quad\\sigma^2=\\begin{pmatrix}0&-i\\\\i&0\\end{pmatrix},\\quad\\sigma^3=\\begin{pmatrix}1&0\\\\0&-1\\end{pmatrix}.\n```\n\nLet $`\\psi_L`$ be the normalized ground state of\n\n```math\nH_L=\\sum_{\\{x,y\\}\\text{ nearest neighbors}}\\sum_{a=1}^3S_x^aS_y^a\n```\n\non $`\\bigotimes_{x\\in\\Lambda_L}\\mathbb C^2`$, with each bond counted once. Set $`\\eta_x=(-1)^{x_1+x_2}`$. Prove or disprove\n\n```math\n\\liminf_{\\substack{L\\to\\infty\\\\L\\text{ even}}}\\frac1{L^4}\\sum_{x,y\\in\\Lambda_L}\\eta_x\\eta_y\\langle\\psi_L,\\mathbf S_x\\cdot\\mathbf S_y\\psi_L\\rangle>0.\n```",
+  "full_local_page_read": true,
+  "queries": [
+    "\"square lattice\" \"Neel order\" rigorous proof 2026",
+    "\"square lattice\" \"Neel order\" rigorous proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"square lattice\" \"Neel order\" rigorous proof (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Low,2007,PhysRevB76,220409;currentprimarytext and November2026focused searches",
+      "scope_comparison": "The target is an unconditional strictly positive liminf of the ground-state averaged staggered structure factor for the isotropic spin1/2 square lattice. The actual Low body uses rigorous inequalities but inserts Monte-Carlo short-distance correlations with statistical errors to show their violation. Those sampled bounds are not certified deterministic input, so the paper does not supply an unconditional proof. Higher spin/dimension, anisotropic or AKLT statements are different Hamiltonians. No matching fully rigorous announcement was found.",
+      "locator": "Eq4–9 and Monte-Carlo evaluation following Eq9;IAMP Lieb ProblemB",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/0704.0713"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The target is an unconditional strictly positive liminf of the ground-state averaged staggered structure factor for the isotropic spin1/2 square lattice. The actual Low body uses rigorous inequalities but inserts Monte-Carlo short-distance correlations with statistical errors to show their violation. Those sampled bounds are not certified deterministic input, so the paper does not supply an unconditional proof. Higher spin/dimension, anisotropic or AKLT statements are different Hamiltonians. No matching fully rigorous announcement was found.",
+  "latest_version_check": "Low,2007,PhysRevB76,220409;currentprimarytext and November2026focused searches",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

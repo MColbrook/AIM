@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "230",
+  "manifest_index": 177,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "230",
+    "title": "Global finite-energy compressible flow at the diatomic exponent",
+    "area": "Viscous compressible gas dynamics",
+    "file": "problems/230-compressible-ns-physical-exponent.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "641e0bc03b12ba8cc35de7e543dd81de1db85620c250e667ba4c357cf604b683",
+    "statement_sha256": "8d3a7e96f1919aafc960f4fdf04821689f95c31a1fadbd163dd9e289c0f4b4b5",
+    "state": "unreviewed"
+  },
+  "source_sha256": "641e0bc03b12ba8cc35de7e543dd81de1db85620c250e667ba4c357cf604b683",
+  "statement_sha256": "8d3a7e96f1919aafc960f4fdf04821689f95c31a1fadbd163dd9e289c0f4b4b5",
+  "actual_source_sha256": "641e0bc03b12ba8cc35de7e543dd81de1db85620c250e667ba4c357cf604b683",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "On $`\\mathbb T^3`$, consider constant-viscosity barotropic flow\n\n```math\n\\rho_t+\\mathop{\\mathrm{div}}\\nolimits(\\rho u)=0,\\qquad(\\rho u)_t+\\mathop{\\mathrm{div}}\\nolimits(\\rho u\\otimes u)+\\nabla\\rho^{7/5}=\\Delta u+\\nabla\\mathop{\\mathrm{div}}\\nolimits u.\n```\n\nDoes every initial density $`\\rho_0\\geq0`$ and momentum $`m_0`$ with\n\n```math\nE_0=\\int_{\\mathbb T^3}\\left(\\frac{|m_0|^2}{2\\rho_0}+\\frac52\\rho_0^{7/5}\\right)dx<\\infty\n```\n\nadmit a global finite-energy weak solution? The kinetic term is $`0`$ at $`(\\rho_0,m_0)=(0,0)`$ and infinite if $`\\rho_0=0`$, $`m_0\\ne0`$.\n\nRequire the displayed distributional equations and initial traces, $`\\rho\\in L^\\infty_{\\mathrm{loc}}([0,\\infty);L^{7/5})`$, $`u\\in L^2_{\\mathrm{loc}}([0,\\infty);H^1)`$, the renormalized continuity equation\n\n```math\n\\partial_tb(\\rho)+\\mathop{\\mathrm{div}}\\nolimits(b(\\rho)u)+(\\rho b'(\\rho)-b(\\rho))\\mathop{\\mathrm{div}}\\nolimits u=0\n```\n\nfor $`b\\in C^1`$ with compactly supported derivative, and, for almost every $`t`$,\n\n```math\nE(t)+\\int_0^t\\int(|\\nabla u|^2+|\\mathop{\\mathrm{div}}\\nolimits u|^2)\\,dx\\,ds\\leq E_0.\n```\n\nHere $`E(t)`$ is the corresponding density-and-momentum energy.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"compressible Navier Stokes\" \"7/5\" weak existence 2026",
+    "\"compressible Navier Stokes\" \"7/5\" weak existence (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"compressible Navier Stokes\" \"7/5\" weak existence (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://www.math.cmu.edu/~gautam/research/201208-fluids-working-group/Feireisl_2001.pdf",
+      "version_or_date": "Final JMFM3(2001)358–392; current focused searches3November2026 found no exact general7/5 constant-viscosity claim.",
+      "locator": "Theorem1.1 p360; equations1.1–1.10; concluding remarks",
+      "scope_comparison": "Theorem1.1 supplies the standard renormalized finite-energy weak solution only for gamma>3/2 in dimension3; 7/5 is below this range. Current search results include stationary problems, density-dependent viscosities, and finite-time smooth implosion at7/5. These respectively alter the problem or demonstrate classical singularity without disproving global finite-energy weak existence. No full matching announcement was located.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Theorem1.1 supplies the standard renormalized finite-energy weak solution only for gamma>3/2 in dimension3; 7/5 is below this range. Current search results include stationary problems, density-dependent viscosities, and finite-time smooth implosion at7/5. These respectively alter the problem or demonstrate classical singularity without disproving global finite-energy weak existence. No full matching announcement was located.",
+  "latest_version_check": "Final JMFM3(2001)358–392; current focused searches3November2026 found no exact general7/5 constant-viscosity claim.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -2,9 +2,9 @@
 
 **Area:** Capillary surfaces and spectral geometry
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -27,6 +27,13 @@ This class models zero-mean-curvature capillary films attached at a right angle 
 3. D. Ko and G. Shao, [Free boundary minimal annuli in convex balls](https://arxiv.org/abs/2608.14679), preprint (2026), abstract and main results: recent annulus existence and min–max characterization.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The announced Corollary1.2 gives uniqueness up to rotation of every properly embedded free-boundary minimal annulus in the unit3-ball. Local hypotheses impose exactly smoothness, proper embedding, annular topology and orthogonal boundary meeting; no extra reflection symmetry is required. The standard critical-catenoid parametrization is the same object.
+
+[Claimed solution](https://arxiv.org/pdf/2609.13054v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/108.json). Source locator: Corollary1.2 following Theorem1.1. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative uniqueness of the critical catenoid
 

@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "231",
+  "manifest_index": 178,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "231",
+    "title": "Nonlinear orbital stability of small solitary gravity waves",
+    "area": "Free-surface fluid dynamics",
+    "file": "problems/231-solitary-gravity-wave-nonlinear-stability.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "0e61953740cf54f4a7f3ed0f1d3808dc42f36e16ed0715e4de80451da93d65fc",
+    "statement_sha256": "eb1e8fc6448be048884ba1b8fe277ebbf491466b7ec9d1c85c142da969420793",
+    "state": "unreviewed"
+  },
+  "source_sha256": "0e61953740cf54f4a7f3ed0f1d3808dc42f36e16ed0715e4de80451da93d65fc",
+  "statement_sha256": "eb1e8fc6448be048884ba1b8fe277ebbf491466b7ec9d1c85c142da969420793",
+  "actual_source_sha256": "0e61953740cf54f4a7f3ed0f1d3808dc42f36e16ed0715e4de80451da93d65fc",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Consider two-dimensional irrotational water of unit rest depth and gravity, with no surface tension. Its surface variables $`(\\eta,\\psi)`$ on $`\\mathbb R`$ satisfy\n\n```math\n\\eta_t=G(\\eta)\\psi,\\qquad \\psi_t=-\\eta-\\frac12\\psi_x^2+\\frac{(G(\\eta)\\psi+\\eta_x\\psi_x)^2}{2(1+\\eta_x^2)}.\n```\n\nHere $`\\psi`$ is the surface velocity potential, and $`G(\\eta)\\psi=(\\phi_y-\\eta_x\\phi_x)|_{y=\\eta}`$, where $`\\Delta\\phi=0`$ in $`-1<y<\\eta(x)`$, $`\\phi_y|_{y=-1}=0`$, and $`\\phi|_{y=\\eta}=\\psi`$. Potentials are taken modulo constants.\n\nLet $`Q_c=(\\eta_c,\\psi_c)`$ be the classical branch of smooth solitary elevation waves of speed $`c>1`$ bifurcating from zero at $`c=1`$; thus $`Q_c(x-ct)`$ solves this system and $`(\\eta_c,\\psi_c')`$ decays at infinity. Define $`K`$ by the Fourier multiplier $`\\widehat{Kf}(\\xi)=\\sqrt{|\\xi|\\tanh|\\xi|}\\,\\widehat f(\\xi)`$ and $`\\|(a,b)\\|_{X^s}=\\|a\\|_{H^s}+\\|Kb\\|_{H^s}`$.\n\nDoes there exist $`c_*>1`$ such that, for every $`c\\in(1,c_*)`$ and $`\\varepsilon>0`$, some $`\\delta>0`$ has the following property? Every smooth initial state with positive depth, finite $`\\|Q_0-Q_c\\|_{X^s}`$ for all integers $`s\\geq0`$, and $`\\|Q_0-Q_c\\|_{X^6}<\\delta`$ generates a global smooth graph solution satisfying\n\n```math\n\\sup_{t\\geq0}\\inf_{a\\in\\mathbb R}\\|Q(t)-Q_c(\\cdot-a)\\|_{X^0}<\\varepsilon.\n```",
+  "full_local_page_read": true,
+  "queries": [
+    "\"solitary gravity waves\" \"nonlinear stability\" 2026",
+    "\"solitary gravity waves\" \"nonlinear stability\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"solitary gravity waves\" \"nonlinear stability\" (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"solitary gravity\" \"nonlinear\" stability arxiv"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Section1 Theorems1.2,1.4,1.6–1.7 and Corollary1.5; linearizationEq1.11",
+      "version_or_date": "arXiv2402.11115v1; current HTML manuscript internal date24August2026; focused3November2026 searches.",
+      "url": "https://arxiv.org/html/2402.11115v1",
+      "scope_comparison": "Actual theorems prove resolvent, semigroup and spectral properties of the operator linearized at a small solitary wave; they do not give nonlinear global existence or orbital stability for every nearby smooth datum in X6. Capillary and reduced-model results change hypotheses. No complete pure-gravity nonlinear announcement was located.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Actual theorems prove resolvent, semigroup and spectral properties of the operator linearized at a small solitary wave; they do not give nonlinear global existence or orbital stability for every nearby smooth datum in X6. Capillary and reduced-model results change hypotheses. No complete pure-gravity nonlinear announcement was located.",
+  "latest_version_check": "arXiv2402.11115v1; current HTML manuscript internal date24August2026; focused3November2026 searches.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

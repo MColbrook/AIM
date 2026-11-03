@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "616",
+  "manifest_index": 478,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "616",
+    "title": "Weak convergence under subcritical vanishing damping",
+    "area": "Continuous optimization",
+    "file": "problems/616-weak-convergence-under-subcritical-vanishing-damping.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-dd0bbee17368fecd",
+    "group": "optimization-information",
+    "source_sha256": "f46041b6aa1735bc342abf5b839ff89dc396275d80747f3d64abbae0fc458f16",
+    "statement_sha256": "451b22f119ee281b19b11e5bffe4aef76289056bee60ed5dd1f748a3a741ffe8",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f46041b6aa1735bc342abf5b839ff89dc396275d80747f3d64abbae0fc458f16",
+  "statement_sha256": "451b22f119ee281b19b11e5bffe4aef76289056bee60ed5dd1f748a3a741ffe8",
+  "actual_source_sha256": "f46041b6aa1735bc342abf5b839ff89dc396275d80747f3d64abbae0fc458f16",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`H`$ be a real Hilbert space and let $`\\Phi:H\\to\\mathbb R`$ be convex and continuously Fréchet differentiable, with $`\\nabla\\Phi`$ Lipschitz on bounded sets. Assume that $`S=\\mathrm{argmin}_H\\Phi\\ne\\varnothing`$. Fix $`t_0>0`$ and $`1<\\alpha<3`$. For arbitrary initial position and velocity in $`H`$, consider the global classical solution of\n```math\n\\ddot x(t)+\\frac{\\alpha}{t}\\dot x(t)+\\nabla\\Phi(x(t))=0,\n \\qquad t\\ge t_0.\n```\n\n\n**Problem.** Must there be a point $`x_\\infty\\in S`$ such that $`x(t)\\rightharpoonup x_\\infty`$ as $`t\\to\\infty`$?\n\nNo boundedness of the trajectory or of $`S`$, coercivity, strong convexity or additional regularization is assumed. In finite dimensions the question is ordinary norm convergence; in an arbitrary Hilbert space the target is weak convergence.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Nesterov\" \"subcritical\" convergence correction 2026",
+    "\"Nesterov\" \"subcritical\" convergence correction (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v2, 19 January 2026",
+      "scope_comparison": "The current authors explicitly state that an earlier subcritical r in [1,3) argument is fully invalidated by an error. The retained positive theorem concerns r=3 in its printed finite-dimensional setup. It cannot settle arbitrary-Hilbert weak convergence for 1<alpha<3 and arbitrary initial conditions.",
+      "locator": "Section 4.3, lines 415–423",
+      "url": "https://arxiv.org/html/2510.23513v2",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The current authors explicitly state that an earlier subcritical r in [1,3) argument is fully invalidated by an error. The retained positive theorem concerns r=3 in its printed finite-dimensional setup. It cannot settle arbitrary-Hilbert weak convergence for 1<alpha<3 and arbitrary initial conditions.",
+  "latest_version_check": "v2, 19 January 2026",
+  "gap_retraction_check": "Current v2 Section 4.3 expressly invalidates the earlier subcritical proof; no general counterexample is asserted.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "746",
+  "manifest_index": 590,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "746",
+    "title": "Global weak existence for nonlocal quantum drift–diffusion–Poisson",
+    "area": "Quantum semiconductor transport",
+    "file": "problems/746-global-weak-existence-for-nonlocal-quantum-driftdiffusionpoisson.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-7809cf78bf581b91",
+    "group": "electrochemistry-energy-storage",
+    "source_sha256": "d56b708e7afed65e9a2c105405c750af398b2a4dc0fa57322c79960785ad89dc",
+    "statement_sha256": "9481ff65fc38e1532e8b7c88b1809ea35dd4c98e51d9f76882cb9a0e4e1fe02f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d56b708e7afed65e9a2c105405c750af398b2a4dc0fa57322c79960785ad89dc",
+  "statement_sha256": "9481ff65fc38e1532e8b7c88b1809ea35dd4c98e51d9f76882cb9a0e4e1fe02f",
+  "actual_source_sha256": "d56b708e7afed65e9a2c105405c750af398b2a4dc0fa57322c79960785ad89dc",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`I=(0,1)`$, and let $`H_0=-\\partial_{xx}`$ act on the complex Hilbert space $`L^2(I)`$ with domain\n```math\nD(H_0)=\\{\\psi\\in H^2(I):\\psi(0)=\\psi(1),\\ \\psi'(0)=\\psi'(1)\\}.\n```\nWrite $`H^1_{\\rm per}(I)=\\{v\\in H^1(I):v(0)=v(1)\\}`$, and write $`H^{-1}_{\\rm per}`$ for its dual. There is no prescribed external potential. All physical constants are fixed to one.\n\nA density operator is a nonnegative self-adjoint trace-class operator $`\\rho`$ on $`L^2(I)`$. Its spatial density $`n[\\rho]`$ is defined by\n```math\n\\mathrm{Tr}(M_\\varphi\\rho)=\\int_I\\varphi(x)n[\\rho]\\,(x)\\,dx\n\\quad(\\varphi\\in L^\\infty(I)),\n```\nwhere $`M_\\varphi`$ denotes multiplication by $`\\varphi`$. Put\n```math\n\\mathcal E_+=\\{\\rho\\ge0:\\rho\\text{ is trace-class},\\\nH_0^{1/2}\\rho H_0^{1/2}\\text{ is trace-class}\\},\n\\qquad\n\\|\\rho\\|_{\\mathcal E}=\\mathrm{Tr}\\rho+\n\\mathrm{Tr}(H_0^{1/2}\\rho H_0^{1/2}).\n```\nProducts in this definition are understood through their nonnegative trace-class extensions.\n\nFor a nonnegative $`n\\in H^1_{\\rm per}(I)`$, define the extended constrained energy\n```math\n\\mathcal K(n)=\\inf_{\\substack{\\rho\\in\\mathcal E_+\\\\n[\\rho]=n}}\n\\left\\{\\mathrm{Tr}(\\rho\\log\\rho-\\rho)+\n\\mathrm{Tr}(H_0^{1/2}\\rho H_0^{1/2})\\right\\},\n```\nusing $`0\\log0=0`$ and $`\\inf\\varnothing=+\\infty`$. No minimizer is asserted for an arbitrary nonnegative $`H^1`$ density. For the strictly positive initial densities below, the constrained problem has a unique minimizer and finite value. Let $`V[n]\\in H^1_0(I)`$ be the unique weak solution of\n```math\n-V[n]''=n,\\qquad V[n]\\,(0)=V[n]\\,(1)=0,\n```\nand define\n```math\n\\mathcal F(n)=\\mathcal K(n)+\n\\frac12\\int_I|V[n]'|^2\\,dx.\n```\n\nFor every real $`n_0\\in H^1_{\\rm per}(I)`$ with $`\\min_{[0,1]}n_0>0`$ and $`\\int_I n_0=1`$, does there exist a global weak solution $`(n,A,V)`$ with the following properties on every finite interval $`[0,T]`$?\n\n```math\n\\begin{aligned}\nn&\\ge0,\\qquad\nn\\in L^\\infty(0,T;H^1_{\\rm per})\\cap H^1(0,T;H^{-1}_{\\rm per})\n\\cap C([0,T];L^2(I)),\\qquad n(0)=n_0,\\quad \\int_I n(t)=1,\\\\\nA&\\in L^2(0,T;H^1_{\\rm per}(I)),\\qquad\nV\\in L^\\infty(0,T;H^1_0(I)),\\qquad -V''=n,\\\\\n\\rho(t)&=\\exp[-(H_0+A(t))]\\in L^\\infty(0,T;\\mathcal E_+),\\qquad\nH_0\\rho H_0\\in L^2(0,T;\\mathcal J_1).\n\\end{aligned}\n```\n\nHere $`A`$ is real, $`\\mathcal J_1`$ is the trace-class space with trace norm, and the exponential is defined by spectral functional calculus. Almost everywhere in time, require $`n=n[\\rho]`$ and require $`\\rho(t)`$ to attain the constrained infimum $`\\mathcal K(n(t))`$. For every real $`\\varphi\\in C^1([0,T];H^1_{\\rm per}(I))`$ with $`\\varphi(T)=0`$, require\n```math\n\\int_0^T\\!\\int_I n\\,\\partial_t\\varphi\\,dx\\,dt+\n\\int_I n_0\\varphi(0)\\,dx+\n\\int_0^T\\!\\int_I n\\,\\partial_x(A-V)\\,\\partial_x\\varphi\\,dx\\,dt=0.\n```\nFinally, require the free-energy inequality\n```math\n\\mathcal F(n(t))+\\int_0^t\\!\\int_I\nn(s,x)|\\partial_x(A-V)(s,x)|^2\\,dx\\,ds\n\\le\\mathcal F(n_0)\n```\nfor almost every $`t\\ge0`$. The question imposes no smallness condition on $`\\mathcal F(n_0)-\\min\\mathcal F`$, and does not prescribe a positive lower bound uniform in time.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"quantum drift diffusion\" \"Poisson\" \"global\" \"arbitrary\" 2026 nonlocal",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"quantum drift-diffusion\" global weak",
+    "site:palomar-registry.org OR site:hexagonmath.org \"quantum drift\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "scope_comparison": "Actual Theorem1.3 continuum nlQDD exists up to T* with alternative finite-time density inf→0; model explicitly omits external/self-consistent electric potentials. Global positive discrete solutions are not global continuum Gibbs-class solutions. Pinaud's matching Poisson/Gibbs theorem requires small relative free energy. Local asks every positive H1 unit-mass datum with Poisson Dirichlet potential, strong trace-class/Gibbs regularity and energy inequality. Local DLSS/hydrodynamic limits differ. No full matching announcement located.",
+      "locator": "§1.1 no selfconsistent potentials; Theorem1.3; PinaudTheorem3.1/(18) pp817–818",
+      "version_or_date": "Matthes–Rott v1,28February2025; Pinaud AIHPC36(2019)811–836 finalbody separately inspected",
+      "url": "https://arxiv.org/html/2502.21062v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual Theorem1.3 continuum nlQDD exists up to T* with alternative finite-time density inf→0; model explicitly omits external/self-consistent electric potentials. Global positive discrete solutions are not global continuum Gibbs-class solutions. Pinaud's matching Poisson/Gibbs theorem requires small relative free energy. Local asks every positive H1 unit-mass datum with Poisson Dirichlet potential, strong trace-class/Gibbs regularity and energy inequality. Local DLSS/hydrodynamic limits differ. No full matching announcement located.",
+  "latest_version_check": "Matthes–Rott v1,28February2025; Pinaud AIHPC36(2019)811–836 finalbody separately inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

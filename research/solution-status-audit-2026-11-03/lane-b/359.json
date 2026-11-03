@@ -1,0 +1,43 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 294,
+  "source_sha256": "ce6f5bd1eccf81f9966a54c58e1276ba1c9a4925df8942a353fd52a86c412200",
+  "statement_sha256": "b91f3ec32087250b32c4abfc08f29c3f045cecfb1fbcd68ec05259ccbaccb51e",
+  "original_target": {
+    "id": "359",
+    "title": "Vanishing nonlinear viscosity without commuting transport and diffusion matrices",
+    "area": "Hyperbolic conservation laws; physical viscosity",
+    "file": "problems/359-noncommuting-viscosity-limit.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "ce6f5bd1eccf81f9966a54c58e1276ba1c9a4925df8942a353fd52a86c412200",
+    "statement_sha256": "b91f3ec32087250b32c4abfc08f29c3f045cecfb1fbcd68ec05259ccbaccb51e",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "359",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"vanishing viscosity\" \"noncommuting\" 2026 Bressan",
+    "\"Haspot\" \"Jana\" viscosity commut",
+    "\"noncommuting\" viscosity site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2512.15620v2",
+      "version": "v2 28 May 2026, current abstract history checked",
+      "locators": "Theorem 2.1 equation 2.2; Corollary 2.2 equation 2.8, PDF p.8",
+      "body_inspected": true,
+      "access": "HTML v2 404; actual PDF theorem checked.",
+      "scope": "Both main uniform BV and conservative limit explicitly assume A(u)B(u)=B(u)A(u)."
+    }
+  ],
+  "registry_checks": "No nonlinear-viscosity match Palomar/Hexagon/OpenAI metadata; noncommuting alias hits concern operator inequalities. Focused current primary, HAL, Zenodo, GitHub searches.",
+  "scope_comparison": "Target includes entropy-compatible positive symmetric B that need not commute with Df, uniform all-time BV and standard semigroup convergence. Commuting-matrix theorem cannot discard that structural premise. Linear fully damped periodic comparison is a different model and conclusion.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Latest primary revision retains precisely the excluded commutation assumption."
+}

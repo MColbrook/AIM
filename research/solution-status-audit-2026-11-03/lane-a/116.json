@@ -1,0 +1,71 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "116",
+  "manifest_index": 88,
+  "original_target": {
+    "id": "116",
+    "title": "Full-order resonance growth for every nonzero real compact potential",
+    "area": "Wave scattering by a localized medium",
+    "file": "problems/116-full-order-potential-resonances.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "spectral2",
+    "source_sha256": "f6bfdc83b64789e67a3e82c299940c83519861873ad8618f016f6b234e5f7120",
+    "statement_sha256": "1be99da8a0dbecb3bc8b068970b710a513257d191de670ec520c534f09efca93",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f6bfdc83b64789e67a3e82c299940c83519861873ad8618f016f6b234e5f7120",
+  "statement_sha256": "1be99da8a0dbecb3bc8b068970b710a513257d191de670ec520c534f09efca93",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:55:50.753465+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Cunningham v2 concerns generic compactly supported potentials and maximal integrated resonance density. A generic/residual set assertion does not imply every nonzero real L-infinity compact potential. Integrated asymptotic statements also require a transfer argument to the all-large-r lower bound. Known complex counterexamples are excluded by real V.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2606.09358v2",
+      "locator": "Introduction and generic-potential maximal-density theorems.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "resonance density",
+    "compact potential",
+    "Cunningham"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "resonance density",
+        "compact potential",
+        "Cunningham"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "resonance density",
+        "compact potential",
+        "Cunningham"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches of arXiv, Zenodo, HAL, GitHub plus shared current Palomar, Hexagon and OpenAI metadata, and requested Colbrook author lists.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1050",
+  "manifest_index": 894,
+  "checked_date": "2026-11-03",
+  "source_sha256": "5212b0d3e95528a814d7e7810ba149b443b953f2e2a98c489d64a003d1df16f6",
+  "statement_sha256": "9241a1e7e28664f13a1ac811dc884614f1ce35ebaaea131f376f5d5e291e2dd8",
+  "original_target": {
+    "id": "1050",
+    "title": "Uniqueness for a planar plasma coupled to an attractive moving point charge",
+    "area": "Kinetic equations and singular particle–field coupling",
+    "file": "problems/1050-uniqueness-for-a-planar-plasma-coupled-to-an-attractive-moving-point-charge.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-80bfd332a03103b9",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "5212b0d3e95528a814d7e7810ba149b443b953f2e2a98c489d64a003d1df16f6",
+    "statement_sha256": "9241a1e7e28664f13a1ac811dc884614f1ce35ebaaea131f376f5d5e291e2dd8",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Set $`K(z)=z/|z|^2`$ for $`z\\in\\mathbb R^2\\setminus\\{0\\}`$. Fix $`\\xi_0,\\eta_0\\in\\mathbb R^2`$ and a nonnegative bounded probability density $`f_0(x,v)`$ on $`\\mathbb R^2\\times\\mathbb R^2`$. Suppose that, for some finite $`C_0`$, its support is contained, up to null sets, in\n\n```math\n\\left\\{(x,v):x\\ne\\xi_0,\\quad\n\\left|\\frac12|v-\\eta_0|^2+\\log|x-\\xi_0|\\right|\\le C_0\\right\\}.\n```\n\nConsider the coupled system\n\n```math\n\\partial_t f+v\\cdot\\nabla_x f+\n\\big(E(t,x)-K(x-\\xi(t))\\big)\\cdot\\nabla_v f=0,\n\\qquad\nE(t,x)=\\int_{\\mathbb R^2}K(x-y)\\rho(t,y)\\,dy,\n\\quad\n\\rho(t,x)=\\int_{\\mathbb R^2}f(t,x,v)\\,dv,\n```\n\n```math\n\\dot\\xi(t)=\\eta(t),\\qquad\n\\dot\\eta(t)=-E(t,\\xi(t)),\\qquad\n(f,\\xi,\\eta)|_{t=0}=(f_0,\\xi_0,\\eta_0).\n```\n\nThe plasma repels itself and is attracted to the moving point charge. No initial positive distance between the plasma and the charge is assumed.\n\nIs the coupled solution unique in the characteristic existence class of Caprino–Marchioro–Miot–Pulvirenti, Theorem 1? More explicitly, on every finite interval $`[0,T]`$, use the solutions supplied there: $`f\\in L^\\infty(0,T;L^1\\cap L^\\infty)`$, bounded $`E`$, and $`C^1`$ charge position and velocity. The plasma is transported along characteristics satisfying\n\n```math\n\\dot X=V,\\qquad \\dot V=E(t,X)-K(X-\\xi(t)).\n```\n\nFor $`f_0(x,v)\\,dx\\,dv`$-almost every initial label, these characteristics are $`C^1`$ and avoid the charge throughout $`[0,T]`$. Require the same finite microscopic-energy control and density estimate as in that theorem:\n\n```math\n\\mathop{\\mathrm{ess\\,sup}}_{(x,v)\\sim f_0\\,dx\\,dv}\n\\sup_{0\\le s\\le T}\n\\left|\\frac12|V(s;x,v)-\\eta(s)|^2+\n\\log|X(s;x,v)-\\xi(s)|\\right|<\\infty,\n```\n\n```math\n\\rho(t,x)\\le C_T\\big(1+\\log_-|x-\\xi(t)|\\big),\n\\qquad \\log_-r=\\max\\{0,-\\log r\\}.\n```\n\nUniqueness means that two such solutions with the same initial data have the same charge trajectory and the same transported plasma density almost everywhere. The question concerns the fully coupled evolution. Uniqueness of characteristics after prescribing $`f`$, already established in the source, does not answer it. This is the single-charge core of one plasma-charge uniqueness family.",
+  "full_original_page": "# 1050. Uniqueness for a planar plasma coupled to an attractive moving point charge\n\n**Area:** Kinetic equations and singular particle–field coupling\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nSet $`K(z)=z/|z|^2`$ for $`z\\in\\mathbb R^2\\setminus\\{0\\}`$. Fix $`\\xi_0,\\eta_0\\in\\mathbb R^2`$ and a nonnegative bounded probability density $`f_0(x,v)`$ on $`\\mathbb R^2\\times\\mathbb R^2`$. Suppose that, for some finite $`C_0`$, its support is contained, up to null sets, in\n\n```math\n\\left\\{(x,v):x\\ne\\xi_0,\\quad\n\\left|\\frac12|v-\\eta_0|^2+\\log|x-\\xi_0|\\right|\\le C_0\\right\\}.\n```\n\nConsider the coupled system\n\n```math\n\\partial_t f+v\\cdot\\nabla_x f+\n\\big(E(t,x)-K(x-\\xi(t))\\big)\\cdot\\nabla_v f=0,\n\\qquad\nE(t,x)=\\int_{\\mathbb R^2}K(x-y)\\rho(t,y)\\,dy,\n\\quad\n\\rho(t,x)=\\int_{\\mathbb R^2}f(t,x,v)\\,dv,\n```\n\n```math\n\\dot\\xi(t)=\\eta(t),\\qquad\n\\dot\\eta(t)=-E(t,\\xi(t)),\\qquad\n(f,\\xi,\\eta)|_{t=0}=(f_0,\\xi_0,\\eta_0).\n```\n\nThe plasma repels itself and is attracted to the moving point charge. No initial positive distance between the plasma and the charge is assumed.\n\nIs the coupled solution unique in the characteristic existence class of Caprino–Marchioro–Miot–Pulvirenti, Theorem 1? More explicitly, on every finite interval $`[0,T]`$, use the solutions supplied there: $`f\\in L^\\infty(0,T;L^1\\cap L^\\infty)`$, bounded $`E`$, and $`C^1`$ charge position and velocity. The plasma is transported along characteristics satisfying\n\n```math\n\\dot X=V,\\qquad \\dot V=E(t,X)-K(X-\\xi(t)).\n```\n\nFor $`f_0(x,v)\\,dx\\,dv`$-almost every initial label, these characteristics are $`C^1`$ and avoid the charge throughout $`[0,T]`$. Require the same finite microscopic-energy control and density estimate as in that theorem:\n\n```math\n\\mathop{\\mathrm{ess\\,sup}}_{(x,v)\\sim f_0\\,dx\\,dv}\n\\sup_{0\\le s\\le T}\n\\left|\\frac12|V(s;x,v)-\\eta(s)|^2+\n\\log|X(s;x,v)-\\xi(s)|\\right|<\\infty,\n```\n\n```math\n\\rho(t,x)\\le C_T\\big(1+\\log_-|x-\\xi(t)|\\big),\n\\qquad \\log_-r=\\max\\{0,-\\log r\\}.\n```\n\nUniqueness means that two such solutions with the same initial data have the same charge trajectory and the same transported plasma density almost everywhere. The question concerns the fully coupled evolution. Uniqueness of characteristics after prescribing $`f`$, already established in the source, does not answer it. This is the single-charge core of one plasma-charge uniqueness family.\n\n## Application\n\nA hybrid plasma model treats a diffuse cloud kinetically and a distinguished charge as a moving particle. Uniqueness would ensure that the same initial cloud and charge motion determine one subsequent evolution, even when particles can approach the singular attractive field closely.\n\n## References\n\n1. S. Caprino, C. Marchioro, E. Miot and M. Pulvirenti, *On the attractive plasma-charge system in 2-d*, Communications in Partial Differential Equations **37** (2012), 1237–1272, [DOI](https://doi.org/10.1080/03605302.2011.653032). [Author version, arXiv:1106.5527v1](https://arxiv.org/html/1106.5527v1), Introduction and Section 2, equations (2.1)–(2.6), Theorem 1 and Remark 1. These selected statements, rather than the full existence proof, were inspected.\n2. J. Wu and M. Zhu, *Initial-boundary value problem of plasma-charge model in the half space*, Electronic Journal of Differential Equations **2025**, no. 106, 1–18, [official article](https://ejde.math.txstate.edu/Volumes/2025/106/wu.pdf). The Introduction on physical p. 4 retains the two-dimensional attractive uniqueness gap.\n3. J. Wu, *The Plasma-Charge Model: Boundary Effects and Global Well-posedness*, [arXiv:2604.11371v1](https://arxiv.org/html/2604.11371v1), 13 April 2026, Section 1.1. Its discussion still separates planar attractive existence from uniqueness; its new theorems concern a different bounded-domain setting.\n\n## Status review\n\n\n**Known cases:** The attractive fully coupled model permits unbounded velocities near the charge. The April 2026 primary still retains uniqueness as open; prescribed-field characteristic uniqueness and initially separated or repulsive models do not decide it.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe attractive fully coupled model permits unbounded velocities near the charge. The April 2026 primary still retains uniqueness as open; prescribed-field characteristic uniqueness and initially separated or repulsive models do not decide it.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe initial assumption is an absolute microscopic-energy band, allowing unbounded particle velocities near the charge. It is not an assumption of compact velocity support or uniform separation.\n\nThe source proves existence in the displayed class and explicitly leaves the coupled uniqueness question unanswered. The 2025 and 2026 sources retain that distinction. Repulsive three-dimensional Lagrangian existence results have different signs and hypotheses. Nonuniqueness of stationary three-dimensional plasmas with fixed background charges does not provide two evolutions from the same initial data here.\n\nCurrent searches and comparisons on 19 October 2026 found no matching complete resolution or announcement. The AIM, OpenAI and developing FURTHER lists were compared; the nearby relativistic regularity, Coulomb mean-field limit and Landau damping problems have different targets. A bounded skim of the cached Prove2Me matches found different equations and formalization tasks.\n\nThe [source packet](../FURTHER_problems/_tracking/plasma-charge-planar-uniqueness-selected-candidate-2026-10-19.json), [source supplement](../FURTHER_problems/_tracking/plasma-charge-planar-uniqueness-source-supplement-2026-10-19.json), [independent formulation audit](../FURTHER_problems/_tracking/parallel/continuum/cross-plasma-charge-planar-uniqueness-review.json), [current comparisons](../FURTHER_problems/_tracking/plasma-charge-planar-uniqueness-current-review-2026-10-19.json), [duplicate review](../FURTHER_problems/_tracking/plasma-charge-planar-uniqueness-duplicates-review-2026-10-19.json) and [catalogue skim](../FURTHER_problems/_tracking/plasma-charge-planar-uniqueness-catalogue-review-2026-10-19.json) record the exact extents and access limits. These are AI research checks, not human peer review or certification that no solution exists.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-80bfd332a03103b9**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "attractive plasma-charge",
+    "Caprino Marchioro",
+    "Miot Pulvirenti",
+    "plasma-charge uniqueness"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"attractive plasma-charge\" uniqueness 2026"
+    },
+    {
+      "query": "\"attractive plasma\" uniqueness",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2604.11371v1",
+      "locator": "Section1.1lines160–164;original1106.5527v1Theorem1/Remark1"
+    }
+  ],
+  "scope_comparison": "April2026primary retains attractive planar globalexistence without coupleduniqueness. Theorem1existence class allows logarithmicallydiverging density/unboundedvelocities near charge with absolute microscopicenergyband, so standardboundedrho compactvelocity or initialseparation/repulsivemodel uniqueness does notapply. Prescribedselfconsistentfieldcharacteristic uniqueness is weakerthanunique coupledsolution. No full matching announcement.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative search does not establish continued openness; exact problem/current theorem statements compared, no full-proof certification.",
+  "announcement_routing": {
+    "localID": "1050",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "attractive plasma-charge",
+          "Caprino Marchioro",
+          "Miot Pulvirenti",
+          "plasma-charge uniqueness"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "attractive plasma-charge",
+          "Caprino Marchioro",
+          "Miot Pulvirenti",
+          "plasma-charge uniqueness"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "attractive plasma-charge",
+        "Caprino Marchioro",
+        "Miot Pulvirenti",
+        "plasma-charge uniqueness"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "672",
+  "manifest_index": 516,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "672",
+    "title": "Algebraicity of the three-dimensional two-source quadrature domain",
+    "area": "Potential theory and free boundary problems",
+    "file": "problems/672-algebraicity-of-the-three-dimensional-two-source-quadrature-domain.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0cc49330f5426343",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "0962b7fe9d006f54f39a185b93308344bd3424a7155fe14728f6d187cb4070b7",
+    "statement_sha256": "75104335cef7eb66024b4a7a38ad7049ce115bc5269df14b5a6ac01a8d751d7c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "0962b7fe9d006f54f39a185b93308344bd3424a7155fe14728f6d187cb4070b7",
+  "statement_sha256": "75104335cef7eb66024b4a7a38ad7049ce115bc5269df14b5a6ac01a8d751d7c",
+  "actual_source_sha256": "0962b7fe9d006f54f39a185b93308344bd3424a7155fe14728f6d187cb4070b7",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`e=(1,0,0)`$ and $`a>1`$. Set $`m_a=4\\pi a^3/3`$, and use the Newtonian kernel $`N(x)=1/(4\\pi|x|)`$, normalized by $`-\\Delta N=\\delta_0`$. Define\n\n```math\n\\gamma_a(x)=-\\frac{|x|^2}{6}-m_a N(x-e)-m_a N(x+e),\n```\n\nwith $`\\gamma_a=-\\infty`$ at the poles. Let $`s_a`$ be the standard least superharmonic majorant on $`\\mathbb R^3`$, with the usual potential-theoretic regularization, and let\n\n```math\nD_a=\\{x:s_a(x)>\\gamma_a(x)\\}.\n```\n\nThis specifies the canonical positive two-source quadrature domain, equivalently the smash sum of the overlapping radius-$`a`$ balls centered at $`e`$ and $`-e`$. Its uniform unit density satisfies\n\n```math\n\\int_{D_a}h(x)\\,dx=m_a\\bigl(h(e)+h(-e)\\bigr)\n```\n\nfor integrable harmonic $`h`$. The obstacle construction, or equivalently the associated superharmonic quadrature inequality, selects the domain; the harmonic identity alone is not substituted for that specification.\n\n**Question.** For every $`a>1`$, does there exist a nonzero polynomial $`P_a\\in\\mathbb R[x_1,x_2,x_3]`$ such that\n\n```math\n\\partial D_a\\subseteq\\{x:P_a(x)=0\\}?\n```\n\nThe boundary is the entire topological boundary. No uniform degree bound or algebraic dependence of $`P_a`$ on $`a`$ is required. A negative answer requires one parameter $`a>1`$ for which no such polynomial exists.\n\nThis is an explicit three-dimensional, equal-positive-mass specialization of the higher-dimensional algebraicity question following Theorem 5.2 in Levine–Peres. It is a source-derived decision question, rather than a quotation of a positive conjecture.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"three dimensional\" \"two source\" \"quadrature domain\" algebraic 2026",
+    "\"three dimensional\" \"two source\" \"quadrature domain\" algebraic (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Neumann ovaloid\" \"three\" algebraic 2026",
+    "\"Neumann ovaloid\" algebraic Lundberg 2026"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Eremenko–Lundberg author manuscript, Theorem 3.1; checked 2026-11-03",
+      "locator": "Theorem 3.1, PDF pp.6–7; compare Karp–Lundberg 2017 §1.2",
+      "primary_body_access_gap": false,
+      "url": "https://www.math.purdue.edu/~eremenko/dvi/NonAlgQD.pdf",
+      "scope_comparison": "The inspected nonalgebraic construction is in R^4 and uses a first derivative at one source. The explicit two-positive-source Neumann ovaloid paper also assumes R^4. Neither supplies a nonalgebraic member or an algebraicity theorem for the stipulated R^3 equal-two-source obstacle family for every a>1. Current focused searches located no complete matching announcement."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The inspected nonalgebraic construction is in R^4 and uses a first derivative at one source. The explicit two-positive-source Neumann ovaloid paper also assumes R^4. Neither supplies a nonalgebraic member or an algebraicity theorem for the stipulated R^3 equal-two-source obstacle family for every a>1. Current focused searches located no complete matching announcement.",
+  "latest_version_check": "Eremenko–Lundberg author manuscript, Theorem 3.1; checked 2026-11-03",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

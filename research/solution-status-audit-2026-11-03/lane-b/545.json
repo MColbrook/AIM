@@ -1,0 +1,70 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "545",
+  "manifest_index": 424,
+  "original_target": {
+    "id": "545",
+    "title": "Does finite blocking of geodesics force a closed manifold to be flat?",
+    "area": "Geometry and topology",
+    "file": "problems/545-does-finite-blocking-of-geodesics-force-a-closed-manifold-to-be-flat.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-2aa10e21a6f6259e",
+    "group": "geometry-topology",
+    "source_sha256": "a6c5877226e300c49e8629ea77ff0397e9c0b8967e97733d20b44773edd58538",
+    "statement_sha256": "26ca5baba9b7bb13f4d40cea446ab13597b9ebe6458933ab94406c8b4c62537a",
+    "state": "unreviewed"
+  },
+  "source_sha256": "a6c5877226e300c49e8629ea77ff0397e9c0b8967e97733d20b44773edd58538",
+  "statement_sha256": "26ca5baba9b7bb13f4d40cea446ab13597b9ebe6458933ab94406c8b4c62537a",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:50:53.271570+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The final source distinguishes arbitrary pairwise finite blockers from uniform/regular blocking. Theorem4.3 adds nonpositive curvature and Theorem4.5 regular finite blocking; these extra conditions cannot be supplied to the target. Translation-surface classifications concern flat cone metrics.",
+  "primary_sources": [
+    {
+      "url": "https://msp.org/gt/2007/11-2/gt-v11-n2-p06-p.pdf",
+      "locator": "Definitions printed pp867–868 and Theorems4.3–4.5 p883",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"finite blocking\" \"flat\" 2026 geodesics",
+    "\"finite blocking\" flat conjecture proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"finite blocking\" \"flat\" solution announcement"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "finite blocking"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "finite blocking"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Burns–Gutkin direct PDF timed out; their uniform-blocking entropy conclusion was read as stated in the final Lafont–Schmidt Theorem4.4."
+  ],
+  "canonical_update_required": false
+}

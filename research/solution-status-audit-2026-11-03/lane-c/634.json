@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "634",
+  "manifest_index": 492,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "634",
+    "title": "Strong unique continuation under a small local form bound",
+    "area": "Partial differential equations and quantum mechanics",
+    "file": "problems/634-strong-unique-continuation-under-a-small-local-form-bound.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f49eb0b764a586f7",
+    "group": "pdes-materials",
+    "source_sha256": "7a740d7b49263746eca4953ba8f4957ca3f4007217eb46f2e222bd2a56caa034",
+    "statement_sha256": "1497ee3b6a9c2c2f3d579d576a9fdf5f67798ac3a853186e8507ba8856ebb3a6",
+    "state": "unreviewed"
+  },
+  "source_sha256": "7a740d7b49263746eca4953ba8f4957ca3f4007217eb46f2e222bd2a56caa034",
+  "statement_sha256": "1497ee3b6a9c2c2f3d579d576a9fdf5f67798ac3a853186e8507ba8856ebb3a6",
+  "actual_source_sha256": "7a740d7b49263746eca4953ba8f4957ca3f4007217eb46f2e222bd2a56caa034",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For every dimension $`n`$, does there exist $`\\varepsilon_n\\in(0,1)`$ such that the following holds? Let $`V\\in L^2_{\\mathrm{loc}}(\\mathbb R^n;\\mathbb R)`$ satisfy, for every $`R>0`$ and some $`c_R\\ge0`$,\n```math\n\\int_{B_R}|V||u|^2\\le\\varepsilon_n\\int_{\\mathbb R^n}|\\nabla u|^2\n+c_R\\int_{\\mathbb R^n}|u|^2\n\\quad(u\\in C_c^\\infty(\\mathbb R^n)).\n```\n\nIf $`\\Psi\\in H^1_{\\mathrm{loc}}(\\mathbb R^n;\\mathbb C)`$ weakly solves $`-\\Delta\\Psi+V\\Psi=0`$ and, at some $`x_0`$,\n```math\n\\int_{B_r(x_0)}|\\Psi|^2=O(r^m)\\quad\\text{for every }m\\ge1,\n```\n\nmust $`\\Psi\\equiv0`$? Here $`B_R=B_R(0)`$; the same $`\\varepsilon_n`$ applies for all $`R`$.\n\nThis real-potential version retains the conjecture's inherited $`L^2_{\\mathrm{loc}}`$ hypothesis. It is known for $`n\\le4`$; the remaining dimensional range is $`n\\ge5`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"unique continuation\" \"small form\" Garrigue 2026",
+    "\"unique continuation\" \"small form\" Garrigue (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1804.07564v7",
+      "primary_body_access_gap": false,
+      "scope_comparison": "Theorem1.1 assumes a bound on |V|^2 by a fractional power of -Delta and H2-local solutions. The following conjecture weakens this to |V| form-bounded by -Delta and H1-local solutions, exactly the target with inherited L2-local real potential. Many-body Lebesgue/Hohenberg–Kohn conclusions do not supply it in high dimensions.",
+      "version_or_date": "v7,29January2019; latest record inspected",
+      "locator": "Theorem1.1 and following conjecture, lines55–79"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem1.1 assumes a bound on |V|^2 by a fractional power of -Delta and H2-local solutions. The following conjecture weakens this to |V| form-bounded by -Delta and H1-local solutions, exactly the target with inherited L2-local real potential. Many-body Lebesgue/Hohenberg–Kohn conclusions do not supply it in high dimensions.",
+  "latest_version_check": "v7,29January2019; latest record inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

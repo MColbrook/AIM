@@ -1,0 +1,47 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "361",
+  "manifest_index": 296,
+  "source_sha256": "32f7ca62f697e102b5fd012ff837fbe50479fa5e17640b895d6f10574ba85c86",
+  "statement_sha256": "9ef6d799c128f93bbb5eb8e20c8e75157da6afdbd78b57890888feb38cb2d8a2",
+  "original_target": {
+    "id": "361",
+    "title": "Can one-dimensional entropy-dissipating systems have two bounded solutions?",
+    "area": "Continuum mechanics; admissibility of shock dynamics",
+    "file": "problems/361-one-dimensional-convex-entropy-nonuniqueness.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: affirmative existence, claimed",
+    "proof": "https://arxiv.org/pdf/2609.09353v1",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_115_140.md",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "32f7ca62f697e102b5fd012ff837fbe50479fa5e17640b895d6f10574ba85c86",
+    "statement_sha256": "9ef6d799c128f93bbb5eb8e20c8e75157da6afdbd78b57890888feb38cb2d8a2",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "unverified-announcement",
+  "ready_for_parent": true,
+  "recommended_status": "Solved",
+  "answer": "Affirmative existence of two bounded entropy-admissible solutions.",
+  "required_status_qualification": "Solved on the basis of an unverified announcement. The full target is claimed in the cited source; the external proof has not been independently verified here.",
+  "scope_comparison": "Theorem1.3 claims infinitely many bounded entropy-admissible weak solutions for one smooth strictly decreasing pressure p and the same Riemann data. The p-system has eigenvalues +-sqrt(-p'), hence strict hyperbolicity, and entropy Hessian diag(-p',1)>0 on the open convex positive-volume state space. §9 uses a finite constitutive configuration in a compact interior state range. Perturbations have zero trace on an expanding wedge, so both solutions equal the constant Riemann states outside |x|<s t and attain the same initial data strongly in L1_loc as wedge width tends to0. Distributional entropy production includes the two wedge boundaries and is nonpositive; jump-only Liu admissibility is not substituted.",
+  "queries": [
+    "one dimensional conservation laws convex entropy 2609.09353 nonuniqueness",
+    "\"convex integration\" \"Strong Trace\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"2609.09353\" correction withdrawal error"
+  ],
+  "primary_sources": [
+    {
+      "version": "v1,8September2026; primary history onlyv1",
+      "locator": "Theorem1.3; §1.4 p-system and entropy; §9 Steps1–3 and wedge gluing",
+      "body_inspected": true,
+      "url": "https://arxiv.org/html/2609.09353v1"
+    }
+  ],
+  "known_gap_check": "Prior local applicability reviews read; no concrete scope or proof gap was recorded. Current primary bodies and bounded correction/version searches did not locate withdrawal. Whole external proofs remain unverified.",
+  "verification": "Applicability review only; no new whole-proof, Lean or certificate replay."
+}

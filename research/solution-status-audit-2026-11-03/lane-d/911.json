@@ -1,0 +1,140 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "911",
+  "manifest_index": 755,
+  "checked_date": "2026-11-03",
+  "source_sha256": "3e4965b561212bc0a16aa2b22a6c0b51eedfdc56d2fe77fed844e32316c8fe9d",
+  "statement_sha256": "8dc6b0d2a915fc28c3ac2969b95433468d95ad48193b10a302dc105ed090180c",
+  "original_target": {
+    "id": "911",
+    "title": "The sharp constant in the critical Dirac norm inequality",
+    "area": "Operators, matrices and computation",
+    "file": "problems/911-the-sharp-constant-in-the-critical-dirac-norm-inequality.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-82fe5d75531fa088",
+    "group": "operators",
+    "source_sha256": "3e4965b561212bc0a16aa2b22a6c0b51eedfdc56d2fe77fed844e32316c8fe9d",
+    "statement_sha256": "8dc6b0d2a915fc28c3ac2969b95433468d95ad48193b10a302dc105ed090180c",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For an integer $`d\\geq3`$, put $`N=2^{\\lfloor d/2\\rfloor}`$, $`p_d=2d/(d+1)`$ and $`q_d=2d/(d-1)`$. Fix Hermitian matrices $`\\gamma_1,\\ldots,\\gamma_d\\in\\mathbb C^{N\\times N}`$ satisfying\n\n```math\n\\gamma_j\\gamma_k+\\gamma_k\\gamma_j=2\\delta_{jk}I_N,\n\\qquad D_d=-i\\sum_{j=1}^{d}\\gamma_j\\partial_j.\n```\n\nDerivatives are distributional, and all norms below use Lebesgue measure on $`\\mathbb R^d`$ and the Euclidean norm on $`\\mathbb C^N`$. Define\n\n```math\n\\mathcal X_d=\\{\\psi\\in L^{q_d}(\\mathbb R^d;\\mathbb C^N):\nD_d\\psi\\in L^{p_d}(\\mathbb R^d;\\mathbb C^N)\\},\n\\qquad\nC_d=\\inf_{0\\ne\\psi\\in\\mathcal X_d}\n\\frac{\\|D_d\\psi\\|_{p_d}}{\\|\\psi\\|_{q_d}}.\n```\n\nDetermine the exact value of $`C_d`$ for each $`d\\geq3`$. Equivalently, find the largest constant for which $`\\|D_d\\psi\\|_{p_d}\\geq C_d\\|\\psi\\|_{q_d}`$ holds for every $`\\psi\\in\\mathcal X_d`$.\n\nThis is the constant question in Frank–Loss [1, equation (8) in the January 2022 preprint; equation (9) in the published article]. Their power-normalized constant is $`S_d^s=C_d^{p_d}`$.",
+  "full_original_page": "# 911. The sharp constant in the critical Dirac norm inequality\n\n**Area:** Operators, matrices and computation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor an integer $`d\\geq3`$, put $`N=2^{\\lfloor d/2\\rfloor}`$, $`p_d=2d/(d+1)`$ and $`q_d=2d/(d-1)`$. Fix Hermitian matrices $`\\gamma_1,\\ldots,\\gamma_d\\in\\mathbb C^{N\\times N}`$ satisfying\n\n```math\n\\gamma_j\\gamma_k+\\gamma_k\\gamma_j=2\\delta_{jk}I_N,\n\\qquad D_d=-i\\sum_{j=1}^{d}\\gamma_j\\partial_j.\n```\n\nDerivatives are distributional, and all norms below use Lebesgue measure on $`\\mathbb R^d`$ and the Euclidean norm on $`\\mathbb C^N`$. Define\n\n```math\n\\mathcal X_d=\\{\\psi\\in L^{q_d}(\\mathbb R^d;\\mathbb C^N):\nD_d\\psi\\in L^{p_d}(\\mathbb R^d;\\mathbb C^N)\\},\n\\qquad\nC_d=\\inf_{0\\ne\\psi\\in\\mathcal X_d}\n\\frac{\\|D_d\\psi\\|_{p_d}}{\\|\\psi\\|_{q_d}}.\n```\n\nDetermine the exact value of $`C_d`$ for each $`d\\geq3`$. Equivalently, find the largest constant for which $`\\|D_d\\psi\\|_{p_d}\\geq C_d\\|\\psi\\|_{q_d}`$ holds for every $`\\psi\\in\\mathcal X_d`$.\n\nThis is the constant question in Frank–Loss [1, equation (8) in the January 2022 preprint; equation (9) in the published article]. Their power-normalized constant is $`S_d^s=C_d^{p_d}`$.\n\n## Application\n\nThis inequality measures how the free Dirac operator controls the size of a spinor at the critical exponents. Sharp constants help distinguish the effects of spinorial structure from scalar Sobolev estimates in relativistic PDE and magnetic zero-mode problems.\n\n## References\n\n1. R. L. Frank and M. Loss, [A sharp criterion for zero modes of the Dirac equation](https://arxiv.org/abs/2201.03610), January 2022 preprint, pp. 6–7, “Relation to Sobolev inequalities”; published in *Journal of the European Mathematical Society* **28** (2026), 305–331, [doi:10.4171/JEMS/1475](https://doi.org/10.4171/JEMS/1475), p. 311.\n2. G. Wang and M. Zhang, [Stability of spinorial Sobolev inequalities on $`\\mathbb S^n`$](https://arxiv.org/abs/2508.09047), latest arXiv version v2, Introduction, equation (1.15), Theorem 1.5 and the following paragraph; published in *Advances in Mathematics* **505** (2026), 111318, [doi:10.1016/j.aim.2026.111318](https://doi.org/10.1016/j.aim.2026.111318).\n3. B. Bieganowski and J. Mederski, [Explicit counterexamples to Frank–Loss optimizer conjectures for critical Dirac and vector Sobolev inequalities](https://arxiv.org/abs/2610.15787), October 2026 preprint, Theorem 1.1, Section 4 and Section 7.\n\n## Status review\n\n\n**Known cases:** The October 2026 counterexamples disprove the proposed optimizers and give smaller explicit quotients, not the exact critical Dirac norm constant. Spinorial Yamabe quotients and magnetic zero-mode thresholds are different variational quantities. The current exact-constant target remains.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe October 2026 counterexamples disprove the proposed optimizers and give smaller explicit quotients, not the exact critical Dirac norm constant. Spinorial Yamabe quotients and magnetic zero-mode thresholds are different variational quantities. The current exact-constant target remains.\n\nAdditional comparison sources: [comparison source 1](https://arxiv.org/abs/2610.15787). The primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe inequality holds with a positive constant, but the exact optimum remains undetermined in the sources checked. The old proposal that the conformal Killing-spinor family supplies the optimum is false: Wang–Zhang [2] establish instability, and Bieganowski–Mederski [3] provide explicit lower-quotient competitors in every dimension. In particular, [3] gives $`C_3\\leq(18\\pi)^{1/3}`$, strictly below the old proposed value $`\\tfrac32|\\mathbb S^3|^{1/3}`$; it explicitly does not determine the exact optimal constants.\n\nThe remaining question concerns the norm quotient displayed above. The spinorial Yamabe quotient, which uses $`\\int\\langle D\\psi,\\psi\\rangle`$ in the denominator, and the sharp magnetic-field threshold for coupled Dirac zero modes are different problems. The recent results on those quantities do not determine $`C_d`$; [3, Section 7] expressly distinguishes them.\n\nCurrent searches included the exact problem and source titles, sharp/optimal spinorial Sobolev constants, counterexamples, 2025–2026 updates and Prove2Me. The October 2026 comparison was checked in its primary body. No complete or announced determination of the displayed constants was located. This is a bounded literature review, not a proof of openness.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-82fe5d75531fa088**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Frank Loss\" \"Dirac\" \"sharp constant\" 2026",
+    "\"Frank Loss\" \"Dirac\" \"sharp constant\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.15787v1",
+      "locator": "Theorem1.1 and immediately following paragraph, lines110–124; Section4",
+      "comparison": "Actual new result gives strict upper bounds below proposed optimizers and expressly does not determine exact optimal constants. MathDB sharp zero-mode claim concerns magnetic-field threshold, a different functional, so it cannot mark this exact norm-quotient constant problem solved.",
+      "inspected": "Actual indicated body passages"
+    }
+  ],
+  "rationale": "Actual new result gives strict upper bounds below proposed optimizers and expressly does not determine exact optimal constants. MathDB sharp zero-mode claim concerns magnetic-field threshold, a different functional, so it cannot mark this exact norm-quotient constant problem solved. No full matching resolution located in bounded current searches.",
+  "limitations": [
+    "Bounded search is not proof of continued openness; this review checks mathematical scope rather than certifying every cited proof."
+  ],
+  "announcement_routing": {
+    "localID": "911",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Dirac",
+          "Frank",
+          "spinorial Sobolev",
+          "critical Dirac"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-15-000020",
+            "title": "Menger's theorem, Hamiltonian cycles, long cycles and pancyclicity",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-15-000020-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-18-000011",
+            "title": "Dirac's theorem: k vertices of a k-connected graph lie on a common cycle",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000011-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-18-000006",
+            "title": "Chordal, split, threshold and cograph structure",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000001",
+            "title": "Mader's theorem and Hadwiger's conjecture for t ≤ 4",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-07-000014",
+            "title": "Dependent finite mixed Nash equilibria in Lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-07-000014-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-07-000009",
+            "title": "Native Lean finite Nash equilibria",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-07-000009-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-03-000001",
+            "title": "Ore's and Dirac's Theorems on Hamiltonian Cycles",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-03-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-31-000010",
+            "title": "MaxWellApexLab/BicausalOT-palomar",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000010-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Dirac",
+          "Frank",
+          "spinorial Sobolev",
+          "critical Dirac"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00008v1",
+            "title": "Finite Nash Equilibria and Dependent Mixed Strategies in Lean",
+            "url": "https://hexagonmath.org/abs/2610.00008v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Dirac",
+        "Frank",
+        "spinorial Sobolev",
+        "critical Dirac"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "The Dirac results in these hits are graph Hamiltonicity/cycle theorems. Other finite game and bicausal transport hits likewise do not address the critical Dirac differential-operator inequality or its sharp constant.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.708Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

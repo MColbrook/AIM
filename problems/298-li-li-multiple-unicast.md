@@ -2,9 +2,9 @@
 
 **Area:** Applied geometry, control and information
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -37,7 +37,16 @@ The question determines whether routers can increase sustained data-transfer rat
 5. Bernhard Haeupler, David Wajc and Goran Zuzic, *Network Coding Gaps for Completion Times of Multiple Unicasts*, FOCS 2020; author manuscript, Theorems 1.2–1.3 and Appendix A. [Full text](https://www.cs.cmu.edu/~dwajc/pdfs/haeupler19.pdf).
 6. Cheuk Ting Li, *Undecidability of Network Coding, Conditional Information Inequalities, and Conditional Independence Implication*, IEEE Transactions on Information Theory 69(6), 2023, 3493–3510, DOI [10.1109/TIT.2023.3247570](https://doi.org/10.1109/TIT.2023.3247570). Scope checked in [arXiv:2205.11461v3](https://arxiv.org/pdf/2205.11461v3), §IV, Theorems 22–23.
 
+7. Mark Braverman and Zhongtian He, *The Multiple Unicast Conjecture is False*, [arXiv:2610.10108v1](https://arxiv.org/html/2610.10108v1), 7 October 2026, §4.
+
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Section 4 claims a causal code on an undirected graph with 157 independent unicast sessions and shared edge capacities: common coding rate at least 1, whereas fractional routing has common rate at most 147/157. This is the throughput model in the original target; the separate nondeterministic construction in §3 is not the basis of this status.
+
+[Claimed solution](https://arxiv.org/pdf/2610.10108v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/298.json). §4, deterministic causal certificate and rate comparison. The full external proof has not been independently verified here; no local Lean kernel replay or human peer review is asserted. This label records the complete announcement under the requested status policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative
 

@@ -1,0 +1,70 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "481",
+  "manifest_index": 380,
+  "original_target": {
+    "id": "481",
+    "title": "A sharp entropy–dissipation inequality for planar fractional-pressure diffusion",
+    "area": "Nonlocal diffusion and functional inequalities",
+    "file": "problems/481-a-sharp-entropydissipation-inequality-for-planar-fractional-pressure-diffusion.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-67078dd7e6e16552",
+    "group": "diffusion-materials",
+    "source_sha256": "e6d491ce623bcbcacd88636d11aa466becd0980b83cf3f79bec9da334fb7c309",
+    "statement_sha256": "e5fae4db5c48dc0d0099c55af11f3e73e53ebdc19eb6a083d52eb4c1e2804ec2",
+    "state": "unreviewed"
+  },
+  "source_sha256": "e6d491ce623bcbcacd88636d11aa466becd0980b83cf3f79bec9da334fb7c309",
+  "statement_sha256": "e5fae4db5c48dc0d0099c55af11f3e73e53ebdc19eb6a083d52eb4c1e2804ec2",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:21:23.050246+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual1407.4392 Section2.1 equations2.12/2.14 and following paragraph pose the higher-dimensional entropy inequality. The proved inequality is one-dimensional; d2,s1/2,lambda1 specialization matches local normalization but is not established by that theorem. No full-scope newer candidate found.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1407.4392",
+      "locator": "Section2.1 equations2.12 and2.14 and paragraph following",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"fractional pressure\" \"entropy dissipation\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "fractional pressure",
+        "entropy dissipation"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "fractional pressure",
+        "entropy dissipation"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Published DOI10.1016/j.jde.2014.10.003 body inaccessible; comparison uses actual author preprint, not final publication."
+  ],
+  "canonical_update_required": false
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "082",
+  "manifest_index": 61,
+  "original_target": {
+    "id": "082",
+    "title": "Smooth unforced inviscid Boussinesq evolution on the whole plane",
+    "area": "Geophysical fluid dynamics",
+    "file": "problems/082-inviscid-boussinesq-plane.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "pdes-materials",
+    "source_sha256": "6e34b505c13c608a16a99bfcc0d82fe69e6158a3ef0ec247581e5795de2baa6e",
+    "statement_sha256": "26cf689aaf7aad994421deb0c80a137bcaf1458c226e1882824eba9ea83dea8c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6e34b505c13c608a16a99bfcc0d82fe69e6158a3ef0ec247581e5795de2baa6e",
+  "statement_sha256": "26cf689aaf7aad994421deb0c80a137bcaf1458c226e1882824eba9ea83dea8c",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:46:55.206695+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The September Alpoge–Buckmaster announcement as described by Tao has additional smooth external forcing. Boundary constructions use a solid boundary and low-regularity/sector profiles do not meet whole-plane real Schwartz smooth-data hypotheses. No matching unforced plane solution or counterexample located.",
+  "primary_sources": [
+    {
+      "url": "https://terrytao.wordpress.com/2026/09/07/finite-time-blowup-with-smooth-forcing-term-for-the-incompressible-porous-medium-boussinesq-and-incompressible-euler-equations/",
+      "locator": "Author commentary, smooth forcing and boundary distinctions.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2604.01868",
+      "locator": "Primary abstract; numerical investigation and singular profiles.",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "Boussinesq"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Boussinesq"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; exact target and excluding hypotheses compared above. Loose name/word hits may be unrelated."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Boussinesq"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; exact target and excluding hypotheses compared above. Loose name/word hits may be unrelated."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches with arXiv, Zenodo, HAL and GitHub; shared complete Palomar/Hexagon and OpenAI metadata screened, plus requested Colbrook author listings.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

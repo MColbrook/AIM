@@ -2,9 +2,9 @@
 
 **Area:** Semilinear elliptic PDEs and reaction equilibria
 
-**Status:** 🔵 OPEN
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-22
+**Last checked:** 2026-11-03
 ## Problem statement
 
 For each $`d\in\{6,7,8,9\}`$, does there exist $`C_d<\infty`$ such that, for every $`f\in C^1(\mathbb R)`$ and every $`u\in C^2(B_1)`$ satisfying
@@ -30,7 +30,16 @@ Stable stationary reaction-diffusion patterns can have both production and deple
 1. X. Cabré, [Stable solutions to reaction-diffusion elliptic problems](https://arxiv.org/abs/2603.03161), lecture survey (2026), §3.5.4.
 2. F. Peng, Y. R.-Y. Zhang and Y. Zhou, [Interior Hölder regularity for stable solutions to semilinear elliptic equations up to dimension 5](https://arxiv.org/abs/2204.06345), preprint (2022), main interior estimate and discussion of dimensions 6–9.
 
+3. L.-H. Huang, Y. Zhou and W. Zou, [*Interior Regularity for Stable Solutions of Semilinear Elliptic Equations with Sign-Changing Nonlinearities*](https://arxiv.org/abs/2610.21641), arXiv:2610.21641v1 (15 October 2026), Theorem 1.2, equation (1.18). [Primary manuscript](https://arxiv.org/pdf/2610.21641v1).
+
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Huang–Zhou–Zou’s Theorem 1.2, equation (1.18), asserts a Hölder seminorm bound depending only on dimension and the L² norm of the gradient, for stable classical solutions with arbitrary locally Lipschitz sign-changing reaction laws in every dimension from two through nine. Averaging the Hölder difference estimate over a second point in the half-ball and applying Cauchy–Schwarz bounds the supremum by the L² norm of the function plus that gradient norm. This gives exactly the displayed W¹,² bound in dimensions 6–9, with a constant independent of the reaction law. The proof uses the seminorm estimate (1.18); the different full Hölder norm estimate (1.19), whose right side contains the negative part of the reaction, is not needed.
+
+[Claimed solution](https://arxiv.org/pdf/2610.21641v1) · [Dated statement comparison and elementary mean argument](../research/solution-status-audit-2026-11-03/lane-b/439.json). The theorem hypotheses and current announcement were checked. The external proof has not been independently verified end-to-end here; no Lean verification or human peer review is asserted.
+
+### Earlier status record
+
 
 **Literature check:** Open in cited literature; no later resolution located.
 

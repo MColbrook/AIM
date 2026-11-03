@@ -1,0 +1,90 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "537",
+  "manifest_index": 418,
+  "original_target": {
+    "id": "537",
+    "title": "Does zero simplicial volume force zero Euler characteristic?",
+    "area": "Geometry and topology",
+    "file": "problems/537-does-zero-simplicial-volume-force-zero-euler-characteristic.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ebc6155a43d61e57",
+    "group": "geometry-topology",
+    "source_sha256": "55f855d378e79c2ff4c15252e2025407a6ed9931a655a53274aa03745ae1c94c",
+    "statement_sha256": "b346dc064528097a8e4ac60249f96b3727c870da7543881171581086d52017d1",
+    "state": "unreviewed"
+  },
+  "source_sha256": "55f855d378e79c2ff4c15252e2025407a6ed9931a655a53274aa03745ae1c94c",
+  "statement_sha256": "b346dc064528097a8e4ac60249f96b3727c870da7543881171581086d52017d1",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:46:33.052524+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Theorem 1.5 of 2610.32342 requires immersed straightening and explicitly hopes to extend by proving this for all aspherical manifolds. The other new theorem requires nonpositive sectional curvature and dimension four. Neither proves the vanishing implication for arbitrary closed aspherical topological manifolds.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.32342v1",
+      "locator": "Theorem 1.5 and following paragraph; v1, 23 October 2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2506.09524v4",
+      "locator": "Introduction and main theorem; official v4, 17 July 2026",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"zero simplicial volume\" \"Euler characteristic\" 2026",
+    "\"simplicial volume\" \"Euler characteristic\" proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"zero simplicial volume\" \"Euler characteristic\" solution announcement"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "simplicial volume",
+        "Euler characteristic"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "simplicial volume",
+        "Euler characteristic"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00690v1",
+          "title": "Isometric embeddings of parallelizable and stably parallelizable Riemannian manifolds"
+        },
+        {
+          "id": "hexagon:2610.00445v2",
+          "title": "Vanishing of Higher Magnitude Homology for Finite Prefix Models"
+        },
+        {
+          "id": "hexagon:2610.00330v1",
+          "title": "A  construction of the sphere-packing magic functions in dimensions 8 and 24"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Retrieved 2506.09524v4 body bears an internal August date; historical byte parity is not asserted."
+  ],
+  "canonical_update_required": false
+}

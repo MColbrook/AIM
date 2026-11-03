@@ -1,0 +1,75 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "503",
+  "manifest_index": 396,
+  "original_target": {
+    "id": "503",
+    "title": "The plane fixed-point problem for nonseparating continua",
+    "area": "Geometry and topology",
+    "file": "problems/503-the-plane-fixed-point-problem-for-nonseparating-continua.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-9581a3be0581aa60",
+    "group": "geometry-topology",
+    "source_sha256": "003257b877dd4aa2dc580b8a8a499e1ac1c7fb6fe6569a13b023d38a2f9b8d8b",
+    "statement_sha256": "291e8531bd662dfaff634e17a706da05c13b5507b745bc4f44e0b9e3342697a1",
+    "state": "unreviewed"
+  },
+  "source_sha256": "003257b877dd4aa2dc580b8a8a499e1ac1c7fb6fe6569a13b023d38a2f9b8d8b",
+  "statement_sha256": "291e8531bd662dfaff634e17a706da05c13b5507b745bc4f44e0b9e3342697a1",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:35:51.623424+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2407.09677 introduction retains fixed points for every continuous self-map of a nonseparating planar continuum; its Theorem1.1 is accessible embedding. Nonplanar tree-like counterexamples and locally connected/homeomorphic/extendable subclasses differ. Hagopian's primary opening discussion confirms distinction.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2407.09677",
+      "locator": "Introduction lines61–67 and Theorem1.1",
+      "body_inspected": true
+    },
+    {
+      "url": "https://bpb-us-e2.wpmucdn.com/sites.mst.edu/dist/1/140/files/2023/05/FPPHago-2.pdf",
+      "locator": "Opening question and partial-result discussion",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"nonseparating plane\" \"fixed point\" resolution (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "nonseparating",
+        "Nadler"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "nonseparating",
+        "Nadler"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Published Nadler–Quinn institutional PDF418/404; actual arXiv theorem read without publication parity."
+  ],
+  "canonical_update_required": false
+}

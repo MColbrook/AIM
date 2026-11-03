@@ -1,0 +1,127 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "991",
+  "manifest_index": 835,
+  "checked_date": "2026-11-03",
+  "source_sha256": "9069c35f8de4d72961e5af63ff4f153b744ddd68d3b55bf0c2eb5888c78d4055",
+  "statement_sha256": "2acb71f4c3e37ad36240aac97312c971896940f71b0d799d02493ebb79253ba8",
+  "original_target": {
+    "id": "991",
+    "title": "Does every weakly mixing system have a strictly over-recurrent set?",
+    "area": "Ergodic theory and recurrence",
+    "file": "problems/991-does-every-weakly-mixing-system-have-a-strictly-over-recurrent-set.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e1f4d6e7e11d01dd",
+    "group": "probability-statistics",
+    "source_sha256": "9069c35f8de4d72961e5af63ff4f153b744ddd68d3b55bf0c2eb5888c78d4055",
+    "statement_sha256": "2acb71f4c3e37ad36240aac97312c971896940f71b0d799d02493ebb79253ba8",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`(X,\\mathcal B,\\mu)`$ be a standard nonatomic probability space, and let $`T:X\\to X`$ be invertible and measure preserving, modulo null sets. Assume $`T`$ is weakly mixing: for all measurable $`E,F`$,\n```math\n\\lim_{N\\to\\infty}\\frac1N\\sum_{n=0}^{N-1}\n\\left|\\mu(E\\cap T^{-n}F)-\\mu(E)\\mu(F)\\right|=0.\n```\n\n\nMust there exist a measurable set $`A`$ with $`0<\\mu(A)<1`$ such that\n```math\n\\mu(A\\cap T^{-n}A)>\\mu(A)^2\n\\qquad\\text{for every integer }n\\ge1?\n```\n\n\nThe same set must work at every positive lag. This is the strict form posed in Adams--Bergelson--Sun, Question 1.6. Invertibility makes the corresponding negative-lag inequalities equivalent; the inequality at zero is automatic. The nonatomic setting excludes the trivial one-point system.",
+  "full_original_page": "# 991. Does every weakly mixing system have a strictly over-recurrent set?\n\n**Area:** Ergodic theory and recurrence\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`(X,\\mathcal B,\\mu)`$ be a standard nonatomic probability space, and let $`T:X\\to X`$ be invertible and measure preserving, modulo null sets. Assume $`T`$ is weakly mixing: for all measurable $`E,F`$,\n```math\n\\lim_{N\\to\\infty}\\frac1N\\sum_{n=0}^{N-1}\n\\left|\\mu(E\\cap T^{-n}F)-\\mu(E)\\mu(F)\\right|=0.\n```\n\n\nMust there exist a measurable set $`A`$ with $`0<\\mu(A)<1`$ such that\n```math\n\\mu(A\\cap T^{-n}A)>\\mu(A)^2\n\\qquad\\text{for every integer }n\\ge1?\n```\n\n\nThe same set must work at every positive lag. This is the strict form posed in Adams--Bergelson--Sun, Question 1.6. Invertibility makes the corresponding negative-lag inequalities equivalent; the inequality at zero is automatic. The nonatomic setting excludes the trivial one-point system.\n\n## Application\n\nWeak mixing makes correlations approach independence after discarding a set of lags of density zero. The question asks whether some event can nevertheless have strictly positive excess self-correlation at every lag.\n\n## What is known\n\nAdams proves this for strongly mixing invertible transformations, even with arbitrarily small positive measure. Adams--Bergelson--Sun prove strict over-independence on a density-one set of lags for every weakly mixing system, and prove related Cesaro inequalities. Neither conclusion supplies the required inequality at every individual lag. Boshernitzan--Frantzikinakis--Wierdl pose the related non-strict over-recurrence question.\n\n## References\n\n1. T. Adams, V. Bergelson and W. Sun, [*Under- and over-independence in measure preserving systems*](https://arxiv.org/pdf/1807.02966), Question 1.6, Theorems 1.4 and 1.8. *Israel Journal of Mathematics* **235** (2020), 349--384. [DOI](https://doi.org/10.1007/s11856-020-1960-9).\n2. T. M. Adams, [*Over Recurrence for Mixing Transformations*](https://arxiv.org/pdf/1701.04345), v2 (2019), Section 1 and Theorem 3.1; public preprint.\n3. M. Boshernitzan, N. Frantzikinakis and M. Wierdl, [*Under-recurrence in the Khintchine recurrence theorem*](https://arxiv.org/pdf/1603.07720), definitions in Section 2 and Section 2.4, Problem 1. *Israel Journal of Mathematics* **222** (2017), 815--840. [DOI](https://doi.org/10.1007/s11856-017-1606-8).\n\n## Status review\n\n\n**Known cases:** Strict over-recurrence at every lag on the given arbitrary weakly mixing system is required. Strong mixing, one constructed weakly mixing example, multiplicative-subsequence nonrecurrence and density-one conclusions do not settle it.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nStrict over-recurrence at every lag on the given arbitrary weakly mixing system is required. Strong mixing, one constructed weakly mixing example, multiplicative-subsequence nonrecurrence and density-one conclusions do not settle it.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nPrimary question, latest versions and partial theorem hypotheses were checked through 27 October 2026. No matching full or announced solution was found. No matching target was found in the all-status AIM/OpenAI comparison or existing further-problem list. This is a bounded literature review, not a proof of openness. Strong mixing, density-one inequalities, Cesaro inequalities, and existence on a changed extension do not settle this all-lag question on the given weakly mixing system.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-e1f4d6e7e11d01dd**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "over-recurrent",
+    "over-independence",
+    "Adams"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"weakly mixing\" \"strictly over\" recurrent 2026",
+      "engines": "web general"
+    },
+    {
+      "query": "\"weakly mixing\" \"strictly over\" recurrent",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ],
+      "engines": "web focused"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1807.02966",
+      "locator": "1807.02966 Theorem1.4, Remark1.5, Question1.6 PDFp3; Theorem1.10p5"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1701.04345v2",
+      "locator": "1807.02966 Theorem1.4, Remark1.5, Question1.6 PDFp3; Theorem1.10p5"
+    }
+  ],
+  "scope_comparison": "Theorem1.4 gives strict over-independence along a density-one set. Theorem1.10 requires mixing, and the Adams weak-mixing example is not every given weakly mixing transformation. Question1.6 explicitly preserves the all-lags target. These are partial results.",
+  "recommendation": "Retain partial status; no matching complete resolution located in this bounded current search.",
+  "limitations": "Bounded literature and announcement search, not proof of openness; snapshot routing checks are metadata-only unless a specific primary claim is discussed.",
+  "announcement_routing": {
+    "localID": "991",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "over-recurrent",
+          "over-independence",
+          "Adams"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "over-recurrent",
+          "over-independence",
+          "Adams"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00497v1",
+            "title": "Maximal sublattices of finite semidistributive lattices: the complement need not be an interval",
+            "url": "https://hexagonmath.org/abs/2610.00497v1"
+          },
+          {
+            "id": "hexagon:2609.00111v1",
+            "title": "Torsion in $K_1$ and $p$-adic vanishing cycles",
+            "url": "https://hexagonmath.org/abs/2609.00111v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "over-recurrent",
+        "over-independence",
+        "Adams"
+      ],
+      "hits": [
+        {
+          "entry": "309",
+          "title": "The Kervaire invariant problem at the prime three",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-Kervaire-Invariant-Problem-at-the-Prime-Three-September-24-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Finite semidistributive lattices, p-adic K1 and Kervaire invariants do not give strictly over-recurrent measurable sets for every weakly mixing system.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.751Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

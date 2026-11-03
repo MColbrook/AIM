@@ -1,0 +1,227 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "856",
+  "manifest_index": 700,
+  "checked_date": "2026-11-03",
+  "source_sha256": "7227f56b087c7ae582a6cec74ee74133f0bc97ff540da1aca7704a7f624a1263",
+  "statement_sha256": "93bbd62050b33f460d6759e9a301f993f1cc9823e8cd6efd386656aa23186579",
+  "original_target": {
+    "id": "856",
+    "title": "Can every interior Neumann–Steklov eigenvalue pair be realized by a planar domain?",
+    "area": "Spectral geometry and shape optimization",
+    "file": "problems/856-can-every-interior-neumannsteklov-eigenvalue-pair-be-realized-by-a-planar-domain.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e460bb55f648870f",
+    "group": "geometry-topology",
+    "source_sha256": "7227f56b087c7ae582a6cec74ee74133f0bc97ff540da1aca7704a7f624a1263",
+    "statement_sha256": "93bbd62050b33f460d6759e9a301f993f1cc9823e8cd6efd386656aa23186579",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`D\\subset\\mathbb R^2`$ be the unit disk. For a nonempty bounded connected open set $`\\Omega\\subset\\mathbb R^2`$ with Lipschitz boundary, write $`|\\Omega|`$ for its area and $`P(\\Omega)`$ for its total boundary length, including boundaries of any holes. Let $`\\mu_1(\\Omega)`$ and $`\\sigma_1(\\Omega)`$ be the first positive eigenvalues of\n```math\n-\\Delta u=\\mu u,\\quad \\partial_\\nu u=0,\n\\qquad\n\\Delta v=0,\\quad \\partial_\\nu v=\\sigma v,\n```\n\nrespectively. Both spectra are counted with multiplicity from their zero eigenvalue at index $`0`$.\n\nProve or disprove that for every pair\n```math\n0<x<8\\pi,\\qquad 0<y<\\pi\\mu_1(D)\n```\n\nthere exists such a domain $`\\Omega`$ satisfying\n```math\nP(\\Omega)\\sigma_1(\\Omega)=x,\\qquad\n|\\Omega|\\mu_1(\\Omega)=y.\n```\n\nThere is no convexity or simple connectivity restriction. The question concerns exact simultaneous attainment.",
+  "full_original_page": "# 856. Can every interior Neumann–Steklov eigenvalue pair be realized by a planar domain?\n\n**Area:** Spectral geometry and shape optimization\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`D\\subset\\mathbb R^2`$ be the unit disk. For a nonempty bounded connected open set $`\\Omega\\subset\\mathbb R^2`$ with Lipschitz boundary, write $`|\\Omega|`$ for its area and $`P(\\Omega)`$ for its total boundary length, including boundaries of any holes. Let $`\\mu_1(\\Omega)`$ and $`\\sigma_1(\\Omega)`$ be the first positive eigenvalues of\n```math\n-\\Delta u=\\mu u,\\quad \\partial_\\nu u=0,\n\\qquad\n\\Delta v=0,\\quad \\partial_\\nu v=\\sigma v,\n```\n\nrespectively. Both spectra are counted with multiplicity from their zero eigenvalue at index $`0`$.\n\nProve or disprove that for every pair\n```math\n0<x<8\\pi,\\qquad 0<y<\\pi\\mu_1(D)\n```\n\nthere exists such a domain $`\\Omega`$ satisfying\n```math\nP(\\Omega)\\sigma_1(\\Omega)=x,\\qquad\n|\\Omega|\\mu_1(\\Omega)=y.\n```\n\nThere is no convexity or simple connectivity restriction. The question concerns exact simultaneous attainment.\n\n## Application\n\nThese two scale invariant quantities describe the first bulk Neumann mode and the first Steklov boundary mode. Determining their joint range would show how independently these normalized frequencies can be prescribed by changing a planar shape and its topology.\n\n## Known results and scope\n\nHenrot and Michetti [1, Section 5.1, Theorem 5.1] prove that the **closure** of the attainable diagram is the full rectangle\n```math\n[0,8\\pi]\\times[0,\\pi\\mu_1(D)].\n```\n\nTheir constructions approximate pairs; they do not establish exact realization of every interior pair.\n\nConjecture 1 in the published paper [1, p. 1436] asks for the exact diagram when disconnected Lipschitz open sets are also allowed:\n```math\n(0,8\\pi)\\times(0,\\pi\\mu_1(D))\n\\;\\cup\\;\\{(0,0)\\}\n\\;\\cup\\;\\{(2\\pi,\\pi\\mu_1(D))\\}.\n```\n\nDisconnected sets give the origin. The disk is the only shape attaining the top Neumann boundary; the Steklov upper boundary is excluded by a strict inequality. Thus the remaining question is precisely the positive interior realization problem above.\n\nThe original July 2021 version already asks for interior attainment, but its displayed diagram incorrectly includes the two zero axes. The revised and published versions correct those axes. We use the corrected formulation. The author's 2022 thesis retains this question as Conjecture 3.1 [2, p. 80].\n\nThe more recent results of Acampora, Amato and Cristoforoni [3, Theorems 1.3–1.4] concern the ratio of eigenvalues on collapsing convex domains and associated one dimensional profiles. They do not settle joint attainment on arbitrary planar Lipschitz domains.\n\n## References\n\n1. A. Henrot and M. Michetti, [*A comparison between Neumann and Steklov eigenvalues*](https://ems.press/content/serial-article-files/33905?nt=1), *Journal of Spectral Theory* **12** (2022), 1405–1442, [DOI 10.4171/JST/429](https://doi.org/10.4171/JST/429), Section 5.1, Theorem 5.1 and Conjecture 1. Original source: [arXiv:2107.10075v1](https://arxiv.org/abs/2107.10075v1), submitted 21 July 2021; [revised author manuscript](https://cvgmt.sns.it/media/doc/paper/5203/HM_CompNeummStekSub.pdf), 3 March 2022.\n2. M. Michetti, [*Steklov and Neumann eigenvalues: inequalities, asymptotic and mixed problems*](https://docnum.univ-lorraine.fr/public/DDOC_T_2022_0109_MICHETTI.pdf), doctoral thesis, Université de Lorraine, defended 13 September 2022, Section 3.5.1, Conjecture 3.1, p. 80.\n3. P. Acampora, V. Amato and E. Cristoforoni, [*Estimates on the Neumann and Steklov principal eigenvalues of collapsing domains*](https://arxiv.org/pdf/2307.12889v2), *Communications in Contemporary Mathematics* **28** (2026), 2550027, [DOI 10.1142/S0219199725500270](https://doi.org/10.1142/S0219199725500270). The version checked is arXiv:2307.12889v2, revised 3 March 2025.\n\n## Status review\n\n\n**Known cases:** The known closure of the joint attainable diagram does not imply every interior point is attained exactly. Collapsing convex-domain ratio estimates and one-dimensional profile bounds have different hypotheses and conclusions.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe known closure of the joint attainable diagram does not imply every interior point is attained exactly. Collapsing convex-domain ratio estimates and one-dimensional profile bounds have different hypotheses and conclusions.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nBounded searches through 24 October 2026 found no complete proof, counterexample or announced resolution of exact interior joint attainment. The closure theorem and convex thin-domain ratio estimates have different conclusions. Current AIM/OpenAI index entries and admitted FURTHER statements were checked for equivalent targets; no match was found. This is a literature and duplicate check, not a proof that no solution exists.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-e460bb55f648870f**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"Neumann\" \"Steklov\" \"attainable\" \"diagram\" 2026 solution",
+    "\"Neumann\" \"Steklov\" \"diagram\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:hexagonmath.org OR site:palomar-registry.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2107.10075",
+      "locator": "§5.1, Theorem5.1 and Conjecture1",
+      "inspection": "Exact attainment of every positive interior pair on one connected Lipschitz planar domain is stronger than closure of attainable diagram. Ratio bounds for convex collapsing domains cannot establish exact joint prescription."
+    }
+  ],
+  "scope_comparison": "Exact attainment of every positive interior pair on one connected Lipschitz planar domain is stronger than closure of attainable diagram. Ratio bounds for convex collapsing domains cannot establish exact joint prescription.",
+  "rationale": "The stated full target has no matching complete result in the recorded bounded searches. Inspected primary bodies retain the stated conjecture or give restricted progress; recommended status stays Partially resolved. This does not certify openness or independently verify complete proofs.",
+  "source_gaps": [],
+  "announcement_routing": {
+    "localID": "856",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Neumann",
+          "Steklov"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-27-000029",
+            "title": "Strictly Convex Steklov-Isospectral Plane Domains",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-27-000029-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-18-000004",
+            "title": "Tamper-proofing with self-modifying code: threat model, security and necessity of the assumptions",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000004-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-13-000006",
+            "title": "Erdős 1105: anti-Ramsey numbers for cycles and paths",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-13-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-09-000007",
+            "title": "Strict Neumann Polya inequality on simply connected planar domains",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-09-000007-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-01-000004",
+            "title": "minimax-theorem-lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-01-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-01-000013",
+            "title": "Grushko--Neumann rank additivity for free products",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-01-000013-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-31-000019",
+            "title": "Marshall Hall's theorem through finite cores",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000019-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-01-000002",
+            "title": "lean-operator-theory",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-01-000002-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-31-000011",
+            "title": "MaxWellApexLab/BicausalOT-palomar",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000011-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-31-000010",
+            "title": "MaxWellApexLab/BicausalOT-palomar",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000010-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-31-000009",
+            "title": "MaxWellApexLab/BicausalOT-palomar",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000009-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-31-000007",
+            "title": "MaxWellApexLab/BicausalOT-palomar",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000007-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-23-000006",
+            "title": "ehrlich-b/euclidean-jordan",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-23-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-23-000005",
+            "title": "ehrlich-b/euclidean-jordan",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-23-000005-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Neumann",
+          "Steklov"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00555v1",
+            "title": "The operator Hilbert space $\\mathrm{OH}$ embeds completely isometrically into a noncommutative $\\mathrm{L}^1$-space",
+            "url": "https://hexagonmath.org/abs/2610.00555v1"
+          },
+          {
+            "id": "hexagon:2610.00142v1",
+            "title": "Noncommutative Buzano-Dragomir Inequality and Applications",
+            "url": "https://hexagonmath.org/abs/2610.00142v1"
+          },
+          {
+            "id": "hexagon:2610.00134v2",
+            "title": "Poisson boundaries of type III factors and the relative bicentralizer conjecture",
+            "url": "https://hexagonmath.org/abs/2610.00134v2"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Neumann",
+        "Steklov"
+      ],
+      "hits": [
+        {
+          "entry": "286",
+          "title": "Arithmetic rigidity of lattice von Neumann algebras",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Arithmeticity-of-twisted-finite-correspondences-for-lattices-over-local-fields-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-arithmetic-category-and-stable-recovery-of-lattice-factors-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "289",
+          "title": "The strong Kadison--Kastler conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Universal-strong-Kadison-Kastler-stability-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Near-Inclusions-of-von-Neumann-Algebras-Without-Small-Spatial-Embeddings-October-5-2026/near-inclusions.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Close-Separable-Cstar-Algebras-Without-Spatial-Conjugacy-October-5-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "290",
+          "title": "Connes' bicentralizer conjecture and relative bicentralizers",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Expected-amenable-subalgebras-preserving-core-commutants-September-23-2026/Expected-amenable-subalgebras-preserving-core-commutants-September-23-2026.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Bounded-recovery-for-modular-spectral-averages-September-23-2026/Bounded-recovery-for-modular-spectral-averages-September-23-2026.pdf"
+          ]
+        },
+        {
+          "entry": "295",
+          "title": "The Kadison--Ringrose cohomology conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Vanishing-of-higher-bounded-Hochschild-cohomology-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "298",
+          "title": "A counterexample to Voiculescu’s free-entropy equality conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-finite-entropy-separation-of-microstates-and-nonmicrostates-free-entropy-September-25-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "300",
+          "title": "The Popa--Vaes quadratic strong-operator paving conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Approximation-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026/Approximation-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Quadratic-Strong-Operator-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026/Quadratic-Strong-Operator-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026.pdf"
+          ]
+        },
+        {
+          "entry": "369",
+          "title": "The hot spots conjecture for simply connected planar domains",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains-September-24-2026/main.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target."
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "680",
+  "manifest_index": 524,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "680",
+    "title": "Maximal arclength of polynomial lemniscates in every degree",
+    "area": "Complex analysis and potential theory",
+    "file": "problems/680-maximal-arclength-of-polynomial-lemniscates-in-every-degree.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-19b859adfab2934a",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "69e0c9f59b87a6307ae0c1ed7ac4ecc1430c14e5c34ea41ba514b6875fc1892f",
+    "statement_sha256": "4bb8ff0b4579a5b22630f037f08e1ef01f272fadb5ba243986b6ae7f9c59347f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "69e0c9f59b87a6307ae0c1ed7ac4ecc1430c14e5c34ea41ba514b6875fc1892f",
+  "statement_sha256": "4bb8ff0b4579a5b22630f037f08e1ef01f272fadb5ba243986b6ae7f9c59347f",
+  "actual_source_sha256": "69e0c9f59b87a6307ae0c1ed7ac4ecc1430c14e5c34ea41ba514b6875fc1892f",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\ge1`$ be an integer and let\n```math\np(z)=z^n+a_{n-1}z^{n-1}+\\cdots+a_0,\\qquad a_j\\in\\mathbb C,\n```\n\nbe any monic polynomial. Define its unit lemniscate and its Euclidean arclength by\n```math\nL(p)=\\{z\\in\\mathbb C:|p(z)|=1\\},\\qquad \\ell(L(p))=\\mathcal H^1(L(p)).\n```\n\nIs it always true that\n```math\n\\ell(L(p))\\le \\ell(L(z^n-1))?\n```\n\nHere $`\\mathcal H^1`$ is one-dimensional Hausdorff measure: all components of the geometric level set are counted, without parametrization multiplicity. No connectedness, root-location bound, additional coefficient normalization or regular-value assumption is imposed. The question asks for the inequality in every positive degree; it does not add a classification of equality cases.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Erdos Herzog Piranian\" \"all degrees\" proof 2026",
+    "\"Erdos Herzog Piranian\" \"all degrees\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Theorem1.1(iv), Remark1.3",
+      "scope_comparison": "The actual theorem requires sufficiently large n, with no optimized explicit threshold. The local target includes every degree. Current experimental/forum claims cover finite selected degrees, not all remaining degrees. Minimal-area lemniscate results also answer a different question. No all-degree complete claim was identified.",
+      "version_or_date": "arXiv:2512.12455v2, 22 December 2025; latest history checked",
+      "url": "https://arxiv.org/html/2512.12455v2",
+      "primary_body_access_gap": true
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual theorem requires sufficiently large n, with no optimized explicit threshold. The local target includes every degree. Current experimental/forum claims cover finite selected degrees, not all remaining degrees. Minimal-area lemniscate results also answer a different question. No all-degree complete claim was identified.",
+  "latest_version_check": "arXiv:2512.12455v2, 22 December 2025; latest history checked",
+  "gap_retraction_check": "The local page records an earlier computational certification correction. Main repository read, but EHP114 README raw endpoint cache-missed and find incomplete on root README returned no match; current exact correction body was not verified. No reliance on that claim as a proof.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

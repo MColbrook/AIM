@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "630",
+  "manifest_index": 489,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "630",
+    "title": "Must a closed nonconstant CPE metric be Einstein?",
+    "area": "Geometry and topology",
+    "file": "problems/630-must-a-closed-nonconstant-cpe-metric-be-einstein.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-5463a2fc1e2b0f58",
+    "group": "geometry-topology",
+    "source_sha256": "1d83ee698c623b01b7d0d3d1c266df1004d402b7d927a5239c9e81c74e7540ea",
+    "statement_sha256": "202412228d65b0b0189834fa7d7c7e2e1da8c8a952111461fc8c4c33be46cbf4",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1d83ee698c623b01b7d0d3d1c266df1004d402b7d927a5239c9e81c74e7540ea",
+  "statement_sha256": "202412228d65b0b0189834fa7d7c7e2e1da8c8a952111461fc8c4c33be46cbf4",
+  "actual_source_sha256": "1d83ee698c623b01b7d0d3d1c266df1004d402b7d927a5239c9e81c74e7540ea",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`(M^n,g)`$ be a closed connected smooth Riemannian manifold of dimension $`n\\ge3`$, with volume $`1`$ and constant scalar curvature $`s`$. Suppose there exists a **nonconstant** real smooth function $`f`$ satisfying the critical point equation\n```math\n\\mathrm{Hess}_g f-(\\Delta_g f)g-f\\mathrm{Ric}_g\n=\\mathrm{Ric}_g-\\frac{s}{n}g,\n```\n\nwhere $`\\Delta_g f=\\mathrm{tr}_g\\mathrm{Hess}_g f`$.\n\nMust $`g`$ be Einstein, that is, $`\\mathrm{Ric}_g=(s/n)g`$?\n\nTracing gives $`\\Delta_gf=-sf/(n-1)`$. Since $`f`$ is nonconstant and $`M`$ is closed, $`s>0`$ and $`\\int_Mf\\,dV_g=0`$. If the Einstein conclusion holds, the equation becomes\n```math\n\\mathrm{Hess}_gf=-\\frac{s}{n(n-1)}fg,\n```\n\nand Obata's theorem makes $`(M,g)`$ a round sphere up to scaling. Thus this is also a sphere-rigidity question.\n\nNo curvature sign, stability, Bach-flatness, symmetry, or lower bound $`f\\ge-1`$ is assumed. The nonconstant condition matters: the degenerate constant potential $`f=-1`$ on a scalar-flat metric is outside this question.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Besse conjecture\" \"critical point equation\" proof 2026",
+    "\"Besse conjecture\" \"critical point equation\" proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "version_or_date": "v2, 1 July 2022",
+      "url": "https://arxiv.org/html/2201.00263v2",
+      "scope_comparison": "Conjecture2 requires nonconstant potential, excluding scalar-flat constant f=-1. The full3D claim2208.10887 was withdrawn30November2022, with a recorded error in Lemma3.6/Lemma5.1. Curvature/static/Einstein-assuming theorems do not prove the unrestricted inhomogeneous CPE implication.",
+      "locator": "Conjecture 2 and discussion lines41–75; official 2208.10887 withdrawal"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Conjecture2 requires nonconstant potential, excluding scalar-flat constant f=-1. The full3D claim2208.10887 was withdrawn30November2022, with a recorded error in Lemma3.6/Lemma5.1. Curvature/static/Einstein-assuming theorems do not prove the unrestricted inhomogeneous CPE implication.",
+  "latest_version_check": "v2, 1 July 2022",
+  "gap_retraction_check": "Official arXiv2208.10887 record says withdrawn by the author; comment identifies an error in Lemma3.6 (Lemma5.1). This withdrawn claim is not counted as an active complete announcement.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

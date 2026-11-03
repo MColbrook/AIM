@@ -1,0 +1,99 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1027",
+  "manifest_index": 871,
+  "checked_date": "2026-11-03",
+  "source_sha256": "b7fd7ac56a32794349bed723062b9bfe5282a99438d277adaf63edfbceb8e179",
+  "statement_sha256": "eedf1ff61e0dd54267ce713f1f8a017aa5591d7a87deaf8b61b5916bf6cc5898",
+  "original_target": {
+    "id": "1027",
+    "title": "Does the Steklov spectrum determine the boundary Laplace spectrum?",
+    "area": "Spectral geometry and inverse boundary problems",
+    "file": "problems/1027-does-the-steklov-spectrum-determine-the-boundary-laplace-spectrum.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c90002eaa1e080c2",
+    "group": "spectral",
+    "source_sha256": "b7fd7ac56a32794349bed723062b9bfe5282a99438d277adaf63edfbceb8e179",
+    "statement_sha256": "eedf1ff61e0dd54267ce713f1f8a017aa5591d7a87deaf8b61b5916bf6cc5898",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`n\\ge3`$, and let $`(\\Omega_1,g_1)`$ and $`(\\Omega_2,g_2)`$ be smooth compact $`n`$-dimensional Riemannian manifolds with smooth nonempty boundary. Require each connected component to meet the boundary. The manifolds and their boundaries may have several connected components; no orientability assumption is imposed.\n\nFor each manifold, let $`\\sigma_j(\\Omega_i,g_i)`$ be the ordinary, unweighted Steklov eigenvalues, repeated with multiplicity, of\n\n```math\n\\Delta_{g_i}u=0\\quad\\text{in }\\Omega_i,\n\\qquad \\partial_{\\nu_i}u=\\sigma u\\quad\\text{on }\\partial\\Omega_i,\n```\n\nwhere $`\\nu_i`$ is the outward unit normal. These are the eigenvalues of the Dirichlet-to-Neumann map on the full boundary. Set $`h_i=g_i|_{T\\partial\\Omega_i}`$, and let $`\\lambda_j(\\partial\\Omega_i,h_i)`$ be the eigenvalues of the nonnegative Laplace–Beltrami operator $`-\\Delta_{h_i}`$ on the closed boundary. Both lists include zero eigenvalues with their full multiplicities.\n\nDoes\n\n```math\n\\sigma_j(\\Omega_1,g_1)=\\sigma_j(\\Omega_2,g_2)\n\\quad\\text{for every }j\\ge0\n```\n\nimply\n\n```math\n\\lambda_j(\\partial\\Omega_1,h_1)=\\lambda_j(\\partial\\Omega_2,h_2)\n\\quad\\text{for every }j\\ge0?\n```\n\nProve this implication for every $`n\\ge3`$, or construct a pair that violates it in some such dimension. The data consist only of the Steklov eigenvalues at frequency zero. Equality of the full Dirichlet-to-Neumann maps, of spectra at other frequencies, or of all Robin spectra is not assumed. The requested conclusion is equality of boundary spectra, not isometry of the boundaries.",
+  "full_original_page": "# 1027. Does the Steklov spectrum determine the boundary Laplace spectrum?\n\n**Area:** Spectral geometry and inverse boundary problems\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`n\\ge3`$, and let $`(\\Omega_1,g_1)`$ and $`(\\Omega_2,g_2)`$ be smooth compact $`n`$-dimensional Riemannian manifolds with smooth nonempty boundary. Require each connected component to meet the boundary. The manifolds and their boundaries may have several connected components; no orientability assumption is imposed.\n\nFor each manifold, let $`\\sigma_j(\\Omega_i,g_i)`$ be the ordinary, unweighted Steklov eigenvalues, repeated with multiplicity, of\n\n```math\n\\Delta_{g_i}u=0\\quad\\text{in }\\Omega_i,\n\\qquad \\partial_{\\nu_i}u=\\sigma u\\quad\\text{on }\\partial\\Omega_i,\n```\n\nwhere $`\\nu_i`$ is the outward unit normal. These are the eigenvalues of the Dirichlet-to-Neumann map on the full boundary. Set $`h_i=g_i|_{T\\partial\\Omega_i}`$, and let $`\\lambda_j(\\partial\\Omega_i,h_i)`$ be the eigenvalues of the nonnegative Laplace–Beltrami operator $`-\\Delta_{h_i}`$ on the closed boundary. Both lists include zero eigenvalues with their full multiplicities.\n\nDoes\n\n```math\n\\sigma_j(\\Omega_1,g_1)=\\sigma_j(\\Omega_2,g_2)\n\\quad\\text{for every }j\\ge0\n```\n\nimply\n\n```math\n\\lambda_j(\\partial\\Omega_1,h_1)=\\lambda_j(\\partial\\Omega_2,h_2)\n\\quad\\text{for every }j\\ge0?\n```\n\nProve this implication for every $`n\\ge3`$, or construct a pair that violates it in some such dimension. The data consist only of the Steklov eigenvalues at frequency zero. Equality of the full Dirichlet-to-Neumann maps, of spectra at other frequencies, or of all Robin spectra is not assumed. The requested conclusion is equality of boundary spectra, not isometry of the boundaries.\n\n## Application\n\nThe Dirichlet-to-Neumann operator maps prescribed boundary values to the normal flux of their harmonic extension through the interior. This question asks whether its eigenvalues determine the intrinsic Laplace spectrum of the boundary itself. It concerns exact identifiability from an infinite spectrum, rather than reconstruction from finitely many noisy measurements.\n\n## References\n\n1. A. Girouard and I. Polterovich, *Spectral geometry of the Steklov problem*, Journal of Spectral Theory **7** (2017), 321–359, §5.1, Open Problem 7 on p.344. [DOI](https://doi.org/10.4171/JST/164); [published PDF](https://ems.press/content/serial-article-files/33609).\n2. A. Girouard, L. Parnovski, I. Polterovich and D. A. Sher, *The Steklov spectrum of surfaces: asymptotics and invariants*, Mathematical Proceedings of the Cambridge Philosophical Society **157** (2014), 379–389. [DOI](https://doi.org/10.1017/S030500411400036X); [arXiv manuscript](https://arxiv.org/abs/1311.5533), Question 1.11 on p.3 and Corollary 1.12 on p.4 of version 1.\n3. B. Colbois, A. Girouard, C. Gordon and D. Sher, *Some recent developments on the Steklov eigenvalue problem*, Revista Matemática Complutense **37** (2024), 1–161, §9, Open Question 9.1. [Published article](https://doi.org/10.1007/s13163-023-00480-3).\n\n## Status review\n\n\n**Known cases:** The implication is between spectra alone at frequency zero for arbitrary higher-dimensional manifolds. Equality of full maps, strong isospectrality, conformal-class rigidity and surface boundary-length recovery are stronger hypotheses or narrower settings.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe implication is between spectra alone at frequency zero for arbitrary higher-dimensional manifolds. Equality of full maps, strong isospectrality, conformal-class rigidity and surface boundary-length recovery are stronger hypotheses or narrower settings.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nFor surfaces, the implication is known: the Steklov spectrum determines the multiset of lengths of boundary components, which determines the Laplace spectrum of their disjoint union of circles. The question therefore starts in dimension three. The usual cylinder, Sunada and torus-action examples of Steklov isospectrality preserve boundary Laplace spectra and do not answer it negatively.\n\nThe August 2026 [Hu–Shi–Tang construction](https://arxiv.org/html/2608.10557v2), Theorem 1.1.2, claims noncongruent strictly convex planar domains with identical Steklov spectra. Their boundaries are circles of the same intrinsic length, so their boundary Laplace spectra also agree. Taking products does not automatically extend that construction to a counterexample here: the separation argument uses additional, nonzero-frequency spectra absent from the hypothesis.\n\nThe September 2026 version of [Florentin's conformal rigidity theorem](https://arxiv.org/html/2501.15535v4), Theorem I.2, assumes a fixed conformal class, Anosov boundary dynamics with simple length spectrum, and equality of the conformal factor to one on the boundary. It does not settle the unrestricted implication above.\n\nCurrent searches located no full resolution or announced counterexample for this exact question. AIM295 concerns interior Dirichlet spectra and planar shape, while AIM051 uses the full boundary operator on known geometry. Neither is the present spectral implication. An independent selected-primary audit confirmed the statement, component conventions and current comparisons. The fresh186-page catalogue scan returned12 spectral/name contexts; all were read and concern unrelated journal citations, transforms, nodal lengths, symplectic packing or conformal rigidity. These listing checks do not certify mission proofs. The complete published2017survey and original2013manuscript were read for discovery; only recorded sections of the2024survey and recent follow-ups were inspected. The final2014publication remains a separate edition comparison gap, while the exact question is verified directly in the published2017and2024sources.\n\n[Detailed source and status review](../FURTHER_problems/_tracking/parallel/rough-filtering/steklov-boundary-spectrum-review.json), [independent audit](../FURTHER_problems/_tracking/parallel/continuum/cross-steklov-boundary-spectrum-review.json), [catalogue comparison](../FURTHER_problems/_tracking/parallel/rough-filtering/steklov-prove2-0100-review.json) and [coordinator review](../FURTHER_problems/_tracking/steklov-coordinator-review-2026-10-17.json) record the dated evidence and limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-c90002eaa1e080c2**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Steklov boundary spectrum",
+    "Florentin",
+    "Dirichlet-to-Neumann"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"Steklov spectrum\" \"boundary Laplace\" 2026"
+    },
+    {
+      "query": "\"Steklov spectrum\" \"boundary Laplace\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://ems.press/content/serial-article-files/33609",
+      "locator": "published2017OpenProblem7printed344; 2501.15535v4 17September2026primaryabstract; 2608.10557v2Theorem1.1.2(iv)"
+    }
+  ],
+  "scope_comparison": "Florentin requires fixed conformal class and Anosov simple boundary length spectrum. Planar isospectral pairs have boundary length2pi by explicit Theorem1.1.2(iv), hence equal intrinsic circle spectra. Neither supplies higher-dimensional spectral-only counterexamples or the unrestricted implication. Strong equality of full maps/all nonzero-frequency spectra is extra data.",
+  "recommendation": "Retain partial status; no matching full resolution located in bounded current searches.",
+  "limitations": "Negative evidence does not prove openness. Exact original page and hashes retained.",
+  "announcement_routing": {
+    "localID": "1027",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Steklov boundary spectrum",
+          "Florentin",
+          "Dirichlet-to-Neumann"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Steklov boundary spectrum",
+          "Florentin",
+          "Dirichlet-to-Neumann"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Steklov boundary spectrum",
+        "Florentin",
+        "Dirichlet-to-Neumann"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

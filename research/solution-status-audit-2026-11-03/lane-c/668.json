@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "668",
+  "manifest_index": 512,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "668",
+    "title": "Harmonic-prior predictive dominance with unknown variance",
+    "area": "Bayesian statistical prediction and uncertainty quantification",
+    "file": "problems/668-harmonic-prior-predictive-dominance-with-unknown-variance.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c0ba18618b159b21",
+    "group": "bayesian-inverse-uncertainty-quantification",
+    "source_sha256": "56aa0978566864dc4ae3323679fd8dfb124330d668609017cf447acc52befe69",
+    "statement_sha256": "b8cc6da1d5a2266de5d827479003945d54de24093ff76985ef5e6fd5d5a4c0d5",
+    "state": "unreviewed"
+  },
+  "source_sha256": "56aa0978566864dc4ae3323679fd8dfb124330d668609017cf447acc52befe69",
+  "statement_sha256": "b8cc6da1d5a2266de5d827479003945d54de24093ff76985ef5e6fd5d5a4c0d5",
+  "actual_source_sha256": "56aa0978566864dc4ae3323679fd8dfb124330d668609017cf447acc52befe69",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`m\\ge k\\ge3`$ and let $`N`$ be a positive integer with $`n=mN>k`$. Fix a real $`m\\times k`$ matrix $`\\widetilde X`$ of full column rank and put $`X=\\mathbf1_N\\otimes\\widetilde X`$. Observe\n\n```math\nY\\sim N_n(X\\beta,sI_n),\n```\n\nand predict the density $`p_{\\beta,s}`$ of an independent future vector $`Z\\sim N_m(\\widetilde X\\beta,sI_m)`$, where both $`\\beta\\in\\mathbb R^k`$ and the common variance $`s>0`$ are unknown. Consider the improper priors, with densities relative to $`d\\beta\\,ds`$,\n\n```math\n\\pi_H(\\beta,s)=(\\beta^T\\widetilde X^T\\widetilde X\\beta)^{1-k/2}s^{-2},\n\\qquad \\pi_R(\\beta,s)=s^{-1}.\n```\n\nFor each $`-1<\\alpha<1`$, define the generalized Bayes predictive density by normalizing, as a function of $`z`$,\n\n```math\nq_{\\pi,\\alpha}(z\\mid y)\\ \\propto\\ \n\\left[\\mathbb E_{\\pi(\\beta,s\\mid y)}\n p_{\\beta,s}(z)^{(1-\\alpha)/2}\\right]^{2/(1-\\alpha)}.\n```\n\nFor probability densities $`q,p`$, use the loss\n\n```math\nD_\\alpha(q,p)=\\frac4{1-\\alpha^2}\n\\left(1-\\int_{\\mathbb R^m}q(z)^{(1+\\alpha)/2}\n p(z)^{(1-\\alpha)/2}\\,dz\\right)\n```\n\nand the frequentist risk\n\n```math\nR_\\alpha(\\beta,s;q)=\\mathbb E_{Y\\mid\\beta,s}\n D_\\alpha(q(\\cdot\\mid Y),p_{\\beta,s}).\n```\n\n**For every allowed design, $`N`$ and $`\\alpha`$, does $`q_{\\pi_H,\\alpha}`$ dominate $`q_{\\pi_R,\\alpha}`$: risk no larger for every $`(\\beta,s)`$, and strictly smaller for at least one parameter?** Prove or disprove this assertion.\n\nThe posterior and normalization are defined almost surely under the sampling model when $`n>k`$. Arbitrary definitions on the exceptional null set of observations do not affect the risk.\n\nThis is Problem 1 of Maruyama–Strawderman, retaining their replicated-design assumption (AS1). The prior $`\\pi_H`$ is fixed; the predictive rule changes with $`\\alpha`$. Unknown variance is essential. In this convention ordinary KL loss is the endpoint $`\\alpha=-1`$, and reverse KL is $`\\alpha=1`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"harmonic prior\" \"unknown variance\" \"alpha divergence\" proof 2026",
+    "\"harmonic prior\" \"unknown variance\" \"alpha divergence\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1,19February2010; latest record inspected",
+      "url": "https://arxiv.org/html/1002.3786v1",
+      "locator": "AS1 and equations1.8–1.11; Problem1, lines82–116",
+      "primary_body_access_gap": false,
+      "scope_comparison": "Problem1 is exactly the fixed harmonic-prior unknown-variance dominance question for every interior alpha. Its ordinary/reverse-KL endpoints and Problem2-1 are distinct. Known-variance harmonic alpha-divergence theorems remove a material unknown parameter and do not establish this model."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Problem1 is exactly the fixed harmonic-prior unknown-variance dominance question for every interior alpha. Its ordinary/reverse-KL endpoints and Problem2-1 are distinct. Known-variance harmonic alpha-divergence theorems remove a material unknown parameter and do not establish this model.",
+  "latest_version_check": "v1,19February2010; latest record inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "536",
+  "manifest_index": 417,
+  "original_target": {
+    "id": "536",
+    "title": "Optimal star-discrepancy lower bound for infinite sequences",
+    "area": "Uncertainty quantification and quasi-Monte Carlo integration",
+    "file": "problems/536-star-discrepancy-sequence-lower-bound.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "numerical-analysis",
+    "source_sha256": "a8f19ab5c0df4383ea0254957c895d32ecfd667924e09262a04de5cf805b2ba4",
+    "statement_sha256": "6e9262c024e1c4f8dbcaf8505f5020b8e826939917663ba798344ce210d8b660",
+    "state": "unreviewed"
+  },
+  "source_sha256": "a8f19ab5c0df4383ea0254957c895d32ecfd667924e09262a04de5cf805b2ba4",
+  "statement_sha256": "6e9262c024e1c4f8dbcaf8505f5020b8e826939917663ba798344ce210d8b660",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:46:33.006522+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The current v3 Dick Theorems 1.1–1.2 and Remark 1.4 concern inverse discrepancy in dimension–accuracy polynomial strips and explicitly distinguish fixed dimension. Online thinning with log^(d+1)n unnormalized upper bounds and one finite Sobol table formalization do not give the universal fixed-d infinite-sequence lower bound log^d n infinitely often.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2607.23571v3",
+      "locator": "Theorems 1.1–1.2 and Remark 1.4; current v3, 15 October 2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2609.10921v1",
+      "locator": "Introduction and Theorem 1.3, online-thinning upper bound",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"star discrepancy\" \"sequences\" \"lower bound\" 2026",
+    "\"star discrepancy\" \"sequence\" optimal lower (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"star discrepancy\" \"sequence\" \"lower bound\" proof announcement 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "star discrepancy",
+        "Sobol"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-30-000009",
+          "title": "A dimension-free weak-type (1,1) bound for the Gaussian Riesz transforms"
+        },
+        {
+          "id": "PALOMAR-2026-10-28-000014",
+          "title": "The Critical 2D KPZ Process"
+        },
+        {
+          "id": "PALOMAR-2026-10-27-000028",
+          "title": "Perron's extremal solutions of the Bernoulli one-phase problem: viscosity, inner variational and one-sided minimizing solutions, and free boundary structure in the plane"
+        },
+        {
+          "id": "PALOMAR-2026-10-18-000008",
+          "title": "Planar Pólya–Szegő Buckling Inequality"
+        },
+        {
+          "id": "PALOMAR-2026-10-09-000014",
+          "title": "Hörmander's hypoellipticity theorem and the Rothschild–Stein theory"
+        },
+        {
+          "id": "PALOMAR-2026-09-05-000004",
+          "title": "Exact four-dimensional projection quality of the OneTwo Sobol' table at 65,536 points"
+        },
+        {
+          "id": "PALOMAR-2026-09-02-000004",
+          "title": "Nash's isometric embedding theorem for closed manifolds (Günther's proof)"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "star discrepancy",
+        "Sobol"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00664v1",
+          "title": "Low-discrepancy quasi-uniform digital sequences in every dimension"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Hofer publisher body https://jtnb.centre-mersenne.org/articles/10.5802/jtnb.1369/ returned 403; no universal full claim inferred from special-sequence metadata."
+  ],
+  "canonical_update_required": false
+}

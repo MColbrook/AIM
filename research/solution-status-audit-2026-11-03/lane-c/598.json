@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "598",
+  "manifest_index": 461,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "598",
+    "title": "Log-concavity of Gaussian convex-hull intersection probabilities",
+    "area": "Stochastic geometry and convexity",
+    "file": "problems/598-gaussian-radon-intersection-logconcavity.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "probability-statistics",
+    "source_sha256": "f239757c63d9d58a0c7f9047d14713134a277d489cefb9bd83ab3c82fe07aa94",
+    "statement_sha256": "689be5f1e4f3585a855cc3f10c6c1cca4c2c876c53db8bf82c2da138cf3cf53b",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f239757c63d9d58a0c7f9047d14713134a277d489cefb9bd83ab3c82fe07aa94",
+  "statement_sha256": "689be5f1e4f3585a855cc3f10c6c1cca4c2c876c53db8bf82c2da138cf3cf53b",
+  "actual_source_sha256": "f239757c63d9d58a0c7f9047d14713134a277d489cefb9bd83ab3c82fe07aa94",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For integers $`d\\ge1`$ and $`n\\ge d+3`$, let $`X_1,\\ldots,X_n`$ be independent standard Gaussian vectors in $`\\mathbb R^d`$. For $`1\\le k\\le n-1`$, define\n\n```math\nq_k(n,d)=\\mathbb P\\!\\left(\\mathop{\\mathrm{conv}}\\nolimits\\{X_1,\\ldots,X_k\\}\\cap\\mathop{\\mathrm{conv}}\\nolimits\\{X_{k+1},\\ldots,X_n\\}\\ne\\varnothing\\right).\n```\n\nProve or disprove that this sequence is log-concave:\n\n```math\nq_k(n,d)^2\\ge q_{k-1}(n,d)q_{k+1}(n,d)\\qquad(2\\le k\\le n-2).\n```\n\nBy the symmetry $`q_k=q_{n-k}`$, this would also make the intersection probability increase as the two prescribed group sizes become more balanced.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Radon\" \"log-concavity\" Gaussian intersection probabilities",
+    "\"Gaussian\" \"convex hull\" \"log-concavity\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar.ai OR site:hexagonmath.org)",
+    "\"Gaussian\" \"Radon\" \"log-concavity\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web / primary author and publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2507.01353",
+      "version_or_date": "v1, 2 July 2025; journal September 2026",
+      "locator": "Theorem 1.1; Section 7 Conjecture 7.2, lines 467–491",
+      "inspection": "Read theorem/conjecture body, not only title or abstract",
+      "scope_comparison": "The proved ultra-log-concavity theorem concerns n=d+2, where the Radon partition is unique. The primary Conjecture 7.2 states the extension for prescribed labeled splits of larger Gaussian samples. The local target is n>=d+3. A randomly chosen Radon part is not the same random variable."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "No full matching resolution or complete announcement identified in these bounded searches. The proved ultra-log-concavity theorem concerns n=d+2, where the Radon partition is unique. The primary Conjecture 7.2 states the extension for prescribed labeled splits of larger Gaussian samples. The local target is n>=d+3. A randomly chosen Radon part is not the same random variable.",
+  "latest_version_check": "arXiv abstract/version record inspected 2026-11-03; cited version is latest displayed. No withdrawal banner observed.",
+  "gap_retraction_check": "No full matching candidate located to audit for a known gap. This is not independent verification of cited restricted results; no assurance of continued openness.",
+  "announcement_qualification": null,
+  "limitations": [
+    "Search-engine repository coverage is bounded; absence of a hit is not a certified openness claim.",
+    "No theorem was promoted from an index entry alone."
+  ]
+}

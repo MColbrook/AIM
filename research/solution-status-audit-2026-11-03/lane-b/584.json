@@ -1,0 +1,80 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "584",
+  "manifest_index": 450,
+  "original_target": {
+    "id": "584",
+    "title": "Cylinders for the symmetric Gaussian isoperimetric problem",
+    "area": "Probability and statistics",
+    "file": "problems/584-cylinders-for-the-symmetric-gaussian-isoperimetric-problem.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-66091664200dfc8f",
+    "group": "probability-statistics",
+    "source_sha256": "10a1b947a0deea6d95e25d1e777deac1cd3f0cc08b29a77f331767610cba34c3",
+    "statement_sha256": "06b090b1655a121f3a9565dd77f82cc2f5d6d43b44d4b14df8cdef96f1c5d9cc",
+    "state": "unreviewed"
+  },
+  "source_sha256": "10a1b947a0deea6d95e25d1e777deac1cd3f0cc08b29a77f331767610cba34c3",
+  "statement_sha256": "06b090b1655a121f3a9565dd77f82cc2f5d6d43b44d4b14df8cdef96f1c5d9cc",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T14:04:53.546612+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The October published Theorem1.18 requires eventual stabilization of the dimension profile and additional integral curvature conditions. Removing convexity does not remove these other restrictions, so it does not prove the fixed-dimensional all-volume cylinder-or-complement inequality for arbitrary symmetric competitors.",
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00526-026-03408-z",
+      "locator": "Section1.5 Problem1.17, Theorem1.18; section2.1 product-reduction proof;13October2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2204.12003",
+      "locator": "Abstract, product minimality and exceptional curvature case",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"symmetric Gaussian isoperimetric\" \"2026\" cylinder",
+    "\"symmetric Gaussian isoperimetric\" cylinders [domains arxiv.org,zenodo.org,hal.science,github.com]"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "symmetric Gaussian",
+        "Gaussian perimeter"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-09-000013",
+          "title": "Replica symmetry up to the de Almeida–Thouless line in the Sherrington–Kirkpatrick model"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "symmetric Gaussian",
+        "Gaussian perimeter"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

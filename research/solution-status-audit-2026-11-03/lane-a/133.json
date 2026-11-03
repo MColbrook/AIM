@@ -1,0 +1,69 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "133",
+  "manifest_index": 104,
+  "original_target": {
+    "id": "133",
+    "title": "Irrational ellipticity when a convex energy surface has finitely many orbits",
+    "area": "Hamiltonian mechanics / orbital stability",
+    "file": "problems/133-finite-convex-orbits-irrational-ellipticity.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse2",
+    "source_sha256": "a072b0ee2419d800f9f7830072bdd69a96b3102fbaa8caec3e25970d5f3a8367",
+    "statement_sha256": "549f4fe1c0ffd84aee831bd8ea65d80f096964bb387a287e88632ce5193c14a4",
+    "state": "unreviewed"
+  },
+  "source_sha256": "a072b0ee2419d800f9f7830072bdd69a96b3102fbaa8caec3e25970d5f3a8367",
+  "statement_sha256": "549f4fe1c0ffd84aee831bd8ea65d80f096964bb387a287e88632ce5193c14a4",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:15:33.788256+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The actual2026 Liu–Ou Conjecture2 remains the all-orbits assertion. Theorem1.2 gives at least two irrationally elliptic orbits under nondegeneracy; the R6 result does not make every orbit irrationally elliptic for every dimension or allow degeneracies.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2603.12656v1",
+      "locator": "Conjecture2, Theorem1.2, discussion before Theorem1.6",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"all closed characteristics\" \"irrationally elliptic\" 2026",
+    "\"irrationally elliptic\" \"conjecture\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "irrationally elliptic",
+        "closed characteristics"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "irrationally elliptic",
+        "closed characteristics"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

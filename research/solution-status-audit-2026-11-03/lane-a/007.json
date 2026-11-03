@@ -1,0 +1,63 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "007",
+  "manifest_index": 5,
+  "source_sha256": "3f21eb330e5bdafaa84994953c1094f092c9387f6b961a2a57c9b5af276ae4f0",
+  "statement_sha256": "0c5035df64c5240430c14f222ec6d92022dd395149616dafcd04875043f0a856",
+  "original_target": {
+    "id": "007",
+    "title": "Pólya–Szegő conjecture for the first buckling load",
+    "area": "Elastic stability",
+    "file": "problems/007-buckling-load-ball.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "spectral",
+    "source_sha256": "3f21eb330e5bdafaa84994953c1094f092c9387f6b961a2a57c9b5af276ae4f0",
+    "statement_sha256": "0c5035df64c5240430c14f222ec6d92022dd395149616dafcd04875043f0a856",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T11:50:18.917235+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "newly-located-unverified-announcement",
+  "recommended_status": "Solved",
+  "answer": "Affirmative announcement by Quanyu Tang and Haiqi Zhang,18October2026.",
+  "scope_comparison": "The current working manuscript defines the same H02 closure and buckling Rayleigh quotient, permits sign-changing test functions, and its corollary cor:area asserts the disk lower bound for every positive-finite-area planar open set. This includes every bounded smooth local target. The pinned Palomar statement and solution repeat the actual H02 graph closure and quotient; polya_szego_buckling has no sign, topology or extra theorem-package assumption. No claim here extends to higher-dimensional buckling or to the first-two-eigenvalue ratio.",
+  "queries": [
+    "buckling Polya conjecture proof2026",
+    "Polya Szego buckling conjecture solved",
+    "polya-szego-planar-unconditional error correction withdrawn"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://github.com/QuanyuTang/polya-szego-planar-unconditional-palomar/blob/3b3417486b092363b411ed25ee2edb5e6f87f0ed/manuscript/PS_dim2_v5.pdf",
+      "locator": "Working draftv5,18October2026: introduction definitions; Theorem1.2 labelled main and Corollary1.3 labelled cor:area",
+      "body_inspected": true,
+      "source_instead_of_pdf": "../_sources/buckling-manuscript-v5.tex",
+      "git_blob_sha1": "aacb103e1ab4badb781ead030b0b00291e93e2b7"
+    },
+    {
+      "url": "https://palomar-registry.org/entry?id=PALOMAR-2026-10-18-000008&version=1",
+      "locator": "Registered version1; original PlanarBucklingChallenge.lean and PlanarBucklingSolution.lean, definitionsH02/bucklingEig and polya_szego_buckling",
+      "body_inspected": true,
+      "commit": "5311f47821b5da92e81e75b7da5091d176c8deb9",
+      "statement_sha256": "92f8c376d384bdeb53cb09c9de868d743bfbd7fdc2ea04b3c25fae13f534d45b",
+      "solution_sha256": "76863569c0628a3c096bdbfb9a6a4989cf16a57c623f0a6371af763d462f4f0a"
+    }
+  ],
+  "provider_checks": {
+    "Palomar": "Complete954-summary snapshot plus full versioned record and pinned challenge/solution sources; compared and hashes verified.",
+    "Hexagon": "Complete646-work snapshot; no buckling match.",
+    "arXiv": "Focused announcement search; current authors explicitly say draftv5 has not been submitted to arXiv.",
+    "Zenodo_HAL_GitHub": "Focused mathematical formulation and correction search; public GitHub manuscript and formalization are the primary match.",
+    "Other": "Clopen author submission also announces full target; automated reviews are advisory and not used as proof certification."
+  },
+  "known_gap_check": "The current public announcement is not withdrawn. Development-time draft comments in the registered sources explicitly point to subsequent verification records; challenge sorry placeholders are not a solution. The independently supplied solution declaration has a concrete proof bridge without the old conditional-package assumption. We inspected statement fidelity and published registration metadata, not all dependency proofs.",
+  "verification": "No independent whole-proof check, local Lean build, kernel replay or human peer review is asserted. Palomar reports external verification; this audit does not elevate it to AIM Lean verified.",
+  "required_status_qualification": "Solved on the basis of an unverified announcement, with an external Palomar formalization registration; external mathematical proof and kernel checks not independently replayed here.",
+  "limitations": [
+    "The working manuscript is under revision.",
+    "User specifically requests recording complete matching announcements as Solved."
+  ]
+}

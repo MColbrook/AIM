@@ -1,0 +1,126 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "093",
+  "manifest_index": 67,
+  "original_target": {
+    "id": "093",
+    "title": "A strongly polynomial pivot rule for the simplex method",
+    "area": "Numerical optimization",
+    "file": "problems/093-strongly-polynomial-simplex.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "optimization-information",
+    "source_sha256": "4c951197aa2a8df326cb4f5eca0bfd932f0f3160a6a89929d73debeb70cf69d0",
+    "statement_sha256": "8d390b6fc98b2e293ef3e7aac47ac6d965da193bcd4ce57a68a63cc948ba997e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "4c951197aa2a8df326cb4f5eca0bfd932f0f3160a6a89929d73debeb70cf69d0",
+  "statement_sha256": "8d390b6fc98b2e293ef3e7aac47ac6d965da193bcd4ce57a68a63cc948ba997e",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:46:55.477676+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Current circuit-diameter/straight-line-complexity results use circuit augmentations rather than ordinary feasible simplex pivots, and do not provide the target rule-selection arithmetic bound. Bounds on degenerate pivots alone do not bound all pivots; special unimodular/network LP or deterministic games are restricted inputs. No admissible general strongly-polynomial pivot algorithm located.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2602.05699v1",
+      "locator": "Introduction and circuit-augmentation model.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol364-stacs2026/LIPIcs.STACS.2026.31/LIPIcs.STACS.2026.31.pdf",
+      "locator": "Primary abstract and ranking-based lower-bound scope.",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "simplex",
+    "pivot rule",
+    "linear programming"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "simplex",
+        "pivot rule",
+        "linear programming"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-21-000004",
+          "title": "Formalization of a curved three-dimensional simplex Hilbert transform"
+        },
+        {
+          "id": "PALOMAR-2026-10-16-000020",
+          "title": "The augmented Descartes theorem in every dimension, its converses, and Soddy's two spheres"
+        },
+        {
+          "id": "PALOMAR-2026-10-03-000005",
+          "title": "Optimal Information and Concavification in Bayesian Persuasion"
+        },
+        {
+          "id": "PALOMAR-2026-09-20-000001",
+          "title": "Finite tight Blackwell approachability-to-improper phi-regret reduction in Lean"
+        },
+        {
+          "id": "PALOMAR-2026-09-15-000004",
+          "title": "B. C. Carlson's approach to special functions of applied mathematics"
+        }
+      ],
+      "scope": "Routing only; exact target and excluding hypotheses compared above. Loose name/word hits may be unrelated."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "simplex",
+        "pivot rule",
+        "linear programming"
+      ],
+      "metadata_hits": [
+        {
+          "id": "2610.00731",
+          "title": "A sharp Brégman–Minc bound for permanents"
+        },
+        {
+          "id": "2610.00561",
+          "title": "Volume Computation and Comparison for Four-Dimensional Bodies of Constant Width"
+        },
+        {
+          "id": "2610.00419",
+          "title": "Improved bounds on $H_m$ for $2\\le m\\le 5$"
+        },
+        {
+          "id": "2610.00366",
+          "title": "Finite Multiset Codes and Affine Lattice Restrictions"
+        },
+        {
+          "id": "2610.00395",
+          "title": "Additive Rounding for LP-Tight Three-Item Bin Packing"
+        },
+        {
+          "id": "2610.00210",
+          "title": "The truncated octahedral conjecture"
+        },
+        {
+          "id": "2610.00002",
+          "title": "A Finite Coordinate Reduction for Approachability Loss in Lean"
+        }
+      ],
+      "scope": "Routing only; exact target and excluding hypotheses compared above. Loose name/word hits may be unrelated."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches with arXiv, Zenodo, HAL and GitHub; shared complete Palomar/Hexagon and OpenAI metadata screened, plus requested Colbrook author listings.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

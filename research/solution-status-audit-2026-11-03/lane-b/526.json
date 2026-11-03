@@ -1,0 +1,95 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "526",
+  "manifest_index": 409,
+  "original_target": {
+    "id": "526",
+    "title": "Exact motion-planning complexity of real projective spaces",
+    "area": "Applied topology and robot motion planning",
+    "file": "problems/526-projective-motion-planning.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "e10c4a4445c1177415f3da8a66312e5026093ab37c3f1415b5188deb93480545",
+    "statement_sha256": "f59f295209283f0dec113459372e8eb249d47322c71b8c8c0d54278d44b7e356",
+    "state": "unreviewed"
+  },
+  "source_sha256": "e10c4a4445c1177415f3da8a66312e5026093ab37c3f1415b5188deb93480545",
+  "statement_sha256": "f59f295209283f0dec113459372e8eb249d47322c71b8c8c0d54278d44b7e356",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:35.868754+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The current Davis tables still distinguish immersion from nonimmersion bounds. Equivariant immersions of P(n rho) and conditional neural-width consequences do not classify the least ordinary immersion dimension for every RP^n.",
+  "primary_sources": [
+    {
+      "url": "https://www.lehigh.edu/~dmd1/immtable",
+      "locator": "Current immersion/nonimmersion bounds table",
+      "body_inspected": true
+    },
+    {
+      "url": "https://www.lehigh.edu/~dmd1/imms.html",
+      "locator": "Current publications and bounds",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2604.25260v1",
+      "locator": "Main Theorem 1 and Theorem 4.23; v1, 28 April 2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.20229",
+      "locator": "Metadata: conditional consequence assuming an immersion",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"real projective\" \"immersion dimension\" 2026",
+    "\"real projective spaces\" \"immersion\" \"2026\" theorem (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"real projective spaces\" \"immersion\" \"complete\" \"2026\""
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "projective spaces",
+        "immersion dimension"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "projective spaces",
+        "immersion dimension"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00648v1",
+          "title": "A bridge between analysis on local fields and quantum groups: the compact case"
+        },
+        {
+          "id": "hexagon:2610.00446v1",
+          "title": "Which String Vibrations Become Which Generations on the Dwork Quintic"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "No isolated RP24 table row is presented as a newly certified sharp bound."
+  ],
+  "canonical_update_required": false
+}

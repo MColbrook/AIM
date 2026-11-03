@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "140",
+  "manifest_index": 110,
+  "original_target": {
+    "id": "140",
+    "title": "Global null control of a heat equation with cubic growth",
+    "area": "Nonlinear PDE control / reaction-diffusion",
+    "file": "problems/140-global-cubic-heat-null-control.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-08",
+    "group": "inverse2",
+    "source_sha256": "84b5bb7c1d4b792cdab42f65ea6eedd59d26bbcb21e3b5a17c4b176194478084",
+    "statement_sha256": "a38518a16024aebd2abbcede6c8195c82ba1cf40eef447aaa6857b081073d16c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "84b5bb7c1d4b792cdab42f65ea6eedd59d26bbcb21e3b5a17c4b176194478084",
+  "statement_sha256": "a38518a16024aebd2abbcede6c8195c82ba1cf40eef447aaa6857b081073d16c",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:23:09.306453+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The published LeBalc'h–Takahashi Theorem1.1 assumes small initial data as equation1.7. Its scalar odd-growth global question is separate from global cascade control using cubic couplings. Neither absorbing reaction nor small-data local control proves arbitrary-data, arbitrary-time null control with growing+y3.",
+  "primary_sources": [
+    {
+      "url": "https://www.numdam.org/item/10.5802/ambp.430.pdf",
+      "locator": "Section1.1 Theorem1.1 equations1.6–1.8, following discussion",
+      "body_inspected": true
+    },
+    {
+      "url": "https://www.ljll.fr/~coron/Documents/2017-Coron-Guilleron-SICON.pdf",
+      "locator": "Primary abstract: three heat equations coupled by cubics",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"global\" \"null controllability\" \"cubic\" \"heat\" 2026",
+    "\"cubic\" \"heat\" \"global controllability\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "null controllability",
+        "odd coupling"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "null controllability",
+        "odd coupling"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

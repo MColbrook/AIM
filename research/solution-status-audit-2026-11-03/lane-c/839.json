@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "839",
+  "manifest_index": 683,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "839",
+    "title": "Straight-triangle realizations of triangulated double tori",
+    "area": "Geometric topology and polyhedral surfaces",
+    "file": "problems/839-straight-triangle-realizations-of-triangulated-double-tori.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c254ae769bec192b",
+    "group": "geometry-topology",
+    "source_sha256": "6b8f186b40b2400ebaba23ea701e1e93a9384ff25fe17943bcbfc61ab987b4c1",
+    "statement_sha256": "6da3e16e901493877d0ec42a3250f254461cdcc520fc7de0e1da97d61f8e6440",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6b8f186b40b2400ebaba23ea701e1e93a9384ff25fe17943bcbfc61ab987b4c1",
+  "statement_sha256": "6da3e16e901493877d0ec42a3250f254461cdcc520fc7de0e1da97d61f8e6440",
+  "actual_source_sha256": "6b8f186b40b2400ebaba23ea701e1e93a9384ff25fe17943bcbfc61ab987b4c1",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`K`$ be a finite abstract simplicial complex whose realization is a closed, connected, orientable surface of genus two. Does there always exist a choice of points $`p_v\\in\\mathbb R^3`$, one for each vertex $`v`$ of $`K`$, such that the map obtained by affine interpolation on every simplex is an embedding?\n\nMore explicitly, require every triangle to have three affinely independent vertex images and, writing\n```math\nP_\\sigma=\\mathrm{conv}\\{p_v:v\\in\\sigma\\},\n```\n\nrequire\n```math\nP_\\sigma\\cap P_\\tau=P_{\\sigma\\cap\\tau}\n \\qquad\\text{for every pair of simplices }\\sigma,\\tau\\in K,\n```\n\nwhere $`P_\\varnothing=\\varnothing`$. All vertex images are distinct. Thus edges are straight segments, faces are flat triangles, and intersections are exactly those prescribed by $`K`$.\n\nThe given triangulation must be realized without subdivision or additional vertices. Vertex coordinates are free; no edge lengths or angles are prescribed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"genus two\" \"triangulations\" \"realizability\" 2026",
+    "\"genus two\" \"triangulations\" \"realizability\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"genus two\" \"triangulations\" \"realizability\" (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Section3.2 pp9–11,edge expansions and genus2 computational results;0507592theorem p2;2608.01444 Theorems3.6,3.10",
+      "primary_body_access_gap": false,
+      "scope_comparison": "The exact target is a straight-triangle embedding of every given genus2 simplicial complex into R3 without adding vertices or subdivision. The actual finite-family theorem realizes all865 ten-vertex triangulations. The primary Section3.2 explicitly says edge expansion does not automatically preserve realizability; finitely many irreducibles therefore do not settle all triangulations. The2026 claimed complete holonomy classification Theorems3.6/3.10 was inspected: it concerns flat cone metrics/seamless quadrangulations and nonempty differential strata, not spatial embeddings of a prescribed triangular complex. No full matching claim was found.",
+      "url": "https://arxiv.org/pdf/math/0608538v2",
+      "version_or_date": "arXiv:math/0608538v2,13May2009,currentlatest;math/0507592v1,28July2005;2608.01444v1,August2026"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The exact target is a straight-triangle embedding of every given genus2 simplicial complex into R3 without adding vertices or subdivision. The actual finite-family theorem realizes all865 ten-vertex triangulations. The primary Section3.2 explicitly says edge expansion does not automatically preserve realizability; finitely many irreducibles therefore do not settle all triangulations. The2026 claimed complete holonomy classification Theorems3.6/3.10 was inspected: it concerns flat cone metrics/seamless quadrangulations and nonempty differential strata, not spatial embeddings of a prescribed triangular complex. No full matching claim was found.",
+  "latest_version_check": "arXiv:math/0608538v2,13May2009,currentlatest;math/0507592v1,28July2005;2608.01444v1,August2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

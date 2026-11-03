@@ -1,0 +1,82 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "472",
+  "manifest_index": 374,
+  "original_target": {
+    "id": "472",
+    "title": "Uniqueness of all weak dual solutions of fractional porous-medium flow",
+    "area": "Nonlocal PDEs; diffusion on curved spaces",
+    "file": "problems/472-manifold-fractional-pme-weak-dual-uniqueness.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "15cc61fed29fdae41bc64a2bd70d765002c1245a6f846fff5efa7865afc8b26b",
+    "statement_sha256": "460fcadb6d1dd6bb4ca61c7c3883e60141178034e293fdcc8103ee7866169f39",
+    "state": "unreviewed"
+  },
+  "source_sha256": "15cc61fed29fdae41bc64a2bd70d765002c1245a6f846fff5efa7865afc8b26b",
+  "statement_sha256": "460fcadb6d1dd6bb4ca61c7c3883e60141178034e293fdcc8103ee7866169f39",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:17:44.752754+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2109.10732 Corollary2.5 and Section7 uniqueness bullet restrict uniqueness to monotone-approximation solutions. New2609.12954v1 Theorem3.1/Remark3.2 retain that subclass and Ric>=0, so neither covers all local weak dual solutions. ArXiv bodies resolved institutional PDF access failure.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2109.10732",
+      "locator": "Corollary2.5 and Section7 uniqueness bullet",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2609.12954v1",
+      "locator": "Theorem3.1 and Remark3.2",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"weak dual\" \"manifolds\" \"uniqueness\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "weak dual",
+        "Berchio"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-15-000019",
+          "title": "Kőnig's theorems and Dilworth's theorem"
+        },
+        {
+          "id": "PALOMAR-2026-10-01-000020",
+          "title": "Linnik's constant is at most 3.99: A formalization of a weighted version of Heath-Brown's near-density estimate, and of the proof's certificate checker"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "weak dual",
+        "Berchio"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

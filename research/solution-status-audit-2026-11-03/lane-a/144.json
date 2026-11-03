@@ -1,0 +1,80 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "144",
+  "manifest_index": 112,
+  "original_target": {
+    "id": "144",
+    "title": "Energy conservation at the exact Onsager Hölder exponent",
+    "area": "Fluid mechanics and turbulence",
+    "file": "problems/144-onsager-endpoint.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "cfc9ab7d2f521e52001c143c0f7c084c68160f8a07cc758494d53115f7f7b279",
+    "statement_sha256": "90fac794144f05a2a929705c506a915f03929d74be59492db5355f8282a49094",
+    "state": "unreviewed"
+  },
+  "source_sha256": "cfc9ab7d2f521e52001c143c0f7c084c68160f8a07cc758494d53115f7f7b279",
+  "statement_sha256": "90fac794144f05a2a929705c506a915f03929d74be59492db5355f8282a49094",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:23:09.504160+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Isett's actual2024 introduction retains the exact Hölder1/3 endpoint; its solutions approach the exponent with a scale-dependent loss and belong to every subcritical class, not the exact displayed C-time/C1/3-space class. Forced Navier–Stokes critical/subcritical dissipation and vanishing critical Besov tails have different hypotheses. Shared Hexagon Onsager match concerns rods, not Euler.",
+  "primary_sources": [
+    {
+      "url": "https://msp.org/apde/2024/17-6/apde-v17-n6-p09-p.pdf",
+      "locator": "Introduction and main endpoint-approaching construction",
+      "body_inspected": true
+    },
+    {
+      "url": "https://www.math.ias.edu/delellis/sites/math.ias.edu.delellis/files/anomalous_dissipation6.pdf",
+      "locator": "Forced Navier–Stokes abstract, not unforced Euler endpoint",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Onsager\" \"endpoint\" \"2026\" one third",
+    "\"Onsager\" \"C^{1/3}\" 2026 solution",
+    "\"Onsager\" \"endpoint\" (site:zenodo.org OR site:hal.science OR site:github.com) solution"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Onsager",
+        "endpoint energy"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Onsager",
+        "endpoint energy"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00667v1",
+          "title": "First-order phase transition in Onsager's model of hard rods in $\\mathbb R^3$"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

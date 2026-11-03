@@ -1,0 +1,44 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 247,
+  "source_sha256": "8c4457f8dcd54687ef87097451176fab525f32de8eb7bc26564eaf6da15aacba",
+  "statement_sha256": "a41a50cde02adea55ec1ef9e159d1def355c63191804b0d57e6f84dc27dad030",
+  "original_target": {
+    "id": "306",
+    "title": "Classical hardness of learning parity with noise",
+    "area": "Statistical learning and average-case computational complexity",
+    "file": "problems/306-learning-parity-noise.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "probability-statistics",
+    "source_sha256": "8c4457f8dcd54687ef87097451176fab525f32de8eb7bc26564eaf6da15aacba",
+    "statement_sha256": "a41a50cde02adea55ec1ef9e159d1def355c63191804b0d57e6f84dc27dad030",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "306",
+  "outcome": "no-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Original requires all uniform randomized polynomial-time classical algorithms with polynomially many random dense examples, constant0<eta<1/2 and negligible search success. Aggarwal et al current worst-case reductions remain conditional and use low-noise transformed parameters. Quantum/coherent samples, sparse parity, preprocessing advice and exponential-in-dimension exhaustive search do not satisfy the target. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "classical learning parity with noise polynomial time algorithm 2026",
+    "\"learning parity with noise\" polynomial (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2606.05834",
+      "version": "current HTML3November2026",
+      "locator": "Theorem3.1; Corollary4.1 and reduction assumptions",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "parity.with.noise|search.LPN|LPN.hard",
+    "palomar_matches": 0,
+    "hexagon_matches": 0,
+    "result": "No matching indexed claim."
+  }
+}

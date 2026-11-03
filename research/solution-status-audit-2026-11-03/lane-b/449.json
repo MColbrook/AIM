@@ -1,0 +1,49 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 361,
+  "source_sha256": "acf489c2259679daa8ca7c61c6c65412018e21bb1851ba6339caa2db3b7ae80f",
+  "statement_sha256": "1961e140c7a4ed9ebd78b8479e2848644967841ad9d9cece17183a852cce3e94",
+  "original_target": {
+    "id": "449",
+    "title": "Hexagonal optimality for Gaussian time-frequency sampling",
+    "area": "Applied harmonic analysis and communication channels",
+    "file": "problems/449-gaussian-gabor-hexagonal-optimality.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-22",
+    "group": "operators",
+    "source_sha256": "acf489c2259679daa8ca7c61c6c65412018e21bb1851ba6339caa2db3b7ae80f",
+    "statement_sha256": "1961e140c7a4ed9ebd78b8479e2848644967841ad9d9cece17183a852cce3e94",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "449",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"Strohmer Beaver\" \"2026\" conjecture",
+    "\"Gaussian Gabor\" \"hexagonal\" \"all\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Gabor\" \"Strohmer\" \"density\" \"2026\" hexagonal proof"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1905.05051",
+      "version": "2019,currentHTML",
+      "locator": "ConjectureIII.1",
+      "theorem_body_checked": true,
+      "scope": "Exactallrealdensity>1condition-numberconjecture."
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/forum-of-mathematics-pi/article/variational-principle-for-gaussian-lattice-sums/32BFCFF6F2378F378ECCB25388A7C060",
+      "date": "currentpublisherpageindexedOct2026",
+      "locator": "Theorem1.1,informalCorollary1.2,andAppendixA.1 especiallyvol(Lambda)^-1 in2N",
+      "theorem_body_checked": true,
+      "scope": "IntroinformalcorollarysaysStrohmerBeavercorrect,butactualAppendixA.1derivesexactframeboundsfromGaussianlatticesumsonlyforevenintegerdensity. Gaussianpolarizationallalpha≠Gaborframeconditionnumberallrealdelta."
+    }
+  ],
+  "registry_checks": "Palomar/Hexagon/OpenAI/Colbrookcachesscanned;no fullmatchingclaim. Strohmer–HeathSICformalizationisdifferent.",
+  "scope_comparison": "Needallrealdelta>1. Actualbodyrestrictsspectralboundidentities toevenintegers;donotuseinformalcorollaryaloneasfullscopeclaim. Windowconstant2^1/4scalesAandBequally,sodoesnotmatter.",
+  "rationale": "Bounded searches found no full matching resolution or announcement for every real density; retain Partially resolved."
+}

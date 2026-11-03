@@ -1,0 +1,113 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1009",
+  "manifest_index": 853,
+  "checked_date": "2026-11-03",
+  "source_sha256": "ab7758f365c44088a8346ec2555f4e0642d526cfa3cfbbf6ab2cb5a30dc01ef4",
+  "statement_sha256": "7cf6ee8614a0955b70c3f5831407ea02eca28d5eaac8e1b467d0e38c266b51fa",
+  "original_target": {
+    "id": "1009",
+    "title": "A Hodge spectral gap from lower sectional curvature, volume, and diameter",
+    "area": "Spectral theory and spectral geometry",
+    "file": "problems/1009-a-hodge-spectral-gap-from-lower-sectional-curvature-volume-and-diameter.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0bbb4209e527318d",
+    "group": "spectral",
+    "source_sha256": "ab7758f365c44088a8346ec2555f4e0642d526cfa3cfbbf6ab2cb5a30dc01ef4",
+    "statement_sha256": "7cf6ee8614a0955b70c3f5831407ea02eca28d5eaac8e1b467d0e38c266b51fa",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix a dimension $`m`$, a real number $`\\kappa`$, and $`v,D>0`$. Does there exist $`C=C(m,\\kappa,v,D)>0`$ such that every connected oriented closed Riemannian $`m`$-manifold $`(M,g)`$ satisfying\n\n```math\n\\mathrm{sec}_g\\geq\\kappa,\\qquad \\mathrm{vol}(M,g)\\geq v,\\qquad \\mathrm{diam}(M,g)\\leq D\n```\n\n\nhas first **positive** Hodge-Laplacian eigenvalue $`\\lambda^{(p)}_1(M,g)\\geq C`$ in every form degree $`p=0,\\ldots,m`$ [1, Remark 3.3; 2, Conjecture 6.2]?\n\nLott suggested the needed noncollapsing, lower-curvature class might have a finite Lipschitz-cover property [3, p. 918]. Anné and Takahashi construct small positive Hodge eigenvalues under fixed volume and a lower sectional-curvature bound, but their examples have unbounded diameter [1, 2]. A known gap bound under **two-sided** sectional-curvature control does not settle the one-sided version [2, Theorem 6.1].",
+  "full_original_page": "# 1009. A Hodge spectral gap from lower sectional curvature, volume, and diameter\n\n**Area:** Spectral theory and spectral geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix a dimension $`m`$, a real number $`\\kappa`$, and $`v,D>0`$. Does there exist $`C=C(m,\\kappa,v,D)>0`$ such that every connected oriented closed Riemannian $`m`$-manifold $`(M,g)`$ satisfying\n\n```math\n\\mathrm{sec}_g\\geq\\kappa,\\qquad \\mathrm{vol}(M,g)\\geq v,\\qquad \\mathrm{diam}(M,g)\\leq D\n```\n\n\nhas first **positive** Hodge-Laplacian eigenvalue $`\\lambda^{(p)}_1(M,g)\\geq C`$ in every form degree $`p=0,\\ldots,m`$ [1, Remark 3.3; 2, Conjecture 6.2]?\n\nLott suggested the needed noncollapsing, lower-curvature class might have a finite Lipschitz-cover property [3, p. 918]. Anné and Takahashi construct small positive Hodge eigenvalues under fixed volume and a lower sectional-curvature bound, but their examples have unbounded diameter [1, 2]. A known gap bound under **two-sided** sectional-curvature control does not settle the one-sided version [2, Theorem 6.1].\n\n## Application\n\nA positive answer would make the spectral gap of differential forms stable across noncollapsing geometric families with only a lower sectional-curvature bound. This matters when Hodge theory is used to study geometry through eigenvalues rather than through topology alone.\n\n## References\n\n1. C. Anné and J. Takahashi, [*Small eigenvalues of the rough and Hodge Laplacians under fixed volume*](https://afst.centre-mersenne.org/item/10.5802/afst.1764.pdf), *Ann. Fac. Sci. Toulouse Math.* **33** (2024), no. 1, 123–151, DOI: [10.5802/afst.1764](https://doi.org/10.5802/afst.1764), Remark 3.3.\n2. C. Anné and J. Takahashi, [*Small eigenvalues of the Hodge-Laplacian with sectional curvature bounded below*](https://www.math.is.tohoku.ac.jp/~junya/paper/surgery-curv-2025.pdf), *Ann. Global Anal. Geom.* **68** (2025), article 1, DOI: [10.1007/s10455-025-10005-4](https://doi.org/10.1007/s10455-025-10005-4), Theorem 6.1 and Conjecture 6.2.\n3. J. Lott, [*Remark about the spectrum of the $`p`$-form Laplacian under a collapse with curvature bounded below*](https://math.berkeley.edu/~lott/S0002-9939-03-07121-1.pdf), *Proc. Amer. Math. Soc.* **132** (2004), 911–918, DOI: [10.1090/S0002-9939-03-07121-1](https://doi.org/10.1090/S0002-9939-03-07121-1), p. 918.\n\n## Status review\n\n\n**Known cases:** The one-sided sectional-curvature, volume and diameter hypotheses do not include an injectivity-radius bound. The retrieved February 2026 Ricci/injectivity-radius announcement is also officially withdrawn for a mistake in Proposition 3.1; it is not a resolution.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe one-sided sectional-curvature, volume and diameter hypotheses do not include an injectivity-radius bound. The retrieved February 2026 Ricci/injectivity-radius announcement is also officially withdrawn for a mistake in Proposition 3.1; it is not a resolution.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe [bounded audit](../FURTHER_problems/_tracking/j282-lott-hodge-eigenvalue-status-2026-10-22.json) compares the original remark, 2024 and 2025 formulations, stronger nearby theorems, and targeted result and announcement searches through 22 October 2026. It found no resolution of this exact one-sided-curvature, bounded-diameter claim.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-0bbb4209e527318d**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Hodge-Laplacian",
+    "Anné",
+    "Takahashi",
+    "Lott"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"Hodge\" \"curvature bounded below\" \"spectral gap\" 2026"
+    },
+    {
+      "query": "\"Hodge\" \"curvature bounded below\" \"spectral gap\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    },
+    {
+      "query": "\"uniform estimates\" \"Hodge\" \"Lott\" \"Ricci\" 2026"
+    },
+    {
+      "query": "\"Bhattacharya\" \"Hodge\" \"withdrawn\""
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.math.is.tohoku.ac.jp/~junya/paper/surgery-curv-2025.pdf",
+      "locator": "2025 Theorem6.1/Conjecture6.2 and Remark1.2(ii); officialarxiv2602.11913v2 withdrawn3March2026"
+    },
+    {
+      "url": "https://arxiv.org/abs/2602.11913",
+      "locator": "v2withdrawalnotice8,20,30; primary September18IITBabstractsourcehttps://www.math.iitb.ac.in/webcal/view_entry.php?date=20260918&friendly=1&id=2131, retrieved as indexed primary content after directtimeouts"
+    }
+  ],
+  "scope_comparison": "The small-eigenvalue constructions have diameter->infinity. Known gap theorem requires two-sided curvature. September18IITB primary abstract explicitly adds injectivity radius>i0; this does not follow from target one-sided curvature/noncollapse. February Ricci/injectivity paper is officially withdrawn for mistake in Proposition3.1, so no valid resolution follows.",
+  "recommendation": "Retain partial status; no complete matching proof or announcement found in bounded current checks.",
+  "limitations": "Negative searches do not establish continued openness; explicit narrower primary hypotheses suffice to exclude the cited comparators as full solutions.",
+  "announcement_routing": {
+    "localID": "1009",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Hodge-Laplacian",
+          "Anné",
+          "Takahashi",
+          "Lott"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Hodge-Laplacian",
+          "Anné",
+          "Takahashi",
+          "Lott"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Hodge-Laplacian",
+        "Anné",
+        "Takahashi",
+        "Lott"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

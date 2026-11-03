@@ -1,0 +1,88 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "005",
+  "manifest_index": 3,
+  "source_sha256": "7169c4741179705e4368a01f02428f5a9a45ae37842b14ab61784684998d4b38",
+  "statement_sha256": "f7faa29435448632b9ba7b27180f4f556c1b108557505ff8b18146e2b3ec57bb",
+  "original_target": {
+    "id": "005",
+    "title": "Does the disk minimize the third Dirichlet eigenvalue?",
+    "area": "Spectral shape optimization",
+    "file": "problems/005-third-dirichlet-disk.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "spectral",
+    "source_sha256": "7169c4741179705e4368a01f02428f5a9a45ae37842b14ab61784684998d4b38",
+    "statement_sha256": "f7faa29435448632b9ba7b27180f4f556c1b108557505ff8b18146e2b3ec57bb",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T11:44:35.178566+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Target is the third Dirichlet eigenvalue for arbitrary bounded planar open sets, allowing disconnected sets, at fixed area. Robin, Neumann, Dirac, eigenvalue-ratio and nodal-line counterexamples do not prove or disprove the requested disk-minimality inequality.",
+  "primary_sources": [],
+  "queries": [
+    {
+      "query": "third Dirichlet",
+      "providers": [
+        "arXiv",
+        "Zenodo",
+        "HAL",
+        "GitHub",
+        "Palomar",
+        "Hexagon"
+      ],
+      "method": "Focused web searches plus public current-provider metadata routing"
+    },
+    {
+      "query": "third eigenvalue",
+      "providers": [
+        "arXiv",
+        "Zenodo",
+        "HAL",
+        "GitHub",
+        "Palomar",
+        "Hexagon"
+      ],
+      "method": "Focused web searches plus public current-provider metadata routing"
+    },
+    {
+      "query": "Dirichlet",
+      "providers": [
+        "arXiv",
+        "Zenodo",
+        "HAL",
+        "GitHub",
+        "Palomar",
+        "Hexagon"
+      ],
+      "method": "Focused web searches plus public current-provider metadata routing"
+    }
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "revision": 735,
+      "entries": 954,
+      "complete_listing": true,
+      "scope": "Searched current public summaries; full definitions only where candidate relevant."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "entries": 646,
+      "complete_listing": true,
+      "scope": "Current metadata searched; Xi/character-sum Polya and point-billiard hits are different targets."
+    },
+    "OpenAI": {
+      "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+      "scope": "Current manuscript routing index inspected, not proof audit of every manuscript."
+    }
+  },
+  "limitations": [
+    "Bounded search cannot establish that no solution exists.",
+    "Provider metadata coverage is not a full proof review."
+  ],
+  "canonical_update_required": false
+}

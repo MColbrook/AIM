@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1047",
+  "manifest_index": 891,
+  "checked_date": "2026-11-03",
+  "source_sha256": "283e87f20225bd112e2d3beb74c10d019a71d4880d9e286b105a8cebe5d9afab",
+  "statement_sha256": "5bd01c65037cfae84c3c56b968b705cf64ab569354589337e0330fb9e6d6501d",
+  "original_target": {
+    "id": "1047",
+    "title": "Global energy-class propagation for the three-dimensional hyperbolic cubic Schrödinger equation",
+    "area": "Nonlinear waves, fluids and kinetic equations; dispersive PDEs",
+    "file": "problems/1047-global-energy-class-propagation-for-the-three-dimensional-hyperbolic-cubic-schrodinger-equation.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-58f9f6cf3a0d2d73",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "283e87f20225bd112e2d3beb74c10d019a71d4880d9e286b105a8cebe5d9afab",
+    "statement_sha256": "5bd01c65037cfae84c3c56b968b705cf64ab569354589337e0330fb9e6d6501d",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`L=\\partial_{x_1}^2+\\partial_{x_2}^2-\\partial_z^2`$ on $`\\mathbb R^3`$. For every complex-valued $`u_0\\in H^1(\\mathbb R^3)`$, consider\n\n```math\ni\\partial_tu+Lu+|u|^2u=0,\\qquad u(0)=u_0.\n```\n\nWrite $`[0,T_{\\max})`$ for the maximal forward interval of its standard local mild solution, with\n\n```math\nu\\in C([0,T_{\\max});H^1(\\mathbb R^3))\n\\cap L^{8/3}_{\\mathrm{loc}}([0,T_{\\max});W^{1,4}(\\mathbb R^3)),\n```\n\nand the Duhamel identity\n\n```math\nu(t)=e^{itL}u_0+i\\int_0^t e^{i(t-s)L}(|u(s)|^2u(s))\\,ds.\n```\n\nProve or disprove that $`T_{\\max}=\\infty`$ for every such datum. Equivalently, can the finite-time $`H^1`$ blow-up alternative ever occur? The domain is the full Euclidean space in all three spatial directions; no symmetry, smallness, or periodic direction is assumed.",
+  "full_original_page": "# 1047. Global energy-class propagation for the three-dimensional hyperbolic cubic Schrödinger equation\n\n**Area:** Nonlinear waves, fluids and kinetic equations; dispersive PDEs\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`L=\\partial_{x_1}^2+\\partial_{x_2}^2-\\partial_z^2`$ on $`\\mathbb R^3`$. For every complex-valued $`u_0\\in H^1(\\mathbb R^3)`$, consider\n\n```math\ni\\partial_tu+Lu+|u|^2u=0,\\qquad u(0)=u_0.\n```\n\nWrite $`[0,T_{\\max})`$ for the maximal forward interval of its standard local mild solution, with\n\n```math\nu\\in C([0,T_{\\max});H^1(\\mathbb R^3))\n\\cap L^{8/3}_{\\mathrm{loc}}([0,T_{\\max});W^{1,4}(\\mathbb R^3)),\n```\n\nand the Duhamel identity\n\n```math\nu(t)=e^{itL}u_0+i\\int_0^t e^{i(t-s)L}(|u(s)|^2u(s))\\,ds.\n```\n\nProve or disprove that $`T_{\\max}=\\infty`$ for every such datum. Equivalently, can the finite-time $`H^1`$ blow-up alternative ever occur? The domain is the full Euclidean space in all three spatial directions; no symmetry, smallness, or periodic direction is assumed.\n\n## Application\n\nNormal group-velocity dispersion in a Kerr optical medium produces one dispersive direction with the opposite sign to the two transverse directions. This question tests whether that mixed dispersion can prevent finite-time collapse for arbitrary finite-energy pulse envelopes.\n\n## References\n\n1. É. Dumas, D. Lannes and J. Szeftel, *Variants of the Focusing NLS Equation: Derivation, Justification, and Open Problems Related to Filamentation*, in *Laser Filamentation*, Springer (2016), pp.19–75, §4.2, equation(69), Open Problem6; [author-hosted final chapter](https://david-lannes.perso.math.cnrs.fr/wp-content/uploads/2019/01/dumaslannesszeftel.pdf), printed61–62; [eligible preprint](https://arxiv.org/abs/1405.7308v2), pp.33–34; [chapter DOI](https://doi.org/10.1007/978-3-319-23084-9_2).\n2. J.-C. Saut and Y. Wang, [*On the hyperbolic nonlinear Schrödinger equations*](https://doi.org/10.1186/s13662-024-03811-w), *Advances in Continuous and Discrete Models* (2024), article15, equations(1.9), §2.1 and Open Problem2.\n\n## Status review\n\n\n**Known cases:** The dispersion has two positive and one negative spatial direction on full R3. Elliptic focusing/defocusing cubic theorems, hyperbolic-space geometry and a solution constant in one infinite direction do not settle arbitrary H1 data here.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe dispersion has two positive and one negative spatial direction on full R3. Elliptic focusing/defocusing cubic theorems, hyperbolic-space geometry and a solution constant in one infinite direction do not settle arbitrary H1 data here.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThis is the three-dimensional component of the cited global-existence question. AIM421 concerns the planar equation and asks for global $`L^2`$ scattering; it does not cover this three-dimensional energy-class target. The 2024 review explicitly retains the arbitrary-large-data three-dimensional question.\n\nThe conserved gradient energy has opposite signs and does not bound the full $`H^1`$ norm. Linear Strichartz estimates yield local well-posedness, but do not supply the missing large-data global bound. A solution constant in the negative-dispersion coordinate has infinite $`L^2(\\mathbb R^3)`$ norm unless it vanishes, so a planar focusing blow-up inserted into a periodic direction does not directly settle this full-space problem.\n\nSelected current-source, semantic, independent and catalogue checks through 18 October 2026 found no matching full resolution. Recent periodic, mixed-domain and fractional-dispersion results have different hypotheses. Only the three-dimensional component is added here. The rest of the final 2016 chapter remains a version-coverage gap.\n\nThe [primary review](../FURTHER_problems/_tracking/parallel/continuum/hyperbolic-nls3d-review.json), [independent selected audit](../FURTHER_problems/_tracking/parallel/rough-filtering/cross-hyperbolic-nls3d-review.json), [semantic comparison](../FURTHER_problems/_tracking/hyperbolic-nls3d-duplicates-review-2026-10-18.json), [catalogue comparison](../FURTHER_problems/_tracking/hyperbolic-nls3d-catalogue-review-2026-10-18.json) and [coordinator review](../FURTHER_problems/_tracking/hyperbolic-nls3d-coordinator-review-2026-10-18.json) record the checked scope and access limits. These are AI checks, not human peer review or certification of all cited proofs.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-58f9f6cf3a0d2d73**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "hyperbolic nonlinear Schrodinger",
+    "Saut Wang",
+    "nonelliptic cubic",
+    "Dumas Lannes"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"hyperbolic\" \"Schrödinger\" \"three-dimensional\" global blowup 2026"
+    },
+    {
+      "query": "hyperbolic Schrodinger cubic global R3 large data",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://link.springer.com/article/10.1186/s13662-024-03811-w",
+      "locator": "2024Section2.1OpenProblem2lines250–255;eq2.6;authorfinal2016chapterpp61–62OpenProblem6"
+    }
+  ],
+  "scope_comparison": "Exactmixed(2,1) dispersion on allR3 is retained explicitly in 2024source. Hyperbolic-space H3 Riemannian radial NLS has elliptic Laplace–Beltrami, not mixed Euclidean dispersion. Periodic/mixedspaceblowupconstantnegative-directiondata are outsideH1R3; numerical variable-coefficientIBVP does not prove nonlinear global existence/blowup. No full match.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded current negative search does not certify openness. Exact statement/current-comparison theorem scope inspected; not certification of entire proofs. 1046 original publisher body recovered from existing native cache, authorPDFcurrentaccess timed out.",
+  "announcement_routing": {
+    "localID": "1047",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "hyperbolic nonlinear Schrodinger",
+          "Saut Wang",
+          "nonelliptic cubic",
+          "Dumas Lannes"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "hyperbolic nonlinear Schrodinger",
+          "Saut Wang",
+          "nonelliptic cubic",
+          "Dumas Lannes"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "hyperbolic nonlinear Schrodinger",
+        "Saut Wang",
+        "nonelliptic cubic",
+        "Dumas Lannes"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

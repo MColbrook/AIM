@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "681",
+  "manifest_index": 525,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "681",
+    "title": "Positive capacity of transcendental quasiregular backward-orbit closures",
+    "area": "Geometric function theory and nonlinear potential theory",
+    "file": "problems/681-positive-capacity-of-transcendental-quasiregular-backward-orbit-closures.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-1bbd1c61a62bf3e7",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "aaef501a213efbd3955162b4e90a1066813e26cb8db4b84ed20e47a856419ea0",
+    "statement_sha256": "70f2e3f21a1e59c826d776a8270cd5f9df1b0d617b3889d58509c1619c0b204d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "aaef501a213efbd3955162b4e90a1066813e26cb8db4b84ed20e47a856419ea0",
+  "statement_sha256": "70f2e3f21a1e59c826d776a8270cd5f9df1b0d617b3889d58509c1619c0b204d",
+  "actual_source_sha256": "aaef501a213efbd3955162b4e90a1066813e26cb8db4b84ed20e47a856419ea0",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`d\\ge3`$. Let $`f:\\mathbb R^d\\to\\mathbb R^d`$ be nonconstant and continuous, with $`f\\in W^{1,d}_{\\mathrm{loc}}`$ and\n\n```math\n\\|Df(x)\\|^d\\le K\\det Df(x)\\quad\\text{a.e.}\n```\n\nfor some finite $`K\\ge1`$, where $`\\|Df\\|`$ is the operator norm. Assume that $`f`$ is of transcendental type: $`\\lim_{|x|\\to\\infty}|f(x)|`$ does not exist. The map is defined on all of Euclidean space. Set\n\n```math\nO_f^-(x)=\\bigcup_{m\\ge0}\\{y:f^m(y)=x\\},\\qquad\nE(f)=\\{x:O_f^-(x)\\text{ is finite}\\}.\n```\n\nFor compact $`C`$ inside a bounded open $`A\\subset\\mathbb R^d`$, define\n\n```math\n\\mathrm{cap}(A,C)=\\inf\\left\\{\\int_A|\\nabla u|^d\\,dx:\n u\\in C_c^\\infty(A),\\ u\\ge0,\\ u|_C\\ge1\\right\\}.\n```\n\nA compact set has zero conformal $`d`$-capacity if this infimum is zero; this property is independent of the enclosing bounded open set. A closed unbounded set has zero capacity if every compact subset does.\n\n**Does every $`x\\notin E(f)`$ satisfy**\n\n```math\n\\mathrm{cap}\\!\\left(\\overline{O_f^-(x)}\\right)>0?\n```\n\nThe closure is taken in $`\\mathbb R^d`$. Equivalently, zero capacity of that closure should characterize exceptional points, since finite sets have zero capacity. This is the entire, no-pole component of the conjectural relation discussed in [1].",
+  "full_local_page_read": true,
+  "queries": [
+    "\"quasiregular\" \"backward\" \"capacity\" proof 2026",
+    "\"quasiregular\" \"backward\" \"capacity\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Introduction before Theorem1.5 and Theorem1.5;1210.3972 Theorems1.9–1.11",
+      "scope_comparison": "Theorem1.5 requires at least one pole, excluded by the entire target. The no-pole source proves positive closed-backward-orbit capacity when there is no pits effect, when local index is globally bounded, or in dimension2. The requested d>=3 class has none of those extra assumptions. No full matching current announcement found.",
+      "version_or_date": "arXiv:1805.00454v2 (2018); Bergweiler–Nicks1210.3972v1 body also read",
+      "url": "https://arxiv.org/pdf/1805.00454v2",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem1.5 requires at least one pole, excluded by the entire target. The no-pole source proves positive closed-backward-orbit capacity when there is no pits effect, when local index is globally bounded, or in dimension2. The requested d>=3 class has none of those extra assumptions. No full matching current announcement found.",
+  "latest_version_check": "arXiv:1805.00454v2 (2018); Bergweiler–Nicks1210.3972v1 body also read",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

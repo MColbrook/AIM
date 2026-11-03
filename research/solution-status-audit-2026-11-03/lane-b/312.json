@@ -1,0 +1,44 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 253,
+  "source_sha256": "49452e23a642029522b0ac2d483d810558c201bbb0ec0ed75257c6083e48c8d5",
+  "statement_sha256": "6333a34a2e9651692654ada0e12084c576a6b66a688be901d6a7013bb60cf740",
+  "original_target": {
+    "id": "312",
+    "title": "The factor-two integrality gap for asymmetric metric routing",
+    "area": "Operations research and directed routing",
+    "file": "problems/312-asymmetric-tsp-integrality-gap.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "stochastic3",
+    "source_sha256": "49452e23a642029522b0ac2d483d810558c201bbb0ec0ed75257c6083e48c8d5",
+    "statement_sha256": "6333a34a2e9651692654ada0e12084c576a6b66a688be901d6a7013bb60cf740",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "312",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Original all directed metrics asks OPT<=2 Held-Karp with degree1 and outgoing cuts>=1. Vygen current Theorem1 gives9+alpha for alpha>3+2sqrt2, hence12+2sqrt2 upper gap, not2. New Palomar KKO/Christofides claims use undirected symmetric metrics; small ATSP enumeration and exact random instances do not cover arbitrary directed costs. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "asymmetric traveling salesman subtour LP integrality gap two proof 2026",
+    "\"asymmetric\" \"integrality gap\" two (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2603.14334",
+      "version": "current HTML3November2026",
+      "locator": "Theorem1 and LP(1)",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "asymmetric.*(salesman|TSP)|ATSP|subtour",
+    "palomar_matches": 3,
+    "hexagon_matches": 1,
+    "result": "Symmetric TSP bounds, tournament capacity and conditional sparse Hamiltonian-cycle counting have different models."
+  }
+}

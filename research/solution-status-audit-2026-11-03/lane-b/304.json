@@ -1,0 +1,44 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 245,
+  "source_sha256": "f6b44b0cea26dacc81a0102b4c82f83e3d3fe842c3133d3d160184b70002d0ab",
+  "statement_sha256": "66c6834390c4fd1e7cb9638a2e20c41d38fc48edfb1e0904b3dbb3872415ffd1",
+  "original_target": {
+    "id": "304",
+    "title": "Global classical continuation for a reversible mass-action reaction",
+    "area": "Chemical reaction–diffusion / continuum biology",
+    "file": "problems/304-reversible-reaction-classical-continuation.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "diffusion-materials",
+    "source_sha256": "f6b44b0cea26dacc81a0102b4c82f83e3d3fe842c3133d3d160184b70002d0ab",
+    "statement_sha256": "66c6834390c4fd1e7cb9638a2e20c41d38fc48edfb1e0904b3dbb3872415ffd1",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "304",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Original is deterministic Neumann reaction–diffusion for one disjoint-species reversible reaction of arbitrary positive integer order, dimension and diffusivities. Agresti–Kniely–Tang Proposition6.5 requires all diffusivities above a threshold; their principal result adds chosen transport noise on a torus. Quadratic/low-dimensional classical theorems, renormalized weak solutions and spatially homogeneous mass-action permanence do not settle arbitrary-order classical continuation. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "single reversible mass action reaction diffusion arbitrary order global classical solutions 2026",
+    "\"reversible\" \"reaction diffusion\" global classical (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.13332v1",
+      "version": "v1,August2026",
+      "locator": "Theorem3.4; Proposition6.5 high diffusivity",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "reaction.diffusion|mass.action",
+    "palomar_matches": 9,
+    "hexagon_matches": 4,
+    "result": "Recorded claims concern fronts, ODE mass-action steady states/permanence/oscillations, not the unrestricted deterministic PDE continuation target."
+  }
+}

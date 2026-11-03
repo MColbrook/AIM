@@ -1,0 +1,166 @@
+[
+  {
+    "localID": "1024",
+    "aliases": [
+      "hyperbolic critical set",
+      "Jung",
+      "Zelditch"
+    ],
+    "outcome": "partial",
+    "review_level": "primary_body_and_search",
+    "searches": [
+      {
+        "query": "\"hyperbolic surfaces\" \"critical points\" finite eigenfunctions 2026"
+      },
+      {
+        "query": "\"hyperbolic surfaces\" \"critical points\" finite eigenfunctions",
+        "domains": [
+          "arxiv.org",
+          "zenodo.org",
+          "hal.science",
+          "github.com"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.numdam.org/item/10.5802/aif.3329.pdf",
+        "locator": "published2020Remark9.6 printed1024"
+      }
+    ],
+    "scope_comparison": "Exact published conjecture concerns closed compact boundaryless hyperbolic surfaces. Rotational cylinder domains have boundary, and isolated nodal singularities only address u=0. Generic transversality and systole critical-point counts do not prove finiteness of the full critical set for every positive-eigenvalue eigenfunction.",
+    "recommendation": "Retain partial status; no matching full resolution located in bounded current searches.",
+    "limitations": "Negative evidence does not prove openness. Exact original page and hashes retained."
+  },
+  {
+    "localID": "1025",
+    "aliases": [
+      "Steklov cuboids",
+      "Lagace",
+      "Savo"
+    ],
+    "outcome": "partial",
+    "review_level": "primary_body_and_search",
+    "searches": [
+      {
+        "query": "\"Steklov\" \"cuboids\" \"determine\" 2026"
+      },
+      {
+        "query": "\"Steklov\" \"cuboids\" \"determine\"",
+        "domains": [
+          "arxiv.org",
+          "zenodo.org",
+          "hal.science",
+          "github.com"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://arxiv.org/html/1711.03075v2",
+        "locator": "Corollaries1.7–1.8/Conjecture1.9 lines150–160; latest2608.10557v2 primaryabstract15August2026"
+      }
+    ],
+    "scope_comparison": "Rectangles and cubes among cuboids are established cases. August planar smooth strictly-convex isospectral pairs are not higher-dimensional cuboids, and2026polygonal determination concerns plane domains. No equality-of-full-spectra determination for all unrestricted d>=3side lengths found.",
+    "recommendation": "Retain partial status; no matching full resolution located in bounded current searches.",
+    "limitations": "Negative evidence does not prove openness. Exact original page and hashes retained."
+  },
+  {
+    "localID": "1026",
+    "aliases": [
+      "Steklov fixed collar",
+      "nodal localization",
+      "Xie",
+      "Decio"
+    ],
+    "outcome": "full",
+    "review_level": "primary_body_and_search",
+    "resolution_type": "negative counterexample; complete matching unverified announcement",
+    "searches": [
+      {
+        "query": "\"Steklov\" \"fixed collar\" nodal 2026"
+      },
+      {
+        "query": "\"Steklov\" \"fixed collar\" nodal",
+        "domains": [
+          "arxiv.org",
+          "zenodo.org",
+          "hal.science",
+          "github.com"
+        ]
+      },
+      {
+        "query": "Steklov nodal density fixed boundary collar Decio 2026"
+      },
+      {
+        "query": "\"Steklov\" \"collar\" \"zeros\"",
+        "domains": [
+          "arxiv.org",
+          "zenodo.org",
+          "hal.science",
+          "github.com"
+        ]
+      },
+      {
+        "query": "\"2610.28391\" gap correction withdrawn"
+      },
+      {
+        "query": "\"Xie\" \"Zhang\" \"nodal\" \"Steklov\" \"fixed collar\""
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://arxiv.org/abs/2610.28391",
+        "version": "v2",
+        "date": "2026-11-01",
+        "locator": "current submission history; firstv1 20October2026; no withdrawal notice"
+      },
+      {
+        "url": "https://arxiv.org/html/2610.28391v2",
+        "version": "v2",
+        "date": "2026-11-01",
+        "locator": "Theorem1.2 equation1.9; Section4.3 Lemma4.4 equation4.26, Lemma4.5 equations4.30–4.31 and final proofofTheorem1.2",
+        "access": "Web HTML/PDF cache misses; public GET-only Invoke-WebRequest recovered latest HTML in RAM; actual theorem and complete Section4.3 inspected, no external PDF saved."
+      }
+    ],
+    "scope_comparison": "COMPLETE negative match. Latestv2 constructs ONE fixed bounded simply connected Euclidean planar domain Ω with C∞ boundary, real harmonic functions v_j satisfying ordinary unweighted ∂νv_j=σ_jv_j, σ_j>2^(j−1)→∞. Lemma4.4 gives zero-free disk |z|<=1−1/(j+1) for a common smooth positive weight. Lemma4.5 realizes it with one injective smooth conformal F,7/8<=|F'|<=9/8. Final proof explicitly proves every interior zero y of v_j satisfies dist(y,∂Ω)<=9/[8(j+1)]. Smooth bounded domain is Lipschitz and d=2 is permitted in universal target.",
+    "deduction": "For ANY proposed fixed collar δ>0 choose x∈Ω with0<d0=dist(x,∂Ω)<δ. Distance-to-boundary is1-Lipschitz, so for ANY y∈Z_vj, |x−y|>=d0−dist(y,∂Ω)>=d0−9/[8(j+1)]. For largej this is>=d0/2, while C/σ_j<d0/2 for ANY fixedC. Thus B(x,C/σ_j) contains no interior zero. This directly disproves the exact all-domain/all-eigenfunction fixed-width collar assertion. An independent alternative is that sublinear total nodal length contradicts fixed-collar wavelength density by packing harmonic nodal arcs, but direct v2 localization avoids that extra argument.",
+    "known_gap_check": "Latest official v2 supersedes v1; theorem1.2 retained and Section4.3 now explicitly records localization. Focused gap/correction/withdrawal search found no public retraction or known gap; this is bounded, not proof certification. The source proof has been inspected at the claimed theorem/construction level, not independently verified in full.",
+    "recommendation": "Mark Solved (disproved), explicitly qualified as an UNVERIFIED ANNOUNCEMENT of Xie–Zhang, arXiv2610.28391v2,1November2026. Preserve full original target. Cite Theorem1.2 and Section4.3 localization with the displayed distance argument.",
+    "suggested_status_text": "Solved (disproved; unverified announcement). Xie and Zhang, arXiv:2610.28391v2 (1November2026), Theorem1.2 and Section4.3 announce one fixed smooth bounded simply connected planar domain and ordinary real Steklov eigenfunctions with σ_j→∞ whose entire interior zero sets lie within9/[8(j+1)] of the boundary. Every fixed positive-width collar contains a point at positive boundary distance; its distance from these zero sets stays positive along the sequence, contradicting the proposed CΩ/σ_j bound. The announced proof has not been independently certified.",
+    "limitations": "This status follows user instruction to count complete matching announcements, with explicit unverified-announcement qualification. It does not assert peer review or independent proof certification."
+  },
+  {
+    "localID": "1027",
+    "aliases": [
+      "Steklov boundary spectrum",
+      "Florentin",
+      "Dirichlet-to-Neumann"
+    ],
+    "outcome": "partial",
+    "review_level": "primary_body_and_search",
+    "searches": [
+      {
+        "query": "\"Steklov spectrum\" \"boundary Laplace\" 2026"
+      },
+      {
+        "query": "\"Steklov spectrum\" \"boundary Laplace\"",
+        "domains": [
+          "arxiv.org",
+          "zenodo.org",
+          "hal.science",
+          "github.com"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://ems.press/content/serial-article-files/33609",
+        "locator": "published2017OpenProblem7printed344; 2501.15535v4 17September2026primaryabstract; 2608.10557v2Theorem1.1.2(iv)"
+      }
+    ],
+    "scope_comparison": "Florentin requires fixed conformal class and Anosov simple boundary length spectrum. Planar isospectral pairs have boundary length2pi by explicit Theorem1.1.2(iv), hence equal intrinsic circle spectra. Neither supplies higher-dimensional spectral-only counterexamples or the unrestricted implication. Strong equality of full maps/all nonzero-frequency spectra is extra data.",
+    "recommendation": "Retain partial status; no matching full resolution located in bounded current searches.",
+    "limitations": "Negative evidence does not prove openness. Exact original page and hashes retained."
+  }
+]

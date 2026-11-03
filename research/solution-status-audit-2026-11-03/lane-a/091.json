@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "091",
+  "manifest_index": 65,
+  "source_sha256": "0ea0846154e573c5ed8d33b32bfc5ddb8fd1bd4c92daa3e11f1d13f2df4ac554",
+  "statement_sha256": "119b1aeb7128f4c5fcf3288c17a7ba5e36a9057c259b532c56af9344bf8225e6",
+  "original_target": {
+    "id": "091",
+    "title": "The planar self-avoiding-walk displacement exponent",
+    "area": "Polymer models",
+    "file": "problems/091-planar-self-avoiding-walk-exponent.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "probability-statistics",
+    "source_sha256": "0ea0846154e573c5ed8d33b32bfc5ddb8fd1bd4c92daa3e11f1d13f2df4ac554",
+    "statement_sha256": "119b1aeb7128f4c5fcf3288c17a7ba5e36a9057c259b532c56af9344bf8225e6",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "review_state": "bounded_review_complete",
+  "reviewed_UTC": "2026-11-03T12:46:55.785348+00:00",
+  "outcome": "claim-with-gap",
+  "recommended_status": "Open",
+  "scope_comparison": "Hueter2001v2 Theorem2 claims the exact square-lattice RMS exponent. However Corollary2 delegates weak-to-hard SAW transfer to Corollary1 pp27–28. The lower constant rho1(beta) may tend0; choosing a slow beta(n) diagonal does not justify exchanging the beta limit and n-liminf. The printed argument supplies no missing lower-uniformity or exchange theorem. OpenAI237 is a honeycomb-lattice DIAMETER exponent, not square-lattice endpoint second moment.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/math/0108077v2",
+      "locator": "Theorems1/2 p2–3 and Corollaries1/2 pp27–28",
+      "body_inspected": true,
+      "sha256": "a262d0ebe0753f6dc6664459d17b22c2d67266e2b2b0fc1662868263a2588911"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0108077",
+      "locator": "Version2 comment specifically removes beta-uniformity of lower bound"
+    }
+  ],
+  "independent_transfer_check": {
+    "reviewer": "separate lane-c agent",
+    "conclusion": "Same gap in beta/n limit interchange; not disproof of the SAW conjecture.",
+    "countermodel_to_inference": "a(n,beta)=n^(1/2)+exp(-beta)*n^(3/4). Fixed finite beta gives exponent3/4, uniform upper2n^(3/4), normalized convergence to exp(-beta) uniform in beta. beta(n)=sqrt(log n) gives diagonal exponent3/4 and log(rho1)/log n->0; the fixed-n beta->infinity limit has exponent1/2."
+  },
+  "queries": [
+    "self avoiding walk exponent2001 3/4",
+    "Hueter proof self-avoiding walk error gap",
+    "math/0108077",
+    "self-avoiding exponent3/4 2026"
+  ],
+  "provider_checks": {
+    "OpenAI": "Pinned current overview family237 explicitly honeycomb diameter; not transferred by unproved universality to square-lattice endpoint RMS."
+  },
+  "limitations": [
+    "Gap diagnosis concerns one transfer step; not an independent review of all32pages.",
+    "No full reliable announced solution matching the exact target located."
+  ],
+  "canonical_update_required": true
+}

@@ -1,0 +1,140 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "992",
+  "manifest_index": 836,
+  "checked_date": "2026-11-03",
+  "source_sha256": "e0ae03e3d90faf042c66f8d9e8e62bf492c64c5504bc371aefdd2fd2dcab6a56",
+  "statement_sha256": "7984e53a410240b4cb8620feb101ddc93202a355bedc6a65f15ef9a6e76df78a",
+  "original_target": {
+    "id": "992",
+    "title": "Shy reflected Brownian couplings in contractible domains",
+    "area": "Probability, statistics and learning",
+    "file": "problems/992-shy-reflected-brownian-couplings-in-contractible-domains.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f3d8745ef4645ca8",
+    "group": "probability-statistics",
+    "source_sha256": "e0ae03e3d90faf042c66f8d9e8e62bf492c64c5504bc371aefdd2fd2dcab6a56",
+    "statement_sha256": "7984e53a410240b4cb8620feb101ddc93202a355bedc6a65f15ef9a6e76df78a",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`d\\geq3`$ and let $`D\\subset\\mathbb R^d`$ be a bounded contractible domain with $`C^2`$ boundary. Suppose $`(X_t,Y_t)_{t\\geq0}`$ is a **co-adapted** coupling of two normally reflected Brownian motions in $`\\overline D`$. Must it be true, for every starting pair and every $`\\varepsilon>0`$, that\n\n```math\n\\mathbb P\\!\\left(\\inf_{t\\geq0}|X_t-Y_t|>\\varepsilon\\right)=0\\,?\n```\n\n\nEquivalently, can any such domain support a shy co-adapted coupling [1, Section 5.2, Conjecture 1]? The $`C^2`$ restriction specifies a standard regular setting for reflection; the source conjectures the broader bounded contractible case. In dimension two, the regular simply connected case follows from the source's $`\\mathrm{CAT}(0)`$ theorem [1, Theorem 2].",
+  "full_original_page": "# 992. Shy reflected Brownian couplings in contractible domains\n\n**Area:** Probability, statistics and learning\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`d\\geq3`$ and let $`D\\subset\\mathbb R^d`$ be a bounded contractible domain with $`C^2`$ boundary. Suppose $`(X_t,Y_t)_{t\\geq0}`$ is a **co-adapted** coupling of two normally reflected Brownian motions in $`\\overline D`$. Must it be true, for every starting pair and every $`\\varepsilon>0`$, that\n\n```math\n\\mathbb P\\!\\left(\\inf_{t\\geq0}|X_t-Y_t|>\\varepsilon\\right)=0\\,?\n```\n\n\nEquivalently, can any such domain support a shy co-adapted coupling [1, Section 5.2, Conjecture 1]? The $`C^2`$ restriction specifies a standard regular setting for reflection; the source conjectures the broader bounded contractible case. In dimension two, the regular simply connected case follows from the source's $`\\mathrm{CAT}(0)`$ theorem [1, Theorem 2].\n\n## Application\n\nCo-adapted means each Brownian motion retains its transition law with respect to the common filtration; the coupling may correlate their driving noise but cannot anticipate future motion. The conjecture asks whether the topology of a bounded domain alone forces the two paths arbitrarily close with probability one, a question about how geometry constrains probabilistic coupling. Later work rules out shy couplings in regular star-shaped and more generally uniformly well-contractible-loop domains [2, Theorem 5.5]. Its contractible three-dimensional example is not in that geometric class [2, Example 7.1], so that result does not cover the question here.\n\n## References\n\n1. M. Bramson, K. Burdzy and W. S. Kendall, [*Shy couplings, CAT(0) spaces, and the lion and man*](https://arxiv.org/abs/1007.3199), *Ann. Probab.* **41** (2013), no. 2, 744–784, DOI: [10.1214/11-AOP723](https://doi.org/10.1214/11-AOP723), Section 5.2, Conjecture 1.\n2. M. Bramson, K. Burdzy and W. S. Kendall, [*Rubber bands, pursuit games and shy couplings*](https://arxiv.org/abs/1207.0597), *Proc. Lond. Math. Soc.* **109** (2014), no. 1, 121–160, DOI: [10.1112/plms/pdt067](https://doi.org/10.1112/plms/pdt067), Theorem 5.5 and Example 7.1.\n\n## Status review\n\n\n**Known cases:** The smooth contractible case in dimension at least three is needed. CAT(0), rubber-band and planar simply-connected theorems impose stronger geometry; no matching general conclusion found.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe smooth contractible case in dimension at least three is needed. CAT(0), rubber-band and planar simply-connected theorems impose stronger geometry; no matching general conclusion found.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe [bounded audit](../FURTHER_problems/_tracking/shy-coupling-contractible-status-2026-10-22.json) checks the original statement, later geometric partial results, targeted proof/counterexample announcements, and AIM/FURTHER duplicates through 22 October 2026. No resolution of the smooth contractible $`d\\geq3`$ case was located.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f3d8745ef4645ca8**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "shy coupling",
+    "contractible",
+    "Bramson"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"shy coupling\" contractible 2026"
+    },
+    {
+      "query": "\"shy coupling\" contractible",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1207.0597",
+      "locator": "Theorem5.5 PDFp23; Example7.1 referenced geometric separation"
+    }
+  ],
+  "scope_comparison": "Theorem5.5 rules out shy co-adapted reflected Brownian couplings in bounded CL domains. Contractibility of a smooth bounded domain in dimension>=3 does not give the stronger uniform loop-contraction hypothesis; the target retains arbitrary such domains.",
+  "recommendation": "Retain partial status; no matching complete resolution located in this bounded current search.",
+  "limitations": "Bounded search is not proof of openness. Full original local page retained; shared announcement metadata scanned for aliases, primary scope used for plausible candidates.",
+  "announcement_routing": {
+    "localID": "992",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "shy coupling",
+          "contractible",
+          "Bramson"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-08-27-000004",
+            "title": "Arthur742Ramos/finite-graph-fundamental-group",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000004-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "shy coupling",
+          "contractible",
+          "Bramson"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00680v2",
+            "title": "Closed three-manifolds as hypersurfaces of Euclidean fourspace: compactness, the homogeneous geometries, and total absolute curvature",
+            "url": "https://hexagonmath.org/abs/2610.00680v2"
+          },
+          {
+            "id": "hexagon:2610.00556v1",
+            "title": "Risk Aversion and Information in Robust Contracting",
+            "url": "https://hexagonmath.org/abs/2610.00556v1"
+          },
+          {
+            "id": "hexagon:2610.00010v1",
+            "title": "A contractible open four-manifold with a complete metric of uniformly positive scalar curvature",
+            "url": "https://hexagonmath.org/abs/2610.00010v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "shy coupling",
+        "contractible",
+        "Bramson"
+      ],
+      "hits": [
+        {
+          "entry": "310",
+          "title": "Quillen's conjecture in rational homology",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Rational-homology-and-Quillens-conjecture-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "359",
+          "title": "Negative K\\\"ahler curvature without bounded holomorphic coordinates",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-negatively-pinched-Kahler-threefold-without-bounded-holomorphic-coordinates-September-25-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/One-sided-negative-sectional-curvature-and-the-holomorphic-Liouville-property-September-25-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Finite-graph fundamental groups, four-manifold geometry, contractible PSC examples, robust contracting and Quillen homology do not build shy reflected Brownian couplings in all target domains.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.752Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

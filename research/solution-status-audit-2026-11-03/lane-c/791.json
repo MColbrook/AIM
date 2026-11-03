@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "791",
+  "manifest_index": 635,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "791",
+    "title": "Primitive inequalities for convex support functions on simplicial fans",
+    "area": "Convex and algebraic geometry",
+    "file": "problems/791-primitive-inequalities-for-convex-support-functions-on-simplicial-fans.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-5da6e3af38745f79",
+    "group": "geometry-topology",
+    "source_sha256": "aacc707e9166fb49d62ffea9a0fd63b848d6f80287f7ecd823aea7fd160eaef6",
+    "statement_sha256": "a954fa579d284e7b6e117ff9498cc535607d3f493708ddea23713976cb34befd",
+    "state": "unreviewed"
+  },
+  "source_sha256": "aacc707e9166fb49d62ffea9a0fd63b848d6f80287f7ecd823aea7fd160eaef6",
+  "statement_sha256": "a954fa579d284e7b6e117ff9498cc535607d3f493708ddea23713976cb34befd",
+  "actual_source_sha256": "aacc707e9166fb49d62ffea9a0fd63b848d6f80287f7ecd823aea7fd160eaef6",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\ge1`$, let $`N\\cong\\mathbb Z^n`$, and set $`N_{\\mathbb R}=N\\otimes_{\\mathbb Z}\\mathbb R`$. Let $`\\Sigma`$ be a finite rational simplicial fan in $`N_{\\mathbb R}`$ with convex, full-dimensional support $`|\\Sigma|`$. Here a fan is a collection of strongly convex rational polyhedral cones, closed under faces, such that the intersection of two cones is a face of each. Simplicial means that the generators of each cone are linearly independent.\n\nWrite $`\\Sigma(1)`$ for its rays and $`v_\\rho\\in N`$ for the primitive generator of a ray $`\\rho`$. A *primitive collection* is a subset $`P\\subseteq\\Sigma(1)`$ that is not contained in any cone of $`\\Sigma`$, although every proper subset is contained in a cone.\n\nLet $`\\varphi:|\\Sigma|\\to\\mathbb R`$ be continuous and linear on each cone. Suppose that every primitive collection satisfies\n```math\n\\sum_{\\rho\\in P}\\varphi(v_\\rho)\n\\ \\ge\\ \n\\varphi\\!\\left(\\sum_{\\rho\\in P}v_\\rho\\right).\n```\n\nConvexity of the support makes the argument on the right well defined. Must\n```math\n\\varphi(u)+\\varphi(v)\\ge\\varphi(u+v)\n\\qquad\\text{for all }u,v\\in|\\Sigma|?\n```\n\nThe function is positively homogeneous, so this is the usual convexity condition on its support. The conjecture asks whether the finitely many primitive inequalities suffice. No completeness, smoothness or quasi-projectivity is assumed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Cox\" \"Renesse\" \"primitive collections\" conjecture proof 2026",
+    "\"Cox\" \"Renesse\" \"primitive collections\" conjecture (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/0808.1836",
+      "locator": "Conjecture4.2(Casagrande), lines782–788; Theorem1.4",
+      "version_or_date": "v2,3September2008; latest record inspected",
+      "scope_comparison": "The conjecture is exactly the simplicial convex-full-support primitive-inequality criterion. Theorem1.4 assumes quasi-projectivity. Known smooth/projective or toric blow-up cases do not remove that hypothesis for every rational simplicial fan; strict ampleness criteria are different from the weak inequalities.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The conjecture is exactly the simplicial convex-full-support primitive-inequality criterion. Theorem1.4 assumes quasi-projectivity. Known smooth/projective or toric blow-up cases do not remove that hypothesis for every rational simplicial fan; strict ampleness criteria are different from the weak inequalities.",
+  "latest_version_check": "v2,3September2008; latest record inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

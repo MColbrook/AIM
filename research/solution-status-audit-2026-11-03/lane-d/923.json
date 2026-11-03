@@ -1,0 +1,100 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "923",
+  "manifest_index": 767,
+  "checked_date": "2026-11-03",
+  "source_sha256": "2c4ee315d95023b74b5f8ac06d4b150d72c0cf76d3604c27fea85b7529cacb5d",
+  "statement_sha256": "067bd00f6f67eddae3015e66674e3930cd5049588261ef17aaaba538aab12387",
+  "original_target": {
+    "id": "923",
+    "title": "Rapid decay for cocompact lattices in semisimple Lie groups",
+    "area": "Harmonic analysis / convolution operators and operator algebras",
+    "file": "problems/923-rapid-decay-for-cocompact-lattices-in-semisimple-lie-groups.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ab2e51856d3b8681",
+    "group": "operators",
+    "source_sha256": "2c4ee315d95023b74b5f8ac06d4b150d72c0cf76d3604c27fea85b7529cacb5d",
+    "statement_sha256": "067bd00f6f67eddae3015e66674e3930cd5049588261ef17aaaba538aab12387",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`G`$ be a connected, noncompact semisimple real Lie group with finite centre, and let $`\\Gamma<G`$ be a discrete cocompact lattice, so $`G/\\Gamma`$ is compact. Fix a finite symmetric generating set $`S`$ of $`\\Gamma`$ and write $`|\\gamma|_S`$ for word length. For a finitely supported $`f:\\Gamma\\to\\mathbb C`$, let $`\\lambda_\\Gamma(f)`$ act on $`\\ell^2(\\Gamma)`$ by\n```math\n\\bigl(\\lambda_\\Gamma(f)\\xi\\bigr)(x)=\\sum_{\\gamma\\in\\Gamma}f(\\gamma)\\xi(\\gamma^{-1}x).\n```\n\nDoes every such lattice have the rapid decay property: do constants $`C>0`$ and $`s\\ge0`$ exist such that every finitely supported $`f`$ satisfies\n```math\n\\|\\lambda_\\Gamma(f)\\|_{\\ell^2\\to\\ell^2}\n\\le C\\left(\\sum_{\\gamma\\in\\Gamma}|f(\\gamma)|^2(1+|\\gamma|_S)^{2s}\\right)^{1/2}\\,?\n```\n\nThe constants may depend on the lattice and its generating set. This is the real Lie group case of Valette's conjecture; no particular exponent is prescribed.",
+  "full_original_page": "# 923. Rapid decay for cocompact lattices in semisimple Lie groups\n\n**Area:** Harmonic analysis / convolution operators and operator algebras\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`G`$ be a connected, noncompact semisimple real Lie group with finite centre, and let $`\\Gamma<G`$ be a discrete cocompact lattice, so $`G/\\Gamma`$ is compact. Fix a finite symmetric generating set $`S`$ of $`\\Gamma`$ and write $`|\\gamma|_S`$ for word length. For a finitely supported $`f:\\Gamma\\to\\mathbb C`$, let $`\\lambda_\\Gamma(f)`$ act on $`\\ell^2(\\Gamma)`$ by\n```math\n\\bigl(\\lambda_\\Gamma(f)\\xi\\bigr)(x)=\\sum_{\\gamma\\in\\Gamma}f(\\gamma)\\xi(\\gamma^{-1}x).\n```\n\nDoes every such lattice have the rapid decay property: do constants $`C>0`$ and $`s\\ge0`$ exist such that every finitely supported $`f`$ satisfies\n```math\n\\|\\lambda_\\Gamma(f)\\|_{\\ell^2\\to\\ell^2}\n\\le C\\left(\\sum_{\\gamma\\in\\Gamma}|f(\\gamma)|^2(1+|\\gamma|_S)^{2s}\\right)^{1/2}\\,?\n```\n\nThe constants may depend on the lattice and its generating set. This is the real Lie group case of Valette's conjecture; no particular exponent is prescribed.\n\n## Application\n\nThe inequality bounds a group convolution operator by a weighted square-summability norm. It connects harmonic analysis and random walks with smooth subalgebras of reduced group $`C^*`$-algebras and their topological $`K`$-theory.\n\n## References\n\n1. A. Valette, *On the Haagerup inequality and groups acting on $`\\widetilde A_n`$-buildings*, **Annales de l'Institut Fourier 47** (1997), 1195â€“1208, pp. 1195â€“1197. [DOI](https://doi.org/10.5802/aif.1596); [primary text](https://www.numdam.org/item/10.5802/aif.1596.pdf).\n2. I. Chatterji, *Introduction to the Rapid Decay property*, **Contemporary Mathematics 691** (2017), 53â€“72, Conjecture 1.1, p. 56; Proposition 4.1, p. 66. [DOI](https://doi.org/10.1090/conm/691/13893); [author offprint](https://chatterj.perso.math.cnrs.fr/papers/IntroRDSurvey.pdf).\n3. A. Boyer, A. Pinochet Lobos and C. Pittet, *Radial rapid decay does not imply rapid decay*, **Annales de l'Institut Fourier 73** (2023), 1421â€“1452, introduction p. 1422 and Definitions 2.1â€“2.4. [DOI](https://doi.org/10.5802/aif.3552); [primary text](https://www.numdam.org/item/10.5802/aif.3552.pdf).\n4. B.-O. Battseren, *On the growth of Fourier multipliers*, **Journal of Noncommutative Geometry 18** (2024), 1209â€“1228, p. 1211. [DOI](https://doi.org/10.4171/JNCG/551); [primary text](https://ems.press/content/serial-article-files/48451).\n\n## Status review\n\n\n**Known cases:** The lattice is cocompact and the target is full rapid decay. Rank-one and selected higher-rank results, radial rapid decay and the publicly posted coefficient-sampling reduction leave the general lattice-descent step open.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe lattice is cocompact and the target is full rapid decay. Rank-one and selected higher-rank results, radial rapid decay and the publicly posted coefficient-sampling reduction leave the general lattice-descent step open.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe 2023 and 2024 primary texts explicitly retain the general conjecture. Bounded checks through 25 October 2026 found no full solution, counterexample or announced solution for the target above. Known special cases and radial rapid decay do not establish the general inequality. The nonuniform higher-rank counterexamples do not meet the cocompact hypothesis.\n\n## Duplicate check\n\nCompared with the current and all-status AIM/OpenAI statements, all 896 recorded finding decisions and 531 admitted pages. The existing semisimple comparison-map problem concerns cohomology; the OpenAI Baumâ€“Connes counterexamples concern a different assertion and group class.\n\n## Review provenance\n\nLocated in the recovered-body review of DOI 10.5802/aif.1596. A separate reviewer checked the formulation and current literature; the coordinator read the primary definitions, explicit openness passages and equivalent norm formulation, and completed the semantic comparison. This is a bounded status review without a claim to verify every cited proof.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-ab2e51856d3b8681**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "rapid decay",
+    "Valette",
+    "cocompact lattice"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Valette\" \"rapid decay\" conjecture solved 2026",
+    "\"Valette\" \"rapid decay\" conjecture; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://chatterj.perso.math.cnrs.fr/papers/IntroRDSurvey.pdf",
+      "locator": "Conjecture1.1 and subsequent lattice-descent discussion, printedp56; primary indexed body",
+      "comparison": "Full RD for every cocompact real semisimple lattice is requested, not radial RD or ambient-group RD. Known rank-one/SL3 selected higher-rank results are restricted; nonuniform higher-rank counterexamples violate cocompactness."
+    }
+  ],
+  "rationale": "Full RD for every cocompact real semisimple lattice is requested, not radial RD or ambient-group RD. Known rank-one/SL3 selected higher-rank results are restricted; nonuniform higher-rank counterexamples violate cocompactness.",
+  "limitations": [
+    "Bounded negative search, not proof of continued openness."
+  ],
+  "announcement_routing": {
+    "localID": "923",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "rapid decay",
+          "Valette",
+          "cocompact lattice"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-09-30-000013",
+            "title": "Irrationality of Li₂(1/2)",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000013-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "rapid decay",
+          "Valette",
+          "cocompact lattice"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "rapid decay",
+        "Valette",
+        "cocompact lattice"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Irrationality of a dilogarithm is not rapid decay of cocompact lattices in semisimple Lie groups.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.715Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

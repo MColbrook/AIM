@@ -1,0 +1,183 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "950",
+  "manifest_index": 794,
+  "checked_date": "2026-11-03",
+  "source_sha256": "ed3ad33ffeb06a468283930c795195ae4d1fb0840fecf7b49c43d0900645d6db",
+  "statement_sha256": "0faf90984c2200b9f0b8886d8b098c7678df1bf5465d3b677baceb406c2de406",
+  "original_target": {
+    "id": "950",
+    "title": "Global regularity for strictly positive periodic scalar stretching",
+    "area": "Nonlocal evolution equations; viscoelasticity models",
+    "file": "problems/950-global-regularity-for-strictly-positive-periodic-scalar-stretching.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a9a98b190b25ceba",
+    "group": "pdes-materials",
+    "source_sha256": "ed3ad33ffeb06a468283930c795195ae4d1fb0840fecf7b49c43d0900645d6db",
+    "statement_sha256": "0faf90984c2200b9f0b8886d8b098c7678df1bf5465d3b677baceb406c2de406",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\mathbb T^2=(\\mathbb R/(2\\pi\\mathbb Z))^2`$. Define the periodic Riesz transform $`R_1`$ by\n\n```math\n\\widehat{R_1h}(k)=-i\\frac{k_1}{|k|}\\widehat h(k)\\quad(k\\in\\mathbb Z^2\\setminus\\{0\\}),\n\\qquad \\widehat{R_1h}(0)=0.\n```\n\nThus $`R_1^2`$ has multiplier $`-k_1^2/|k|^2`$ at nonzero modes and zero at the origin. For every real $`\\omega_0\\in C^\\infty(\\mathbb T^2)`$ with $`\\min\\omega_0>0`$, consider\n\n```math\n\\partial_t\\omega=\\omega R_1^2\\omega,\\qquad \\omega(0,x)=\\omega_0(x).\n```\n\n**Does its unique local smooth solution extend smoothly to every finite time?** Equivalently, can a finite maximal time of smooth existence occur for any such strictly positive initial datum? Smooth extension means $`\\omega\\in C^1([0,T];H^s(\\mathbb T^2))`$ for every finite $`T`$ and every $`s>1`$, with the displayed equation and initial trace. Positivity is preserved as long as the smooth solution exists. There is no smallness or Fourier-cone condition on the datum.",
+  "full_original_page": "# 950. Global regularity for strictly positive periodic scalar stretching\n\n**Area:** Nonlocal evolution equations; viscoelasticity models\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\mathbb T^2=(\\mathbb R/(2\\pi\\mathbb Z))^2`$. Define the periodic Riesz transform $`R_1`$ by\n\n```math\n\\widehat{R_1h}(k)=-i\\frac{k_1}{|k|}\\widehat h(k)\\quad(k\\in\\mathbb Z^2\\setminus\\{0\\}),\n\\qquad \\widehat{R_1h}(0)=0.\n```\n\nThus $`R_1^2`$ has multiplier $`-k_1^2/|k|^2`$ at nonzero modes and zero at the origin. For every real $`\\omega_0\\in C^\\infty(\\mathbb T^2)`$ with $`\\min\\omega_0>0`$, consider\n\n```math\n\\partial_t\\omega=\\omega R_1^2\\omega,\\qquad \\omega(0,x)=\\omega_0(x).\n```\n\n**Does its unique local smooth solution extend smoothly to every finite time?** Equivalently, can a finite maximal time of smooth existence occur for any such strictly positive initial datum? Smooth extension means $`\\omega\\in C^1([0,T];H^s(\\mathbb T^2))`$ for every finite $`T`$ and every $`s>1`$, with the displayed equation and initial trace. Positivity is preserved as long as the smooth solution exists. There is no smallness or Fourier-cone condition on the datum.\n\n## Application\n\nThis scalar equation isolates a quadratic nonlocal stretching mechanism from a model of polymeric fluids. It tests whether dissipation and strict positivity can prevent singularities in that simplified mechanism; it does not assert regularity for the tensorial Oldroyd–B fluid system.\n\n## References\n\n1. R. Bianchini and T. M. Elgindi, *Finite-time singularity formation for scalar stretching equations*, Nonlinearity **38** (2025), 075003, [DOI](https://doi.org/10.1088/1361-6544/addcae). The explicit question is §3.4, published pp. 9–10; [author manuscript](https://arxiv.org/abs/2407.16450v1), p. 9. The actual publisher-provided [published full text](https://www.researchgate.net/publication/392372714_Finite-time_singularity_formation_for_scalar_stretching_equations) retains it.\n2. P. Constantin and W. Sun, *Remarks on Oldroyd-B and related complex fluid models*, Communications in Mathematical Sciences **10** (2012), 33–73, §6, [published PDF](https://archive.intlpress.com/site/pub/files/_fulltext/journals/cms/2012/0010/0001/CMS-2012-0010-0001-a003.pdf), [DOI](https://doi.org/10.4310/CMS.2012.v10.n1.a3). Their Fourier-cone condition gives a restricted global class.\n3. D. Du, J. Li and X. Shi, *On self-similar singular solutions to a vorticity stretching equation*, [arXiv:2512.15017v1](https://arxiv.org/abs/2512.15017v1), equations (0.1)–(0.2) and Theorems 1.1–1.2, for comparison of the opposite sign and whole-space model.\n\n## Status review\n\n\n**Known cases:** Strictly positive periodic data with this sign of the Riesz-square stretching are required. Whole-space nonnegative cone-supported blowup and the opposite-sign model do not supply a counterexample.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nStrictly positive periodic data with this sign of the Riesz-square stretching are required. Whole-space nonnegative cone-supported blowup and the opposite-sign model do not supply a counterexample.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe 2025 source explicitly distinguishes its nonnegative, cone-supported whole-space blow-up construction from this strictly positive torus question. With $`f=\\log\\omega`$, one has $`f_t=R_1^2(e^f)`$, conserved mean $`f`$, and\n\n```math\n\\frac12\\frac{d}{dt}\\int_{\\mathbb T^2}|\\nabla f|^2\n=-\\int_{\\mathbb T^2}e^f|\\partial_1f|^2\\le0.\n```\n\nThese bounds control every fixed finite $`L^p`$ norm of $`\\omega`$ through the two-dimensional Moser–Trudinger inequality. They do not directly supply a uniform $`L^\\infty`$ or smooth continuation estimate.\n\nThe December 2025 announcement uses $`Z_{11}=\\partial_{11}\\Delta^{-1}=-R_1^2`$ and the equation $`w_t=wZ_{11}w`$ on $`\\mathbb R^2`$. Under the sign change $`w=-\\omega`$, its positive-integral blow-up data have the opposite sign to the present positive $`\\omega`$. Its compactly supported or $`L^2`$ whole-space profiles do not give smooth strictly positive periodic counterexamples. A later survey's unrestricted statement that scalar stretching equations admit some singular data also has no positivity restriction.\n\nCurrent searches on 17 October 2026 found no matching resolution or announced solution. The independent selected-primary audit and the scoped catalogue comparison passed; the review records retain the exact current-status comparisons and access limits. No absence proof is claimed.\n\n[Owner review](../FURTHER_problems/_tracking/parallel/continuum/scalar-positive-stretching-review.json), [independent audit](../FURTHER_problems/_tracking/parallel/rough-filtering/cross-scalar-positive-stretching-review.json), [duplicate comparison](../FURTHER_problems/_tracking/parallel/continuum/scalar-stretching-duplicate-query-receipt.json), [catalogue comparison](../FURTHER_problems/_tracking/parallel/continuum/scalar-positive-stretching-prove2me0145-review.json) and [coordinator review](../FURTHER_problems/_tracking/scalar-positive-stretching-coordinator-review-2026-10-17.json) record the checked conventions and reading limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-a9a98b190b25ceba**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "scalar stretching",
+    "Bianchini",
+    "Elgindi",
+    "Riesz"
+  ],
+  "queries": [
+    "\"scalar stretching\" \"positive\" torus 2026",
+    "\"scalar stretching\" \"positive\" torus; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"Bianchini\" \"Elgindi\" \"stretching\" positive"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2407.16450v1",
+      "locator": "Section3.4, lines306–315; Theorem3.1",
+      "comparison": "Actual source distinguishes compact/cone-supported nonnegative whole-space singular data from strictly positive torus data; logarithm H1 estimate gives finite Lp bounds but not smooth continuation."
+    },
+    {
+      "url": "https://arxiv.org/abs/2512.15017v1",
+      "locator": "December2025 announcement, equation sign/model comparison retained in full local statement",
+      "comparison": "Opposite-sign Z11=-R1^2 on R2 with localized/self-similar profiles does not provide positive periodic data for the specified sign. Not a plausible full match."
+    }
+  ],
+  "rationale": "No source located proving unrestricted positive periodic regularity or producing a matching positive-periodic blowup datum.",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected scope statements inspected, not certification of every proof."
+  ],
+  "announcement_routing": {
+    "localID": "950",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "scalar stretching",
+          "Bianchini",
+          "Elgindi",
+          "Riesz"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-30-000009",
+            "title": "A dimension-free weak-type (1,1) bound for the Gaussian Riesz transforms",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-30-000009-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-07-000002",
+            "title": "Two partial balayage principles for weak-type estimates",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-07-000002-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-08-000006",
+            "title": "Lichnerowicz--Obata first eigenvalue and round-sphere rigidity",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-08-000006-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "scalar stretching",
+          "Bianchini",
+          "Elgindi",
+          "Riesz"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00256v3",
+            "title": "The Pólya–Vinogradov inequality with log log q for every character",
+            "url": "https://hexagonmath.org/abs/2610.00256v3"
+          },
+          {
+            "id": "hexagon:2610.00199v1",
+            "title": "Finite Field Riesz-Frechet Representation",
+            "url": "https://hexagonmath.org/abs/2610.00199v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "scalar stretching",
+        "Bianchini",
+        "Elgindi",
+        "Riesz"
+      ],
+      "hits": [
+        {
+          "entry": "078",
+          "title": "The three-dimensional Bochner--Riesz conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Bochner-Riesz-Multipliers-in-Three-Dimensions-September-24-2026/Bochner-Riesz-Multipliers-in-Three-Dimensions-September-24-2026.pdf"
+          ]
+        },
+        {
+          "entry": "079",
+          "title": "Local smoothing for the Euclidean wave equation",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Local-smoothing-for-the-Euclidean-wave-equation-October-25-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Critical-local-smoothing-for-the-three-dimensional-wave-equation-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "081",
+          "title": "The David--Semmes Riesz-transform problem in higher codimension",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Riesz-transforms-and-uniform-rectifiability-in-higher-codimension-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "090",
+          "title": "Universal optimality of the triangular lattice",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/An-atomic-certificate-for-triangular-lattice-universal-optimality-September-26-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Universal-optimality-of-the-triangular-lattice-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-sharp-Fourier-certificate-for-planar-circle-packing-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Triangular-minimality-for-planar-Coulomb-renormalized-energy-September-23-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "140",
+          "title": "Memory--sample lower bounds for noiseless Gaussian regression",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Memory-and-precision-in-noiseless-Gaussian-regression-September-27-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Posterior-replicas-and-conditional-information-in-Gaussian-regression-September-27-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Localization-costs-and-information-growth-for-exact-Gaussian-observations-September-27-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Projection-moments-positive-cap-domination-and-Riesz-estimates-on-the-sphere-September-27-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Replacing-Gaussian-observations-in-memory-constrained-inference-September-27-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Subsphere-methods-for-memory-sample-lower-bounds-in-noiseless-Gaussian-regression-September-27-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "373",
+          "title": "Nonattainment in three-marginal Coulomb transport",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-counterexample-to-the-Monge-ansatz-for-the-three-marginal-Coulomb-cost-September-25-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Riesz-transform linear weak-type estimates, Bochner–Riesz/local smoothing, lattice optimality and Coulomb transport do not supply global evolution regularity of the stated nonlinear periodic stretching model.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.735Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

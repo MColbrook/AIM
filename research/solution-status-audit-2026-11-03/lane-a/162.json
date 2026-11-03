@@ -1,0 +1,75 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "162",
+  "manifest_index": 128,
+  "original_target": {
+    "id": "162",
+    "title": "Does fixed noise select a unique inviscid fluid law?",
+    "area": "Nonlinear waves, fluids and kinetic equations",
+    "file": "problems/162-does-fixed-noise-select-a-unique-inviscid-fluid-law.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0614d0fd64c7bb4a",
+    "group": "continuum2",
+    "source_sha256": "693e7f8be754ea69be30aaeda19dddcd0204c95dd51568bfb05976c7619e7365",
+    "statement_sha256": "b3cb2647e028be170c6938acc6d4eb12c1ea58a9b29d097ded6ef7146451b25d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "693e7f8be754ea69be30aaeda19dddcd0204c95dd51568bfb05976c7619e7365",
+  "statement_sha256": "b3cb2647e028be170c6938acc6d4eb12c1ea58a9b29d097ded6ef7146451b25d",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:34:39.522087+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Actual1712.09830 Openproblem4(a) asks sequence dependence at fixed noise. Current2602.15805v2 studies an N-dimensional Galerkin evolution with extra random stirring and convergence of two energy/enstrophy observables, not the full untruncated velocity stationary law for fixed Laplacian/noise. Altering viscosity exponent also does not answer fixed operator.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1712.09830",
+      "locator": "Openproblem4(a) and Theorem5.1",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2602.15805v2",
+      "locator": "Introduction/model and Section5",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Kuksin\" \"stationary\" \"inviscid\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) 2026",
+    "\"Kuksin\" \"inviscid\" \"2026\" uniqueness stationary"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Kuksin",
+        "inviscid stationary"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Kuksin",
+        "inviscid stationary"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

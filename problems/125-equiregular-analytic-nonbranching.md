@@ -2,9 +2,9 @@
 
 **Area:** Nonholonomic geometry / optimal transport
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -22,6 +22,13 @@ Branching allows optimal motions to share an initial trajectory and then split. 
 2. E. Le Donne, N. Paddeu and A. Socionovo, *Metabelian distributions and sub-Riemannian geodesics* (2026), [Advances in Calculus of Variations](https://doi.org/10.1515/acv-2025-0104), Theorem 1.1 and structural definitions. Supplies a regularity result in a restricted analytic setting, rather than a general nonbranching theorem.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Theorem1.3 claims branching minimizing geodesics in Carnot groups. Those structures are analytic and equiregular, and the lift preserves length minimality and branching of curves sharing a nontrivial initial segment. Common arclength parametrization gives the local unit-speed convention. The nonequiregular3D example alone would not suffice; the Carnot lift is essential.
+
+[Claimed solution](https://arxiv.org/pdf/2603.23068v3) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/125.json). Source locator: Theorem1.3 and Carnot-group lifting in§10. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative: branching analytic equiregular minimizers
 

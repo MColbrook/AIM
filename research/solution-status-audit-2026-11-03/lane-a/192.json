@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "192",
+  "manifest_index": 151,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "192",
+    "title": "Polynomial mixing of planar Ising dynamics with plus boundary",
+    "area": "Statistical mechanics and stochastic relaxation",
+    "file": "problems/192-ising-plus-boundary-polynomial-mixing.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "22eaf76647f07bfb0f1979112d8737a0be82d26601304a1cd5e0d9c0b39dbd28",
+    "statement_sha256": "e970bd8cfd4744a69284d37f168953b069fa10cb0f9ffc1b54ec61b06f68864d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "22eaf76647f07bfb0f1979112d8737a0be82d26601304a1cd5e0d9c0b39dbd28",
+  "statement_sha256": "e970bd8cfd4744a69284d37f168953b069fa10cb0f9ffc1b54ec61b06f68864d",
+  "actual_source_sha256": "22eaf76647f07bfb0f1979112d8737a0be82d26601304a1cd5e0d9c0b39dbd28",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix $`\\beta>\\beta_c^{(2)}=\\frac12\\log(1+\\sqrt2)`$. On $`\\Lambda_n=\\{1,\\ldots,n\\}^2`$ take Ising spins with all exterior spins fixed to $`+1`$ and Gibbs weight proportional to $`\\exp(\\beta\\sum_{x\\sim y}\\sigma_x\\sigma_y)`$, summing over edges meeting $`\\Lambda_n`$. Run continuous-time heat-bath Glauber dynamics: each interior site, at rate one, resamples its spin from the Gibbs conditional law.\n\nLet\n\n```math\nt_{\\rm mix}(n,\\beta)=\\inf\\{t:\\max_\\eta\\|P_t(\\eta,\\cdot)-\\mu_{n,\\beta}^+\\|_{\\rm TV}\\le1/4\\}.\n```\n\nFor every fixed $`\\beta>\\beta_c^{(2)}`$, do finite constants $`C_\\beta,a_\\beta`$ exist with $`t_{\\rm mix}(n,\\beta)\\le C_\\beta n^{a_\\beta}`$ for all $`n\\ge1`$?",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Ising\" \"plus boundary\" \"polynomial mixing\" 2026",
+    "\"Ising\" \"plus boundary\" \"polynomial mixing\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Ising\" \"plus boundary\" \"polynomial mixing\" (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Ising\" \"plus boundary\" \"polynomial\" 2026 mixing solved"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2605.08052v1",
+      "primary_body_access_gap": false,
+      "locator": "Theorem1,Assumption1.2,Theorems3–4,AppendixA",
+      "version_or_date": "arXiv:2605.08052v1,8May2026,onlyversion",
+      "scope_comparison": "The exact target is a polynomial worst-initial-state mixing bound for finite plus-boundary boxes at each fixed beta>beta_c. The current primary Theorem1 treats biased iid initializations on a torus/infinite lattice, not every finite-box start. Section1.2 explicitly identifies polynomial plus-boundary mixing as open and proves only a uniform-in-large-beta quasi-polynomial input in AppendixA. This does not replace exp((log n)^C) by n^a for all boxes. No full matching announcement was found."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The exact target is a polynomial worst-initial-state mixing bound for finite plus-boundary boxes at each fixed beta>beta_c. The current primary Theorem1 treats biased iid initializations on a torus/infinite lattice, not every finite-box start. Section1.2 explicitly identifies polynomial plus-boundary mixing as open and proves only a uniform-in-large-beta quasi-polynomial input in AppendixA. This does not replace exp((log n)^C) by n^a for all boxes. No full matching announcement was found.",
+  "latest_version_check": "arXiv:2605.08052v1,8May2026,onlyversion",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

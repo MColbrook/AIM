@@ -1,0 +1,110 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "925",
+  "manifest_index": 769,
+  "checked_date": "2026-11-03",
+  "source_sha256": "2e8c40a9396e7c1acef5d2a3a40988f19d0c95c99142806f2c080b0cb013223e",
+  "statement_sha256": "e0a2cc71a8008e3f371dd9f095102fd304303b3fb5f0f04011d9bdeacabebe08",
+  "original_target": {
+    "id": "925",
+    "title": "Does the infinite-variable Hardy space have a Schauder basis?",
+    "area": "Function spaces, harmonic analysis and Dirichlet series",
+    "file": "problems/925-does-the-infinite-variable-hardy-space-have-a-schauder-basis.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c213c89642744611",
+    "group": "operators",
+    "source_sha256": "2e8c40a9396e7c1acef5d2a3a40988f19d0c95c99142806f2c080b0cb013223e",
+    "statement_sha256": "e0a2cc71a8008e3f371dd9f095102fd304303b3fb5f0f04011d9bdeacabebe08",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\mathbb T=\\{z\\in\\mathbb C:|z|=1\\}`$, and equip $`\\mathbb T^{\\mathbb N}`$ with normalized product Haar measure $`m`$. Define the complex Banach space\n```math\nH^1(\\mathbb T^{\\mathbb N})\n =\\overline{\\left\\{\\sum_{\\nu\\in A}a_\\nu z^\\nu:\n A\\subset\\mathbb N_0^{(\\mathbb N)}\\text{ finite},\\ a_\\nu\\in\\mathbb C\\right\\}}^{\\,L^1(m)},\n```\n\nwhere each multi-index $`\\nu`$ has finite support and $`z^\\nu=\\prod_jz_j^{\\nu_j}`$.\n\nDoes there exist a sequence $`(e_j)_{j\\ge1}`$ in this space such that every $`F\\in H^1(\\mathbb T^{\\mathbb N})`$ has a unique scalar sequence $`(a_j)`$ satisfying\n```math\n\\lim_{N\\to\\infty}\\left\\|F-\\sum_{j=1}^{N}a_je_j\\right\\|_{L^1(m)}=0?\n```\n\n\nThe basis vectors may be arbitrary elements of the space. Unconditional convergence is not required.",
+  "full_original_page": "# 925. Does the infinite-variable Hardy space have a Schauder basis?\n\n**Area:** Function spaces, harmonic analysis and Dirichlet series\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\mathbb T=\\{z\\in\\mathbb C:|z|=1\\}`$, and equip $`\\mathbb T^{\\mathbb N}`$ with normalized product Haar measure $`m`$. Define the complex Banach space\n```math\nH^1(\\mathbb T^{\\mathbb N})\n =\\overline{\\left\\{\\sum_{\\nu\\in A}a_\\nu z^\\nu:\n A\\subset\\mathbb N_0^{(\\mathbb N)}\\text{ finite},\\ a_\\nu\\in\\mathbb C\\right\\}}^{\\,L^1(m)},\n```\n\nwhere each multi-index $`\\nu`$ has finite support and $`z^\\nu=\\prod_jz_j^{\\nu_j}`$.\n\nDoes there exist a sequence $`(e_j)_{j\\ge1}`$ in this space such that every $`F\\in H^1(\\mathbb T^{\\mathbb N})`$ has a unique scalar sequence $`(a_j)`$ satisfying\n```math\n\\lim_{N\\to\\infty}\\left\\|F-\\sum_{j=1}^{N}a_je_j\\right\\|_{L^1(m)}=0?\n```\n\n\nThe basis vectors may be arbitrary elements of the space. Unconditional convergence is not required.\n\n## Application\n\nThe question asks whether all analytic functions in this infinite-variable space can share one ordered system of unique, norm-convergent expansions. Through the Bohr correspondence it is also a question about representing Dirichlet series in their mean absolute-value norm. Such a basis would provide convergent linear truncations without requiring the canonical Dirichlet monomials to serve as basis vectors.\n\n## References\n\n1. E. Saksman and K. Seip, *Some open questions in analysis for Dirichlet series*, [arXiv:1601.01616v1](https://arxiv.org/abs/1601.01616v1), physical pp.2–4, Problem 2.6 (first question); published in Contemporary Mathematics **679** (2016), 179–191, [doi:10.1090/conm/679/13675](https://doi.org/10.1090/conm/679/13675).\n2. A. Aleman, J.-F. Olsen and E. Saksman, *Fourier multipliers for Hardy spaces of Dirichlet series*, [arXiv:1210.4292](https://arxiv.org/abs/1210.4292), Section 3, Corollary 4 and Question 1.\n3. D. Carando, S. Lassalle and L. Milne, *The fundamental functions of the canonical basis of Hardy spaces of Dirichlet series*, [arXiv:2406.03623v1](https://arxiv.org/abs/2406.03623v1), definitions, Remark 1.2 and Proposition 4.1; [published 2025 version](https://doi.org/10.1007/s00041-025-10191-6).\n\n## Status review\n\n\n**Known cases:** Any Schauder basis in infinite-variable H1 is requested. Finite-variable, p>1, Markushevich and Frechet-space basis results have different conclusions. No matching general endpoint announcement found.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nAny Schauder basis in infinite-variable H1 is requested. Finite-variable, p>1, Markushevich and Frechet-space basis results have different conclusions. No matching general endpoint announcement found.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nReviewed 18 October 2026. The 2016 survey and the earlier Question 1 explicitly ask for any Schauder basis. The Bohr correspondence is an isometry, so the formulation above preserves that question. Known results for the canonical monomials when $`1<p<\\infty`$, and Markushevich bases at $`p=1`$, do not supply an arbitrary Schauder basis. A basis of a translated Fréchet space concerns a different topology; recent bases made of finite Blaschke products concern one complex variable and prescribed basis vectors.\n\nSelected current-source, semantic, independent and catalogue checks found no matching full resolution. All 186 cached catalogue descriptions returned zero supplied-alias matches. This is a bounded literature check, not proof that no solution exists. Comparisons with the original published bodies and the 2025 subscription article remain access gaps; no certification of all proofs is claimed.\n\nThe [primary review](../FURTHER_problems/_tracking/parallel/complex-bayesian/dirichlet-h1-schauder-basis-review.json), [independent selected audit](../FURTHER_problems/_tracking/parallel/rough-filtering/cross-dirichlet-h1-schauder-basis-review.json), [semantic comparison](../FURTHER_problems/_tracking/dirichlet-h1-basis-duplicates-review-2026-10-18.json), [catalogue comparison](../FURTHER_problems/_tracking/dirichlet-h1-basis-catalogue-review-2026-10-18.json) and [coordinator review](../FURTHER_problems/_tracking/dirichlet-h1-basis-coordinator-review-2026-10-18.json) record the scope and limits. These are AI checks, not human peer review.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-c213c89642744611**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Hardy space",
+    "Schauder basis",
+    "Dirichlet series",
+    "Saksman"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Hardy\" \"Dirichlet\" \"H1\" \"Schauder basis\" 2026",
+    "\"Hardy\" \"Dirichlet\" \"H1\" \"Schauder basis\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1601.01616v1",
+      "locator": "Problem2.6 and preceding paragraph, lines89–96",
+      "comparison": "Any basis for H1 on the infinite torus is requested. Canonical monomials for p>1, an unconditional basis for another space, Markushevich systems, and one-variable Hardy results do not answer it."
+    }
+  ],
+  "rationale": "Any basis for H1 on the infinite torus is requested. Canonical monomials for p>1, an unconditional basis for another space, Markushevich systems, and one-variable Hardy results do not answer it.",
+  "limitations": [
+    "Bounded negative search, not proof of continued openness."
+  ],
+  "announcement_routing": {
+    "localID": "925",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Hardy space",
+          "Schauder basis",
+          "Dirichlet series",
+          "Saksman"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-08-21-000012",
+            "title": "teal-sea/zeta-lab",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-21-000012-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Hardy space",
+          "Schauder basis",
+          "Dirichlet series",
+          "Saksman"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00595v1",
+            "title": "Metric, Schauder and Operator-Valued Frames",
+            "url": "https://hexagonmath.org/abs/2610.00595v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Hardy space",
+        "Schauder basis",
+        "Dirichlet series",
+        "Saksman"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Davenport–Heilbronn functional equations and existence of metric frames do not give a Schauder basis of the infinite-variable Hardy space.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.718Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

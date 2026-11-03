@@ -1,0 +1,125 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "841",
+  "manifest_index": 685,
+  "checked_date": "2026-11-03",
+  "source_sha256": "647103413e26c31c18248322f552312633e5616b6749a41dc1a36bf450ae319b",
+  "statement_sha256": "83a6f4fa49e338e78b350d2126a16b3d4edee9746fc26c2f8dbc798f972eb248",
+  "original_target": {
+    "id": "841",
+    "title": "Continuous densities for inhomogeneous grid projections",
+    "area": "Geometry and topology",
+    "file": "problems/841-continuous-densities-for-inhomogeneous-grid-projections.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ca6d7a85d46168a2",
+    "group": "geometry-topology",
+    "source_sha256": "647103413e26c31c18248322f552312633e5616b6749a41dc1a36bf450ae319b",
+    "statement_sha256": "83a6f4fa49e338e78b350d2126a16b3d4edee9746fc26c2f8dbc798f972eb248",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`M\\geq2`$ be an integer. Fix weights $`p_{ij}\\in[0,1]`$, $`0\\leq i,j<M`$, satisfying\n```math\nS:=\\sum_{i,j}p_{ij}>M,\\qquad q_{ij}:=p_{ij}/S.\n```\n\nFor $`T_{ij}(x,y)=((x+i)/M,(y+j)/M)`$, let $`\\nu`$ be the unique probability measure on $`[0,1]^2`$ satisfying\n```math\n\\nu=\\sum_{i,j}q_{ij}(T_{ij})_*\\nu.\n```\n\nFor $`\\theta\\in[0,\\pi)`$, put $`\\pi_\\theta(x,y)=x\\cos\\theta+y\\sin\\theta`$ and $`\\nu_\\theta=(\\pi_\\theta)_*\\nu`$.\n\nDoes there exist a set $`E\\subset[0,\\pi)`$, depending on these fixed weights, with $`\\dim_H E=0`$, such that every $`\\nu_\\theta`$, $`\\theta\\notin E`$, has a **continuous density on $`\\mathbb R`$**?\n\nEquivalently, outside $`E`$, seek a nonnegative continuous function $`f_\\theta`$, supported on $`I_\\theta=\\pi_\\theta([0,1]^2)`$, zero outside this interval, with $`\\int f_\\theta=1`$ and\n```math\n\\sum_{i,j}p_{ij}f_\\theta(Mt-i\\cos\\theta-j\\sin\\theta)\n =\\frac{S}{M}f_\\theta(t).\n```\n\nContinuity is required for each fixed direction; no joint angle regularity or strict positivity throughout $`I_\\theta`$ is imposed.",
+  "full_original_page": "# 841. Continuous densities for inhomogeneous grid projections\n\n**Area:** Geometry and topology\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`M\\geq2`$ be an integer. Fix weights $`p_{ij}\\in[0,1]`$, $`0\\leq i,j<M`$, satisfying\n```math\nS:=\\sum_{i,j}p_{ij}>M,\\qquad q_{ij}:=p_{ij}/S.\n```\n\nFor $`T_{ij}(x,y)=((x+i)/M,(y+j)/M)`$, let $`\\nu`$ be the unique probability measure on $`[0,1]^2`$ satisfying\n```math\n\\nu=\\sum_{i,j}q_{ij}(T_{ij})_*\\nu.\n```\n\nFor $`\\theta\\in[0,\\pi)`$, put $`\\pi_\\theta(x,y)=x\\cos\\theta+y\\sin\\theta`$ and $`\\nu_\\theta=(\\pi_\\theta)_*\\nu`$.\n\nDoes there exist a set $`E\\subset[0,\\pi)`$, depending on these fixed weights, with $`\\dim_H E=0`$, such that every $`\\nu_\\theta`$, $`\\theta\\notin E`$, has a **continuous density on $`\\mathbb R`$**?\n\nEquivalently, outside $`E`$, seek a nonnegative continuous function $`f_\\theta`$, supported on $`I_\\theta=\\pi_\\theta([0,1]^2)`$, zero outside this interval, with $`\\int f_\\theta=1`$ and\n```math\n\\sum_{i,j}p_{ij}f_\\theta(Mt-i\\cos\\theta-j\\sin\\theta)\n =\\frac{S}{M}f_\\theta(t).\n```\n\nContinuity is required for each fixed direction; no joint angle regularity or strict positivity throughout $`I_\\theta`$ is imposed.\n\n## Application\n\nThese weights arise from a recursive random retention model. The question concerns the associated **deterministic** mass distribution and asks how many viewing directions can obstruct continuity of its projected density. Conclusions about intervals in random shadows require additional positivity conditions.\n\n## References\n\n- K. Simon and L. Vágó, *Fractal Percolations*, Banach Center Publications **115** (2018), 183–196, [DOI](https://doi.org/10.4064/bc115-6). [Primary v2](https://arxiv.org/html/1803.11426v2), **Conjecture 4.12**, equations (4.2)–(4.4) and the dimension-greater-than-one regime at the start of §4.\n- P. Shmerkin and B. Solomyak, *Absolute continuity of self-similar measures, their projections and convolutions*, Trans. Amer. Math. Soc. **368** (2016), 5125–5151, [DOI](https://doi.org/10.1090/tran6696), Theorem B.\n- K. Simon and L. Vágó, *Projections of Fractal percolation constructed with inhomogeneous probabilities*, [arXiv:1505.05477](https://arxiv.org/abs/1505.05477), **withdrawn 31 October 2016**.\n\n## Status review\n\n\n**Known cases:** Lq projected densities outside a zero-dimensional exceptional set need not be continuous. Homogeneous-retention results and random-shadow interval results differ from the arbitrary deterministic grid weights. The 2015 inhomogeneous claim was withdrawn and is not used as a resolution.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nLq projected densities outside a zero-dimensional exceptional set need not be continuous. Homogeneous-retention results and random-shadow interval results differ from the arbitrary deterministic grid weights. The 2015 inhomogeneous claim was withdrawn and is not used as a resolution.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\n**Partial progress; continuity remains open in searches checked 28 October 2026.** The known $`L^q`$-density conclusion, for some $`q>1`$, outside a zero-dimensional exceptional set does not establish continuity. Homogeneous and later equal-retention affine results have narrower hypotheses or concern projected sets.\n\nThe earlier 2015 claim was withdrawn because of an error affecting its main theorem; it is not treated as a resolution. The latest eligible source retains Conjecture 4.12. No matching nonwithdrawn complete result, counterexample or announcement was found, and semantic checks against all-status AIM and private entries found no equivalent target.\n\nThe condition $`S>M`$ states explicitly the source’s intended dimension-greater-than-one regime; it is not printed in the isolated conjecture sentence. Here $`p_{ij}`$ are retention weights, while $`q_{ij}`$ are probability weights. The eigenvalue is $`S/M`$.\n\nReview evidence: [owner](../FURTHER_problems/_tracking/focused-inhomogeneous-fractal-projection-density-C225-C-20261028/OWNER-EXACT-INHOMOGENEOUS-GRID-PROJECTION-CONTINUOUS-DENSITY-CONJECTURE-PRIMARY-CURRENT-DUPLICATE-PROPOSAL.json), [independent model review](../FURTHER_problems/_tracking/focused-inhomogeneous-fractal-projection-density-C225-C-20261028/A-INDEPENDENT-INHOMOGENEOUS-WEIGHTS-PROJECTION-DENSITY-AND-OPERATOR-NORMALIZATION-MODEL-PEER-PASS.json), [coordinating review](../FURTHER_problems/_tracking/focused-inhomogeneous-fractal-projection-density-C225-C-20261028/ROOT-EXACT-DETERMINISTIC-PROJECTION-DENSITY-AND-WITHDRAWN-CLAIM-FINAL-REVIEW.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-ca6d7a85d46168a2**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"inhomogeneous\" \"continuous\" \"projections\" Simon Vago conjecture 2026",
+    "\"inhomogeneous\" \"projection\" \"continuous density\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR Palomar OR site:hexagonmath.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1803.11426v2",
+      "version": "v2, 30 April 2018",
+      "locator": "Conjecture 4.12; equations 4.2–4.4; lines 439–467",
+      "inspection": "Primary body read: continuity outside Hausdorff-dimension-zero exception is conjectural; Lp density is a weaker known property."
+    },
+    {
+      "url": "https://arxiv.org/abs/1505.05477",
+      "version": "v2, withdrawn 31 October 2016",
+      "locator": "withdrawal banner and comments lines 8–21",
+      "inspection": "Critical uncorrected error in Lemma 4.3 affects Theorem 2.1. Cannot use as complete result."
+    }
+  ],
+  "scope_comparison": "Local deterministic normalized measure for arbitrary weights with S>M requires continuous density on all R. Random homogeneous percolation shadows or Lp densities do not establish this.",
+  "rationale": "The stated full target has no matching complete result in the recorded bounded searches. Inspected primary bodies retain the stated conjecture or give restricted progress; recommended status stays Partially resolved. This does not certify openness or independently verify complete proofs.",
+  "source_gaps": [],
+  "announcement_routing": {
+    "localID": "841",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "inhomogeneous",
+          "continuous densities",
+          "fractal percolation"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-30-000002",
+            "title": "The additive theorem for 2-transitive Galois groups (Girstmair; Dixon, Theorem 1') and its representation-theoretic engine",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-30-000002-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-11-000019",
+            "title": "Exact robust gaps in finite open chiral chains",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-11-000019-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "inhomogeneous",
+          "continuous densities",
+          "fractal percolation"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00398v2",
+            "title": "$\\log_p 2 \\cdot \\log_p(3+\\sqrt2)$ is not a $p$-adic linear form in logarithms",
+            "url": "https://hexagonmath.org/abs/2610.00398v2"
+          },
+          {
+            "id": "hexagon:2609.00133v1",
+            "title": "A Universal Noncommutative Splitting Algebra for Polynomials",
+            "url": "https://hexagonmath.org/abs/2609.00133v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "inhomogeneous",
+        "continuous densities",
+        "fractal percolation"
+      ],
+      "hits": [
+        {
+          "entry": "022",
+          "title": "The weak inhomogeneous Duffin--Schaeffer conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-weak-inhomogeneous-Duffin-Schaeffer-conjecture-September-25-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target."
+}

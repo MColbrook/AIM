@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "607",
+  "manifest_index": 470,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "607",
+    "title": "Hypergraph shuffles and the one-particle spectral gap",
+    "area": "Markov chains and spectral graph theory",
+    "file": "problems/607-caputo-hypergraph-gap.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "probability-statistics",
+    "source_sha256": "140a4aadc5e5521c76e38f12a2a1b676a587a329f24269c7cf6480d8a9a5a531",
+    "statement_sha256": "ba782668ec9db2987aaa89b8af218c564eb15aa2a3744c57988df9589f685b8f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "140a4aadc5e5521c76e38f12a2a1b676a587a329f24269c7cf6480d8a9a5a531",
+  "statement_sha256": "ba782668ec9db2987aaa89b8af218c564eb15aa2a3744c57988df9589f685b8f",
+  "actual_source_sha256": "140a4aadc5e5521c76e38f12a2a1b676a587a329f24269c7cf6480d8a9a5a531",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\ge2`$ and give each subset $`B\\subseteq[n]`$ with $`|B|\\ge2`$ a weight $`w_B\\ge0`$. Assume the graph joining vertices that share a positive-weight subset is connected.\n\nPlace one distinct label at each vertex. Independently, each $`B`$ rings at rate $`w_B`$ and uniformly permutes its labels. Let $`L_{\\rm IP}`$ be this continuous-time generator on $`S_n`$. The position of one label has generator\n\n```math\nL_{\\rm RW}f(x)=\\sum_{B\\ni x}w_B\\left(\\frac1{|B|}\\sum_{y\\in B}f(y)-f(x)\\right).\n```\n\nFor either reversible chain, let $`\\lambda`$ be the smallest positive eigenvalue of its negative generator. Prove or disprove Caputo's conjecture:\n\n```math\n\\lambda_{\\rm IP}=\\lambda_{\\rm RW}.\n```",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Caputo\" \"hypergraph\" \"spectral gap\" conjecture proof 2026",
+    "\"Caputo\" \"hypergraph\" \"spectral gap\" conjecture proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1, 9 September 2026",
+      "scope_comparison": "General weighted-hypergraph interchange equality is explicitly retained. Pairwise Aldous and exchange/KMP degree-two results concern different generators; no all-hypergraph interchange proof found.",
+      "locator": "Section 1.4.6, lines 661–664; Remark 7.8",
+      "url": "https://arxiv.org/html/2609.10450",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "General weighted-hypergraph interchange equality is explicitly retained. Pairwise Aldous and exchange/KMP degree-two results concern different generators; no all-hypergraph interchange proof found.",
+  "latest_version_check": "v1, 9 September 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

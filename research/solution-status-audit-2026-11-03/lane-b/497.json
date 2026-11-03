@@ -1,0 +1,69 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "497",
+  "manifest_index": 392,
+  "original_target": {
+    "id": "497",
+    "title": "The three-quarter conjecture for binary fix-free codes",
+    "area": "Information theory and lossless compression",
+    "file": "problems/497-fix-free-three-quarter.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-23",
+    "group": "optimization-information",
+    "source_sha256": "e307fe350dacd171cf28c8847a64dd682706d8e5104520ebfd218820a48d391c",
+    "statement_sha256": "1a38452755fe0947e3f4e99cc7bd2344aa3c5bdb4e177fffebff883fc8efa286",
+    "state": "unreviewed"
+  },
+  "source_sha256": "e307fe350dacd171cf28c8847a64dd682706d8e5104520ebfd218820a48d391c",
+  "statement_sha256": "1a38452755fe0947e3f4e99cc7bd2344aa3c5bdb4e177fffebff883fc8efa286",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:35:50.760556+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Latest2609.18237v2 Theorem1 restricts the number of distinct codeword lengths to1<=s<=3; local arbitrary length lists include more lengths. Current revision20September2026 does not remove that restriction. No full matching announcement located.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2609.18237v2",
+      "locator": "Theorem1",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"fix-free\" \"conjecture\" solution (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"fix-free\" \"four\" \"lengths\"2026 conjecture"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "fix-free",
+        "bifix"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "fix-free",
+        "bifix"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

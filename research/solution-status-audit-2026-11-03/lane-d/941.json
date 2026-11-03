@@ -1,0 +1,95 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "941",
+  "manifest_index": 785,
+  "checked_date": "2026-11-03",
+  "source_sha256": "4ccaa6a9d6911766f49c3b5bd07e5deda935edba166062420431bf9effd5423f",
+  "statement_sha256": "a126bc1d71e67b54caaa2d596433ac6a118ae80fa83b43ed790b21bacc5c6192",
+  "original_target": {
+    "id": "941",
+    "title": "Maximal clamped-plate compliance under a variable bounded load",
+    "area": "Shape optimization / fourth-order elasticity",
+    "file": "problems/941-maximal-clamped-plate-compliance-under-a-variable-bounded-load.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-3c8e393f9656b29e",
+    "group": "pdes-materials",
+    "source_sha256": "4ccaa6a9d6911766f49c3b5bd07e5deda935edba166062420431bf9effd5423f",
+    "statement_sha256": "a126bc1d71e67b54caaa2d596433ac6a118ae80fa83b43ed790b21bacc5c6192",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix an integer $`N\\ge3`$ and a volume $`m>0`$. Let $`\\Omega\\subset\\mathbb R^N`$ be any nonempty open set with $`|\\Omega|=m`$; disconnected and unbounded finite-measure competitors are allowed. Define $`H^2_0(\\Omega)`$ as the closure of $`C^\\infty_c(\\Omega)`$ in $`H^2(\\Omega)`$. For a measurable real load $`\\rho:\\Omega\\to[-1,1]`$, let $`u_{\\Omega,\\rho}\\in H^2_0(\\Omega)`$ be the unique weak solution\n\n```math\n\\int_\\Omega\\Delta u_{\\Omega,\\rho}\\,\\Delta\\phi\\,dx\n=\\int_\\Omega\\rho\\phi\\,dx\n\\qquad(\\phi\\in H^2_0(\\Omega)).\n```\n\nThus the operator is the clamped bilaplacian with **zero lateral compression or tension**. On a smooth boundary the conditions are $`u=\\partial_nu=0`$. Define the compliance\n\n```math\n\\mathcal C(\\Omega,\\rho)\n=\\int_\\Omega\\rho u_{\\Omega,\\rho}\\,dx\n=\\int_\\Omega|\\Delta u_{\\Omega,\\rho}|^2\\,dx.\n```\n\nIf $`B_R`$ is a ball of volume $`m`$, prove or disprove\n\n```math\n\\mathcal C(\\Omega,\\rho)\n\\le\\mathcal C(B_R,1)\n=\\frac{|\\mathbb S^{N-1}|R^{N+4}}\n {N^2(N+2)^2(N+4)}\n```\n\nfor every such $`\\Omega`$ and $`\\rho`$. The comparison on the right uses the constant load $`1`$; its deflection is\n\n```math\nu_{B_R,1}(x)=\\frac{(R^2-|x|^2)^2}{8N(N+2)}.\n```\n\nNo sign condition is imposed on the deflection. No convexity, connectedness, or smoothness assumption is imposed on the competing set beyond the stated weak formulation. The displayed inequality, rather than a classification of every equality case, is the target.",
+  "full_original_page": "# 941. Maximal clamped-plate compliance under a variable bounded load\n\n**Area:** Shape optimization / fourth-order elasticity\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix an integer $`N\\ge3`$ and a volume $`m>0`$. Let $`\\Omega\\subset\\mathbb R^N`$ be any nonempty open set with $`|\\Omega|=m`$; disconnected and unbounded finite-measure competitors are allowed. Define $`H^2_0(\\Omega)`$ as the closure of $`C^\\infty_c(\\Omega)`$ in $`H^2(\\Omega)`$. For a measurable real load $`\\rho:\\Omega\\to[-1,1]`$, let $`u_{\\Omega,\\rho}\\in H^2_0(\\Omega)`$ be the unique weak solution\n\n```math\n\\int_\\Omega\\Delta u_{\\Omega,\\rho}\\,\\Delta\\phi\\,dx\n=\\int_\\Omega\\rho\\phi\\,dx\n\\qquad(\\phi\\in H^2_0(\\Omega)).\n```\n\nThus the operator is the clamped bilaplacian with **zero lateral compression or tension**. On a smooth boundary the conditions are $`u=\\partial_nu=0`$. Define the compliance\n\n```math\n\\mathcal C(\\Omega,\\rho)\n=\\int_\\Omega\\rho u_{\\Omega,\\rho}\\,dx\n=\\int_\\Omega|\\Delta u_{\\Omega,\\rho}|^2\\,dx.\n```\n\nIf $`B_R`$ is a ball of volume $`m`$, prove or disprove\n\n```math\n\\mathcal C(\\Omega,\\rho)\n\\le\\mathcal C(B_R,1)\n=\\frac{|\\mathbb S^{N-1}|R^{N+4}}\n {N^2(N+2)^2(N+4)}\n```\n\nfor every such $`\\Omega`$ and $`\\rho`$. The comparison on the right uses the constant load $`1`$; its deflection is\n\n```math\nu_{B_R,1}(x)=\\frac{(R^2-|x|^2)^2}{8N(N+2)}.\n```\n\nNo sign condition is imposed on the deflection. No convexity, connectedness, or smoothness assumption is imposed on the competing set beyond the stated weak formulation. The displayed inequality, rather than a classification of every equality case, is the target.\n\n## Application\n\nCompliance measures work done by the transverse load in a linear bending model. The question asks whether a ball under a uniform load already gives the largest response when both shape and every bounded signed load are allowed to vary. The higher-dimensional formulation is the analytic extension of the physical two-dimensional plate problem.\n\n## Known results\n\nAshbaugh–Bucur–Laugesen–Leylekian prove this assertion in dimensions one and two. They also prove the constant-load inequality in every dimension. Their published Open Problem 1 asks for the extension to higher dimensions and to curved spaces; the statement above isolates its Euclidean higher-dimensional part.\n\nThe first-eigenvalue clamped-plate and first-buckling-load conjectures concern different Rayleigh quotients. An estimate only for $`\\rho\\equiv1`$ does not control all signed loads, because the clamped bilaplacian is not positivity preserving on arbitrary domains. The source's two-ball relaxation has a better value at two equal balls in higher dimensions; that relaxation is not itself a counterexample on a physical competing domain.\n\n## References\n\n1. M. S. Ashbaugh, D. Bucur, R. S. Laugesen and R. Leylekian, *Fourth Order Saint-Venant Inequalities: Maximizing Compliance and Mean Deflection Among Clamped Plates*, Communications in Mathematical Physics **406** (2025), article 256. [DOI](https://doi.org/10.1007/s00220-025-05439-7), [published 35-page PDF](https://link.springer.com/content/pdf/10.1007/s00220-025-05439-7.pdf). Exact Open Problem 1, p. 24; weak/energy definitions, pp. 4–6 and 21; Theorem 5.1, p. 22; ball formula, pp. 6–7. This published version is eligible through registered journal J027; its January 2025 arXiv submission is after the separate W001 cutoff.\n2. P. Freitas and R. Leylekian, *Extremal problems for clamped plates under tension*, Journal de Mathématiques Pures et Appliquées **208** (2026), 103867. [DOI](https://doi.org/10.1016/j.matpur.2026.103867), [author version](https://arxiv.org/abs/2507.07040). Model (3) and Theorem B optimize the response to the constant load $`1`$ for $`\\Delta^2-\\tau\\Delta`$, $`\\tau\\ge0`$. They do not state the variable-load inequality above.\n\n## Status review\n\n\n**Known cases:** The load may vary measurably in [-1,1], in every dimension N>=3. The 2025 and 2026 ball-maximality results assume constant load or a different tension model; no matching variable-load result found.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe load may vary measurably in [-1,1], in every dimension N>=3. The 2025 and 2026 ball-maximality results assume constant load or a different tension model; no matching variable-load result found.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nCurrent primary-source and announcement searches on 17 October 2026 found no matching resolution of the stated variable-load assertion. The 2026 tension result and known constant-load inequalities have narrower load classes. Independent selected-primary review passed. All 186 cached catalogue pages were checked with six aliases; the four matching windows concern shallow-water control. This compares listing descriptions rather than every mission proof.\n\nThe associated mean and total deflection bounds follow from the bounded-load compliance bound by the Cauchy–Schwarz inequality for the positive inverse operator; they are not counted separately here.\n\n[Owner review](../FURTHER_problems/_tracking/parallel/continuum/plate-variable-load-compliance-review.json), [independent audit](../FURTHER_problems/_tracking/parallel/complex-bayesian/cross-plate-variable-load-compliance-review.json), [duplicate comparison](../FURTHER_problems/_tracking/parallel/continuum/plate-compliance-duplicate-query-receipt.json), [catalogue receipt](../FURTHER_problems/_tracking/parallel/continuum/plate-variable-load-prove2me0134-review.json) and [coordinator review](../FURTHER_problems/_tracking/plate-variable-load-coordinator-review-2026-10-17.json) record scope and limitations.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-3c8e393f9656b29e**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "clamped plate",
+    "variable load",
+    "Saint-Venant",
+    "compliance"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"clamped plates\" \"variable load\" compliance 2026",
+    "\"clamped plates\" \"variable load\" compliance; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00220-025-05439-7",
+      "locator": "Section5.2 Openproblem1, lines718–728",
+      "comparison": "Published source explicitly asks variable-load extension to N>=3; two-ball relaxation obstruction is not a physical-domain counterexample. Constant-load/tension-model ball maximality does not establish every signed load in zero-tension model."
+    }
+  ],
+  "rationale": "Published source explicitly asks variable-load extension to N>=3; two-ball relaxation obstruction is not a physical-domain counterexample. Constant-load/tension-model ball maximality does not establish every signed load in zero-tension model.",
+  "limitations": [
+    "Bounded search does not establish continued openness; selected primary scope statements checked, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "941",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "clamped plate",
+          "variable load",
+          "Saint-Venant",
+          "compliance"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "clamped plate",
+          "variable load",
+          "Saint-Venant",
+          "compliance"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "clamped plate",
+        "variable load",
+        "Saint-Venant",
+        "compliance"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

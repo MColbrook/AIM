@@ -12,7 +12,7 @@ Admitted page: [review page](../../../problems/350-lane-emden-subcritical-system
 
 ## 2. Can every bounded entire Burgers profile recur at late times?
 
-Admitted page: [review page](../../../problems/351-burgers-entire-limits.md)
+Admitted page: [review page](../../../cut_problems/problems/351-burgers-entire-limits.md)
 
 1. T. Gallay and A. Scheel, [*Viscous shocks and long-time behavior of scalar conservation laws*](https://arxiv.org/abs/2306.13341), Communications on Pure and Applied Analysis 23 (2024), 1448–1482, §6 immediately after Proposition 6.2 and §7.
 
@@ -210,6 +210,6 @@ Admitted page: [review page](../../../problems/383-flory-gelation-mass-continuit
 
 ## 35. Uniqueness of positive reaction–diffusion equilibria outside two obstacles
 
-Admitted page: [review page](../../../problems/384-reaction-two-obstacle-uniqueness.md)
+Admitted page: [review page](../../../cut_problems/problems/384-reaction-two-obstacle-uniqueness.md)
 
 1. H. Berestycki and C. Graham, [*A Stable-Compact Method for Qualitative Properties of Semilinear Elliptic Equations*](https://doi.org/10.1007/s00205-026-02168-6), Archive for Rational Mechanics and Analysis 250 (2026), article 21, §8.5, Open Question 7(ii), and Theorem 1.1.

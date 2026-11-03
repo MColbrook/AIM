@@ -1,0 +1,164 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "926",
+  "manifest_index": 770,
+  "checked_date": "2026-11-03",
+  "source_sha256": "f69e254582bd98158d0ac0a4f7a4bb2702c97dd53aac00333ad7f77ac91a84ae",
+  "statement_sha256": "4e7d60aa5f990ce36daa858ce7d5d73d733f0771be05030068153157c3a7ab70",
+  "original_target": {
+    "id": "926",
+    "title": "Are real Grothendieck constants strictly increasing with vector dimension?",
+    "area": "Operator inequalities and continuous optimization",
+    "file": "problems/926-are-real-grothendieck-constants-strictly-increasing-with-vector-dimension.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c4e00fc43141e067",
+    "group": "operators",
+    "source_sha256": "f69e254582bd98158d0ac0a4f7a4bb2702c97dd53aac00333ad7f77ac91a84ae",
+    "statement_sha256": "4e7d60aa5f990ce36daa858ce7d5d73d733f0771be05030068153157c3a7ab70",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For a nonzero real matrix $`A=(a_{ij})`$ of arbitrary finite size $`m`$ by $`n`$ and an integer $`d\\ge1`$, define\n\n```math\nV_d(A)=\\max_{u_i,v_j\\in S^{d-1}}\n \\left|\\sum_{i=1}^{m}\\sum_{j=1}^{n}a_{ij}\\langle u_i,v_j\\rangle\\right|,\n\\qquad\nK_G^{\\mathbb R}(d)=\n\\sup_{\\substack{m,n\\ge1\\\\0\\ne A\\in\\mathbb R^{m\\times n}}}\n\\frac{V_d(A)}{V_1(A)}.\n```\n\nHere $`S^{d-1}`$ is the unit sphere in $`\\mathbb R^d`$. In particular, $`V_1`$ is the maximum over two sign vectors. The size of $`A`$ is unrestricted; $`d`$ bounds the dimension of the vectors. Square matrices give the same definition by padding with zero rows or columns.\n\nIs\n\n```math\nK_G^{\\mathbb R}(d+1)>K_G^{\\mathbb R}(d)\n\\qquad\\hbox{for every integer }d\\ge1?\n```\n\nThe weak inequality follows by embedding $`\\mathbb R^d`$ in $`\\mathbb R^{d+1}`$. The question concerns strictness throughout the hierarchy, rather than the value of the universal limit.",
+  "full_original_page": "# 926. Are real Grothendieck constants strictly increasing with vector dimension?\n\n**Area:** Operator inequalities and continuous optimization\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor a nonzero real matrix $`A=(a_{ij})`$ of arbitrary finite size $`m`$ by $`n`$ and an integer $`d\\ge1`$, define\n\n```math\nV_d(A)=\\max_{u_i,v_j\\in S^{d-1}}\n \\left|\\sum_{i=1}^{m}\\sum_{j=1}^{n}a_{ij}\\langle u_i,v_j\\rangle\\right|,\n\\qquad\nK_G^{\\mathbb R}(d)=\n\\sup_{\\substack{m,n\\ge1\\\\0\\ne A\\in\\mathbb R^{m\\times n}}}\n\\frac{V_d(A)}{V_1(A)}.\n```\n\nHere $`S^{d-1}`$ is the unit sphere in $`\\mathbb R^d`$. In particular, $`V_1`$ is the maximum over two sign vectors. The size of $`A`$ is unrestricted; $`d`$ bounds the dimension of the vectors. Square matrices give the same definition by padding with zero rows or columns.\n\nIs\n\n```math\nK_G^{\\mathbb R}(d+1)>K_G^{\\mathbb R}(d)\n\\qquad\\hbox{for every integer }d\\ge1?\n```\n\nThe weak inequality follows by embedding $`\\mathbb R^d`$ in $`\\mathbb R^{d+1}`$. The question concerns strictness throughout the hierarchy, rather than the value of the universal limit.\n\n## Application\n\nThese constants quantify the worst loss in replacing vector-valued bilinear optimization by optimization over signs. Their dimension dependence also describes limitations of finite-dimensional correlation models.\n\n## References\n\n- J. Briët, H. Buhrman and B. Toner, *A generalized Grothendieck inequality and entanglement in XOR games*, [arXiv:0901.2009v1](https://arxiv.org/abs/0901.2009v1), 14 January 2009. Definition 1 on p. 1 fixes the vector-dimensional constant; the paragraph following Theorem 3 on p. 2 explicitly leaves its strict increase open.\n- S. Designolle, T. Vértesi and S. Pokutta, *Better bounds on finite-order Grothendieck constants*, [arXiv:2409.03739v4](https://arxiv.org/abs/2409.03739v4), revised 5 October 2026; published as *Better bounds on finite-order Grothendieck constants with applications to Bell nonlocality*, [Physical Review A 113, 022401 (2026)](https://doi.org/10.1103/m5mn-c5dx). Section II, Eq. (5), distinguishes ordinary and generalized constants; Sections III–V give bounds.\n- B. Bagchi and G. Misra, *On Grothendieck constants*, [author-hosted primary text](https://www.isibang.ac.in/~gm/gmhomefiles/papers/kgc2.pdf), 26 April 2008, p. 1. Its fixed-matrix-size constants are a different sequence; their failure of strict monotonicity does not answer the question above.\n\n## Status review\n\n\n**Known cases:** The dimension is vector order with unrestricted matrix size. Fixed matrix-size equalities and dimension-witness ratios are different quantities. The October 2026 finite-order estimates do not establish strictness at every adjacent order.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe dimension is vector order with unrestricted matrix size. Fixed matrix-size equalities and dimension-witness ratios are different quantities. The October 2026 finite-order estimates do not establish strictness at every adjacent order.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe original paper proves nontrivial generalized ratios $`K_G(n\\mapsto m)>1`$ and binary-outcome dimension witnesses, while explicitly separating those results from this question. A strict improvement $`V_{d+1}(A)>V_d(A)`$ for some matrix does not itself compare the two worst-case suprema relative to $`V_1`$. Recent finite-order bounds and announcements of improvements to the universal real constant did not supply a resolution of the whole hierarchy in the searches performed.\n\nAIM 027 asks for the exact universal limit $`K_G`$; that related problem does not state the adjacent strictness question. The all-status findings, saved pages and current public catalogue comparison located no matching formulation. This is a bounded literature check, not a certification that no solution exists or human peer review.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-c4e00fc43141e067**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Grothendieck constant",
+    "finite-order",
+    "dimension witnesses"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Grothendieck\" \"strictly increasing\" dimension 2026",
+    "\"Grothendieck\" \"strictly increasing\" dimension; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2409.03739v4",
+      "locator": "Introduction and SectionsII–III/table of finite-order bounds, revised5October2026",
+      "comparison": "Certified finite-dimension lower bounds and heuristic improvements for selected d do not prove strictness for every adjacent pair. A matrix with Vd+1>Vd or generalized ratio >1 does not compare both suprema relative to V1; fixed-matrix-size constants are another sequence."
+    }
+  ],
+  "rationale": "Certified finite-dimension lower bounds and heuristic improvements for selected d do not prove strictness for every adjacent pair. A matrix with Vd+1>Vd or generalized ratio >1 does not compare both suprema relative to V1; fixed-matrix-size constants are another sequence.",
+  "limitations": [
+    "Bounded negative search, not proof of continued openness."
+  ],
+  "announcement_routing": {
+    "localID": "926",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Grothendieck constant",
+          "finite-order",
+          "dimension witnesses"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-13-000010",
+            "title": "A uniform zero-free region for Dedekind zeta functions",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-13-000010-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-09-000001",
+            "title": "Global Stafford",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-09-000001-v2.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Grothendieck constant",
+          "finite-order",
+          "dimension witnesses"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00655v2",
+            "title": "An improved zero-free half-plane for Hecke L-functions over number fields and Quasi-Riemann Hypothesis",
+            "url": "https://hexagonmath.org/abs/2610.00655v2"
+          },
+          {
+            "id": "hexagon:2610.00629v1",
+            "title": "Analytic symmetric floating bodies",
+            "url": "https://hexagonmath.org/abs/2610.00629v1"
+          },
+          {
+            "id": "hexagon:2610.00406v1",
+            "title": "Classical regularity and attainment in portfolio choice with nonhomothetic utility",
+            "url": "https://hexagonmath.org/abs/2610.00406v1"
+          },
+          {
+            "id": "hexagon:2610.00256v3",
+            "title": "The Pólya–Vinogradov inequality with log log q for every character",
+            "url": "https://hexagonmath.org/abs/2610.00256v3"
+          },
+          {
+            "id": "hexagon:2610.00216v1",
+            "title": "A seven-eighths zero-free half-plane for unitary Weil L-functions",
+            "url": "https://hexagonmath.org/abs/2610.00216v1"
+          },
+          {
+            "id": "hexagon:2610.00220v1",
+            "title": "A zero-free strip for the $L$-functions of the elliptic curves $y^2=x^3+d$",
+            "url": "https://hexagonmath.org/abs/2610.00220v1"
+          },
+          {
+            "id": "hexagon:2610.00200v2",
+            "title": "A quasi-Riemann hypothesis for Dedekind zeta functions",
+            "url": "https://hexagonmath.org/abs/2610.00200v2"
+          },
+          {
+            "id": "hexagon:2610.00178v1",
+            "title": "Unconditional implications of the Quasi-Riemann Hypothesis",
+            "url": "https://hexagonmath.org/abs/2610.00178v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Grothendieck constant",
+        "finite-order",
+        "dimension witnesses"
+      ],
+      "hits": [
+        {
+          "entry": "003",
+          "title": "The quasi-Riemann hypothesis",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/paper2.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "207",
+          "title": "The $\\ell^1$-Bass and complex Bass trace conjectures",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-l1-Bass-Conjecture-for-Discrete-Groups-October-5-2026/l1-bass-conjecture.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-Bass-trace-conjecture-for-complex-group-rings-September-24-2026/The-Bass-trace-conjecture-for-complex-group-rings-September-24-2026.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Zeta/Hecke zero-free regions, Stafford module algebra, floating-body geometry, portfolio utility and Bass traces do not compare adjacent real Grothendieck constants. An alias referring to vector dimension or Grothendieck-related background is not the required strict hierarchy theorem.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.719Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

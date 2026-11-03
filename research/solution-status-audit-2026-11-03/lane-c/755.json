@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "755",
+  "manifest_index": 599,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "755",
+    "title": "Uniqueness of a finite-toughness hydraulic-fracture similarity profile",
+    "area": "Hydraulic fracture; nonlocal degenerate diffusion",
+    "file": "problems/755-uniqueness-of-a-finite-toughness-hydraulic-fracture-similarity-profile.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-519616fb7e5dcd38",
+    "group": "fracture-damage-plasticity-contact",
+    "source_sha256": "c96c7c56b951f7c73bf469d7523e7351ff2891a9b18cfdfa62c354bc7c666a66",
+    "statement_sha256": "c72c089318b905d479d89b9d3c99816bfeca6f7b147ad749e08d4f31865ad049",
+    "state": "unreviewed"
+  },
+  "source_sha256": "c96c7c56b951f7c73bf469d7523e7351ff2891a9b18cfdfa62c354bc7c666a66",
+  "statement_sha256": "c72c089318b905d479d89b9d3c99816bfeca6f7b147ad749e08d4f31865ad049",
+  "actual_source_sha256": "c96c7c56b951f7c73bf469d7523e7351ff2891a9b18cfdfa62c354bc7c666a66",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix $`K>0`$. For $`x,z\\in(-1,1)`$ set\n\n```math\nG(x,z)=\\frac1\\pi\\log\\!\\left(\\frac{1-xz+\\sqrt{(1-x^2)(1-z^2)}}{|x-z|}\\right),\\qquad\ng(x,z)=\\frac12\\big[(z-x)G(x,z)+(z+x)G(x,-z)\\big].\n```\n\nThe products at $`z=x`$ and $`z=-x`$ use their continuous limits, and $`g(\\pm1,z)=0`$. For an even continuous function $`U:\\mathbb R\\to[0,\\infty)`$ supported on $`[-1,1]`$, positive on $`(-1,1)`$, define its signed tail by\n\n```math\n\\mathcal T_U(z)=\n\\begin{cases}\n\\displaystyle\\int_z^1U(y)\\,dy,&z>0,\\\\\n\\displaystyle-\\int_{-1}^zU(y)\\,dy,&z<0.\n\\end{cases}\n```\n\nIts value at zero can be assigned arbitrarily in the following integral. Is there **at most one** such $`U`$ satisfying\n\n```math\n\\lim_{x\\to\\pm1,\\ |x|<1}\\frac{U(x)}{\\sqrt{1-x^2}}=K,\n\\qquad\nU(x)=K\\sqrt{1-x^2}+\\int_{-1}^1g(x,z)\n\\frac{zU(z)+\\tfrac32\\mathcal T_U(z)}{U(z)^3}\\,dz\n\\quad(-1<x<1)?\n```\n\nAll integrals are ordinary absolutely convergent Lebesgue integrals. Existence in this class follows from the construction in [1, Proposition 2.3 and §4.2]. The question fixes both the positive normalized toughness $`K`$ and the support; the injection rate is an output, rather than an additional prescribed parameter.\n\nEquivalently, this is the normalized even cubic-mobility profile equation\n$`U^3\\partial_x I(U)=xU+\\tfrac32\\mathcal T_U`$ in distributions in the interior (classically away from the injection point), with $`I=-(-\\partial_{xx})^{1/2}`$ on the whole line and zero opening outside the interval. The integral formulation specifies the solution class without requiring smoothness across the injection point.",
+  "full_local_page_read": true,
+  "queries": [
+    "hydraulic fracture self similar uniqueness finite toughness Imbert Mellet 2026",
+    "hydraulic fracture uniqueness finite toughness self similar (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "hydraulic fracture uniqueness (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"1403.7491\" uniqueness 2026"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Author full PDF, 46 pages; arXiv 1403.7491v2 (2016), CMP 340 (2015), inspected 3 November 2026",
+      "locator": "Theorem 1.1(ii); Remark 1.2(4), p.7; §2.2 integral formulation",
+      "scope_comparison": "The actual theorem constructs a finite-toughness profile with prescribed K and support and determines the injection rate. Remark 1.2(4) explicitly leaves uniqueness open. This is exactly the cubic-mobility nonlocal profile setting, but existence supplies no at-most-one proof. Searches found no later matching uniqueness announcement. Linear-mobility fractional thin-film stationary-profile uniqueness changes both mobility and fractional parameter and cannot settle the fixed K cubic problem.",
+      "primary_body_access_gap": false,
+      "url": "https://www.math.umd.edu/~mellet/publi/selfsimilar.pdf"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual theorem constructs a finite-toughness profile with prescribed K and support and determines the injection rate. Remark 1.2(4) explicitly leaves uniqueness open. This is exactly the cubic-mobility nonlocal profile setting, but existence supplies no at-most-one proof. Searches found no later matching uniqueness announcement. Linear-mobility fractional thin-film stationary-profile uniqueness changes both mobility and fractional parameter and cannot settle the fixed K cubic problem.",
+  "latest_version_check": "Author full PDF, 46 pages; arXiv 1403.7491v2 (2016), CMP 340 (2015), inspected 3 November 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

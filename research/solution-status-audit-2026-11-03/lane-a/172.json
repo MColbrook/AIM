@@ -1,0 +1,82 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "172",
+  "manifest_index": 135,
+  "original_target": {
+    "id": "172",
+    "title": "Exclusion of coexistence for unequal Richardson growth rates",
+    "area": "Competing infections and stochastic growth",
+    "file": "problems/172-unequal-richardson-competition.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "cf9e95f62295e8f337ad5d360fceac826443b3b3ab39953dd548f2ef48095341",
+    "statement_sha256": "3aa235b20d33171dd525c3b72be5b3eebc7c3c2843154a12b8e6e215a919b8f0",
+    "state": "unreviewed"
+  },
+  "source_sha256": "cf9e95f62295e8f337ad5d360fceac826443b3b3ab39953dd548f2ef48095341",
+  "statement_sha256": "3aa235b20d33171dd525c3b72be5b3eebc7c3c2843154a12b8e6e215a919b8f0",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:39.963299+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Theorem 1 of 1808.10796 proves exclusion on a half-plane with boundary seeds. It does not cover every unequal rate on the full lattice. Equal-rate coexistence applications and a countable exceptional-rate exclusion leave the target quantifier unresolved.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1808.10796",
+      "locator": "Theorem 1 and introduction, half-plane geometry",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Richardson model\" \"2026\" \"unequal\"",
+    "\"Richardson model\" \"coexistence\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) \"rates\""
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Richardson",
+        "coexistence"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Richardson",
+        "coexistence"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00734v1",
+          "title": "Density coexistence for hard spheres with a long-range attractive pair interaction"
+        },
+        {
+          "id": "hexagon:2610.00667v1",
+          "title": "First-order phase transition in Onsager's model of hard rods in $\\mathbb R^3$"
+        },
+        {
+          "id": "hexagon:2610.00322v1",
+          "title": "The Willow Transform and the Blind Zone Theorem: A Sharp Obstruction in the Turán Hierarchy for the Riemann ξ-Function"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

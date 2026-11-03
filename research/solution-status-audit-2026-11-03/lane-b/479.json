@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "479",
+  "manifest_index": 378,
+  "original_target": {
+    "id": "479",
+    "title": "Global classical Maxwell–Stefan diffusion with arbitrary pair friction",
+    "area": "Cross-diffusion PDEs; gas mixtures",
+    "file": "problems/479-maxwell-stefan-arbitrary-friction-global-classical.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "9ecdf4886d833f56829d6eb20ce1f826be8c6faaf563c15d6d5515c1a42fa2db",
+    "statement_sha256": "9b59a9b2808b781c13c05e3b25898a6e44132168ae3e45acd0663864205e2148",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9ecdf4886d833f56829d6eb20ce1f826be8c6faaf563c15d6d5515c1a42fa2db",
+  "statement_sha256": "9b59a9b2808b781c13c05e3b25898a6e44132168ae3e45acd0663864205e2148",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:21:22.760859+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2609.06732v1 Theorem14.2/Cor14.3/Section16 assume additive coefficients fij=gi+gj with ordered positive gi and expressly exclude arbitrary nonadditive N>=4. Actual2610.00162v1 Theorem1.1 is only ternary N=3. Neither settles all requested coefficients/species.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2609.06732",
+      "locator": "Theorem14.2, Corollary14.3, Sections1.4 and16",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2610.00162v1",
+      "locator": "Theorem1.1",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Maxwell-Stefan\" \"global strong\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Maxwell",
+        "Stefan"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-14-000009",
+          "title": "Selection of the electromagnetic source tensor by covariance, conservation and the exchange law"
+        },
+        {
+          "id": "PALOMAR-2026-08-31-000011",
+          "title": "MaxWellApexLab/BicausalOT-palomar"
+        },
+        {
+          "id": "PALOMAR-2026-08-31-000010",
+          "title": "MaxWellApexLab/BicausalOT-palomar"
+        },
+        {
+          "id": "PALOMAR-2026-08-31-000009",
+          "title": "MaxWellApexLab/BicausalOT-palomar"
+        },
+        {
+          "id": "PALOMAR-2026-08-31-000007",
+          "title": "MaxWellApexLab/BicausalOT-palomar"
+        },
+        {
+          "id": "PALOMAR-2026-08-27-000020",
+          "title": "BrandonMYates/schwarzschild-comparator"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Maxwell",
+        "Stefan"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00642v1",
+          "title": "Near-Null Limits and Contact Distributions for Maxwell Composite Operators"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

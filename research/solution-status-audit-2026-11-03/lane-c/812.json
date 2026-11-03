@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "812",
+  "manifest_index": 656,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "812",
+    "title": "What is the optimal power exponent for the four-corner Favard length?",
+    "area": "Geometry and topology",
+    "file": "problems/812-what-is-the-optimal-power-exponent-for-the-four-corner-favard-length.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8342a0aa285fd109",
+    "group": "geometry-topology",
+    "source_sha256": "6708dd27dacd9b248dd6c4c95b501890fd44585bb39e34b8a67aba073a965996",
+    "statement_sha256": "4a54fb04385a052d8d8d36044e6e5d0d0b10f1d62ba335bc857511369a2f3038",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6708dd27dacd9b248dd6c4c95b501890fd44585bb39e34b8a67aba073a965996",
+  "statement_sha256": "4a54fb04385a052d8d8d36044e6e5d0d0b10f1d62ba335bc857511369a2f3038",
+  "actual_source_sha256": "6708dd27dacd9b248dd6c4c95b501890fd44585bb39e34b8a67aba073a965996",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For $`n\\ge1`$, let\n```math\nC_n=\\bigcup_{(a_1,\\ldots,a_n)\\in\\{0,3\\}^n}\n\\left[\\sum_{j=1}^n a_j4^{-j},\\ \\sum_{j=1}^n a_j4^{-j}+4^{-n}\\right],\n\\qquad K_n=C_n\\times C_n.\n```\n\nFor $`\\pi_\\theta(x,y)=x\\cos\\theta+y\\sin\\theta`$, define\n```math\nF_n=\\frac1\\pi\\int_0^\\pi |\\pi_\\theta(K_n)|\\,d\\theta,\\qquad\n\\alpha_{\\rm Fav}=\\sup\\left\\{a\\ge0:\\ \\exists C>0\\\n\\forall n\\ge1,\\ F_n\\le Cn^{-a}\\right\\}.\n```\n\nHere $`|\\cdot|`$ is one-dimensional Lebesgue measure. Determine the exact value of $`\\alpha_{\\rm Fav}`$.\n\nThis is the power-exponent subproblem of the classical question about the decay of $`F_n`$, for this fixed deterministic construction. Determining the exponent need not determine logarithmic corrections or establish a bound at the supremum.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Favard\" \"optimal exponent\" \"four corner\" proof 2026",
+    "\"Favard\" \"optimal exponent\" \"four corner\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/CoolRmal/FavardLength/66d2857d03e02e8b2f1488791787ba4352baa332/Solution.lean",
+      "locator": "Challenge.lean definitions30–55 and Solution.lean theorem declarations13–36",
+      "version_or_date": "Pinned announcement commit66d2857d03e02e8b2f1488791787ba4352baa332; Palomar v1 is earlier/weaker",
+      "scope_comparison": "Actual formal declarations announce156307/625000<=alphaFav<=1, not an exact value of alphaFav. Challenge definitions match the four-corner deterministic construction and supremum in the local page. This is matching partial progress even if independently unverified; no full-target conclusion is inferred. No local compilation or independent proof certification performed.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual formal declarations announce156307/625000<=alphaFav<=1, not an exact value of alphaFav. Challenge definitions match the four-corner deterministic construction and supremum in the local page. This is matching partial progress even if independently unverified; no full-target conclusion is inferred. No local compilation or independent proof certification performed.",
+  "latest_version_check": "Pinned announcement commit66d2857d03e02e8b2f1488791787ba4352baa332; Palomar v1 is earlier/weaker",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

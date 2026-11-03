@@ -1,0 +1,47 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "393",
+  "manifest_index": 320,
+  "source_sha256": "c80b7ad2b2b69bcf6fdb76d494e87b1507790aa97600c99fe5c47bd86e96cde2",
+  "statement_sha256": "468135a7eeef0878b95d9df570a500f9b9101492b089697a717bc4724b2c2f71",
+  "original_target": {
+    "id": "393",
+    "title": "Singular-set dimension of polyhedral partial-transport free boundaries",
+    "area": "Free-boundary PDEs / optimal transport",
+    "file": "problems/393-polyhedral-partial-transport-free-boundary.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: affirmative codimension-two partial-transport regularity",
+    "proof": "https://arxiv.org/pdf/2610.18756v1",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md",
+    "group": "continuum2",
+    "source_sha256": "c80b7ad2b2b69bcf6fdb76d494e87b1507790aa97600c99fe5c47bd86e96cde2",
+    "statement_sha256": "468135a7eeef0878b95d9df570a500f9b9101492b089697a717bc4724b2c2f71",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "unverified-announcement",
+  "ready_for_parent": true,
+  "recommended_status": "Solved",
+  "answer": "Affirmative codimension-two partial-transport free-boundary regularity.",
+  "required_status_qualification": "Solved on the basis of an unverified announcement. The full target is claimed in the cited source; the external proof has not been independently verified here.",
+  "scope_comparison": "Theorem1.2 assumes bounded open source and bounded polyhedral target separated by a hyperplane, arbitrary0<m<min volumes, and gives a relatively closed exceptional set of dimension<=n-2 outside which the source free boundary is smooth. This includes every original n>=3 and nonconvex target. For finite-facet null slits, measure and closure are preserved under polyhedral fill; §6 uses the same canonical normalized obstacle pair and U={u>|x|^2/2-c_m}, so the active source and free boundary agree, rather than identifying arbitrary open representatives by measure alone. Proposition6.4 gives a local embedded graph.",
+  "queries": [
+    "polyhedral optimal transport singular interface 2610.18756",
+    "\"non-convex polyhedral\" transport (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"2610.18756\" correction withdrawal error"
+  ],
+  "primary_sources": [
+    {
+      "version": "v1,13October2026; primary history onlyv1",
+      "locator": "Theorem1.2; §6 canonical active source/Proposition6.4",
+      "body_inspected": true,
+      "url": "https://arxiv.org/html/2610.18756v1"
+    }
+  ],
+  "known_gap_check": "Prior local applicability reviews read; no concrete scope or proof gap was recorded. Current primary bodies and bounded correction/version searches did not locate withdrawal. Whole external proofs remain unverified.",
+  "verification": "Applicability review only; no new whole-proof, Lean or certificate replay."
+}

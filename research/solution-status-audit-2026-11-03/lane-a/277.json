@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "277",
+  "manifest_index": 220,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "277",
+    "title": "The exact asymptotic match fraction for independent binary sequences",
+    "area": "Sequence comparison and computational biology",
+    "file": "problems/277-binary-lcs-constant.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "b19a9d99dabc9e394c2bc1a92a551e8951107b50d2a6c7b44a388a92410243a1",
+    "statement_sha256": "bf37160ed01fd900d474b915f147a3543d97301f2c66a149e3d4f821bd171ea2",
+    "state": "unreviewed"
+  },
+  "source_sha256": "b19a9d99dabc9e394c2bc1a92a551e8951107b50d2a6c7b44a388a92410243a1",
+  "statement_sha256": "bf37160ed01fd900d474b915f147a3543d97301f2c66a149e3d4f821bd171ea2",
+  "actual_source_sha256": "b19a9d99dabc9e394c2bc1a92a551e8951107b50d2a6c7b44a388a92410243a1",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`(X_i)`$ and $`(Y_i)`$ be independent sequences of independent fair bits. Define $`L_n=\\max\\{k:\\exists i_1<\\cdots<i_k\\le n,\\ j_1<\\cdots<j_k\\le n,\\ X_{i_r}=Y_{j_r}\\ (1\\le r\\le k)\\}`$. Determine the exact value of the Chvátal–Sankoff constant $`\\gamma_2=\\lim_{n\\to\\infty}\\mathbb E[L_n]/n`$. Its existence is known. An exact evaluation or characterization that determines the constant explicitly is sought, beyond successively improved numerical bounds or a restatement of this limit.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Chvatal Sankoff\" \"exact\" 2026",
+    "\"Chvatal Sankoff\" \"exact\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Chvatal Sankoff\" \"exact\" (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "Theorems1.1–1.2give asymptotic bounds in the number of strings/alphabet size, not the exact binary two-string constant. October primary announcements report successively improved upper bounds0.824120and0.821963; they remain upper bounds and unrefereed, with explicit automaton/verification limits. No explicit exact evaluation or equivalent determining formula was located.",
+      "locator": "Theorems1.1–1.2;ReasonMachinesblogSinceAugustandLimitations",
+      "url": "https://arxiv.org/html/2504.10425",
+      "version_or_date": "CurrentarXiv2504.10425v1rendering,internal11August2026;ReasonMachinesprimaryannouncement27October2026also inspected.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Theorems1.1–1.2give asymptotic bounds in the number of strings/alphabet size, not the exact binary two-string constant. October primary announcements report successively improved upper bounds0.824120and0.821963; they remain upper bounds and unrefereed, with explicit automaton/verification limits. No explicit exact evaluation or equivalent determining formula was located.",
+  "latest_version_check": "CurrentarXiv2504.10425v1rendering,internal11August2026;ReasonMachinesprimaryannouncement27October2026also inspected.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,849 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={Five numerical-analysis targets: proofs and counterexamples},
+ pdfauthor={Research note prepared with ChatGPT}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Five numerical-analysis targets}
+\fancyhead[R]{\small Research note / 3 October 2026}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\setcounter{tocdepth}{1}
+\allowdisplaybreaks
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\gen}{\mathfrak g}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\sech}{\operatorname{sech}}
+
+\begin{document}
+\begin{titlepage}
+\vspace*{16mm}
+{\Large\bfseries Five numerical-analysis targets\par}
+\par\vspace{4mm}
+{\large Proofs, counterexamples, and an exact algebraic certificate\par}
+\par\vspace{10mm}
+{\large AIM catalogue: entries 505, 523, 553, 570, and the cubic conjecture in 641\par}
+\par\vspace{8mm}
+3 October 2026\par
+\par\vspace{13mm}
+\textbf{Research status.} These are arguments developed for the linked repository formulations, not announcements of acceptance by the original authors or repository maintainers. They have not been independently peer-reviewed. The algebraic certificate in Section~\ref{sec:cubic} has been checked using exact symbolic arithmetic. The numerical experiment in Section~\ref{sec:ab} is corroborative only; its counterexample is proved analytically.
+\par\vspace{7mm}
+\begin{tabular}{@{}p{14mm}p{128mm}@{}}
+\toprule
+Target & Conclusion proved in this note\\
+\midrule
+505 & The uniform fixed-grid upwind Aronson--B\'enilan estimate is false, even for $G(p)=1-p$.\\[3pt]
+523 & The general-amplitude Nystr\"om bound is false: a fixed smooth amplitude gives a lower bound of order $\sqrt{\log k}$.\\[3pt]
+553 & $\lfloor\log_2m\rfloor+1\le N(m)\le\lceil\log_2m\rceil+1$. In particular, $N(m)\sim\log_2m$.\\[3pt]
+570 & No universal continuity-cost constant exists for arbitrary real Banach spaces. One fixed nonseparable operator is a counterexample.\\[3pt]
+641 & The cubic Fej\'er inequality holds in every dimension.\\
+\bottomrule
+\end{tabular}\par
+\par\vspace{7mm}
+\textbf{Scope.} The result for 553 is a sharp asymptotic answer, not a determination of every value of $N(m)$. The result for 570 uses nonseparable spaces and does not settle the separable variant. The result for 523 concerns the arbitrary smooth amplitudes explicitly allowed by the repository, not a separately restricted class of physical boundary-integral kernels. The three quartic conjectures grouped into entry 641 are not claimed here.
+\par\vfill
+\small Accompanying files: \texttt{verify\_cubic.py}, \texttt{cubic\_certificate.json},\newline
+\texttt{check\_505.py}, and \texttt{ab\_experiments.json}.
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Entry 505: a counterexample to the uniform upwind estimate}\label{sec:ab}
+
+The exact scheme and initial-data assumptions used here are those of catalogue entry 505~\cite{repo505}; the originating scheme is David--Ruan~\cite{davidruan}. Set
+\[
+ X=T=p_H=1,\qquad G(p)=1-p.
+\]
+Thus $G(1)=0$ and $G'=-1$. We prove that a single fixed initial-data bound $C_0$ cannot yield a constant independent of both $h$ and $\gamma$ in
+\begin{equation}\label{eq:abtarget}
+ w_i(t):=\frac{p_{i+1}-2p_i+p_{i-1}}{h^2}+1-p_i
+ \ge -\frac{C}{\gamma t}.
+\end{equation}
+
+\subsection{A positive pressure profile on a fixed core}
+
+Let $M$ be even, $M\ge4$, $h=1/M$, $K=M/2$, and
+\[
+ I_h=\{-K,\ldots,K\}.
+\]
+The full computational grid is $\{-M,\ldots,M\}$. First consider a Dirichlet problem on the smaller core, with pressure zero at $\pm(K+1)$. Write
+\[
+ \eta_h=\operatorname{arcosh}(1+h^2/2),\qquad
+ P_i^h=1-\frac{\cosh(\eta_h i)}{\cosh(\eta_h(K+1))},\quad i\in I_h.
+\]
+Direct substitution gives
+\begin{equation}\label{eq:linprofile}
+ \Delta_hP_i^h+1-P_i^h=0,\qquad P^h_{\pm(K+1)}=0.
+\end{equation}
+This profile is positive, strictly less than one, symmetric, and strictly decreasing from the centre to the right endpoint. Moreover, with $c=\tanh(1/2)>0$,
+\begin{equation}\label{eq:edgeasymp}
+ \frac{P_K^h}{h}\longrightarrow c,\qquad
+ \frac{P_{K-1}^h}{P_K^h}\longrightarrow2,\qquad
+ \frac{P_{K-1}^h-P_K^h}{h}\longrightarrow c.
+\end{equation}
+Indeed, $\eta_h=h+O(h^3)$ and $(K+1)\eta_h\to1/2$.
+
+For a positive core pressure $p$, with zero Dirichlet neighbours outside the core, define
+\begin{equation}\label{eq:Dgamma}
+ D_{\gamma,h}(p)_i=
+ \Delta_hp_i+\frac1{h^2}\sum_{\substack{j=i\pm1\\p_j>p_i}}
+ \left[\left(\frac{p_j}{p_i}\right)^{1/\gamma}-1\right](p_j-p_i).
+\end{equation}
+This is precisely the upwind diffusion term in the density equation divided by $n_i=p_i^{1/\gamma}$. Lower-pressure neighbours contribute only to $\Delta_hp_i$.
+
+For each fixed $h$, there exists a positive profile $P^{h,\gamma}$ for every sufficiently large $\gamma$ such that
+\begin{equation}\label{eq:nonlinearprofile}
+ D_{\gamma,h}(P^{h,\gamma})_i+1-P_i^{h,\gamma}=0,
+ \qquad P^{h,\gamma}\longrightarrow P^h\quad(\gamma\to\infty).
+\end{equation}
+Here and below, a limit with $h$ fixed is a finite-dimensional limit. To justify existence, put $\nu=1/\gamma$. The left side of~\eqref{eq:nonlinearprofile} is continuously differentiable in $(\nu,p)$ near $(0,P^h)$. At a tie $p_j=p_i$, its additional term is of the form
+\[
+ (p_j-p_i)_+\left[\exp\!\left(\nu\log\frac{p_j}{p_i}\right)-1\right],
+\]
+which is $C^1$ and is quadratic to leading order in the difference of the pressures. At $\nu=0$, the derivative with respect to $p$ is the invertible Dirichlet matrix $\Delta_h-I$. The implicit-function theorem applies. By closeness to $P^h$ and local uniqueness, $P^{h,\gamma}$ is symmetric, lies strictly between zero and one, and is strictly decreasing away from the centre for sufficiently large $\gamma$.
+
+\subsection{An exact solution on the pinned core}
+
+Fix
+\[
+ a=\frac34,\qquad q=\frac12,\qquad t_0=-\log a>0.
+\]
+Take the full-grid initial data
+\begin{equation}\label{eq:abinitial}
+ n_i(0)=
+ \begin{cases}
+ a(P_i^{h,\gamma})^{1/\gamma},&i\in I_h,\\
+ 0,&i\notin I_h.
+ \end{cases}
+\end{equation}
+If the exterior densities are artificially pinned to zero, the core has the exact solution
+\begin{align}
+ p_i^D(t)&=\theta_\gamma(t)P_i^{h,\gamma},\label{eq:corepressure}\\
+ n_i^D(t)&=\theta_\gamma(t)^{1/\gamma}(P_i^{h,\gamma})^{1/\gamma},\label{eq:coredensity}\\
+ \theta_\gamma(t)&=\frac1{1+(a^{-\gamma}-1)e^{-\gamma t}}.
+ \label{eq:theta}
+\end{align}
+Indeed, $D_{\gamma,h}$ is homogeneous of degree one in the pressure, so~\eqref{eq:nonlinearprofile} gives
+\[
+ D_{\gamma,h}(\theta P^{h,\gamma})+1-\theta P^{h,\gamma}=1-\theta.
+\]
+The density equation becomes $\dot n_i^D=(1-\theta)n_i^D$, equivalent to $\theta'=\gamma\theta(1-\theta)$. Its initial value is $a^\gamma$.
+
+For fixed $t<t_0$, $\theta_\gamma(t)\to0$, whereas for fixed $t>t_0$, $\theta_\gamma(t)\to1$ and $\theta_\gamma'(t)\to0$. The waiting time $t_0$ is independent of the mesh.
+
+\subsection{Control of the full, unpinned scheme}
+
+We now use the actual reflected Neumann ghost values at $\pm M$, as required by the target. The scalar face flux is
+\[
+ F(n,m)=\max(n,m)(m^\gamma-n^\gamma).
+\]
+It is nondecreasing in its second argument. Thus the finite ODE system is cooperative. The maximum principle gives $0\le n_i\le1$, and comparison with the zero-extended pinned-core solution gives
+\begin{equation}\label{eq:comparison}
+ n_i(t)\ge n_i^D(t),\qquad i\in I_h.
+\end{equation}
+The extension is a subsolution outside the core because all fluxes entering a zero-density cell are nonnegative.
+
+Fix $h$ for now and make $\gamma$ so large that $\min_{i\in I_h}n_i^D(0)>q$. This is possible because that minimum tends to $a>q$. Since $n^D$ is increasing in time, all core densities then exceed $q$.
+
+Bootstrap on the condition that all exterior densities are at most $q$. Define the nonnegative discrepancy
+\[
+ D(t)=\sum_{i\in I_h}(n_i(t)-n_i^D(t)).
+\]
+Internal face fluxes cancel when the density equations are summed. At each core boundary, the upwind density is the core density. As $n\ge n^D$ and $p\ge p^D$, the difference of the outgoing boundary terms is bounded above, in the discrepancy equation, by $n p_{\rm out}\le q^\gamma$. Also,
+\[
+ [n-n^{\gamma+1}]-[n^D-(n^D)^{\gamma+1}]\le n-n^D.
+\]
+Consequently,
+\begin{equation}\label{eq:D-bound}
+ D'(t)\le D(t)+\frac{2q^\gamma}{h^2},\qquad
+ 0\le D(t)\le \frac{2(e^t-1)}{h^2}q^\gamma.
+\end{equation}
+In particular, because $n\mapsto n^\gamma$ is $\gamma$-Lipschitz on $[0,1]$,
+\begin{equation}\label{eq:pdiff}
+ 0\le p_i(t)-p_i^D(t)\le C_h\gamma q^\gamma\quad(i\in I_h,
+ \ 0\le t\le1)
+\end{equation}
+while the bootstrap condition holds. Here $C_h$ is independent of $\gamma$; its dependence on the fixed mesh is harmless at this stage.
+
+To control the exterior, use weights $\omega_{\pm M}=1/2$ and $\omega_i=1$ at all other nodes, and set
+\[
+ E(t)=\sum_{i\notin I_h}\omega_i n_i(t).
+\]
+These half-weights exactly cancel the factor two generated by the reflected boundary stencil. Hence
+\[
+ E'(t)\le E(t)+\frac{p_K(t)+p_{-K}(t)}{h^2},\qquad E(0)=0.
+\]
+Equations~\eqref{eq:corepressure} and~\eqref{eq:pdiff} imply
+\begin{equation}\label{eq:Ebound}
+ E(t)\le \frac{2P_K^{h,\gamma}}{h^2}
+ \int_0^t e^{t-s}\theta_\gamma(s)\dd s+C_h\gamma q^\gamma.
+\end{equation}
+Each exterior density is at most $2E(t)$.
+
+Choose the observation time
+\begin{equation}\label{eq:th}
+ t_h=t_0+\log\left(1+\frac{q h^2}{8P_K^h}\right).
+\end{equation}
+For small $h$, it lies below $T=1$, and $t_h\to t_0$. For fixed $h$, dominated convergence gives
+\[
+ \int_0^{t_h}e^{t_h-s}\theta_\gamma(s)\dd s
+ \longrightarrow e^{t_h-t_0}-1=\frac{q h^2}{8P_K^h}.
+\]
+Thus the right side of~\eqref{eq:Ebound}, at $t=t_h$, tends to $q/4$. The convolution in that estimate is nondecreasing in $t$. It follows that, for all sufficiently large $\gamma$, the estimate gives $2E(t)<q$ throughout the interval up to any putative first exit time from the bootstrap condition. Such a first exit is impossible. The estimates therefore hold on the entire interval $[0,t_h]$.
+
+Besides $p(t_h)\to P^h$ on the core, we need the pressure derivative to converge to zero. This is not inferred merely from convergence of the pressures. On $[0,1]$, each internal density flux has Lipschitz constant at most $C_h\gamma$. At a core/exterior face, where the exterior density is at most $q$, the flux discrepancy is bounded by
+\[
+ (\gamma+1)|n_i-n_i^D|+q^\gamma.
+\]
+Using~\eqref{eq:D-bound} in the actual density equations therefore gives
+\[
+ |\dot n_i-\dot n_i^D|\le C_h\gamma q^\gamma.
+\]
+For $\gamma\ge2$, $n\mapsto n^{\gamma-1}$ is $(\gamma-1)$-Lipschitz on $[0,1]$, and $|\dot n_i^D|\le1$. Consequently,
+\begin{equation}\label{eq:derivdiff}
+ |\dot p_i-\dot p_i^D|\le C_h\gamma^2q^\gamma.
+\end{equation}
+At the fixed time $t_h>t_0$, $\dot p_i^D(t_h)=\theta_\gamma'(t_h)P_i^{h,\gamma}\to0$. We have proved
+\begin{equation}\label{eq:corelimits}
+ p_i(t_h)\longrightarrow P_i^h,\qquad
+ \dot p_i(t_h)\longrightarrow0,\qquad i\in I_h.
+\end{equation}
+
+\subsection{The negative defect and uniform admissibility}
+
+At the right core endpoint $K$, the only higher-pressure neighbour is $K-1$ when $\gamma$ is sufficiently large. The exact pressure equation is
+\begin{equation}\label{eq:pressureidentity}
+ \frac{\dot p_K}{\gamma p_K}
+ =w_K+\frac1{h^2}
+ \left[\left(\frac{p_{K-1}}{p_K}\right)^{1/\gamma}-1\right]
+ (p_{K-1}-p_K).
+\end{equation}
+Multiply by $\gamma$ and use~\eqref{eq:corelimits}. For each fixed $h$,
+\begin{equation}\label{eq:scaledlimit}
+ \lim_{\gamma\to\infty}\gamma w_K(t_h)=-A_h,\qquad
+ A_h=\frac{P_{K-1}^h-P_K^h}{h^2}
+ \log\frac{P_{K-1}^h}{P_K^h}.
+\end{equation}
+Equation~\eqref{eq:edgeasymp} yields
+\begin{equation}\label{eq:Aasymp}
+ A_h\sim\frac{\tanh(1/2)\log2}{h}.
+\end{equation}
+In particular, $t_hA_h\to\infty$.
+
+The initial data meet every stated uniform bound. Both $n_i(0)$ and $p_i(0)$ are at most one, so their $h$-weighted sums are at most three. Symmetry and monotonicity of the core profile give total variation at most $2a$. Inside the core, the exact initial derivative is
+\[
+ \dot n_i(0)=(1-a^\gamma)n_i(0)\ge0.
+\]
+There are just two nonzero initial exterior derivatives, each at most $a^{\gamma+1}/h^2$. Thus
+\begin{equation}\label{eq:initderiv}
+ h\sum_i|\dot n_i(0)|\le3+\frac{2a^{\gamma+1}}h.
+\end{equation}
+Choose a sequence of even $M\to\infty$, and for each corresponding $h$ choose a finite integer $\gamma_h$ sufficiently large that all preceding estimates apply,
+\[
+ \gamma_h w_K(t_h)\le-\frac12A_h,
+ \qquad \frac{a^{\gamma_h+1}}h\le1.
+\]
+All four initial bounds hold with the same $C_0=10$, while
+\[
+ -\gamma_h t_hw_K(t_h)\ge\frac12t_hA_h\longrightarrow\infty.
+\]
+This contradicts any constant in~\eqref{eq:abtarget} depending only on the permitted fixed parameters.
+
+\begin{theorem}
+The uniform estimate asked for in entry 505 is false under its stated assumptions, including the reflected Neumann ghost values and all four uniform initial-data bounds.
+\end{theorem}
+
+\subsection{A numerical check, not used in the proof}
+
+The accompanying script solves the stationary core problem and integrates the full ODE with a stiff solver. For $\gamma=500M$, it gives:
+\begin{center}
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+$M$ & $\gamma$ & $\gamma w_K(t_h)$ & $-A_h$ & $-\gamma t_hw_K(t_h)$\\
+\midrule
+10 & 5000 & $-2.31735$ & $-2.31723$ & $0.69618$\\
+20 & 10000 & $-5.46771$ & $-5.46736$ & $1.60877$\\
+40 & 20000 & $-11.84682$ & $-11.84617$ & $3.44751$\\
+80 & 40000 & $-24.64579$ & $-24.64478$ & $7.13147$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The proof selects $\gamma_h$ by the rigorous fixed-$h$ limit and does not assume that the particular numerical choice $500M$ works at every mesh size.
+
+\newpage
+\section{Entry 523: the square-root logarithm is necessary}\label{sec:nystrom}
+
+We use exactly the general-amplitude formulation in catalogue entry 523~\cite{repo523}. The original paper and its fourth version retain the general-curve conjecture~\cite{galkowski}. It is enough to disprove the estimate at $s=0$.
+
+\subsection{A fixed smooth curve and a fixed amplitude}
+
+Choose a smooth embedded closed curve containing a straight horizontal arc, with a smooth periodic parametrization satisfying, on $|t|<1/4$,
+\begin{equation}\label{eq:localcurve}
+ \gamma(t)=(\sigma(t),0),\qquad \sigma(t)=t+\frac12t^2.
+\end{equation}
+Such a curve is obtained by smoothly completing a line segment away from this chart and then making a positive smooth reparametrization. The local speed is $1+t>0$; the global speed is smooth, bounded above, and bounded away from zero. No positive-curvature or unit-speed hypothesis is imposed by the repository target.
+
+Let $\chi$ be a smooth periodic cutoff supported in $(-1/4,1/4)$ and equal to one on $[-1/8,1/8]$. Parametrize a neighbourhood of $(-1,0)\in S^1$ by
+\[
+ \omega(\theta)=(-\cos\theta,\sin\theta).
+\]
+Choose a nonnegative even smooth cutoff $\psi$, supported in $|\theta|<\theta_0$ for a sufficiently small fixed $\theta_0>0$, and equal to one near zero. Define, independently of $k$,
+\begin{equation}\label{eq:amp}
+ f_k(\omega(\theta),t,\tau)=\psi(\theta)\chi(t)\chi(\tau),
+\end{equation}
+and extend by zero on the rest of the circle. This is a fixed smooth amplitude; every derivative required in the question is uniformly bounded in $k$.
+
+Put $\rho=m/k$ and restrict it to
+\[
+ J=\left[1-\frac1{32},1+\frac1{32}\right].
+\]
+For $\theta_0$ small enough, $\tau_\theta=\rho/\cos\theta-1$ lies in the region where $\chi(\tau)=1$, uniformly for $\rho\in J$.
+
+\subsection{Reduction to a nearly degenerate one-dimensional integral}
+
+Using the local coordinate and interchanging the two compact integrals,
+\begin{equation}\label{eq:Lhat}
+ \widehat L_{1,k,m}(t)=\frac{k\chi(t)}{\sqrt{2\pi}}
+ \int\psi(\theta)e^{-ik\sigma(t)\cos\theta}
+ \int\chi(\tau)e^{ik[\sigma(\tau)\cos\theta-\rho\tau]}
+ \dd\tau\dd\theta.
+\end{equation}
+The inner phase is exactly quadratic in $\tau$, has critical point $\tau_\theta$, and has second derivative $\cos\theta>0$. Since the cutoff is identically one near the critical point, quadratic stationary phase, with integration by parts away from that point, gives for every $B>0$ a remainder $O(k^{-B})$, uniformly in the parameters. With $u=1+t$, the result is
+\begin{equation}\label{eq:stationtau}
+ \widehat L_{1,k,m}(t)=\chi(t)\sqrt{k}\,e^{i\pi/4}
+ \int \frac{\psi(\theta)}{\sqrt{\cos\theta}}
+ e^{ik\Psi(u,\rho,\theta)}\dd\theta+O(k^{-B}),
+\end{equation}
+where
+\begin{equation}\label{eq:Psi}
+ \Psi(u,\rho,\theta)=\rho-\frac12u^2\cos\theta
+ -\frac{\rho^2}{2\cos\theta}.
+\end{equation}
+All constants here concern the one fixed curve and amplitude.
+
+Choose a fixed small $\delta_0>0$, for example $1/32$, and take
+\[
+ t=\rho-1-\delta,\qquad k^{-1/4}\le\delta\le\delta_0.
+\]
+These $t$ lie in the plateau of $\chi$. Also $u=\rho-\delta<\rho$. The angular phase has just one stationary point on the support, at zero, and
+\[
+ \Psi_{\theta\theta}(u,\rho,0)=-A,
+ \qquad A=\frac{\rho^2-u^2}{2}
+       =\frac{\delta(2\rho-\delta)}2\asymp\delta.
+\]
+The degeneration $A\downarrow0$ as $t\uparrow\rho-1$ is responsible for the logarithm.
+
+\subsection{Uniform stationary phase on the required range}
+
+For completeness, we justify uniformity as $A$ tends to zero with $k$. Let
+\[
+ g(\theta)=\Psi(u,\rho,0)-\Psi(u,\rho,\theta),\qquad
+ b(\theta)=\frac{\psi(\theta)}{\sqrt{\cos\theta}}.
+\]
+For $|\theta|<\theta_0<\pi/2$,
+\begin{equation}\label{eq:gsecond}
+ g''(\theta)=\frac{\rho^2}{2\cos\theta}
+ -\frac{u^2\cos\theta}{2}
+ +\frac{\rho^2\sin^2\theta}{\cos^3\theta}\ge A>0.
+\end{equation}
+Further,
+\[
+ g(\theta)=\frac{A\theta^2}{2}+O(\theta^4),
+\]
+with the remainder uniform in $u,\rho$ in the present compact ranges. Rescale $\zeta=\sqrt{kA}\,\theta$. On each bounded $\zeta$ interval,
+\[
+ kg\!\left(\frac\zeta{\sqrt{kA}}\right)
+ =\frac{\zeta^2}{2}+O\!\left(\frac{\zeta^4}{kA^2}\right),
+ \qquad b\!\left(\frac\zeta{\sqrt{kA}}\right)\to1
+\]
+uniformly, because $kA^2\gtrsim k^{1/2}\to\infty$.
+
+The tails of this rescaled integral are also uniform. On the positive half-line, the derivative of the rescaled phase is increasing and is at least $\zeta$ by~\eqref{eq:gsecond}; the negative half-line is analogous. The amplitudes have uniformly bounded total variation. Integration by parts therefore bounds either tail $|\zeta|>R$ by $C/R$, uniformly in $k,A,u,\rho$. First letting $k\to\infty$ on a bounded interval and then $R\to\infty$ proves
+\begin{equation}\label{eq:uniformfresnel}
+ \int b(\theta)e^{ik\Psi(u,\rho,\theta)}\dd\theta
+ =\frac{e^{ik\Psi(u,\rho,0)}}{\sqrt{kA}}
+ \left(\sqrt{2\pi}e^{-i\pi/4}+o(1)\right)
+\end{equation}
+uniformly for $\rho\in J$ and $k^{-1/4}\le\delta\le\delta_0$.
+
+Combining~\eqref{eq:stationtau} and~\eqref{eq:uniformfresnel} gives
+\begin{equation}\label{eq:nystromasymp}
+ \widehat L_{1,k,m}(\rho-1-\delta)
+ =\sqrt{\frac{2\pi}{A}}\,e^{ik\Psi(u,\rho,0)}(1+o(1)).
+\end{equation}
+In particular, for all sufficiently large $k$,
+\[
+ \abs{\widehat L_{1,k,m}(\rho-1-\delta)}^2\ge\frac{c_1}{\delta}
+\]
+with $c_1>0$ uniform in the specified ranges.
+
+\subsection{The logarithmic lower bound}
+
+On this arc, arclength measure is $\dd s=(1+t)\dd t=u\dd t$, with $u$ bounded above and below by positive constants. Thus, uniformly for integers $m$ with $m/k\in J$,
+\begin{align}
+ \norm{\widehat L_{1,k,m}}_{L^2(\Gamma)}^2
+ &\ge c_2\int_{k^{-1/4}}^{\delta_0}\frac{\dd\delta}{\delta}
+ \ge c_3\log k
+\end{align}
+for sufficiently large $k$. There are at least $c_4k$ such positive integers $m$.
+
+Choose $\eps=1/2$ and $N=4\lceil k\rceil$. The prescribed sum includes all these integers, and at $s=0$ its extra weight is one. Hence
+\begin{equation}\label{eq:loglower}
+ \frac1k\sum_{0<|m|\le(1-\eps)N}
+ \norm{\widehat L_{1,k,m}}_{H_k^0(\Gamma)}
+ \ge c_5\sqrt{\log k}\longrightarrow\infty.
+\end{equation}
+
+\begin{theorem}
+The constant bound in the repository's general smooth-amplitude formulation of entry 523 is false. A fixed smooth curve, a fixed smooth nonconstant-speed parametrization, and a fixed smooth amplitude already force the square-root logarithmic loss.
+\end{theorem}
+
+\begin{remark}
+The amplitude localization in~\eqref{eq:amp} is explicitly permitted by the repository statement. This argument does not identify that amplitude with every particular physical single- or double-layer kernel. It also does not contradict the positive-curvature, unit-speed result, since the construction has a flat arc and variable speed.
+\end{remark}
+
+\newpage
+\section{Entry 553: sharp logarithmic measurement growth}\label{sec:adaptive}
+
+We retain precisely the information model of entry 553~\cite{repo553}: each branch functional is continuous in the input, while the dependence on the preceding exact measurements and the final decoder may be arbitrary. The known upper bound is Theorem~1 of Krieg--Novak--Ullrich, version 2~\cite{knu}.
+
+\begin{theorem}\label{thm:adaptive}
+For $m\ge2$,
+\[
+ \boxed{\lfloor\log_2m\rfloor+1\le N(m)
+ \le\lceil\log_2m\rceil+1.}
+\]
+Consequently $N(m)=\log_2m+O(1)$ and $N(m)\sim\log_2m$. At powers of two, $N(2^r)=r+1$ for $r\ge1$.
+
+More strongly, if $m\ge2^n$, every deterministic algorithm using at most $n$ adaptive continuous real-valued measurements has infinite worst-case error on $\R^m$.
+\end{theorem}
+
+\subsection{An antipodal index and its elementary properties}
+
+For a nonempty compact antipodally invariant subset $K$ of a Euclidean sphere, define its genus $\gen(K)$ to be the least integer $r\ge1$ for which there exists a continuous odd map
+\[
+ K\longrightarrow\R^r\setminus\{0\}.
+\]
+Set $\gen(\varnothing)=0$. The Borsuk--Ulam theorem implies
+\begin{equation}\label{eq:gensphere}
+ \gen(S_R^{m-1})=m.
+\end{equation}
+The upper bound uses the inclusion into $\R^m\setminus\{0\}$. A smaller odd map would contradict Borsuk--Ulam.
+
+We will use three facts, proving the two fiber facts explicitly. First, an odd map from a compact symmetric subset $A\subset K$ to a sphere extends to an odd nonvanishing map on some invariant open neighbourhood of $A$ in $K$. To see this, extend its coordinates to $K$ by the Tietze extension theorem and antisymmetrize:
+\[
+ F(x)=\frac{F_0(x)-F_0(-x)}2.
+\]
+This agrees with the original map on $A$. By compactness it is nonzero on an invariant neighbourhood, where it can be normalized.
+
+\begin{lemma}[Odd zero sets]\label{lem:oddzero}
+If $h:K\to\R$ is continuous and odd and $Z=h^{-1}(0)$, then
+\[
+ \gen(Z)\ge\gen(K)-1.
+\]
+\end{lemma}
+\begin{proof}
+If $Z=\varnothing$, $h$ itself gives $\gen(K)\le1$. Otherwise let $r=\gen(Z)$ and extend a nonvanishing odd map on $Z$ to a continuous odd map $F:K\to\R^r$ by the preceding extension argument. The map
+\[
+ x\longmapsto(F(x),h(x))
+\]
+is odd and nowhere zero: on $Z$ its first component is nonzero, and outside $Z$ its last component is nonzero. Thus $\gen(K)\le r+1$.
+\end{proof}
+
+\begin{lemma}[Fibers of an even real function]\label{lem:evenfiber}
+If $f:K\to\R$ is continuous and even, some fiber satisfies
+\[
+ \gen(f^{-1}(y))\ge\left\lceil\frac{\gen(K)}2\right\rceil.
+\]
+\end{lemma}
+\begin{proof}
+The empty-set case is immediate. For nonempty $K$, it suffices to show that if every fiber has genus at most $r$, then $\gen(K)\le2r$. Here necessarily $r\ge1$. For each $y\in f(K)$, the compact invariant fiber $f^{-1}(y)$ has an invariant open neighbourhood $U_y$ admitting an odd map to $S^{r-1}$. Compactness of $K$ yields an open interval $I_y$ around $y$ with
+\[
+ f^{-1}(I_y)\subset U_y.
+\]
+Indeed, otherwise a sequence outside $U_y$ with $f(x_j)\to y$ would have a limit in $f^{-1}(y)\setminus U_y$.
+
+Choose a finite interval cover of the compact set $f(K)$ from these $I_y$. Refine it by sufficiently short, overlapping intervals on a regular grid, and give consecutive grid intervals alternating colors zero and one. The mesh can be chosen smaller than a Lebesgue number of the original cover. Each refined interval, intersected with $f(K)$, then lies in an original interval, and intervals of the same color are pairwise disjoint.
+
+Let $V_0,V_1\subset K$ be the preimages of the two unions. They are invariant open sets covering $K$. On each component interval of a fixed color, use the odd map inherited from the relevant $U_y$. Since those component preimages are disjoint open sets, the maps together give continuous odd maps
+\[
+ v_j:V_j\to S^{r-1},\qquad j=0,1.
+\]
+Take a continuous even partition of unity $\alpha_0,\alpha_1$ subordinate to this two-set cover. Such a partition is obtained by averaging an ordinary subordinate partition with its antipodal pullback. Then
+\[
+ x\longmapsto\bigl(\alpha_0(x)v_0(x),\alpha_1(x)v_1(x)\bigr)
+\]
+with each product extended by zero outside its $V_j$ is continuous, odd, and nonvanishing. Continuity of the zero extension follows because $v_j$ is bounded and $\alpha_j$ vanishes on the boundary. This is the required map into $\R^{2r}\setminus\{0\}$.
+\end{proof}
+
+\begin{lemma}[One continuous measurement]\label{lem:onefiber}
+For any continuous $\lambda:K\to\R$, there exist $y\in\R$ and a compact invariant set $K'\subset K$ such that
+\[
+ \lambda(x)=y\quad(x\in K'),\qquad
+ \gen(K')\ge\left\lfloor\frac{\gen(K)}2\right\rfloor.
+\]
+\end{lemma}
+\begin{proof}
+The function $h(x)=\lambda(x)-\lambda(-x)$ is odd. On its zero set $Z$, the restriction of $\lambda$ is even. Apply Lemmas~\ref{lem:oddzero} and~\ref{lem:evenfiber}, obtaining
+\[
+ \gen(K')\ge\left\lceil\frac{\gen(K)-1}{2}\right\rceil
+ =\left\lfloor\frac{\gen(K)}2\right\rfloor.
+\]
+The chosen fiber inside $Z$ is compact and invariant.
+\end{proof}
+
+\subsection{An adversarial transcript}
+
+Fix any algorithm with $n$ measurements, and suppose $m\ge2^n$. An algorithm that sometimes stops earlier can be padded with zero measurements, so it is enough to consider exactly $n$ stages. Fix an arbitrary radius $R>0$ and start with $K_0=S_R^{m-1}$.
+
+Apply Lemma~\ref{lem:onefiber} to the first measurement. This chooses a value $y_1$ and a compact invariant set $K_1$ whose points all produce that value. For the second step, the preceding history is now fixed, so the algorithm selects one particular continuous function. Apply the same lemma to that function restricted to $K_1$. Continue for the first $n-1$ stages. We obtain a fixed transcript $y_1,\ldots,y_{n-1}$ and a compact invariant set $K_{n-1}$ producing it, with
+\[
+ \gen(K_{n-1})\ge
+ \left\lfloor\frac{m}{2^{n-1}}\right\rfloor\ge2.
+\]
+For the final, now fixed, branch functional $\lambda_n$, the odd function
+\[
+ x\longmapsto\lambda_n(x)-\lambda_n(-x)
+\]
+has a zero on $K_{n-1}$; otherwise it would give an odd map into $\R\setminus\{0\}$, contradicting genus at least two. Hence some antipodal pair $x,-x$ of norm $R$ produces the same complete transcript.
+
+The decoder returns the same vector $z$ on that transcript. By the triangle inequality,
+\[
+ \max\{\norm{x-z}_2,\norm{-x-z}_2\}\ge R.
+\]
+Since $R$ was arbitrary, the worst-case error is infinite. In particular, $n=\lfloor\log_2m\rfloor$ cannot suffice. Combining the resulting lower bound with the cited upper bound proves Theorem~\ref{thm:adaptive}.
+
+\begin{remark}
+The proof fixes one branch at a time. It never assumes continuity in the history, continuity of the whole adaptive encoder, or continuity of the decoder. The one-integer gap for non-powers of two remains; in particular this does not decide $N(3)$.
+\end{remark}
+
+\newpage
+\section{Entry 570: no universal cost of continuous decoding}\label{sec:decoder}
+
+The quantification in entry 570 is over arbitrary real Banach spaces, with no separability assumption~\cite{repo570}. This distinction is decisive. The compact-input factor-two theorem in the cited source~\cite{knu} does not apply to the following unit ball.
+
+\begin{theorem}\label{thm:decoder}
+Let
+\[
+ I=[0,1],\qquad X=\ell_1(I),\qquad Y=\ell_2(I),
+\]
+and let $S:X\to Y$ be the canonical inclusion. Then, for every finite $n\ge1$,
+\[
+ \delta_n(S)=1,
+\]
+whereas for every integer $K\ge1$,
+\[
+ e_{2K}(S)\le\frac1{\sqrt{K+1}}.
+\]
+Therefore no universal finite constant $C$ can satisfy $\delta_n(S)\le Ce_n(S)$ in the stated class. In particular, $C=2$ already fails for this operator at $n=8$.
+\end{theorem}
+
+\subsection{A continuous encoder with a discontinuous accurate decoder}
+
+Every element of $\ell_1(I)$ or $\ell_2(I)$ has countable support. The inclusion $S$ is bounded with norm one. Fix $K\ge1$ and put $\tau=1/(K+1)$. Define coordinatewise soft thresholding by
+\[
+ (T_\tau x)_t=\sgn(x_t)(|x_t|-\tau)_+.
+\]
+This map is $1$-Lipschitz on $\ell_1(I)$. If $\norm{x}_1\le1$, then $T_\tau x$ has at most $K$ nonzero coordinates: $K+1$ coordinates strictly larger than $\tau$ in magnitude would have total $\ell_1$ norm greater than one. Also,
+\begin{equation}\label{eq:soft-error}
+ \norm{x-T_\tau x}_2^2
+ =\sum_{t\in I}\min(|x_t|,\tau)^2
+ \le\tau\sum_{t\in I}|x_t|\le\tau.
+\end{equation}
+
+Use $2K$ real moments of the thresholded vector as the encoder:
+\begin{equation}\label{eq:momentencoder}
+ N_K(x)_j=\sum_{t\in[0,1]}t^j(T_\tau x)_t,
+ \qquad j=0,1,\ldots,2K-1.
+\end{equation}
+Here $t^0=1$, including at $t=0$. Every coordinate is continuous, indeed $1$-Lipschitz in the $\ell_1$ norm, because $|t^j|\le1$. Thus $N_K:B_X\to\R^{2K}$ is an admissible nonadaptive continuous encoder.
+
+The moment map in~\eqref{eq:momentencoder} is injective on vectors supported on at most $K$ indices. To prove this, subtract two such vectors with the same moments. Their difference has support $\{t_1,\ldots,t_r\}$, where $r\le2K$, and its coefficients $c_i$ satisfy
+\[
+ \sum_{i=1}^r c_i t_i^j=0,\qquad j=0,\ldots,r-1.
+\]
+The Vandermonde matrix of distinct nodes $t_i$ is invertible; hence all $c_i=0$.
+
+Define a decoder on all of $\R^{2K}$ by returning the unique at-most-$K$-sparse vector having the given moments whenever one exists, and returning zero otherwise. No continuity is required for $e_{2K}$. On the encoder image it returns $T_\tau x$ exactly. Equation~\eqref{eq:soft-error} proves
+\[
+ e_{2K}(S)\le\sqrt\tau=(K+1)^{-1/2}.
+\]
+
+\subsection{Every continuous decoder misses a coordinate}
+
+Let $\phi:\R^n\to\ell_2(I)$ be any continuous decoder. Its image is separable, since $\R^n$ is separable. More explicitly, choose a countable dense subset of its image and let $J\subset I$ be the union of the supports of those countably many vectors. Each support is countable, so $J$ is countable. Since $\ell_2(J)$ is closed in $\ell_2(I)$,
+\[
+ \phi(\R^n)\subset\ell_2(J).
+\]
+Choose $t\in I\setminus J$ and take the unit vector $e_t\in B_X$. For every encoder $N$, regardless of its form,
+\[
+ \norm{Se_t-\phi(N(e_t))}_2^2
+ =1+\norm{\phi(N(e_t))}_2^2\ge1.
+\]
+Thus $\delta_n(S)\ge1$. The zero decoder gives the reverse inequality, because $\norm S=1$.
+
+For any putative universal $C$, choose $K+1>C^2$. Then
+\[
+ C e_{2K}(S)\le\frac{C}{\sqrt{K+1}}<1=\delta_{2K}(S).
+\]
+For $C=2$, take $K=4$, giving $2e_8(S)\le2/\sqrt5<1$.
+
+\begin{remark}
+The same fixed operator supplies the counterexample for every proposed constant. Both its domain and codomain are nonseparable. No conclusion about the still-interesting variant restricted to separable Banach spaces is claimed.
+\end{remark}
+
+\newpage
+\section{Entry 641: the cubic Fej\'er inequality in every dimension}\label{sec:cubic}
+
+We settle the cubic assertion within entry 641~\cite{repo641}. Bos proved it through dimension 28 and described a dimension-by-dimension degree-elevation test~\cite{bos}. The point here is to carry out the induction symbolically in the dimension, reducing all remaining dimensions to 45 exact coefficient types.
+
+\begin{theorem}\label{thm:cubic}
+For every nondegenerate real $d$-simplex, $d\ge1$, Bos's cubic node set $F_{3,d}$ satisfies
+\[
+ \sum_{x\in F_{3,d}}|\ell_x^{(3,d)}(z)|^2\le1
+ \qquad(z\in S_d).
+\]
+\end{theorem}
+
+\subsection{A dimension-independent symmetric deficit}
+
+Let $M=d+1$ be the number of barycentric coordinates. Work homogeneously with nonnegative $x_1,\ldots,x_M$ and write
+\[
+ S=\sum_i x_i,\qquad p_j=\sum_i x_i^j.
+\]
+The homogeneous cubic cardinal polynomials are
+\begin{align}
+ \ell_i&=\frac{x_i}{2}(12x_i^2-12Sx_i+3S^2-p_2),\label{eq:cubicvertex}\\
+ \ell_{ij}&=5x_ix_j\left(\frac{3+\sqrt5}{2}x_i+
+                 \frac{3-\sqrt5}{2}x_j-S\right),\quad i\ne j,
+                 \label{eq:cubicedge}\\
+ \ell_{ijk}&=27x_ix_jx_k,\quad i<j<k.\label{eq:cubicface}
+\end{align}
+Direct substitution at the three node types verifies cardinality. These are the homogenized polynomials from Bos's construction. Their squared sum, denoted $\mathcal K_M$, is
+\begin{align}\label{eq:Ksym}
+ \mathcal K_M={}&54p_6+78Sp_5+29S^2p_4-\frac{391}{2}p_2p_4
+ -18S^3p_3-144Sp_2p_3+50p_3^2\notag\\
+ &+\frac94S^4p_2+\frac{47}{2}S^2p_2^2+\frac{487}{4}p_2^3.
+\end{align}
+For example, the face contribution follows from
+\[
+ 729\sum_{i<j<k}x_i^2x_j^2x_k^2
+ =\frac{243}{2}p_2^3-\frac{729}{2}p_2p_4+243p_6.
+\]
+The vertex and edge contributions are obtained by the same direct expansion. Formula~\eqref{eq:Ksym} is also independently checked by the accompanying exact-arithmetic script.
+
+Define the homogeneous deficit
+\[
+ H_M(x)=S^6-\mathcal K_M(x).
+\]
+The desired inequality is $H_M\ge0$ on the nonnegative orthant, followed by restriction to $S=1$. Appending a zero coordinate leaves the formula unchanged:
+\[
+ H_M(x_1,\ldots,x_{M-1},0)=H_{M-1}(x_1,\ldots,x_{M-1}).
+\]
+
+\subsection{One induction step covers the whole orthant}
+
+By symmetry, permute any nonnegative $x$ so that $x_M=\min_i x_i$. Set
+\[
+ z=Mx_M,\qquad \mu_i=x_i-x_M\ge0\quad(1\le i<M).
+\]
+Then
+\begin{equation}\label{eq:centroidsub}
+ x_i=\mu_i+z/M\ (i<M),\qquad x_M=z/M.
+\end{equation}
+Thus the centroid-to-facet substitution does not omit any point of the orthant.
+
+Put $q_j=\sum_{i=1}^{M-1}\mu_i^j$. Under~\eqref{eq:centroidsub},
+\begin{equation}\label{eq:pq}
+ p_j=\sum_{i=1}^j\binom ji q_i(z/M)^{j-i}+\frac{z^j}{M^{j-1}},
+ \qquad 1\le j\le6,
+\end{equation}
+so $S=q_1+z$. Form the degree-eight polynomial
+\begin{equation}\label{eq:Q}
+ Q_M(\mu,z)=4M^5(q_1+z)^2
+ \left[H_M(\mu_1+z/M,\ldots,\mu_{M-1}+z/M,z/M)
+       -H_{M-1}(\mu)\right].
+\end{equation}
+It is divisible by $z$. Because it is symmetric in the $\mu$ variables, the coefficient of $z^k\mu^\alpha$ depends only on the partition $\alpha$ of $8-k$ consisting of its positive exponents. There are
+\[
+ p(7)+p(6)+\cdots+p(0)=15+11+7+5+3+2+1+1=45
+\]
+possible types. For $M\ge8$, every such partition fits within the available $M-1$ variables.
+
+The exact coefficient certificate in Appendix~\ref{app:certificate} establishes that all 45 coefficients are positive for every real $M\ge8$. In particular,
+\[
+ Q_M(\mu,z)\ge0\qquad(M\ge8,\ \mu,z\ge0).
+\]
+Except at the origin, the multiplier $4M^5(q_1+z)^2$ is positive. Therefore
+\begin{equation}\label{eq:inductionH}
+ H_M(\mu+z/M,z/M)\ge H_{M-1}(\mu).
+\end{equation}
+At the origin both sides vanish.
+
+The cases $1\le d\le6$ are already among Bos's proved cases. The accompanying script checks them again exactly, including the one- and two-dimensional bases and degree elevations $8,5,3,3$ for dimensions $3,4,5,6$, respectively. Starting at $M=7$ and applying~\eqref{eq:inductionH} for $M=8,9,\ldots$ proves Theorem~\ref{thm:cubic}.
+
+\subsection{What the exact verifier checks}
+
+The file \texttt{verify\_cubic.py} uses only exact SymPy expressions and integers or rational numbers in its assertions. It checks the direct cardinal-polynomial squared-sum identity; the one-dimensional identity
+\[
+ H_2(u,v)=12uv(u^2-3uv+v^2)^2;
+\]
+the two-dimensional positive-coefficient base decomposition; all coefficient types in the four remaining low-dimensional induction steps; and all 45 coefficient polynomials in symbolic $M$ after $M=u+8$.
+
+Its output is:
+\begin{quote}\ttfamily\small
+PASS: direct cardinal sum-of-squares identity (six variables).\\
+PASS: base cases, dimensions one and two.\\
+PASS: dimension 3, elevation 8, 123 coefficient types.\\
+PASS: dimension 4, elevation 5, 94 coefficient types.\\
+PASS: dimension 5, elevation 3, 60 coefficient types.\\
+PASS: dimension 6, elevation 3, 64 coefficient types.\\
+PASS: all 45 symbolic coefficient types are nonnegative for M >= 8.\\
+ALL EXACT CHECKS PASSED.
+\end{quote}
+
+\newpage
+\appendix
+\section{Complete cubic coefficient certificate}\label{app:certificate}
+
+For a partition $\alpha\vdash8-k$, let $C_{k,\alpha}(M)$ be the coefficient of $z^k\mu_1^{\alpha_1}\cdots\mu_r^{\alpha_r}$ in~\eqref{eq:Q}. The table gives a positive factor $F_{k,\alpha}(M)$ and an array $(a_0,\ldots,a_s)$ such that the following is an exact polynomial identity:
+\begin{equation}\label{eq:tablemeaning}
+ C_{k,\alpha}(8+u)=F_{k,\alpha}(8+u)\sum_{j=0}^s a_j u^j.
+\end{equation}
+Every displayed $a_j$ is positive, and each displayed $F(M)$ is positive for $M\ge8$. The empty partition is denoted $\varnothing$; exponents on parts denote repetitions.
+
+\begingroup
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.13}
+\footnotesize
+\begin{longtable}{@{}rlll@{}}
+\toprule
+$k$ & $\alpha$ & $F_{k,\alpha}(M)$ & $(a_0,a_1,\ldots)$\\
+\midrule
+\endfirsthead
+\toprule
+$k$ & $\alpha$ & $F_{k,\alpha}(M)$ & $(a_0,a_1,\ldots)$\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+1 & $(7)$ & $48 M^{4} \left(M - 1\right)$ & $(1)$\\
+1 & $(6,1)$ & $120 M^{4}$ & $(4,1)$\\
+1 & $(5,2)$ & $32 M^{4}$ & $(108,19)$\\
+1 & $(5,1^{2})$ & $8 M^{4}$ & $(691,111)$\\
+1 & $(4,3)$ & $120 M^{4}$ & $(86,13)$\\
+1 & $(4,2,1)$ & $8 M^{4}$ & $(1852,327)$\\
+1 & $(4,1^{3})$ & $24 M^{4}$ & $(1681,231)$\\
+1 & $(3^{2},1)$ & $528 M^{4}$ & $(37,7)$\\
+1 & $(3,2^{2})$ & $16 M^{4}$ & $(246,191)$\\
+1 & $(3,2,1^{2})$ & $16 M^{4}$ & $(2933,543)$\\
+1 & $(3,1^{4})$ & $48 M^{4}$ & $(3133,438)$\\
+1 & $(2^{3},1)$ & $144 M^{4}$ & $(144,59)$\\
+1 & $(2^{2},1^{3})$ & $48 M^{4}$ & $(2773,493)$\\
+1 & $(2,1^{5})$ & $240 M^{4}$ & $(1603,234)$\\
+1 & $(1^{7})$ & $30240 M^{4}$ & $(29,4)$\\
+2 & $(6)$ & $36 M^{3} \left(M - 1\right)$ & $(22,3)$\\
+2 & $(5,1)$ & $12 M^{3}$ & $(1886,593,43)$\\
+2 & $(4,2)$ & $4 M^{3}$ & $(23766,6679,461)$\\
+2 & $(4,1^{2})$ & $4 M^{3}$ & $(46558,13169,879)$\\
+2 & $(3^{2})$ & $8 M^{3}$ & $(19494,5287,359)$\\
+2 & $(3,2,1)$ & $16 M^{3}$ & $(14394,4748,355)$\\
+2 & $(3,1^{3})$ & $24 M^{3}$ & $(29968,8563,576)$\\
+2 & $(2^{3})$ & $24 M^{3}$ & $(34,1660,193)$\\
+2 & $(2^{2},1^{2})$ & $8 M^{3}$ & $(65834,23543,1817)$\\
+2 & $(2,1^{4})$ & $72 M^{3}$ & $(24308,7179,498)$\\
+2 & $(1^{6})$ & $720 M^{3}$ & $(5816,1611,108)$\\
+3 & $(5)$ & $4 M^{2} \left(M - 1\right)$ & $(2538,711,47)$\\
+3 & $(4,1)$ & $4 M^{2}$ & $(117366,49147,6686,295)$\\
+3 & $(3,2)$ & $8 M^{2}$ & $(102258,42029,5739,258)$\\
+3 & $(3,1^{2})$ & $8 M^{2}$ & $(234260,99829,13674,605)$\\
+3 & $(2^{2},1)$ & $8 M^{2}$ & $(159730,81927,12648,611)$\\
+3 & $(2,1^{3})$ & $24 M^{2}$ & $(177980,80093,11338,515)$\\
+3 & $(1^{5})$ & $480 M^{2}$ & $(21806,9274,1263,56)$\\
+4 & $(4)$ & $M \left(M - 1\right)$ & $(130056,52702,6921,295)$\\
+4 & $(3,1)$ & $2 M$ & $(1844808,1015586,206723,18410,605)$\\
+4 & $(2^{2})$ & $2 M$ & $(1571928,903466,192249,17862,611)$\\
+4 & $(2,1^{2})$ & $2 M$ & $(4011400,2362530,501963,45998,1545)$\\
+4 & $(1^{4})$ & $24 M$ & $(792080,454696,94306,8465,280)$\\
+5 & $(3)$ & $2 \left(M - 1\right)$ & $(420984,224198,44113,3800,121)$\\
+5 & $(2,1)$ & $6$ & $(2183112,1536018,425265,57927,3887,103)$\\
+5 & $(1^{3})$ & $12$ & $(2386440,1698730,470883,63852,4255,112)$\\
+6 & $(2)$ & $M - 1$ & $(325512,179338,36255,3184,103)$\\
+6 & $(1^{2})$ & $2$ & $(2335608,1664406,463769,63260,4237,112)$\\
+7 & $(1)$ & $8 \left(M - 3\right) \left(M - 1\right)$ & $(2376,874,103,4)$\\
+8 & $\varnothing$ & $\left(M - 3\right) \left(M - 1\right)$ & $(2376,874,103,4)$\\
+\end{longtable}
+\endgroup
+
+Here is an exact way of checking the table without expanding in an unbounded number of variables. Treat $q_1,\ldots,q_6,z,M$ as formal indeterminates and substitute~\eqref{eq:pq} into~\eqref{eq:Q}. For a product $q_{b_1}\cdots q_{b_s}$, define
+\[
+ T((b_1,\ldots,b_s),\alpha)
+ =[\mu^\alpha]\prod_{j=1}^s\left(\sum_i\mu_i^{b_j}\right).
+\]
+It is computed by the finite recursion
+\begin{align*}
+ T((),\alpha)&=\mathbf1_{\alpha=0},\\
+ T((b_1,\ldots,b_s),\alpha)
+ &=\sum_{i:\alpha_i\ge b_1}
+ T((b_2,\ldots,b_s),\alpha-b_1e_i).
+\end{align*}
+This counts all assignments of the power-sum factors to the target monomial's variables, including the correct multiplicities for repeated factors. Apply it to each formal monomial in $Q_M$. The resulting coefficients are the 45 polynomials represented in the table. The accompanying JSON file also gives the full coefficients of each $C_{k,\alpha}(8+u)$ without factor removal.
+
+The separate file \texttt{crosscheck\_cubic.py} expands the polynomial directly in a multivariate polynomial ring at $M=8$. All 3,432 nonzero monomial coefficients agree exactly with the 45-type certificate. This cross-check does not use the power-sum coefficient recursion.
+
+The all-dimensional argument is a uniform symbolic certificate, not a check at a finite list of large dimensions. The quartic conjectures in the same catalogue entry are not part of Theorem~\ref{thm:cubic}.
+
+\newpage
+\begin{thebibliography}{99}
+\bibitem{repo505}
+M. Colbrook, AIM catalogue, \href{https://github.com/MColbrook/AIM/blob/main/problems/505-upwind-discrete-aronson-benilan.md}{entry 505: A discrete Aronson--B\'enilan estimate for an upwind growth scheme}. Repository statement accessed 3 October 2026.
+
+\bibitem{davidruan}
+N. David and X. Ruan, \emph{An asymptotic preserving scheme for a tumor growth model of porous medium type}, ESAIM: Mathematical Modelling and Numerical Analysis \textbf{56} (2022), 121--150. \href{https://doi.org/10.1051/m2an/2021080}{doi:10.1051/m2an/2021080}.
+
+\bibitem{repo523}
+M. Colbrook, AIM catalogue, \href{https://github.com/MColbrook/AIM/blob/main/problems/523-nystrom-logarithmic-loss.md}{entry 523: Removing the logarithmic loss in Helmholtz Nystr\"om estimates}. Repository statement accessed 3 October 2026.
+
+\bibitem{galkowski}
+J. Galkowski, M. Rachh, and E. A. Spence, \emph{Helmholtz boundary integral methods and the pollution effect}, \href{https://arxiv.org/abs/2507.22797v4}{arXiv:2507.22797v4} (2026), equations (9.3)--(9.6), Lemmas 11.1 and 11.3, and Conjecture 11.4.
+
+\bibitem{repo553}
+M. Colbrook, AIM catalogue, \href{https://github.com/MColbrook/AIM/blob/main/problems/553-continuous-adaptive-measurement-complexity.md}{entry 553: Minimum number of continuous adaptive measurements for vector recovery}. Repository statement accessed 3 October 2026.
+
+\bibitem{knu}
+D. Krieg, E. Novak, and M. Ullrich, \emph{How many continuous measurements are needed to learn a vector?}, \href{https://arxiv.org/abs/2412.06468v2}{arXiv:2412.06468v2}, 22 September 2026. Theorem 1, Section 3, Lemma 9, and the discussion of Banach unit balls.
+
+\bibitem{repo570}
+M. Colbrook, AIM catalogue, \href{https://github.com/MColbrook/AIM/blob/main/problems/570-continuous-decoder-banach-balls.md}{entry 570: The cost of continuous reconstruction on Banach unit balls}. Repository statement accessed 3 October 2026.
+
+\bibitem{repo641}
+M. Colbrook, AIM catalogue, \href{https://github.com/MColbrook/AIM/blob/main/problems/641-bos-simplex-interpolation-nodes.md}{entry 641: Bos's cubic and quartic simplex interpolation nodes}. Repository statement accessed 3 October 2026.
+
+\bibitem{bos}
+L. Bos, \emph{On Fekete points for a real simplex}, Indagationes Mathematicae \textbf{34} (2023), 274--293. \href{https://arxiv.org/abs/2205.06498}{arXiv:2205.06498}; \href{https://doi.org/10.1016/j.indag.2022.11.003}{doi:10.1016/j.indag.2022.11.003}. Section 3 and Proposition 3.1.
+\end{thebibliography}
+\end{document}

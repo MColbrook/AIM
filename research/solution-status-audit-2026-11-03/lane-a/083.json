@@ -1,0 +1,65 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "083",
+  "manifest_index": 62,
+  "source_sha256": "c33fc69a0ff1e2be49f0303276b3d1fd2d6a6b5f2f6e8aae6f284defebd29abd",
+  "statement_sha256": "01e71da596b5dda34099018f5ba65adee0ca368016c5d422537e5853c4ecc045",
+  "original_target": {
+    "id": "083",
+    "title": "The bulk ground-state energy of the planar Lennard–Jones system",
+    "area": "Atomistic materials",
+    "file": "problems/083-lennard-jones-planar-crystallization.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "pdes-materials",
+    "source_sha256": "c33fc69a0ff1e2be49f0303276b3d1fd2d6a6b5f2f6e8aae6f284defebd29abd",
+    "statement_sha256": "01e71da596b5dda34099018f5ba65adee0ca368016c5d422537e5853c4ecc045",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:02:33.670637+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "newly-located-unverified-announcement",
+  "recommended_status": "Solved",
+  "answer": "Affirmative announcement by MatthewJ.Colbrook,31October2026.",
+  "scope_comparison": "Theorem1.1 uses exactly v(r)=r^-12-2r^-6 and sums over i<j, on every distinct finite planar configuration without lattice, periodicity or density assumptions. It gives E_N>=N e_triangle with e_triangle=-Z6^2/(2Z12), and proves the actual thermodynamic limit F_N/N equals that value by finite triangular patches. This implies the original liminf equality, with the same lattice scaling infimum and factor1/2. Geometric convergence/uniqueness of every minimizer is not claimed or required.",
+  "discovery": "Explicit user-requested Colbrook Zenodo author search,18records returned.",
+  "queries": [
+    "metadata.creators.person_or_org.name:\"Colbrook, Matthew\"",
+    "creators.name:\"Colbrook, Matthew\""
+  ],
+  "primary_sources": [
+    {
+      "url": "https://zenodo.org/records/23835694",
+      "version": "Version1,31October2026; current search metadata lists is_last true",
+      "locator": "Theorem1.1, printedp2; normalization(1.1), proof completion insection3",
+      "body_inspected": true,
+      "pdf": "https://zenodo.org/api/records/23835694/files/lennard_jones.pdf/content",
+      "pdf_md5": "7046951a819e64daf29491863a7a9fb8",
+      "pdf_sha256": "d816c0012d6f210c922eddd6e552af5571167e7194abab444fd85add671b2349",
+      "public_checksum_verified": true,
+      "pdf_stored_locally": false,
+      "extracted_text": "../_sources/colbrook-LJ-manuscript-text.txt"
+    },
+    {
+      "url": "https://github.com/MColbrook/Bulk-energy-of-the-planar-Lennard-Jones-potential",
+      "locator": "README and MATHEMATICAL_SCOPE.txt, especiallysections1,2,6,7",
+      "body_inspected": true,
+      "scope": "Finite arithmetic certificates do not independently certify imported interpolation/convergence/Fourier/thermodynamic arguments."
+    }
+  ],
+  "provider_checks": {
+    "arXiv": "Complete62-result requested author math listing: this31OctoberZenodomanuscript has no corresponding arXivrecord in that listing.",
+    "Zenodo": "Both exact author filters return18records; complete public hitset checked.",
+    "GitHub": "Public proof-package inventory, README and mathematical-scope source read; no code executed or files uploaded.",
+    "Palomar_Hexagon": "Current complete metadata searched for Lennard/Jones/crystallization; no separate full matching formalization was used."
+  },
+  "known_gap_check": "No known mathematical gap was established in the source-scope comparison. The author states a complete theorem, with finite certificates and cited analytic dependencies. External proof and dependencies are not independently certified by this review.",
+  "verification": "PDF read in memory and checksum matched the published Zenodo record; actual theorem compared. No full proof certification, certificate replay, local Lean run or human peer review asserted.",
+  "required_status_qualification": "Solved on the basis of an unverified announcement. The full target is claimed; the external proof and numerical certificate have not been independently verified here.",
+  "limitations": [
+    "Claimed theorem depends on imported analytic results and finite arithmetic assertions; neither was freshly replayed.",
+    "The requested policy records a complete matching announcement as Solved."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "698",
+  "manifest_index": 542,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "698",
+    "title": "Brown–Shields cyclicity in the classical Dirichlet space",
+    "area": "Complex analysis, potential theory and operator theory",
+    "file": "problems/698-brownshields-cyclicity-in-the-classical-dirichlet-space.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-755b6e65c7ca9eb5",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "d8a24b5427927dcd3fd066e4829f0d9a4725fbc216e7210ba74557e38296856b",
+    "statement_sha256": "da7b87673a2c7395cf9dc7273454d508526544e8dc805e2b36091846f2c7eae1",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d8a24b5427927dcd3fd066e4829f0d9a4725fbc216e7210ba74557e38296856b",
+  "statement_sha256": "da7b87673a2c7395cf9dc7273454d508526544e8dc805e2b36091846f2c7eae1",
+  "actual_source_sha256": "d8a24b5427927dcd3fd066e4829f0d9a4725fbc216e7210ba74557e38296856b",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Write $`\\mathbb D=\\{z\\in\\mathbb C:|z|<1\\}`$ and $`\\mathbb T=\\partial\\mathbb D`$. The classical Dirichlet space is\n\n```math\n\\mathcal D=\\left\\{f(z)=\\sum_{n\\geq0}a_nz^n:\n\\|f\\|_{\\mathcal D}^2=\\sum_{n\\geq0}(n+1)|a_n|^2<\\infty\\right\\}.\n```\n\nA nonzero holomorphic function is *outer* if, up to a unimodular constant, it has the representation\n\n```math\nf(z)=\\exp\\!\\left(\\int_{\\mathbb T}\\frac{\\zeta+z}{\\zeta-z}\n\\log h(\\zeta)\\,dm(\\zeta)\\right),\n```\n\nwhere $`h>0`$ almost everywhere, $`\\log h\\in L^1(m)`$, and $`m`$ is normalized arclength measure. Define its radial boundary zero set by\n\n```math\nZ(f)=\\{\\zeta\\in\\mathbb T:\\lim_{r\\uparrow1}f(r\\zeta)=0\\}.\n```\n\nFor every outer $`f\\in\\mathcal D`$ with $`Z(f)`$ of logarithmic capacity zero, must\n\n```math\n\\overline{\\{pf:p\\in\\mathbb C[z]\\}}^{\\,\\mathcal D}=\\mathcal D?\n```\n\nEquivalently, do polynomials $`p_k`$ exist with $`\\|p_kf-1\\|_{\\mathcal D}\\to0`$? Capacity zero means that every compact subset supports no probability measure with finite logarithmic energy $`\\iint\\log(1/|\\zeta-\\eta|)\\,d\\nu(\\zeta)d\\nu(\\eta)`$. No boundary continuity or geometric regularity of $`Z(f)`$ is assumed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Brown Shields\" conjecture solution 2026",
+    "\"Brown Shields\" conjecture solution (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Brown-Shields conjecture\" proof 2026 classical"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The current iterated-log theorem requires extra bounded-argument/integrability hypotheses and explicitly retains Brown–Shields. The newer weighted-space characterization assumes H(b)=D_mu and countable intersection of support with an unrestricted-liminf zero set; it does not cover arbitrary outer functions in the classical space under only radial zero-capacity. No complete matching classical claim found.",
+      "locator": "Theorem1.4 and following discussion147–149;2509.04907v1 Theorem10.1",
+      "version_or_date": "arXiv2409.20298v2;2026PAMS154,783–791",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2409.20298v2"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The current iterated-log theorem requires extra bounded-argument/integrability hypotheses and explicitly retains Brown–Shields. The newer weighted-space characterization assumes H(b)=D_mu and countable intersection of support with an unrestricted-liminf zero set; it does not cover arbitrary outer functions in the classical space under only radial zero-capacity. No complete matching classical claim found.",
+  "latest_version_check": "arXiv2409.20298v2;2026PAMS154,783–791",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

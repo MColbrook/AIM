@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "720",
+  "manifest_index": 564,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "720",
+    "title": "Polynomial Dirichlet solvability characterizes smooth three-dimensional ellipsoids",
+    "area": "Complex analysis and potential theory",
+    "file": "problems/720-polynomial-dirichlet-solvability-characterizes-smooth-three-dimensional-ellipsoids.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-d20103502e4aa38d",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "78b8b13f642c2c70db6af7a11c710e7287f9b465dbab0d844b3c2a57a0ea1ccd",
+    "statement_sha256": "b1576774478a1c919d9648160726213b264c521e4a88c4dfb14427900ce8f0bf",
+    "state": "unreviewed"
+  },
+  "source_sha256": "78b8b13f642c2c70db6af7a11c710e7287f9b465dbab0d844b3c2a57a0ea1ccd",
+  "statement_sha256": "b1576774478a1c919d9648160726213b264c521e4a88c4dfb14427900ce8f0bf",
+  "actual_source_sha256": "78b8b13f642c2c70db6af7a11c710e7287f9b465dbab0d844b3c2a57a0ea1ccd",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^3`$ be a nonempty bounded connected open set with $`C^\\infty`$ boundary. Suppose that, for every polynomial $`p\\in\\mathbb R[x_1,x_2,x_3]`$, there is a polynomial $`h\\in\\mathbb R[x_1,x_2,x_3]`$ such that\n\n```math\n\\Delta h=0\\quad\\text{on }\\mathbb R^3,\\qquad h=p\\quad\\text{on }\\partial\\Omega.\n```\n\nMust there exist $`a\\in\\mathbb R^3`$ and a real symmetric positive-definite matrix $`Q`$ such that\n\n```math\n\\Omega=\\{x\\in\\mathbb R^3:(x-a)^TQ(x-a)<1\\}?\n```\n\nNo bound on the degree of $`h`$ in terms of the degree of $`p`$ is assumed. Neither convexity nor symmetry of $`\\Omega`$ is assumed. This is the smooth three-dimensional case of the Khavinson–Shapiro conjecture. Ellipsoids, including balls, have the stated polynomial extension property.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Khavinson Shapiro\" \"three dimensional\" proof 2026",
+    "\"Khavinson Shapiro\" \"three dimensional\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.29909v1",
+      "version_or_date": "arXiv2608.29909v1,30August2026",
+      "locator": "Theorem1.1 lines65–71",
+      "scope_comparison": "The actual announced theorem has Omega subset R2 with Jordan boundary components. The target is a smooth domain in R3 with all polynomial harmonic extensions, with no degree control. Restricting a three-dimensional harmonic polynomial to a plane need not remain harmonic, so no automatic planar reduction exists. No complete matching R3 announcement found.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual announced theorem has Omega subset R2 with Jordan boundary components. The target is a smooth domain in R3 with all polynomial harmonic extensions, with no degree control. Restricting a three-dimensional harmonic polynomial to a plane need not remain harmonic, so no automatic planar reduction exists. No complete matching R3 announcement found.",
+  "latest_version_check": "arXiv2608.29909v1,30August2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

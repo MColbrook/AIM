@@ -1,0 +1,71 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "101",
+  "manifest_index": 74,
+  "original_target": {
+    "id": "101",
+    "title": "Concentration of nuclear charge minimizes the Dirac gap level",
+    "area": "Relativistic quantum chemistry",
+    "file": "problems/101-dirac-charge-concentration.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-08",
+    "group": "spectral2",
+    "source_sha256": "ad6a2181bcb603dd49f282756e2e198a53f93b9a0a231bd8e980ac0757c9a763",
+    "statement_sha256": "599bbd8b96687c76625178ccfdf3de10f3ca0013d77c1fff77e3e4f683c6e849",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ad6a2181bcb603dd49f282756e2e198a53f93b9a0a231bd8e980ac0757c9a763",
+  "statement_sha256": "599bbd8b96687c76625178ccfdf3de10f3ca0013d77c1fff77e3e4f683c6e849",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:55:49.171984+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "PartII Conjecture1 exactly separates arbitrary measure charge concentration from established radial cases. Existence of an optimizing singular-support measure below a critical coupling does not identify it as a delta, nor does a nonsharp coupling bound give sqrt(1-nu²) for every nu<1. No matching general announcement located.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2003.04051v2",
+      "locator": "§2.3, Conjecture1, equation30, lines338–347.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "charge distribution",
+    "Dirac-Coulomb",
+    "charge concentration"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "charge distribution",
+        "Dirac-Coulomb",
+        "charge concentration"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "charge distribution",
+        "Dirac-Coulomb",
+        "charge concentration"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches of arXiv, Zenodo, HAL, GitHub plus shared current Palomar, Hexagon and OpenAI metadata, and requested Colbrook author lists.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

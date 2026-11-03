@@ -1,0 +1,109 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "885",
+  "manifest_index": 729,
+  "checked_date": "2026-11-03",
+  "source_sha256": "f7e1ff383283cce4c52260fd95843e32882969c6c97d752e1311d5239942c1a0",
+  "statement_sha256": "fd214e5279db3bad021303ecb31c987bf5593543637a734b8638047d0985e140",
+  "original_target": {
+    "id": "885",
+    "title": "Must observations be affine in every finite-dimensional Euclidean estimation algebra?",
+    "area": "Nonlinear filtering and data assimilation",
+    "file": "problems/885-must-observations-be-affine-in-every-finite-dimensional-euclidean-estimation-algebra.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-5b9b6e16dabcf96e",
+    "group": "nonlinear-filtering-data-assimilation",
+    "source_sha256": "f7e1ff383283cce4c52260fd95843e32882969c6c97d752e1311d5239942c1a0",
+    "statement_sha256": "fd214e5279db3bad021303ecb31c987bf5593543637a734b8638047d0985e140",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`n,m\\ge1`$, and let $`f:\\mathbb R^n\\to\\mathbb R^n`$ and $`h=(h_1,\\ldots,h_m):\\mathbb R^n\\to\\mathbb R^m`$ be real smooth functions. On the real vector space $`C^\\infty(\\mathbb R^n;\\mathbb R)`$ define\n\n```math\nL_0\\varphi=\\frac12\\Delta\\varphi\n-\\sum_{i=1}^n f_i\\partial_i\\varphi\n-(\\mathrm{div}f)\\varphi\n-\\frac12\\sum_{j=1}^m h_j^2\\varphi,\n\\qquad M_{h_j}\\varphi=h_j\\varphi.\n```\n\nLet $`E`$ be the smallest real vector space of differential operators containing $`L_0,M_{h_1},\\ldots,M_{h_m}`$ and closed under $`[A,B]=AB-BA`$.\n\n**If $`E`$ is finite-dimensional over $`\\mathbb R`$, must every $`h_j`$ be affine on $`\\mathbb R^n`$?** Equivalently, must $`h_j(x)=a_j\\cdot x+b_j`$ for constant $`a_j\\in\\mathbb R^n`$ and $`b_j\\in\\mathbb R`$?\n\nThis is the weak Mitter conjecture in the smooth Euclidean identity-diffusion setting. No rank, observability, gradient-drift, polynomial-coefficient or constant-Wong-matrix condition is imposed. The question concerns these global differential operators; it does not additionally assert global nonexplosion for every associated stochastic system.",
+  "full_original_page": "# 885. Must observations be affine in every finite-dimensional Euclidean estimation algebra?\n\n**Area:** Nonlinear filtering and data assimilation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`n,m\\ge1`$, and let $`f:\\mathbb R^n\\to\\mathbb R^n`$ and $`h=(h_1,\\ldots,h_m):\\mathbb R^n\\to\\mathbb R^m`$ be real smooth functions. On the real vector space $`C^\\infty(\\mathbb R^n;\\mathbb R)`$ define\n\n```math\nL_0\\varphi=\\frac12\\Delta\\varphi\n-\\sum_{i=1}^n f_i\\partial_i\\varphi\n-(\\mathrm{div}f)\\varphi\n-\\frac12\\sum_{j=1}^m h_j^2\\varphi,\n\\qquad M_{h_j}\\varphi=h_j\\varphi.\n```\n\nLet $`E`$ be the smallest real vector space of differential operators containing $`L_0,M_{h_1},\\ldots,M_{h_m}`$ and closed under $`[A,B]=AB-BA`$.\n\n**If $`E`$ is finite-dimensional over $`\\mathbb R`$, must every $`h_j`$ be affine on $`\\mathbb R^n`$?** Equivalently, must $`h_j(x)=a_j\\cdot x+b_j`$ for constant $`a_j\\in\\mathbb R^n`$ and $`b_j\\in\\mathbb R`$?\n\nThis is the weak Mitter conjecture in the smooth Euclidean identity-diffusion setting. No rank, observability, gradient-drift, polynomial-coefficient or constant-Wong-matrix condition is imposed. The question concerns these global differential operators; it does not additionally assert global nonexplosion for every associated stochastic system.\n\n## Application\n\nFor a hidden diffusion $`dX_t=f(X_t)dt+dB_t`$ observed through $`dY_t=h(X_t)dt+dW_t`$, with independent Brownian noises, $`L_0`$ is the Stratonovich Zakai density operator. Its Lie algebra is a central object in constructing exact finite-dimensional nonlinear filters. The conjecture would constrain which observation laws are compatible with this algebraic reduction; it is not a claim classifying every possible finite-dimensional filtering representation.\n\n## References\n\n1. Xiaopei Jiao, Jiayi Kang and Ji Shi, [*Finite-dimensional filter with non-maximal rank*](https://bimsa.net/doc/publication/15097.pdf), Communications in Information and Systems25(4),757–785, header2025, DOI [10.4310/CIS.260128101407](https://doi.org/10.4310/CIS.260128101407). Conjecture4.1, printed770; model and definitions, printed760–763. DOI-associated2026 metadata and publisher-copy parity remain separately recorded.\n2. Xiaopei Jiao and Stephen Shing-Toung Yau, [*Weak Form Mitter Conjecture on Nonmaximal Rank Estimation Algebra: State Dimension4 and Rank3*](https://jag.math.tsinghua.edu.cn/Publications/Control/466.pdf), Journal of Systems Science and Complexity38(1)(2025),27–78, [DOI](https://doi.org/10.1007/s11424-025-4138-z), Theorems4.5 and5.20.\n3. Jie Chen and Stephen S. T. Yau, [*Finite-Dimensional Filters with Nonlinear Drift VII: Mitter Conjecture and Structure of eta*](https://doi.org/10.1137/S0363012994272836), SIAM Journal on Control and Optimization,1997; official abstract specifies maximal rank.\n4. Jiayi Kang, Andrew Salmon and Stephen Shing-Toung Yau, [*Nonexistence of finite-dimensional estimation algebras on closed smooth manifolds*](https://arxiv.org/html/2410.08689v1), MainTheorems1–2,2024.\n\n## Status review\n\n\n**Known cases:** Ocone gives quadratic multiplication functions, not affine observations. Maximal-rank and dimension-four rank-three results add rank assumptions; compact-manifold nonexistence does not cover arbitrary Euclidean observations. No full weak-Mitter result under these general hypotheses was located.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nOcone gives quadratic multiplication functions, not affine observations. Maximal-rank and dimension-four rank-three results add rank assumptions; compact-manifold nonexistence does not cover arbitrary Euclidean observations. No full weak-Mitter result under these general hypotheses was located.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nSource[1] explicitly states the weak conjecture. Its recalled Ocone theorem gives degree at most two for multiplication functions in $`E`$, which does not establish affine observations. The stronger assertion that every multiplication function in $`E`$ is affine is separately conjectural.\n\nKnown results include maximal rank[3] and state dimension4 with linear rank3[2]. The sufficient partial-Wong-matrix theorem in[2] also retains rank $`n-1`$. Shorthand about dimension4 in introductory prose must be read with the actual theorem's rank hypothesis. Novel filters with nonpolynomial Wong matrices in[1] still use affine observations.\n\nThe closed-manifold theorem[4] assumes compactness without boundary. Its noncompact extension requires two distinct critical points joined by a gradient trajectory; it does not cover every smooth Euclidean observation. These results do not establish the unrestricted implication displayed above.\n\nNo matching full resolution was located in the recorded bounded searches. The [full pinned-source review](../FURTHER_problems/_tracking/parallel/rough-filtering/jiao2026-nonmaximal-full-review.json), [model/current review](../FURTHER_problems/_tracking/parallel/rough-filtering/weak-mitter-review.json), [independent selected audit](../FURTHER_problems/_tracking/parallel/continuum/cross-weak-mitter-review.json), [semantic comparison](../FURTHER_problems/_tracking/weak-mitter-duplicates-review-2026-10-19.json), [catalogue comparison](../FURTHER_problems/_tracking/weak-mitter-catalogue-review-2026-10-19.json) and [coordinator review](../FURTHER_problems/_tracking/weak-mitter-coordinator-review-2026-10-19.json) document their extent and limits. These are AI checks, not human peer review.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-5b9b6e16dabcf96e**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"weak Mitter conjecture\" solution 2026",
+    "\"Mitter conjecture\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://bimsa.net/doc/publication/15097.pdf",
+      "locator": "2025 header/2026DOI source, Conjecture4.1 printed770/PDF13",
+      "inspection": "Primary body expressly poses all observations affine for any finite-dimensional estimation algebra. Degree<=2 multiplication bound is weaker. Maximal rank and state4/rank3 results add rank assumptions absent from local smooth Euclidean identity-diffusion operators. Exact later rank theorem bodies pending."
+    }
+  ],
+  "scope_comparison": "Primary body expressly poses all observations affine for any finite-dimensional estimation algebra. Degree<=2 multiplication bound is weaker. Maximal rank and state4/rank3 results add rank assumptions absent from local smooth Euclidean identity-diffusion operators. Exact later rank theorem bodies pending.",
+  "rationale": "No full matching resolution identified in bounded searches; exact remaining theorem-body comparisons recorded explicitly.",
+  "source_gaps": [
+    "Specific pending source-body comparisons described above.",
+    "Snapshot routing pending this batch."
+  ],
+  "announcement_routing": {
+    "localID": "885",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Mitter",
+          "estimation algebra"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Mitter",
+          "estimation algebra"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Mitter",
+        "estimation algebra"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:48:36.128Z",
+      "previous_outcome": "hold",
+      "localID": "885",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "queries": [
+        "\"Weak Form Mitter\" \"State Dimension 4\" pdf"
+      ],
+      "sources": [
+        {
+          "url": "https://jag.math.tsinghua.edu.cn/Publications/Control/466.pdf",
+          "version": "published2025 JSSC38(1),27–78 DOI10.1007/s11424-025-4138-z",
+          "locator": "Theorem5.20 printed p43 / PDF p17; Theorem4.5",
+          "inspection": "The final affine-observations theorem explicitly assumes state dimension4 and linear rank3. Theorem4.5 is conditional on partially constant Wong-matrix structure; it is not a proof of that condition for every state dimension and rank."
+        }
+      ],
+      "scope_comparison": "Exact new rank theorem now read. Target has arbitrary Euclidean dimension and no maximal/nonmaximal rank restriction. This is partial progress, not a full resolution of Conjecture4.1."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

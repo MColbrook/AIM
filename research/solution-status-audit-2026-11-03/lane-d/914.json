@@ -1,0 +1,86 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "914",
+  "manifest_index": 758,
+  "checked_date": "2026-11-03",
+  "source_sha256": "0e88dce40c3a145f81233ad3977fa1b90aaf86e76f9fc78dd0eeb57aeaf6ec11",
+  "statement_sha256": "e1e540402b6da784530feb0ffb32ee7306498582a55ebc971909e98d6a2445d4",
+  "original_target": {
+    "id": "914",
+    "title": "Sharp multiparameter Haar small-ball inequality in dimensions at least three",
+    "area": "Harmonic analysis and approximation theory",
+    "file": "problems/914-sharp-multiparameter-haar-small-ball-inequality-in-dimensions-at-least-three.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-9126dcde4ff29aa5",
+    "group": "operators",
+    "source_sha256": "0e88dce40c3a145f81233ad3977fa1b90aaf86e76f9fc78dd0eeb57aeaf6ec11",
+    "statement_sha256": "e1e540402b6da784530feb0ffb32ee7306498582a55ebc971909e98d6a2445d4",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix an integer $`d\\ge3`$. For each dyadic interval $`I\\subset[0,1)`$, let\n$`h_I=\\mathbf1_{I_{\\rm right}}-\\mathbf1_{I_{\\rm left}}`$, and for a dyadic rectangle\n$`R=I_1\\times\\cdots\\times I_d`$ put $`h_R(x)=\\prod_{j=1}^d h_{I_j}(x_j)`$.\nThese Haar functions have $`L^\\infty`$ norm one.\n\nDoes a constant $`C_d`$ exist such that, for every integer $`n\\ge1`$ and every\nchoice of real coefficients $`\\alpha_R`$ indexed by **all** dyadic rectangles\n$`R\\subset[0,1)^d`$ with $`|R|\\ge2^{-n}`$,\n```math\n2^{-n}\\sum_{\\substack{R\\subset[0,1)^d\\\\|R|=2^{-n}}}|\\alpha_R|\n\\le C_d n^{(d-2)/2}\n \\left\\|\\sum_{\\substack{R\\subset[0,1)^d\\\\|R|\\ge2^{-n}}}\n          \\alpha_R h_R\\right\\|_{L^\\infty([0,1)^d)}\\,?\n```\n\n\nThe norm includes the coarser rectangles; their coefficients are unrestricted.",
+  "full_original_page": "# 914. Sharp multiparameter Haar small-ball inequality in dimensions at least three\n\n**Area:** Harmonic analysis and approximation theory\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix an integer $`d\\ge3`$. For each dyadic interval $`I\\subset[0,1)`$, let\n$`h_I=\\mathbf1_{I_{\\rm right}}-\\mathbf1_{I_{\\rm left}}`$, and for a dyadic rectangle\n$`R=I_1\\times\\cdots\\times I_d`$ put $`h_R(x)=\\prod_{j=1}^d h_{I_j}(x_j)`$.\nThese Haar functions have $`L^\\infty`$ norm one.\n\nDoes a constant $`C_d`$ exist such that, for every integer $`n\\ge1`$ and every\nchoice of real coefficients $`\\alpha_R`$ indexed by **all** dyadic rectangles\n$`R\\subset[0,1)^d`$ with $`|R|\\ge2^{-n}`$,\n```math\n2^{-n}\\sum_{\\substack{R\\subset[0,1)^d\\\\|R|=2^{-n}}}|\\alpha_R|\n\\le C_d n^{(d-2)/2}\n \\left\\|\\sum_{\\substack{R\\subset[0,1)^d\\\\|R|\\ge2^{-n}}}\n          \\alpha_R h_R\\right\\|_{L^\\infty([0,1)^d)}\\,?\n```\n\n\nThe norm includes the coarser rectangles; their coefficients are unrestricted.\n\n## Application\n\nThis bound would sharpen estimates for approximation classes with bounded mixed derivatives and for small deviations of the Brownian sheet. These applications do not identify this statement with every conjecture involving small-ball probabilities.\n\n## Known progress\n\nOrthogonality and Cauchy--Schwarz give the weaker exponent $`(d-1)/2`$.\nReference [1], Theorem 1.5, improves that exponent to $`(d-1)/2-\\eta(d)`$ for some positive $`\\eta(d)`$, leaving the conjectured exponent unresolved. The two-dimensional case is established. Reference [2] obtains a signed, restricted three-dimensional estimate.\n\n## References\n\n1. D. Bilyk, M. T. Lacey and A. Vagharshakyan, *On the Small Ball Inequality in All Dimensions*, Journal of Functional Analysis **254** (2008), 2470--2502, [doi:10.1016/j.jfa.2007.09.010](https://doi.org/10.1016/j.jfa.2007.09.010); [arXiv:0705.4619v3](https://arxiv.org/pdf/0705.4619v3), Conjecture 1.1 and Theorem 1.5. [Version record](https://arxiv.org/abs/0705.4619).\n2. D. Bilyk, M. T. Lacey, I. Parissis and A. Vagharshakyan, *A three-dimensional signed small ball inequality*, [author manuscript](https://www-users.cse.umn.edu/~dbilyk/papers/lnsBiLaPaVa.pdf), abstract and p.3, equation (1.5) and its scope clarification.\n\n## Status review\n\n\n**Known cases:** The dimensional exponent improvement and signed restricted three-dimensional estimates do not reach the conjectured exponent for all coefficients, including unrestricted coarser rectangles. Brownian-sheet and discrepancy results with different norms or hypotheses do not directly establish this Haar sup-norm inequality.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe dimensional exponent improvement and signed restricted three-dimensional estimates do not reach the conjectured exponent for all coefficients, including unrestricted coarser rectangles. Brownian-sheet and discrepancy results with different norms or hypotheses do not directly establish this Haar sup-norm inequality.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe coordinator checked the displayed conjecture in the actual latest v3, its Haar normalization and the hypotheses of the cited partial results. Bounded searches on 25 October 2026 found no matching proof, counterexample or complete announcement. This is a dated search finding, not exhaustive literature coverage or certification of the cited proofs.\n\nThe duplicate comparison used all 1,703 pinned AIM/OpenAI statements and all 905 preceding local findings. AIM 536 concerns infinite-sequence star discrepancy; AIM 660 concerns product-prior probability ratios. Local Brownian-sheet level-set and posterior-mode questions also have different targets. No equivalent target was located.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-9126dcde4ff29aa5**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Haar\" \"small ball inequality\" solved 2026",
+    "\"Haar\" \"small ball inequality\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/0705.4619v3",
+      "locator": "Conjecture1.1 and Theorem1.5, equations1.2/1.6, lines57–84",
+      "comparison": "Exact target includes all coarser rectangles. Theorem1.5 exponent (d-1)/2-eta(d) is weaker than required (d-2)/2; signed/restricted coefficients or two-dimensional refinements do not cover every real coefficient choice in all d>=3."
+    }
+  ],
+  "rationale": "Exact target includes all coarser rectangles. Theorem1.5 exponent (d-1)/2-eta(d) is weaker than required (d-2)/2; signed/restricted coefficients or two-dimensional refinements do not cover every real coefficient choice in all d>=3. No full matching claim found in bounded searches.",
+  "limitations": [
+    "Bounded negative search does not prove openness."
+  ],
+  "announcement_routing": {
+    "localID": "914",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "small ball inequality",
+          "Haar small",
+          "Brownian sheet"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "small ball inequality",
+          "Haar small",
+          "Brownian sheet"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "small ball inequality",
+        "Haar small",
+        "Brownian sheet"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

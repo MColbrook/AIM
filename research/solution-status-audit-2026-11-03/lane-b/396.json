@@ -1,0 +1,53 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 323,
+  "source_sha256": "cdbd6c414bfd2d6a81497578dc906a9f9470c8f017a3637bbe991cf5e1567ed6",
+  "statement_sha256": "f0d05b66290eef0f283d74608ea1f908f791e414cbc3643979ce0152151be3aa",
+  "original_target": {
+    "id": "396",
+    "title": "Global smooth evolution for the periodic De Gregorio equation",
+    "area": "Nonlocal transport and mathematical fluid dynamics",
+    "file": "problems/396-global-smooth-evolution-for-the-periodic-de-gregorio-equation.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e7a2717430ad22cf",
+    "group": "continuum2",
+    "source_sha256": "cdbd6c414bfd2d6a81497578dc906a9f9470c8f017a3637bbe991cf5e1567ed6",
+    "statement_sha256": "f0d05b66290eef0f283d74608ea1f908f791e414cbc3643979ce0152151be3aa",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "396",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"De Gregorio\" \"global regularity\" \"2026\"",
+    "\"De Gregorio\" \"periodic\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) 2026",
+    "\"De Gregorio\" \"smooth\" \"2026\"",
+    "\"De Gregorio\" (site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"De Gregorio\" model smooth periodic 2026 site:arxiv.org",
+    "\"De Gregorio\" \"equation\" site:zenodo.org"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.03287v1",
+      "version": "v1 2October2026; abs stillv1",
+      "locators": "Theorems1.1–1.2 lines129–140",
+      "body_inspected": true,
+      "scope": "Excited states -sin(nx) nonlinearly unstable: smallH2 perturbations leave fixedH1 neighborhood at finite time. Escape is not blowup."
+    },
+    {
+      "url": "https://ems.press/content/serial-article-files/50203",
+      "version": "publishedJEMS27(2025)1619–1677 DOI10.4171/JEMS/1399",
+      "locators": "Theorems1–3 printedpp1621–1622; classX definition",
+      "body_inspected": true,
+      "scope": "Global theorem keeps oddness, periodic subcell sign and integrability restrictions; blowup theorem has nonsmooth C^alpha data alpha<1."
+    }
+  ],
+  "registry_checks": "No De Gregorio alias Palomar/Hexagon/OpenAI/Colbrook caches. GitHub blowup-search technical writeup July2026 describes exploratory numerical search, not a proof; primary mathematical sources used for outcome.",
+  "scope_comparison": "Target coefficienta=1, inviscid circle arbitrary real smooth data including nonzero mean. Local instability, lower regularity blowup, real-line compact-support profiles and generalized parameter models do not settle universal circle smoothness.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

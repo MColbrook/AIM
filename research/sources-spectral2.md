@@ -22,11 +22,11 @@ Reviewed 2026-09-08. The first source below supplies an explicit open assertion 
 
 - [110. The disk maximizes the first magnetic Neumann eigenvalue](../problems/103-magnetic-neumann-disk.md): B. Colbois, C. Léna, L. Provenzano and A. Savo, [A reverse Faber–Krahn inequality for the magnetic Laplacian](https://arxiv.org/abs/2403.11336), Journal de Mathématiques Pures et Appliquées 192 (2024), Conjecture 1.5 and main theorem: Fournais–Helffer conjecture and moderate-field case.
 
-- [111. Strict angle monotonicity of magnetic wedge ground energy](../problems/104-magnetic-wedge-angle-monotonicity.md): V. Bonnaillie-Noël, [Schrödinger operator with magnetic field in domain with corners](https://proceedings.centre-mersenne.org/articles/10.5802/jedp.15/), Journées Équations aux Dérivées Partielles (2005), §2, p. II–5: explicit strict-angle-monotonicity conjecture.
+- [111. Strict angle monotonicity of magnetic wedge ground energy](../cut_problems/problems/104-magnetic-wedge-angle-monotonicity.md): V. Bonnaillie-Noël, [Schrödinger operator with magnetic field in domain with corners](https://proceedings.centre-mersenne.org/articles/10.5802/jedp.15/), Journées Équations aux Dérivées Partielles (2005), §2, p. II–5: explicit strict-angle-monotonicity conjecture.
 
 - [112. Baur’s high-field disk conjecture for all higher eigenvalues](../problems/105-baur-high-field-disk.md): M. Baur, [Numerical optimization of eigenvalues of the planar magnetic Dirichlet Laplacian with constant magnetic field](https://doi.org/10.1063/5.0253311), Journal of Mathematical Physics 66 (2025), Conjecture 4.2: source of the threshold.
 
-- [113. Is the optimal magnetic rectangle always a square?](../problems/106-optimal-magnetic-rectangle.md): D. Krejčiřík, [Is the optimal magnetic rectangle a square?](https://arxiv.org/abs/2508.16152), preprint (2025), main question: exact rectangle problem.
+- [113. Is the optimal magnetic rectangle always a square?](../cut_problems/problems/106-optimal-magnetic-rectangle.md): D. Krejčiřík, [Is the optimal magnetic rectangle a square?](https://arxiv.org/abs/2508.16152), preprint (2025), main question: exact rectangle problem.
 
 - [114. A sharp universal inequality for clamped-plate eigenvalues](../problems/107-clamped-plate-universal-bound.md): D. Chen, Q.-M. Cheng and G. Wei, [A gap for eigenvalues of a clamped plate problem](https://arxiv.org/abs/1610.05889), preprint (2016), Conjecture 1.1, equation (1.6): exact proposed inequality.
 

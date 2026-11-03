@@ -1,0 +1,59 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "673",
+  "manifest_index": 517,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "673",
+    "title": "Cluster values on the complex $`\\ell_p`$ ball",
+    "area": "Complex analysis and potential theory",
+    "file": "problems/673-cluster-values-on-the-complex-ell-p-ball.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0d2203fd7e84c633",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "55de821338814fe7a0903578626676237855c010455d783c862ef724b5f884fe",
+    "statement_sha256": "74ff89748bb5cd0fca801473b9f1d15e93fbb7df5b044df6326b9e3ec487ecea",
+    "state": "unreviewed"
+  },
+  "source_sha256": "55de821338814fe7a0903578626676237855c010455d783c862ef724b5f884fe",
+  "statement_sha256": "74ff89748bb5cd0fca801473b9f1d15e93fbb7df5b044df6326b9e3ec487ecea",
+  "actual_source_sha256": "55de821338814fe7a0903578626676237855c010455d783c862ef724b5f884fe",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`1<p<\\infty`$, $`p\\ne2`$, and let $`B`$ be the open unit ball of $`X=\\ell_p(\\mathbb N;\\mathbb C)`$. Let $`A_u(B)`$ be the Banach algebra of holomorphic functions on $`B`$ that are uniformly continuous in the norm of $`X`$, with the supremum norm. Its spectrum $`M`$ consists of nonzero continuous multiplicative linear functionals. For $`z\\in B`$, define\n\n```math\nM_z=\\{\\varphi\\in M:\\varphi(x^*)=x^*(z)\\text{ for every }x^*\\in X^*\\}.\n```\n\nFor $`f\\in A_u(B)`$ let $`Cl_B(f,z)`$ consist of all limits of $`f(x_\\alpha)`$ along nets $`x_\\alpha\\in B`$ converging weakly to $`z`$. Is it true that, for every $`f\\in A_u(B)`$ and every $`z\\in B`$ with $`z\\ne0`$,\n\n```math\nCl_B(f,z)=\\{\\varphi(f):\\varphi\\in M_z\\}?\n```\n\nThe inclusion from left to right always holds. Equality is known at $`z=0`$, and for all points when $`p=2`$. The unit-sphere case is also known; the question concerns nonzero interior points for the non-Hilbert spaces.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"cluster value\" \"ell p\" corrigendum 2026",
+    "\"cluster value\" \"ell p\" corrigendum (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"cluster value\" \"ell_p\" \"corrigendum\"",
+    "\"cluster value\" \"corrigendum\" Carando 2018",
+    "\"Fibers and Gleason\" \"ell\" cluster 2025"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Published corrigendum, Advances in Mathematics 329 (2018), 1307–1309; 4 April 2018",
+      "locator": "p.1308 paragraphs 1–2 and Theorems 2–3; p.1309",
+      "primary_body_access_gap": false,
+      "url": "https://danielgalicer.weebly.com/uploads/1/0/1/6/101699952/cluster_values_aim_corrigendum.pdf",
+      "scope_comparison": "The authors explicitly invalidate the proof of Lemma2.2(ii)⇒(iii), Theorem1.1 and Corollary1.2. The corrected Hb(X) assertion permits a larger radius R than r, so does not establish same-unit-ball Au(B_lp) cluster equality at every nonzero interior point. The 2025 fibers/Gleason-parts paper concerns spectrum structure, not a restoration of this missing universal equality."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The authors explicitly invalidate the proof of Lemma2.2(ii)⇒(iii), Theorem1.1 and Corollary1.2. The corrected Hb(X) assertion permits a larger radius R than r, so does not establish same-unit-ball Au(B_lp) cluster equality at every nonzero interior point. The 2025 fibers/Gleason-parts paper concerns spectrum structure, not a restoration of this missing universal equality.",
+  "latest_version_check": "Published corrigendum, Advances in Mathematics 329 (2018), 1307–1309; 4 April 2018",
+  "gap_retraction_check": "Actual three-page corrigendum read. Original general positive proof is not valid. Hilbert/origin cases and enlarged-radius corrected theorem do not settle target.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -4,7 +4,7 @@
 
 **Status:** 🔵 OPEN
 
-**Last checked:** 2026-09-08
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -31,5 +31,7 @@ The number of stable zero-temperature phases determines whether a two-dimensiona
 **Literature check:** Open in cited literature; no later resolution located.
 
 The 2024 paper explicitly retains uniqueness of the ground-state pair as a conjecture. Uniqueness with finite-volume continuous couplings, half-plane theorems, and statements about particular translation-covariant state selections are weaker than the full-plane assertion here.
+
+Itoi’s [arXiv:2012.11801v6](https://arxiv.org/html/2012.11801v6) appends an erratum restricting its uniqueness theorem to finite lattices: the infinite-volume convergence used in the argument was assumed and is not proved. That claim therefore does not settle the question above.
 
 Search topics checked on 2026-09-08: two dimensional Edwards Anderson Gaussian ground state pair uniqueness solved 2025 2026.

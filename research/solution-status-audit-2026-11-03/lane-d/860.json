@@ -1,0 +1,107 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "860",
+  "manifest_index": 704,
+  "checked_date": "2026-11-03",
+  "source_sha256": "df61e481c2b1566889e3357ae2224d247538915f0c47a57a4024c6d1af5f3e9d",
+  "statement_sha256": "2ecba29b658de670353c0927e3074c571826ce4c2102f71f3c419112fcc526f3",
+  "original_target": {
+    "id": "860",
+    "title": "Does positive magnetic curvature force contact type on a magnetic energy level of the sphere?",
+    "area": "Magnetic dynamics and contact geometry",
+    "file": "problems/860-does-positive-magnetic-curvature-force-contact-type-on-a-magnetic-energy-level-of-the-sphere.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ee2ab692d11bcb90",
+    "group": "geometry-topology",
+    "source_sha256": "df61e481c2b1566889e3357ae2224d247538915f0c47a57a4024c6d1af5f3e9d",
+    "statement_sha256": "2ecba29b658de670353c0927e3074c571826ce4c2102f71f3c419112fcc526f3",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`g`$ be a smooth Riemannian metric on $`S^2`$, with area form $`\\mu`$, Gaussian curvature $`K`$, and rotation $`\\jmath`$ by $`\\pi/2`$. Let $`\\sigma=f\\mu`$ be a smooth symplectic magnetic form, so (after orienting $`S^2`$) $`f>0`$. On $`TS^2`$ equip the kinetic-energy Hamiltonian $`E(x,v)=\\tfrac12|v|_g^2`$ with the twisted symplectic form $`\\omega_\\sigma=d\\alpha-\\pi^*\\sigma`$, where $`\\alpha`$ is the metric pullback of the Liouville form. For $`c>0`$ put $`\\Sigma_c=E^{-1}(c)`$ and $`m=\\sqrt{2c}`$. The source defines the magnetic curvature on the unit tangent bundle by\n\n```math\nK_m(x,v)=m^2K(x)-m\\,df_x(\\jmath v)+f(x),\\qquad |v|_g=1.\n```\n\n**Benedetti's Conjecture 1.2.** If $`K_m>0`$ everywhere on $`SS^2`$, must $`\\Sigma_c`$ be of contact type? Here contact type means that the restriction $`\\omega_\\sigma|_{\\Sigma_c}`$ has a primitive that is a contact form.\n\nThe conjecture concerns an arbitrary smooth positive magnetic form and metric on the sphere at an energy satisfying the displayed condition. It is not the contact-type conjecture for exact magnetic forms, nor a claim that every energy level of every magnetic system is contact type.",
+  "full_original_page": "# 860. Does positive magnetic curvature force contact type on a magnetic energy level of the sphere?\n\n**Area:** Magnetic dynamics and contact geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`g`$ be a smooth Riemannian metric on $`S^2`$, with area form $`\\mu`$, Gaussian curvature $`K`$, and rotation $`\\jmath`$ by $`\\pi/2`$. Let $`\\sigma=f\\mu`$ be a smooth symplectic magnetic form, so (after orienting $`S^2`$) $`f>0`$. On $`TS^2`$ equip the kinetic-energy Hamiltonian $`E(x,v)=\\tfrac12|v|_g^2`$ with the twisted symplectic form $`\\omega_\\sigma=d\\alpha-\\pi^*\\sigma`$, where $`\\alpha`$ is the metric pullback of the Liouville form. For $`c>0`$ put $`\\Sigma_c=E^{-1}(c)`$ and $`m=\\sqrt{2c}`$. The source defines the magnetic curvature on the unit tangent bundle by\n\n```math\nK_m(x,v)=m^2K(x)-m\\,df_x(\\jmath v)+f(x),\\qquad |v|_g=1.\n```\n\n**Benedetti's Conjecture 1.2.** If $`K_m>0`$ everywhere on $`SS^2`$, must $`\\Sigma_c`$ be of contact type? Here contact type means that the restriction $`\\omega_\\sigma|_{\\Sigma_c}`$ has a primitive that is a contact form.\n\nThe conjecture concerns an arbitrary smooth positive magnetic form and metric on the sphere at an energy satisfying the displayed condition. It is not the contact-type conjecture for exact magnetic forms, nor a claim that every energy level of every magnetic system is contact type.\n\n## Application\n\nContact type gives a Reeb-flow description of the charged-particle dynamics on that energy level and brings contact-geometric tools to the study of periodic magnetic trajectories. The original work explains that a positive answer would, in particular, establish contact type at every energy for the area-form magnetic system on any convex surface of revolution considered there.\n\n## References\n\n- G. Benedetti, [*The contact property for symplectic magnetic fields on $`S^2`$*](https://doi.org/10.1017/etds.2014.82), *Ergodic Theory Dynam. Systems* **36** (2016), 682–713. [Official arXiv revision](https://arxiv.org/html/1308.2128v2), Section 1, Conjecture 1.2; Section 2.2 for conventions, and Sections 3–4 for partial results.\n- V. Assenza, [*Magnetic curvature and existence of a closed magnetic geodesic on low energy levels*](https://doi.org/10.1093/imrn/rnae209), *Int. Math. Res. Not.* **2024** (2024), 13586–13610. Its low-energy periodic-orbit theorem is a different conclusion.\n- L. Deschamps, L. Maier and T. Stalljohann, [*On the contact type conjecture for exact magnetic systems*](https://arxiv.org/abs/2508.01113), arXiv:2508.01113v3 (2026). This concerns exact fields and a selected class of systems, so it does not resolve the symplectic $`S^2`$ conjecture.\n\n## Status review\n\n\n**Known cases:** Benedetti proves low-energy and special-geometry contact type. A noncontact example without positive magnetic curvature is not a counterexample to the implication here. Results for exact fields or merely existence of a periodic orbit have different assumptions or conclusions.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nBenedetti proves low-energy and special-geometry contact type. A noncontact example without positive magnetic curvature is not a counterexample to the implication here. Results for exact fields or merely existence of a periodic orbit have different assumptions or conclusions.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe original v1 body passage and the official v2 mathematical setup and Conjecture 1.2 were compared. Benedetti proves contact type for sufficiently low energies and in selected geometries; his noncontact example has no positive magnetic-curvature hypothesis. Current primary searches, including the author's [publication list](https://sites.google.com/view/gabrielebenedetti/research), found no exact later proof, counterexample or announced complete solution. Newer positive-curvature periodic-orbit results and work on exact magnetic forms have different hypotheses or conclusions. This is a bounded status check, not exhaustive certification. The [source receipt](../FURTHER_problems/_tracking/parallel/rough-filtering/arxiv-body-secondpass-0201-remote-attested-review.json), [later-version comparison](../FURTHER_problems/_tracking/benedetti-magnetic-curvature-later-version-2026-10-22.json), [current-status audit](../FURTHER_problems/_tracking/benedetti-magnetic-curvature-status-2026-10-22.json), and [duplicate check](../FURTHER_problems/_tracking/benedetti-magnetic-curvature-duplicates-2026-10-22.json) record the limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-ee2ab692d11bcb90**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"positive magnetic curvature\" \"contact type\" conjecture solution",
+    "\"positive magnetic curvature\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:hexagonmath.org OR site:palomar-registry.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1308.2128v2",
+      "locator": "v2, Conjecture1.2 and §2.2",
+      "inspection": "Source conjecture requires positive magnetic curvature for a positive symplectic magnetic form on S2. Exact-form contact-type conjecture has incompatible nonexact symplectic S2 hypotheses. Low-energy periodic orbit existence does not imply contact type."
+    }
+  ],
+  "scope_comparison": "Source conjecture requires positive magnetic curvature for a positive symplectic magnetic form on S2. Exact-form contact-type conjecture has incompatible nonexact symplectic S2 hypotheses. Low-energy periodic orbit existence does not imply contact type.",
+  "rationale": "No complete matching resolution identified in bounded indexed searches. Required direct announcement coverage pending; not certified open.",
+  "source_gaps": [
+    "2026 exact-field theorem body pending."
+  ],
+  "announcement_routing": {
+    "localID": "860",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "magnetic curvature"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "magnetic curvature"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "magnetic curvature"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target.",
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:35:56.819Z",
+      "previous_outcome": "hold",
+      "localID": "860",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "queries": [
+        "\"magnetic\" \"exact\" \"contact type\" 2026 sphere"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2508.01113v3",
+          "version": "20 April 2026",
+          "locator": "primary abstract lines16–20; version history",
+          "inspection": "Deschamps–Maier–Stalljohann treat a constructed class of EXACT fields of strong geodesic type and prove non-contact type below a Mañe threshold. A positive symplectic magnetic two-form on closed S2 has nonzero integral and cannot be exact. They do not assert positive magnetic curvature for the target systems."
+        }
+      ],
+      "scope_comparison": "The incompatible exactness assumption excludes the candidate as a full solution or counterexample to positive magnetic curvature for positive symplectic fields on S2. The original Conjecture1.2 body was read; no material matching source gap remains."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "895",
+  "manifest_index": 739,
+  "checked_date": "2026-11-03",
+  "source_sha256": "8b0b2fc5752756f72fe25690400910c3c4242d15165f24b35533ad07238725f8",
+  "statement_sha256": "6745ff1cbf3cf90d63897e1b4735271880be953f977d6eca598a1c12507fbe54",
+  "original_target": {
+    "id": "895",
+    "title": "Does an unconditional basis force a Lipschitz-free space to be $`\\ell_1`$?",
+    "area": "Functional analysis and Lipschitz-free Banach spaces",
+    "file": "problems/895-does-an-unconditional-basis-force-a-lipschitz-free-space-to-be-ell-1.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-20752392e6f922bb",
+    "group": "operators",
+    "source_sha256": "8b0b2fc5752756f72fe25690400910c3c4242d15165f24b35533ad07238725f8",
+    "statement_sha256": "6745ff1cbf3cf90d63897e1b4735271880be953f977d6eca598a1c12507fbe54",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`(M,d,0)`$ be a pointed metric space, and let $`\\mathcal F(M)`$ be the real Lipschitz-free Banach space: the closed linear span of the evaluation vectors $`\\delta_x`$ in $`\\mathrm{Lip}_0(M)^*`$, where $`\\mathrm{Lip}_0(M)`$ consists of real Lipschitz functions vanishing at $`0`$. If $`\\mathcal F(M)`$ admits an **unconditional Schauder basis**, must it be linearly isomorphic to $`\\ell_1`$?\n\nThis is Open problem 1 in Novotný's paper. The word *unconditional* applies to any Schauder basis of $`\\mathcal F(M)`$, not just one obtained from retractions or extension operators on $`M`$.\n\n**Editorial clarification:** State explicitly that the Schauder basis is an infinite sequence, so the intended infinite-dimensional question is not confused with the elementary finite-metric case.",
+  "full_original_page": "# 895. Does an unconditional basis force a Lipschitz-free space to be $`\\ell_1`$?\n\n**Area:** Functional analysis and Lipschitz-free Banach spaces\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`(M,d,0)`$ be a pointed metric space, and let $`\\mathcal F(M)`$ be the real Lipschitz-free Banach space: the closed linear span of the evaluation vectors $`\\delta_x`$ in $`\\mathrm{Lip}_0(M)^*`$, where $`\\mathrm{Lip}_0(M)`$ consists of real Lipschitz functions vanishing at $`0`$. If $`\\mathcal F(M)`$ admits an **unconditional Schauder basis**, must it be linearly isomorphic to $`\\ell_1`$?\n\nThis is Open problem 1 in Novotný's paper. The word *unconditional* applies to any Schauder basis of $`\\mathcal F(M)`$, not just one obtained from retractions or extension operators on $`M`$.\n\n**Editorial clarification:** State explicitly that the Schauder basis is an infinite sequence, so the intended infinite-dimensional question is not confused with the elementary finite-metric case.\n\n## Application\n\nLipschitz-free spaces turn Lipschitz maps into linear operators. The question asks whether the strong linear coordinate structure of an unconditional basis rigidly determines the space up to isomorphism.\n\n## Known results and scope\n\nNovotný proves that certain nets in $`\\mathbb R^n`$, $`n\\geq2`$, have no **retractional** unconditional basis. This does not rule out another unconditional basis for their free spaces and does not answer the general question. If $`M`$ contains a line segment, $`\\mathcal F(M)`$ contains an isomorphic copy of $`L_1[0,1]`$ and so cannot have an unconditional basis. These observations leave the source's converse open.\n\n## References\n\n1. M. Novotný, [*Some Remarks on Schauder Bases in Lipschitz Free Spaces*](https://arxiv.org/pdf/1905.13188v2), *Bulletin of the Belgian Mathematical Society – Simon Stevin* **27** (2020), 111–126, [DOI:10.36045/bbms/1590199307](https://doi.org/10.36045/bbms/1590199307), Open problem 1 (arXiv v2, printed p. 14). [Institutional bibliographic record](https://intranet.fel.cvut.cz/en/research/13101/publication/2020.html).\n2. R. J. Aliaga, [*Lipschitz-free spaces and purely 1-unrectifiable metric spaces*](https://arxiv.org/pdf/2606.02918), arXiv:2606.02918v2 (2026), introduction. This exposition studies different structural properties; it does not state the requested unconditional-basis implication.\n\n## Status review\n\n\n**Known cases:** The question is about existence of an unconditional Schauder basis in the infinite-dimensional sense, not a selected retractional basis. Negative retractional-basis results and structural claims about other properties do not settle the existence implication for arbitrary Lipschitz-free spaces.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe question is about existence of an unconditional Schauder basis in the infinite-dimensional sense, not a selected retractional basis. Negative retractional-basis results and structural claims about other properties do not settle the existence implication for arbitrary Lipschitz-free spaces.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe latest arXiv version retains Open problem 1. Targeted later-primary, proof, counterexample and announcement searches through 23 October 2026 found no result settling this general implication. A semantic check found no matching AIM or admitted FURTHER problem. These are bounded checks. The published article's identity was verified, but its native PDF was not obtained, so exact publication-text parity is not claimed. The [source and status audit](../FURTHER_problems/_tracking/arxiv2139-two-candidate-independent-audit-2026-10-23.json) records the locators and limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-20752392e6f922bb**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"Lipschitz free\" \"unconditional basis\" \"ell_1\" 2026",
+    "\"Lipschitz-free\" \"unconditional basis\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1905.13188v2",
+      "locator": "v2 28August2019, Openproblem1 p14/PDF13",
+      "inspection": "Primary body asks arbitrary unconditional Schauder basis implies ell1, distinguishes retractional-basis obstruction. Fresh July2026Mason product-sequences Theorem1 read: specified sequence products yield F(Z^d) or ell1 for pure sparse products, not general unconditional-basis rigidity."
+    },
+    {
+      "url": "https://arxiv.org/html/2607.28440",
+      "version": "v1 30July2026",
+      "locator": "Theorem1",
+      "inspection": "Product-sequence classification is restricted and supplies no universal implication for arbitrary M with an unconditional basis."
+    }
+  ],
+  "scope_comparison": "Primary body asks arbitrary unconditional Schauder basis implies ell1, distinguishes retractional-basis obstruction. Fresh July2026Mason product-sequences Theorem1 read: specified sequence products yield F(Z^d) or ell1 for pure sparse products, not general unconditional-basis rigidity.",
+  "rationale": "Inspected primary statement and current candidate bodies do not establish the full target. Recorded bounded searches found no matching complete resolution; this is not a guarantee of openness.",
+  "source_gaps": [],
+  "announcement_routing": {
+    "localID": "895",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "unconditional basis",
+          "Lipschitz-free"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "unconditional basis",
+          "Lipschitz-free"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00595v1",
+            "title": "Metric, Schauder and Operator-Valued Frames",
+            "url": "https://hexagonmath.org/abs/2610.00595v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "unconditional basis",
+        "Lipschitz-free"
+      ],
+      "hits": [
+        {
+          "entry": "330",
+          "title": "A negative answer to Kalton's Lipschitz-free approximation question",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Failure-of-Bounded-Approximation-in-a-Lipschitz-Free-Space-over-a-Uniformly-Discrete-Metric-Space-September-26-2026/main.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "OpenAI330 Theorem1.1 gives a free space failing EVERY finite BAP constant. Any Schauder basis gives BAP through uniformly bounded partial-sum projections, so this example cannot have the unconditional Schauder basis required for a counterexample. Metric/Schauder frames are not unconditional Schauder bases or an ell1 rigidity theorem.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.696Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

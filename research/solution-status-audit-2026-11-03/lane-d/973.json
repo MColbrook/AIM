@@ -1,0 +1,92 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "973",
+  "manifest_index": 817,
+  "checked_date": "2026-11-03",
+  "source_sha256": "e0cba08c3d45956589a9148d3ab301e30cb12e16c9f35494ff3d6e939dcd4227",
+  "statement_sha256": "44352d8c6e560cc717ef1231395240f1cdfe799e8e9a2ddb7ef887d44d337dfa",
+  "original_target": {
+    "id": "973",
+    "title": "Near-quadratic logarithmic slowdown bounds for planar random media",
+    "area": "Probability and transport in random environments",
+    "file": "problems/973-near-quadratic-logarithmic-slowdown-bounds-for-planar-random-media.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-2a0cbff65951d823",
+    "group": "probability-statistics",
+    "source_sha256": "e0cba08c3d45956589a9148d3ab301e30cb12e16c9f35494ff3d6e939dcd4227",
+    "statement_sha256": "44352d8c6e560cc717ef1231395240f1cdfe799e8e9a2ddb7ef887d44d337dfa",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "At each $`x\\in\\mathbb Z^2`$, sample an independent, identically distributed probability vector $`\\omega_x=(\\omega_x(e))_{e\\in\\{\\pm e_1,\\pm e_2\\}}`$. Assume uniform ellipticity: $`\\omega_x(e)\\geq\\kappa>0`$ almost surely for every $`e`$. Given the sampled environment, start $`X_0=0`$ and use transition probabilities\n```math\nP_\\omega(X_{n+1}=x+e\\mid X_n=x)=\\omega_x(e).\n```\n\nLet $`\\mathbb P^0`$ denote the annealed law, averaging over the environment and the walk.\n\nAssume condition $`(T)`$ in a direction $`\\ell_0\\in S^1`$: for every unit vector $`\\ell`$ in some neighborhood of $`\\ell_0`$, there are $`c_\\ell,C_\\ell,L_\\ell>0`$ such that\n```math\n\\mathbb P^0(H_{-L}^{\\ell}<H_L^{\\ell})\n \\leq C_\\ell e^{-c_\\ell L}\\quad(L\\geq L_\\ell),\n```\n\nwhere $`H_L^\\ell=\\inf\\{n\\geq0:X_n\\cdot\\ell\\geq L\\}`$ and\n$`H_{-L}^\\ell=\\inf\\{n\\geq0:X_n\\cdot\\ell\\leq-L\\}`$.\nUnder this assumption the limiting velocity $`v=\\lim_{n\\to\\infty}X_n/n`$ is deterministic and nonzero.\n\nFor every $`a\\in[0,v]\\setminus\\{v\\}`$, every $`0<\\varepsilon<\\|v-a\\|_\\infty`$, and every $`0<\\alpha<2`$, do constants $`C,c>0`$ exist such that\n```math\n\\mathbb P^0\\!\\left(\\left\\|X_n/n-a\\right\\|_\\infty<\\varepsilon\\right)\n \\leq C\\exp\\!\\left[-c(\\log n)^\\alpha\\right]\n \\quad\\text{for every integer }n\\geq3?\n```\n\nConstants may depend on the environment law, direction, $`a,\\varepsilon,\\alpha`$, but not on $`n`$.\n\nThis is the planar $`(T)`$ subcase of the extension conjectured in [1, Section 1.8]. It concerns the original annealed slowdown event.",
+  "full_original_page": "# 973. Near-quadratic logarithmic slowdown bounds for planar random media\n\n**Area:** Probability and transport in random environments\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nAt each $`x\\in\\mathbb Z^2`$, sample an independent, identically distributed probability vector $`\\omega_x=(\\omega_x(e))_{e\\in\\{\\pm e_1,\\pm e_2\\}}`$. Assume uniform ellipticity: $`\\omega_x(e)\\geq\\kappa>0`$ almost surely for every $`e`$. Given the sampled environment, start $`X_0=0`$ and use transition probabilities\n```math\nP_\\omega(X_{n+1}=x+e\\mid X_n=x)=\\omega_x(e).\n```\n\nLet $`\\mathbb P^0`$ denote the annealed law, averaging over the environment and the walk.\n\nAssume condition $`(T)`$ in a direction $`\\ell_0\\in S^1`$: for every unit vector $`\\ell`$ in some neighborhood of $`\\ell_0`$, there are $`c_\\ell,C_\\ell,L_\\ell>0`$ such that\n```math\n\\mathbb P^0(H_{-L}^{\\ell}<H_L^{\\ell})\n \\leq C_\\ell e^{-c_\\ell L}\\quad(L\\geq L_\\ell),\n```\n\nwhere $`H_L^\\ell=\\inf\\{n\\geq0:X_n\\cdot\\ell\\geq L\\}`$ and\n$`H_{-L}^\\ell=\\inf\\{n\\geq0:X_n\\cdot\\ell\\leq-L\\}`$.\nUnder this assumption the limiting velocity $`v=\\lim_{n\\to\\infty}X_n/n`$ is deterministic and nonzero.\n\nFor every $`a\\in[0,v]\\setminus\\{v\\}`$, every $`0<\\varepsilon<\\|v-a\\|_\\infty`$, and every $`0<\\alpha<2`$, do constants $`C,c>0`$ exist such that\n```math\n\\mathbb P^0\\!\\left(\\left\\|X_n/n-a\\right\\|_\\infty<\\varepsilon\\right)\n \\leq C\\exp\\!\\left[-c(\\log n)^\\alpha\\right]\n \\quad\\text{for every integer }n\\geq3?\n```\n\nConstants may depend on the environment law, direction, $`a,\\varepsilon,\\alpha`$, but not on $`n`$.\n\nThis is the planar $`(T)`$ subcase of the extension conjectured in [1, Section 1.8]. It concerns the original annealed slowdown event.\n\n## Application\n\nThe estimate would quantify unusually slow transport through an independently disordered planar medium, despite its positive macroscopic velocity.\n\n## Known progress\n\nBerger [1, Theorem 1.5] proves the corresponding family with $`\\alpha<d`$ for $`d\\geq4`$, and explicitly conjectures the extension to dimensions two and three. The hypothesis there is $`(T_\\gamma)`$; the exponential slab bound above implies it for every fixed $`\\gamma<1`$ when $`L`$ is large.\n\nPeretz [2, Theorem 1.8] obtains a related regeneration-time tail estimate in dimension three; Remark 1.9 leaves the planar regeneration case open. His regeneration convention differs from Berger's. No equivalence of those definitions or their first-time tail events is needed or asserted here. The invariant-measure theorem [2, Theorem 1.5] concerns a different conclusion.\n\n## References\n\n1. N. Berger, *Slowdown estimates for ballistic random walk in random environment*, J. Eur. Math. Soc. **14** (2012), 127–174, [doi:10.4171/JEMS/298](https://doi.org/10.4171/JEMS/298). Model and Definitions 4–7 on pp. 127–129; Theorem 1.5 and Section 1.8 on p. 131.\n2. T. Peretz, *Environment viewed from the particle and slowdown for ballistic RWRE in low dimensions*, [arXiv:2204.12238v2](https://arxiv.org/html/2204.12238v2), 3 August 2025. Definitions 1.1 and 1.3, Theorems 1.2, 1.5 and 1.8, Remark 1.9. This checked version supplies the current comparison.\n\n## Status review\n\n\n**Known cases:** The planar (T) slowdown event is the original annealed position event with every logarithmic exponent below two. Current low-dimensional invariant-environment and regeneration bounds do not establish the displayed full slowdown estimate.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe planar (T) slowdown event is the original annealed position event with every logarithmic exponent below two. Current low-dimensional invariant-environment and regeneration bounds do not establish the displayed full slowdown estimate.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe original published statement, its low-dimensional conjecture and the later primary theorem statements were checked directly on 24 October 2026. Bounded searches found no matching complete solution or announcement. AIM/OpenAI and FURTHER comparisons found distinct qualitative transience/ballisticity questions. The complete linked OpenAI proof and final EJP publisher body were not accessible in this check; no full-proof or final-version parity claim is made. The Prove2Me homepage timed out; inspected indexed missions concerned different one-dimensional models. These limitations remain recorded in the review log.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-2a0cbff65951d823**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Peretz",
+    "ballistic RWRE",
+    "slowdown"
+  ],
+  "queries": [
+    "\"Peretz\" \"slowdown\" \"dimension two\" 2026",
+    "\"Peretz\" \"slowdown\" \"dimension two\"; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"Peretz\" \"slowdown\" planar"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2204.12238v2",
+      "locator": "3Aug2025v2 Theorems1.5–1.8/Remark1.9 lines143–173",
+      "comparison": "Invariant-environment result includes d2 but tail upper bounds are d>=3; regeneration theorem explicitly d3 and planar case left open. It does not bound the exact planar annealed slowdown position event for every alpha<2."
+    }
+  ],
+  "rationale": "Invariant-environment result includes d2 but tail upper bounds are d>=3; regeneration theorem explicitly d3 and planar case left open. It does not bound the exact planar annealed slowdown position event for every alpha<2.",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary statements inspected, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "973",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Peretz",
+          "ballistic RWRE",
+          "slowdown"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Peretz",
+          "ballistic RWRE",
+          "slowdown"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Peretz",
+        "ballistic RWRE",
+        "slowdown"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

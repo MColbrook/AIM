@@ -1,0 +1,54 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "606",
+  "manifest_index": 469,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "606",
+    "title": "A zero in the nontrivial spectrum of a power permutation",
+    "area": "Information theory, sequence design and finite fields",
+    "file": "problems/606-helleseth-vanishing.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "optimization-information",
+    "source_sha256": "a240b42ef7f870584eab2434637c99ff7c5efe6e2aae1655fedd98559d7603eb",
+    "statement_sha256": "86660c9871ac6ab7f70a7dfeaeafa5452891501c3401fb14ed2c3b69cc386814",
+    "state": "unreviewed"
+  },
+  "source_sha256": "a240b42ef7f870584eab2434637c99ff7c5efe6e2aae1655fedd98559d7603eb",
+  "statement_sha256": "86660c9871ac6ab7f70a7dfeaeafa5452891501c3401fb14ed2c3b69cc386814",
+  "actual_source_sha256": "a240b42ef7f870584eab2434637c99ff7c5efe6e2aae1655fedd98559d7603eb",
+  "full_original_statement": "Let $`F=\\mathbb F_q`$, where $`q=p^n>2`$ and $`p`$ is prime. Let $`d`$ be a positive integer satisfying\n\n```math\n\\gcd(d,q-1)=1,\\qquad d\\equiv1\\pmod{p-1}.\n```\n\nWrite $`\\mathop{\\mathrm{Tr}}\\nolimits:F\\to\\mathbb F_p`$ for the absolute trace and define\n\n```math\nW_{F,d}(a)=\\sum_{x\\in F}\\exp\\!\\left(\\frac{2\\pi i}{p}\\mathop{\\mathrm{Tr}}\\nolimits(x^d-ax)\\right).\n```\n\nDoes there always exist $`a\\in F\\setminus\\{0\\}`$ for which $`W_{F,d}(a)=0`$?\n\nThis is Helleseth's vanishing conjecture, also called the $`-1`$ conjecture for cross-correlation of maximum-length sequences. Excluding $`a=0`$ is essential: the permutation condition already gives $`W_{F,d}(0)=0`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Helleseth\" \"vanishing conjecture\" proof 2026",
+    "\"Helleseth\" \"vanishing conjecture\" proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v3, 24 August 2021; current arXiv record checked",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2006.15726v3",
+      "locator": "Section 1.2; Theorem 1.6, lines 104–107",
+      "scope_comparison": "Theorem 1.6 covers invertible Niho exponents over quadratic extensions of odd characteristic. That is a restricted exponent family, not all d coprime to q-1 with d congruent to 1 mod p-1. Helleseth's separate three-valued conjecture is not the vanishing target."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem 1.6 covers invertible Niho exponents over quadratic extensions of odd characteristic. That is a restricted exponent family, not all d coprime to q-1 with d congruent to 1 mod p-1. Helleseth's separate three-valued conjecture is not the vanishing target.",
+  "latest_version_check": "v3, 24 August 2021; current arXiv record checked",
+  "gap_retraction_check": "No matching complete candidate was identified; version records showed no withdrawal banner. Cited partial proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

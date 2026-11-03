@@ -1,0 +1,86 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 260,
+  "source_sha256": "efc58f1032d7791843b12a83b5c7bb946b384e7a1c80b78b878bc69315d1f061",
+  "statement_sha256": "519773fe1f027d78b0ac5e59a96ad452efa7bf5b760d5f52c135b0bfdf809b1d",
+  "original_target": {
+    "id": "319",
+    "title": "Generic stabilization by static output feedback",
+    "area": "Feedback control and real algebraic geometry",
+    "file": "problems/319-generic-static-output-feedback-stabilization.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "inverse2",
+    "source_sha256": "efc58f1032d7791843b12a83b5c7bb946b384e7a1c80b78b878bc69315d1f061",
+    "statement_sha256": "519773fe1f027d78b0ac5e59a96ad452efa7bf5b760d5f52c135b0bfdf809b1d",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "319",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The latest Liu arXiv2610.00390v2 Theorems1–3 and section6 concern complexity/exact synthesis for individual rational plants, including two-input ETR completeness and single-input NP-hardness. They do not classify Euclidean-density stabilization for all critical dimension pairs n=mp. Zenodo23074149 is the same work; the accessible latest arXiv body resolves the material comparison gap.",
+  "queries": [
+    "generic static output feedback stabilization critical dimension classification m p 2026",
+    "\"Byrnes\" \"Anderson\" generic stabilizability 2026",
+    "\"static output feedback\" generic stabilization (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://www.math.purdue.edu/~eremenko/dvi/gpolep.pdf",
+      "version": "current author PDF dated3October2026",
+      "locator": "p2 Question and preceding known cases",
+      "body_inspected": true
+    },
+    {
+      "url": "https://zenodo.org/records/23074149",
+      "version": "search-indexed October2026 record",
+      "locator": "Indexed title/abstract only",
+      "body_inspected": false
+    }
+  ],
+  "source_gaps": [
+    "Zenodo record inaccessible to web; direct read-only API fetch returnedHTTP403. Full ETR-completeness theorem body not inspected."
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "static.output|generic.stabili|pole.placement",
+    "result": "No matching index record."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T14:15:26.154296+00:00",
+      "reviewer": "lane-b; root persisted final relay",
+      "scope_comparison": "The latest Liu arXiv2610.00390v2 Theorems1–3 and section6 concern complexity/exact synthesis for individual rational plants, including two-input ETR completeness and single-input NP-hardness. They do not classify Euclidean-density stabilization for all critical dimension pairs n=mp. Zenodo23074149 is the same work; the accessible latest arXiv body resolves the material comparison gap.",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2610.00390v2",
+          "locator": "Theorems1–3 sections3–4 and section6;3October2026",
+          "body_inspected": true
+        },
+        {
+          "url": "https://arxiv.org/abs/2610.00390",
+          "locator": "Current v2 only, no withdrawal",
+          "body_inspected": false
+        },
+        {
+          "url": "https://zenodo.org/records/23074149",
+          "locator": "Indexed same author/title/work, v1 1October2026",
+          "body_inspected": false
+        }
+      ],
+      "queries": [
+        "\"23074149\" static output feedback",
+        "\"static output feedback\" \"ETR\" \"2026\"",
+        "\"23074149\" \"Liu\""
+      ],
+      "limitations": [
+        "Zenodo direct file inaccessible, but matching latest arXiv body inspected. No whole-proof certification."
+      ]
+    }
+  ],
+  "rationale": "The latest Liu arXiv2610.00390v2 Theorems1–3 and section6 concern complexity/exact synthesis for individual rational plants, including two-input ETR completeness and single-input NP-hardness. They do not classify Euclidean-density stabilization for all critical dimension pairs n=mp. Zenodo23074149 is the same work; the accessible latest arXiv body resolves the material comparison gap.",
+  "material_full_claim_gap_resolved": true
+}

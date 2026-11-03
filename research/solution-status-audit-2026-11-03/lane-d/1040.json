@@ -1,0 +1,112 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1040",
+  "manifest_index": 884,
+  "checked_date": "2026-11-03",
+  "source_sha256": "4d3354efe2cf482aee81fe02ef909e26580367e9ccc959c74e46015ad33c54fa",
+  "statement_sha256": "802eecb92972330e8e90258769b5f20bf362ccaddf8d6a37ea11b281417cb784",
+  "original_target": {
+    "id": "1040",
+    "title": "Exact majorization of depolarizing-channel outputs",
+    "area": "Quantum information and matrix inequalities",
+    "file": "problems/1040-exact-majorization-of-depolarizing-channel-outputs.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e6d09869b8647910",
+    "group": "spectral3",
+    "source_sha256": "4d3354efe2cf482aee81fe02ef909e26580367e9ccc959c74e46015ad33c54fa",
+    "statement_sha256": "802eecb92972330e8e90258769b5f20bf362ccaddf8d6a37ea11b281417cb784",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For an integer $`d\\geq2`$, let the depolarizing channel on $`d`$-dimensional matrices be\n\n```math\n\\mathcal D_{p,d}(X)=(1-p)X+\\frac{p}{d}\\mathrm{Tr}(X)I_d,\n\\qquad 0\\leq p\\leq\\frac{d^2}{d^2-1}.\n```\n\n\nFor every $`n\\geq1`$ and every density matrix $`\\rho`$ on $`(\\mathbb C^d)^{\\otimes n}`$, must the output eigenvalues of $`\\mathcal D_{p,d}^{\\otimes n}(\\rho)`$ be majorized by those for any fixed pure product input? Explicitly, with eigenvalues listed in decreasing order, is\n\n```math\n\\lambda^\\downarrow\\!\\left(\\mathcal D_{p,d}^{\\otimes n}(\\rho)\\right)\n\\prec\n\\lambda^\\downarrow\\!\\left(\\mathcal D_{p,d}^{\\otimes n}\n (|0\\rangle\\langle0|^{\\otimes n})\\right)?\n```\n\n\nHere $`x\\prec y`$ means that every initial partial sum of the decreasingly ordered entries of $`x`$ is at most the corresponding sum for $`y`$, with equal total sums. The question includes possibly entangled inputs $`\\rho`$ and the full completely positive parameter range above. A proof for every $`d,p,n`$, or one counterexample, would decide the conjecture.",
+  "full_original_page": "# 1040. Exact majorization of depolarizing-channel outputs\n\n**Area:** Quantum information and matrix inequalities\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor an integer $`d\\geq2`$, let the depolarizing channel on $`d`$-dimensional matrices be\n\n```math\n\\mathcal D_{p,d}(X)=(1-p)X+\\frac{p}{d}\\mathrm{Tr}(X)I_d,\n\\qquad 0\\leq p\\leq\\frac{d^2}{d^2-1}.\n```\n\n\nFor every $`n\\geq1`$ and every density matrix $`\\rho`$ on $`(\\mathbb C^d)^{\\otimes n}`$, must the output eigenvalues of $`\\mathcal D_{p,d}^{\\otimes n}(\\rho)`$ be majorized by those for any fixed pure product input? Explicitly, with eigenvalues listed in decreasing order, is\n\n```math\n\\lambda^\\downarrow\\!\\left(\\mathcal D_{p,d}^{\\otimes n}(\\rho)\\right)\n\\prec\n\\lambda^\\downarrow\\!\\left(\\mathcal D_{p,d}^{\\otimes n}\n (|0\\rangle\\langle0|^{\\otimes n})\\right)?\n```\n\n\nHere $`x\\prec y`$ means that every initial partial sum of the decreasingly ordered entries of $`x`$ is at most the corresponding sum for $`y`$, with equal total sums. The question includes possibly entangled inputs $`\\rho`$ and the full completely positive parameter range above. A proof for every $`d,p,n`$, or one counterexample, would decide the conjecture.\n\n## Application\n\nExact majorization would compare all convex spectral functionals of arbitrary outputs with the pure-product reference output. In classical communication through repeated depolarizing channels, it would give stronger finite-blocklength control than the currently proved approximate majorization. The channel's leading-order classical capacity and the paper's third-order expansion are already established; neither settles this exact spectral question.\n\n## References\n\n1. Z. Song, X. Wang, M. Tomamichel and K. Fang, [*Approximate majorization and high-order capacity of quantum depolarizing channels*](https://arxiv.org/html/2609.37240v1), arXiv:2609.37240v1 (29 September 2026), Introduction, equations (1)–(2), and §5, Discussion. The authors state the exact relation as a conjecture, prove an approximate relation, and identify the exact version as open in the discussion.\n2. C. King, [*The capacity of the quantum depolarizing channel*](https://arxiv.org/abs/quant-ph/0204172), *IEEE Transactions on Information Theory* **49** (2003), 221–229. King's established norm and entropy results give important weaker comparisons, as explained in [1, Introduction and Remark 5](https://arxiv.org/html/2609.37240v1).\n\n## Status review\n\n\n**Known cases:** The conjecture asks exact all-partial-sum majorization for all tensor powers. The September 2026 source still conjectures it; approximate majorization, shifted determinants and bosonic Gaussian-channel majorization are different.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe conjecture asks exact all-partial-sum majorization for all tensor powers. The September 2026 source still conjectures it; approximate majorization, shifted determinants and bosonic Gaussian-channel majorization are different.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe September 2026 source states the conjecture for the entire range $`0\\leq p\\leq d^2/(d^2-1)`$. Its Theorem 4 compares shifted log determinants; its approximate-majorization bound permits a nonzero spectral defect and does not prove the exact partial-sum inequalities. The authors again call exact majorization open in §5. The current arXiv record lists only v1. Bounded searches on 21 October 2026 for the exact conjecture, a proof, a counterexample and an announcement found no matching complete resolution. A separate bosonic Gaussian-channel majorization theorem concerns a different channel and does not answer this question. Searches of AIM problem statements and admitted FURTHER pages found no equivalent target. These checks do not certify exhaustive absence of a solution.\n\nThe [primary-source audit](../FURTHER_problems/_tracking/depolarizing-majorization-primary-2026-10-21.json), [current-status review](../FURTHER_problems/_tracking/depolarizing-majorization-status-2026-10-21.json), and [duplicate/scope review](../FURTHER_problems/_tracking/depolarizing-majorization-duplicates-2026-10-21.json) record the selected evidence and limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-e6d09869b8647910**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "depolarizing majorization",
+    "Tomamichel",
+    "Fang",
+    "Song"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"depolarizing\" \"exact majorization\" solved 2026"
+    },
+    {
+      "query": "\"depolarizing\" \"majorization\" proof",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2609.37240v1",
+      "locator": "29September2026 eq2, Theorem4 and Section5line307"
+    }
+  ],
+  "scope_comparison": "Shifted log-determinant ordering and approximate majorization permit nonzero spectral defect. Section5 explicitly retains exact eq2; target needs every initial eigenvalue partial sum for all n and complete CP p-range. Entropy/norm multiplicativity and bosonic Gaussian theorems do not provide it.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative search is not proof of continued openness; primary problem/current comparison bodies inspected at locators. Full proof certification not claimed.",
+  "announcement_routing": {
+    "localID": "1040",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "depolarizing majorization",
+          "Tomamichel",
+          "Fang",
+          "Song"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "depolarizing majorization",
+          "Tomamichel",
+          "Fang",
+          "Song"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00260v2",
+            "title": "Stable algebraic families of polarized dynamical systems and exceptional extensions",
+            "url": "https://hexagonmath.org/abs/2610.00260v2"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "depolarizing majorization",
+        "Tomamichel",
+        "Fang",
+        "Song"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Polarized algebraic dynamical systems and exceptional extensions are not quantum depolarizing-channel output majorization.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.765Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

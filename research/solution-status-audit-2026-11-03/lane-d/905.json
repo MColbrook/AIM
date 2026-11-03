@@ -1,0 +1,98 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "905",
+  "manifest_index": 749,
+  "checked_date": "2026-11-03",
+  "source_sha256": "f2beb0d4086f6df1657f63580bf0b6b6b9d1127157cf3f6084faefeca7a0bfd2",
+  "statement_sha256": "ea31c6012e33cfed5fae008e261113733bd023d5767bdd6dfc00627a8ba6d36d",
+  "original_target": {
+    "id": "905",
+    "title": "Does Lipschitz affine approximation determine the exact martingale cotype?",
+    "area": "Banach space geometry and quantitative differentiation",
+    "file": "problems/905-does-lipschitz-affine-approximation-determine-the-exact-martingale-cotype.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-6403776313aba0f9",
+    "group": "operators",
+    "source_sha256": "f2beb0d4086f6df1657f63580bf0b6b6b9d1127157cf3f6084faefeca7a0bfd2",
+    "statement_sha256": "ea31c6012e33cfed5fae008e261113733bd023d5767bdd6dfc00627a8ba6d36d",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix a real Banach space $`(Y,\\|\\cdot\\|_Y)`$ and an exponent $`2\\leq q<\\infty`$. Suppose that there exist a positive integer $`n`$, an $`n`$-dimensional real normed space $`(X,\\|\\cdot\\|_X)`$, and a finite constant $`C`$ with the following property.\n\nLet $`B_X=\\{x:\\|x\\|_X\\leq1\\}`$, use Lebesgue measure in fixed linear coordinates on $`X`$, and write $`\\mathcal A(X,Y)`$ for the affine maps $`\\Lambda(x)=Tx+b`$, with $`T:X\\to Y`$ linear and $`b\\in Y`$. Every compactly supported map $`f:X\\to Y`$ satisfying $`\\|f(x)-f(y)\\|_Y\\leq\\|x-y\\|_X`$ obeys\n```math\n\\int_X\\int_0^\\infty\n\\inf_{\\Lambda\\in\\mathcal A(X,Y)}\n\\left(\\frac{1}{|tB_X|}\\int_{x+tB_X}\n\\|f(y)-\\Lambda(y)\\|_Y^q\\,dy\\right)\n\\frac{dt}{t^{q+1}}\\,dx\n\\leq C\\,|\\mathrm{supp}f|.\n```\n\nHere $`|E|`$ denotes Lebesgue volume, and $`\\mathrm{supp}f`$ is the closure of the set where $`f\\ne0`$. There is no bound on the Lipschitz constant of the affine approximants.\n\nMust $`Y`$ have **martingale cotype $`q`$**? Explicitly, must there be a finite constant $`m`$ such that, for every probability space with filtration $`(\\mathcal F_k)_{k=1}^N`$ and every finite $`Y`$-valued martingale $`(M_k)_{k=1}^N`$ in $`L^q`$,\n```math\n\\left(\\sum_{k=1}^{N-1}\\mathbb E\\|M_{k+1}-M_k\\|_Y^q\\right)^{1/q}\n\\leq m\\max_{1\\leq k\\leq N}\n\\left(\\mathbb E\\|M_k\\|_Y^q\\right)^{1/q}?\n```\n\nThe martingale condition is $`\\mathbb E[M_{k+1}\\mid\\mathcal F_k]=M_k`$. Equivalently, does $`Y`$ admit an equivalent norm whose modulus of uniform convexity has power type $`q`$? The exponent must remain the same $`q`$; replacing it by $`q+\\varepsilon`$ does not answer the question.",
+  "full_original_page": "# 905. Does Lipschitz affine approximation determine the exact martingale cotype?\n\n**Area:** Banach space geometry and quantitative differentiation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix a real Banach space $`(Y,\\|\\cdot\\|_Y)`$ and an exponent $`2\\leq q<\\infty`$. Suppose that there exist a positive integer $`n`$, an $`n`$-dimensional real normed space $`(X,\\|\\cdot\\|_X)`$, and a finite constant $`C`$ with the following property.\n\nLet $`B_X=\\{x:\\|x\\|_X\\leq1\\}`$, use Lebesgue measure in fixed linear coordinates on $`X`$, and write $`\\mathcal A(X,Y)`$ for the affine maps $`\\Lambda(x)=Tx+b`$, with $`T:X\\to Y`$ linear and $`b\\in Y`$. Every compactly supported map $`f:X\\to Y`$ satisfying $`\\|f(x)-f(y)\\|_Y\\leq\\|x-y\\|_X`$ obeys\n```math\n\\int_X\\int_0^\\infty\n\\inf_{\\Lambda\\in\\mathcal A(X,Y)}\n\\left(\\frac{1}{|tB_X|}\\int_{x+tB_X}\n\\|f(y)-\\Lambda(y)\\|_Y^q\\,dy\\right)\n\\frac{dt}{t^{q+1}}\\,dx\n\\leq C\\,|\\mathrm{supp}f|.\n```\n\nHere $`|E|`$ denotes Lebesgue volume, and $`\\mathrm{supp}f`$ is the closure of the set where $`f\\ne0`$. There is no bound on the Lipschitz constant of the affine approximants.\n\nMust $`Y`$ have **martingale cotype $`q`$**? Explicitly, must there be a finite constant $`m`$ such that, for every probability space with filtration $`(\\mathcal F_k)_{k=1}^N`$ and every finite $`Y`$-valued martingale $`(M_k)_{k=1}^N`$ in $`L^q`$,\n```math\n\\left(\\sum_{k=1}^{N-1}\\mathbb E\\|M_{k+1}-M_k\\|_Y^q\\right)^{1/q}\n\\leq m\\max_{1\\leq k\\leq N}\n\\left(\\mathbb E\\|M_k\\|_Y^q\\right)^{1/q}?\n```\n\nThe martingale condition is $`\\mathbb E[M_{k+1}\\mid\\mathcal F_k]=M_k`$. Equivalently, does $`Y`$ admit an equivalent norm whose modulus of uniform convexity has power type $`q`$? The exponent must remain the same $`q`$; replacing it by $`q+\\varepsilon`$ does not answer the question.\n\n## Application\n\nQuantitative differentiation measures how well Lipschitz maps resemble affine maps on balls of different sizes. This question asks whether a precise analytic approximation estimate detects the corresponding power of uniform convexity in the target space. Such estimates are used in quantitative embedding and discretization problems, including the approach to Bourgain's discretization theorem developed in the source.\n\n## Known results and scope\n\nHytönen–Naor's Theorem 9 proves that the assumed estimate implies superreflexivity, meaning existence of some equivalent uniformly convex norm. Their results also give, for Banach lattice targets, martingale cotype $`q+\\varepsilon`$ for every $`\\varepsilon>0`$. The question concerns attainment of the exact exponent.\n\nHytönen–Merikoski characterize martingale cotype $`q`$ by a stronger local approximation estimate controlled by a Sobolev $`W^{1,q}`$ norm. Their Remark 3 explicitly distinguishes the unresolved Hytönen–Naor question: the support-volume bound using a global Lipschitz constant is weaker than that Sobolev bound. Substituting the stronger bound would change the problem.\n\nThe current OpenAI announcement that nontrivial Markov type implies superreflexivity is a qualitative renorming statement; superreflexivity already follows here from the source theorem. Ryoo's later real-valued Dorronsoro theorem on Carnot groups and vector-valued heat estimates assuming power-type uniform convexity also have different hypotheses and conclusions.\n\n## References\n\n1. T. Hytönen and A. Naor, *Heat flow and quantitative differentiation*, J. Eur. Math. Soc. 21 (2019), 3415–3466, [DOI](https://doi.org/10.4171/JEMS/906). Eligible source: [arXiv:1608.01915v1](https://arxiv.org/pdf/1608.01915v1), Question 10 and Theorem 9, p. 10; martingale definitions pp. 5–6; Proposition 33 and discussion pp. 30–32. The [author's 2017 version](https://web.math.princeton.edu/~naor/homepage%20files/UAAP-heat-flow.pdf) retains Question 10.\n2. T. Hytönen and J. Merikoski, *Vector-Valued Local Approximation Spaces*, J. Fourier Anal. Appl. 25 (2019), 299–320, published online 2018, [DOI](https://doi.org/10.1007/s00041-018-9598-2). [arXiv:1612.09502v3](https://arxiv.org/pdf/1612.09502v3), Theorems 1, 3–4 and Remark 3, pp. 3–5.\n3. OpenAI, *Nontrivial Markov Type Forces Superreflexivity* (2026), [preprint](https://github.com/openai/math/blob/main/preprints/Nontrivial-Markov-Type-Forces-Superreflexivity-September-23-2026/paper.pdf), Theorem 1.1, p. 1. Included to distinguish its announced qualitative conclusion from the exact exponent requested here.\n4. S.-Y. Ryoo, *Quantitative nonembeddability of groups of polynomial growth into uniformly convex spaces*, [arXiv:2207.11305v2](https://arxiv.org/pdf/2207.11305v2) (2025), Theorem 34, p. 22, and Theorems 55–57, p. 38.\n\n## Status review\n\n\n**Known cases:** The Lipschitz support-volume estimate implies qualitative superreflexivity, while the exact-q martingale characterization uses a stronger Sobolev-controlled approximation inequality. Qualitative Markov-type renorming and Banach-lattice q-plus-epsilon progress do not attain the specified exponent from this weaker hypothesis.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe Lipschitz support-volume estimate implies qualitative superreflexivity, while the exact-q martingale characterization uses a stronger Sobolev-controlled approximation inequality. Qualitative Markov-type renorming and Banach-lattice q-plus-epsilon progress do not attain the specified exponent from this weaker hypothesis.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked on 2026-10-24 against the original statement and definitions, the later author version, selected current primary theorems, official version histories, author publication listings, targeted Prove2Me searches, and all-status AIM/FURTHER comparisons. No matching full resolution or announcement was located. The review preserves the distinction between exact martingale cotype, weaker qualitative renorming, and the stronger Sobolev hypothesis. It covers selected primary passages and does not certify every cited proof or exhaust the literature.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-6403776313aba0f9**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"affine approximation\" \"martingale cotype\" \"Question\" 2026",
+    "\"affine approximation\" \"martingale cotype\" \"Question\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1612.09502v3",
+      "locator": "Theorem4 and Remark3, lines135–140",
+      "comparison": "The exact-q characterization assumes Sobolev W1q control, explicitly stronger than the target Lipschitz/support-volume premise. Qualitative Markov-type-to-superreflexivity announcements do not supply the exact exponent q.",
+      "inspected": "Actual indicated body passages"
+    }
+  ],
+  "rationale": "The exact-q characterization assumes Sobolev W1q control, explicitly stronger than the target Lipschitz/support-volume premise. Qualitative Markov-type-to-superreflexivity announcements do not supply the exact exponent q. No full matching resolution located in bounded current searches.",
+  "limitations": [
+    "Bounded search is not proof of continued openness; this review checks mathematical scope rather than certifying every cited proof."
+  ],
+  "announcement_routing": {
+    "localID": "905",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "martingale cotype",
+          "affine approximation",
+          "Markov type"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "martingale cotype",
+          "affine approximation",
+          "Markov type"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "martingale cotype",
+        "affine approximation",
+        "Markov type"
+      ],
+      "hits": [
+        {
+          "entry": "327",
+          "title": "Markov type characterizes superreflexivity",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Nontrivial-Markov-Type-Forces-Superreflexivity-September-23-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "OpenAI327 actual Theorem1.1 gives qualitative superreflexivity from nontrivial Markov type, with no specified power q for the renorming. Target asks the SAME martingale-cotype exponent q from a different affine-approximation premise. The theorem does not assert that quantitative endpoint.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.702Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

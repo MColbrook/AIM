@@ -1,0 +1,81 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "533",
+  "manifest_index": 415,
+  "original_target": {
+    "id": "533",
+    "title": "The Eisenbud-Goto regularity bound for smooth complex projective varieties",
+    "area": "Algebraic geometry and syzygies",
+    "file": "problems/533-the-eisenbud-goto-regularity-bound-for-smooth-complex-projective-varieties.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-bc9107527674d480",
+    "group": "geometry-topology",
+    "source_sha256": "61738077a9d89dd08f1f5eaa8d6a9d427ed02d7dbea1aad657477f4cc5663d86",
+    "statement_sha256": "e2b7c3f825d71e9dc7761167be445b6fefd59c908b23f1f5caa38ed03adbb574",
+    "state": "unreviewed"
+  },
+  "source_sha256": "61738077a9d89dd08f1f5eaa8d6a9d427ed02d7dbea1aad657477f4cc5663d86",
+  "statement_sha256": "e2b7c3f825d71e9dc7761167be445b6fefd59c908b23f1f5caa38ed03adbb574",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:36.107801+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Theorem A in 2601.16103 requires a 2-very-ample projectively normal embedding and specified mild singularities; smoothness alone does not supply projective normality. The October paper explicitly retains the smooth Eisenbud–Goto question and treats secant loci/linear syzygies and singular examples. Ideal-sheaf versus structure-sheaf regularity has been distinguished.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2601.16103v2",
+      "locator": "Theorem A; current v2, 9 February 2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2610.12078v1",
+      "locator": "Introduction after the secant problem; v1, 8 October 2026",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Eisenbud-Goto\" \"smooth\" 2026 proof",
+    "\"Eisenbud-Goto\" smooth proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Eisenbud-Goto\" \"smooth\" \"2026\" announcement"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Eisenbud",
+        "Goto"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Eisenbud",
+        "Goto"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00384v1",
+          "title": "A counterexample to the Eisenbud–Mazur conjecture"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

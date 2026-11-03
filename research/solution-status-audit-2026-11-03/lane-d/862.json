@@ -1,0 +1,182 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "862",
+  "manifest_index": 706,
+  "checked_date": "2026-11-03",
+  "source_sha256": "7a978487d8c969335c589f04db883a0cd135a0915175decf6c3740fae749aa50",
+  "statement_sha256": "25d25ac65a5a77606cb0f4208f32fff4bc6c5427c35ed81cc9bbf9d97a137a4c",
+  "original_target": {
+    "id": "862",
+    "title": "A three-condition criterion for extremal toric Poincaré metrics",
+    "area": "Kähler geometry and geometric analysis",
+    "file": "problems/862-a-three-condition-criterion-for-extremal-toric-poincare-metrics.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f0a8502fe113b9f4",
+    "group": "geometry-topology",
+    "source_sha256": "7a978487d8c969335c589f04db883a0cd135a0915175decf6c3740fae749aa50",
+    "statement_sha256": "25d25ac65a5a77606cb0f4208f32fff4bc6c5427c35ed81cc9bbf9d97a137a4c",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`(X,L)`$ be a smooth compact polarized toric variety with labelled Delzant momentum polytope $`\\Delta`$. A torus-invariant divisor $`Z`$ corresponds to selected facets $`F=\\bigcup_i F_i`$.\n\nFor any induced labelled polytope pair $`(P,G)`$, define its extremal affine function $`s_{(P,G)}`$ by requiring\n```math\n\\mathcal L_{(P,G)}(h)=\n\\int_{\\partial P\\setminus G}h\\,d\\nu\n-\\frac12\\int_P h s_{(P,G)}\\,d\\mu\n```\n\nto vanish for every affine $`h`$. Call the pair stable if $`\\mathcal L_{(P,G)}(h)>0`$ for every convex piecewise-affine $`h`$ that is not affine. Here $`d\\mu`$ is lattice Lebesgue measure and $`d\\nu`$ is the facet measure determined by the primitive labels, as in the source.\n\nPut $`G_i=F_i\\cap\\bigcup_{j\\ne i}F_j`$. Assume:\n\n1. $`(\\Delta,F)`$ is stable.\n2. Every $`(F_i,G_i)`$ is stable, using its induced labels and measures.\n3. On each selected facet,\n   ```math\ns_{(F_i,G_i)}-s_{(\\Delta,F)}|_{F_i}=c_i>0\n```\n\n   for a constant $`c_i`$.\n\nMust $`X\\setminus Z`$ admit a torus-invariant extremal Kähler metric of Poincaré type in $`c_1(L)`$?\n\nUse Definition 1.1 of the source for Poincaré type: near a divisor chart $`Z=\\{z_1\\cdots z_k=0\\}`$, the metric is quasi-isometric to\n```math\n\\sqrt{-1}\\left(\\sum_{j=1}^k\n\\frac{dz_j\\wedge d\\bar z_j}{|z_j|^2(\\log|z_j|)^2}\n+\\sum_{j=k+1}^n dz_j\\wedge d\\bar z_j\\right).\n```\n\nIt has a potential relative to a smooth form in the class, with logarithm-of-logarithm growth and all derivatives of its differential bounded in the model metric. Extremal means that the $`(1,0)`$ gradient of scalar curvature is holomorphic.",
+  "full_original_page": "# 862. A three-condition criterion for extremal toric Poincaré metrics\n\n**Area:** Kähler geometry and geometric analysis\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`(X,L)`$ be a smooth compact polarized toric variety with labelled Delzant momentum polytope $`\\Delta`$. A torus-invariant divisor $`Z`$ corresponds to selected facets $`F=\\bigcup_i F_i`$.\n\nFor any induced labelled polytope pair $`(P,G)`$, define its extremal affine function $`s_{(P,G)}`$ by requiring\n```math\n\\mathcal L_{(P,G)}(h)=\n\\int_{\\partial P\\setminus G}h\\,d\\nu\n-\\frac12\\int_P h s_{(P,G)}\\,d\\mu\n```\n\nto vanish for every affine $`h`$. Call the pair stable if $`\\mathcal L_{(P,G)}(h)>0`$ for every convex piecewise-affine $`h`$ that is not affine. Here $`d\\mu`$ is lattice Lebesgue measure and $`d\\nu`$ is the facet measure determined by the primitive labels, as in the source.\n\nPut $`G_i=F_i\\cap\\bigcup_{j\\ne i}F_j`$. Assume:\n\n1. $`(\\Delta,F)`$ is stable.\n2. Every $`(F_i,G_i)`$ is stable, using its induced labels and measures.\n3. On each selected facet,\n   ```math\ns_{(F_i,G_i)}-s_{(\\Delta,F)}|_{F_i}=c_i>0\n```\n\n   for a constant $`c_i`$.\n\nMust $`X\\setminus Z`$ admit a torus-invariant extremal Kähler metric of Poincaré type in $`c_1(L)`$?\n\nUse Definition 1.1 of the source for Poincaré type: near a divisor chart $`Z=\\{z_1\\cdots z_k=0\\}`$, the metric is quasi-isometric to\n```math\n\\sqrt{-1}\\left(\\sum_{j=1}^k\n\\frac{dz_j\\wedge d\\bar z_j}{|z_j|^2(\\log|z_j|)^2}\n+\\sum_{j=k+1}^n dz_j\\wedge d\\bar z_j\\right).\n```\n\nIt has a potential relative to a smooth form in the class, with logarithm-of-logarithm growth and all derivatives of its differential bounded in the model metric. Extremal means that the $`(1,0)`$ gradient of scalar curvature is holomorphic.\n\n## Application\n\nThe criterion would turn a geometric existence problem on a noncompact manifold with cusp ends into explicit stability tests on its momentum polytope and facets.\n\n## References\n\n1. V. Apostolov, H. Auvray and L. M. Sektnan, [*Extremal Kähler Poincaré type metrics on toric varieties*](https://arxiv.org/html/1711.08424), Definitions 1.1 and 3.1, Conjecture 4.12, Eq.(41), and Remark 4.13; *Journal of Geometric Analysis* **31** (2021), 1223–1290. [DOI](https://doi.org/10.1007/s12220-019-00263-7).\n2. Y. Xu, [*The uniqueness of Poincaré type extremal Kähler metric*](https://arxiv.org/html/2504.08203), Theorem 1.1 (2025).\n3. X. Chen and Y. Xu, [*Poincaré type J-equation*](https://arxiv.org/html/2605.01179), Theorem 1.1 (2026).\n\n## Status review\n\n\n**Known cases:** Hirzebruch-surface constructions establish cases, while Donaldson metrics can have different asymptotics. The Poincare extremal uniqueness theorem and J-equation solvability do not prove existence from all three stated stability and boundary-affine conditions.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nHirzebruch-surface constructions establish cases, while Donaldson metrics can have different asymptotics. The Poincare extremal uniqueness theorem and J-equation solvability do not prove existence from all three stated stability and boundary-affine conditions.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe original paper proves special cases including Hirzebruch surfaces. Its complete Donaldson metrics need not have Poincaré asymptotics. Recent uniqueness and J-equation theorems do not prove this existence criterion. Only sufficiency is asked; necessity at general divisor crossings is separate.\n\nThe [coordinating review](../FURTHER_problems/_tracking/focused-C206-toric-and-Reznikov-two-precise-gates-C-20261028/ROOT-INDEPENDENT-THREE-MODEL-PRIMARY-CURRENT-AND-DUPLICATE-FINAL-REVIEW.json) records exact signs, normalization, independent model review, current searches and semantic duplicate checks. The official preprint supplies the statement; complete published-edition parity was not established. No matching general resolution or complete announcement was located.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f0a8502fe113b9f4**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"Poincare\" \"toric\" \"Conjecture 4.12\" solution",
+    "\"extremal\" \"toric\" \"Poincare\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:hexagonmath.org OR site:palomar-registry.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1711.08424",
+      "locator": "Conjecture4.12, Corollary5.12",
+      "inspection": "Primary exact three-condition sufficiency question read. Hirzebruch/CP1xCP1 corollary covers special toric surfaces. Existence of complete Donaldson metrics permits non-Poincare asymptotics, and uniqueness/J-equation theorems do not supply this extremal existence."
+    }
+  ],
+  "scope_comparison": "Primary exact three-condition sufficiency question read. Hirzebruch/CP1xCP1 corollary covers special toric surfaces. Existence of complete Donaldson metrics permits non-Poincare asymptotics, and uniqueness/J-equation theorems do not supply this extremal existence.",
+  "rationale": "No complete matching resolution identified in bounded indexed searches. Required direct announcement coverage pending; not certified open.",
+  "source_gaps": [
+    "2025 uniqueness and2026 J-equation actual theorem bodies pending."
+  ],
+  "announcement_routing": {
+    "localID": "862",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Poincare",
+          "Poincaré",
+          "toric"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-11-01-000014",
+            "title": "Dimension-free KLS Poincare bound for isotropic log-concave densities (smooth compactly supported tests)",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-11-01-000014-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-11-01-000009",
+            "title": "A formal proof of an affine reverse Faber-Krahn inequality",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-11-01-000009-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-30-000012",
+            "title": "Uniform attachment with freezing: Scaling limits — Lean formalization",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-30-000012-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-17-000014",
+            "title": "First Betti numbers of five-generated numerical semigroups",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000014-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-09-000001",
+            "title": "Ginibre Poincaré formalization",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-09-000001-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-07-000005",
+            "title": "Linear upper bounds for the first Betti number of four-generated numerical semigroups",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-07-000005-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Poincare",
+          "Poincaré",
+          "toric"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00676v1",
+            "title": "Existence of SRB measures for some Rössler systems",
+            "url": "https://hexagonmath.org/abs/2610.00676v1"
+          },
+          {
+            "id": "hexagon:2610.00718v1",
+            "title": "Beyond Small Balls: A Determinant Inequality for Functions of Matrix Gaussian Series",
+            "url": "https://hexagonmath.org/abs/2610.00718v1"
+          },
+          {
+            "id": "hexagon:2610.00620v1",
+            "title": "Positive definite functions of noncommuting contractions, Hua-Bellman matrices, and a new distance metric",
+            "url": "https://hexagonmath.org/abs/2610.00620v1"
+          },
+          {
+            "id": "hexagon:2610.00292v1",
+            "title": "A Probabilistic Proof of a Positivstellensatz of Baldi-Sinn-Telek-Weigert",
+            "url": "https://hexagonmath.org/abs/2610.00292v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Poincare",
+        "Poincaré",
+        "toric"
+      ],
+      "hits": [
+        {
+          "entry": "305",
+          "title": "Counterexamples to disk embedding and Wall's manifold conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-boundary-only-obstruction-to-four-dimensional-disk-embedding-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-marked-tensor-obstruction-to-four-dimensional-disk-embedding-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-PD4-group-without-an-aspherical-manifold-model-September-24-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target.",
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.057Z",
+      "previous_outcome": "hold",
+      "localID": "862",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "queries": [
+        "\"extremal\" \"Poincaré\" \"J-equation\" 2026 toric",
+        "\"Poincaré\" \"uniqueness\" 2025 extremal metrics"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2504.08203v1",
+          "version": "11 April 2025",
+          "locator": "primary abstract",
+          "inspection": "Xu proves uniqueness assuming existence and Aut_0(D) trivial; this supplies no existence implication from the three target conditions."
+        },
+        {
+          "url": "https://arxiv.org/abs/2605.01179v1",
+          "version": "2 May 2026",
+          "locator": "primary abstract",
+          "inspection": "Chen–Xu characterize the J-equation and prove boundedness below of K-energy under extra surface/divisor assumptions. This is not existence of the target extremal metric from its three conditions."
+        }
+      ],
+      "scope_comparison": "Explicit different conclusions exclude the two later comparators. Exact original Conjecture4.12 body was read. Generic OpenAI disk-embedding/Poincare-duality hit is unrelated topology. Bounded search found no full candidate."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

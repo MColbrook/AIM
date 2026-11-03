@@ -1,0 +1,80 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "524",
+  "manifest_index": 408,
+  "original_target": {
+    "id": "524",
+    "title": "Maximal motion-planning complexity from positive simplicial volume",
+    "area": "Applied topology and robot motion planning",
+    "file": "problems/524-positive-volume-motion-planning.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "103bdbb356f4b1cfa1321cf0e02458728bcbf39c98c4e49185047b4114e0652d",
+    "statement_sha256": "7108446df1d66bdfcf94224a9595065cc0be01028c807fd581335171d8f8fbc8",
+    "state": "unreviewed"
+  },
+  "source_sha256": "103bdbb356f4b1cfa1321cf0e02458728bcbf39c98c4e49185047b4114e0652d",
+  "statement_sha256": "7108446df1d66bdfcf94224a9595065cc0be01028c807fd581335171d8f8fbc8",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:35.817386+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Question 5.1(b) asks maximal unreduced TC=2n+1 for positive-simplicial-volume aspherical M. The local solution to question 5.1(a), concerning weight of one zero-divisor class on a product of genus-two surfaces, does not refute (b): Example 5.7 gives maximal TC=9 for that four-manifold.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2212.08962v2",
+      "locator": "Question 5.1(b), Example 5.7; v2, 17 December 2023",
+      "body_inspected": true
+    },
+    {
+      "url": "https://www.mas.ucy.ac.cy/cneofy01/publications/papers/TC_asphericity_connected_sum.pdf",
+      "locator": "Published question 5.1(b), printed page 12",
+      "body_inspected": true
+    },
+    {
+      "url": "research/solutions/525-positive-norm-tc-weight/paper/counterexample.tex",
+      "locator": "Main theorem, positive fundamental-class norm but low weight of a specific zero-divisor",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"positive simplicial volume\" \"topological complexity\" 2026",
+    "\"positive simplicial volume\" \"topological complexity\" proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"topological complexity\" \"simplicial volume\" \"solution\""
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "simplicial volume",
+        "topological complexity"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "simplicial volume",
+        "topological complexity"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

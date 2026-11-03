@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "232",
+  "manifest_index": 179,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "232",
+    "title": "Asymptotic stability of the phi-four kink without odd symmetry",
+    "area": "Nonlinear scalar fields",
+    "file": "problems/232-phi-four-general-kink-stability.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "33bad8e2ac5fbc479fd79169382b4a0309271a48740e454d5cd42b3ca0ff4de3",
+    "statement_sha256": "2f899e0a6374d7d546036adecb8131e6fd28e17cc8f2b0142813668851dc438a",
+    "state": "unreviewed"
+  },
+  "source_sha256": "33bad8e2ac5fbc479fd79169382b4a0309271a48740e454d5cd42b3ca0ff4de3",
+  "statement_sha256": "2f899e0a6374d7d546036adecb8131e6fd28e17cc8f2b0142813668851dc438a",
+  "actual_source_sha256": "33bad8e2ac5fbc479fd79169382b4a0309271a48740e454d5cd42b3ca0ff4de3",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`H(x)=\\tanh(x/\\sqrt2)`$ and consider $`\\phi_{tt}-\\phi_{xx}=\\phi-\\phi^3`$ on $`\\mathbb R_t\\times\\mathbb R_x`$. Does there exist $`\\varepsilon>0`$ such that every initial datum\n\n```math\n\\|\\phi(0)-H\\|_{H^1}+\\|\\phi_t(0)\\|_{L^2}<\\varepsilon\n```\n\nhas the following asymptotics? There exist $`c_\\infty\\in(-1,1)`$ and $`a\\in C^1([0,\\infty))`$ with $`a'(t)\\to c_\\infty`$ such that, writing $`H_c(y)=H(y/\\sqrt{1-c^2})`$, for every $`R>0`$,\n\n```math\n\\|\\phi(t,a(t)+\\cdot)-H_{c_\\infty}\\|_{H^1(-R,R)}+\\|\\phi_t(t,a(t)+\\cdot)+c_\\infty H'_{c_\\infty}\\|_{L^2(-R,R)}\\longrightarrow0.\n```\n\nNo parity condition is imposed on either perturbation. The derivative in the second term is the physical time derivative before shifting coordinates.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"phi4 kink\" asymptotic stability general 2026",
+    "\"phi4 kink\" asymptotic stability general (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"phi4 kink\" asymptotic stability general (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"phi^4\" \"asymptotic stability\" \"2026\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Theorem1, definition of E_H^odd and Section1.3 phi4 application",
+      "version_or_date": "arXiv2203.04143v1,8March2022; current searches3November2026 including2026conference primary program.",
+      "url": "https://arxiv.org/html/2203.04143",
+      "scope_comparison": "Theorem1 explicitly requires odd perturbations in the energy space. The target allows both arbitrary translation/Lorentz modulation and every small nonsymmetric energy datum. Recent sine-Gordon results, periodic snoidal orbital stability and deformed-potential claims do not prove this phi4 asymptotic statement. The2026author conference discussion retains the internal-mode challenge. No matching full claim was found.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Theorem1 explicitly requires odd perturbations in the energy space. The target allows both arbitrary translation/Lorentz modulation and every small nonsymmetric energy datum. Recent sine-Gordon results, periodic snoidal orbital stability and deformed-potential claims do not prove this phi4 asymptotic statement. The2026author conference discussion retains the internal-mode challenge. No matching full claim was found.",
+  "latest_version_check": "arXiv2203.04143v1,8March2022; current searches3November2026 including2026conference primary program.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

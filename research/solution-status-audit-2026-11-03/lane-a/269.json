@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "269",
+  "manifest_index": 213,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "269",
+    "title": "Rapid sampling of proper colorings at the ergodicity threshold",
+    "area": "Antiferromagnetic spin systems and constrained sampling",
+    "file": "problems/269-coloring-glauber-threshold.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "9b9a10a901df4da2b2db0886a0f8cce2655c43a405a95a45752ed2450cbbda7a",
+    "statement_sha256": "99bb312fb5f556503aa4f5bf40c4abfc3ac5a18d589b7bc194f1d1818653fcf9",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9b9a10a901df4da2b2db0886a0f8cce2655c43a405a95a45752ed2450cbbda7a",
+  "statement_sha256": "99bb312fb5f556503aa4f5bf40c4abfc3ac5a18d589b7bc194f1d1818653fcf9",
+  "actual_source_sha256": "9b9a10a901df4da2b2db0886a0f8cce2655c43a405a95a45752ed2450cbbda7a",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For each integer $`\\Delta\\ge2`$ and $`q\\ge\\Delta+2`$, consider any finite simple graph $`G`$ with $`n`$ vertices and maximum degree at most $`\\Delta`$. A step chooses a uniform vertex and replaces its color by a uniform color absent from its neighbors. Starting from any proper $`q`$-coloring, this heat-bath chain has the uniform proper-coloring law as its stationary distribution. Do there exist constants $`C_{\\Delta,q},a_{\\Delta,q}<\\infty`$ such that its worst-start total-variation mixing time to error $`\\varepsilon`$ is at most $`C_{\\Delta,q}n^{a_{\\Delta,q}}\\log(1/\\varepsilon)`$ for all $`G`$ and $`0<\\varepsilon<1/2`$?",
+  "full_local_page_read": true,
+  "queries": [
+    "\"colorings\" \"Delta+2\" mixing 2026",
+    "\"colorings\" \"Delta+2\" mixing (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"colorings\" \"Delta+2\" mixing (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "Chen–Liu's actual theorem requires girth>=5, sufficiently large degree depending on fixeddelta, and q>=(1+delta)Delta. Jain–Mizgerd–Vigoda similarly require girth>=7. Neither covers arbitrary graphs at q=Delta+2 for everyDelta; tree edge-colorings are different states. The claimed unpresented no-spanning4-cycle extension still would not cover all graphs. No full target announcement found.",
+      "locator": "Theorem1 and Theorem3; Section1.2 current obstruction; comparatorTheorem1.3",
+      "primary_body_access_gap": false,
+      "version_or_date": "arXiv2608.25491v1,26August2026; additional Jain–Mizgerd–Vigoda2604.11938v2,27August2026.",
+      "url": "https://arxiv.org/html/2608.25491"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Chen–Liu's actual theorem requires girth>=5, sufficiently large degree depending on fixeddelta, and q>=(1+delta)Delta. Jain–Mizgerd–Vigoda similarly require girth>=7. Neither covers arbitrary graphs at q=Delta+2 for everyDelta; tree edge-colorings are different states. The claimed unpresented no-spanning4-cycle extension still would not cover all graphs. No full target announcement found.",
+  "latest_version_check": "arXiv2608.25491v1,26August2026; additional Jain–Mizgerd–Vigoda2604.11938v2,27August2026.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

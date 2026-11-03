@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "679",
+  "manifest_index": 523,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "679",
+    "title": "The square-root factorial multiplier sequence",
+    "area": "Polynomial zero preservation and entire functions",
+    "file": "problems/679-the-square-root-factorial-multiplier-sequence.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-173f8d7899595d45",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "7b545e24ca54a6ac5b6e53a2d4ceec8b2451539248759a56dd3ced8dc1ca12d9",
+    "statement_sha256": "b4ffe83ad9ca0853d84af8898bd4ca9be10977afde5c4701c29103be2da9702c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "7b545e24ca54a6ac5b6e53a2d4ceec8b2451539248759a56dd3ced8dc1ca12d9",
+  "statement_sha256": "b4ffe83ad9ca0853d84af8898bd4ca9be10977afde5c4701c29103be2da9702c",
+  "actual_source_sha256": "7b545e24ca54a6ac5b6e53a2d4ceec8b2451539248759a56dd3ced8dc1ca12d9",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For every real polynomial $`p(x)=\\sum_{k=0}^m a_kx^k`$ with only real zeros, must\n\n```math\nTp(x)=\\sum_{k=0}^m\\frac{\\sqrt{k}}{k!}a_kx^k\n```\n\nhave only real zeros or be identically zero? The constant coefficient is annihilated: $`\\gamma_0=0`$, and $`\\gamma_k=\\sqrt{k}/k!`$ for $`k\\ge1`$.\n\nEquivalently, does the entire function\n\n```math\n\\Phi(z)=\\sum_{k=0}^{\\infty}\\frac{\\sqrt{k}}{(k!)^2}z^k\n```\n\nbelong to the Laguerre–Pólya class with nonnegative coefficients, meaning that it is a locally uniform limit of real polynomials whose zeros are all nonpositive? Another equivalent formulation asks whether every Jensen polynomial\n\n```math\nJ_n(x)=\\sum_{k=0}^n\\binom nk\\frac{\\sqrt{k}}{k!}x^k,\\qquad n\\ge1,\n```\n\nhas only real zeros. Zeros at the origin are allowed. These are equivalent formulations of one question.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"square root factorial\" \"multiplier sequence\" proof 2026",
+    "\"square root factorial\" \"multiplier sequence\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Problem39(a), PDFp16 lines2210–2215; §3.1",
+      "scope_comparison": "The primary body explicitly poses sqrt(k)/k! as Problem39(a). Nearby exp(±sqrt(k))/k! examples are different sequences. Zero exclusion in a half-plane permits nonreal zeros, and the recent profile theorem assumes real-rooted inputs. Focused coefficient/problem-number/author searches found no complete all-degree resolution.",
+      "version_or_date": "arXiv:1505.00355v2, 26 August 2015; current version history checked",
+      "url": "https://arxiv.org/pdf/1505.00355v2",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "no-match",
+  "recommended_status": "Open",
+  "rationale": "The primary body explicitly poses sqrt(k)/k! as Problem39(a). Nearby exp(±sqrt(k))/k! examples are different sequences. Zero exclusion in a half-plane permits nonreal zeros, and the recent profile theorem assumes real-rooted inputs. Focused coefficient/problem-number/author searches found no complete all-degree resolution.",
+  "latest_version_check": "arXiv:1505.00355v2, 26 August 2015; current version history checked",
+  "gap_retraction_check": "Final publisher-body parity remains unavailable; v2 exact original question read. No positive complete proof identified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

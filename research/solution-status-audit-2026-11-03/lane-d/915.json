@@ -1,0 +1,126 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "915",
+  "manifest_index": 759,
+  "checked_date": "2026-11-03",
+  "source_sha256": "6007bcb70c60ba7511fd4ec436df08ed38c17baad95e8df41d3bdf1184abf0cd",
+  "statement_sha256": "a161af0870fdf61c983b74730e261743bee87aaee5754fbd8e46d07e4a9b7167",
+  "original_target": {
+    "id": "915",
+    "title": "Polynomial endpoint Lorentz bounds for multilinear forms",
+    "area": "Functional analysis / multilinear coefficient inequalities",
+    "file": "problems/915-polynomial-endpoint-lorentz-bounds-for-multilinear-forms.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-970fc654af384048",
+    "group": "operators",
+    "source_sha256": "6007bcb70c60ba7511fd4ec436df08ed38c17baad95e8df41d3bdf1184abf0cd",
+    "statement_sha256": "a161af0870fdf61c983b74730e261743bee87aaee5754fbd8e46d07e4a9b7167",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For integers $`m,n\\ge1`$, let $`T:(\\mathbb C^n)^m\\to\\mathbb C`$ be a complex multilinear form, with\n```math\n\\|T\\|=\\sup_{\\|x^{(j)}\\|_\\infty\\le1,\\;1\\le j\\le m}\n|T(x^{(1)},\\ldots,x^{(m)})|.\n```\n\nArrange the $`n^m`$ numbers $`|T(e_{i_1},\\ldots,e_{i_m})|`$ in nonincreasing order as $`a_1^*,\\ldots,a_{n^m}^*`$, where $`e_i`$ are standard basis vectors. Put $`p_m=2m/(m+1)`$.\n\nDoes a constant $`\\delta>0`$, independent of $`m,n,T`$, exist such that\n```math\n\\sum_{k=1}^{n^m}a_k^*\n\\left(k^{1/p_m}-(k-1)^{1/p_m}\\right)\n\\le m^\\delta\\|T\\|\n```\nfor every $`m,n,T`$? The left side uses the published endpoint Lorentz norm. Its degree-one optimal constant is $`1`$.",
+  "full_original_page": "# 915. Polynomial endpoint Lorentz bounds for multilinear forms\n\n**Area:** Functional analysis / multilinear coefficient inequalities\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor integers $`m,n\\ge1`$, let $`T:(\\mathbb C^n)^m\\to\\mathbb C`$ be a complex multilinear form, with\n```math\n\\|T\\|=\\sup_{\\|x^{(j)}\\|_\\infty\\le1,\\;1\\le j\\le m}\n|T(x^{(1)},\\ldots,x^{(m)})|.\n```\n\nArrange the $`n^m`$ numbers $`|T(e_{i_1},\\ldots,e_{i_m})|`$ in nonincreasing order as $`a_1^*,\\ldots,a_{n^m}^*`$, where $`e_i`$ are standard basis vectors. Put $`p_m=2m/(m+1)`$.\n\nDoes a constant $`\\delta>0`$, independent of $`m,n,T`$, exist such that\n```math\n\\sum_{k=1}^{n^m}a_k^*\n\\left(k^{1/p_m}-(k-1)^{1/p_m}\\right)\n\\le m^\\delta\\|T\\|\n```\nfor every $`m,n,T`$? The left side uses the published endpoint Lorentz norm. Its degree-one optimal constant is $`1`$.\n\n## Application\n\nSuch bounds would strengthen dimension-free coefficient estimates used in high-dimensional holomorphic analysis and Dirichlet series.\n\n## References\n\n1. A. Defant and M. Mastyło, *Bohnenblust–Hille inequalities for Lorentz spaces via interpolation*, **Analysis & PDE 9** (2016), 1235–1258. Definitions (1),(2), p. 1236; Problem 1, p. 1237; Theorems 6 and 12. [DOI](https://doi.org/10.2140/apde.2016.9.1235); [published text](https://msp.org/apde/2016/9-5/apde-v9-n5-p07-p.pdf).\n2. D. M. Pellegrino and E. V. Teixeira, *Polynomial Growth of Complex Polynomial Bohnenblust–Hille Constants*, [arXiv:2608.16584v3](https://arxiv.org/abs/2608.16584v3), 28 September 2026. Equation (1.1) and Theorem A.\n\n## Status review\n\n\n**Known cases:** Polynomial growth for ordinary coefficient norms and subpolynomial bounds in larger Lorentz spaces do not control the endpoint Lorentz norm with second index one. Recent exact-contractivity results restricted to a fixed monomial support also have another scope.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nPolynomial growth for ordinary coefficient norms and subpolynomial bounds in larger Lorentz spaces do not control the endpoint Lorentz norm with second index one. Recent exact-contractivity results restricted to a fixed monomial support also have another scope.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe source proves a finite endpoint bound with exponential degree dependence. Its polynomial bounds in larger Lorentz spaces do not settle Problem 1. The recent polynomial result in [2] controls the ordinary coefficient norm, without endpoint Lorentz control. Bounded primary-literature and announcement checks found no exact complete resolution through the date above.\n\n## Duplicate check\n\nCompared with 1,703 all-status AIM/OpenAI entries, 898 local findings and 533 admitted pages. Boolean influence questions and existing Hardy–Dirichlet problems have different targets.\n\n## Review provenance\n\nAn independent reviewer and the coordinator checked the precise norm, quantifiers, partial results and current claims. This records a bounded status review; it does not certify the proofs of recent announcements.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-970fc654af384048**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Bohnenblust Hille\" \"endpoint\" \"Lorentz\" 2026",
+    "\"Bohnenblust Hille\" \"endpoint\" \"Lorentz\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2608.16584v3",
+      "locator": "Definitionequation1.1 and TheoremA, lines78–100",
+      "comparison": "D_m controls ordinary ell_(2m/(m+1)) coefficient norm of homogeneous polynomials, not the stronger Lorentz endpoint second-index-one norm of all multilinear forms. Fresh Hardy-Littlewood and local-qudit results likewise specify other norms/operator classes."
+    }
+  ],
+  "rationale": "D_m controls ordinary ell_(2m/(m+1)) coefficient norm of homogeneous polynomials, not the stronger Lorentz endpoint second-index-one norm of all multilinear forms. Fresh Hardy-Littlewood and local-qudit results likewise specify other norms/operator classes. No full matching claim found in bounded searches.",
+  "limitations": [
+    "Bounded negative search does not prove openness."
+  ],
+  "announcement_routing": {
+    "localID": "915",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Bohnenblust",
+          "Lorentz",
+          "Mastylo"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-29-000002",
+            "title": "Self-similar counterexamples to three conjectures of Lorentz",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-29-000002-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-14-000009",
+            "title": "Selection of the electromagnetic source tensor by covariance, conservation and the exchange law",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-14-000009-v2.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000020",
+            "title": "The augmented Descartes theorem in every dimension, its converses, and Soddy's two spheres",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000020-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-14-000008",
+            "title": "Möbius invariance of the Ramsey property for finite spherical sets",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-14-000008-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-30-000035",
+            "title": "Metric–Pfaffian Stabilizers and Fixed-Hodge Field Recovery",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000035-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-11-000002",
+            "title": "The Kolmogorov-Arnold representation theorem",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-11-000002-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Bohnenblust",
+          "Lorentz",
+          "Mastylo"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00538v1",
+            "title": "Nonlinear Wave Limits of Reversible Finite-State Cellular Automata",
+            "url": "https://hexagonmath.org/abs/2610.00538v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Bohnenblust",
+        "Lorentz",
+        "Mastylo"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "These Lorentz-named hits concern Lorentzian physics or approximation-theory Lorentz conjectures, not the endpoint Lorentz sequence norm of arbitrary multilinear coefficients. Spherical/Ramsey/Descartes and cellular-automata hits are different models.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.710Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

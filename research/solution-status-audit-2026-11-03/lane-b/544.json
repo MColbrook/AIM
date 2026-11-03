@@ -1,0 +1,80 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "544",
+  "manifest_index": 423,
+  "original_target": {
+    "id": "544",
+    "title": "Bounded weakening for constrained invertibility",
+    "area": "Applied topology and structured linear algebra",
+    "file": "problems/544-constrained-invertibility-bounded-weakening.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "eecb8dac7b023298ef1f6a1bf98decc4a65dce360974c19470d2c89d788f9668",
+    "statement_sha256": "f2eb71d413800c7364931ed056ea35afd926a52e577295bb67feca7adfbe107c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "eecb8dac7b023298ef1f6a1bf98decc4a65dce360974c19470d2c89d788f9668",
+  "statement_sha256": "f2eb71d413800c7364931ed056ea35afd926a52e577295bb67feca7adfbe107c",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:46:33.316892+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Published Conjecture 6.10 retains the uniform odd-c weakening target. The new pruning-versus-bottleneck comparison has factor 2r-1 depending on pointwise dimension, not a uniform interleaving/matching or original graph-distance bound. March 2026 author slides still distinguish conjectural uniformity from size-dependent progress.",
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09695-w",
+      "locator": "Definitions 6.6/6.9, Conjecture 6.10 and Theorem 6.14",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2602.15243v1",
+      "locator": "Theorem 1.1; v1, 16 February 2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://sites.math.duke.edu/~ezra/Talks/distances.pdf",
+      "locator": "24–27 March 2026 slides, uniform weakening conjecture",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"constrained invertibility\" \"weakening\" 2026",
+    "\"constrained invertibility\" \"conjecture\" solution (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"bounded weakening\" \"constrained invertibility\" proof"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "constrained invertibility",
+        "bounded weakening"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "constrained invertibility",
+        "bounded weakening"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

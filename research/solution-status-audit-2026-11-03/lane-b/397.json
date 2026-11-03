@@ -1,0 +1,71 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 324,
+  "source_sha256": "bb4811796d1fa69c02deda15ecf95c9703b1ef6a0a3c5e2f4bcf042bec896232",
+  "statement_sha256": "ed991dc7e668992c0f40958bbed66f13ffc9acd2df33a19713adf5f1b604196d",
+  "original_target": {
+    "id": "397",
+    "title": "Can one Dirichlet spectrum determine a Caputo potential?",
+    "area": "Inverse problems; fractional differential equations",
+    "file": "problems/397-can-one-dirichlet-spectrum-determine-a-caputo-potential.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-dde636e3c888aba7",
+    "group": "inverse3",
+    "source_sha256": "bb4811796d1fa69c02deda15ecf95c9703b1ef6a0a3c5e2f4bcf042bec896232",
+    "statement_sha256": "ed991dc7e668992c0f40958bbed66f13ffc9acd2df33a19713adf5f1b604196d",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "397",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Caputo\" \"single spectrum\" uniqueness 2026",
+    "\"Caputo\" \"single spectrum\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Caputo\" \"inverse\" \"one spectrum\" uniqueness",
+    "\"fractional\" \"single-spectrum\" uniqueness potential 2026",
+    "\"Caputo\" \"potential\" \"spectrum\" uniqueness 2026 site:arxiv.org",
+    "\"Caputo\" potential uniqueness \"norming\" 2025 inverse",
+    "\"Jin\" \"Rundell\" \"single spectrum\" proof uniqueness",
+    "\"Caputo\" \"one spectrum\" (site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Caputo\" \"inverse Sturm\" 2026 potential uniqueness",
+    "\"variable-order\" \"Sturm-Liouville\" \"norming\" inverse 2025"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1204.2475v1",
+      "version": "v1 11April2012 publiccopydated29May2018",
+      "locators": "Section4(c), PDFp13; AppendixA equation8",
+      "body_inspected": true,
+      "scope": "Exact Caputo realization, single-spectrum uniqueness expressly a conjecture after numerical reconstruction; Volterra normalization matches target."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1501.00251v1",
+      "version": "v1 2015",
+      "locators": "Section4.1 PDFp18",
+      "body_inspected": true,
+      "scope": "Theoretical single Dirichlet spectrum uniqueness remains to be established."
+    },
+    {
+      "url": "https://files.ele-math.com/articles/fdc-15-20.pdf",
+      "version": "FractionalDifferentialCalculus15(2025)",
+      "locators": "Section7.2 Theorem4, printedp355",
+      "body_inspected": true,
+      "scope": "Inverse theorem assumes eigenvalues together with norming constants for variable-order Caputo/RiemannLiouville mix; not one-spectrum target."
+    },
+    {
+      "url": "https://oaktrust.library.tamu.edu/bitstreams/9478fe49-9bd4-45b8-81f4-7447c39f5f76/download",
+      "version": "olderthesis search-visibleSection2.3.2",
+      "locators": "claim cites original2012Section4",
+      "body_inspected": false,
+      "scope": "Apparent proven-uniqueness sentence traces to original explicit conjecture, not additional theorem."
+    }
+  ],
+  "registry_checks": "No relevant Caputo alias in Palomar/Hexagon/OpenAI/Colbrook metadata; Palomar Caputo permanent inequality unrelated. Primary arXiv/publisher/author searches and Zenodo/HAL/GitHub focused queries.",
+  "scope_comparison": "Must match leftCaputoorder1<alpha<2, additive arbitrary real boundedq and full complex zeros with multiplicities, no normingdata/symmetry. Two-sided or conformable derivatives, time-fractional evolution with classical spatial operator, convolution operators order>2 differ.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. A secondary thesis claim cannot override its cited primary paper's explicitly conjectural statement."
+}

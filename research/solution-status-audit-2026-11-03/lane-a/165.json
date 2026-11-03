@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "165",
+  "manifest_index": 130,
+  "original_target": {
+    "id": "165",
+    "title": "A stationary isotropic gas of freely moving non-colliding disks",
+    "area": "Kinetic geometry and hard-particle systems",
+    "file": "problems/165-stationary-noncolliding-billiards.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "9f734a2650487bbe07521c6f45e2d1b303ca92d9b77daeaf5eadaeed9d14823d",
+    "statement_sha256": "b7a27abbc759d7594f487b7c519f0893f564cf0935d5c4cba0812247bda72419",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9f734a2650487bbe07521c6f45e2d1b303ca92d9b77daeaf5eadaeed9d14823d",
+  "statement_sha256": "b7a27abbc759d7594f487b7c519f0893f564cf0935d5c4cba0812247bda72419",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:34:39.679694+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2605.23575v2 Introduction explicitly retains even the weaker stationary ergodic question and separately isotropy; a constant velocity shift used in the deterministic lattice construction breaks rotational invariance. Thus its bounded distinct velocities do not supply all invariances and lower speed simultaneously in local random process.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2605.23575v2",
+      "locator": "Section1 ergodic and isotropic open problems; Section2 deterministic construction",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"non-colliding billiards\" solution isotropic",
+    "\"non-colliding billiards\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "non-colliding billiards",
+        "Shamov"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-09-11-000004",
+          "title": "All-ones polynomials over GF(2) under the substitution X ↦ X² + X + 1 (OEIS A071642, TheoremDB P12771)"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "non-colliding billiards",
+        "Shamov"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

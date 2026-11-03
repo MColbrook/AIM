@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "626",
+  "manifest_index": 487,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "626",
+    "title": "Polynomial-size nonobtuse tetrahedral meshes",
+    "area": "Numerical PDEs and computational geometry",
+    "file": "problems/626-polynomial-nonobtuse-tetrahedral-meshes.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "numerical-analysis",
+    "source_sha256": "60ec39e12c4845fcb1143e93df9bac28811833509a305debafe222efec42f95e",
+    "statement_sha256": "1d36bd26500fff6c0d8afbb89e1b942b1054de82f21d45d97f547e31e3b651c8",
+    "state": "unreviewed"
+  },
+  "source_sha256": "60ec39e12c4845fcb1143e93df9bac28811833509a305debafe222efec42f95e",
+  "statement_sha256": "1d36bd26500fff6c0d8afbb89e1b942b1054de82f21d45d97f547e31e3b651c8",
+  "actual_source_sha256": "60ec39e12c4845fcb1143e93df9bac28811833509a305debafe222efec42f95e",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`P\\subset\\mathbb R^3`$ be the closure of a bounded polyhedral domain with a finite polygonal boundary, and let $`n`$ be its boundary combinatorial complexity (vertices, edges and faces).\n\nDo universal constants $`C,k>0`$ exist such that every such $`P`$ admits a conforming tetrahedralization with at most $`Cn^k`$ tetrahedra, all of whose interior dihedral angles are at most $`\\pi/2`$?\n\nHere the tetrahedra have disjoint interiors and cover $`P`$; intersections are common faces, edges or vertices, and each input boundary face is a union of mesh triangles. Arbitrary additional vertices on the boundary and in the interior are allowed. The bound must be independent of geometric aspect ratios. The target is an element-count bound, without a prescribed polynomial-time construction.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"nonobtuse\" tetrahedral mesh \"polynomial\" size 2026",
+    "\"nonobtuse\" tetrahedral mesh \"polynomial\" size (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "version_or_date": "v1, 13 January 2026",
+      "url": "https://arxiv.org/html/2601.08304",
+      "scope_comparison": "A 4-ball tetrahedron with interior mid-sphere center has a face-to-face partition into24 path tetrahedra (boundary-center variant18). Arbitrary polyhedral domains do not have this special tangency geometry, so a polynomial bound independent of all aspect ratios is not established. General nonconforming dissections do not supply a conforming mesh.",
+      "locator": "Theorem 7 and Remark 8, lines 287–299"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "A 4-ball tetrahedron with interior mid-sphere center has a face-to-face partition into24 path tetrahedra (boundary-center variant18). Arbitrary polyhedral domains do not have this special tangency geometry, so a polynomial bound independent of all aspect ratios is not established. General nonconforming dissections do not supply a conforming mesh.",
+  "latest_version_check": "v1, 13 January 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

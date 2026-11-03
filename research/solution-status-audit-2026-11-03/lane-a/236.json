@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "236",
+  "manifest_index": 182,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "236",
+    "title": "The quadruple-bubble conjecture in three-dimensional space",
+    "area": "Soap films and interfacial energy",
+    "file": "problems/236-spatial-quadruple-bubble.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "diffusion-materials",
+    "source_sha256": "6c97a63a244adcdfde05444fb06103150bb8d116accb220c1b8cd4140aec5776",
+    "statement_sha256": "7218159f481e3ba08d6f5a75e6307dd6ffbf3278f69dc3d52e7e3882dfd46b97",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6c97a63a244adcdfde05444fb06103150bb8d116accb220c1b8cd4140aec5776",
+  "statement_sha256": "7218159f481e3ba08d6f5a75e6307dd6ffbf3278f69dc3d52e7e3882dfd46b97",
+  "actual_source_sha256": "6c97a63a244adcdfde05444fb06103150bb8d116accb220c1b8cd4140aec5776",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For four prescribed volumes $`v_1,\\ldots,v_4>0`$, minimize\n\n```math\nP(E_1,E_2,E_3,E_4)=\\frac12\\sum_{i=1}^5\\mathop{\\mathrm{Per}}\\nolimits(E_i),\\qquad E_5=\\mathbb R^3\\setminus\\bigcup_{i=1}^4E_i,\n```\n\nover pairwise disjoint measurable cells of finite perimeter with $`|E_i|=v_i`$ for $`i\\leq4`$. Perimeter is the total variation of the distributional derivative of the indicator; interfaces are thus counted once.\n\nProve or disprove that every minimizing cluster, up to null sets and Euclidean isometries, is a standard quadruple bubble. Define this family as follows: choose five unit vectors $`c_i\\in\\mathbb R^4`$ with $`c_i\\cdot c_j=-1/4`$ for $`i\\ne j`$, partition $`S^3`$ into cells $`C_i=\\{x:x\\cdot c_i\\geq x\\cdot c_j\\ \\forall j\\}`$, stereographically project from a point strictly inside $`C_5`$ to $`\\mathbb R^3`$, and apply a Euclidean similarity. Select members having the prescribed four finite volumes. The cells need not be connected in the competing class.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"quadruple bubble\" R3 conjecture 2026",
+    "\"quadruple bubble\" R3 conjecture (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"quadruple bubble\" R3 conjecture (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "scope_comparison": "The actual multi-bubble theorem covers k<=n for k2..5 on Euclidean/spherical spaces. Four finite bubbles in R3 have k=n+1 and five total cells including exterior. The current final2026primary discussion explicitly excludes this maximal case. Gaussian complete results and four bubbles in R4 do not match. No later exact announcement found.",
+      "locator": "Section4 Partial answers,Section9 problem1",
+      "version_or_date": "arXiv2510.07078v1,8October2025; final ICM2026 chapter doi10.1137/25M1804224.",
+      "url": "https://arxiv.org/html/2510.07078v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The actual multi-bubble theorem covers k<=n for k2..5 on Euclidean/spherical spaces. Four finite bubbles in R3 have k=n+1 and five total cells including exterior. The current final2026primary discussion explicitly excludes this maximal case. Gaussian complete results and four bubbles in R4 do not match. No later exact announcement found.",
+  "latest_version_check": "arXiv2510.07078v1,8October2025; final ICM2026 chapter doi10.1137/25M1804224.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

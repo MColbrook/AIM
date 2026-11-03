@@ -1,0 +1,118 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "881",
+  "manifest_index": 725,
+  "checked_date": "2026-11-03",
+  "source_sha256": "4d358f6a08ae7f83763fe1b51e355d56e42d8888fb0bfcb39d427ab2bf2060e1",
+  "statement_sha256": "7a53277f94f0d8c96403a62b83549f165c8fa6863c557776e83b8a1b55456ff2",
+  "original_target": {
+    "id": "881",
+    "title": "Uniqueness of the simply connected static three-dimensional hemisphere",
+    "area": "Mathematical relativity / geometric analysis",
+    "file": "problems/881-uniqueness-of-the-simply-connected-static-three-dimensional-hemisphere.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b748cc5fb227462e",
+    "group": "mathematical-relativity",
+    "source_sha256": "4d358f6a08ae7f83763fe1b51e355d56e42d8888fb0bfcb39d427ab2bf2060e1",
+    "statement_sha256": "7a53277f94f0d8c96403a62b83549f165c8fa6863c557776e83b8a1b55456ff2",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`M`$ be a compact, connected, simply connected smooth three-manifold with nonempty connected boundary. Suppose $`g`$ is a smooth Riemannian metric and $`f\\in C^\\infty(M)`$ satisfies\n\n```math\nR_g=6,\\qquad\n\\nabla_g^2f=f(\\mathrm{Ric}_g-3g),\\qquad\nf>0\\text{ in }\\mathrm{int}M,\\qquad\nf^{-1}(0)=\\partial M,\\qquad \\max_M f=1.\n```\n\nMust there be an isometry $`F:(M,g)\\to(\\mathbb S^3_+,g_{\\mathrm{round}})`$ with $`f=x_4\\circ F`$, where $`\\mathbb S^3_+=\\{x\\in\\mathbb S^3:x_4\\ge0\\}`$ has unit sectional curvature?\n\nNo Ricci-curvature, boundary-area, surface-gravity or local-conformal-flatness assumption is imposed. The dimension, simple connectedness and connected boundary are essential parts of the question.",
+  "full_original_page": "# 881. Uniqueness of the simply connected static three-dimensional hemisphere\n\n**Area:** Mathematical relativity / geometric analysis\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`M`$ be a compact, connected, simply connected smooth three-manifold with nonempty connected boundary. Suppose $`g`$ is a smooth Riemannian metric and $`f\\in C^\\infty(M)`$ satisfies\n\n```math\nR_g=6,\\qquad\n\\nabla_g^2f=f(\\mathrm{Ric}_g-3g),\\qquad\nf>0\\text{ in }\\mathrm{int}M,\\qquad\nf^{-1}(0)=\\partial M,\\qquad \\max_M f=1.\n```\n\nMust there be an isometry $`F:(M,g)\\to(\\mathbb S^3_+,g_{\\mathrm{round}})`$ with $`f=x_4\\circ F`$, where $`\\mathbb S^3_+=\\{x\\in\\mathbb S^3:x_4\\ge0\\}`$ has unit sectional curvature?\n\nNo Ricci-curvature, boundary-area, surface-gravity or local-conformal-flatness assumption is imposed. The dimension, simple connectedness and connected boundary are essential parts of the question.\n\n## Application\n\nThe interior metric $`-f^2dt^2+g`$ is a static vacuum spacetime with positive cosmological constant. This asks whether a smooth simply connected three-dimensional static region with a single horizon must have the de Sitter geometry.\n\n## References\n\n1. L. Ambrozio, *On static three-manifolds with positive scalar curvature*, Journal of Differential Geometry **107** (2017),1–45. The eligible manuscript explicitly asks the question on p.3 following Remark3; p.2 defines static triples. [DOI](https://doi.org/10.4310/jdg/1505268028), [eligible manuscript](https://arxiv.org/abs/1503.03803v1), [institutional accepted copy](https://wrap.warwick.ac.uk/128729/7/WRAP-on-static-three-manifolds-positive-scalar-curvature-Ambrozio-2015.pdf).\n2. A. Carlotto, *The general relativistic constraint equations*, Living Reviews in Relativity **24** (2021),article2, AppendixD. [Survey](https://doi.org/10.1007/s41114-020-00030-z).\n3. L. Branca, P. Mastrolia and M. Rigoli, *Some geometric properties of generalized $`\\varphi`$-vacuum static spaces*, Calculus of Variations and Partial Differential Equations **65** (2026),163. Theorem1.4 and its following specialization retain an additional boundary-gradient constraint. [Published article](https://doi.org/10.1007/s00526-026-03337-x).\n\n## Status review\n\n\n**Known cases:** The known hemisphere results require a curvature, surface-gravity or boundary-gradient bound. Recent boundary-static Robin or quasi-Einstein results change the equation or exclude the static parameter. Nariai quotients fail simple connectedness; higher-dimensional counterexamples do not address dimension three.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe known hemisphere results require a curvature, surface-gravity or boundary-gradient bound. Recent boundary-static Robin or quasi-Einstein results change the equation or exclude the static parameter. Nariai quotients fail simple connectedness; higher-dimensional counterexamples do not address dimension three.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\n**Literature check: 17 October2026.** The exact simply connected three-dimensional question is explicit in Ambrozio's manuscript. Known results impose further geometric conditions. Current generalized-static results retain an additional boundary-gradient upper bound. The June2026 Part I theorem and the served August2026 monograph specialize it to $`|\\nabla f|^2\\le1`$ in this normalization. The 2026 quasi-Einstein hemisphere classification assumes a parameter strictly greater than one; the static case is the excluded value one.\n\nWithout simple connectedness, a quotient of the Nariai cylinder supplies a connected-boundary example different from the hemisphere. Higher-dimensional simply connected counterexamples do not settle the three-dimensional question. Recent results on static potentials with Robin boundary conditions study a different boundary system.\n\nThe 2017 final published body has not been accessed; the available institutional accepted manuscript and latest eligible preprint were compared with current primary statements. An independent selected-primary audit has passed. The all-status catalogue comparison found no matching alias among its186cachedlistingpages; its scope is recorded in the review packet. The 2026 Calculus of Variations article has a factor discrepancy between its literal boundary display and following specialization; the review packet preserves it. The precise formulation and current theorem comparisons passed review.\n\n[Owner review](../FURTHER_problems/_tracking/parallel/complex-bayesian/static-hemisphere-review.json), [independent audit](../FURTHER_problems/_tracking/parallel/continuum/cross-static-hemisphere-review.json), [duplicate comparison](../FURTHER_problems/_tracking/parallel/complex-bayesian/static-hemisphere-duplicate-snapshot.json), [catalogue comparison](../FURTHER_problems/_tracking/parallel/complex-bayesian/static-hemisphere-prove2-0155-review.json) and [coordinator review](../FURTHER_problems/_tracking/static-hemisphere-coordinator-review-2026-10-17.json) preserve version, access and formula caveats.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-b748cc5fb227462e**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"static three manifolds\" \"simply connected\" \"hemisphere\" 2026",
+    "\"static\" \"hemisphere\" \"simply connected\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Rigidity of compact quasi-Einstein manifolds with boundary\" arxiv"
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2401.16929",
+      "locator": "Theorem1, Theorem2 and Corollary1",
+      "inspection": "Fresh quasi-Einstein candidate inspected: 3D classification Corollary1 explicitly requires m>1, excludes static m=1 despite discussion of m=1 in setup. Original Ambrozio question and TheoremD read; TheoremD adds boundary area>=4pi/3. 2026 generalized-static boundary-gradient theorem remains to inspect."
+    },
+    {
+      "url": "https://arxiv.org/html/1503.03803v1",
+      "locator": "Question after Remark3; TheoremD",
+      "inspection": "Exact simply connected static hemisphere question retained; boundary-area theorem is conditional."
+    }
+  ],
+  "scope_comparison": "Fresh quasi-Einstein candidate inspected: 3D classification Corollary1 explicitly requires m>1, excludes static m=1 despite discussion of m=1 in setup. Original Ambrozio question and TheoremD read; TheoremD adds boundary area>=4pi/3. 2026 generalized-static boundary-gradient theorem remains to inspect.",
+  "rationale": "No full matching resolution identified in bounded searches; exact remaining theorem-body comparisons recorded explicitly.",
+  "source_gaps": [
+    "Specific pending source-body comparisons described above.",
+    "Snapshot routing pending this batch."
+  ],
+  "announcement_routing": {
+    "localID": "881",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "static hemisphere",
+          "static three-manifold",
+          "quasi-Einstein"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "static hemisphere",
+          "static three-manifold",
+          "quasi-Einstein"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "static hemisphere",
+        "static three-manifold",
+        "quasi-Einstein"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:48:36.126Z",
+      "previous_outcome": "hold",
+      "localID": "881",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "queries": [
+        "\"Some geometric properties of generalized\" \"vacuum static\" Branca"
+      ],
+      "sources": [
+        {
+          "url": "https://inspirehep.net/files/7e242d3ec264ef3c60681d16b7abe7dc",
+          "version": "published13April2026, Calc.Var65:163 DOI10.1007/s00526-026-03337-x",
+          "locator": "Theorem1.4 equations(1.14)–(1.17), pp4–5; §4 proof",
+          "inspection": "Hemisphere rigidity requires three extra inequalities, including explicit boundary gradient bound(1.17). The target normalization max f=1 does not include this surface-gravity bound. The authors describe prior no-hair results as requiring further hypotheses."
+        }
+      ],
+      "scope_comparison": "Actual published theorem and its boundary-gradient condition now read. A simply connected static three-manifold alone is not the stated theorem. Earlier m>1 quasi-Einstein comparator excluded static m=1. Hold resolved."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

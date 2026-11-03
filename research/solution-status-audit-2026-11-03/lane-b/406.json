@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 329,
+  "source_sha256": "f13e0584bd85c204475f0715b5dfc84f3fd49ebc2431758c4f4f82519081ab23",
+  "statement_sha256": "eec471bdf6ada9f72d3703bc295503960e4399ce682b420f0596be69db31a150",
+  "original_target": {
+    "id": "406",
+    "title": "Stationarity of Lipschitz weak solutions of the minimal-surface system",
+    "area": "Nonlinear elliptic PDE systems / surface energy",
+    "file": "problems/406-lawson-osserman-stationarity.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "continuum2",
+    "source_sha256": "f13e0584bd85c204475f0715b5dfc84f3fd49ebc2431758c4f4f82519081ab23",
+    "statement_sha256": "eec471bdf6ada9f72d3703bc295503960e4399ce682b420f0596be69db31a150",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "406",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Lawson Osserman\" \"stationarity\" 2026 Lipschitz",
+    "\"Lawson Osserman\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) stationarity"
+  ],
+  "sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00222-026-01442-4",
+      "version": "InventMath published14August2026",
+      "locators": "Theorem1.1, Remarks1.2,1.5",
+      "body_inspected": true,
+      "scope": "Outer-critical Lipschitz maps from2Ddomain smooth; higherdimensionaloutercriticalmaps explicitly unresolved."
+    },
+    {
+      "url": "https://arxiv.org/html/2604.04336v1",
+      "version": "v1 6April2026; latestabsconfirmed",
+      "locators": "Theorem1.7, condition1.4 and Corollary5.2",
+      "body_inspected": true,
+      "scope": "Requires productsof singularvalues <=1/(rank−1)^2 almosteverywhere."
+    },
+    {
+      "url": "https://arxiv.org/html/2407.11903",
+      "version": "Mooneysurvey currentHTML",
+      "locators": "Remark3.2 equations7–8",
+      "body_inspected": true,
+      "scope": "Exact outer-to-inner implication remains beyondknown2Dcase."
+    }
+  ],
+  "registry_checks": "No minimalgraph/LawsonOsserman matchingalias Palomar/Hexagon/OpenAI/Colbrook caches; LawsonmatchesGromovLawsondifferent. Current arXiv, author/publisher, Zenodo, HAL, GitHub focused searches.",
+  "scope_comparison": "Target alln>=3,m>=2 Lipschitzweakoutercriticalmaps, no slope/two-dilationbound. 2Dregularity and calibrationwithquantitativesingularvaluebounddonotcover.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

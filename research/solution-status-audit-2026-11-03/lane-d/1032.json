@@ -1,0 +1,123 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1032",
+  "manifest_index": 876,
+  "checked_date": "2026-11-03",
+  "source_sha256": "92baa1e7415fe750927e8457e2f7c346127d902779209bb6f8a70ab70f393574",
+  "statement_sha256": "fc36900fe6b2b675cfa085cfa3b415693617a55b599268125f9b85ac3c0bdd93",
+  "original_target": {
+    "id": "1032",
+    "title": "The spectral tree for high-order Heun operators",
+    "area": "Spectral asymptotics of differential operators and planar potential theory",
+    "file": "problems/1032-the-spectral-tree-for-high-order-heun-operators.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f2efae695b2822f4",
+    "group": "spectral",
+    "source_sha256": "92baa1e7415fe750927e8457e2f7c346127d902779209bb6f8a70ab70f393574",
+    "statement_sha256": "fc36900fe6b2b675cfa085cfa3b415693617a55b599268125f9b85ac3c0bdd93",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`k\\geq3`$ and\n\n```math\n\\mathfrak d=\\sum_{i=1}^{k}Q_i(z)\\frac{d^i}{dz^i},\n\\qquad \\deg Q_i\\leq i+1,\\quad\\deg Q_k=k+1.\n```\n\nAssume the $`k+1`$ roots of $`Q_k`$ are simple and not all collinear. For each sufficiently large $`n`$, take all linear **Van Vleck polynomials** $`V_{n,j}(z)`$ for which $`(\\mathfrak d+V_{n,j})S=0`$ has a polynomial solution $`S`$ of degree $`n`$, counting the $`n+1`$ possibilities with multiplicity. Write $`z_{n,j}`$ for the root of $`V_{n,j}`$ and\n\n```math\n\\mu_n=\\frac{1}{n+1}\\sum_{j=1}^{n+1}\\delta_{z_{n,j}}.\n```\n\nDo the measures $`\\mu_n`$ converge weakly to a positive probability measure determined only by $`Q_k`$, supported on a **finite planar tree** inside the convex hull of the roots of $`Q_k`$, whose leaves are exactly those roots? The conjecture also asks that this limiting measure reproduce the exterior logarithmic potential calculated from the operator's finite-band recurrence [2, Conjecture 1].",
+  "full_original_page": "# 1032. The spectral tree for high-order Heun operators\n\n**Area:** Spectral asymptotics of differential operators and planar potential theory\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`k\\geq3`$ and\n\n```math\n\\mathfrak d=\\sum_{i=1}^{k}Q_i(z)\\frac{d^i}{dz^i},\n\\qquad \\deg Q_i\\leq i+1,\\quad\\deg Q_k=k+1.\n```\n\nAssume the $`k+1`$ roots of $`Q_k`$ are simple and not all collinear. For each sufficiently large $`n`$, take all linear **Van Vleck polynomials** $`V_{n,j}(z)`$ for which $`(\\mathfrak d+V_{n,j})S=0`$ has a polynomial solution $`S`$ of degree $`n`$, counting the $`n+1`$ possibilities with multiplicity. Write $`z_{n,j}`$ for the root of $`V_{n,j}`$ and\n\n```math\n\\mu_n=\\frac{1}{n+1}\\sum_{j=1}^{n+1}\\delta_{z_{n,j}}.\n```\n\nDo the measures $`\\mu_n`$ converge weakly to a positive probability measure determined only by $`Q_k`$, supported on a **finite planar tree** inside the convex hull of the roots of $`Q_k`$, whose leaves are exactly those roots? The conjecture also asks that this limiting measure reproduce the exterior logarithmic potential calculated from the operator's finite-band recurrence [2, Conjecture 1].\n\n## Application\n\nThe answer would identify where the spectral parameters of polynomial solutions accumulate for high-order Heun equations. It would turn an exterior moment calculation into the actual planar root distribution.\n\n## Known results and scope\n\nShapiro and Tater [1, Conjecture 3] proposed the generalized Heun spectral tree in 2008. The second-order classical Heun support problem was settled separately in [3]. In July 2026, Shapiro [2] proved that every fixed limiting holomorphic moment, and the Cauchy transform and logarithmic potential **outside** the convex hull, depend only on $`Q_k`$. Full weak convergence is proved there when the roots of $`Q_k`$ are collinear. For genuinely non-collinear roots, the paper still states the tree and positive mother-body claim as a conjecture. Exterior moments alone need not locate a measure uniquely inside a two-dimensional hull.\n\n## References\n\n1. B. Shapiro and M. Tater, [*On spectral polynomials of the Heun equation. I*](https://arxiv.org/pdf/0812.2321), arXiv:0812.2321 (2008), Section 4, Conjecture 3.\n2. B. Shapiro, [*Van Vleck spectra of high-order Heun operators: finite-band universality and exterior asymptotics*](https://arxiv.org/pdf/2607.02700), arXiv:2607.02700 (2026), Theorems 2–5 and Conjecture 1.\n3. B. Shapiro, K. Takemura and M. Tater, [*On spectral polynomials of the Heun equation. II*](https://arxiv.org/pdf/0904.0650), arXiv:0904.0650 (2009), Theorem 2 for the classical second-order case.\n\n## Status review\n\n\n**Known cases:** General noncollinear simple leading roots and every high order k>=3 require a full positive spectral-tree limit. The July 2026 finite-band and exterior-moment results retain the tree conjecture; the classical second-order result is narrower.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nGeneral noncollinear simple leading roots and every high order k>=3 require a full positive spectral-tree limit. The July 2026 finite-band and exterior-moment results retain the tree conjecture; the classical second-order result is narrower.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe [primary-body, later-result and duplicate audit](../FURTHER_problems/_tracking/high-order-heun-spectral-tree-status-2026-10-21.json) separates the current conjecture from the proved moment and collinear results. Bounded searches found no complete proof or counterexample through 21 October 2026; this does not rule out unindexed work.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f2efae695b2822f4**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "high-order Heun",
+    "Van Vleck",
+    "spectral tree",
+    "Shapiro"
+  ],
+  "searches": [
+    {
+      "query": "\"Heun\" \"spectral tree\" \"2607.02700\" solution"
+    },
+    {
+      "query": "\"spectral tree\" Heun Zenodo HAL GitHub proof"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2607.02700",
+      "version": "v1",
+      "date": "2026-07-02",
+      "locator": "current official history; HTML Theorems2–5 and Conjecture1, lines75–155"
+    },
+    {
+      "url": "https://arxiv.org/html/2607.02700v1",
+      "locator": "Conjecture1 and text beforeSection2"
+    }
+  ],
+  "scope_comparison": "Theorems2–3 determine holomorphic moments and exterior potential, not a unique positive planar carrier. Theorems4–5 require one-dimensional localization/collinear roots, excluded by target's genuinely noncollinear k>=3 roots. Conjecture1 expressly retains the complete finite-tree/mother-body limit. No newer matching announcement found.",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded current literature and announcement searches do not establish continued openness. Restricted results were compared at the stated locators; no full proof certification claimed.",
+  "announcement_routing": {
+    "localID": "1032",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "high-order Heun",
+          "Van Vleck",
+          "spectral tree",
+          "Shapiro"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-11-02-000021",
+            "title": "Effective Rice–Shapiro theorem for closed lambda programs",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-11-02-000021-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "high-order Heun",
+          "Van Vleck",
+          "spectral tree",
+          "Shapiro"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00234v1",
+            "title": "An unavoidable set of divisors for the nearest integers to ξ(3/2)^n",
+            "url": "https://hexagonmath.org/abs/2610.00234v1"
+          },
+          {
+            "id": "hexagon:2609.00138v1",
+            "title": "Signed seeds and G-gradings on cluster algebras",
+            "url": "https://hexagonmath.org/abs/2609.00138v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "high-order Heun",
+        "Van Vleck",
+        "spectral tree",
+        "Shapiro"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Rice–Shapiro lambda programs, nearest-integer divisibility and graded cluster algebras are Shapiro/name or spectral-tree terminology collisions; none concerns high-order Heun spectral trees.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.765Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

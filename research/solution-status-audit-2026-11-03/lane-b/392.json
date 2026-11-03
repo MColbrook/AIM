@@ -1,0 +1,47 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "392",
+  "manifest_index": 319,
+  "source_sha256": "2e8d8954c3b51198493b00325c0661009f8472ba01ed48a5000e971f8922d290",
+  "statement_sha256": "b4e08c5f64202e4d9ab31d279e290b71ea193d2a8650ffa899ad97463e40028b",
+  "original_target": {
+    "id": "392",
+    "title": "Regularity of transport interfaces for nonconvex polyhedral targets",
+    "area": "Monge–Ampère PDEs / optimal transport",
+    "file": "problems/392-polyhedral-transport-singular-interface.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: affirmative codimension-two transport-interface regularity",
+    "proof": "https://arxiv.org/pdf/2610.18756v1",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md",
+    "group": "continuum2",
+    "source_sha256": "2e8d8954c3b51198493b00325c0661009f8472ba01ed48a5000e971f8922d290",
+    "statement_sha256": "b4e08c5f64202e4d9ab31d279e290b71ea193d2a8650ffa899ad97463e40028b",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "unverified-announcement",
+  "ready_for_parent": true,
+  "recommended_status": "Solved",
+  "answer": "Affirmative codimension-two regularity for full transport interfaces.",
+  "required_status_qualification": "Solved on the basis of an unverified announcement. The full target is claimed in the cited source; the external proof has not been independently verified here.",
+  "scope_comparison": "Theorem1.1 allows an arbitrary bounded open source, bounded polyhedral target of equal volume and the given convex Brenier potential. It uses the closure of the nondifferentiability set inside source, and a relatively closed exceptional subset of Hausdorff dimension<=n-2 with smooth local hypersurfaces elsewhere. It applies in n>=2 and hence n>=3. For finite-facet domains with possible null slits, filling cells cut out by the finite facet hyperplanes changes only a null set and preserves target closure; the same potential and its nondifferentiability set remain. Local max-of-two smooth branches with distinct gradients yields embedded graphs, not just immersions.",
+  "queries": [
+    "polyhedral optimal transport singular interface 2610.18756",
+    "\"non-convex polyhedral\" transport (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"2610.18756\" correction withdrawal error"
+  ],
+  "primary_sources": [
+    {
+      "version": "v1,13October2026; primary history onlyv1",
+      "locator": "Theorem1.1; §1 Sigma definition; §5 Proposition5.3/Lemma5.4",
+      "body_inspected": true,
+      "url": "https://arxiv.org/html/2610.18756v1"
+    }
+  ],
+  "known_gap_check": "Prior local applicability reviews read; no concrete scope or proof gap was recorded. Current primary bodies and bounded correction/version searches did not locate withdrawal. Whole external proofs remain unverified.",
+  "verification": "Applicability review only; no new whole-proof, Lean or certificate replay."
+}

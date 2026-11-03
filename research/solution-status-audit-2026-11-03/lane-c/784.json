@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "784",
+  "manifest_index": 628,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "784",
+    "title": "Interior volume in the conformal orbit of a free boundary minimal submanifold",
+    "area": "Minimal submanifolds and conformal geometry",
+    "file": "problems/784-interior-volume-in-the-conformal-orbit-of-a-free-boundary-minimal-submanifold.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-3deba7294a5078ad",
+    "group": "geometry-topology",
+    "source_sha256": "be792c63201a60b9fd32945d09ab51ec2529dcaeb430cd8c861a31afcd45d26f",
+    "statement_sha256": "72cdfeb54857125da842eb8d178f2fc4fd009e9139286158e158c76fc823c7c0",
+    "state": "unreviewed"
+  },
+  "source_sha256": "be792c63201a60b9fd32945d09ab51ec2529dcaeb430cd8c861a31afcd45d26f",
+  "statement_sha256": "72cdfeb54857125da842eb8d178f2fc4fd009e9139286158e158c76fc823c7c0",
+  "actual_source_sha256": "be792c63201a60b9fd32945d09ab51ec2529dcaeb430cd8c861a31afcd45d26f",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For every pair of integers $`2\\le k<n`$, let $`\\Sigma`$ be a compact connected smooth $`k`$-manifold with nonempty boundary, and let $`X:\\Sigma\\to\\overline{B^n}`$ be a smooth immersion. Write $`g=X^*g_{\\mathrm E}`$ for its induced Euclidean metric, and assume\n```math\nX^{-1}(S^{n-1})=\\partial\\Sigma,\\qquad\n\\Delta_gX=0,\\qquad dX(\\eta)=X\\quad\\text{on }\\partial\\Sigma,\n```\n\nwhere $`\\eta`$ is the outward unit conormal. Thus $`X`$ is a free boundary minimal immersion into the Euclidean unit ball.\n\nFor every conformal diffeomorphism $`f:\\overline{B^n}\\to\\overline{B^n}`$, is\n```math\n\\mathrm{Vol}_{k}\\bigl(\\Sigma,(f\\circ X)^*g_{\\mathrm E}\\bigr)\n\\le \\mathrm{Vol}_{k}(\\Sigma,g)?\n```\n\nVolumes are computed on the parameter manifold, counting immersion multiplicity. No embeddedness, orientability, topology, or spectral assumption is added.\n\nEquivalently, does every $`y\\in\\mathbb R^n`$ with $`|y|>1`$ satisfy\n```math\n\\int_\\Sigma\\left(\\frac{|y|^2-1}{|X-y|^2}\\right)^k dV_g\n\\le \\int_\\Sigma dV_g?\n```\n\nThis is the nontrivial dimension range of Fraser–Schoen's Question 3.2 (2013), repeated as Open Question 8 on page 24 of Li's survey arXiv:1907.05053v3. Ko–Shao's latest version of *Free boundary minimal annuli in convex balls* (2026), Section 1.2.1, still identifies the corresponding surface-area question as open. The known decrease of boundary length for two-dimensional free boundary minimal surfaces concerns a different quantity.",
+  "full_local_page_read": true,
+  "queries": [
+    "free boundary minimal interior area conformal maps Fraser Schoen Ko Shao 2026",
+    "free boundary minimal interior area conformal maps Fraser Schoen Ko Shao 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "free boundary minimal interior area conformal maps Fraser Schoen Ko Shao 2026 (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "§1.2.1 equations(5)–(6)and discussion",
+      "version_or_date": "v2,22August2026;currentarXivrecordinspected3November2026",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2608.14679v2",
+      "scope_comparison": "The actual text explicitly retains Fraser–Schoen's conformal interior-area question even for surfaces. Its Willmore comparison bounds the conformal family by2Area(original) in the minimal case, not the required sharp1× bound. Boundary-length control applies to another functional; kVol=boundaryVol holds for the original minimal immersion but cannot be reused on an arbitrary conformal image that is not Euclidean minimal. No theorem found covers every2<=k<n immersion with multiplicity."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual text explicitly retains Fraser–Schoen's conformal interior-area question even for surfaces. Its Willmore comparison bounds the conformal family by2Area(original) in the minimal case, not the required sharp1× bound. Boundary-length control applies to another functional; kVol=boundaryVol holds for the original minimal immersion but cannot be reused on an arbitrary conformal image that is not Euclidean minimal. No theorem found covers every2<=k<n immersion with multiplicity.",
+  "latest_version_check": "v2,22August2026;currentarXivrecordinspected3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

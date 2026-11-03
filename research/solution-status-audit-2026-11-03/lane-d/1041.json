@@ -1,0 +1,121 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1041",
+  "manifest_index": 885,
+  "checked_date": "2026-11-03",
+  "source_sha256": "cf425869bbfe854a4f9bb021928cfb6c83268dc01d4bdb25191af72f570505ee",
+  "statement_sha256": "3d39b80bbaf2cd1b9c7cac3c4699822df535b00376cbe1c26e84af8684637062",
+  "original_target": {
+    "id": "1041",
+    "title": "The Gell-Mann–Brueckner expansion for jellium in the thermodynamic limit",
+    "area": "Many-body physics, quantum information and wave analysis",
+    "file": "problems/1041-the-gell-mannbrueckner-expansion-for-jellium-in-the-thermodynamic-limit.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f5341981fcc4d952",
+    "group": "spectral3",
+    "source_sha256": "cf425869bbfe854a4f9bb021928cfb6c83268dc01d4bdb25191af72f570505ee",
+    "statement_sha256": "3d39b80bbaf2cd1b9c7cac3c4699822df535b00376cbe1c26e84af8684637062",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Consider three-dimensional neutral Coulomb jellium with $`N`$ identical spinless fermions in a box $`\\Lambda\\subset\\mathbb R^3`$, a uniform positive background of density $`\\rho=N/|\\Lambda|`$, and the fixed physical Coulomb interaction $`|x-y|^{-1}`$. Let $`e_J(\\rho)`$ be the ground-state energy per unit volume after taking the thermodynamic limit at fixed $`\\rho`$, including the background self-energy as in equation (1) of the report.\n\nAs $`\\rho\\to\\infty`$, can one rigorously establish the predicted Gell-Mann–Brueckner correction through order $`\\rho`$:\n```math\ne_J(\\rho)=\\frac35c_{\\mathrm{TF}}\\rho^{5/3}-c_{\\mathrm D}\\rho^{4/3}\n       +c_1\\rho\\log\\rho+c_2\\rho+o(\\rho),\n```\n\nwith the corresponding predicted constants $`c_1,c_2`$ for this spinless model? The first two terms are established; the issue is a matching rigorous asymptotic for the correlation terms in the stated order of limits. The source specifies the structure of these terms but does not give numerical values for $`c_1,c_2`$, so none are asserted here.",
+  "full_original_page": "# 1041. The Gell-Mann–Brueckner expansion for jellium in the thermodynamic limit\n\n**Area:** Many-body physics, quantum information and wave analysis\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nConsider three-dimensional neutral Coulomb jellium with $`N`$ identical spinless fermions in a box $`\\Lambda\\subset\\mathbb R^3`$, a uniform positive background of density $`\\rho=N/|\\Lambda|`$, and the fixed physical Coulomb interaction $`|x-y|^{-1}`$. Let $`e_J(\\rho)`$ be the ground-state energy per unit volume after taking the thermodynamic limit at fixed $`\\rho`$, including the background self-energy as in equation (1) of the report.\n\nAs $`\\rho\\to\\infty`$, can one rigorously establish the predicted Gell-Mann–Brueckner correction through order $`\\rho`$:\n```math\ne_J(\\rho)=\\frac35c_{\\mathrm{TF}}\\rho^{5/3}-c_{\\mathrm D}\\rho^{4/3}\n       +c_1\\rho\\log\\rho+c_2\\rho+o(\\rho),\n```\n\nwith the corresponding predicted constants $`c_1,c_2`$ for this spinless model? The first two terms are established; the issue is a matching rigorous asymptotic for the correlation terms in the stated order of limits. The source specifies the structure of these terms but does not give numerical values for $`c_1,c_2`$, so none are asserted here.\n\n## Application\n\nThe correction quantifies many-body electron correlation beyond the leading kinetic and exchange energies in the physical high-density regime. A proof would bridge rigorous mean-field results and the thermodynamic electron gas.\n\n## References\n\n1. François Visconti, *Ground state energy of a charged Fermi gas at high density*, in [*Oberwolfach Report 46/2025: Analysis of Many-body Quantum Systems*](https://doi.org/10.4171/OWR/2025/46), printed pp. 2533–2536, especially equations (1)–(2) and the open-question paragraph on p. 2536.\n2. M. R. Christiansen, C. Hainzl and P. T. Nam, [*The Gell-Mann–Brueckner Formula for the Correlation Energy of the Electron Gas: A Rigorous Upper Bound in the Mean-Field Regime*](https://doi.org/10.1007/s00220-023-04672-2), *Communications in Mathematical Physics* **401** (2023), 1469–1529.\n3. M. R. Christiansen, C. Hainzl and P. T. Nam, [*The Correlation Energy of the Electron Gas in the Mean-Field Regime*](https://arxiv.org/html/2405.01386v2), arXiv:2405.01386v2 (11 May 2026), cited by the report for its matching mean-field result.\n\n## Status review\n\n\n**Known cases:** The physical fixed Coulomb interaction is considered after the thermodynamic limit. The May 2026 mean-field theorem and author research account explicitly retain the distinction; neither proves these correlation terms in that order of limits.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe physical fixed Coulomb interaction is considered after the thermodynamic limit. The May 2026 mean-field theorem and author research account explicitly retain the distinction; neither proves these correlation terms in that order of limits.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe report explicitly says the Gell-Mann–Brueckner formula remains open for the thermodynamic limit. Its cited rigorous results put a density-dependent interaction prefactor on a fixed torus, so they do not establish the fixed-Coulomb thermodynamic expansion above. The latest arXiv version of the matching mean-field result and an independent exact-model audit confirm this difference. Bounded searches on 21 October 2026 found no complete matching announcement. This is a live-status assessment, not a proof of unsolvedness.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f5341981fcc4d952**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Gell-Mann",
+    "Brueckner",
+    "jellium",
+    "Visconti",
+    "Hainzl"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"Gell-Mann\" \"thermodynamic\" rigorous 2026 correlation energy"
+    },
+    {
+      "query": "\"Gell-Mann-Brueckner\" \"thermodynamic\" proof",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2405.01386v2",
+      "locator": "11May2026 Section1.1eq1.6 and Theorem1.2/Corollary1.3; OWR2025/46p2536; authorHainzlresearchpage"
+    }
+  ],
+  "scope_comparison": "Actual theorem is on fixed T^3 with interaction kF^-beta,11/12<beta<=1 and matching upper onlybeta=1. Target takes thermodynamic limit for fixed physical Coulomb first, then high density and requires both rho log rho and rho constants. Current author account expressly confines rigorous result to mean-field finite boxes; electron bilayer capacitance and numerical paramagnetic correlation are different.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative search is not proof of continued openness; primary problem/current comparison bodies inspected at locators. Full proof certification not claimed.",
+  "announcement_routing": {
+    "localID": "1041",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Gell-Mann",
+          "Brueckner",
+          "jellium",
+          "Visconti",
+          "Hainzl"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Gell-Mann",
+          "Brueckner",
+          "jellium",
+          "Visconti",
+          "Hainzl"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00612v1",
+            "title": "Equality of the Jellium and the Uniform Electron Gas Energies",
+            "url": "https://hexagonmath.org/abs/2610.00612v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Gell-Mann",
+        "Brueckner",
+        "jellium",
+        "Visconti",
+        "Hainzl"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.081Z",
+      "previous_outcome": "partial",
+      "localID": "1041",
+      "announcement_hit_disposition": "Hexagon2610.00612v1 primary abstract in complete provider snapshot proves equality of Jellium and UEG thermodynamic ground-state energies. This does not assert the physical-interaction positive-temperature high-density exchange free-energy asymptotic. Its linked arXiv2603.21200v1 primary abstract additionally concerns lattice-periodic nonuniform electron gas definitions and thermodynamic limits, not this asymptotic formula."
+    }
+  ]
+}

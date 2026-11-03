@@ -18,6 +18,7 @@ REQUIRED = {"id", "title", "area", "file", "status", "last_checked"}
 SECTIONS = ("Problem statement", "Application", "References", "Status review")
 GENERATED_DOCUMENTS = ("README.md", "CATALOG.md", "RESOLVED.md")
 LOCAL_CACHE_DIRECTORIES = frozenset({".git", ".lake", ".venv", "__pycache__"})
+LOCAL_WORKING_DIRECTORIES = frozenset({"FURTHER_problems", "PROBLEM_SCORING", "cut_problems"})
 STATUS_DISPLAY = {
     "Open": "🔵 OPEN",
     "Partially resolved": "🟡 PARTIAL",
@@ -36,7 +37,8 @@ def markdown_paths(root):
     """Visit source Markdown without descending into local dependency caches."""
     for directory, subdirectories, filenames in os.walk(root):
         subdirectories[:] = [name for name in subdirectories
-                             if name not in LOCAL_CACHE_DIRECTORIES]
+                             if name not in LOCAL_CACHE_DIRECTORIES and name != "_sources"
+                             and not (Path(directory) == root and name in LOCAL_WORKING_DIRECTORIES)]
         for name in filenames:
             if Path(name).match("*.md"):
                 yield Path(directory) / name
@@ -67,7 +69,34 @@ def next_problem_id(manifest):
     """Allocate after the current consecutively numbered collection."""
     issued = [identifier for batch in manifest["batches"] for identifier in batch["ids"]]
     issued.extend(row["id"] for row in manifest["retired"])
+    issued.extend(row["id"] for row in manifest.get("cut", []))
     return max(map(int, issued), default=0) + 1
+
+
+def optional_local_working_file(path, manifest):
+    """Allow explicitly unpublished working records when their folder is absent.
+
+    A present local archive is still checked strictly. Public files never become
+    optional, and the historical registry continues to validate IDs and decisions.
+    """
+    path = path.resolve()
+    try:
+        parts = path.relative_to(ROOT).parts
+    except ValueError:
+        return False
+    return bool(parts and parts[0] in LOCAL_WORKING_DIRECTORIES
+                and parts[0] in manifest.get("local_working_directories", [])
+                and not (ROOT / parts[0]).exists())
+
+
+def local_source_cache(path):
+    """Downloaded audit sources remain local; published reviews link originals."""
+    try:
+        parts = path.resolve().relative_to(ROOT).parts
+    except ValueError:
+        return False
+    return (parts[:2] == ("research", "solution-status-audit-2026-11-03")
+            and "_sources" in parts[2:])
 
 
 def load_manifest():
@@ -83,6 +112,13 @@ def load_manifest():
             errors.append(f"catalogue.json: {key} must be an array")
     if errors:
         return {}, errors
+    local_workings = manifest.get("local_working_directories", [])
+    if (not isinstance(local_workings, list) or
+            any(not isinstance(name, str) or name not in LOCAL_WORKING_DIRECTORIES
+                for name in local_workings) or len(set(local_workings)) != len(local_workings)):
+        return {}, ["catalogue.json: invalid local_working_directories"]
+    if not isinstance(manifest.get("cut", []), list):
+        return {}, ["catalogue.json: cut must be an array"]
     removed = manifest.get("removed_ids", [])
     if not isinstance(removed, list) or not all(valid_id(i) for i in removed):
         return {}, ["catalogue.json: removed_ids must be an array of valid IDs"]
@@ -153,6 +189,103 @@ def load_manifest():
                         evidence.suffix != ".md" or not evidence.is_file() or
                         not evidence.read_text(encoding="utf-8").strip()):
                     errors.append(f"{item['id']}: invalid or empty Lean verification_record")
+    for item in manifest.get("cut", []):
+        if not isinstance(item, dict) or not valid_id(item.get("id")):
+            errors.append("catalogue.json: cut ID needs a valid id")
+            continue
+        for field in ("title", "status", "last_checked", "reason", "record", "original_file"):
+            if not isinstance(item.get(field), str) or not item[field].strip():
+                errors.append(f"catalogue.json: invalid cut {field} for {item['id']}")
+        if not isinstance(item.get("group"), str) or item["group"] not in group_keys:
+            errors.append(f"catalogue.json: invalid cut group for {item['id']}")
+        if item.get("status") not in STATUS_DISPLAY:
+            errors.append(f"catalogue.json: invalid cut status for {item['id']}")
+        score = item.get("importance")
+        if type(score) is not int or not 0 <= score < 6:
+            errors.append(f"catalogue.json: cut importance must be an integer below 6 for {item['id']}")
+        scores = item.get("scores")
+        if (not isinstance(scores, dict) or set(scores) != {"M", "A", "C", "E"} or
+                any(type(value) is not int or not 0 <= value <= 10 for value in scores.values()) or
+                score != max(scores.get("M", -1), scores.get("A", -1))):
+            errors.append(f"catalogue.json: invalid cut scores for {item['id']}")
+        value = item.get("record", "")
+        record = (ROOT / value).resolve() if isinstance(value, str) else ROOT
+        if (not isinstance(value, str) or Path(value).is_absolute() or
+                ROOT / "cut_problems" not in record.parents or
+                record.suffix != ".md" or
+                not (record.is_file() or optional_local_working_file(record, manifest))):
+            errors.append(f"catalogue.json: invalid cut record for {item['id']}")
+        if value != "cut_problems/" + str(item.get("original_file", "")):
+            errors.append(f"catalogue.json: cut record must mirror its original_file for {item['id']}")
+        errors.extend(date_errors(item.get("last_checked"), item["id"]))
+        replacement = item.get("replacement")
+        if replacement is not None:
+            if (not isinstance(replacement, dict) or
+                    not re.fullmatch(r"FURTHER-[0-9a-f]{16}", str(replacement.get("source_key", ""))) or
+                    replacement.get("group") != item.get("group") or
+                    not isinstance(replacement.get("file"), str) or
+                    not replacement["file"].startswith(f"problems/{item['id']}-") or
+                    not (ROOT / replacement["file"]).is_file()):
+                errors.append(f"catalogue.json: invalid cut replacement for {item['id']}")
+            else:
+                errors.extend(date_errors(replacement.get("filled_on"), item["id"]))
+    editorial = manifest.get("editorial_archive", [])
+    if not isinstance(editorial, list):
+        errors.append("catalogue.json: editorial_archive must be an array")
+    else:
+        seen = set()
+        for item in editorial:
+            if not isinstance(item, dict) or not valid_id(item.get("id")):
+                errors.append("catalogue.json: invalid editorial archive ID")
+                continue
+            key = item.get("source_key", "")
+            if not isinstance(key, str) or not re.fullmatch(r"FURTHER-[0-9a-f]{16}", key) or key in seen:
+                errors.append("catalogue.json: invalid or duplicate editorial archive source key")
+            seen.add(key)
+            for field in ("title", "area", "reason", "replacement_file", "replacement_source_key"):
+                if not isinstance(item.get(field), str) or not item[field].strip():
+                    errors.append(f"catalogue.json: invalid editorial archive {field}")
+            value = item.get("record", "")
+            path = (ROOT / value).resolve() if isinstance(value, str) else ROOT
+            if (not isinstance(value, str) or Path(value).is_absolute() or
+                    ROOT / "cut_problems" not in path.parents or path.suffix != ".md" or
+                    not (path.is_file() or optional_local_working_file(path, manifest))):
+                errors.append("catalogue.json: invalid editorial archive record")
+            if item.get("group") not in group_keys or item.get("status") not in STATUS_DISPLAY:
+                errors.append("catalogue.json: invalid editorial archive group or status")
+            errors.extend(date_errors(item.get("last_checked"), item["id"]))
+            errors.extend(date_errors(item.get("archived_on"), item["id"]))
+    archives = manifest.get("further_archive", [])
+    if not isinstance(archives, list):
+        errors.append("catalogue.json: further_archive must be an array")
+    else:
+        seen = set()
+        for item in archives:
+            if not isinstance(item, dict):
+                errors.append("catalogue.json: invalid further archive record")
+                continue
+            key = item.get("source_key", "")
+            if not isinstance(key, str) or not re.fullmatch(r"FURTHER-[0-9a-f]{16}", key) or key in seen:
+                errors.append("catalogue.json: invalid or duplicate further archive source key")
+            seen.add(key)
+            if "id" in item or "new_aim_id" in item:
+                errors.append("catalogue.json: further archives must not allocate an AIM ID")
+            for field in ("title", "reason", "status", "original_file", "review"):
+                if not isinstance(item.get(field), str) or not item[field].strip():
+                    errors.append("catalogue.json: invalid further archive " + field)
+            value = item.get("record", "")
+            path = (ROOT / value).resolve() if isinstance(value, str) else ROOT
+            if (not isinstance(value, str) or Path(value).is_absolute() or
+                    ROOT / "cut_problems/FURTHER_problems" not in path.parents or
+                    path.suffix != ".md" or
+                    not (path.is_file() or optional_local_working_file(path, manifest)) or
+                    value != "cut_problems/" + str(item.get("original_file", ""))):
+                errors.append("catalogue.json: invalid further archive path")
+            review = ROOT / str(item.get("review", ""))
+            if (not (review.is_file() or optional_local_working_file(review, manifest))
+                    or ROOT not in review.resolve().parents):
+                errors.append("catalogue.json: invalid further archive review")
+            errors.extend(date_errors(item.get("archived_on"), str(key)))
     return manifest if not errors else {}, errors
 
 
@@ -261,6 +394,15 @@ def render_readme(entries, manifest):
                f"**{claimed} solution claim{'s' if claimed != 1 else ''}**")
     if other:
         summary += f" · **{other} other retained entries**"
+    integration = manifest.get("further_archive", [])
+    integrated_ids = [i for batch in manifest["batches"] if batch.get("key") == "retained-further-2026-10-30" for i in batch["ids"]]
+    integration_note = (
+        f"The remaining retained further problems were rechecked online: **{len(integrated_ids)} were added as AIM {min(map(int, integrated_ids))}–{max(map(int, integrated_ids))}**, and **{len(integration)} were archived without IDs** following resolution or formulation checks. "
+        f"There are now **{len(entries) + len(manifest['retired'])} AIM entries**; no problems from that integration batch remain staged. Later research discoveries are handled separately. Scores are unchanged. "
+        "The [integration register](research/further-integration-2026-10-30/README.md) records each decision, evidence and historical path. Claimed complete resolutions are distinguished from certified proofs."
+        if integrated_ids else
+        "The retained collection comprises 665 AIM entries and 409 staged further problems. Scores remain unchanged."
+    )
     lines = [
         "# AIM — Open Applied Problems", "",
         "A sourced collection of precise mathematical research problems in spectral theory, operator theory, applied mathematics, and related fields. Each entry has a self-contained statement, a discussion of applications or mathematical significance, references, and a dated literature-status review.", "",
@@ -273,7 +415,11 @@ def render_readme(entries, manifest):
         "Contributions made with or without AI are welcome.", "",
         "**[AIM, explained](https://mathematics-explained.com/)** is our companion website for explanations of the problems, known results, proofs and applications in this collection. Papers and videos are welcome; you do not need to solve a problem to contribute. The aim is to improve human understanding, with credit to explanation authors and their sources.", "",
         "On 13 October 2026, we cross-referenced AIM with [OpenAI's mathematics collection](https://github.com/openai/math), linking complete results and partial progress while retaining the original problems. The [statement comparisons](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) explain the scope. We welcome carefully checked, human-authored write-ups of the ideas, assumptions and applications for [AIM, explained](https://mathematics-explained.com/).", "",
-        "The [15 October PR reviews](research/solution_reviews/2026-10-15-active-prs/README.md) record individual proof audits, partial progress and claims still awaiting verification, together with further primary-source comparisons. All original problem pages and IDs are retained.", "",
+        "The [15 October PR reviews](research/solution_reviews/2026-10-15-active-prs/README.md) record individual proof audits, partial progress and claims still awaiting verification, together with further primary-source comparisons. Original IDs and the archived records are preserved.", "",
+        "The [incorporated October reviews](research/upstream-integration-2026-11-03/README.md) document the updated evidence for AIM 458, 482, 541 and 556, plus the original archived 571 and 627. Local IDs, scores and cut decisions are unchanged; the Stiefel problem remains an unnumbered pending candidate.", "",
+        "The [3 November solution-status audit](research/solution-status-audit-2026-11-03/README.md) searched all 912 then-unresolved targets individually. Complete matching announcements are recorded as **Solved** at the editor’s request, explicitly qualified as unverified on each problem page. The audit records source-access limits and does not certify the proofs or establish Lean verification.", "",
+        "On 30 October 2026, we applied the agreed editorial cutoff **I = max(M, A) ≥ 6** to the locally scored collection. The local cut archive preserves the original 111 former AIM entries and 210 further problems, including their local solution material, plus one subsequent explicit editorial exclusion. We filled the 111 vacant IDs from retained further problems in the corresponding subjects, after fresh online status checks; the later exclusion was replaced within its subject. See the [ID replacement register](research/catalogue-backfill-2026-10-30/README.md) for the distinct historical and current identities.", "",
+        integration_note, "",
         "If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.", "",
         summary + ". Counts reflect the statuses recorded in this collection.", "",
         f"**[Browse all {len(entries)} open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**", "",
@@ -288,6 +434,8 @@ def render_readme(entries, manifest):
             *resolution_table(resolutions), "",
         ]
     lines += [
+        "## Local working material", "",
+        "`FURTHER_problems/`, `PROBLEM_SCORING/` and `cut_problems/` are local working folders and are not published. The public catalogue retains the editorial decisions, current IDs and provenance registers. Historical provenance links into those folders refer to local records; the corresponding working files and downloaded source caches are unavailable on GitHub. Current proof and review links are published or link directly to their original sources.", "",
         "## Reading the collection", "",
         "Each [problem page](problems/) records its assumptions and quantifiers, an **Application** section, references, a status label, and its last review date. The Application section describes a supported use where one is clear, labels indirect connections, or states that no direct application has been identified. Changing a problem's status to Solved keeps its page and ID in place. Complete deletion closes the gap: subsequent entries and their links are renumbered, and deleted numbers are not reserved. Cite the repository commit alongside an ID because numbering can change.", "",
         "The collection includes foundational questions as well as directly applied ones, with a wide range of difficulty. Related entries may imply one another; the count does not assert logical independence. Further additions exclude numerical linear algebra (NLA).", "",
@@ -297,7 +445,7 @@ def render_readme(entries, manifest):
         "| 🔵 OPEN | The target is unresolved in the literature checked for the entry. | Yes |",
         "| 🟡 PARTIAL | Some substantive cases of the stated target are proved; the page identifies what remains. | Yes |",
         "| 🟠 SOLUTION CLAIMED | A source claims a complete resolution; independent proof review is outstanding. | No |",
-        "| ✅ SOLVED | A publication or documented independent audit supports a complete resolution. | No |",
+        "| ✅ SOLVED | A publication or documented independent audit supports a complete resolution; the audit-specific announcement convention above is explicitly qualified. | No |",
         "| 🏆 LEAN VERIFIED | A complete resolution has reviewed Lean kernel-checking evidence and matches the original target. | No |",
         "| ⚪ NEEDS VERIFICATION | A statement or status issue requires further review. | No |",
         "| ⚫ WITHDRAWN | The entry was removed for a documented reason; its ID and original statement are retained. | No |", "",
@@ -432,20 +580,40 @@ def validate_page(row, path):
     return errors
 
 
-def validate(entries, manifest, documents=None):
+def validate(entries, manifest, documents=None, catalogue_only=False):
     errors = []
     ids = [row["id"] for row in entries]
     retired = [row["id"] for row in manifest["retired"]]
-    issued = ids + retired
+    cut = manifest.get("cut", [])
+    editorial = manifest.get("editorial_archive", [])
+    archived_keys = {row["source_key"] for row in manifest.get("further_archive", [])}
+    if archived_keys & {row.get("source_key") for row in entries}:
+        errors.append("An archived further problem cannot also be a current AIM entry")
+    for row in editorial:
+        matching = [entry for entry in entries if entry["id"] == row["id"]]
+        if (len(matching) != 1 or matching[0]["file"] != row.get("replacement_file") or
+                matching[0].get("source_key") != row.get("replacement_source_key") or
+                matching[0].get("group") != row.get("group") or
+                any(entry.get("source_key") == row["source_key"] for entry in entries)):
+            errors.append(f"{row['id']}: editorial archive must identify its distinct current replacement in the same subject")
+    if len({row["id"] for row in cut}) != len(cut):
+        errors.append("Duplicate historical cut ID")
+    for row in cut:
+        replacement = row.get("replacement")
+        if replacement is not None:
+            matching = [entry for entry in entries if entry["id"] == row["id"]]
+            if (len(matching) != 1 or matching[0]["file"] != replacement.get("file") or
+                    matching[0].get("source_key") != replacement.get("source_key") or
+                    matching[0].get("group") != row.get("group")):
+                errors.append(f"{row['id']}: replacement must match one current entry, source key and original subject group")
+    issued = ids + retired + [row["id"] for row in cut if not row.get("replacement")]
     if len(set(issued)) != len(issued):
-        errors.append("Duplicate ID in active or retired records")
+        errors.append("Duplicate ID in active, retired or cut records")
     if not issued or set(issued) != {f"{i:03d}" for i in range(1, max(map(int, issued), default=0) + 1)}:
-        errors.append("IDs must be consecutive across active and retired records; renumber after deletion")
-    if set(ids) != {f"{i:03d}" for i in range(1, len(ids) + 1)}:
-        errors.append("Active problem IDs must be consecutive from 001 with no gaps")
+        errors.append("IDs must be consecutive across active, retired and cut records; register every issued ID")
     batched = [identifier for batch in manifest["batches"] for identifier in batch["ids"]]
     if len(set(batched)) != len(batched) or set(batched) != set(issued):
-        errors.append("Publication batches must partition all active and retired IDs exactly once")
+        errors.append("Publication batches must partition all active, retired and cut IDs exactly once")
     for key in ("title", "file"):
         values = [row[key] for row in entries]
         if len(set(values)) != len(values):
@@ -464,12 +632,23 @@ def validate(entries, manifest, documents=None):
         errors.extend(validate_page(row, path))
     for row in manifest["retired"]:
         errors.extend(validate_page(row, ROOT / row["record"]))
+    for row in cut:
+        if (ROOT / row["record"]).is_file():
+            errors.extend(validate_page(row, ROOT / row["record"]))
+    for row in editorial:
+        if (ROOT / row["record"]).is_file():
+            errors.extend(validate_page(row, ROOT / row["record"]))
     actual = set((ROOT / "problems").glob("*.md"))
     for extra in sorted(actual - indexed):
         errors.append(f"Unindexed problem file: {extra.relative_to(ROOT)}")
     generated = {ROOT / name: content for name, content in (documents or {}).items()}
-    markdown = {path: path.read_text(encoding="utf-8") for path in markdown_paths(ROOT)
-                if path not in generated}
+    source_paths = ([*(ROOT / row["file"] for row in entries),
+                     *(ROOT / row["record"] for row in manifest["retired"]),
+                     *(ROOT / row["record"] for row in cut),
+                     *(ROOT / row["record"] for row in editorial)]
+                    if catalogue_only else markdown_paths(ROOT))
+    markdown = {path: path.read_text(encoding="utf-8") for path in source_paths
+                if path not in generated and path.is_file()}
     markdown.update(generated)
     for path, content in markdown.items():
         errors.extend(f"{path.relative_to(ROOT).as_posix()}: {error}" for error in validate_math(content))
@@ -478,7 +657,9 @@ def validate(entries, manifest, documents=None):
                 continue
             target_path = unquote(target.split("#", 1)[0])
             resolved = (path.parent / target_path).resolve()
-            if target_path and not resolved.exists() and resolved not in generated:
+            if (target_path and not resolved.exists() and resolved not in generated
+                    and not optional_local_working_file(resolved, manifest)
+                    and not local_source_cache(resolved)):
                 errors.append(f"{path.relative_to(ROOT)}: broken local link {target}")
     return errors
 
@@ -488,6 +669,8 @@ def main():
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--write", action="store_true", help="rebuild README, open catalogue and resolution archive after validation")
     mode.add_argument("--check", action="store_true", help="check content and freshness of all generated documents")
+    parser.add_argument("--catalogue-only", action="store_true",
+                        help="validate registered AIM pages and generated indexes; leave research drafts and historical logs to their own checks")
     args = parser.parse_args()
     manifest, errors = load_manifest()
     if errors:
@@ -503,7 +686,7 @@ def main():
     documents = dict(zip(GENERATED_DOCUMENTS, (
         render_readme(open_entries, display_manifest), render_catalog(open_entries, display_manifest),
         render_resolved(display_manifest))))
-    errors.extend(validate(entries, manifest, documents))
+    errors.extend(validate(entries, manifest, documents, catalogue_only=args.catalogue_only))
     if args.check:
         for name, content in documents.items():
             path = ROOT / name

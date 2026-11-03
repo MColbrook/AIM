@@ -45,4 +45,4 @@ The solved $`\delta=0.9`$ prize instance is weaker than determining $`\delta_*`$
 
 September 17, 2026 searches covering recent and unrestricted resolution claims found no matching sharp-threshold result. The [evidence ledger](../candidates/belgian-chocolate-threshold.json) records the source scopes, duplicate comparison and access limits. The polynomial, rational-control and equivalent holomorphic formulations are one problem family.
 
-A clearly separated adversarial self-pass passed on September 17. Integrated as [entry 309](../../../problems/308-belgian-chocolate-threshold.md) after the September 17, 2026 batch refresh.
+A clearly separated adversarial self-pass passed on September 17. Integrated as [entry 309](../../../cut_problems/problems/308-belgian-chocolate-threshold.md) after the September 17, 2026 batch refresh.

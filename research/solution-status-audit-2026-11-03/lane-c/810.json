@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "810",
+  "manifest_index": 654,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "810",
+    "title": "Infinitely many Anosov windows in magnetic-field intensity",
+    "area": "Magnetic dynamics / bifurcation theory",
+    "file": "problems/810-infinitely-many-anosov-windows-in-magnetic-field-intensity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8068458e5d850a2e",
+    "group": "geometry-topology",
+    "source_sha256": "44ed0eb02f1de176c4ac3557fb3b8c899621bf1688dbb5fef66be7a2b9fc6af0",
+    "statement_sha256": "4387728708828d351eff9b278c5d7c506e33e86a91ef8dcd2ad26f333e17dc8e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "44ed0eb02f1de176c4ac3557fb3b8c899621bf1688dbb5fef66be7a2b9fc6af0",
+  "statement_sha256": "4387728708828d351eff9b278c5d7c506e33e86a91ef8dcd2ad26f333e17dc8e",
+  "actual_source_sha256": "44ed0eb02f1de176c4ac3557fb3b8c899621bf1688dbb5fef66be7a2b9fc6af0",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Does there exist a closed connected oriented smooth surface $`M`$ of genus at\nleast two and a smooth Riemannian metric $`g`$ for which the following set has\ninfinitely many connected components?\n\nFor each constant $`\\lambda\\ge0`$, let $`\\varphi_t^\\lambda`$ be the flow on the\nunit tangent bundle $`SM`$ determined by\n\n```math\n\\nabla_{\\dot\\gamma}\\dot\\gamma=\\lambda J\\dot\\gamma,\n\\qquad |\\dot\\gamma|_g=1,\n```\n\nwhere $`J`$ rotates tangent vectors by $`\\pi/2`$ according to the orientation.\nThis is the magnetic flow whose field is $`\\lambda`$ times the area form of\nthe **same fixed metric** $`g`$. Define\n\n```math\n\\mathcal A_g=\\{\\lambda\\in[0,\\infty):\\varphi^\\lambda\n\\text{ is an Anosov flow on }SM\\}.\n```\n\nHere Anosov means that there are continuous invariant line bundles\n$`E^s_\\lambda,E^u_\\lambda`$ and constants $`C_\\lambda,c_\\lambda>0`$ with\n\n```math\nT(SM)=\\mathbb R F_\\lambda\\oplus E^s_\\lambda\\oplus E^u_\\lambda,\n\\qquad\n\\|d\\varphi_t^\\lambda|_{E^s_\\lambda}\\|\\le C_\\lambda e^{-c_\\lambda t},\n\\qquad\n\\|d\\varphi_{-t}^\\lambda|_{E^u_\\lambda}\\|\\le C_\\lambda e^{-c_\\lambda t}\n\\quad(t\\ge0),\n```\n\nwhere $`F_\\lambda`$ generates the flow. The constants may depend on\n$`\\lambda`$. The question concerns infinitely many windows for **one**\nmetric; choosing a different metric for each prescribed finite number\nof windows does not answer it.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Anosov\" \"magnetic\" \"infinitely many\" intervals 2026 solution",
+    "\"Anosov\" \"magnetic\" \"infinitely many\" intervals (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Anosov\" \"magnetic\" \"infinitely many\" intervals (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "§7 actual construction, Lemma7.1 and final paragraph pp30–31",
+      "version_or_date": "Current author40page manuscript of Nonlinearity15(2002)281–314 inspected; no matching later fixed-metric infinite-window announcement in focused searches.",
+      "scope_comparison": "The compactified negative-curvature metric examples use the metric's area form and construct an arbitrarily long FINITE alternation sequence. The final§7 paragraph explicitly says the infinite alternations cannot be arranged by their argument. Producing a different metric for each finite length is not one metric with infinitely many components. Openness/boundedness of the intensity set alone imply no finite-component bound. No exact proof or counterexample identified.",
+      "url": "https://sites.math.northwestern.edu/~burns/papers/magflow/final311.pdf",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The compactified negative-curvature metric examples use the metric's area form and construct an arbitrarily long FINITE alternation sequence. The final§7 paragraph explicitly says the infinite alternations cannot be arranged by their argument. Producing a different metric for each finite length is not one metric with infinitely many components. Openness/boundedness of the intensity set alone imply no finite-component bound. No exact proof or counterexample identified.",
+  "latest_version_check": "Current author40page manuscript of Nonlinearity15(2002)281–314 inspected; no matching later fixed-metric infinite-window announcement in focused searches.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

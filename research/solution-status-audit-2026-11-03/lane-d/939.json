@@ -1,0 +1,97 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "939",
+  "manifest_index": 783,
+  "checked_date": "2026-11-03",
+  "source_sha256": "7775eabf35fc7be00c02ba20c72d6c3aa9de30fd962e2e507b46126ecbff5390",
+  "statement_sha256": "15f7002172c6931ed2fe40db5df46a62acb155499a1a1148a54d33774b812e75",
+  "original_target": {
+    "id": "939",
+    "title": "Diagonal concavity for sums of elementary symmetric polynomials",
+    "area": "Nonlinear analysis and curvature equations",
+    "file": "problems/939-diagonal-concavity-for-sums-of-elementary-symmetric-polynomials.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-292951d1c43dcebb",
+    "group": "pdes-materials",
+    "source_sha256": "7775eabf35fc7be00c02ba20c72d6c3aa9de30fd962e2e507b46126ecbff5390",
+    "statement_sha256": "15f7002172c6931ed2fe40db5df46a62acb155499a1a1148a54d33774b812e75",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`1\\le p\\le n`$ and let $`a_0,\\ldots,a_p\\ge0`$ be not all zero. On the positive orthant $`\\Gamma_n=(0,\\infty)^n`$, set\n```math\n\\sigma_0(x)=1,\\qquad\n\\sigma_k(x)=\\sum_{1\\le i_1<\\cdots<i_k\\le n}x_{i_1}\\cdots x_{i_k},\\qquad\nf_a(x)=\\sum_{k=0}^p a_k\\sigma_k(x).\n```\n\nIts diagonal restriction is\n```math\nP_a(t)=f_a(t,\\ldots,t)=\\sum_{k=0}^p a_k\\binom nk t^k.\n```\n\nProve or disprove: if $`t\\mapsto P_a(t)^{1/p}`$ is concave on $`(0,\\infty)`$, then $`x\\mapsto f_a(x)^{1/p}`$ is concave on all of $`\\Gamma_n`$.\n\nThe reverse implication follows by restriction to the diagonal. Equivalently, does the scalar condition\n```math\nP_a(t)P_a''(t)-\\left(1-\\frac1p\\right)P_a'(t)^2\\le0\\qquad(t>0)\n```\n\nsuffice for full concavity? No real-rootedness assumption is imposed. The exponent remains $`1/p`$ if $`a_p=0`$.",
+  "full_original_page": "# 939. Diagonal concavity for sums of elementary symmetric polynomials\n\n**Area:** Nonlinear analysis and curvature equations\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`1\\le p\\le n`$ and let $`a_0,\\ldots,a_p\\ge0`$ be not all zero. On the positive orthant $`\\Gamma_n=(0,\\infty)^n`$, set\n```math\n\\sigma_0(x)=1,\\qquad\n\\sigma_k(x)=\\sum_{1\\le i_1<\\cdots<i_k\\le n}x_{i_1}\\cdots x_{i_k},\\qquad\nf_a(x)=\\sum_{k=0}^p a_k\\sigma_k(x).\n```\n\nIts diagonal restriction is\n```math\nP_a(t)=f_a(t,\\ldots,t)=\\sum_{k=0}^p a_k\\binom nk t^k.\n```\n\nProve or disprove: if $`t\\mapsto P_a(t)^{1/p}`$ is concave on $`(0,\\infty)`$, then $`x\\mapsto f_a(x)^{1/p}`$ is concave on all of $`\\Gamma_n`$.\n\nThe reverse implication follows by restriction to the diagonal. Equivalently, does the scalar condition\n```math\nP_a(t)P_a''(t)-\\left(1-\\frac1p\\right)P_a'(t)^2\\le0\\qquad(t>0)\n```\n\nsuffice for full concavity? No real-rootedness assumption is imposed. The exponent remains $`1/p`$ if $`a_p=0`$.\n\n## Application\n\nAn exact one-variable concavity test would simplify checking structural assumptions for nonlinear curvature equations, including combinations of elementary symmetric curvatures in Lovelock constraint equations.\n\n## References\n\n1. X. Lachaume, [*On the concavity of a sum of elementary symmetric polynomials*](https://arxiv.org/abs/1712.10327), v1 (2017), Definition 1.1, Conjecture 1 on pp.3 and 8, and Theorem 3.3.\n2. X. Lachaume, [*The constraint equations of Lovelock gravity theories: a new $`\\sigma_k`$-Yamabe problem*](https://arxiv.org/html/1712.04528), v2 (2018), Definition 2.4 and Theorem 2.7(d); *Journal of Mathematical Physics* **59** (2018), 072501. [DOI](https://doi.org/10.1063/1.5023758).\n\n## Status review\n\n\n**Known cases:** The scalar hypothesis is diagonal concavity, not real-rootedness. Quadratic cases and derivative-convolution announcements do not prove this general implication.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe scalar hypothesis is diagonal concavity, not real-rootedness. Quadratic cases and derivative-convolution announcements do not prove this general implication.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nReference 1 proves the quadratic case. Reference 2 shows that real-rootedness of $`P_a`$ implies concavity of $`f_a^{1/p}`$. That sufficient condition is stronger than the diagonal-concavity hypothesis here and does not settle the general question.\n\nA 2026 public announcement concerning derivative convolution addresses different conjectures in reference 1 and explicitly does not claim this one. The [coordinating review](../FURTHER_problems/_tracking/focused-C198-Steklov-Lachaume-two-precise-gates-C-20261028/ROOT-LACHAUME-FINAL-SCIENTIFIC-REVIEW.json) records source and comparator checks, current-resolution and announcement searches, semantic duplicate comparisons and independent model review. It also preserves an inconsistent implication in the source's summary without relying on it. Bounded searches do not prove continued openness.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-292951d1c43dcebb**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Lachaume",
+    "diagonal concavity",
+    "derivative convolution"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Lachaume\" \"diagonal\" \"concavity\" 2026",
+    "\"Lachaume\" \"diagonal\" \"concavity\"; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"Lachaume\" \"derivative convolution\""
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1712.10327v1",
+      "locator": "Conjecture1, lines131–138/475–480",
+      "comparison": "Exact diagonal-to-full concavity target is distinct from real-rootedness. Primary Carptopus/MathExplore-Notes README announces a Walsh-convolution proof of Conjectures4/5 and explicitly excludes1/3, so it is not a matching full announcement."
+    },
+    {
+      "url": "https://github.com/Carptopus/MathExplore-Notes/blob/master/README.md",
+      "locator": "A Walsh-convolution proof of two conjectures of Lachaume, public v0.1-beta announcement",
+      "comparison": "Only conjectures4/5; explicitly no claim for1/3."
+    }
+  ],
+  "rationale": "Exact diagonal-to-full concavity target is distinct from real-rootedness. Primary Carptopus/MathExplore-Notes README announces a Walsh-convolution proof of Conjectures4/5 and explicitly excludes1/3, so it is not a matching full announcement.",
+  "limitations": [
+    "Bounded search does not establish continued openness; selected primary scope statements checked, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "939",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Lachaume",
+          "diagonal concavity",
+          "derivative convolution"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Lachaume",
+          "diagonal concavity",
+          "derivative convolution"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Lachaume",
+        "diagonal concavity",
+        "derivative convolution"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

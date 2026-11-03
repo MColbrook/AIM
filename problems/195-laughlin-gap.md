@@ -2,9 +2,9 @@
 
 **Area:** Fractional quantum Hall physics
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -38,6 +38,13 @@ The gap protects a correlated quantum Hall fluid against low-energy perturbation
 2. N. Rougerie and J. Yngvason, [Quantum Hall phases of cold Bose gases](https://arxiv.org/abs/2209.14215), Encyclopedia of Condensed Matter Physics, second edition (2024), discussion of the yrast curve and spectral-gap conjecture: physical interpretation and later assessment.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The candidate proof explicitly claims the plane inequality H^2>=H/3 on every bosonic particle sector, with coefficient1 for each unordered pair projector. This restricts to the invariant finite polynomial cutoff in the local target and gives positive eigenvalues>=1/3 by spectral calculus. The spherical threshold Q>=3088 in the abstract is not substituted for a plane result; the final plane assertion in Theorem3 is used. No full analytic/certificate audit is asserted.
+
+[Claimed solution](https://github.com/Shencongli/bosonic-laughlin-spectral-gap/blob/fda5da170a1a87c2a7a8e970254c7073c228a99a/paper.pdf) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/195.json). Source locator: Theorem3, printedp10–11: final plane sentence. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: complete bosonic Laughlin gap claim awaiting independent argument and certificate review.
 

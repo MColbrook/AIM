@@ -1,0 +1,50 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 238,
+  "source_sha256": "d87eb337532c155e0f734d9cac98c0a9d78d39534e63bb2132c54db6acce1b50",
+  "statement_sha256": "bab2f886db1be88ce39b31dd8eff4ad0e92b9b6dd43da3b33d9d4327c292701a",
+  "original_target": {
+    "id": "296",
+    "title": "Positive-temperature order in the three-dimensional Edwards–Anderson spin glass",
+    "area": "Stochastic growth, populations and statistical mechanics",
+    "file": "problems/296-ea-three-dimensional-order.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "stochastic2",
+    "source_sha256": "d87eb337532c155e0f734d9cac98c0a9d78d39534e63bb2132c54db6acce1b50",
+    "statement_sha256": "bab2f886db1be88ce39b31dd8eff4ad0e92b9b6dd43da3b33d9d4327c292701a",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "296",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Original target fixes nearest-neighbor Z3, free boxes, Gaussian bonds and positive finite beta with limsup site-overlap second moment>0. TheoremA of2609.38220 proves low-temperature overlap order on a diamond hierarchical Migdal–Kadanoff graph, not Z3. Hexagon2610.00155 Theorem1.1 is a d->infinity pressure limit (variance1/(2d)); even its overlap derivative concerns link overlap, not the original fixed d3 site-overlap positivity. Zero-temperature results also do not transfer. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "three dimensional Edwards Anderson positive temperature overlap spin glass proof 2026",
+    "\"Edwards Anderson\" positive temperature proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2609.38220",
+      "version": "current HTML accessed3November2026",
+      "locator": "§2 graph; TheoremA",
+      "body_inspected": true
+    },
+    {
+      "url": "https://hexagonmath.org/pdf/2610.00155v1",
+      "version": "v1",
+      "locator": "Theorem1.1, printedp5 / PDFp9; Remarks1.5–1.6",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "Edwards|Migdal|spin.glass.*order",
+    "palomar_matches": 2,
+    "hexagon_matches": 3,
+    "result": "Palomar planar ferromagnetic Potts records unrelated; Hexagon spherical dynamics and high-dimensional EA do not match."
+  }
+}

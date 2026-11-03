@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "235",
+  "manifest_index": 181,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "235",
+    "title": "Rigidity of positively curved shells above one-half Hölder regularity",
+    "area": "Thin-shell geometry and elasticity",
+    "file": "problems/235-holder-isometric-shell-rigidity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-13",
+    "group": "diffusion-materials",
+    "source_sha256": "8a9e93546fe51fb4678549d8a8b784d6de3917500b197f407958531774bc5405",
+    "statement_sha256": "ac5357391c245192fa1e4d2bd0d0aef910d33c0e0a477d074fb6e0b7bc24d15a",
+    "state": "unreviewed"
+  },
+  "source_sha256": "8a9e93546fe51fb4678549d8a8b784d6de3917500b197f407958531774bc5405",
+  "statement_sha256": "ac5357391c245192fa1e4d2bd0d0aef910d33c0e0a477d074fb6e0b7bc24d15a",
+  "actual_source_sha256": "8a9e93546fe51fb4678549d8a8b784d6de3917500b197f407958531774bc5405",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`g`$ be any smooth Riemannian metric on $`S^2`$ with strictly positive Gaussian curvature. For every $`\\alpha\\in(1/2,1)`$ and every $`C^{1,\\alpha}`$ embedding $`u:S^2\\to\\mathbb R^3`$ satisfying the isometry condition\n\n```math\nDu(x)^TDu(x)=g(x)\n```\n\nin local coordinates, must $`u(S^2)`$ be the boundary of a convex body?\n\nHere $`C^{1,\\alpha}`$ means that first derivatives are locally Hölder continuous with exponent $`\\alpha`$, and an embedding is an injective immersion that is a homeomorphism onto its image. The unresolved assertion includes the interval $`1/2<\\alpha\\leq2/3`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"isometric embeddings\" rigidity \"1/2\" 2026",
+    "\"isometric embeddings\" rigidity \"1/2\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"isometric embeddings\" rigidity \"1/2\" (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Theorem1.3,Theorem1.5,Theorem1.6; discussion immediately preceding Theorem1.5",
+      "version_or_date": "arXiv2607.02412v1,2July2026,only version in current submission history.",
+      "url": "https://arxiv.org/html/2607.02412",
+      "scope_comparison": "Newell–Nguyen Theorem1.6 proves convexity for C1 intersect W^(1+2/3,3) isometric embeddings. The alternative low-Hölder graph theorem requires BV2; removability needs additional regularity outside a small exceptional set. None follows for every C^(1,alpha) embedding with1/2<alpha<=2/3. The discussion explicitly cannot justify the relevant multiplication at merely fractional one-half regularity. No full target claim located. New July2026 partial citation should be added.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Newell–Nguyen Theorem1.6 proves convexity for C1 intersect W^(1+2/3,3) isometric embeddings. The alternative low-Hölder graph theorem requires BV2; removability needs additional regularity outside a small exceptional set. None follows for every C^(1,alpha) embedding with1/2<alpha<=2/3. The discussion explicitly cannot justify the relevant multiplication at merely fractional one-half regularity. No full target claim located. New July2026 partial citation should be added.",
+  "latest_version_check": "arXiv2607.02412v1,2July2026,only version in current submission history.",
+  "gap_retraction_check": "No complete claim identified. The Sobolev/BV assumptions are material, not automatic consequences of the full stated Hölder interval.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

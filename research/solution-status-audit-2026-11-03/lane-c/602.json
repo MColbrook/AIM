@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "602",
+  "manifest_index": 465,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "602",
+    "title": "BFGS convergence for a quadratic plus an absolute value",
+    "area": "Continuous optimization",
+    "file": "problems/602-bfgs-convergence-for-a-quadratic-plus-an-absolute-value.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-072328cf729a616d",
+    "group": "optimization-information",
+    "source_sha256": "cc0e893bb12f2c60e4241085443cd4f16bc2f1938d1a3c9048eea5079eaf935a",
+    "statement_sha256": "cc3957597a12e8d2e2d46b589c2b247c3a5e79c95f78b1b5e4c935bba5ecc8e9",
+    "state": "unreviewed"
+  },
+  "source_sha256": "cc0e893bb12f2c60e4241085443cd4f16bc2f1938d1a3c9048eea5079eaf935a",
+  "statement_sha256": "cc3957597a12e8d2e2d46b589c2b247c3a5e79c95f78b1b5e4c935bba5ecc8e9",
+  "actual_source_sha256": "cc0e893bb12f2c60e4241085443cd4f16bc2f1938d1a3c9048eea5079eaf935a",
+  "full_original_statement": "Let $`f:\\mathbb R^2\\to\\mathbb R`$ be\n```math\nf(u,v)=u^2+|v|.\n```\n\nFix $`0<c_1<c_2<1`$ and a symmetric positive definite matrix $`H_0\\in\\mathbb R^{2\\times2}`$. Consider any infinite sequence $`x_k=(u_k,v_k)`$, with $`v_k\\ne0`$ for every $`k`$, generated as follows. At each step put\n```math\ng_k=\\nabla f(x_k)=(2u_k,\\mathrm{sgn}v_k)^T,\n \\qquad p_k=-H_kg_k,\n \\qquad x_{k+1}=x_k+a_kp_k,\n```\n\nwhere $`a_k>0`$ satisfies the Armijo and weak Wolfe conditions\n```math\nf(x_{k+1})\\le f(x_k)+c_1a_kg_k^Tp_k,\n \\qquad g_{k+1}^Tp_k\\ge c_2g_k^Tp_k.\n```\n\nWith $`s_k=x_{k+1}-x_k`$, $`y_k=g_{k+1}-g_k`$ and $`\\rho_k=(y_k^Ts_k)^{-1}`$, use the full inverse BFGS update\n```math\nH_{k+1}=(I-\\rho_ks_ky_k^T)H_k(I-\\rho_ky_ks_k^T)\n                  +\\rho_ks_ks_k^T.\n```\n\nThe conditions imply $`y_k^Ts_k>0`$, so this update is well defined.\n\n**Conjecture.** Every such sequence converges to the unique minimizer $`(0,0)`$.\n\nThe quantifier covers all positive definite initial matrices and all accepted steps satisfying the two inequalities. It does not prescribe a particular line-search implementation or a convergence rate. The restriction $`v_k\\ne0`$ is part of the source's definition: the conjecture concerns infinite BFGS sequences at differentiable points, without assigning a gradient or an update at a kink. Equivalently, the question is whether $`f(x_k)\\to0`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"BFGS\" \"quadratic\" \"absolute value\" convergence 2026",
+    "\"BFGS\" \"quadratic\" \"absolute value\" convergence (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"BFGS\" \"u^2\" \"conjecture\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Published 8 May 2026",
+      "primary_body_access_gap": false,
+      "url": "https://link.springer.com/article/10.1007/s10957-026-03008-z",
+      "locator": "Introduction lines 74–80; matrix assumptions (B2.1), Theorem 4.1",
+      "scope_comparison": "Primary introduction explicitly retains x1^2+|x2| as not understood. The paper's convergence results require eigenvalue behavior assumptions not proved for all BFGS executions. Smooth objectives, the Euclidean norm, one-dimensional absolute values, restarts, and limited-memory variants do not match the all-positive-definite-initial-matrices/all-Armijo-weak-Wolfe-steps target."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Primary introduction explicitly retains x1^2+|x2| as not understood. The paper's convergence results require eigenvalue behavior assumptions not proved for all BFGS executions. Smooth objectives, the Euclidean norm, one-dimensional absolute values, restarts, and limited-memory variants do not match the all-positive-definite-initial-matrices/all-Armijo-weak-Wolfe-steps target.",
+  "latest_version_check": "Published 8 May 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; version records showed no withdrawal banner. Cited partial proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

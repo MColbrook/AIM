@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "237",
+  "manifest_index": 183,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "237",
+    "title": "The exact minimum ropelength of a trefoil",
+    "area": "Geometry of ropes and knotted polymers",
+    "file": "problems/237-ideal-trefoil-ropelength.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "diffusion-materials",
+    "source_sha256": "692f0c79655fd7bb322c498252c269480e69d581ba881141b66033c155367927",
+    "statement_sha256": "47e62ee3897b53b71c201bbb266891174fe486d8b536e6f138973931a933e537",
+    "state": "unreviewed"
+  },
+  "source_sha256": "692f0c79655fd7bb322c498252c269480e69d581ba881141b66033c155367927",
+  "statement_sha256": "47e62ee3897b53b71c201bbb266891174fe486d8b536e6f138973931a933e537",
+  "actual_source_sha256": "692f0c79655fd7bb322c498252c269480e69d581ba881141b66033c155367927",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For a closed $`C^{1,1}`$ embedded curve $`\\gamma:S^1\\to\\mathbb R^3`$, define its thickness $`\\tau(\\gamma)`$ as its reach: the supremum of $`r>0`$ such that every point at distance less than $`r`$ from the curve has a unique nearest point on it. Define ropelength by $`\\mathcal R(\\gamma)=\\mathop{\\mathrm{Length}}\\nolimits(\\gamma)/\\tau(\\gamma)`$.\n\nDetermine the exact value\n\n```math\n\\mathcal R_{3_1}=\\inf\\{\\mathcal R(\\gamma):\\gamma\\text{ is ambient isotopic to a trefoil}\\}.\n```\n\nA trefoil is the knot type represented, for $`t\\in[0,2\\pi]`$, by $`((2+\\cos3t)\\cos2t,(2+\\cos3t)\\sin2t,\\sin3t)`$. Ambient isotopy means deformation by a continuous family of homeomorphisms of $`\\mathbb R^3`$. Thickness here is a tube radius, not its diameter.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"trefoil\" \"exact\" \"ropelength\" 2026",
+    "\"trefoil\" \"exact\" \"ropelength\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"trefoil\" \"exact\" \"ropelength\" (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "scope_comparison": "Theorem7 establishes existence and C1,1 regularity of ropelength minimizers; sharp link examples do not determine the trefoil's exact radius-normalized infimum. Focused current searches produced numerical tightness and polygon-space/stick-merger claims, not a matching universal lower bound and exact trefoil construction. No exact complete announcement located.",
+      "locator": "Section2 Theorem7; thickness definition Section1; sharp multicomponent link theorems",
+      "version_or_date": "arXivmath/0103224v3,1March2002, current retrieved PDF.",
+      "url": "https://arxiv.org/pdf/math/0103224"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Theorem7 establishes existence and C1,1 regularity of ropelength minimizers; sharp link examples do not determine the trefoil's exact radius-normalized infimum. Focused current searches produced numerical tightness and polygon-space/stick-merger claims, not a matching universal lower bound and exact trefoil construction. No exact complete announcement located.",
+  "latest_version_check": "arXivmath/0103224v3,1March2002, current retrieved PDF.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

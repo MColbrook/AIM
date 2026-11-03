@@ -2,9 +2,9 @@
 
 **Area:** Spectral graph theory / network design
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -33,6 +33,13 @@ A signing defines a two-sheeted graph lift: positive edges stay in the same shee
 3. Vaibhav Suvagiya, [*Parity families and a kernel-averaged L-function for near-Ramanujan signings*](https://arxiv.org/abs/2607.17343), preprint, 19 July 2026, abstract and main results. Approximate bounds under additional graph hypotheses.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The finite connected simple cubic graph F in Theorem1.1 has signed adjacency norm>2sqrt2 for every edge signing. That disproves the universal two-sided bound at d3. Its failure to be a Ramanujan base graph does not weaken this counterexample because the local statement does not assume that restriction. A one-sided signing theorem would not suffice.
+
+[Claimed solution](https://arxiv.org/pdf/2609.15591v4) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/214.json). Source locator: Theorem1.1, currentv4. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative
 

@@ -1,0 +1,127 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "866",
+  "manifest_index": 710,
+  "checked_date": "2026-11-03",
+  "source_sha256": "40283abccab866ebf00d3775d632196ef9b94f65161880af3b482ba63d488979",
+  "statement_sha256": "e852ece4a44fd53545e5b515f3d27aff1ac81a0a25527246c5998ee01ed6f9cc",
+  "original_target": {
+    "id": "866",
+    "title": "Does vanishing real simplicial volume force vanishing integral foliated simplicial volume?",
+    "area": "Geometry and topology",
+    "file": "problems/866-does-vanishing-real-simplicial-volume-force-vanishing-integral-foliated-simplicial-volume.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f83d255cb4607980",
+    "group": "geometry-topology",
+    "source_sha256": "40283abccab866ebf00d3775d632196ef9b94f65161880af3b482ba63d488979",
+    "statement_sha256": "e852ece4a44fd53545e5b515f3d27aff1ac81a0a25527246c5998ee01ed6f9cc",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`M`$ be an oriented closed connected aspherical $`n`$-manifold: its universal cover $`\\widetilde M`$ is contractible. Its real simplicial volume is\n```math\n\\|M\\|=\\inf\\left\\{\\sum_j|a_j|:\\ \n  \\sum_j a_j\\sigma_j\\text{ is a finite real singular cycle representing }[M]_{\\mathbb R}\\right\\}.\n```\n\n\nSet $`\\Gamma=\\pi_1(M)`$. A standard $`\\Gamma`$-space $`\\alpha:\\Gamma\\curvearrowright(X,\\mu)`$ is a probability-measure-preserving action on a standard Borel probability space. Give $`L^\\infty(X,\\mathbb Z)`$ the right action $`(f\\cdot\\gamma)(x)=f(\\gamma x)`$, and use the deck action on singular chains of $`\\widetilde M`$. In the balanced chain complex\n```math\nC_*^\\alpha(M)=L^\\infty(X,\\mathbb Z)\\otimes_{\\mathbb Z\\Gamma}\n C_*(\\widetilde M;\\mathbb Z),\n```\n\nthe integer fundamental class maps to a class $`[M]^\\alpha`$ by the inclusion of constant functions.\n\nFor a finite reduced chain $`c=\\sum_j f_j\\otimes\\sigma_j`$, with the $`\\sigma_j`$ in distinct deck-transformation orbits, set\n```math\n|c|_1=\\sum_j\\int_X |f_j(x)|\\,d\\mu(x),\\qquad\n|M|^\\alpha=\\inf\\{|c|_1:\\ \\partial c=0,\\ [c]=[M]^\\alpha\\}.\n```\n\nThe **integral foliated simplicial volume** is\n```math\n|M|=\\inf_\\alpha |M|^\\alpha,\n```\n\nwhere the infimum runs over all standard $`\\Gamma`$-spaces.\n\nMust\n```math\n\\|M\\|=0\\quad\\Longrightarrow\\quad |M|=0\n```\n\nhold for every such $`M`$?\n\nThe target is the infimum over actions. It does not assert that every parametrized norm vanishes. No residual-finiteness assumption on $`\\Gamma`$ is imposed.",
+  "full_original_page": "# 866. Does vanishing real simplicial volume force vanishing integral foliated simplicial volume?\n\n**Area:** Geometry and topology\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`M`$ be an oriented closed connected aspherical $`n`$-manifold: its universal cover $`\\widetilde M`$ is contractible. Its real simplicial volume is\n```math\n\\|M\\|=\\inf\\left\\{\\sum_j|a_j|:\\ \n  \\sum_j a_j\\sigma_j\\text{ is a finite real singular cycle representing }[M]_{\\mathbb R}\\right\\}.\n```\n\n\nSet $`\\Gamma=\\pi_1(M)`$. A standard $`\\Gamma`$-space $`\\alpha:\\Gamma\\curvearrowright(X,\\mu)`$ is a probability-measure-preserving action on a standard Borel probability space. Give $`L^\\infty(X,\\mathbb Z)`$ the right action $`(f\\cdot\\gamma)(x)=f(\\gamma x)`$, and use the deck action on singular chains of $`\\widetilde M`$. In the balanced chain complex\n```math\nC_*^\\alpha(M)=L^\\infty(X,\\mathbb Z)\\otimes_{\\mathbb Z\\Gamma}\n C_*(\\widetilde M;\\mathbb Z),\n```\n\nthe integer fundamental class maps to a class $`[M]^\\alpha`$ by the inclusion of constant functions.\n\nFor a finite reduced chain $`c=\\sum_j f_j\\otimes\\sigma_j`$, with the $`\\sigma_j`$ in distinct deck-transformation orbits, set\n```math\n|c|_1=\\sum_j\\int_X |f_j(x)|\\,d\\mu(x),\\qquad\n|M|^\\alpha=\\inf\\{|c|_1:\\ \\partial c=0,\\ [c]=[M]^\\alpha\\}.\n```\n\nThe **integral foliated simplicial volume** is\n```math\n|M|=\\inf_\\alpha |M|^\\alpha,\n```\n\nwhere the infimum runs over all standard $`\\Gamma`$-spaces.\n\nMust\n```math\n\\|M\\|=0\\quad\\Longrightarrow\\quad |M|=0\n```\n\nhold for every such $`M`$?\n\nThe target is the infimum over actions. It does not assert that every parametrized norm vanishes. No residual-finiteness assumption on $`\\Gamma`$ is imposed.\n\n## Application\n\nIntegral foliated simplicial volume controls measured topological invariants, including $`L^2`$-Betti numbers. A positive answer would turn real-volume vanishing into stronger measured vanishing and, in particular, imply the corresponding zero-Euler-characteristic conclusion.\n\n## Known progress\n\nLöh, Moraschini and Sauer prove vanishing for smooth aspherical manifolds with an open amenable cover of multiplicity at most the dimension. Their Theorem 1.2 proves the stronger parametrized conclusion for every essentially free action in this restricted class. It does not settle Question 1.1 for arbitrary aspherical manifolds.\n\nBargagnati, Casali, Milizia and Moraschini's 2026 Corollary 1.5 gives vanishing for mapping tori over oriented closed connected aspherical prime three-manifolds, and for mapping tori over closed connected oriented hyperbolic manifolds of dimension at least three. These are additional restricted families.\n\nThe stable integral simplicial volume defined using finite covers is a different invariant. The source's separate Question 2.4 about that invariant includes residual finiteness; those conditions are not substituted into this problem.\n\n## Status review\n\n\n**Known cases:** Amenable-cover and mapping-torus results give restricted vanishing families. Scalar-curvature criteria in the OpenAI collection impose additional geometry and do not infer integral foliated vanishing solely from zero real simplicial volume. Stable integral volume over finite covers is a different invariant.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nAmenable-cover and mapping-torus results give restricted vanishing families. Scalar-curvature criteria in the OpenAI collection impose additional geometry and do not infer integral foliated vanishing solely from zero real simplicial volume. Stable integral volume over finite covers is a different invariant.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe original Question 1.1, the source's real and twisted-chain definitions, the latest v2 question, the published question and Definition 2.6, and the actual 2026 mapping-torus corollary were read. Current primary-source searches for full proofs, counterexamples and announcements, with bounded Prove2Me searches, found no matching general resolution on 24 October 2026.\n\nAll-status AIM/OpenAI and FURTHER checks distinguish the target from positive-volume motion-planning complexity, affine-manifold real-volume vanishing, amenable-normal-subgroup real-volume vanishing, and scalar-curvature inequalities. The existing [zero-real-volume Euler-characteristic question](537-does-zero-simplicial-volume-force-zero-euler-characteristic.md) is a related weaker conclusion; it does not state integral foliated volume vanishing. This review compares statements and scope, without certifying every cited proof.\n\n## References\n\n1. C. Löh, M. Moraschini and R. Sauer, [Amenable covers and integral foliated simplicial volume](https://arxiv.org/abs/2112.12223), eligible v1 and latest v2, Question 1.1, Theorem 1.2 and Definitions 2.1, 2.5–2.6. [Published article](https://nyjm.albany.edu/j/2022/28-47p.pdf), *New York Journal of Mathematics* **28** (2022), 1112–1136.\n2. G. Bargagnati, A. Casali, F. Milizia and M. Moraschini, [Minimal volume entropy of mapping tori over 3-manifolds](https://doi.org/10.1007/s00208-026-03590-7), *Mathematische Annalen* **396**, article 59 (13 October 2026), introduction and Corollary 1.5.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f83d255cb4607980**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"vanishing\" \"integral foliated simplicial volume\" conjecture 2026",
+    "\"vanishing\" \"integral foliated simplicial volume\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:hexagonmath.org OR site:palomar-registry.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2112.12223",
+      "locator": "Question1.1, Theorem1.2",
+      "inspection": "Exact source question read. Need infimum over all pmp actions vanish assuming only asphericity and zero real volume, no residual finiteness. Amenable-cover/mapping-torus/scalar-curvature restrictions are extra; stable integral finite-cover volume is different. Actual recent mapping-torus corollary not yet inspected."
+    }
+  ],
+  "scope_comparison": "Exact source question read. Need infimum over all pmp actions vanish assuming only asphericity and zero real volume, no residual finiteness. Amenable-cover/mapping-torus/scalar-curvature restrictions are extra; stable integral finite-cover volume is different. Actual recent mapping-torus corollary not yet inspected.",
+  "rationale": "No complete matching resolution identified in bounded searches. Snapshot announcement routing and exact body gaps still to be recorded; no guarantee of continued openness.",
+  "source_gaps": [
+    "2026 mapping-torus corollary and OpenAI scalar-curvature candidate body pending."
+  ],
+  "announcement_routing": {
+    "localID": "866",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "integral foliated",
+          "simplicial volume"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "integral foliated",
+          "simplicial volume"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "integral foliated",
+        "simplicial volume"
+      ],
+      "hits": [
+        {
+          "entry": "335",
+          "title": "Gromov's integral scalar-curvature inequality",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/An-integral-scalar-curvature-bound-for-real-simplicial-volume-October-5-2026/v126-proof.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Positive-scalar-curvature-forces-rational-inessentiality-September-23-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target.",
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.068Z",
+      "previous_outcome": "hold",
+      "localID": "866",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "queries": [
+        "\"simplicial volume\" \"mapping tori\" 2026 integral foliated"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2510.11651v1",
+          "version": "13 October 2025; published JLMS2026 DOI10.1112/jlms.70697",
+          "locator": "primary abstract; publisher Theorem2",
+          "inspection": "Results concern integral simplicial volume of cyclic covers of torus mapping tori, with homological monodromy bounds. This is a restricted class and a cover invariant, not arbitrary pmp-action infimum."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/math/main/preprints/An-integral-scalar-curvature-bound-for-real-simplicial-volume-October-5-2026/v126-proof.pdf",
+          "version": "5 October 2026; fetched3November2026",
+          "locator": "Theorem1.1 printed p3; Theorem2.1 printed p5",
+          "inspection": "Actual theorem bounds REAL simplicial volume by negative scalar curvature. Theorem2.1 assumes existence of a nonnegative scalar curvature metric to deduce real volume zero. Neither theorem turns zero real volume on an arbitrary aspherical manifold into zero integral foliated volume.",
+          "local_text": "_sources/openai-335.txt",
+          "receipt": "_sources/openai-335.txt.receipt.json"
+        }
+      ],
+      "scope_comparison": "Original Question1.1 body and both new claims' exact scope compared. Scalar curvature existence cannot be inferred from real volume zero, and no all-action integral-foliated conclusion is asserted. No material plausible full-candidate gap remains."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

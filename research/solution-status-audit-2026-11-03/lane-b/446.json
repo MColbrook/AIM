@@ -1,0 +1,46 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "446",
+  "manifest_index": 360,
+  "source_sha256": "ba10bc66126bfccf07cb9d068500534755c77b65fb37b0a20dcea583c63c8fca",
+  "statement_sha256": "a36d89e4f2245134aab4d624869d1ceea1b7c628a09a04f241a4292fc0973e5f",
+  "original_target": {
+    "id": "446",
+    "title": "The sharp Beurling–Ahlfors bound for planar elliptic systems",
+    "area": "Planar elliptic PDEs and singular integral operators",
+    "file": "problems/446-beurling-ahlfors-sharp-norm.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: affirmative sharp bound, claimed",
+    "proof": "https://arxiv.org/pdf/2609.28311v2",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_115_140.md",
+    "group": "operators",
+    "source_sha256": "ba10bc66126bfccf07cb9d068500534755c77b65fb37b0a20dcea583c63c8fca",
+    "statement_sha256": "a36d89e4f2245134aab4d624869d1ceea1b7c628a09a04f241a4292fc0973e5f",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "unverified-announcement",
+  "ready_for_parent": true,
+  "recommended_status": "Solved",
+  "answer": "Affirmative complex-valued sharp operator norm for all1<p<infinity.",
+  "required_status_qualification": "Solved on the basis of an unverified announcement. The full target is claimed in the cited source; the external proof has not been independently verified here.",
+  "scope_comparison": "Corollary2 explicitly states the Beurling–Ahlfors norm on Lp(C;C) equals p*-1 for every1<p<infinity. This implies the original Cc-infinity complex-valued input inequality in the same plane Lebesgue normalization; operator notation S versus B and overall kernel sign do not change norms. The scalar/real-only or special-input restrictions of nearby results are not used. The source proof remains an unverified full announcement; current Hyra partial coefficient1.523958 does not supersede the stronger full claim.",
+  "queries": [
+    "\"2609.28311\" correction error withdrawn",
+    "\"Beurling Ahlfors\" sharp norm (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "primary_sources": [
+    {
+      "version": "v2,8October2026",
+      "locator": "Corollary2 equation(4); Theorem1; §2",
+      "body_inspected": true,
+      "url": "https://arxiv.org/html/2609.28311v2"
+    }
+  ],
+  "known_gap_check": "Prior local applicability reviews read; no concrete scope or proof gap was recorded. Current primary bodies and bounded correction/version searches did not locate withdrawal. Whole external proofs remain unverified.",
+  "verification": "Applicability review only; no new whole-proof, Lean or certificate replay."
+}

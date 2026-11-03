@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1033",
+  "manifest_index": 877,
+  "checked_date": "2026-11-03",
+  "source_sha256": "7074957fe8221b340f51163b5256ac7c078cac96a335077523ac7b9de7090239",
+  "statement_sha256": "b79cbaa4b24a708abf0b35d57f89f55cf7b51a5386975a208783f0c134b05fa8",
+  "original_target": {
+    "id": "1033",
+    "title": "Sharp Landau-level counting on arbitrary planar domains",
+    "area": "Spectral theory and spectral geometry",
+    "file": "problems/1033-sharp-landau-level-counting-on-arbitrary-planar-domains.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f336bd4505867e25",
+    "group": "spectral",
+    "source_sha256": "7074957fe8221b340f51163b5256ac7c078cac96a335077523ac7b9de7090239",
+    "statement_sha256": "b79cbaa4b24a708abf0b35d57f89f55cf7b51a5386975a208783f0c134b05fa8",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^2`$ be a nonempty open set with $`0<|\\Omega|<\\infty`$, and let $`B>0`$. Set $`A(x)=\\tfrac12(-x_2,x_1)`$ and let $`H_{B,\\Omega}^{\\mathrm D}`$ be the Dirichlet magnetic Laplacian $`(-i\\nabla-BA)^2`$: its quadratic form is the closure of\n\n```math\nq_B[u]=\\int_\\Omega|(-i\\nabla-BA)u|^2\\,dx,\\qquad u\\in C_c^\\infty(\\Omega),\n```\n\n\nin the magnetic form norm. Write $`N_\\Omega(B,\\lambda)`$ for its number of eigenvalues **strictly below** $`\\lambda`$, counted with multiplicity.\n\nIs it true, for every such $`\\Omega`$, every $`B>0`$ and every $`\\lambda>0`$, that\n\n```math\nN_\\Omega(B,\\lambda)\\le \\frac{B|\\Omega|}{2\\pi}\\,\\#\\{k\\in\\mathbb Z_{\\ge0}:B(2k+1)<\\lambda\\}\\,?\n```\n\n\nThe right side is the area times the integrated density of states of the full-plane Landau Hamiltonian. Both counting conventions are strict, including when $`\\lambda`$ is a Landau level. The potential is the restriction of the displayed globally defined symmetric gauge; extra Aharonov–Bohm fluxes are not part of the question.",
+  "full_original_page": "# 1033. Sharp Landau-level counting on arbitrary planar domains\n\n**Area:** Spectral theory and spectral geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\Omega\\subset\\mathbb R^2`$ be a nonempty open set with $`0<|\\Omega|<\\infty`$, and let $`B>0`$. Set $`A(x)=\\tfrac12(-x_2,x_1)`$ and let $`H_{B,\\Omega}^{\\mathrm D}`$ be the Dirichlet magnetic Laplacian $`(-i\\nabla-BA)^2`$: its quadratic form is the closure of\n\n```math\nq_B[u]=\\int_\\Omega|(-i\\nabla-BA)u|^2\\,dx,\\qquad u\\in C_c^\\infty(\\Omega),\n```\n\n\nin the magnetic form norm. Write $`N_\\Omega(B,\\lambda)`$ for its number of eigenvalues **strictly below** $`\\lambda`$, counted with multiplicity.\n\nIs it true, for every such $`\\Omega`$, every $`B>0`$ and every $`\\lambda>0`$, that\n\n```math\nN_\\Omega(B,\\lambda)\\le \\frac{B|\\Omega|}{2\\pi}\\,\\#\\{k\\in\\mathbb Z_{\\ge0}:B(2k+1)<\\lambda\\}\\,?\n```\n\n\nThe right side is the area times the integrated density of states of the full-plane Landau Hamiltonian. Both counting conventions are strict, including when $`\\lambda`$ is a Landau level. The potential is the restriction of the displayed globally defined symmetric gauge; extra Aharonov–Bohm fluxes are not part of the question.\n\n## Application\n\nThis would give a sharp area bound on the number of confined quantum states below any energy in a constant perpendicular magnetic field. Integrating the counting inequality also gives the corresponding Landau-level bounds for positive-order Riesz means.\n\n## Known results and scope\n\nFrank, Loss and Weidl prove this counting bound for finite-area tiling domains and explicitly ask whether it extends to arbitrary domains. For arbitrary finite-area domains they establish the associated Riesz-mean bound at orders $`\\gamma\\ge1`$; their counterexamples to a different, field-independent semiclassical constant do not disprove the displayed Landau-level bound.\n\nThe latest checked Frank–Larson–Pfeiffer preprint strengthens the arbitrary-domain Landau-level estimate at $`\\gamma\\ge1`$, with a remainder. Its theorem does not cover the counting order $`\\gamma=0`$. Recent nonmagnetic Pólya announcements concern $`-\\Delta`$ rather than this constant-field estimate.\n\n## References\n\n1. R. L. Frank, M. Loss and T. Weidl, [*Pólya’s conjecture in the presence of a constant magnetic field*](https://ems.press/content/serial-article-files/31694?nt=1#page=5), *Journal of the European Mathematical Society* **11** (2009), no. 6, 1365–1383, [doi:10.4171/JEMS/184](https://doi.org/10.4171/JEMS/184). Definitions and magnetic symbol on printed p. 1368; Theorem 2.2, equations (2.6)–(2.9), and the question on printed p. 1369.\n2. R. L. Frank, S. Larson and P. Pfeiffer, [*Improved semiclassical eigenvalue estimates for the Laplacian and the Landau Hamiltonian*](https://arxiv.org/html/2502.02388v2), arXiv:2502.02388v2 (6 December 2025), Theorem 2.\n\n## Status review\n\n\n**Known cases:** The assertion is the exact Landau-level counting bound on every finite-area open set. Tiling classes, nonmagnetic Polya bounds and positive-order Riesz means do not give the arbitrary-domain zeroth-order bound.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe assertion is the exact Landau-level counting bound on every finite-area open set. Tiling classes, nonmagnetic Polya bounds and positive-order Riesz means do not give the arbitrary-domain zeroth-order bound.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked 24 October 2026. Bounded current and announcement searches found no matching solution, and the closest AIM and FURTHER targets concern different operators, Riesz orders or shape comparisons. The live Prove2Me page timed out; indexed searches found no matching entry. These checks cannot rule out unindexed work.\n\nThe [dated independent review](../FURTHER_problems/_tracking/JEMS184-Landau-counting-independent-coordinator-admission-review-20261024.json) records the source, current-result and duplicate comparisons.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f336bd4505867e25**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Landau counting",
+    "Frank Loss Weidl",
+    "Landau Hamiltonian",
+    "Pfeiffer"
+  ],
+  "searches": [
+    {
+      "query": "\"Landau\" \"counting\" \"arbitrary domains\" 2026 Polya"
+    },
+    {
+      "query": "\"Landau\" \"counting\" \"Pólya\" 2026 arxiv"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2502.02388",
+      "version": "v2",
+      "date": "2025-12-06",
+      "locator": "latest official history"
+    },
+    {
+      "url": "https://arxiv.org/html/2502.02388v2",
+      "locator": "Theorem2 lines93–98; magnetic form definitions lines74–91"
+    }
+  ],
+  "scope_comparison": "Theorem2 retains gamma>=1 for every finite-area open planar domain. Target asks strict counting gamma=0 at all fields/energies including exact Landau levels. Positive Riesz means cannot be differentiated into the required counting inequality. Robin cuboid and nonmagnetic Polya results use different operators; no full matching announcement located.",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded current literature and announcement searches do not establish continued openness. Restricted results were compared at the stated locators; no full proof certification claimed.",
+  "announcement_routing": {
+    "localID": "1033",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Landau counting",
+          "Frank Loss Weidl",
+          "Landau Hamiltonian",
+          "Pfeiffer"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Landau counting",
+          "Frank Loss Weidl",
+          "Landau Hamiltonian",
+          "Pfeiffer"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Landau counting",
+        "Frank Loss Weidl",
+        "Landau Hamiltonian",
+        "Pfeiffer"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

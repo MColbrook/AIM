@@ -1,0 +1,44 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 246,
+  "source_sha256": "c849c74aeba59f6495a3d6c568f22e89780cb8b0959214ade4b00ae2eb3806a6",
+  "statement_sha256": "23eba502a9427711381aa0ad8d500dc6a011dc64207a0474013b0e35c86b70ba",
+  "original_target": {
+    "id": "305",
+    "title": "Dynamic optimality of splay trees",
+    "area": "Adaptive data structures and online computation",
+    "file": "problems/305-splay-dynamic-optimality.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "operators",
+    "source_sha256": "c849c74aeba59f6495a3d6c568f22e89780cb8b0959214ade4b00ae2eb3806a6",
+    "statement_sha256": "23eba502a9427711381aa0ad8d500dc6a011dc64207a0474013b0e35c86b70ba",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "305",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Original specifically bottom-up Splay and an absolute competitive factor, with arbitrary initialization additive f(n). Current Chmel et al Theorem1 proves O(loglog n log^2logloglog n) competitiveness, still unbounded with n; an initialization cost independent of sequence cannot absorb that multiplicative loss over arbitrary long sequences. Conditional regular-access proofs and tournament-heap counterexamples have different scope. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "splay trees dynamic optimality constant competitive proof 2026",
+    "\"splay trees\" dynamic optimality (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2607.18498",
+      "version": "current HTML3November2026",
+      "locator": "Theorem1; §5 proof of competitiveness",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "\\bsplay\\b|dynamic.optimal",
+    "palomar_matches": 0,
+    "hexagon_matches": 0,
+    "result": "No indexed matching claim. Word boundaries exclude unrelated 'display' text."
+  }
+}

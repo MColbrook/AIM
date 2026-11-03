@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "623",
+  "manifest_index": 484,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "623",
+    "title": "Costas arrays at every order",
+    "area": "Combinatorial signal design",
+    "file": "problems/623-costas-all-orders.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "optimization-information",
+    "source_sha256": "a7a22959f82818145a40ea0ce51b6bf5463e589a65b43eda0d6cea66432e769d",
+    "statement_sha256": "b387634a354d06f9cde0311a4ad7d2c213d836af2e4d8a9d23711bd5c0adc17a",
+    "state": "unreviewed"
+  },
+  "source_sha256": "a7a22959f82818145a40ea0ce51b6bf5463e589a65b43eda0d6cea66432e769d",
+  "statement_sha256": "b387634a354d06f9cde0311a4ad7d2c213d836af2e4d8a9d23711bd5c0adc17a",
+  "actual_source_sha256": "a7a22959f82818145a40ea0ce51b6bf5463e589a65b43eda0d6cea66432e769d",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For each positive integer $`n`$, does there exist a permutation $`f`$ of $`\\{1,\\ldots,n\\}`$ such that, for every $`h\\in\\{1,\\ldots,n-1\\}`$, the integers\n\n```math\nf(i+h)-f(i),\\qquad 1\\le i\\le n-h,\n```\n\nare pairwise distinct? All differences are taken in the integers, without reduction modulo $`n`$.\n\nSuch a permutation describes a Costas array. Settle existence for every order, either by proving the assertion or by proving nonexistence at some order. Failure of a search or of a particular algebraic construction is insufficient for the negative answer.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Costas arrays\" \"all orders\" existence 2026",
+    "\"Costas arrays\" \"all orders\" existence (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "version_or_date": "v1, 3 February 2026",
+      "url": "https://arxiv.org/html/2602.03407",
+      "scope_comparison": "The universal matrix is a representation/search framework for existing arrays. Prediction for arbitrary orders is explicitly future work; algorithm input assumes the complete frequency matrix and invokes a search. This is no proof of existence at every integer order. A symmetric-array census cannot prove unrestricted nonexistence.",
+      "locator": "Section IV-A, especially lines 239–245 and Algorithm 1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The universal matrix is a representation/search framework for existing arrays. Prediction for arbitrary orders is explicitly future work; algorithm input assumes the complete frequency matrix and invokes a search. This is no proof of existence at every integer order. A symmetric-array census cannot prove unrestricted nonexistence.",
+  "latest_version_check": "v1, 3 February 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

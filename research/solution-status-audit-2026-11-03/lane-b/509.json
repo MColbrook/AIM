@@ -1,0 +1,79 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "509",
+  "manifest_index": 400,
+  "original_target": {
+    "id": "509",
+    "title": "Can a closed Ricci-flat manifold have full rotation holonomy?",
+    "area": "Riemannian geometry; Einstein metrics",
+    "file": "problems/509-can-a-closed-ricci-flat-manifold-have-full-rotation-holonomy.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-3e256070aadbc752",
+    "group": "geometry-topology",
+    "source_sha256": "d42613494ceaf2dc9f5d1d62e9851bed3b63facef0699f1eecf759a8c454191d",
+    "statement_sha256": "584ba0fee0551ef846100cfa23eb6c7c7305febf52d57177c72c01128d53509d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d42613494ceaf2dc9f5d1d62e9851bed3b63facef0699f1eecf759a8c454191d",
+  "statement_sha256": "584ba0fee0551ef846100cfa23eb6c7c7305febf52d57177c72c01128d53509d",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:35:52.506835+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2608.16880v1 introduction distinguishes compact simply connected Ricci-flat question from its positive-Einstein construction. Actual2204.08048v2 Theorems4–5 generic-holonomy complete metrics have Kasner asymptotics and noncompact/infinite topology; compactifications do not yield requested closed manifold. No full match located.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2608.16880v1",
+      "locator": "Introduction lambda=0 paragraph, line58",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2204.08048v2",
+      "locator": "Theorems4–5",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"compact\" \"Ricci-flat\" \"SO(n)\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Ricci-flat",
+        "full holonomy"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Ricci-flat",
+        "full holonomy"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00654v1",
+          "title": "Collision Geometry and Holonomy of Finite Blaschke Model Spaces"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

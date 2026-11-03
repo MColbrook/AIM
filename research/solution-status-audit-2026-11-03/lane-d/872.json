@@ -1,0 +1,102 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "872",
+  "manifest_index": 716,
+  "checked_date": "2026-11-03",
+  "source_sha256": "ff4d8474ec6f53e4713058cdb9277adedc5c393b21a58021b46ef57e980428ef",
+  "statement_sha256": "e764d2fffb2007d54bc600b19b0cabb6955d54eb7086ebc17bec8cc79f9faa92",
+  "original_target": {
+    "id": "872",
+    "title": "Is the algebraic Hilbert number exactly the Harnack-type expression?",
+    "area": "Inverse problems, control and dynamics",
+    "file": "problems/872-is-the-algebraic-hilbert-number-exactly-the-harnack-type-expression.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-67bda3e4afc372e4",
+    "group": "inverse",
+    "source_sha256": "ff4d8474ec6f53e4713058cdb9277adedc5c393b21a58021b46ef57e980428ef",
+    "statement_sha256": "e764d2fffb2007d54bc600b19b0cabb6955d54eb7086ebc17bec8cc79f9faa92",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For an integer $`d\\ge 2`$, let $`H_a(d)`$ be the supremum, over real planar polynomial vector fields\n```math\n\\dot x=P(x,y),\\qquad \\dot y=Q(x,y),\\qquad \\max(\\deg P,\\deg Q)\\le d,\n```\n\nof the number of *algebraic limit cycles*: isolated periodic orbits contained in the zero set of a nonzero real polynomial. Is\n```math\nH_a(d)=1+\\frac{(d-1)(d-2)}2\\qquad\\text{for every }d\\ge2?\n```\n\nThe equality asserts both a coefficient-independent upper bound and its attainment. The invariant algebraic curves are **not** assumed smooth, nodal, generic, or of bounded degree.",
+  "full_original_page": "# 872. Is the algebraic Hilbert number exactly the Harnack-type expression?\n\n**Area:** Inverse problems, control and dynamics\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor an integer $`d\\ge 2`$, let $`H_a(d)`$ be the supremum, over real planar polynomial vector fields\n```math\n\\dot x=P(x,y),\\qquad \\dot y=Q(x,y),\\qquad \\max(\\deg P,\\deg Q)\\le d,\n```\n\nof the number of *algebraic limit cycles*: isolated periodic orbits contained in the zero set of a nonzero real polynomial. Is\n```math\nH_a(d)=1+\\frac{(d-1)(d-2)}2\\qquad\\text{for every }d\\ge2?\n```\n\nThe equality asserts both a coefficient-independent upper bound and its attainment. The invariant algebraic curves are **not** assumed smooth, nodal, generic, or of bounded degree.\n\n## Application\n\nThe count measures how complicated the algebraically visible oscillations of a polynomial dynamical system can be at a fixed vector-field degree. It is a sharp, restricted version of the limit-cycle counting question in Hilbert's sixteenth problem. A resolution would in particular settle the still-open quadratic algebraic case $`H_a(2)=1`$, while leaving the broader count of nonalgebraic limit cycles as a different question.\n\n## References\n\n1. J. Llibre, R. Ramírez and N. Sadovskaia, [*On the 16th Hilbert problem for algebraic limit cycles*](https://doi.org/10.1016/j.jde.2009.11.023), *Journal of Differential Equations* **248** (2010), 1401–1409. The generic invariant-curve theorem and source of the full conjecture.\n2. J. Llibre, R. Ramírez and N. Sadovskaia, [*On the 16th Hilbert problem for limit cycles on nonsingular algebraic curves*](https://doi.org/10.1016/j.jde.2010.06.009), *Journal of Differential Equations* **250** (2011), 983–999, [author preprint](https://ddd.uab.cat/pub/artpub/2011/gsduab_2789/joudifequ_a2011v250p983preprint.pdf), printed p. 2, Conjecture 2 and Theorem 1. The same authors state the unrestricted conjecture and distinguish it from their results under hypotheses on invariant curves.\n3. J. Llibre and X. Zhang, [*A survey on algebraic and explicit non-algebraic limit cycles in planar differential systems*](https://doi.org/10.1016/j.exmath.2020.03.001), *Expositiones Mathematicae* **39** (2021), 48–61, [author preprint](https://ddd.uab.cat/pub/artpub/2021/239786/LliZha2019c.pdf), §2.3, Open problems 1–3. The full formula remains an explicit open problem; the survey records the nodal-case theorem and the quadratic and cubic subquestions.\n\n## Status review\n\n\n**Known cases:** The generic or nodal invariant-curve theorems do not establish the unrestricted algebraic Hilbert number. The Prove2Me listing presents the exact formula as a goal, not an independently checked solution. The older Winkel counterexample concerns a different conjecture.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe generic or nodal invariant-curve theorems do not establish the unrestricted algebraic Hilbert number. The Prove2Me listing presents the exact formula as a goal, not an independently checked solution. The older Winkel counterexample concerns a different conjecture.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe 2010 generic result gives the displayed bound for even $`d`$, and one less for odd $`d`$, when *all* irreducible invariant algebraic curves meet the genericity assumptions. Zhang's nodal-curve theorem also concerns a restricted class. These theorems do not cover arbitrary invariant curves. The 2021 author survey continues to list the unrestricted formula as Open problem 3. A bounded literature and announcement check on 21 October 2026 found no complete matching resolution. The older paper titled “Counterexample to a conjecture on the algebraic limit cycles of polynomial vector fields” disproves Winkel's different 2000 conjecture about the minimum vector-field degree for given ovals, not this 2010 formula.\n\nThe discovery cue was a [Prove2Me listing](https://prove2.me/?status=all&page=96). Its listed formalization targets were not treated as verified Lean proofs. The [body and status audit](../FURTHER_problems/_tracking/prove2-llibre-algebraic-hilbert-body-and-status-2026-10-21.json) and [semantic comparison](../FURTHER_problems/_tracking/prove2-llibre-algebraic-hilbert-duplicate-2026-10-21.json) record the checks and their limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-67bda3e4afc372e4**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"algebraic Hilbert number\" conjecture solution 2026",
+    "\"algebraic Hilbert number\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://ddd.uab.cat/pub/artpub/2021/239786/LliZha2019c.pdf",
+      "locator": "2021 survey §2.3 Openproblem3; PDFp5",
+      "inspection": "Exact unrestricted formula is retained as open problem in primary survey. Generic/nodal invariant-curve assumptions do not give universal bound or attainability. Winkel counterexample targets minimum field degree for chosen ovals, not this algebraic Hilbert number."
+    }
+  ],
+  "scope_comparison": "Exact unrestricted formula is retained as open problem in primary survey. Generic/nodal invariant-curve assumptions do not give universal bound or attainability. Winkel counterexample targets minimum field degree for chosen ovals, not this algebraic Hilbert number.",
+  "rationale": "Bounded searches did not identify a complete matching resolution; hold while specific body gaps stated above remain.",
+  "source_gaps": [
+    "Specific remaining body/locator comparison described in source inspection.",
+    "Snapshot announcement routing pending for this batch."
+  ],
+  "announcement_routing": {
+    "localID": "872",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "algebraic Hilbert",
+          "algebraic limit cycles"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "algebraic Hilbert",
+          "algebraic limit cycles"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "algebraic Hilbert",
+        "algebraic limit cycles"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.069Z",
+      "previous_outcome": "hold",
+      "localID": "872",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "queries": [
+        "\"Winkel\" \"algebraic Hilbert\" 2026",
+        "\"Winkel\" \"ovals\" \"Hilbert\" polynomial 2026"
+      ],
+      "scope_comparison": "The original primary survey §2.3 Openproblem3 was already read with the exact unrestricted algebraic Hilbert number formula. Fresh focused searches produced no plausible full matching theorem. The previously mentioned Winkel topic asks minimum vector-field degree for prescribed ovals, which does not assert either the universal upper bound or attainment in this target. No essential candidate-body gap was identified; routing is now complete and empty for the target aliases. This is a bounded negative search, not proof of openness."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

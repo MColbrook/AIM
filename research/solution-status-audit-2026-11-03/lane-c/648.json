@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "648",
+  "manifest_index": 501,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "648",
+    "title": "Higher-regularity density of stable ergodicity",
+    "area": "Geometry, topology and smooth dynamics",
+    "file": "problems/648-higher-regularity-density-of-stable-ergodicity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-7d9554bef6df4e67",
+    "group": "geometry-topology",
+    "source_sha256": "3f2e8919f0b6edf59fd1930ad860841d3af22279698f3c1ac48f03797e6e28ba",
+    "statement_sha256": "283cf0a08706df0219d0bbb46928220d2f0fb9b24027d598c2652bf3a4321034",
+    "state": "unreviewed"
+  },
+  "source_sha256": "3f2e8919f0b6edf59fd1930ad860841d3af22279698f3c1ac48f03797e6e28ba",
+  "statement_sha256": "283cf0a08706df0219d0bbb46928220d2f0fb9b24027d598c2652bf3a4321034",
+  "actual_source_sha256": "3f2e8919f0b6edf59fd1930ad860841d3af22279698f3c1ac48f03797e6e28ba",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`M`$ be a compact connected smooth Riemannian manifold without boundary, of dimension at least three, with normalized volume measure $`m`$. A volume-preserving diffeomorphism $`g`$ is **stably ergodic** if some $`C^1`$ neighborhood $`U`$ of $`g`$ has the following property: every volume-preserving $`C^2`$ diffeomorphism $`h\\in U`$ is ergodic for $`m`$. Ergodicity means that each invariant measurable set has measure zero or one.\n\nUse the source's partially hyperbolic class. Thus $`f`$ admits a continuous nontrivial $`Df`$-invariant splitting\n```math\nTM=E^s\\oplus E^c\\oplus E^u\n```\n\nand continuous positive functions $`\\nu,\\widehat\\nu,\\gamma,\\widehat\\gamma`$, with\n```math\n\\nu,\\widehat\\nu<1,\\qquad\n\\nu<\\gamma<\\widehat\\gamma^{-1}<\\widehat\\nu^{-1},\n```\n\nsuch that at every $`x\\in M`$, for nonzero vectors in the indicated subbundles,\n```math\n\\|D_xf(v^s)\\|<\\nu(x)\\|v^s\\|,\\qquad\n\\gamma(x)\\|v^c\\|<\\|D_xf(v^c)\\|<\\widehat\\gamma(x)^{-1}\\|v^c\\|,\\qquad\n\\widehat\\nu(x)^{-1}\\|v^u\\|<\\|D_xf(v^u)\\|.\n```\n\n\nFor every integer $`r\\ge2`$, every volume-preserving partially hyperbolic $`C^r`$ diffeomorphism $`f:M\\to M`$, and every $`C^r`$ neighborhood $`V`$ of $`f`$, must $`V`$ contain a volume-preserving partially hyperbolic $`C^r`$ diffeomorphism $`g`$ that is stably ergodic?\n\nThe approximation must occur in the $`C^r`$ topology. The robustness in the definition of stable ergodicity is measured in the $`C^1`$ topology among volume-preserving $`C^2`$ maps.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"stable ergodicity\" \"C^r\" density 2026",
+    "\"stable ergodicity\" \"C^r\" density (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.24946",
+      "locator": "Theorem1.1, lines113–116; Leguil–Pineyrua TheoremA",
+      "version_or_date": "v1,October2026;2112.12762v2,27January2022 version inspected",
+      "scope_comparison": "October theorem assumes u-center bunching, robust coherence, center dimension2, unstable dimension1, EA, and a center determinant condition. TheoremA likewise requires a coherence/plaque-expansiveness/strong-bunching package. Neither establishes Cr-density for every partially hyperbolic conservative Cr map and each r>=2. C1-density uses a different approximation topology.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "October theorem assumes u-center bunching, robust coherence, center dimension2, unstable dimension1, EA, and a center determinant condition. TheoremA likewise requires a coherence/plaque-expansiveness/strong-bunching package. Neither establishes Cr-density for every partially hyperbolic conservative Cr map and each r>=2. C1-density uses a different approximation topology.",
+  "latest_version_check": "v1,October2026;2112.12762v2,27January2022 version inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

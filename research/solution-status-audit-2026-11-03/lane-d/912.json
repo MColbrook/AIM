@@ -1,0 +1,86 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "912",
+  "manifest_index": 756,
+  "checked_date": "2026-11-03",
+  "source_sha256": "e027088e75223a56f6f3e010464d1df81e54d9db0932ec0a4ac28975b07b8a8c",
+  "statement_sha256": "2e422ed0001a0e15feaf8cd5a4989ea63e5eaea922ea8cea157b2630ab14d4e6",
+  "original_target": {
+    "id": "912",
+    "title": "Realizing a prescribed maximal nest with one operator",
+    "area": "Operators, matrices and computation",
+    "file": "problems/912-realizing-a-prescribed-maximal-nest-with-one-operator.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-88b2c5f4b484a93e",
+    "group": "operators",
+    "source_sha256": "e027088e75223a56f6f3e010464d1df81e54d9db0932ec0a4ac28975b07b8a8c",
+    "statement_sha256": "2e422ed0001a0e15feaf8cd5a4989ea63e5eaea922ea8cea157b2630ab14d4e6",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`H`$ be a complex separable infinite-dimensional Hilbert space. Let $`\\mathcal N`$ be a maximal nest: a complete chain of norm-closed linear subspaces of $`H`$, containing $`\\{0\\}`$ and $`H`$, that is not properly contained in any other chain. Completeness means closure under arbitrary intersections and closed linear spans.\n\nMust there exist a bounded complex-linear operator $`T\\in\\mathcal B(H)`$ for which\n\n```math\n\\mathrm{Lat}(T):=\\{M\\subseteq H:M\\text{ is closed and linear},\\ T(M)\\subseteq M\\}=\\mathcal N?\n```\n\n\nThe required lattice is the given collection of concrete subspaces. Having merely an order-isomorphic lattice, or one maximal invariant chain inside a larger invariant-subspace lattice, does not satisfy the statement. No compactness, quasinilpotence or prescribed spectrum is required of $`T`$.\n\nAn operator whose entire invariant-subspace lattice is a chain is called **unicellular**. The question is Problem2 in [1, Chapter25, printed p.392].",
+  "full_original_page": "# 912. Realizing a prescribed maximal nest with one operator\n\n**Area:** Operators, matrices and computation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`H`$ be a complex separable infinite-dimensional Hilbert space. Let $`\\mathcal N`$ be a maximal nest: a complete chain of norm-closed linear subspaces of $`H`$, containing $`\\{0\\}`$ and $`H`$, that is not properly contained in any other chain. Completeness means closure under arbitrary intersections and closed linear spans.\n\nMust there exist a bounded complex-linear operator $`T\\in\\mathcal B(H)`$ for which\n\n```math\n\\mathrm{Lat}(T):=\\{M\\subseteq H:M\\text{ is closed and linear},\\ T(M)\\subseteq M\\}=\\mathcal N?\n```\n\n\nThe required lattice is the given collection of concrete subspaces. Having merely an order-isomorphic lattice, or one maximal invariant chain inside a larger invariant-subspace lattice, does not satisfy the statement. No compactness, quasinilpotence or prescribed spectrum is required of $`T`$.\n\nAn operator whose entire invariant-subspace lattice is a chain is called **unicellular**. The question is Problem2 in [1, Chapter25, printed p.392].\n\n## Application\n\nInvariant subspaces describe closed components preserved by a linear evolution. This asks which prescribed complete hierarchies can be exactly the components preserved by a single bounded operator, linking triangular operator models with the concrete geometry of subspace lattices.\n\n## References\n\n1. K. R. Davidson, *Nest Algebras: Triangular Forms for Operator Algebras on Hilbert Space*, Pitman Research Notes in Mathematics **191**, Longman Scientific & Technical, 1988, Chapter25, Problem2, printed p.392. [Author’s book page and copy](https://www.math.uwaterloo.ca/~krdavids/nestbook.html).\n2. W. E. Longstaff, [*Reflexive index of a family of subspaces*](https://doi.org/10.1017/S0004972713001159), *Bulletin of the Australian Mathematical Society* **90** (2014), 134–140, Definitions1.1 and Section2, observations O2–O4. This explains the one-operator formulation and the two-operator upper bound for nests.\n\n## Status review\n\n\n**Known cases:** A two-operator common invariant lattice and examples of individual unicellular operators do not realize every prescribed maximal nest by one operator. Order-isomorphic nests or one maximal invariant chain inside a larger lattice do not satisfy the exact concrete-lattice target.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nA two-operator common invariant lattice and examples of individual unicellular operators do not realize every prescribed maximal nest by one operator. Order-isomorphic nests or one maximal invariant chain inside a larger lattice do not satisfy the exact concrete-lattice target.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe [primary/current-source and semantic review](../FURTHER_problems/_tracking/focused-Nest-Algebras-Q1-Q2-C278-C-20261029/ROOT-FINAL-TWO-EXACT-NEST-SOURCE-CURRENT-AND-SEMANTIC-REVIEWS.json), checked29October2026, found no matching complete resolution, announced solution or duplicate in the bounded searches.\n\nLongstaff’s observation O4 gives every separable Hilbert-space nest as the common invariant-subspace lattice of **two** operators. It also lists one-operator examples, including Donoghue and Volterra operators. These facts do not establish the requested single-operator realization for every prescribed maximal nest. Examples of lattices with larger reflexive index elsewhere in that paper are not maximal chains and do not provide counterexamples here.\n\nThe nearby catalogue questions on a common invariant subspace of an invertible operator and its inverse, real-to-complex passage, and hyperinvariant subspaces have different quantifiers and conclusions. No equivalence with them is asserted. The evidence concerns selected primary statements and bounded current searches, not complete proof verification or exhaustive absence of a later reference.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-88b2c5f4b484a93e**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"maximal nest\" \"one operator\" unicellular",
+    "\"maximal nest\" \"one operator\" unicellular; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3D3A250F0B6688E0E67F31FB9551C33D/S0004972713001159a.pdf/reflexive-index-of-a-family-of-subspaces.pdf",
+      "locator": "Section2.4 O4, PDFpp3–4/printed136–137",
+      "comparison": "Every separable Hilbert nest has reflexive index at most TWO; listed Donoghue/Volterra examples do not show index ONE for each prescribed concrete maximal nest. Lattice-isomorphism invariance is expressly false in O6."
+    }
+  ],
+  "rationale": "Every separable Hilbert nest has reflexive index at most TWO; listed Donoghue/Volterra examples do not show index ONE for each prescribed concrete maximal nest. Lattice-isomorphism invariance is expressly false in O6. No full matching claim found in bounded searches.",
+  "limitations": [
+    "Bounded negative search does not prove openness."
+  ],
+  "announcement_routing": {
+    "localID": "912",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "maximal nest",
+          "unicellular",
+          "reflexive index"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "maximal nest",
+          "unicellular",
+          "reflexive index"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "maximal nest",
+        "unicellular",
+        "reflexive index"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

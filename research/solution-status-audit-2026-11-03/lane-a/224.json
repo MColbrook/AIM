@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "224",
+  "manifest_index": 172,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "224",
+    "title": "Finite-time singularity formation for unconstrained Willmore flow",
+    "area": "Membrane bending and geometric evolution",
+    "file": "problems/224-willmore-finite-time-singularity.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "diffusion-materials",
+    "source_sha256": "3a777fd76483fe461dcb6241167e4ea3de6a5b23e623e69148a64cb30f8d6709",
+    "statement_sha256": "0e5485fa4fb08d2c0243cbd27e52bb8edfb3d2114761c81147472421665f3e3d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "3a777fd76483fe461dcb6241167e4ea3de6a5b23e623e69148a64cb30f8d6709",
+  "statement_sha256": "0e5485fa4fb08d2c0243cbd27e52bb8edfb3d2114761c81147472421665f3e3d",
+  "actual_source_sha256": "3a777fd76483fe461dcb6241167e4ea3de6a5b23e623e69148a64cb30f8d6709",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Does there exist a smooth closed connected orientable surface $`\\Sigma`$ and a smooth immersion $`f_0:\\Sigma\\to\\mathbb R^3`$ whose maximal smooth unconstrained Willmore flow has finite lifetime $`T<\\infty`$?\n\nPrecisely, for the induced metric $`g`$, second fundamental form $`A`$, mean curvature $`H=\\mathop{\\mathrm{tr}}\\nolimits_g A`$ and trace-free part $`A^\\circ=A-(H/2)g`$, consider\n\n```math\n\\partial_t f\\cdot\\nu=-\\big(\\Delta_gH+H|A^\\circ|^2\\big),\\qquad f(0)=f_0,\n```\n\nwith compatible curvature and normal conventions, and arbitrary tangential reparametrization. Seek an evolution that cannot be smoothly extended past a finite $`T`$, equivalently with curvature becoming unbounded as $`t\\uparrow T`$. There are no area, volume or spontaneous-curvature terms in this flow.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"unconstrained Willmore flow\" \"finite time\" singularity 2026",
+    "\"unconstrained Willmore flow\" \"finite time\" singularity (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"unconstrained Willmore flow\" \"finite time\" singularity (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Blatt\" \"singular example\" \"Willmore\" pdf"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The new October paper defines singularity to include failure to converge at infinite time. Proposition1.6 classifies unavoidable singularities for spheres of energy at most12pi but does not assert finite maximal time. The discussion explicitly retains finite-time singularity formation as open. Blatt's revolution examples and the new topological classification therefore do not meet the target requiring T<infinity for the unconstrained flow.",
+      "version_or_date": "Final Forum of Mathematics Sigma, published8October2026, Mäder-Baumdicker–Seidel.",
+      "locator": "Definition1.5,Proposition1.6,Remark1.8 and paragraphs preceding/after these; Theorem1.2",
+      "url": "https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/willmore-energy-landscape-of-spheres-and-avoidable-singularities-of-the-willmore-flow/3A045FCEB7F18D10516A1AD474E5873D",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The new October paper defines singularity to include failure to converge at infinite time. Proposition1.6 classifies unavoidable singularities for spheres of energy at most12pi but does not assert finite maximal time. The discussion explicitly retains finite-time singularity formation as open. Blatt's revolution examples and the new topological classification therefore do not meet the target requiring T<infinity for the unconstrained flow.",
+  "latest_version_check": "Final Forum of Mathematics Sigma, published8October2026, Mäder-Baumdicker–Seidel.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

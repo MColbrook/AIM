@@ -1,0 +1,108 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "488",
+  "manifest_index": 385,
+  "original_target": {
+    "id": "488",
+    "title": "The Fourier entropy–influence conjecture",
+    "area": "Boolean models, statistical learning and Fourier analysis",
+    "file": "problems/488-fourier-entropy-influence.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-23",
+    "group": "optimization-information",
+    "source_sha256": "4639df55e7ed87738e0fac64989cf0444304107315417f32c02cc83578ea963b",
+    "statement_sha256": "38a2f2d54e6974ec08df8c1ecbf063391b1021d29cd104b80c75ef6fd49eb90d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "4639df55e7ed87738e0fac64989cf0444304107315417f32c02cc83578ea963b",
+  "statement_sha256": "38a2f2d54e6974ec08df8c1ecbf063391b1021d29cd104b80c75ef6fd49eb90d",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:31:42.994979+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Actual2610.16069v1 TheoremA treats regular Boolean functions including LTFs; B/C retain composition/overlap losses, D read-once structured functions. Section9.2 expressly leaves removing both restrictions to unrestricted FEI. Actual2609.21563v1 Theorem2 is plateaued functions only;2512.03117 latestv3 remains withdrawn. Quantum counterexamples differ from scalar plus/minus1 Boolean outputs.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.16069v1",
+      "locator": "TheoremsA–D and Section9.2 final paragraph",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2609.21563v1",
+      "locator": "Theorem2",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2512.03117",
+      "locator": "v3 withdrawal notice",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Fourier entropy influence\" \"proof\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Fourier entropy",
+        "FEI"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-29-000015",
+          "title": "Graph isomorphism in quasipolynomial time on a single-tape Turing machine"
+        },
+        {
+          "id": "PALOMAR-2026-10-17-000013",
+          "title": "Growth series of the triangle Coxeter groups (p, q, infinity), with the PGL(2,Z) instance: Padovan sphere sizes and growth rate the plastic number"
+        },
+        {
+          "id": "PALOMAR-2026-09-27-000006",
+          "title": "Péterfalvi's Problem for p = 3: No Group Satisfies Hypothesis (B)"
+        },
+        {
+          "id": "PALOMAR-2026-09-17-000001",
+          "title": "Davis-Kahan 1970: the four Section 2 rotation-of-eigenvectors theorem families"
+        },
+        {
+          "id": "PALOMAR-2026-08-30-000002",
+          "title": "pengzhang91/Feige"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Fourier entropy",
+        "FEI"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00575v1",
+          "title": "The Unbalanced Group Theorem"
+        },
+        {
+          "id": "hexagon:2610.00253v1",
+          "title": "$C_2$-cofiniteness of logarithmic $W$-algebras"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

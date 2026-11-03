@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "779",
+  "manifest_index": 623,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "779",
+    "title": "Can nonparallel cylinder packings approach optimal lower density?",
+    "area": "Geometry and topology",
+    "file": "problems/779-can-nonparallel-cylinder-packings-approach-optimal-lower-density.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-3138cdf543b2c1a5",
+    "group": "geometry-topology",
+    "source_sha256": "12bbf09ba34b4aeef1ff73026d2295fc5ffa2f6c2216393914d8787475d67b10",
+    "statement_sha256": "e44d0fe395efbf261efe74c1bd495762dd9aac223d91f8b8ad1a9c548d3fba38",
+    "state": "unreviewed"
+  },
+  "source_sha256": "12bbf09ba34b4aeef1ff73026d2295fc5ffa2f6c2216393914d8787475d67b10",
+  "statement_sha256": "e44d0fe395efbf261efe74c1bd495762dd9aac223d91f8b8ad1a9c548d3fba38",
+  "actual_source_sha256": "12bbf09ba34b4aeef1ff73026d2295fc5ffa2f6c2216393914d8787475d67b10",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\mathfrak C`$ be the class of countably infinite families $`\\mathcal C=\\{C_i\\}`$ of solid infinite circular cylinders of radius 1 in $`\\mathbb R^3`$. Their interiors must be pairwise disjoint, and no two axes may be parallel. Define the lower density by\n```math\n\\delta^-(\\mathcal C)=\\liminf_{R\\to\\infty}\n \\frac{\\mathrm{Vol}(B_R(0)\\cap\\bigcup_i C_i)}\n      {\\mathrm{Vol}(B_R(0))}.\n```\n\nIs\n```math\n\\sup_{\\mathcal C\\in\\mathfrak C}\\delta^-(\\mathcal C)\n =\\frac{\\pi}{\\sqrt{12}}?\n```\n\nEquivalently, can the lower density exceed $`\\pi/\\sqrt{12}-\\varepsilon`$ for every $`\\varepsilon>0`$? Attainment by one packing is not required.",
+  "full_local_page_read": true,
+  "queries": [
+    "nonparallel cylinder packing optimal lower density Eliyahu 2026",
+    "nonparallel cylinder packing optimal lower density Eliyahu 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "nonparallel cylinder packing optimal lower density Eliyahu 2026 (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The actual construction reaches pi/sqrt12 for upper density (limsup), while its lower-density construction gives pi/6−epsilon. The paper explicitly distinguishes limsup, liminf, and densities with variable centers. The target requires liminf about one fixed center arbitrarily close to pi/sqrt12, so the upper-density theorem and bounded-hole questions do not resolve it. No later full matching claim found.",
+      "primary_body_access_gap": false,
+      "locator": "Definitions in§1;Theorem2.2;Corollary3.9;§4",
+      "url": "https://arxiv.org/html/2310.06943v1",
+      "version_or_date": "v1,10October2023; current arXiv history inspected3November2026"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual construction reaches pi/sqrt12 for upper density (limsup), while its lower-density construction gives pi/6−epsilon. The paper explicitly distinguishes limsup, liminf, and densities with variable centers. The target requires liminf about one fixed center arbitrarily close to pi/sqrt12, so the upper-density theorem and bounded-hole questions do not resolve it. No later full matching claim found.",
+  "latest_version_check": "v1,10October2023; current arXiv history inspected3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

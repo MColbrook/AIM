@@ -1,0 +1,80 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "167",
+  "manifest_index": 132,
+  "original_target": {
+    "id": "167",
+    "title": "The Euler vortex-filament limit for a general moving curve",
+    "area": "Vortex dynamics and fluid mechanics",
+    "file": "problems/167-vortex-filament-binormal.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "70051748079a79da832f0d2f9ef86087464c3406d54bed30ca2d403ca246729f",
+    "statement_sha256": "fd04c409f32ddca4e2f5ea5d354b459b3e6c803d17905906d9509590d0494e36",
+    "state": "unreviewed"
+  },
+  "source_sha256": "70051748079a79da832f0d2f9ef86087464c3406d54bed30ca2d403ca246729f",
+  "statement_sha256": "fd04c409f32ddca4e2f5ea5d354b459b3e6c803d17905906d9509590d0494e36",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:39.831270+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Theorem 2 of the source assumes a conservative weak Euler solution and sustained concentration; it does not construct smooth Euler approximations for an arbitrary evolving binormal curve. The 2026 Huang dissertation abstract advertises approximate profiles and perturbations, and the published circular-filament construction concerns weak dissipative solutions, not the stated general smooth-family limit.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1603.00227",
+      "locator": "Theorem 2, section 2.4",
+      "body_inspected": true
+    },
+    {
+      "url": "https://escholarship.org/uc/item/21f859g0",
+      "locator": "Official abstract; dissertation embargoed until 31 August 2027",
+      "body_inspected": false
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s40818-025-00211-5",
+      "locator": "Introduction and Theorem 1.1, circular weak dissipative filament",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"vortex filament\" \"general\" \"curve\" \"2026\" Euler",
+    "\"vortex filament\" \"general curve\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "vortex filament",
+        "binormal"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "vortex filament",
+        "binormal"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Embargoed dissertation body was not accessible; its abstract's approximate-profile statement does not announce the target construction."
+  ],
+  "canonical_update_required": false
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "587",
+  "manifest_index": 452,
+  "original_target": {
+    "id": "587",
+    "title": "The minimizing Sard conjecture for smooth sub-Riemannian structures",
+    "area": "Geometric control and sub-Riemannian geometry",
+    "file": "problems/587-the-minimizing-sard-conjecture-for-smooth-sub-riemannian-structures.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0e6d1b6203869b84",
+    "group": "geometry-topology",
+    "source_sha256": "741833009f03444d3699221417efae10674e96e425c558a21466a875ab88ea19",
+    "statement_sha256": "a400f3deb1092f34df07663f22b9d902ad931a2aec6c16178c71423a6b8af8e0",
+    "state": "unreviewed"
+  },
+  "source_sha256": "741833009f03444d3699221417efae10674e96e425c558a21466a875ab88ea19",
+  "statement_sha256": "a400f3deb1092f34df07663f22b9d902ad931a2aec6c16178c71423a6b8af8e0",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T14:07:57.405816+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The new ordinary-Sard counterexamples do not resolve the minimizing question: one proves minimizing nullity for its own constructed structure, and the October paper expressly disclaims a minimizing assertion. Metabelian/rank-two and Goh-rank criteria remain restricted classes.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2609.05991v1",
+      "locator": "Section6 Proposition6.1, constructed corank-two structure",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2610.24080v1",
+      "locator": "Introduction after Theorem1.3, explicitly no minimizing-Sard claim",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.12530",
+      "locator": "Abstract, metabelian/rank-two scope",
+      "body_inspected": false
+    },
+    {
+      "url": "https://www.numdam.org/item/10.5802/jep.242.pdf",
+      "locator": "Selected Goh-rank theorem and corank/generic corollaries",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"minimizing Sard\" conjecture 2026 solution",
+    "\"minimizing Sard\" conjecture solution [domains arxiv.org,zenodo.org,hal.science,github.com]",
+    "\"minimizing Sard\" \"2026\" proof all"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "minimizing Sard",
+        "Sard"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "minimizing Sard",
+        "Sard"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00425v1",
+          "title": "An explicit upper-bound certificate for the Schur–Siegel–Smyth trace constant"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "560",
+  "manifest_index": 435,
+  "original_target": {
+    "id": "560",
+    "title": "Hardness of minimum-dilation triangulation",
+    "area": "Computational geometry and optimization",
+    "file": "problems/560-minimum-dilation-hardness.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "0ea54c911acdcb92be0c40d32cba03669b1ce9f864db88483ab0f02d85cea858",
+    "statement_sha256": "eb538506734a13b5da767f904ce9053fbb1df12b324d43db0e9485cff9ab26fd",
+    "state": "unreviewed"
+  },
+  "source_sha256": "0ea54c911acdcb92be0c40d32cba03669b1ce9f864db88483ab0f02d85cea858",
+  "statement_sha256": "eb538506734a13b5da767f904ce9053fbb1df12b324d43db0e9485cff9ab26fd",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:56:06.417225+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Exact benchmark algorithms and an 84-gon bound do not prove many-one NP-hardness of the exact rational-threshold binary-input triangulation problem. Edge-budget graphs, trees, oriented cycles and minimum-total-length triangulations have different admissible objects or objectives. The 2026 oriented-spanner paper explicitly retains the plane undirected question.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/2502.18189",
+      "locator": "Section1.2 p3 distinguishes hardness variants; current v1, 25February2025",
+      "body_inspected": true
+    },
+    {
+      "url": "https://doi.org/10.20382/jocg.v17i2a1",
+      "locator": "20February2026 final abstract retains unknown hardness",
+      "body_inspected": false
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00453-025-01342-8",
+      "locator": "Related work and hardness section, oriented/sparse variants",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"minimum dilation triangulation\" \"NP-hard\" 2026",
+    "\"minimum dilation triangulation\" hardness (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "minimum dilation triangulation NP hardness proof 2026 -site:arxiv-troller.com"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "minimum dilation"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "minimum dilation"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "JoCG final body download redirected in a loop; abstract and matching preprint read, no final byte parity asserted."
+  ],
+  "canonical_update_required": false
+}

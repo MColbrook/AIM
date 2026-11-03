@@ -1,0 +1,77 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "137",
+  "manifest_index": 108,
+  "original_target": {
+    "id": "137",
+    "title": "Exact capacity of the binary deletion channel",
+    "area": "Information theory / synchronization errors",
+    "file": "problems/137-binary-deletion-channel-capacity.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse2",
+    "source_sha256": "6059c2cc9f5aab757e90c98eaae267d7d4d9648c431925871205d825e0c22587",
+    "statement_sha256": "169d77adabc1e2a72ad88d442224afd36087075118ed50c9ec7ebfe929cb0af4",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6059c2cc9f5aab757e90c98eaae267d7d4d9648c431925871205d825e0c22587",
+  "statement_sha256": "169d77adabc1e2a72ad88d442224afd36087075118ed50c9ec7ebfe929cb0af4",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:23:09.089870+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The actual September2609.19412v1 Theorem2.1 gives an enclosure whose midpoint error is strictly below.0095, not exact capacity. New2609.13351 gives a high-deletion upper bound and2609.24908 lower bounds. The primary public code README expressly distinguishes midpoint estimate and achievable endpoint from exact capacity.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2609.19412v1",
+      "locator": "Theorem2.1 and equation4",
+      "body_inspected": true
+    },
+    {
+      "url": "https://github.com/anadim/binary-deletion-channel-capacity",
+      "locator": "Scope and approximation guarantee in README",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.13351",
+      "locator": "Upper bound only in author abstract",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"binary deletion\" \"capacity\" 2026 exact",
+    "\"binary deletion\" capacity (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "deletion channel"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "deletion channel"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

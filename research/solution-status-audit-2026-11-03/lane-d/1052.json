@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1052",
+  "manifest_index": 896,
+  "checked_date": "2026-11-03",
+  "source_sha256": "dc8c3cc3e401c41513a1eff8e6b12e774a543d7e0a0b8c62be70b44c46d1dcdf",
+  "statement_sha256": "dfb649e35baa74249aa11c8a58ea6435de65d398a09628a478f7c7d519c3d2f9",
+  "original_target": {
+    "id": "1052",
+    "title": "Global bounded evolution for the local kinetic Vicsek equation",
+    "area": "Kinetic equations and collective motion",
+    "file": "problems/1052-global-bounded-evolution-for-the-local-kinetic-vicsek-equation.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-9913d6e7ebf1497d",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "dc8c3cc3e401c41513a1eff8e6b12e774a543d7e0a0b8c62be70b44c46d1dcdf",
+    "statement_sha256": "dfb649e35baa74249aa11c8a58ea6435de65d398a09628a478f7c7d519c3d2f9",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Write $`\\mathbb T=\\mathbb R/(2\\pi\\mathbb Z)`$, and use the probability measure $`dm(\\theta)=d\\theta/(2\\pi)`$ on the orientation circle. For $`x\\in\\mathbb R^2`$, set\n\n```math\ne(\\theta)=(\\cos\\theta,\\sin\\theta),\\qquad e^\\perp(\\theta)=(-\\sin\\theta,\\cos\\theta),\\qquad\nJ_f(t,x)=\\int_{\\mathbb T}e(\\eta)f(t,x,\\eta)\\,dm(\\eta).\n```\n\nFix transport speed, angular diffusion and alignment strength equal to one. Consider the local, unnormalized dipolar alignment equation\n\n```math\n\\partial_t f+e(\\theta)\\cdot\\nabla_x f+\n\\partial_\\theta\\big[(J_f\\cdot e^\\perp(\\theta))f\\big]\n=\\partial_\\theta^2f.\n```\n\nFor every nonnegative $`f_0\\in C_c^\\infty(\\mathbb R^2\\times\\mathbb T)`$, does there exist a single solution on $`[0,\\infty)`$ which, for every finite $`T>0`$, satisfies\n\n```math\nf\\ge0,\\qquad\nf\\in C([0,T];L^1\\cap L^2)\\cap L^\\infty((0,T)\\times\\mathbb R^2\\times\\mathbb T),\n\\qquad \\partial_\\theta f\\in L^2((0,T)\\times\\mathbb R^2\\times\\mathbb T),\n```\n\nhas $`f(0)=f_0`$ in $`L^1\\cap L^2`$, and preserves $`\\int f\\,dx\\,dm=\\int f_0\\,dx\\,dm`$? The spaces in the display use $`dx\\,dm`$. Require the distributional identity\n\n```math\n\\int_0^T\\!\\int f\\left[\\partial_t\\varphi+e\\cdot\\nabla_x\\varphi+\n(J_f\\cdot e^\\perp)\\partial_\\theta\\varphi\\right]\\,dx\\,dm\\,dt\n+\\int f_0\\varphi(0)\\,dx\\,dm\n=\\int_0^T\\!\\int \\partial_\\theta f\\,\\partial_\\theta\\varphi\\,dx\\,dm\\,dt\n```\n\nfor all smooth test functions compactly supported in $`[0,T)\\times\\mathbb R^2`$ and periodic in $`\\theta`$.\n\nThe bound may depend on $`T`$ and $`f_0`$. There is no smallness condition on the datum, its mass or its spatial density. The alignment uses $`J_f(t,x)`$ at the same spatial point, without a spatial convolution or division by $`|J_f|`$.\n\nLocal bounded existence and uniqueness are available. Thus the question asks whether the bounded evolution can always be continued through every finite time. A counterexample with a finite maximal bounded-existence time would also resolve it.",
+  "full_original_page": "# 1052. Global bounded evolution for the local kinetic Vicsek equation\n\n**Area:** Kinetic equations and collective motion\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nWrite $`\\mathbb T=\\mathbb R/(2\\pi\\mathbb Z)`$, and use the probability measure $`dm(\\theta)=d\\theta/(2\\pi)`$ on the orientation circle. For $`x\\in\\mathbb R^2`$, set\n\n```math\ne(\\theta)=(\\cos\\theta,\\sin\\theta),\\qquad e^\\perp(\\theta)=(-\\sin\\theta,\\cos\\theta),\\qquad\nJ_f(t,x)=\\int_{\\mathbb T}e(\\eta)f(t,x,\\eta)\\,dm(\\eta).\n```\n\nFix transport speed, angular diffusion and alignment strength equal to one. Consider the local, unnormalized dipolar alignment equation\n\n```math\n\\partial_t f+e(\\theta)\\cdot\\nabla_x f+\n\\partial_\\theta\\big[(J_f\\cdot e^\\perp(\\theta))f\\big]\n=\\partial_\\theta^2f.\n```\n\nFor every nonnegative $`f_0\\in C_c^\\infty(\\mathbb R^2\\times\\mathbb T)`$, does there exist a single solution on $`[0,\\infty)`$ which, for every finite $`T>0`$, satisfies\n\n```math\nf\\ge0,\\qquad\nf\\in C([0,T];L^1\\cap L^2)\\cap L^\\infty((0,T)\\times\\mathbb R^2\\times\\mathbb T),\n\\qquad \\partial_\\theta f\\in L^2((0,T)\\times\\mathbb R^2\\times\\mathbb T),\n```\n\nhas $`f(0)=f_0`$ in $`L^1\\cap L^2`$, and preserves $`\\int f\\,dx\\,dm=\\int f_0\\,dx\\,dm`$? The spaces in the display use $`dx\\,dm`$. Require the distributional identity\n\n```math\n\\int_0^T\\!\\int f\\left[\\partial_t\\varphi+e\\cdot\\nabla_x\\varphi+\n(J_f\\cdot e^\\perp)\\partial_\\theta\\varphi\\right]\\,dx\\,dm\\,dt\n+\\int f_0\\varphi(0)\\,dx\\,dm\n=\\int_0^T\\!\\int \\partial_\\theta f\\,\\partial_\\theta\\varphi\\,dx\\,dm\\,dt\n```\n\nfor all smooth test functions compactly supported in $`[0,T)\\times\\mathbb R^2`$ and periodic in $`\\theta`$.\n\nThe bound may depend on $`T`$ and $`f_0`$. There is no smallness condition on the datum, its mass or its spatial density. The alignment uses $`J_f(t,x)`$ at the same spatial point, without a spatial convolution or division by $`|J_f|`$.\n\nLocal bounded existence and uniqueness are available. Thus the question asks whether the bounded evolution can always be continued through every finite time. A counterexample with a finite maximal bounded-existence time would also resolve it.\n\n## Application\n\nThe equation models agents moving at fixed speed while their directions diffuse and turn toward the local mean direction. Global bounded evolution would justify this local alignment description for arbitrarily concentrated smooth populations, beyond the small perturbations for which stability theory is available.\n\n## References\n\n1. Marc Briant and Nicolas Meunier, *Well-posedness for systems of self-propelled particles*, Kinetic and Related Models **17** (2024), 659–673. [Publisher](https://www.aimsciences.org/article/doi/10.3934/krm.2023036); [author manuscript](https://arxiv.org/abs/2305.05336v1), equations(1.5)–(1.6), Theorem1.1 and the discussion following Proposition1.2, physical pages2–4. Their general local kernel class includes the displayed dipolar alignment instance; their sign convention puts the interaction divergence on the right, so this instance uses $`k(\\omega,\\omega_*)=-\\omega_*/(2\\pi)`$ with their unnormalized circle area measure.\n2. Émeric Bouin and Amic Frouvelle, *Quantitative stability of constant equilibria in a non-linear alignment model of self-propelled particles* (2026). [Primary text](https://arxiv.org/html/2604.05927v1), equation(1.1), the normalized sphere measure after(1.2), Theorems1.1–1.3 and introductory discussion. This fixes the physical alignment sign and proves global evolution near subcritical isotropic equilibria, while retaining unrestricted finite-time breakdown as a possibility.\n3. Marc Briant, Antoine Diez and Sara Merino-Aceituno, *Cauchy theory for general kinetic Vicsek models in collective dynamics and mean-field limit approximations*, SIAM Journal on Mathematical Analysis **54** (2022), 1131–1168. [DOI](https://doi.org/10.1137/21M1405885); [author text](https://arxiv.org/abs/2004.00883), hypothesis(H1), Theorem2.4 and Remark2.5. Their global nonnormalized-kernel result assumes a bounded regular spatial kernel, which excludes the local Dirac kernel here.\n\n## Status review\n\n\n**Known cases:** The local unnormalized alignment is spatially pointwise and initial data are unrestricted in size. Near-equilibrium, nonlocal-kernel and normalized-moment theorems do not give global bounded evolution for this model.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe local unnormalized alignment is spatially pointwise and initial data are unrestricted in size. Near-equilibrium, nonlocal-kernel and normalized-moment theorems do not give global bounded evolution for this model.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe 2026 primary source explicitly retains the unrestricted global question. Searches through 17 October 2026 found no theorem or announced finite-time counterexample for this exact local, angularly diffusive, unnormalized model and arbitrary smooth compact data. The statement is a precise two-dimensional instance of that question.\n\nGlobal results for spatially homogeneous dynamics, normalized orientation $`J/|J|`$, bounded spatial observation kernels, or Vicsek–BGK relaxation use different equations. The 2025 Gu–He mixing results assume a smooth spatial influence function and parameter restrictions. The 2026 Bouin–Frouvelle theorem requires smallness around a subcritical constant equilibrium.\n\nAIM074 concerns hard-sphere Boltzmann collisions and Euclidean velocities; AIM219 concerns axisymmetry of stationary Onsager minimizers; AIM377 concerns a unit-director fluid system. None is this local kinetic alignment problem. An independent selected-primary audit checked the alignment sign, probability measure, angular reduction, initial trace, weak identity and bounded continuation class. It also checked that finite-mass compact data do not automatically satisfy the newer small-perturbation theorem. The fresh 186-page catalogue scan returned no contexts for the six specified target aliases; this bounded comparison does not certify every mission proof.\n\nThe [independent audit](../FURTHER_problems/_tracking/parallel/rough-filtering/cross-vicsek-review.json), [fresh catalogue receipt](../FURTHER_problems/_tracking/parallel/continuum/vicsek-prove2me0095-comparison.json) and [coordinator status check](../FURTHER_problems/_tracking/coordinator-selected-status-2026-10-17.json) record the passages and dated searches. The original 18-page author text was read in full; the final 15-page 2024 publication remains a version-parity gap. The 2026 primary source provides the current explicit global-existence question, with selected rather than full-paper reading recorded. This later preprint supplies status information; discovery eligibility is through registered journal J158, independently of the arXiv cutoff. No matching complete resolution or announced counterexample was found in these checks.\n\n[Detailed review packet](../FURTHER_problems/_tracking/parallel/continuum/vicsek-global-review.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-9913d6e7ebf1497d**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "local kinetic Vicsek",
+    "Bouin Frouvelle",
+    "Briant Meunier",
+    "unnormalized alignment"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"local\" \"kinetic Vicsek\" \"global\" 2026 unnormalized"
+    },
+    {
+      "query": "local kinetic Vicsek global bounded equation",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2604.05927v1",
+      "locator": "Theorem1.1localbound;Theorems1.2–1.3smallperturbations;actualHTMLread via GETafterwebtimeouts"
+    }
+  ],
+  "scope_comparison": "Currentprimaryintro expressly says local-in-space version notaprioriglobal/couldexplode; globalnearuniformsubcriticalequilibria requires Sobolevsmallness. Finitemasscompactdata alone does not meet it. Globalnonlocalobservationkernel and normalizedJ/|J| equations differ from spatialDirac,unnormalizeddipolar drift. No full matching announcement.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative search cannot establish openness. Primarycurrentcomparison theorem scope inspected; no proof certification. 1054publisherPDFnotfetched, authorcurrentTheorem1.4readandR0dependenceexplicit.",
+  "announcement_routing": {
+    "localID": "1052",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "local kinetic Vicsek",
+          "Bouin Frouvelle",
+          "Briant Meunier",
+          "unnormalized alignment"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "local kinetic Vicsek",
+          "Bouin Frouvelle",
+          "Briant Meunier",
+          "unnormalized alignment"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "local kinetic Vicsek",
+        "Bouin Frouvelle",
+        "Briant Meunier",
+        "unnormalized alignment"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

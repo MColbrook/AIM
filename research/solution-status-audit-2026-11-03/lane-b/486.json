@@ -1,0 +1,105 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "486",
+  "manifest_index": 383,
+  "original_target": {
+    "id": "486",
+    "title": "The sharp number of directions illuminating a convex body",
+    "area": "Convex geometry and geometric coverage",
+    "file": "problems/486-hadwiger-boltyanski-illumination.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-23",
+    "group": "inverse3",
+    "source_sha256": "3ced96f8d8643355c5f58f4a5be19973dc3464d76ded6f59b9f2a1cbb1380595",
+    "statement_sha256": "940523b1ec3ada6a9f31f144bf9d025fe636d1537b7ebb917e0b176f2ad0e550",
+    "state": "unreviewed"
+  },
+  "source_sha256": "3ced96f8d8643355c5f58f4a5be19973dc3464d76ded6f59b9f2a1cbb1380595",
+  "statement_sha256": "940523b1ec3ada6a9f31f144bf9d025fe636d1537b7ebb917e0b176f2ad0e550",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:21:23.405450+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Actual2609.23913 Theorem1 is fractional illumination; Theorem2 ordinary bound is dlogd+dloglogd+O(d), not2^d. Actual1602.06040 Section2.1 reports gaps in Boltyanski2000 three-dimensional claimed proof. New Hexagon2611.00011/10/09 abstracts assert only real1-symmetric/complex subclasses; withdrawn2610.00536 is complex bodies. No arbitrary-real-body complete result found.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2609.23913",
+      "locator": "Theorems1–2",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/1602.06040",
+      "locator": "Section2.1",
+      "body_inspected": true
+    },
+    {
+      "url": "https://hexagonmath.org/abs/2611.00011v1",
+      "locator": "Retained current metadata abstract only",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"illumination conjecture\" \"proof\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "illumination",
+        "Hadwiger"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-16-000001",
+          "title": "Mader's theorem and Hadwiger's conjecture for t ≤ 4"
+        },
+        {
+          "id": "PALOMAR-2026-10-15-000005",
+          "title": "Wagner's planarity criterion and list colouring of planar and K5-minor-free graphs"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "illumination",
+        "Hadwiger"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2611.00011v1",
+          "title": "Improved and sharp bounds for illumination"
+        },
+        {
+          "id": "hexagon:2611.00010v1",
+          "title": "Illumination of complex 1-unconditional convex bodies"
+        },
+        {
+          "id": "hexagon:2611.00007v1",
+          "title": "Illumination of several families of complex convex bodies"
+        },
+        {
+          "id": "hexagon:2610.00536v1",
+          "title": "Illumination of complex convex bodies"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "New restricted-class Hexagon bodies inaccessible through abs/PDF/source API; exclusions based on explicit abstract scope, not theorem-body checks."
+  ],
+  "canonical_update_required": false
+}

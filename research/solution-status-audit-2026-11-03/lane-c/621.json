@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "621",
+  "manifest_index": 482,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "621",
+    "title": "Does the standard Nelder–Mead method always converge on x²+y²?",
+    "area": "Continuous optimization",
+    "file": "problems/621-does-the-standard-neldermead-method-always-converge-on-x2-y2.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8b243d08720213e1",
+    "group": "optimization-information",
+    "source_sha256": "7c16c4fbf895cff2e8180e8a5c07ccf14a5b0a5c5f94277d755d3195db618051",
+    "statement_sha256": "bffb986d941c5e24d6d53f41367ffca050405d0e54fa1f9891d7ea87842d9338",
+    "state": "unreviewed"
+  },
+  "source_sha256": "7c16c4fbf895cff2e8180e8a5c07ccf14a5b0a5c5f94277d755d3195db618051",
+  "statement_sha256": "bffb986d941c5e24d6d53f41367ffca050405d0e54fa1f9891d7ea87842d9338",
+  "actual_source_sha256": "7c16c4fbf895cff2e8180e8a5c07ccf14a5b0a5c5f94277d755d3195db618051",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Apply the standard two-dimensional Nelder–Mead simplex algorithm with its reflection, **expansion**, contraction and shrink steps, as specified by Lagarias, Poonen and Wright [1, §2], to\n\n```math\nf(x,y)=x^2+y^2.\n```\n\n\nStarting from any nondegenerate triangle and using exact arithmetic, must all three successive vertices converge to the unique minimizer $`(0,0)`$?\n\nThe expansion step is the distinction: [1] proves convergence to the minimizer for its **restricted** algorithm, which omits expansion, on a much larger class of smooth strictly convex objectives. Its concluding remarks explicitly leave the original expansion-including question open even for this quadratic. Known counterexamples for other convex functions do not refute this special case.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Nelder Mead\" \"quadratic\" convergence expansion 2026",
+    "\"Nelder Mead\" \"quadratic\" convergence expansion (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "version_or_date": "Revised author manuscript for SIAM Journal on Optimization 22 (2012)",
+      "url": "https://math.mit.edu/~poonen/papers/nm.pdf",
+      "scope_comparison": "The proved theorem removes expansion. The local target keeps expansion and allows every nondegenerate starting triangle on x^2+y^2. Counterexamples for other objectives and conditional step-frequency/simplex-value theorems do not settle minimizer convergence here. MDPI 2024 comparator returned HTTP429; original theorem body was obtained.",
+      "locator": "Theorems 1.2/3.17; algorithm Section 2 and conclusion"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The proved theorem removes expansion. The local target keeps expansion and allows every nondegenerate starting triangle on x^2+y^2. Counterexamples for other objectives and conditional step-frequency/simplex-value theorems do not settle minimizer convergence here. MDPI 2024 comparator returned HTTP429; original theorem body was obtained.",
+  "latest_version_check": "Revised author manuscript for SIAM Journal on Optimization 22 (2012)",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

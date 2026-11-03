@@ -1,0 +1,70 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "750",
+  "manifest_index": 594,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "750",
+    "title": "Finite-time touchdown for a hinged electrostatic MEMS plate at large voltage",
+    "area": "Free-boundary PDEs and electrostatic actuators",
+    "file": "problems/750-finite-time-touchdown-for-a-hinged-electrostatic-mems-plate-at-large-voltage.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c2ecd10db9b1b9c9",
+    "group": "fluid-structure-interaction",
+    "source_sha256": "4f0b05d6cebacef2f83f304e4b6241b13c6544f16b545512cb5cd73ef0e41025",
+    "statement_sha256": "0a29a60d34126ed063796dc47f291ad4f7285afbc20ce916bcb95fcadbe63231",
+    "state": "unreviewed"
+  },
+  "source_sha256": "4f0b05d6cebacef2f83f304e4b6241b13c6544f16b545512cb5cd73ef0e41025",
+  "statement_sha256": "0a29a60d34126ed063796dc47f291ad4f7285afbc20ce916bcb95fcadbe63231",
+  "actual_source_sha256": "4f0b05d6cebacef2f83f304e4b6241b13c6544f16b545512cb5cd73ef0e41025",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix a bounded convex domain $`D\\subset\\mathbb R^2`$ with $`C^{4,\\gamma}`$ boundary for some $`0<\\gamma<1`$, and parameters\n```math\n\\varepsilon>0,\\qquad\\beta>0,\\qquad\\tau\\ge0,\\qquad-1<\\sigma<1.\n```\n\nHere $`\\nu`$ is the exterior unit normal on $`\\partial D`$ and $`\\kappa`$ is its curvature, with the convention $`\\kappa\\ge0`$ for convex domains. For $`k=3,4`$, write\n```math\nH^k_B(D)=\\{v\\in H^k(D):v=0,\\ \\Delta v-(1-\\sigma)\\kappa\\partial_\\nu v=0\\text{ on }\\partial D\\}.\n```\n\nFor each voltage parameter $`\\lambda>0`$, consider the unique maximal solution with the fixed rest initial condition $`u(0,x)=0`$. Its plate displacement $`u(t,x)>-1`$ satisfies\n```math\n\\partial_tu+\\beta\\Delta_x^2u-\\tau\\Delta_xu\n=-\\lambda\\left(\\varepsilon^2|\\nabla_x\\psi_u(t,x,u(t,x))|^2+|\\partial_z\\psi_u(t,x,u(t,x))|^2\\right),\n```\n\nwith $`u=\\Delta_xu-(1-\\sigma)\\kappa\\partial_\\nu u=0`$ on $`\\partial D`$. For each $`t`$, the potential $`\\psi_u(t)`$ is determined on\n```math\n\\Omega(u(t))=\\{(x,z):x\\in D,\\ -1<z<u(t,x)\\}\n```\n\nby\n```math\n\\varepsilon^2\\Delta_x\\psi_u+\\partial_z^2\\psi_u=0\\quad\\text{in }\\Omega(u(t)),\\qquad\n\\psi_u(t,x,z)=\\frac{1+z}{1+u(t,x)}\\quad\\text{on }\\partial\\Omega(u(t)).\n```\n\nThe maximal time $`T_\\lambda\\in(0,\\infty]`$ is for the locally unique solution class\n```math\nu\\in C([0,T_\\lambda);H^3_B(D))\\cap C((0,T_\\lambda);H^4_B(D))\\cap C^1((0,T_\\lambda);L^2(D)),\n\\qquad\\psi_u(t)\\in H^2(\\Omega(u(t))).\n```\n\nThe plate equation holds in $`L^2(D)`$ for positive times, and the elliptic equation and boundary traces have their Sobolev meanings.\n\n**Is there a finite $`\\Lambda=\\Lambda(D,\\varepsilon,\\beta,\\tau,\\sigma)>0`$ such that $`T_\\lambda<\\infty`$ for every $`\\lambda>\\Lambda`$?** By the source's continuation theorem, such a finite maximal time would necessarily satisfy\n```math\n\\liminf_{t\\uparrow T_\\lambda}\\min_{x\\in\\overline D}u(t,x)=-1.\n```\n\n\nThis is the rest-initial-data subcase of the source's explicitly stated large-voltage question. It does not ask for a sharp pull-in voltage or equality with a stationary threshold. The aspect ratio $`\\varepsilon`$ remains fixed and positive.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"hinged\" \"MEMS\" \"finite time\" \"2026\" touchdown",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"hinged\" \"MEMS\" touchdown",
+    "site:palomar-registry.org OR site:hexagonmath.org \"hinged\" MEMS"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2103.06776v1",
+      "version_or_date": "Nikv1,11March2021; newerWang–ShenMathematics14(18)(2026)3324 primarybodygap",
+      "primary_body_access_gap": true,
+      "scope_comparison": "Actual Nik body retains sufficiently-large-lambda⇒finite maximal time for hinged fourth-order free-boundary plate with positive aspectratio. Continuation only proves finite breakdown musttouchdown; stationary nonexistence does not force finitetime. New 'Quenching Behavior of a Higher-Order Electrostatic Microelectromechanical System' routes to nonlinear diffusion power/discrete quenching schemes; primary MDPI body429/PDF inaccessible, so exact newtheorem comparison is incomplete. No complete matching claim established; retain partialstatus and source hold.",
+      "locator": "Theorem1.2 and followingparagraph; finalparagraph beforeAcknowledgements; newdoi10.3390/math14183324"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The 2026 studied model is one-dimensional second-order (u^m)_t=u_xx-u^(-p), with singular boundary flux. Theorem5 proves positivity loss in a discrete iteration. The fourth-order plate is background, and no theorem treats the two-dimensional hinged moving-gap electrostatic plate at positive aspect ratio. Nik's continuation criterion does not itself force finite-time touchdown at large voltage.",
+  "latest_version_check": "Nikv1,11March2021; newerWang–ShenMathematics14(18)(2026)3324 primarybodygap",
+  "gap_retraction_check": "Source hold for2026MDPI candidate https://www.mdpi.com/2227-7390/14/18/3324 and /pdf:429/inaccessible. Abstract/title not accepted as theorem-body verification. OldexactNik body read.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ],
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T14:04:04.920800+00:00",
+      "reviewer": "lane-c; root persisted final relay",
+      "url": "https://mdpi-res.com/d_attachment/mathematics/mathematics-14-03324/article_deploy/mathematics-14-03324.pdf",
+      "locator": "Equation1 p1, equations2–3 pp2–3, equations7–8 pp5–6 and Theorem5 section3.2.2",
+      "primary_body_read_in_earlier_lane_turn": true,
+      "scope_comparison": "The 2026 studied model is one-dimensional second-order (u^m)_t=u_xx-u^(-p), with singular boundary flux. Theorem5 proves positivity loss in a discrete iteration. The fourth-order plate is background, and no theorem treats the two-dimensional hinged moving-gap electrostatic plate at positive aspect ratio. Nik's continuation criterion does not itself force finite-time touchdown at large voltage.",
+      "limitations": "Earlier RAM PDF/model and indexed actual theorem inspected; no body bytes/SHA retained. All numerical theorems and older final-edition parity were not audited."
+    }
+  ],
+  "review_state": "bounded_review_complete",
+  "material_full_claim_access_gap": false
+}

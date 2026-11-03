@@ -1,0 +1,115 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1008",
+  "manifest_index": 852,
+  "checked_date": "2026-11-03",
+  "source_sha256": "e5a2bafda5b9d67446154ebafe782cfec12e184fcca50a13df07f078b3c7a0f7",
+  "statement_sha256": "fdb22de7c7254dd94202c238712a817b4e3f48ba0772cd254ff4e26869d1d5dd",
+  "original_target": {
+    "id": "1008",
+    "title": "The Wang-Xia lower bound for a Neumann biharmonic Steklov eigenvalue",
+    "area": "Spectral geometry",
+    "file": "problems/1008-the-wang-xia-lower-bound-for-a-neumann-biharmonic-steklov-eigenvalue.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-045e3753c5c58e88",
+    "group": "spectral",
+    "source_sha256": "e5a2bafda5b9d67446154ebafe782cfec12e184fcca50a13df07f078b3c7a0f7",
+    "statement_sha256": "fdb22de7c7254dd94202c238712a817b4e3f48ba0772cd254ff4e26869d1d5dd",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`(M^n,g)`$, $`n\\ge2`$, be a smooth connected compact Riemannian manifold with nonempty smooth boundary. Assume $`\\mathrm{Ric}_g\\ge0`$ and\n```math\n\\mathrm{II}(X,X)\\ge c\\,|X|^2\\qquad(X\\in T\\partial M)\n```\n\nfor some $`c>0`$, where $`\\mathrm{II}(X,X)=g(\\nabla_X\\nu,X)`$ uses the outward unit normal $`\\nu`$. Let $`\\lambda_1(\\partial M)`$ be the first positive eigenvalue of $`-\\Delta_{\\partial M}`$ for the induced boundary metric.\n\nWith $`\\Delta_g=\\mathrm{div}_g\\nabla_g`$, let $`\\xi_1`$ be the first positive eigenvalue of\n```math\n\\Delta_g^2u=0\\quad\\text{in }M,\\qquad\n\\partial_\\nu u=0,\\quad\\partial_\\nu(\\Delta_gu)+\\xi u=0\n\\quad\\text{on }\\partial M.\n```\n\nMust\n```math\n\\xi_1\\ge\\frac{n+2}{n-1}\\,c\\,\\lambda_1(\\partial M)\n```\n\nhold, with equality precisely for the Euclidean ball of radius $`1/c`$? No warped-product or sectional-curvature assumption is imposed.",
+  "full_original_page": "# 1008. The Wang-Xia lower bound for a Neumann biharmonic Steklov eigenvalue\n\n**Area:** Spectral geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`(M^n,g)`$, $`n\\ge2`$, be a smooth connected compact Riemannian manifold with nonempty smooth boundary. Assume $`\\mathrm{Ric}_g\\ge0`$ and\n```math\n\\mathrm{II}(X,X)\\ge c\\,|X|^2\\qquad(X\\in T\\partial M)\n```\n\nfor some $`c>0`$, where $`\\mathrm{II}(X,X)=g(\\nabla_X\\nu,X)`$ uses the outward unit normal $`\\nu`$. Let $`\\lambda_1(\\partial M)`$ be the first positive eigenvalue of $`-\\Delta_{\\partial M}`$ for the induced boundary metric.\n\nWith $`\\Delta_g=\\mathrm{div}_g\\nabla_g`$, let $`\\xi_1`$ be the first positive eigenvalue of\n```math\n\\Delta_g^2u=0\\quad\\text{in }M,\\qquad\n\\partial_\\nu u=0,\\quad\\partial_\\nu(\\Delta_gu)+\\xi u=0\n\\quad\\text{on }\\partial M.\n```\n\nMust\n```math\n\\xi_1\\ge\\frac{n+2}{n-1}\\,c\\,\\lambda_1(\\partial M)\n```\n\nhold, with equality precisely for the Euclidean ball of radius $`1/c`$? No warped-product or sectional-curvature assumption is imposed.\n\n## Application\n\nThe estimate would connect the response of a fourth-order boundary operator to boundary geometry and its intrinsic Laplace spectrum.\n\n## References\n\n1. Q. Wang and C. Xia, [*Sharp Lower Bounds for the First Eigenvalues of the Bi-Laplace Operator*](https://arxiv.org/abs/1802.05502), v5 (2020), equation (1.35) and the final conjecture, equation (3.58).\n2. C. Xiong, [*On the Spectra of Three Steklov Eigenvalue Problems on Warped Product Manifolds*](https://doi.org/10.1007/s12220-022-00889-0), *Journal of Geometric Analysis* **32** (2022), article 153; [preprint](https://arxiv.org/abs/1902.00656), Conjecture 4 and Theorem 5.\n3. Z. Lv, C. Xiong and Y. Zou, [*Scaling inequalities for Steklov eigenvalues in space forms and sharp eigenvalue estimates on warped product manifolds*](https://arxiv.org/abs/2512.22885), v1 (2025), Theorem 18 and Conjecture 21.\n\n## Status review\n\n\n**Known cases:** The arbitrary Ricci-nonnegative manifold with uniformly convex boundary is the target. The 2025 three-dimensional warped-product result and ordinary Steklov lower bounds do not establish this biharmonic assertion with rigidity.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe arbitrary Ricci-nonnegative manifold with uniformly convex boundary is the target. The 2025 three-dimensional warped-product result and ordinary Steklov lower bounds do not establish this biharmonic assertion with rigidity.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe warped-product case is known: the 2025 paper supplies the missing three-dimensional case and restates the arbitrary-manifold question as Conjecture 21. A weaker general lower bound is known. Results for ordinary Steklov, Dirichlet-type biharmonic Steklov, or interior buckling eigenvalues concern different operators.\n\nFor a Euclidean ball of radius $`r`$, the quantities are $`\\xi_1=(n+2)/r^3`$, $`\\lambda_1=(n-1)/r^2`$ and $`c=1/r`$, consistent with the proposed equality and scaling. No matching general proof, counterexample or complete-resolution announcement was located in bounded checks through the date above.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-045e3753c5c58e88**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "biharmonic Steklov",
+    "Wang-Xia",
+    "Xiong",
+    "Zou"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"Wang Xia\" \"biharmonic\" conjecture 2026"
+    },
+    {
+      "query": "\"Wang Xia\" \"biharmonic\" conjecture",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    },
+    {
+      "query": "\"biharmonic Steklov\" \"conjecture\" 2026"
+    },
+    {
+      "query": "\"Wang\" \"Xia\" \"xi\" Steklov",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2512.22885v1",
+      "locator": "Theorem18 and Conjecture21, 2025v1"
+    }
+  ],
+  "scope_comparison": "Theorem18 assumes radial warped-product metric dr²+h²gSphere and supplies the missing n=3 case. Its actual hypotheses are stronger than arbitrary Ricci>=0/II>=c. Conjecture21 retains the general Neumann biharmonic Steklov statement; other fourth-order boundary conditions do not imply it.",
+  "recommendation": "Retain partial status; no complete matching proof or announcement found in bounded current checks.",
+  "limitations": "Negative searches do not establish continued openness; explicit narrower primary hypotheses suffice to exclude the cited comparators as full solutions.",
+  "announcement_routing": {
+    "localID": "1008",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "biharmonic Steklov",
+          "Wang-Xia",
+          "Xiong",
+          "Zou"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "biharmonic Steklov",
+          "Wang-Xia",
+          "Xiong",
+          "Zou"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "biharmonic Steklov",
+        "Wang-Xia",
+        "Xiong",
+        "Zou"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

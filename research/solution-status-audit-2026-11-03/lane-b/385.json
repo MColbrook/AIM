@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 314,
+  "source_sha256": "f0a391162084dc3c85188a5c6a675b50d4a711477e66f71613a88c140720c429",
+  "statement_sha256": "9f67dee5fb9220e160abe90606144becf80c0f75fd5fd506c888957055c2ea85",
+  "original_target": {
+    "id": "385",
+    "title": "Scalar geodesic tomography on nontrapping surfaces with conjugate points",
+    "area": "Geometric inverse problems / tomography",
+    "file": "problems/385-scalar-geodesic-tomography-on-nontrapping-surfaces-with-conjugate-points.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-387c2faf2696000a",
+    "group": "inverse3",
+    "source_sha256": "f0a391162084dc3c85188a5c6a675b50d4a711477e66f71613a88c140720c429",
+    "statement_sha256": "9f67dee5fb9220e160abe90606144becf80c0f75fd5fd506c888957055c2ea85",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "385",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"geodesic ray transform\" \"nontrapping\" \"conjugate points\" 2026 injectivity",
+    "\"nontrapping\" \"smooth\" \"injectivity\" (site:zenodo.org OR site:hal.science OR site:github.com) geodesic",
+    "\"geodesic\" \"nontrapping\" injectivity counterexample 2026 smooth"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2506.24067v2",
+      "version": "v2 6May2026, current abs version; AnnFennMath51(2026)",
+      "locators": "Corollary1.6 lines174–177",
+      "body_inspected": true,
+      "scope": "Injectivity assumes manifold, metric and matrix weight real analytic."
+    },
+    {
+      "url": "https://www.acadsci.fi/mathematica/Vol45/vol45pp1095-1102.pdf",
+      "version": "published2020",
+      "locators": "Theorem1.1 PDFp2",
+      "body_inspected": true,
+      "scope": "Allows smooth nontrapping surfaces and conjugate points but unknown restricted to piecewise constant functions."
+    },
+    {
+      "url": "https://arxiv.org/html/2510.09518",
+      "version": "current HTML checked3November2026",
+      "locators": "Theorem1 and metric definition2",
+      "body_inspected": true,
+      "scope": "Explicit circularly symmetric disk family with special transport blow-down maps, not arbitrary smooth metrics."
+    }
+  ],
+  "registry_checks": "Palomar/Hexagon/OpenAI and shared Colbrook author metadata found no relevant nontrapping/tomography full claim; broad conjugate aliases unrelated. Focused arXiv, primary publisher/author, Zenodo, HAL, GitHub search.",
+  "scope_comparison": "Target qualitative unweighted smooth-function injectivity for every smooth nontrapping compact surface. Analytic geometry or piecewise constants are proper restrictions. Microlocal instability does not supply exact smooth kernel.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

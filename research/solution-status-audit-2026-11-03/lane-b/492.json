@@ -1,0 +1,79 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "492",
+  "manifest_index": 388,
+  "original_target": {
+    "id": "492",
+    "title": "Constant-gap NP-hardness of densest k-subgraph",
+    "area": "Network optimization and approximation complexity",
+    "file": "problems/492-densest-k-subgraph-constant-gap-hardness.md",
+    "status": "Open",
+    "last_checked": "2026-09-23",
+    "group": "stochastic3",
+    "source_sha256": "3b9974eabe1f00f50c675eccc7f6fa941dd882be08f8cec418d6f7065e7bad22",
+    "statement_sha256": "9d41db06bfa28f1203eced2d8afcfd0dd0db59ffdca29190ca5dc46bc51f54b1",
+    "state": "unreviewed"
+  },
+  "source_sha256": "3b9974eabe1f00f50c675eccc7f6fa941dd882be08f8cec418d6f7065e7bad22",
+  "statement_sha256": "9d41db06bfa28f1203eced2d8afcfd0dd0db59ffdca29190ca5dc46bc51f54b1",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:31:43.458137+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2605.25464v1 Definition1/Theorems2,5 use assumed gap hardness. Revised1611.05991v3,27October2026, Theorem1 now assumes Almost-ETH, and its constant-gap reduction time is subexponential2^~Omega(m^3/4), not polynomial. This does not supply requested unconditional polynomial-size NP-hardness reduction.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2605.25464v1",
+      "locator": "Definition1 and Theorems2,5",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/1611.05991v3",
+      "locator": "Theorem1 and Section1.1 comparison; revised assumption",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"densest k-subgraph\" \"constant gap\" hardness (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "densest k-subgraph",
+        "Gap-ETH"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "densest k-subgraph",
+        "Gap-ETH"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00613v2",
+          "title": "What Does the Refutation of the Exponential Time Hypothesis Mean for Learning Theory?"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "New TCS S030439752600438X publisher body403; indexed introduction only, not used as main theorem evidence."
+  ],
+  "canonical_update_required": false
+}

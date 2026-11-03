@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "723",
+  "manifest_index": 567,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "723",
+    "title": "Does every smooth real-algebraic CR submanifold have Nash–Artin approximation?",
+    "area": "Complex analysis and CR geometry",
+    "file": "problems/723-does-every-smooth-real-algebraic-cr-submanifold-have-nashartin-approximation.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-d5b4165e16eedb05",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "26c2a6b0d3c23f82f530ca5251e6fe3d4294904dd6daa12df443758fa0496091",
+    "statement_sha256": "8871b12de78c76b9eb495d62e2568d37533d0604e1290cb53c98213ae589e38f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "26c2a6b0d3c23f82f530ca5251e6fe3d4294904dd6daa12df443758fa0496091",
+  "statement_sha256": "8871b12de78c76b9eb495d62e2568d37533d0604e1290cb53c98213ae589e38f",
+  "actual_source_sha256": "26c2a6b0d3c23f82f530ca5251e6fe3d4294904dd6daa12df443758fa0496091",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`M\\subset\\mathbb C^N`$ be a smooth real-algebraic CR submanifold. Fix any point $`p\\in M`$, any positive integer $`N'`$, and any real-algebraic set $`\\Sigma\\subset\\mathbb C^N\\times\\mathbb C^{N'}`$. Suppose a germ of a holomorphic map $`h:(\\mathbb C^N,p)\\to\\mathbb C^{N'}`$ has its graph over $`M`$ contained in $`\\Sigma`$ near $`(p,h(p))`$.\n\n**For every integer $`j\\ge1`$, must there be a germ of an algebraic holomorphic map $`h_j:(\\mathbb C^N,p)\\to\\mathbb C^{N'}`$ whose graph over $`M`$ still lies in $`\\Sigma`$ and whose derivatives at $`p`$ agree with those of $`h`$ through order $`j`$?**\n\nThe quantifiers over $`p`$, $`N'`$ and $`\\Sigma`$ are part of the question. “Algebraic holomorphic” means that the component germs are algebraic power series, not merely holomorphic approximations. The property for a given pair $`(M,\\Sigma)`$ is Definition 3.6 of Mir's survey; Conjecture C asserts it for every such pair when $`M`$ is a smooth real-algebraic CR submanifold.\n\nKnown results cover generically minimal CR submanifolds, those whose CR orbits have constant dimension, and all smooth real-algebraic hypersurfaces. Every CR submanifold also has the property away from a proper real-algebraic exceptional subset. The remaining difficulty is higher codimension with variable CR-orbit dimension; the problem is not an open hypersurface case.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Nash Artin approximation\" CR submanifolds conjecture 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"Nash\" \"Artin\" \"CR\" approximation",
+    "site:palomar-registry.org OR site:hexagonmath.org \"Nash Artin\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Mir, Methods Appl. Anal.21(2014)481–502; current searches 3 November2026",
+      "scope_comparison": "Actual definition has every target dimension, every real-algebraic graph constraint and every finite jet. Theorems cover generically minimal, constant-CR-orbit-dimension and hypersurface sources; ConjectureC explicitly leaves points of nonmaximal CR-orbit dimension. The local target includes such smooth higher-codimension points. Rond's Bishop-surface obstruction involves a CR singularity excluded here; minimal-source jet determination/strong approximation is narrower. No complete all-smooth-CR result located.",
+      "url": "https://archive.intlpress.com/site/pub/files/_fulltext/journals/maa/2014/0021/0004/MAA-2014-0021-0004-a005.pdf",
+      "locator": "Definition3.6 pp492–493; Theorems3.7–3.10 pp493–494; ConjectureC and following paragraph pp494–495",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual definition has every target dimension, every real-algebraic graph constraint and every finite jet. Theorems cover generically minimal, constant-CR-orbit-dimension and hypersurface sources; ConjectureC explicitly leaves points of nonmaximal CR-orbit dimension. The local target includes such smooth higher-codimension points. Rond's Bishop-surface obstruction involves a CR singularity excluded here; minimal-source jet determination/strong approximation is narrower. No complete all-smooth-CR result located.",
+  "latest_version_check": "Mir, Methods Appl. Anal.21(2014)481–502; current searches 3 November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

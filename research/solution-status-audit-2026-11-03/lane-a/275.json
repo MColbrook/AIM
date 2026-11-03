@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "275",
+  "manifest_index": 218,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "275",
+    "title": "The four-thirds integrality gap for metric routing",
+    "area": "Operations research and routing",
+    "file": "problems/275-metric-tsp-four-thirds.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "968d075d6cb1da56800e1027b047dbf012d9b0b8d835ad23557d434f196b427f",
+    "statement_sha256": "24337e042754e6a38c2238174f590571f12d9f869da7b7a6ec3158079d029bdf",
+    "state": "unreviewed"
+  },
+  "source_sha256": "968d075d6cb1da56800e1027b047dbf012d9b0b8d835ad23557d434f196b427f",
+  "statement_sha256": "24337e042754e6a38c2238174f590571f12d9f869da7b7a6ec3158079d029bdf",
+  "actual_source_sha256": "968d075d6cb1da56800e1027b047dbf012d9b0b8d835ad23557d434f196b427f",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "On the complete graph $`K_n`$, let $`c_e\\ge0`$ satisfy the triangle inequality. Write $`\\mathrm{OPT}(c)`$ for the cheapest Hamiltonian cycle, and let $`\\mathrm{HK}(c)`$ minimize $`\\sum_ec_ex_e`$ subject to $`x_e\\ge0`$, $`\\sum_{e\\ni v}x_e=2`$ for each vertex, and $`\\sum_{e\\in\\delta(S)}x_e\\ge2`$ for every nonempty proper vertex set $`S`$; $`\\delta(S)`$ denotes its crossing edges. Must $`\\mathrm{OPT}(c)\\le\\tfrac43\\mathrm{HK}(c)`$ hold for every $`n\\ge3`$ and every such metric?",
+  "full_local_page_read": true,
+  "queries": [
+    "\"metric TSP\" \"4/3\" integrality gap 2026",
+    "\"metric TSP\" \"4/3\" integrality gap (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"metric TSP\" \"4/3\" integrality gap (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The currentv5computes exact subtour gaps for general instances up to16vertices and half-integral extreme points up to18. This improves some older summaries quoting15but does not prove the all-n4/3inequality. Restricted half-integral/cycle-cut approximation theorems do not cover every metric. No complete target announcement located.",
+      "locator": "Section1 scope,Section3Results,Table4",
+      "url": "https://arxiv.org/html/2603.12995",
+      "version_or_date": "LatestretrievedarXiv2603.12995v5,8September2026.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The currentv5computes exact subtour gaps for general instances up to16vertices and half-integral extreme points up to18. This improves some older summaries quoting15but does not prove the all-n4/3inequality. Restricted half-integral/cycle-cut approximation theorems do not cover every metric. No complete target announcement located.",
+  "latest_version_check": "LatestretrievedarXiv2603.12995v5,8September2026.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

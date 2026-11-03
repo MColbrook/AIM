@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "552",
+  "manifest_index": 431,
+  "original_target": {
+    "id": "552",
+    "title": "Polynomial-time Bernoulli group testing at the information threshold",
+    "area": "High-dimensional inference and computational statistics",
+    "file": "problems/552-bernoulli-group-testing.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "probability-statistics",
+    "source_sha256": "8945fbd4b96081f20c074c1d6daabe6a55ed310b005139dd5278d81b45a360f1",
+    "statement_sha256": "fabba6b1dfe099fb49e7d77c248854cd6dc7fd6be604c6ab163f584ed6bda7f8",
+    "state": "unreviewed"
+  },
+  "source_sha256": "8945fbd4b96081f20c074c1d6daabe6a55ed310b005139dd5278d81b45a360f1",
+  "statement_sha256": "fabba6b1dfe099fb49e7d77c248854cd6dc7fd6be604c6ab163f584ed6bda7f8",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:56:06.109609+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Lovig–Zadik proves low-temperature local Johnson-chain bottleneck/hardness for certain parameters and initializations, not impossibility for all polynomial decoders. The new threshold-query theorem permits chosen design and selectable unbounded thresholds, unlike prescribed iid Bernoulli noiseless OR. Spatial coupling and prior restrictions likewise change the target.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2410.09231v2",
+      "locator": "Introduction, Theorem3.15 and Corollary3.16; current v2 16October2024",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2607.14448v1",
+      "locator": "Theorem2, selectable threshold queries and design",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Bernoulli\" \"group testing\" \"polynomial\" \"2026\" approximate recovery",
+    "\"Bernoulli group testing\" \"threshold\" \"2026\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Bernoulli group testing\" \"polynomial-time\" \"2026\" recovery optimal"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Bernoulli group testing"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Bernoulli group testing"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Final Annals of Applied Probability36(3)2026 pp2626–2679 PDF502; published parity not established."
+  ],
+  "canonical_update_required": false
+}

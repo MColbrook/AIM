@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "836",
+  "manifest_index": 680,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "836",
+    "title": "The $`4\\pi`$ boundary-curvature threshold for oriented minimal surfaces",
+    "area": "Geometry and topology",
+    "file": "problems/836-the-4-pi-boundary-curvature-threshold-for-oriented-minimal-surfaces.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-bc3f9bee6a33f2bf",
+    "group": "geometry-topology",
+    "source_sha256": "4d2ed22f5de41cdbc275cd6c9d9eb619fc9e1020a587b7edea29f3c7e729f67f",
+    "statement_sha256": "d7cc176f77680cbbe19a27efa7c844b93790a5392e4f6a8bb87fa5425e43d947",
+    "state": "unreviewed"
+  },
+  "source_sha256": "4d2ed22f5de41cdbc275cd6c9d9eb619fc9e1020a587b7edea29f3c7e729f67f",
+  "statement_sha256": "d7cc176f77680cbbe19a27efa7c844b93790a5392e4f6a8bb87fa5425e43d947",
+  "actual_source_sha256": "4d2ed22f5de41cdbc275cd6c9d9eb619fc9e1020a587b7edea29f3c7e729f67f",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Gamma\\subset\\mathbb R^3`$ be a smooth, simple closed curve with total *boundary-curve* curvature\n```math\n\\mathrm{tc}(\\Gamma)=\\int_\\Gamma |\\kappa|\\,ds\\leq4\\pi.\n```\n\nMust every smooth, compact, oriented minimal surface spanning $`\\Gamma`$ be a disk? Equivalently, if such a curve bounds an oriented minimal surface that is not a disk, must $`\\mathrm{tc}(\\Gamma)>4\\pi`$? The orientability condition matters: curves of total curvature below $`4\\pi`$ can bound minimal Möbius strips.\n\nBrian White proves the disk conclusion for $`\\mathrm{tc}(\\Gamma)\\leq 2\\pi\\sqrt{2\\pi/e}`$, approximately $`1.014\\cdot3\\pi`$, and conjectures the sharp $`4\\pi`$ threshold for oriented surfaces. Curves of curvature less than $`4\\pi+\\varepsilon`$ can bound oriented embedded minimal surfaces of arbitrarily high genus, so the proposed constant cannot be raised.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"minimal surfaces\" \"4 pi\" oriented boundary total curvature 2026",
+    "\"minimal surfaces\" \"4 pi\" oriented boundary total curvature (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"minimal surfaces\" \"4 pi\" oriented boundary total curvature (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Section9,Theorem19 and immediately following conjecture,p683",
+      "version_or_date": "Final CMH97(2022)669–689,DOI10.4171/CMH/542; current 2026 focused search",
+      "url": "https://ems.press/content/serial-article-files/43576",
+      "scope_comparison": "The full local target requires disk topology for every compact oriented spanning minimal surface at boundary-curve total curvature <=4pi. Actual Theorem19 gives only tc>2pi sqrt(2pi/e) for oriented nondisks and explicitly conjectures replacing that smaller threshold by 4pi. An embeddedness theorem at4pi does not force disk topology; Mobius-strip examples fail orientability, and total surface Gaussian curvature results use a different invariant. No later full matching announcement was located. The supplementary Stanford lecture-note mirror returned502, but the published original theorem and conjecture were directly readable."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The full local target requires disk topology for every compact oriented spanning minimal surface at boundary-curve total curvature <=4pi. Actual Theorem19 gives only tc>2pi sqrt(2pi/e) for oriented nondisks and explicitly conjectures replacing that smaller threshold by 4pi. An embeddedness theorem at4pi does not force disk topology; Mobius-strip examples fail orientability, and total surface Gaussian curvature results use a different invariant. No later full matching announcement was located. The supplementary Stanford lecture-note mirror returned502, but the published original theorem and conjecture were directly readable.",
+  "latest_version_check": "Final CMH97(2022)669–689,DOI10.4171/CMH/542; current 2026 focused search",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "522",
+  "manifest_index": 406,
+  "original_target": {
+    "id": "522",
+    "title": "Sharp uniform approximation of Lipschitz functions by shallow ReLU networks",
+    "area": "Approximation theory / numerical analysis",
+    "file": "problems/522-sharp-uniform-approximation-of-lipschitz-functions-by-shallow-relu-networks.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-466ae24e446bfce1",
+    "group": "numerical-analysis",
+    "source_sha256": "84924387383ae16091b5b75a5a096c30cd01c218d70829401860e8ec3deb1a22",
+    "statement_sha256": "c0364d18b8fcbc8aac075fe0fdd9e8727b5744a3c1c5688960d30a1b73efa13c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "84924387383ae16091b5b75a5a096c30cd01c218d70829401860e8ec3deb1a22",
+  "statement_sha256": "c0364d18b8fcbc8aac075fe0fdd9e8727b5744a3c1c5688960d30a1b73efa13c",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:35.739482+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The source equation 1.13 and Table 1 retain the lower bound (n log n)^(-s/d). New coefficient-budget Besov/H^m results and statistical minimax lower bounds do not give the unrestricted architectural lower bound for the target Lipschitz L-infinity problem.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2408.10996v3",
+      "locator": "Equation 1.13 and Table 1; official v3 date 16 October 2025",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2609.06418v1",
+      "locator": "Theorem 1.2, definition of E_n,m(B;M0), fixed coefficient budget",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2605.18468v4",
+      "locator": "Theorem 2 and section 4.2 Theorems 7–8",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"shallow ReLU\" \"Lipschitz\" lower bound (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Lipschitz\" \"shallow ReLU\" \"sharp\" \"lower\" 2026 announcement"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "shallow ReLU",
+        "Lipschitz"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-11-01-000014",
+          "title": "Dimension-free KLS Poincare bound for isotropic log-concave densities (smooth compactly supported tests)"
+        },
+        {
+          "id": "PALOMAR-2026-10-27-000028",
+          "title": "Perron's extremal solutions of the Bernoulli one-phase problem: viscosity, inner variational and one-sided minimizing solutions, and free boundary structure in the plane"
+        },
+        {
+          "id": "PALOMAR-2026-10-19-000017",
+          "title": "Sharp continued-fraction bounds from exact digit runs"
+        },
+        {
+          "id": "PALOMAR-2026-10-19-000005",
+          "title": "Exact db2 cascade norms and an optimal uniform constant"
+        },
+        {
+          "id": "PALOMAR-2026-10-12-000006",
+          "title": "Sharp last-iterate bounds and extremal trajectories for constant-step gradient descent"
+        },
+        {
+          "id": "PALOMAR-2026-10-09-000007",
+          "title": "Strict Neumann Polya inequality on simply connected planar domains"
+        },
+        {
+          "id": "PALOMAR-2026-10-08-000001",
+          "title": "Sharp Wasserstein propagation of chaos from correlated initial data"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "shallow ReLU",
+        "Lipschitz"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2611.00026v1",
+          "title": "Iterating the Gupta–Ndiaye–Norin–Wei method: a computer-verified bound $R(k)\\le 3.7698^{k+o(k)}$"
+        },
+        {
+          "id": "hexagon:2610.00595v1",
+          "title": "Metric, Schauder and Operator-Valued Frames"
+        },
+        {
+          "id": "hexagon:2610.00556v1",
+          "title": "Risk Aversion and Information in Robust Contracting"
+        },
+        {
+          "id": "hexagon:2610.00160v2",
+          "title": "Binary Regression for BV Class Conditional Probability"
+        },
+        {
+          "id": "hexagon:2610.00154v1",
+          "title": "Parisi formula for Ising and Spherical Perceptrons"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "HTML includes 2026 citations despite the official v3 date; historical byte parity and final SIAM parity were not verified."
+  ],
+  "canonical_update_required": false
+}

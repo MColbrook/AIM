@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "737",
+  "manifest_index": 581,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "737",
+    "title": "Bernoulli's lemniscate as the longest-lived zero-winding curve diffusion flow",
+    "area": "Surface diffusion and geometric evolution",
+    "file": "problems/737-bernoulli-s-lemniscate-as-the-longest-lived-zero-winding-curve-diffusion-flow.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8f09c7c42ac94240",
+    "group": "diffusion-materials",
+    "source_sha256": "1f66b91b8a6dc335f0a7fc0acd469c4865bf7681b7ed36c9e1302c4f43d0fc2d",
+    "statement_sha256": "eb11c2225692ebdee8a442a41f5589802dda1feccc8538dee2bf5db2062f8276",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1f66b91b8a6dc335f0a7fc0acd469c4865bf7681b7ed36c9e1302c4f43d0fc2d",
+  "statement_sha256": "eb11c2225692ebdee8a442a41f5589802dda1feccc8538dee2bf5db2062f8276",
+  "actual_source_sha256": "1f66b91b8a6dc335f0a7fc0acd469c4865bf7681b7ed36c9e1302c4f43d0fc2d",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\gamma_0:S^1\\to\\mathbb R^2`$ be any smooth regular closed immersed curve, with length $`L_0>0`$ and turning number zero:\n\n```math\n\\frac1{2\\pi}\\int_{\\gamma_0}\\kappa\\,ds=0.\n```\n\nLet $`\\gamma:S^1\\times[0,T)\\to\\mathbb R^2`$ be its maximal smooth regular evolution by curve diffusion,\n\n```math\n\\partial_t\\gamma\\cdot\\nu=-\\partial_s^2\\kappa.\n```\n\nHere $`s`$ is arclength, $`\\nu`$ is a continuously chosen unit normal, and $`\\kappa=\\partial_s^2\\gamma\\cdot\\nu`$ is the compatible signed curvature. Tangential velocities only change parametrization. Self-intersections are allowed. Here $`T`$ is the maximal time of geometric smooth immersed existence, allowing smooth reparametrization; an artificial degeneration of a tangential parametrization does not end the geometric evolution. It is not the first self-intersection time. There is no assumption of zero signed enclosed area, symmetry, or proximity to a particular curve.\n\nMust every such flow satisfy\n\n```math\nT\\le \\frac{L_0^4}{3\\cdot2^{11}K(-1)^4},\n\\qquad\nK(-1)=\\int_0^{\\pi/2}\\frac{d\\theta}{\\sqrt{1+\\sin^2\\theta}}\\,?\n```\n\nThe proposed bound is attained by a suitably scaled Bernoulli lemniscate. For the explicit regular immersion\n\n```math\nb(u)=\\frac{(\\cos u,\\sin u\\cos u)}{1+\\sin^2u},\n\\qquad u\\in\\mathbb R/(2\\pi\\mathbb Z),\n```\n\nits length is $`4K(-1)`$ and its curve diffusion flow is, up to reparametrization, $`(1-24t)^{1/4}b`$, with maximal time $`1/24`$. Scaling lengths by $`a`$ scales time by $`a^4`$, giving the constant displayed above. The question asks only for this universal lifetime bound; it does not assert a classification of all shrinkers or of equality cases.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"curve diffusion\" \"lemniscate\" \"lifespan\" 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"lemniscate\" \"curve diffusion\"",
+    "site:palomar-registry.org OR site:hexagonmath.org \"lemniscate\" \"diffusion\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1,29January2026; Wheeler final2022 article doi10.3934/mine.2022001 separately read",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2601.21227v1",
+      "locator": "§3.3–3.4 Proposition3.10/Lemma3.13; Wheeler2022 p3 lifetime discussion",
+      "scope_comparison": "Actual Lemma3.13 gives epicyclic shrinker turning index p, nonzero in construction. It is not a zero-turning example or a universal lifetime inequality. Wheeler finalbody retains Bernoulli-length sharp lifetime conjecture after weaker L0^4/(16pi^4) bound. Added cubic-curvature/elastic/ideal flow or immortal convergence results alter evolution or lifetime assumptions. Local allows every zero-turning immersion, no signed-area/symmetry restriction. No full matching proof/counterexample announcement located."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual Lemma3.13 gives epicyclic shrinker turning index p, nonzero in construction. It is not a zero-turning example or a universal lifetime inequality. Wheeler finalbody retains Bernoulli-length sharp lifetime conjecture after weaker L0^4/(16pi^4) bound. Added cubic-curvature/elastic/ideal flow or immortal convergence results alter evolution or lifetime assumptions. Local allows every zero-turning immersion, no signed-area/symmetry restriction. No full matching proof/counterexample announcement located.",
+  "latest_version_check": "v1,29January2026; Wheeler final2022 article doi10.3934/mine.2022001 separately read",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

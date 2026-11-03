@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "699",
+  "manifest_index": 543,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "699",
+    "title": "Does positive Favard length force positive analytic capacity?",
+    "area": "Complex analysis and geometric measure theory",
+    "file": "problems/699-does-positive-favard-length-force-positive-analytic-capacity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-7c22fa2893111528",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "5ab3ed74d53afa27238b3c07b2d2eaa9318be0561d1b26b8d5a00906c7b0b7c8",
+    "statement_sha256": "a3eda4a7697ab51fb7e80f9abd4389e924a4b1c5c05322e59ac1c243eca65162",
+    "state": "unreviewed"
+  },
+  "source_sha256": "5ab3ed74d53afa27238b3c07b2d2eaa9318be0561d1b26b8d5a00906c7b0b7c8",
+  "statement_sha256": "a3eda4a7697ab51fb7e80f9abd4389e924a4b1c5c05322e59ac1c243eca65162",
+  "actual_source_sha256": "5ab3ed74d53afa27238b3c07b2d2eaa9318be0561d1b26b8d5a00906c7b0b7c8",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`E\\subset\\mathbb C`$ be compact. For $`0\\le\\theta<\\pi`$, let $`P_\\theta`$ be orthogonal projection onto the line $`\\{re^{i\\theta}:r\\in\\mathbb R\\}`$. Define its Favard length by\n```math\n\\mathrm{Fav}(E)=\\int_0^\\pi \\mathcal H^1(P_\\theta(E))\\,d\\theta.\n```\n\nDefine its analytic capacity by\n```math\n\\gamma(E)=\n\\sup\\left\\{\n\\left|\\lim_{z\\to\\infty}z\\bigl(f(z)-f(\\infty)\\bigr)\\right|:\nf\\text{ is holomorphic on }\\mathbb C\\setminus E,\\quad |f|\\le1\n\\right\\}.\n```\n\nThe limit $`f(\\infty)`$ exists for such bounded functions.\n\nProve or disprove that every compact planar set satisfies\n```math\n\\mathrm{Fav}(E)>0\\quad\\Longrightarrow\\quad\\gamma(E)>0.\n```\n\n\nNo length, rectifiability or regularity assumption is imposed on $`E`$. The target is this qualitative implication; a uniform lower estimate $`\\gamma(E)\\ge c\\,\\mathrm{Fav}(E)`$ is a stronger, separate question.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Favard length\" \"analytic capacity\" positive 2026",
+    "\"Favard length\" \"analytic capacity\" positive (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Favard\" \"analytic capacity\" \"2026\" Vitushkin"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The September body explicitly retains Fav(E)>0⇒gamma(E)>0 for arbitrary compact sets and proves special random-model cases. Its counterexamples have gamma>0 and Fav=0, the opposite direction. The October body constructs deterministic self-similar sets and neighborhood inequalities, not the universal implication. Four-corner decay exponent formalizations do not answer it.",
+      "locator": "§1.5 eq1.14/Theorem1.14/Corollary1.15;2610.22908Theorem1.1",
+      "version_or_date": "arXiv2609.33557v1,27September2026;2610.22908v1,16October2026 compared",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2609.33557"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The September body explicitly retains Fav(E)>0⇒gamma(E)>0 for arbitrary compact sets and proves special random-model cases. Its counterexamples have gamma>0 and Fav=0, the opposite direction. The October body constructs deterministic self-similar sets and neighborhood inequalities, not the universal implication. Four-corner decay exponent formalizations do not answer it.",
+  "latest_version_check": "arXiv2609.33557v1,27September2026;2610.22908v1,16October2026 compared",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

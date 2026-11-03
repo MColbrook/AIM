@@ -1,0 +1,91 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "965",
+  "manifest_index": 809,
+  "checked_date": "2026-11-03",
+  "source_sha256": "21c1f23f939e716a1b5fa6c4ca864756594155d83e53bac558dd48f315e02475",
+  "statement_sha256": "8d834924da4d625f7b30dbcbec055096807e83ef6981a2ce67a57fcba57b9e73",
+  "original_target": {
+    "id": "965",
+    "title": "Must every global subcritical heat flow vanish in energy norm?",
+    "area": "Nonlinear parabolic equations; reaction–diffusion",
+    "file": "problems/965-must-every-global-subcritical-heat-flow-vanish-in-energy-norm.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-feac7347a94ee8a6",
+    "group": "pdes-materials",
+    "source_sha256": "21c1f23f939e716a1b5fa6c4ca864756594155d83e53bac558dd48f315e02475",
+    "statement_sha256": "8d834924da4d625f7b30dbcbec055096807e83ef6981a2ce67a57fcba57b9e73",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For an integer $`N\\ge1`$, set\n\n```math\np_S(N)=\\begin{cases}(N+2)/(N-2),&N\\ge3,\\\\+\\infty,&N=1,2.\\end{cases}\n```\n\nFix $`1<p<p_S(N)`$ and define the real energy space\n\n```math\n\\mathcal E_{N,p}=\\{v\\in L^{p+1}(\\mathbb R^N;\\mathbb R):\\nabla v\\in L^2(\\mathbb R^N;\\mathbb R^N)\\},\n\\qquad\n\\|v\\|_{\\mathcal E_{N,p}}=\\|v\\|_{L^{p+1}}+\\|\\nabla v\\|_{L^2},\n```\n\nwhere the gradient is weak. Let $`u_0\\in\\mathcal E_{N,p}`$ and suppose its canonical maximal forward solution to\n\n```math\n\\partial_tu-\\Delta u=|u|^{p-1}u\\quad\\text{on }\\mathbb R^N\\times(0,\\infty),\n\\qquad u(0,\\cdot)=u_0,\n```\n\nexists globally. Here the solution belongs to $`C([0,\\infty);\\mathcal E_{N,p})`$, satisfies the usual heat-semigroup Duhamel formula, and is classical for positive times. There is no spatial boundary. Must\n\n```math\n\\lim_{t\\to\\infty}\\bigl(\\|u(t)\\|_{L^{p+1}(\\mathbb R^N)}+\\|\\nabla u(t)\\|_{L^2(\\mathbb R^N)}\\bigr)=0?\n```\n\nThe data may change sign and need not be radial. Global existence is assumed; no uniform decay rate, smallness, finite number of sign changes, exponential spatial tail, or uniform bound over all positive times is assumed.",
+  "full_original_page": "# 965. Must every global subcritical heat flow vanish in energy norm?\n\n**Area:** Nonlinear parabolic equations; reaction–diffusion\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor an integer $`N\\ge1`$, set\n\n```math\np_S(N)=\\begin{cases}(N+2)/(N-2),&N\\ge3,\\\\+\\infty,&N=1,2.\\end{cases}\n```\n\nFix $`1<p<p_S(N)`$ and define the real energy space\n\n```math\n\\mathcal E_{N,p}=\\{v\\in L^{p+1}(\\mathbb R^N;\\mathbb R):\\nabla v\\in L^2(\\mathbb R^N;\\mathbb R^N)\\},\n\\qquad\n\\|v\\|_{\\mathcal E_{N,p}}=\\|v\\|_{L^{p+1}}+\\|\\nabla v\\|_{L^2},\n```\n\nwhere the gradient is weak. Let $`u_0\\in\\mathcal E_{N,p}`$ and suppose its canonical maximal forward solution to\n\n```math\n\\partial_tu-\\Delta u=|u|^{p-1}u\\quad\\text{on }\\mathbb R^N\\times(0,\\infty),\n\\qquad u(0,\\cdot)=u_0,\n```\n\nexists globally. Here the solution belongs to $`C([0,\\infty);\\mathcal E_{N,p})`$, satisfies the usual heat-semigroup Duhamel formula, and is classical for positive times. There is no spatial boundary. Must\n\n```math\n\\lim_{t\\to\\infty}\\bigl(\\|u(t)\\|_{L^{p+1}(\\mathbb R^N)}+\\|\\nabla u(t)\\|_{L^2(\\mathbb R^N)}\\bigr)=0?\n```\n\nThe data may change sign and need not be radial. Global existence is assumed; no uniform decay rate, smallness, finite number of sign changes, exponential spatial tail, or uniform bound over all positive times is assumed.\n\n## Application\n\nThis asks whether diffusion eventually removes every globally regular finite-energy state despite the focusing reaction. The decreasing energy functional is different from the positive norm appearing in the question.\n\n## Known progress\n\nThe question is stated after(1.18) in[1]. That paper proves sufficient one-dimensional cases with finitely many sign changes of both the initial profile and its derivative, and recalls results for exponentially decreasing initial data. Its general question is broader than those cases.\n\nThe later overview[2] discusses restricted pointwise decay and weighted-data results; this is not a statement that the exact energy-norm question has been resolved. The optimal Liouville theorem[3] concerns positive solutions. The energy-critical, ground-state-threshold theorem[4], the potential-well theorem for a subcritical equation with an additional linear absorption term[5], and the recent small-data global-existence theorem[6] have different hypotheses or conclusions. The singular self-similar solutions in[7] are outside this global energy-solution class.\n\n## References\n\n1. T. Bartsch, P. Poláčik and P. Quittner, [*Liouville-type theorems and asymptotic behavior of nodal radial solutions of semilinear heat equations*](https://ems.press/journals/jems/articles/1949), J. Eur. Math. Soc.13(1)(2011),219–247, DOI10.4171/JEMS/250. Definition(1.5), equation(1.10), question after(1.18), and Proposition5.4; printed pp.221–224,239–241.\n2. P. Quittner, [*A priori estimates of solutions to local and nonlocal superlinear parabolic problems*](https://arxiv.org/abs/2412.05855v2), v2(22January2025), §1.1, especially Remark1.1.\n3. P. Quittner, [*Optimal Liouville theorems for superlinear parabolic problems*](https://arxiv.org/abs/2003.13223v2), v2(30September2020), Theorem1 and §1.2.\n4. S. Gustafson and D. Roxanas, [*Global, decaying solutions of a focusing energy-critical heat equation in $`\\mathbb R^4`$*](https://arxiv.org/abs/1707.07644v1), v1(24July2017), equation(1.1) and Theorem1.1.\n5. M. Ikeda and K. Taniguchi, [*Global well-posedness, dissipation and blow up for semilinear heat equations in energy spaces associated with self-adjoint operators*](https://arxiv.org/abs/1902.01016v3), v3(26September2019), equation(1.1) and Theorem2.2.\n6. G. Y. Diebou and N. C. Phuc, [*Optimal global well-posedness for semilinear heat equations*](https://arxiv.org/html/2610.27365v1), v1(19October2026), Theorem1.1.\n7. Y. Naito, [*Existence of infinitely many singular self-similar solutions for the semilinear heat equation*](https://arxiv.org/abs/2609.36821v1), v1(29September2026), Theorem1.1 and(1.4)–(1.7).\n\n## Status review\n\n\n**Known cases:** The target allows sign changes and asks energy-norm decay of every global energy-subcritical solution. Critical infinite-time blowup, bounded-domain finite-time blowup rates and sign/radial restricted decay have different hypotheses.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe target allows sign changes and asks energy-norm decay of every global energy-subcritical solution. Critical infinite-time blowup, bounded-domain finite-time blowup rates and sign/radial restricted decay have different hypotheses.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked against the selected original and later primary statements on24October2026. No matching resolution was located in bounded published/announced-result searches. The all-status repository comparisons are recorded separately. Prove2Me indexed searching found no observed match; a direct live-site request timed out, so live mission coverage remains a gap. The independent source/current and repository checks are recorded in the research ledger; they do not certify every proof in the cited literature.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-feac7347a94ee8a6**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scope passages inspected, not full proof certification."
+  ],
+  "aliases": [
+    "subcritical heat",
+    "Quittner",
+    "Polacik"
+  ],
+  "queries": [
+    "\"global\" \"subcritical\" \"heat equation\" \"energy decay\" 2026",
+    "\"global\" \"subcritical\" \"heat equation\" \"energy decay\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.27365v1",
+      "locator": "19Oct2026 abstract, Theorem1.1 and initial-data Z norm discussion",
+      "comparison": "Global existence for sufficiently small Z norm and necessary conditions for nonnegative data do not imply decay of every already-global signed energy solution. Critical-threshold, radial/nodal finite-sign and singular selfsimilar models likewise add or change assumptions."
+    }
+  ],
+  "rationale": "The recent well-posedness announcement resolves a different small-data endpoint problem, not unrestricted global energy-subcritical decay.",
+  "announcement_routing": {
+    "localID": "965",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "subcritical heat",
+          "Quittner",
+          "Polacik"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "subcritical heat",
+          "Quittner",
+          "Polacik"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "subcritical heat",
+        "Quittner",
+        "Polacik"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 304,
+  "source_sha256": "1f999582180dcb4a8375bcb8eee2881155d51239cf38d4dab1224d84ada48b55",
+  "statement_sha256": "fd3f6fbaaa9d47e99b38f9329960d1d926f75382906dca87aa3f3afc8a2b0c24",
+  "original_target": {
+    "id": "371",
+    "title": "Large-data weak solutions for three-dimensional stress-diffusive Oldroyd-B flow",
+    "area": "Viscoelastic fluids; polymer rheology",
+    "file": "problems/371-oldroyd-diffusive-three-dimensional-weak.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "1f999582180dcb4a8375bcb8eee2881155d51239cf38d4dab1224d84ada48b55",
+    "statement_sha256": "fd3f6fbaaa9d47e99b38f9329960d1d926f75382906dca87aa3f3afc8a2b0c24",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "371",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"three-dimensional\" \"Oldroyd-B\" \"weak solutions\" \"2026\" stress diffusion",
+    "\"Dębiec\" \"Süli\" \"Hookean\" arxiv",
+    "\"Oldroyd-B\" \"three-dimensional\" \"stress diffusion\" \"weak\" 2026 solution",
+    "\"Oldroyd-B\" \"stress\" \"weak\" site:zenodo.org OR site:hal.science OR site:github.com \"three-dimensional\""
+  ],
+  "sources": [
+    {
+      "url": "https://d-nb.info/1379418437/34",
+      "version": "published ARMA249:43 (2025)",
+      "locators": "equations 3–4; Definition 1.2; Remark 1.4",
+      "body_inspected": true,
+      "scope": "Generalised dissipative solutions retain stress-defect measure; full closure in 2D or under additional velocity regularity."
+    },
+    {
+      "url": "https://arxiv.org/html/2306.16901v1",
+      "version": "v1 29 June 2023, current abstract only v1",
+      "locators": "Remark 1.4; generalized solution definition",
+      "body_inspected": true,
+      "scope": "Explains missing stress compactness in 3D, not solved by ordinary trace-energy inequality."
+    },
+    {
+      "url": "https://arxiv.org/html/2610.21473v1",
+      "version": "v1 October 2026",
+      "locators": "Theorem 1.1; equation/model",
+      "body_inspected": true,
+      "scope": "Inviscid fractional-stress-diffusive model beta<1; bounded lower energy plus small higher fractional energy, not large-data weak stress closure."
+    }
+  ],
+  "registry_checks": "No Oldroyd alias Palomar/Hexagon/OpenAI full metadata. Focused current arXiv, primary publisher, Zenodo, HAL, GitHub searches.",
+  "scope_comparison": "Need exact momentum stress with no defect, arbitrary data on bounded 3D domain and sigma L-infinity L2 / L2 H1. Generalized measures, quadratic elastic-energy changes, compressible, creeping 2D, or small-data fractional diffusion models do not cover original constitutive law.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Current primary generalized theorem and October fractional theorem retain distinct limitations."
+}

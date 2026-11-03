@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "161",
+  "manifest_index": 127,
+  "original_target": {
+    "id": "161",
+    "title": "The maximal heat-transfer exponent at finite Prandtl number",
+    "area": "Buoyant convection and heat transfer",
+    "file": "problems/161-finite-prandtl-heat-scaling.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "1e6e178bcf2183b7eb4181c598b3f0d54a30136a7be6628eac0b192a6cf0cbfc",
+    "statement_sha256": "98bc17a8243b9713516b858a2359bdd4ed9554cd8d5be5e2e0d2022d6b16555d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1e6e178bcf2183b7eb4181c598b3f0d54a30136a7be6628eac0b192a6cf0cbfc",
+  "statement_sha256": "98bc17a8243b9713516b858a2359bdd4ed9554cd8d5be5e2e0d2022d6b16555d",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:34:39.439953+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual Ding–Wen–Li2026 body states its energy-stability variational extremals need not solve full buoyant dynamics and introduces an INTERNAL thermal forcing to realize conductive profiles. Infinite-Prandtl sharp estimates omit fluid inertia and Navier-slip variants change walls. Neither gives matching upper/lower exponent for actual no-slip2D Pr=1 solutions.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2606.14138v1",
+      "locator": "Introduction and mathematical formulation",
+      "body_inspected": true
+    },
+    {
+      "url": "https://doi.org/10.1007/s00220-026-05637-x",
+      "locator": "Equations4–8: infinite-Prandtl Stokes and slip model",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"finite Prandtl\" \"optimal\" \"exponent\" \"2026\" Nusselt",
+    "\"finite Prandtl\" \"Nusselt\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "finite Prandtl",
+        "Nusselt"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "finite Prandtl",
+        "Nusselt"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

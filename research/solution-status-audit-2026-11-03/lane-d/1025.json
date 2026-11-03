@@ -1,0 +1,99 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1025",
+  "manifest_index": 869,
+  "checked_date": "2026-11-03",
+  "source_sha256": "21d132d201b85de6f8f0832d94af3cd131eacbf1a275d7c30e78e2b5ba3073a3",
+  "statement_sha256": "6c26838906d571188d5ce7b8e1faf3de5c74834bd4f221d6d315f99d1b193499",
+  "original_target": {
+    "id": "1025",
+    "title": "Does the Steklov spectrum determine every cuboid?",
+    "area": "Spectral geometry and inverse problems",
+    "file": "problems/1025-does-the-steklov-spectrum-determine-every-cuboid.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ab61f2addb846336",
+    "group": "spectral",
+    "source_sha256": "21d132d201b85de6f8f0832d94af3cd131eacbf1a275d7c30e78e2b5ba3073a3",
+    "statement_sha256": "6c26838906d571188d5ce7b8e1faf3de5c74834bd4f221d6d315f99d1b193499",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For any integer $`d\\ge3`$ and $`a=(a_1,\\ldots,a_d)\\in(0,\\infty)^d`$, set\n\n```math\n\\Omega_a=\\prod_{j=1}^d(-a_j,a_j)\\subset\\mathbb R^d.\n```\n\nWrite $`0=\\sigma_0(\\Omega_a)<\\sigma_1(\\Omega_a)\\le\\sigma_2(\\Omega_a)\\le\\cdots`$ for the unweighted Steklov eigenvalues, repeated with multiplicity. The boundary condition is $`\\partial_\\nu u=\\sigma u`$ on the entire boundary, with outward normal. Precisely, $`\\sigma`$ is an eigenvalue when some nonzero real $`u\\in H^1(\\Omega_a)`$ satisfies\n\n```math\n\\int_{\\Omega_a}\\nabla u\\cdot\\nabla v\\,dx\n=\\sigma\\int_{\\partial\\Omega_a}u v\\,dS\n\\quad\\text{for every }v\\in H^1(\\Omega_a).\n```\n\n**If $`\\sigma_k(\\Omega_a)=\\sigma_k(\\Omega_b)`$ for every $`k\\ge0`$, must the multisets $`\\{a_1,\\ldots,a_d\\}`$ and $`\\{b_1,\\ldots,b_d\\}`$ coincide?** Equivalently, must the two cuboids be Euclidean isometric?\n\nThis is the unresolved higher-dimensional part of [1, Conjecture 1.9]. All side lengths are positive and unrestricted; scale is retained. The hypothesis uses the exact infinite spectrum, not just finitely many eigenvalues or asymptotic coefficients.",
+  "full_original_page": "# 1025. Does the Steklov spectrum determine every cuboid?\n\n**Area:** Spectral geometry and inverse problems\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor any integer $`d\\ge3`$ and $`a=(a_1,\\ldots,a_d)\\in(0,\\infty)^d`$, set\n\n```math\n\\Omega_a=\\prod_{j=1}^d(-a_j,a_j)\\subset\\mathbb R^d.\n```\n\nWrite $`0=\\sigma_0(\\Omega_a)<\\sigma_1(\\Omega_a)\\le\\sigma_2(\\Omega_a)\\le\\cdots`$ for the unweighted Steklov eigenvalues, repeated with multiplicity. The boundary condition is $`\\partial_\\nu u=\\sigma u`$ on the entire boundary, with outward normal. Precisely, $`\\sigma`$ is an eigenvalue when some nonzero real $`u\\in H^1(\\Omega_a)`$ satisfies\n\n```math\n\\int_{\\Omega_a}\\nabla u\\cdot\\nabla v\\,dx\n=\\sigma\\int_{\\partial\\Omega_a}u v\\,dS\n\\quad\\text{for every }v\\in H^1(\\Omega_a).\n```\n\n**If $`\\sigma_k(\\Omega_a)=\\sigma_k(\\Omega_b)`$ for every $`k\\ge0`$, must the multisets $`\\{a_1,\\ldots,a_d\\}`$ and $`\\{b_1,\\ldots,b_d\\}`$ coincide?** Equivalently, must the two cuboids be Euclidean isometric?\n\nThis is the unresolved higher-dimensional part of [1, Conjecture 1.9]. All side lengths are positive and unrestricted; scale is retained. The hypothesis uses the exact infinite spectrum, not just finitely many eigenvalues or asymptotic coefficients.\n\n## Application\n\nThe Steklov spectrum describes harmonic boundary response. This question tests whether the complete idealized response identifies a rectangular medium's side lengths, before considering reconstruction from finite or noisy measurements.\n\n## References\n\n1. A. Girouard, J. Lagacé, I. Polterovich and A. Savo, *The Steklov spectrum of cuboids*, Mathematika **65** (2019), 272–310, [DOI](https://doi.org/10.1112/S0025579318000414); [author manuscript](https://arxiv.org/html/1711.03075v2), §§1.1–1.2 and 1.5, Corollaries 1.7–1.8 and Conjecture 1.9. The original v1 numbers the conjecture 1.8.\n2. T. Hu, J. Shi and Q. Tang, *Strictly Convex Steklov-Isospectral Plane Domains*, [arXiv:2608.10557v2](https://arxiv.org/html/2608.10557v2), Theorem 1.1.2. Announced counterexamples in a different geometric class.\n3. E. B. Dryden, C. Gordon, J. Moreno, J. Rowlett and C. Villegas-Blas, *The Steklov Spectrum of Convex Polygonal Domains II: Investigating Spectral Determination*, J. Geom. Anal. **36** (2026), 346, [DOI and full text](https://doi.org/10.1007/s12220-026-02597-5), §1 and Theorem 4.1.\n\n## Status review\n\n\n**Known cases:** All positive side lengths in every dimension at least three are included. Rectangles, cubes, planar polygons and smooth planar isospectral examples do not decide arbitrary cuboid determination.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nAll positive side lengths in every dimension at least three are included. Rectangles, cubes, planar polygons and smooth planar isospectral examples do not decide arbitrary cuboid determination.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked 2026-10-29. Source [1] settles rectangles and shows that a cube is determined among all cuboids. The remaining question is arbitrary cuboids in $`d\\ge3`$. The smooth strictly convex planar pairs in [2] do not belong to this class; [3] concerns planar polygons.\n\nBounded exact-question, author, proof/counterexample and 2025–2026 searches located no complete or announced resolution of the cuboid conjecture. All-status AIM/OpenAI and FURTHER comparisons found no equivalent target. [Owner review](../FURTHER_problems/_tracking/focused-Steklov-cuboid-isospectral-rigidity-C242-C-20261029/OWNER-EXACT-UNWEIGHTED-FULL-STEKLOV-CUBOID-SPECTRAL-ISOMETRY-PRIMARY2026-SCOPE-AND-DUPLICATE-PROPOSAL.json) and [coordinating review](../FURTHER_problems/_tracking/focused-Steklov-cuboid-isospectral-rigidity-C242-C-20261029/ROOT-EXACT-CUBOID-CURRENT-PLANAR-COUNTEREXAMPLE-SCOPE-AND-FINAL-ADMISSION-REVIEW.json) preserve the source, version, access and independent model checks.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-ab61f2addb846336**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Steklov cuboids",
+    "Lagace",
+    "Savo"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"Steklov\" \"cuboids\" \"determine\" 2026"
+    },
+    {
+      "query": "\"Steklov\" \"cuboids\" \"determine\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1711.03075v2",
+      "locator": "Corollaries1.7–1.8/Conjecture1.9 lines150–160; latest2608.10557v2 primaryabstract15August2026"
+    }
+  ],
+  "scope_comparison": "Rectangles and cubes among cuboids are established cases. August planar smooth strictly-convex isospectral pairs are not higher-dimensional cuboids, and2026polygonal determination concerns plane domains. No equality-of-full-spectra determination for all unrestricted d>=3side lengths found.",
+  "recommendation": "Retain partial status; no matching full resolution located in bounded current searches.",
+  "limitations": "Negative evidence does not prove openness. Exact original page and hashes retained.",
+  "announcement_routing": {
+    "localID": "1025",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Steklov cuboids",
+          "Lagace",
+          "Savo"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Steklov cuboids",
+          "Lagace",
+          "Savo"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Steklov cuboids",
+        "Lagace",
+        "Savo"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

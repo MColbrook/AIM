@@ -1,0 +1,124 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "903",
+  "manifest_index": 747,
+  "checked_date": "2026-11-03",
+  "source_sha256": "540f5c6b5f41cd907d8e96dbbdf9b2993764dd809405c1e11e6a7f33d5a843d4",
+  "statement_sha256": "1ff04feecf414f57b4192eff4c76c2a57a39f74627bab14ad9df322966a9b57c",
+  "original_target": {
+    "id": "903",
+    "title": "Does symmetric strong diameter two force a copy of $`c_0`$?",
+    "area": "Operators, matrices and computation",
+    "file": "problems/903-does-symmetric-strong-diameter-two-force-a-copy-of-c-0.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-4f4f1df6c82d9c76",
+    "group": "operators",
+    "source_sha256": "540f5c6b5f41cd907d8e96dbbdf9b2993764dd809405c1e11e6a7f33d5a843d4",
+    "statement_sha256": "1ff04feecf414f57b4192eff4c76c2a57a39f74627bab14ad9df322966a9b57c",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`X`$ be a nonzero real Banach space with its given norm and closed unit ball $`B_X`$. For $`x^*\\in X^*`$ with $`\\|x^*\\|=1`$ and $`\\alpha>0`$, write\n```math\nS(x^*,\\alpha)=\\{x\\in B_X:x^*(x)>1-\\alpha\\}.\n```\n\nAssume that $`X`$ has the **symmetric strong diameter two property**: for every finite family of slices $`S_1,\\ldots,S_m`$ and every $`\\varepsilon>0`$, there are $`x_i\\in S_i`$ and a single $`y\\in B_X`$ such that\n```math\n\\|y\\|>1-\\varepsilon,\\qquad x_i+y\\in S_i,\\quad x_i-y\\in S_i\\quad(1\\le i\\le m).\n```\n\n\nMust $`X`$ contain a closed linear subspace isomorphic to real $`c_0`$, the space of real null sequences with the supremum norm? Equivalently, must there exist a bounded linear map $`J:c_0\\to X`$ and constants $`0<a\\le b<\\infty`$ satisfying\n```math\na\\|z\\|_\\infty\\le\\|Jz\\|_X\\le b\\|z\\|_\\infty\\qquad(z\\in c_0)?\n```\n\nNeither an isometric nor a complemented copy is required. There are no separability, lattice or dual-space assumptions. The premise uses all norm-dual slices, rather than only weak-star slices or a stronger sequential/transfinite variant.",
+  "full_original_page": "# 903. Does symmetric strong diameter two force a copy of $`c_0`$?\n\n**Area:** Operators, matrices and computation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`X`$ be a nonzero real Banach space with its given norm and closed unit ball $`B_X`$. For $`x^*\\in X^*`$ with $`\\|x^*\\|=1`$ and $`\\alpha>0`$, write\n```math\nS(x^*,\\alpha)=\\{x\\in B_X:x^*(x)>1-\\alpha\\}.\n```\n\nAssume that $`X`$ has the **symmetric strong diameter two property**: for every finite family of slices $`S_1,\\ldots,S_m`$ and every $`\\varepsilon>0`$, there are $`x_i\\in S_i`$ and a single $`y\\in B_X`$ such that\n```math\n\\|y\\|>1-\\varepsilon,\\qquad x_i+y\\in S_i,\\quad x_i-y\\in S_i\\quad(1\\le i\\le m).\n```\n\n\nMust $`X`$ contain a closed linear subspace isomorphic to real $`c_0`$, the space of real null sequences with the supremum norm? Equivalently, must there exist a bounded linear map $`J:c_0\\to X`$ and constants $`0<a\\le b<\\infty`$ satisfying\n```math\na\\|z\\|_\\infty\\le\\|Jz\\|_X\\le b\\|z\\|_\\infty\\qquad(z\\in c_0)?\n```\n\nNeither an isometric nor a complemented copy is required. There are no separability, lattice or dual-space assumptions. The premise uses all norm-dual slices, rather than only weak-star slices or a stronger sequential/transfinite variant.\n\n## Application\n\nThe question links the geometry of the unit ball, expressed by a common direction in finitely many slices, to a concrete infinite-dimensional linear subspace. It would clarify which structural consequences follow from this diameter property without changing the given norm.\n\n## References\n\n1. R. Haller, J. Langemets, V. Lima and R. Nadel, *Symmetric strong diameter two property*, Mediterranean Journal of Mathematics **16** (2019). [DOI](https://doi.org/10.1007/s00009-019-1306-1); [primary preprint](https://arxiv.org/abs/1804.01705). Definition 1.1 and Question 6.1.\n2. S. Ciaci, *Transfinite geometric properties of the unit ball in Banach spaces*, University of Tartu dissertation (2024), Section 3.4, Problem 3.1, p. 58. [University primary text](https://dspace.ut.ee/server/api/core/bitstreams/97f34bef-7753-42db-83f4-0fcc87b29ff1/content). It explicitly retains the ordinary finite-slice question.\n\n## Status review\n\n\n**Known cases:** Almost-square spaces satisfy a stronger property, while the converse renorming theorem starts with an existing c0 copy. Weak-star or local diameter-two properties do not supply ordinary all-slice symmetric strong diameter two. The c0-absorbing OpenAI example does not assert this premise for its given norm.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nAlmost-square spaces satisfy a stronger property, while the converse renorming theorem starts with an existing c0 copy. Weak-star or local diameter-two properties do not supply ordinary all-slice symmetric strong diameter two. The c0-absorbing OpenAI example does not assert this premise for its given norm.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked 30 October 2026. The original definition and question, the 2024 thesis question, and relevant 2024 and 2026 primary comparison statements were read. Almost-square spaces form a stronger known class. The converse renorming result starting with a copy of $`c_0`$ does not prove the implication asked here. Results about weak-star slices or the local diameter two property do not supply this premise.\n\nBounded current searches found no matching proof, counterexample or complete announcement. Semantic checks against AIM, current saved OpenAI announcements and private findings found no equivalent target. In particular, the announcement of a space without linear $`c_0`$ that absorbs $`c_0`$ bi-Lipschitz does not assert the required slice property for its given norm. These checks are not a proof of openness; no complete proof audit or published-body parity is claimed.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-4f4f1df6c82d9c76**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"symmetric strong diameter two\" \"c_0\" 2026",
+    "\"symmetric strong diameter two\" (site:zenodo.org OR site:hal.science OR site:github.com)",
+    "symmetric strong diameter two c0; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1804.01705",
+      "locator": "Question6.1, lines603–609",
+      "comparison": "Ordinary finite-family norm-dual slice question asks c0 containment."
+    },
+    {
+      "url": "https://arxiv.org/html/2404.11430v1",
+      "locator": "Abstract and introduction only read",
+      "comparison": "Routes to possible comparator on Lipschitz functions/weak-star distinction; actual theorem bodies not yet fully compared."
+    }
+  ],
+  "rationale": "Keep partial status; no matching full announcement found, but newer Lipschitz-space/transfinite comparator theorem bodies remain unexamined.",
+  "source_gaps": [
+    "2404.11430 actual main theorem and2302.14414 transfinite theorem comparison pending."
+  ],
+  "announcement_routing": {
+    "localID": "903",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "symmetric strong diameter",
+          "SSD2P",
+          "diameter two"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-17-000018",
+            "title": "Moore graphs of diameter two: the Hoffman–Singleton theorem",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000018-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "symmetric strong diameter",
+          "SSD2P",
+          "diameter two"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "symmetric strong diameter",
+        "SSD2P",
+        "diameter two"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:30:43.574Z",
+      "previous_outcome": "hold",
+      "localID": "903",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2404.11430v1",
+          "locator": "Section 1 lines 122–128, Theorems 2.4/2.6 and Examples 3.1–3.2"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2302.14414",
+          "version": "v1, 28 February 2023",
+          "locator": "Theorems 2.1–2.2/2.7, properties indexed by kappa > aleph0"
+        }
+      ],
+      "comparison": "The 2024 result separates weak-star SSD2P from ordinary SSD2P and proves ordinary SSD2P for a restricted family of Lipschitz spaces; it does not construct ordinary SSD2P without c0 or prove all-space containment. The transfinite theorems assume stronger cardinal properties and establish sum/tensor stability. Finite ordinary norm-dual slice implication remains distinct. Palomar Moore graphs hit is finite graph diameter, unrelated to Banach unit-ball slices."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": [],
+  "announcement_hit_disposition": "The Hoffman–Singleton Moore-graph theorem is finite graph theory; it has no Banach slice diameter-two or c0 conclusion.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.702Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

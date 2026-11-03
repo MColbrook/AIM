@@ -1,0 +1,68 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "113",
+  "manifest_index": 85,
+  "original_target": {
+    "id": "113",
+    "title": "Anderson localization for the cosine skew-shift model at every coupling",
+    "area": "Deterministic quantum disorder",
+    "file": "problems/113-skew-shift-localization.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "spectral2",
+    "source_sha256": "81c8f63fc6fcf5449e44269e6c725e32448035cbe86d45a87b4db36f328aaf3a",
+    "statement_sha256": "1ec8421d25f899cc091eca53c271b39d99c7031069a3dc999a5f20f57f11968d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "81c8f63fc6fcf5449e44269e6c725e32448035cbe86d45a87b4db36f328aaf3a",
+  "statement_sha256": "1ec8421d25f899cc091eca53c271b39d99c7031069a3dc999a5f20f57f11968d",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:55:50.349266+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Wang–Peng–Piao's latest primary theorem requires sufficiently large coupling and proves Lyapunov exponent positivity/continuity. The target requires exponential point spectrum for every positive coupling and each Diophantine alpha in the cosine skew-shift model. Long-range dynamical estimates and quasiperiodic rather than skew-shift results do not establish it.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2606.23316",
+      "locator": "§1 main theorem and large-coupling assumption.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "skew-shift",
+    "skew shift"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "skew-shift",
+        "skew shift"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "skew-shift",
+        "skew shift"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches of arXiv, Zenodo, HAL, GitHub plus shared current Palomar, Hexagon and OpenAI metadata, and requested Colbrook author lists.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

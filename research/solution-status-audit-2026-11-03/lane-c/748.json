@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "748",
+  "manifest_index": 592,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "748",
+    "title": "Global smoothness for critical Darcy electroconvection",
+    "area": "Electrochemistry and electrohydrodynamics",
+    "file": "problems/748-global-smoothness-for-critical-darcy-electroconvection.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ccbd62517f9f46d2",
+    "group": "electrochemistry-energy-storage",
+    "source_sha256": "5cb1e8496806e9ddaca0e825b0dcb32dcc3d6e1e6d60f1cda3196c9883337909",
+    "statement_sha256": "621fff405f80dd7e76c5a7ca4ddf0cf79c7b203b82549c9a168bafc3c5f34eac",
+    "state": "unreviewed"
+  },
+  "source_sha256": "5cb1e8496806e9ddaca0e825b0dcb32dcc3d6e1e6d60f1cda3196c9883337909",
+  "statement_sha256": "621fff405f80dd7e76c5a7ca4ddf0cf79c7b203b82549c9a168bafc3c5f34eac",
+  "actual_source_sha256": "5cb1e8496806e9ddaca0e825b0dcb32dcc3d6e1e6d60f1cda3196c9883337909",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\mathbb T^2=(\\mathbb R/2\\pi\\mathbb Z)^2`$. Write $`\\Lambda=(-\\Delta)^{1/2}`$, $`R=\\nabla\\Lambda^{-1}`$ and let $`\\mathbb P`$ be the Leray projection onto divergence free periodic vector fields. The multipliers of $`\\Lambda`$ and $`R`$ at the zero Fourier mode are zero, and the multiplier of $`\\mathbb P`$ there is the identity.\n\nFor arbitrary real $`q_0\\in C^\\infty(\\mathbb T^2)`$ with $`\\int_{\\mathbb T^2}q_0\\,dx=0`$, consider\n\n```math\n\\partial_tq+u\\cdot\\nabla q+\\Lambda q=0,\n\\qquad u=-\\mathbb P(qRq),\n\\qquad q(0)=q_0.\n```\n\nDoes the unique local smooth solution remain smooth for all positive time? There is no smallness restriction on $`q_0`$. A precise continuation target is\n\n```math\n\\sup_{0\\le t\\le T}\\|q(t)\\|_{H^3(\\mathbb T^2)}<\\infty\n\\quad\\text{for every finite }T.\n```\n\nThis is the critical dissipation exponent $`\\Lambda`$, with no external magnetic field or added viscosity. The velocity is fixed instantaneously by the quadratic constitutive law above.\n\nThe source explicitly states that arbitrary data global smoothness remains open. Global weak solutions and global regularity for sufficiently small data are known. The corresponding result with stronger dissipation $`\\Lambda^\\alpha`$, $`\\alpha>1`$, does not include this critical case. The critical surface quasigeostrophic equation has a different, linear velocity law.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Darcy\" \"electroconvection\" \"global\" regularity 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"critical\" \"Darcy electroconvection\"",
+    "site:palomar-registry.org OR site:hexagonmath.org \"Darcy\" \"electroconvection\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "scope_comparison": "Actual B0 Darcy model has quadratic doubly nonlocal u=−P(qRq); source retains arbitrary-data smoothness while small/large-magnetic-field theorems differ. New entropy paper proves weak-solution entropy/moment results on R2, not H3 continuation for arbitrary sign-changing mean-zero smooth data on T2. Stronger alpha>1 dissipation and linear-velocity criticalSQG do not imply target. No complete match located.",
+      "locator": "p3 equations1.17–1.20 B0 and large-data open statement; entropyTheorem1.1/1.2",
+      "version_or_date": "Authormanuscript12August2025; DCDS54(2026)61–86; entropy2608.24312v1,25August2026",
+      "url": "https://web.math.princeton.edu/~const/acil9.pdf"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual B0 Darcy model has quadratic doubly nonlocal u=−P(qRq); source retains arbitrary-data smoothness while small/large-magnetic-field theorems differ. New entropy paper proves weak-solution entropy/moment results on R2, not H3 continuation for arbitrary sign-changing mean-zero smooth data on T2. Stronger alpha>1 dissipation and linear-velocity criticalSQG do not imply target. No complete match located.",
+  "latest_version_check": "Authormanuscript12August2025; DCDS54(2026)61–86; entropy2608.24312v1,25August2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

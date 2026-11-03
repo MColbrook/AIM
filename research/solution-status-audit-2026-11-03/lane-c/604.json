@@ -1,0 +1,54 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "604",
+  "manifest_index": 467,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "604",
+    "title": "Divisible point sets as unions of parallel lines",
+    "area": "Coding theory and finite geometry",
+    "file": "problems/604-strong-cylinder.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "optimization-information",
+    "source_sha256": "2920a58d4d8f686f6904665bc64b213f13e60671845a0c2e08dec00698e319c2",
+    "statement_sha256": "e23700e51ddbfb2d2f0c59fe5fcec4f048b122f674890d32090ab04a0aac5824",
+    "state": "unreviewed"
+  },
+  "source_sha256": "2920a58d4d8f686f6904665bc64b213f13e60671845a0c2e08dec00698e319c2",
+  "statement_sha256": "e23700e51ddbfb2d2f0c59fe5fcec4f048b122f674890d32090ab04a0aac5824",
+  "actual_source_sha256": "2920a58d4d8f686f6904665bc64b213f13e60671845a0c2e08dec00698e319c2",
+  "full_original_statement": "Let $`p`$ be a prime and let $`S\\subseteq\\mathbb F_p^3`$ contain exactly $`p^2`$ points. Suppose every affine plane $`H\\subseteq\\mathbb F_p^3`$ satisfies\n\n```math\n|S\\cap H|\\equiv0\\pmod p.\n```\n\nMust $`S`$ be the union of $`p`$ distinct parallel affine lines?\n\nEquivalently, must there exist $`v\\in\\mathbb F_p^3\\setminus\\{0\\}`$ and $`a_1,\\ldots,a_p\\in\\mathbb F_p^3`$ such that\n\n```math\nS=\\bigsqcup_{j=1}^{p}\\bigl(a_j+\\mathbb F_pv\\bigr)?\n```\n\nThis is Ball's strong cylinder conjecture. The condition concerns sets without repeated points, and $`p`$ must be prime.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"strong cylinder conjecture\" prime 2026",
+    "\"strong cylinder conjecture\" prime (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1, 14 January 2026; current arXiv record checked",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2601.09910v1",
+      "locator": "Conjecture 1.6; Theorem 1.12",
+      "scope_comparison": "Theorem 1.12 gives a Z-linear combination of cylinder indicators, permitting signed coefficients. It does not assert the set itself consists of p parallel lines. Nonprime-field counterexamples and verification for p<=7 leave the universal prime-field target unaddressed."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem 1.12 gives a Z-linear combination of cylinder indicators, permitting signed coefficients. It does not assert the set itself consists of p parallel lines. Nonprime-field counterexamples and verification for p<=7 leave the universal prime-field target unaddressed.",
+  "latest_version_check": "v1, 14 January 2026; current arXiv record checked",
+  "gap_retraction_check": "No matching complete candidate was identified; version records showed no withdrawal banner. Cited partial proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

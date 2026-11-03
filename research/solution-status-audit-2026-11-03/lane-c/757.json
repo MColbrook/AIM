@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "757",
+  "manifest_index": 601,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "757",
+    "title": "Sharp strain integrability in planar Griffith fracture",
+    "area": "Fracture mechanics and free-discontinuity problems",
+    "file": "problems/757-sharp-strain-integrability-in-planar-griffith-fracture.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8b60393423ca150f",
+    "group": "fracture-damage-plasticity-contact",
+    "source_sha256": "69f36b72fcddeafd4522d4ebe7c8b1eee9326a7fe1579c8165747e2907686f53",
+    "statement_sha256": "ac639606ebe44305adc72a25859d7a0d4bb76dda59ee670a453ca772892e6c18",
+    "state": "unreviewed"
+  },
+  "source_sha256": "69f36b72fcddeafd4522d4ebe7c8b1eee9326a7fe1579c8165747e2907686f53",
+  "statement_sha256": "ac639606ebe44305adc72a25859d7a0d4bb76dda59ee670a453ca772892e6c18",
+  "actual_source_sha256": "69f36b72fcddeafd4522d4ebe7c8b1eee9326a7fe1579c8165747e2907686f53",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^2`$ be bounded and Lipschitz. Fix Lamé coefficients $`\\mu>0`$ and $`\\lambda+\\mu>0`$, and define $`\\mathbb C\\xi=\\lambda\\mathrm{tr}(\\xi)I+2\\mu\\xi`$ for symmetric matrices. For a displacement $`u`$ and crack $`K`$, set\n\n```math\ne(u)=\\tfrac12(Du+Du^T),\\qquad\nG(u,K;B)=\\int_{B\\setminus K}\\mathbb Ce(u):e(u)\\,dx\n+\\mathcal H^1(K\\cap B).\n```\n\nAssume $`K\\subset\\Omega`$ is relatively closed and coral: $`\\mathcal H^1(K\\cap B(x,r))>0`$ whenever $`x\\in K`$ and $`r>0`$. Let $`u\\in W^{1,2}_{\\mathrm{loc}}(\\Omega\\setminus K;\\mathbb R^2)`$, with locally finite $`G`$.\n\nThe pair is a *local minimizer* if, for every ball $`B\\Subset\\Omega`$,\n$`G(u,K;B)\\leq G(v,L;B)`$ for every relatively closed $`L\\subset\\Omega`$ and $`v\\in W^{1,2}_{\\mathrm{loc}}(\\Omega\\setminus L;\\mathbb R^2)`$ satisfying\n\n```math\nL\\setminus B=K\\setminus B,\\qquad\nv=u\\ \\text{a.e. on }\\Omega\\setminus(K\\cup B).\n```\n\nMust every such pair satisfy $`e(u)\\in L^{4,\\infty}_{\\mathrm{loc}}(\\Omega)`$? Explicitly, for every open $`U\\Subset\\Omega`$, is\n\n```math\n\\sup_{s>0}s^4\\mathcal L^2\\{x\\in U\\setminus K:|e(u)(x)|>s\\}<\\infty?\n```\n\nThe matrix norm is Frobenius. This is the isotropic subclass of the endpoint question in [2]. Crack connectedness and restrictions preserving crack topology are not imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "Griffith minimizers weak L4 endpoint 2026 2607.19229",
+    "Griffith minimizer weak L4 endpoint (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "Griffith weak L4 (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Griffith\" \"weak\" \"L4\" 2026 solution"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1, 21 July 2026; arXiv record inspected. Also 2510.08670v1, 9 October 2025, published TAMS 379 (2026)",
+      "locator": "Theorems 1.2–1.3, Corollary 1.4 and §5; 2510.08670 Theorem 2.1(ii)",
+      "scope_comparison": "The actual 2026 theorem proves u locally bounded and H1 off the crack, hence full gradient L2; it does not reach weak L4 symmetric strain. The TAMS theorem gives e(u) in Lp for some tensor-dependent p>2, with no p=4 endpoint. Results allow topological almost-minimizers, but that extension of the admissible class does not strengthen the integrability exponent. Scalar planar Mumford–Shah announcements concern full scalar gradients and do not directly imply this vectorial Lamé symmetric-strain endpoint.",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2607.19229v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual 2026 theorem proves u locally bounded and H1 off the crack, hence full gradient L2; it does not reach weak L4 symmetric strain. The TAMS theorem gives e(u) in Lp for some tensor-dependent p>2, with no p=4 endpoint. Results allow topological almost-minimizers, but that extension of the admissible class does not strengthen the integrability exponent. Scalar planar Mumford–Shah announcements concern full scalar gradients and do not directly imply this vectorial Lamé symmetric-strain endpoint.",
+  "latest_version_check": "v1, 21 July 2026; arXiv record inspected. Also 2510.08670v1, 9 October 2025, published TAMS 379 (2026)",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

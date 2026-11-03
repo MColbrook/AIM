@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "245",
+  "manifest_index": 191,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "245",
+    "title": "The full three-dimensional Newton minimum-resistance problem",
+    "area": "Calculus of variations / aerodynamic shape optimization",
+    "file": "problems/245-newton-minimum-resistance.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "inverse3",
+    "source_sha256": "b10935bc8c6e2e2f6946fc47d0c4d0a07ab1237a8b786d2c47ba6310d3af91f4",
+    "statement_sha256": "1e504df17d22453742795f0be97bd024f020eaafdd3ca8c625e6541944ff58d2",
+    "state": "unreviewed"
+  },
+  "source_sha256": "b10935bc8c6e2e2f6946fc47d0c4d0a07ab1237a8b786d2c47ba6310d3af91f4",
+  "statement_sha256": "1e504df17d22453742795f0be97bd024f020eaafdd3ca8c625e6541944ff58d2",
+  "actual_source_sha256": "b10935bc8c6e2e2f6946fc47d0c4d0a07ab1237a8b786d2c47ba6310d3af91f4",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Write $`D=\\{x\\in\\mathbb R^2:|x|<1\\}`$. For each height $`M>0`$, let $`\\mathcal U_M`$ consist of concave functions $`u:D\\to[0,M]`$. Determine the exact minimum\n\n```math\n\\inf_{u\\in\\mathcal U_M} J(u),\\qquad J(u)=\\int_D\\frac{1}{1+|\\nabla u(x)|^2}\\,dx,\n```\n\nand characterize all minimizing functions, up to rotations of $`D`$. The gradient is the almost-everywhere gradient of a concave function. No axial or other symmetry is assumed.\n\nThis is the convex-body formulation of Newton's resistance functional for a body with circular base and bounded height in a dilute, parallel particle stream.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Newton\" \"minimal resistance\" convex bodies 2026",
+    "\"Newton\" \"minimal resistance\" convex bodies (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Newton\" \"minimal resistance\" convex bodies (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Section1 functional and admissible classes; Sections3–4 computations; Section5Summary",
+      "version_or_date": "arXiv2511.09177v1,12November2025,current retrieved version.",
+      "scope_comparison": "The actual body formulates the same Euclidean convex-body objective (up to u→M−u converting convex/concave profiles), computes numerical competitors and conjectures a structure only on selected height intervals. Section5 explicitly leaves deriving the candidate ODEs to future research. A2026central-field and Lorentz–Minkowski variant changes the functional. No all-height exact optimum/classification announcement was located.",
+      "url": "https://arxiv.org/html/2511.09177"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The actual body formulates the same Euclidean convex-body objective (up to u→M−u converting convex/concave profiles), computes numerical competitors and conjectures a structure only on selected height intervals. Section5 explicitly leaves deriving the candidate ODEs to future research. A2026central-field and Lorentz–Minkowski variant changes the functional. No all-height exact optimum/classification announcement was located.",
+  "latest_version_check": "arXiv2511.09177v1,12November2025,current retrieved version.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

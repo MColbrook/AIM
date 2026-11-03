@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "678",
+  "manifest_index": 522,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "678",
+    "title": "Sharp exponential volume decay for plurisubharmonic sublevel sets",
+    "area": "Complex analysis and potential theory",
+    "file": "problems/678-sharp-exponential-volume-decay-for-plurisubharmonic-sublevel-sets.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-15ce012b8d4d1662",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "acdcddf04a977cbd319e325b2ade824f8799e63f3039a63296136a0e5355edeb",
+    "statement_sha256": "48a9e68b41a77c32ff29074a3bfbcac583255b9cf8b1b4fc57d55fcea104b802",
+    "state": "unreviewed"
+  },
+  "source_sha256": "acdcddf04a977cbd319e325b2ade824f8799e63f3039a63296136a0e5355edeb",
+  "statement_sha256": "48a9e68b41a77c32ff29074a3bfbcac583255b9cf8b1b4fc57d55fcea104b802",
+  "actual_source_sha256": "acdcddf04a977cbd319e325b2ade824f8799e63f3039a63296136a0e5355edeb",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For each integer $`n\\ge2`$, does there exist a constant $`C_n`$ with the following property? Let $`\\Omega\\subset\\mathbb C^n`$ be any bounded hyperconvex domain, let $`\\varphi\\in\\mathcal F(\\Omega)`$, and put\n\n```math\n\\mu=\\left(\\int_\\Omega(dd^c\\varphi)^n\\right)^{1/n}>0,\n\\qquad dd^c=\\frac{i}{\\pi}\\partial\\bar\\partial.\n```\n\nIs it true that, for every $`s>0`$,\n\n```math\n\\mathrm{Vol}_{2n}\\{z\\in\\Omega:\\varphi(z)<-s\\}\n\\le C_n\\mathrm{diam}(\\Omega)^{2n}\n\\exp\\!\\left(-\\frac{2ns}{\\mu}\\right)?\n```\n\nHere hyperconvex means that the domain has a continuous negative plurisubharmonic exhaustion. The Cegrell class $`\\mathcal F(\\Omega)`$ consists of decreasing limits $`\\varphi_j\\downarrow\\varphi`$ with $`\\varphi_j\\in\\mathcal E_0(\\Omega)`$ and uniformly bounded total Monge–Ampère masses. The class $`\\mathcal E_0`$ consists of bounded negative plurisubharmonic functions with boundary limit zero and finite total Monge–Ampère mass. The measure for $`\\varphi`$ is its Cegrell Monge–Ampère measure.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"plurisubharmonic\" \"sublevel\" \"sharp\" \"volume\" proof 2026",
+    "\"plurisubharmonic\" \"sublevel\" \"sharp\" \"volume\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "TheoremA equation1.4, PDFp3 and Corollary4.2",
+      "scope_comparison": "The actual theorem has factor (1+s/mu)^(n-1) multiplying the requested critical exponential. The target removes this factor for all hyperconvex domains and all F potentials. Symmetrization imposes S1-invariance; subcritical integrated bounds and complex-Sobolev norms do not supply the missing uniform critical weak-tail estimate. No full matching announcement identified.",
+      "version_or_date": "arXiv:0804.3954v3; current bounded search 2026-11-03",
+      "url": "https://arxiv.org/pdf/0804.3954v3",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual theorem has factor (1+s/mu)^(n-1) multiplying the requested critical exponential. The target removes this factor for all hyperconvex domains and all F potentials. Symmetrization imposes S1-invariance; subcritical integrated bounds and complex-Sobolev norms do not supply the missing uniform critical weak-tail estimate. No full matching announcement identified.",
+  "latest_version_check": "arXiv:0804.3954v3; current bounded search 2026-11-03",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "152",
+  "manifest_index": 120,
+  "original_target": {
+    "id": "152",
+    "title": "Steady planar flow around an obstacle at arbitrary Reynolds number",
+    "area": "Viscous flow around bodies",
+    "file": "problems/152-exterior-steady-flow.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "67a0b03a3054655b2e490c303e360b57ece861590d34b332ba494344ce9f8e36",
+    "statement_sha256": "f914e4cd832c92e00ab32fcba0a1a9a58c82d6e7cc7dc65ecd22e063f312bf2b",
+    "state": "unreviewed"
+  },
+  "source_sha256": "67a0b03a3054655b2e490c303e360b57ece861590d34b332ba494344ce9f8e36",
+  "statement_sha256": "f914e4cd832c92e00ab32fcba0a1a9a58c82d6e7cc7dc65ecd22e063f312bf2b",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:32:24.078085+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual Korobkov–Ren2105.08898 Theorem1 requires small Reynolds number to identify the prescribed far-field velocity. Nontriviality, convergence to some constant, or whole-plane forcing results do not identify the exact prescribed U for arbitrary obstacle and Reynolds number. No matching unrestricted result located.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2105.08898",
+      "locator": "Introduction and Theorem1, small-Reynolds assumption",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Leray\" \"plane\" \"arbitrary Reynolds\" 2026",
+    "\"Leray\" \"plane\" \"2026\" \"infinity\"",
+    "\"Leray\" \"prescribed\" \"2026\" stationary plane -site:researchgate.net"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Leray",
+        "plane stationary"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-03-000006",
+          "title": "Escauriaza–Seregin–Šverák and Ladyzhenskaya–Prodi–Serrin regularity"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Leray",
+        "plane stationary"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00269v1",
+          "title": "Sharp fractional Helly bounds for common affine flats"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

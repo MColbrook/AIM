@@ -1,0 +1,94 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "865",
+  "manifest_index": 709,
+  "checked_date": "2026-11-03",
+  "source_sha256": "aa284e9cd098114b63b66c5d19166b8e79fa8433c45327507ee89e1dad07c748",
+  "statement_sha256": "a34ea6159e76b9751aaeeb78234a582628d0dd6670f40891e2b370f79cb4d506",
+  "original_target": {
+    "id": "865",
+    "title": "Does the Weeks manifold uniquely realize the three-dimensional Margulis constant?",
+    "area": "Hyperbolic geometry and low-dimensional topology",
+    "file": "problems/865-does-the-weeks-manifold-uniquely-realize-the-three-dimensional-margulis-constant.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f71fd439084c903d",
+    "group": "geometry-topology",
+    "source_sha256": "aa284e9cd098114b63b66c5d19166b8e79fa8433c45327507ee89e1dad07c748",
+    "statement_sha256": "a34ea6159e76b9751aaeeb78234a582628d0dd6670f40891e2b370f79cb4d506",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For an orientable finite-volume hyperbolic 3-manifold $`M=\\mathbb{H}^3/\\Gamma`$, let $`\\mu(M)`$ be the supremum of numbers $`\\varepsilon`$ such that, whenever two elements of $`\\Gamma`$ both move a point of $`\\mathbb{H}^3`$ less than $`\\varepsilon`$, they commute. Define the three-dimensional Margulis constant by\n\n```math\n\\mu_3=\\inf_{M}\\mu(M),\n```\n\n\nwhere the infimum runs over all such $`M`$. Let $`W`$ be the Weeks manifold.\n\n**Question.** Is $`\\mu_3=\\mu(W)=0.77442660700998\\ldots`$? If so, is $`W`$ the **unique** manifold attaining this infimum, up to isometry?",
+  "full_original_page": "# 865. Does the Weeks manifold uniquely realize the three-dimensional Margulis constant?\n\n**Area:** Hyperbolic geometry and low-dimensional topology\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor an orientable finite-volume hyperbolic 3-manifold $`M=\\mathbb{H}^3/\\Gamma`$, let $`\\mu(M)`$ be the supremum of numbers $`\\varepsilon`$ such that, whenever two elements of $`\\Gamma`$ both move a point of $`\\mathbb{H}^3`$ less than $`\\varepsilon`$, they commute. Define the three-dimensional Margulis constant by\n\n```math\n\\mu_3=\\inf_{M}\\mu(M),\n```\n\n\nwhere the infimum runs over all such $`M`$. Let $`W`$ be the Weeks manifold.\n\n**Question.** Is $`\\mu_3=\\mu(W)=0.77442660700998\\ldots`$? If so, is $`W`$ the **unique** manifold attaining this infimum, up to isometry?\n\n## Application\n\nThe value controls the uniform thick–thin decomposition of hyperbolic 3-manifolds. An exact minimizer would make quantitative geometric bounds sharper and identify the extremal manifold.\n\n## References\n\n1. *K3: A New Problem List in Low-Dimensional Topology*, [author-approved preliminary PDF](https://math.berkeley.edu/sites/default/files/surv-295-ruberman-watermarked-author-pdf.pdf), Chapter 3, Problem 3.23, printed pp. 146–147. The problem asks for the constant and uniqueness of the Weeks realization.\n2. M. Goerner, R. C. Haraway III, N. R. Hoffman and M. Trnkova, [*Verified Length Spectrum and Margulis number for Hyperbolic 3-Manifolds*](https://arxiv.org/html/2609.26663v1), arXiv:2609.26663v1 (2026), Section 1.4, Theorem 1.2, Corollary 1.3, Conjecture 1.4 and Remark 1.5.\n3. D. Futer, [*In search of the Margulis constant*](https://ems.press/content/serial-article-files/46997?nt=1), *Oberwolfach Reports* **20** (2023), 183–186, Conjecture 1 and Theorem 2. The symmetric case does not settle the full problem.\n\n## Status review\n\n\n**Known cases:** The September 2026 verified census calculation gives an upper bound for the universal Margulis constant and a minimum among selected censuses. Its global equality remains Conjecture 1.4; neither that calculation nor the symmetric-pair theorem proves global uniqueness of the Weeks realization.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe September 2026 verified census calculation gives an upper bound for the universal Margulis constant and a minimum among selected censuses. Its global equality remains Conjecture 1.4; neither that calculation nor the symmetric-pair theorem proves global uniqueness of the Weeks realization.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe 2026 paper computes $`\\mu(W)`$ and verifies its minimum in specified finite censuses, with one closed census manifold excluded for a technical reason. Its global conclusion is an **upper bound** for $`\\mu_3`$, and it explicitly states equality as a conjecture. The book also asks for uniqueness, which is stronger. The 2023 symmetric-case theorem restricts the pairs of isometries and does not prove the unrestricted conjecture. Targeted later proof and announcement searches through 2026-10-21 found no global resolution. The [status and duplicate receipt](../FURTHER_problems/_tracking/margulis-weeks-constant-status-2026-10-21.json) records the bounded review.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f71fd439084c903d**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"Weeks\" \"Margulis constant\" proof 2026",
+    "\"Margulis\" \"Weeks\" (site:zenodo.org OR site:hal.science OR site:github.com OR site:hexagonmath.org OR site:palomar-registry.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2609.26663v1",
+      "locator": "v1 September2026, Corollary1.3 and Conjecture1.4",
+      "inspection": "Actual body gives mu3<=mu(Weeks), while global equality is separately conjectured. Census minimum is not universal minimum. Local question additionally asks uniqueness among every orientable finite-volume hyperbolic3-manifold."
+    }
+  ],
+  "scope_comparison": "Actual body gives mu3<=mu(Weeks), while global equality is separately conjectured. Census minimum is not universal minimum. Local question additionally asks uniqueness among every orientable finite-volume hyperbolic3-manifold.",
+  "rationale": "The stated full target has no matching complete result in the recorded bounded searches. Inspected primary bodies retain the stated conjecture or give restricted progress; recommended status stays Partially resolved. This does not certify openness or independently verify complete proofs.",
+  "source_gaps": [],
+  "announcement_routing": {
+    "localID": "865",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Margulis",
+          "Weeks"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Margulis",
+          "Weeks"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Margulis",
+        "Weeks"
+      ],
+      "hits": [
+        {
+          "entry": "018",
+          "title": "The Margulis--Platonov conjecture over global fields",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026/margulis-platonov-global-function-fields.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target."
+}

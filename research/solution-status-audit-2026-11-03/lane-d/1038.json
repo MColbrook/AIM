@@ -1,0 +1,107 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1038",
+  "manifest_index": 882,
+  "checked_date": "2026-11-03",
+  "source_sha256": "bcb7d6acf4b0e1f2617db6899a4ca1166bbef7b7b7ac628c90aa4b60e5797b29",
+  "statement_sha256": "ae406794ade1f63433423ff643d5bb66d19f6b5de70f9f1fa2b5d0ddd085cfbf",
+  "original_target": {
+    "id": "1038",
+    "title": "Stability at critical nuclear charge for magnetic no-pair Dirac matter",
+    "area": "Many-body physics, quantum information and wave analysis",
+    "file": "problems/1038-stability-at-critical-nuclear-charge-for-magnetic-no-pair-dirac-matter.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-6e5bf5da93a1daa7",
+    "group": "spectral3",
+    "source_sha256": "bcb7d6acf4b0e1f2617db6899a4ca1166bbef7b7b7ac628c90aa4b60e5797b29",
+    "statement_sha256": "ae406794ade1f63433423ff643d5bb66d19f6b5de70f9f1fa2b5d0ddd085cfbf",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix $`\\alpha_0=1/137`$ and write $`\\gamma_B=2/(\\pi/2+2/\\pi)`$. Let $`\\sigma_1,\\sigma_2,\\sigma_3`$ be the Pauli matrices, and put\n```math\na_j=\\begin{pmatrix}0&\\sigma_j\\\\ \\sigma_j&0\\end{pmatrix},\n \\qquad b=\\begin{pmatrix}I_2&0\\\\0&-I_2\\end{pmatrix}.\n```\n\nIn units with electron mass, $`\\hbar`$ and the speed of light equal to one, define\n```math\nD_A=\\sum_{j=1}^3a_j(-i\\partial_j+\\sqrt{\\alpha_0}A_j)+b,\n \\qquad \\mathcal H_A^+=\\mathbf1_{(0,\\infty)}(D_A)L^2(\\mathbb R^3;\\mathbb C^4).\n```\n\nAllow real vector potentials\n```math\n\\mathcal A=\\{A\\in L^6(\\mathbb R^3;\\mathbb R^3):\n \\mathrm{div}A=0,\\ \\mathrm{curl}A\\in L^2(\\mathbb R^3)\\},\n```\n\nwith derivatives interpreted distributionally. For distinct fixed nuclei $`R_1,\\ldots,R_M`$ and charges $`Z_a>0`$ satisfying $`\\alpha_0Z_a\\le\\gamma_B`$, set\n```math\nV_C=\\sum_{i<j}|x_i-x_j|^{-1}\n -\\sum_{i=1}^N\\sum_{a=1}^M Z_a|x_i-R_a|^{-1}\n +\\sum_{a<b}Z_aZ_b|R_a-R_b|^{-1}.\n```\n\nFor normalized $`\\Psi\\in\\bigwedge^N\\mathcal H_A^+\\cap H^{1/2}((\\mathbb R^3)^N;\\mathbb C^{4^N})`$, consider the quadratic-form energy\n```math\n\\mathcal E_{A,R,Z}(\\Psi)=\n \\left\\langle\\Psi,\\left(\\sum_{i=1}^N D_{A,i}+\\alpha_0V_C\\right)\\Psi\\right\\rangle\n +\\frac1{8\\pi}\\int_{\\mathbb R^3}|\\mathrm{curl}A|^2.\n```\n\nIs there a finite constant $`C`$, independent of $`N,M,A,R,Z`$, such that\n```math\n\\mathcal E_{A,R,Z}(\\Psi)\\ge-C(N+M)\n```\n\nfor all these systems? The assertion is understood on the common finite-energy form domain and hence for its semibounded realization if the lower bound holds.\n\nThe electronic subspace depends on the magnetic field, and the nuclear Coulomb potential is not included in the operator defining that subspace. This is the modified Brown-Ravenhall model of [1, section 10.4]. The rational coupling $`1/137`$ specifies the benchmark used for the source's physical-coupling discussion; it is not an exact measured value. The required charge range reaches the Brown-Ravenhall value, approximately $`Z=124`$.",
+  "full_original_page": "# 1038. Stability at critical nuclear charge for magnetic no-pair Dirac matter\n\n**Area:** Many-body physics, quantum information and wave analysis\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix $`\\alpha_0=1/137`$ and write $`\\gamma_B=2/(\\pi/2+2/\\pi)`$. Let $`\\sigma_1,\\sigma_2,\\sigma_3`$ be the Pauli matrices, and put\n```math\na_j=\\begin{pmatrix}0&\\sigma_j\\\\ \\sigma_j&0\\end{pmatrix},\n \\qquad b=\\begin{pmatrix}I_2&0\\\\0&-I_2\\end{pmatrix}.\n```\n\nIn units with electron mass, $`\\hbar`$ and the speed of light equal to one, define\n```math\nD_A=\\sum_{j=1}^3a_j(-i\\partial_j+\\sqrt{\\alpha_0}A_j)+b,\n \\qquad \\mathcal H_A^+=\\mathbf1_{(0,\\infty)}(D_A)L^2(\\mathbb R^3;\\mathbb C^4).\n```\n\nAllow real vector potentials\n```math\n\\mathcal A=\\{A\\in L^6(\\mathbb R^3;\\mathbb R^3):\n \\mathrm{div}A=0,\\ \\mathrm{curl}A\\in L^2(\\mathbb R^3)\\},\n```\n\nwith derivatives interpreted distributionally. For distinct fixed nuclei $`R_1,\\ldots,R_M`$ and charges $`Z_a>0`$ satisfying $`\\alpha_0Z_a\\le\\gamma_B`$, set\n```math\nV_C=\\sum_{i<j}|x_i-x_j|^{-1}\n -\\sum_{i=1}^N\\sum_{a=1}^M Z_a|x_i-R_a|^{-1}\n +\\sum_{a<b}Z_aZ_b|R_a-R_b|^{-1}.\n```\n\nFor normalized $`\\Psi\\in\\bigwedge^N\\mathcal H_A^+\\cap H^{1/2}((\\mathbb R^3)^N;\\mathbb C^{4^N})`$, consider the quadratic-form energy\n```math\n\\mathcal E_{A,R,Z}(\\Psi)=\n \\left\\langle\\Psi,\\left(\\sum_{i=1}^N D_{A,i}+\\alpha_0V_C\\right)\\Psi\\right\\rangle\n +\\frac1{8\\pi}\\int_{\\mathbb R^3}|\\mathrm{curl}A|^2.\n```\n\nIs there a finite constant $`C`$, independent of $`N,M,A,R,Z`$, such that\n```math\n\\mathcal E_{A,R,Z}(\\Psi)\\ge-C(N+M)\n```\n\nfor all these systems? The assertion is understood on the common finite-energy form domain and hence for its semibounded realization if the lower bound holds.\n\nThe electronic subspace depends on the magnetic field, and the nuclear Coulomb potential is not included in the operator defining that subspace. This is the modified Brown-Ravenhall model of [1, section 10.4]. The rational coupling $`1/137`$ specifies the benchmark used for the source's physical-coupling discussion; it is not an exact measured value. The required charge range reaches the Brown-Ravenhall value, approximately $`Z=124`$.\n\n## Application\n\nThis asks whether self-generated classical magnetic fields preserve the expected relativistic stability range for heavy nuclei when both spin and relativistic Dirac dynamics are included.\n\n## References\n\n1. E. H. Lieb and R. Seiringer, [The Stability of Matter in Quantum Mechanics, Chapter 10](https://doi.org/10.1017/CBO9780511819681.011), Cambridge University Press (2009; online 2010), pp. 184-185 and 193-194, equations (10.4.1)-(10.4.4) and the open problem after Theorem 10.1.\n2. E. H. Lieb, H. Siedentop and J. P. Solovej, [Stability and Instability of Relativistic Electrons in Classical Electromagnetic Fields](https://arxiv.org/abs/cond-mat/9610195v4), Journal of Statistical Physics 89 (1997), 37-59, section 2 and Theorem 1; [DOI](https://doi.org/10.1007/BF02770753).\n3. M. Könenberg and O. Matte, [Ground states of semi-relativistic Pauli-Fierz and no-pair Hamiltonians in QED at critical Coulomb coupling](https://jot.theta.ro/jot/archive/2013-070-001/2013-070-001-011.pdf), Journal of Operator Theory 70 (2013), 211-237, introduction and sections 2-3: comparison with a one-electron model coupled to a quantized field with an ultraviolet cutoff.\n4. R. Reuvers, J. P. Solovej and D. Stuart, [Stability of Matter Interacting with Classical Non-Abelian Gauge Fields](https://arxiv.org/abs/2610.08313), preprint (2026), section 1.2 and Theorem 7: a current related-model comparison.\n\n5. O. Matte and E. Stockmeyer, [On the eigenfunctions of no-pair operators in classical magnetic fields](https://arxiv.org/html/0810.4897v1), **Integral Equations and Operator Theory** 65(2) (2009), 255–283, introduction and Theorem 2.1: a fixed-field one-electron comparison.\n\n## Status review\n\n\n**Known cases:** The many-electron field-dependent no-pair projection with classical magnetic energy must remain stable at critical nuclear charge. One-electron quantized-field binding and non-Abelian gauge analogues have different models.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe many-electron field-dependent no-pair projection with classical magnetic energy must remain stable at critical nuclear charge. One-electron quantized-field binding and non-Abelian gauge analogues have different models.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked **30 October 2026**.\n\nThe source [1] expressly leaves stability up to the expected critical nuclear charge open at physical coupling. Its Theorem 10.1 proves a sufficient regime reaching $`Z\\le56`$ for the physical coupling and cites a stronger result reaching $`Z\\le88`$. The original argument [2] also does not reach the displayed critical charge. The question asks for stability of the second kind; it does not require the stronger nonnegative bound in those sufficient theorems.\n\nReference [5] proves one-electron semiboundedness for a fixed external magnetic field, with additional regularity at critical coupling. It does not provide a lower bound uniform over fields and arbitrary particle and nuclear counts after adding one classical field-energy term.\n\nThe critical-coupling ground-state result [3] treats one electron coupled to a quantized photon field at fixed ultraviolet cutoff. It does not provide an arbitrary-particle lower bound uniform over the uncut classical magnetic fields in this question. The later non-abelian model [4] proves a small-coupling result for a different system. Results for an atomic Brown-Ravenhall operator without a magnetic field or for the Furry projection that already contains the attractive nuclear potential likewise have different hypotheses.\n\nBounded current searches on 30 October 2026 found no matching complete published or announced proof or counterexample, and all-status AIM, FURTHER and OpenAI statement comparisons found no equivalent existing target.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-6e5bf5da93a1daa7**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Brown-Ravenhall",
+    "no-pair",
+    "Siedentop",
+    "Matte",
+    "non-Abelian gauge"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"no-pair\" \"critical\" stability matter magnetic 2026"
+    },
+    {
+      "query": "\"no-pair\" stability \"critical\" magnetic",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.08313v1",
+      "locator": "Theorem7 lines296–298 and Section1.2; October2026"
+    }
+  ],
+  "scope_comparison": "Current Theorem7 concerns non-Abelian colour Dirac matter with its own lambda/charge/spin thresholds; not the displayed abelian many-nucleus field-dependent positive spectral projection at alpha=1/137 and every critical nuclear charge. Fixed-field one-electron semiboundedness and cutoff QED one-electron ground states do not give uniform classical-field second-kind many-body stability. No complete matching claim found.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded current search and announcement routing; absence is not proof of openness. Actual comparison theorem statements/definitions inspected; no entire proof certification claimed.",
+  "announcement_routing": {
+    "localID": "1038",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Brown-Ravenhall",
+          "no-pair",
+          "Siedentop",
+          "Matte",
+          "non-Abelian gauge"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Brown-Ravenhall",
+          "no-pair",
+          "Siedentop",
+          "Matte",
+          "non-Abelian gauge"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Brown-Ravenhall",
+        "no-pair",
+        "Siedentop",
+        "Matte",
+        "non-Abelian gauge"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

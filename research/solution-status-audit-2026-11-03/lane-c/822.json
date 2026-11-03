@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "822",
+  "manifest_index": 666,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "822",
+    "title": "Log-squared systolic growth on translation surfaces",
+    "area": "Geometry and topology",
+    "file": "problems/822-log-squared-systolic-growth-on-translation-surfaces.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a335c018f2a6390a",
+    "group": "geometry-topology",
+    "source_sha256": "b99b31248c838c500d109696546fd750ebc4c9431447ff6f3e77611b24346e21",
+    "statement_sha256": "2ffa3ce54bf4f13830d9fbb58d60fd5ce6ab0a0fa37e302d10d5b4c16c0a7088",
+    "state": "unreviewed"
+  },
+  "source_sha256": "b99b31248c838c500d109696546fd750ebc4c9431447ff6f3e77611b24346e21",
+  "statement_sha256": "2ffa3ce54bf4f13830d9fbb58d60fd5ce6ab0a0fa37e302d10d5b4c16c0a7088",
+  "actual_source_sha256": "b99b31248c838c500d109696546fd750ebc4c9431447ff6f3e77611b24346e21",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "A closed translation surface is a connected orientable surface formed by gluing finitely many Euclidean polygons along paired sides by translations. Its flat metric has cone angles that are positive integer multiples of $`2\\pi`$.\n\nLet $`\\mathrm{sys}(S)`$ be the length of a shortest noncontractible closed geodesic of $`S`$, with geodesics allowed to pass through cone points. Define\n```math\n\\mathrm{SR}(S)=\\frac{\\mathrm{sys}(S)^2}{\\mathrm{area}(S)}.\n```\n\nDo absolute constants $`c>0`$ and $`g_0\\ge2`$ exist such that, for **every** integer $`g\\ge g_0`$, some genus-$`g`$ translation surface satisfies\n```math\n\\mathrm{SR}(S)\\ge c\\,\\frac{(\\log g)^2}{g}?\n```\n\nThe ratio is invariant under scaling, so area one is an equivalent normalization. The surfaces may vary over all strata. The systole here is a closed-loop length, rather than the length of a shortest saddle connection.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"translation surfaces\" \"systolic\" \"log\" genus proof 2026",
+    "\"translation surfaces\" \"systolic\" \"log\" genus (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/nihargargava/systole_bound/a54807b9bf6cbd61194c1fb78da380535ec8a871/README.md",
+      "locator": "README theorem lines2–7;2610.40750v1 main results lines124–149",
+      "version_or_date": "PALOMAR-2026-10-18-000028v1, commita54807b9bf6cbd61194c1fb78da380535ec8a871",
+      "scope_comparison": "The Palomar theorem explicitly concerns closed hyperbolic surfaces, not translation surfaces with flat cone metrics. New2610.40750 studies systolic graph embeddings using shortest saddle connections and genus bounds, not log-squared closed-loop systolic ratio. The established translation-surface construction2403.14923v1 is on a subsequence and at a weaker rate. No full matching announcement found. MainTheorem.lean raw URL was unavailable; README theorem statement and newer thesis definitions/results were read.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The Palomar theorem explicitly concerns closed hyperbolic surfaces, not translation surfaces with flat cone metrics. New2610.40750 studies systolic graph embeddings using shortest saddle connections and genus bounds, not log-squared closed-loop systolic ratio. The established translation-surface construction2403.14923v1 is on a subsequence and at a weaker rate. No full matching announcement found. MainTheorem.lean raw URL was unavailable; README theorem statement and newer thesis definitions/results were read.",
+  "latest_version_check": "PALOMAR-2026-10-18-000028v1, commita54807b9bf6cbd61194c1fb78da380535ec8a871",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "211",
+  "manifest_index": 161,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "211",
+    "title": "GOE level spacings in a desymmetrized Sinai billiard",
+    "area": "Quantum chaos / wave-cavity spectra",
+    "file": "problems/211-sinai-goe-spacing.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "spectral3",
+    "source_sha256": "77473e4b55d3f3053a21bb21ad563b395d4ac2c3ce29c2d478ed88eb15498bf2",
+    "statement_sha256": "2f4eb6e35c2d284c91c0c7a8b76ab9adc53343bd7f5a88b9c1cf7287dae0eca4",
+    "state": "unreviewed"
+  },
+  "source_sha256": "77473e4b55d3f3053a21bb21ad563b395d4ac2c3ce29c2d478ed88eb15498bf2",
+  "statement_sha256": "2f4eb6e35c2d284c91c0c7a8b76ab9adc53343bd7f5a88b9c1cf7287dae0eca4",
+  "actual_source_sha256": "77473e4b55d3f3053a21bb21ad563b395d4ac2c3ce29c2d478ed88eb15498bf2",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let\n\n```math\n\\Omega=\\{(x,y)\\in\\mathbb R^2:0<y<x<1,\\quad x^2+y^2>1/4\\},\n```\n\nand let $`0<\\lambda_1\\le\\lambda_2\\le\\cdots`$ be the Dirichlet eigenvalues of $`-\\Delta`$ on $`\\Omega`$, counted with multiplicity. Set $`\\mu_j=|\\Omega|\\lambda_j/(4\\pi)`$.\nDefine $`F_{\\mathrm{GOE}}`$ as the bulk nearest-neighbor spacing distribution of the Gaussian orthogonal ensemble: for an $`n\\times n`$ real symmetric random matrix $`H_n`$, the entries above the diagonal are independent centered Gaussians of variance $`1/n`$, and diagonal entries are independent centered Gaussians of variance $`2/n`$. If $`\\nu_1\\le\\cdots\\le\\nu_n`$ are its eigenvalues and $`k=\\lfloor n/2\\rfloor`$, then\n\n```math\nF_{\\mathrm{GOE}}(s)=\\lim_{n\\to\\infty}\\mathbb P\\left\\{\\frac n\\pi(\\nu_{k+1}-\\nu_k)\\le s\\right\\}.\n```\n\nDoes the deterministic billiard spectrum satisfy\n\n```math\n\\lim_{N\\to\\infty}\\frac1N\\#\\{1\\le j\\le N:\\mu_{j+1}-\\mu_j\\le s\\}\n=F_{\\mathrm{GOE}}(s)\n\\quad\\text{for every }s\\ge0?\n```\n\nThis domain is one symmetry sector of a square containing a circular obstacle; Dirichlet conditions on the symmetry cuts prevent mixing different symmetry sectors.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Sinai billiard\" \"GOE\" proof 2026",
+    "\"Sinai billiard\" \"GOE\" proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Sinai billiard\" \"GOE\" proof (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "scope_comparison": "The exact target is the exact bulk GOE nearest-neighbor law for one specified desymmetrized Dirichlet Sinai domain at high energy. Magan–Wu's actual model construction and numerical Metropolis tests use Poissonian Hamiltonian ensembles and SYK-type couplings; their counterarguments to broad ETH/Lyapunov formulations do not alter this billiard's spectrum. Quantum eigenfunction equidistribution or random-state ansatz results do not prove its consecutive eigenvalue spacings. No complete proof, counterexample for this fixed domain, or matching announcement was located.",
+      "url": "https://arxiv.org/html/2411.08186",
+      "locator": "Sections1–4,Poissonian Hamiltonian ensembles and SYK construction;NonnenmacherSection4.1pp23–24",
+      "version_or_date": "arXiv:2411.08186v1,12November2024;Nonnenmacher1005.5598currentPDF"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The exact target is the exact bulk GOE nearest-neighbor law for one specified desymmetrized Dirichlet Sinai domain at high energy. Magan–Wu's actual model construction and numerical Metropolis tests use Poissonian Hamiltonian ensembles and SYK-type couplings; their counterarguments to broad ETH/Lyapunov formulations do not alter this billiard's spectrum. Quantum eigenfunction equidistribution or random-state ansatz results do not prove its consecutive eigenvalue spacings. No complete proof, counterexample for this fixed domain, or matching announcement was located.",
+  "latest_version_check": "arXiv:2411.08186v1,12November2024;Nonnenmacher1005.5598currentPDF",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

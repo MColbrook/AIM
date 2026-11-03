@@ -1,0 +1,64 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 337,
+  "source_sha256": "7ccfbf1baecfca25ba9893b9b07a42cc019398ecbeee17945a63b72ca78e273f",
+  "statement_sha256": "35751e783ae4e0da5116111e8b7082ced84fb532ba5c79b14f7a5a0d3a4cd3cf",
+  "original_target": {
+    "id": "416",
+    "title": "Time analyticity of trajectories for bounded-vorticity Euler flows",
+    "area": "Ideal fluids and Lagrangian regularity",
+    "file": "problems/416-time-analyticity-of-trajectories-for-bounded-vorticity-euler-flows.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-03efb3c13aa58a87",
+    "group": "continuum2",
+    "source_sha256": "7ccfbf1baecfca25ba9893b9b07a42cc019398ecbeee17945a63b72ca78e273f",
+    "statement_sha256": "35751e783ae4e0da5116111e8b7082ced84fb532ba5c79b14f7a5a0d3a4cd3cf",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "416",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Yudovich\" \"trajectories\" \"analyticity\" 2026",
+    "\"Yudovich\" \"analyticity\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Yudovich\" \"analytic trajectories\" \"2026\""
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2509.21121",
+      "version": "v1 25September2025; currentHTML",
+      "locators": "Theorem1, Theorems2–3 and introductory explanation",
+      "body_inspected": true,
+      "scope": "Yudovich well-posedness, C∞time regularity, continuity in initial data and domain; no analytic time-radius bound."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1004.1718",
+      "version": "Sueur2011 currentPDF",
+      "locators": "Theorem1 and prior-work discussion PDFp2",
+      "body_inspected": true,
+      "scope": "Gevrey orderM+2 for bounded-domain bounded vorticity; recalls full-space Gevrey3. Gevreyorder>1 does not imply analytic."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1705.06238",
+      "version": "v2 14May2018 authorcopyNovember2018",
+      "locators": "Theorem3.11 PDFp23; Section3.3",
+      "body_inspected": true,
+      "scope": "Regular vortex patches/C1,mu framework, not arbitraryboundedvorticity on torus."
+    },
+    {
+      "url": "https://www.math.utoronto.ca/khesin/papers/Problems_in_GHD_ARMA.pdf",
+      "version": "publishedARMA247(2023)15",
+      "locators": "Remark6.2 search-visible primary passage",
+      "body_inspected": false,
+      "scope": "Explicitly raises bounded-vorticity analyticity; used as problem-routing/status context only."
+    }
+  ],
+  "registry_checks": "No Yudovich/Lagrangiananalytiticity relevantalias Palomar/Hexagon/OpenAI/Colbrook metadata. Bounded current primary arXiv/author/publisher, Zenodo, HAL, GitHub searches.",
+  "scope_comparison": "Every bounded mean-zero torusvorticity and every particle, everytime require actual convergentlocalpower series. Smoothness, arbitrary high derivatives, Gevrey3 or Holder/vortexpatch extra hypotheses do not suffice.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

@@ -1,0 +1,86 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "890",
+  "manifest_index": 734,
+  "checked_date": "2026-11-03",
+  "source_sha256": "2a5a3192fd9fe333c8c5e16b6791e0e4aba7ece4dd593c316fe536c647802d98",
+  "statement_sha256": "172d1626c96c626adec0797c199558a15d8fb5ae86081c9db41f744dd06dd790",
+  "original_target": {
+    "id": "890",
+    "title": "Local reflexivity of the maximal operator space on bounded operators",
+    "area": "Operator spaces and functional analysis",
+    "file": "problems/890-local-reflexivity-of-the-maximal-operator-space-on-bounded-operators.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-03f54527a60e84c3",
+    "group": "operators",
+    "source_sha256": "2a5a3192fd9fe333c8c5e16b6791e0e4aba7ece4dd593c316fe536c647802d98",
+    "statement_sha256": "172d1626c96c626adec0797c199558a15d8fb5ae86081c9db41f744dd06dd790",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`H=\\ell_2(\\mathbb N;\\mathbb C)`$ and let\n```math\nX=\\mathrm{MAX}(\\mathcal B(H)).\n```\n\nHere $`\\mathcal B(H)`$ first has its usual operator norm as a Banach space, and $`\\mathrm{MAX}`$ gives it the largest operator-space matrix norms compatible with that norm. Equivalently, every bounded linear map from $`X`$ to any $`\\mathcal B(K)`$ is completely bounded with the same norm. These matrix norms generally differ from the usual ones on the $`C^*`$-algebra $`\\mathcal B(H)`$.\n\n**Does there exist a finite constant $`\\lambda\\geq1`$ for which $`X`$ is $`\\lambda`$-locally reflexive?** Precisely, for every finite-dimensional subspace $`E\\subset X^{**}`$, with its inherited operator-space structure, must there be a net of linear maps $`u_\\alpha:E\\to X`$ such that\n```math\n\\sup_\\alpha\\|u_\\alpha\\|_{\\mathrm{cb}}\\leq\\lambda,\n\\qquad\nj_Xu_\\alpha(e)\\longrightarrow e\n\\quad\\text{in }\\sigma(X^{**},X^*)\\quad(e\\in E)?\n```\n\nHere $`j_X:X\\to X^{**}`$ is the canonical embedding and\n$`\\|u\\|_{\\mathrm{cb}}=\\sup_{r\\geq1}\\|\\mathrm{id}_{M_r}\\otimes u\\|`$.\nThe constant is independent of $`E`$; the approximating net may depend on $`E`$. The bidual carries its canonical operator-space structure. No norm-separability assumption on $`X`$ is imposed.\n\nPisier's Theorem 18.13 makes this a test case for local reflexivity of all maximal operator spaces, with a uniform finite constant. Asking for $`\\lambda=1`$ is a stronger version; the question above asks whether any finite constant works.",
+  "full_original_page": "# 890. Local reflexivity of the maximal operator space on bounded operators\n\n**Area:** Operator spaces and functional analysis\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`H=\\ell_2(\\mathbb N;\\mathbb C)`$ and let\n```math\nX=\\mathrm{MAX}(\\mathcal B(H)).\n```\n\nHere $`\\mathcal B(H)`$ first has its usual operator norm as a Banach space, and $`\\mathrm{MAX}`$ gives it the largest operator-space matrix norms compatible with that norm. Equivalently, every bounded linear map from $`X`$ to any $`\\mathcal B(K)`$ is completely bounded with the same norm. These matrix norms generally differ from the usual ones on the $`C^*`$-algebra $`\\mathcal B(H)`$.\n\n**Does there exist a finite constant $`\\lambda\\geq1`$ for which $`X`$ is $`\\lambda`$-locally reflexive?** Precisely, for every finite-dimensional subspace $`E\\subset X^{**}`$, with its inherited operator-space structure, must there be a net of linear maps $`u_\\alpha:E\\to X`$ such that\n```math\n\\sup_\\alpha\\|u_\\alpha\\|_{\\mathrm{cb}}\\leq\\lambda,\n\\qquad\nj_Xu_\\alpha(e)\\longrightarrow e\n\\quad\\text{in }\\sigma(X^{**},X^*)\\quad(e\\in E)?\n```\n\nHere $`j_X:X\\to X^{**}`$ is the canonical embedding and\n$`\\|u\\|_{\\mathrm{cb}}=\\sup_{r\\geq1}\\|\\mathrm{id}_{M_r}\\otimes u\\|`$.\nThe constant is independent of $`E`$; the approximating net may depend on $`E`$. The bidual carries its canonical operator-space structure. No norm-separability assumption on $`X`$ is imposed.\n\nPisier's Theorem 18.13 makes this a test case for local reflexivity of all maximal operator spaces, with a uniform finite constant. Asking for $`\\lambda=1`$ is a stronger version; the question above asks whether any finite constant works.\n\n## Application\n\nBanach-space local reflexivity approximates finite-dimensional pieces of a bidual without controlling all matrix levels at once. This problem asks whether such simultaneous control survives for the maximal operator-space structure. The equivalent lifting properties in the cited sources connect it to bounded liftings through quotient $`C^*`$-algebras.\n\n## References\n\n1. G. Pisier, [*Introduction to Operator Space Theory*](https://bpb-us-e1.wpmucdn.com/sites.northeastern.edu/dist/4/7815/files/2024/07/Pisier.pdf), Cambridge University Press, London Mathematical Society Lecture Note Series **294** (2003). See the question in the Introduction, printed p. 9; the maximal structure in Chapter 3, equations (3.3)-(3.4); Definition 18.1; and Theorem 18.13, especially (ii)-(iii).\n2. N. Ozawa, [*On the lifting property for universal $`C^*`$-algebras of operator spaces*](https://jot.theta.ro/jot/archive/2001-046-003/2001-046-003-007.pdf), *Journal of Operator Theory* **46** (2001), 579-591, Proposition 3.1(C2) and its proof. The source attributes the maximal-space conjecture to T. Oikhberg.\n3. G. Pisier, [*Seemingly injective von Neumann algebras*, arXiv:2010.13743v4](https://arxiv.org/html/2010.13743v4), 19 December 2021, Section 8, especially Definitions 8.2-8.3 and the discussion following them. This gives the explicit completely bounded approximation convention used above.\n4. G. Pisier and J. Roydor, [*Operator space theory from the maximal viewpoint*, arXiv:2610.21929v2](https://arxiv.org/html/2610.21929v2), 17 October 2026, Sections 2 and 4. Its local-reflexivity statements concern maximally bounded maps and impose an additional identification hypothesis.\n\n## Status review\n\n\n**Known cases:** Pisier-Roydor v2 introduces maximally bounded maps and maximal tensor norms. Its maximal local-reflexivity statements do not prove completely bounded approximations for MAX(B(H)) with a uniform finite constant. Ordinary operator-space local reflexivity and this new mb notion remain distinct.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nPisier-Roydor v2 introduces maximally bounded maps and maximal tensor norms. Its maximal local-reflexivity statements do not prove completely bounded approximations for MAX(B(H)) with a uniform finite constant. Ordinary operator-space local reflexivity and this new mb notion remain distinct.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe source question concerns the maximal matrix norms on an underlying Banach space. The 2026 paper's maximal-tensor-product theory uses a different class of maps and does not establish the completely bounded approximation property above. The existing FURTHER problem about local reflexivity implying exactness for an ordinary $`C^*`$-algebra has different hypotheses and conclusion. Searches through the checked date found no matching proof, counterexample or announced solution. The [dated audit](../FURTHER_problems/_tracking/MAX-local-reflexivity-independent-peer-2026-10-23.json) records the independent statement comparison, exact constant convention, current searches and access limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-03f54527a60e84c3**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"MAX(B(H))\" \"locally reflexive\" 2026",
+    "\"maximal operator space\" \"local reflexivity\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.21929v2",
+      "locator": "v2 17October2026, §4 equation4.1 and Theorem4.1",
+      "inspection": "Actual new maximal local-reflexivity theorem presumes MB(E,C**)=MB(E,C)** isometrically, uses maximally bounded maps and separable X. Does not establish completely bounded local-reflexivity approximations for MAX(B(H)) with one finite universal constant. Maximal tensor viewpoint is a different framework."
+    }
+  ],
+  "scope_comparison": "Actual new maximal local-reflexivity theorem presumes MB(E,C**)=MB(E,C)** isometrically, uses maximally bounded maps and separable X. Does not establish completely bounded local-reflexivity approximations for MAX(B(H)) with one finite universal constant. Maximal tensor viewpoint is a different framework.",
+  "rationale": "Inspected primary statement and current candidate bodies do not establish the full target. Recorded bounded searches found no matching complete resolution; this is not a guarantee of openness.",
+  "source_gaps": [],
+  "announcement_routing": {
+    "localID": "890",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "MAX(B(H))",
+          "maximal operator space",
+          "local reflexivity"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "MAX(B(H))",
+          "maximal operator space",
+          "local reflexivity"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "MAX(B(H))",
+        "maximal operator space",
+        "local reflexivity"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

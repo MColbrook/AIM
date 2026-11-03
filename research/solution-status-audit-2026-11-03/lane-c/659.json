@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "659",
+  "manifest_index": 506,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "659",
+    "title": "Global classical continuation for a fully coupled SKT population model",
+    "area": "Population dynamics / cross-diffusion PDEs",
+    "file": "problems/659-global-classical-continuation-for-a-fully-coupled-skt-population-model.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-7d3599ac0ca013fb",
+    "group": "diffusion-materials",
+    "source_sha256": "11bd4fb8a6d0b4b272407e42a8695a98a2fe0e9078bc10a3e0589ca1051fd2ed",
+    "statement_sha256": "75705867b3eff52f939d406faed900ccc7ee3cb43697c009b0c935642592de9c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "11bd4fb8a6d0b4b272407e42a8695a98a2fe0e9078bc10a3e0589ca1051fd2ed",
+  "statement_sha256": "75705867b3eff52f939d406faed900ccc7ee3cb43697c009b0c935642592de9c",
+  "actual_source_sha256": "11bd4fb8a6d0b4b272407e42a8695a98a2fe0e9078bc10a3e0589ca1051fd2ed",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\mathbb T^3=(\\mathbb R/\\mathbb Z)^3`$. Fix arbitrary constants $`d_1,d_2>0`$ and $`a_{ij},r_i,s_{ij}\\geq0`$, for $`i,j\\in\\{1,2\\}`$. For smooth strictly positive initial densities $`u_1^0,u_2^0`$ on $`\\mathbb T^3`$, consider the periodic system\n\n```math\n\\begin{aligned}\n\\partial_tu_1&=\\Delta[(d_1+a_{11}u_1+a_{12}u_2)u_1]\n +u_1(r_1-s_{11}u_1-s_{12}u_2),\\\\\n\\partial_tu_2&=\\Delta[(d_2+a_{21}u_1+a_{22}u_2)u_2]\n +u_2(r_2-s_{21}u_1-s_{22}u_2),\\qquad (u_1,u_2)|_{t=0}=(u_1^0,u_2^0).\n\\end{aligned}\n```\n\nDoes its unique maximal local nonnegative strong solution continue through every finite time, for every such choice of coefficients and data? Precisely, is\n\n```math\n(u_1,u_2)\\in C([0,T];H^4(\\mathbb T^3)^2)\n\\cap L^2(0,T;H^5(\\mathbb T^3)^2)\n```\n\nfor every finite $`T`$? With smooth data this asks for classical continuation. No smallness, equality $`d_1=d_2`$, dominance of self diffusion, or triangularity assumption is imposed; in particular both cross coefficients $`a_{12},a_{21}`$ may be positive. Uniform bounds as $`t\\to\\infty`$ are not an additional requirement.\n\nThis is a three-dimensional positive-data instance of the possible-blowup question discussed in [1, §1.2], with its exact model and coefficient assumptions from [1, (1.9)]. The source gives local strong solutions and a Sobolev blowup criterion. Choosing the displayed fixed Sobolev class specifies the continuation target.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"SKT\" \"global classical\" coupled 2026",
+    "\"SKT\" \"global classical\" coupled (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2607.01857",
+      "locator": "Equation1 and Theorem1/Proposition1.1, lines49–54 and125–141",
+      "version_or_date": "v1,2July2026; latest arXiv record inspected",
+      "scope_comparison": "The current theorem's diffusion depends only on preceding species, imposing triangularity. It does not prove the fully coupled arbitrary-coefficient3D SKT continuation target. The original2025 publisher and2026 corrigendum retrieval returned403/inaccessible in this pass; no claim of fresh complete corrigendum verification is made.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The current theorem's diffusion depends only on preceding species, imposing triangularity. It does not prove the fully coupled arbitrary-coefficient3D SKT continuation target. The original2025 publisher and2026 corrigendum retrieval returned403/inaccessible in this pass; no claim of fresh complete corrigendum verification is made.",
+  "latest_version_check": "v1,2July2026; latest arXiv record inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

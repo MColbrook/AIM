@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 328,
+  "source_sha256": "6e28a9c9ac74bdfe56e53d466c259fe90878304133e5c073f228bbd9e82bdc1b",
+  "statement_sha256": "1af8e923c7dadf7223fea4c3cf59e850ec4382fd341ca4805be3d6dc23292ab1",
+  "original_target": {
+    "id": "405",
+    "title": "Uniqueness of divergence-free transport with bounded-deformation velocity",
+    "area": "Linear transport and nonsmooth flows",
+    "file": "problems/405-uniqueness-of-divergence-free-transport-with-bounded-deformation-velocity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a3505222b6a71a4e",
+    "group": "continuum2",
+    "source_sha256": "6e28a9c9ac74bdfe56e53d466c259fe90878304133e5c073f228bbd9e82bdc1b",
+    "statement_sha256": "1af8e923c7dadf7223fea4c3cf59e850ec4382fd341ca4805be3d6dc23292ab1",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "405",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"transport\" \"bounded deformation\" uniqueness 2026",
+    "\"bounded deformation\" transport uniqueness (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"bounded deformation\" \"uniqueness\" \"2026\" \"transport\" Cantor"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.17129v1",
+      "version": "v1 12October2026; latestabsconfirmed",
+      "locators": "Theorem5.1 equations5.1–5.3, subsequent paragraph",
+      "body_inspected": true,
+      "scope": "SpatialSBD noCantor and measure-valued time derivative required; subsequent paragraphasksremoving timeassumption."
+    },
+    {
+      "url": "https://arxiv.org/html/2510.10704v4",
+      "version": "v4 18May2026",
+      "locators": "Theorem1.2 and discussionSection2.3",
+      "body_inspected": true,
+      "scope": "Euler energy conservation forBDvelocity uses Euler nonlinearity; explicitly does not apply tolinear transport."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2610.33993",
+      "version": "v1 25October2026; current public PDF RAM-only inspection",
+      "pdf_sha256": "62fa4e115bf8147857db6e216b1581773464023d39d78bbcd04e4ce006bacd16",
+      "locators": "Chapter4 Sections4.1–4.3, especially4.2 equation4.1",
+      "body_inspected": true,
+      "scope": "Expository DiPernaLions thesis: counterexamples sacrifice bounded growth, full first derivative regularity, or boundedness of scalar solutions. FractionalSobolev class doesn't ensureBD."
+    }
+  ],
+  "registry_checks": "No boundeddeformation alias Palomar/Hexagon/OpenAI/Colbrook metadata. Focused arXiv, primary author/publisher, Zenodo, HAL, GitHub searches.",
+  "scope_comparison": "Target bounded divergence-free L1-time BDvelocity with arbitraryCantorpart and no time derivative, uniqueness between allsigned bounded integrabledistributionalscalars. Neither SBD/time-regular partialtheorem nor Euler energyconservation proves it.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

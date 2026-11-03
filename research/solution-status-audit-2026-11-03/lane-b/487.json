@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "487",
+  "manifest_index": 384,
+  "original_target": {
+    "id": "487",
+    "title": "The GNRS conjecture for minor-free network flow",
+    "area": "Network routing, metric geometry and combinatorial optimization",
+    "file": "problems/487-gnrs-minor-free-flow-cut.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-13",
+    "group": "stochastic3",
+    "source_sha256": "9741d2fea9cee7d6befada0151ee306a9806c7d89fc678d6fc23a540ffff780e",
+    "statement_sha256": "b89cc95fd7467d1d2f92e6bcfc2e48dbb1490773265b7c8f40a3543e5784ab68",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9741d2fea9cee7d6befada0151ee306a9806c7d89fc678d6fc23a540ffff780e",
+  "statement_sha256": "b89cc95fd7467d1d2f92e6bcfc2e48dbb1490773265b7c8f40a3543e5784ab68",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:31:42.822031+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Actual Lee–Sidiropoulos primary introduction Conjectures1–3 distinguishes arbitrary excluded-minor-closed families. Current pinned OpenAI family089 only claims planar and fixed-treewidth cases, not all excluded minors. No matching general L1 constant-distortion theorem found.",
+  "primary_sources": [
+    {
+      "url": "https://people.csail.mit.edu/tasos/papers/geoforbid_stoc2009.pdf",
+      "locator": "Introduction Conjectures1–3",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "GNRS minor free constant distortion solution (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "GNRS",
+        "minor-free"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-15-000005",
+          "title": "Wagner's planarity criterion and list colouring of planar and K5-minor-free graphs"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "GNRS",
+        "minor-free"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Pinned OpenAI family089 body inaccessible through attempted public raw/GitHub URLs; restricted scope taken from retained current index, not fresh theorem-body reading."
+  ],
+  "canonical_update_required": false
+}

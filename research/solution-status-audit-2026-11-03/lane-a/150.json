@@ -1,0 +1,116 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "150",
+  "manifest_index": 118,
+  "original_target": {
+    "id": "150",
+    "title": "The nonlinear Landau limit of weakly interacting particles",
+    "area": "Kinetic theory and collisional relaxation",
+    "file": "problems/150-newton-landau-weak-coupling.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "2b78a12b752ff5bafa666761f43702150d23cb9e24b87ac96d5357719676b6c9",
+    "statement_sha256": "ce6ba2d16f9cd3f36c0e7ab078baf6e9a55d991099536a20bf1e775dba0b3461",
+    "state": "unreviewed"
+  },
+  "source_sha256": "2b78a12b752ff5bafa666761f43702150d23cb9e24b87ac96d5357719676b6c9",
+  "statement_sha256": "ce6ba2d16f9cd3f36c0e7ab078baf6e9a55d991099536a20bf1e775dba0b3461",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:25:45.087137+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual Winter1905.05021 Theorem1.1 starts from a non-Markovian equation obtained by truncating BBGKY and uses near-Maxwellian data and a specified interaction potential. It is not a derivation from all interactions of the stated Newtonian particle hierarchy. Linear tagged-particle and kinetic grazing-collision limits do not settle this nonlinear full-particle limit.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1905.05021",
+      "locator": "Introduction equations1.1–1.8, Theorem1.1",
+      "body_inspected": true
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022039621001236",
+      "locator": "Published abstract confirms truncated hierarchy",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Landau\" \"weak coupling\" \"2026\" full BBGKY particles",
+    "\"Landau\" \"weak-coupling\" \"2026\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Landau",
+        "weak-coupling"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-09-14-000007",
+          "title": "Robin1984"
+        },
+        {
+          "id": "PALOMAR-2026-08-19-000007",
+          "title": "stalex444/pdt-lean"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Landau",
+        "weak-coupling"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00688v2",
+          "title": "The Riemann hypothesis as a margin: a two-sided criterion verified to 2*10^29, the fourth-moment anatomy of Mobius cancellation, and one constant seen from every side"
+        },
+        {
+          "id": "hexagon:2610.00545v1",
+          "title": "The missing Lin(ni)k"
+        },
+        {
+          "id": "hexagon:2610.00512v1",
+          "title": "The continuum limit of three-dimensional SU(2) lattice Yang–Mills theory on a torus V: Short-distance and weak-coupling asymptotics"
+        },
+        {
+          "id": "hexagon:2610.00466v2",
+          "title": "Exceptional zeros of Hecke $L$-functions"
+        },
+        {
+          "id": "hexagon:2610.00461v1",
+          "title": "An explicit elementary proof of no Landau--Siegel zeros"
+        },
+        {
+          "id": "hexagon:2610.00451v1",
+          "title": "Small algebraic integers and Frobenius prime sums"
+        },
+        {
+          "id": "hexagon:2610.00409v2",
+          "title": "A Frobenius determinant proof of the non-existence of Landau–Siegel zeros"
+        },
+        {
+          "id": "hexagon:2610.00311v2",
+          "title": "On Landau--Siegel zeros"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "160",
+  "manifest_index": 126,
+  "original_target": {
+    "id": "160",
+    "title": "Sharp enstrophy-limited heat transport in two dimensions",
+    "area": "Heat transfer and flow optimization",
+    "file": "problems/160-two-dimensional-wall-transport.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "1d188bcf04a3e6a8e12c0be8c73406959f159b27873a0fe3eb6a3f42ff11dcee",
+    "statement_sha256": "6a84f501e843fa22bc1247ffabd044a5e5e58e9a61ca171d87b6fff83cc85f50",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1d188bcf04a3e6a8e12c0be8c73406959f159b27873a0fe3eb6a3f42ff11dcee",
+  "statement_sha256": "6a84f501e843fa22bc1247ffabd044a5e5e58e9a61ca171d87b6fff83cc85f50",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:34:39.364787+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual Kumar2205.03367 Theorem1.1 removes the logarithm only in the steady THREE-dimensional class; Remark1.4 explicitly keeps the two-dimensional question open. Two-dimensional computations and separable-ansatz upper bounds do not produce the requested full Pe^(2/3) lower bound.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2205.03367",
+      "locator": "Theorem1.1 and Remark1.4",
+      "body_inspected": true
+    },
+    {
+      "url": "https://sandreza.github.io/files/wall-to-wall-optimal-transport-in-two-dimensions.pdf",
+      "locator": "Conclusion questions and logarithmic gap",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"wall-to-wall\" \"two-dimensional\" 2026 optimal transport logarithmic",
+    "\"two dimensional\" \"wall-to-wall\" \"2026\" logarithmic"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "wall-to-wall",
+        "heat transport"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "wall-to-wall",
+        "heat transport"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

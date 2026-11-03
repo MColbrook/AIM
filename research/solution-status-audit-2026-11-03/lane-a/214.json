@@ -1,0 +1,51 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "214",
+  "manifest_index": 164,
+  "source_sha256": "e6b38d338cbf4c94ad0b2dc74d749dedb9b547da978cb76559cf72250b002c40",
+  "statement_sha256": "18d15815955830f7173f57b54a8d447d01fdf63edef0955314316ba749f2849f",
+  "original_target": {
+    "id": "214",
+    "title": "Optimal spectral signings of regular graphs",
+    "area": "Spectral graph theory / network design",
+    "file": "problems/214-bilu-linial-signing.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: negative",
+    "proof": "https://arxiv.org/pdf/2609.15591v4",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md",
+    "group": "spectral3",
+    "source_sha256": "e6b38d338cbf4c94ad0b2dc74d749dedb9b547da978cb76559cf72250b002c40",
+    "statement_sha256": "18d15815955830f7173f57b54a8d447d01fdf63edef0955314316ba749f2849f",
+    "state": "unreviewed"
+  },
+  "full_local_statement_read": true,
+  "reviewed_UTC": "2026-11-03T12:18:12.134921+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "pre-existing-complete-claim-current-scope-reviewed",
+  "recommended_status": "Solved",
+  "answer": "Negative announcement; unverified",
+  "scope_comparison": "The finite connected simple cubic graph F in Theorem1.1 has signed adjacency norm>2sqrt2 for every edge signing. That disproves the universal two-sided bound at d3. Its failure to be a Ramanujan base graph does not weaken this counterexample because the local statement does not assume that restriction. A one-sided signing theorem would not suffice.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/2609.15591v4",
+      "locator": "Theorem1.1, currentv4",
+      "body_inspected": true,
+      "receipt": {
+        "id": "214",
+        "url": "https://arxiv.org/pdf/2609.15591v4",
+        "PDF_sha256": "a1d88ecde778c61af059f4d41ba94e31d3150cbfd782cef84c2ed77245b49430",
+        "PDF_bytes": 504548,
+        "PDF_saved": false,
+        "UTC": "2026-11-03T12:09:50.275928+00:00"
+      },
+      "extracted_text": "../_sources/214-primary-text.txt"
+    }
+  ],
+  "search_scope": "Individual named/mathematical primary-host searches plus exact-source correction/withdrawal queries and current Palomar/Hexagon metadata. No universal search completeness is asserted.",
+  "known_gap_check": "No concrete defeating gap established by this bounded scope review. Entire external proof and essential certificates remain unverified.",
+  "verification": "Exact original target compared with actual primary theorem/model body and required reduction. No local kernel, numerical-certificate or full proof replay.",
+  "additional_qualification": null,
+  "canonical_update_required": true
+}

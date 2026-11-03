@@ -1,0 +1,41 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 292,
+  "source_sha256": "3d37b1eab7b863d838c4039b80656fc674da600f27f68b7eb13dba3c6246e549",
+  "statement_sha256": "711efa10ff08d3b8a81f4c1c630899aefec7e2bea6ee403a7928c63d5722bfd1",
+  "original_target": {
+    "id": "357",
+    "title": "Scattering of arbitrary small energy data for the three-dimensional Zakharov system",
+    "area": "Plasma physics; dispersive asymptotics",
+    "file": "problems/357-zakharov-small-energy-scattering.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "3d37b1eab7b863d838c4039b80656fc674da600f27f68b7eb13dba3c6246e549",
+    "statement_sha256": "711efa10ff08d3b8a81f4c1c630899aefec7e2bea6ee403a7928c63d5722bfd1",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "357",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Zakharov\" \"small energy\" \"nonradial\" 2026",
+    "\"Zakharov\" \"small energy\" scattering site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.14993v1",
+      "version": "v1 15 August 2026; current abs only v1",
+      "locators": "introduction immediately before first-order equation 1.4; radial energy space and main theorems",
+      "body_inspected": true,
+      "scope": "Explicitly retains nonradial 3D small energy scattering; theorem uses radial data. Angular-regular variants and 4D nonradial theorem distinguished."
+    }
+  ],
+  "registry_checks": "Palomar Zakharov alias only EGZ combinatorics; Hexagon/OpenAI no matching PDE alias. arXiv, Zenodo, HAL, GitHub, primary author/publisher searches executed.",
+  "scope_comparison": "Original requires all unweighted small H1 x L2 x homogeneous H−1 data without radial/angular restrictions and scattering in both directions. Constructing final-state wave operators alone does not prove arbitrary initial small-data scattering.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Current primary theorem/intro preserves the excluded extra restrictions."
+}

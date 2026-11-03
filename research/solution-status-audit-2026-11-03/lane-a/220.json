@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "220",
+  "manifest_index": 168,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "220",
+    "title": "Finiteness of interior defects in Oseen–Frank minimizers",
+    "area": "Liquid-crystal continuum mechanics",
+    "file": "problems/220-oseen-frank-interior-defects.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "diffusion-materials",
+    "source_sha256": "4ce5761441e04e623c8c35eb1f6adb87e4b03ad00ddbddb60168e60681a2cd1f",
+    "statement_sha256": "c221c86d6850497c56a812b6e670ee1353787784f6d1613f8474495ebf7dc983",
+    "state": "unreviewed"
+  },
+  "source_sha256": "4ce5761441e04e623c8c35eb1f6adb87e4b03ad00ddbddb60168e60681a2cd1f",
+  "statement_sha256": "c221c86d6850497c56a812b6e670ee1353787784f6d1613f8474495ebf7dc983",
+  "actual_source_sha256": "4ce5761441e04e623c8c35eb1f6adb87e4b03ad00ddbddb60168e60681a2cd1f",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^3`$ be a bounded smooth domain, let $`g:\\partial\\Omega\\to\\mathbb S^2`$ be smooth with a nonempty $`H^1`$ extension class, and let $`k_1,k_2,k_3>0`$. For $`n\\in H^1(\\Omega;\\mathbb S^2)`$ with trace $`g`$, set\n\n```math\nE(n)=\\frac12\\int_\\Omega\\left[k_1(\\mathop{\\mathrm{div}}\\nolimits n)^2+k_2(n\\cdot\\mathop{\\mathrm{curl}}\\nolimits n)^2+k_3|n\\times\\mathop{\\mathrm{curl}}\\nolimits n|^2\\right]dx.\n```\n\nFor every global minimizer, is its interior singular set locally finite? Here a point is singular if no neighborhood admits a smooth representative of $`n`$; locally finite means that every compact subset of $`\\Omega`$ contains only finitely many such points.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Oseen Frank\" \"interior\" \"locally finite\" 2026",
+    "\"Oseen Frank\" \"interior\" \"locally finite\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Oseen Frank\" \"interior\" \"locally finite\" (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Section1.1–1.2,Theorem1.1,PDFpp1–2",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/pdf/2608.22287",
+      "version_or_date": "arXiv:2608.22287v1,23August2026,onlyversion",
+      "scope_comparison": "The exact target asks locally finite interior singularities of every minimizer for arbitrary positive k1,k2,k3. Actual2026Theorem1.1 proves smoothness in a full boundary collar, with no assertion of discreteness/finiteness of the remaining interior set. Its introduction separates isolated-interior-singularity and boundary questions. Equal-constant harmonic-map results do not cover arbitrary anisotropy. No later full matching theorem/announcement was found. PDFrecovers unavailableHTML."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The exact target asks locally finite interior singularities of every minimizer for arbitrary positive k1,k2,k3. Actual2026Theorem1.1 proves smoothness in a full boundary collar, with no assertion of discreteness/finiteness of the remaining interior set. Its introduction separates isolated-interior-singularity and boundary questions. Equal-constant harmonic-map results do not cover arbitrary anisotropy. No later full matching theorem/announcement was found. PDFrecovers unavailableHTML.",
+  "latest_version_check": "arXiv:2608.22287v1,23August2026,onlyversion",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1026",
+  "manifest_index": 870,
+  "checked_date": "2026-11-03",
+  "source_sha256": "164e2155b8f5e5987e281240dd550e6b9938d09dd9d2db67c84aa2808c9175b5",
+  "statement_sha256": "c95b3258aab54332a200976bec71731480b5fec1303e5d21466be9057fcc4709",
+  "original_target": {
+    "id": "1026",
+    "title": "Steklov zeros in a fixed boundary collar",
+    "area": "Spectral theory and spectral geometry",
+    "file": "problems/1026-steklov-zeros-in-a-fixed-boundary-collar.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b3f3a912668a85e3",
+    "group": "spectral",
+    "source_sha256": "164e2155b8f5e5987e281240dd550e6b9938d09dd9d2db67c84aa2808c9175b5",
+    "statement_sha256": "c95b3258aab54332a200976bec71731480b5fec1303e5d21466be9057fcc4709",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`d\\ge2`$ and let $`\\Omega\\subset\\mathbb R^d`$ be a bounded connected Lipschitz domain. A real weak Steklov eigenfunction of positive eigenvalue $`\\sigma`$ is a nonzero $`u\\in H^1(\\Omega;\\mathbb R)`$ satisfying\n```math\n\\int_\\Omega \\nabla u\\cdot\\nabla v\\,dx\n =\\sigma\\int_{\\partial\\Omega}\\mathrm{Tr}u\\mathrm{Tr}v\\,d\\mathcal H^{d-1}\n \\qquad(v\\in H^1(\\Omega;\\mathbb R)).\n```\n\nIt is harmonic in the interior. Use its harmonic representative to define\n$`Z_u=\\{y\\in\\Omega:u(y)=0\\}`$, and write\n```math\n\\Omega_\\delta=\\{x\\in\\Omega:\\mathrm{dist}(x,\\partial\\Omega)<\\delta\\}.\n```\n\n\n**Problem.** Do there exist constants $`\\delta_\\Omega>0`$ and $`C_\\Omega>0`$, depending only on the fixed domain, such that for every such eigenpair and every $`x\\in\\Omega_{\\delta_\\Omega}`$,\n```math\nB(x,C_\\Omega/\\sigma)\\cap Z_u\\ne\\varnothing?\n```\n\nThe collar width must be independent of the eigenvalue. The assertion concerns every real eigenfunction, including arbitrary directions in a multiple eigenspace. Balls may meet the exterior, but their required zeros lie inside $`\\Omega`$.",
+  "full_original_page": "# 1026. Steklov zeros in a fixed boundary collar\n\n**Area:** Spectral theory and spectral geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`d\\ge2`$ and let $`\\Omega\\subset\\mathbb R^d`$ be a bounded connected Lipschitz domain. A real weak Steklov eigenfunction of positive eigenvalue $`\\sigma`$ is a nonzero $`u\\in H^1(\\Omega;\\mathbb R)`$ satisfying\n```math\n\\int_\\Omega \\nabla u\\cdot\\nabla v\\,dx\n =\\sigma\\int_{\\partial\\Omega}\\mathrm{Tr}u\\mathrm{Tr}v\\,d\\mathcal H^{d-1}\n \\qquad(v\\in H^1(\\Omega;\\mathbb R)).\n```\n\nIt is harmonic in the interior. Use its harmonic representative to define\n$`Z_u=\\{y\\in\\Omega:u(y)=0\\}`$, and write\n```math\n\\Omega_\\delta=\\{x\\in\\Omega:\\mathrm{dist}(x,\\partial\\Omega)<\\delta\\}.\n```\n\n\n**Problem.** Do there exist constants $`\\delta_\\Omega>0`$ and $`C_\\Omega>0`$, depending only on the fixed domain, such that for every such eigenpair and every $`x\\in\\Omega_{\\delta_\\Omega}`$,\n```math\nB(x,C_\\Omega/\\sigma)\\cap Z_u\\ne\\varnothing?\n```\n\nThe collar width must be independent of the eigenvalue. The assertion concerns every real eigenfunction, including arbitrary directions in a multiple eigenspace. Balls may meet the exterior, but their required zeros lie inside $`\\Omega`$.\n\n## Application\n\nThese harmonic modes describe media with a boundary spectral load. The proposed estimate identifies a region where sign oscillations persist at the boundary wavelength even when the mode's amplitude is small. It would help specify the spatial resolution needed to capture nodal interfaces near a boundary.\n\n## References\n\n1. S. Decio, *Nodal sets of Steklov eigenfunctions near the boundary: Inner radius estimates*, International Mathematics Research Notices **2022** (21), 16709–16729, [doi:10.1093/imrn/rnab198](https://doi.org/10.1093/imrn/rnab198). The precise proposed strengthening appears in Remark (ii) following Theorem 1, [arXiv:2102.05549v2, p. 3](https://arxiv.org/pdf/2102.05549v2#page=3).\n2. O. Bruno and J. Galkowski, *Domains without dense Steklov nodal sets*, Journal of Fourier Analysis and Applications **26** (2020), article 45, [doi:10.1007/s00041-020-09753-7](https://doi.org/10.1007/s00041-020-09753-7); [primary author manuscript](https://www.homepages.ucl.ac.uk/~ucahalk/BandLimitedSteklov.pdf).\n3. M. Mukherjee, *Wavelength-scale optional stopping, critical Feynman–Kac gauges, and capacitary spectral inequalities*, [arXiv:2608.15650v1](https://arxiv.org/html/2608.15650v1), §8.2–8.3, especially Theorems 8.3 and 8.5.\n\n## Status review\n\n\n**Known cases:** The collar width is fixed independently of frequency. Boundary-centered nodal density and estimates in shrinking collars do not give this fixed-width assertion; the known global non-density examples do not decide a sufficiently small collar.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe collar width is fixed independently of frequency. Boundary-centered nodal density and estimates in shrinking collars do not give this fixed-width assertion; the known global non-density examples do not decide a sufficiently small collar.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nDecio proves wavelength density for balls centered exactly on the boundary and explicitly suggests the fixed-collar extension above. The global density conjecture has counterexamples, but the cited construction leaves a sufficiently small fixed collar undecided. The 2026 norm estimates use collars whose widths shrink as $`\\sigma^{-1}`$; they do not assert the displayed fixed-collar zero-density estimate.\n\nChecks through 17 October 2026 have not located a complete resolution of this statement. All-status AIM and current announcement comparisons distinguish it from interior nodal-volume estimates, amplitude decay, and boundary nodal-component counts. The review record retains precise version and access limits; this is a literature check, not a proof of openness. [Review packet](../FURTHER_problems/_tracking/parallel/rough-filtering/collar-density-review.json).\n\nThe independent selected-primary audit confirmed the full Lipschitz formulation. All15 returned windows from the186-page combined catalogue scan were read; none stated an equivalent target. These are listing-description checks, without certification of mission proofs. The final21-page IMRN body has not been compared with the19-page author version.\n\n[Independent audit](../FURTHER_problems/_tracking/parallel/continuum/cross-collar-density-review.json), [catalogue comparison](../FURTHER_problems/_tracking/parallel/rough-filtering/collar-density-prove2-0115-review.json) and [coordinator review](../FURTHER_problems/_tracking/collar-density-coordinator-review-2026-10-17.json) retain exact assumptions, versions and bounded search evidence.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-b3f3a912668a85e3**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Steklov fixed collar",
+    "nodal localization",
+    "Xie",
+    "Decio"
+  ],
+  "outcome": "full",
+  "review_level": "primary_body_and_search",
+  "resolution_type": "negative counterexample; complete matching unverified announcement",
+  "searches": [
+    {
+      "query": "\"Steklov\" \"fixed collar\" nodal 2026"
+    },
+    {
+      "query": "\"Steklov\" \"fixed collar\" nodal",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    },
+    {
+      "query": "Steklov nodal density fixed boundary collar Decio 2026"
+    },
+    {
+      "query": "\"Steklov\" \"collar\" \"zeros\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    },
+    {
+      "query": "\"2610.28391\" gap correction withdrawn"
+    },
+    {
+      "query": "\"Xie\" \"Zhang\" \"nodal\" \"Steklov\" \"fixed collar\""
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2610.28391",
+      "version": "v2",
+      "date": "2026-11-01",
+      "locator": "current submission history; firstv1 20October2026; no withdrawal notice"
+    },
+    {
+      "url": "https://arxiv.org/html/2610.28391v2",
+      "version": "v2",
+      "date": "2026-11-01",
+      "locator": "Theorem1.2 equation1.9; Section4.3 Lemma4.4 equation4.26, Lemma4.5 equations4.30–4.31 and final proofofTheorem1.2",
+      "access": "Web HTML/PDF cache misses; public GET-only Invoke-WebRequest recovered latest HTML in RAM; actual theorem and complete Section4.3 inspected, no external PDF saved."
+    }
+  ],
+  "scope_comparison": "COMPLETE negative match. Latestv2 constructs ONE fixed bounded simply connected Euclidean planar domain Ω with C∞ boundary, real harmonic functions v_j satisfying ordinary unweighted ∂νv_j=σ_jv_j, σ_j>2^(j−1)→∞. Lemma4.4 gives zero-free disk |z|<=1−1/(j+1) for a common smooth positive weight. Lemma4.5 realizes it with one injective smooth conformal F,7/8<=|F'|<=9/8. Final proof explicitly proves every interior zero y of v_j satisfies dist(y,∂Ω)<=9/[8(j+1)]. Smooth bounded domain is Lipschitz and d=2 is permitted in universal target.",
+  "deduction": "For ANY proposed fixed collar δ>0 choose x∈Ω with0<d0=dist(x,∂Ω)<δ. Distance-to-boundary is1-Lipschitz, so for ANY y∈Z_vj, |x−y|>=d0−dist(y,∂Ω)>=d0−9/[8(j+1)]. For largej this is>=d0/2, while C/σ_j<d0/2 for ANY fixedC. Thus B(x,C/σ_j) contains no interior zero. This directly disproves the exact all-domain/all-eigenfunction fixed-width collar assertion. An independent alternative is that sublinear total nodal length contradicts fixed-collar wavelength density by packing harmonic nodal arcs, but direct v2 localization avoids that extra argument.",
+  "known_gap_check": "Latest official v2 supersedes v1; theorem1.2 retained and Section4.3 now explicitly records localization. Focused gap/correction/withdrawal search found no public retraction or known gap; this is bounded, not proof certification. The source proof has been inspected at the claimed theorem/construction level, not independently verified in full.",
+  "recommendation": "Mark Solved (disproved), explicitly qualified as an UNVERIFIED ANNOUNCEMENT of Xie–Zhang, arXiv2610.28391v2,1November2026. Preserve full original target. Cite Theorem1.2 and Section4.3 localization with the displayed distance argument.",
+  "suggested_status_text": "Solved (disproved; unverified announcement). Xie and Zhang, arXiv:2610.28391v2 (1November2026), Theorem1.2 and Section4.3 announce one fixed smooth bounded simply connected planar domain and ordinary real Steklov eigenfunctions with σ_j→∞ whose entire interior zero sets lie within9/[8(j+1)] of the boundary. Every fixed positive-width collar contains a point at positive boundary distance; its distance from these zero sets stays positive along the sequence, contradicting the proposed CΩ/σ_j bound. The announced proof has not been independently certified.",
+  "limitations": "This status follows user instruction to count complete matching announcements, with explicit unverified-announcement qualification. It does not assert peer review or independent proof certification.",
+  "announcement_routing": {
+    "localID": "1026",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Steklov fixed collar",
+          "nodal localization",
+          "Xie",
+          "Decio"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-28-000014",
+            "title": "The Critical 2D KPZ Process",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-28-000014-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Steklov fixed collar",
+          "nodal localization",
+          "Xie",
+          "Decio"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00297v1",
+            "title": "Bounds for Erdős Problem #188: $7\\le k\\le 60$",
+            "url": "https://hexagonmath.org/abs/2610.00297v1"
+          },
+          {
+            "id": "hexagon:2610.00286v1",
+            "title": "Gallai's conjecture with two exceptional even vertices",
+            "url": "https://hexagonmath.org/abs/2610.00286v1"
+          },
+          {
+            "id": "hexagon:2610.00260v2",
+            "title": "Stable algebraic families of polarized dynamical systems and exceptional extensions",
+            "url": "https://hexagonmath.org/abs/2610.00260v2"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Steklov fixed collar",
+        "nodal localization",
+        "Xie",
+        "Decio"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "The KPZ, finite Erdos/Gallai graph and algebraic-dynamics routing hits are unrelated. Full target counterexample is arXiv2610.28391v2, inspected separately; no matching claim is inferred from these hits.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.763Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

@@ -1,0 +1,102 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1035",
+  "manifest_index": 879,
+  "checked_date": "2026-11-03",
+  "source_sha256": "f5c1e7be7f7323681fb273c65a803616bc8e3b2098540dab799d3a6259352606",
+  "statement_sha256": "62ec5b2df5f116a96acafddebc5e31f91eb4b42562577c41766ecf35a580912b",
+  "original_target": {
+    "id": "1035",
+    "title": "Do matrix local-mass bounds imply Stahl–Totik regularity?",
+    "area": "Spectral theory and matrix orthogonal polynomials",
+    "file": "problems/1035-do-matrix-local-mass-bounds-imply-stahltotik-regularity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-fbfaae302efa3887",
+    "group": "spectral",
+    "source_sha256": "f5c1e7be7f7323681fb273c65a803616bc8e3b2098540dab799d3a6259352606",
+    "statement_sha256": "62ec5b2df5f116a96acafddebc5e31f91eb4b42562577c41766ecf35a580912b",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`E`$ be a finite union of disjoint closed intervals in $`\\mathbb R`$, and let $`\\mu`$ be an $`\\ell\\times\\ell`$ positive matrix-valued measure with associated block Jacobi matrix having essential spectrum $`E`$. For $`\\eta>0`$ and positive integers $`m`$, put\n\n```math\nS_{m,\\eta}=\\left\\{x:\\mu\\!\\left([x-m^{-1},x+m^{-1}]\\right)\\succeq e^{-\\eta m}I_\\ell\\right\\}.\n```\n\n\nSuppose $`|E\\setminus S_{m,\\eta}|\\to0`$ as $`m\\to\\infty`$ for every $`\\eta>0`$, where $`|\\cdot|`$ is Lebesgue measure and $`\\succeq`$ is the positive-semidefinite order. **Must $`\\mu`$ be regular?** In the source's notation, this means the determinant of the off-diagonal block Jacobi coefficients obeys\n\n```math\n\\lim_{n\\to\\infty}\\bigl|\\det(A_1\\cdots A_n)\\bigr|^{1/n}=\\mathrm{Cap}(E)^\\ell.\n```\n\n\nThis is Conjecture 5.9 of Damanik, Pushnitski and Simon. Their scalar direct-sum case follows from an existing Stahl–Totik theorem; the conjecture asks about general matrix measures.",
+  "full_original_page": "# 1035. Do matrix local-mass bounds imply Stahl–Totik regularity?\n\n**Area:** Spectral theory and matrix orthogonal polynomials\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`E`$ be a finite union of disjoint closed intervals in $`\\mathbb R`$, and let $`\\mu`$ be an $`\\ell\\times\\ell`$ positive matrix-valued measure with associated block Jacobi matrix having essential spectrum $`E`$. For $`\\eta>0`$ and positive integers $`m`$, put\n\n```math\nS_{m,\\eta}=\\left\\{x:\\mu\\!\\left([x-m^{-1},x+m^{-1}]\\right)\\succeq e^{-\\eta m}I_\\ell\\right\\}.\n```\n\n\nSuppose $`|E\\setminus S_{m,\\eta}|\\to0`$ as $`m\\to\\infty`$ for every $`\\eta>0`$, where $`|\\cdot|`$ is Lebesgue measure and $`\\succeq`$ is the positive-semidefinite order. **Must $`\\mu`$ be regular?** In the source's notation, this means the determinant of the off-diagonal block Jacobi coefficients obeys\n\n```math\n\\lim_{n\\to\\infty}\\bigl|\\det(A_1\\cdots A_n)\\bigr|^{1/n}=\\mathrm{Cap}(E)^\\ell.\n```\n\n\nThis is Conjecture 5.9 of Damanik, Pushnitski and Simon. Their scalar direct-sum case follows from an existing Stahl–Totik theorem; the conjecture asks about general matrix measures.\n\n## Application\n\nThe proposed criterion would let local spectral-mass information establish the large-degree asymptotics of matrix orthogonal polynomials and their block Jacobi parameters.\n\n## References\n\n- D. Damanik, A. Pushnitski and B. Simon, [*The Analytic Theory of Matrix Orthogonal Polynomials*](https://surveys-in-approximation-theory.com/papers/11/11.pdf), *Surveys in Approximation Theory* **4** (2008), 1–85. See printed pp. 68–72, especially (5.1), Theorem 5.4 and Conjecture 5.9; [publisher record](https://surveys-in-approximation-theory.com/papers/11/index.html).\n\n## Status review\n\n\n**Known cases:** The local matrix-mass condition must imply determinant regularity for general matrix measures. Scalar direct sums, other matrix regularity criteria and GMP Cesaro-Nevai results do not establish it.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe local matrix-mass condition must imply determinant regularity for general matrix measures. Scalar direct sums, other matrix regularity criteria and GMP Cesaro-Nevai results do not establish it.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe original paper proves matrix regularity criteria and notes the direct-sum special case, but leaves the general local-mass implication as Conjecture 5.9. The later [GMP-matrix regularity paper](https://arxiv.org/abs/2008.11884) proves a different Cesàro–Nevai conjecture, and the [2025 habilitation account](https://benjamineichinger.eu/pdf/habilitation.pdf) does not announce this exact implication. Bounded searches through 22 October 2026 found no matching complete proof, counterexample or announcement; this negative result is not exhaustive. The [publisher-PDF body receipt](../FURTHER_problems/_tracking/parallel/complex-bayesian/journal-primary-body-second-pass-0679-J321-remote-pdf-body-review.json), [scope/status audit](../FURTHER_problems/_tracking/matrix-stahl-totik-2026-10-22-status.json) and [duplicate audit](../FURTHER_problems/_tracking/matrix-stahl-totik-2026-10-22-duplicates.json) record the checks.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-fbfaae302efa3887**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "matrix local-mass",
+    "matrix Remez",
+    "Stahl-Totik",
+    "Pushnitski"
+  ],
+  "searches": [
+    {
+      "query": "\"matrix\" \"Stahl\" \"Totik\" \"Conjecture 5.9\""
+    },
+    {
+      "query": "\"matrix\" \"Stahl-Totik\" regularity 2026 Zenodo HAL GitHub"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www2.math.ethz.ch/EMIS/journals/SAT/papers/11/11.pdf",
+      "date": "2008",
+      "locator": "Section5.6 printedp72 Conjecture5.9; same full statement in UT authorPDF07-278 printedp81"
+    },
+    {
+      "url": "https://arxiv.org/abs/2008.11884",
+      "locator": "primary abstract: regular GMP matrices characterization implies a Cesaro–Nevai conjecture"
+    }
+  ],
+  "scope_comparison": "Source still distinguishes general positive matrix measures from scalar direct sums and calls for matrix Remez. GMP Cesaro–Nevai theorem and 2025 continuum Schrodinger regularity use different conditions/models and do not prove the local PSD interval-mass implication for every eta. No matching later full claim found.",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded current literature and announcement searches do not establish continued openness. Restricted results were compared at the stated locators; no full proof certification claimed.",
+  "announcement_routing": {
+    "localID": "1035",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "matrix local-mass",
+          "matrix Remez",
+          "Stahl-Totik",
+          "Pushnitski"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "matrix local-mass",
+          "matrix Remez",
+          "Stahl-Totik",
+          "Pushnitski"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "matrix local-mass",
+        "matrix Remez",
+        "Stahl-Totik",
+        "Pushnitski"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

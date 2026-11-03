@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "279",
+  "manifest_index": 222,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "279",
+    "title": "A constant approximation for general max-min fair allocation",
+    "area": "Fair allocation of indivisible resources",
+    "file": "problems/279-general-santa-claus.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "22bf8a1c1e140427b8925d323c5e2e397eda7c086174a789135bea49afc4e8ea",
+    "statement_sha256": "f6178495215abf8f734d04090e793e5f5c10f9da09d3fe6621bea31b456a797f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "22bf8a1c1e140427b8925d323c5e2e397eda7c086174a789135bea49afc4e8ea",
+  "statement_sha256": "f6178495215abf8f734d04090e793e5f5c10f9da09d3fe6621bea31b456a797f",
+  "actual_source_sha256": "22bf8a1c1e140427b8925d323c5e2e397eda7c086174a789135bea49afc4e8ea",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Given $`m`$ agents, $`n`$ indivisible items and nonnegative rational values $`v_{ij}`$, partition the items into sets $`A_1,\\ldots,A_m`$. Define $`V(A)=\\min_i\\sum_{j\\in A_i}v_{ij}`$ and $`V^*=\\max_A V(A)`$. Does an absolute $`C<\\infty`$ and a polynomial-time algorithm exist that always produces $`V(A)\\ge V^*/C`$? Polynomial time is measured in the binary encoding length; a randomized algorithm with success probability at least $`2/3`$ is allowed. Values are arbitrary, not restricted to a common item value or zero.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"general Santa Claus\" constant approximation 2026",
+    "\"general Santa Claus\" constant approximation (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"general Santa Claus\" constant approximation (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Section5.1.3 OpenProblem5 and following restrictedSantaClaus discussion; BamasTheorem1",
+      "scope_comparison": "The current survey explicitly retains constant approximation for arbitrary egalitarian additive values as OpenProblem5. Following constant-factor algorithms require each item to have either a common value or zero. The Bamas reduction is conditional on a better-than-two unrelated-makespan algorithm; it supplies neither premise nor unrestricted general allocation algorithm. No complete match found.",
+      "url": "https://link.springer.com/article/10.1007/s10288-026-00628-z",
+      "version_or_date": "Final4OR2026primarysurvey,current body."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The current survey explicitly retains constant approximation for arbitrary egalitarian additive values as OpenProblem5. Following constant-factor algorithms require each item to have either a common value or zero. The Bamas reduction is conditional on a better-than-two unrelated-makespan algorithm; it supplies neither premise nor unrestricted general allocation algorithm. No complete match found.",
+  "latest_version_check": "Final4OR2026primarysurvey,current body.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

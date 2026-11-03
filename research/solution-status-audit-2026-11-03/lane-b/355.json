@@ -1,0 +1,48 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 290,
+  "source_sha256": "820c6875c144d4ebacd1346359f07428d3dcaad6403311a819319c6e0bf9e35f",
+  "statement_sha256": "7b959aeed605fee05b8bb6cd4080674130bad1b819d4edc23d52640f5470277c",
+  "original_target": {
+    "id": "355",
+    "title": "Global smooth Schrödinger maps below the degree-zero energy threshold",
+    "area": "Ferromagnetism; geometric dispersive PDEs",
+    "file": "problems/355-schrodinger-map-threshold.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "820c6875c144d4ebacd1346359f07428d3dcaad6403311a819319c6e0bf9e35f",
+    "statement_sha256": "7b959aeed605fee05b8bb6cd4080674130bad1b819d4edc23d52640f5470277c",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "355",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Schrodinger maps\" \"8 pi\" threshold 2026 global",
+    "\"Schrödinger maps\" \"threshold\" site:zenodo.org OR site:hal.science OR site:github.com 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://www.numdam.org/item/10.5802/jedp.92.pdf",
+      "version": "Tataru 2012 primary exposition",
+      "locators": "section 5, Conjecture 3; Theorems 4–5",
+      "body_inspected": true,
+      "scope": "Strong threshold in zero homotopy, equivariant cases distinct."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2601.03576v1",
+      "version": "v1 7 January 2026",
+      "locators": "equation 1.1; Theorem 1.1",
+      "body_inspected": true,
+      "scope": "Small critical norm Ishimori/hyperbolic-elliptic coupled system, not all non-equivariant isotropic sphere maps below 8pi."
+    }
+  ],
+  "registry_checks": "No Schrodinger/Schrödinger-map alias Palomar/Hexagon/OpenAI metadata. Focused current scholarly and repository searches executed.",
+  "scope_comparison": "Target all smooth degree-zero energy<8pi data on R2, no rotational symmetry or extra spacetime bound, conservative isotropic elliptic Laplacian equation. Small critical norm, equivariant theory, conditional L4 spacetime criteria or Ishimori coupling do not cover all such data.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Broad global-wellposedness title has restricted theorem body."
+}

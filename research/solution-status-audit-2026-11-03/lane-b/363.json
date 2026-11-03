@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 298,
+  "source_sha256": "d6dd0606801ff57f917c41cb6dc5041d89a45becc9466648528fa05fbf9c4fec",
+  "statement_sha256": "b56dd9e8638c7bc741b90484e120c9818b914f75123190774505117ee73627bf",
+  "original_target": {
+    "id": "363",
+    "title": "Are bounded ancient Landau–Coulomb distributions necessarily Maxwellians?",
+    "area": "Plasma collisions; kinetic regularity",
+    "file": "problems/363-landau-ancient-liouville.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "d6dd0606801ff57f917c41cb6dc5041d89a45becc9466648528fa05fbf9c4fec",
+    "statement_sha256": "b56dd9e8638c7bc741b90484e120c9818b914f75123190774505117ee73627bf",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "363",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Landau\" \"ancient\" \"Liouville\" 2026 Maxwellian",
+    "\"Landau\" \"Liouville\" \"ancient\" site:arxiv.org",
+    "\"ancient\" \"Landau\" site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2204.06401v1",
+      "version": "v1 13 April 2022",
+      "locators": "Conjecture 7.5 and preceding blowup-limit discussion",
+      "body_inspected": true,
+      "scope": "Exact bounded ancient homogeneous Coulomb class with timewise weighted L1−1, no finite mass/energy."
+    },
+    {
+      "url": "https://arxiv.org/html/2401.06939v3",
+      "version": "v3 8 May 2025",
+      "locators": "Open Problems second item; Theorem 0.3",
+      "body_inspected": true,
+      "scope": "Finite weighted integrability/Fisher information global existence does not classify locally finite-mass bounded ancient solutions."
+    },
+    {
+      "url": "https://arxiv.org/html/2608.13758v1",
+      "version": "v1 13 August 2026",
+      "locators": "equation 1.1; Theorem 1.4 and ensuing limitation",
+      "body_inspected": true,
+      "scope": "Krieger–Strain isotropic model; explicitly says rigidity proof uses nonconservation of energy and does not apply to actual Landau."
+    }
+  ],
+  "registry_checks": "Palomar/Hexagon/OpenAI full metadata checked for ancient/kinetic/Landau aliases; no matching claim. Current arXiv, author/publisher, Zenodo, HAL, GitHub searches.",
+  "scope_comparison": "Original includes possible infinite mass/energy and all backward times; finite-mass global Cauchy regularity, near-Maxwellian linear stability and isotropic stationary rigidity do not settle it.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Actual August rigidity theorem explicitly has a different operator."
+}

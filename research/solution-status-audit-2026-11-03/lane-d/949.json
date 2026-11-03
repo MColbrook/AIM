@@ -1,0 +1,113 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "949",
+  "manifest_index": 793,
+  "checked_date": "2026-11-03",
+  "source_sha256": "bdc0cd6124c5158c471ee8169c93be7a9b674958e456a18849ae8593eb3fe074",
+  "statement_sha256": "a83a8f0515863bc9152341f2c93ca553ae4d55616ed07e7b2dd0c6c2d2e3ed00",
+  "original_target": {
+    "id": "949",
+    "title": "Does a smooth target make energy-minimal planar deformations $`C^1`$?",
+    "area": "PDEs, fluids and materials",
+    "file": "problems/949-does-a-smooth-target-make-energy-minimal-planar-deformations-c-1.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8ff0a972febff463",
+    "group": "pdes-materials",
+    "source_sha256": "bdc0cd6124c5158c471ee8169c93be7a9b674958e456a18849ae8593eb3fe074",
+    "statement_sha256": "a83a8f0515863bc9152341f2c93ca553ae4d55616ed07e7b2dd0c6c2d2e3ed00",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`X,Y\\subset\\mathbb C`$ be bounded planar domains with the same finite connectivity. Following Cristina, Iwaniec, Kovalev and Onninen [1, Definitions 1.4 and 1.9], let $`\\mathcal D(X,Y)`$ be their class of orientation-preserving $`W^{1,2}`$ deformations: limits of homeomorphisms $`X\\to Y`$ with the stated boundary-component correspondence and nonoverlap condition. Boundary values are not prescribed pointwise, and a deformation may map some interior points of $`X`$ to $`\\partial Y`$.\n\nFor a Dirichlet-energy minimizer $`h\\in\\mathcal D(X,Y)`$,\n\n```math\nE_X[h]=\\int_X|Dh|^2=\\min_{g\\in\\mathcal D(X,Y)}\\int_X|Dg|^2,\n```\n\n\nmust $`h`$ be $`C^1`$ **in the interior of $`X`$** whenever $`\\partial Y`$ is smooth? This is [1, Question 9.2] in the published version, Question 8.3 in the original preprint. The smoothness of the *target* boundary is the essential hypothesis.\n\nThe authors prove local Lipschitz regularity in general [1, Theorem 1.14]. Their non-$`C^1`$ examples have nonsmooth target boundaries. Their explicit smooth annulus example is $`C^{1,1}`$ but not $`C^2`$, so it does not decide the stated $`C^1`$ question.",
+  "full_original_page": "# 949. Does a smooth target make energy-minimal planar deformations $`C^1`$?\n\n**Area:** PDEs, fluids and materials\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`X,Y\\subset\\mathbb C`$ be bounded planar domains with the same finite connectivity. Following Cristina, Iwaniec, Kovalev and Onninen [1, Definitions 1.4 and 1.9], let $`\\mathcal D(X,Y)`$ be their class of orientation-preserving $`W^{1,2}`$ deformations: limits of homeomorphisms $`X\\to Y`$ with the stated boundary-component correspondence and nonoverlap condition. Boundary values are not prescribed pointwise, and a deformation may map some interior points of $`X`$ to $`\\partial Y`$.\n\nFor a Dirichlet-energy minimizer $`h\\in\\mathcal D(X,Y)`$,\n\n```math\nE_X[h]=\\int_X|Dh|^2=\\min_{g\\in\\mathcal D(X,Y)}\\int_X|Dg|^2,\n```\n\n\nmust $`h`$ be $`C^1`$ **in the interior of $`X`$** whenever $`\\partial Y`$ is smooth? This is [1, Question 9.2] in the published version, Question 8.3 in the original preprint. The smoothness of the *target* boundary is the essential hypothesis.\n\nThe authors prove local Lipschitz regularity in general [1, Theorem 1.14]. Their non-$`C^1`$ examples have nonsmooth target boundaries. Their explicit smooth annulus example is $`C^{1,1}`$ but not $`C^2`$, so it does not decide the stated $`C^1`$ question.\n\n## Application\n\nThese deformations model least-energy mappings of planar elastic sheets without fixing every boundary point. Interior $`C^1`$ regularity would rule out corners in a minimizing deformation when the receiving shape has a smooth boundary, even if parts of the sheet collapse onto it.\n\n## References\n\n1. J. Cristina, T. Iwaniec, L. V. Kovalev and J. Onninen, [*The Hopf-Laplace equation: harmonicity and regularity*](https://journals.sns.it/index.php/annaliscienze/article/download/367/357/586), *Annali della Scuola Normale Superiore di Pisa, Classe di Scienze* (5) **13** (2014), 1145–1187, Definitions 1.4 and 1.9, Theorems 1.14–1.15 and Question 9.2 (printed p. 1185). [Original arXiv:1011.5934v1](https://arxiv.org/pdf/1011.5934v1), Question 8.3.\n2. T. Iwaniec and J. Onninen, [*Mappings of least Dirichlet energy and their Hopf differentials*](https://arxiv.org/abs/1202.1017), arXiv:1202.1017 (2012). Related least-energy mappings and cracks; this is not cited as a resolution of [1, Question 9.2].\n\n## Status review\n\n\n**Known cases:** The deformation class allows cracks to the target boundary and does not prescribe pointwise boundary data. The September 2026 regularity theorem for local obstacle/constraint maps treats a different minimizer class.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe deformation class allows cracks to the target boundary and does not prescribe pointwise boundary data. The September 2026 regularity theorem for local obstacle/constraint maps treats a different minimizer class.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nA [bounded status and duplicate audit](../FURTHER_problems/_tracking/w001-hopf-laplace-smooth-target-regularity-status-2026-10-22.json) through 22 October 2026 found no proof, counterexample or announcement settling this exact smooth-target question. Later regularity results for other constraint-map classes have different admissible mappings and should not be conflated with $`\\mathcal D(X,Y)`$.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-8ff0a972febff463**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Hopf-Laplace",
+    "energy-minimal deformation",
+    "smooth target",
+    "Onninen"
+  ],
+  "queries": [
+    "\"Hopf Laplace\" \"smooth target\" C1 regularity 2026",
+    "\"Hopf Laplace\" \"smooth target\" C1 regularity; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"Hopf-Laplace\" \"regularity\" \"2026\"",
+    "\"energy-minimizing constraint maps\" \"2026\" regularity September"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://journals.sns.it/index.php/annaliscienze/article/download/367/357/586",
+      "locator": "Published2014 Question9.2, printed1185, PDF40; lines2263–2270",
+      "comparison": "Exact smooth-Y deformation-class question; smooth annulus is C1,1 but not C2, and counterexamples use nonsmooth Y."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s44007-026-00209-w",
+      "locator": "30Mar2026, Introduction and Notation/Terminology",
+      "comparison": "Constraint maps minimize among all maps with prescribed boundary values and image constraint outside compact connected obstacle; this differs from deformations with boundary-component correspondence/no overlap and slipping boundary."
+    }
+  ],
+  "rationale": "Recent fixed-boundary local obstacle-map regularity does not identify the same minimizer class or settle interior C1 for all energy-minimal deformations.",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected scope statements inspected, not certification of every proof."
+  ],
+  "announcement_routing": {
+    "localID": "949",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Hopf-Laplace",
+          "energy-minimal deformation",
+          "smooth target",
+          "Onninen"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Hopf-Laplace",
+          "energy-minimal deformation",
+          "smooth target",
+          "Onninen"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Hopf-Laplace",
+        "energy-minimal deformation",
+        "smooth target",
+        "Onninen"
+      ],
+      "hits": [
+        {
+          "entry": "085",
+          "title": "Endpoint regularity of the planar centered maximal function",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/An-Endpoint-Gradient-Bound-for-the-Centered-Disk-Maximal-Operator-September-26-2026/article.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "OpenAI085 concerns Sobolev gradients of a centered disk maximal operator, not C1 regularity of planar energy-minimal deformations with a smooth target.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.734Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

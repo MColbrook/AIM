@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "790",
+  "manifest_index": 634,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "790",
+    "title": "Regular cylindrical decompositions in fixed coordinates",
+    "area": "Real algebraic geometry and computational topology",
+    "file": "problems/790-regular-cylindrical-decompositions-in-fixed-coordinates.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-52169073ac293a11",
+    "group": "geometry-topology",
+    "source_sha256": "118dd3d88661b8e5f4c3652118dadc71408d3df5c8eb77b1216354c148354ed5",
+    "statement_sha256": "60a1ca5ea781700174458d092b637ed4ab7d891ff65429ed6e7242588f68ee8e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "118dd3d88661b8e5f4c3652118dadc71408d3df5c8eb77b1216354c148354ed5",
+  "statement_sha256": "60a1ca5ea781700174458d092b637ed4ab7d891ff65429ed6e7242588f68ee8e",
+  "actual_source_sha256": "118dd3d88661b8e5f4c3652118dadc71408d3df5c8eb77b1216354c148354ed5",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For each $`n\\geq1`$ and each closed bounded semialgebraic set $`S\\subset\\mathbb R^n`$, fix an ordering of the coordinate axes. Must there be a finite cylindrical algebraic decomposition $`\\mathcal P`$ of $`\\mathbb R^n`$, in that order, such that $`S`$ is a union of its cells and every cell $`C\\subset S`$ is topologically regular?\n\nA cylindrical decomposition is built inductively from points and open intervals, then graphs of finitely many ordered continuous semialgebraic functions over each lower-dimensional cell and the intervening open bands, including outer bands. For $`d=\\dim C`$, regularity means\n\n```math\n(\\overline C,C)\\cong(\\overline B^{d},B^{d}),\n```\n\nwhere $`B^d`$ is the open unit ball. The homeomorphism is topological. The order stays fixed throughout. No frontier condition or algorithmic complexity bound is added.",
+  "full_local_page_read": true,
+  "queries": [
+    "regular cylindrical algebraic decomposition fixed coordinates 2026",
+    "regular cylindrical algebraic decomposition fixed coordinates 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "regular cylindrical algebraic decomposition fixed coordinates 2026 (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The actual2026 theorem constructs closure-finite CADs that are not well-bordered, and subsequent examples refute implications concerning given cells/decompositions. These are not semialgebraic sets for which every compatible CAD in the fixed coordinate order has a nonregular cell. The original sufficient theorem assumes a reduced well-based strong decomposition; frontier-condition existence and generic coordinate changes do not supply universal fixed-order regular CADs. No matching existence proof or universal obstruction found.",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2601.09795v1",
+      "version_or_date": "v1,14January2026;currentarXivrecordinspected;also1803.04029v1actualdefinitionandquestion",
+      "locator": "Theorem2.2;Propositions3.7,3.10,3.12;originalQuestion1.1(i),Theorem3.11"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual2026 theorem constructs closure-finite CADs that are not well-bordered, and subsequent examples refute implications concerning given cells/decompositions. These are not semialgebraic sets for which every compatible CAD in the fixed coordinate order has a nonregular cell. The original sufficient theorem assumes a reduced well-based strong decomposition; frontier-condition existence and generic coordinate changes do not supply universal fixed-order regular CADs. No matching existence proof or universal obstruction found.",
+  "latest_version_check": "v1,14January2026;currentarXivrecordinspected;also1803.04029v1actualdefinitionandquestion",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

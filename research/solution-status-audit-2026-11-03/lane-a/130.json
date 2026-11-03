@@ -1,0 +1,105 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "130",
+  "manifest_index": 101,
+  "original_target": {
+    "id": "130",
+    "title": "Finiteness of planar central configurations for fixed masses",
+    "area": "Celestial mechanics / relative equilibria",
+    "file": "problems/130-finite-planar-central-configurations.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-08",
+    "group": "inverse2",
+    "source_sha256": "e8157288809ecd14a7a293bab10819692f3cb06d50726b33e06bfc469bc9dfb2",
+    "statement_sha256": "b3f60e9aafb99edb5ad23753a8d424ba9048fa644b9f74ed2f466802e0eac981",
+    "state": "unreviewed"
+  },
+  "source_sha256": "e8157288809ecd14a7a293bab10819692f3cb06d50726b33e06bfc469bc9dfb2",
+  "statement_sha256": "b3f60e9aafb99edb5ad23753a8d424ba9048fa644b9f74ed2f466802e0eac981",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:15:33.544035+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "October2610.16107 Theorem1.2 is specifically five bodies and expressly conditional on AppendixA computational statements; even an unconditional five-body proof would leave local all N>=5 target. Other October announcements cover only five/six bodies. The thalens all-N route labels itself a conditional proof skeleton with named open bridges; not a complete general solution. Retained Palomar matches are four-body convex results; Hexagon2610.00550 and2610.00467 cover five bodies only, and2610.00526 assumes centered co-circular configurations. These metadata exclusions do not require treating them as general-N proofs.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.16107v1",
+      "locator": "Theorems1.1–1.2 and AppendixA caveat",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.13100",
+      "locator": "Five-body abstract only",
+      "body_inspected": false
+    },
+    {
+      "url": "https://thalens.org/problems/smale6/",
+      "locator": "Conditional proof skeleton and scope-audited reduction with named open bridges",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"central configurations\" finiteness 2026 all masses",
+    "\"central configurations\" finiteness (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "central configuration",
+        "Smale6"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-27-000009",
+          "title": "The optimal Hessian bound for convex four-body central configurations"
+        },
+        {
+          "id": "PALOMAR-2026-10-02-000011",
+          "title": "Uniqueness of four-body convex central configurations for all masses"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "central configuration",
+        "Smale6"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00551v1",
+          "title": "Uniqueness of four-body convex central configurations for all masses"
+        },
+        {
+          "id": "hexagon:2610.00550v1",
+          "title": "Smale's sixth problem for five bodies in the plane, with a proof formalized in Lean"
+        },
+        {
+          "id": "hexagon:2610.00526v1",
+          "title": "Rigidity of Newtonian Centered Co-Circular Central Configurations"
+        },
+        {
+          "id": "hexagon:2610.00467v1",
+          "title": "Finiteness of Planar Central Configurations for Five Positive Masses"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

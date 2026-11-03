@@ -1,0 +1,99 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1056",
+  "manifest_index": 900,
+  "checked_date": "2026-11-03",
+  "source_sha256": "5214c2e5184f20704ec82abc36d3ce72a4a1d3a578ed807a288df9ff23cbfdec",
+  "statement_sha256": "8577653fe514021f9b93e367a8f0c44c59252a845e589f942b2ce306fdbe0d1e",
+  "original_target": {
+    "id": "1056",
+    "title": "Can higher Sobolev norms blow up for non-rational half-wave maps on the circle?",
+    "area": "Nonlinear waves, fluids and kinetic equations",
+    "file": "problems/1056-can-higher-sobolev-norms-blow-up-for-non-rational-half-wave-maps-on-the-circle.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-afb75af63a0ec558",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "5214c2e5184f20704ec82abc36d3ce72a4a1d3a578ed807a288df9ff23cbfdec",
+    "statement_sha256": "8577653fe514021f9b93e367a8f0c44c59252a845e589f942b2ce306fdbe0d1e",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Consider the half-wave maps equation on the one-dimensional torus $`\\mathbb T=\\mathbb R/2\\pi\\mathbb Z`$,\n```math\n\\partial_t u=u\\times |D|u,\\qquad u:\\mathbb R\\times\\mathbb T\\longrightarrow\\mathbb S^2.\n```\n\nFor $`s>1/2`$ and non-rational initial data $`u_0\\in H^s(\\mathbb T;\\mathbb S^2)`$, let $`u(t)`$ be the globally defined critical-space solution. Can $`\\|u(t)\\|_{H^s}`$ become infinite at a finite time, or grow without bound as $`|t|\\to\\infty`$? More broadly, does the flow preserve $`H^s`$ globally for non-rational data? The finite-time question includes the classical local $`H^s`$ range $`s>3/2`$; global well-posedness at $`1/2<s\\leq3/2`$ also entails a lower-regularity local question.\n\nThe question concerns the circle $`\\mathbb T`$, not the real-line companion equation. Here rational means rational in $`z=e^{ix}`$. At critical regularity $`H^{1/2}`$, a global continuous flow and almost periodicity are already known. Uniform bounds on all higher Sobolev norms have been established for rational initial data.",
+  "full_original_page": "# 1056. Can higher Sobolev norms blow up for non-rational half-wave maps on the circle?\n\n**Area:** Nonlinear waves, fluids and kinetic equations\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nConsider the half-wave maps equation on the one-dimensional torus $`\\mathbb T=\\mathbb R/2\\pi\\mathbb Z`$,\n```math\n\\partial_t u=u\\times |D|u,\\qquad u:\\mathbb R\\times\\mathbb T\\longrightarrow\\mathbb S^2.\n```\n\nFor $`s>1/2`$ and non-rational initial data $`u_0\\in H^s(\\mathbb T;\\mathbb S^2)`$, let $`u(t)`$ be the globally defined critical-space solution. Can $`\\|u(t)\\|_{H^s}`$ become infinite at a finite time, or grow without bound as $`|t|\\to\\infty`$? More broadly, does the flow preserve $`H^s`$ globally for non-rational data? The finite-time question includes the classical local $`H^s`$ range $`s>3/2`$; global well-posedness at $`1/2<s\\leq3/2`$ also entails a lower-regularity local question.\n\nThe question concerns the circle $`\\mathbb T`$, not the real-line companion equation. Here rational means rational in $`z=e^{ix}`$. At critical regularity $`H^{1/2}`$, a global continuous flow and almost periodicity are already known. Uniform bounds on all higher Sobolev norms have been established for rational initial data.\n\n## Application\n\nThe critical-space flow is controlled, but its higher regularity may behave differently. The question tests whether the integrable structure prevents creation of arbitrarily fine spatial scales beyond the rational solution class.\n\n## References\n\n1. Enno Lenzmann (joint work with Patrick Gérard), *The half-wave maps equation is globally well-posed in* $`H^{1/2}`$ *on* $`\\mathbb T`$, in [*Oberwolfach Report 10/2026: Nonlinear Waves and Dispersive Equations*](https://doi.org/10.4171/OWR/2026/10), printed pp. 668–671, open question on p. 670.\n2. Patrick Gérard and Enno Lenzmann, [*The half-wave maps equation on* $`\\mathbb T`$*: Global well-posedness in* $`H^{1/2}`$ *and almost periodicity*](https://arxiv.org/html/2602.20895v3), arXiv:2602.20895v3 (July 2026), Theorem 2.4 and following Remark. The report's arXiv identifier has a transposed digit; this is the matching paper by title and authors.\n\n## Status review\n\n\n**Known cases:** The circle flow with nonrational data needs higher Sobolev control. The July 2026 critical-space almost-periodicity and rational-data higher bounds do not imply regularity or uniform bounds for all higher-Sobolev data.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe circle flow with nonrational data needs higher Sobolev control. The July 2026 critical-space almost-periodicity and rational-data higher bounds do not imply regularity or uniform bounds for all higher-Sobolev data.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nTheorem 2.4 bounds higher $`H^s`$ norms uniformly in time for rational data. The subsequent Remark explicitly leaves non-rational data and global $`H^s`$ well-posedness open. The authors' global $`H^{1/2}`$ flow and almost periodicity in that space do not settle higher $`H^s`$ behavior. Bounded current searches and an independent source-and-scope audit on 21 October 2026 found no matching complete announcement. This is a live-status assessment, not a proof of unsolvedness.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-afb75af63a0ec558**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "half-wave maps",
+    "Gerard Lenzmann",
+    "non-rational"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"half-wave maps\" \"non-rational\" 2026 Sobolev"
+    },
+    {
+      "query": "half wave maps nonrational Sobolev growth",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2602.20895v3",
+      "locator": "1July2026Theorem2.4/Remarklines273–285"
+    }
+  ],
+  "scope_comparison": "UniformallhigherSobolevbounds require rationaldata. CriticalH1/2almostperiodicity onlygivescompactnessinthatnorm, notHs>s1/2. Remarkexplicitlyretainsnonrationalgrowth/globalHsquestion. Real-linehalf-wave maps and linearhalf-wavesmoothing differ. No full match.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative searches do not certify continued openness; exact source/currentcandidate theorem bodies compared. Completeproof certification notclaimed.",
+  "announcement_routing": {
+    "localID": "1056",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "half-wave maps",
+          "Gerard Lenzmann",
+          "non-rational"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "half-wave maps",
+          "Gerard Lenzmann",
+          "non-rational"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "half-wave maps",
+        "Gerard Lenzmann",
+        "non-rational"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

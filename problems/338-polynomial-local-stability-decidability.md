@@ -2,9 +2,9 @@
 
 **Area:** Nonlinear control and algorithmic verification
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -41,7 +41,16 @@ A positive answer would establish a general decision method, potentially with pr
 6. Sicun Gao, Soonho Kong and Edmund M. Clarke, *Revisiting the Complexity of Stability of Continuous and Hybrid Systems*, [arXiv:1404.7169v4](https://arxiv.org/pdf/1404.7169v4), revised June 4, 2014. Cited preprint: §§3.1–3.2, §4.1 and §4.3.
 7. Min Wu, Zhengfeng Yang and Wang Lin, *Exact Asymptotic Stability Analysis and Region-of-Attraction Estimation for Nonlinear Systems*, Abstract and Applied Analysis **2013**, Article 146137. [Publisher full text](https://onlinelibrary.wiley.com/doi/10.1155/2013/146137), published April 4, 2013; §3.1 and §4.3, Algorithm 9.
 
+8. Ivan O. Shevchenko, Jun Liu and Xinzhi Liu, *Global asymptotic stability of homogeneous polynomial vector fields is undecidable*, [arXiv:2610.12434v1](https://arxiv.org/html/2610.12434v1), 8 October 2026, Theorems 1.1 and 1.5; §2.4.
+
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The claimed undecidability for rational homogeneous polynomial fields applies to an effectively encoded subclass of the original inputs. For homogeneous fields, flow scaling makes local asymptotic stability equivalent to global asymptotic stability, including forward completeness. A total decision algorithm for the local target would therefore decide the claimed undecidable subclass.
+
+[Claimed solution](https://arxiv.org/pdf/2610.12434v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/338.json). Theorems 1.1/1.5; homogeneous scaling identity (2.1). The full external proof has not been independently verified here; no local Lean kernel replay or human peer review is asserted. This label records the complete announcement under the requested status policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative
 

@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 342,
+  "source_sha256": "b99cd27a95d93dcd515b24da3702ec567e27d1735e175596e911463a609cad31",
+  "statement_sha256": "cc2188216cef6f7e9d9d4fc910d8bceb36f6d7bed7b64edce232578695c422b5",
+  "original_target": {
+    "id": "423",
+    "title": "Compact resolvent for kinetic Fokker–Planck and Witten operators",
+    "area": "Spectral theory and mathematical physics",
+    "file": "problems/423-compact-resolvent-for-kinetic-fokkerplanck-and-witten-operators.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-7185d10e3dabea59",
+    "group": "spectral2",
+    "source_sha256": "b99cd27a95d93dcd515b24da3702ec567e27d1735e175596e911463a609cad31",
+    "statement_sha256": "cc2188216cef6f7e9d9d4fc910d8bceb36f6d7bed7b64edce232578695c422b5",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "423",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"Helffer Nier\" conjecture compact resolvent 2026 solution",
+    "\"Helffer-Nier\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) compactness"
+  ],
+  "sources": [
+    {
+      "url": "https://genfokkerplanck.sciencesconf.org/654171/document",
+      "date": "10June2025",
+      "locator": "p1",
+      "theorem_body_checked": true,
+      "scope": "Nier explicitly distinguishes special polynomial cases from the unproved arbitrary smooth compactness equivalence."
+    },
+    {
+      "url": "https://arxiv.org/html/2010.16175",
+      "version": "current HTML,2020preprint",
+      "locator": "Theorems1.1,1.2 eq3–4",
+      "theorem_body_checked": true,
+      "scope": "Maximal accretivity is general, but compactness/maximal estimates require d2or3 and Hessian controlled by gradient; not arbitrary smooth potentials."
+    },
+    {
+      "url": "https://www.imo.universite-paris-saclay.fr/~bernard.helffer/travaux.html",
+      "date": "current listing throughSep2026",
+      "locator": "publications362–370",
+      "scope": "Current author routing found no all-smooth resolution."
+    }
+  ],
+  "registry_checks": "Complete Palomar and Hexagon metadata and pinned OpenAI/Colbrook listings scanned for target names/aliases; no matching full claim.",
+  "scope_comparison": "Target is W compact implies kinetic K compact for every n and smooth real V, without confinement growth or derivative controls. Local Helffer–Nourrigat hypoellipticity and restricted global estimates do not imply this.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Partially resolved."
+}

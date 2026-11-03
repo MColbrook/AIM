@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "516",
+  "manifest_index": 403,
+  "original_target": {
+    "id": "516",
+    "title": "Is the Brownian Lévy transformation ergodic?",
+    "area": "Stochastic analysis and ergodic theory",
+    "file": "problems/516-is-the-brownian-levy-transformation-ergodic.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-05a9c1280279133e",
+    "group": "probability-statistics",
+    "source_sha256": "9c1d26dffadac6007de3fe86deceb733c552bf1f0c953ed41ddb0e476b94fd4f",
+    "statement_sha256": "79c40fd92494e848d4f7230f7255fd390f05319097b67a593dc137e82f1a0cc2",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9c1d26dffadac6007de3fe86deceb733c552bf1f0c953ed41ddb0e476b94fd4f",
+  "statement_sha256": "79c40fd92494e848d4f7230f7255fd390f05319097b67a593dc137e82f1a0cc2",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:35:53.258259+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual1206.2485v3 Theorem1 gives equivalences with convergence of iterated stochastic-integral coefficients, not a proof the coefficients converge. Actual2010.16000v2 distinguishes continuous Brownian Lévy transform from solved discrete recycling. Discrete nonergodicity and modified maps do not match entire-half-line Brownian question.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1206.2485v3",
+      "locator": "Theorem1(i)–(ii)",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2010.16000v2",
+      "locator": "Introduction lines56–60 and Section5",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Lévy transformation\" \"ergodic\" proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Lévy transformation",
+        "Levy transformation"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Lévy transformation",
+        "Levy transformation"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

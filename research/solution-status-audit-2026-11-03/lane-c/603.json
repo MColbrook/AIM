@@ -1,0 +1,83 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "603",
+  "manifest_index": 466,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "603",
+    "title": "No suboptimal local minima in relaxed two-phase elastic compliance",
+    "area": "Continuous optimization / structural design",
+    "file": "problems/603-no-suboptimal-local-minima-in-relaxed-two-phase-elastic-compliance.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-529a37c7cbeba24c",
+    "group": "optimization-information",
+    "source_sha256": "24206c3de92e1e95375244682116a85bcd0190083a9d7c816b2159887e863501",
+    "statement_sha256": "9b55f61d9cd86342c33ee57577824bce6543c32ad38bc9dfdd8af7e03ae02f78",
+    "state": "unreviewed"
+  },
+  "source_sha256": "24206c3de92e1e95375244682116a85bcd0190083a9d7c816b2159887e863501",
+  "statement_sha256": "9b55f61d9cd86342c33ee57577824bce6543c32ad38bc9dfdd8af7e03ae02f78",
+  "actual_source_sha256": "24206c3de92e1e95375244682116a85bcd0190083a9d7c816b2159887e863501",
+  "full_original_statement": "Let $`N\\ge2`$, let $`\\Omega\\subset\\mathbb R^N`$ be a bounded open set, and let $`f\\in L^2(\\Omega;\\mathbb R^N)`$. Write $`\\mathbb S^N`$ for the real symmetric matrices. Fix two constant isotropic Hooke tensors\n```math\nAE=2\\mu_AE+\\left(\\kappa_A-\\frac{2\\mu_A}{N}\\right)\\mathrm{tr}(E)I,\\qquad\nBE=2\\mu_BE+\\left(\\kappa_B-\\frac{2\\mu_B}{N}\\right)\\mathrm{tr}(E)I,\n```\n\nwhere\n```math\n0<\\mu_A\\le\\mu_B,\\qquad 0<\\kappa_A\\le\\kappa_B.\n```\n\nFor a fixed $`\\ell\\in\\mathbb R`$, define\n```math\nF_\\ell(\\tau)=\\min\\{A^{-1}\\tau:\\tau+\\ell,\\ B^{-1}\\tau:\\tau\\}.\n```\n\nThe colon is the Frobenius inner product. On $`Y=(0,1)^N`$, define the symmetric divergence-quasiconvex envelope by the periodic cell formula\n```math\nQF_\\ell(\\tau)=\n\\inf_{\\substack{\\eta\\in L^2_{\\rm per}(Y;\\mathbb S^N)\\\\\n\\mathrm{div}\\eta=0,\\ \\int_Y\\eta\\,dy=0}}\n\\int_Y F_\\ell(\\tau+\\eta(y))\\,dy .\n```\n\nDivergence is taken row by row in distributions. The perturbations are periodic; replacing them by arbitrary nonperiodic fields is not part of this definition.\n\nSet\n```math\n\\mathcal S_f=\\{\\tau\\in L^2(\\Omega;\\mathbb S^N):-\\mathrm{div}\\tau=f\\text{ in }\\mathcal D'(\\Omega)\\},\\qquad\n\\mathcal I_\\ell(\\tau)=\\int_\\Omega QF_\\ell(\\tau(x))\\,dx.\n```\n\nProve or disprove that every local minimizer of $`\\mathcal I_\\ell`$ on $`\\mathcal S_f`$, in the strong $`L^2`$ norm, is a global minimizer. Explicitly, if $`\\tau_0\\in\\mathcal S_f`$ and some $`\\varepsilon>0`$ satisfy\n```math\n\\mathcal I_\\ell(\\tau_0)\\le\\mathcal I_\\ell(\\tau)\n\\quad\\text{for all }\\tau\\in\\mathcal S_f\\text{ with }\n\\|\\tau-\\tau_0\\|_{L^2}<\\varepsilon,\n```\n\nmust this inequality hold for every $`\\tau\\in\\mathcal S_f`$?\n\nThe statement uses the source's clamped displacement formulation: the underlying elastic state has $`u\\in H^1_0(\\Omega;\\mathbb R^N)`$. There is no additional prescribed boundary traction on $`\\tau`$. The multiplier is fixed and the stress formulation has no separate volume constraint. The nontrivial range is $`\\ell<0`$: with phase $`A`$ weaker, $`\\ell\\ge0`$ selects the quadratic $`B^{-1}\\tau:\\tau`$ and is convex.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"relaxed\" \"compliance\" \"local minimizers\" global 2026",
+    "\"relaxed\" \"compliance\" \"local minimizers\" global (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+    "Allaire \"4.1.18\" conjecture"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Book chapter 2002; primary tool access failed",
+      "primary_body_access_gap": true,
+      "url": "https://doi.org/10.1007/978-1-4684-9286-6_4",
+      "locator": "Local reference points to Remark 4.1.18; candidate 2602.23180v2 Theorem 3.10 HTML also returned 404",
+      "scope_comparison": "No full matching candidate found by targeted searches. Primary book chapter and the latest candidate's theorem body were inaccessible in this pass, so this entry is held rather than recorded as a completed theorem comparison. Local page describes global-value/laminate results with plane-stress and volume constraints; that description is not independent source verification."
+    }
+  ],
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "rationale": "The exact original remark conjectures no suboptimal L2 local stress minima. The recovered current Theorem3.10 requires 2D plane stress, one load and an explicit volume budget, and proves equality of global infima plus attainment by rank<=2 laminates. Neither this global-value assertion nor finite-dimensional filtered SIMP results proves every strong-L2 local minimizer of the specified fixed-multiplier/divergence-constrained functional is global.",
+  "latest_version_check": "Book chapter 2002; primary tool access failed",
+  "gap_retraction_check": "No matching complete candidate was identified; version records showed no withdrawal banner. Cited partial proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ],
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:56:59.315578+00:00",
+      "reviewer": "root",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2602.23180v2",
+          "locator": "Theorem3.10, pp23–25",
+          "body_inspected": true,
+          "receipt": "../_sources/603-free-material-v2-receipt.json"
+        },
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/978-1-4684-9286-6_4.pdf",
+          "locator": "Original Remark4.1.18 p286 and Theorem4.1.15/formula4.44 pp282–283",
+          "body_inspected": true,
+          "retained_original": "FURTHER_problems/_tracking/B159-Allaire-ch4-native-formula-images-C-20261026/render-and-text-manifest.json",
+          "original_pdf_sha256": "0070fb84562e1af394a87275e9830fbbf0b8765025c6892e590d77e553c3e02a"
+        }
+      ],
+      "comparison": "The exact original remark conjectures no suboptimal L2 local stress minima. The recovered current Theorem3.10 requires 2D plane stress, one load and an explicit volume budget, and proves equality of global infima plus attainment by rank<=2 laminates. Neither this global-value assertion nor finite-dimensional filtered SIMP results proves every strong-L2 local minimizer of the specified fixed-multiplier/divergence-constrained functional is global.",
+      "limitations": [
+        "Current comparator PDF recovered in RAM, text/receipt only retained. Original book passage inspected in the prior byte-pinned native render and text; no new edition or full-book proof audit asserted."
+      ]
+    }
+  ],
+  "review_state": "bounded_review_complete",
+  "material_full_claim_gap": false
+}

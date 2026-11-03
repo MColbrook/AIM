@@ -1,0 +1,110 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1031",
+  "manifest_index": 875,
+  "checked_date": "2026-11-03",
+  "source_sha256": "111dbdbf31bbb0d241bbb9b75b698b79eeb1cacd948b7cccfbb697652f010d58",
+  "statement_sha256": "1ef985c220b72c60c5cf27656881cff5e24493c6c83bc5b835b78876652ffc2a",
+  "original_target": {
+    "id": "1031",
+    "title": "Are non-Cantor spectra dense among nonperiodic limit-periodic potentials?",
+    "area": "Spectral theory and aperiodic media",
+    "file": "problems/1031-are-non-cantor-spectra-dense-among-nonperiodic-limit-periodic-potentials.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f21752e16a430439",
+    "group": "spectral",
+    "source_sha256": "111dbdbf31bbb0d241bbb9b75b698b79eeb1cacd948b7cccfbb697652f010d58",
+    "statement_sha256": "1ef985c220b72c60c5cf27656881cff5e24493c6c83bc5b835b78876652ffc2a",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\mathrm{LP}_{\\mathrm{np}}`$ be the bounded real sequences on $`\\mathbb Z`$ that are uniform limits of periodic sequences and are themselves nonperiodic. Set\n```math\n(H_Vu)(n)=u(n-1)+u(n+1)+V(n)u(n)\n\\quad\\text{on }\\ell^2(\\mathbb Z).\n```\n\nFor every $`V\\in\\mathrm{LP}_{\\mathrm{np}}`$ and $`\\varepsilon>0`$, does there exist $`W\\in\\mathrm{LP}_{\\mathrm{np}}`$ such that\n```math\n\\|W-V\\|_\\infty<\\varepsilon,\n\\qquad \\mathrm{int}\\sigma(H_W)\\ne\\varnothing?\n```\n\nThis is Damanik–Fillman Question 10.4. These spectra are compact and perfect, so having nonempty interior is equivalent here to failing to be a Cantor set. The approximating potential $`W`$ must remain nonperiodic; its entire spectrum need not be a single interval.",
+  "full_original_page": "# 1031. Are non-Cantor spectra dense among nonperiodic limit-periodic potentials?\n\n**Area:** Spectral theory and aperiodic media\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\mathrm{LP}_{\\mathrm{np}}`$ be the bounded real sequences on $`\\mathbb Z`$ that are uniform limits of periodic sequences and are themselves nonperiodic. Set\n```math\n(H_Vu)(n)=u(n-1)+u(n+1)+V(n)u(n)\n\\quad\\text{on }\\ell^2(\\mathbb Z).\n```\n\nFor every $`V\\in\\mathrm{LP}_{\\mathrm{np}}`$ and $`\\varepsilon>0`$, does there exist $`W\\in\\mathrm{LP}_{\\mathrm{np}}`$ such that\n```math\n\\|W-V\\|_\\infty<\\varepsilon,\n\\qquad \\mathrm{int}\\sigma(H_W)\\ne\\varnothing?\n```\n\nThis is Damanik–Fillman Question 10.4. These spectra are compact and perfect, so having nonempty interior is equivalent here to failing to be a Cantor set. The approximating potential $`W`$ must remain nonperiodic; its entire spectrum need not be a single interval.\n\n## Application\n\nThe problem tests whether spectral bands can persist under arbitrarily small changes of a uniformly aperiodic medium, alongside the known abundance of Cantor spectra.\n\n## References\n\n1. D. Damanik and J. Fillman, [*Spectral Properties of Limit-Periodic Operators*](https://arxiv.org/html/1802.05794v1), Section 4 and Question 10.4, p.36; Chapter 15 in *Analysis and Geometry on Graphs and Manifolds*, LMS Lecture Note Series **461** (2020), 382–444. [DOI](https://doi.org/10.1017/9781108615259.016).\n2. D. Damanik, Z. Gan and H. Krüger, [*Limit-periodic Schrödinger operators with a discontinuous Lyapunov exponent*](https://doi.org/10.1016/j.jfa.2020.108565), *Journal of Functional Analysis* **279** (2020), 108565, Theorem 1.3.\n\n## Status review\n\n\n**Known cases:** The nearby potential must stay nonperiodic and have spectral interior. Dense periodic spectra, positive-measure Cantor spectra and particular non-Cantor examples do not imply density in this class.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe nearby potential must stay nonperiodic and have spectral interior. Dense periodic spectra, positive-measure Cantor spectra and particular non-Cantor examples do not imply density in this class.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nSpecific nonperiodic examples with non-Cantor spectra are known. Dense periodic potentials do not answer this question. Neither do dense potentials with discontinuous Lyapunov exponents, positive-measure spectra or purely absolutely continuous spectral type.\n\nThe [coordinating review](../FURTHER_problems/_tracking/focused-nonCantor-LP-density-D030-C179-Root-20261028/ROOT-FINAL-SCIENTIFIC-REVIEW.json) records primary-source, latest-version, current-resolution/announcement and semantic duplicate checks, including an independent formulation review. The formulation uses the archived chapter; full published-body parity is not asserted. These bounded checks do not prove continued openness.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f21752e16a430439**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "non-Cantor",
+    "limit-periodic",
+    "Damanik",
+    "Gan",
+    "Kruger"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"limit-periodic\" \"non-Cantor\" \"dense\" 2026"
+    },
+    {
+      "query": "\"limit-periodic\" \"non-Cantor\" \"dense\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    },
+    {
+      "query": "\"limit-periodic\" \"non-Cantor\" density proof"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1802.05794v1",
+      "locator": "Question10.4physicalp36 / Section10; 2020discontinuousLyapunovconstructioncomparison"
+    }
+  ],
+  "scope_comparison": "Dense periodic approximants violate required nonperiodicity of W. Pure AC or positive-measure spectrum may still be Cantor, so October2026EC(eta) theorem does not establish spectral interior. Existing particular non-Cantor examples do not prove density near every fixed nonperiodicV. No full matching result found.",
+  "recommendation": "Retain partial status; no matching full proof/counterexample announcement located.",
+  "limitations": "Bounded negative evidence, not proof of continued openness. No full proof certification of restricted comparisons claimed.",
+  "announcement_routing": {
+    "localID": "1031",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "non-Cantor",
+          "limit-periodic",
+          "Damanik",
+          "Gan",
+          "Kruger"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "non-Cantor",
+          "limit-periodic",
+          "Damanik",
+          "Gan",
+          "Kruger"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "non-Cantor",
+        "limit-periodic",
+        "Damanik",
+        "Gan",
+        "Kruger"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

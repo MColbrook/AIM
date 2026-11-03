@@ -1,0 +1,86 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "541",
+  "manifest_index": 421,
+  "original_target": {
+    "id": "541",
+    "title": "Low-degree convergence of relaxed minimal-deformation surface elements",
+    "area": "Numerical analysis of evolving surfaces",
+    "file": "problems/541-low-degree-relaxed-minimal-deformation.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-11-03",
+    "outcome": "Partial: one admissible linear counterexample and cubic convergence; degree two remains unresolved.",
+    "proof": "research/solutions/541-linear-failure-cubic-convergence/paper/manuscript.pdf",
+    "review": "research/solution_reviews/2026-10-21-active-prs/172-review.md",
+    "group": "numerical-analysis",
+    "source_sha256": "b511b4720a75988f154c126cc53742828d145b85612538ad015606a919e71b49",
+    "statement_sha256": "685559efedcdad52d812f01aa8d81cc5add9b27ff26f507dc6e533c106c15ff3",
+    "state": "unreviewed"
+  },
+  "source_sha256": "b511b4720a75988f154c126cc53742828d145b85612538ad015606a919e71b49",
+  "statement_sha256": "685559efedcdad52d812f01aa8d81cc5add9b27ff26f507dc6e533c106c15ff3",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:46:33.211831+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The current local manuscript already records a failing admissible linear torus family and h^3 sqrt(log) convergence for all admissible cubic families, while its quadratic-open remark explicitly retains degree two. It uses fixed reference measure and discontinuous geometric normals; projected/averaged-normal MDR and Willmore/Helfrich energy laws differ.",
+  "primary_sources": [
+    {
+      "url": "research/solutions/541-linear-failure-cubic-convergence/paper/manuscript.tex",
+      "locator": "Theorems thm:failure and thm:cubic; rem:quadratic-open",
+      "body_inspected": true
+    },
+    {
+      "url": "https://libuyang.com/NM-15.pdf",
+      "locator": "Original high-degree relaxed minimal deformation scheme",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2602.14405v1",
+      "locator": "Section 2.3 and main theorem, projected/averaged-normal MDR",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.07244",
+      "locator": "Abstract, Willmore/Helfrich system",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"relaxed minimal deformation\" quadratic convergence 2026",
+    "\"relaxed minimal deformation\" convergence quadratic (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"relaxed minimal deformation\" \"degree two\""
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "minimal deformation"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "minimal deformation"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 356,
+  "source_sha256": "77edc962885dad37b608dd3bc38b363ec43dfef4922928eb8880cd4b74f57bcd",
+  "statement_sha256": "847113753d1e19a4c8ffe8f28732fe58318aef8b40d7725d30d7888c85edd92f",
+  "original_target": {
+    "id": "442",
+    "title": "Finite-time collapse in the planar self-steepening Schrödinger equation",
+    "area": "Derivative dispersive PDEs and optical pulses",
+    "file": "problems/442-planar-self-steepening-finite-time-collapse.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "77edc962885dad37b608dd3bc38b363ec43dfef4922928eb8880cd4b74f57bcd",
+    "statement_sha256": "847113753d1e19a4c8ffe8f28732fe58318aef8b40d7725d30d7888c85edd92f",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "442",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"self-steepening\" \"blow-up\" \"2026\" Schrödinger",
+    "\"two dimensional\" \"derivative\" \"Schrodinger\" blowup (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1805.12351",
+      "version": "currentHTML,published2019",
+      "locator": "§3.4eq3.5–3.6Fig9 andRemark3.3",
+      "theorem_body_checked": true,
+      "scope": "ExactplanarcubicDNLSdelta2=1 apparentGaussianamplitudeblowupisnumerical;authorswarnresolutionmaymimicblowup."
+    },
+    {
+      "url": "https://www.aimspress.com/aimspress-data/math/2026/8/PDF/math-11-08-1098.pdf",
+      "date": "2026vol11issue8pp27448–27467",
+      "locator": "Theorems1.1–1.3,pp27450–27451",
+      "theorem_body_checked": true,
+      "scope": "Read publicPDFinRAM. One-dimensional boundedDirichletinterval, generalized derivativeequation;Theorem1.2conditionalfinite-timecontinuation/divergence,Theorem1.3lowerlifespan. Noconstructionfinite-timeblowup,muchlessplanarLinfblowup."
+    }
+  ],
+  "registry_checks": "Complete Palomar/Hexagonmetadata andpinnedOpenAI/Colbrookauthorlistingssearched;nomatchingfullclaim.",
+  "scope_comparison": "NeedSchwartzR2data,smoothclassicalallHm untilfiniteTandLinfdivergenceatT, fixednonzeroiyderivativecoefficient. Conditionalcontinuationcriteria,1Dmodels,regularizedequationsandnumericsdonotsettle.",
+  "limitations": [
+    "InitialwebPDFaccessfailed;resolvedbypublicpublisherPDFreadinRAMwithoutstoring."
+  ],
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

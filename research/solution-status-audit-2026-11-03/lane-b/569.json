@@ -1,0 +1,75 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "569",
+  "manifest_index": 442,
+  "original_target": {
+    "id": "569",
+    "title": "Does discontinuous information help randomized approximation?",
+    "area": "Information-based complexity and randomized numerical recovery",
+    "file": "problems/569-does-discontinuous-information-help-randomized-approximation.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8b825ff887eb95a8",
+    "group": "numerical-analysis",
+    "source_sha256": "1f9947d09e6a03e4ebab5e1f8918e97b61d6e1f753ccb1cd2a723d1f5ab2d91d",
+    "statement_sha256": "5871a3e5a2204779480a9fdfc5231ec164676baea65a731807997f115ba4dc33",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1f9947d09e6a03e4ebab5e1f8918e97b61d6e1f753ccb1cd2a723d1f5ab2d91d",
+  "statement_sha256": "5871a3e5a2204779480a9fdfc5231ec164676baea65a731807997f115ba4dc33",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:59:51.389915+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Original Remark8 leaves randomized approximation on general normed spaces unresolved. Deterministic worst-case theorems and compact Hilbert bounds do not give exact equality for the nonlinear target, expected budget and RMS error under the local measurability convention. The 2026 Remark9.6 again describes continuity restrictions as conjecturally unnecessary in a different model.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1106.2945",
+      "locator": "Remark8 pp16–17 and compact-Hilbert Theorem2; current v1 15June2011",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/pdf/2602.02066v2",
+      "locator": "Remark9.6 preliminary pp144–145; current v2 6April2026",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"discontinuous information\" randomized 2026 solved",
+    "\"discontinuous information\" randomized [domains arxiv.org,zenodo.org,hal.science,github.com]",
+    "\"discontinuous information\" \"randomized\" \"2026\""
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "discontinuous information"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "discontinuous information"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "2013 final body not freshly compared; 2026 preliminary manuscript has191 pages versus185 in the final Acta volume."
+  ],
+  "canonical_update_required": false
+}

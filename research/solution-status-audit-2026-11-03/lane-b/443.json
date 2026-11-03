@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 357,
+  "source_sha256": "3d65aa582a4618cc10b752fac448fe411c24840fd44b6648d84b46e5bdd2e9b4",
+  "statement_sha256": "04b028655cb6fdb9e9774fbd752af3eba58cc9a851aca59171203e06f9ee5e9d",
+  "original_target": {
+    "id": "443",
+    "title": "The Weinstock inequality for convex domains in a sphere",
+    "area": "Elliptic boundary spectra and shape optimization",
+    "file": "problems/443-spherical-convex-weinstock-inequality.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "spectral2",
+    "source_sha256": "3d65aa582a4618cc10b752fac448fe411c24840fd44b6648d84b46e5bdd2e9b4",
+    "statement_sha256": "04b028655cb6fdb9e9774fbd752af3eba58cc9a851aca59171203e06f9ee5e9d",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "443",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Weinstock\" \"sphere\" \"2026\"",
+    "\"Weinstock\" \"spherical\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Weinstock inequality\" \"sphere\" solution",
+    "\"Weinstock\" \"spherical\" \"convex\" theorem"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.11841",
+      "version": "v1,Aug2026",
+      "locator": "Theorems1.1–1.2",
+      "theorem_body_checked": true,
+      "scope": "Euclideanandhyperbolicoutwardminimizingdomains;notpositivelycurvedsphere."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00526-026-03323-3",
+      "date": "2026published",
+      "locator": "TheoremA,§4",
+      "theorem_body_checked": true,
+      "scope": "Compactorientable2DsurfacesandshiftedSteklovproblemparameter2/freeboundaryminimalcaps. NotordinaryharmonicSteklovofn>=3convexdomaininSn."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s13163-023-00480-3",
+      "date": "2024survey",
+      "locator": "OpenQuestion4.27",
+      "theorem_body_checked": true,
+      "scope": "DistinguishesboundaryareaconstraintfromBrockvolumeconstraint. Spherecounterexamplesforlatterdonotdecidethis."
+    }
+  ],
+  "registry_checks": "Complete Palomar/Hexagonmetadata andpinnedOpenAI/Colbrookauthorlistingssearched;nomatchingfullclaim.",
+  "scope_comparison": "Needn>=3smoothgeodesicconvexclosureinopenhemisphere,fixedboundaryarea,ordinaryharmonicSteklovandequalityonlyballs. Wrongcurvaturesign,dimension2,shiftedboundaryproblem,orvolumefixeddonotmatch.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

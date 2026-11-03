@@ -1,0 +1,69 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "163",
+  "manifest_index": 129,
+  "original_target": {
+    "id": "163",
+    "title": "Uniqueness of the Brownian coagulation similarity profile",
+    "area": "Aerosol kinetics and aggregation",
+    "file": "problems/163-brownian-coagulation-profile.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "ac2f04e7c3ce39cde8068ef6ffc34a324dcb129636603df97c0f6fb39b613ed8",
+    "statement_sha256": "37f3e96c3ea13dc068c1724a819f11ca7b70221afb0d08f71b8cb7e2b99897cb",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ac2f04e7c3ce39cde8068ef6ffc34a324dcb129636603df97c0f6fb39b613ed8",
+  "statement_sha256": "37f3e96c3ea13dc068c1724a819f11ca7b70221afb0d08f71b8cb7e2b99897cb",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:34:39.595039+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual1510.03361v3 introduction equation1.2 identifies Brownian kernel and distinguishes its general uniqueness question. The theorem assumes K=2+epsilon W with sufficiently small epsilon. The full Brownian ratio terms at coefficient1 are not a small perturbation covered by the result. Time-dependent coagulation/breakage uniqueness and multiplicative/constant kernels differ.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1510.03361v3",
+      "locator": "Introduction equation1.2 and main small-epsilon assumptions",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Brownian kernel\" \"self-similar\" \"uniqueness\" 2026",
+    "\"coagulation\" \"Brownian kernel\" (site:zenodo.org OR site:hal.science OR site:github.com) uniqueness"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "coagulation",
+        "Brownian kernel"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "coagulation",
+        "Brownian kernel"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "531",
+  "manifest_index": 413,
+  "original_target": {
+    "id": "531",
+    "title": "Uniqueness of the positive Einstein metric on the four-sphere",
+    "area": "Differential geometry / mathematical relativity",
+    "file": "problems/531-uniqueness-of-the-positive-einstein-metric-on-the-four-sphere.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f9303a5f48457b24",
+    "group": "geometry-topology",
+    "source_sha256": "ebe2e45ef5f5cbba8a9d8d0d98af18244225f907901a0c2baff540c58323642f",
+    "statement_sha256": "9f304c1a628484ea424a4e833eeaef8e99cb297e4983a8931c3dd78fffde1ffc",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ebe2e45ef5f5cbba8a9d8d0d98af18244225f907901a0c2baff540c58323642f",
+  "statement_sha256": "9f304c1a628484ea424a4e833eeaef8e99cb297e4983a8931c3dd78fffde1ffc",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:36.027962+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The torus-symmetry claim is withdrawn. The published twistor result adds fibrewise-constant scalar curvature, while other current results retain positive sectional curvature or a Yamabe-gap threshold. None of those proves arbitrary Einstein metrics on S4 are round.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/2610.12210",
+      "locator": "Withdrawn v2, 9 October 2026",
+      "body_inspected": false
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00209-026-04100-w",
+      "locator": "Theorem 1.1 and Corollary 1.2, extra twistor hypothesis",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2609.23337v1",
+      "locator": "Theorem 1.2, strictly positive sectional curvature",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/1801.10305v2",
+      "locator": "Theorem 1.2, Yamabe-gap threshold",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Einstein\" \"four-sphere\" uniqueness proof 2026",
+    "\"four-sphere\" \"Einstein\" uniqueness (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"four-sphere\" Einstein round \"2026\" proof announcement"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Einstein",
+        "four-sphere"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-09-30-000024",
+          "title": "Local Hodge generation of sl(15) and scalar response rigidity"
+        },
+        {
+          "id": "PALOMAR-2026-09-07-000015",
+          "title": "De Lellis--Topping almost-Schur inequality"
+        },
+        {
+          "id": "PALOMAR-2026-09-06-000004",
+          "title": "Double-contracted second Bianchi identity for metric-compatible torsion-free connections"
+        },
+        {
+          "id": "PALOMAR-2026-08-27-000020",
+          "title": "BrandonMYates/schwarzschild-comparator"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Einstein",
+        "four-sphere"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00680v2",
+          "title": "Closed three-manifolds as hypersurfaces of Euclidean fourspace: compactness, the homogeneous geometries, and total absolute curvature"
+        },
+        {
+          "id": "hexagon:2610.00658v3",
+          "title": "Riemannian three-manifolds as hypersurfaces of Euclidean four-space: the realizability operator, its symbol, and its linearisation at the round sphere"
+        },
+        {
+          "id": "hexagon:2610.00450v1",
+          "title": "Superfluid Stiffness and Nonclassical Rotational Inertia of the Dilute Hard-Sphere Bose Gas"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

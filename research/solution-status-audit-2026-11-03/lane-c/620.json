@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "620",
+  "manifest_index": 481,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "620",
+    "title": "A multimarginal Minty converse",
+    "area": "Continuous optimization and monotone operator theory",
+    "file": "problems/620-a-multimarginal-minty-converse.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-42339ebf38dedb8b",
+    "group": "optimization-information",
+    "source_sha256": "5c64a9351a3407ecc80ded59af61b0a4c8c5bd69c98613fb578254683b53d0bd",
+    "statement_sha256": "53cc03a739be594cd4e53cc767d04dcc58a8599950c612dbc8850be9ee2e5ca9",
+    "state": "unreviewed"
+  },
+  "source_sha256": "5c64a9351a3407ecc80ded59af61b0a4c8c5bd69c98613fb578254683b53d0bd",
+  "statement_sha256": "53cc03a739be594cd4e53cc767d04dcc58a8599950c612dbc8850be9ee2e5ca9",
+  "actual_source_sha256": "5c64a9351a3407ecc80ded59af61b0a4c8c5bd69c98613fb578254683b53d0bd",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`H`$ be a real Hilbert space, let $`N\\geq3`$, and put $`I=\\{1,\\ldots,N\\}`$. Call $`\\Gamma\\subseteq H^N`$ **$`c`$-monotone** if, for all $`x,y\\in\\Gamma`$ and every nonempty proper $`K\\subset I`$,\n\n```math\n\\left\\langle\\sum_{i\\in K}(x_i-y_i),\\ \\sum_{j\\notin K}(x_j-y_j)\\right\\rangle\\geq0.\n```\n\nHere $`c(x_1,\\ldots,x_N)=\\sum_{i<j}\\langle x_i,x_j\\rangle`$. Call $`\\Gamma`$ maximally $`c`$-monotone if it is $`c`$-monotone and is contained in no strictly larger $`c`$-monotone subset of $`H^N`$.\n\nMust every maximally $`c`$-monotone $`\\Gamma`$ satisfy\n\n```math\n\\left\\{\\sum_{i=1}^N x_i:(x_1,\\ldots,x_N)\\in\\Gamma\\right\\}=H?\n```\n\nFor two marginals this is Minty's classical theorem. The converse implication, from this range condition to maximal $`c`$-monotonicity, is already proved for every finite number of marginals. No splitting potentials, cyclic monotonicity of higher orders, or regularity assumptions are imposed here. [1]",
+  "full_local_page_read": true,
+  "queries": [
+    "\"multimarginal\" \"maximal monotonicity\" Minty converse 2026",
+    "\"multimarginal\" \"maximal monotonicity\" Minty converse (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "version_or_date": "v2, 18 September 2019",
+      "url": "https://arxiv.org/html/1901.03777v2",
+      "scope_comparison": "The original remark states the exact missing maximality-to-surjective-sum direction. Lim's counterexample in Proposition 1.10 expressly is not maximally c-monotone, so it fails the local premise. Results for contact sets or extra regularity do not settle arbitrary maximal sets.",
+      "locator": "Theorem 2.5 and Remark 2.6; Lim 2207.04830v4 Proposition 1.10"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The original remark states the exact missing maximality-to-surjective-sum direction. Lim's counterexample in Proposition 1.10 expressly is not maximally c-monotone, so it fails the local premise. Results for contact sets or extra regularity do not settle arbitrary maximal sets.",
+  "latest_version_check": "v2, 18 September 2019",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

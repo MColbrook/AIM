@@ -1,0 +1,51 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "111",
+  "manifest_index": 84,
+  "source_sha256": "174fce8c943b9ad6fd337b5ad4169ea109d73ef9a40bc6469d933a2891903135",
+  "statement_sha256": "41862235ec148ae46bf75672c5f5f90a4b2038fecb5195a16e040f557824a26b",
+  "original_target": {
+    "id": "111",
+    "title": "Unbounded first Steklov multiplicity with fixed boundary count",
+    "area": "Boundary-mode degeneracy",
+    "file": "problems/111-steklov-fixed-boundary-multiplicity.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: affirmative unbounded first Steklov multiplicity",
+    "proof": "https://zenodo.org/api/records/22949635/files/Prescribed_Steklov_Spectra_nifa.pdf/content",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md",
+    "group": "spectral2",
+    "source_sha256": "174fce8c943b9ad6fd337b5ad4169ea109d73ef9a40bc6469d933a2891903135",
+    "statement_sha256": "41862235ec148ae46bf75672c5f5f90a4b2038fecb5195a16e040f557824a26b",
+    "state": "unreviewed"
+  },
+  "full_local_statement_read": true,
+  "reviewed_UTC": "2026-11-03T12:18:12.094808+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "pre-existing-complete-claim-current-scope-reviewed",
+  "recommended_status": "Solved",
+  "answer": "Affirmative announcement; unverified",
+  "scope_comparison": "Fix b=1 and prescribe a1=...=aN=1 with next eigenvalue>2. TheoremA claims a smooth metric on a connected orientable surface of sufficiently large genus with those exact first N positive ordinary Steklov eigenvalues. Thus first multiplicity equals N with fixed boundary count. Genus may grow as permitted; length rescaling preserves multiplicity. The final theorem absorbs boundary weights into a smooth conformal metric and has no nonconstant interior conductivity.",
+  "primary_sources": [
+    {
+      "url": "https://zenodo.org/api/records/22949635/files/Prescribed_Steklov_Spectra_nifa.pdf/content",
+      "locator": "TheoremA, ordinary unweighted model(1.1)",
+      "body_inspected": true,
+      "receipt": {
+        "id": "111",
+        "url": "https://zenodo.org/api/records/22949635/files/Prescribed_Steklov_Spectra_nifa.pdf/content",
+        "PDF_sha256": "b4214e8895f8c9e9cd9c300dd89d5d1d1b98a77ada4b7095b9ffe885ec325fe7",
+        "PDF_bytes": 766442,
+        "PDF_saved": false,
+        "UTC": "2026-11-03T12:09:50.186428+00:00"
+      },
+      "extracted_text": "../_sources/111-primary-text.txt"
+    }
+  ],
+  "search_scope": "Individual named/mathematical primary-host searches plus exact-source correction/withdrawal queries and current Palomar/Hexagon metadata. No universal search completeness is asserted.",
+  "known_gap_check": "No concrete defeating gap established by this bounded scope review. Entire external proof and essential certificates remain unverified.",
+  "verification": "Exact original target compared with actual primary theorem/model body and required reduction. No local kernel, numerical-certificate or full proof replay.",
+  "additional_qualification": null,
+  "canonical_update_required": true
+}

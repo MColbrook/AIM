@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "813",
+  "manifest_index": 657,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "813",
+    "title": "Minimum-volume convex bodies of prescribed minimum width",
+    "area": "Convex geometry and shape optimization",
+    "file": "problems/813-minimum-volume-convex-bodies-of-prescribed-minimum-width.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8b7c1b3365314dd0",
+    "group": "geometry-topology",
+    "source_sha256": "6875972980c248ee2789938ea2456c34551b662835a4d331e808845750943b40",
+    "statement_sha256": "7feef2d90c2755a32d4e7e25e812816fd0d071c2ab5f465764f62e6b72bf5db1",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6875972980c248ee2789938ea2456c34551b662835a4d331e808845750943b40",
+  "statement_sha256": "7feef2d90c2755a32d4e7e25e812816fd0d071c2ab5f465764f62e6b72bf5db1",
+  "actual_source_sha256": "6875972980c248ee2789938ea2456c34551b662835a4d331e808845750943b40",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For each integer $`n\\ge3`$, let $`K\\subset\\mathbb R^n`$ range over compact convex sets with nonempty interior. Define\n```math\nh_K(u)=\\max_{x\\in K}x\\cdot u,\\qquad\nw(K)=\\min_{u\\in S^{n-1}}\\bigl(h_K(u)+h_K(-u)\\bigr).\n```\n\nDetermine the exact value\n```math\nc_n=\\inf\\{\\mathrm{Vol}_n(K):w(K)=1\\}\n```\n\nand characterize every attaining body up to Euclidean isometry.\n\nThis is the higher-dimensional Euclidean Pál isominwidth problem. The constraint prescribes the *minimum* directional thickness; it does not require constant width in every direction. No symmetry is imposed, and no particular minimizing shape is asserted. Equivalently, determine the sharp constant and equality cases in $`\\mathrm{Vol}_n(K)\\ge c_n w(K)^n`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Pal\" \"isominwidth\" minimum volume higher dimensional 2026",
+    "\"Pal\" \"isominwidth\" minimum volume higher dimensional (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Pal\" \"isominwidth\" minimum volume higher dimensional (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "version_or_date": "Current abs latestv2 revised6October2026; actual body inspected.",
+      "scope_comparison": "Theorems concern r-ball-convex bodies in constant-curvature PLANES and their planar stability. The Introduction explicitly retains higher-dimensional Pal problem. Its only3D comparison assumes rotational symmetry; constant-width minimization is a smaller class than minimum-width constraint. Thus no all-n sharp Euclidean volume constants/equality cases. No full current matching announcement found.",
+      "url": "https://arxiv.org/html/2606.02882v2",
+      "locator": "Introduction distinguishes higher-dimensional problem; actual Theorems1.1–1.2 and1.4–1.6"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorems concern r-ball-convex bodies in constant-curvature PLANES and their planar stability. The Introduction explicitly retains higher-dimensional Pal problem. Its only3D comparison assumes rotational symmetry; constant-width minimization is a smaller class than minimum-width constraint. Thus no all-n sharp Euclidean volume constants/equality cases. No full current matching announcement found.",
+  "latest_version_check": "Current abs latestv2 revised6October2026; actual body inspected.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

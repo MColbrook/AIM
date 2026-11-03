@@ -1,0 +1,49 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 270,
+  "source_sha256": "cc1abe52455b2a743329c40ecdddedb74f03905f462aec35000b114920c1949a",
+  "statement_sha256": "9d406001596aaca5338289a3adb305dd5d67aeb5b3caa5e75f62e5c090840c66",
+  "original_target": {
+    "id": "332",
+    "title": "Decidability of stability under arbitrary switching",
+    "area": "Switched systems, robust control and formal verification",
+    "file": "problems/332-switched-linear-stability-decidability.md",
+    "status": "Open",
+    "last_checked": "2026-09-18",
+    "group": "inverse2",
+    "source_sha256": "cc1abe52455b2a743329c40ecdddedb74f03905f462aec35000b114920c1949a",
+    "statement_sha256": "9d406001596aaca5338289a3adb305dd5d67aeb5b3caa5e75f62e5c090840c66",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "332",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"joint spectral radius\" \"strict\" decidability 2026 solution",
+    "\"joint spectral radius\" \"<1\" undecidable 2026",
+    "\"switched\" \"stability\" decidability site:zenodo.org OR site:hal.science OR site:github.com 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2607.00637v2",
+      "version": "v2 10 September 2026",
+      "locators": "Theorem 4; Algorithm 1; Remark 2",
+      "body_inspected": true,
+      "scope": "Exactness upon termination with explicit lack of termination/convergence guarantee."
+    },
+    {
+      "url": "https://www.mit.edu/~jnt/Papers/J081-00-vb-products.pdf",
+      "version": "Systems & Control Letters 2000",
+      "locators": "introduction; Theorem 2",
+      "body_inspected": true,
+      "scope": "Boundedness and nonstrict spectral radius threshold undecidable; strict-threshold decision is a distinct question."
+    }
+  ],
+  "registry_checks": "No joint-spectral-radius alias in Palomar/Hexagon current full metadata. Focused arXiv, author/publisher, Zenodo, HAL and GitHub searches.",
+  "scope_comparison": "Target is a total algorithm for rational finite matrix sets deciding JSR<1 with negative answer at equality. Semidecision/certificate searches, approximation and JSR<=1 undecidability do not decide that strict boundary. Indexed slides/thesis sentences citing Blondel–Tsitsiklis for strict undecidability were checked against actual primary theorem and not promoted.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Current path-complete algorithm expressly leaves termination for future work."
+}

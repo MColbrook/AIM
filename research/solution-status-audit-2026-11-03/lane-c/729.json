@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "729",
+  "manifest_index": 573,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "729",
+    "title": "Uniqueness of free-time controlled transport in Eulerian form",
+    "area": "Optimal control and continuous optimal transport",
+    "file": "problems/729-uniqueness-of-free-time-controlled-transport-in-eulerian-form.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-442aa1806b172de2",
+    "group": "continuous-optimization",
+    "source_sha256": "930a49699e2f9b4de68eb8f97cf1502a296588c3c86c96ecc3ff8614ac9ab25d",
+    "statement_sha256": "19e7c83fcfbbfd9fcbe23ee77f738f085212fea1e2a13a9ccaf5f6224f8d8896",
+    "state": "unreviewed"
+  },
+  "source_sha256": "930a49699e2f9b4de68eb8f97cf1502a296588c3c86c96ecc3ff8614ac9ab25d",
+  "statement_sha256": "19e7c83fcfbbfd9fcbe23ee77f738f085212fea1e2a13a9ccaf5f6224f8d8896",
+  "actual_source_sha256": "930a49699e2f9b4de68eb8f97cf1502a296588c3c86c96ecc3ff8614ac9ab25d",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Use hypotheses H0–H6 of [1]. Let $`\\mu,\\nu`$ be compactly supported probabilities on $`\\mathbb R^n`$, with disjoint supports and at least one absolutely continuous marginal. The closed control set is $`A\\subset\\mathbb R^m`$; $`K\\ge0`$ is continuous. Dynamics $`f(q,a)`$ are Lipschitz in $`q`$, continuous in $`a`$, and span $`\\mathbb R^n`$ at each $`q`$. Require\n\n```math\n\\sup_q|f(q,a)|<\\infty,\\quad |f(q,a)|\\le\\Gamma_0(1+|a|),\\quad\n\\liminf_{|a|\\to\\infty}\\frac{K(t,q,a)}{|a|}=\\infty,\n\\qquad \\liminf_{T\\to\\infty}\\int_0^T\\inf_{q,a}K(t,q,a)\\,dt=\\infty.\n```\n\nThe smooth Hamiltonian $`H(t,q,p)=\\sup_a\\{p\\cdot f(q,a)-K(t,q,a)\\}`$ has the source's asymptotic growth $`H\\sim|p|^\\beta`$, $`1<\\beta<\\infty`$, uniformly in $`(t,q)`$. Its maximizing control is unique and continuous. Assume either strict time increase or strict time decrease of $`K`$.\n\nMinimize $`\\int_0^\\infty\\int K\\,d\\rho_t\\,dt`$ over nonnegative finite state–control measures $`\\rho_t`$ and a nonnegative stopping measure $`\\sigma`$, with spatial marginal $`\\nu`$, satisfying [1, (3.1)–(3.2)]:\n\n```math\n\\int w\\,d\\sigma=\\int w(0,x)\\,d\\mu(x)\n +\\int_0^\\infty\\int(\\partial_t w+f\\cdot\\nabla_qw)\\,d\\rho_t\\,dt.\n```\n\nHere $`\\rho_t`$ is weak*-measurable; tests are the source's $`C^1(\\mathbb R\\times\\mathbb R^n)`$ functions with integrals understood. **Is the minimizing pair $`(\\rho_t\\,dt,\\sigma)`$ unique?** Occupation equality includes controls and ignores changes on null time sets. The displayed coercivity is not strengthened to an unstated uniform rate.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"controlled dynamics\" \"free end times\" \"uniqueness\" Eulerian",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"Eulerian\" \"free\" \"transport\" uniqueness",
+    "site:palomar-registry.org OR site:hexagonmath.org \"controlled transport\" \"uniqueness\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v2,6July2018 (HTML body displays later generated Date); SIAMJCO56(2018)3239–3259",
+      "scope_comparison": "Theorem5.5 gives unique endpoint transport plan and an Eulerian minimizing embedding, not uniqueness of every admissible state-control occupation/stopping pair. Remark5.6 restricts an Eulerian uniqueness argument to smoother dual potentials and conjectures Lipschitz case. Local target keeps original H0–H6/coercivity and includes controls. Stochastic drift uniqueness has nonzero diffusion, tariff results concern endpoint plans. No primary theorem meeting the full deterministic Eulerian scope located.",
+      "primary_body_access_gap": false,
+      "locator": "H5–H6; Theorem5.5; Remark5.6",
+      "url": "https://arxiv.org/html/1803.10874v2"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem5.5 gives unique endpoint transport plan and an Eulerian minimizing embedding, not uniqueness of every admissible state-control occupation/stopping pair. Remark5.6 restricts an Eulerian uniqueness argument to smoother dual potentials and conjectures Lipschitz case. Local target keeps original H0–H6/coercivity and includes controls. Stochastic drift uniqueness has nonzero diffusion, tariff results concern endpoint plans. No primary theorem meeting the full deterministic Eulerian scope located.",
+  "latest_version_check": "v2,6July2018 (HTML body displays later generated Date); SIAMJCO56(2018)3239–3259",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

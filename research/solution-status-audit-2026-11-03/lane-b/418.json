@@ -1,0 +1,54 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 338,
+  "source_sha256": "4c1b63fed58683030dd98a2129c237a49a90561367f485edb19d07c0095eee21",
+  "statement_sha256": "fb1b1c45319408fa628341d07d3772d4bced165b4a2221348b43b9f5ddf54d15",
+  "original_target": {
+    "id": "418",
+    "title": "Uniqueness of the zero-average dispersion-managed soliton",
+    "area": "Nonlocal dispersive PDEs / optical pulse design",
+    "file": "problems/418-zero-dispersion-soliton-uniqueness.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "continuum2",
+    "source_sha256": "4c1b63fed58683030dd98a2129c237a49a90561367f485edb19d07c0095eee21",
+    "statement_sha256": "fb1b1c45319408fa628341d07d3772d4bced165b4a2221348b43b9f5ddf54d15",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "418",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"zero\" \"dispersion managed\" soliton uniqueness 2026",
+    "\"dispersion managed\" \"uniqueness\" minimizer",
+    "\"zero dispersion\" \"uniqueness\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) soliton",
+    "\"Choi\" \"Jin\" \"Lee\" \"uniqueness\" \"dispersion\" arxiv",
+    "\"zero-average\" \"soliton\" uniqueness (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1008.4631",
+      "version": "v1, 27 Aug 2010; published J Nonlinear Sci 2012",
+      "locator": "Theorem 1.1, PDF p3; Remarks1.3; Appendix C",
+      "theorem_body_checked": true,
+      "scope": "Existence and tightness modulo shifts/boosts for the uniform [0,1] measure; no assertion of one orbit of maximizers."
+    },
+    {
+      "url": "https://epubs.siam.org/doi/abs/10.1137/22M1499972",
+      "date": "7 July 2023",
+      "locator": "Publisher model/abstract and author publication list https://sites.google.com/view/sangdonjin",
+      "theorem_body_checked": false,
+      "scope": "Positive average dispersion and sufficiently small positive epsilon, not the zero-average maximization problem. Full publisher link redirects to abstract; no full-scope announcement inferred."
+    }
+  ],
+  "registry_checks": "Searched complete cached Palomar/Hexagon metadata and pinned OpenAI/Colbrook author listings for dispersion-managed/dispersion managed aliases; no matching full claim.",
+  "scope_comparison": "The target is uniqueness of every global maximizer modulo the entire specified symmetry group for the zero-average uniform-profile quartic functional on R. Existence, decay, or positive-average perturbative uniqueness does not imply this.",
+  "limitations": [
+    "KIT B2 source timed out; SIAM full/epdf redirected to abstract; these do not support a full solution."
+  ],
+  "rationale": "Bounded searches found no full matching resolution or announcement. Retain Open; known results are existence or a different positive-average model."
+}

@@ -10,8 +10,8 @@
     {
       "path": "README.md",
       "purpose": "Package entry point, build command and factual AI-use disclosure",
-      "sha256": "0985f246048378e0f8232ce225e1bc952ef469eea9a874d83039367c61814754",
-      "bytes": 1257
+      "sha256": "eef38642628423a695d8ce5dfe23e09128ce9eab46260c79888b1fe30f891041",
+      "bytes": 1631
     },
     {
       "path": "TARGET_COMPARISON.md",
@@ -21,16 +21,27 @@
     },
     {
       "path": "paper.pdf",
-      "purpose": "Anonymous final analytic manuscript",
-      "sha256": "6f50db9bd4bf21477e493fe8748a2163810360f432ac50fd62d1b35bea7be48c",
-      "bytes": 313735
+      "purpose": "Final analytic manuscript with author attribution",
+      "sha256": "80d433d313e2688f463cc90c69b217ac7368684f8081add644e40f5a40a994d9",
+      "bytes": 356192
     },
     {
       "path": "paper.tex",
-      "purpose": "Editable anonymous self-contained manuscript source",
-      "sha256": "466ed9f8046f056b469ba8c5063c375b6d010dc58f8ff51603541538439e4693",
-      "bytes": 19568
+      "purpose": "Editable self-contained manuscript source with author attribution",
+      "sha256": "aead7e0f36c445df08cba35ef56d9c6bf721f6361a4b177606650acd5cf3bcfe",
+      "bytes": 19620
     }
   ],
-  "manifest_policy": "The manifest describes the four content files. SHA256SUMS binds those files and this manifest; the checksum list excludes itself."
+  "manifest_policy": "The manifest describes the four content files. SHA256SUMS binds those files and this manifest; the checksum list excludes itself.",
+  "authors": [
+    {
+      "name": "Kaiwen Jin",
+      "email": "yui.ui.siki@gmail.com"
+    }
+  ],
+  "local_incorporation": {
+    "date": "2026-11-03",
+    "upstream_commit": "8729eab98bafe409b66c5e39253bf56569a62327",
+    "evidence_scope": "Recorded upstream audits reused; no new full proof audit or formal verification claimed."
+  }
 }

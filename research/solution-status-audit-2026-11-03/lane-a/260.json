@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "260",
+  "manifest_index": 204,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "260",
+    "title": "The exact zero-error Shannon capacity of the seven-cycle",
+    "area": "Zero-error communication / combinatorial coding",
+    "file": "problems/260-seven-cycle-shannon-capacity.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "inverse3",
+    "source_sha256": "a1ffd6ef8076cb4f8c2b36ed4792c5c693620fbbc432979c4111e80261558d8b",
+    "statement_sha256": "6b1714a52534325ceeb760969c1356aa850cf8735fd353fe7608e9f4bd7e6480",
+    "state": "unreviewed"
+  },
+  "source_sha256": "a1ffd6ef8076cb4f8c2b36ed4792c5c693620fbbc432979c4111e80261558d8b",
+  "statement_sha256": "6b1714a52534325ceeb760969c1356aa850cf8735fd353fe7608e9f4bd7e6480",
+  "actual_source_sha256": "a1ffd6ef8076cb4f8c2b36ed4792c5c693620fbbc432979c4111e80261558d8b",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`C_7`$ have vertex set $`\\mathbb Z/7\\mathbb Z`$, with distinct vertices adjacent when their difference is $`\\pm1`$. For $`k\\geq1`$, let $`a_k`$ be the largest size of a set $`\\mathcal C\\subset(\\mathbb Z/7\\mathbb Z)^k`$ such that any distinct $`x,y\\in\\mathcal C`$ have some coordinate $`i`$ with $`x_i-y_i\\notin\\{0,1,-1\\}`$ modulo seven.\n\nDetermine exactly\n\n```math\n\\Theta(C_7)=\\sup_{k\\geq1}a_k^{1/k}.\n```\n\nEquivalently, $`a_k`$ is the independence number of the $`k`$-fold strong graph power. The corresponding zero-error rate is $`\\log_2\\Theta(C_7)`$ bits per channel use.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"C7\" \"Shannon capacity\" 2026",
+    "\"C7\" \"Shannon capacity\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"C7\" \"Shannon capacity\" (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.30273",
+      "version_or_date": "arXiv2608.30273v1,31August2026,current retrieved primary.",
+      "scope_comparison": "The actual construction provides a finite-block independent set and a3.25883262...lower bound, with no matching upper bound. The Lovasz/pentagon Palomar formalization proves C5capacity, and Hexagon's lexicographic/strong-product equality does not evaluate C7. Neither an improved finite code nor an exact hierarchy computes the requested supremum. No full exact-capacity announcement found.",
+      "locator": "Sections3–4 heterogeneous recursion,AppendixB finite certificates and final arithmetic for C7^500;Section5openproblems",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The actual construction provides a finite-block independent set and a3.25883262...lower bound, with no matching upper bound. The Lovasz/pentagon Palomar formalization proves C5capacity, and Hexagon's lexicographic/strong-product equality does not evaluate C7. Neither an improved finite code nor an exact hierarchy computes the requested supremum. No full exact-capacity announcement found.",
+  "latest_version_check": "arXiv2608.30273v1,31August2026,current retrieved primary.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "938",
+  "manifest_index": 782,
+  "checked_date": "2026-11-03",
+  "source_sha256": "c1763aad6c83a5137459dad833cca4e57dc3f64e32d4a79a999178dea1ea8f13",
+  "statement_sha256": "8653173098b630da1dd0f0f1362374cca4fa12432a47d124fa3a086ae6af93ec",
+  "original_target": {
+    "id": "938",
+    "title": "Interior continuity for general multiphase Stefan equations",
+    "area": "Degenerate parabolic PDEs / phase transitions",
+    "file": "problems/938-interior-continuity-for-general-multiphase-stefan-equations.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-2225ba9dafbab48f",
+    "group": "pdes-materials",
+    "source_sha256": "c1763aad6c83a5137459dad833cca4e57dc3f64e32d4a79a999178dea1ea8f13",
+    "statement_sha256": "8653173098b630da1dd0f0f1362374cca4fa12432a47d124fa3a086ae6af93ec",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`N\\ge3`$, let $`E\\subset\\mathbb R^N`$ be open, and let $`T>0`$. Let $`\\beta:\\mathbb R\\rightrightarrows\\mathbb R`$ be a maximal monotone graph with domain $`\\mathbb R`$, bounded on bounded sets:\n```math\n\\sup_{|s|\\le M}\\sup_{v\\in\\beta(s)}|v|<\\infty\\qquad(M>0).\n```\nAssume that some $`\\alpha_0>0`$ satisfies\n```math\n(v_1-v_2)(s_1-s_2)\\ge\\alpha_0|s_1-s_2|^2\n\\quad\\bigl((s_i,v_i)\\in\\beta,\\ i=1,2\\bigr).\n```\nThus finite jumps, accumulating singularities and singular continuous parts are allowed; no prescribed formula for $`\\beta`$ is imposed.\n\nLet $`\\mathbf A:E\\times(0,T)\\times\\mathbb R\\times\\mathbb R^N\\to\\mathbb R^N`$ be measurable in $`(x,t)`$, continuous in $`(z,\\xi)`$ for almost every $`(x,t)`$, and satisfy, for fixed $`0<\\lambda\\le\\Lambda<\\infty`$,\n```math\n\\mathbf A(x,t,z,\\xi)\\cdot\\xi\\ge\\lambda|\\xi|^2,\n\\qquad |\\mathbf A(x,t,z,\\xi)|\\le\\Lambda|\\xi|.\n```\n\nConsider any locally bounded\n```math\nu\\in L^2_{\\mathrm{loc}}\\bigl((0,T);W^{1,2}_{\\mathrm{loc}}(E)\\bigr)\n```\nwith a measurable selection $`w(x,t)\\in\\beta(u(x,t))`$, weakly continuous as a map into $`L^2_{\\mathrm{loc}}(E)`$, satisfying\n```math\n\\int_E w\\varphi\\,dx\\Big|_{t_1}^{t_2}\n+\\int_{t_1}^{t_2}\\!\\int_E\n\\left[-w\\,\\partial_t\\varphi+\n\\mathbf A(x,t,u,\\nabla u)\\cdot\\nabla\\varphi\\right]dx\\,dt=0.\n```\nHere $`0<t_1<t_2<T`$, and $`\\varphi`$ is any smooth test function with spatial support compactly contained in $`E`$, defined on $`[t_1,t_2]`$.\n\nMust $`u`$ have a representative jointly continuous on $`E\\times(0,T)`$?\n\nThis is the homogeneous, quadratic-growth subproblem of the general question in [1]. It concerns interior continuity of every bounded energy weak solution. No boundary regularity, Hölder exponent or uniform modulus over all graphs is requested.",
+  "full_original_page": "# 938. Interior continuity for general multiphase Stefan equations\n\n**Area:** Degenerate parabolic PDEs / phase transitions\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`N\\ge3`$, let $`E\\subset\\mathbb R^N`$ be open, and let $`T>0`$. Let $`\\beta:\\mathbb R\\rightrightarrows\\mathbb R`$ be a maximal monotone graph with domain $`\\mathbb R`$, bounded on bounded sets:\n```math\n\\sup_{|s|\\le M}\\sup_{v\\in\\beta(s)}|v|<\\infty\\qquad(M>0).\n```\nAssume that some $`\\alpha_0>0`$ satisfies\n```math\n(v_1-v_2)(s_1-s_2)\\ge\\alpha_0|s_1-s_2|^2\n\\quad\\bigl((s_i,v_i)\\in\\beta,\\ i=1,2\\bigr).\n```\nThus finite jumps, accumulating singularities and singular continuous parts are allowed; no prescribed formula for $`\\beta`$ is imposed.\n\nLet $`\\mathbf A:E\\times(0,T)\\times\\mathbb R\\times\\mathbb R^N\\to\\mathbb R^N`$ be measurable in $`(x,t)`$, continuous in $`(z,\\xi)`$ for almost every $`(x,t)`$, and satisfy, for fixed $`0<\\lambda\\le\\Lambda<\\infty`$,\n```math\n\\mathbf A(x,t,z,\\xi)\\cdot\\xi\\ge\\lambda|\\xi|^2,\n\\qquad |\\mathbf A(x,t,z,\\xi)|\\le\\Lambda|\\xi|.\n```\n\nConsider any locally bounded\n```math\nu\\in L^2_{\\mathrm{loc}}\\bigl((0,T);W^{1,2}_{\\mathrm{loc}}(E)\\bigr)\n```\nwith a measurable selection $`w(x,t)\\in\\beta(u(x,t))`$, weakly continuous as a map into $`L^2_{\\mathrm{loc}}(E)`$, satisfying\n```math\n\\int_E w\\varphi\\,dx\\Big|_{t_1}^{t_2}\n+\\int_{t_1}^{t_2}\\!\\int_E\n\\left[-w\\,\\partial_t\\varphi+\n\\mathbf A(x,t,u,\\nabla u)\\cdot\\nabla\\varphi\\right]dx\\,dt=0.\n```\nHere $`0<t_1<t_2<T`$, and $`\\varphi`$ is any smooth test function with spatial support compactly contained in $`E`$, defined on $`[t_1,t_2]`$.\n\nMust $`u`$ have a representative jointly continuous on $`E\\times(0,T)`$?\n\nThis is the homogeneous, quadratic-growth subproblem of the general question in [1]. It concerns interior continuity of every bounded energy weak solution. No boundary regularity, Hölder exponent or uniform modulus over all graphs is requested.\n\n## Application\n\nThe temperature is $`u`$, while $`w`$ represents enthalpy. A graph with several jumps models several phase changes. The question asks whether rough, spatially and temporally varying diffusion can produce a temperature discontinuity when the enthalpy graph has unrestricted singularities.\n\n## Known progress and scope\n\nThe original source proves continuity in two space dimensions for general graphs, and in higher dimensions for particular diffusion operators or enthalpy graphs [1]. Part I and Part II of Gianazza–Liao cover broad but structured graphs, including finitely many singularities within a bounded temperature range [2,3]. Part III allows general strongly monotone graphs but assumes $`p\\ge\\max\\{2,N\\}`$ for diffusion with $`p`$-growth [4]. With the solution/approximation framework stated there, its theorem does not include $`p=2<N`$.\n\nThe 2026 improvement of Stefan continuity moduli treats a single-jump enthalpy and $`p>2`$ [5]. These results do not establish the stated arbitrary-graph, quadratic-growth assertion. A bounded search found no matching later proof or announced solution; this is not a guarantee that none exists.\n\n## References\n\n1. E. DiBenedetto, J. M. Urbano and V. Vespri, *Current issues on singular and degenerate evolution equations*, Coimbra Preprint 03–24 (2003), [author-department manuscript](https://www.mat.uc.pt/preprints/ps/p0324.pdf#page=11), §1.4 and §5, especially (5.1)–(5.3), (5.15)–(5.16), Theorems 5.6–5.7 and §5.4.6. An associated chapter appears in *Handbook of Differential Equations: Evolutionary Equations*, vol. I, pp.169–286, [DOI](https://doi.org/10.1016/S1874-5717(04)80005-7). The eligible source here is the 2003 manuscript; edition parity is not assumed.\n2. U. Gianazza and N. Liao, *Continuity of the temperature in a multi-phase transition problem*, Math. Ann. 384 (2022), 211–245; online 2021, [DOI](https://doi.org/10.1007/s00208-021-02255-x), (1.2)–(1.5), Theorem 1.1 and §1.2.\n3. U. Gianazza and N. Liao, *Continuity of the temperature in a multi-phase transition problem. Part II*, Interfaces Free Bound. 26 (2024), 625–674, [DOI](https://doi.org/10.4171/IFB/522), (1.2)–(1.8), Theorem 1.1 and §1.2.\n4. U. Gianazza and N. Liao, *Continuity of the Temperature in a Multi-Phase Transition Problem. Part III*, J. Anal. Math. 150 (2023), 583–607, [DOI](https://doi.org/10.1007/s11854-023-0283-2), (1.2)–(1.5), Theorem 1.1 and §1.2.\n5. U. Gianazza, N. Liao and J. M. Urbano, *Improved Moduli of Continuity for Degenerate Phase Transitions*, Ann. PDE 12, 27 (2026), [DOI](https://doi.org/10.1007/s40818-026-00253-3); [arXiv:2408.11555v1](https://arxiv.org/html/2408.11555v1), (1.1)–(1.3), Theorem 1.1. The selected arXiv body and publisher metadata were checked separately; final-layout parity is not asserted.\n\n## Status review\n\n\n**Known cases:** Arbitrary strongly monotone graphs may include accumulating jumps and singular continuous parts. The cited 2026 phase-transition estimates concern structured graphs; no matching all-graph theorem or full announcement found.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nArbitrary strongly monotone graphs may include accumulating jumps and singular continuous parts. The cited 2026 phase-transition estimates concern structured graphs; no matching all-graph theorem or full announcement found.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\n**Literature check:** The original general question and the quadratic-growth residual were checked against the stated source hypotheses. The cited later theorems cover structured graphs, different growth ranges, or different coefficient and solution assumptions; none of the checked statements covers this entire formulation. Bounded searches through 25 October 2026 located no matching full proof or announced solution.\n\n**Duplicate check:** The all-status AIM/OpenAI index and the 887-record FURTHER findings export were compared by scientific target. Scalar enthalpy-graph continuity is distinct from fractional-pressure or time-memory porous-medium flow, Maxwell-Stefan systems, classical interface control, and stability of melting profiles. The independent root comparison is retained in the tracking records.\n\n**Limits:** The live Prove2Me check and the older linear-comparator full-body route remain recorded access gaps. No exhaustive absence, full proof audit, or edition parity is claimed.\n\n**Admission review:** 25 October 2026. The recorded primary-statement, current-status and semantic duplicate checks were completed before admission. Public AIM-head and complete OpenAI-CONTENTS comparisons were refreshed without a change. The dated, bounded search and access limits above remain part of this assessment.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-2225ba9dafbab48f**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Stefan",
+    "multi-phase",
+    "multiphase",
+    "enthalpy graph"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"multiphase\" \"Stefan\" \"general\" continuity 2026",
+    "\"multiphase\" \"Stefan\" \"general\" continuity; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2408.11555v1",
+      "locator": "Theorem1.1; equations1.1–1.3 and regularization equation2.2",
+      "comparison": "Actual recent estimate treats single-jump graph beta(s)=s+nu H(s), with degenerate p>2 and regularization framework. It does not cover arbitrary strongly monotone graphs with accumulating/singular continuous parts for quadratic diffusion p=2<N. PartIII p>=max(2,N) is also outside quadratic high dimension."
+    },
+    {
+      "url": "https://link.springer.com/content/pdf/10.1007/s11854-023-0283-2.pdf",
+      "locator": "2023 Theorem1.1 printed584, PDFp2; discussion printed585",
+      "comparison": "Actual full general-graph theorem requires p>=max(2,N). The text explicitly leaves the complementary range to future work; quadratic p=2<N is outside the theorem."
+    }
+  ],
+  "rationale": "Actual recent estimate treats single-jump graph beta(s)=s+nu H(s), with degenerate p>2 and regularization framework. It does not cover arbitrary strongly monotone graphs with accumulating/singular continuous parts for quadratic diffusion p=2<N. PartIII p>=max(2,N) is also outside quadratic high dimension.",
+  "limitations": [
+    "Bounded search does not establish continued openness; selected primary scope statements checked, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "938",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Stefan",
+          "multi-phase",
+          "multiphase",
+          "enthalpy graph"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Stefan",
+          "multi-phase",
+          "multiphase",
+          "enthalpy graph"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Stefan",
+        "multi-phase",
+        "multiphase",
+        "enthalpy graph"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

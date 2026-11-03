@@ -1,0 +1,122 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "933",
+  "manifest_index": 777,
+  "checked_date": "2026-11-03",
+  "source_sha256": "1ccb0970178f697902fe792192d557573f92db68f0ba92cc434f710a9f7da632",
+  "statement_sha256": "f19d34e15f3b749d538b87148fa05e7a47cdfc932922b0528678f0fbdf257e15",
+  "original_target": {
+    "id": "933",
+    "title": "Bounded point interpolation in Hardy spaces of Dirichlet series",
+    "area": "Function spaces and interpolation theory",
+    "file": "problems/933-bounded-point-interpolation-in-hardy-spaces-of-dirichlet-series.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-eaa457344ff9ca20",
+    "group": "operators",
+    "source_sha256": "1ccb0970178f697902fe792192d557573f92db68f0ba92cc434f710a9f7da632",
+    "statement_sha256": "f19d34e15f3b749d538b87148fa05e7a47cdfc932922b0528678f0fbdf257e15",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For $`1<p<\\infty`$, $`p\\ne2`$, characterize the bounded sequences $`S=(s_j)`$ of distinct points in $`\\{s\\in\\mathbb C:\\mathrm{Re}s>1/2\\}`$ that interpolate for the Hardy space $`\\mathscr H^p`$ of ordinary Dirichlet series. Also obtain quantitative estimates for the interpolation constant $`M_{\\mathscr H^p}(S)`$ as the points approach the critical line $`\\mathrm{Re}s=1/2`$ [1, concluding question in Section 9].\n\nHere $`\\mathscr H^p`$ is the completion of Dirichlet polynomials in the mean-value $`p`$-norm. In the source's definition, interpolation means that for each data sequence $`(a_j)`$ with\n```math\n\\sum_j |a_j|^p\\,\\|\\delta_{s_j}\\|^{-p}<\\infty,\n  \\qquad \\|\\delta_{s_j}\\|=\\zeta(2\\mathrm{Re}s_j)^{1/p},\n```\n\nthere is an $`f\\in\\mathscr H^p`$ with $`f(s_j)=a_j`$ and norm bounded by $`M_{\\mathscr H^p}(S)`$ times the displayed weighted $`\\ell^p`$ norm [1, Section 4.1].",
+  "full_original_page": "# 933. Bounded point interpolation in Hardy spaces of Dirichlet series\n\n**Area:** Function spaces and interpolation theory\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor $`1<p<\\infty`$, $`p\\ne2`$, characterize the bounded sequences $`S=(s_j)`$ of distinct points in $`\\{s\\in\\mathbb C:\\mathrm{Re}s>1/2\\}`$ that interpolate for the Hardy space $`\\mathscr H^p`$ of ordinary Dirichlet series. Also obtain quantitative estimates for the interpolation constant $`M_{\\mathscr H^p}(S)`$ as the points approach the critical line $`\\mathrm{Re}s=1/2`$ [1, concluding question in Section 9].\n\nHere $`\\mathscr H^p`$ is the completion of Dirichlet polynomials in the mean-value $`p`$-norm. In the source's definition, interpolation means that for each data sequence $`(a_j)`$ with\n```math\n\\sum_j |a_j|^p\\,\\|\\delta_{s_j}\\|^{-p}<\\infty,\n  \\qquad \\|\\delta_{s_j}\\|=\\zeta(2\\mathrm{Re}s_j)^{1/p},\n```\n\nthere is an $`f\\in\\mathscr H^p`$ with $`f(s_j)=a_j`$ and norm bounded by $`M_{\\mathscr H^p}(S)`$ times the displayed weighted $`\\ell^p`$ norm [1, Section 4.1].\n\n## Application\n\nPoint interpolation controls how well functions in $`\\mathscr H^p`$ can match prescribed values near their critical boundary. The original paper identifies the missing sequence characterization and constants as obstacles to sharper approximation-number estimates for composition operators.\n\n## Known results and scope\n\nThe bounded-sequence case for $`\\mathscr H^2`$ is characterized by a local interpolation theorem [2]. The 2016 paper gives an $`\\mathscr H^1`$ bound through squaring an $`\\mathscr H^2`$ interpolant and finite-sequence estimates away from the critical line [1, Section 4]. Those do not give the requested uniform characterization and near-boundary estimates for $`1<p<\\infty`$, $`p\\ne2`$. A 2026 preprint announces a solution of the **different local embedding inequality** also listed at the end of [1]; its stated results do not answer this point-interpolation question [3].\n\n## References\n\n1. F. Bayart, H. Queffélec and K. Seip, [*Approximation numbers of composition operators on $`H^p`$ spaces of Dirichlet series*](https://aif.centre-mersenne.org/item/10.5802/aif.3019.pdf), *Annales de l'Institut Fourier* **66** (2016), no. 2, 551–588, Sections 4.1 and 9. [DOI](https://doi.org/10.5802/aif.3019).\n2. J.-F. Olsen and K. Seip, [*Local interpolation in Hilbert spaces of Dirichlet series*](https://arxiv.org/abs/math/0608506), *Proceedings of the American Mathematical Society* **136** (2008), 203–212.\n3. B. Chen, X. Fang, F. Guo, S. Hou, Y. Shao and Q. Zhou, [*The Local Embedding Problem for Hardy Spaces of Dirichlet Series*](https://arxiv.org/abs/2609.11560v2), arXiv preprint (2026), Theorem 1.1 and Corollary 1.2.\n\n## Status review\n\n\n**Known cases:** The July 2026 Maletzki theorem is for the bounded Dirichlet-series algebra H-infinity. It does not give the weighted finite-p interpolation characterization or its boundary constants; the recent local embedding result is also a different assertion.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe July 2026 Maletzki theorem is for the bounded Dirichlet-series algebra H-infinity. It does not give the weighted finite-p interpolation characterization or its boundary constants; the recent local embedding result is also a different assertion.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe [source, later-result and duplicate audit](../FURTHER_problems/_tracking/hardy-dirichlet-interpolating-sequences-status-2026-10-21.json) separates point interpolation from local norm embedding and from interpolation between function spaces. No complete solution or announced settlement of the exact point-sequence task was found in bounded searches through 21 October 2026.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-eaa457344ff9ca20**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Dirichlet series",
+    "interpolating sequences",
+    "Maletzki"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Dirichlet series\" \"interpolating sequences\" \"Maletzki\" 2026",
+    "\"Dirichlet series\" \"interpolating sequences\" \"Maletzki\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/2607.23796",
+      "locator": "Primary abstract: Dirichlet-series application explicitly H-infinity",
+      "comparison": "Characterization is for bounded Dirichlet-series algebra H-infinity, not weighted finite-p point interpolation plus boundary constants. 2609.11560 local embedding inequality changes the conclusion; no matching complete point-sequence solution located."
+    }
+  ],
+  "rationale": "Characterization is for bounded Dirichlet-series algebra H-infinity, not weighted finite-p point interpolation plus boundary constants. 2609.11560 local embedding inequality changes the conclusion; no matching complete point-sequence solution located.",
+  "limitations": [
+    "Bounded negative search is not proof of openness; candidate scope inspected, not complete proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "933",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Dirichlet series",
+          "interpolating sequences",
+          "Maletzki"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-08-21-000012",
+            "title": "teal-sea/zeta-lab",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-21-000012-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Dirichlet series",
+          "interpolating sequences",
+          "Maletzki"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Dirichlet series",
+        "interpolating sequences",
+        "Maletzki"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:57:05.491Z",
+      "previous_outcome": "partial",
+      "localID": "933",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "sources": [
+        {
+          "url": "https://aif.centre-mersenne.org/item/10.5802/aif.3019.pdf",
+          "version": "published2016AIF66(2),551–588; fetched3November2026",
+          "locator": "§4.1 interpolation definitions; §9 concluding questions, printedp586",
+          "inspection": "Actual final body lists two SEPARATE questions: the local embedding inequality, and characterization/boundary constants of bounded interpolating sequences for finite p!=2. Thus a solution of the former does not state the latter.",
+          "local_text": "_sources/933-Bayart.txt",
+          "receipt": "_sources/933-Bayart.txt.receipt.json"
+        }
+      ],
+      "scope_comparison": "Exact original target body recovered; H-infinity Maletzki theorem remains a different function space. Palomar zeta-lab proves the analytic functional-equation half of Davenport–Heilbronn, not finite-p point interpolation. No full matching announcement found in bounded searches."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": [],
+  "announcement_hit_disposition": "zeta-lab constructs an entire Davenport–Heilbronn function and its functional equation, expressly not all off-critical zeros. It does not characterize bounded finite-p Hardy Dirichlet-series interpolating sequences or their boundary constants.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.725Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

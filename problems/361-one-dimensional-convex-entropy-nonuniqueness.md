@@ -2,9 +2,9 @@
 
 **Area:** Continuum mechanics; admissibility of shock dynamics
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -33,6 +33,13 @@ An entropy inequality encodes the second law or energy dissipation in continuum 
 3. A. Bressan and G. Guerra, [*Unique solutions to hyperbolic conservation laws with a strictly convex entropy*](https://arxiv.org/abs/2305.10737), Journal of Differential Equations (2024), Theorem 1.1, uniqueness in the small-BV semigroup domain.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Affirmative existence of two bounded entropy-admissible solutions.
+
+[Claimed solution](https://arxiv.org/pdf/2609.09353v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/361.json). Source locator: Theorem1.3; §1.4 p-system and entropy; §9 Steps1–3 and wedge gluing. The comparison records the hypotheses, quantifiers and any reduction to the original target. The full external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative existence, claimed
 

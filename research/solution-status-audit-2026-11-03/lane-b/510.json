@@ -1,0 +1,80 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "510",
+  "manifest_index": 401,
+  "original_target": {
+    "id": "510",
+    "title": "Finite homotopy models for spherical Rips complexes",
+    "area": "Applied and computational topology",
+    "file": "problems/510-spherical-rips-finite-homotopy-type.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "5d18cd086640412b0c841da0b59c579019a4001af33f3391ca222871f6f3e2e0",
+    "statement_sha256": "5fa9ae6197fc8f36c63d34fea329b1deb2a8f801ef18a45103c4d386c2c3a053",
+    "state": "unreviewed"
+  },
+  "source_sha256": "5d18cd086640412b0c841da0b59c579019a4001af33f3391ca222871f6f3e2e0",
+  "statement_sha256": "5fa9ae6197fc8f36c63d34fea329b1deb2a8f801ef18a45103c4d386c2c3a053",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:35:52.735902+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual2407.15818v2 Conjecture7.3 is finite CW type at all strict positive scales. Jin manuscript Theorem1.1 only covers a short interval after first transition for n>=3; new2609.33009v1 gives critical-diameter/deformation gap criteria and initial ranges. Neither settles every sphere scale.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2407.15818v2",
+      "locator": "Conjecture7.3 and convention discussion",
+      "body_inspected": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/MColbrook/AIM/24edaadc6bb272737d8da0745c662c992db07b22/research/solutions/512-kaiwen-jin-spherical-rips-first-transition/paper/main.tex",
+      "locator": "Theorem1.1 labelthm:main, lines49–56; identical local source read by agent",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2609.33009v1",
+      "locator": "Introduction and critical-diameter/deformation theorem discussion",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Rips\" \"finite CW\" spheres (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "spherical Rips",
+        "finite homotopy",
+        "finite CW"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "spherical Rips",
+        "finite homotopy",
+        "finite CW"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

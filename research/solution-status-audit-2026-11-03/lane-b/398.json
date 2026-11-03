@@ -1,0 +1,51 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 325,
+  "source_sha256": "d05168e20b292c2067e231c56a77e821c1273151f96a4f32ad45eef9c5a2f84a",
+  "statement_sha256": "d4e0ae0ac3600ca87d6e163b044af00a0d7d94e1e60e64cd781b265097997ac3",
+  "original_target": {
+    "id": "398",
+    "title": "An electric far-field factorization criterion for a perfect conductor",
+    "area": "Inverse electromagnetic scattering and operator ranges",
+    "file": "problems/398-an-electric-far-field-factorization-criterion-for-a-perfect-conductor.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-96efe2be67155a2d",
+    "group": "inverse3",
+    "source_sha256": "d05168e20b292c2067e231c56a77e821c1273151f96a4f32ad45eef9c5a2f84a",
+    "statement_sha256": "d4e0ae0ac3600ca87d6e163b044af00a0d7d94e1e60e64cd781b265097997ac3",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "398",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"perfectly conducting\" \"factorization method\" 2026 electric",
+    "\"perfectly conducting\" \"factorization\" \"electric far field\"",
+    "\"perfectly conducting\" factorization (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"perfect conductor\" \"factorization\" \"2026\" Maxwell"
+  ],
+  "sources": [
+    {
+      "url": "https://num.math.uni-goettingen.de/kress/looking-back.pdf",
+      "version": "authorcopy SIAMReview60(2018)779–807",
+      "locators": "Theorem3.1 and following paragraph PDFpp18–19",
+      "body_inspected": true,
+      "scope": "Helmholtz sound-soft quarter-power range theorem; explicitly says perfect-conductor electromagnetic analogue remains open."
+    },
+    {
+      "url": "https://www.math.uni-bremen.de/zetem/cms/media.php/278/factorization.pdf",
+      "version": "Lechleiter2015 author manuscript",
+      "locators": "PDFpp4–5 middle-operator condition",
+      "body_inspected": true,
+      "scope": "Coercivity hypothesis fails for perfect conductor; successful Maxwell medium/low-frequency/periodic methods concern different operators or setups."
+    }
+  ],
+  "registry_checks": "No perfectly conducting/far-field relevant alias Palomar/Hexagon/OpenAI/Colbrook metadata; focused arXiv, Zenodo, HAL, GitHub, primary author/publisher searches.",
+  "scope_comparison": "Exact unmodified electric operatorF, actual range(F*F)^1/4 for allC2PEC obstacles away from interior Maxwell eigenfrequencies. Numerical sampling, modifiedFsharp, penetrable Maxwell media and single-illumination uniqueness do not establish it.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

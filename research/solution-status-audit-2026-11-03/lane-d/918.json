@@ -1,0 +1,86 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "918",
+  "manifest_index": 762,
+  "checked_date": "2026-11-03",
+  "source_sha256": "10e359a909612359d15a7ff843a7a0f50edc16576619a989d841079f5603b8fc",
+  "statement_sha256": "69e516e7cbecd99e13d093572e7c5220e08915ef11876d0d1fb97f63cee2406c",
+  "original_target": {
+    "id": "918",
+    "title": "Are all $`L^p`$-convolvers $`p`$-pseudomeasures?",
+    "area": "Functional analysis and operator algebras",
+    "file": "problems/918-are-all-l-p-convolvers-p-pseudomeasures.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a13830d8fb26a65f",
+    "group": "operators",
+    "source_sha256": "10e359a909612359d15a7ff843a7a0f50edc16576619a989d841079f5603b8fc",
+    "statement_sha256": "69e516e7cbecd99e13d093572e7c5220e08915ef11876d0d1fb97f63cee2406c",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`G`$ be a locally compact group with left Haar measure, and let $`1<p<\\infty`$, $`p\\ne2`$. Left convolution gives a representation $`\\lambda_p:L^1(G)\\to\\mathcal B(L^p(G))`$. Inside $`\\mathcal B(L^p(G))`$, set\n\n```math\nPF_p(G)=\\overline{\\lambda_p(L^1(G))}^{\\|\\cdot\\|},\\qquad\nPM_p(G)=\\overline{\\lambda_p(L^1(G))}^{\\mathrm{WOT}},\\qquad\nCV_p(G)=\\lambda_p(L^1(G))''.\n```\n\n\nHere $`\\mathrm{WOT}`$ is the weak operator topology, and the double prime means the bicommutant. One always has $`PM_p(G)\\subseteq CV_p(G)`$. **Must $`PM_p(G)=CV_p(G)`$ for every locally compact $`G`$ and every such $`p`$?** Equivalently, is every $`L^p`$-convolver a weak-operator limit of left-convolution operators from $`L^1(G)`$?\n\nThis is the unresolved core of Gardella's Question 4.12, which states the question for all $`p\\in[1,\\infty)`$.",
+  "full_original_page": "# 918. Are all $`L^p`$-convolvers $`p`$-pseudomeasures?\n\n**Area:** Functional analysis and operator algebras\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`G`$ be a locally compact group with left Haar measure, and let $`1<p<\\infty`$, $`p\\ne2`$. Left convolution gives a representation $`\\lambda_p:L^1(G)\\to\\mathcal B(L^p(G))`$. Inside $`\\mathcal B(L^p(G))`$, set\n\n```math\nPF_p(G)=\\overline{\\lambda_p(L^1(G))}^{\\|\\cdot\\|},\\qquad\nPM_p(G)=\\overline{\\lambda_p(L^1(G))}^{\\mathrm{WOT}},\\qquad\nCV_p(G)=\\lambda_p(L^1(G))''.\n```\n\n\nHere $`\\mathrm{WOT}`$ is the weak operator topology, and the double prime means the bicommutant. One always has $`PM_p(G)\\subseteq CV_p(G)`$. **Must $`PM_p(G)=CV_p(G)`$ for every locally compact $`G`$ and every such $`p`$?** Equivalently, is every $`L^p`$-convolver a weak-operator limit of left-convolution operators from $`L^1(G)`$?\n\nThis is the unresolved core of Gardella's Question 4.12, which states the question for all $`p\\in[1,\\infty)`$.\n\n## Application\n\nThe equality would make two natural descriptions of operators invariant under group translation coincide. It is a Banach-space analogue of the Hilbert-space bicommutant phenomenon, relevant to harmonic analysis and $`L^p`$ operator algebras.\n\n## Known results and scope\n\nThe cases $`p=1`$ and $`p=2`$ are known, as are all $`p`$ when $`G`$ has the approximation property; this includes amenable groups. Gardella and Thiel's later paper solves an **isomorphism** problem for these algebras but explicitly retains their equality as an open problem. The question here imposes no amenability, approximation property, discreteness, or second-countability assumption on $`G`$.\n\n## References\n\n1. E. Gardella, [*A modern look at algebras of operators on $`L^p`$-spaces*](https://arxiv.org/abs/1909.12096v1), *Expositiones Mathematicae* **39** (2021), 420–453, [DOI:10.1016/j.exmath.2020.10.003](https://doi.org/10.1016/j.exmath.2020.10.003). Definition 4.3, Proposition 4.9 and Question 4.12 in the [arXiv full text](https://arxiv.org/html/1909.12096v1).\n2. E. Gardella and H. Thiel, [*Isomorphisms of algebras of convolution operators*](https://smf.emath.fr/sites/default/files/2022-12/ens_ann-sc_55_1433-1471__sample.pdf), *Annales Scientifiques de l'École Normale Supérieure* **55** (2022), 1433–1471, [DOI:10.24033/asens.2520](https://doi.org/10.24033/asens.2520), introduction, printed p. 1435.\n\n## Status review\n\n\n**Known cases:** The approximation-property case and p=1,2 are known. Isomorphisms of convolution-operator algebras do not identify WOT-closed pseudomeasures with all bicommutant convolvers. No all-group, all-nonHilbert-p resolution was located.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe approximation-property case and p=1,2 are known. Isomorphisms of convolution-operator algebras do not identify WOT-closed pseudomeasures with all bicommutant convolvers. No all-group, all-nonHilbert-p resolution was located.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe later published paper still calls this equality open, while distinguishing it from the isomorphism result it proves. Targeted source, theorem, counterexample and announcement searches through 23 October 2026 found no general resolution. A semantic search found no matching AIM or admitted FURTHER problem. These are bounded checks, and the publisher's native PDF of Reference 1 was not obtained. The [review audit](../FURTHER_problems/_tracking/arxiv2239-convolvers-pseudomeasures-review-2026-10-23.json) records evidence and limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-a13830d8fb26a65f**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"convolvers\" \"pseudomeasures\" 2026",
+    "\"convolvers\" \"pseudomeasures\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1909.12096v1",
+      "locator": "Question4.12, lines515–519",
+      "comparison": "Exact equality asked for every locally compact G and nonHilbert p. Approximation-property (including amenable) cases do not cover all groups; later isometric-isomorphism rigidity compares two algebras without identifying PMp with CVp."
+    }
+  ],
+  "rationale": "Exact equality asked for every locally compact G and nonHilbert p. Approximation-property (including amenable) cases do not cover all groups; later isometric-isomorphism rigidity compares two algebras without identifying PMp with CVp. No full matching claim found in bounded searches.",
+  "limitations": [
+    "Bounded negative search does not prove openness."
+  ],
+  "announcement_routing": {
+    "localID": "918",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "convolvers",
+          "pseudomeasures",
+          "Gardella"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "convolvers",
+          "pseudomeasures",
+          "Gardella"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "convolvers",
+        "pseudomeasures",
+        "Gardella"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

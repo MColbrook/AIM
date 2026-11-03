@@ -1,0 +1,48 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 295,
+  "source_sha256": "b3388469309bf885435ce3d5211a658b4a37a4a8613c576a2ab26a888eebe84d",
+  "statement_sha256": "f6356784b642200b5042a8b57a6e88a8374313aee49a3bd747ea20e54a45dc7d",
+  "original_target": {
+    "id": "360",
+    "title": "Uniqueness of Glimm–Lax solutions for arbitrarily rough bounded data",
+    "area": "Gas dynamics; one-dimensional conservation laws",
+    "file": "problems/360-glimm-lax-measurable-data-uniqueness.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "b3388469309bf885435ce3d5211a658b4a37a4a8613c576a2ab26a888eebe84d",
+    "statement_sha256": "f6356784b642200b5042a8b57a6e88a8374313aee49a3bd747ea20e54a45dc7d",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "360",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Glimm Lax\" uniqueness bounded measurable 2026",
+    "\"Glimm\" \"uniqueness\" site:zenodo.org OR site:hal.science OR site:github.com 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2601.01349v1",
+      "version": "v1 4 January 2026, current abs history checked; journal 2026",
+      "locators": "Theorem 1.1, Corollary 1.1, section 1.6 Open Problem 1",
+      "body_inspected": true,
+      "scope": "W^(s,p)_loc for some s>0; explicitly asks about data outside every fractional Sobolev space."
+    },
+    {
+      "url": "https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/c/168431/files/2025/06/Linfty-unique-29.pdf",
+      "version": "30 May 2025 author manuscript",
+      "locators": "abstract and uniqueness-domain discussion",
+      "body_inspected": true,
+      "scope": "Faster-than-1/t variation decay restriction; not all Glimm–Lax initial data."
+    }
+  ],
+  "registry_checks": "Palomar Glimm name only QFT foundation; no corresponding Hexagon/OpenAI match. Focused arXiv, primary author/publisher, Zenodo, HAL, GitHub searches.",
+  "scope_comparison": "Need at most one entropy solution in full Glimm–Lax class for every small measurable bounded initial datum, allowing no positive Sobolev regularity. Current theorem does not cover data outside every fractional space. Existing 361 entropy nonuniqueness requires separately checking full GL bounds/genuine nonlinearity; it was not inferred to refute this target.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Actual current primary paper explicitly retains arbitrary-rough-data uniqueness."
+}

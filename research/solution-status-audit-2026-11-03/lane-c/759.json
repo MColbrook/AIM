@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "759",
+  "manifest_index": 603,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "759",
+    "title": "Full interior regularity for the nondegenerate symmetric p-Laplace system",
+    "area": "Nonlinear elasticity / elliptic regularity",
+    "file": "problems/759-full-interior-regularity-for-the-nondegenerate-symmetric-p-laplace-system.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e5c4790e54b5c493",
+    "group": "fracture-damage-plasticity-contact",
+    "source_sha256": "2f6bae4719ee5a5433857aef591114e8128ee0c99d23a4425f1c3740f98de990",
+    "statement_sha256": "14feec6d7796a2e7e3e05e53d54f5a07f9879af3b0dff614260cd3b56ae9aa07",
+    "state": "unreviewed"
+  },
+  "source_sha256": "2f6bae4719ee5a5433857aef591114e8128ee0c99d23a4425f1c3740f98de990",
+  "statement_sha256": "14feec6d7796a2e7e3e05e53d54f5a07f9879af3b0dff614260cd3b56ae9aa07",
+  "actual_source_sha256": "2f6bae4719ee5a5433857aef591114e8128ee0c99d23a4425f1c3740f98de990",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\ge3`$, $`1<p<\\infty`$, $`p\\ne2`$, and let $`B_1\\subset\\mathbb R^n`$ be the open unit ball. For $`u\\in W^{1,p}(B_1;\\mathbb R^n)`$ write\n\n```math\ne(u)=\\frac{\\nabla u+\\nabla u^{\\mathsf T}}2,\n\\qquad A(P)=(1+|P|^2)^{(p-2)/2}P,\n```\n\nwhere $`|P|`$ is the Frobenius norm. Suppose $`u`$ solves the homogeneous system weakly:\n\n```math\n\\int_{B_1} A(e(u)):e(\\varphi)\\,dx=0\n\\quad\\text{for every }\\varphi\\in C_c^\\infty(B_1;\\mathbb R^n).\n```\n\nIs every such $`u`$ of class $`C^{1,\\alpha}_{\\mathrm{loc}}(B_1;\\mathbb R^n)`$ for some $`\\alpha\\in(0,1)`$? Prove this assertion, or produce an admissible weak solution for which it fails. No boundary condition, pressure, or divergence-free constraint is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"symmetric p-Laplace\" full regularity 2026 nondegenerate",
+    "\"symmetric gradient\" \"regularity\" (site:zenodo.org OR site:hal.science OR site:github.com) 2026",
+    "symmetric p Laplace (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1, 17 March 2026; current arXiv record inspected 3 November 2026",
+      "primary_body_access_gap": false,
+      "locator": "Introduction; Theorem 1.2, equations (1.7)–(1.11)",
+      "scope_comparison": "The actual theorem obtains W1,2 local regularity of the nonlinear stress for p in (p−(n),p+(n)); the following text extends this to the exact nondegenerate Carreau law nu=1. This is Sobolev stress regularity, not C1,alpha of every weak solution in all n>=3 and all p≠2. The introduction explicitly retains full higher-dimensional Holder-gradient regularity as an open problem. Full-gradient p-Laplace and pressure-constrained p-Stokes results change the equation.",
+      "url": "https://arxiv.org/html/2603.17036v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual theorem obtains W1,2 local regularity of the nonlinear stress for p in (p−(n),p+(n)); the following text extends this to the exact nondegenerate Carreau law nu=1. This is Sobolev stress regularity, not C1,alpha of every weak solution in all n>=3 and all p≠2. The introduction explicitly retains full higher-dimensional Holder-gradient regularity as an open problem. Full-gradient p-Laplace and pressure-constrained p-Stokes results change the equation.",
+  "latest_version_check": "v1, 17 March 2026; current arXiv record inspected 3 November 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

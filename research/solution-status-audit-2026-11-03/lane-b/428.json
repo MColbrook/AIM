@@ -1,0 +1,49 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 347,
+  "source_sha256": "8da46cc189834cba8350cd1b87084cbee6acc0b812580132f10393e1f54a8256",
+  "statement_sha256": "4f3e9d9244902ff0f739a6c8ad482082591e096e840b4931f7f89e07b61775e2",
+  "original_target": {
+    "id": "428",
+    "title": "The sharp first Steklov eigenvalue with fixed boundary area",
+    "area": "Spectral geometry and shape optimization",
+    "file": "problems/428-the-sharp-first-steklov-eigenvalue-with-fixed-boundary-area.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-12f901dd5cb5dc2c",
+    "group": "spectral2",
+    "source_sha256": "8da46cc189834cba8350cd1b87084cbee6acc0b812580132f10393e1f54a8256",
+    "statement_sha256": "4f3e9d9244902ff0f739a6c8ad482082591e096e840b4931f7f89e07b61775e2",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "428",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Steklov\" \"boundary area\" \"sharp\" 2026",
+    "\"Steklov\" \"supremum\" \"boundary\" 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2604.03418v3",
+      "version": "v3,4July2026,currentabs checked",
+      "locator": "Introduction beforeDefinition1.1;eq1.3",
+      "theorem_body_checked": true,
+      "scope": "Explicitly says sharp sigma1 A^(1/(d-1)) bounds unknown d>=3; paper targets mixed area-volume normalization."
+    },
+    {
+      "url": "https://arxiv.org/html/2609.33555v1",
+      "version": "v1,27Sep2026,currentabs checked",
+      "locator": "Corollary1.4,eq1.5",
+      "theorem_body_checked": true,
+      "scope": "Sharp sigma1*A*volume^((2-n)/n) for3<=n<=6. Does not fixareaonly; its approximating domains do not prove boundary-area normalized sharpness."
+    }
+  ],
+  "registry_checks": "Complete cached Palomar/Hexagon metadata and pinned OpenAI/Colbrook author listings scanned for target terms; no full matching claim. Palomar planar Steklov isospectrality is a different question.",
+  "scope_comparison": "Need exact Cn over every smooth connected bounded Euclidean domain with arbitrary topology/allboundarycomponents, for eachn>=3, including approximating sharpness. Mixednormalization or hyperbolic/manifold/convex subclass results fail.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

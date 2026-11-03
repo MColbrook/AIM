@@ -1,0 +1,93 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "571",
+  "manifest_index": 443,
+  "original_target": {
+    "id": "571",
+    "title": "Sharp few-distance bound for arbitrary normed spaces",
+    "area": "Geometry and topology",
+    "file": "problems/571-sharp-few-distance-bound-for-arbitrary-normed-spaces.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-42fbb72b316da0aa",
+    "group": "geometry-topology",
+    "source_sha256": "f1e15085d603484203ef18b9f728796fced79ec24646b124e5d5b580926e86e1",
+    "statement_sha256": "5aece8ea4f02e777b5ca3da6706fd97be820b6733a79ee1885b4c1a6d834b6c2",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f1e15085d603484203ef18b9f728796fced79ec24646b124e5d5b580926e86e1",
+  "statement_sha256": "5aece8ea4f02e777b5ca3da6706fd97be820b6733a79ee1885b4c1a6d834b6c2",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:59:51.466110+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The full target requires both the all-norm (k+1)^d cardinality bound and equality rigidity. The original Conjecture1 and survey Conjecture15 retain both. Planar, parallelotope, k=1 and lp/product-norm results and weaker general2^(kd) bounds do not cover every norm. A variable-dimension isosceles-free construction has a different conclusion.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/0712.0953v1",
+      "locator": "Conjecture1, Theorems1/3",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/1702.00066v2",
+      "locator": "Section8 Conjecture15 and known cases",
+      "body_inspected": true
+    },
+    {
+      "url": "https://math.mit.edu/research/highschool/primes/materials/2020/Chen-Gui-Tang-Xiong.pdf",
+      "locator": "Section1 lp/product-norm scope",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"few-distance\" \"normed\" 2026 conjecture Swanepoel",
+    "\"few-distance\" \"normed\" conjecture [domains arxiv.org,zenodo.org,hal.science,github.com]",
+    "\"Swanepoel\" \"few-distance\" \"2026\""
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "few-distance",
+        "few distance",
+        "Swanepoel"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-11-02-000007",
+          "title": "Erdős Problem 657: Straus's observation on isosceles-free point sets with few distances"
+        },
+        {
+          "id": "PALOMAR-2026-09-30-000016",
+          "title": "Frankl-Kupavskii-Swanepoel Theorem 3: fewer than C(d+2,2) edges embeds in R^d"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "few-distance",
+        "few distance",
+        "Swanepoel"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "2022 final EJC body and a reported2005 three-dimensional subcase were not freshly verified; no claim about the smallest unresolved dimension."
+  ],
+  "canonical_update_required": false
+}

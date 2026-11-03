@@ -1,0 +1,107 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "071",
+  "manifest_index": 51,
+  "original_target": {
+    "id": "071",
+    "title": "Global regularity of the three-dimensional Navier–Stokes equations",
+    "area": "Fluid dynamics",
+    "file": "problems/071-navier-stokes-global-regularity.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "pdes-materials",
+    "source_sha256": "c740dbc19da35ef4638f99f832f59fa250350b9b4e5ba3086366f52e28e54743",
+    "statement_sha256": "3dbaa20adbc286427299ce27c17f94311460634205277f9a684bfacdcd4fd903",
+    "state": "unreviewed"
+  },
+  "source_sha256": "c740dbc19da35ef4638f99f832f59fa250350b9b4e5ba3086366f52e28e54743",
+  "statement_sha256": "3dbaa20adbc286427299ce27c17f94311460634205277f9a684bfacdcd4fd903",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:36:54.815987+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The primary September166-page manuscript Theorem1.1 has a smooth nonzero force, zero initial velocity and arbitrary positive viscosity; torus Corollary10.6 retains forcing. Unforced Euler blowup is inviscid. Critical-regularity NS nonuniqueness has rough initial data. None establishes failure of continuation for an unforced periodic smooth datum. Palomar singular-set bounds and conditional integrability criteria do not eliminate the singular set for all data.",
+  "primary_sources": [
+    {
+      "url": "https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf",
+      "locator": "Theorem1.1 p1; Corollary10.6.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.23868",
+      "locator": "Primary programmatic-search target, not a completed unforced blowup proof.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "Navier",
+    "Stokes"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Navier",
+        "Stokes"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-06-000006",
+          "title": "FluidSingularSets"
+        },
+        {
+          "id": "PALOMAR-2026-10-03-000006",
+          "title": "Escauriaza–Seregin–Šverák and Ladyzhenskaya–Prodi–Serrin regularity"
+        },
+        {
+          "id": "PALOMAR-2026-10-03-000004",
+          "title": "Regularity of asymptotically axisymmetric Navier–Stokes solutions with analytic forcing"
+        },
+        {
+          "id": "PALOMAR-2026-09-22-000003",
+          "title": "CaffarelliKohnNirenberg"
+        }
+      ],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Navier",
+        "Stokes"
+      ],
+      "metadata_hits": [
+        {
+          "id": "2610.00593",
+          "title": "Stability and Convergence of a Regularized Immersed Boundary Method under Dynamic Cartesian Refinement. Part III: Fluid-Driven Rigid-Body Motion"
+        },
+        {
+          "id": "2610.00592",
+          "title": "Stability and Convergence of a Regularized Immersed Boundary Method under Dynamic Cartesian Refinement. Part II: General Prescribed Motion"
+        },
+        {
+          "id": "2610.00582",
+          "title": "Stability and Convergence of a Regularized Immersed Boundary Method under Dynamic Cartesian Refinement. Part I: Fixed Geometry"
+        },
+        {
+          "id": "2610.00314",
+          "title": "Non-unique vanishing-viscosity solutions of 2D Euler with vorticity in $L^p$"
+        }
+      ],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted web searches; arXiv, Zenodo, HAL, GitHub, shared OpenAI current index and requested Colbrook author lists screened. No matching complete claim located.",
+  "limitations": [
+    "Bounded search cannot establish absence of unindexed solutions.",
+    "No end-to-end proof or Lean verification; clearly excluding source hypotheses can be established by a primary abstract."
+  ],
+  "canonical_update_required": false
+}

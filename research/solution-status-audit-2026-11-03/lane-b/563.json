@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "563",
+  "manifest_index": 437,
+  "original_target": {
+    "id": "563",
+    "title": "Identifying a distribution from its Gaussian-channel MMSE curve",
+    "area": "Statistical estimation and information theory",
+    "file": "problems/563-mmse-identification.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "probability-statistics",
+    "source_sha256": "0f8a3181cbb0e9196a79ddcd9d7f6c8dad17b88d4a8db8a10a8c4f9e0709f677",
+    "statement_sha256": "0e39d4eebb652fce001b71baa657f785752476598dbaf1bb85f1edbcca3c9ad4",
+    "state": "unreviewed"
+  },
+  "source_sha256": "0f8a3181cbb0e9196a79ddcd9d7f6c8dad17b88d4a8db8a10a8c4f9e0709f677",
+  "statement_sha256": "0e39d4eebb652fce001b71baa657f785752476598dbaf1bb85f1edbcca3c9ad4",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:59:51.007771+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The cumulant criteria assume a symmetric moment-determinate source and all-order competitor moments; the alternating case requires extra sign restrictions. They neither cover arbitrary finite-variance distributions nor resolve signs from the MMSE curve alone. The institutional October2026 thesis announcement describes three sufficient conditions on symmetric variables, rather than a general resolution.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2311.04831v2",
+      "locator": "Section2.2, Theorems2.12/2.15/2.17; current v2 15June2024",
+      "body_inspected": true
+    },
+    {
+      "url": "https://www.ulb.be/fr/agenda-soutenances-de-theses/paul-mansanarez-faculte-des-sciences?LANGUE=0&RH=1559136530523",
+      "locator": "October2026 institutional thesis abstract",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"MMSE conjecture\" solution 2026",
+    "\"MMSE conjecture\" solution [domains arxiv.org,zenodo.org,hal.science,github.com]",
+    "\"MMSE conjecture\" \"2026\" counterexample"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "MMSE"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "MMSE"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Final2024 journal body not freshly compared; latest author preprint inspected."
+  ],
+  "canonical_update_required": false
+}

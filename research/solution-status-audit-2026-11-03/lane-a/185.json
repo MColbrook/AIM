@@ -1,0 +1,89 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "185",
+  "manifest_index": 145,
+  "original_target": {
+    "id": "185",
+    "title": "The strong Markov property for continuum dynamical percolation",
+    "area": "Probability, stochastic processes and critical phenomena",
+    "file": "problems/185-the-strong-markov-property-for-continuum-dynamical-percolation.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a1f1b07a98664724",
+    "group": "stochastic2",
+    "source_sha256": "da813adc5c406c7bff8594224508da2c5c701d00b19902571b1835b19c4f75dc",
+    "statement_sha256": "847e9daf52c0ae38480a1d068e099fc76dc1b886624b6702ff9d86f3f5095f87",
+    "state": "unreviewed"
+  },
+  "source_sha256": "da813adc5c406c7bff8594224508da2c5c701d00b19902571b1835b19c4f75dc",
+  "statement_sha256": "847e9daf52c0ae38480a1d068e099fc76dc1b886624b6702ff9d86f3f5095f87",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:49:29.469156+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The original Question11.10 asks the strong Markov property beyond ordinary Markov behavior. The later Liouville Theorem1.4 proves mixing, not the exact stopped identity for the stated exceptional-state absorbing extension. Generic Palomar continuous-path Feller-process libraries cannot be substituted for this explicitly non-Feller quad-crossing process. Static Voronoi crossings and near-critical monotone coupling are different dynamics.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1305.5526v4",
+      "locator": "Section11.1, Remark11.9 and Question11.10",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/1905.06940v2",
+      "locator": "Theorem1.4, homogeneous mixing; section5.5 ordinary Markov property",
+      "body_inspected": true
+    },
+    {
+      "url": "https://math.univ-lyon1.fr/~garban/Fichiers/memoirHDR.pdf",
+      "locator": "Introduction remark retaining strong Markov question; indexed primary text",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"continuum dynamical percolation\" \"strong Markov\"",
+    "\"dynamical percolation\" \"strong Markov\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "dynamical percolation",
+        "strong Markov"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-09-18-000001",
+          "title": "Superdiffusion"
+        },
+        {
+          "id": "PALOMAR-2026-09-15-000007",
+          "title": "MarkovProcess"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "dynamical percolation",
+        "strong Markov"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

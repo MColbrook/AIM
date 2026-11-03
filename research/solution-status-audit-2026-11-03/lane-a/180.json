@@ -1,0 +1,84 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "180",
+  "manifest_index": 140,
+  "original_target": {
+    "id": "180",
+    "title": "The density conjecture for activated random walk on the square lattice",
+    "area": "Self-organized criticality",
+    "file": "problems/180-activated-random-walk-density.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "54460cc67503b7ec3c8d2839647f78abc4bc1161261c648af0897d634a130c09",
+    "statement_sha256": "e674b9ab34d4c9d5fa87be679c0a1f5230267f770eb4cd9005634d1d570842ae",
+    "state": "unreviewed"
+  },
+  "source_sha256": "54460cc67503b7ec3c8d2839647f78abc4bc1161261c648af0897d634a130c09",
+  "statement_sha256": "e674b9ab34d4c9d5fa87be679c0a1f5230267f770eb4cd9005634d1d570842ae",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:40.144327+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The source Theorem 1.1 and the 2025 follow-up concern one dimension, not the square lattice. The 2026 complete-graph density result has a different underlying graph; all-dimensional critical density <1 results do not establish equality with the square-box driven stationary density.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2406.01731",
+      "locator": "Theorem 1.1 and introduction, one dimension",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2502.02579",
+      "locator": "Section 1.3, one-dimensional scope",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2604.04747v1",
+      "locator": "Complete-graph model and theorem",
+      "body_inspected": true
+    },
+    {
+      "url": "https://www.ceremade.dauphine.fr/~forien/index_en.html",
+      "locator": "Current author research list distinguishing these results",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"activated random walk\" \"density conjecture\" \"2026\" square",
+    "\"activated random walk\" \"density\" \"Z2\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "activated random walk",
+        "density conjecture"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "activated random walk",
+        "density conjecture"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

@@ -1,0 +1,86 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "842",
+  "manifest_index": 686,
+  "checked_date": "2026-11-03",
+  "source_sha256": "dd7d7a49cf34785b071b33ee44a9c97dd9fd4a21ec52e72191a4ebc1de24bd4d",
+  "statement_sha256": "478fb1ae880fa4acc1c5cfd78099c56a8bac6bf93f5ac934d3ea7586293535eb",
+  "original_target": {
+    "id": "842",
+    "title": "Must a four-dimensional steady soliton with positive Ricci curvature and linear curvature decay be Bryant?",
+    "area": "Geometry and topology",
+    "file": "problems/842-must-a-four-dimensional-steady-soliton-with-positive-ricci-curvature-and-linear-curvature-decay-be-b.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ca7ac61e14ebae50",
+    "group": "geometry-topology",
+    "source_sha256": "dd7d7a49cf34785b071b33ee44a9c97dd9fd4a21ec52e72191a4ebc1de24bd4d",
+    "statement_sha256": "478fb1ae880fa4acc1c5cfd78099c56a8bac6bf93f5ac934d3ea7586293535eb",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`(M^4,g,f)`$ be a complete connected noncompact smooth gradient steady Ricci soliton, with the convention\n```math\n\\mathrm{Ric}_g=\\mathrm{Hess}_g f.\n```\n\nAssume $`\\mathrm{Ric}_g>0`$ everywhere and that $`g`$ is $`\\kappa`$-noncollapsed on all scales for some $`\\kappa>0`$: a curvature-controlled ball with $`\\sup_{B_g(x,r)}|\\mathrm{Rm}_g|\\le r^{-2}`$ has volume at least $`\\kappa r^4`$.\n\nFix $`o\\in M`$ and put $`\\rho(x)=d_g(o,x)`$. Suppose there are constants $`C,r_0>0`$ such that\n```math\n|\\mathrm{Rm}_g|(x)\\le\\frac{C}{\\rho(x)}\n\\qquad\\text{whenever }\\rho(x)\\ge r_0.\n```\n\n\nMust $`(M,g)`$ be isometric, up to positive constant rescaling, to the four-dimensional Bryant steady soliton?\n\nThe decay assumption concerns the **full curvature tensor**. No global nonnegative sectional-curvature or curvature-operator assumption is imposed, and the soliton is not assumed to arise as a singularity model.",
+  "full_original_page": "# 842. Must a four-dimensional steady soliton with positive Ricci curvature and linear curvature decay be Bryant?\n\n**Area:** Geometry and topology\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`(M^4,g,f)`$ be a complete connected noncompact smooth gradient steady Ricci soliton, with the convention\n```math\n\\mathrm{Ric}_g=\\mathrm{Hess}_g f.\n```\n\nAssume $`\\mathrm{Ric}_g>0`$ everywhere and that $`g`$ is $`\\kappa`$-noncollapsed on all scales for some $`\\kappa>0`$: a curvature-controlled ball with $`\\sup_{B_g(x,r)}|\\mathrm{Rm}_g|\\le r^{-2}`$ has volume at least $`\\kappa r^4`$.\n\nFix $`o\\in M`$ and put $`\\rho(x)=d_g(o,x)`$. Suppose there are constants $`C,r_0>0`$ such that\n```math\n|\\mathrm{Rm}_g|(x)\\le\\frac{C}{\\rho(x)}\n\\qquad\\text{whenever }\\rho(x)\\ge r_0.\n```\n\n\nMust $`(M,g)`$ be isometric, up to positive constant rescaling, to the four-dimensional Bryant steady soliton?\n\nThe decay assumption concerns the **full curvature tensor**. No global nonnegative sectional-curvature or curvature-operator assumption is imposed, and the soliton is not assumed to arise as a singularity model.\n\n## Application\n\nSteady solitons model persistent geometric patterns in Ricci flow. The question asks whether noncollapse, positive Ricci curvature and this decay rate determine the entire metric, rather than just its geometry at infinity.\n\n## References\n\n1. Yuxing Deng and Xiaohua Zhu, *Classification of gradient steady Ricci solitons with linear curvature decay*, Science China Mathematics **63** (2020), 135–154. [DOI](https://doi.org/10.1007/s11425-019-1548-0); [primary preprint](https://arxiv.org/abs/1809.08502). Theorem 1.5 and the conjecture immediately following it state this target.\n2. Michael B. Law, *On steady and expanding Ricci solitons with asymptotic symmetries*, [latest primary preprint, v3, 8 April 2026](https://arxiv.org/abs/2505.20576v3). Theorem 1.5, §1.2 and the version-correction note are essential to the current comparison.\n3. Ziyi Zhao and Xiaohua Zhu, *Steady gradient Ricci solitons with nonnegative curvature away from a compact set*, Annales de la Faculté des sciences de Toulouse **35** (2026), 801–837. [Publisher](https://doi.org/10.5802/afst.1864). The stated Bryant rigidity conclusion retains a global nonnegative curvature-operator hypothesis.\n4. Pak-Yeung Chan, Zilu Ma and Yongjia Zhang, *Hamilton-Ivey estimates for gradient Ricci solitons*. [Primary preprint](https://arxiv.org/abs/2112.11025); [published DOI](https://doi.org/10.1007/s00526-025-03167-3). Theorems 1.6–1.7 give curvature bounds and positivity outside a compact set under their stated hypotheses, without supplying the needed global sign condition.\n\n## Status review\n\n\n**Known cases:** Law v3 remains the latest revision and explicitly states that dropping its weighted Lichnerowicz-kernel dimension hypothesis is unknown. Positivity of sectional curvature only outside a compact set does not supply the global sign assumptions in other Bryant-rigidity results.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nLaw v3 remains the latest revision and explicitly states that dropping its weighted Lichnerowicz-kernel dimension hypothesis is unknown. Positivity of sectional curvature only outside a compact set does not supply the global sign assumptions in other Bryant-rigidity results.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked 30 October 2026. Deng–Zhu already prove that these solitons are asymptotically cylindrical and have positive sectional curvature outside a compact set. The question asks for the further global Bryant conclusion.\n\nLaw's latest theorem proves this conclusion with an additional weighted Lichnerowicz-kernel dimension bound, at most one in dimension four. The same version explicitly says that removing that bound is unknown and replaces earlier arguments after an error in old Lemma 3.11. The earlier unconditional claim is therefore not treated as an active resolution. No implication from the assumptions above to the kernel bound was located.\n\nOther rigidity results assume a global curvature sign or pinching condition. Positivity outside a compact set does not supply that premise. The known flying-wing counterexamples to a broader higher-dimensional conjecture are not identified as counterexamples satisfying the precise decay hypothesis here.\n\nBounded current searches and full nearest-statement comparisons against AIM, current saved OpenAI announcements and private findings found no equivalent target or matching active complete resolution. Exact preprint statements and the relevant version history were read; full published-body parity is not asserted. These checks are not a proof of openness.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-ca7ac61e14ebae50**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"Deng\" \"Zhu\" \"Law\" \"steady\" soliton conjecture 2026",
+    "\"steady solitons\" \"linear curvature decay\" (site:zenodo.org OR site:hal.science OR site:github.com OR Palomar OR site:hexagonmath.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2505.20576v3",
+      "version": "v3, 8 April 2026",
+      "locator": "Theorem 1.5, §1.2 and Note on this version; lines 104–117 and 162–164",
+      "inspection": "Theorem requires weighted Lichnerowicz-kernel dimension at most one in dimension four. Text says its removal is unknown. Fatal error in old Lemma 3.11 invalidates earlier main claims; v3 supersedes them."
+    }
+  ],
+  "scope_comparison": "Local positive Ricci, noncollapse and full-tensor linear decay impose no weighted kernel bound or global positive sectional curvature. This needed premise cannot be inferred merely from positivity at infinity.",
+  "rationale": "The stated full target has no matching complete result in the recorded bounded searches. Inspected primary bodies retain the stated conjecture or give restricted progress; recommended status stays Partially resolved. This does not certify openness or independently verify complete proofs.",
+  "source_gaps": [],
+  "announcement_routing": {
+    "localID": "842",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "steady soliton",
+          "linear curvature decay"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "steady soliton",
+          "linear curvature decay"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "steady soliton",
+        "linear curvature decay"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target."
+}

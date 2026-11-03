@@ -1,0 +1,128 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "987",
+  "manifest_index": 831,
+  "checked_date": "2026-11-03",
+  "source_sha256": "10fc734a845c7dc33cf9f297bc3d00f57ca3b3f16a65f91c68e1921b279fb798",
+  "statement_sha256": "e0afc575711e811a2368d40ba86ddb07b3d653d894f270da5d2d11e82932278a",
+  "original_target": {
+    "id": "987",
+    "title": "Instance-dependent samples for a noisy zero-sum matrix game",
+    "area": "Probability, statistics and learning",
+    "file": "problems/987-instance-dependent-samples-for-a-noisy-zero-sum-matrix-game.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c73d3439aeaff8f4",
+    "group": "probability-statistics",
+    "source_sha256": "10fc734a845c7dc33cf9f297bc3d00f57ca3b3f16a65f91c68e1921b279fb798",
+    "statement_sha256": "e0afc575711e811a2368d40ba86ddb07b3d653d894f270da5d2d11e82932278a",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let the unknown payoff matrix of a two-player zero-sum game be $`A\\in\\mathbb R^{n\\times m}`$. A learner chooses an entry $`(i,j)`$ at each round and observes $`A_{ij}+\\eta_t`$, where the noise is zero-mean and $`1`$-subgaussian. For $`\\varepsilon>0`$ and $`0<\\delta<1`$, how many adaptive entry samples are necessary and sufficient, as a function of the particular matrix $`A`$, to return an $`\\varepsilon`$-Nash equilibrium with probability at least $`1-\\delta`$?\n\nWriting $`\\Delta_n`$ for the probability simplex, a pair $`(x_*,y_*)\\in\\Delta_n\\times\\Delta_m`$ is $`\\varepsilon`$-Nash here when, for every $`x\\in\\Delta_n`$ and $`y\\in\\Delta_m`$,\n```math\nx^\\top Ay_*\\le x_*^\\top Ay_*+\\varepsilon,\\qquad x_*^\\top Ay\\ge x_*^\\top Ay_*-\\varepsilon.\n```\n\nThe original author asks for a tight characterization, ideally $`\\Theta(H_1(A,\\varepsilon)\\log(1/\\delta)+H_2(A,\\varepsilon))`$ with the instance-dependent functions $`H_1,H_2`$ identified. They are **unknown functions to find**, not inputs already specified by the paper. The displayed source model calls the noise zero-mean and $`1`$-subgaussian without explicitly spelling out an independence assumption.",
+  "full_original_page": "# 987. Instance-dependent samples for a noisy zero-sum matrix game\n\n**Area:** Probability, statistics and learning\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet the unknown payoff matrix of a two-player zero-sum game be $`A\\in\\mathbb R^{n\\times m}`$. A learner chooses an entry $`(i,j)`$ at each round and observes $`A_{ij}+\\eta_t`$, where the noise is zero-mean and $`1`$-subgaussian. For $`\\varepsilon>0`$ and $`0<\\delta<1`$, how many adaptive entry samples are necessary and sufficient, as a function of the particular matrix $`A`$, to return an $`\\varepsilon`$-Nash equilibrium with probability at least $`1-\\delta`$?\n\nWriting $`\\Delta_n`$ for the probability simplex, a pair $`(x_*,y_*)\\in\\Delta_n\\times\\Delta_m`$ is $`\\varepsilon`$-Nash here when, for every $`x\\in\\Delta_n`$ and $`y\\in\\Delta_m`$,\n```math\nx^\\top Ay_*\\le x_*^\\top Ay_*+\\varepsilon,\\qquad x_*^\\top Ay\\ge x_*^\\top Ay_*-\\varepsilon.\n```\n\nThe original author asks for a tight characterization, ideally $`\\Theta(H_1(A,\\varepsilon)\\log(1/\\delta)+H_2(A,\\varepsilon))`$ with the instance-dependent functions $`H_1,H_2`$ identified. They are **unknown functions to find**, not inputs already specified by the paper. The displayed source model calls the noise zero-mean and $`1`$-subgaussian without explicitly spelling out an independence assumption.\n\n## Application\n\nTwo game matrices of the same size can have very different equilibrium margins. A sharp instance-dependent bound would say when noisy payoff queries can identify an approximate equilibrium substantially faster than the generic worst-case guarantee.\n\n## References\n\n1. A. Maiti, [*Open Problem: Optimal Instance-Dependent Sample Complexity for finding Nash Equilibrium in Two Player Zero-Sum Matrix games*](https://proceedings.mlr.press/v291/maiti25b.html), *Proceedings of the 38th Conference on Learning Theory*, PMLR **291** (2025), 6230–6234, §2–3; [publisher PDF](https://raw.githubusercontent.com/mlresearch/v291/main/assets/maiti25b/maiti25b.pdf).\n2. A. Maiti, K. Jamieson and L. J. Ratliff, [*Instance-dependent Sample Complexity Bounds for Zero-sum Matrix Games*](https://proceedings.mlr.press/v206/maiti23a.html), AISTATS 2023, PMLR **206**, for smaller game classes and related instance bounds.\n3. J. Jiang and M. Zhang, [*An LP-Based Approach for Bilinear Saddle Point Problem with Instance-dependent Guarantee and Noisy Feedback*](https://arxiv.org/abs/2602.12513), arXiv:2602.12513 (2026), introduction and §1.1–1.2, for a general-dimensional upper bound on a distinct $`\\varepsilon`$-bias target.\n\n## Status review\n\n\n**Known cases:** Necessary and sufficient instance-dependent samples for general mixed possibly nonunique Nash equilibria are required. Pure equilibria, n-by-two games, regret bounds and epsilon-bias upper bounds do not characterize this target.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nNecessary and sufficient instance-dependent samples for general mixed possibly nonunique Nash equilibria are required. Pure equilibria, n-by-two games, regret bounds and epsilon-bias upper bounds do not characterize this target.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nMaiti records progress for strict pure equilibria and certain $`n\\times2`$ games, while asking for the general, possibly nonunique-equilibrium case. Jiang and Zhang provide an instance-dependent general-dimensional *upper bound* for estimating an equilibrium with $`\\varepsilon`$ bias; their paper distinguishes that target from the high-probability $`\\varepsilon`$-Nash criterion above and does not characterize its general instance-optimal complexity. A separate September 2026 Nash-*regret* announcement also has a different online objective. Bounded searches through 22 October 2026 found no complete matching characterization or exact AIM/FURTHER duplicate. The [status](../FURTHER_problems/_tracking/noisy-matrix-game-instance-complexity-2026-10-22-status.json) and [duplicate](../FURTHER_problems/_tracking/noisy-matrix-game-instance-complexity-2026-10-22-duplicates.json) audits record the scope of these checks.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-c73d3439aeaff8f4**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Maiti",
+    "matrix games",
+    "instance-dependent"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"Maiti\" \"instance dependent\" matrix games 2026",
+      "engines": "web general"
+    },
+    {
+      "query": "\"Maiti\" \"instance dependent\" matrix games",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ],
+      "engines": "web focused"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2602.12513v1",
+      "locator": "2602.12513v1 Section1.2 lines119–124; 2609.34812v1 primary abstract28September2026"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.34812",
+      "locator": "2602.12513v1 Section1.2 lines119–124; 2609.34812v1 primary abstract28September2026"
+    }
+  ],
+  "scope_comparison": "Jiang–Zhang explicitly distinguish epsilon bias of an equilibrium estimate from a high-probability epsilon-suboptimality-gap equilibrium. Their upper bound is not matching necessary and sufficient instance complexity for arbitrary n,m. September Nash-regret result has a different objective/adaptive opponents and also does not settle fixed-confidence identification.",
+  "recommendation": "Retain partial status; no matching complete resolution located in this bounded current search.",
+  "limitations": "Bounded literature and announcement search, not proof of openness; snapshot routing checks are metadata-only unless a specific primary claim is discussed.",
+  "announcement_routing": {
+    "localID": "987",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Maiti",
+          "matrix games",
+          "instance-dependent"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-09-08-000002",
+            "title": "Verified regret matching and finite-time equilibrium computation",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-08-000002-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Maiti",
+          "matrix games",
+          "instance-dependent"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Maiti",
+        "matrix games",
+        "instance-dependent"
+      ],
+      "hits": [
+        {
+          "entry": "110",
+          "title": "Optimal-order randomized $k$-server on arbitrary metrics",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Squared-logarithmic-randomized-k-server-on-arbitrary-metrics-September-24-2026/Squared-logarithmic-randomized-k-server-on-arbitrary-metrics-September-24-2026.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Uniform-computation-of-the-squared-logarithmic-k-server-bound-September-24-2026/Uniform-computation-of-the-squared-logarithmic-k-server-bound-September-24-2026.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.077Z",
+      "previous_outcome": "partial",
+      "localID": "987",
+      "announcement_hit_disposition": "Versioned Palomar2026-09-08-000002-v1 primary record read directly by public GET: full-information payoffs, deterministic finite-time regret matching and selfPlay_approxNash, repository Arthur742Ramos/verified-regret-matching-lean commit52e2c3dbbd8308b11271daf2e4c5a80aebae1df7. Target instead asks tight instance-dependent UNKNOWN matrix noisy-entry sample complexity with fixed confidence. No such noisy statistical model or matching lower/upper sample complexity is asserted. OpenAI k-server is unrelated."
+    }
+  ]
+}

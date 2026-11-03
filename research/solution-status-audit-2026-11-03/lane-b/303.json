@@ -1,0 +1,44 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 244,
+  "source_sha256": "9230401525d7e0d62976c4f4d707f3aea78ea93036d793f824453420297f5ea4",
+  "statement_sha256": "74fa23984fe3fade2721e622eddcccfe4e78d22bc7f9d3ede35c6dfb186acf8b",
+  "original_target": {
+    "id": "303",
+    "title": "Diffusive mean-square displacement at fixed disorder",
+    "area": "Disordered quantum transport",
+    "file": "problems/303-anderson-fixed-disorder-diffusion.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "spectral2",
+    "source_sha256": "9230401525d7e0d62976c4f4d707f3aea78ea93036d793f824453420297f5ea4",
+    "statement_sha256": "74fa23984fe3fade2721e622eddcccfe4e78d22bc7f9d3ede35c6dfb186acf8b",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "303",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Original fixes weak positive lambda then lets t->infinity for all sufficiently large t, uniform bounded site law on Z3 and delta0 initial state. Black–Drogin–Hernandez current v2 uses Gaussian disorder and estimates on lambda-dependent resolvent/time scales; its bounds do not extend the horizon to infinity at fixed lambda. New OpenAI family261 is a spectral absolutely-continuous interval claim, not the required two-sided mean-square growth for delta0. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "Anderson model fixed disorder quantum diffusion mean square displacement 2026",
+    "\"Anderson\" \"fixed disorder\" diffusion (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2506.06468",
+      "version": "v2,6November2025",
+      "locator": "Theorems1.1–1.3; §1 fixed disorder versus scaling",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "Anderson|quantum.diffusion",
+    "palomar_matches": 2,
+    "hexagon_matches": 4,
+    "result": "Palomar historical large-disorder localization and unrelated compartment model; Hexagon high-dimensional EA/Anderson t-motives and polynomial results. No candidate for fixed-lambda quantum diffusion."
+  }
+}

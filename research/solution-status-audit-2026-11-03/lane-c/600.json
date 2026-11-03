@@ -1,0 +1,54 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "600",
+  "manifest_index": 463,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "600",
+    "title": "Sierksma's lower bound for Tverberg partitions",
+    "area": "Discrete geometry and convexity",
+    "file": "problems/600-sierksma-tverberg-partition-count.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "a7b2ae6041815f8f6e835a6987e3b1832b0cb4c6317e592a61b0d886d69d4351",
+    "statement_sha256": "cec428e8bf135e2b4c24c04fe848389c5bebf074da159b90c35b6311a3658180",
+    "state": "unreviewed"
+  },
+  "source_sha256": "a7b2ae6041815f8f6e835a6987e3b1832b0cb4c6317e592a61b0d886d69d4351",
+  "statement_sha256": "cec428e8bf135e2b4c24c04fe848389c5bebf074da159b90c35b6311a3658180",
+  "actual_source_sha256": "a7b2ae6041815f8f6e835a6987e3b1832b0cb4c6317e592a61b0d886d69d4351",
+  "full_original_statement": "Let $`d\\ge2`$ and $`r\\ge3`$ be integers, and let $`X\\subset\\mathbb R^d`$ consist of exactly $`(d+1)(r-1)+1`$ distinct points. A Tverberg partition is an unordered partition\n\n```math\nX=X_1\\sqcup\\cdots\\sqcup X_r\n```\n\ninto nonempty sets such that\n\n```math\n\\bigcap_{i=1}^r\\mathop{\\mathrm{conv}}\\nolimits(X_i)\\ne\\varnothing.\n```\n\nProve or disprove that every such $`X`$ has at least\n\n```math\n((r-1)!)^d\n```\n\ndistinct Tverberg partitions. Partitions differing only by the order of their parts are counted once. The claim imposes no general-position assumption.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Sierksma\" conjecture proof 2026",
+    "\"Sierksma\" conjecture proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1, 20 April 2026; current arXiv record checked",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2604.18485",
+      "locator": "Conjecture 1 and Theorem 2, lines 44–55",
+      "scope_comparison": "Theorem 2 treats seven points in the plane and three parts (d=2,r=3), not all d>=2,r>=3. A news headline implying all of Sierksma is solved is contradicted by the actual theorem body. The unrestricted count is retained as Conjecture 1."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Theorem 2 treats seven points in the plane and three parts (d=2,r=3), not all d>=2,r>=3. A news headline implying all of Sierksma is solved is contradicted by the actual theorem body. The unrestricted count is retained as Conjecture 1.",
+  "latest_version_check": "v1, 20 April 2026; current arXiv record checked",
+  "gap_retraction_check": "No matching complete candidate was identified; version records showed no withdrawal banner. Cited partial proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

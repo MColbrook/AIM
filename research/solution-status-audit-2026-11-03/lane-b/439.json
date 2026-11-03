@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 354,
+  "source_sha256": "9128170fc56ad3559c6fc45ac95b8eb977978318ee6926dc15ddd1e4daee8f8b",
+  "statement_sha256": "5ceae536dcf73b19cb5f57e2afa757a1cbe0b7587584d0286db2041d7a74c856",
+  "original_target": {
+    "id": "439",
+    "title": "Interior bounds for stable elliptic states with sign-changing reaction laws",
+    "area": "Semilinear elliptic PDEs and reaction equilibria",
+    "file": "problems/439-stable-semilinear-sign-changing-interior-bound.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "pdes-materials",
+    "source_sha256": "9128170fc56ad3559c6fc45ac95b8eb977978318ee6926dc15ddd1e4daee8f8b",
+    "statement_sha256": "5ceae536dcf73b19cb5f57e2afa757a1cbe0b7587584d0286db2041d7a74c856",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "439",
+  "outcome": "full",
+  "recommended_status": "Solved",
+  "ready_for_parent": true,
+  "new_discovery": true,
+  "full_match_type": "unverified-announcement",
+  "required_status_qualification": "Complete solution announced in an October 2026 preprint; the announced proof has not been independently verified in this audit.",
+  "suggested_status_text": "Solved (positive solution announced; unverified). Huang, Zhou and Zou, arXiv:2610.21641v1 (15 October 2026), Theorem1.2, eq1.18 proves [u]_{C^{0,alpha_d}(B1/2)} <= C(d)||Du||_{L2(B3/4)} for stable C2 solutions and arbitrary locally Lipschitz f in dimensions2–9. Averaging u over B1/2 then gives the stated L∞ <= C_d||u||_{W1,2(B1)} in every requested dimension6–9. The preprint's proof has not been independently verified.",
+  "queries": [
+    "\"stable solutions\" \"sign-changing\" \"dimension\" 2026",
+    "\"stable\" \"semilinear\" \"dimension 9\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"2610.21641\" (correction OR withdrawn OR gap OR error)",
+    "\"2610.21641\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.21641v1",
+      "version": "v1,15Oct2026 10:21:44UTC",
+      "locator": "§1.1 eq1.1–1.2;Theorem1.2 eq1.18;§3.2proof",
+      "theorem_body_checked": true,
+      "scope": "All stable classical C2 solutions onB1;f locallyLipschitzandmaychangesign. DimensiononlyC,positivealpha_d for6–9. The seminormbound usesonlyDuL2,notnegativef. Strongerfullnormboundeq1.19usesD(u) includingfminus butisnotneeded."
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.21641",
+      "version": "current recordonlyv1,checked3Nov2026",
+      "locator": "Submissionhistory",
+      "scope": "No withdrawal/replacementnotice; focusedexactIDsearchlocatednogapnotice."
+    }
+  ],
+  "scope_comparison": "C1(R) is contained in locallyLipschitzclass. Forx,z inBhalf, |u(x)|<=|u(z)|+diam(Bhalf)^alpha [u]Cα; averagez andCauchySchwarz yield sup<=C_d(||u||L2(Bhalf)+||Du||L2(B3/4))<=C_d||u||W1,2(B1). Coversallrequested6,7,8,9, nopropertiesofzeros,sign,orentirespaceassumptions.",
+  "registry_checks": "Complete Palomar/HexagonandpinnedOpenAI/Colbrookmetadatahadnomatchingclaim. FoundviafocusedcurrentarXivsearch.",
+  "retraction_limitations_check": "Currentabs onlyv1. ExactIDcorrection/withdrawal/gapqueryfoundnospecificnotice. Thisisannouncement/scopevalidationnotwholeproofcertification.",
+  "rationale": "Theorem1.2eq1.18 plus elementarymeanestimate gives entiretargetwithconstantindependentofreactionlaw. RecommendSolvedwithexplicitunverifiedannouncementqualification."
+}

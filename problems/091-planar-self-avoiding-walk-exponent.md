@@ -32,7 +32,14 @@ Self-avoidance models the excluded-volume effect in a polymer chain. The exponen
 - [Gordon Slade, *The self-avoiding walk: A brief survey* (2011), critical-exponent discussion](https://doi.org/10.4171/072-1/9).
 - [Hugo Duminil-Copin and Alan Hammond, *Self-avoiding walk is sub-ballistic* (Communications in Mathematical Physics, 2013), introduction](https://www.ihes.fr/~duminil/publi/Subballisticity.pdf).
 
+- I. Hueter, [*Proof of the Conjecture that the Planar Self-Avoiding Walk has Root Mean Square Displacement Exponent 3/4*](https://arxiv.org/abs/math/0108077), arXiv:math/0108077v2 (17 August 2001), Theorem 2 and Corollaries 1–2, pp. 27–28. This older claim has a limit-transfer gap identified below.
+
 ## Status review
+
+**Announcement check (3 November 2026):** The older Hueter manuscript claims the stated square-lattice exponent, but its transfer from weak to strict self-avoidance is not justified by the estimates quoted in Corollary 1. The lower constant may tend to zero as the repulsion parameter tends to infinity; selecting a slowly increasing parameter with walk length does not establish the required interchange of limits. Corollary 2 relies on that same transfer. A [separate check of this inference](../research/solution-status-audit-2026-11-03/lane-a/091.json) confirms the gap. The problem remains open in this catalogue. The September OpenAI announcement concerns the diameter of honeycomb-lattice walks, which does not settle the displayed square-lattice endpoint second moment.
+
+### Earlier status record
+
 
 **Literature check:** Open in cited literature; no later resolution located.
 

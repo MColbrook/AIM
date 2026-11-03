@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "739",
+  "manifest_index": 583,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "739",
+    "title": "A bounded-domain nonlocal-to-local limit for degenerate Cahn–Hilliard diffusion",
+    "area": "Diffusion and materials",
+    "file": "problems/739-a-bounded-domain-nonlocal-to-local-limit-for-degenerate-cahnhilliard-diffusion.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b04d757e7a4c4057",
+    "group": "diffusion-materials",
+    "source_sha256": "b900fef47af78de2e89cb14a4fd9cd0ac7a83589e51115002c1e88d475d98a25",
+    "statement_sha256": "1c1f5edd28fcfc37f72e6dc457dd97779a39b1c2a6f9910c19fbe760cb1a805f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "b900fef47af78de2e89cb14a4fd9cd0ac7a83589e51115002c1e88d475d98a25",
+  "statement_sha256": "1c1f5edd28fcfc37f72e6dc457dd97779a39b1c2a6f9910c19fbe760cb1a805f",
+  "actual_source_sha256": "b900fef47af78de2e89cb14a4fd9cd0ac7a83589e51115002c1e88d475d98a25",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`d\\in\\{2,3\\}`$ and let $`\\Omega\\subset\\mathbb R^d`$ be any bounded connected $`C^\\infty`$ domain; convexity is not assumed. Fix a nonnegative radial $`\\omega\\in C_c^\\infty(B_1(0))`$, positive near the origin, with $`\\int\\omega=1`$. Set\n```math\n\\omega_\\varepsilon(z)=\\varepsilon^{-d}\\omega(z/\\varepsilon),\\qquad\n\\kappa=\\frac1{2d}\\int_{\\mathbb R^d}|z|^2\\omega(z)\\,dz,\n```\n```math\nB_\\varepsilon v(x)=\\varepsilon^{-2}\\int_\\Omega\\omega_\\varepsilon(x-y)(v(x)-v(y))\\,dy,\n\\qquad F(s)=s^2(s-1)^2.\n```\nThis is a regional operator: $`v`$ is not extended outside $`\\Omega`$. Fix $`u^0\\in C^\\infty(\\overline\\Omega)`$ with $`u^0\\ge0`$ and $`u^0\\not\\equiv0`$. Zeros of $`u^0`$ are allowed.\n\n**Question.** Can one choose, for every sufficiently small $`\\varepsilon>0`$, a global nonnegative energy weak solution of\n```math\n\\partial_tu_\\varepsilon=\\mathrm{div}(u_\\varepsilon\\nabla\\mu_\\varepsilon),\\qquad\n\\mu_\\varepsilon=B_\\varepsilon u_\\varepsilon+F'(u_\\varepsilon),\\qquad\n\\nu\\cdot u_\\varepsilon\\nabla\\mu_\\varepsilon=0,\n\\qquad u_\\varepsilon(0)=u^0,\n```\nso that, for some sequence $`\\varepsilon_j\\downarrow0`$ and one global nonnegative weak solution $`u`$, \n```math\nu_{\\varepsilon_j}\\longrightarrow u\\quad\\text{strongly in }L^2(0,T;H^1(\\Omega))\n\\quad\\text{for every finite }T>0,\n```\nwhere\n```math\n\\partial_tu=\\mathrm{div}(u\\nabla\\mu),\\qquad\n\\mu=-\\kappa\\Delta u+F'(u),\\qquad\n\\partial_\\nu u=0,\\quad u\\partial_\\nu\\mu=0,\\qquad u(0)=u^0?\n```\nHere $`\\nu`$ is the exterior unit normal. The assertion asks for a suitable choice of nonlocal weak solutions; it does not quantify over every weak family.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"degenerate Cahn Hilliard\" \"bounded domain\" \"nonlocal to local\" 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"degenerate\" \"Cahn\" \"bounded domain\"",
+    "site:palomar-registry.org OR site:hexagonmath.org \"degenerate\" \"Cahn\" \"bounded\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "Actual body proves strong L2H1 convergence on torus and §1.4 leaves regional bounded-domain entropy estimate/extra Neumann condition. Local requires all smooth bounded possibly nonconvex domains, linear vacuum-degenerate mobility, selected global nonlocal energy solutions and both limiting boundary conditions. Constant-mobility bounded-domain operator convergence and stochastic regular-potential results use a different mobility; periodic Flory-Huggins remains boundary-free. No full matching announcement located.",
+      "version_or_date": "v3 authorversion; JDE364(2023)576–611 finalmetadata; current3November2026",
+      "url": "https://arxiv.org/html/2208.08955v3",
+      "primary_body_access_gap": false,
+      "locator": "Theorem1.8 and §1.4 equations1.18–1.24/open bounded-domain obstacles"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual body proves strong L2H1 convergence on torus and §1.4 leaves regional bounded-domain entropy estimate/extra Neumann condition. Local requires all smooth bounded possibly nonconvex domains, linear vacuum-degenerate mobility, selected global nonlocal energy solutions and both limiting boundary conditions. Constant-mobility bounded-domain operator convergence and stochastic regular-potential results use a different mobility; periodic Flory-Huggins remains boundary-free. No full matching announcement located.",
+  "latest_version_check": "v3 authorversion; JDE364(2023)576–611 finalmetadata; current3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "016",
+  "manifest_index": 11,
+  "source_sha256": "da24e0c271c7674a4e66d74771c005a752aec20d35d9ea84fa840e1254e08a48",
+  "statement_sha256": "f5bc7bfbbc7bd3bcdcadde7ba9a9d3cb99c430b322c8268f9e9970efd688e962",
+  "original_target": {
+    "id": "016",
+    "title": "Localization at every disorder strength in two dimensions",
+    "area": "Disordered quantum transport",
+    "file": "problems/016-anderson-planar-localization.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-13",
+    "group": "spectral",
+    "source_sha256": "da24e0c271c7674a4e66d74771c005a752aec20d35d9ea84fa840e1254e08a48",
+    "statement_sha256": "f5bc7bfbbc7bd3bcdcadde7ba9a9d3cb99c430b322c8268f9e9970efd688e962",
+    "state": "unreviewed"
+  },
+  "full_local_statement_read": true,
+  "full_page_review_claimed": false,
+  "reviewed_UTC": "2026-11-03T11:54:06.342939+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Current OpenAI introduction still expressly does not assert exponential eigenfunction decay. Pure-point spectrum with an orthonormal eigenbasis at each fixed positive disorder is weaker than an exponentially decaying eigenbasis; Palomar classical strong-disorder formalization likewise does not cover all weak disorder.",
+  "queries": [
+    "Localization at every disorder strength in two dimensions proof counterexample2026",
+    "Localization at every disorder strength in two dimensions (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "query_method": "The displayed strings describe focused named/mathematical searches; actual query variants are retained in the session source-search responses. Source-host searches and current Palomar/Hexagon full-metadata alias checks were separately performed.",
+  "primary_sources": [
+    {
+      "url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/Pure-Point-Spectrum-for-the-Two-Dimensional-Anderson-Model-at-Every-Positive-Disorder-September-23-2026/build/sections/introduction.tex",
+      "inspection": "Primary statement/abstract or body as recorded in scope comparison; no full proof certification."
+    }
+  ],
+  "provider_checks": {
+    "Palomar_Hexagon": {
+      "routing": "../_sources/016-provider-routing.json",
+      "Palomar_complete_metadata": 954,
+      "Hexagon_complete_metadata": 646,
+      "scope": "Listing/metadata routing only. Individual relevant theorem/interface comparisons detailed above."
+    },
+    "OpenAI": {
+      "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+      "scope": "Current CONTENTS/overview searched; candidate theorem if relevant."
+    },
+    "arXiv_Zenodo_HAL_GitHub": "Focused primary-host and unrestricted web searches; bounded and indexing-dependent."
+  },
+  "known_gap": null,
+  "limitations": [
+    "No matching result in bounded search is not a proof of mathematical openness.",
+    "Irrelevant/restricted results were not audited as full proofs."
+  ],
+  "canonical_update_required": false
+}

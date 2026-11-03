@@ -1,0 +1,42 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 303,
+  "source_sha256": "c9ebaa9e1fc59382316d23abdfea1bf14a8eb9ff50c98ceea88314b95e61c35f",
+  "statement_sha256": "4c7e3d5bfbf9d84a24948d878c1ac7079c76b2780056254b33e4b7e7a09758a4",
+  "original_target": {
+    "id": "370",
+    "title": "Global regularity of viscous planar MHD without magnetic diffusion",
+    "area": "Magnetohydrodynamics; conducting fluids",
+    "file": "problems/370-nonresistive-planar-mhd.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "c9ebaa9e1fc59382316d23abdfea1bf14a8eb9ff50c98ceea88314b95e61c35f",
+    "statement_sha256": "4c7e3d5bfbf9d84a24948d878c1ac7079c76b2780056254b33e4b7e7a09758a4",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "370",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"2D\" \"non-resistive\" MHD \"large data\" 2026 global",
+    "\"non-resistive\" \"2D\" \"global\" \"2026\" arxiv",
+    "\"non-resistive\" \"MHD\" site:zenodo.org OR site:hal.science OR site:github.com 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2606.29160v1",
+      "version": "v1 28 June 2026",
+      "locators": "equation 1.1; hypotheses 1.30–1.31; Theorems 1.3 and 1.9",
+      "body_inspected": true,
+      "scope": "Strip T x R, small perturbations of sheared field xi bounded uniformly away from zero; extra compatibility conditions."
+    }
+  ],
+  "registry_checks": "No nonresistive/non-resistive alias Palomar/Hexagon/OpenAI full metadata. Current arXiv, primary author/publisher, Zenodo, HAL, GitHub searches.",
+  "scope_comparison": "Original every decaying smooth Hk velocity/magnetic field on R2, full velocity viscosity, no magnetic diffusion/damping, no background. Small perturbation of nondecaying sheared field on a strip does not cover it. Compressible MHD, resistive-only and damping systems differ.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Actual 2026 stability theorem remains restricted."
+}

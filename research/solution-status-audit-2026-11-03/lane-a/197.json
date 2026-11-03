@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "197",
+  "manifest_index": 154,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "197",
+    "title": "The logarithmic correction to dilute Bose-gas energy",
+    "area": "Quantum equations of state",
+    "file": "problems/197-wu-bose-energy.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "spectral3",
+    "source_sha256": "b5b6d5ba2047e1c3706bd502333c0382596fab9a31d91991a70c3658fdecacab",
+    "statement_sha256": "f14ba78d9808fe38dffcdd274b366dd0586c92067f0f17c451d70ec79b0630a2",
+    "state": "unreviewed"
+  },
+  "source_sha256": "b5b6d5ba2047e1c3706bd502333c0382596fab9a31d91991a70c3658fdecacab",
+  "statement_sha256": "f14ba78d9808fe38dffcdd274b366dd0586c92067f0f17c451d70ec79b0630a2",
+  "actual_source_sha256": "b5b6d5ba2047e1c3706bd502333c0382596fab9a31d91991a70c3658fdecacab",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For a nonzero, nonnegative, radial $`V\\in C_c^\\infty(\\mathbb R^3)`$, let $`a>0`$ be its scattering length: the solution of $`(-\\Delta+V/2)f=0`$ with $`f(x)\\to1`$ satisfies $`f(x)=1-a/|x|`$ outside the support. Let $`E(N,L)`$ be the ground energy of $`N`$ bosons in a periodic cube of side $`L`$, with kinetic energy $`\\sum_j-\\Delta_j`$ and pair potential given by the periodic extension of $`V`$. Define\n\n```math\ne(\\rho)=\\lim_{N,L\\to\\infty,\\ N/L^3\\to\\rho}\\frac{E(N,L)}{L^3}.\n```\n\nProve or disprove the asymptotic formula, as $`\\rho\\downarrow0`$ with $`V`$ fixed,\n\n```math\ne(\\rho)=4\\pi a\\rho^2\\left[1+\\frac{128}{15\\sqrt\\pi}(\\rho a^3)^{1/2}+8\\left(\\frac{4\\pi}{3}-\\sqrt3\\right)\\rho a^3\\log(\\rho a^3)+o\\big(\\rho a^3|\\log(\\rho a^3)|\\big)\\right].\n```",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Wu\" \"Bose gas\" \"lower bound\" thermodynamic 2026",
+    "\"Wu\" \"Bose gas\" \"lower bound\" thermodynamic (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Wu\" \"Bose gas\" \"lower bound\" thermodynamic (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The target needs the two-sided Wu expansion in the thermodynamic limit followed by dilute density with a fixed smooth nonnegative potential. Actual Theorem1 proves only <= with error O(rho a^3), and its primary discussion explicitly leaves the matching lower bound open. Gross–Pitaevskii Wu results keep a fixed unit box and shrink scattering length as1/N, a different limit. No later matching lower bound or complete announcement was found in focused current searches.",
+      "primary_body_access_gap": false,
+      "locator": "Theorem1,Eq3 and immediately following thermodynamic lower-bound discussion",
+      "version_or_date": "arXiv:2506.04153v1,4June2025,onlyversion current3November2026",
+      "url": "https://arxiv.org/html/2506.04153v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The target needs the two-sided Wu expansion in the thermodynamic limit followed by dilute density with a fixed smooth nonnegative potential. Actual Theorem1 proves only <= with error O(rho a^3), and its primary discussion explicitly leaves the matching lower bound open. Gross–Pitaevskii Wu results keep a fixed unit box and shrink scattering length as1/N, a different limit. No later matching lower bound or complete announcement was found in focused current searches.",
+  "latest_version_check": "arXiv:2506.04153v1,4June2025,onlyversion current3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

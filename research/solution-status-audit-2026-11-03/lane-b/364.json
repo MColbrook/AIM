@@ -1,0 +1,49 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 299,
+  "source_sha256": "e7a7847c4e0a87b2302d025734174fb83fb72f0c329f6f249985c134dc6c3089",
+  "statement_sha256": "0296c651973711d8c1b1c4dcecd9519dc1efc6e7637d03edb713038733afb70e",
+  "original_target": {
+    "id": "364",
+    "title": "Landau–Coulomb smoothing controlled only by macroscopic quantities",
+    "area": "Plasma kinetics; quantitative regularization",
+    "file": "problems/364-landau-macroscopic-smoothing.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "e7a7847c4e0a87b2302d025734174fb83fb72f0c329f6f249985c134dc6c3089",
+    "statement_sha256": "0296c651973711d8c1b1c4dcecd9519dc1efc6e7637d03edb713038733afb70e",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "364",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Landau Coulomb\" \"macroscopic\" \"smoothing\" 2026",
+    "\"Landau-Coulomb\" \"smoothing\" \"entropy\" site:arxiv.org 2026",
+    "\"Landau\" \"smoothing\" \"entropy\" site:zenodo.org OR site:hal.science OR site:github.com 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2401.06939v3",
+      "version": "v3 8 May 2025",
+      "locators": "Theorems 0.1–0.3; equation 0.7; Open Problems first item",
+      "body_inspected": true,
+      "scope": "Regularization estimates retain weighted Lp/high moments/Fisher information; expressly asks for mass-energy-entropy-only estimates."
+    },
+    {
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/c8a9e527-b1ca-4950-9840-01de7dec4703/content",
+      "version": "published 2025 text in institutional repository",
+      "locators": "Open Problems p.8",
+      "body_inspected": true,
+      "scope": "Confirms same quantitative unresolved premise in journal text."
+    }
+  ],
+  "registry_checks": "Palomar/Hexagon/OpenAI full metadata checked, no matching claim. arXiv, primary authors/publisher, Zenodo, HAL, GitHub queries executed.",
+  "scope_comparison": "Normalized mass/momentum/energy and upper entropy alone must control positive-time L-infinity independently of all stronger data. Qualitative smooth existence or estimates with initial Lp, tail or Fisher parameters do not meet uniformity. Inhomogeneous hard-potential implosion has different operator and setting.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Actual primary theorem does not remove required quantitative dependencies."
+}

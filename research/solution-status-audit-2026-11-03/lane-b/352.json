@@ -1,0 +1,49 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 288,
+  "source_sha256": "335e486b8eebd33f4910ce603a06912d0f486065f7b5012226c43146889a7ccf",
+  "statement_sha256": "35219c3798121e86a4b3e5cc4055a93f739471f3e361f49bf786739aa779cba4",
+  "original_target": {
+    "id": "352",
+    "title": "Competitive exclusion by the slowest diffuser in a multispecies habitat",
+    "area": "Spatial ecology; reaction–diffusion",
+    "file": "problems/352-dockery-slowest-diffuser.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "335e486b8eebd33f4910ce603a06912d0f486065f7b5012226c43146889a7ccf",
+    "statement_sha256": "35219c3798121e86a4b3e5cc4055a93f739471f3e361f49bf786739aa779cba4",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "352",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Dockery\" conjecture solved 2026 multispecies",
+    "\"Dockery conjecture\" 2026 proof solution",
+    "\"Dockery\" \"conjecture\" site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://people.math.osu.edu/lam.184/paper/2023tams.pdf",
+      "version": "current author PDF of TAMS 2023 paper",
+      "locators": "section 1.2; Conjecture 1; Theorems 1.8–1.9, pp.4–5",
+      "body_inspected": true,
+      "scope": "All finite diffusion sets above sufficiently large B0; set of successful configurations open. Not all positive distinct rates."
+    },
+    {
+      "url": "https://www.math.miami.edu/~rsc/docs/2021evolution.pdf",
+      "version": "SIAM 2021 author paper",
+      "locators": "introduction and open configuration theorem",
+      "body_inspected": true,
+      "scope": "Open sets of diffusion choices, not unrestricted rate configurations."
+    }
+  ],
+  "registry_checks": "No Dockery/slowest-diffuser aliases Palomar/Hexagon/OpenAI metadata. Focused arXiv, Zenodo, HAL, GitHub and primary author/publisher searches.",
+  "scope_comparison": "Need every N>=3 and ordered finite positive rates in a fixed nonconstant nonnegative resource environment. High-rate threshold, existence of open configurations and N=2 theorem do not cover arbitrary rates. Time-dependent environment counterexamples violate fixed-environment premise.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Exact primary theorem retains high-diffusion restriction."
+}

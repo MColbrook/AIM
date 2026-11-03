@@ -1,0 +1,91 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "954",
+  "manifest_index": 798,
+  "checked_date": "2026-11-03",
+  "source_sha256": "d9fbc0f3eb891ef2be8e34ad2023e5a51b7469106b82bd7e36e499c2cf3464ef",
+  "statement_sha256": "fa9805627872714c544048809d7865ad07d5da0a5ec3330dfead1d8ea52dfd75",
+  "original_target": {
+    "id": "954",
+    "title": "Does transverse degree one force Ginzburg–Landau solutions to be independent of the axial variables?",
+    "area": "Nonlinear elliptic equations and vortex models",
+    "file": "problems/954-does-transverse-degree-one-force-ginzburglandau-solutions-to-be-independent-of-the-axial-variables.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c5247c91e7c22a6f",
+    "group": "pdes-materials",
+    "source_sha256": "d9fbc0f3eb891ef2be8e34ad2023e5a51b7469106b82bd7e36e499c2cf3464ef",
+    "statement_sha256": "fa9805627872714c544048809d7865ad07d5da0a5ec3330dfead1d8ea52dfd75",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For an integer $`N\\ge3`$, write a point of $`\\mathbb R^N`$ as $`(z,t)\\in\\mathbb R^2\\times\\mathbb R^{N-2}`$. Let $`u\\in C^2(\\mathbb R^N;\\mathbb C)`$ solve the classical complex-valued Ginzburg–Landau equation\n```math\n\\Delta u+(1-|u|^2)u=0 \\qquad\\text{in }\\mathbb R^N.\n```\n\nAssume that its modulus approaches one as the transverse coordinate goes to infinity, **uniformly in all axial variables**:\n```math\n\\lim_{R\\to\\infty}\n\\sup_{\\substack{|z|\\ge R\\\\t\\in\\mathbb R^{N-2}}}\n\\bigl||u(z,t)|-1\\bigr|=0.\n```\n\n\nThis uniform limit makes $`u`$ nonzero whenever $`|z|`$ is sufficiently large. For such an $`R`$ and any $`t`$, define the transverse degree to be the winding number of the phase on the circle:\n```math\nq=\\deg\\left(\nS^1\\ni e^{i\\theta}\\longmapsto\n\\frac{u(Re^{i\\theta},t)}{|u(Re^{i\\theta},t)|}\\in S^1\n\\right).\n```\n\nContinuity and homotopy invariance make this integer independent of the sufficiently large radius $`R`$ and of $`t`$.\n\nIf $`q\\in\\{-1,+1\\}`$, must there exist a function $`v:\\mathbb R^2\\to\\mathbb C`$ such that\n```math\nu(z,t)=v(z)\\qquad\\text{for every }(z,t)\\in\\mathbb R^2\\times\\mathbb R^{N-2}?\n```\n\n\nThis is the residual degree-one question stated after condition (1.18) in [1], including both signs. There is no assumption of stability, local or global minimality, periodicity, finite energy, or an energy growth bound. The requested conclusion is independence of the axial variables; a separate radial classification of $`v`$ is not part of the question.",
+  "full_original_page": "# 954. Does transverse degree one force Ginzburg–Landau solutions to be independent of the axial variables?\n\n**Area:** Nonlinear elliptic equations and vortex models\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor an integer $`N\\ge3`$, write a point of $`\\mathbb R^N`$ as $`(z,t)\\in\\mathbb R^2\\times\\mathbb R^{N-2}`$. Let $`u\\in C^2(\\mathbb R^N;\\mathbb C)`$ solve the classical complex-valued Ginzburg–Landau equation\n```math\n\\Delta u+(1-|u|^2)u=0 \\qquad\\text{in }\\mathbb R^N.\n```\n\nAssume that its modulus approaches one as the transverse coordinate goes to infinity, **uniformly in all axial variables**:\n```math\n\\lim_{R\\to\\infty}\n\\sup_{\\substack{|z|\\ge R\\\\t\\in\\mathbb R^{N-2}}}\n\\bigl||u(z,t)|-1\\bigr|=0.\n```\n\n\nThis uniform limit makes $`u`$ nonzero whenever $`|z|`$ is sufficiently large. For such an $`R`$ and any $`t`$, define the transverse degree to be the winding number of the phase on the circle:\n```math\nq=\\deg\\left(\nS^1\\ni e^{i\\theta}\\longmapsto\n\\frac{u(Re^{i\\theta},t)}{|u(Re^{i\\theta},t)|}\\in S^1\n\\right).\n```\n\nContinuity and homotopy invariance make this integer independent of the sufficiently large radius $`R`$ and of $`t`$.\n\nIf $`q\\in\\{-1,+1\\}`$, must there exist a function $`v:\\mathbb R^2\\to\\mathbb C`$ such that\n```math\nu(z,t)=v(z)\\qquad\\text{for every }(z,t)\\in\\mathbb R^2\\times\\mathbb R^{N-2}?\n```\n\n\nThis is the residual degree-one question stated after condition (1.18) in [1], including both signs. There is no assumption of stability, local or global minimality, periodicity, finite energy, or an energy growth bound. The requested conclusion is independence of the axial variables; a separate radial classification of $`v`$ is not part of the question.\n\n## Application\n\nThe equation describes stationary states of the complex Ginzburg–Landau energy without an applied magnetic field. Zeros of the complex field represent vortices, and phase winding records their net charge. In three dimensions, the question asks whether a configuration of total transverse charge one whose modulus becomes uniformly constant away from its axis must be a straight planar profile extended along that axis. This addresses the geometry of entire critical configurations, including configurations that need not minimize the energy [1, introduction].\n\n## Known results and scope\n\nThe same assertion without the restriction $`q=\\pm1`$ is false. Dávila, del Pino, Medina and Rodiac construct nontrivial helical solutions in three dimensions satisfying the uniform modulus limit. Their Theorem 1 has total transverse degree $`n\\ge2`$. The mixed-sign construction in their Theorem 2 has one negative and $`n-1`$ positive filaments, with $`n\\ge5`$, hence total degree $`n-2\\ge3`$. These results leave the stated degree-one question open in the source.\n\nSandier and Shafrir prove that a local minimizer $`u:\\mathbb R^3\\to\\mathbb R^2`$ is constant if\n```math\n\\liminf_{R\\to\\infty}\\frac{E(u;B_R)}{R\\log R}<2\\pi,\n\\qquad\nE(u;B_R)=\\int_{B_R}\n\\left(\\frac12|\\nabla u|^2+\\frac14(1-|u|^2)^2\\right).\n```\n\nTheir conjectural classification of all nonconstant local minimizers and this theorem both concern a more restricted variational class [2, introduction and Theorem 1.1]. They do not establish axial independence for every critical solution in the problem above.\n\nLater constructions for a coupled two-component Ginzburg–Landau system [3] have a different target space and coupling. Their recalled scalar helical examples have at least two units of total degree; they do not settle the scalar residual question here.\n\nDegree-one travelling vortex helices for the Gross–Pitaevskii equation [4] solve an equation with a nonzero travelling-wave term. For the nonstraight helices in its Theorem 1, that term does not vanish; these profiles therefore do not supply stationary counterexamples to the equation here.\n\n## References\n\n1. J. Dávila, M. del Pino, M. Medina and R. Rodiac, [*Interacting helical vortex filaments in the three-dimensional Ginzburg–Landau equation*](https://doi.org/10.4171/JEMS/1175), *Journal of the European Mathematical Society* **24** (2022), 4143–4199. [Published PDF](https://ems.press/content/serial-article-files/33011). The question and condition (1.18) are on printed p. 4148, native PDF p. 6. The same question appears in [arXiv version 2](https://arxiv.org/pdf/1901.02807v2), dated 31 July 2019, native p. 5. The preprint was first submitted on 9 January 2019.\n2. E. Sandier and I. Shafrir, [*Small energy Ginzburg–Landau minimizers in $`\\mathbb R^3`$*](https://doi.org/10.1016/j.jfa.2017.01.010), *Journal of Functional Analysis* **272** (2017), 3946–3964. [Latest arXiv version](https://arxiv.org/abs/1612.00821), version 2, dated 10 January 2017.\n3. L. Duan, Q. Gao and J. Yang, [*The helical vortex filaments of Ginzburg–Landau system in $`\\mathbb R^3`$*](https://arxiv.org/abs/2207.11927), arXiv:2207.11927, 25 July 2022. The checked preprint concerns a coupled $`\\mathbb C^2`$-valued system, rather than the scalar complex equation above.\n\n4. D. Chiron, [*Vortex helices for the Gross–Pitaevskii equation*](https://math.univ-cotedazur.fr/~chiron/fichierspdf/helixfinal.pdf), equation (2), Theorem 1 and Remark 1, native pp. 2–3. The constructed nonstraight helices have nonzero travelling speed for sufficiently small positive parameter.\n\n## Status review\n\n\n**Known cases:** The scalar complex equation with uniform transverse degree plus/minus one is required. Higher-degree helices, coupled two-component systems and traveling Gross-Pitaevskii models are not counterexamples.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe scalar complex equation with uniform transverse degree plus/minus one is required. Higher-degree helices, coupled two-component systems and traveling Gross-Pitaevskii models are not counterexamples.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe explicit source question, equation, uniform limit, and degree ranges of the counterexamples were checked in the published paper and in its official 2019 arXiv version 2. These are selected native body passages; no whole-paper reading or byte equality between versions is claimed.\n\nBounded searches through 23 October 2026 located no matching complete proof, counterexample, or announced resolution of this precise residual question. Current announcements concerning degree-one minimizers on a bounded planar disk, bounded-ball vector-valued minimizers, and nondegeneracy of degree-two or degree-three planar vortices have different hypotheses or conclusions. The checked current OpenAI catalogue descriptions contained no matching target; this is not a claim to have read every linked manuscript.\n\nThe all-status duplicate check included the AIM statements, the developing findings, the eight changed statements in the current public AIM snapshot, and all 737 current findings, including the newest admitted statements. The closest existing AIM problem asks for radial classification of higher-degree solutions on the plane. Other nearby entries concern bounded-disk uniqueness, planar $`p`$-Ginzburg–Landau stability for $`p>4`$, and renormalized Coulomb energy. None has the same whole-space axial-independence target.\n\nThe companion audit records the selected source windows, dated current queries, exact duplicate comparisons, and access limits. These checks do not certify every cited proof or guarantee the absence of an unlocated solution.\n\nIndependent admission evidence: [source and scope review](../FURTHER_problems/_tracking/ginzburg-degree-one-independent-peer-2026-10-23.json), [semantic duplicate review](../FURTHER_problems/_tracking/ginzburg-degree-one-coordinator-duplicate-review-2026-10-23.json), [current searches](../FURTHER_problems/_tracking/ginzburg-degree-one-current-resolution-search-2026-10-23.json), [announcement checks](../FURTHER_problems/_tracking/ginzburg-degree-one-announcements-and-catalogues-2026-10-23.json) and [source versions](../FURTHER_problems/_tracking/ginzburg-degree-one-eligibility-and-latest-versions-2026-10-23.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-c5247c91e7c22a6f**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Ginzburg-Landau",
+    "helical",
+    "transversal degree"
+  ],
+  "queries": [
+    "\"Ginzburg-Landau\" \"degree one\" \"helical\" 2026",
+    "\"Ginzburg-Landau\" \"degree one\" \"helical\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "primary_sources": [
+    {
+      "url": "https://ems.press/content/serial-article-files/33011",
+      "locator": "Published2022 printed4148 PDFp6 lines399–416",
+      "comparison": "Actual condition1.18 is uniform in all axial variables; constructed helices have total degree>=2. Source explicitly isolates +/-1. Planar nondegeneracy, bounded-cylinder minimizers and traveling Gross-Pitaevskii profiles add hypotheses or a different equation."
+    }
+  ],
+  "rationale": "Actual condition1.18 is uniform in all axial variables; constructed helices have total degree>=2. Source explicitly isolates +/-1. Planar nondegeneracy, bounded-cylinder minimizers and traveling Gross-Pitaevskii profiles add hypotheses or a different equation.",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scopes inspected, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "954",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Ginzburg-Landau",
+          "helical",
+          "transversal degree"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Ginzburg-Landau",
+          "helical",
+          "transversal degree"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Ginzburg-Landau",
+        "helical",
+        "transversal degree"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

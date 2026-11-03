@@ -1,0 +1,117 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1034",
+  "manifest_index": 878,
+  "checked_date": "2026-11-03",
+  "source_sha256": "ddffc2f09c373fdfcfd69c995c71a61d6cb1a5e140987dc451a2afd39da1ce7e",
+  "statement_sha256": "0c5f3f60df4f9de19e340ee15686c46b3f579bbf4e8c25c3778d2d7561cf0ce0",
+  "original_target": {
+    "id": "1034",
+    "title": "The sharp curvature Schrödinger inequality for closed loops",
+    "area": "Spectral geometry and elastic loops",
+    "file": "problems/1034-the-sharp-curvature-schrodinger-inequality-for-closed-loops.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f883c76cd5abf98d",
+    "group": "spectral",
+    "source_sha256": "ddffc2f09c373fdfcfd69c995c71a61d6cb1a5e140987dc451a2afd39da1ce7e",
+    "statement_sha256": "0c5f3f60df4f9de19e340ee15686c46b3f579bbf4e8c25c3778d2d7561cf0ce0",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\gamma:\\mathbb R/(2\\pi\\mathbb Z)\\to\\mathbb R^3`$ be any smooth unit-speed closed curve, so $`|\\gamma'(s)|=1`$, and define its curvature by $`\\kappa(s)=|\\gamma''(s)|`$. Self-intersections are allowed; planarity and convexity are not assumed.\n\nProve or disprove that every $`f\\in H^1_{\\mathrm{per}}(0,2\\pi)`$ satisfies\n```math\n\\int_0^{2\\pi}\\bigl(|f'(s)|^2+\\kappa(s)^2|f(s)|^2\\bigr)\\,ds\n\\geq \\int_0^{2\\pi}|f(s)|^2\\,ds.\n```\n\nEquivalently, the least eigenvalue of\n```math\nH_\\gamma=-\\frac{d^2}{ds^2}+\\kappa(s)^2\n```\n\nwith periodic boundary conditions should be at least $`1`$. The unit circle and a known family of noncircular ovals attain $`1`$. The question asks for the universal bound, without adding an equality-classification requirement.",
+  "full_original_page": "# 1034. The sharp curvature Schrödinger inequality for closed loops\n\n**Area:** Spectral geometry and elastic loops\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\gamma:\\mathbb R/(2\\pi\\mathbb Z)\\to\\mathbb R^3`$ be any smooth unit-speed closed curve, so $`|\\gamma'(s)|=1`$, and define its curvature by $`\\kappa(s)=|\\gamma''(s)|`$. Self-intersections are allowed; planarity and convexity are not assumed.\n\nProve or disprove that every $`f\\in H^1_{\\mathrm{per}}(0,2\\pi)`$ satisfies\n```math\n\\int_0^{2\\pi}\\bigl(|f'(s)|^2+\\kappa(s)^2|f(s)|^2\\bigr)\\,ds\n\\geq \\int_0^{2\\pi}|f(s)|^2\\,ds.\n```\n\nEquivalently, the least eigenvalue of\n```math\nH_\\gamma=-\\frac{d^2}{ds^2}+\\kappa(s)^2\n```\n\nwith periodic boundary conditions should be at least $`1`$. The unit circle and a known family of noncircular ovals attain $`1`$. The question asks for the universal bound, without adding an equality-classification requirement.\n\n## Application\n\nThis operator arises when determining the tension in a dynamical elastic loop. The inequality would provide a sharp uniform coercivity estimate for that operator over closed curves of fixed length. The curvature potential here has a positive sign.\n\n## References\n\n1. Almut Burchard and Lawrence E. Thomas, *On an isoperimetric inequality for a Schrödinger operator depending on the curvature of a loop*, Journal of Geometric Analysis **15** (2005),543–563, [published article](https://doi.org/10.1007/BF02922244); [author versionmath/0505123v1](https://arxiv.org/abs/math/0505123v1), Introduction, equation1.1 and Theorem1.1, physical pp.1–4.\n2. Helmut Linde, *An improved bound for the ground state of a Schrödinger operator on a loop*, [arXiv:2504.20229v2](https://arxiv.org/abs/2504.20229v2),24May2025, Introduction and Theorems2.1–2.2.\n3. Durvudkhan Suragan, *An Improved Bound for the Ovals Problem*, [arXiv:2609.10775v1](https://arxiv.org/abs/2609.10775v1),9September2026, Introduction, Theorem1.1, Corollary1.2 and the endpoint-condition discussion in §5/AppendixA.\n4. OpenAI, *Sharp one-dimensional Lieb–Thirring constants*, [announced preprint](https://github.com/openai/math/blob/main/preprints/Sharp-One-Dimensional-Lieb-Thirring-Constants-September-23-2026/paper.pdf),23September2026, Theorem1.1.\n\n## Status review\n\n\n**Known cases:** The sharp constant is one for all smooth closed spatial curves, with no convexity restriction. The September 2026 near-sharp estimate remains below one; planar convex verification notebooks and one-dimensional Lieb-Thirring constants do not prove this full geometric assertion.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe sharp constant is one for all smooth closed spatial curves, with no convexity restriction. The September 2026 near-sharp estimate remains below one; planar convex verification notebooks and one-dimensional Lieb-Thirring constants do not prove this full geometric assertion.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nBurchard–Thomas prove local minimality of the oval family rather than the full global assertion. Linde improves the analytic lower bound to $`0.81`$. Suragan announces the stronger bound\n```math\n\\lambda_1(H_\\gamma)\\geq\\frac{\\sqrt\\pi}{2}\n\\left(\\frac{\\Gamma(7/6)}{\\Gamma(5/3)}\\right)^3<1,\n```\n\nwhich still leaves a gap to the conjectured value.\n\nThe announced sharp Lieb–Thirring theorem concerns a related real-line spectral inequality. The inspected cumulative-density reduction imposes zero endpoint values, whereas a smooth loop has a positive periodic ground-state amplitude. Thus that theorem does not automatically establish the present periodic inequality. This distinction was independently checked; neither announcement's complete proof was certified here.\n\nNo matching complete resolution or equivalent AIM/FURTHER entry was located in the bounded searches and comparisons. The [coordinator review](../FURTHER_problems/_tracking/benguria-loss-coordinator-review-2026-10-19.json), [current checks](../FURTHER_problems/_tracking/benguria-loss-current-review-2026-10-19.json), [duplicate review](../FURTHER_problems/_tracking/benguria-loss-duplicates-review-2026-10-19.json) and [independent scope audit](../FURTHER_problems/_tracking/parallel/continuum/benguria-loss-loop-independent-scope-audit-2026-10-19.json) record exact reading extents and limitations.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f883c76cd5abf98d**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "ovals problem",
+    "Benguria",
+    "Burchard",
+    "Suragan",
+    "curvature Schrodinger"
+  ],
+  "searches": [
+    {
+      "query": "\"ovals problem\" \"2609.10775\" solved"
+    },
+    {
+      "query": "\"ovals problem\" solution Zenodo GitHub HAL"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2609.10775",
+      "version": "v1",
+      "date": "2026-09-09",
+      "locator": "official latest version"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.10775v1",
+      "locator": "Theorem1.1/Corollary1.2 eq1.4–1.7 lines57–81"
+    },
+    {
+      "url": "https://arxiv.org/abs/2503.02431",
+      "version": "v2",
+      "date": "2025-04-19",
+      "locator": "official withdrawn note: false selfadjointness of A_T in proof Lemma2.4.1, described fatal by authors"
+    },
+    {
+      "url": "https://cv.hal.science/emmanueltrelat",
+      "locator": "HAL04974901v2 withdrawal listed"
+    }
+  ],
+  "scope_comparison": "Latest near-sharp universal constant c*=0.9618316523<1 is partial even though it includes spatial loops. The apparently complete 2025 Solution of the Ovals problem is officially withdrawn with fatal error, so cannot count as a viable matching announcement. Dualverse verification notebook states convex planar subclass and verifies equality family/numerics; neither proves all smooth spatial loops. No unwithdrawn full match found.",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded current literature and announcement searches do not establish continued openness. Restricted results were compared at the stated locators; no full proof certification claimed.",
+  "announcement_routing": {
+    "localID": "1034",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "ovals problem",
+          "Benguria",
+          "Burchard",
+          "Suragan",
+          "curvature Schrodinger"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "ovals problem",
+          "Benguria",
+          "Burchard",
+          "Suragan",
+          "curvature Schrodinger"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "ovals problem",
+        "Benguria",
+        "Burchard",
+        "Suragan",
+        "curvature Schrodinger"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

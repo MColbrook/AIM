@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "638",
+  "manifest_index": 494,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "638",
+    "title": "A limiting law for maximal persistence in random clique complexes",
+    "area": "Applied topology / stochastic topology",
+    "file": "problems/638-random-clique-maximal-persistence-law.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "d68fa2e25e33563704dbd39d9e73730f203941c9b6018bbe9ad318f808e567f4",
+    "statement_sha256": "27edea89e8382970788b155ca4a567a6997006bc3154df6098aafff5dc106085",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d68fa2e25e33563704dbd39d9e73730f203941c9b6018bbe9ad318f808e567f4",
+  "statement_sha256": "27edea89e8382970788b155ca4a567a6997006bc3154df6098aafff5dc106085",
+  "actual_source_sha256": "d68fa2e25e33563704dbd39d9e73730f203941c9b6018bbe9ad318f808e567f4",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Assign independent uniform random variables $`U_e\\in[0,1]`$ to the edges of the complete graph on $`n`$ vertices. Let $`X_n(p)`$ be the clique complex of the graph with edges $`U_e\\le p`$. Fix $`k\\ge1`$ and compute persistent homology over $`\\mathbb Q`$. For its positive-length barcode intervals $`[b,d)`$, put\n\n```math\nM_k(n)=\\max d/b,\n```\n\nwith $`M_k(n)=0`$ if that barcode is empty. Define\n\n```math\nf_k(n)=n^{1/[k(k+1)]}(\\log n)^{1/(k+1)}.\n```\n\nDoes there exist a probability distribution $`\\mu_k`$ on $`\\mathbb R`$ and a constant $`\\lambda_k>0`$ such that\n\n```math\n\\frac{M_k(n)}{f_k(n)}\\xrightarrow{\\mathrm d}\\mu_k,\n\\qquad \\mu_k([\\lambda_k,\\infty))=1?\n```\n\nProve this assertion or give a counterexample. The dimension $`k`$ stays fixed as $`n\\to\\infty`$; no particular named distribution is prescribed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"maximal persistence\" \"clique\" limiting 2026",
+    "\"maximal persistence\" \"clique\" limiting (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2209.05713",
+      "primary_body_access_gap": false,
+      "scope_comparison": "The actual body conjectures convergence with f_k(n)=n^[1/k(k+1)](log n)^[1/(k+1)] to a law bounded away from zero. Power-exponent high-probability bounds lack this logarithmic normalized limiting law. Torus-grid Rips filtrations are a different model from independent uniform edge times.",
+      "version_or_date": "v1,13September2022; latest record inspected",
+      "locator": "Conjecture5.2, lines390–407"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual body conjectures convergence with f_k(n)=n^[1/k(k+1)](log n)^[1/(k+1)] to a law bounded away from zero. Power-exponent high-probability bounds lack this logarithmic normalized limiting law. Torus-grid Rips filtrations are a different model from independent uniform edge times.",
+  "latest_version_check": "v1,13September2022; latest record inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

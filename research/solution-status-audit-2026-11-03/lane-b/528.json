@@ -1,0 +1,70 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "528",
+  "manifest_index": 411,
+  "original_target": {
+    "id": "528",
+    "title": "Minimax estimation of topic distributions with weak sparsity",
+    "area": "Statistical inference and topic models",
+    "file": "problems/528-weak-sparse-topic-minimax.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "probability-statistics",
+    "source_sha256": "75c2d96f4f9e45ff9ddee1a3cab4f175903e441505eb2b74aba5881faa4df97b",
+    "statement_sha256": "5cfa1ec3bd6bbc804653e4305fca1996d0b0c5b92aad287b6e32e4d9959115cd",
+    "state": "unreviewed"
+  },
+  "source_sha256": "75c2d96f4f9e45ff9ddee1a3cab4f175903e441505eb2b74aba5881faa4df97b",
+  "statement_sha256": "5cfa1ec3bd6bbc804653e4305fca1996d0b0c5b92aad287b6e32e4d9959115cd",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:35.946800+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The final 2026 JMLR Theorem 19 and section 5 retain upper bounds and explicitly leave the minimax-optimal l1 rate under assumption (15) open. Ordered-decay weak sparsity differs from support-size sparsity; vertex-hunting algorithm conditions differ from parameter-class restrictions. High-probability bounds are not silently converted to expected-risk matching bounds.",
+  "primary_sources": [
+    {
+      "url": "https://jmlr.org/papers/volume27/23-1344/23-1344.pdf",
+      "locator": "Theorem 19 pages 14–15, section 5 page 33; published May 2026",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"weak sparsity\" \"topic\" \"minimax\" 2026",
+    "\"weak sparsity\" \"topic\" minimax (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"weak-sparsity\" \"topic\" minimax solution 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "weak sparsity",
+        "topic model"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "weak sparsity",
+        "topic model"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

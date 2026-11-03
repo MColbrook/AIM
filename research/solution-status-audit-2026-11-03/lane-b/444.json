@@ -1,0 +1,51 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 358,
+  "source_sha256": "e271f9a6c77c84e8b84409c687c2c8451f90ef286a600d98dbe455a9c57829f6",
+  "statement_sha256": "9f7fde8e3e98d2a54c59a055e018dcdbb46d3afdbc1f2f367887b69d670f5d2c",
+  "original_target": {
+    "id": "444",
+    "title": "Optimal dimension for bounded subquadratic p-Laplace extremal states",
+    "area": "Singular quasilinear elliptic PDEs",
+    "file": "problems/444-subquadratic-p-laplace-extremal-critical-dimension.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "pdes-materials",
+    "source_sha256": "e271f9a6c77c84e8b84409c687c2c8451f90ef286a600d98dbe455a9c57829f6",
+    "statement_sha256": "9f7fde8e3e98d2a54c59a055e018dcdbb46d3afdbc1f2f367887b69d670f5d2c",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "444",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"subquadratic\" \"stable\" \"p-Laplacian\" \"2026\" dimension",
+    "\"p-Laplace\" \"extremal\" \"1<p<2\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"stable\" \"p-Laplace\" \"2026\" \"subquadratic\"",
+    "\"Endpoint Morrey interior regularity\" \"Qu\" \"Wang\""
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2006.01445",
+      "version": "published2022,currentHTML",
+      "locator": "Theorem1.1 eq1.12;Theorem1.5",
+      "theorem_body_checked": true,
+      "scope": "Subquadraticrange n<5p,notn<p+4p/(p-1).Optimalrangeforp>=2only."
+    },
+    {
+      "url": "https://www.aimspress.com/aimspress-data/era/2026/7/PDF/era-34-07-210.pdf",
+      "date": "PDFpublished3June2026;issueJuly2026",
+      "sha256": "0eabf5fc615a2c2b6cccf8475b58f03ded863b6daf3cecd3a1c4fb3c4b462cc5",
+      "locator": "pp4766–4767 eq1.6,Theorems1.1–1.3",
+      "theorem_body_checked": true,
+      "scope": "Allthreetheoremsassume d>5p for1<p<2 viaeq1.6andgivefiniteexponentMorreyestimates. Endpointreferspdintegrabilityinhighdimensions,notboundednessuptooptimalcriticaldimension. ReadRAMPDFwithoutstorage."
+    }
+  ],
+  "registry_checks": "Palomar/Hexagon/OpenAI/Colbrookcompletecachesscanned;no matchingfullclaim.",
+  "scope_comparison": "Needall1<p<2 and2<=d<p+4p/(p-1),generalpositiveincreasingconvexsuperlinearf,strictlyconvexdomain,extremallimitbounded. MorreyfiniteexponentsinhighdnotfullrangeLinf.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

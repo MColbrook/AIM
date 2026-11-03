@@ -2,9 +2,9 @@
 
 **Area:** Interacting particles and conditioned diffusion
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -42,6 +42,13 @@ Resampling lets a particle population approximate the distribution of a diffusio
 - [Lucas Journel and Pierre Monmarché, *Uniform convergence of the Fleming–Viot process in a hard killing metastable case*, Annals of Applied Probability 35 (2025), 1019–1048; arXiv:2207.02030v3, November 21, 2024](https://arxiv.org/pdf/2207.02030v3), Assumptions 1–2 and Theorems 1–2.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Negative: a bounded connected three-dimensional driftless Brownian explosion domain.
+
+[Claimed solution](https://arxiv.org/pdf/2610.18802v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/348.json). Source locator: Theorem1.1; §2 model; §7 common Kelvin clock and domain construction. The comparison records the hypotheses, quantifiers and any reduction to the original target. The full external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative: finite-time Brownian branching explosion
 

@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "708",
+  "manifest_index": 552,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "708",
+    "title": "The critical opening for asymptotic Borel surjectivity",
+    "area": "Complex analysis and asymptotic analysis",
+    "file": "problems/708-the-critical-opening-for-asymptotic-borel-surjectivity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-98eccdb3a0a69c54",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "17ea7ed4f6d2c48b76ef3548852df6666d909b4c4a58d9e54992daed17d5f164",
+    "statement_sha256": "464637d93eb2078e31ba51f5d1258ad41e8f682c228979d8b4a876af4f6128c1",
+    "state": "unreviewed"
+  },
+  "source_sha256": "17ea7ed4f6d2c48b76ef3548852df6666d909b4c4a58d9e54992daed17d5f164",
+  "statement_sha256": "464637d93eb2078e31ba51f5d1258ad41e8f682c228979d8b4a876af4f6128c1",
+  "actual_source_sha256": "17ea7ed4f6d2c48b76ef3548852df6666d909b4c4a58d9e54992daed17d5f164",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`M=(M_p)_{p\\ge0}`$, $`M_0=1`$, be strongly regular: positive and logarithmically convex, with constants $`A,B>0`$ such that\n```math\nM_{p+q}\\le A^{p+q}M_pM_q,\\qquad\n\\sum_{q\\ge p}\\frac{M_q}{(q+1)M_{q+1}}\\le B\\frac{M_p}{M_{p+1}}.\n```\n\nSet $`m_p=M_{p+1}/M_p`$ and\n```math\n\\gamma(M)=\\sup\\{a>0:(m_p/(p+1)^a)_p\\text{ is almost increasing}\\}.\n```\n\nAlmost increasing means $`c_p\\le Kc_q`$ whenever $`p\\le q`$, for a fixed $`K`$.\n\nOn the logarithm's Riemann surface put $`S_\\alpha=\\{z:|\\arg z|<\\pi\\alpha/2\\}`$, with $`0<|z|<\\infty`$. Prescribe $`\\widehat f=\\sum a_pz^p`$ satisfying $`|a_p|\\le CA^pM_p`$. Define three holomorphic classes:\n\n- $`\\widetilde{\\mathcal A}_M`$: for each bounded proper subsector $`T`$ of $`S_\\alpha`$, some $`C_T,A_T>0`$ satisfy\n  ```math\n|f(z)-\\sum_{p<N}a_pz^p|\\le C_TA_T^NM_N|z|^N\\quad(z\\in T,\\ N\\ge0).\n```\n\n- $`\\widetilde{\\mathcal A}^{u}_M`$: that estimate holds throughout $`S_\\alpha`$ with one pair of constants.\n- $`\\mathcal A_M`$: some $`C,A>0`$ satisfy $`|f^{(p)}(z)|\\le CA^p p!M_p`$ throughout $`S_\\alpha`$.\n\nLet $`\\mathcal S`$ denote the openings $`\\alpha>0`$ for which the coefficient map onto all prescribed series is surjective. Is\n```math\n\\mathcal S(\\widetilde{\\mathcal A}_M)=(0,\\gamma(M)],\\qquad\n\\mathcal S(\\widetilde{\\mathcal A}^{u}_M)=\\mathcal S(\\mathcal A_M)=(0,\\gamma(M))\n```\n\nalways true? At the critical opening this asks for nonuniform surjectivity and uniform non-surjectivity.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"asymptotic Borel\" \"critical\" \"surjectivity\" proof 2026",
+    "\"asymptotic Borel\" \"critical\" \"surjectivity\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "url": "https://link.springer.com/article/10.1186/s13660-026-03485-w",
+      "locator": "Theorem2.10 lines325–331;Theorems2.14/3.3;Roumieu definitions",
+      "scope_comparison": "The actual 2026 theorem sandwiches surjectivity intervals between (0,gamma(M)) and (0,gamma(M)] and does not decide the general finite critical opening. The new shifted-moment implication gives interior results; Beurling quantifiers differ. Target requires BOTH nonuniform endpoint inclusion and uniform/derivative endpoint exclusion for every strongly regular M. No complete matching endpoint theorem found.",
+      "version_or_date": "JIA2026article85, current publication checked3November2026"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual 2026 theorem sandwiches surjectivity intervals between (0,gamma(M)) and (0,gamma(M)] and does not decide the general finite critical opening. The new shifted-moment implication gives interior results; Beurling quantifiers differ. Target requires BOTH nonuniform endpoint inclusion and uniform/derivative endpoint exclusion for every strongly regular M. No complete matching endpoint theorem found.",
+  "latest_version_check": "JIA2026article85, current publication checked3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

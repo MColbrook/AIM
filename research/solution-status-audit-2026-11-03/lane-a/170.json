@@ -1,0 +1,77 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "170",
+  "manifest_index": 134,
+  "original_target": {
+    "id": "170",
+    "title": "The two-thirds passage-time variance exponent",
+    "area": "Random interfaces and growth fluctuations",
+    "file": "problems/170-fpp-kpz-variance.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "295e58bffa90c3beb1959f21037db0f0b91633a23b1c9955698443e188336379",
+    "statement_sha256": "445555a17ed70326f6621dcf194f8a2c5266d088e15c84f30ba706e18eb8c701",
+    "state": "unreviewed"
+  },
+  "source_sha256": "295e58bffa90c3beb1959f21037db0f0b91633a23b1c9955698443e188336379",
+  "statement_sha256": "445555a17ed70326f6621dcf194f8a2c5266d088e15c84f30ba706e18eb8c701",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:39.913985+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Theorem 1 of the 2026 sublinear-variance paper concerns a rotationally invariant Riemannian continuum model and gives a sublinear upper exponent, not the exact two-thirds variance exponent for square-lattice i.i.d. exponential first-passage percolation. Shape differentiability and absence of bigeodesics are different conclusions.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2604.01214",
+      "locator": "Theorem 1 and section 1.1 model assumptions",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"first passage percolation\" \"variance exponent\" \"2026\" exponential"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "first passage",
+        "variance exponent"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "first passage",
+        "variance exponent"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00299v1",
+          "title": "Polylogarithmic Descent for Almost All Collatz Orbits in Natural Density"
+        },
+        {
+          "id": "hexagon:2610.00190v1",
+          "title": "Aging in Spherical Spin Glass Dynamics"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

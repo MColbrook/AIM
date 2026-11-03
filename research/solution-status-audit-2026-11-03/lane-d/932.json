@@ -1,0 +1,135 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "932",
+  "manifest_index": 776,
+  "checked_date": "2026-11-03",
+  "source_sha256": "d642072f835c9f55ba0503a52836ebaf5553b00cd0c24ade173221a40c68a4a7",
+  "statement_sha256": "85eb277569aea6b52583bfd1729c1281335eef3b8dc6eac9ffa18d83824b8289",
+  "original_target": {
+    "id": "932",
+    "title": "Half-Hölder regularity for Spencer's random block model",
+    "area": "Operators, matrices and computation",
+    "file": "problems/932-half-holder-regularity-for-spencer-s-random-block-model.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e7793527d7b46adb",
+    "group": "operators",
+    "source_sha256": "d642072f835c9f55ba0503a52836ebaf5553b00cd0c24ade173221a40c68a4a7",
+    "statement_sha256": "85eb277569aea6b52583bfd1729c1281335eef3b8dc6eac9ffa18d83824b8289",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix an integer $`d\\ge1`$ and numbers $`a,g>0`$. Let $`(v_n)_{n\\in\\mathbb Z^d}`$ be independent uniform random variables on $`[-1,1]`$. Define the bounded self-adjoint operator on $`\\ell^2(\\mathbb Z^d;\\mathbb C^2)`$\n```math\n(H_\\omega\\psi)(n)=\n\\begin{pmatrix}v_n&a\\\\a&-v_n\\end{pmatrix}\\psi(n)\n+g^{-1}\\sum_{|m-n|_1=1}\\psi(m).\n```\n\nLet $`e_1,e_2`$ be the standard basis of $`\\mathbb C^2`$ and define the normalized integrated density of states by\n```math\nN(E)=\\frac12\\,\\mathbb E_\\omega\n\\sum_{j=1}^2\n\\left\\langle\\delta_0\\otimes e_j,\\,\n\\mathbf1_{(-\\infty,E]}(H_\\omega)\n(\\delta_0\\otimes e_j)\\right\\rangle .\n```\n\nDoes there always exist $`C=C(d,a,g)<\\infty`$ such that\n```math\nN(E+\\varepsilon)-N(E-\\varepsilon)\n\\le C\\varepsilon^{1/2}\n\\qquad(E\\in\\mathbb R,\\ 0<\\varepsilon\\le1)?\n```\n\nThis is a concrete bounded-density specialization of Spencer's conjecture recorded in [1]. Both internal components have the same nearest-neighbor hopping sign. Constants need not be uniform in $`a`$ or $`g`$.",
+  "full_original_page": "# 932. Half-Hölder regularity for Spencer's random block model\n\n**Area:** Operators, matrices and computation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix an integer $`d\\ge1`$ and numbers $`a,g>0`$. Let $`(v_n)_{n\\in\\mathbb Z^d}`$ be independent uniform random variables on $`[-1,1]`$. Define the bounded self-adjoint operator on $`\\ell^2(\\mathbb Z^d;\\mathbb C^2)`$\n```math\n(H_\\omega\\psi)(n)=\n\\begin{pmatrix}v_n&a\\\\a&-v_n\\end{pmatrix}\\psi(n)\n+g^{-1}\\sum_{|m-n|_1=1}\\psi(m).\n```\n\nLet $`e_1,e_2`$ be the standard basis of $`\\mathbb C^2`$ and define the normalized integrated density of states by\n```math\nN(E)=\\frac12\\,\\mathbb E_\\omega\n\\sum_{j=1}^2\n\\left\\langle\\delta_0\\otimes e_j,\\,\n\\mathbf1_{(-\\infty,E]}(H_\\omega)\n(\\delta_0\\otimes e_j)\\right\\rangle .\n```\n\nDoes there always exist $`C=C(d,a,g)<\\infty`$ such that\n```math\nN(E+\\varepsilon)-N(E-\\varepsilon)\n\\le C\\varepsilon^{1/2}\n\\qquad(E\\in\\mathbb R,\\ 0<\\varepsilon\\le1)?\n```\n\nThis is a concrete bounded-density specialization of Spencer's conjecture recorded in [1]. Both internal components have the same nearest-neighbor hopping sign. Constants need not be uniform in $`a`$ or $`g`$.\n\n## Application\n\nThe bound limits the expected fraction of energy levels in a small interval for a disordered two-component quantum system. It asks whether the square-root singularity permitted by an isolated block remains the worst possible concentration after sites are coupled.\n\n## References\n\n1. Alexander Elgart, Mira Shamis and Sasha Sodin, [*Localisation for non-monotone Schrödinger operators*](https://doi.org/10.4171/JEMS/451), *Journal of the European Mathematical Society* **16** (2014), no. 5, 909–924. The conjecture and partial progress are on p. 911; the operator and IDS conventions are in §1.2, especially Corollary 1.2 on p. 914. [Published text](https://ems.press/content/serial-article-files/31961?nt=1).\n2. John Z. Imbrie and Rajinder Mavi, [*Level Spacing for Non-Monotone Anderson Models*](https://arxiv.org/abs/1506.06692), v3 (2016), §1.2 and Theorems 1.1–1.3.\n3. Werner Kirsch, Bernd Metzger and Peter Müller, [*Random block operators*](https://arxiv.org/abs/1009.3795), v1 (2010), Eq. (1.2), Proposition 3.1 and Theorem 5.1: a related block model with different hopping signs and additional hypotheses.\n\n## Status review\n\n\n**Known cases:** Uniformly random diagonal blocks with the same hopping sign and every fixed coupling require the exact one-half Holder exponent. Quasiperiodic block results, smaller Holder exponents at large disorder and opposite-sign hopping models do not cover this.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nUniformly random diagonal blocks with the same hopping sign and every fixed coupling require the exact one-half Holder exponent. Quasiperiodic block results, smaller Holder exponents at large disorder and opposite-sign hopping models do not cover this.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nFor every exponent $`0<s<1/2`$, [1] gives an $`s`$-Hölder estimate at sufficiently large $`g`$, with a threshold depending on the exponent. This does not give the endpoint for a fixed coupling.\n\nFor $`a=1`$ and small hopping, [2] supplies a stretched-logarithmic eigenvalue-counting bound and level-spacing estimates; it explicitly distinguishes these from Hölder regularity. The square-root spectral mapping in [3] uses opposite hopping signs, so it does not settle the displayed model.\n\nBounded literature and announcement searches through 24 October 2026 located no matching complete resolution. All-status AIM/OpenAI comparisons, the developing collection and available Prove2Me listings revealed no matching target. These are source and statement checks, without a claim to certify every cited proof or exhaust the literature.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-e7793527d7b46adb**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Spencer",
+    "random block",
+    "non-monotone",
+    "integrated density"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Spencer\" \"random block\" \"Holder\" density states",
+    "\"Spencer\" \"random block\" \"Holder\" density states; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1506.06692",
+      "locator": "Section1.2 model and Theorem1.1, lines77–105",
+      "comparison": "Same-sign hopping model is matched at a=1, but theorem assumes small hopping and gives stretched-log eigenvalue-counting bound explicitly weaker than Holder continuity. Opposite-sign block spectral mapping and quasiperiodic models miss required hypotheses; no exact endpoint at every coupling found."
+    }
+  ],
+  "rationale": "Same-sign hopping model is matched at a=1, but theorem assumes small hopping and gives stretched-log eigenvalue-counting bound explicitly weaker than Holder continuity. Opposite-sign block spectral mapping and quasiperiodic models miss required hypotheses; no exact endpoint at every coupling found.",
+  "limitations": [
+    "Bounded negative search is not proof of openness; candidate scope inspected, not complete proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "932",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Spencer",
+          "random block",
+          "non-monotone",
+          "integrated density"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-28-000018",
+            "title": "The Pippenger–Spencer theorem on the chromatic index of hypergraphs",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-28-000018-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-20-000004",
+            "title": "The Lovász Local Lemma and two applications",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-20-000004-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-19-000008",
+            "title": "Erdős Problem 173: monochromatic triangles in two-colorings of the plane",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-19-000008-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-18-000021",
+            "title": "Graham's bounds for list scheduling and LPT on identical machines: 2 − 1/m, 4/3 − 1/(3m) and their tight instances",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000021-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-12-000007",
+            "title": "Classical theorems of Fröhlich and Spencer: the Kosterlitz–Thouless transition, massless phases of abelian gauge theories, and Anderson localization",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-12-000007-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Spencer",
+          "random block",
+          "non-monotone",
+          "integrated density"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00566v1",
+            "title": "Deformations of Deligne's S_t",
+            "url": "https://hexagonmath.org/abs/2610.00566v1"
+          },
+          {
+            "id": "hexagon:2609.00134v1",
+            "title": "Five equations for first-order logic, modulo the structure of existential graphs",
+            "url": "https://hexagonmath.org/abs/2609.00134v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Spencer",
+        "random block",
+        "non-monotone",
+        "integrated density"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Pippenger–Spencer hypergraph coloring and the other graph/logic hits are name collisions. Frohlich–Spencer tight-binding Anderson localization is not the nonmonotone random2x2 block model half-Holder density statement.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.724Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

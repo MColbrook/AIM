@@ -1,0 +1,50 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 326,
+  "source_sha256": "22f15014faed1d46a28070378e653dbfb8c97bf21518d26ad354eaa6af3d4e07",
+  "statement_sha256": "6f354fd4218e479c4b4cbef86b29b1ab9e048a0a352774abbc289652c815cb42",
+  "original_target": {
+    "id": "399",
+    "title": "Quasi-invariance of independent-Fourier Gaussian laws under 2D Euler",
+    "area": "Two-dimensional Euler dynamics and Gaussian measures",
+    "file": "problems/399-quasi-invariance-of-independent-fourier-gaussian-laws-under-2d-euler.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-3f1ac500a16ac818",
+    "group": "continuum2",
+    "source_sha256": "22f15014faed1d46a28070378e653dbfb8c97bf21518d26ad354eaa6af3d4e07",
+    "statement_sha256": "6f354fd4218e479c4b4cbef86b29b1ab9e048a0a352774abbc289652c815cb42",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "399",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"Euler\" \"Gaussian\" \"quasi-invariance\" 2026",
+    "\"Euler\" \"quasi-invariance\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) Gaussian",
+    "\"Gaussian\" \"Euler\" \"quasi-invariance\" \"2026\" classification"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.01019",
+      "version": "v1 2August2026; abs latest confirmed",
+      "locators": "TheoremsA,B lines126–157",
+      "body_inspected": true,
+      "scope": "TheoremA full invariance classification allsigma>0. TheoremB quasi-invariance equivalence assumes finite active-direction set D(a)."
+    },
+    {
+      "url": "https://arxiv.org/html/2609.01105v2",
+      "version": "v2 21September2026",
+      "locators": "Theorem1.3; equation1.1; Section1.2",
+      "body_inspected": true,
+      "scope": "Prescribed deterministic divergence-free transport of specific covariance(1−Delta)^−alpha, with Killing-field characterization. Not nonlinear Euler where velocity depends on Gaussian initialdata."
+    }
+  ],
+  "registry_checks": "Palomar quasi-invariance match CameronMartin/ClarkOcone unrelated; no Euler matching alias Hexagon/OpenAI/Colbrook metadata. Current arXiv, Zenodo, HAL, GitHub and primary author/publisher searches.",
+  "scope_comparison": "Target all independent-Fourier covariance sequences h^sigma, arbitrary infinite directions, equivalence for everytime. Invariance classification doesn't rule out a changed but equivalent measure. Finite union directions is a strict restriction.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

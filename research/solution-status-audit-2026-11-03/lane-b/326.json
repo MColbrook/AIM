@@ -1,0 +1,50 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 264,
+  "source_sha256": "ffd48c9a5cd0acebe8d0a9ac057b813978920026e4bb088d9de0d3348c95fe5a",
+  "statement_sha256": "259ef70f0eaa6d8c32cc7b54658d4d3fcb13cecf7a3cbc0818f6fcce2e46c0da",
+  "original_target": {
+    "id": "326",
+    "title": "Polynomial-time DNF learning from uniform random examples",
+    "area": "Statistical learning, Boolean rules and computational complexity",
+    "file": "problems/326-classical-uniform-dnf-learning.md",
+    "status": "Open",
+    "last_checked": "2026-09-18",
+    "group": "probability-statistics",
+    "source_sha256": "ffd48c9a5cd0acebe8d0a9ac057b813978920026e4bb088d9de0d3348c95fe5a",
+    "statement_sha256": "259ef70f0eaa6d8c32cc7b54658d4d3fcb13cecf7a3cbc0818f6fcce2e46c0da",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "326",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Original classical noiseless examples-only uniform PAC learning of every s-term DNF in time polynomial n,s,1/epsilon,log1/delta with efficient improper hypothesis allowed. Alman et al Theorem1 uses membership queries and returns a candidate-term list, not a full hypothesis; the learning theorem is quasipolynomial and assumes exact equal-length terms. Quantum and pairwise/numerical queries exceed the allowed access. The we-solve distribution-free page explicitly remains Open; its visible conditional consistency-to-learning argument is not a supplied polynomial consistency algorithm. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "DNF learning uniform examples only polynomial time proof 2026",
+    "\"DNF\" \"uniform\" learning polynomial (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2505.18839v1",
+      "version": "v1,24May2025",
+      "locator": "§1.2 Theorems1/3 and limitations followingTheorem1",
+      "body_inspected": true
+    },
+    {
+      "url": "https://we-solve.github.io/problems/polynomial-time-distribution-free-pac-learning-of-dnf-formulas/",
+      "version": "accessed3November2026",
+      "locator": "StatusOpen; conditional contribution",
+      "body_inspected": false
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "\\bDNF\\b|disjunctive.normal",
+    "palomar_matches": 0,
+    "hexagon_matches": 0,
+    "result": "No indexed matching announcement."
+  }
+}

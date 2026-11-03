@@ -1,0 +1,109 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "884",
+  "manifest_index": 728,
+  "checked_date": "2026-11-03",
+  "source_sha256": "fb14bf1fa5b08ef9f833bd5aabf433366341a8a78412b990836cc395840adfd4",
+  "statement_sha256": "43080ca1acc82a243a8e84feb5888f72538898a6379a11d683016db7aa695e64",
+  "original_target": {
+    "id": "884",
+    "title": "Completeness under conformal changes of compact Lorentzian spaceforms",
+    "area": "Mathematical relativity / Lorentzian geometry",
+    "file": "problems/884-completeness-under-conformal-changes-of-compact-lorentzian-spaceforms.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f023bd067be9fed5",
+    "group": "mathematical-relativity",
+    "source_sha256": "fb14bf1fa5b08ef9f833bd5aabf433366341a8a78412b990836cc395840adfd4",
+    "statement_sha256": "43080ca1acc82a243a8e84feb5888f72538898a6379a11d683016db7aa695e64",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`M`$ be a closed connected smooth manifold of dimension $`n\\geq2`$, and let $`g_0`$ be a smooth Lorentzian metric of constant sectional curvature. For an arbitrary $`u\\in C^\\infty(M;\\mathbb R)`$, set\n\n```math\ng=e^{2u}g_0.\n```\n\n\n**Must $`(M,g)`$ be geodesically complete?** Explicitly, for every $`x\\in M`$ and $`v\\in T_xM`$, must the maximal solution of\n\n```math\n\\nabla^g_{\\dot\\gamma}\\dot\\gamma=0,\\qquad \\gamma(0)=x,\\qquad \\dot\\gamma(0)=v\n```\n\n\nbe defined for every affine parameter $`t\\in\\mathbb R`$?\n\nThe constant curvature assumption is on $`g_0`$; the rescaled metric need not have constant curvature. There is no homogeneity or Killing-field assumption on the compact quotient and no restriction to one sign of the constant curvature. The conformal factor is a single globally defined smooth positive function. Local conformal flatness alone is a different condition.",
+  "full_original_page": "# 884. Completeness under conformal changes of compact Lorentzian spaceforms\n\n**Area:** Mathematical relativity / Lorentzian geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`M`$ be a closed connected smooth manifold of dimension $`n\\geq2`$, and let $`g_0`$ be a smooth Lorentzian metric of constant sectional curvature. For an arbitrary $`u\\in C^\\infty(M;\\mathbb R)`$, set\n\n```math\ng=e^{2u}g_0.\n```\n\n\n**Must $`(M,g)`$ be geodesically complete?** Explicitly, for every $`x\\in M`$ and $`v\\in T_xM`$, must the maximal solution of\n\n```math\n\\nabla^g_{\\dot\\gamma}\\dot\\gamma=0,\\qquad \\gamma(0)=x,\\qquad \\dot\\gamma(0)=v\n```\n\n\nbe defined for every affine parameter $`t\\in\\mathbb R`$?\n\nThe constant curvature assumption is on $`g_0`$; the rescaled metric need not have constant curvature. There is no homogeneity or Killing-field assumption on the compact quotient and no restriction to one sign of the constant curvature. The conformal factor is a single globally defined smooth positive function. Local conformal flatness alone is a different condition.\n\n## Application\n\nConformal changes preserve light cones and unparameterized null trajectories, while geodesic completeness records whether freely moving trajectories persist for all affine times. This question isolates whether a smooth change of scale can create geodesic incompleteness on a compact Lorentzian spaceform. It is a mathematical model of the distinction between causal structure and affine dynamics, without a claim that compact Lorentzian manifolds describe a physical universe.\n\n## Known cases and limitations\n\nThe constant-curvature metric $`g_0`$ is complete. Null completeness is preserved by smooth conformal changes on a compact manifold, because the parameter-change factor is bounded above and away from zero. The question therefore concerns possible timelike or spacelike incompleteness.\n\nCompleteness is also known when the rescaled metric is globally conformal to a compact homogeneous Lorentzian metric, or admits an everywhere timelike conformal Killing field. Constant curvature gives local homogeneity, which does not supply either global hypothesis automatically on a compact quotient. The existence of incomplete compact Lorentzian metrics by itself does not provide a counterexample in this globally prescribed conformal class.\n\n## References\n\n1. M. Sánchez, *On the completeness of trajectories for some mechanical systems*, in *Geometry, Mechanics, and Dynamics*, Fields Institute Communications **73** (2015), 343–372. [Eligible author version](https://arxiv.org/abs/1303.6150), v2, §4.4, Question 1, physical p.24, and Theorems 6–8, pp.21–22. Exact author version checked; full published chapter not compared.\n2. K. Burns and V. S. Matveev, *Open problems and questions about geodesics*, Ergodic Theory and Dynamical Systems **41** (2021), 641–684. [Eligible author version](https://arxiv.org/abs/1308.5417), v3, §9.3, Question 9.3.2, physical p.27. Restates the same question.\n3. A. Burtscher, *A conformal Hopf–Rinow theorem for semi-Riemannian spacetimes*. [Latest checked author version](https://arxiv.org/abs/2309.08682), v5 (2025), introduction, Theorems 1.2 and 1.6 and the discussion of geodesic completeness. The result concerns completeness of a null-distance metric and global hyperbolicity; it does not give full geodesic completeness in the question above.\n\n## Status review\n\n\n**Known cases:** Null completeness is conformally preserved here, while full affine geodesic completeness is stronger. Timelike conformal Killing fields or global homogeneous metrics are additional assumptions not implied by local constant curvature on a compact quotient. Null-distance completeness is another conclusion.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nNull completeness is conformally preserved here, while full affine geodesic completeness is stronger. Timelike conformal Killing fields or global homogeneous metrics are additional assumptions not implied by local constant curvature on a compact quotient. Null-distance completeness is another conclusion.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe exact question is stated in both source surveys. Bounded literature and announcement searches on 17 October 2026 located no complete proof or counterexample for this precise global conformal class. General null-distance completeness theorems and results on compact manifolds with special Killing fields have different conclusions or hypotheses. Independent selected-primary review passed. All 186 cached catalogue pages were checked with five target aliases, with no matches. This is a listing-description comparison, not every mission proof.\n\n[Owner review](../FURTHER_problems/_tracking/parallel/complex-bayesian/conformal-lorentz-completeness-review.json), [independent audit](../FURTHER_problems/_tracking/parallel/rough-filtering/cross-conformal-lorentz-completeness-review.json), [duplicate comparison](../FURTHER_problems/_tracking/parallel/complex-bayesian/conformal-lorentz-completeness-duplicate-snapshot.json), [catalogue receipt](../FURTHER_problems/_tracking/parallel/complex-bayesian/conformal-lorentz-prove2-0134-review.json) and [coordinator review](../FURTHER_problems/_tracking/conformal-lorentz-coordinator-review-2026-10-17.json) record evidence and version limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f023bd067be9fed5**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"conformal\" \"compact Lorentzian\" \"spaceforms\" completeness conjecture",
+    "\"conformal\" \"compact Lorentzian\" completeness (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1308.5417",
+      "locator": "Question9.3.2",
+      "inspection": "Exact source question read: global smooth conformal change of compact constant-curvature Lorentz metric, all affine geodesic completeness. Null completeness, local conformal flatness, null-distance completeness and timelike Killing special cases have different scope. Recent conformal Hopf–Rinow theorem body pending."
+    }
+  ],
+  "scope_comparison": "Exact source question read: global smooth conformal change of compact constant-curvature Lorentz metric, all affine geodesic completeness. Null completeness, local conformal flatness, null-distance completeness and timelike Killing special cases have different scope. Recent conformal Hopf–Rinow theorem body pending.",
+  "rationale": "No full matching resolution identified in bounded searches; exact remaining theorem-body comparisons recorded explicitly.",
+  "source_gaps": [
+    "Specific pending source-body comparisons described above.",
+    "Snapshot routing pending this batch."
+  ],
+  "announcement_routing": {
+    "localID": "884",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Lorentzian spaceform",
+          "geodesic completeness",
+          "conformal completeness"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Lorentzian spaceform",
+          "geodesic completeness",
+          "conformal completeness"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Lorentzian spaceform",
+        "geodesic completeness",
+        "conformal completeness"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.073Z",
+      "previous_outcome": "hold",
+      "localID": "884",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2309.08682v5",
+          "version": "4 September 2025; published2026 Indag.Math37(3),703–743",
+          "locator": "primary abstract and final-version history",
+          "inspection": "Burtscher explicitly notes failure of Lorentzian geodesic Hopf–Rinow and develops completeness of NULL DISTANCE and proper cone structures. The result generalizes the metric part of Hopf–Rinow, not affine completeness of all conformal spaceform geodesics."
+        }
+      ],
+      "scope_comparison": "Original exact Question9.3.2 body already read. Latest comparator's expressly different metric-completeness notion excludes it; there is no material matching theorem-body gap."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

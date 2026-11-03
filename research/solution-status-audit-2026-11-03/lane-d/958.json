@@ -1,0 +1,93 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "958",
+  "manifest_index": 802,
+  "checked_date": "2026-11-03",
+  "source_sha256": "459406ee667d31dd3f96129f0d774c358baa0468a184e240c534d41d114e110b",
+  "statement_sha256": "7f2a970b4467a725839ca808d81f9df323c8ee6245d63b10a71e8a00ba7edc25",
+  "original_target": {
+    "id": "958",
+    "title": "Can ACF blow-up slopes vary while the interface normal stays fixed?",
+    "area": "Two-phase free boundaries and blow-up limits",
+    "file": "problems/958-can-acf-blow-up-slopes-vary-while-the-interface-normal-stays-fixed.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-e09a9c5e050ea1f5",
+    "group": "pdes-materials",
+    "source_sha256": "459406ee667d31dd3f96129f0d774c358baa0468a184e240c534d41d114e110b",
+    "statement_sha256": "7f2a970b4467a725839ca808d81f9df323c8ee6245d63b10a71e8a00ba7edc25",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`u_+,u_-\\geq0`$ be continuous on a ball $`B_2\\subset\\mathbb{R}^n`$, $`n\\geq2`$, subharmonic on their respective positive sets, with disjoint positive sets and $`u_+(0)=u_-(0)=0`$. Suppose the Alt–Caffarelli–Friedman functional\n\n```math\nJ(r)=r^{-4}\\left(\\int_{B_r}|\\nabla u_+|^2|x|^{2-n}\\,dx\\right)\\left(\\int_{B_r}|\\nabla u_-|^2|x|^{2-n}\\,dx\\right)\n```\n\n\nhas a strictly positive limit as $`r\\downarrow0`$. Subsequential blow-ups at the origin have the two-plane form $`c_+(x\\cdot\\nu)_+`$ and $`c_-(x\\cdot\\nu)_-`$ with $`c_+,c_->0`$ and a unit normal $`\\nu`$.\n\nCan one find such a pair for which *every* subsequential blow-up has the same normal $`\\nu`$, but the amplitude pair $`(c_+,c_-)`$ differs between two subsequences?",
+  "full_original_page": "# 958. Can ACF blow-up slopes vary while the interface normal stays fixed?\n\n**Area:** Two-phase free boundaries and blow-up limits\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`u_+,u_-\\geq0`$ be continuous on a ball $`B_2\\subset\\mathbb{R}^n`$, $`n\\geq2`$, subharmonic on their respective positive sets, with disjoint positive sets and $`u_+(0)=u_-(0)=0`$. Suppose the Alt–Caffarelli–Friedman functional\n\n```math\nJ(r)=r^{-4}\\left(\\int_{B_r}|\\nabla u_+|^2|x|^{2-n}\\,dx\\right)\\left(\\int_{B_r}|\\nabla u_-|^2|x|^{2-n}\\,dx\\right)\n```\n\n\nhas a strictly positive limit as $`r\\downarrow0`$. Subsequential blow-ups at the origin have the two-plane form $`c_+(x\\cdot\\nu)_+`$ and $`c_-(x\\cdot\\nu)_-`$ with $`c_+,c_->0`$ and a unit normal $`\\nu`$.\n\nCan one find such a pair for which *every* subsequential blow-up has the same normal $`\\nu`$, but the amplitude pair $`(c_+,c_-)`$ differs between two subsequences?\n\n## Application\n\nBlow-ups describe the local geometry and growth of a two-phase interface. The question separates uniqueness of the tangent direction from uniqueness of the two phases' growth rates at a single point.\n\n## References\n\n1. E. Salato, [*A self-contained proof of the Alt-Caffarelli-Friedman monotonicity formula*](https://www.aimsciences.org/article/doi/10.3934/dcdss.2025156?viewType=HTML), *Discrete and Continuous Dynamical Systems - S* **20** (2026), 319–340; online 10 November 2025. See equations (1)–(2) and the explicit Problem in §6, p. 339.\n2. M. Allen and D. Kriventsov, [*A spiral interface with positive Alt-Caffarelli-Friedman limit at the origin*](https://doi.org/10.2140/apde.2020.13.201), *Analysis & PDE* **13** (2020), 201–214. Their example varies the interface normal while keeping the slopes fixed; the converse is the question above.\n3. M. Allen, D. Kriventsov and R. Neumayer, [*Rectifiability and uniqueness of blow-ups for points with positive Alt–Caffarelli–Friedman limit*](https://doi.org/10.1007/s00208-024-03077-3), *Mathematische Annalen* (2025/2026). It proves uniqueness at almost every point in the positive-limit set, not at every prescribed point.\n\n## Status review\n\n\n**Known cases:** Almost-everywhere blowup uniqueness leaves exceptional points. A rotating normal with fixed slopes does not answer the requested fixed-normal, varying-slope construction.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nAlmost-everywhere blowup uniqueness leaves exceptional points. A rotating normal with fixed slopes does not answer the requested fixed-normal, varying-slope construction.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe spiral construction demonstrates nonuniqueness of the normal with fixed slopes. The later almost-everywhere uniqueness theorem allows exceptional points, so it does not settle the fixed-normal, variable-slope construction. The [bounded exact-source, current-status and duplicate review](../FURTHER_problems/_tracking/acf-fixed-normal-variable-slope-status-2026-10-21.json) found no full published or announced resolution and no matching AIM/FURTHER entry.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-e09a9c5e050ea1f5**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Alt-Caffarelli-Friedman",
+    "Salato",
+    "ACF limit"
+  ],
+  "queries": [
+    "\"ACF\" \"slopes\" \"normal\" blow ups",
+    "\"ACF\" \"slopes\" \"normal\" blow ups; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"Alt-Caffarelli-Friedman\" \"slopes\" 2026",
+    "\"Salato\" \"slopes\" Friedman"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00208-024-03077-3",
+      "locator": "Published2025 volume391; Theorem1.2/Introduction lines72–74 and slope-uniqueness discussion",
+      "comparison": "Uniqueness is Hausdorff(n-1)-almost everywhere, not at a prescribed exceptional point. Rotating-normal examples with fixed slopes give the converse phenomenon; no fixed-normal varying-amplitude construction located."
+    }
+  ],
+  "rationale": "Uniqueness is Hausdorff(n-1)-almost everywhere, not at a prescribed exceptional point. Rotating-normal examples with fixed slopes give the converse phenomenon; no fixed-normal varying-amplitude construction located.",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scopes inspected, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "958",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Alt-Caffarelli-Friedman",
+          "Salato",
+          "ACF limit"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Alt-Caffarelli-Friedman",
+          "Salato",
+          "ACF limit"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Alt-Caffarelli-Friedman",
+        "Salato",
+        "ACF limit"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

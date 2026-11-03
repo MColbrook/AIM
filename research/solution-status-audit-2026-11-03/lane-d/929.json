@@ -1,0 +1,95 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "929",
+  "manifest_index": 773,
+  "checked_date": "2026-11-03",
+  "source_sha256": "1102beced5cafe3ade93cc2fa8db4a4a7d2d8fdbd58ce8d6e9c9ff6b76efbb16",
+  "statement_sha256": "86cbb1d3548d6b3fc6233ba1e2b65ad371167ca05ef56cce3e915c4a6b3ef4a7",
+  "original_target": {
+    "id": "929",
+    "title": "A uniform bilinear square-function bound for arbitrary sharp strips",
+    "area": "Harmonic analysis and bilinear Fourier multipliers",
+    "file": "problems/929-a-uniform-bilinear-square-function-bound-for-arbitrary-sharp-strips.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-d90667dbf7f524f0",
+    "group": "operators",
+    "source_sha256": "1102beced5cafe3ade93cc2fa8db4a4a7d2d8fdbd58ce8d6e9c9ff6b76efbb16",
+    "statement_sha256": "86cbb1d3548d6b3fc6233ba1e2b65ad371167ca05ef56cce3e915c4a6b3ef4a7",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix $`2<p_1,p_2<\\infty`$ and $`1<p<2`$ with $`1/p=1/p_1+1/p_2`$. For a finite family $`\\Omega`$ of pairwise disjoint bounded open intervals of positive length, define\n\n```math\n\\pi_\\omega(f,g)(x)=\\iint_{\\mathbb R^2}\n\\widehat f(\\xi)\\widehat g(\\eta)\\mathbf1_\\omega(\\xi-\\eta)\ne^{2\\pi i x(\\xi+\\eta)}\\,d\\xi\\,d\\eta,\n\\qquad \\omega\\in\\Omega,\n```\n\nusing $`\\widehat f(\\xi)=\\int_{\\mathbb R}f(x)e^{-2\\pi i x\\xi}\\,dx`$.\n\nDoes there exist $`C_{p_1,p_2}<\\infty`$, independent of the family, such that every pair of complex Schwartz functions satisfies\n\n```math\n\\left\\|\\left(\\sum_{\\omega\\in\\Omega}|\\pi_\\omega(f,g)|^2\\right)^{1/2}\\right\\|_{L^p(\\mathbb R)}\n\\le C_{p_1,p_2}\\|f\\|_{L^{p_1}(\\mathbb R)}\\|g\\|_{L^{p_2}(\\mathbb R)}?\n```\n\nWidths and separations are arbitrary. The cutoffs are characteristic functions of the diagonal strips $`\\{(\\xi,\\eta):\\xi-\\eta\\in\\omega\\}`$.",
+  "full_original_page": "# 929. A uniform bilinear square-function bound for arbitrary sharp strips\n\n**Area:** Harmonic analysis and bilinear Fourier multipliers\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix $`2<p_1,p_2<\\infty`$ and $`1<p<2`$ with $`1/p=1/p_1+1/p_2`$. For a finite family $`\\Omega`$ of pairwise disjoint bounded open intervals of positive length, define\n\n```math\n\\pi_\\omega(f,g)(x)=\\iint_{\\mathbb R^2}\n\\widehat f(\\xi)\\widehat g(\\eta)\\mathbf1_\\omega(\\xi-\\eta)\ne^{2\\pi i x(\\xi+\\eta)}\\,d\\xi\\,d\\eta,\n\\qquad \\omega\\in\\Omega,\n```\n\nusing $`\\widehat f(\\xi)=\\int_{\\mathbb R}f(x)e^{-2\\pi i x\\xi}\\,dx`$.\n\nDoes there exist $`C_{p_1,p_2}<\\infty`$, independent of the family, such that every pair of complex Schwartz functions satisfies\n\n```math\n\\left\\|\\left(\\sum_{\\omega\\in\\Omega}|\\pi_\\omega(f,g)|^2\\right)^{1/2}\\right\\|_{L^p(\\mathbb R)}\n\\le C_{p_1,p_2}\\|f\\|_{L^{p_1}(\\mathbb R)}\\|g\\|_{L^{p_2}(\\mathbb R)}?\n```\n\nWidths and separations are arbitrary. The cutoffs are characteristic functions of the diagonal strips $`\\{(\\xi,\\eta):\\xi-\\eta\\in\\omega\\}`$.\n\n## Application\n\nThis asks whether disjoint frequency-difference bands yield a uniform square-function estimate despite the modulation invariance of their bilinear Hilbert-transform geometry.\n\n## References\n\n1. F. Bernicot and M. Vitturi, [A bilinear Rubio de Francia inequality for arbitrary rectangles](https://doi.org/10.1093/imrn/rnz177), *International Mathematics Research Notices* **2021**(17), 12925–12966. [Archived manuscript](https://arxiv.org/pdf/1808.06534v1), introduction, printed p.2, sharp-strip formula and arbitrary-strip question.\n2. F. Bernicot, [On the boundedness for the bilinear quadratic functional given by arbitrary strips](https://arxiv.org/html/2606.22134v1) (2026), Theorem1.1 and Remark1.5(c).\n\n## Status review\n\n\n**Known cases:** Sharp characteristic cutoffs for arbitrary disjoint diagonal strips are essential. The June 2026 smooth-cutoff estimate with a cardinality epsilon loss explicitly leaves this assertion separate; equal-width and axis-aligned rectangle estimates do not settle it.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nSharp characteristic cutoffs for arbitrary disjoint diagonal strips are essential. The June 2026 smooth-cutoff estimate with a cardinality epsilon loss explicitly leaves this assertion separate; equal-width and axis-aligned rectangle estimates do not settle it.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe equal-width result in [1] covers this strict local-L2 exponent range. Removing that geometry is the question. The 2026 theorem [2] uses smooth adapted cutoffs and a factor $`(\\#\\Omega)^\\varepsilon`$; Remark1.5(c) separately identifies the sharp-cutoff case. It does not prove the displayed uniform estimate.\n\nBounded resolution, announcement and all-status semantic duplicate checks through 30 October 2026 found no matching completion. The axis-parallel rectangle theorem and scalar Fourier square-function results were distinguished from this diagonal-strip bilinear assertion.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-d90667dbf7f524f0**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "bilinear quadratic",
+    "arbitrary strips",
+    "Bernicot",
+    "sharp strips"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"bilinear\" \"arbitrary strips\" sharp 2026",
+    "\"bilinear\" \"arbitrary strips\" sharp; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2606.22134v1",
+      "locator": "Theorem1.1 and Remarks1.2/1.5(c), lines110–148",
+      "comparison": "Current theorem is smooth and loses (#S)^epsilon. Remark1.5(c) expressly separates characteristic-function cutoffs, only equal-width known in strict local-L2 range; arbitrary sharp widths and uniform constants remain outside."
+    }
+  ],
+  "rationale": "Current theorem is smooth and loses (#S)^epsilon. Remark1.5(c) expressly separates characteristic-function cutoffs, only equal-width known in strict local-L2 range; arbitrary sharp widths and uniform constants remain outside.",
+  "limitations": [
+    "Bounded negative search is not proof of openness; candidate scope inspected, not complete proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "929",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "bilinear quadratic",
+          "arbitrary strips",
+          "Bernicot",
+          "sharp strips"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "bilinear quadratic",
+          "arbitrary strips",
+          "Bernicot",
+          "sharp strips"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "bilinear quadratic",
+        "arbitrary strips",
+        "Bernicot",
+        "sharp strips"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

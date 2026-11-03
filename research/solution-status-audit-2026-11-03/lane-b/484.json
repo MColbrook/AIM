@@ -1,0 +1,83 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "484",
+  "manifest_index": 382,
+  "original_target": {
+    "id": "484",
+    "title": "Global attraction for complex-balanced reaction–diffusion with boundary equilibria",
+    "area": "Reaction–diffusion PDEs; chemical equilibration",
+    "file": "problems/484-complex-balanced-pde-global-attractor.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "139232a46cd72a86063883af2f5ea6f4f80f3b9bcc4bad9ef5bc3c6a54436028",
+    "statement_sha256": "f1ca1e9ac8ef807714dda8371663877053e629df0d90ca3fd468fbb20da108b1",
+    "state": "unreviewed"
+  },
+  "source_sha256": "139232a46cd72a86063883af2f5ea6f4f80f3b9bcc4bad9ef5bc3c6a54436028",
+  "statement_sha256": "f1ca1e9ac8ef807714dda8371663877053e629df0d90ca3fd468fbb20da108b1",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:21:23.285469+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Actual Fellner source Remark3.6 leaves the general boundary-equilibrium case. Actual July2026 paper Theorem2.1 concerns selected three-species catalytic/irreversible networks. Actual2609.24553v1 Theorem7.2 is positive ODE trajectories with two extra siphon hypotheses, not spatial PDE. Palomar matching metadata is an explicitly restricted shared-resource family.",
+  "primary_sources": [
+    {
+      "url": "https://imsc.uni-graz.at/fellnerk/preprints/DFT.pdf",
+      "locator": "Remark3.6 printedp29",
+      "body_inspected": true
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00033-026-02847-0",
+      "locator": "Equation1.1 and Theorem2.1",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2609.24553v1",
+      "locator": "Theorem7.2",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"complex balanced\" \"reaction diffusion\" \"global attractor\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "complex-balanced",
+        "complex balanced"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-11-000011",
+          "title": "Realizations and dynamics of shared-resource mass-action systems"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "complex-balanced",
+        "complex balanced"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

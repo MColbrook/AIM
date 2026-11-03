@@ -1,0 +1,35 @@
+{
+  "schema": "AIM_BACKFILL_VALIDATION_V1",
+  "date": "2026-10-30",
+  "result": "PASS",
+  "promotions": 111,
+  "current_aim_ids": "001–665",
+  "current_problem_pages": 656,
+  "retained_resolved_records": 9,
+  "still_staged_further_problems": 409,
+  "retained_total": 1074,
+  "archived_problems": 322,
+  "online_rechecks": 111,
+  "online_query_batches": 40,
+  "excluded_matching_complete_announcements": 3,
+  "promoted_statuses": {
+    "Open": 54,
+    "Partially resolved": 57
+  },
+  "checks": {
+    "catalogue_check": "PASS: scripts/catalogue.py --check --catalogue-only",
+    "cut_integrity": "PASS after the ID 106 editorial replacement: 1396 unchanged original score profiles, 868 original archived files plus one explicit editorial archive, 57 solution packages and protected research-checkpoint hashes",
+    "promotion_integrity": "PASS: verify_backfill.py; exact 111 source identities, mathematical statements, paths, hashes, subject groups, saved rechecks and backlink-only edits",
+    "focused_catalogue_tests": "PASS: 23 tests in test_cut_catalogue and test_catalogue.ResolutionPresentationTests, NumberAllocationTests, MathFormattingTests"
+  },
+  "limits": "Bounded online status searches, not a proof of continued openness or a full audit of every cited proof. Historical research logs and drafts are outside the catalogue-only validation scope.",
+  "git_operations_performed": false,
+  "cumulative_promotions": 112,
+  "explicit_editorial_overrides": 1,
+  "editorial_replacement_106": {
+    "archived_source_key": "FURTHER-2c5f4a2043e77042",
+    "replacement_source_key": "FURTHER-ec2b23395e04846f",
+    "review": "replacement-106-searches.json",
+    "score_values_changed": false
+  }
+}

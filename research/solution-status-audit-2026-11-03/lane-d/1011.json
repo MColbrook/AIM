@@ -1,0 +1,149 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1011",
+  "manifest_index": 855,
+  "checked_date": "2026-11-03",
+  "source_sha256": "0d951422e06cff4b32c4d089f3ae0f8326643175b3a65d04bb2e8c8dab2e05df",
+  "statement_sha256": "ca6270c82ef50247fdf75da1c679a86f9628501c3f5485c2c8c6cc5976da07a5",
+  "original_target": {
+    "id": "1011",
+    "title": "Dominance of the continuous spectrum on random cusped hyperbolic surfaces",
+    "area": "Spectral theory and spectral geometry",
+    "file": "problems/1011-dominance-of-the-continuous-spectrum-on-random-cusped-hyperbolic-surfaces.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-110964b90e663db3",
+    "group": "spectral",
+    "source_sha256": "0d951422e06cff4b32c4d089f3ae0f8326643175b3a65d04bb2e8c8dab2e05df",
+    "statement_sha256": "ca6270c82ef50247fdf75da1c679a86f9628501c3f5485c2c8c6cc5976da07a5",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`k(g)\\ge1`$ be integers with $`k(g)=o(\\sqrt g)`$. Sample a complete oriented finite-area hyperbolic surface $`X`$ of genus $`g`$ with $`k(g)`$ cusps from normalized Weil–Petersson volume $`\\mathbb P_{g,k(g)}`$ on its moduli space. Fix $`I=[a,b]`$ with $`1/4<a<b<\\infty`$.\n\nLet $`N(X,I)`$ count the discrete eigenvalues of the nonnegative scalar Laplacian in $`I`$, with multiplicity. Write $`\\Phi_X(s)`$ for the cusp scattering matrix in the usual period-one cusp normalization and $`\\varphi_X(s)=\\det\\Phi_X(s)`$. Thus its coefficients occur in the constant terms $`\\delta_{bc}y^s+\\Phi_{bc}(s)y^{1-s}`$ of the Eisenstein series. Put\n\n```math\n\\tau(r)=\\frac14+r^2,\\qquad\nM(X,I)=\\frac1{4\\pi}\\int_{\\tau^{-1}(I)}\n-\\frac{\\varphi_X'(1/2+ir)}{\\varphi_X(1/2+ir)}\\,dr.\n```\n\n\nThe inverse image uses real $`r`$ of both signs; the prime differentiates in $`s`$. Does every $`\\varepsilon>0`$ satisfy\n\n```math\n\\mathbb P_{g,k(g)}\\!\\left(M(X,I)\\ne0\\ \\text{and}\\ \n\\left|\\frac{N(X,I)}{M(X,I)}\\right|<\\varepsilon\\right)\\longrightarrow1\n\\quad(g\\to\\infty)?\n```\n\n\nThis makes the high-probability ratio language of [1, Conjecture 1.10] precise by requiring the ratio to be defined on that event. The source does not specify a value at $`M=0`$; none is assigned here. No positivity of this signed scattering integral is assumed.",
+  "full_original_page": "# 1011. Dominance of the continuous spectrum on random cusped hyperbolic surfaces\n\n**Area:** Spectral theory and spectral geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`k(g)\\ge1`$ be integers with $`k(g)=o(\\sqrt g)`$. Sample a complete oriented finite-area hyperbolic surface $`X`$ of genus $`g`$ with $`k(g)`$ cusps from normalized Weil–Petersson volume $`\\mathbb P_{g,k(g)}`$ on its moduli space. Fix $`I=[a,b]`$ with $`1/4<a<b<\\infty`$.\n\nLet $`N(X,I)`$ count the discrete eigenvalues of the nonnegative scalar Laplacian in $`I`$, with multiplicity. Write $`\\Phi_X(s)`$ for the cusp scattering matrix in the usual period-one cusp normalization and $`\\varphi_X(s)=\\det\\Phi_X(s)`$. Thus its coefficients occur in the constant terms $`\\delta_{bc}y^s+\\Phi_{bc}(s)y^{1-s}`$ of the Eisenstein series. Put\n\n```math\n\\tau(r)=\\frac14+r^2,\\qquad\nM(X,I)=\\frac1{4\\pi}\\int_{\\tau^{-1}(I)}\n-\\frac{\\varphi_X'(1/2+ir)}{\\varphi_X(1/2+ir)}\\,dr.\n```\n\n\nThe inverse image uses real $`r`$ of both signs; the prime differentiates in $`s`$. Does every $`\\varepsilon>0`$ satisfy\n\n```math\n\\mathbb P_{g,k(g)}\\!\\left(M(X,I)\\ne0\\ \\text{and}\\ \n\\left|\\frac{N(X,I)}{M(X,I)}\\right|<\\varepsilon\\right)\\longrightarrow1\n\\quad(g\\to\\infty)?\n```\n\n\nThis makes the high-probability ratio language of [1, Conjecture 1.10] precise by requiring the ratio to be defined on that event. The source does not specify a value at $`M=0`$; none is assigned here. No positivity of this signed scattering integral is assumed.\n\n## Application\n\nThe question separates the contribution of square-integrable eigenmodes from scattering states in the quantum spectrum of a negatively curved surface of large genus.\n\n## References\n\n1. E. Le Masson and T. Sahlsten, [*Quantum ergodicity for Eisenstein series on hyperbolic surfaces of large genus*](https://doi.org/10.1007/s00208-023-02671-1), *Mathematische Annalen* **389** (2024), 845–898. Definitions p. 846, Weil–Petersson model §1.3, Conjecture 1.10 p. 853. [Accepted arXiv v3](https://arxiv.org/abs/2006.14935v3), revised 27 June 2023.\n\n## Status review\n\n\n**Known cases:** The target counts discrete spectrum against a signed scattering integral on a fixed interval above one quarter. Quantum ergodicity and lower spectral gaps do not establish high-probability dominance of the continuous spectrum.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe target counts discrete spectrum against a signed scattering integral on a fixed interval above one quarter. Quantum ergodicity and lower spectral gaps do not establish high-probability dominance of the continuous spectrum.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked 23 October 2026. No matching complete proof or announced solution was found in bounded current searches. Recent spectral-gap results below $`1/4`$ do not control this count on a fixed interval above $`1/4`$.\n\nThe page uses the latest and published conjecture, including its corrected sign, integration variable and cusp-growth hypothesis. Its explicit nonzero-denominator convention is an interpretation of the source's ratio statement. A proposed reformulation using area-normalized counts remains held: the source's introductory and detailed density theorems state different cusp-growth ranges. No equivalence relying on that discrepancy is asserted here.\n\nThe [coordinator review](../FURTHER_problems/_tracking/random-surface-ratio-coordinator-review-2026-10-23.json), [independent review](../FURTHER_problems/_tracking/journal1118-random-surface-ratio-independent-audit.json), [owner review](../FURTHER_problems/_tracking/arxiv2585-random-hyperbolic-surface-ratio-candidate-audit-2026-10-23.json) and [duplicate audit](../FURTHER_problems/_tracking/random-surface-ratio-all-status-duplicates-2026-10-23.json) record the exact scope, current comparisons and bounded search limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-110964b90e663db3**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Eisenstein",
+    "Sahlsten",
+    "continuous spectrum",
+    "cusped"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"continuous spectrum\" \"random\" \"cusped\" 2026"
+    },
+    {
+      "query": "\"continuous spectrum\" \"random\" \"cusped\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2006.14935v3",
+      "locator": "v3 27June2023 Theorem1.9/Conjecture1.10 physicalp6; primary2602.08352v1abstract"
+    }
+  ],
+  "scope_comparison": "Theorem1.9 controls N+M, not their ratio. February2026 spectral-gap theorem only removes eigenvalues below1/4 minus a correction; it supplies no above-threshold N/M dominance. Retain corrected signed-scattering integral and nonzero-denominator event rather than substituting an unproved area-normalized equivalence.",
+  "recommendation": "Retain partial status; no complete matching proof or announcement found in bounded current checks.",
+  "limitations": "Negative searches do not establish continued openness; explicit narrower primary hypotheses suffice to exclude the cited comparators as full solutions.",
+  "announcement_routing": {
+    "localID": "1011",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Eisenstein",
+          "Sahlsten",
+          "continuous spectrum",
+          "cusped"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-17-000013",
+            "title": "Growth series of the triangle Coxeter groups (p, q, infinity), with the PGL(2,Z) instance: Padovan sphere sizes and growth rate the plastic number",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000013-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-19-000004",
+            "title": "Irrationality of the 7-adic zeta value ζ₇(3)",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-19-000004-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Eisenstein",
+          "Sahlsten",
+          "continuous spectrum",
+          "cusped"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00716v1",
+            "title": "A 7/8 zero-free half-plane for angular Hecke L-functions over the Eisenstein field",
+            "url": "https://hexagonmath.org/abs/2610.00716v1"
+          },
+          {
+            "id": "hexagon:2610.00458v1",
+            "title": "A 15/16 zero-free half-plane for angular Hecke L-functions over the Eisenstein field",
+            "url": "https://hexagonmath.org/abs/2610.00458v1"
+          },
+          {
+            "id": "hexagon:2610.00256v3",
+            "title": "The Pólya–Vinogradov inequality with log log q for every character",
+            "url": "https://hexagonmath.org/abs/2610.00256v3"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Eisenstein",
+        "Sahlsten",
+        "continuous spectrum",
+        "cusped"
+      ],
+      "hits": [
+        {
+          "entry": "023",
+          "title": "Patterson’s first moment for cubic Gauss sums",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "261",
+          "title": "Localization and delocalization in the Anderson model",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Pure-Point-Spectrum-for-the-Two-Dimensional-Anderson-Model-at-Every-Positive-Disorder-September-23-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Coxeter group growth and arithmetic zeta/Hecke/Gauss sums do not compare continuous and discrete Laplace spectral mass on Weil–Petersson random cusped surfaces. Anderson localization is another random operator model.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.759Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

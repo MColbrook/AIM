@@ -1,0 +1,167 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1037",
+  "manifest_index": 881,
+  "checked_date": "2026-11-03",
+  "source_sha256": "a3d5c15666bd1dcd6bdb4b5b68cfa2b766589af94eef688aba65a37acad4028b",
+  "statement_sha256": "f2b9995049c588a5750c29bfe6517a3f763822c6790a14113503458ab5d59667",
+  "original_target": {
+    "id": "1037",
+    "title": "The thermodynamic limit for neutral matter coupled to the quantized electromagnetic field",
+    "area": "Many-body physics, quantum information and wave analysis",
+    "file": "problems/1037-the-thermodynamic-limit-for-neutral-matter-coupled-to-the-quantized-electromagnetic-field.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-62ab0eb0cc7dc6af",
+    "group": "spectral3",
+    "source_sha256": "a3d5c15666bd1dcd6bdb4b5b68cfa2b766589af94eef688aba65a37acad4028b",
+    "statement_sha256": "f2b9995049c588a5750c29bfe6517a3f763822c6790a14113503458ab5d59667",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Consider the nonrelativistic Coulomb-gauge model of Lieb and Loss [1, §2], with a fixed ultraviolet cutoff. Electrons are spin-$`\\tfrac12`$ fermions of charge $`-\\sqrt{\\alpha}`$, with $`g=2`$. There is one species of quantum nuclei of charge $`Z\\sqrt{\\alpha}`$ and mass $`M`$ in electron-mass units. Fix the nuclei to be either spinless bosons or spin-$`\\tfrac12`$ fermions; their magnetic moments are omitted.\n\nFix an integer $`Z\\ge1`$, $`\\alpha,M,\\beta,\\Lambda,\\rho>0`$, with\n```math\n\\alpha<\\frac1{98},\\qquad Z\\alpha^2<\\frac{39}{40\\cdot468}.\n```\n\nFor each integer $`K\\ge1`$, put $`N=ZK`$ and let $`\\Omega_K`$ be the centered cube of volume $`K/\\rho`$. Particles satisfy Dirichlet boundary conditions on $`\\partial\\Omega_K`$. The photon field occupies the larger periodic cube $`\\mathcal U_L=(-L/2,L/2)^3`$, with $`L>|\\Omega_K|^{1/3}`$, and is not confined to $`\\Omega_K`$.\n\nUse exactly the three-component photon convention in [1, (2.7)–(2.8)]. Thus $`k\\in(2\\pi/L)\\mathbb Z^3\\setminus\\{0\\}`$, $`\\mathbf a(k)=(a_1(k),a_2(k),a_3(k))`$ obeys the canonical bosonic commutation relations, and\n```math\nH_{f,L}=\\sum_{k\\ne0}\\sum_{j=1}^{3}|k|a_j^*(k)a_j(k).\n```\n\nChoose the sharp cutoff $`\\chi_\\Lambda(k)=\\mathbf1_{\\{|k|\\le\\Lambda\\}}`$ and define\n```math\nC_{\\Lambda,L}(x)=\\frac1{2\\pi}\\left(\\frac{2\\pi}{L}\\right)^{3/2}\n \\sum_{k\\ne0}\\frac{\\chi_\\Lambda(k)}{|k|^{3/2}}\n \\bigl[\\mathbf a(k)e^{ik\\cdot x}-\\mathbf a^*(k)e^{-ik\\cdot x}\\bigr],\n \\qquad A_{\\Lambda,L}=i\\,\\mathrm{curl}C_{\\Lambda,L}.\n```\n\nThe cutoff acts on the matter–field coupling; the free field $`H_{f,L}`$ retains all nonzero modes. On the electron space, the chosen nuclear statistics space, and the photon Fock space, set\n```math\n\\begin{split}\n H_{K,L}={}&\\sum_{i=1}^{ZK}\\bigl[\\sigma_i\\cdot(-i\\nabla_{x_i}\n             +\\sqrt{\\alpha}A_{\\Lambda,L}(x_i))\\bigr]^2\\\\\n &+\\frac1M\\sum_{j=1}^{K}\n      \\bigl(-i\\nabla_{R_j}-Z\\sqrt{\\alpha}A_{\\Lambda,L}(R_j)\\bigr)^2\n      +\\alpha V_C+H_{f,L},\\\\\n V_C={}&\\sum_{i<i'}|x_i-x_{i'}|^{-1}\n       +Z^2\\sum_{j<j'}|R_j-R_{j'}|^{-1}\n       -Z\\sum_{i,j}|x_i-R_j|^{-1}.\n\\end{split}\n```\n\nLet\n```math\n\\mathcal Z_{K,L}=\\mathrm{Tr}e^{-\\beta H_{K,L}},\n \\qquad \\mathcal Z^0_L=\\mathrm{Tr}_{\\mathcal F_L}e^{-\\beta H_{f,L}}.\n```\n\nDo the ordinary inner limits exist, and does the iterated, Planck-subtracted free-energy density\n```math\n-\\frac1\\beta\\lim_{K\\to\\infty}\\frac1{|\\Omega_K|}\n       \\lim_{L\\to\\infty}\n       \\bigl(\\log\\mathcal Z_{K,L}-\\log\\mathcal Z^0_L\\bigr)\n```\n\nexist as a finite real number for every fixed choice of the above parameters and nuclear statistics?\n\nThis is the standard neutral growing-cube specialization of [1, (2.3)]. The source leaves the matter-container shape unspecified for its lower-bound argument. The question here fixes that choice explicitly. It does not ask for the separate ultraviolet-renormalization limit $`\\Lambda\\to\\infty`$, arbitrary-container shape independence, or nuclear hyperfine interactions.",
+  "full_original_page": "# 1037. The thermodynamic limit for neutral matter coupled to the quantized electromagnetic field\n\n**Area:** Many-body physics, quantum information and wave analysis\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nConsider the nonrelativistic Coulomb-gauge model of Lieb and Loss [1, §2], with a fixed ultraviolet cutoff. Electrons are spin-$`\\tfrac12`$ fermions of charge $`-\\sqrt{\\alpha}`$, with $`g=2`$. There is one species of quantum nuclei of charge $`Z\\sqrt{\\alpha}`$ and mass $`M`$ in electron-mass units. Fix the nuclei to be either spinless bosons or spin-$`\\tfrac12`$ fermions; their magnetic moments are omitted.\n\nFix an integer $`Z\\ge1`$, $`\\alpha,M,\\beta,\\Lambda,\\rho>0`$, with\n```math\n\\alpha<\\frac1{98},\\qquad Z\\alpha^2<\\frac{39}{40\\cdot468}.\n```\n\nFor each integer $`K\\ge1`$, put $`N=ZK`$ and let $`\\Omega_K`$ be the centered cube of volume $`K/\\rho`$. Particles satisfy Dirichlet boundary conditions on $`\\partial\\Omega_K`$. The photon field occupies the larger periodic cube $`\\mathcal U_L=(-L/2,L/2)^3`$, with $`L>|\\Omega_K|^{1/3}`$, and is not confined to $`\\Omega_K`$.\n\nUse exactly the three-component photon convention in [1, (2.7)–(2.8)]. Thus $`k\\in(2\\pi/L)\\mathbb Z^3\\setminus\\{0\\}`$, $`\\mathbf a(k)=(a_1(k),a_2(k),a_3(k))`$ obeys the canonical bosonic commutation relations, and\n```math\nH_{f,L}=\\sum_{k\\ne0}\\sum_{j=1}^{3}|k|a_j^*(k)a_j(k).\n```\n\nChoose the sharp cutoff $`\\chi_\\Lambda(k)=\\mathbf1_{\\{|k|\\le\\Lambda\\}}`$ and define\n```math\nC_{\\Lambda,L}(x)=\\frac1{2\\pi}\\left(\\frac{2\\pi}{L}\\right)^{3/2}\n \\sum_{k\\ne0}\\frac{\\chi_\\Lambda(k)}{|k|^{3/2}}\n \\bigl[\\mathbf a(k)e^{ik\\cdot x}-\\mathbf a^*(k)e^{-ik\\cdot x}\\bigr],\n \\qquad A_{\\Lambda,L}=i\\,\\mathrm{curl}C_{\\Lambda,L}.\n```\n\nThe cutoff acts on the matter–field coupling; the free field $`H_{f,L}`$ retains all nonzero modes. On the electron space, the chosen nuclear statistics space, and the photon Fock space, set\n```math\n\\begin{split}\n H_{K,L}={}&\\sum_{i=1}^{ZK}\\bigl[\\sigma_i\\cdot(-i\\nabla_{x_i}\n             +\\sqrt{\\alpha}A_{\\Lambda,L}(x_i))\\bigr]^2\\\\\n &+\\frac1M\\sum_{j=1}^{K}\n      \\bigl(-i\\nabla_{R_j}-Z\\sqrt{\\alpha}A_{\\Lambda,L}(R_j)\\bigr)^2\n      +\\alpha V_C+H_{f,L},\\\\\n V_C={}&\\sum_{i<i'}|x_i-x_{i'}|^{-1}\n       +Z^2\\sum_{j<j'}|R_j-R_{j'}|^{-1}\n       -Z\\sum_{i,j}|x_i-R_j|^{-1}.\n\\end{split}\n```\n\nLet\n```math\n\\mathcal Z_{K,L}=\\mathrm{Tr}e^{-\\beta H_{K,L}},\n \\qquad \\mathcal Z^0_L=\\mathrm{Tr}_{\\mathcal F_L}e^{-\\beta H_{f,L}}.\n```\n\nDo the ordinary inner limits exist, and does the iterated, Planck-subtracted free-energy density\n```math\n-\\frac1\\beta\\lim_{K\\to\\infty}\\frac1{|\\Omega_K|}\n       \\lim_{L\\to\\infty}\n       \\bigl(\\log\\mathcal Z_{K,L}-\\log\\mathcal Z^0_L\\bigr)\n```\n\nexist as a finite real number for every fixed choice of the above parameters and nuclear statistics?\n\nThis is the standard neutral growing-cube specialization of [1, (2.3)]. The source leaves the matter-container shape unspecified for its lower-bound argument. The question here fixes that choice explicitly. It does not ask for the separate ultraviolet-renormalization limit $`\\Lambda\\to\\infty`$, arbitrary-container shape independence, or nuclear hyperfine interactions.\n\n## Application\n\nA thermodynamic limit would justify an extensive equilibrium free energy for this continuum model of charged matter and quantized radiation.\n\n## References\n\n1. E. H. Lieb and M. Loss, [The thermodynamic limit for matter interacting with Coulomb forces and with the quantized electromagnetic field: I. The lower bound](https://arxiv.org/abs/math-ph/0408001), arXiv:math-ph/0408001v1 (2004), §1, (2.1)–(2.9), Theorem 3.1; published in Communications in Mathematical Physics 258 (2005), 675–695, [DOI](https://doi.org/10.1007/s00220-005-1365-y).\n2. E. H. Lieb and R. Seiringer, [The Stability of Matter in Quantum Mechanics, Chapter 14](https://doi.org/10.1017/CBO9780511819681.015), Cambridge University Press (2009; online 2010), printed p. 248, referring to [1].\n3. C. Hainzl, M. Lewin and J. P. Solovej, [The Thermodynamic Limit of Quantum Coulomb Systems. Part II. Applications](https://arxiv.org/abs/0806.1709), v2 (2008), §2.2 and Theorem 8: the magnetic field is an external classical periodic field; there is no quantized-radiation subsystem.\n\n## Status review\n\n\n**Known cases:** Finite-temperature neutral matter coupled to a quantized photon field and its iterated Planck-subtracted limits are required. Ordinary Coulomb thermodynamic Lean formalization has no photon subsystem; single-electron self-energy ultraviolet asymptotics do not cover the limit.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nFinite-temperature neutral matter coupled to a quantized photon field and its iterated Planck-subtracted limits are required. Ordinary Coulomb thermodynamic Lean formalization has no photon subsystem; single-electron self-energy ultraviolet asymptotics do not cover the limit.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nLieb and Loss prove an extensive lower bound under the stated coupling restrictions, while explicitly retaining the ordinary limits as an additional task [1, §2 and Theorem 3.1]. The book [2, p. 248] identifies the corresponding QED thermodynamic-limit problem as open.\n\nBounded current searches on 26 October 2026 found no proof, counterexample or complete announcement matching this model and limit order. The current Armstrong–Loher thermodynamic-limit formalization concerns the nonmagnetic Coulomb ground-state energy; it does not cover this positive-temperature coupled-field question. This is a source- and statement-level status assessment, with no certification of entire proofs.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-62ab0eb0cc7dc6af**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "quantized electromagnetic",
+    "Lieb Loss",
+    "Planck",
+    "thermodynamic limit"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"thermodynamic limit\" \"quantized electromagnetic\" 2026 proof"
+    },
+    {
+      "query": "\"thermodynamic limit\" \"quantized\" \"Lieb\" \"Loss\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/math-ph/0408001",
+      "locator": "Section2 eq2.3 and Theorem3.1 printedp9; latest v1July31,2004"
+    }
+  ],
+  "scope_comparison": "Theorem3.1 proves extensive lower bound under same coupling restrictions, not the ordinary inner limit or convergence of Planck-subtracted growing-cube free energy. The quantized field is not confined to matter domain. Classical external-field Coulomb thermodynamic limits and nonmagnetic ground-state Lean work lack this photon subsystem and positive-temperature limit order. No full announcement located.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded current search and announcement routing; absence is not proof of openness. Actual comparison theorem statements/definitions inspected; no entire proof certification claimed.",
+  "announcement_routing": {
+    "localID": "1037",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "quantized electromagnetic",
+          "Lieb Loss",
+          "Planck",
+          "thermodynamic limit"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-11-000006",
+            "title": "Finite-size mean bias of the Sherrington-Kirkpatrick free energy",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-11-000006-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-08-000006",
+            "title": "Stability of Matter in Lean: Lieb–Thirring, Ionization, the Thermodynamic Limit and Thomas–Fermi Theory",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-08-000006-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "quantized electromagnetic",
+          "Lieb Loss",
+          "Planck",
+          "thermodynamic limit"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00450v1",
+            "title": "Superfluid Stiffness and Nonclassical Rotational Inertia of the Dilute Hard-Sphere Bose Gas",
+            "url": "https://hexagonmath.org/abs/2610.00450v1"
+          },
+          {
+            "id": "hexagon:2610.00345v1",
+            "title": "A lower bound for two-interval quantum backflow",
+            "url": "https://hexagonmath.org/abs/2610.00345v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "quantized electromagnetic",
+        "Lieb Loss",
+        "Planck",
+        "thermodynamic limit"
+      ],
+      "hits": [
+        {
+          "entry": "216",
+          "title": "Critical logarithmic corrections and BKT scaling for the planar XY model",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-critical-logarithmic-correction-for-the-planar-XY-model-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Critical-Center-Magnetization-in-the-Planar-XY-Model-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-Critical-Spin-Field-of-the-Planar-XY-Model-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Essential-Singularity-of-the-Correlation-Length-in-the-Planar-XY-Model-October-5-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-critical-correlation-exponent-of-the-planar-XY-model-September-24-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/BKT-universality-for-height-and-planar-spin-fields-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "267",
+          "title": "Positive-temperature Bose--Einstein condensation and quantum depletion",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Bose-Einstein-condensation-at-positive-temperature-in-the-dilute-hard-sphere-gas-October-5-2026/positive-temperature-hard-spheres.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Quantum-Depletion-and-Momentum-Distribution-in-the-Dilute-Hard-Sphere-Bose-Gas-October-5-2026/Quantum-Depletion-in-the-Dilute-Hard-Sphere-Bose-Gas.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Quantum-Depletion-for-Fixed-Bounded-Repulsive-Potentials-October-5-2026/fixed-repulsion-quantum-depletion.pdf",
+            "https://github.com/openai/math/blob/main/preprints/A-density-uniform-condensate-bound-for-dilute-Bose-gases-September-27-2026/paper.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Ground-state-condensation-in-the-dilute-hard-sphere-gas-September-24-2026/paper.pdf"
+          ]
+        },
+        {
+          "entry": "271",
+          "title": "Bloch's law and spontaneous ferromagnetic order",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Blochs-Law-for-Finite-Range-Heisenberg-Ferromagnets-in-Three-Dimensions-October-5-2026/bloch-law-heisenberg.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-first-lattice-correction-to-Blochs-law-October-5-2026/first-lattice-correction-bloch-law.pdf",
+            "https://github.com/openai/math/blob/main/preprints/The-spherical-magnetization-law-for-the-three-dimensional-quantum-Heisenberg-ferromagnet-October-5-2026/spherical-magnetization.pdf",
+            "https://github.com/openai/math/blob/main/preprints/Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.079Z",
+      "previous_outcome": "partial",
+      "localID": "1037",
+      "announcement_hit_disposition": "Palomar2026-10-08-000006 primary abstract in complete provider snapshot concerns nonrelativistic Coulomb matter, no quantized electromagnetic field, and canonical ZERO-TEMPERATURE thermodynamic energy with finite-mass nuclei. Target subtracts Planck radiation and requires positive-temperature inner/outer electromagnetic free-energy limits. Sherrington-Kirkpatrick, Bose stiffness/backflow, XY and Heisenberg hits change the model. None asserts the full target."
+    }
+  ]
+}

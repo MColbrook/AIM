@@ -1,0 +1,44 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 248,
+  "source_sha256": "c30a105551d2ccb960ec85b5dab4f786de47b53792263c146780358f7e9176d9",
+  "statement_sha256": "2ec52075020a0cb7289cba4e0f4d2b5deb57957828f479ebb9944c7a2aa06b2a",
+  "original_target": {
+    "id": "307",
+    "title": "Linear-size sample compression for binary concept classes",
+    "area": "Statistical learning and combinatorial dimension",
+    "file": "problems/307-linear-sample-compression.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "probability-statistics",
+    "source_sha256": "c30a105551d2ccb960ec85b5dab4f786de47b53792263c146780358f7e9176d9",
+    "statement_sha256": "2ec52075020a0cb7289cba4e0f4d2b5deb57957828f479ebb9944c7a2aa06b2a",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "307",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Original counts both unordered retained labeled examples and side-information bits, permits improper reconstruction and asks some universal K times VC dimension for all finite classes. The March apparent full claim is still withdrawn in arXiv v4 with the author stating Lemma2 proof is wrong. Exponential VC compression and structured graph/oriented-matroid schemes do not give linear general compression; monotone or unlabeled exact-d obstructions do not refute this formulation. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "linear sample compression conjecture solved 2026 withdrawal",
+    "\"sample compression\" linear conjecture (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2603.23561",
+      "version": "v4,3August2026; current withdrawal visible3November2026",
+      "locator": "Withdrawal banner and Comments: proof of Lemma2 is wrong",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "sample.compression|VC.dimension",
+    "palomar_matches": 0,
+    "hexagon_matches": 1,
+    "result": "Hexagon fractional DAG-treewidth VC-rounding theorem is unrelated to sample compression."
+  }
+}

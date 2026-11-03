@@ -1,0 +1,109 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "927",
+  "manifest_index": 771,
+  "checked_date": "2026-11-03",
+  "source_sha256": "296289b4be750cff6903f9a4ed4cf1d3da596e3945cbe0b9fbd04ee5680e562c",
+  "statement_sha256": "59d2e6099f03a151d628770f9eca1a9be0431e6691128dfdc485498337bc3e97",
+  "original_target": {
+    "id": "927",
+    "title": "Can multiqubit pure states attain the smallest product overlap up to a universal factor?",
+    "area": "Operators, matrices and computation",
+    "file": "problems/927-can-multiqubit-pure-states-attain-the-smallest-product-overlap-up-to-a-universal-factor.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c77f7a7a604d2997",
+    "group": "operators",
+    "source_sha256": "296289b4be750cff6903f9a4ed4cf1d3da596e3945cbe0b9fbd04ee5680e562c",
+    "statement_sha256": "59d2e6099f03a151d628770f9eca1a9be0431e6691128dfdc485498337bc3e97",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For a unit vector $`\\psi\\in(\\mathbb C^2)^{\\otimes N}`$, define its maximal product-state overlap by\n```math\n\\Lambda(\\psi)=\\sup_{\\|u_1\\|=\\cdots=\\|u_N\\|=1}\n\\bigl|\\langle\\psi,u_1\\otimes\\cdots\\otimes u_N\\rangle\\bigr|.\n```\n\nDoes there exist a numerical constant $`C<\\infty`$, **independent of the number of qubits $`N`$**, such that for every $`N\\ge1`$ some unit vector $`\\psi_N\\in(\\mathbb C^2)^{\\otimes N}`$ satisfies\n```math\n\\Lambda(\\psi_N)^2\\le C\\,2^{-N}?\n```\n\nEquivalently, can the complex Hilbert–Schmidt unit sphere contain order-$`N`$ tensors with injective norm bounded by $`\\sqrt C\\,2^{-N/2}`$ uniformly in $`N`$? No explicit construction is required by the existence question.",
+  "full_original_page": "# 927. Can multiqubit pure states attain the smallest product overlap up to a universal factor?\n\n**Area:** Operators, matrices and computation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor a unit vector $`\\psi\\in(\\mathbb C^2)^{\\otimes N}`$, define its maximal product-state overlap by\n```math\n\\Lambda(\\psi)=\\sup_{\\|u_1\\|=\\cdots=\\|u_N\\|=1}\n\\bigl|\\langle\\psi,u_1\\otimes\\cdots\\otimes u_N\\rangle\\bigr|.\n```\n\nDoes there exist a numerical constant $`C<\\infty`$, **independent of the number of qubits $`N`$**, such that for every $`N\\ge1`$ some unit vector $`\\psi_N\\in(\\mathbb C^2)^{\\otimes N}`$ satisfies\n```math\n\\Lambda(\\psi_N)^2\\le C\\,2^{-N}?\n```\n\nEquivalently, can the complex Hilbert–Schmidt unit sphere contain order-$`N`$ tensors with injective norm bounded by $`\\sqrt C\\,2^{-N/2}`$ uniformly in $`N`$? No explicit construction is required by the existence question.\n\n## Application\n\nThe overlap measures how close a multipartite pure state is to a fully separable product state. A positive answer would remove the polynomial loss in the available random-state estimate and match the elementary $`2^{-N}`$ lower scale up to a constant. This is a sharp scaling question for geometric entanglement and complex injective tensor norms.\n\n## References\n\n1. Guillaume Aubrun and Alexander Müller-Hermes, [*Asymptotic Tensor Powers of Banach Spaces*](https://doi.org/10.5802/aif.3736), *Annales de l'Institut Fourier* **76** (2026), no. 3, 1341–1368, §4.1, especially Lemma 4.3 and the paragraph after its proof on printed pp. 1354–1355. The proved complex estimate retains a $`\\sqrt{N\\log N}`$ numerator at fixed local dimension 2; the authors explicitly say that the constant-numerator improvement is unknown even there.\n2. Lisa T. Weinbrenner and Otfried Gühne, [*Quantifying entanglement from the geometric perspective*](https://doi.org/10.1209/0295-5075/adffb5), *Europhysics Letters* **151** (2025), no. 6, adffb5, “Asymptotic behaviour” section. This independently formulates the stated $`\\Lambda^2(\\psi_N)\\le C2^{-N}`$ question and distinguishes it from the $`N^2 2^{-N}`$ random-state bound.\n3. Guillaume Aubrun and Stanisław J. Szarek, *Alice and Bob Meet Banach: The Interface of Asymptotic Geometric Analysis and Quantum Information Theory*, American Mathematical Society, 2017, Problem 8.27, cited by both papers above. The book's exact problem page was not independently inspected in this review.\n\n## Status review\n\n\n**Known cases:** A dimension-independent constant multiplying 2^-N is needed, rather than its exponential root limit or polynomial losses. The 2026 tensor norm article and 2025 geometric-entanglement discussion retain this distinction; no matching constant bound found.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nA dimension-independent constant multiplying 2^-N is needed, rather than its exponential root limit or polynomial losses. The 2026 tensor norm article and 2025 geometric-entanglement discussion retain this distinction; no matching constant bound found.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe 2026 journal paper proves the limiting tensor radius but explicitly leaves the finite-order constant-numerator bound open; taking an $`N`$-th root loses the polynomial factor and therefore does not answer this question. The 2025 review independently labels the same multiqubit inequality open. A targeted literature and announcement search on 21 October 2026 found no subsequent resolution, and a semantic comparison found no duplicate in AIM or existing FURTHER pages. This bounded status assessment does not establish unsolvedness as a theorem.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-c77f7a7a604d2997**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "product overlap",
+    "geometric entanglement",
+    "tensor radius",
+    "tensor powers"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"qubits\" \"product overlap\" \"constant\" 2026",
+    "\"qubits\" \"product overlap\" \"constant\"; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2110.12828",
+      "locator": "Lemma4.3 and following paragraph, lines325–338",
+      "comparison": "Complex Hilbert-Schmidt unit tensors have proved bound C_n sqrt(k log k)/n^(k/2); following paragraph explicitly calls constant numerator unknown even n=2. Real tensors and Nth-root radius limit lose the essential complex uniform constant. Product-test optimal acceptance conditional on overlap is a different optimization."
+    }
+  ],
+  "rationale": "Complex Hilbert-Schmidt unit tensors have proved bound C_n sqrt(k log k)/n^(k/2); following paragraph explicitly calls constant numerator unknown even n=2. Real tensors and Nth-root radius limit lose the essential complex uniform constant. Product-test optimal acceptance conditional on overlap is a different optimization.",
+  "limitations": [
+    "Bounded negative search, not proof of continued openness."
+  ],
+  "announcement_routing": {
+    "localID": "927",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "product overlap",
+          "geometric entanglement",
+          "tensor radius",
+          "tensor powers"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-28-000017",
+            "title": "Group constructions cannot refute the Set Cover Conjecture, including tensor powers",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-28-000017-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-08-000005",
+            "title": "Matrix multiplication exponent at most 9/4 over arbitrary fields",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-08-000005-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "product overlap",
+          "geometric entanglement",
+          "tensor radius",
+          "tensor powers"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "product overlap",
+        "geometric entanglement",
+        "tensor radius",
+        "tensor powers"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Group-theoretic set-cover limitations and matrix-multiplication tensor rank/exponent concern other tensor functionals, not minimizing maximum product overlap of arbitrary multiqubit pure states.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.720Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

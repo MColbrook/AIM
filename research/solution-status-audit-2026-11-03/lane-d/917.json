@@ -1,0 +1,129 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "917",
+  "manifest_index": 761,
+  "checked_date": "2026-11-03",
+  "source_sha256": "d0149a8a36a3163b478ca271c0f649da88f5c0e94f234e794ad290a65828519b",
+  "statement_sha256": "edc1041602c19f50e09543334c5b209c36b2ca8c68c0225a6774849f877eb103",
+  "original_target": {
+    "id": "917",
+    "title": "Split products for time-dependent form-sum Schrödinger evolution",
+    "area": "Operators, matrices and computation",
+    "file": "problems/917-split-products-for-time-dependent-form-sum-schrodinger-evolution.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-9eef288061af8163",
+    "group": "operators",
+    "source_sha256": "d0149a8a36a3163b478ca271c0f649da88f5c0e94f234e794ad290a65828519b",
+    "statement_sha256": "edc1041602c19f50e09543334c5b209c36b2ca8c68c0225a6774849f877eb103",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\mathcal H`$ be a complex Hilbert space, $`T>0`$, and $`H_0\\ge0`$ self-adjoint. Put $`Q=D(H_0^{1/2})`$, $`q_0[u]=\\|H_0^{1/2}u\\|^2`$. For each $`t\\in[0,T]`$, let $`V(t)`$ be self-adjoint with associated closed Hermitian form $`q_{V(t)}`$ defined on a domain containing $`Q`$. Assume, uniformly in $`t`$,\n\n```math\n|q_{V(t)}[u]|\\le a q_0[u]+b\\|u\\|^2,\n\\qquad u\\in Q,\\quad 0\\le a<1,\\quad b\\in\\mathbb R.\n```\n\nThe restricted forms induce $`\\widetilde V(t):Q\\to Q^*`$. Require strong differentiability in $`t`$ and\n\n```math\n|\\langle\\widetilde V'(t)u,u\\rangle|\n\\le a q_0[u]+b\\|u\\|^2.\n```\n\nUse one-sided derivatives at the endpoints. Suppose also $`q_t=q_0+q_{V(t)}\\ge c\\|\\cdot\\|^2`$ for a fixed $`c>0`$. Let $`H(t)=H_0\\dotplus V(t)`$ be the form sum and $`U(t,s)`$ its unitary form-evolution propagator for $`i\\partial_tu=H(t)u`$.\n\nFor fixed $`0\\le s<t\\le T`$, set $`h=(t-s)/n`$ and $`t_j=s+jh`$. Do both products\n\n```math\nP_n^R=F_{n-1}^R\\cdots F_0^R,\n\\qquad F_j^R=(I+ihH_0)^{-1}(I+ihV(t_j))^{-1},\n```\n\n```math\nP_n^E=F_{n-1}^E\\cdots F_0^E,\n\\qquad F_j^E=e^{-ihH_0}e^{-ihV(t_j)},\n```\n\nconverge strongly to $`U(t,s)`$? These are two separate limit questions. Later times occur on the left; the $`V`$ factor acts first in each step. No common operator core, identification with the algebraic operator sum, convergence rate, or uniform-in-time limit is assumed.\n\nBoth products are contractions. Thus the source's weak-operator version for $`P_n^R`$ is equivalent here: if $`P_n\\to U`$ weakly and $`U`$ is unitary, then $`\\|P_nx-Ux\\|^2\\le2\\|x\\|^2-2\\mathrm{Re}\\langle P_nx,Ux\\rangle\\to0`$.",
+  "full_original_page": "# 917. Split products for time-dependent form-sum Schrödinger evolution\n\n**Area:** Operators, matrices and computation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\mathcal H`$ be a complex Hilbert space, $`T>0`$, and $`H_0\\ge0`$ self-adjoint. Put $`Q=D(H_0^{1/2})`$, $`q_0[u]=\\|H_0^{1/2}u\\|^2`$. For each $`t\\in[0,T]`$, let $`V(t)`$ be self-adjoint with associated closed Hermitian form $`q_{V(t)}`$ defined on a domain containing $`Q`$. Assume, uniformly in $`t`$,\n\n```math\n|q_{V(t)}[u]|\\le a q_0[u]+b\\|u\\|^2,\n\\qquad u\\in Q,\\quad 0\\le a<1,\\quad b\\in\\mathbb R.\n```\n\nThe restricted forms induce $`\\widetilde V(t):Q\\to Q^*`$. Require strong differentiability in $`t`$ and\n\n```math\n|\\langle\\widetilde V'(t)u,u\\rangle|\n\\le a q_0[u]+b\\|u\\|^2.\n```\n\nUse one-sided derivatives at the endpoints. Suppose also $`q_t=q_0+q_{V(t)}\\ge c\\|\\cdot\\|^2`$ for a fixed $`c>0`$. Let $`H(t)=H_0\\dotplus V(t)`$ be the form sum and $`U(t,s)`$ its unitary form-evolution propagator for $`i\\partial_tu=H(t)u`$.\n\nFor fixed $`0\\le s<t\\le T`$, set $`h=(t-s)/n`$ and $`t_j=s+jh`$. Do both products\n\n```math\nP_n^R=F_{n-1}^R\\cdots F_0^R,\n\\qquad F_j^R=(I+ihH_0)^{-1}(I+ihV(t_j))^{-1},\n```\n\n```math\nP_n^E=F_{n-1}^E\\cdots F_0^E,\n\\qquad F_j^E=e^{-ihH_0}e^{-ihV(t_j)},\n```\n\nconverge strongly to $`U(t,s)`$? These are two separate limit questions. Later times occur on the left; the $`V`$ factor acts first in each step. No common operator core, identification with the algebraic operator sum, convergence rate, or uniform-in-time limit is assumed.\n\nBoth products are contractions. Thus the source's weak-operator version for $`P_n^R`$ is equivalent here: if $`P_n\\to U`$ weakly and $`U`$ is unitary, then $`\\|P_nx-Ux\\|^2\\le2\\|x\\|^2-2\\mathrm{Re}\\langle P_nx,Ux\\rangle\\to0`$.\n\n## Application\n\nSplitting separates simpler parts of a quantum Hamiltonian. These limits would justify that approximation when the forms share a domain but the domains of the full operators can change with time.\n\n## References\n\n1. P.-A. Vuillermot and W. F. Wreszinski, [*Product approximations for solutions to a class of evolution equations in Hilbert space*](https://ems.press/content/serial-article-files/44680), *Portugaliae Mathematica* **68** (2011), 317–343, [doi:10.4171/PM/1894](https://doi.org/10.4171/PM/1894). Conditions (V), (V′), and Remark (3), equations (32)–(33), pp. 323–325; standing positivity (7).\n2. A. Bátkai, P. Csomós, B. Farkas and G. Nickel, [*Operator splitting for non-autonomous evolution equations*](https://arxiv.org/abs/1002.0164), arXiv:1002.0164v4; *Journal of Functional Analysis* **260** (2011), 2163–2190, [doi:10.1016/j.jfa.2010.10.008](https://doi.org/10.1016/j.jfa.2010.10.008). Assumption 2.1 and Theorem 2.2.\n3. V. A. Zagrebnov, H. Neidhardt and T. Ichinose, *Trotter-Kato Product Formulæ* (2024), [Chapter 12](https://doi.org/10.1007/978-3-031-56720-9_12), Assumptions 12.1.1, and [Chapter 13](https://doi.org/10.1007/978-3-031-56720-9_13), Sections 13.1–13.3.\n4. S. Becker, N. Galke, L. van Luijk and R. Salzmann, [*Convergence Rates for the Trotter Splitting for Unbounded Operators*](https://doi.org/10.1007/s10208-025-09730-w), published online 2025; *Foundations of Computational Mathematics* **26** (2026), 2471–2524, Theorem 3.6.\n\n## Status review\n\n\n**Known cases:** Existing nonautonomous splitting theorems require generation by an algebraic operator-sum closure or stronger domain/commutator control. Parabolic form-sum results and time-integrated autonomous unitary limits do not establish both pointwise-in-time products under only the displayed form assumptions.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nExisting nonautonomous splitting theorems require generation by an algebraic operator-sum closure or stronger domain/commutator control. Parabolic form-sum results and time-integrated autonomous unitary limits do not establish both pointwise-in-time products under only the displayed form assumptions.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked 26 October 2026. The original article explicitly poses the split formulas as open. Its proved formulas use the full $`H(t)`$ in each step. Hilbert-space contractivity alone does not supply the additional dual-space stability used by that proof.\n\nThe 2011 evolution-semigroup theorem requires generation by the closure of an algebraic operator sum. The 2024 time-dependent framework uses parabolic evolution and fractional operator-domain estimates; its unitary discussion includes autonomous results and convergence integrated over time. The 2025 theorem has additional autonomous energy, core and commutator assumptions. These statements do not establish the displayed form-only, time-dependent limits.\n\nBounded searches of current literature and announcements, with all-status AIM/FURTHER/OpenAI comparisons, found no complete resolution or duplicate. Original hypotheses and the actual product order were independently read, and selected later theorem statements were compared. Full 2020 preprint/publication parity and complete proofs of the cited results were not audited.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-9eef288061af8163**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"time dependent\" \"form sum\" Trotter product Schrodinger convergence 2026",
+    "\"time dependent\" \"form sum\" Trotter product Schrodinger convergence; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1002.0164v4",
+      "locator": "Assumption2.1 and Theorem2.2, lines327–369",
+      "comparison": "Actual hypothesis requires evolution generated by closure of the algebraic sum/differential operator. Common form domain and positive form-sum evolution do not assert that identification; autonomous/parabolic/convergence-in-time-integral results also miss both fixed-time limits."
+    }
+  ],
+  "rationale": "Actual hypothesis requires evolution generated by closure of the algebraic sum/differential operator. Common form domain and positive form-sum evolution do not assert that identification; autonomous/parabolic/convergence-in-time-integral results also miss both fixed-time limits. No full matching claim found in bounded searches.",
+  "limitations": [
+    "Bounded negative search does not prove openness."
+  ],
+  "announcement_routing": {
+    "localID": "917",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "form sum",
+          "Trotter",
+          "non-autonomous",
+          "nonautonomous"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-29-000016",
+            "title": "lie-trotter-lean",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-29-000016-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-17-000016",
+            "title": "NumericalSemigroups: Huang's quadratic form, its positivity, and its n-generator kernel windows",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000016-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-11-000015",
+            "title": "Erdos607",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-11-000015-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-07-000004",
+            "title": "Explicit Szemerédi–Trotter bounds over arbitrary fields",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-07-000004-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "form sum",
+          "Trotter",
+          "non-autonomous",
+          "nonautonomous"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00294v1",
+            "title": "Rational points on elliptic curves that are primitive modulo a positive proportion of primes",
+            "url": "https://hexagonmath.org/abs/2610.00294v1"
+          },
+          {
+            "id": "hexagon:2610.00170v1",
+            "title": "The number of multiplicity sets of n-point plane line collections grows as exp(Theta(sqrt(n)))",
+            "url": "https://hexagonmath.org/abs/2610.00170v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "form sum",
+        "Trotter",
+        "non-autonomous",
+        "nonautonomous"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.076Z",
+      "previous_outcome": "partial",
+      "localID": "917",
+      "announcement_hit_disposition": "Versioned Palomar2026-10-29-000016-v1 primary record read directly by public GET. Its abstract and LieTrotter.trotter_product / norm_trotter_sub_le_commutator concern fixed A,B in a COMPLETE NORMED ALGEBRA, bounded operator-norm commutator estimate. Target has possibly unbounded nonautonomous form sums on Q, no algebraic sum/core identification, and separate resolvent/exponential limits. The exact explicit bounded-algebra setting excludes this claim. Other Szemeredi-Trotter/number-theory hits are term collisions."
+    }
+  ]
+}

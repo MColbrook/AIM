@@ -1,0 +1,109 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "882",
+  "manifest_index": 726,
+  "checked_date": "2026-11-03",
+  "source_sha256": "d166faed5bbbf15f20109fd9a81b97c1407b9b19350750b4f863b4aefcef6f0a",
+  "statement_sha256": "d25c0e6eb5d22d5f29cff37ff8f2362f4d5524c6df5e310839565815d1ad47f7",
+  "original_target": {
+    "id": "882",
+    "title": "Intrinsic-flat stability of scalar sphere rigidity",
+    "area": "Scalar geometry and mathematical relativity",
+    "file": "problems/882-intrinsic-flat-stability-of-scalar-sphere-rigidity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c980a03a2a342504",
+    "group": "mathematical-relativity",
+    "source_sha256": "d166faed5bbbf15f20109fd9a81b97c1407b9b19350750b4f863b4aefcef6f0a",
+    "statement_sha256": "d25c0e6eb5d22d5f29cff37ff8f2362f4d5524c6df5e310839565815d1ad47f7",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix constants $`D,V>0`$. Let $`g_j`$, $`j=1,2,\\ldots`$, be any sequence of smooth Riemannian metrics on the standard smooth three-sphere $`\\mathbb S^3`$. Assume\n```math\n\\mathrm{Scal}_{g_j}\\ge 6-\\frac1j,\\qquad\n\\mathrm{MinA}(\\mathbb S^3,g_j)\\ge4\\pi-\\frac1j,\\qquad\n\\mathrm{diam}_{g_j}(\\mathbb S^3)\\le D,\\qquad\n\\mathrm{Vol}_{g_j}(\\mathbb S^3)\\le V.\n```\nHere\n```math\n\\mathrm{MinA}(\\mathbb S^3,g)=\\inf\\{\\mathrm{Area}_g(\\Sigma):\\Sigma\\subset\\mathbb S^3\\text{ is a nonempty smooth closed embedded minimal surface}\\}.\n```\nMinimal means that the mean curvature vanishes. Both stable and unstable surfaces are included, with no genus restriction. The sphere has no boundary.\n\nGive each sphere its intrinsic Riemannian distance $`d_j`$ and its integration current $`T_j`$ for the standard orientation. Must the whole sequence converge to the unit round sphere in the volume-preserving intrinsic-flat sense? Explicitly, writing $`d_{\\mathrm{rd}}`$ and $`T_{\\mathrm{rd}}`$ for the round distance and integration current, is it true that\n```math\nd_{\\mathcal F}\\bigl((\\mathbb S^3,d_j,T_j),(\\mathbb S^3,d_{\\mathrm{rd}},T_{\\mathrm{rd}})\\bigr)\\longrightarrow0,\n\\qquad\n\\mathrm{Vol}_{g_j}(\\mathbb S^3)\\longrightarrow2\\pi^2?\n```\nThe distance $`d_{\\mathcal F}`$ is the Sormani–Wenger intrinsic flat distance: the infimum of flat distances of the currents after distance-preserving embeddings into a common complete metric space. No identification of points between the spheres is prescribed in the conclusion.",
+  "full_original_page": "# 882. Intrinsic-flat stability of scalar sphere rigidity\n\n**Area:** Scalar geometry and mathematical relativity\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix constants $`D,V>0`$. Let $`g_j`$, $`j=1,2,\\ldots`$, be any sequence of smooth Riemannian metrics on the standard smooth three-sphere $`\\mathbb S^3`$. Assume\n```math\n\\mathrm{Scal}_{g_j}\\ge 6-\\frac1j,\\qquad\n\\mathrm{MinA}(\\mathbb S^3,g_j)\\ge4\\pi-\\frac1j,\\qquad\n\\mathrm{diam}_{g_j}(\\mathbb S^3)\\le D,\\qquad\n\\mathrm{Vol}_{g_j}(\\mathbb S^3)\\le V.\n```\nHere\n```math\n\\mathrm{MinA}(\\mathbb S^3,g)=\\inf\\{\\mathrm{Area}_g(\\Sigma):\\Sigma\\subset\\mathbb S^3\\text{ is a nonempty smooth closed embedded minimal surface}\\}.\n```\nMinimal means that the mean curvature vanishes. Both stable and unstable surfaces are included, with no genus restriction. The sphere has no boundary.\n\nGive each sphere its intrinsic Riemannian distance $`d_j`$ and its integration current $`T_j`$ for the standard orientation. Must the whole sequence converge to the unit round sphere in the volume-preserving intrinsic-flat sense? Explicitly, writing $`d_{\\mathrm{rd}}`$ and $`T_{\\mathrm{rd}}`$ for the round distance and integration current, is it true that\n```math\nd_{\\mathcal F}\\bigl((\\mathbb S^3,d_j,T_j),(\\mathbb S^3,d_{\\mathrm{rd}},T_{\\mathrm{rd}})\\bigr)\\longrightarrow0,\n\\qquad\n\\mathrm{Vol}_{g_j}(\\mathbb S^3)\\longrightarrow2\\pi^2?\n```\nThe distance $`d_{\\mathcal F}`$ is the Sormani–Wenger intrinsic flat distance: the infimum of flat distances of the currents after distance-preserving embeddings into a common complete metric space. No identification of points between the spheres is prescribed in the conclusion.\n\n## Application\n\nScalar curvature is a central geometric quantity in general relativity. This conjecture asks whether almost attaining a sharp scalar-curvature and minimal-surface bound forces a closed three-dimensional space to be close to the round model in a weak geometric sense. The specified convergence permits thin wells while tracking total volume.\n\n## References\n\n1. Christina Sormani and participants at the IAS workshop, [*Conjectures on Convergence and Scalar Curvature*](https://arxiv.org/abs/2103.10093v1), Conjecture 9.1, equations (124)–(125), and Remark 9.3, pp. 41–42 (2021). Attribution: Fernando C. Marques and André Neves.\n2. Hunter Stufflebeam and Paul Sweeney Jr, [*Width Stability of Rotationally Symmetric Metrics*](https://doi.org/10.1007/s12220-025-02020-5), Journal of Geometric Analysis **35** (2025), 238, Conjecture 1.1 and Theorem A; [open published text](https://pmc.ncbi.nlm.nih.gov/articles/PMC12187838/).\n3. Paul Sweeney Jr, [*Examples for scalar sphere stability*](https://doi.org/10.1007/s00526-025-03036-z), Calculus of Variations and Partial Differential Equations **64** (2025), 188; [preprint](https://arxiv.org/abs/2301.01292v2), Conjecture 1.3 and Theorems A-prime and B-prime.\n4. Sven Hirsch and Yiyue Zhang, [*Stability of Llarull's theorem in all dimensions*](https://doi.org/10.1016/j.aim.2024.109980), Advances in Mathematics **458** (2024), 109980; [preprint](https://arxiv.org/abs/2310.14412v3), Theorems 1.1 and 1.6.\n\n## Status review\n\n\n**Known cases:** Rotationally symmetric width stability is established. Width-only counterexamples have minimum minimal-surface area tending to zero; Llarull stability imposes a degree/map comparison assumption. Neither class settles the stated unrestricted three-sphere minimum-area conjecture.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nRotationally symmetric width stability is established. Width-only counterexamples have minimum minimal-surface area tending to zero; Llarull stability imposes a degree/map comparison assumption. Neither class settles the stated unrestricted three-sphere minimum-area conjecture.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe general conjecture remains open in the cited sources. Stufflebeam–Sweeney prove the rotationally symmetric case, in all dimensions at least three, and retain the general three-dimensional conjecture. Their Theorem A also gives volume convergence in that symmetric setting.\n\nSweeney's counterexamples to a width-only assertion have minimum minimal-surface area tending to zero, so they do not satisfy the displayed minimum-area bound. Other examples fail Gromov–Hausdorff convergence while still converging to the round sphere in the requested volume-preserving intrinsic-flat sense.\n\nThe Llarull stability results require an area-nonincreasing map of nonzero degree to the round sphere, or stronger metric-comparison and Sobolev assumptions. Those hypotheses are not part of this conjecture. Wenger compactness alone gives a subsequence with some intrinsic-flat limit; identifying that limit as round and preserving its total mass remain additional conclusions.\n\nThe volume question in Remark 9.3 is included in this entry, rather than made a separate problem. No matching complete general resolution was located in the recorded bounded searches. The [source and current review](../FURTHER_problems/_tracking/parallel/continuum/scalar-sphere-stability-review.json), [independent selected audit](../FURTHER_problems/_tracking/parallel/complex-bayesian/cross-scalar-sphere-stability-review.json), [semantic comparison](../FURTHER_problems/_tracking/scalar-sphere-duplicates-review-2026-10-19.json), [catalogue comparison](../FURTHER_problems/_tracking/scalar-sphere-catalogue-review-2026-10-19.json) and [coordinator review](../FURTHER_problems/_tracking/scalar-sphere-coordinator-review-2026-10-19.json) record the checks and their limits. These are AI checks, not human peer review.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-c980a03a2a342504**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"scalar sphere stability\" conjecture \"MinA\" 2026",
+    "\"scalar sphere stability\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12187838/",
+      "locator": "2025 published, TheoremA",
+      "inspection": "Actual theorem assumes rotational symmetry, while target allows all smooth S3 metrics. MinA bound includes every embedded closed minimal surface; width-only bound and area-nonincreasing degree-map Llarull conditions cannot be substituted. Need check cited width-only counterexample body before treating full current check complete."
+    }
+  ],
+  "scope_comparison": "Actual theorem assumes rotational symmetry, while target allows all smooth S3 metrics. MinA bound includes every embedded closed minimal surface; width-only bound and area-nonincreasing degree-map Llarull conditions cannot be substituted. Need check cited width-only counterexample body before treating full current check complete.",
+  "rationale": "No full matching resolution identified in bounded searches; exact remaining theorem-body comparisons recorded explicitly.",
+  "source_gaps": [
+    "Specific pending source-body comparisons described above.",
+    "Snapshot routing pending this batch."
+  ],
+  "announcement_routing": {
+    "localID": "882",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "scalar sphere",
+          "sphere stability",
+          "MinA"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "scalar sphere",
+          "sphere stability",
+          "MinA"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "scalar sphere",
+        "sphere stability",
+        "MinA"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:48:36.127Z",
+      "previous_outcome": "hold",
+      "localID": "882",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2301.01292v2",
+          "version": "9March2023; published2025",
+          "locator": "TheoremA-prime; Conjecture1.3 and paragraph following, HTMLlines94–111",
+          "inspection": "The width counterexample has MinA ->0, explicitly stated at line111, and the paper says it does NOT satisfy Conjecture1.3. The MinA lower bound is exactly the stronger hypothesis retained by the target."
+        }
+      ],
+      "scope_comparison": "Actual counterexample body now checked. It cannot refute the target MinA formulation; rotational symmetry theorem remains a restricted positive case. No material plausible full claim gap remains."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

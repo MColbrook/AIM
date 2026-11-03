@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 281,
+  "source_sha256": "df3948346ba796eaea1e5e1b277c2e0c42f58a21b6fbc6e4ed35df88fba81438",
+  "statement_sha256": "ea4b49d4379241a7854f8297a96399acf76322eebdc5f61d8c3bec046d7c6f6f",
+  "original_target": {
+    "id": "344",
+    "title": "The sharp degree bound for strong edge-colouring",
+    "area": "Communication networks, interference scheduling and graph colouring",
+    "file": "problems/344-strong-edge-colouring.md",
+    "status": "Open",
+    "last_checked": "2026-09-19",
+    "group": "inverse3",
+    "source_sha256": "df3948346ba796eaea1e5e1b277c2e0c42f58a21b6fbc6e4ed35df88fba81438",
+    "statement_sha256": "ea4b49d4379241a7854f8297a96399acf76322eebdc5f61d8c3bec046d7c6f6f",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "344",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"strong edge\" \"colouring\" \"2026\" 1.25",
+    "\"strong edge\" \"conjecture\" site:zenodo.org OR site:hal.science OR site:github.com 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2607.17421v1",
+      "version": "v1 19 July 2026",
+      "locators": "Theorems 1.1–1.4",
+      "body_inspected": true,
+      "scope": "General simple-graph 1.73 Delta² at sufficiently large degree; other bounds restricted to bipartite/random classes."
+    },
+    {
+      "url": "https://arxiv.org/html/2609.34023v1",
+      "version": "v1 27 September 2026",
+      "locators": "Theorems 1.1–1.2",
+      "body_inspected": true,
+      "scope": "Six-approximation on disk graphs and coefficient 225/142 with additive O(Delta) on unit disk graphs."
+    },
+    {
+      "url": "https://github.com/rossjkang/localflagalgebras/blob/main/RESULTS.md",
+      "version": "current public formalization scope",
+      "locators": "Paper 2 remaining assumptions",
+      "body_inspected": true,
+      "scope": "Certificate-output and external coloring assumptions remain; not a kernel verification of the exact conjecture."
+    }
+  ],
+  "registry_checks": "No strong-edge/strong-chromatic alias Palomar/Hexagon full metadata; current arXiv, Zenodo, HAL and GitHub queries executed.",
+  "scope_comparison": "Exact parity-sensitive coefficient 5/4 for every loopless multigraph and degree is stronger than 1.73, 225/142 and large-degree/simple-graph restrictions. We do not transfer the new simple-graph proofs to multigraphs without justification.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. September disk-graph theorem and July general theorem are partial only."
+}

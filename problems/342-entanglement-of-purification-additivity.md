@@ -2,9 +2,9 @@
 
 **Area:** Quantum information and correlation preparation
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -55,6 +55,13 @@ This is a cost for creating both classical and quantum correlations. General add
 5. Amir-Reza Negari and Zahra Baghali Khanian, *Rényi Entanglement of Purification Is Non-additive*, [preprint v1](https://arxiv.org/html/2608.28897v1), August 28, 2026. §I, Theorems 1–3, Appendix C.2 and §V Outlook.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Negative: ordinary von Neumann entanglement of purification is nonadditive.
+
+[Claimed solution](https://arxiv.org/abs/2609.29539v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/342.json). Source locator: Theorem1; §2; AppendixA.1 ancilla reduction; §3 exact lower-bound certificate. The comparison records the hypotheses, quantifiers and any reduction to the original target. The full external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: nonadditivity claim with exact finite artifact replay; complete analytic reduction awaiting independent review.
 

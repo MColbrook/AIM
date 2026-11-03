@@ -2,9 +2,9 @@
 
 **Area:** Diffusion in diluted networks
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -20,6 +20,13 @@ Random deletion of conducting bonds can create trapping and bottlenecks. The que
 - [Itai Benjamini, Russell Lyons and Oded Schramm, *Percolation Perturbations in Potential Theory and Random Walks* (1999)](https://arxiv.org/abs/math/9804010), original general questions and partial results.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Corollary1.1 claims that all infinite clusters are transient almost surely for p>pc on every infinite connected locally finite transient transitive graph. A Cayley graph with finite symmetric generators is in this class. The result has no polynomial-growth or amenability restriction; the excluded critical parameter p=pc is not part of the local target.
+
+[Claimed solution](https://arxiv.org/pdf/2603.03257v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/175.json). Source locator: Corollary1.1, displayed assertion(1). The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative
 

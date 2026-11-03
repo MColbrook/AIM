@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "257",
+  "manifest_index": 202,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "257",
+    "title": "A complete boundary-control criterion for coupled heat systems in higher dimensions",
+    "area": "Parabolic control / coupled diffusion",
+    "file": "problems/257-boundary-coupled-heat-control-criterion.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "inverse3",
+    "source_sha256": "a3a265d01ad4d6784899749e02cb088fa336cf1a7108b6e5f88e49191dcb6353",
+    "statement_sha256": "104b948315a3a54572d2d4b9a202d259410e56b60821cfecc68670ecf8783cef",
+    "state": "unreviewed"
+  },
+  "source_sha256": "a3a265d01ad4d6784899749e02cb088fa336cf1a7108b6e5f88e49191dcb6353",
+  "statement_sha256": "104b948315a3a54572d2d4b9a202d259410e56b60821cfecc68670ecf8783cef",
+  "actual_source_sha256": "a3a265d01ad4d6784899749e02cb088fa336cf1a7108b6e5f88e49191dcb6353",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Given a bounded connected smooth domain $`\\Omega\\subset\\mathbb R^d`$, $`d\\geq2`$, a nonempty relatively open $`\\Gamma\\subset\\partial\\Omega`$, $`T>0`$, and constant real matrices $`A\\in\\mathbb R^{n\\times n}`$ and $`B\\in\\mathbb R^{n\\times m}`$ with $`m<n`$, consider\n\n```math\ny_t-\\Delta y-Ay=0,\\qquad y|_{\\partial\\Omega}=Bf\\,\\mathbf1_\\Gamma,\\qquad y(0)=y_0\\in L^2(\\Omega)^n.\n```\n\nFind a necessary and sufficient spectral/algebraic condition for null controllability by $`f\\in L^\\infty(\\Gamma\\times(0,T))^m`$: every $`y_0`$ must admit such a control with $`y(T)=0`$, interpreted by transposition. The criterion should identify the interaction of $`A,B`$ with the Dirichlet Laplacian spectral data of $`\\Omega`$ and the active boundary. Merely restating controllability as an adjoint observability inequality is not the requested characterization.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"boundary controllability\" \"coupled parabolic\" multidimensional 2026",
+    "\"boundary controllability\" \"coupled parabolic\" multidimensional (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"boundary controllability\" \"coupled parabolic\" multidimensional (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s40324-024-00363-7",
+      "version_or_date": "FinalSeMA82(2025)267–288,updated8October2025; correction history says author-name correction only.",
+      "scope_comparison": "Problem1 explicitly asks for a necessary/sufficient AC/NC condition for N>=2,m<n. Theorem2's boundary characterization is one-dimensional; distributed Kalman tests and time-discrete results do not characterize all boundary geometry/spectrum in higher dimension. The2025correction corrects the author's name, not an announced resolution. No exact new criterion located.",
+      "locator": "Section2 Eq4,Theorem2 and Problem1; Change history",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Problem1 explicitly asks for a necessary/sufficient AC/NC condition for N>=2,m<n. Theorem2's boundary characterization is one-dimensional; distributed Kalman tests and time-discrete results do not characterize all boundary geometry/spectrum in higher dimension. The2025correction corrects the author's name, not an announced resolution. No exact new criterion located.",
+  "latest_version_check": "FinalSeMA82(2025)267–288,updated8October2025; correction history says author-name correction only.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

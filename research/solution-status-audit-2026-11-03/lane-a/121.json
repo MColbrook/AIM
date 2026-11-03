@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "121",
+  "manifest_index": 93,
+  "original_target": {
+    "id": "121",
+    "title": "Minimal filling volume of a simple manifold",
+    "area": "Geometric analysis / travel-time bounds",
+    "file": "problems/121-simple-manifold-minimal-filling.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse2",
+    "source_sha256": "4def8481723cbad156674a16b9e938d7ae8af312a41f915e20690fb502078c68",
+    "statement_sha256": "3c142c206d70c295a87f01dcbb42dfd1c68d669ecdd14f3ce0685d57bfb386cd",
+    "state": "unreviewed"
+  },
+  "source_sha256": "4def8481723cbad156674a16b9e938d7ae8af312a41f915e20690fb502078c68",
+  "statement_sha256": "3c142c206d70c295a87f01dcbb42dfd1c68d669ecdd14f3ce0685d57bfb386cd",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:15:32.806349+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Burago–Ivanov's actual Theorem1 assumes the metric C2-close to Euclidean. Briggs–Wells2026 gives a discrete/continuous non-sharp lower bound, not arbitrary simple manifolds with unrestricted competing topology. No full matching result located.",
+  "primary_sources": [
+    {
+      "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v171-n2-p10-p.pdf",
+      "locator": "Conjecture1.4 and Theorem1, p1185",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2602.17859",
+      "locator": "Theorem2.1 and Section3",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"simple manifold\" \"minimal filling\" 2026 proof",
+    "\"minimal filling\" (site:zenodo.org OR site:hal.science OR site:github.com) conjecture"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "minimal filling",
+        "filling area"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "minimal filling",
+        "filling area"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

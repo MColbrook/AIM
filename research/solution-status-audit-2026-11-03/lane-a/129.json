@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "129",
+  "manifest_index": 100,
+  "original_target": {
+    "id": "129",
+    "title": "Saari's constant-inertia conjecture for planar gravitation",
+    "area": "Celestial mechanics / rigid gravitational motions",
+    "file": "problems/129-saari-constant-inertia.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse2",
+    "source_sha256": "d3fb1a1dccc75be1d6d5e163ae2cd4b86541ef7de1803bafeedac2e08fae2175",
+    "statement_sha256": "9ec5ff3dbd4c62b0c21266c70f61b88103ad01942470480c91bf9fe1c998cbd9",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d3fb1a1dccc75be1d6d5e163ae2cd4b86541ef7de1803bafeedac2e08fae2175",
+  "statement_sha256": "9ec5ff3dbd4c62b0c21266c70f61b88103ad01942470480c91bf9fe1c998cbd9",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:15:33.390344+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The named general proof2212.09718 remains officially withdrawn at latestv7,14October2026; no corrected general proof identified. Planar three-body/collinear results and generic vector-field results do not cover every fixed positive mass tuple for planar N>=4.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/2212.09718",
+      "locator": "Current withdrawal notice and v5/v6/v7 submission history",
+      "body_inspected": false
+    },
+    {
+      "url": "https://www.cs.toronto.edu/~schmah/pubs/SchSt07_Saari.pdf",
+      "locator": "Introduction: generic vector-field formulation",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Saari\" \"conjecture\" 2026 proof Newtonian",
+    "\"Saari\" \"constant\" \"inertia\" (site:zenodo.org OR site:hal.science OR site:github.com) conjecture"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Saari",
+        "constant inertia"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Saari",
+        "constant inertia"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

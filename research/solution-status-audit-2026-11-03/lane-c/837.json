@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "837",
+  "manifest_index": 681,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "837",
+    "title": "Quaternionic Calabi equation on compact HKT manifolds",
+    "area": "Geometry and topology",
+    "file": "problems/837-quaternionic-calabi-equation-on-compact-hkt-manifolds.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-bcc1ff6354cd2f52",
+    "group": "geometry-topology",
+    "source_sha256": "ade75ddc1149664d262530cee82b18e420161cf86cf78e200f023604cf2688a5",
+    "statement_sha256": "ec68ad94ba842a1f94ff7f269417ec579722b7c7a637288c3a15878eee1aa2c8",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ade75ddc1149664d262530cee82b18e420161cf86cf78e200f023604cf2688a5",
+  "statement_sha256": "ec68ad94ba842a1f94ff7f269417ec579722b7c7a637288c3a15878eee1aa2c8",
+  "actual_source_sha256": "ade75ddc1149664d262530cee82b18e420161cf86cf78e200f023604cf2688a5",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\ge1`$ and let $`M`$ be a compact connected smooth manifold without boundary of real dimension $`4n`$. Give $`M`$ integrable hypercomplex structures $`I,J,K`$ and a positive hyperhermitian metric $`g`$. Use the right-action convention of reference 2: write\n\n```math\n\\omega_L(X,Y)=g(XL,Y),\\qquad\n\\Omega=\\omega_J-i\\omega_K,\\qquad\n\\partial\\Omega=0.\n```\n\nHere Dolbeault types and operators are taken with respect to $`I`$. The final condition is the HKT condition. On differential forms set $`(J\\eta)(X_1,\\ldots,X_k)=\\eta(X_1J,\\ldots,X_kJ)`$ and\n\n```math\n\\partial_J=J^{-1}\\bar\\partial J.\n```\n\nA $`(2,0)`$-form $`\\eta`$ is q-real when $`J\\bar\\eta=\\eta`$, and is strictly q-positive when $`\\eta(Z,\\bar ZJ)>0`$ for every nonzero $`I`$-$`(1,0)`$ vector $`Z`$.\n\nFix a nowhere-vanishing $`I`$-holomorphic $`(2n,0)`$-form $`\\Theta`$, with its q-positive choice: $`\\Theta=h\\Omega^n`$ for a smooth positive real function $`h`$. For **every** real $`f\\in C^\\infty(M)`$ satisfying\n\n```math\n\\int_M(e^f-1)\\Omega^n\\wedge\\overline\\Theta=0,\n```\n\ndoes there exist a real $`\\varphi\\in C^\\infty(M)`$ such that\n\n```math\n(\\Omega+\\partial\\partial_J\\varphi)^n=e^f\\Omega^n,\n\\qquad \\Omega+\\partial\\partial_J\\varphi>0?\n```\n\nThe inequality means strict q-positivity. No local flatness or compatible hyperKähler or locally conformally hyperKähler metric is assumed. Uniqueness modulo real constants is already known; the unresolved target is existence. One can select a representative by imposing $`\\int_M\\varphi\\Omega^n\\wedge\\overline\\Theta=0`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Alesker Verbitsky conjecture\" HKT 2026",
+    "\"Alesker Verbitsky conjecture\" HKT (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Alesker Verbitsky conjecture\" HKT (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Equation1,Theorem1.1,Remark3.4;2609.21528v1 Theorem1.1",
+      "version_or_date": "arXiv:2610.07897v1,6October2026,onlyversion;2609.21528v1,18September2026",
+      "url": "https://arxiv.org/html/2610.07897v1",
+      "scope_comparison": "The target asks smooth existence for every normalized smooth density on any compact HKT manifold with positive holomorphic volume form, without extra geometry. October2026 Theorem1.1 assumes a compatible locally conformally hyperkahler metric; Remark3.4 explicitly explains the missing general HKT estimate. Its extra normalization scalar does not remove that geometric assumption. September2026 Theorem1.1 assumes local flatness and supplies only a continuous solution. These are genuine advances but do not settle smooth existence on the full stated class. No later matching complete announcement was found."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The target asks smooth existence for every normalized smooth density on any compact HKT manifold with positive holomorphic volume form, without extra geometry. October2026 Theorem1.1 assumes a compatible locally conformally hyperkahler metric; Remark3.4 explicitly explains the missing general HKT estimate. Its extra normalization scalar does not remove that geometric assumption. September2026 Theorem1.1 assumes local flatness and supplies only a continuous solution. These are genuine advances but do not settle smooth existence on the full stated class. No later matching complete announcement was found.",
+  "latest_version_check": "arXiv:2610.07897v1,6October2026,onlyversion;2609.21528v1,18September2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "646",
+  "manifest_index": 500,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "646",
+    "title": "Compact orbit covers of aspherical manifolds",
+    "area": "Applied topology / geometric topology",
+    "file": "problems/646-aspherical-compact-orbit-cover.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "geometry-topology",
+    "source_sha256": "987a71d9dacd9a88ec47bce6288d98d4f4f92a940674df54b8ebcf663d5283f4",
+    "statement_sha256": "866ef553ccc3a9b657aeb04af9f57e54629783a0862b49293fdcf90a51fa1aa5",
+    "state": "unreviewed"
+  },
+  "source_sha256": "987a71d9dacd9a88ec47bce6288d98d4f4f92a940674df54b8ebcf663d5283f4",
+  "statement_sha256": "866ef553ccc3a9b657aeb04af9f57e54629783a0862b49293fdcf90a51fa1aa5",
+  "actual_source_sha256": "987a71d9dacd9a88ec47bce6288d98d4f4f92a940674df54b8ebcf663d5283f4",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`M`$ be a closed connected smooth aspherical manifold, and let $`\\widetilde M`$ be its universal cover. Thus $`M`$ is compact without boundary and $`\\widetilde M`$ is contractible. Write $`G=\\pi_1(M)`$ for the group acting on $`\\widetilde M`$ by deck transformations.\n\nDoes there always exist a compact subset $`K\\subseteq\\widetilde M`$ such that\n\n```math\n\\widetilde M=\\bigcup_{g\\in G}gK,\n```\n\nand, for every finite nonempty subset $`F\\subseteq G`$, the intersection\n\n```math\n\\bigcap_{g\\in F}gK\n```\n\nis either empty or contractible?\n\nThe condition includes singleton $`F`$, so $`K`$ itself must be contractible. The entire cover must consist of translates of this one compact set.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"aspherical manifolds\" \"compact\" \"contractible\" cover Eden 2026",
+    "\"aspherical manifolds\" \"compact\" \"contractible\" cover Eden (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2212.14146",
+      "locator": "Conjectures1.4 and6.8",
+      "version_or_date": "v2,17October2023",
+      "scope_comparison": "Conjecture1.4 is the exact compact single-orbit cover assertion. Constant-curvature Voronoi cases are special; Conjecture6.8 asks the stronger closed fundamental-domain form. A general good cover using several inequivalent compact sets does not satisfy the single-K deck-translate quantifier.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Conjecture1.4 is the exact compact single-orbit cover assertion. Constant-curvature Voronoi cases are special; Conjecture6.8 asks the stronger closed fundamental-domain form. A general good cover using several inequivalent compact sets does not satisfy the single-K deck-translate quantifier.",
+  "latest_version_check": "v2,17October2023",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

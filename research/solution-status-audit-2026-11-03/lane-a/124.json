@@ -1,0 +1,74 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "124",
+  "manifest_index": 96,
+  "original_target": {
+    "id": "124",
+    "title": "Continuous velocity of every sub-Riemannian length minimizer",
+    "area": "Nonholonomic optimal control / regularity",
+    "file": "problems/124-c1-subriemannian-minimizers.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse2",
+    "source_sha256": "5cda2ba4e0eb1594d4cadaaf7f2c4854490e51e449f0ba8202787374df62b169",
+    "statement_sha256": "b18176248d710fed03e8e0b6b2ee57ac3e67a5148f61b0d54e01bbe2eb6f00f2",
+    "state": "unreviewed"
+  },
+  "source_sha256": "5cda2ba4e0eb1594d4cadaaf7f2c4854490e51e449f0ba8202787374df62b169",
+  "statement_sha256": "b18176248d710fed03e8e0b6b2ee57ac3e67a5148f61b0d54e01bbe2eb6f00f2",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:15:33.084456+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The actual 2026 Theorem1.1 is restricted to analytic equiregular rank2 metabelian distributions. Section5 explicitly leaves possible minimality of its nonmetabelian spiral open. The nonsmooth2025 examples are C2, not counterexamples to C1; neither source covers arbitrary smooth bracket-generating constant rank.",
+  "primary_sources": [
+    {
+      "url": "https://doi.org/10.1515/acv-2025-0104",
+      "locator": "Theorem1.1 and Section5",
+      "body_inspected": true
+    },
+    {
+      "url": "https://math.univ-cotedazur.fr/u/rifford/Papiers_en_ligne/minimizing_arxiv_Jan31.pdf",
+      "locator": "Introduction and nonsmooth minimizing example",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"sub-Riemannian\" \"C1\" \"minimizers\" 2026 counterexample",
+    "\"sub-Riemannian\" \"C1\" 2026 (proof OR counterexample)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "sub-Riemannian",
+        "metabelian"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "sub-Riemannian",
+        "metabelian"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

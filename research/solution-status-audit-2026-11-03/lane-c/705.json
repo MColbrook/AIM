@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "705",
+  "manifest_index": 549,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "705",
+    "title": "Boundary Hölder regularity of harmonic quasiconformal maps on arbitrary domains",
+    "area": "Complex analysis and geometric function theory",
+    "file": "problems/705-boundary-holder-regularity-of-harmonic-quasiconformal-maps-on-arbitrary-domains.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8ea604d5bc3486f4",
+    "group": "complex-analysis-potential-theory",
+    "source_sha256": "10e300b68b9ec1fce0e50adb2c3cf60537d9489e91c957505cfc64fcdb82db1b",
+    "statement_sha256": "a243ed6200282b231907efa88b71f1b23019ec9b628ef8532e39121ad083f120",
+    "state": "unreviewed"
+  },
+  "source_sha256": "10e300b68b9ec1fce0e50adb2c3cf60537d9489e91c957505cfc64fcdb82db1b",
+  "statement_sha256": "a243ed6200282b231907efa88b71f1b23019ec9b628ef8532e39121ad083f120",
+  "actual_source_sha256": "10e300b68b9ec1fce0e50adb2c3cf60537d9489e91c957505cfc64fcdb82db1b",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\geq 3`$, let $`D\\subset\\mathbb R^n`$ be any bounded domain, and let $`0<\\alpha\\leq1`$. Suppose that $`f:\\overline D\\to\\mathbb R^n`$ is continuous, its coordinate functions are harmonic in $`D`$, and $`f|_D`$ is quasiconformal. Assume that, for some finite $`M`$,\n```math\n|f(x)-f(y)|\\leq M|x-y|^\\alpha\n  \\qquad (x,y\\in\\partial D).\n```\n\nMust there be a finite constant $`M'`$ such that\n```math\n|f(x)-f(y)|\\leq M'|x-y|^\\alpha\n  \\qquad (x,y\\in\\overline D)?\n```\n\nThere is no smoothness, uniform-perfectness, capacity-density or extension-domain assumption on $`D`$. The question concerns preservation of the **same** exponent; a weaker exponent follows for quasiconformal maps from a prior boundary-continuity theorem. It asks for existence of $`M'`$, not a constant independent of all domain geometry.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"harmonic quasiconformal\" \"arbitrary\" \"Holder\" proof 2026",
+    "\"harmonic quasiconformal\" \"arbitrary\" \"Holder\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Theorem2.1 lines85–89;Introduction84",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2602.05436v1",
+      "scope_comparison": "The actual theorem requires both source and target C^(1,alpha) boundaries. The target has any bounded source domain without regularity or capacity-density conditions and asks preservation of its given boundary exponent. Original uniform-perfectness theorems and the new Lyapunov-domain result do not establish this unrestricted implication. No matching full result found.",
+      "version_or_date": "arXiv2602.05436v1,5February2026;publisherarticle103956indexed"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The actual theorem requires both source and target C^(1,alpha) boundaries. The target has any bounded source domain without regularity or capacity-density conditions and asks preservation of its given boundary exponent. Original uniform-perfectness theorems and the new Lyapunov-domain result do not establish this unrestricted implication. No matching full result found.",
+  "latest_version_check": "arXiv2602.05436v1,5February2026;publisherarticle103956indexed",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

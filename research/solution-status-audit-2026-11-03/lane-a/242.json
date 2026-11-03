@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "242",
+  "manifest_index": 188,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "242",
+    "title": "Minimum volume of a three-dimensional body of constant width",
+    "area": "Convex geometry / geometric design",
+    "file": "problems/242-constant-width-volume.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "inverse3",
+    "source_sha256": "09161bc696ab85c8301ba03ae461a0b86202cc629dc78331682002084d251a7d",
+    "statement_sha256": "d0512e9ec0feca6c0abc7bff11d3f47d8a68aa8c6e4569e7b1e10aaaaa29269a",
+    "state": "unreviewed"
+  },
+  "source_sha256": "09161bc696ab85c8301ba03ae461a0b86202cc629dc78331682002084d251a7d",
+  "statement_sha256": "d0512e9ec0feca6c0abc7bff11d3f47d8a68aa8c6e4569e7b1e10aaaaa29269a",
+  "actual_source_sha256": "09161bc696ab85c8301ba03ae461a0b86202cc629dc78331682002084d251a7d",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For a compact convex body $`K\\subset\\mathbb R^3`$ with nonempty interior, define its support function by $`h_K(u)=\\max_{x\\in K}x\\cdot u`$ for $`u\\in S^2`$. Determine the exact value of\n\n```math\nv_3=\\inf\\left\\{\\mathop{\\mathrm{Vol}}\\nolimits_3(K):h_K(u)+h_K(-u)=1\\text{ for every }u\\in S^2\\right\\},\n```\n\nand characterize all bodies attaining this value, up to rigid motion. The condition prescribes width one in every direction. The infimum is over all such convex bodies; no rotational or polyhedral symmetry is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Blaschke Lebesgue\" minimum volume 2026",
+    "\"Blaschke Lebesgue\" minimum volume (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Blaschke Lebesgue\" minimum volume (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Section4 Lemma4.1 and following necessary-condition theorem; Section5 final conjecture",
+      "scope_comparison": "The October paper gives necessary conditions for minimizers and a conjectural dimension-raising construction; it does not compute the3Dminimum or classify all minimizers. This is later partial work beyond the local June citation. The proof of Lemma4.1 additionally infers nonempty interior from positive measure without justification in the inspected text, so its necessity proof was not independently certified. No exact full claim found.",
+      "url": "https://arxiv.org/html/2610.38257",
+      "version_or_date": "arXiv2610.38257v1,28October2026."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The October paper gives necessary conditions for minimizers and a conjectural dimension-raising construction; it does not compute the3Dminimum or classify all minimizers. This is later partial work beyond the local June citation. The proof of Lemma4.1 additionally infers nonempty interior from positive measure without justification in the inspected text, so its necessity proof was not independently certified. No exact full claim found.",
+  "latest_version_check": "arXiv2610.38257v1,28October2026.",
+  "gap_retraction_check": "Potential gap in the inspected partial proof: Section4 Lemma4.1 says a positive-measure measurable set E contains an interior point. This does not hold for arbitrary measurable sets; no repair located in this pass. Not a full-resolution candidate in any event.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

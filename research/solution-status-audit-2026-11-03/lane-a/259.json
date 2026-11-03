@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "259",
+  "manifest_index": 203,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "259",
+    "title": "Minimum-time eradication of an expanding set inside a geographic barrier",
+    "area": "Geometric optimal control / invasive-species containment",
+    "file": "problems/259-minimum-time-constrained-eradication.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "inverse3",
+    "source_sha256": "58833f9277276cf4ab622b12b36b03b53cfa45d8ba74e383841e856a6e6f2eba",
+    "statement_sha256": "e3ec02d5a3744f0aa63406ecca8030a026245489a9676c9b2bdeac4db7bae3b2",
+    "state": "unreviewed"
+  },
+  "source_sha256": "58833f9277276cf4ab622b12b36b03b53cfa45d8ba74e383841e856a6e6f2eba",
+  "statement_sha256": "e3ec02d5a3744f0aa63406ecca8030a026245489a9676c9b2bdeac4db7bae3b2",
+  "actual_source_sha256": "58833f9277276cf4ab622b12b36b03b53cfa45d8ba74e383841e856a6e6f2eba",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`V\\subset\\mathbb R^2`$ be a bounded connected Lipschitz domain and $`M>0`$. A motion is a measurable set $`E\\subset(0,T)\\times V`$ of finite perimeter, meaning its indicator has distributional gradient given by a finite vector measure. Write $`\\partial^*E`$ for its reduced boundary, $`\\nu=(\\nu_0,\\nu_1,\\nu_2)`$ for its generalized **inner** unit normal, and $`\\mathcal H^2`$ for surface measure. Require\n\n```math\n\\int_{\\partial^*E\\cap((a,b)\\times V)}\n\\max\\{-\\nu_0+\\sqrt{\\nu_1^2+\\nu_2^2},0\\}\\,d\\mathcal H^2\n\\leq M(b-a)\\qquad(0\\leq a<b\\leq T).\n```\n\nThe slices $`\\Omega(t)=\\{x:(t,x)\\in E\\}`$ must have endpoint traces $`\\mathbf1_{\\Omega(t)}\\to\\mathbf1_V`$ as $`t\\downarrow0`$ and $`\\mathbf1_{\\Omega(t)}\\to0`$ as $`t\\uparrow T`$, in $`L^1(V)`$. For every $`(V,M)`$ permitting such a motion, determine the least $`T`$ and characterize its minimizers.\n\nThis is the published BV formulation. At a smooth front with inward speed $`\\beta`$, effort is $`\\int_{\\partial\\Omega(t)\\cap V}\\max\\{1+\\beta,0\\}\\,ds`$; the integrated constraint and endpoint traces account for all removal, including possible discontinuities.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Bressan\" \"moving sets\" geographical minimum time 2026",
+    "\"Bressan\" \"moving sets\" geographical minimum time (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Bressan\" \"moving sets\" geographical minimum time (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2502.06050",
+      "version_or_date": "Current arXiv2502.06050 rendering,2025survey; primary author manuscript15November2024.",
+      "scope_comparison": "Problem3 asks the exact minimum-time eradication strategy for a general connected geographical domain. Existing existence and compatible minimum-perimeter-slice sufficient conditions do not characterize optimal motions for all feasible Lipschitz domains/budgets. No current all-domain full theorem was located; necessary conditions alone are not promoted to optimality over the stated BV class.",
+      "locator": "Section7 Problem3; preceding discussion of geographical constraints",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Problem3 asks the exact minimum-time eradication strategy for a general connected geographical domain. Existing existence and compatible minimum-perimeter-slice sufficient conditions do not characterize optimal motions for all feasible Lipschitz domains/budgets. No current all-domain full theorem was located; necessary conditions alone are not promoted to optimality over the stated BV class.",
+  "latest_version_check": "Current arXiv2502.06050 rendering,2025survey; primary author manuscript15November2024.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

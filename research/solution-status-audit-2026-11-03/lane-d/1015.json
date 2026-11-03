@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1015",
+  "manifest_index": 859,
+  "checked_date": "2026-11-03",
+  "source_sha256": "389371c6fe44afa6bbe430c3dc5ce05f23e55aba537301811158a1c8912ca79f",
+  "statement_sha256": "b827096b8fc11dcaf420463e0cfff691d883e2f8e8e0cecf3917137b2464f666",
+  "original_target": {
+    "id": "1015",
+    "title": "Stability of higher Laplace eigenvalue bounds on the sphere",
+    "area": "Spectral geometry and spectral optimization",
+    "file": "problems/1015-stability-of-higher-laplace-eigenvalue-bounds-on-the-sphere.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-23a295b582937de3",
+    "group": "spectral",
+    "source_sha256": "389371c6fe44afa6bbe430c3dc5ce05f23e55aba537301811158a1c8912ca79f",
+    "statement_sha256": "b827096b8fc11dcaf420463e0cfff691d883e2f8e8e0cecf3917137b2464f666",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`g_0`$ be the round metric of curvature one on $`S^2`$, with area measure $`dv_{g_0}`$ and total area $`4\\pi`$. A nonzero finite positive Radon measure $`\\mu`$ is **admissible** if the identity on smooth functions extends to a compact bounded operator\n```math\nW^{1,2}(S^2,g_0)\\longrightarrow L^2(S^2,\\mu).\n```\n\nDefine its eigenvalues, counting multiplicities and starting with $`\\lambda_0=0`$, by\n```math\n\\lambda_k(S^2,\\mu)=\n\\inf_{\\substack{E\\subset C^\\infty(S^2;\\mathbb R)\\\\\n\\dim E=\\dim_{L^2(\\mu)}E=k+1}}\n\\ \\sup_{0\\ne f\\in E}\n\\frac{\\int_{S^2}|\\nabla f|_{g_0}^2\\,dv_{g_0}}\n     {\\int_{S^2} f^2\\,d\\mu},\n\\qquad\n\\bar\\lambda_k(S^2,\\mu)=\\lambda_k(S^2,\\mu)\\mu(S^2).\n```\n\nThe equality of dimensions requires the image of $`E`$ in $`L^2(\\mu)`$ to retain its dimension.\n\nFor every fixed integer $`k\\ge3`$, is there a constant $`c_k>0`$, independent of $`\\mu`$, such that every admissible measure satisfying $`\\lambda_k(S^2,\\mu)=2`$ admits a conformal automorphism $`\\Phi:S^2\\to S^2`$, distinct points $`p_1,\\ldots,p_m`$, and positive integers $`\\alpha_1,\\ldots,\\alpha_m`$, where\n```math\n1\\le m\\le k-1,\\qquad \\sum_{i=1}^m\\alpha_i=k-1,\n```\n\nfor which\n```math\n8\\pi k-\\bar\\lambda_k(S^2,\\mu)\n\\ \\ge\\\nc_k\\left\\|\ndv_{g_0}+\\sum_{i=1}^m4\\pi\\alpha_i\\delta_{p_i}-\\Phi_*\\mu\n\\right\\|_{(C^1(S^2))^*}^{\\,2}?\n```\n\nHere $`\\delta_p`$ is unit point mass, $`\\Phi_*\\mu(A)=\\mu(\\Phi^{-1}(A))`$, and\n```math\n\\|\\nu\\|_{(C^1)^*}\n=\\sup_{\\|f\\|_\\infty+\\|\\nabla f\\|_\\infty\\le1}\n\\left|\\int_{S^2}f\\,d\\nu\\right|.\n```\n\nAn equivalent $`C^1`$ norm changes only the constant.\n\nThis is the remaining $`k\\ge3`$ portion of Conjecture 1.7 in the 2021 preprint, renumbered Conjecture 1.8 in the accepted version. The case $`k=2`$ is already Theorem 1.7 of that version. The constant may depend on $`k`$; uniformity over all $`k`$ is not requested. Integer weights allow several bubbles to concentrate at the same point. The comparison measure may contain Dirac masses even though $`\\mu`$ is admissible.",
+  "full_original_page": "# 1015. Stability of higher Laplace eigenvalue bounds on the sphere\n\n**Area:** Spectral geometry and spectral optimization\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`g_0`$ be the round metric of curvature one on $`S^2`$, with area measure $`dv_{g_0}`$ and total area $`4\\pi`$. A nonzero finite positive Radon measure $`\\mu`$ is **admissible** if the identity on smooth functions extends to a compact bounded operator\n```math\nW^{1,2}(S^2,g_0)\\longrightarrow L^2(S^2,\\mu).\n```\n\nDefine its eigenvalues, counting multiplicities and starting with $`\\lambda_0=0`$, by\n```math\n\\lambda_k(S^2,\\mu)=\n\\inf_{\\substack{E\\subset C^\\infty(S^2;\\mathbb R)\\\\\n\\dim E=\\dim_{L^2(\\mu)}E=k+1}}\n\\ \\sup_{0\\ne f\\in E}\n\\frac{\\int_{S^2}|\\nabla f|_{g_0}^2\\,dv_{g_0}}\n     {\\int_{S^2} f^2\\,d\\mu},\n\\qquad\n\\bar\\lambda_k(S^2,\\mu)=\\lambda_k(S^2,\\mu)\\mu(S^2).\n```\n\nThe equality of dimensions requires the image of $`E`$ in $`L^2(\\mu)`$ to retain its dimension.\n\nFor every fixed integer $`k\\ge3`$, is there a constant $`c_k>0`$, independent of $`\\mu`$, such that every admissible measure satisfying $`\\lambda_k(S^2,\\mu)=2`$ admits a conformal automorphism $`\\Phi:S^2\\to S^2`$, distinct points $`p_1,\\ldots,p_m`$, and positive integers $`\\alpha_1,\\ldots,\\alpha_m`$, where\n```math\n1\\le m\\le k-1,\\qquad \\sum_{i=1}^m\\alpha_i=k-1,\n```\n\nfor which\n```math\n8\\pi k-\\bar\\lambda_k(S^2,\\mu)\n\\ \\ge\\\nc_k\\left\\|\ndv_{g_0}+\\sum_{i=1}^m4\\pi\\alpha_i\\delta_{p_i}-\\Phi_*\\mu\n\\right\\|_{(C^1(S^2))^*}^{\\,2}?\n```\n\nHere $`\\delta_p`$ is unit point mass, $`\\Phi_*\\mu(A)=\\mu(\\Phi^{-1}(A))`$, and\n```math\n\\|\\nu\\|_{(C^1)^*}\n=\\sup_{\\|f\\|_\\infty+\\|\\nabla f\\|_\\infty\\le1}\n\\left|\\int_{S^2}f\\,d\\nu\\right|.\n```\n\nAn equivalent $`C^1`$ norm changes only the constant.\n\nThis is the remaining $`k\\ge3`$ portion of Conjecture 1.7 in the 2021 preprint, renumbered Conjecture 1.8 in the accepted version. The case $`k=2`$ is already Theorem 1.7 of that version. The constant may depend on $`k`$; uniformity over all $`k`$ is not requested. Integer weights allow several bubbles to concentrate at the same point. The comparison measure may contain Dirac masses even though $`\\mu`$ is admissible.\n\n## Application\n\nThe estimate would quantify how spectral data close to the optimal higher eigenvalue bound constrain the geometry of a surface. It would identify, in a weak measure distance and after conformal reparametrization, the round component and concentrated bubbles arising in nearly optimal spectral metrics.\n\n## References\n\n- [Mikhail Karpukhin, Mickaël Nahon, Iosif Polterovich and Daniel Stern, *Stability of isoperimetric inequalities for Laplace eigenvalues on surfaces*, arXiv:2106.15043v1 (29 June 2021)](https://arxiv.org/abs/2106.15043v1), Section 1.2 and Conjecture 1.7.\n- [Author accepted version, pp. 2–6](https://discovery.ucl.ac.uk/10205710/1/stability_submit_v2.pdf), definition (1.4), Theorem 1.7, Conjecture 1.8 and Remark 1.9. Published in *Journal of Differential Geometry* **129** (2025), no. 2, 415–490; [DOI 10.4310/jdg/1738163208](https://doi.org/10.4310/jdg/1738163208). The [institutional record](https://discovery.ucl.ac.uk/id/eprint/10205710/) identifies this PDF as the accepted manuscript.\n\n- [Zuoqin Wang and Qingwei Zeng, *Improvements of Classical Eigenvalue Inequalities I: Quantitative Hersch-deficit and the Joint Spectral Range on the Two-Sphere*, arXiv:2609.32443v1 (26 September 2026)](https://arxiv.org/html/2609.32443v1), Theorems 1.1–1.4. These concern reciprocal-sum and low-eigenvalue deficits, rather than the higher-index bubbling estimate above.\n- [Denis Vinokurov, *Maximizing higher eigenvalues in dimensions three and above*, arXiv:2506.09328v3 (30 July 2026)](https://arxiv.org/html/2506.09328v3), Theorem 1.1. Its source manifolds have dimension at least three.\n\n## Status review\n\n\n**Known cases:** The residual starts at k>=3 and asks quantitative distance to an integer-weighted bubble measure. Low-index Hersch deficits and higher-dimensional eigenvalue optimization do not establish this higher-index sphere stability.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe residual starts at k>=3 and asks quantitative distance to an integer-weighted bubble measure. Low-index Hersch deficits and higher-dimensional eigenvalue optimization do not establish this higher-index sphere stability.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe September 2026 Wang–Zeng estimates control a reciprocal-sum deficit near the single round measure; their geometric theorem does not give the integer-weight bubbling estimate for $`k\\ge3`$. Vinokurov\\'s higher-eigenvalue realization theorem applies in source dimension at least three, whereas the question here is on $`S^2`$.\n\nThe accepted manuscript retains the conjecture for general $`k`$, while establishing the case $`k=2`$. Its discussion explains why the $`W^{-1,2}`$ norm used for some first eigenvalue results cannot be substituted here: a Dirac mass does not belong to that dual space.\n\nCurrent author publication lists and selected newer main statements were checked through 23 October 2026. The 2025 work on the second variation of Laplace eigenvalues concerns critical metrics and torus optimization; the October 2026 Morse-index paper treats particular free-boundary and closed minimal surfaces. The revised 2025 Dirichlet-spectrum stability paper concerns Euclidean domains with boundary and estimates relative to a ball. These statements do not establish the sphere-measure estimate above.\n\nSearches covered the exact title, conjecture numbers in both versions, the authors, higher eigenvalue stability, bubbling, later proofs and counterexamples, and indexed Prove2Me results. The current OpenAI Math overview was also checked for relevant aliases. No matching complete resolution was located; these bounded checks do not prove that no solution exists.\n\nAn all-status AIM and FURTHER comparison returned buckling ratios, Steklov multiplicity and maximizer questions, feedback stabilization, and thermal insulation. Their complete matched statements concern different operators, domains or conclusions. No equivalent problem was identified among those records. The [dated audit](../FURTHER_problems/_tracking/sphere-eigenvalue-stability-independent-peer-2026-10-23.json) records the independent statement comparison, additional September 2026 result, final duplicate checks and source-access limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-23a295b582937de3**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "higher eigenvalue stability",
+    "Karpukhin",
+    "Nahon",
+    "bubbling"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"higher eigenvalue\" \"stability\" \"bubbling\" sphere 2026"
+    },
+    {
+      "query": "\"higher eigenvalue\" \"stability\" \"bubbling\" sphere",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://discovery.ucl.ac.uk/10205710/1/stability_submit_v2.pdf",
+      "locator": "acceptedmanuscript2025 Theorem1.7/Conjecture1.8/Remark1.9 physicalpp5–6; 2609.32443v1 primaryabstract26September2026"
+    }
+  ],
+  "scope_comparison": "Actual accepted body proves k=2 and leaves integer-weighted bubble stability for general k. September Hersch reciprocal-sum and first/second eigenvalue deficits concern low indices/single round measure, not this C1-dual quantitative estimate for every fixed k>=3. Higher-dimensional maximization changes source dimension.",
+  "recommendation": "Retain partial status; no complete matching proof or announcement found in bounded current checks.",
+  "limitations": "Negative searches do not establish continued openness; explicit narrower primary hypotheses suffice to exclude the cited comparators as full solutions.",
+  "announcement_routing": {
+    "localID": "1015",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "higher eigenvalue stability",
+          "Karpukhin",
+          "Nahon",
+          "bubbling"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "higher eigenvalue stability",
+          "Karpukhin",
+          "Nahon",
+          "bubbling"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "higher eigenvalue stability",
+        "Karpukhin",
+        "Nahon",
+        "bubbling"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

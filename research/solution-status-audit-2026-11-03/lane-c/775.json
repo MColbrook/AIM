@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "775",
+  "manifest_index": 619,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "775",
+    "title": "The exact measurable planar unit-distance-avoidance density",
+    "area": "Geometry and topology",
+    "file": "problems/775-the-exact-measurable-planar-unit-distance-avoidance-density.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-2c3c2e1ff07f2a96",
+    "group": "geometry-topology",
+    "source_sha256": "774a6e110a5343266529dab5fdbf648502686c78fead07f0067d6f101fbcd014",
+    "statement_sha256": "eea5cae5759deba68271af26bc4981c0afbcb7813be6125abf9b6d4c99bb89fb",
+    "state": "unreviewed"
+  },
+  "source_sha256": "774a6e110a5343266529dab5fdbf648502686c78fead07f0067d6f101fbcd014",
+  "statement_sha256": "eea5cae5759deba68271af26bc4981c0afbcb7813be6125abf9b6d4c99bb89fb",
+  "actual_source_sha256": "774a6e110a5343266529dab5fdbf648502686c78fead07f0067d6f101fbcd014",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For a Lebesgue-measurable set $`A\\subset\\mathbb R^2`$ having no two points at Euclidean distance exactly $`1`$, set\n```math\n\\overline\\delta(A)=\\limsup_{R\\to\\infty}\\frac{|A\\cap B(0,R)|}{\\pi R^2},\n\\qquad m_1(\\mathbb R^2)=\\sup_A\\overline\\delta(A).\n```\n\n**Determine $`m_1(\\mathbb R^2)`$ exactly.** In particular, is it equal to Croft's optimized periodic tortoise density\n```math\n\\delta_C=\\max_{\\sqrt3/2\\le h\\le1}\n\\frac{\\pi-6\\arccos h+6h\\sqrt{1-h^2}}{2\\sqrt3(1+h)^2}\n\\approx0.2293647316?\n```\n\nA tortoise is an open radius-$`1/2`$ disc intersected with an aligned open regular hexagon of height $`h`$, repeated on a triangular lattice of spacing $`1+h`$. The formula is its area divided by lattice-cell area.",
+  "full_local_page_read": true,
+  "queries": [
+    "exact density planar measurable set avoids unit distance Croft 2026",
+    "exact density planar measurable set avoids unit distance Croft 2026 (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "exact density planar measurable set avoids unit distance Croft 2026 (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.15424v1",
+      "primary_body_access_gap": false,
+      "version_or_date": "v1, October2026 actual theorem read; Ruhland2408.10076 latestv4,18June2025 record and body inspected",
+      "locator": "Theorem1.1,Corollary1.2,following paragraph;Ruhlandv4 abstract and§5",
+      "scope_comparison": "The October theorem identifies the limiting worst finite independence ratio with m1 but explicitly does not evaluate m1. Its numeric interval remains Croft≤m1≤0.2470, so the exact-density target remains unresolved by that theorem. The 2024 Ruhland search hit claiming an improved construction is superseded: v4 is retitled No new lower bound and says a severe error was corrected without improving Croft. Strict-quarter and double-cap results have different conclusions. No matching exact-value announcement located."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The October theorem identifies the limiting worst finite independence ratio with m1 but explicitly does not evaluate m1. Its numeric interval remains Croft≤m1≤0.2470, so the exact-density target remains unresolved by that theorem. The 2024 Ruhland search hit claiming an improved construction is superseded: v4 is retitled No new lower bound and says a severe error was corrected without improving Croft. Strict-quarter and double-cap results have different conclusions. No matching exact-value announcement located.",
+  "latest_version_check": "v1, October2026 actual theorem read; Ruhland2408.10076 latestv4,18June2025 record and body inspected",
+  "gap_retraction_check": "Ruhland2408.10076v4 explicitly corrects the earlier improved-density claim after a severe error; v1 was not used as current evidence. The October transfer proof was scope-read, not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

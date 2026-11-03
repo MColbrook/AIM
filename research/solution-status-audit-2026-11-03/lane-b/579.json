@@ -1,0 +1,127 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "579",
+  "manifest_index": 447,
+  "original_target": {
+    "id": "579",
+    "title": "Can a Heisenberg surface be more than one-half Hölder?",
+    "area": "Geometry and topology",
+    "file": "problems/579-can-a-heisenberg-surface-be-more-than-one-half-holder.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-9ebaedcfc1da3807",
+    "group": "geometry-topology",
+    "source_sha256": "00663a36bf74b0b176ebd917854748608e6d87d4a8b0f6612427c40911ba4002",
+    "statement_sha256": "ab7900cbc46895f3a3cba55b875c47807b2b0b9a4a47653f5b6ac7b45c6b8b38",
+    "state": "unreviewed"
+  },
+  "source_sha256": "00663a36bf74b0b176ebd917854748608e6d87d4a8b0f6612427c40911ba4002",
+  "statement_sha256": "ab7900cbc46895f3a3cba55b875c47807b2b0b9a4a47653f5b6ac7b45c6b8b38",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T14:03:57.868407+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "recommended_status": "Solved",
+  "scope_comparison": "The proposed Theorem1.1 constructs an injective closed planar disk embedding in H1 with CC exponent1/2+1/1800. Restriction to its interior meets the local target. Sections8–9 claim injectivity and CC Holder control for the same limit map. The authors explicitly label the proof preliminary and not human-verified.",
+  "primary_sources": [
+    {
+      "url": "https://sites.pitt.edu/~hajlasz/Gromov/Gromov_conjecture.pdf",
+      "locator": "6September2026 preliminary draft; frontpage disclaimer, Theorem1.1 p2, Proposition8.2, Proposition9.2 and completion p40",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2607.03667v2",
+      "locator": "AppendixA points to the proposed n=1 construction; current v2 6September2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/1601.00956",
+      "locator": "Separate old claim withdrawn,11March2016",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Heisenberg\" \"Hölder\" \"1/2\" \"2026\" embedding",
+    "\"Heisenberg\" \"Hölder\" \"embedding\" 2026 [domains arxiv.org,zenodo.org,hal.science,github.com]"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Heisenberg",
+        "Hölder embedding",
+        "Hajlasz",
+        "Schikorra"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-16-000014",
+          "title": "Finite quantum designs: mutually unbiased bases, SIC-POVMs, and the Welch and Gerzon bounds"
+        },
+        {
+          "id": "PALOMAR-2026-10-01-000005",
+          "title": "Local conjugacy in prosolvable groups"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Heisenberg",
+        "Hölder embedding",
+        "Hajlasz",
+        "Schikorra"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00733v1",
+          "title": "Haagerup vertex operator algebras at central charge eight"
+        },
+        {
+          "id": "hexagon:2610.00692v1",
+          "title": "The partition exponent in the graded pieces of the Claude 3-SAT algorithm is optimal for pieces of that shape"
+        },
+        {
+          "id": "hexagon:2610.00544v2",
+          "title": "The Height-Conductor Ratio on Curve Towers: Closed Forms for the Fermat Tower, the One-Third Barrier, and the Attainable Set"
+        },
+        {
+          "id": "hexagon:2610.00453v1",
+          "title": "Faster-than-power-law decay of order parameter correlations in the two-dimensional RP2 model: a rigorous result by vibe-proving"
+        },
+        {
+          "id": "hexagon:2610.00405v1",
+          "title": "Quaternionic Heisenberg-Robertson-Schrodinger and  Maccone-Pati Uncertainty Principles"
+        },
+        {
+          "id": "hexagon:2610.00379v1",
+          "title": "Octonionic Heisenberg-Robertson-Schrodinger and Maccone-Pati Uncertainty Principles"
+        },
+        {
+          "id": "hexagon:2610.00253v1",
+          "title": "$C_2$-cofiniteness of logarithmic $W$-algebras"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Authors say proposed proof/calculations are not yet verified by the human authors and the draft is not ready for arXiv. Full-scope announcement only, not correctness certification. Root independently inspected the PDF in RAM; local text and SHA receipt retained."
+  ],
+  "canonical_update_required": true,
+  "new_discovery": true,
+  "full_match_type": "unverified-announcement",
+  "required_status_qualification": "Complete solution announced; proof not independently verified in this audit.",
+  "root_scope_check": true
+}

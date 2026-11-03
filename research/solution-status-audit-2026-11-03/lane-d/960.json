@@ -1,0 +1,88 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "960",
+  "manifest_index": 804,
+  "checked_date": "2026-11-03",
+  "source_sha256": "c5ceda3855c9e046865aa8d5fcbc2230c5020ceb552d1b08892e0b832509d6e3",
+  "statement_sha256": "550e98f840fce4502469dfd18774bc059e723be0519bc42633a3e0604f66a944",
+  "original_target": {
+    "id": "960",
+    "title": "Does the rescaled vectorial doubly nonlinear flow have a full limit?",
+    "area": "Partial differential equations; nonlinear evolution and spectral asymptotics",
+    "file": "problems/960-does-the-rescaled-vectorial-doubly-nonlinear-flow-have-a-full-limit.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f3817289a92134ca",
+    "group": "pdes-materials",
+    "source_sha256": "c5ceda3855c9e046865aa8d5fcbc2230c5020ceb552d1b08892e0b832509d6e3",
+    "statement_sha256": "550e98f840fce4502469dfd18774bc059e723be0519bc42633a3e0604f66a944",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^n`$ be a bounded domain with smooth boundary, $`m\\geq2`$, and $`1<p<\\infty`$. Given $`g\\in W^{1,p}_0(\\Omega;\\mathbb R^m)`$, consider a weak solution $`v`$ of Hynd's vectorial Dirichlet flow\n\n```math\n|v_t|^{p-2}v_t=\\mathrm{div}(|Dv|^{p-2}Dv),\\qquad\nv|_{\\partial\\Omega}=0,\\qquad v(\\cdot,0)=g.\n```\n\n\nSet\n\n```math\n\\Lambda_p=\\inf_{0\\ne u\\in W^{1,p}_0(\\Omega;\\mathbb R^m)}\n\\frac{\\int_\\Omega |Du|^p\\,dx}{\\int_\\Omega|u|^p\\,dx},\n\\qquad \\Upsilon_p=\\Lambda_p^{1/(p-1)}.\n```\n\n\nSuppose, as in Hynd's Theorem 1.3, that\n\n```math\n\\liminf_{t\\to\\infty}e^{p\\Upsilon_p t}\\int_\\Omega|Dv(x,t)|^p\\,dx>0.\n```\n\n\nFor $`p\\ne2`$, must **the entire trajectory** $`e^{\\Upsilon_p t}v(\\cdot,t)`$ converge strongly in $`W^{1,p}_0(\\Omega;\\mathbb R^m)`$ as $`t\\to\\infty`$ to one vectorial $`p`$-ground state? Hynd proved that every time sequence has a further ground-state convergent subsequence. The question asks whether different subsequences can select different limits. The $`p=2`$ flow decouples into heat equations, so the unresolved focus is the nonlinear vectorial case.",
+  "full_original_page": "# 960. Does the rescaled vectorial doubly nonlinear flow have a full limit?\n\n**Area:** Partial differential equations; nonlinear evolution and spectral asymptotics\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`\\Omega\\subset\\mathbb R^n`$ be a bounded domain with smooth boundary, $`m\\geq2`$, and $`1<p<\\infty`$. Given $`g\\in W^{1,p}_0(\\Omega;\\mathbb R^m)`$, consider a weak solution $`v`$ of Hynd's vectorial Dirichlet flow\n\n```math\n|v_t|^{p-2}v_t=\\mathrm{div}(|Dv|^{p-2}Dv),\\qquad\nv|_{\\partial\\Omega}=0,\\qquad v(\\cdot,0)=g.\n```\n\n\nSet\n\n```math\n\\Lambda_p=\\inf_{0\\ne u\\in W^{1,p}_0(\\Omega;\\mathbb R^m)}\n\\frac{\\int_\\Omega |Du|^p\\,dx}{\\int_\\Omega|u|^p\\,dx},\n\\qquad \\Upsilon_p=\\Lambda_p^{1/(p-1)}.\n```\n\n\nSuppose, as in Hynd's Theorem 1.3, that\n\n```math\n\\liminf_{t\\to\\infty}e^{p\\Upsilon_p t}\\int_\\Omega|Dv(x,t)|^p\\,dx>0.\n```\n\n\nFor $`p\\ne2`$, must **the entire trajectory** $`e^{\\Upsilon_p t}v(\\cdot,t)`$ converge strongly in $`W^{1,p}_0(\\Omega;\\mathbb R^m)`$ as $`t\\to\\infty`$ to one vectorial $`p`$-ground state? Hynd proved that every time sequence has a further ground-state convergent subsequence. The question asks whether different subsequences can select different limits. The $`p=2`$ flow decouples into heat equations, so the unresolved focus is the nonlinear vectorial case.\n\n## Application\n\nThe flow is a nonlinear method for approaching the sharp vectorial Poincaré quotient. Full convergence would justify using a long run to select one ground state; subsequential compactness alone leaves that selection unresolved.\n\n## References\n\n1. R. Hynd, [*Compactness methods for doubly nonlinear parabolic systems*](https://doi.org/10.1090/tran/6828), *Transactions of the American Mathematical Society* **369** (2017), 5031–5068. Model (1.8), Theorem 1.3 and the explicit conjecture following its proof in §5; [author PDF](https://bpb-us-w2.wpmucdn.com/web.sas.upenn.edu/dist/6/47/files/2017/10/TAMSCompactness-1g9c4rx.pdf).\n2. R. Hynd and E. Lindgren, [*Large time behavior of solutions of Trudinger's equation*](https://arxiv.org/abs/1702.01630), *Journal of Differential Equations* **274** (2021), 188–230. Scalar full-limit result for a related equation, not a vectorial resolution.\n3. R. Hynd, B. Kawohl and P. Lindqvist, [*On the uniqueness of eigenfunctions for the vectorial $`p`$-Laplacian*](https://doi.org/10.1007/s00013-023-01920-8), *Archiv der Mathematik* **121** (2023), 745–755. Classifies vectorial Rayleigh minimizers; does not establish temporal convergence of this flow.\n4. L. Bungert and M. Burger, [*Asymptotic profiles of nonlinear homogeneous evolution equations of gradient flow type*](https://arxiv.org/abs/1906.09856), arXiv:1906.09856 (2019). Related abstract gradient-flow theory with different evolution hypotheses.\n\n## Status review\n\n\n**Known cases:** Subsequential ground-state convergence and classification of vectorial ground states do not establish convergence of the whole nonlinear trajectory. Scalar and standard gradient-flow theorems use different equations or simplicity assumptions.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nSubsequential ground-state convergence and classification of vectorial ground states do not establish convergence of the whole nonlinear trajectory. Scalar and standard gradient-flow theorems use different equations or simplicity assumptions.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe explicit conjecture appears after Hynd's subsequential theorem. Later vectorial eigenfunction classification describes possible ground states but supplies no assertion that a trajectory cannot drift among them. Scalar and Hilbertian-flow convergence results have different state spaces or dynamics. A bounded resolution and announcement search through 2026-10-22 found no proof for this exact vectorial full-limit question. See the [source-bound original passage](../FURTHER_problems/_tracking/parallel/rough-filtering/arxiv-body-secondpass-0189-remote-attested-review.json), [status audit](../FURTHER_problems/_tracking/hynd-vectorial-full-limit-status-2026-10-22.json), and [semantic duplicate audit](../FURTHER_problems/_tracking/hynd-vectorial-full-limit-duplicates-2026-10-22.json). These checks do not establish that every possible later result has been indexed.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f3817289a92134ca**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary scope passages inspected, not full proof certification."
+  ],
+  "aliases": [
+    "doubly nonlinear",
+    "Hynd"
+  ],
+  "queries": [
+    "\"Hynd\" \"vectorial\" \"convergence\" doubly nonlinear 2026",
+    "\"Hynd\" \"vectorial\" \"convergence\" doubly nonlinear; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"Compactness methods for doubly nonlinear parabolic systems\" convergence"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://bpb-us-w2.wpmucdn.com/web.sas.upenn.edu/dist/6/47/files/2017/10/TAMSCompactness-1g9c4rx.pdf",
+      "locator": "Theorem1.3 proof end, native PDFp35 lines3295–3344",
+      "comparison": "Actual proof gives further ground-state convergent subsequences and expressly conjectures whole rescaled limit. Classification of vectorial eigenfunctions fixes possible limit forms but does not prevent time-dependent direction drift; scalar/Hilbert gradient flow results have different equations."
+    }
+  ],
+  "rationale": "No current full vectorial p!=2 trajectory convergence theorem or matching announcement found.",
+  "announcement_routing": {
+    "localID": "960",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "doubly nonlinear",
+          "Hynd"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "doubly nonlinear",
+          "Hynd"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "doubly nonlinear",
+        "Hynd"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

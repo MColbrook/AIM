@@ -1,0 +1,86 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "547",
+  "manifest_index": 426,
+  "original_target": {
+    "id": "547",
+    "title": "Lawson surfaces as Willmore minimizers in every higher genus",
+    "area": "Geometric analysis and bending-energy minimization",
+    "file": "problems/547-lawson-surfaces-as-willmore-minimizers-in-every-higher-genus.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ef7b1502c4175743",
+    "group": "geometry-topology",
+    "source_sha256": "d7964fc933426d7d06dccca670212640162726581d4d6e2c71bf08b754a41164",
+    "statement_sha256": "8b001f17e1bad2be6f3489a7427e91b16803609510287fd89910b1c96a1de597",
+    "state": "unreviewed"
+  },
+  "source_sha256": "d7964fc933426d7d06dccca670212640162726581d4d6e2c71bf08b754a41164",
+  "statement_sha256": "8b001f17e1bad2be6f3489a7427e91b16803609510287fd89910b1c96a1de597",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:50:53.380080+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Theorem1.1 and section4 prove a Willmore lower bound and Mobius equality classification only under the specified halfturn-group symmetry. No unrestricted all-genus lower bound and equality classification was located. Mobius bands, Klein bottles, higher codimension and fixed conformal classes have different scopes.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2410.12582v2",
+      "locator": "Theorem1.1 and section4; current v2, 1 December2025",
+      "body_inspected": true
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s12220-026-02501-1",
+      "locator": "Published metadata and abstract",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"Lawson\" \"Willmore minimizers\" 2026",
+    "\"Lawson\" \"Willmore\" conjecture solution (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Lawson\" \"Willmore\" \"2026\" announcement"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Lawson",
+        "Willmore"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Lawson",
+        "Willmore"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00010v1",
+          "title": "A contractible open four-manifold with a complete metric of uniformly positive scalar curvature"
+        },
+        {
+          "id": "hexagon:2609.00152v1",
+          "title": "A Lean Formalization of the Classical Seifert van Kampen Groupoid Theorem"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "Full published-body parity was not established."
+  ],
+  "canonical_update_required": false
+}

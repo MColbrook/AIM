@@ -71,6 +71,6 @@ The publication refresh also checked Löfberg's September 15, 2026 hardness clai
 
 Later results on descriptor-system controllability and time-delayed feedback use different admissible inputs or controllers. The reviewed 2025 Ackermann/Greville paper describes plant-dependent algebraic conditions; only its publisher excerpt was accessible, and no general dimension-classification claim was found there. These limits, and the older dates of the explicit status sources, remain recorded in the audit.
 
-This differs from the [Belgian chocolate threshold](308-belgian-chocolate-threshold.md), which concerns a particular scalar plant family and stable dynamic controllers of unrestricted finite order. The [Witsenhausen benchmark](134-witsenhausen-exact-optimum.md) instead asks for an optimal cost in a decentralized stochastic control problem.
+This differs from the [Belgian chocolate threshold](../cut_problems/problems/308-belgian-chocolate-threshold.md), which concerns a particular scalar plant family and stable dynamic controllers of unrestricted finite order. The [Witsenhausen benchmark](134-witsenhausen-exact-optimum.md) instead asks for an optimal cost in a decentralized stochastic control problem.
 
 Resolution searches and duplicate checks were refreshed immediately before the September 17, 2026 batch integration. Review was a separated adversarial self-pass; no independent agent or human review is claimed.

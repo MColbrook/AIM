@@ -1,0 +1,90 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "549",
+  "manifest_index": 428,
+  "original_target": {
+    "id": "549",
+    "title": "Ordinary posterior contraction for heavy-tailed neural-network priors",
+    "area": "Bayesian nonparametrics and neural networks",
+    "file": "problems/549-heavy-tailed-network-ordinary-posterior.md",
+    "status": "Open",
+    "last_checked": "2026-09-24",
+    "group": "probability-statistics",
+    "source_sha256": "2d3c80e1e087fa6585c64081c729b6bb243fb05be1007c165ce8d3b26fd86cd2",
+    "statement_sha256": "9e2828b0d7cb8fad362265d37b68c960d92f1b3cf899b525276557d1ce61a097",
+    "state": "unreviewed"
+  },
+  "source_sha256": "2d3c80e1e087fa6585c64081c729b6bb243fb05be1007c165ce8d3b26fd86cd2",
+  "statement_sha256": "9e2828b0d7cb8fad362265d37b68c960d92f1b3cf899b525276557d1ce61a097",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:56:05.903024+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Ordinary alpha=1 unclipped posterior contraction for arbitrary design distribution and the prescribed deep common-scaling prior remains unmatched. JMLRTheorem13 uses a product prior on f and unknown variance, unlike fixed known variance. The June2026 source explicitly leaves rho=1 random design open; the October theorem fixes eta<1 and a different shallow hierarchical prior.",
+  "primary_sources": [
+    {
+      "url": "https://www.jmlr.org/papers/volume26/24-0894/24-0894.pdf",
+      "locator": "Theorem13 pp21–22",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2606.20480v2",
+      "locator": "Section5, current v2 19June2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2610.23308v1",
+      "locator": "Theorems1–2 and section5, 16October2026",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"heavy-tailed\" \"ordinary posterior\" neural networks 2026 Castillo Egels",
+    "\"posterior\" \"heavy-tailed\" \"Castillo\" \"ordinary\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"heavy-tailed\" \"ordinary posterior\" contraction Castillo 2026 proof"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "heavy-tailed",
+        "posterior"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-03-000005",
+          "title": "Optimal Information and Concavification in Bayesian Persuasion"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "heavy-tailed",
+        "posterior"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00700v1",
+          "title": "Shared Randomness and Normalization in One-Use Loop Communication"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

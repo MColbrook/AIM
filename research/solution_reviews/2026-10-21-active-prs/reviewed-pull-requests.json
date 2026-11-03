@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-21",
+  "repository": "https://github.com/MColbrook/AIM",
+  "base_commit": "5e606437cd49aa16298e60629b9ed5a57de8b8ca",
+  "review_scope": "The five pull requests open at the start of this review batch; pinned submitted revisions and individually preserved integration commits.",
+  "reviewer_scope": "Independent OpenAI Codex contexts and a coordinating review; AI mathematical review without human peer review or Lean verification.",
+  "pull_requests": [
+    {
+      "pr": 172,
+      "aim": 541,
+      "submitted_head": "71ed609ac0d213f399348e2bf6669767b8444ca0",
+      "integration_commit": "4ba75563578a184bf6ab51d7f0077dc44dae0b7f",
+      "status": "Partial",
+      "disposition": "Accept linear counterexample and cubic convergence; quadratic case remains open.",
+      "reports": [
+        "172-review.md",
+        "172-second-review.md",
+        "172-artifact-check.json"
+      ],
+      "prior_work": "A 2024 cubic-convergence announcement is credited. No earlier available complete proof of the exact RMD scheme was located.",
+      "url": "https://github.com/MColbrook/AIM/pull/172"
+    },
+    {
+      "pr": 173,
+      "aim": 666,
+      "submitted_head": "dded7e8e8a65e059d8d1931c3eb2ca07536b8732",
+      "integration_commit": "e27af95ece800ae7a7e0c8460bd83908406b4141",
+      "status": "Open",
+      "disposition": "Add canonical Stiefel injectivity-radius problem under Imaging, control, geometry and dynamics; preserve previously issued archive IDs 652 through 665.",
+      "reports": [
+        "173-new-problem-review.md"
+      ],
+      "prior_work": "The canonical metric conjecture remains open in the June 2026 primary source; the solved Euclidean metric is distinct.",
+      "url": "https://github.com/MColbrook/AIM/pull/173"
+    },
+    {
+      "pr": 175,
+      "aim": 458,
+      "submitted_head": "a9e2073c1da1a576c699b0a71661068013c43ab7",
+      "integration_commit": "8b137cf92d44243c00101767d467e02ff38f0222",
+      "status": "Solved",
+      "disposition": "Accept the revised compatible channel right inverses and exact finite smooth-noise local no-slip theory.",
+      "reports": [
+        "175-review.md",
+        "175-second-review.md"
+      ],
+      "prior_work": "No earlier matching complete theorem was located; the Kunstmann-Weis correction and weaker or differently bounded theories are discussed in the reports.",
+      "url": "https://github.com/MColbrook/AIM/pull/175"
+    },
+    {
+      "pr": 176,
+      "aim": 571,
+      "submitted_head": "3cc0f979cb475aeacc120e0523897a9786da1850",
+      "integration_commit": "1e1249a729497fdfc3c96b44d61dba74077c34bb",
+      "status": "Solved",
+      "disposition": "Accept the unchanged all-parameter formula after a fresh complete independent 608-system replay covering 618 cell memberships.",
+      "reports": [
+        "176-proof-review.md",
+        "176-review.md",
+        "571-independent-replay-summary.json"
+      ],
+      "prior_work": "No earlier matching all-parameter resolution was located; geometric reduction and finite classifications are attributed.",
+      "url": "https://github.com/MColbrook/AIM/pull/176"
+    },
+    {
+      "pr": 177,
+      "aim": 482,
+      "submitted_head": "9a0afd1f0e61b7880026edc282df2576b62183bd",
+      "integration_commit": "e2b20762e73e42d939041ab0528469ffe9228c9b",
+      "status": "Solved",
+      "disposition": "Restore manuscript author attribution; existing mathematical result and status are unchanged.",
+      "reports": [
+        "177-attribution-review.md"
+      ],
+      "prior_work": "The unchanged proof and prior-source search were rechecked; no earlier matching full counterexample was located.",
+      "url": "https://github.com/MColbrook/AIM/pull/177"
+    }
+  ],
+  "validation": {
+    "catalogue_regressions": {
+      "passed": 60,
+      "seconds": 795.909,
+      "candidate_tree": "eff5a79afc71586895c7f26a2b686d666f2f31f7"
+    },
+    "original_geometry_export_tests": {
+      "passed": 7,
+      "seconds": 17.564
+    },
+    "supplement_receipt_cache_failure_tests": {
+      "passed": 11,
+      "seconds": 129.463
+    },
+    "independent_571_replay": {
+      "status": "FULL_REPLAY_MATCHED",
+      "unique_inputs": 608,
+      "cell_members": 618,
+      "cached_results_reused": 0,
+      "failed_systems": 0,
+      "bundle_sha256": "3d693c1c1b7656b285b587f041c03f21d55154b0c88866ed559fcfc505ec3de8",
+      "summary": "571-independent-replay-summary.json",
+      "bundle": "571-independent-replay-bundle.json"
+    },
+    "preserved_target_sections": {
+      "aim_ids": [
+        458,
+        482,
+        541,
+        571
+      ],
+      "sections": [
+        "Problem statement",
+        "Application",
+        "References"
+      ],
+      "compared_against": "5e606437cd49aa16298e60629b9ed5a57de8b8ca",
+      "matched": 12
+    },
+    "original_571_package_files_unchanged": 17,
+    "excluded_work": [
+      "FURTHER_problems",
+      "Other chats untracked solution folders"
+    ]
+  },
+  "publication_note": "Integration commit identities are fixed before the final batch-index commit; no self-referential final receipt hash is required."
+}

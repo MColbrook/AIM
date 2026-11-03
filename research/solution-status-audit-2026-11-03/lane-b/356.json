@@ -1,0 +1,42 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 291,
+  "source_sha256": "e0fbc850da64e773a7c63b1a3ed0fff9c265de6b5f9bc2ca311bcc1427a4cedc",
+  "statement_sha256": "c2337f388a2db8e2d3a38babac2b7de9f9efdedebd37b0b7ac40c76a55133fec",
+  "original_target": {
+    "id": "356",
+    "title": "Finite-time Langmuir collapse for the three-dimensional Zakharov system",
+    "area": "Plasma physics; coupled dispersive equations",
+    "file": "problems/356-zakharov-three-dimensional-collapse.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "e0fbc850da64e773a7c63b1a3ed0fff9c265de6b5f9bc2ca311bcc1427a4cedc",
+    "statement_sha256": "c2337f388a2db8e2d3a38babac2b7de9f9efdedebd37b0b7ac40c76a55133fec",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "356",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"three dimensional Zakharov\" finite time blowup 2026",
+    "\"Zakharov\" \"finite-time blowup\" \"three\" site:arxiv.org 2026",
+    "\"Zakharov\" \"collapse\" site:zenodo.org OR site:hal.science OR site:github.com \"3D\""
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.14993v1",
+      "version": "v1 15 August 2026; current abs only v1",
+      "locators": "Theorems 1.1–1.3; Remark 1",
+      "body_inspected": true,
+      "scope": "Growup includes finite or infinite time, and Remark 1 explicitly distinguishes the unresolved finite-time blowup construction in 3D."
+    }
+  ],
+  "registry_checks": "Palomar Zakharov alias is Dmitrii Zakharov EGZ combinatorics, not this PDE; Hexagon/OpenAI no matching alias. arXiv, Zenodo, HAL, GitHub, primary author/publisher searches executed.",
+  "scope_comparison": "Need smooth rapidly decaying physical 3D Schrödinger-wave Zakharov data with finite maximal energy time and norm divergence. Infinite-time growup, blowup alternatives, 2D or 4D constructions, Klein-Gordon modifications and Zakharov-Kuznetsov (KdV-type) dynamics have different conclusions/equations.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Actual latest relevant primary classification retains finite/infinite ambiguity."
+}

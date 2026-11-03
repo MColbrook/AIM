@@ -1,0 +1,71 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "105",
+  "manifest_index": 78,
+  "original_target": {
+    "id": "105",
+    "title": "Baur’s high-field disk conjecture for all higher eigenvalues",
+    "area": "Magnetic confinement and shape design",
+    "file": "problems/105-baur-high-field-disk.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "spectral2",
+    "source_sha256": "75d964d435e525193723302ada8401f15890073cc0a0bb3159a388a8c38152fb",
+    "statement_sha256": "446b1bf03ce19f42d138c8a2b82cfeeec946bddceab4e9825590004d7fe90a24",
+    "state": "unreviewed"
+  },
+  "source_sha256": "75d964d435e525193723302ada8401f15890073cc0a0bb3159a388a8c38152fb",
+  "statement_sha256": "446b1bf03ce19f42d138c8a2b82cfeeec946bddceab4e9825590004d7fe90a24",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:55:49.875256+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Lotoreichik–Morin Theorem1 proves an asymptotic shape defect bound with a negative logB error. Line106 explicitly says it does not imply Baur's finite-flux conjecture even at large B. It cannot prove the exact disk inequality for all k>=2 and B|Omega|>=2pi k.",
+  "primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s12220-026-02363-7",
+      "locator": "Theorem1, lines99–108.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "Baur",
+    "magnetic Dirichlet",
+    "high-field"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Baur",
+        "magnetic Dirichlet",
+        "high-field"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Baur",
+        "magnetic Dirichlet",
+        "high-field"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; loose name/word hits are not same-target formalizations. Exact excluding hypotheses compared above."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches of arXiv, Zenodo, HAL, GitHub plus shared current Palomar, Hexagon and OpenAI metadata, and requested Colbrook author lists.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

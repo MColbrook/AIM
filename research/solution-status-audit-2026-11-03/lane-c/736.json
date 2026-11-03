@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "736",
+  "manifest_index": 580,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "736",
+    "title": "Global strong aggregation–diffusion without detailed balance",
+    "area": "Nonlocal PDEs / population dynamics",
+    "file": "problems/736-global-strong-aggregationdiffusion-without-detailed-balance.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-60456ace402b9334",
+    "group": "diffusion-materials",
+    "source_sha256": "9f87dcf59c6eadc24ec448eafbf2c84a8a47092f449e06b928bd9033ac4fe4a2",
+    "statement_sha256": "e17f90fe5954456f3798e02040224fb905e4945865b6147b074dec90d98b6465",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9f87dcf59c6eadc24ec448eafbf2c84a8a47092f449e06b928bd9033ac4fe4a2",
+  "statement_sha256": "e17f90fe5954456f3798e02040224fb905e4945865b6147b074dec90d98b6465",
+  "actual_source_sha256": "9f87dcf59c6eadc24ec448eafbf2c84a8a47092f449e06b928bd9033ac4fe4a2",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix integers $`d\\ge1`$, $`n\\ge2`$ and constants $`D_i>0`$. Let $`u_i^0\\in C_c^\\infty(\\mathbb R^d)`$ be nonnegative and not identically zero. For every ordered pair $`i,j`$, let $`K_{ij}:\\mathbb R^d\\to\\mathbb R`$ be bounded, compactly supported, even and of bounded variation. Thus $`K_{ij}(x)=K_{ij}(-x)`$ almost everywhere and its distributional gradient is a finite vector measure. The kernels may have either sign. No relation between $`K_{ij}`$ and $`K_{ji}`$ is imposed; positive weights satisfying $`\\pi_iK_{ij}=\\pi_jK_{ji}`$ need not exist.\n\nDoes the Cauchy problem on $`\\mathbb R^d`$\n\n```math\n\\partial_tu_i=D_i\\Delta u_i+\\nabla\\cdot\\left(u_i\\sum_{j=1}^n\\nabla(K_{ij}*u_j)\\right),\\qquad u_i(0)=u_i^0,\n```\n\nadmit a unique global nonnegative strong solution for every such choice, with no smallness restriction on the masses $`m_i=\\int u_i^0`$?\n\nConvolution is over $`\\mathbb R^d`$ and $`\\nabla(K_{ij}*u_j)=K_{ij}*\\nabla u_j`$ in distributions. The strong class is fixed as follows. For every finite $`T`$, require componentwise\n\n```math\nu_i\\in L^\\infty((0,T)\\times\\mathbb R^d)\n\\cap L^\\infty(0,T;L^1(\\mathbb R^d)\\cap H^1(\\mathbb R^d))\n\\cap L^2(0,T;H^2(\\mathbb R^d)),\n\\qquad \\nabla\\sqrt{u_i}\\in L^2((0,T)\\times\\mathbb R^d),\n```\n\n```math\n\\partial_tu_i\\in L^{4/3}(0,T;W^{-1,q}(\\mathbb R^d)),\\qquad\nq=\\begin{cases}2d/(2d-1),&d\\ne2,\\\\6/5,&d=2.\\end{cases}\n```\n\nRequire $`u_i(t)\\to u_i^0`$ in $`L^2`$ as $`t\\downarrow0`$ and, for every $`\\phi\\in L^4(0,T;W^{1,q'}(\\mathbb R^d))`$, where $`1/q+1/q'=1`$,\n\n```math\n\\int_0^T\\langle\\partial_tu_i,\\phi\\rangle\\,dt\n+D_i\\int_0^T\\!\\int_{\\mathbb R^d}\\nabla u_i\\cdot\\nabla\\phi\n=-\\int_0^T\\!\\int_{\\mathbb R^d}u_i\\sum_j(K_{ij}*\\nabla u_j)\\cdot\\nabla\\phi.\n```\n\nUniqueness concerns this whole class. Bounds may depend on $`T`$, all data and kernels; no uniform-in-time estimate is requested. This is a compact-kernel, smooth-data subfamily of the explicit general question in [1, §5, question 2].",
+  "full_local_page_read": true,
+  "queries": [
+    "\"aggregation diffusion\" \"irregular kernels\" \"detailed balance\" 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"irregular kernels\" \"global\"",
+    "site:palomar-registry.org OR site:hexagonmath.org \"irregular kernels\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Final AIHPC43(2026)1201–1258 doi10.4171/AIHPC/173",
+      "primary_body_access_gap": false,
+      "url": "https://ems.press/content/serial-article-files/53532",
+      "locator": "Theorems4.1–4.4 p1230; H5 detailed balance; §5 question2 p1252",
+      "scope_comparison": "Actual arbitrary-mass existence4.2/strong upgrade4.3 require H5 detailed balance; alternative4.1 has small-mass inequality. Final question2 explicitly asks systems with even kernels but violated H5. Local smooth compact data and compact bounded even BV kernels satisfy rough-kernel setting but allow arbitrary mass and nonsymmetrizable interactions. Conditional uniqueness does not supply missing existence; smooth-kernel theorems demand differentiability not available for top hats. No complete matching announcement located."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual arbitrary-mass existence4.2/strong upgrade4.3 require H5 detailed balance; alternative4.1 has small-mass inequality. Final question2 explicitly asks systems with even kernels but violated H5. Local smooth compact data and compact bounded even BV kernels satisfy rough-kernel setting but allow arbitrary mass and nonsymmetrizable interactions. Conditional uniqueness does not supply missing existence; smooth-kernel theorems demand differentiability not available for top hats. No complete matching announcement located.",
+  "latest_version_check": "Final AIHPC43(2026)1201–1258 doi10.4171/AIHPC/173",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

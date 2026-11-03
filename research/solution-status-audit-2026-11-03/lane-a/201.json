@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "201",
+  "manifest_index": 157,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "201",
+    "title": "Uniqueness of a boson star at every subcritical mass",
+    "area": "Relativistic quantum matter; self-gravitating waves",
+    "file": "problems/201-lieb-yau-boson-star-uniqueness.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-13",
+    "group": "spectral3",
+    "source_sha256": "843ab7fa0ee49d0df70c5cce6703890fc0a9702d52572a939bd9047a977dbaac",
+    "statement_sha256": "7b010ee907298cd2020f9c898d68ab8c431c39e7f8bcf6ee303d2e7bc4b0176f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "843ab7fa0ee49d0df70c5cce6703890fc0a9702d52572a939bd9047a977dbaac",
+  "statement_sha256": "7b010ee907298cd2020f9c898d68ab8c431c39e7f8bcf6ee303d2e7bc4b0176f",
+  "actual_source_sha256": "843ab7fa0ee49d0df70c5cce6703890fc0a9702d52572a939bd9047a977dbaac",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For $`u\\in H^{1/2}(\\mathbb R^3)`$ define\n\n```math\nD(u)=\\iint\\frac{|u(x)|^2|u(y)|^2}{|x-y|}\\,dx\\,dy,\\qquad K(u)=\\langle u,\\sqrt{-\\Delta}\\,u\\rangle,\n```\n\n\n\n```math\nN_* =\\inf_{u\\ne0}\\frac{2K(u)\\|u\\|_2^2}{D(u)},\\qquad \\mathcal E(u)=\\langle u,(\\sqrt{-\\Delta+1}-1)u\\rangle-\\tfrac12D(u).\n```\n\nThe square roots are Fourier multipliers. For every $`0<N<N_*`$, the infimum of $`\\mathcal E`$ over $`\\|u\\|_2^2=N`$ is attained.\n\nIs this minimizer unique modulo translation and constant phase for every such $`N`$? Precisely, must any two minimizers satisfy $`v(x)=e^{i\\theta}u(x-x_0)`$ for some $`\\theta\\in\\mathbb R`$, $`x_0\\in\\mathbb R^3`$?",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Lieb Yau\" boson star uniqueness all mass 2026",
+    "\"Lieb Yau\" boson star uniqueness all mass (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Lieb Yau\" boson star uniqueness all mass (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "arXiv:2609.23771v1,20September2026,onlyversion",
+      "scope_comparison": "The target is uniqueness modulo translations and phase for every0<N<N_*. Newer than the local September13review, the actual September20Corollary1.3 announces uniqueness in N_*−delta_*<N<N_* and explicitly leaves the intermediate-N regime open together with the older small-N result. Theorem1.1 settles a limiting massless critical equation rather than all massive subcritical minimizers. Thus this is new partial claimed progress, not a full solution; its proof was not independently certified. No later theorem covering all intermediate masses was found.",
+      "locator": "Theorems1.1/1.2,Corollary1.3 and following paragraph;Section8",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2609.23771v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The target is uniqueness modulo translations and phase for every0<N<N_*. Newer than the local September13review, the actual September20Corollary1.3 announces uniqueness in N_*−delta_*<N<N_* and explicitly leaves the intermediate-N regime open together with the older small-N result. Theorem1.1 settles a limiting massless critical equation rather than all massive subcritical minimizers. Thus this is new partial claimed progress, not a full solution; its proof was not independently certified. No later theorem covering all intermediate masses was found.",
+  "latest_version_check": "arXiv:2609.23771v1,20September2026,onlyversion",
+  "gap_retraction_check": "The paper discusses an older massless critical-equation proof gap involving nodal domains. Its own new variational proof is a claimed repair for that limiting problem; this audit only compares statements and does not certify the repair. Cor1.3 itself explicitly excludes the intermediate range.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

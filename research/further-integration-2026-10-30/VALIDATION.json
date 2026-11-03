@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-30",
+  "result": "PASS",
+  "reviewed_candidates": 409,
+  "promoted": 402,
+  "archived_without_ids": 7,
+  "current_ids": "001–1067",
+  "new_ids": "666–1067",
+  "current_problem_pages": 1058,
+  "retained_resolved_records": 9,
+  "staged_problems_remaining": 0,
+  "archived_identities": 329,
+  "unchanged_original_score_profiles": 1396,
+  "source_statement_preservation_checks": 409,
+  "documented_math_typo_corrections": 1,
+  "link_only_backlink_repairs": 3,
+  "saved_search_receipts": 198,
+  "checks": {
+    "verify_integration.py": "PASS: exact input coverage, original bytes and hashes, full disposition, no cut reintroduced, statements, references/local links, consecutive IDs, current score/export locations",
+    "verify_backfill.py": "PASS: all 111 earlier reused-ID promotions and their historical intermediate receipts",
+    "cut_problems/verify_cut.py --skip-protected": "PASS: original 321 decisions, 868 archived files, all current score/location hashes and solution-package preservation",
+    "scripts/catalogue.py --check --catalogue-only": "PASS: registered pages, required sections, metadata, math markup, local links and generated document freshness",
+    "focused_unit_tests": "PASS: 26 tests in test_cut_catalogue, ResolutionPresentationTests, NumberAllocationTests and MathFormattingTests"
+  },
+  "limits": [
+    "The protected discovery database and checkpoints were not changed; their prior full-hash check was reused instead of rehashing the unchanged large database.",
+    "Catalogue validation covers registered collection pages and generated indexes; it is not a claim that every historical research draft in the repository validates.",
+    "Current-status searches are bounded. Six exclusions follow matching complete-resolution announcements without independent certification of their entire proofs; the seventh concerns a counterexample to the literal submitted formulation."
+  ]
+}

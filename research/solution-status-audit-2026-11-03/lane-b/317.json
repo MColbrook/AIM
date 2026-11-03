@@ -1,0 +1,45 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 258,
+  "source_sha256": "5933c4bc70359ce41d1e514718283e0aacfc2fb87831c36385327ff4eda4a942",
+  "statement_sha256": "fc8e6dab57145a4638312f052ee133a0d4304ac74a2ddd8ca219e686542b892e",
+  "original_target": {
+    "id": "317",
+    "title": "Orthogonal separation of independent Gaussian polynomial statistics",
+    "area": "Probability and mathematical statistics",
+    "file": "problems/317-gaussian-polynomial-unlinking.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "probability-statistics",
+    "source_sha256": "5933c4bc70359ce41d1e514718283e0aacfc2fb87831c36385327ff4eda4a942",
+    "statement_sha256": "fc8e6dab57145a4638312f052ee133a0d4304ac74a2ddd8ca219e686542b892e",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "317",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Original independent arbitrary-degree nonconstant real polynomials of a standard Gaussian must separate into orthogonal disjoint coordinate blocks, without convexity or chaos restriction. Harge Theorem1.2 imposes convexity of both functions and analyticity/minimum-at-origin of one; Hong–Hu impose symmetric quasi-convex polynomials. Gaussian product inequalities and complex moment counterexamples do not establish the original independent-real-pair statement. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "Gaussian polynomial U conjecture unlinking solved counterexample 2026",
+    "\"Gaussian\" \"unlinking\" conjecture proof",
+    "\"Gaussian\" \"unlinking\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://www.numdam.org/article/AIHPB_2005__41_4_753_0.pdf",
+      "version": "published2005",
+      "locator": "Theorem1.2, printedp754",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "U.conjecture|unlinking|independent.*Gaussian.*polynomial",
+    "palomar_matches": 1,
+    "hexagon_matches": 3,
+    "result": "All lexical false positives (chaotic exponential map, random polynomial zeros, tiling); no matching claim."
+  }
+}

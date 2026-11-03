@@ -1,0 +1,48 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 344,
+  "source_sha256": "3b4a9f99a53ab37fbcf0b56d45ca8a0dcea82d5c960c9b8331f80b4e66685ed5",
+  "statement_sha256": "99ecbc0c836cae78f0b5d50c6f15fc7e2f29a2e89a8e9b46e584582fe337740e",
+  "original_target": {
+    "id": "425",
+    "title": "A continuous spectral symmetrization path for every domain",
+    "area": "Spectral shape optimization",
+    "file": "problems/425-a-continuous-spectral-symmetrization-path-for-every-domain.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-c9e4b2cc27a934bf",
+    "group": "spectral2",
+    "source_sha256": "3b4a9f99a53ab37fbcf0b56d45ca8a0dcea82d5c960c9b8331f80b4e66685ed5",
+    "statement_sha256": "99ecbc0c836cae78f0b5d50c6f15fc7e2f29a2e89a8e9b46e584582fe337740e",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "425",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"Buttazzo\" \"continuous\" \"symmetrization\" 2026 gamma",
+    "\"gamma\" \"continuous\" \"symmetrization\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://journalofconvexanalysis.com/articles/jca30033/jca30033.pdf?v=2",
+      "date": "2023published version",
+      "locator": "Remark3.5,p623;Theorem3.3",
+      "theorem_body_checked": true,
+      "scope": "Polyhedral paths and nested capacitary bridge; explicitly leaves general-domain gamma-continuous paths with both functionals monotone."
+    },
+    {
+      "url": "https://cvgmt.sns.it/person/262/",
+      "date": "current author listing",
+      "locator": "On the continuity of continuous Steiner symmetrization",
+      "scope": "Current author/primary routing yielded original paper, no later full resolution."
+    }
+  ],
+  "registry_checks": "Complete Palomar and Hexagon metadata and pinned OpenAI/Colbrook listings scanned for target names/aliases; no matching full claim.",
+  "scope_comparison": "Need one fixed-volume path for every bounded open domain d>=2 with full gamma continuity and simultaneous lambda1 decreasing,T increasing. Dense polyhedral class, nested paths, or one-sided continuity do not meet all requirements.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Partially resolved."
+}

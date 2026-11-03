@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "934",
+  "manifest_index": 778,
+  "checked_date": "2026-11-03",
+  "source_sha256": "2cca24d4a5457b9aa0d1d220365940ef4851fd43aae40badaca46c4b2db6d575",
+  "statement_sha256": "f8b0b221b7b4003ed91d2a708c019dc1163c52278fd677ec4fcf335c758ad29b",
+  "original_target": {
+    "id": "934",
+    "title": "Bi-invariant subspaces for invertible operators on reflexive Banach spaces",
+    "area": "Operator theory and Banach spaces",
+    "file": "problems/934-bi-invariant-subspaces-for-invertible-operators-on-reflexive-banach-spaces.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f83ff8d1cebc0b80",
+    "group": "operators",
+    "source_sha256": "2cca24d4a5457b9aa0d1d220365940ef4851fd43aae40badaca46c4b2db6d575",
+    "statement_sha256": "f8b0b221b7b4003ed91d2a708c019dc1163c52278fd677ec4fcf335c758ad29b",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`X`$ be any infinite-dimensional complex reflexive Banach space and let $`A:X\\to X`$ be a bounded invertible complex-linear operator. Must there be a norm-closed linear subspace $`M`$ such that\n```math\n\\{0\\}\\subsetneq M\\subsetneq X,\n \\qquad A(M)=M?\n```\n\nThe equality means that the **same** nontrivial subspace is invariant under both $`A`$ and $`A^{-1}`$. Equivalently, must every bounded-operator representation of the discrete group $`\\mathbb Z`$ on such an $`X`$ be reducible? This is Atzmon's question for $`\\mathbb Z`$ [1, Introduction and Section 4].",
+  "full_original_page": "# 934. Bi-invariant subspaces for invertible operators on reflexive Banach spaces\n\n**Area:** Operator theory and Banach spaces\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`X`$ be any infinite-dimensional complex reflexive Banach space and let $`A:X\\to X`$ be a bounded invertible complex-linear operator. Must there be a norm-closed linear subspace $`M`$ such that\n```math\n\\{0\\}\\subsetneq M\\subsetneq X,\n \\qquad A(M)=M?\n```\n\nThe equality means that the **same** nontrivial subspace is invariant under both $`A`$ and $`A^{-1}`$. Equivalently, must every bounded-operator representation of the discrete group $`\\mathbb Z`$ on such an $`X`$ be reducible? This is Atzmon's question for $`\\mathbb Z`$ [1, Introduction and Section 4].\n\n## Application\n\nA common invariant subspace gives a proper closed component preserved by every forward and backward iterate of a reversible linear evolution. The question tests how much reflexivity alone constrains such decompositions, beyond special spectral, symmetry or growth hypotheses.\n\n## Known results and scope\n\nAtzmon proves a sufficient criterion [1, Theorem 6] when an additional conjugate-linear involution intertwines $`A`$ with $`A^{-1}`$ and suitable matrix coefficients are positive definite. Weighted translation examples satisfying further symmetry are covered by that criterion. These assumptions are absent from the universal question. A subspace with only $`A(M)\\subseteq M`$ does not suffice. Results for nonreflexive spaces do not decide this reflexive-space formulation.\n\n## References\n\n1. A. Atzmon, [*Reducible representations of abelian groups*](https://www.numdam.org/item/10.5802/aif.1859.pdf), *Annales de l'Institut Fourier* **51** (2001), no. 5, 1407–1418, [doi:10.5802/aif.1859](https://doi.org/10.5802/aif.1859). The introduction, printed p. 1407, and Section 4, printed p. 1415, state the universal reflexive bi-invariance question; Theorem 6 gives an additional-hypothesis result.\n2. C. Cheng, X. Fang and J. Jiang, [*On the third problem of Halmos on Banach spaces*](https://arxiv.org/abs/2203.14670), arXiv:2203.14670. This treats related but distinct inverse-intransitivity questions and conditional operator classes.\n\n## Status review\n\n\n**Known cases:** The target is a common nontrivial closed subspace invariant under both an invertible operator and its inverse on every reflexive complex space. One-sided invariant-subspace announcements, nonreflexive examples and conditional Atzmon results do not settle it.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe target is a common nontrivial closed subspace invariant under both an invertible operator and its inverse on every reflexive complex space. One-sided invariant-subspace announcements, nonreflexive examples and conditional Atzmon results do not settle it.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nNo matching complete proof, counterexample or announced resolution of the exact universal statement was located in bounded searches through 21 October 2026. Enflo's [2023 announced Hilbert-space result](https://arxiv.org/abs/2305.15442) concerns ordinary one-sided invariant subspaces, so it does not resolve the common-subspace question for all reflexive Banach spaces. The related Halmos results in [2] have different hypotheses. Searches of AIM and admitted FURTHER pages found no duplicate. These checks do not certify exhaustive absence of a solution.\n\nThe [primary-source audit](../FURTHER_problems/_tracking/atzmon-reflexive-biinvariant-primary-2026-10-21.json), [current-status audit](../FURTHER_problems/_tracking/atzmon-reflexive-biinvariant-status-2026-10-21.json), and [duplicate/scope audit](../FURTHER_problems/_tracking/atzmon-reflexive-biinvariant-duplicates-2026-10-21.json) record the evidence and limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-f83ff8d1cebc0b80**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "bi-invariant",
+    "biinvariant",
+    "Atzmon",
+    "invertible operator"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"Atzmon\" \"reflexive\" \"invertible\" invariant 2026",
+    "\"Atzmon\" \"reflexive\" \"invertible\" invariant; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://www.numdam.org/item/10.5802/aif.1859.pdf",
+      "locator": "Section4 before and including Theorem6, printedp1415/PDFp9",
+      "comparison": "Universal common A/A-inverse subspace question explicitly separated from Theorem6, which needs involution intertwining and a positive-definite matrix coefficient. One-sided invariant-subspace assertions and nonreflexive/Frechet counterexamples miss essential target."
+    }
+  ],
+  "rationale": "Universal common A/A-inverse subspace question explicitly separated from Theorem6, which needs involution intertwining and a positive-definite matrix coefficient. One-sided invariant-subspace assertions and nonreflexive/Frechet counterexamples miss essential target.",
+  "limitations": [
+    "Bounded negative search is not proof of openness; candidate scope inspected, not complete proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "934",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "bi-invariant",
+          "biinvariant",
+          "Atzmon",
+          "invertible operator"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "bi-invariant",
+          "biinvariant",
+          "Atzmon",
+          "invertible operator"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "bi-invariant",
+        "biinvariant",
+        "Atzmon",
+        "invertible operator"
+      ],
+      "hits": [
+        {
+          "entry": "288",
+          "title": "Kadison's similarity conjecture",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/Kadisons-similarity-theorem-through-uniform-derivation-estimates-September-23-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

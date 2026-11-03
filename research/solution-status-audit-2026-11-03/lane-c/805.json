@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "805",
+  "manifest_index": 649,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "805",
+    "title": "Must biharmonic hypersurfaces of the round sphere have constant mean curvature?",
+    "area": "Geometric analysis and biharmonic maps",
+    "file": "problems/805-must-biharmonic-hypersurfaces-of-the-round-sphere-have-constant-mean-curvature.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-796e110dc76eb7a4",
+    "group": "geometry-topology",
+    "source_sha256": "535ba000858ccc42cf809d6d8144afe2287c9d46d3dd91ab14cf730450a03d46",
+    "statement_sha256": "27b3d1dedb208209e4f819eb9ec7febdb774ebe5bbac3a78e50c20d91c35afc0",
+    "state": "unreviewed"
+  },
+  "source_sha256": "535ba000858ccc42cf809d6d8144afe2287c9d46d3dd91ab14cf730450a03d46",
+  "statement_sha256": "27b3d1dedb208209e4f819eb9ec7febdb774ebe5bbac3a78e50c20d91c35afc0",
+  "actual_source_sha256": "535ba000858ccc42cf809d6d8144afe2287c9d46d3dd91ab14cf730450a03d46",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`m\\geq4`$ and let $`f:M^m\\to\\mathbb S^{m+1}`$ be a smooth, connected, boundaryless, isometric immersion into the unit round sphere. Assume that $`f`$ is **proper biharmonic**: its bitension field vanishes but its mean-curvature vector is not identically zero. Here “proper” means *nonminimal*, not that $`f`$ is a proper map. **Must the length $`|\\mathbf H|`$ of its mean-curvature vector be constant on $`M`$?** No compactness or completeness condition is imposed. A connected nonconstant-mean-curvature proper biharmonic hypersurface would refute the assertion.\n\nFor a choice of local unit normal, write $`H`$ for the signed scalar mean curvature and $`A`$ for the shape operator. In the convention of reference 3, the biharmonic equations are\n\n```math\n\\Delta H+H\\mathrm{tr}(A^2)=mH,\\qquad 2A(\\nabla H)+mH\\nabla H=0.\n```\n\nThus the question can also be approached by ruling out nonconstant solutions of this geometric system arising from an isometric hypersurface immersion. The formulation with $`|\\mathbf H|`$ is independent of the normal choice.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"biharmonic hypersurfaces\" \"constant mean curvature\" sphere 2026 solution",
+    "\"biharmonic hypersurfaces\" \"constant mean curvature\" sphere (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"biharmonic hypersurfaces\" \"constant mean curvature\" sphere (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.04165v2",
+      "primary_body_access_gap": false,
+      "locator": "Actual Theorem1.1,Theorem1.2,Corollary1.3,Theorem1.4 and preceding arbitrary-dimensional BMO discussion",
+      "version_or_date": "Current arXiv abs inspected: latestv2,8October2026; no later version or withdrawal indicated.",
+      "scope_comparison": "Theorem1.1 applies ambient c<=0 and proves minimality; the target is the round sphere c=1. Spherical Theorem1.2 assumes a point where H²>=4(n−1)/(n(n+8)); Corollary1.3 imposes a scalar-curvature threshold, and Theorem1.4 a mean-curvature gap threshold. These do not force CMC for every nonminimal immersion without extra hypotheses. Paper explicitly retains arbitrary-dimensional BMO. Restricted principal-curvature proof gaps repaired in2025 are not a proof of the unrestricted statement."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem1.1 applies ambient c<=0 and proves minimality; the target is the round sphere c=1. Spherical Theorem1.2 assumes a point where H²>=4(n−1)/(n(n+8)); Corollary1.3 imposes a scalar-curvature threshold, and Theorem1.4 a mean-curvature gap threshold. These do not force CMC for every nonminimal immersion without extra hypotheses. Paper explicitly retains arbitrary-dimensional BMO. Restricted principal-curvature proof gaps repaired in2025 are not a proof of the unrestricted statement.",
+  "latest_version_check": "Current arXiv abs inspected: latestv2,8October2026; no later version or withdrawal indicated.",
+  "gap_retraction_check": "Current v2 read; no announced withdrawal. Search found2025 repair of an older three-distinct-principal-curvature proof, which remains restricted. No proof certification of full v2 undertaken.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

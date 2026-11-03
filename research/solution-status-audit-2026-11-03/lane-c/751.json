@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "751",
+  "manifest_index": 595,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "751",
+    "title": "Uniqueness at finite energy for a viscous fluid coupled to a full von Kármán plate",
+    "area": "Fluid–structure interaction",
+    "file": "problems/751-uniqueness-at-finite-energy-for-a-viscous-fluid-coupled-to-a-full-von-karman-plate.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-d9c53cc16a3503a4",
+    "group": "fluid-structure-interaction",
+    "source_sha256": "695c13cf96b9ccd454488a8ed6482c29dfddfddb9523a727e82cfae843b9cedc",
+    "statement_sha256": "a0c8a17e8b1670b677194cd1f2bbc3684d183f02d3089f99f5e9fe189a5a0f8d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "695c13cf96b9ccd454488a8ed6482c29dfddfddb9523a727e82cfae843b9cedc",
+  "statement_sha256": "a0c8a17e8b1670b677194cd1f2bbc3684d183f02d3089f99f5e9fe189a5a0f8d",
+  "actual_source_sha256": "695c13cf96b9ccd454488a8ed6482c29dfddfddb9523a727e82cfae843b9cedc",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\mathcal O\\subset\\mathbb R^3`$ be a bounded cavity with smooth boundary $`\\partial\\mathcal O=\\overline S\\cup\\overline\\Omega`$, where $`\\Omega\\subset\\{x_3=0\\}`$ is a bounded smooth planar domain, $`S\\subset\\{x_3\\le0\\}`$, and the outward normal on $`\\Omega`$ is $`e_3`$. Fix viscosity $`\\nu>0`$ and Poisson ratio $`0<\\mu<1/2`$. Let $`a:\\Omega\\times[0,T]\\to\\mathbb R^2`$ be the in-plane displacement and $`w:\\Omega\\times[0,T]\\to\\mathbb R`$ the transverse displacement. Define\n\n```math\nP(a,w)=\\tfrac12(\\nabla a+\\nabla a^T)+\\tfrac12\\nabla w\\otimes\\nabla w,\n\\qquad \\sigma(a,w)=\\mathcal C P(a,w),\n```\n\n```math\n\\mathcal C\\epsilon=\\frac{2}{1-\\mu}\\big[\\mu\\mathrm{tr}(\\epsilon)I+(1-\\mu)\\epsilon\\big].\n```\n\nConsider the unforced, fixed-domain system with in-plane inertia retained, no rotational inertia and no mechanical plate damping:\n\n```math\nv_t-\\nu\\Delta v+\\nabla p=0,\\qquad \\mathrm{div}v=0\\quad\\hbox{in }\\mathcal O,\n```\n\n```math\nv=0\\ \\hbox{on }S,\\qquad v=(a_t,w_t)\\ \\hbox{on }\\Omega,\n```\n\n```math\na_{tt}-\\mathrm{div}\\sigma(a,w)=-\\nu\\big(\\partial_3v_{\\parallel}+\\nabla_{\\parallel}v_3\\big)|_\\Omega,\n```\n\n```math\nw_{tt}+\\Delta^2w-\\mathrm{div}(\\sigma(a,w)\\nabla w)=p|_\\Omega-2\\nu\\partial_3v_3|_\\Omega.\n```\n\nImpose $`a=0`$, $`w=\\partial_{n'}w=0`$ on $`\\partial\\Omega`$, and $`\\int_\\Omega w\\,dx'=0`$ (hence $`\\int_\\Omega w_t\\,dx'=0`$). Initial data have finite energy:\n\n```math\nv_0\\in X,\\quad a_0\\in H^1_0(\\Omega)^2,\\quad w_0\\in H^2_0(\\Omega),\\quad\n(a_1,w_1)\\in L^2(\\Omega)^2\\times\\widehat L^2(\\Omega),\n```\n\nwith $`\\int_\\Omega w_0=0`$ and weak normal-trace compatibility $`v_0\\cdot n=w_1`$ on $`\\Omega`$. Here $`X=\\{v\\in L^2(\\mathcal O)^3:\\mathrm{div}v=0,\\ v\\cdot n=0\\text{ on }S\\}`$, $`\\widehat L^2`$ denotes zero mean, and $`V=\\{v\\in H^1(\\mathcal O)^3:\\mathrm{div}v=0,\\ v=0\\text{ on }S\\}`$.\n\nIs the energy weak solution unique for every such datum and every $`T>0`$? Specifically, require\n\n```math\nv\\in L^\\infty(0,T;X)\\cap L^2(0,T;V),\\quad\n(a,w)\\in L^\\infty(0,T;H^1_0(\\Omega)^2\\times H^2_0(\\Omega)),\n```\n\n```math\n(a_t,w_t)\\in L^\\infty(0,T;L^2(\\Omega)^2\\times\\widehat L^2(\\Omega))\\cap L^2(0,T;H^{1/2}_*(\\Omega)^3),\n```\n\nwhere $`H^{1/2}_*(\\Omega)`$ means the trace has an $`H^{1/2}(\\mathbb R^2)`$ zero extension. The interface velocity condition holds almost everywhere in time. Set $`(a,w)(0)=(a_0,w_0)`$. The pressure-free weak identity is\n\n```math\n\\begin{aligned}\n-\\int_0^T(v,\\phi_t)_{\\mathcal O}\\,dt\n+2\\nu\\int_0^T(D(v),D(\\phi))_{\\mathcal O}\\,dt\n-\\int_0^T[(a_t,b_t)_\\Omega+(w_t,d_t)_\\Omega]\\,dt\\\\\n+\\int_0^T(\\Delta w,\\Delta d)_\\Omega\\,dt\n+\\int_0^T\\int_\\Omega\\sigma(a,w):[\\mathrm{sym}\\nabla b+\\mathrm{sym}(\\nabla w\\otimes\\nabla d)]\\,dx'\\,dt\\\\\n=(v_0,\\phi(0))_{\\mathcal O}+(a_1,b(0))_\\Omega+(w_1,d(0))_\\Omega.\n\\end{aligned}\n```\n\nHere $`(\\cdot,\\cdot)`$ denotes the $`L^2`$ pairing and $`\\mathrm{sym} M=(M+M^T)/2`$. Require this for every solenoidal $`\\phi\\in L^2(0,T;V)`$ with $`\\phi_t\\in L^2(0,T;L^2(\\mathcal O)^3)`$, $`\\phi(T)=0`$ and interface trace $`(b,d)`$, where $`b\\in L^2(0,T;H^1_0(\\Omega)^2)`$, $`d\\in L^2(0,T;\\widehat H^2_0(\\Omega))`$, and $`(b_t,d_t)\\in L^2(0,T;L^2(\\Omega)^2\\times\\widehat L^2(\\Omega))`$. Hats denote zero mean. This is the unforced specialization of [2, Definition 2.2]. The interface tractions cancel, so no pressure trace is assumed in this weak class. Also require, for almost every $`t\\in[0,T]`$, the energy inequality\n\n```math\n\\mathcal E(t)+2\\nu\\int_0^t\\|D(v)\\|_{L^2(\\mathcal O)}^2\\,ds\\le\\mathcal E(0),\n```\n\n```math\n\\mathcal E=\\tfrac12\\big(\\|v\\|_2^2+\\|a_t\\|_2^2+\\|w_t\\|_2^2+\\|\\Delta w\\|_2^2+\\int_\\Omega\\mathcal C P(a,w):P(a,w)\\,dx'\\big),\\quad D(v)=\\tfrac12(\\nabla v+\\nabla v^T).\n```\n\nUniqueness concerns $`v,a,w`$ in this class, rather than uniqueness only among strong solutions.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"full von Karman\" \"weak\" \"uniqueness\" fluid 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"von Karman\" \"zero\" \"uniqueness\"",
+    "site:palomar-registry.org OR site:hexagonmath.org \"von Karman\" \"uniqueness\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2307.11262v1",
+      "version_or_date": "v1,21July2023; laterERA33(2025)7065–7084 publisher scope",
+      "primary_body_access_gap": false,
+      "scope_comparison": "Actual source's vectorfullvonKarman/Stokes energyweakclass matcheslocal and explicitly leaves weakuniqueness open, resorting to strong solutions/attractor. 2025fluid-shell paper proves weak uniqueness only2D and uses rotationalinertia; thermoelastic results add thermal dissipation/inertia. Local3DlinearStokes with fullydynamic inplane motion, zero rotationalinertia/damping, arbitrary finite-energy data is not supplied. No fullmatchlocated.",
+      "locator": "Introductionparagraph about neglected rotationalinertia; Definition2.2/Theorem2.3 and followingparagraph"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual source's vectorfullvonKarman/Stokes energyweakclass matcheslocal and explicitly leaves weakuniqueness open, resorting to strong solutions/attractor. 2025fluid-shell paper proves weak uniqueness only2D and uses rotationalinertia; thermoelastic results add thermal dissipation/inertia. Local3DlinearStokes with fullydynamic inplane motion, zero rotationalinertia/damping, arbitrary finite-energy data is not supplied. No fullmatchlocated.",
+  "latest_version_check": "v1,21July2023; laterERA33(2025)7065–7084 publisher scope",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "940",
+  "manifest_index": 784,
+  "checked_date": "2026-11-03",
+  "source_sha256": "3b521d255923cd75199043f54e9dc043ef9335b56aa262241d73327ab7b048b8",
+  "statement_sha256": "06496b37a2282fcb5d34cb581457731e6ec4ddf8aa78ccb1cddb6b6b2c9cb0ed",
+  "original_target": {
+    "id": "940",
+    "title": "The sharp planar torsion-gradient constant and its optimizing domains",
+    "area": "Elliptic PDE and convex shape optimization",
+    "file": "problems/940-the-sharp-planar-torsion-gradient-constant-and-its-optimizing-domains.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-2b0f5b042bac97f4",
+    "group": "pdes-materials",
+    "source_sha256": "3b521d255923cd75199043f54e9dc043ef9335b56aa262241d73327ab7b048b8",
+    "statement_sha256": "06496b37a2282fcb5d34cb581457731e6ec4ddf8aa78ccb1cddb6b6b2c9cb0ed",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For every nonempty bounded open convex domain $`\\Omega\\subset\\mathbb R^2`$, let $`u_\\Omega\\in H^1_0(\\Omega)`$ be the unique weak solution of\n```math\n-\\Delta u_\\Omega=1\\quad\\text{in }\\Omega,\\qquad u_\\Omega=0\\quad\\text{on }\\partial\\Omega.\n```\n\nThus $`\\int_\\Omega\\nabla u_\\Omega\\cdot\\nabla\\varphi=\\int_\\Omega\\varphi`$ for every $`\\varphi\\in H^1_0(\\Omega)`$.\n\nDetermine the exact value\n```math\nc_* = \\sup_{\\substack{\\Omega\\subset\\mathbb R^2\\text{ bounded, open, convex}\\\\|\\Omega|=1}}\n\\|\\nabla u_\\Omega\\|_{L^\\infty(\\Omega)}\n```\n\nand characterize every attaining domain up to Euclidean isometry. The norm is the interior essential supremum of the Euclidean gradient magnitude. No boundary smoothness, strict convexity or symmetry is imposed on the competitors.\n\nEquivalently, determine the sharp coefficient and all equality cases in\n```math\n\\|\\nabla u_\\Omega\\|_{L^\\infty(\\Omega)}\\le c_*\\sqrt{|\\Omega|}.\n```\n\nExistence of an optimizer is already known. The remaining question is its exact value and complete geometric characterization.",
+  "full_original_page": "# 940. The sharp planar torsion-gradient constant and its optimizing domains\n\n**Area:** Elliptic PDE and convex shape optimization\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor every nonempty bounded open convex domain $`\\Omega\\subset\\mathbb R^2`$, let $`u_\\Omega\\in H^1_0(\\Omega)`$ be the unique weak solution of\n```math\n-\\Delta u_\\Omega=1\\quad\\text{in }\\Omega,\\qquad u_\\Omega=0\\quad\\text{on }\\partial\\Omega.\n```\n\nThus $`\\int_\\Omega\\nabla u_\\Omega\\cdot\\nabla\\varphi=\\int_\\Omega\\varphi`$ for every $`\\varphi\\in H^1_0(\\Omega)`$.\n\nDetermine the exact value\n```math\nc_* = \\sup_{\\substack{\\Omega\\subset\\mathbb R^2\\text{ bounded, open, convex}\\\\|\\Omega|=1}}\n\\|\\nabla u_\\Omega\\|_{L^\\infty(\\Omega)}\n```\n\nand characterize every attaining domain up to Euclidean isometry. The norm is the interior essential supremum of the Euclidean gradient magnitude. No boundary smoothness, strict convexity or symmetry is imposed on the competitors.\n\nEquivalently, determine the sharp coefficient and all equality cases in\n```math\n\\|\\nabla u_\\Omega\\|_{L^\\infty(\\Omega)}\\le c_*\\sqrt{|\\Omega|}.\n```\n\nExistence of an optimizer is already known. The remaining question is its exact value and complete geometric characterization.\n\n## Application\n\nIn Saint-Venant torsion, this gradient measures shear stress in a beam cross section under a fixed twist/forcing normalization. The problem identifies the largest possible maximum stress among convex cross sections of prescribed area. Fixing the applied torque instead changes the shape functional by a torsional-rigidity factor.\n\n## References\n\n1. Jeremy G. Hoskins and Stefan Steinerberger, *Towards Optimal Gradient Bounds for the Torsion Function in the Plane*, Journal of Geometric Analysis **31** (2021),7812–7841, [published article](https://doi.org/10.1007/s12220-020-00553-5); [author version1912.08376v3](https://arxiv.org/abs/1912.08376v3), Introduction, especially pp.1–2.\n2. Krzysztof Burdzy, Ilias Ftouhi and Phanuel Mariano, *Geometric properties of optimizers for the maximum gradient of the torsion function*, [arXiv:2512.09400v2](https://arxiv.org/abs/2512.09400v2),17December2025, Introduction and Theorems1.1–1.2.\n3. Michiel van den Berg, Dorin Bucur and Mickael Nahon, *Shape optimisation of the maximum of the gradient of the torsion function on convex sets*, [arXiv:2610.08408v1](https://arxiv.org/abs/2610.08408v1),6October2026, Introduction, Theorem4 and §2.\n\n## Status review\n\n\n**Known cases:** The exact area-normalized constant and all optimizers are still required. October 2026 existence and symmetry results, perimeter-normalized statements and optimality among ellipses do not determine this.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe exact area-normalized constant and all optimizers are still required. October 2026 existence and symmetry results, perimeter-normalized statements and optimality among ellipses do not determine this.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe original paper asks for the optimal constant and extremal domain. The later results establish attainment, $`C^1`$ boundary regularity and a flat boundary segment containing a maximum-gradient point. The October2026 paper also produces an axially symmetric area optimizer. Its stronger assertion that every optimizer has that symmetry concerns the perimeter constraint. These results do not supply the exact area-normalized value or classify all attaining domains.\n\nNumerical pictures suggest shapes, but no exact rounded-D description, uniqueness claim or certified numerical value is included here. Current searches located no matching complete solution or announcement. Existing torsion-height, torsional-rigidity, eigenvalue and clamped-plate problems concern different functionals.\n\nThe [coordinator review](../FURTHER_problems/_tracking/torsion-gradient-coordinator-review-2026-10-19.json), [current checks](../FURTHER_problems/_tracking/torsion-gradient-current-review-2026-10-19.json), [duplicate comparisons](../FURTHER_problems/_tracking/torsion-gradient-duplicates-review-2026-10-19.json) and [independent scope audit](../FURTHER_problems/_tracking/parallel/continuum/torsion-gradient-sharp-constant-independent-audit-2026-10-19.json) record the selected reading extents and limits. This is a bounded literature review, not proof that every possible resolution has been excluded.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-2b0f5b042bac97f4**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "torsion gradient",
+    "maximum gradient",
+    "Hoskins",
+    "Steinerberger"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"torsion\" \"maximum gradient\" sharp constant 2026",
+    "\"torsion\" \"maximum gradient\" sharp constant; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.08408v1",
+      "locator": "Theorem4, lines105–137",
+      "comparison": "Existence, C1 boundary and existence of an axial symmetrized volume optimizer do not determine exact area-normalized value or all optimizers. The statement every optimizer is axial is expressly for perimeter constraint. New fail-point paper addresses selected nonsymmetric domains, not all area optimizers."
+    }
+  ],
+  "rationale": "Existence, C1 boundary and existence of an axial symmetrized volume optimizer do not determine exact area-normalized value or all optimizers. The statement every optimizer is axial is expressly for perimeter constraint. New fail-point paper addresses selected nonsymmetric domains, not all area optimizers.",
+  "limitations": [
+    "Bounded search does not establish continued openness; selected primary scope statements checked, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "940",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "torsion gradient",
+          "maximum gradient",
+          "Hoskins",
+          "Steinerberger"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "torsion gradient",
+          "maximum gradient",
+          "Hoskins",
+          "Steinerberger"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "torsion gradient",
+        "maximum gradient",
+        "Hoskins",
+        "Steinerberger"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

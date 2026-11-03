@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "734",
+  "manifest_index": 578,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "734",
+    "title": "Generalized reaction–diffusion solutions from arbitrary integrable data",
+    "area": "Reaction–diffusion equations and chemical transport",
+    "file": "problems/734-generalized-reactiondiffusion-solutions-from-arbitrary-integrable-data.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-29fd60f466cebea3",
+    "group": "diffusion-materials",
+    "source_sha256": "ad1d157586a283e198fc27dc42c12a2e0ac87e879e377c629ca67010bf0cea0e",
+    "statement_sha256": "9c40f910cf9a25be082f3f4553575f58d67e869c7f402f15445c2141cc3e7135",
+    "state": "unreviewed"
+  },
+  "source_sha256": "ad1d157586a283e198fc27dc42c12a2e0ac87e879e377c629ca67010bf0cea0e",
+  "statement_sha256": "9c40f910cf9a25be082f3f4553575f58d67e869c7f402f15445c2141cc3e7135",
+  "actual_source_sha256": "ad1d157586a283e198fc27dc42c12a2e0ac87e879e377c629ca67010bf0cea0e",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\ge2`$, $`N\\ge2`$, and let $`\\Omega\\subset\\mathbb R^n`$ be a bounded connected domain with smooth boundary. Fix $`d_i,m_i>0`$ and locally Lipschitz reaction functions $`f_i:[0,\\infty)^N\\to\\mathbb R`$, $`1\\le i\\le N`$. Suppose that, for all $`s\\in[0,\\infty)^N`$:\n\n1. $`f_i(s)\\ge0`$ whenever $`s_i=0`$;\n2. there are fixed $`a_i>0`$ and $`K\\ge0`$ such that\n\n```math\nF_a(s):=\\sum_{i=1}^N a_i f_i(s)\n\\le K\\left(1+\\sum_{i=1}^Na_i s_i\\right);\n```\n\n3. there are nonnegative $`\\phi_i\\in C^1([0,\\infty))`$ with $`\\phi_i'>0`$ on $`(0,\\infty)`$ and exponents $`0<\\beta_j<m_j+1`$ such that\n\n```math\nf_i(s)\\ge-\\phi_i(s_i)\\left(1+\\sum_{j\\ne i}s_j^{\\beta_j}\\right).\n```\n\nFor every nonnegative initial vector $`u_0\\in L^1(\\Omega)^N`$, does the Neumann problem\n\n```math\n\\partial_tu_i=d_i\\Delta(u_i^{m_i})+f_i(u),\\qquad\n\\partial_\\nu(u_i^{m_i})=0,\\qquad u_i(0)=u_{0i}\n```\n\nadmit a global generalized solution in the following precise sense?\n\nThe components $`u_i:\\Omega\\times(0,\\infty)\\to[0,\\infty)`$ are measurable. For every $`T<\\infty`$, $`u_i,F_a(u)\\in L^1(\\Omega\\times(0,T))`$ and, for almost every $`t>0`$,\n\n```math\n\\int_\\Omega\\sum_i a_i u_i(t)\n\\le\\int_\\Omega\\sum_i a_i u_{0i}\n+\\int_0^t\\!\\int_\\Omega F_a(u).\n```\n\nFor every smooth $`\\rho:[0,\\infty)\\to\\mathbb R`$ with compactly supported derivative, $`\\rho'\\le0`$ and $`\\rho''\\ge0`$, set\n\n```math\nP_i(s)=\\int_0^s\\sigma^{(m_i-1)/2}\\sqrt{\\rho''(\\sigma)}\\,d\\sigma,\n\\qquad\nQ_i(s)=\\int_0^s\\sigma^{m_i-1}\\rho'(\\sigma)\\,d\\sigma.\n```\n\nRequire $`\\rho'(u_i)f_i(u)\\in L^1(\\Omega\\times(0,T))`$ and $`\\nabla P_i(u_i)\\in L^2(\\Omega\\times(0,T);\\mathbb R^n)`$ for every finite $`T`$. For every nonnegative $`\\varphi\\in C_c^\\infty(\\overline\\Omega\\times[0,\\infty))`$ with $`\\partial_\\nu\\varphi=0`$ on the boundary, require\n\n```math\n-\\int_0^\\infty\\!\\int_\\Omega \\rho(u_i)\\partial_t\\varphi\n-\\int_\\Omega\\rho(u_{0i})\\varphi(0)\n\\le -d_i m_i\\int_0^\\infty\\!\\int_\\Omega\\varphi|\\nabla P_i(u_i)|^2\n+d_i m_i\\int_0^\\infty\\!\\int_\\Omega Q_i(u_i)\\Delta\\varphi\n+\\int_0^\\infty\\!\\int_\\Omega \\rho'(u_i)f_i(u)\\varphi.\n```\n\nThe initial condition is encoded by this inequality and the mass bound. No additional strong $`L^1`$ initial trace, full distributional equality, or $`L^{m_i+1}`$ space–time integrability up to $`t=0`$ is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"reaction diffusion\" \"Lankeit\" \"Winkler\" \"integrable\" 2026 generalized",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"cross-absorptive\" \"L1\"",
+    "site:palomar-registry.org OR site:hexagonmath.org \"cross-absorptive\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Final JEE22(2022)14 doi10.1007/s00028-022-00768-9; current3November2026",
+      "primary_body_access_gap": false,
+      "url": "https://d-nb.info/1258702177/34",
+      "locator": "Theorem1.1/(1.6) pp3–4; Remarkiii; Definitions2.1–2.2",
+      "scope_comparison": "Actual theorem requires L^r initial data with r>1 for n2 and r>=2n/(n+2) for n>=3; Remarkiii explicitly leaves merely integrable data. Local asks only L1 for n>=2 and its precise generalized inequality/mass class without extra strong trace/L^(m+1) up to0. Entropy-renormalized results impose entropy, finite logarithmic entropy or diffusion restrictions absent here. No matching full announcement located."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual theorem requires L^r initial data with r>1 for n2 and r>=2n/(n+2) for n>=3; Remarkiii explicitly leaves merely integrable data. Local asks only L1 for n>=2 and its precise generalized inequality/mass class without extra strong trace/L^(m+1) up to0. Entropy-renormalized results impose entropy, finite logarithmic entropy or diffusion restrictions absent here. No matching full announcement located.",
+  "latest_version_check": "Final JEE22(2022)14 doi10.1007/s00028-022-00768-9; current3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

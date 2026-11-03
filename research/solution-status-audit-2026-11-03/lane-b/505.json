@@ -1,0 +1,77 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "505",
+  "manifest_index": 398,
+  "original_target": {
+    "id": "505",
+    "title": "Polynomial fewnomial root bounds in fixed dimension",
+    "area": "Numerical analysis; approximation and complexity",
+    "file": "problems/505-polynomial-fewnomial-root-bounds-in-fixed-dimension.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ec58af82e6441b04",
+    "group": "numerical-analysis",
+    "source_sha256": "82edf2a7e2a365e609b6f569617c06bf302596710b2bfb8040526f4209567751",
+    "statement_sha256": "ebc72d685b2f9dd266c662c732d4062a16284931bc80e5d677b65876b2c9f41d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "82edf2a7e2a365e609b6f569617c06bf302596710b2bfb8040526f4209567751",
+  "statement_sha256": "ebc72d685b2f9dd266c662c732d4062a16284931bc80e5d677b65876b2c9f41d",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:35:52.004096+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "New2610.29808v1 TheoremD bounds signed topological degree with genericity, not unsigned nondegenerate positive-root counts. New2610.06435v2 TheoremA gives genericity-dependent recursive chamber bounds, not worst-case polynomial in total monomials at fixed n.2306.06784v3 bounds expected roots for Gaussian coefficients only.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.29808v1",
+      "locator": "Introduction degree equation and TheoremD",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2610.06435v2",
+      "locator": "TheoremA",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2306.06784",
+      "locator": "Expected Gaussian-root scope metadata",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"fewnomial\" \"fixed dimension\" polynomial (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "fewnomial"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "fewnomial"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

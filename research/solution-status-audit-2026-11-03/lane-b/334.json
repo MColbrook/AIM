@@ -1,0 +1,50 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 272,
+  "source_sha256": "9a5897f47457760ae22ce099fbfd37005f07bd2d0cfbb028490eb0a8f798d45d",
+  "statement_sha256": "33bc21462a96156c35428f6d4e4161b4242097cb03990160c2b1a24d7db3a44f",
+  "original_target": {
+    "id": "334",
+    "title": "Competitive exclusion in a chemostat with unequal removal rates",
+    "area": "Mathematical biology and microbial competition",
+    "file": "problems/334-chemostat-unequal-removal-exclusion.md",
+    "status": "Open",
+    "last_checked": "2026-09-18",
+    "group": "stochastic3",
+    "source_sha256": "9a5897f47457760ae22ce099fbfd37005f07bd2d0cfbb028490eb0a8f798d45d",
+    "statement_sha256": "33bc21462a96156c35428f6d4e4161b4242097cb03990160c2b1a24d7db3a44f",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "334",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "chemostat \"unequal\" \"removal\" exclusion 2026 conjecture",
+    "\"chemostat\" \"different removal rates\" \"2026\"",
+    "\"chemostat\" \"competitive exclusion\" 2026 solved monotone",
+    "\"chemostat\" \"unequal removal\" site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2501.08011v1",
+      "version": "v1 14 January 2025; journal April 2026",
+      "locators": "model 2.1; hypotheses A1–A4; Theorem 2.4",
+      "body_inspected": true,
+      "scope": "Small mass-conserving species-exchange perturbations of common dilution, compact-initial-set dependent threshold."
+    },
+    {
+      "url": "https://www.math.nthu.edu.tw/~sbhsu/7-26-2019final%20lecture1-6.pdf",
+      "version": "2019 author lecture notes",
+      "locators": "p.10 explicit open problem",
+      "body_inspected": true,
+      "scope": "General monotone response with unequal removal remains exact posed problem."
+    }
+  ],
+  "registry_checks": "Palomar chemostat match is a reaction-network affinity counterexample with a different model; Hexagon no matching metadata. Focused scholarly, author, Zenodo, HAL and GitHub searches.",
+  "scope_comparison": "Target is all finite n, all increasing C1 gross-growth laws, independent arbitrary removal constants and all positive populations. Small conservative conversion cannot absorb arbitrary independent removals. Stochastic/viral, allelopathic and internal-storage variants add terms absent from the target.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Current perturbation theorem and different-model counterexamples do not settle this target."
+}

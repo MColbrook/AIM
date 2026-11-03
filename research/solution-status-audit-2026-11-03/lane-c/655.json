@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "655",
+  "manifest_index": 505,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "655",
+    "title": "Boundedness of second-order TGV denoising for bounded data",
+    "area": "Inverse problems and imaging",
+    "file": "problems/655-boundedness-of-second-order-tgv-denoising-for-bounded-data.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-1c9e82b2b167417c",
+    "group": "inverse3",
+    "source_sha256": "1a6936995c60f2cfe0103caed2e1a7c8a34374f3ae91bc3c50eaf8ebdcb6208c",
+    "statement_sha256": "48891cfdda65d6f5dc7a13ffecaca1b2f8bff4182ee5deea2ca858a68d15df0d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1a6936995c60f2cfe0103caed2e1a7c8a34374f3ae91bc3c50eaf8ebdcb6208c",
+  "statement_sha256": "48891cfdda65d6f5dc7a13ffecaca1b2f8bff4182ee5deea2ca858a68d15df0d",
+  "actual_source_sha256": "1a6936995c60f2cfe0103caed2e1a7c8a34374f3ae91bc3c50eaf8ebdcb6208c",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^2`$ be a bounded connected Lipschitz domain, let $`a,b>0`$, and let $`f\\in L^\\infty(\\Omega;\\mathbb R)`$. Define second-order total generalized variation by\n```math\n\\mathrm{TGV}_{a,b}^2(u)\n =\\inf_{w\\in BD(\\Omega;\\mathbb R^2)}\n \\bigl(a|Du-w\\,dx|(\\Omega)+b|Ew|(\\Omega)\\bigr).\n```\n\nHere $`BV`$ consists of integrable scalar functions whose distributional gradient is a finite Radon measure; $`BD`$ consists of integrable vector fields whose symmetrized distributional gradient $`Ew=(Dw+Dw^{\\mathsf T})/2`$ is a finite Radon measure. Total variations use the Euclidean and Frobenius norms, respectively.\n\nLet $`u`$ be the unique minimizer over $`BV(\\Omega)\\cap L^2(\\Omega)`$ of\n```math\n\\frac12\\int_\\Omega |u-f|^2\\,dx+\\mathrm{TGV}_{a,b}^2(u).\n```\n\nNo boundary traces are prescribed. Must $`u\\in L^\\infty(\\Omega)`$ for every such choice?\n\nOnly boundedness is requested, without a bound by the data range, a bound on the auxiliary field, smoothing, or a restriction on $`b/a`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"TGV\" \"bounded data\" boundedness 2026",
+    "\"TGV\" \"bounded data\" boundedness (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00245-023-10028-y",
+      "locator": "Section5, equations48–49; Proposition6, lines851–856",
+      "version_or_date": "Published2023; current publisher body inspected",
+      "scope_comparison": "Proposition6 proves planar boundedness for equation48, the ICTV infimal convolution with an auxiliary scalar potential. The local TGV functional49 has a general BD vector field. Its nonoptimal-field examples do not refute the actual optimal TGV reconstruction, and first-order clipping does not supply the needed theorem.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Proposition6 proves planar boundedness for equation48, the ICTV infimal convolution with an auxiliary scalar potential. The local TGV functional49 has a general BD vector field. Its nonoptimal-field examples do not refute the actual optimal TGV reconstruction, and first-order clipping does not supply the needed theorem.",
+  "latest_version_check": "Published2023; current publisher body inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

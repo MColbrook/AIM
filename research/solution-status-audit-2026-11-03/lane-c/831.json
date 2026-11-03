@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "831",
+  "manifest_index": 675,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "831",
+    "title": "Sheaf-theoretic SL(2,C) Floer cohomology detects the three-sphere",
+    "area": "Geometric topology / complex character varieties",
+    "file": "problems/831-sheaf-theoretic-sl-2-c-floer-cohomology-detects-the-three-sphere.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b38f83452c83b3c3",
+    "group": "geometry-topology",
+    "source_sha256": "be5d7ce3d8a92bc0205a87e674b55498778165d700c2e84dff9ea56574adfd27",
+    "statement_sha256": "c1b14475f989e837150449664113d462b9535c2f359c43440df68dd41277c153",
+    "state": "unreviewed"
+  },
+  "source_sha256": "be5d7ce3d8a92bc0205a87e674b55498778165d700c2e84dff9ea56574adfd27",
+  "statement_sha256": "c1b14475f989e837150449664113d462b9535c2f359c43440df68dd41277c153",
+  "actual_source_sha256": "be5d7ce3d8a92bc0205a87e674b55498778165d700c2e84dff9ea56574adfd27",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`Y`$ be a closed, connected, oriented smooth three-manifold with\n```math\nH_*(Y;\\mathbb Z)\\cong H_*(S^3;\\mathbb Z).\n```\n\nWrite\n```math\nX_{\\mathrm{irr}}(Y)=\n\\mathrm{Hom}^{\\mathrm{irr}}(\\pi_1(Y),\\mathrm{SL}(2,\\mathbb C))\n\\big/\\mathrm{PSL}(2,\\mathbb C)\n```\n\nfor its irreducible character scheme, with its natural scheme structure. Here an irreducible representation preserves no complex line in $`\\mathbb C^2`$.\n\nUse the **unframed** Abouzaid–Manolescu invariant. More precisely, choose a Heegaard splitting $`Y=U_0\\cup_\\Sigma U_1`$ of genus at least three. The handlebody character varieties\n```math\nL_i=X_{\\mathrm{irr}}(U_i)\\subset X_{\\mathrm{irr}}(\\Sigma)\n```\n\nare complex Lagrangians, and $`L_0\\cap L_1=X_{\\mathrm{irr}}(Y)`$. Their canonical spin structures give the perverse sheaf of vanishing cycles $`\\mathcal P(Y)`$ constructed in [1]. It is canonically independent of the splitting. Set\n```math\nHP^k(Y;\\mathbb Z)\n=\\mathbb H^k(X_{\\mathrm{irr}}(Y),\\mathcal P(Y)),\n\\qquad k\\in\\mathbb Z,\n```\n\nusing ordinary hypercohomology, without compact supports.\n\nDoes\n```math\nHP^k(Y;\\mathbb Z)=0\\quad\\text{for every }k\\in\\mathbb Z\n\\qquad\\Longrightarrow\\qquad\nY\\cong S^3\n```\n\nhold for every such $`Y`$? The reverse implication follows from\n$`X_{\\mathrm{irr}}(S^3)=\\varnothing`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Abouzaid\" \"Manolescu\" \"detect\" sphere cohomology 2026",
+    "\"Abouzaid\" \"Manolescu\" \"detect\" sphere cohomology (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Abouzaid\" \"Manolescu\" \"detect\" sphere cohomology (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"sheaf-theoretic\" \"Floer\" \"sphere\" 2026 detection"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://www.stanford.edu/~cm5/SL2.pdf",
+      "locator": "Section9.4,Question9.1,printedp41/PDFp41; construction and invariant discussion",
+      "scope_comparison": "The local target is nonvanishing of ordinary hypercohomology of the unframed vanishing-cycle sheaf for every non-S3 integral homology sphere. The primary author copy explicitly poses this detection question even after Zentner's nonempty-character result. Existence of irreducible representations does not imply nonzero hypercohomology, and framed/skein or other instanton detection theorems concern different invariants. Current focused searches found no complete matching theorem or announcement. The current author copy recovers the initially failing web.stanford.edu mirror.",
+      "version_or_date": "Current author final copy,44pages; arXiv:1708.00289v2,25 January2019,current latest; JEMS22(2020)",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The local target is nonvanishing of ordinary hypercohomology of the unframed vanishing-cycle sheaf for every non-S3 integral homology sphere. The primary author copy explicitly poses this detection question even after Zentner's nonempty-character result. Existence of irreducible representations does not imply nonzero hypercohomology, and framed/skein or other instanton detection theorems concern different invariants. Current focused searches found no complete matching theorem or announcement. The current author copy recovers the initially failing web.stanford.edu mirror.",
+  "latest_version_check": "Current author final copy,44pages; arXiv:1708.00289v2,25 January2019,current latest; JEMS22(2020)",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

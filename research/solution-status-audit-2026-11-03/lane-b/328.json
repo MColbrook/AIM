@@ -1,0 +1,50 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 266,
+  "source_sha256": "5b69d7cb12bd01af58df9b1526e39f4e1255b2880b6a1f1275f45b4da1f44df0",
+  "statement_sha256": "ff99d723bbe46566a64c5d495826f748ade16831afea5f93e9b46016c791cd18",
+  "original_target": {
+    "id": "328",
+    "title": "Is the Brownian queue transformation ergodic or Bernoulli?",
+    "area": "Probability and ergodic theory",
+    "file": "problems/328-is-the-brownian-queue-transformation-ergodic-or-bernoulli.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-ba52145912456216",
+    "group": "stochastic2",
+    "source_sha256": "5b69d7cb12bd01af58df9b1526e39f4e1255b2880b6a1f1275f45b4da1f44df0",
+    "statement_sha256": "ff99d723bbe46566a64c5d495826f748ade16831afea5f93e9b46016c791cd18",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "328",
+  "outcome": "no-match",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Brownian\" \"queue\" transformation ergodic Bernoulli 2026",
+    "\"Brownian\" \"Keane\" \"O’Connell\" ergodic 2026 solution",
+    "\"Brownian\" \"Bernoulli\" \"Keane\" \"2026\" site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com"
+  ],
+  "sources": [
+    {
+      "url": "https://www.impan.pl/shop/en/publication/transaction/download/product/87112",
+      "version": "primary published paper",
+      "locators": "section 3 Brownian version, p.208",
+      "body_inspected": true,
+      "scope": "Exact centered Brownian queue transform; exponential iid factor; recovery unresolved."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1806.02147",
+      "version": "v1 6 June 2018; published Memoirs AMS 2023",
+      "locators": "section 5.4; section 6 question (6), pp.85–86",
+      "body_inspected": true,
+      "scope": "Discrete reconstruction theorem does not establish whole continuous-path ergodicity or Bernoulli isomorphism."
+    }
+  ],
+  "registry_checks": "Palomar/Hexagon full metadata Brownian queue/Bernoulli aliases did not yield a matching claim; focused repository/scholarly searches executed.",
+  "scope_comparison": "Target asks both ergodicity and Bernoulli isomorphism of the entire continuous-path transformation. An iid current factor is insufficient absent generating reconstruction.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Discrete queue, Brownian invariance and factor theorems have different scope."
+}

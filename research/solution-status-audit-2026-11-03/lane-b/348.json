@@ -1,0 +1,47 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "348",
+  "manifest_index": 285,
+  "source_sha256": "d31d3d48c716b649867bc354ae5c23b1c8ab61b2e56aaa4e5579483b8e8f029b",
+  "statement_sha256": "520c358e52a5cfc0a1eec5bbf19d1cb990c4be51ccc78080de4b0ae3b32e1583",
+  "original_target": {
+    "id": "348",
+    "title": "Non-explosion of Brownian Fleming–Viot systems in arbitrary domains",
+    "area": "Interacting particles and conditioned diffusion",
+    "file": "problems/348-brownian-fleming-viot-nonexplosion.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: negative: finite-time Brownian branching explosion",
+    "proof": "https://arxiv.org/pdf/2610.18802v1",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md",
+    "group": "stochastic2",
+    "source_sha256": "d31d3d48c716b649867bc354ae5c23b1c8ab61b2e56aaa4e5579483b8e8f029b",
+    "statement_sha256": "520c358e52a5cfc0a1eec5bbf19d1cb990c4be51ccc78080de4b0ae3b32e1583",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "unverified-announcement",
+  "ready_for_parent": true,
+  "recommended_status": "Solved",
+  "answer": "Negative: a bounded connected three-dimensional driftless Brownian explosion domain.",
+  "required_status_qualification": "Solved on the basis of an unverified announcement. The full target is claimed in the cited source; the external proof has not been independently verified here.",
+  "scope_comparison": "Theorem1.1 supplies for every N>=3 a bounded connected open Omega_N in R3 and positive probability of tau_infty<T for every interior configuration and T>0. Taking N=3 suffices to refute the universal d,D,N,x assertion. The §2/§7 model is standard driftless Brownian motion with uniform survivor copying; auxiliary operational drift is removed by a common time change preserving the joint Brownian/donor law. Boundary holes accumulating at the explosion point are permitted because the target has no regularity condition. Earlier flawed unrestricted proof and N=2 positive theorem do not limit this announced N>=3 counterexample.",
+  "queries": [
+    "Brownian Fleming Viot 2610.18802 explosion correction",
+    "\"Fleming Viot\" explosion (site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"2610.18802\" correction withdrawal error"
+  ],
+  "primary_sources": [
+    {
+      "version": "v1,13October2026; primary history onlyv1",
+      "locator": "Theorem1.1; §2 model; §7 common Kelvin clock and domain construction",
+      "body_inspected": true,
+      "url": "https://arxiv.org/html/2610.18802v1"
+    }
+  ],
+  "known_gap_check": "Prior local applicability reviews read; no concrete scope or proof gap was recorded. Current primary bodies and bounded correction/version searches did not locate withdrawal. Whole external proofs remain unverified.",
+  "verification": "Applicability review only; no new whole-proof, Lean or certificate replay."
+}

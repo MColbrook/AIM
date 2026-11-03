@@ -1,0 +1,106 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "851",
+  "manifest_index": 695,
+  "checked_date": "2026-11-03",
+  "source_sha256": "4ea48192b623d89a4ad9fe6cb6c7db0b644bfc5cd23686acb461c09eadcb8d56",
+  "statement_sha256": "7d16dc3e968d91c143797d89b22b6a45c02e66f840552039c5c5a6b5695f541f",
+  "original_target": {
+    "id": "851",
+    "title": "Can a small $`C^1`$ perturbation make any prescribed orbit asymptotic to a hyperbolic periodic orbit?",
+    "area": "Smooth dynamical systems",
+    "file": "problems/851-can-a-small-c-1-perturbation-make-any-prescribed-orbit-asymptotic-to-a-hyperbolic-periodic-orbit.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-dcb91827f27e16b8",
+    "group": "geometry-topology",
+    "source_sha256": "4ea48192b623d89a4ad9fe6cb6c7db0b644bfc5cd23686acb461c09eadcb8d56",
+    "statement_sha256": "7d16dc3e968d91c143797d89b22b6a45c02e66f840552039c5c5a6b5695f541f",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`M`$ be a compact smooth manifold, $`f\\in\\mathrm{Diff}^1(M)`$, $`x\\in M`$, and $`\\mathcal U`$ any $`C^1`$ neighborhood of $`f`$. Does there exist $`g\\in\\mathcal U`$ and a hyperbolic periodic orbit $`\\mathcal O`$ of $`g`$ such that $`x\\in W^s_g(\\mathcal O)`$?\n\nCrovisier additionally asks whether $`g`$ can be chosen so that the closures of the forward $`f`$- and $`g`$-orbits of $`x`$ are arbitrarily close in Hausdorff distance, and whether $`\\mathcal O`$ is arbitrarily close to $`\\omega_f(x)`$. These are stronger requests; a result for almost every $`x`$, generic $`f`$, or a special class of surfaces would not answer the stated universal question.",
+  "full_original_page": "# 851. Can a small $`C^1`$ perturbation make any prescribed orbit asymptotic to a hyperbolic periodic orbit?\n\n**Area:** Smooth dynamical systems\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`M`$ be a compact smooth manifold, $`f\\in\\mathrm{Diff}^1(M)`$, $`x\\in M`$, and $`\\mathcal U`$ any $`C^1`$ neighborhood of $`f`$. Does there exist $`g\\in\\mathcal U`$ and a hyperbolic periodic orbit $`\\mathcal O`$ of $`g`$ such that $`x\\in W^s_g(\\mathcal O)`$?\n\nCrovisier additionally asks whether $`g`$ can be chosen so that the closures of the forward $`f`$- and $`g`$-orbits of $`x`$ are arbitrarily close in Hausdorff distance, and whether $`\\mathcal O`$ is arbitrarily close to $`\\omega_f(x)`$. These are stronger requests; a result for almost every $`x`$, generic $`f`$, or a special class of surfaces would not answer the stated universal question.\n\n## Application\n\nThe usual $`C^1`$ closing and connecting lemmas control finite pieces of trajectories. An asymptotic version would control their limiting behavior and, as Crovisier notes, imply density of stable and unstable manifolds of hyperbolic periodic orbits for generic $`C^1`$ diffeomorphisms. It is also linked in the source to the tolerance-stability conjecture.\n\n## References\n\n- S. Crovisier, [*Perturbation de la dynamique de difféomorphismes en topologie $`C^1`$*](https://www.numdam.org/item/AST_2013__354__R1_0/), *Astérisque* **354** (2013), Question 5.12, printed p. 50 (PDF p. 61).\n- S. Crovisier, [*Periodic orbits and chain-transitive sets of $`C^1`$-diffeomorphisms*](https://doi.org/10.1007/s10240-006-0002-4), *Publ. Math. IHÉS* **104** (2006), 87–141, Problem 1 on printed p. 94. This is an earlier formulation of the same question.\n- S. Crovisier and E. Pujals, [*Strongly dissipative surface diffeomorphisms*](https://doi.org/10.4171/CMH/438), *Comment. Math. Helv.* **93** (2018), 377–400. Its closing result concerns a restricted class of surface maps and does not provide the universal prescribed-point stable-capture assertion.\n\n## Status review\n\n\n**Known cases:** The ergodic/asymptotic closing statements give frequency-one closability or exponent approximation for almost every point, rather than stable capture of every prescribed point after an arbitrarily small C1 perturbation. Generic and dissipative-surface results do not cover the universal statement.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe ergodic/asymptotic closing statements give frequency-one closability or exponent approximation for almost every point, rather than stable capture of every prescribed point after an arbitrarily small C1 perturbation. Generic and dissipative-surface results do not cover the universal statement.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nCrovisier posed this explicitly in 2006 and repeated it in 2013. Bounded searches through 22 October 2026 compared later primary work on special dissipative maps and partial hyperbolicity. A 2019 talk entitled “An asymptotic closing lemma and its applications” could easily be mistaken for a resolution, but [Hayashi's own 2018](https://www.ms.u-tokyo.ac.jp/activity/documents/AnnualReport2018.pdf) and [2019](https://www.ms.u-tokyo.ac.jp/activity/documents/AnnualReport2019.pdf) research summaries describe a frequency-one strongly-closable-points result and Lyapunov-exponent approximation, rather than stable capture of every prescribed point or the two Hausdorff controls. No exact later complete theorem or announced counterexample was located; this is a bounded check, not exhaustive certification. The [source-body receipt](../FURTHER_problems/_tracking/parallel/continuum/cached-broad-books-body-continuation-0273-review.json), [independent current-scope comparison](../FURTHER_problems/_tracking/parallel/continuum/crovisier-asterisque354-question5-12-current-scope-independent-2026-10-22.json), [coordinator status addendum](../FURTHER_problems/_tracking/crovisier-asymptotic-closing-status-2026-10-22.json) and [duplicate check](../FURTHER_problems/_tracking/crovisier-asymptotic-closing-duplicates-2026-10-22.json) record the limits.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-dcb91827f27e16b8**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"Crovisier\" \"asymptotic\" \"closing\" \"stable\" 2026",
+    "\"Crovisier\" \"asymptotic closing\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:hexagonmath.org OR site:palomar-registry.org)"
+  ],
+  "sources": [
+    {
+      "url": "https://www.numdam.org/item/AST_2013__354__R1_0/",
+      "locator": "2013 volume metadata; exact Question5.12 body not reached",
+      "inspection": "Target requires every prescribed x for every compact-manifold C1 diffeomorphism, stable capture by hyperbolic periodic orbit after arbitrarily small perturbation. Almost-every-point closability or special Hénon/dissipative-surface results are weaker. Metadata alone is not a full primary check."
+    }
+  ],
+  "scope_comparison": "Target requires every prescribed x for every compact-manifold C1 diffeomorphism, stable capture by hyperbolic periodic orbit after arbitrarily small perturbation. Almost-every-point closability or special Hénon/dissipative-surface results are weaker. Metadata alone is not a full primary check.",
+  "rationale": "No complete matching resolution identified in bounded searches. Hold pending announcement-source coverage and any specific body gaps stated above; no assertion of continued openness.",
+  "source_gaps": [
+    "Original Question5.12 full body not reached; metadata and local target only."
+  ],
+  "announcement_routing": {
+    "localID": "851",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "asymptotic closing",
+          "Crovisier"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "asymptotic closing",
+          "Crovisier"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "asymptotic closing",
+        "Crovisier"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_coverage_note": "Palomar954current summaries and Hexagon646current works were searched by the recorded aliases on3November2026; OpenAI pinned overview was searched too. These are bounded routing searches, not proof of absence. Source access errors earlier in this review are historical attempts; snapshot routing closed those index access gaps.",
+  "announcement_hit_disposition": "No matching full candidate identified. Generic inhomogeneous hits concern Galois/p-adic algebra or chiral chains; Pu alias hit is hyperbolic genus growth; Steklov/Neumann hits concern isospectral deformations, Polya or operator algebras; Margulis hit is Margulis–Platonov over fields. Toric/Poincare hits concern probability, numerical semigroups or topology. None states this local target.",
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:35:56.810Z",
+      "previous_outcome": "hold",
+      "localID": "851",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "sources": [
+        {
+          "url": "https://www.numdam.org/article/PMIHES_2006__104__87_0.pdf",
+          "locator": "Problem 1 (Asymptotic closing lemma), printed p.94 / PDF p.8, lines299–307",
+          "inspection": "Fresh primary body gives exactly every f, every neighborhood U and prescribed x, stable manifold of a hyperbolic periodic orbit, with the two additional Hausdorff requests. The preceding discussion explicitly distinguishes finite shadowing from robust asymptotic behavior."
+        }
+      ],
+      "scope_comparison": "The original exact historical formulation was reached independently despite the 18MB 2013 publisher PDF limit. Earlier current searches located only generic, measure-typical or restricted dissipative surface assertions; none has the universal prescribed-point quantifiers. Historical source access no longer creates a material hold. Bounded negative search only."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": []
+}

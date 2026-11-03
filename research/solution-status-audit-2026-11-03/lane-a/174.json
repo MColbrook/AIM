@@ -1,0 +1,77 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "174",
+  "manifest_index": 137,
+  "original_target": {
+    "id": "174",
+    "title": "Connectivity of the three-dimensional minimal spanning forest",
+    "area": "Disordered network optimization",
+    "file": "problems/174-three-dimensional-minimal-spanning-forest.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "9074f7edfff1b1f60a208b31185dd8161c67ef24fdda29ff5f6dac062d139be4",
+    "statement_sha256": "dc748260e75a84a276790ca365e97d5a12bf5c8e86f5f0a8a6a1370861cde7be",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9074f7edfff1b1f60a208b31185dd8161c67ef24fdda29ff5f6dac062d139be4",
+  "statement_sha256": "dc748260e75a84a276790ca365e97d5a12bf5c8e86f5f0a8a6a1370861cde7be",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:44:40.046414+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The source Corollary 4.3 gives planar connectivity. Quasiplanar slabs Z2 times a fixed finite set do not imply the full Z3 result; skewed forests on nonunimodular graphs are different. The current Lyons–Peres Question 11.35 still asks in which dimensions the lattice minimal spanning forest is a tree.",
+  "primary_sources": [
+    {
+      "url": "https://rdlyons.pages.iu.edu/pdf/AOP0151.pdf",
+      "locator": "Corollary 4.3, planar case",
+      "body_inspected": true
+    },
+    {
+      "url": "https://wrap.warwick.ac.uk/id/eprint/114352/1/WRAP-critical-percolation-minimal-spanning-tree-slabs-Wu-2020.pdf",
+      "locator": "Slab geometry hypotheses",
+      "body_inspected": true
+    },
+    {
+      "url": "https://rdlyons.pages.iu.edu/prbtree/book.pdf",
+      "locator": "Question 11.35, printed page 409",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"minimal spanning forest\" \"Z3\" \"2026\" connected",
+    "\"minimal spanning forest\" connected 2026 Z lattice"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "minimal spanning forest"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "minimal spanning forest"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

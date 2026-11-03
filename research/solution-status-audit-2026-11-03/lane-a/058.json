@@ -1,0 +1,76 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "058",
+  "manifest_index": 41,
+  "original_target": {
+    "id": "058",
+    "title": "Classify noninjectivity sets of spherical mean tomography",
+    "area": "Integral geometry / thermoacoustic imaging",
+    "file": "problems/058-spherical-mean-noninjectivity-sets.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "inverse",
+    "source_sha256": "0a8a1c2bd2c4c20dc7bd1cdd5226c1dbc7d3db7ef4781e7a765a471264a4ce14",
+    "statement_sha256": "ec0e3fa6e2bdc2814c0d1121558eac88cd845fa8a63f9fcbfdd9cfc0f1b4f800",
+    "state": "unreviewed"
+  },
+  "source_sha256": "0a8a1c2bd2c4c20dc7bd1cdd5226c1dbc7d3db7ef4781e7a765a471264a4ce14",
+  "statement_sha256": "ec0e3fa6e2bdc2814c0d1121558eac88cd845fa8a63f9fcbfdd9cfc0f1b4f800",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:36:53.327267+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "Real-analytically ruled surfaces in R3 and convex-support results impose additional assumptions. The necessary translated harmonic-cone plus codimension-two algebraic remainder statement is for arbitrary sets in every d>=3. September2609.19481 concerns the range of the transform, not classification of arbitrary noninjectivity sets.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1504.01250v2",
+      "locator": "§3 main results, Theorems3.5/3.7/3.8 and §4 conjecture; general common-vertex assertion retained.",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.19481",
+      "locator": "Primary abstract; range-characterization subject excludes this target.",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "spherical mean",
+    "Agranovsky",
+    "Quinto"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "spherical mean",
+        "Agranovsky",
+        "Quinto"
+      ],
+      "metadata_hits": [],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "spherical mean",
+        "Agranovsky",
+        "Quinto"
+      ],
+      "metadata_hits": [],
+      "scope": "Complete public summary routing; nonmatching hypotheses compared above. Not a proof review of unrelated works."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted web searches; arXiv, Zenodo, HAL, GitHub, shared OpenAI current index and requested Colbrook author lists screened. No matching complete claim located.",
+  "limitations": [
+    "Bounded search cannot establish absence of unindexed solutions.",
+    "No end-to-end proof or Lean verification; clearly excluding source hypotheses can be established by a primary abstract."
+  ],
+  "canonical_update_required": false
+}

@@ -1,0 +1,86 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "138",
+  "manifest_index": 109,
+  "original_target": {
+    "id": "138",
+    "title": "Recovering a rough planar conductivity from one boundary patch",
+    "area": "Inverse problems and imaging",
+    "file": "problems/138-recovering-a-rough-planar-conductivity-from-one-boundary-patch.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-b42858ef6d500422",
+    "group": "inverse2",
+    "source_sha256": "7bf23fa9132bca942d584e105f30beb1822e4042decbe2149baee10973c32ce9",
+    "statement_sha256": "bd06b7f2ac32b5985e65801d7d91482913cec33be77f78aab6ded5e5fd6fd0ea",
+    "state": "unreviewed"
+  },
+  "source_sha256": "7bf23fa9132bca942d584e105f30beb1822e4042decbe2149baee10973c32ce9",
+  "statement_sha256": "bd06b7f2ac32b5985e65801d7d91482913cec33be77f78aab6ded5e5fd6fd0ea",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:23:09.199574+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "Actual2610.17524v1 equations1.8–1.14 are fractional exterior-data observations with0<s<1, not local planar divergence-form boundary-patch data. Actual math/0401410v1 Theorem2.3 requires BOTH local DN and ND maps. Neither settles the single arbitrary-patch map for arbitrary real L-infinity conductivities; no full match located.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.17524v1",
+      "locator": "Section1.1 equations1.8–1.14",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/math/0401410v1",
+      "locator": "Section2.3 Theorem2.3",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"planar\" \"conductivity\" \"partial data\" \"2026\" L infinity",
+    "\"partial data\" \"conductivity\" \"L∞\" (site:zenodo.org OR site:hal.science OR site:github.com) 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Calderón",
+        "Calderon",
+        "conductivity"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-09-25-000016",
+          "title": "HighContrastHomogenization"
+        },
+        {
+          "id": "PALOMAR-2026-09-15-000008",
+          "title": "Formalization of norm-variation of multiple ergodic averages for commuting transformations"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Calderón",
+        "Calderon",
+        "conductivity"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

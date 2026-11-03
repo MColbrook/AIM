@@ -1,0 +1,92 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "969",
+  "manifest_index": 813,
+  "checked_date": "2026-11-03",
+  "source_sha256": "c9eebcd5abf11e9263e54165556a12fe2f488837bc610825189d61d01bd60e39",
+  "statement_sha256": "056baf7a66c2996f2404275db0f670ecf2703d1db5fb6fe1895b8024cb46aa2c",
+  "original_target": {
+    "id": "969",
+    "title": "Does the Wick square determine the unlabelled CLE4 loops?",
+    "area": "Probability, conformal random geometry and mathematical physics",
+    "file": "problems/969-does-the-wick-square-determine-the-unlabelled-cle4-loops.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-1961823dac27fe7a",
+    "group": "probability-statistics",
+    "source_sha256": "c9eebcd5abf11e9263e54165556a12fe2f488837bc610825189d61d01bd60e39",
+    "statement_sha256": "056baf7a66c2996f2404275db0f670ecf2703d1db5fb6fe1895b8024cb46aa2c",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`D=\\{z\\in\\mathbb C:|z|<1\\}`$, and let $`\\Phi`$ be the real Gaussian free field in $`D`$ with zero Dirichlet boundary conditions and covariance given by the Dirichlet Green function of $`-\\Delta`$. Thus its covariance has the diagonal singularity\n```math\nG_D(z,w)=\\frac{1}{2\\pi}\\log\\frac1{|z-w|}+O(1).\n```\n\n\nLet $`\\Gamma`$ be the **unlabelled, non-nested $`\\mathrm{CLE}_4`$** obtained from $`\\Phi`$ in the canonical Miller–Sheffield level-line coupling. This is the first layer of loops. To specify the joint law, conditional on the CLE loops with interiors $`(O_j)`$, choose independent fair signs $`(\\varepsilon_j)`$ and independent zero-boundary GFFs $`\\Phi_j`$ in $`O_j`$. With $`\\lambda=\\sqrt{\\pi/8}`$, the field in $`O_j`$ is\n```math\n\\Phi|_{O_j}=\\Phi_j+2\\lambda\\varepsilon_j.\n```\n\nThe resulting fields combine, in the sense of random distributions, into $`\\Phi`$. In this coupling $`\\Gamma`$ and its signs are measurable functions of $`\\Phi`$.\n\nDefine the Wick square $`\\Theta=:\\!\\Phi^2\\!:`$ by mollification. For each $`f\\in C_c^\\infty(D)`$,\n```math\n\\Theta(f)=\\lim_{\\epsilon\\downarrow0}\n\\int_D f(z)\\bigl(\\Phi_\\epsilon(z)^2-\n\\mathbb E[\\Phi_\\epsilon(z)^2]\\bigr)\\,dz,\n```\n\nwhere the limit is in $`L^2`$ of the probability space and $`\\Phi_\\epsilon`$ is a smooth mollification. This is a centered random distribution, rather than a pointwise square.\n\n**Is the collection $`\\Gamma`$ almost surely determined by $`\\Theta`$?** Equivalently, does\n```math\n\\sigma(\\Gamma)\\subseteq\n\\sigma\\bigl(\\Theta(f):f\\in C_c^\\infty(D)\\bigr)\n```\n\nhold after completing both sigma-fields by null events?\n\nThe question asks for the unlabelled first-layer loop collection. It does not ask to recover the signs, the full GFF, or the individual Brownian loops.",
+  "full_original_page": "# 969. Does the Wick square determine the unlabelled CLE4 loops?\n\n**Area:** Probability, conformal random geometry and mathematical physics\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`D=\\{z\\in\\mathbb C:|z|<1\\}`$, and let $`\\Phi`$ be the real Gaussian free field in $`D`$ with zero Dirichlet boundary conditions and covariance given by the Dirichlet Green function of $`-\\Delta`$. Thus its covariance has the diagonal singularity\n```math\nG_D(z,w)=\\frac{1}{2\\pi}\\log\\frac1{|z-w|}+O(1).\n```\n\n\nLet $`\\Gamma`$ be the **unlabelled, non-nested $`\\mathrm{CLE}_4`$** obtained from $`\\Phi`$ in the canonical Miller–Sheffield level-line coupling. This is the first layer of loops. To specify the joint law, conditional on the CLE loops with interiors $`(O_j)`$, choose independent fair signs $`(\\varepsilon_j)`$ and independent zero-boundary GFFs $`\\Phi_j`$ in $`O_j`$. With $`\\lambda=\\sqrt{\\pi/8}`$, the field in $`O_j`$ is\n```math\n\\Phi|_{O_j}=\\Phi_j+2\\lambda\\varepsilon_j.\n```\n\nThe resulting fields combine, in the sense of random distributions, into $`\\Phi`$. In this coupling $`\\Gamma`$ and its signs are measurable functions of $`\\Phi`$.\n\nDefine the Wick square $`\\Theta=:\\!\\Phi^2\\!:`$ by mollification. For each $`f\\in C_c^\\infty(D)`$,\n```math\n\\Theta(f)=\\lim_{\\epsilon\\downarrow0}\n\\int_D f(z)\\bigl(\\Phi_\\epsilon(z)^2-\n\\mathbb E[\\Phi_\\epsilon(z)^2]\\bigr)\\,dz,\n```\n\nwhere the limit is in $`L^2`$ of the probability space and $`\\Phi_\\epsilon`$ is a smooth mollification. This is a centered random distribution, rather than a pointwise square.\n\n**Is the collection $`\\Gamma`$ almost surely determined by $`\\Theta`$?** Equivalently, does\n```math\n\\sigma(\\Gamma)\\subseteq\n\\sigma\\bigl(\\Theta(f):f\\in C_c^\\infty(D)\\bigr)\n```\n\nhold after completing both sigma-fields by null events?\n\nThe question asks for the unlabelled first-layer loop collection. It does not ask to recover the signs, the full GFF, or the individual Brownian loops.\n\n## Application\n\nThe Wick square is the quadratic field observable corresponding, up to normalization, to the renormalized occupation field of a critical Brownian loop-soup. The question asks whether this observable retains the outer-boundary geometry of its clusters. This helps distinguish which parts of a conformally invariant random geometry are encoded by a field and which require extra randomness.\n\n## Known results and scope\n\nQian–Werner's Proposition 5 constructs a simultaneous coupling of the GFF, its Wick square, the critical Brownian loop-soup and its outermost cluster boundaries. The existence of this coupling is known; the question concerns determination within that coupling.\n\nAru–Lupu–Sepúlveda's excursion decomposition recovers cluster closures and associated measures from the **full GFF**. This does not itself give recovery from the Wick square.\n\nLehmkuehler–Qian–Werner prove that the exact trace of the loop-soup is not determined even by the coupled GFF, and construct different traces with the same collection of cluster closures. That result distinguishes a cluster from its closure. It does not by itself decide whether the outer-boundary loops are determined by the Wick square.\n\nThe current announcement of a joint Ashkin–Teller scaling limit identifies limiting clusters as recursive local sets of the full limiting GFF. Its selected main statements do not assert reconstruction of $`\\Gamma`$ from $`\\Theta`$.\n\n## References\n\n1. W. Qian and W. Werner, *Decomposition of Brownian loop-soup clusters*, J. Eur. Math. Soc. 21 (2019), 3225–3253, [DOI](https://doi.org/10.4171/JEMS/902). Eligible source: [arXiv:1509.01180v3](https://arxiv.org/pdf/1509.01180v3), Section 3 and Proposition 5 pp. 9–10, and Section 5.4 p. 23.\n2. J. Aru, T. Lupu and A. Sepúlveda, *Excursion decomposition of the 2D continuum GFF*, [arXiv:2304.03150v2](https://arxiv.org/pdf/2304.03150v2) (2023), Theorems 1–2 pp. 2–3, and Theorem 10 with the coupling discussion pp. 7–8.\n3. M. Lehmkuehler, W. Qian and W. Werner, *Parity questions in critical planar Brownian loop-soups (or “where did the free planar bosons go?”)*, Probab. Theory Related Fields 195 (2026), 211–246, published online 2025, [DOI](https://doi.org/10.1007/s00440-025-01418-0). [arXiv:2403.07830v2](https://arxiv.org/pdf/2403.07830v2), Results A.1–A.3 pp. 2–3, Theorem 1 p. 9, and the Wick-square definition p. 21.\n4. OpenAI, *The joint scaling limit of critical Ashkin–Teller currents* (2026), [preprint](https://github.com/openai/math/blob/main/preprints/The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-October-6-2026/main.pdf), Definition 2.1 pp. 6–7 and Theorem 2.3 p. 9.\n\n## Status review\n\n\n**Known cases:** The target is reconstruction of the unlabelled first CLE4 layer from the centered Wick-square distribution. Excursion decompositions, metric reconstruction from loops, parity identities and Ashkin-Teller scaling limits have different directions/conclusions.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe target is reconstruction of the unlabelled first CLE4 layer from the centered Wick-square distribution. Excursion decompositions, metric reconstruction from loops, parity identities and Ashkin-Teller scaling limits have different directions/conclusions.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked on 2026-10-24 against the eligible question and coupling, selected current primary statements and official version histories, targeted current and Prove2Me searches, and all-status AIM/FURTHER comparisons. No matching resolution or announcement was located. The review preserves the distinction between the full GFF and its Wick square, and between exact loop traces and outer boundaries. Selected primary passages were checked; every cited proof and the whole literature have not been certified.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-1961823dac27fe7a**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "Wick square",
+    "CLE4",
+    "loop-soup"
+  ],
+  "queries": [
+    "\"Wick square\" \"CLE\" determined 2026",
+    "\"Wick square\" \"CLE\" determined; domains arxiv.org,zenodo.org,hal.science,github.com",
+    "\"Wick square\" \"loops\" Werner"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2403.07830v2",
+      "locator": "ResultsA.1–A.2 lines58–76",
+      "comparison": "The explicit nondetermination concerns the exact trace, while coupled soups have the same cluster closures. Full GFF determines closures; closures determine square, but neither statement proves square determines unlabelled first-layer outer boundaries. New scaling-limit joint couplings are not reconstruction assertions."
+    }
+  ],
+  "rationale": "The explicit nondetermination concerns the exact trace, while coupled soups have the same cluster closures. Full GFF determines closures; closures determine square, but neither statement proves square determines unlabelled first-layer outer boundaries. New scaling-limit joint couplings are not reconstruction assertions.",
+  "limitations": [
+    "Bounded searches do not establish continued openness; selected primary statements inspected, not full proof certification."
+  ],
+  "announcement_routing": {
+    "localID": "969",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Wick square",
+          "CLE4",
+          "loop-soup"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Wick square",
+          "CLE4",
+          "loop-soup"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Wick square",
+        "CLE4",
+        "loop-soup"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

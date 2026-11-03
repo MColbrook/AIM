@@ -1,0 +1,52 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "286",
+  "manifest_index": 229,
+  "reviewed_UTC": "2026-11-03",
+  "source_sha256": "f3382abada808bc52200e9a3dc21ad347f3b285bc6fbabe6404e4482e704850e",
+  "statement_sha256": "b74552a69316833096acbbae61f3710ee67f8d58cecd1e5c64a51c4ac1c33d66",
+  "original_target": {
+    "id": "286",
+    "title": "Is the variance of fair binary sequence alignment linear?",
+    "area": "Uncertainty in sequence similarity",
+    "file": "problems/286-binary-lcs-linear-variance.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "f3382abada808bc52200e9a3dc21ad347f3b285bc6fbabe6404e4482e704850e",
+    "statement_sha256": "b74552a69316833096acbbae61f3710ee67f8d58cecd1e5c64a51c4ac1c33d66",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "problem_statement": "Let $`X_1,\\ldots,X_n`$ and $`Y_1,\\ldots,Y_n`$ be independent fair binary strings. Let $`L_n`$ be the largest $`k`$ for which indices $`i_1<\\cdots<i_k`$ and $`j_1<\\cdots<j_k`$ in $`\\{1,\\ldots,n\\}`$ satisfy $`X_{i_r}=Y_{j_r}`$ for all $`r`$. Is there a constant $`c>0`$ such that $`\\mathop{\\mathrm{Var}}\\nolimits(L_n)\\ge cn`$ for every sufficiently large $`n`$? A matching upper bound of order $`n`$ is known. A negative answer would also resolve this formulation of the linear-variance question.",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-match",
+  "recommendation": "Retain Open; bounded searches found no full match, not a certification of openness.",
+  "scope_comparison": "Local target fixes both independent strings to Bernoulli(1/2) and requires Var(L_n)>=c n for all sufficiently large n. Lember–Matzinger Theorem2.1 instead requires Bernoulli parameter epsilon below a sufficiently small epsilon0.",
+  "queries": [
+    "fair binary longest common subsequence variance linear proof 2026",
+    "longest common subsequence fair binary variance (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomarmath.ai OR site:hexagonmath.org)",
+    "longest common subsequence variance (site:palomar-registry.org OR site:hexagonmath.org OR site:github.com/openai/math)"
+  ],
+  "search_date": "2026-11-03",
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/0907.5137",
+      "version": "v1,29July2009; published Ann.Probab.37(2009)",
+      "locator": "§2, Theorem2.1, printed p.1195 / PDF p.4",
+      "scope": "Linear lower variance for sufficiently biased binary strings; no fair parameter assertion."
+    },
+    {
+      "url": "https://github.com/spicylemonade/constant",
+      "version": "accessed3November2026; no pinned commit inspected",
+      "locator": "README Main Result",
+      "scope": "Claim about limiting mean Chvatal–Sankoff constant; does not establish variance lower bound."
+    }
+  ],
+  "verification": "Literature and theorem-scope review only; no independent proof verification.",
+  "limitations": [
+    "Searches are bounded and web-index coverage is not exhaustive.",
+    "No newly located full matching announcement; theorem-body checks recorded only for plausible primary candidates.",
+    "Palomar initial guessed hostname corrected to palomar-registry.org in follow-up queries."
+  ]
+}

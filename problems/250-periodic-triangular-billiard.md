@@ -2,9 +2,9 @@
 
 **Area:** Hamiltonian dynamics / ray transport
 
-**Status:** 🟠 SOLUTION CLAIMED
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-10-15
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -23,6 +23,13 @@ The question asks whether every triangular optical or mechanical cavity supports
 3. A. Katok et al., *Problems on invariant measures and related topics*, [AIM workshop problem collection](https://aimath.org/WWN/measrigid/measrigid.pdf), §7, Question 46. States the unresolved obtuse-triangle case and contrasts rational polygons.
 
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The source claims a regular periodic billiard path in every finite bounded polygon. Every nondegenerate triangle is included. Regularity excludes vertices and tangencies; the phase-space orbit is closed, so both position and direction repeat. The doubling construction may increase the period, which the local existential target permits.
+
+[Claimed solution](https://arxiv.org/pdf/2606.10102v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/250.json). Source locator: Theorem1.1 and definition of regular periodic trajectory. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+
+### Earlier status record
+
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative
 

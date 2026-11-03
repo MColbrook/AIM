@@ -1,0 +1,48 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 308,
+  "source_sha256": "414a0b9907318a60e6fb59ba17d96f4aa59844e3b91909beadc896fbd3351155",
+  "statement_sha256": "a03a38847139e136a537c8607f4da107b478438198ee25253cbd7ff233ecf5c0",
+  "original_target": {
+    "id": "375",
+    "title": "Global regularity for two-dimensional Kuramoto–Sivashinsky on arbitrary square tori",
+    "area": "Combustion fronts; nonlinear pattern formation",
+    "file": "problems/375-two-dimensional-kuramoto-sivashinsky-global.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "diffusion-materials",
+    "source_sha256": "414a0b9907318a60e6fb59ba17d96f4aa59844e3b91909beadc896fbd3351155",
+    "statement_sha256": "a03a38847139e136a537c8607f4da107b478438198ee25253cbd7ff233ecf5c0",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "375",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"two dimensional\" \"Kuramoto Sivashinsky\" global regularity 2026",
+    "\"Kuramoto Sivashinsky\" global proof site:zenodo.org OR site:hal.science OR site:github.com 2026"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.00248v1",
+      "version": "v1 submitted 23 September 2026 (despite2610identifier)",
+      "locators": "equation1.13; Theorem1.5; section1.4 statement of limitation",
+      "body_inspected": true,
+      "scope": "L2-sphere constrained gradient/vector dynamics adds lambda_v(t)v, global for this modified PDE."
+    },
+    {
+      "url": "https://arxiv.org/html/2607.19887v1",
+      "version": "v1 22 July 2026",
+      "locators": "Theorem2.1; following comparison",
+      "body_inspected": true,
+      "scope": "Small-to-order-one nonlinear instability at logarithmic time, not finite-time singularity or arbitrary-data global existence."
+    }
+  ],
+  "registry_checks": "No Kuramoto alias Palomar/Hexagon/OpenAI full metadata. Focused current arXiv, author/publisher, Zenodo, HAL and GitHub searches.",
+  "scope_comparison": "Mean subtraction in original only fixes additive height constant; after taking gradient it disappears. New L2 multiplier changes the gradient evolution and is not that harmless normalization. Small/thin-domain, imposed advection or constrained equations do not cover all L>pi square tori and arbitrary data.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. Matching-looking September global title explicitly restricts to modified constrained dynamics."
+}

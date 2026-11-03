@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1048",
+  "manifest_index": 892,
+  "checked_date": "2026-11-03",
+  "source_sha256": "c3f9f08a459e4d86de8758e7e0fb72671530fb636033a5b2611f62112a2dc345",
+  "statement_sha256": "35bc9f3e002da43076812c8e8b8e364dedce3d17a81c151f96506acac7b23dea",
+  "original_target": {
+    "id": "1048",
+    "title": "Can neighboring water-wave Bloch bands overlap?",
+    "area": "Water waves and spectral theory",
+    "file": "problems/1048-can-neighboring-water-wave-bloch-bands-overlap.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-787bd7da5d0b8ea8",
+    "group": "waves-fluids-kinetics",
+    "source_sha256": "c3f9f08a459e4d86de8758e7e0fb72671530fb636033a5b2611f62112a2dc345",
+    "statement_sha256": "35bc9f3e002da43076812c8e8b8e364dedce3d17a81c151f96506acac7b23dea",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Fix $`h>0`$ and a real $`2\\pi`$-periodic $`b\\in C^1(\\mathbb R)`$ with $`h-b(x)\\ge c_0>0`$. Set\n```math\n\\Omega_b=\\{(x,y)\\in\\mathbb R^2:-h+b(x)<y<0\\}.\n```\n\nFor each $`\\theta\\in[-\\tfrac12,\\tfrac12]`$, use traces $`f\\in H^1_{\\mathrm{loc}}(\\mathbb R)`$ satisfying $`f(x+2\\pi)=e^{2\\pi i\\theta}f(x)`$. Their harmonic extensions satisfy\n```math\n\\Delta\\Phi=0\\ \\text{in }\\Omega_b,\\qquad\n\\Phi(x,0)=f(x),\\qquad\n\\partial_\\nu\\Phi=0\\ \\text{on }y=-h+b(x),\n```\n\nwith the same quasiperiodicity and finite energy on a period cell. The free-surface Dirichlet–Neumann map is $`f\\mapsto\\partial_y\\Phi(x,0)`$.\n\nWrite its fiber eigenvalues on one period cell in increasing order, including multiplicities:\n```math\n\\Lambda_0(\\theta)\\le\\Lambda_1(\\theta)\\le\\cdots.\n```\n\nDefine\n```math\n\\Lambda_n^-=\\min_\\theta\\Lambda_n(\\theta),\\qquad\n\\Lambda_n^+=\\max_\\theta\\Lambda_n(\\theta).\n```\n\n**Must $`\\Lambda_n^+\\le\\Lambda_{n+1}^-`$ hold for every $`n\\ge0`$ and every such bottom profile?**\n\nTouching bands are allowed. There is no small-amplitude assumption, and the labels are ordered fiber eigenvalues rather than analytic branches continued through crossings.",
+  "full_original_page": "# 1048. Can neighboring water-wave Bloch bands overlap?\n\n**Area:** Water waves and spectral theory\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFix $`h>0`$ and a real $`2\\pi`$-periodic $`b\\in C^1(\\mathbb R)`$ with $`h-b(x)\\ge c_0>0`$. Set\n```math\n\\Omega_b=\\{(x,y)\\in\\mathbb R^2:-h+b(x)<y<0\\}.\n```\n\nFor each $`\\theta\\in[-\\tfrac12,\\tfrac12]`$, use traces $`f\\in H^1_{\\mathrm{loc}}(\\mathbb R)`$ satisfying $`f(x+2\\pi)=e^{2\\pi i\\theta}f(x)`$. Their harmonic extensions satisfy\n```math\n\\Delta\\Phi=0\\ \\text{in }\\Omega_b,\\qquad\n\\Phi(x,0)=f(x),\\qquad\n\\partial_\\nu\\Phi=0\\ \\text{on }y=-h+b(x),\n```\n\nwith the same quasiperiodicity and finite energy on a period cell. The free-surface Dirichlet–Neumann map is $`f\\mapsto\\partial_y\\Phi(x,0)`$.\n\nWrite its fiber eigenvalues on one period cell in increasing order, including multiplicities:\n```math\n\\Lambda_0(\\theta)\\le\\Lambda_1(\\theta)\\le\\cdots.\n```\n\nDefine\n```math\n\\Lambda_n^-=\\min_\\theta\\Lambda_n(\\theta),\\qquad\n\\Lambda_n^+=\\max_\\theta\\Lambda_n(\\theta).\n```\n\n**Must $`\\Lambda_n^+\\le\\Lambda_{n+1}^-`$ hold for every $`n\\ge0`$ and every such bottom profile?**\n\nTouching bands are allowed. There is no small-amplitude assumption, and the labels are ordered fiber eigenvalues rather than analytic branches continued through crossings.\n\n## Application\n\nThese bands govern propagation of linearized free-surface waves above periodic seabeds. Their ordering would clarify which frequency ranges can be separated by forbidden propagation intervals.\n\n## References\n\n1. W. Craig, M. Gazeau, C. Lacave and C. Sulem, *Bloch theory and spectral gaps for linearized water waves*, **SIAM Journal on Mathematical Analysis** 50(5) (2018), 5477–5501, [DOI:10.1137/17M113561X](https://doi.org/10.1137/17M113561X). The question is explicit in the introduction after Definition 1.1. See [arXiv:1706.07417v2](https://arxiv.org/html/1706.07417v2), with first version dated 22 June 2017.\n2. C. Lacave, M. Ménard and C. Sulem, *Bloch–Floquet band gaps for water waves over a periodic bottom*, **EMS Surveys in Mathematical Sciences** 12(1) (2025), 243–288, [DOI:10.4171/EMSS/93](https://doi.org/10.4171/EMSS/93), Section 4, p. 270. Its results construct gaps perturbatively; the general ordering is not established there. Section 3.4 distinguishes ordered eigenvalues from analytic relabelings.\n\nThe source also asks about periodic/antiperiodic band edges. That additional question and stronger monotonicity statements are separate from the inequality above.\n\n## Status review\n\n\n**Known cases:** No small bottom-amplitude condition is allowed and band labels are ordered fiber eigenvalues. Perturbative gap constructions and analytic branch relabeling do not prove the no-overlap inequality.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nNo small bottom-amplitude condition is allowed and band labels are ordered fiber eigenvalues. Perturbative gap constructions and analytic branch relabeling do not prove the no-overlap inequality.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe 2025 paper establishes perturbative gaps, with smallness depending on the spectral range; it does not establish the general inequality above. No matching complete proof, counterexample or announced resolution was located in the dated bounded search.\n\nThe [source and current review](../FURTHER_problems/_tracking/focused-water-wave-Bloch-band-order-C162-A-20261028/WATER-WAVE-BAND-ORDER-EXACT-PRIMARY-CURRENT-981MODELS614P-1704ROWS-PEER-PASS-NO-ADMISSION.json), [independent review](../FURTHER_problems/_tracking/focused-water-wave-Bloch-band-order-C162-A-20261028/ROOT-EXACT-PRIMARY-FIBER-MODEL-CURRENT-STATUS-REVIEW-PASS.json) and [all-status comparison](../FURTHER_problems/_tracking/focused-water-wave-Bloch-band-order-C162-A-20261028/ROOT-FRESH-981MODELS614P-1704ROWS-CONTENT-DUPLICATE-GATE.json) preserve the model and search limits. These are AI checks, not human peer review or a proof certificate.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-787bd7da5d0b8ea8**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "water wave Bloch",
+    "Craig Gazeau",
+    "Lacave Menard",
+    "band overlap"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "water waves Bloch bands overlap no overlap periodic bottom 2026"
+    },
+    {
+      "query": "water wave Bloch band overlap proof",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1706.07417v2",
+      "locator": "Definition1.1/intro orderedfiberbands;2025publishedEMSS93Section4p270"
+    }
+  ],
+  "scope_comparison": "Fiber eigenvalue ordering at each theta does not order ranges at differenttheta. Latest2025theorem constructs gaps for sufficiently small bottom perturbations depending on finite spectral range, not everyC1profile/noamplitudebound. Analytic branch relabeling and porous obstacle dissipative bands are different. No full matching announcement.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded negative search does not establish continued openness; exact problem/current theorem statements compared, no full-proof certification.",
+  "announcement_routing": {
+    "localID": "1048",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "water wave Bloch",
+          "Craig Gazeau",
+          "Lacave Menard",
+          "band overlap"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "water wave Bloch",
+          "Craig Gazeau",
+          "Lacave Menard",
+          "band overlap"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "water wave Bloch",
+        "Craig Gazeau",
+        "Lacave Menard",
+        "band overlap"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

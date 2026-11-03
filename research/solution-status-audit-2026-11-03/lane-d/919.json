@@ -1,0 +1,86 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "919",
+  "manifest_index": 763,
+  "checked_date": "2026-11-03",
+  "source_sha256": "c7218a9eb23fb3e6f584aa69810f1097bdd2567eb0b6fed313dc1440e714f408",
+  "statement_sha256": "69ee08ca9917cc349bc75c404be1055ce366d3882b2ea4ad477ae13ecf80d0d8",
+  "original_target": {
+    "id": "919",
+    "title": "Can the double-logarithmic loss be removed from the bilinear Hilbert transform's edge estimate?",
+    "area": "Harmonic analysis and multilinear singular integrals",
+    "file": "problems/919-can-the-double-logarithmic-loss-be-removed-from-the-bilinear-hilbert-transform-s-edge-estimate.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-a2c1f51da746cb70",
+    "group": "operators",
+    "source_sha256": "c7218a9eb23fb3e6f584aa69810f1097bdd2567eb0b6fed313dc1440e714f408",
+    "statement_sha256": "69ee08ca9917cc349bc75c404be1055ce366d3882b2ea4ad477ae13ecf80d0d8",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "For a fixed nondegenerate parameter $`\\boldsymbol\\beta=(\\beta_1,\\beta_2,\\beta_3)`$, meaning that its components are pairwise distinct, define the trilinear form\n\n```math\n\\Lambda_{\\boldsymbol\\beta}(f_1,f_2,f_3)\n=\\int_{\\mathbb R}\\mathrm{p.v.}\\int_{\\mathbb R}\nf_1(x-\\beta_1t)f_2(x-\\beta_2t)f_3(x-\\beta_3t)\n\\,\\frac{dt}{t}\\,dx.\n```\n\n\nLet $`\\boldsymbol\\alpha=(\\alpha_1,\\alpha_2,\\alpha_3)`$ satisfy $`\\sum_j\\alpha_j=1`$, one $`\\alpha_j=-1/2`$, and both other components be strictly below $`1`$. For every triple of measurable finite-measure sets $`F_1,F_2,F_3\\subset\\mathbb R`$, does there exist a subset $`F'_j\\subset F_j`$ with $`|F'_j|\\ge |F_j|/2`$ such that\n\n```math\n|\\Lambda_{\\boldsymbol\\beta}(f_1,f_2,f_3)|\n\\le C_{\\boldsymbol\\beta,\\boldsymbol\\alpha}\n\\prod_{k=1}^{3}|F_k|^{\\alpha_k}\n```\n\n\nfor **all** $`|f_k|\\le\\mathbf1_{F_k}`$ when $`k\\ne j`$ and all $`|f_j|\\le\\mathbf1_{F'_j}`$? The subset may depend on the sets, while the constant must not depend on their measures. The parameter is fixed; uniformity as two $`\\beta_j`$ coalesce is a different question.\n\nThe source calls this Conjecture 1, a generalized restricted weak-type estimate on the short open sides of its exponent hexagon. Its Corollary 4 proves the same bound with an extra factor involving $`\\log\\log(e^e+|F_j|/\\min_{k\\ne j}|F_k|)`$. At the midpoint $`\\boldsymbol\\alpha=(3/4,3/4,-1/2)`$, the question is whether that factor can be removed entirely.",
+  "full_original_page": "# 919. Can the double-logarithmic loss be removed from the bilinear Hilbert transform's edge estimate?\n\n**Area:** Harmonic analysis and multilinear singular integrals\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nFor a fixed nondegenerate parameter $`\\boldsymbol\\beta=(\\beta_1,\\beta_2,\\beta_3)`$, meaning that its components are pairwise distinct, define the trilinear form\n\n```math\n\\Lambda_{\\boldsymbol\\beta}(f_1,f_2,f_3)\n=\\int_{\\mathbb R}\\mathrm{p.v.}\\int_{\\mathbb R}\nf_1(x-\\beta_1t)f_2(x-\\beta_2t)f_3(x-\\beta_3t)\n\\,\\frac{dt}{t}\\,dx.\n```\n\n\nLet $`\\boldsymbol\\alpha=(\\alpha_1,\\alpha_2,\\alpha_3)`$ satisfy $`\\sum_j\\alpha_j=1`$, one $`\\alpha_j=-1/2`$, and both other components be strictly below $`1`$. For every triple of measurable finite-measure sets $`F_1,F_2,F_3\\subset\\mathbb R`$, does there exist a subset $`F'_j\\subset F_j`$ with $`|F'_j|\\ge |F_j|/2`$ such that\n\n```math\n|\\Lambda_{\\boldsymbol\\beta}(f_1,f_2,f_3)|\n\\le C_{\\boldsymbol\\beta,\\boldsymbol\\alpha}\n\\prod_{k=1}^{3}|F_k|^{\\alpha_k}\n```\n\n\nfor **all** $`|f_k|\\le\\mathbf1_{F_k}`$ when $`k\\ne j`$ and all $`|f_j|\\le\\mathbf1_{F'_j}`$? The subset may depend on the sets, while the constant must not depend on their measures. The parameter is fixed; uniformity as two $`\\beta_j`$ coalesce is a different question.\n\nThe source calls this Conjecture 1, a generalized restricted weak-type estimate on the short open sides of its exponent hexagon. Its Corollary 4 proves the same bound with an extra factor involving $`\\log\\log(e^e+|F_j|/\\min_{k\\ne j}|F_k|)`$. At the midpoint $`\\boldsymbol\\alpha=(3/4,3/4,-1/2)`$, the question is whether that factor can be removed entirely.\n\n## Application\n\nA positive answer would identify the sharp restricted weak-type boundary behavior of the bilinear Hilbert transform at output exponent $`2/3`$. The analogous Walsh-model quartile operator admits a stronger bound, but its perfect frequency-and-space localization is absent for the continuous transform.\n\n## References\n\n- F. Di Plinio and C. Thiele, [*Endpoint bounds for the bilinear Hilbert transform*](https://arxiv.org/html/1403.5978v1), *Trans. Amer. Math. Soc.* **368** (2016), 3931–3972, [DOI 10.1090/tran/6548](https://doi.org/10.1090/tran/6548). See Introduction, definition (1.3), Conjecture 1 and Corollary 4 (1.7).\n- C. Demeter and F. Di Plinio, [*Endpoint bounds for the quartile operator*](https://arxiv.org/abs/1206.3798), *J. Fourier Anal. Appl.* **19** (2013), 836–856. This treats the Walsh model, not the continuous bilinear Hilbert transform.\n- G. Uraltsev and M. Warchalski, [*The full range of uniform bounds for the bilinear Hilbert transform*](https://arxiv.org/abs/2205.09851), preprint (2022). Its uniform bounds have output exponent strictly greater than $`2/3`$.\n\n## Status review\n\n\n**Known cases:** The continuous-transform source still distinguishes the log-corrected endpoint theorem from its log-free conjecture. Walsh/quartile endpoint bounds and continuous uniform estimates with output exponent strictly above two-thirds do not remove the boundary double-log factor.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe continuous-transform source still distinguishes the log-corrected endpoint theorem from its log-free conjecture. Walsh/quartile endpoint bounds and continuous uniform estimates with output exponent strictly above two-thirds do not remove the boundary double-log factor.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe original paper explicitly separates its log-corrected Corollary 4 from the log-free Conjecture 1. A bounded search through 22 October 2026 checked the [current publications of Di Plinio](https://sites.google.com/view/fdiplinio/home/publications), [current papers of Thiele](https://www.math.uni-bonn.de/people/thiele/papers/), later primary endpoint work and online announcements. No result settling this exact continuous-transform boundary bound was found. The 2022 uniform interior-range theorem and related rough-integral endpoint results have different exponent or operator hypotheses. This is bounded negative evidence, not a guarantee that no solution exists. The [exact source-body receipt](../FURTHER_problems/_tracking/parallel/rough-filtering/arxiv-body-secondpass-0202-remote-attested-review.json), [status comparison](../FURTHER_problems/_tracking/bht-endpoint-2026-10-22-status.json) and [duplicate audit](../FURTHER_problems/_tracking/bht-endpoint-2026-10-22-duplicates.json) record the checks.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-a2c1f51da746cb70**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "queries": [
+    "\"bilinear Hilbert transform\" \"double logarithmic\" endpoint 2026",
+    "\"bilinear Hilbert transform\" \"double logarithmic\" endpoint; domains arxiv.org,zenodo.org,hal.science,github.com"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1403.5978v1",
+      "locator": "Conjecture1 and source abstract / Corollary4",
+      "comparison": "Source explicitly distinguishes log-free GRWT boundary conjecture from double-log-corrected estimate. Quartile/Walsh model and output exponent >2/3 uniform bounds leave the exact continuous open-edge exponent untreated."
+    }
+  ],
+  "rationale": "Source explicitly distinguishes log-free GRWT boundary conjecture from double-log-corrected estimate. Quartile/Walsh model and output exponent >2/3 uniform bounds leave the exact continuous open-edge exponent untreated. No full matching claim found in bounded searches.",
+  "limitations": [
+    "Bounded negative search does not prove openness."
+  ],
+  "announcement_routing": {
+    "localID": "919",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "bilinear Hilbert",
+          "quartile",
+          "double logarithmic"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "bilinear Hilbert",
+          "quartile",
+          "double logarithmic"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "bilinear Hilbert",
+        "quartile",
+        "double logarithmic"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

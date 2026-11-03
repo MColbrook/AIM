@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "806",
+  "manifest_index": 650,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "806",
+    "title": "Must every elliptic Weingarten sphere in a homogeneous three-manifold be rotational?",
+    "area": "Geometry and topology",
+    "file": "problems/806-must-every-elliptic-weingarten-sphere-in-a-homogeneous-three-manifold-be-rotational.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-79d43c862e5f0386",
+    "group": "geometry-topology",
+    "source_sha256": "f1930e65286d0f83344b32111b7b688b341686ed20bf75602229faa81599fa26",
+    "statement_sha256": "30daad1dc87c427f960df970ebf8862e2ca753493ce365d19be6b4587948bd86",
+    "state": "unreviewed"
+  },
+  "source_sha256": "f1930e65286d0f83344b32111b7b688b341686ed20bf75602229faa81599fa26",
+  "statement_sha256": "30daad1dc87c427f960df970ebf8862e2ca753493ce365d19be6b4587948bd86",
+  "actual_source_sha256": "f1930e65286d0f83344b32111b7b688b341686ed20bf75602229faa81599fa26",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`M=\\mathbb{E}^3(\\kappa,\\tau)`$ be a simply connected homogeneous Riemannian three-manifold with four-dimensional isometry group, so $`\\kappa-4\\tau^2\\ne0`$. These spaces have a canonical vertical direction from their Riemannian fibration over a constant-curvature surface.\n\nLet a closed connected oriented surface of genus zero be smoothly immersed in $`M`$. Write $`k_1,k_2`$ for its principal curvatures,\n```math\nH=\\frac{k_1+k_2}{2},\\qquad K_e=k_1k_2.\n```\n\nSuppose it satisfies\n```math\nH=\\phi(H^2-K_e),\\qquad\n\\phi\\in C^\\infty([0,\\infty)),\\qquad\n4t\\phi'(t)^2<1\\quad(t\\ge0).\n```\n\n\nMust its image be invariant under the one-parameter rotational isometries fixing some vertical geodesic?\n\nThe immersion need not be embedded or convex. The question imposes no sign condition on $`H`$ and no global uniform ellipticity bound. It asks for symmetry of an existing immersed sphere, rather than existence for every equation.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Weingarten spheres\" rotational homogeneous 2026 solution",
+    "\"Weingarten spheres\" rotational homogeneous (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Weingarten spheres\" rotational homogeneous (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Weingarten spheres\" 2026 Gálvez Mira"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1807.09654v1",
+      "primary_body_access_gap": false,
+      "locator": "Actual Theorems1.2–1.6; https://arxiv.org/html/2211.11373v2 Theorems4.1–4.2",
+      "version_or_date": "Current abs1807.09654 lists onlyv1,25July2018; finalCrelle773(2021)21–66 identified. Fernandez2211.11373v2 dated28March2023 actual body compared.",
+      "scope_comparison": "Theorem1.6 requires bounded second fundamental form of the canonical rotational example S, not merely of the given compact immersed sphere. Theorem1.5 assumes positive lower/upper mean-curvature bounds for the relation; the local target imposes no sign condition. Fernandez's theorem proves product S²×R under uniform ellipticity; together with a cutoff of the relation on the compact sphere's curvature range it gives that product case. H²×R is already covered. Neither covers all nonproduct E(kappa,tau) spaces. Current2026 Euclidean asymptotic-end/Hopf results have different ambient geometry. No full match found."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem1.6 requires bounded second fundamental form of the canonical rotational example S, not merely of the given compact immersed sphere. Theorem1.5 assumes positive lower/upper mean-curvature bounds for the relation; the local target imposes no sign condition. Fernandez's theorem proves product S²×R under uniform ellipticity; together with a cutoff of the relation on the compact sphere's curvature range it gives that product case. H²×R is already covered. Neither covers all nonproduct E(kappa,tau) spaces. Current2026 Euclidean asymptotic-end/Hopf results have different ambient geometry. No full match found.",
+  "latest_version_check": "Current abs1807.09654 lists onlyv1,25July2018; finalCrelle773(2021)21–66 identified. Fernandez2211.11373v2 dated28March2023 actual body compared.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

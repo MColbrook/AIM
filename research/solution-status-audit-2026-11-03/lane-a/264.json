@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "264",
+  "manifest_index": 208,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "264",
+    "title": "A perfectly conducting obstacle from one electromagnetic plane wave",
+    "area": "Inverse electromagnetic scattering",
+    "file": "problems/264-a-perfectly-conducting-obstacle-from-one-electromagnetic-plane-wave.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-f67c2612b1ddd8ed",
+    "group": "inverse3",
+    "source_sha256": "30f9b7a8d564bfd401fb14f68a91bc0b9079d09c69d1fb9f436c57c223703f63",
+    "statement_sha256": "7dec7733a055cf322b5c6a3b61d31b75d6666f9b234b92faf1bb778af006d13e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "30f9b7a8d564bfd401fb14f68a91bc0b9079d09c69d1fb9f436c57c223703f63",
+  "statement_sha256": "7dec7733a055cf322b5c6a3b61d31b75d6666f9b234b92faf1bb778af006d13e",
+  "actual_source_sha256": "30f9b7a8d564bfd401fb14f68a91bc0b9079d09c69d1fb9f436c57c223703f63",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix $`k>0`$, $`d\\in\\mathbb S^2`$, and $`0\\ne p\\in\\mathbb R^3`$ with $`p\\cdot d=0`$. Let $`D_1,D_2\\subset\\mathbb R^3`$ be bounded connected open sets with connected $`C^2`$ boundaries and connected exteriors. For $`j=1,2`$, let $`(E_j,H_j)`$ be the outgoing electromagnetic field outside $`\\overline D_j`$ with incident field\n\n```math\nE^i(x)=p e^{ikd\\cdot x},\\qquad H^i(x)=(d\\times p)e^{ikd\\cdot x}.\n```\n\nThe total fields satisfy\n\n```math\n\\nabla\\times E_j=ikH_j,\\qquad \\nabla\\times H_j=-ikE_j,\\qquad\n\\nu_j\\times E_j=0\\quad\\hbox{on }\\partial D_j.\n```\n\nWriting $`E_j=E^i+E_j^s`$ and $`H_j=H^i+H_j^s`$, impose the Silver–Müller condition\n\n```math\n\\lim_{r\\to\\infty}r\\bigl(H_j^s(r\\hat x)\\times\\hat x-E_j^s(r\\hat x)\\bigr)=0\n```\n\nuniformly in $`\\hat x\\in\\mathbb S^2`$. Define the complex electric far-field pattern by\n\n```math\nE_j^s(r\\hat x)=\\frac{e^{ikr}}r E_j^\\infty(\\hat x;k,d,p)+O(r^{-2}).\n```\n\nDoes\n\n```math\nE_1^\\infty(\\hat x;k,d,p)=E_2^\\infty(\\hat x;k,d,p)\n\\quad\\hbox{for every }\\hat x\\in\\mathbb S^2\n```\n\nimply $`D_1=D_2`$? The wavenumber, incident direction and polarization are each fixed; the data include the complex phase. The question is for every such fixed triple and every pair of domains in this class. No size or convexity assumption is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"electromagnetic obstacle\" \"single\" uniqueness 2026",
+    "\"electromagnetic obstacle\" \"single\" uniqueness (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"electromagnetic obstacle\" \"single\" uniqueness (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Latestv5,18April2021,withdrawn; current history inspected3November2026.",
+      "url": "https://arxiv.org/abs/1606.06529",
+      "scope_comparison": "The older general one-plane-wave uniqueness claim is explicitly withdrawn for a main-proof gap. Polyhedral uniqueness and the2026extended-sampling result that two equal-pattern obstacles must intersect do not imply equality for arbitrary C2PECobstacles. No repaired general proof or complete matching announcement found.",
+      "primary_body_access_gap": false,
+      "locator": "Primary withdrawal notice,Comments and Submission history"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The older general one-plane-wave uniqueness claim is explicitly withdrawn for a main-proof gap. Polyhedral uniqueness and the2026extended-sampling result that two equal-pattern obstacles must intersect do not imply equality for arbitrary C2PECobstacles. No repaired general proof or complete matching announcement found.",
+  "latest_version_check": "Latestv5,18April2021,withdrawn; current history inspected3November2026.",
+  "gap_retraction_check": "GenqianLiu arXiv1606.06529v5 is withdrawn because of a gap in the main proof; old title/abstract cannot be promoted.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

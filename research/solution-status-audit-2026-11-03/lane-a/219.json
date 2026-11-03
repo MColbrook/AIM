@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "219",
+  "manifest_index": 167,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "219",
+    "title": "Axisymmetry of equilibrium distributions for Onsager rods",
+    "area": "Liquid-crystal statistical mechanics",
+    "file": "problems/219-onsager-axisymmetric-minimizers.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "diffusion-materials",
+    "source_sha256": "4e8c560f50791b0b3f78a522382f6a1245cd0639d00d7bd965faa3f6d40d6079",
+    "statement_sha256": "f77df3d718c4cb17b59d0577364ac531327e127e65da86785073d77bd4ee6835",
+    "state": "unreviewed"
+  },
+  "source_sha256": "4e8c560f50791b0b3f78a522382f6a1245cd0639d00d7bd965faa3f6d40d6079",
+  "statement_sha256": "f77df3d718c4cb17b59d0577364ac531327e127e65da86785073d77bd4ee6835",
+  "actual_source_sha256": "4e8c560f50791b0b3f78a522382f6a1245cd0639d00d7bd965faa3f6d40d6079",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For $`\\kappa>0`$ and probability densities $`\\rho\\geq0`$ on $`\\mathbb S^2`$ with respect to surface area, define\n\n```math\n\\mathcal F_\\kappa(\\rho)=\\int_{\\mathbb S^2}\\rho\\log\\rho\\,dS+\\frac\\kappa2\\iint_{\\mathbb S^2\\times\\mathbb S^2}\\sqrt{1-(p\\cdot q)^2}\\,\\rho(p)\\rho(q)\\,dS_p\\,dS_q,\n```\n\nwith $`0\\log0=0`$ and value $`+\\infty`$ when the entropy is infinite. Is every global minimizer, for every $`\\kappa>0`$, axisymmetric: does there exist $`e\\in\\mathbb S^2`$ such that $`\\rho(Rp)=\\rho(p)`$ almost everywhere for every rotation $`R`$ fixing $`e`$?",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Onsager\" \"minimizer\" \"axisymmetry\" 2026",
+    "\"Onsager\" \"minimizer\" \"axisymmetry\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Onsager\" \"minimizer\" \"axisymmetry\" (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "ConcludingdiscussionofSection3,PDFp13",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/pdf/2008.04009",
+      "version_or_date": "Ball2020,arXiv:2008.04009,currentprimaryPDF",
+      "scope_comparison": "The target quantifies over every global minimizer at every coupling for the square-root Onsager kernel on S2. The primary conclusion explicitly leaves local/global minimizer axisymmetry open for this kernel. Non-axisymmetric critical-point constructions or numerical landscapes do not prove such a point minimizes globally;Maier–Saupe polynomial kernels are different functionals. No later full matching proof,counterexample or complete announcement was located."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The target quantifies over every global minimizer at every coupling for the square-root Onsager kernel on S2. The primary conclusion explicitly leaves local/global minimizer axisymmetry open for this kernel. Non-axisymmetric critical-point constructions or numerical landscapes do not prove such a point minimizes globally;Maier–Saupe polynomial kernels are different functionals. No later full matching proof,counterexample or complete announcement was located.",
+  "latest_version_check": "Ball2020,arXiv:2008.04009,currentprimaryPDF",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

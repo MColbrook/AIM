@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "238",
+  "manifest_index": 184,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "238",
+    "title": "The densest packing of congruent regular tetrahedra",
+    "area": "Granular packing and particle assembly",
+    "file": "problems/238-regular-tetrahedron-packing.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "diffusion-materials",
+    "source_sha256": "552fb15585f15688609e4053fcd83b5be97f1f39580a50cf7e7823e6676d5398",
+    "statement_sha256": "c89776ff3859a57d1a56c176e9e4f68bd403ca253f1d3b9aa0c0f9116ed85fff",
+    "state": "unreviewed"
+  },
+  "source_sha256": "552fb15585f15688609e4053fcd83b5be97f1f39580a50cf7e7823e6676d5398",
+  "statement_sha256": "c89776ff3859a57d1a56c176e9e4f68bd403ca253f1d3b9aa0c0f9116ed85fff",
+  "actual_source_sha256": "552fb15585f15688609e4053fcd83b5be97f1f39580a50cf7e7823e6676d5398",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`T\\subset\\mathbb R^3`$ be a regular tetrahedron of side length one. A packing $`\\mathcal P`$ is a locally finite collection of images of $`T`$ under Euclidean isometries, with pairwise disjoint interiors. Define\n\n```math\n\\delta(\\mathcal P)=\\limsup_{R\\to\\infty}\\frac{|B_R(0)\\cap\\bigcup_{P\\in\\mathcal P}P|}{|B_R(0)|},\\qquad\\delta_T=\\sup_{\\mathcal P}\\delta(\\mathcal P).\n```\n\nDetermine $`\\delta_T`$ exactly, by giving a matching rigorous upper bound and packing construction. Arbitrary orientations and nonperiodic packings are allowed; the known density $`4000/4671`$ is a lower bound, not an assumption about optimality.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"tetrahedra\" \"4000/4671\" packing 2026",
+    "\"tetrahedra\" \"4000/4671\" packing (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"tetrahedra\" \"4000/4671\" packing (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "scope_comparison": "Theorem1 constructs density4000/4671. SectionIII explicitly makes optimality conditional on double-dimer form and restricted parameter space; arbitrary orientations and nonperiodic packings are not bounded by that argument. Other primary upper bounds leave a positive gap. No exact global optimum announcement located.",
+      "locator": "Theorem1 p7,SectionIII p8 optimality qualifications",
+      "version_or_date": "Current retrieved Chen–Engel–Glotzer PDF internally revised25October2018; focused searches3November2026.",
+      "url": "https://arxiv.org/pdf/1001.0586"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Theorem1 constructs density4000/4671. SectionIII explicitly makes optimality conditional on double-dimer form and restricted parameter space; arbitrary orientations and nonperiodic packings are not bounded by that argument. Other primary upper bounds leave a positive gap. No exact global optimum announcement located.",
+  "latest_version_check": "Current retrieved Chen–Engel–Glotzer PDF internally revised25October2018; focused searches3November2026.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

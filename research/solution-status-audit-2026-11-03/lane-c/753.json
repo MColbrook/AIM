@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "753",
+  "manifest_index": 597,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "753",
+    "title": "Approximate continuity of the Cantor part for complex-elliptic systems",
+    "area": "Geometric measure theory / continuum material models",
+    "file": "problems/753-approximate-continuity-of-the-cantor-part-for-complex-elliptic-systems.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0bec0e600d5e27ed",
+    "group": "fracture-damage-plasticity-contact",
+    "source_sha256": "83ad6244d22630313d77b09ac2f42f5aef0e5a553d79a01a4da39577a9354030",
+    "statement_sha256": "44eea4bb907e4badd78f2f78e912440673fef41208d19cd6b2de20745603d5b7",
+    "state": "unreviewed"
+  },
+  "source_sha256": "83ad6244d22630313d77b09ac2f42f5aef0e5a553d79a01a4da39577a9354030",
+  "statement_sha256": "44eea4bb907e4badd78f2f78e912440673fef41208d19cd6b2de20745603d5b7",
+  "actual_source_sha256": "83ad6244d22630313d77b09ac2f42f5aef0e5a553d79a01a4da39577a9354030",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\ge2`$, let $`V,W`$ be nonzero finite-dimensional real inner-product spaces, and let $`A_1,\\ldots,A_n:V\\to W`$ be linear maps. Define\n\n```math\n\\mathcal Au=\\sum_{j=1}^n A_j\\partial_j u,\n\\qquad \\mathbb A(\\xi)=\\sum_{j=1}^n\\xi_j A_j.\n```\n\nAssume that the complexified symbol $`\\mathbb A(\\xi):\\mathbb C\\otimes V\\to\\mathbb C\\otimes W`$ is injective for every $`\\xi\\in\\mathbb C^n\\setminus\\{0\\}`$. Let $`B_1\\subset\\mathbb R^n`$ be the open unit ball, and suppose\n\n```math\nu\\in BV^{\\mathcal A}(B_1)\n:=\\{v\\in L^1(B_1;V):\\mathcal Av\\in\\mathcal M(B_1;W)\\}.\n```\n\nHere $`\\mathcal M`$ denotes finite vector-valued Radon measures. Let $`C_u`$ be the set of $`x\\in B_1`$ at which some $`z\\in V`$ satisfies\n\n```math\n\\lim_{r\\downarrow0}\\frac1{|B_r(x)|}\\int_{B_r(x)}|u(y)-z|\\,dy=0,\n\\qquad S_u=B_1\\setminus C_u.\n```\n\nLet $`J_u`$ consist of the $`x\\in B_1`$ for which some $`a\\ne b`$ in $`V`$ and $`\\nu\\in\\mathbb S^{n-1}`$ satisfy\n\n```math\n\\lim_{r\\downarrow0}\\frac1{|B_r(x)|}\\int_{B_r^+(x,\\nu)}|u(y)-a|\\,dy=0,\n\\quad\n\\lim_{r\\downarrow0}\\frac1{|B_r(x)|}\\int_{B_r^-(x,\\nu)}|u(y)-b|\\,dy=0,\n```\n\nwhere $`B_r^\\pm(x,\\nu)=\\{y\\in B_r(x):\\pm(y-x)\\cdot\\nu>0\\}`$. Must\n\n```math\n|\\mathcal Au|(S_u\\setminus J_u)=0\n```\n\nhold for every such choice of $`n,V,W,\\mathcal A,u`$? The unit-ball formulation is local and is equivalent to the corresponding statement on arbitrary open domains. No one-dimensional slicing or mixing hypothesis is imposed beyond complex ellipticity.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"complex elliptic\" \"approximate continuity\" Cantor 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"complex-elliptic\" \"Cantor\"",
+    "site:palomar-registry.org OR site:hexagonmath.org \"complex elliptic\" \"continuity\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00205-026-02210-7",
+      "version_or_date": "Updatedfinal ARMA250(2026)61,published21June; correction22July2026 doi10.1007/s00205-026-02225-0 inspected",
+      "primary_body_access_gap": false,
+      "scope_comparison": "Actual updated2026body retains even deviatoric specialcase |Ed u|(Su\\Ju)=0 asConjecture1.5 and labels quasi-continuity weaker. Local asksallfirstordercomplexellipticoperators withoutmixing/slicing. Originalv4Conjecture4 matches; scale-dependentbestconstant/capacity and fixedpolar waves do not show singleapproximate value at remainingdiffusepoints. No completealloperator resultlocated.",
+      "locator": "§1.6 Conjecture1.5; §7 quasi-continuitydiscussion; original1911.08474v4 Conjecture4"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual updated2026body retains even deviatoric specialcase |Ed u|(Su\\Ju)=0 asConjecture1.5 and labels quasi-continuity weaker. Local asksallfirstordercomplexellipticoperators withoutmixing/slicing. Originalv4Conjecture4 matches; scale-dependentbestconstant/capacity and fixedpolar waves do not show singleapproximate value at remainingdiffusepoints. No completealloperator resultlocated.",
+  "latest_version_check": "Updatedfinal ARMA250(2026)61,published21June; correction22July2026 doi10.1007/s00205-026-02225-0 inspected",
+  "gap_retraction_check": "July22publishercorrectionchanges introductorywording/subheading, notConjecture1.5. Correctionbodyinspected; no mathematicalresolutionfromcorrection inferred.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

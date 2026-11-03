@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "225",
+  "manifest_index": 173,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "225",
+    "title": "A length-independent mean energy bound for Kuramoto–Sivashinsky",
+    "area": "Combustion fronts and spatiotemporal chaos",
+    "file": "problems/225-kuramoto-sivashinsky-energy-density.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "diffusion-materials",
+    "source_sha256": "fbfdd15ac0f43dbe7c6b2bb6564c73ab30f399ee1da6bc1d7f84193dd454e6c9",
+    "statement_sha256": "f00373e3e97a4a4d21ae3fe8f60f85e2cddfe6fd39c49975b1c803e83ea52b82",
+    "state": "unreviewed"
+  },
+  "source_sha256": "fbfdd15ac0f43dbe7c6b2bb6564c73ab30f399ee1da6bc1d7f84193dd454e6c9",
+  "statement_sha256": "f00373e3e97a4a4d21ae3fe8f60f85e2cddfe6fd39c49975b1c803e83ea52b82",
+  "actual_source_sha256": "fbfdd15ac0f43dbe7c6b2bb6564c73ab30f399ee1da6bc1d7f84193dd454e6c9",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For each $`L\\geq1`$, let $`u`$ solve the one-dimensional Kuramoto–Sivashinsky equation\n\n```math\nu_t+uu_x+u_{xx}+u_{xxxx}=0\n```\n\nwith spatial period $`2\\pi L`$ and arbitrary smooth mean-zero initial data. Does there exist an absolute constant $`C`$, independent of $`L`$ and the initial data, such that\n\n```math\n\\limsup_{T\\to\\infty}\\frac1{2\\pi L T}\\int_0^T\\int_{-\\pi L}^{\\pi L}|u(x,t)|^2\\,dx\\,dt\\leq C?\n```\n\nThis concerns the full equation on intervals of unbounded length, with its coefficients fixed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Kuramoto Sivashinsky\" \"energy\" \"uniform\" length 2026",
+    "\"Kuramoto Sivashinsky\" \"energy\" \"uniform\" length (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Kuramoto Sivashinsky\" \"energy\" \"uniform\" length (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "scope_comparison": "The target requires one absolute long-time mean-energy bound for every period and every mean-zero solution. The primary article distinguishes known period-growing analytic bounds from finite-length computational estimates and an odd-symmetry conjecture. Finite period computations, odd subclasses and power/logarithm-growing bounds do not establish the displayed uniform statement. No exact full announcement was located.",
+      "version_or_date": "arXiv1802.08240v2,6September2018; focused current searches3November2026 found no matching all-length bound.",
+      "locator": "Introduction equations1–5; Section4.2 computations and Section5 Conjecture1",
+      "url": "https://arxiv.org/html/1802.08240",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The target requires one absolute long-time mean-energy bound for every period and every mean-zero solution. The primary article distinguishes known period-growing analytic bounds from finite-length computational estimates and an odd-symmetry conjecture. Finite period computations, odd subclasses and power/logarithm-growing bounds do not establish the displayed uniform statement. No exact full announcement was located.",
+  "latest_version_check": "arXiv1802.08240v2,6September2018; focused current searches3November2026 found no matching all-length bound.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

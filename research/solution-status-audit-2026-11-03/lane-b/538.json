@@ -1,0 +1,91 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "538",
+  "manifest_index": 419,
+  "original_target": {
+    "id": "538",
+    "title": "Closed geodesics on complete manifolds of finite volume",
+    "area": "Riemannian geometry / geodesic dynamics",
+    "file": "problems/538-closed-geodesics-on-complete-manifolds-of-finite-volume.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-21974abcf63a0f32",
+    "group": "geometry-topology",
+    "source_sha256": "b95685e9fa885f685948b9db3c2c7b3173a8aebc97af9b9ced122186aa4e71f5",
+    "statement_sha256": "3dd5b206165ba2ae630b6af2d73d7493a71696f0b45cf4c03bdc47bdfdaa074f",
+    "state": "unreviewed"
+  },
+  "source_sha256": "b95685e9fa885f685948b9db3c2c7b3173a8aebc97af9b9ced122186aa4e71f5",
+  "statement_sha256": "3dd5b206165ba2ae630b6af2d73d7493a71696f0b45cf4c03bdc47bdfdaa074f",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:46:33.101879+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The new geodesic-net Main Theorem requires locally convex ends and yields a one-vertex multi-edge geodesic net, not a smooth periodic geodesic. The hyperbolic theorem requires hyperbolic geometry. Closed sphere/three-manifold results do not cover arbitrary complete finite-volume noncompact manifolds.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2605.12642v1",
+      "locator": "Main Theorem and Definition 1; current v1, 12 May 2026",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2608.29855v2",
+      "locator": "Theorem 1.1; current v2, 20 September 2026",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"finite volume\" \"closed geodesic\" 2026",
+    "\"finite volume\" \"closed geodesic\" existence (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"complete\" \"finite volume\" \"closed geodesics\" solution announcement 2026"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "finite volume",
+        "closed geodesic"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-12-000007",
+          "title": "Classical theorems of Fröhlich and Spencer: the Kosterlitz–Thouless transition, massless phases of abelian gauge theories, and Anderson localization"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "finite volume",
+        "closed geodesic"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00450v1",
+          "title": "Superfluid Stiffness and Nonclassical Rotational Inertia of the Dilute Hard-Sphere Bose Gas"
+        },
+        {
+          "id": "hexagon:2610.00159v1",
+          "title": "The torus with asymptotically the fewest simple closed geodesics"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted.",
+    "EMS 2022 final PDF https://ems.press/content/serial-article-files/39032 timed out; final source parity was not established."
+  ],
+  "canonical_update_required": false
+}

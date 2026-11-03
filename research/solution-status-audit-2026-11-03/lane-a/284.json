@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "284",
+  "manifest_index": 227,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "284",
+    "title": "Optimal final-iterate rate for one-dimensional SGD with bounded unbiased gradients",
+    "area": "Continuous optimization and stochastic approximation",
+    "file": "problems/284-optimal-final-iterate-rate-for-one-dimensional-sgd-with-bounded-unbiased-gradients.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-676c31fc0999ee6e",
+    "group": "stochastic3",
+    "source_sha256": "6ca02c8b65a17f54178588f14e3918c372441aa5608499e321615aef1698dfca",
+    "statement_sha256": "3a48b6155b695b6bbaaa4acc9be5c82fddeeb77a28ef17543e4eab786162c2d4",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6ca02c8b65a17f54178588f14e3918c372441aa5608499e321615aef1698dfca",
+  "statement_sha256": "3a48b6155b695b6bbaaa4acc9be5c82fddeeb77a28ef17543e4eab786162c2d4",
+  "actual_source_sha256": "6ca02c8b65a17f54178588f14e3918c372441aa5608499e321615aef1698dfca",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`F:\\mathbb R\\to\\mathbb R`$ be convex and $`1`$-Lipschitz. Choose a deterministic $`x_1\\in[0,1]`$ and integer horizon $`T\\ge1`$, and set $`\\eta=T^{-1/2}`$. On any filtered probability space $`(\\Omega,\\mathcal F,(\\mathcal F_t),\\mathbb P)`$, let $`x_t`$ be $`\\mathcal F_t`$-measurable and $`g_t`$ be $`\\mathcal F_{t+1}`$-measurable, with\n\n```math\n|g_t|\\le1\\quad\\text{almost surely},\\qquad\n\\mathbb E[g_t\\mid\\mathcal F_t]\\in\\partial F(x_t).\n```\n\nHere $`\\partial F`$ is the ambient convex subdifferential on $`\\mathbb R`$. Perform exactly $`T`$ updates,\n\n```math\nx_{t+1}=\\Pi_{[0,1]}(x_t-\\eta g_t),\\qquad t=1,\\ldots,T.\n```\n\nDoes a universal finite constant $`C`$ exist such that, for every such function, initialization, horizon and oracle process,\n\n```math\n\\mathbb E\\!\\left[F(x_{T+1})-\\min_{x\\in[0,1]}F(x)\\right]\n\\le \\frac{C}{\\sqrt T}\\,?\n```\n\nThe oracle may depend on the entire past and the queried point. The step is constant throughout the run, with multiplier one. The output is the unchanged final point.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"one dimensional SGD\" bounded gradients last iterate 2026",
+    "\"one dimensional SGD\" bounded gradients last iterate (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"one dimensional SGD\" bounded gradients last iterate (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Theorem2Assumptions5–6;Theorem3;proofEq21andlargeoutcomesatendSection6",
+      "scope_comparison": "Theorem2requires state-independent,time-homogeneous additiveiidnoise. Theorem3'sadaptedcounterexamples include noise values at leastsqrt(n)/(8cbar), so they do not satisfy the fixed almost-sure |g_t|<=1bound after normalization. Smoothinterpolationanddeterministiclast-iterate theorems impose otherrestrictions. No theorem resolves arbitrary bounded adapted unbiasedoracles with the exact fixedT^(−1/2)step and unchangedfinaloutput.",
+      "url": "https://arxiv.org/html/2606.24879",
+      "version_or_date": "arXiv2606.24879v1,23June2026,only version in currenthistory;2610.25469smoothinterpolationcomparatorchecked."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem2requires state-independent,time-homogeneous additiveiidnoise. Theorem3'sadaptedcounterexamples include noise values at leastsqrt(n)/(8cbar), so they do not satisfy the fixed almost-sure |g_t|<=1bound after normalization. Smoothinterpolationanddeterministiclast-iterate theorems impose otherrestrictions. No theorem resolves arbitrary bounded adapted unbiasedoracles with the exact fixedT^(−1/2)step and unchangedfinaloutput.",
+  "latest_version_check": "arXiv2606.24879v1,23June2026,only version in currenthistory;2610.25469smoothinterpolationcomparatorchecked.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

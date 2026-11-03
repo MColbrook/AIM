@@ -1,0 +1,135 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1010",
+  "manifest_index": 854,
+  "checked_date": "2026-11-03",
+  "source_sha256": "2661df819fb99b7533344215a9daac3323593ef42d679740c50d77fd94751ab1",
+  "statement_sha256": "4bbef8ff6e6d674aa35367385979a5259cd18b52fbb055005c803702c413c432",
+  "original_target": {
+    "id": "1010",
+    "title": "Nonempty spectrum of a positive-elliptic polynomial pencil in odd dimensions",
+    "area": "Spectral theory and partial differential equations",
+    "file": "problems/1010-nonempty-spectrum-of-a-positive-elliptic-polynomial-pencil-in-odd-dimensions.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0f69f513463d629e",
+    "group": "spectral",
+    "source_sha256": "2661df819fb99b7533344215a9daac3323593ef42d679740c50d77fd94751ab1",
+    "statement_sha256": "4bbef8ff6e6d674aa35367385979a5259cd18b52fbb055005c803702c413c432",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`d\\ge5`$ be odd. Let $`P\\in\\mathbb R[x_1,\\ldots,x_d]`$ have degree $`m\\ge2`$, with leading homogeneous part satisfying\n\n```math\nP_m(x)>0\\qquad\\text{for every }x\\in\\mathbb R^d\\setminus\\{0\\}.\n```\n\n\nMust there exist $`\\lambda\\in\\mathbb C`$ and a nonzero complex-valued Schwartz function $`u\\in\\mathcal S(\\mathbb R^d)`$ such that\n\n```math\n\\bigl[-\\Delta+(P(x)-\\lambda)^2\\bigr]u(x)=0\n\\qquad (x\\in\\mathbb R^d)?\n```\n\n\nThe quantifier is over every such polynomial, including lower-degree terms. Positivity of $`P_m`$ forces $`m`$ to be even. The equation is linear in $`u`$ and quadratic in the spectral parameter. The question asks for existence of at least one eigenvalue; completeness of generalized eigenfunctions and stronger trace-coefficient conjectures are separate questions.",
+  "full_original_page": "# 1010. Nonempty spectrum of a positive-elliptic polynomial pencil in odd dimensions\n\n**Area:** Spectral theory and partial differential equations\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`d\\ge5`$ be odd. Let $`P\\in\\mathbb R[x_1,\\ldots,x_d]`$ have degree $`m\\ge2`$, with leading homogeneous part satisfying\n\n```math\nP_m(x)>0\\qquad\\text{for every }x\\in\\mathbb R^d\\setminus\\{0\\}.\n```\n\n\nMust there exist $`\\lambda\\in\\mathbb C`$ and a nonzero complex-valued Schwartz function $`u\\in\\mathcal S(\\mathbb R^d)`$ such that\n\n```math\n\\bigl[-\\Delta+(P(x)-\\lambda)^2\\bigr]u(x)=0\n\\qquad (x\\in\\mathbb R^d)?\n```\n\n\nThe quantifier is over every such polynomial, including lower-degree terms. Positivity of $`P_m`$ forces $`m`$ to be even. The equation is linear in $`u`$ and quadratic in the spectral parameter. The question asks for existence of at least one eigenvalue; completeness of generalized eigenfunctions and stronger trace-coefficient conjectures are separate questions.\n\n## Application\n\nThis asks whether a confining differential-operator pencil necessarily has nonempty spectrum. Such pencils occur in the study of analytic regularity for differential operators with multiple characteristics and in spectral approaches to damped oscillations.\n\n## References\n\n1. F. Aboud and D. Robert, *Asymptotic expansion for nonlinear eigenvalue problems*, Journal de Mathématiques Pures et Appliquées **93**(2) (2010), 149–162. [Publisher and DOI](https://doi.org/10.1016/j.matpur.2009.08.009); [primary preprint](https://arxiv.org/abs/0903.0919). The formulation is in the introduction, preprint pp. 1–2; Remark 3.4 on p. 6 treats lower-degree terms.\n2. F. Aboud, F. Jauberteau and D. Robert, *Numerical approaches to compute spectra of non-self adjoint operators in dimensions two and three*, arXiv:2412.02465v1 (2024). [Primary text](https://arxiv.org/html/2412.02465v1), introduction and conclusion.\n3. F. M. Aboud, *Existence of solution for some quasi-homogenous and quasi-elliptic Nonlinear Eigenvalue Problems*, ZANCO Journal of Pure and Applied Sciences **31**(s2) (2019), 70–80. [DOI](https://doi.org/10.21271/ZJPAS.31.s2.9). Theorems 4.1 and 5.1 impose additional hypotheses.\n\n## Status review\n\n\n**Known cases:** Every positive-elliptic polynomial in every odd dimension at least five must have an eigenvalue. The general trace-expansion method gives only selected polynomial classes; the 2025 numerical paper concerns dimensions two and three.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nEvery positive-elliptic polynomial in every odd dimension at least five must have an eigenvalue. The general trace-expansion method gives only selected polynomial classes; the 2025 numerical paper concerns dimensions two and three.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nChecked 27 October 2026. The primary work proves the assertion for $`d=3`$ and selected classes in dimensions 5 and 7, alongside earlier results in even dimensions and dimension 1. The 2024 introduction still states the general conjecture and distinguishes these established cases. Its bounded-domain numerical computations do not prove the whole-space assertion above. The 2019 quasi-elliptic results have additional order and positivity conditions and do not establish this universal odd-dimensional Laplacian statement.\n\nCurrent and announcement searches located no matching complete resolution. The all-status AIM collection, the indexed OpenAI announcements and the saved FURTHER collection were checked for equivalent models. Negative searches provide bounded evidence. The dated review records exact source versions, comparisons and access limitations; they do not certify every cited proof.\n\nReview evidence: [dated source, current-status and independent comparison record](../FURTHER_problems/_tracking/C134-09030919-polynomial-pencil-root-current-gate-20261027/ROOT-FINAL-FORMULATION-CURRENT-AND-INDEPENDENT-ADMISSION-PASS.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-0f69f513463d629e**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "polynomial pencil",
+    "Aboud",
+    "Jauberteau",
+    "Robert"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"Aboud Robert\" \"odd\" \"eigenvalue\" 2026"
+    },
+    {
+      "query": "\"Aboud Robert\" \"odd\" \"eigenvalue\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2412.02465v1",
+      "locator": "3December2024 introduction lines59–73 and conclusions"
+    }
+  ],
+  "scope_comparison": "Current theoretical summary covers n=1,3, selected convex n=5 and convex n=7. Numerical whole/bounded-domain computations in2,3 do not establish existence for every positive leading homogeneous polynomial and lower-order terms in all odd d>=5. No full matching claim found.",
+  "recommendation": "Retain partial status; no complete matching proof or announcement found in bounded current checks.",
+  "limitations": "Negative searches do not establish continued openness; explicit narrower primary hypotheses suffice to exclude the cited comparators as full solutions.",
+  "announcement_routing": {
+    "localID": "1010",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "polynomial pencil",
+          "Aboud",
+          "Jauberteau",
+          "Robert"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-29-000034",
+            "title": "On the local geometry of the tight 39-point code in 𝕆P²",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-29-000034-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-10-16-000013",
+            "title": "Finite Observations and Recognition of the Compact Albert Algebra",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000013-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-09-27-000005",
+            "title": "The Four Color Theorem (Lean 4 port of Gonthier's Coq proof)",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-27-000005-v1.json"
+          },
+          {
+            "id": "PALOMAR-2026-08-31-000017",
+            "title": "sneed-and-feed/lean-theorems-1",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000017-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "polynomial pencil",
+          "Aboud",
+          "Jauberteau",
+          "Robert"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "polynomial pencil",
+        "Aboud",
+        "Jauberteau",
+        "Robert"
+      ],
+      "hits": [
+        {
+          "entry": "301",
+          "title": "Classification by trace cones after Razak--Jacelon stabilization",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/The-trace-cone-classifies-Razak-Jacelon-stabilizations-September-25-2026/The-trace-cone-classifies-Razak-Jacelon-stabilizations-September-25-2026.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Albert/Jordan algebra recognition, a finite39point code, four-coloring and tracial cones concern different spectra or finite algebraic objects, not nonempty spectrum of the specified positive-elliptic polynomial pencil.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.758Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "187",
+  "manifest_index": 147,
+  "original_target": {
+    "id": "187",
+    "title": "A phase transition for continuum hard disks",
+    "area": "Equilibrium fluids and phase transitions",
+    "file": "problems/187-hard-disk-phase-transition.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "9b842d59bc07fea03416534e2a0dc9ca6856cf486bed96f3d9df2cade898235d",
+    "statement_sha256": "9036c06864179e65904dcbcc363315e0f5f75b3656f35f1448c568e0d41dbd7a",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9b842d59bc07fea03416534e2a0dc9ca6856cf486bed96f3d9df2cade898235d",
+  "statement_sha256": "9036c06864179e65904dcbcc363315e0f5f75b3656f35f1448c568e0d41dbd7a",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:49:29.678698+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The Michelen–Perkins introduction distinguishes low-activity uniqueness from unproved Euclidean hard-disk nonuniqueness. Hexagon2610.00734v1 explicitly adds a long-range attractive Kac interaction and therefore does not resolve pure hard-core disks. Its identifier is a Hexagon identifier, not arXiv2610.00734 (which is about Boolean quadric polytopes). Numerical melting, enlarged-disk percolation, rods and lattice gases are outside the target.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2109.01094",
+      "locator": "Introduction and section1.1.1, Euclidean finite-range rotationally symmetric potentials",
+      "body_inspected": true
+    },
+    {
+      "url": "https://hexagonmath.org/abs/2610.00734v1",
+      "locator": "Official cached abstract: nonzero attractive Kac pair interaction",
+      "body_inspected": false
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.00734",
+      "locator": "Identity check: unrelated Boolean quadric polytopes",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"hard disks\" \"phase transition\" proof 2026",
+    "\"hard disks\" \"Gibbs\" \"nonuniqueness\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"hard disks\" \"Gibbs\" \"nonuniqueness\" \"2026\" proof"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "hard disk",
+        "hard-disk"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "hard disk",
+        "hard-disk"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00734v1",
+          "title": "Density coexistence for hard spheres with a long-range attractive pair interaction"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

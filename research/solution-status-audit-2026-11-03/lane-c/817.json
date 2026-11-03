@@ -1,0 +1,59 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "817",
+  "manifest_index": 661,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "817",
+    "title": "Rational coefficients in supernatural decompositions of sheaf cohomology",
+    "area": "Algebraic geometry / cohomology of coherent sheaves",
+    "file": "problems/817-rational-coefficients-in-supernatural-decompositions-of-sheaf-cohomology.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-96345eb794be9f0e",
+    "group": "geometry-topology",
+    "source_sha256": "87ad5dd0ca1ee4a79fbb0c211283b0f5d9e36ca556d11411c545f7e8aa850bc1",
+    "statement_sha256": "e85a5edf8acb1a0b3918891021d319ebbde83cdd304aa15736db5f9fc5be9088",
+    "state": "unreviewed"
+  },
+  "source_sha256": "87ad5dd0ca1ee4a79fbb0c211283b0f5d9e36ca556d11411c545f7e8aa850bc1",
+  "statement_sha256": "e85a5edf8acb1a0b3918891021d319ebbde83cdd304aa15736db5f9fc5be9088",
+  "actual_source_sha256": "87ad5dd0ca1ee4a79fbb0c211283b0f5d9e36ca556d11411c545f7e8aa850bc1",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`K`$ be a field, let $`n\\geq1`$, and let $`\\mathcal F\\ne0`$ be a coherent sheaf on $`\\mathbb P^n_K`$. Its cohomology table has entries\n```math\n\\gamma_{i,t}(\\mathcal F)=\\dim_K H^i(\\mathbb P^n_K,\\mathcal F(t)),\n\\qquad 0\\leq i\\leq n,\\quad t\\in\\mathbb Z.\n```\n\n\nFor a strictly decreasing integer sequence $`z=(z_1>\\cdots>z_s)`$, $`0\\leq s\\leq n`$, put $`z_0=+\\infty`$ and $`z_{s+1}=z_{s+2}=\\cdots=-\\infty`$. Define the normalized supernatural table\n```math\n\\gamma^z_{i,t}=\n\\begin{cases}\n\\displaystyle\\prod_{j=1}^{s}|t-z_j|,&0\\leq i\\leq s,\\ z_i>t>z_{i+1},\\\\\n0,&\\text{otherwise}.\n\\end{cases}\n```\n\nThe empty product is one. This is the normalization in which the supernatural sheaf has degree $`s!`$.\n\nOrder root sequences coordinatewise after padding with $`-\\infty`$. Eisenbud–Schreyer prove that there is a unique chain $`Z`$ of such sequences and unique positive real coefficients $`q_z`$ with\n```math\n\\gamma(\\mathcal F)=\\sum_{z\\in Z}q_z\\gamma^z,\n```\n\nwhere the sum converges in each entry.\n\n**Must every $`q_z`$ be rational, including when $`\\mathcal F`$ is not pure-dimensional?**\n\nHere pure-dimensional means that all associated subvarieties have the same dimension. The question concerns the coefficients in this unique chain decomposition. It does not require a finite sum or a common denominator.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"supernatural\" \"cohomology\" \"rational\" decomposition coefficients 2026",
+    "\"supernatural\" \"cohomology\" \"rational\" decomposition coefficients (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"supernatural\" \"cohomology\" \"rational\" decomposition coefficients (site:palomar-registry.org OR site:hexagonmath.org)",
+    "Eisenbud Schreyer cohomology rational coefficients non pure sheaf 2026",
+    "\"supernatural\" \"cohomology\" \"coefficients\" \"rational\" conjecture"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Original0902.1594v1dated10February2009 primary actual body; finalJEMS12(2010)703–722 located. Current targeted searches no exact later rationality theorem.",
+      "url": "https://arxiv.org/html/0902.1594v1",
+      "scope_comparison": "Theorem0.2 provides unique positive REAL coefficients; rationality is proved for top-dimensional terms and pure-dimensional sheaves. Its following question explicitly asks all coefficients. The transfinite algorithm takes limits after infinite subtraction, so rational finite-stage coefficients alone do not prove lower-dimensional limits rational. Vector-bundle categorification or graded-local-cohomology/Betti cone results have different inputs/targets. No full matching claim located.",
+      "locator": "Actual Theorem0.2 and immediately following rationality question; Algorithm0.4",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem0.2 provides unique positive REAL coefficients; rationality is proved for top-dimensional terms and pure-dimensional sheaves. Its following question explicitly asks all coefficients. The transfinite algorithm takes limits after infinite subtraction, so rational finite-stage coefficients alone do not prove lower-dimensional limits rational. Vector-bundle categorification or graded-local-cohomology/Betti cone results have different inputs/targets. No full matching claim located.",
+  "latest_version_check": "Original0902.1594v1dated10February2009 primary actual body; finalJEMS12(2010)703–722 located. Current targeted searches no exact later rationality theorem.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

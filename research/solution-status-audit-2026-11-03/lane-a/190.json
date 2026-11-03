@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "190",
+  "manifest_index": 150,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "190",
+    "title": "Pathwise uniqueness at the three-quarter Hölder threshold",
+    "area": "Stochastic reaction–diffusion equations",
+    "file": "problems/190-stochastic-heat-critical-uniqueness.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "stochastic2",
+    "source_sha256": "40496b5d7a3d0288f74d910923b39c9c7f300dc7890ff89530855d078ad35327",
+    "statement_sha256": "e9f0efbd011cfb56fc73d1ba1ccaeeaa23d060e959b5a0d77e038e619c7ef4c5",
+    "state": "unreviewed"
+  },
+  "source_sha256": "40496b5d7a3d0288f74d910923b39c9c7f300dc7890ff89530855d078ad35327",
+  "statement_sha256": "e9f0efbd011cfb56fc73d1ba1ccaeeaa23d060e959b5a0d77e038e619c7ef4c5",
+  "actual_source_sha256": "40496b5d7a3d0288f74d910923b39c9c7f300dc7890ff89530855d078ad35327",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\sigma:\\mathbb R\\to\\mathbb R`$ satisfy $`|\\sigma(a)-\\sigma(b)|\\le C|a-b|^{3/4}`$ for all $`a,b`$, and let $`u_0`$ be bounded and continuous. On $`\\mathbb R`$, consider the Itô–Walsh mild equation\n\n```math\nu(t,x)=(p_t*u_0)(x)+\\int_0^t\\!\\int_{\\mathbb R}p_{t-s}(x-y)\\sigma(u(s,y))\\,W(ds,dy),\n```\n\nwhere $`p_t(x)=(2\\pi t)^{-1/2}e^{-x^2/(2t)}`$ and $`W`$ is space–time white noise.\n\nMust any two adapted continuous mild solutions with the same $`u_0`$ and the same noise be indistinguishable, in the class satisfying\n\n```math\n\\sup_{0\\le t\\le T,\\ x\\in\\mathbb R}e^{-a|x|}|u(t,x)|<\\infty\n\\quad\\text{almost surely for every }a,T>0?\n```\n\nThe coefficient may vanish and solutions may have either sign.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"stochastic heat\" \"3/4\" \"pathwise uniqueness\" 2026",
+    "\"stochastic heat\" \"3/4\" \"pathwise uniqueness\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"stochastic heat\" \"3/4\" \"pathwise uniqueness\" (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"stochastic heat\" \"critical\" \"three-quarter\" uniqueness 2026"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2608.01279v1",
+      "primary_body_access_gap": false,
+      "locator": "Theorem1.1,Eq1.2 and following uniqueness-in-law paragraph;Section1.2 outlook",
+      "version_or_date": "arXiv:2608.01279v1,2August2026,onlyversion; Addona–Bignamini DOI10.1007/s40072-026-00432-0,30May2026",
+      "scope_comparison": "The exact target is pathwise uniqueness on R at exponent3/4 for all possibly vanishing coefficients and signed tempered continuous solutions. Han's actual2026Theorem1.1 assumes uniformly nonvanishing coefficient, works on the1D torus and proves uniqueness in law only. The text explicitly says all uniqueness results are in law and whole-line extension is future work. The2026 H older-drift theorem concerns additive noise and drift regularity rather than the displayed multiplicative coefficient. Neither establishes the endpoint target. No matching complete announcement was found."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The exact target is pathwise uniqueness on R at exponent3/4 for all possibly vanishing coefficients and signed tempered continuous solutions. Han's actual2026Theorem1.1 assumes uniformly nonvanishing coefficient, works on the1D torus and proves uniqueness in law only. The text explicitly says all uniqueness results are in law and whole-line extension is future work. The2026 H older-drift theorem concerns additive noise and drift regularity rather than the displayed multiplicative coefficient. Neither establishes the endpoint target. No matching complete announcement was found.",
+  "latest_version_check": "arXiv:2608.01279v1,2August2026,onlyversion; Addona–Bignamini DOI10.1007/s40072-026-00432-0,30May2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

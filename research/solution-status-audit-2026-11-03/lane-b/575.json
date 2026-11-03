@@ -1,0 +1,93 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "575",
+  "manifest_index": 446,
+  "original_target": {
+    "id": "575",
+    "title": "The limit law of the most visited site of a planar random walk",
+    "area": "Probability, extreme values and Brownian multiplicative chaos",
+    "file": "problems/575-the-limit-law-of-the-most-visited-site-of-a-planar-random-walk.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-4009a70c4e53c8bd",
+    "group": "probability-statistics",
+    "source_sha256": "cab6096351d4fd1297c4790db177d66a2284e85c3a4d0fa70ef273ce47164207",
+    "statement_sha256": "e718d2f894a0865a605562ec509d6cb1c926e547cf2552a270d10b4c6de4cd37",
+    "state": "unreviewed"
+  },
+  "source_sha256": "cab6096351d4fd1297c4790db177d66a2284e85c3a4d0fa70ef273ce47164207",
+  "statement_sha256": "e718d2f894a0865a605562ec509d6cb1c926e547cf2552a270d10b4c6de4cd37",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T14:03:57.816030+00:00",
+  "reviewer": "lane-b; root persisted relayed evidence",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "The first-exit centered square-root local-time maximum law differs from a wired recurrent cover-time/last-vertex limit and independent-excursion leading-order deviations. A Hexagon favourite-site position escape-rate announcement concerns locations at fixed time, not the value of the maximum at first exit.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2502.09853v1",
+      "locator": "Section5.3 Conjecture5.3 and critical-chaos discussion; known missing-sqrt display typo not used as target",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2602.21277v1",
+      "locator": "TheoremI section1.1, cover-time/last-vertex law",
+      "body_inspected": true
+    },
+    {
+      "url": "https://arxiv.org/html/2610.26640v1",
+      "locator": "Section2.3 equation19 and Corollary2.6, independent-excursion deviations",
+      "body_inspected": true
+    },
+    {
+      "url": "https://hexagonmath.org/abs/2610.00014v1",
+      "locator": "Cached official abstract, escape rate of positions",
+      "body_inspected": false
+    }
+  ],
+  "queries": [
+    "\"most visited\" \"planar\" \"limit law\" 2026 Jego",
+    "\"planar\" \"local time\" \"maximum\" \"limit\" Jego 2026 [domains arxiv.org,zenodo.org,hal.science,github.com]",
+    "\"planar random walk\" \"maximum\" \"local time\" \"2026\" limit law"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "local time",
+        "favorite",
+        "Brownian chaos"
+      ],
+      "metadata_hits": [],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "local time",
+        "favorite",
+        "Brownian chaos"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00014v1",
+          "title": "On the escape rate of favorite sites of planar random walks"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

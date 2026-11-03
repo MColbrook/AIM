@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "282",
+  "manifest_index": 225,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "282",
+    "title": "Does finite equilibrium capacity force nondegenerate capacity?",
+    "area": "Chemical reaction networks and nonlinear dynamics",
+    "file": "problems/282-does-finite-equilibrium-capacity-force-nondegenerate-capacity.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-0d5c9b396045b1bc",
+    "group": "stochastic3",
+    "source_sha256": "9ace461969cdfa7f1ab13c239705c1487e5cdd9304794beb87717df456e13cb7",
+    "statement_sha256": "2fd8f8d2eac475b380652313585f9c990f2c21e4d597743f8752029ca35a89b3",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9ace461969cdfa7f1ab13c239705c1487e5cdd9304794beb87717df456e13cb7",
+  "statement_sha256": "2fd8f8d2eac475b380652313585f9c990f2c21e4d597743f8752029ca35a89b3",
+  "actual_source_sha256": "9ace461969cdfa7f1ab13c239705c1487e5cdd9304794beb87717df456e13cb7",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix finitely many reactions $`y_r\\to y'_r`$, with $`y_r,y'_r\\in\\mathbb N_0^s`$. For positive rates $`\\kappa_r`$, write $`x^y=\\prod_{i=1}^s x_i^{y_i}`$ and put\n```math\nf_\\kappa(x)=\\sum_r\\kappa_rx^{y_r}(y'_r-y_r),\\qquad\nS=\\mathrm{span}\\{y'_r-y_r\\}.\n```\n\nA positive equilibrium in a class $`P=(x_0+S)\\cap(0,\\infty)^s`$ is a zero of $`f_\\kappa`$ in $`P`$. It is nondegenerate when $`Df_\\kappa(x)|_S:S\\to S`$ is invertible.\n\nLet $`C_+(G)`$ and $`C_{\\rm nd}(G)`$ be the maximum numbers of distinct positive equilibria and nondegenerate positive equilibria in one class, respectively, maximizing over positive rates and positive $`x_0`$.\n\nThe **Nondegeneracy Conjecture** asks whether\n```math\nC_+(G)<\\infty\\quad\\Longrightarrow\\quad C_+(G)=C_{\\rm nd}(G).\n```\n\nThe network stays fixed; rates and class may change. Nondegeneracy does not assert stability.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"reaction network\" \"nondegeneracy conjecture\" 2026",
+    "\"reaction network\" \"nondegeneracy conjecture\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"reaction network\" \"nondegeneracy conjecture\" (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "locator": "Theorem5.2 pp21–22 and following openquestion;TheoremCintro",
+      "scope_comparison": "Theorem5.2underconditions(i)or(ii)guarantees at least ell_ndeg+min(ell_deg,2)nondegenerate roots after parameter change. Its following paragraph explicitly leaves improvement to ell_ndeg+ell_deg open. Generic nondegeneracy and thetwo-equilibrium special case do not equate all finite capacities for everyfixednetwork. No full matching announcement found.",
+      "url": "https://arxiv.org/pdf/2412.17798v3",
+      "version_or_date": "arXiv2412.17798v3,14May2026;finalSIAMJAppliedAlgebraGeometry10(2026)519–548."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Theorem5.2underconditions(i)or(ii)guarantees at least ell_ndeg+min(ell_deg,2)nondegenerate roots after parameter change. Its following paragraph explicitly leaves improvement to ell_ndeg+ell_deg open. Generic nondegeneracy and thetwo-equilibrium special case do not equate all finite capacities for everyfixednetwork. No full matching announcement found.",
+  "latest_version_check": "arXiv2412.17798v3,14May2026;finalSIAMJAppliedAlgebraGeometry10(2026)519–548.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

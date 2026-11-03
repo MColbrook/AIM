@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "221",
+  "manifest_index": 169,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "221",
+    "title": "Strict physicality for anisotropic singular Q-tensor minimizers",
+    "area": "Liquid-crystal continuum theory",
+    "file": "problems/221-anisotropic-q-physicality.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "diffusion-materials",
+    "source_sha256": "be7be211d2236715ccac643da8e47f379eb3f5f1ca7baaa8905b7d6233fb88f6",
+    "statement_sha256": "7934a4cd5d447395a991af5cea57f2d86787a1d9fd2816e305926255599baf1b",
+    "state": "unreviewed"
+  },
+  "source_sha256": "be7be211d2236715ccac643da8e47f379eb3f5f1ca7baaa8905b7d6233fb88f6",
+  "statement_sha256": "7934a4cd5d447395a991af5cea57f2d86787a1d9fd2816e305926255599baf1b",
+  "actual_source_sha256": "be7be211d2236715ccac643da8e47f379eb3f5f1ca7baaa8905b7d6233fb88f6",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`S_0`$ be the symmetric trace-free real $`3\\times3`$ matrices. Define\n\n```math\nf(Q)=\\inf_\\rho\\left\\{\\int_{\\mathbb S^2}\\rho\\log\\rho\\,dS:\\rho\\geq0,\\ \\int\\rho\\,dS=1,\\ \\int(p\\otimes p-I/3)\\rho(p)\\,dS=Q\\right\\},\n```\n\nwith the infimum $`+\\infty`$ when no admissible density exists. Let $`\\Omega\\subset\\mathbb R^3`$ be bounded and smooth, and prescribe smooth boundary values $`Q_b`$ whose eigenvalues lie in $`[-1/3+\\delta_0,2/3-\\delta_0]`$ for some $`\\delta_0>0`$.\n\nFor arbitrary $`L_1,L_2,\\theta,\\kappa>0`$, minimize\n\n```math\n\\int_\\Omega\\left[L_1|\\nabla Q|^2+L_2|\\mathop{\\mathrm{div}}\\nolimits Q|^2+\\theta f(Q)-\\kappa|Q|^2\\right]dx\n```\n\nover $`H^1(\\Omega;S_0)`$ with trace $`Q_b`$, where $`(\\mathop{\\mathrm{div}}\\nolimits Q)_i=\\sum_j\\partial_jQ_{ij}`$. Must every global minimizer admit some $`\\delta>0`$ with $`\\lambda_{\\min}(Q(x))\\geq-1/3+\\delta`$ almost everywhere? Trace zero then also separates the largest eigenvalue from $`2/3`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"Ball Majumdar\" \"anisotropic\" \"strict physicality\" 2026",
+    "\"Ball Majumdar\" \"anisotropic\" \"strict physicality\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Ball Majumdar\" \"anisotropic\" \"strict physicality\" (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"Contact set of solutions to gradient flow\" Liu Xu 2026",
+    "\"Regularity of a gradient flow generated\" \"anisotropic\" \"arxiv\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Theorems1.1–1.2andCor1.1;2011.09541v2Theorem1.2Eq1.16",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2607.26354v1",
+      "version_or_date": "Liu–Xu2607.26354v1,29July2026;Lu–Liu–Xu2011.09541v2;Gimperlein–Maity2506.04880v1Remark2.3",
+      "scope_comparison": "The target is uniform strict eigenvalue separation for every three-dimensional smooth-Dirichlet global minimizer with arbitrary positive divergence coupling. Actual2026Theorem1.2 allows a contact set of Hausdorff dimension<=1 in3D,while emptiness is proved in2D only. The older gradient-flow strict-separation Theorem1.2 assumes periodic torus geometry and the additional small-anisotropy/coercivity condition L1−3|L2+L3|−alpha C_T^2>0. Neither covers all positive constants and fixedDirichletdata. The2025Remark2.3explicitly assumes strictphysicalityratherthanprovesit. No full matching announcement was found."
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The target is uniform strict eigenvalue separation for every three-dimensional smooth-Dirichlet global minimizer with arbitrary positive divergence coupling. Actual2026Theorem1.2 allows a contact set of Hausdorff dimension<=1 in3D,while emptiness is proved in2D only. The older gradient-flow strict-separation Theorem1.2 assumes periodic torus geometry and the additional small-anisotropy/coercivity condition L1−3|L2+L3|−alpha C_T^2>0. Neither covers all positive constants and fixedDirichletdata. The2025Remark2.3explicitly assumes strictphysicalityratherthanprovesit. No full matching announcement was found.",
+  "latest_version_check": "Liu–Xu2607.26354v1,29July2026;Lu–Liu–Xu2011.09541v2;Gimperlein–Maity2506.04880v1Remark2.3",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

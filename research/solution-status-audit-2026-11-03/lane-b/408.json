@@ -1,0 +1,64 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 331,
+  "source_sha256": "2a364795188cd93ea1e62cc715936ec758be0324ee362da6c7a5cb76635534f9",
+  "statement_sha256": "bb8d36273e64842b343e3d1db7a3bc350dcf89873ccf49314359c01b71222ff1",
+  "original_target": {
+    "id": "408",
+    "title": "Polynomial anisotropic minimal graphs in dimensions four and five",
+    "area": "Quasilinear elliptic PDEs / crystalline surface energy",
+    "file": "problems/408-polynomial-anisotropic-minimal-graphs.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "continuum2",
+    "source_sha256": "2a364795188cd93ea1e62cc715936ec758be0324ee362da6c7a5cb76635534f9",
+    "statement_sha256": "bb8d36273e64842b343e3d1db7a3bc350dcf89873ccf49314359c01b71222ff1",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "408",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"anisotropic\" \"polynomial\" \"four\" \"2026\" minimal",
+    "\"anisotropic minimal\" \"polynomial\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Entire solutions to equations of minimal surface type in six dimensions\" arxiv",
+    "\"The anisotropic Bernstein problem\" Mooney Yang arxiv"
+  ],
+  "sources": [
+    {
+      "url": "https://www.math.uci.edu/~mooneycr/Bernstein_6D_JEMS.pdf",
+      "version": "JEMS24(2022)4353–4361 DOI10.4171/JEMS/1202; primarysearch-visiblefulltext",
+      "locators": "Theorem1.1",
+      "body_inspected": true,
+      "scope": "Quadraticpolynomial onlyinR6 forC2,1uniformlyellipticintegrand."
+    },
+    {
+      "url": "https://www.math.uci.edu/~mooneycr/MooneyYang_AnisotropicBP_Final.pdf",
+      "version": "InventMath235(2024)211–232 DOI10.1007/s00222-023-01222-4",
+      "locators": "Theorem1.1 and followinggrowthformula",
+      "body_inspected": true,
+      "scope": "R4 nonlinear examplesgrow r^(1+mu),mu in(0,1/2); nonintegerdegree andsubquadraticso cannotbenonaffinepolynomials."
+    },
+    {
+      "url": "https://arxiv.org/html/2609.08972",
+      "version": "v1 8September2026; latestabsconfirmed",
+      "locators": "Theorem1.1 equation3",
+      "body_inspected": true,
+      "scope": "Lowergrowthgapforgradients unlessaffine; doesnotconstruct polynomialnorprecludeall polynomialdegrees."
+    },
+    {
+      "url": "https://arxiv.org/html/2608.29117",
+      "version": "v2 4October2026; latestabsconfirmed",
+      "locators": "Theorem1.1 equation6",
+      "body_inspected": true,
+      "scope": "Bernsteinrigidityn<=7onlyforintegrands sufficientlyC2closetoisotropicarea."
+    }
+  ],
+  "registry_checks": "No anisotropicminimalgraph matchingalias Palomar/Hexagon/OpenAI/Colbrookmetadata. Current arXiv, primaryauthors/publishers andZenodo/HAL/GitHubsearches.",
+  "scope_comparison": "Existence in eitherR4orR5 for arbitrarypositiveevenC2,1uniformlyellipticPhi. R6polynomial, R4nonpolynomial andnear-isotropicnonexistenceleaveexistentialtargetunmet.",
+  "rationale": "Bounded searches found no full matching resolution or announcement."
+}

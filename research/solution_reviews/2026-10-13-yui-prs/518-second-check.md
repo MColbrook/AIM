@@ -2,7 +2,7 @@
 
 Reviewed 13 October 2026 at head `24ab3fa10db1f33a143f32876c6ae5b023782933`. This is a second AI mathematical check, requested after the primary reviewer reconstructed the proof. It finds **no mathematical gap** and supports Solved for the exact stated time-semidiscrete target. It is not independent human review or formal verification. The numerical code, full campaign and package QA belong to the primary review; no finite numerical observation is used as a premise here.
 
-[Proof](../../solutions/kaiwen-jin-518/paper/main.pdf), [source](../../solutions/kaiwen-jin-518/paper/main.tex).
+[Proof](../../../cut_problems/research/solutions/kaiwen-jin-518/paper/main.pdf), [source](../../../cut_problems/research/solutions/kaiwen-jin-518/paper/main.tex).
 
 ## Scope
 

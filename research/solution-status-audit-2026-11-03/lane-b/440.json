@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 355,
+  "source_sha256": "2b5e5909aa0434d81ea1b3b5bb2da549f7a271dc3d0dfe44c953d8a027ff5593",
+  "statement_sha256": "357e4e1adafd414f7429f45d3b1dbc09a0735a1040c47d5a9bac14ef06d72dda",
+  "original_target": {
+    "id": "440",
+    "title": "Horizontal gradient regularity on arbitrary Carnot groups",
+    "area": "Partial differential equations and regularity",
+    "file": "problems/440-horizontal-gradient-regularity-on-arbitrary-carnot-groups.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-99602011c336bf91",
+    "group": "pdes-materials",
+    "source_sha256": "2b5e5909aa0434d81ea1b3b5bb2da549f7a271dc3d0dfe44c953d8a027ff5593",
+    "statement_sha256": "357e4e1adafd414f7429f45d3b1dbc09a0735a1040c47d5a9bac14ef06d72dda",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "440",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "queries": [
+    "\"Carnot\" \"gradient\" \"arbitrary\" \"2026\" p-harmonic",
+    "\"Carnot\" \"higher step\" gradient regularity (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2110.04377v4",
+      "version": "v4,publishedAdvMath2022",
+      "locator": "Theorem1.3 andstep2hypotheses§1",
+      "theorem_body_checked": true,
+      "scope": "Allp,HolderhorizontalgradientbutHörmanderstep2only."
+    },
+    {
+      "url": "https://arxiv.org/html/2212.10605v2",
+      "version": "v2,published2024",
+      "locator": "§8(i)",
+      "theorem_body_checked": true,
+      "scope": "Explicitly generalCarnotstepunresolved;step2extensionsknown."
+    },
+    {
+      "url": "https://arxiv.org/abs/2601.02035",
+      "version": "v1,5Jan2026",
+      "locator": "modelmetadata",
+      "theorem_body_checked": false,
+      "scope": "LinearhorizontalLaplaceBochner/curvatureinequalities,notnonlinearallq gradientHolder."
+    }
+  ],
+  "registry_checks": "Complete Palomar/Hexagonmetadata andpinnedOpenAI/Colbrookauthorlistingssearched;nomatchingfullclaim.",
+  "scope_comparison": "Needeveryscalarquasilinearq-harmonicweaksolution onanyfinite-stepCarnotgroup withCChorizontalgradientHolder;step2,linearq2,orrestrictedexponentnotfull.",
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Partially resolved."
+}

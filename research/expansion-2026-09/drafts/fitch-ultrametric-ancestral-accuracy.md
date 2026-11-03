@@ -72,4 +72,4 @@ Review was a separated adversarial self-pass after drafting. No independent agen
 
 A publication refresh on September 18, 2026 rechecked status and upstream duplicates; see the [batch 4 audit](../batch-04-review.md). No matching later resolution was located.
 
-Integrated page: [339. Accuracy of parsimony reconstruction under a molecular clock](../../../problems/328-fitch-ultrametric-ancestral-accuracy.md).
+Integrated page: [339. Accuracy of parsimony reconstruction under a molecular clock](../../../cut_problems/problems/328-fitch-ultrametric-ancestral-accuracy.md).

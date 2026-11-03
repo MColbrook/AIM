@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "754",
+  "manifest_index": 598,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "754",
+    "title": "No diffuse Cantor damage in cohesive fracture minimizers",
+    "area": "Fracture, damage and free-discontinuity problems",
+    "file": "problems/754-no-diffuse-cantor-damage-in-cohesive-fracture-minimizers.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-19410d24fd493bfe",
+    "group": "fracture-damage-plasticity-contact",
+    "source_sha256": "50232308b1c5ac31f54f269b0480f58957c2f5241bd7601ddc8b5583befe60f4",
+    "statement_sha256": "ae15f70a5ae9fab8b59c84b9633eede847acfcc096e25d575f8b7f35b5de190c",
+    "state": "unreviewed"
+  },
+  "source_sha256": "50232308b1c5ac31f54f269b0480f58957c2f5241bd7601ddc8b5583befe60f4",
+  "statement_sha256": "ae15f70a5ae9fab8b59c84b9633eede847acfcc096e25d575f8b7f35b5de190c",
+  "actual_source_sha256": "50232308b1c5ac31f54f269b0480f58957c2f5241bd7601ddc8b5583befe60f4",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`\\Omega\\subset\\mathbb R^n`$ be bounded and Lipschitz, with $`n\\ge2`$. Let $`F,G:[0,\\infty)\\to[0,\\infty)`$ be continuously differentiable and increasing. Assume:\n\n- $`F`$ is strictly convex and superlinear, with $`F(0)=F'(0)=0`$.\n- $`G`$ is strictly concave, $`G(0)=0`$, and $`\\sigma:=G'(0)>0`$.\n- The following limit exists, possibly as minus infinity, and is negative:\n\n```math\n\\lim_{s\\downarrow0}\\frac{G(s)-\\sigma s}{s^2}<0.\n```\n\nLet $`e_M>0`$ be the unique solution of $`F'(e_M)=\\sigma`$ and define\n\n```math\n\\overline F(t)=\n\\begin{cases}\n F(t),&0\\le t\\le e_M,\\\\\n F(e_M)+\\sigma(t-e_M),&t>e_M.\n\\end{cases}\n```\n\nFor a scalar function $`u\\in BV(\\Omega)`$, write its distributional derivative as\n\n```math\nDu=\\nabla u\\,\\mathcal L^n+[u]\\nu_u\\,\n\\mathcal H^{n-1}\\!\\restriction J_u+D^c u.\n```\n\nHere $`\\nabla u`$ is the approximate gradient, $`J_u`$ its jump set, $`[u]`$ the difference of its one-sided traces and $`D^c u`$ its Cantor derivative. Consider\n\n```math\n\\mathcal E(u)=\\int_\\Omega\\overline F(|\\nabla u|)\\,dx\n +\\int_{J_u}G(|[u]|)\\,d\\mathcal H^{n-1}\n +\\sigma|D^c u|(\\Omega).\n```\n\nSuppose $`\\mathcal E(u)<\\infty`$ and $`u`$ is a **local minimizer in the BV norm**: for some $`\\eta>0`$, $`\\mathcal E(u)\\le\\mathcal E(v)`$ whenever $`v\\in BV(\\Omega)`$, $`\\mathrm{supp}(v-u)\\Subset\\Omega`$ and\n\n```math\n\\|v-u\\|_{BV}:=\\|v-u\\|_{L^1}+|D(v-u)|(\\Omega)<\\eta.\n```\n\nMust every such minimizer satisfy\n\n```math\n|D^c u|(\\Omega)=0,\\qquad |\\nabla u|\\le e_M\\quad\\text{almost everywhere}?\n```\n\nThus the proposed assertion is membership in $`SBV(\\Omega)`$ together with the yield-strain bound. No smoothness away from a prescribed crack is assumed. For example, the admissible pair $`F(t)=t^2/2`$, $`G(t)=1-e^{-t}`$ has $`\\sigma=e_M=1`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "cohesive fracture BV local minimizer Cantor gradient bound Dal Maso Garroni 2026 Crismale Friedrich 2607.02261",
+    "cohesive fracture Cantor local minimizers (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "cohesive fracture (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"2607.02261\" correction OR gap OR withdrawn"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1, 2 July 2026; current arXiv record inspected 3 November 2026. Original math/0507088 theorem body also inspected.",
+      "locator": "§1, assumption g(0+)>0; Dal Maso–Garroni Theorem 1, PDF p.3, equations (4)–(5)",
+      "scope_comparison": "The original Theorem 1 bounds the gradient only on an open set where the local minimizer is C1; its SBV consequence assumes a closed exceptional set of finite H^(n−1) measure. The requested BV-norm local minimizers need no such regularity and require both vanishing Cantor part and the gradient bound. The new quasistatic-existence paper assumes g(0+)>0, whereas this target has G(0)=0 and finite positive initial slope. Neither theorem resolves the full target.",
+      "primary_body_access_gap": false,
+      "url": "https://arxiv.org/html/2607.02261v1"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The original Theorem 1 bounds the gradient only on an open set where the local minimizer is C1; its SBV consequence assumes a closed exceptional set of finite H^(n−1) measure. The requested BV-norm local minimizers need no such regularity and require both vanishing Cantor part and the gradient bound. The new quasistatic-existence paper assumes g(0+)>0, whereas this target has G(0)=0 and finite positive initial slope. Neither theorem resolves the full target.",
+  "latest_version_check": "v1, 2 July 2026; current arXiv record inspected 3 November 2026. Original math/0507088 theorem body also inspected.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

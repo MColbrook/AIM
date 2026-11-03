@@ -2,9 +2,9 @@
 
 **Area:** Quantum scattering and transport
 
-**Status:** 🔵 OPEN
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-08
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -25,7 +25,16 @@ It asks how little spatial decay of an electric potential suffices to preserve t
 1. B. Simon, [Tosio Kato’s work on non-relativistic quantum mechanics: part 2](https://doi.org/10.1007/s13373-018-0121-5), Bulletin of Mathematical Sciences (2018), Conjecture 20.2: weighted condition and infinite multiplicity.
 2. S. Denisov and A. Kiselev, [Spectral Properties of Schrödinger Operators with Decaying Potentials](https://services.math.duke.edu/~kiselev/dec.pdf), survey (2007), §5, equation (5.1): multidimensional open problem and partial results.
 
+3. S. Becker and M. Yang, [*Lenses make many points: Pure point spectrum disproves Simon’s L² conjecture*](https://arxiv.org/abs/2610.31637), arXiv:2610.31637v1 (22 October 2026), Theorem 1.1. [Primary manuscript](https://arxiv.org/pdf/2610.31637v1).
+
 ## Status review
+
+**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Becker and Yang’s Theorem 1.1 constructs smooth bounded nonnegative potentials with the required weighted square integrability, but with no continuous spectral subspace at all. Its weight $`|x|^{1-d}`$ is stronger than the displayed $`(1+|x|)^{1-d}`$ condition. The claimed counterexample therefore answers this problem negatively.
+
+[Claimed solution](https://arxiv.org/pdf/2610.31637v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/097.json). The theorem hypotheses and current announcement were checked. The external proofs have not been independently verified end-to-end here; no Lean verification or human peer review is asserted.
+
+### Earlier status record
+
 
 **Literature check:** Open in cited literature; no later resolution located.
 

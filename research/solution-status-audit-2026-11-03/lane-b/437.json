@@ -1,0 +1,53 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 352,
+  "source_sha256": "55bd7d215a2aa03457549aeaf71695c76cbfa8ffde55c10960caa73e03a717d5",
+  "statement_sha256": "87c782b81939f5be089f49061f0620a20a727a8f8e51c4c1fc36d3b9c1439b8f",
+  "original_target": {
+    "id": "437",
+    "title": "Bounded variation of gradients in the Rudin–Osher–Fatemi denoising model",
+    "area": "Variational elliptic PDEs and image denoising",
+    "file": "problems/437-rof-gradient-bounded-variation.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "pdes-materials",
+    "source_sha256": "55bd7d215a2aa03457549aeaf71695c76cbfa8ffde55c10960caa73e03a717d5",
+    "statement_sha256": "87c782b81939f5be089f49061f0620a20a727a8f8e51c4c1fc36d3b9c1439b8f",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "437",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"Rudin\" \"Osher\" \"Fatemi\" \"gradient\" \"BV\" 2026",
+    "\"Brezis\" \"gradient\" \"bounded variation\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"ROF\" \"Brezis\" \"Hessian\" 2026",
+    "\"Brezis\" \"Problem 8.1\" solution gradient"
+  ],
+  "sources": [
+    {
+      "url": "https://sites.math.rutgers.edu/~brezis/PUBlications/234.pdf",
+      "date": "2023survey",
+      "locator": "§8,Theorem8.1 andOpenProblem8.1,PDFp24",
+      "theorem_body_checked": true,
+      "scope": "KnownLipschitzgradientboundednessdoesnotimplyBVgradient;d1obstacletransformationgivesaffirmativecaseonly."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00245-026-10483-3",
+      "date": "4Aug2026",
+      "locator": "publishermodel/abstract;PMCcopyrequestedbutCAPTCHA",
+      "theorem_body_checked": false,
+      "scope": "Rectilinear l1-anisotropic functional andgridapproximation. ItsmodeldiffersfromisotropicEuclideantotalvariation;noHessianmeasuretheoreminferred."
+    }
+  ],
+  "registry_checks": "Complete Palomar/Hexagon metadata and pinned OpenAI/Colbrook author listings searched for topic aliases; no full matching announcement.",
+  "scope_comparison": "NeedglobalfiniteRadonsecondderivativesoftheuniqueisotropicROFminimizerforallsmoothdata/domain,d>=2,noboundaryconstraint. BVofU,LipschitzU,d1,anisotropicandhigherorderregularizersinsufficient.",
+  "limitations": [
+    "2026anisotropiccomparisonfullbodyinaccessiblePMCchallenge;metadataexplicitlydifferentfunctional. No purportedfullmatchingclaimleftunexamined."
+  ],
+  "rationale": "Bounded searches found no full matching resolution or announcement; retain Open."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "731",
+  "manifest_index": 575,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "731",
+    "title": "Residual norm attainment and differentiability of the dual norm",
+    "area": "Banach space geometry and continuous optimization",
+    "file": "problems/731-residual-norm-attainment-and-differentiability-of-the-dual-norm.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-8ee6d05d50adbec3",
+    "group": "continuous-optimization",
+    "source_sha256": "283503e94e5311aaa99674122d0081f717fa261c2faea64d09fbe9ca49c442c6",
+    "statement_sha256": "bfb3ca409812d2885882e561ee913e7910b4ed235254da54d829e69f4fa9c741",
+    "state": "unreviewed"
+  },
+  "source_sha256": "283503e94e5311aaa99674122d0081f717fa261c2faea64d09fbe9ca49c442c6",
+  "statement_sha256": "bfb3ca409812d2885882e561ee913e7910b4ed235254da54d829e69f4fa9c741",
+  "actual_source_sha256": "283503e94e5311aaa99674122d0081f717fa261c2faea64d09fbe9ca49c442c6",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`(X,\\|\\cdot\\|)`$ be an arbitrary real Banach space, let $`B_X`$ be its closed unit ball, and let $`\\|\\cdot\\|_*`$ be the dual norm on $`X^*`$. Define\n```math\n\\mathrm{NA}(X)=\\{f\\in X^*: f(x)=\\|f\\|_*\\text{ for some }x\\in B_X\\}.\n```\n\nSuppose that $`\\mathrm{NA}(X)`$ is residual in the norm topology of $`X^*`$: it contains a countable intersection of norm-open dense sets. Must $`\\|\\cdot\\|_*`$ be Fréchet differentiable at every point of some norm-dense subset of $`X^*`$?\n\nHere Fréchet differentiability at $`f`$ means that there is a bounded linear functional $`L_f\\in X^{**}`$ such that\n```math\n\\lim_{\\|h\\|_*\\to0,\\ h\\ne0}\n\\frac{\\big|\\|f+h\\|_*-\\|f\\|_*-L_f(h)\\big|}{\\|h\\|_*}=0.\n```\n\nThe question concerns the given norm; no separability or renormability hypothesis is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"norm attaining\" \"residual\" \"dual norm\" Frechet 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"residual\" \"norm-attaining\" differentiability",
+    "site:palomar-registry.org OR site:hexagonmath.org \"norm-attaining\" residual"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "locator": "Theorem3 pp2–3 and following class discussion; JFA2023 §4/Theorem4.1",
+      "scope_comparison": "Actual Theorem3 assumes X is a dual differentiation space; following discussion lists equivalent LUR-renormable/RNP/weak-Asplund-dual classes. Local target asks arbitrary real Banach space with its given norm. JFA2023 operator Theorem4.1 requires separability of X,Y*, and its scalar discussion retains the DD restriction. Bishop-Phelps gives density, not the residuality⇒dense Fréchet implication. No arbitrary-space result located.",
+      "url": "https://www.math.auckland.ac.nz/~moors/DualDifferentiationspaces.pdf",
+      "version_or_date": "Author version of BullAustMS99(2019)467–472 doi10.1017/S0004972719000376; current searches3November2026",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual Theorem3 assumes X is a dual differentiation space; following discussion lists equivalent LUR-renormable/RNP/weak-Asplund-dual classes. Local target asks arbitrary real Banach space with its given norm. JFA2023 operator Theorem4.1 requires separability of X,Y*, and its scalar discussion retains the DD restriction. Bishop-Phelps gives density, not the residuality⇒dense Fréchet implication. No arbitrary-space result located.",
+  "latest_version_check": "Author version of BullAustMS99(2019)467–472 doi10.1017/S0004972719000376; current searches3November2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

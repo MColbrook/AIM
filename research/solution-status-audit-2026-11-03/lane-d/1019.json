@@ -1,0 +1,131 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1019",
+  "manifest_index": 863,
+  "checked_date": "2026-11-03",
+  "source_sha256": "a5b75a24bd2ba2eabf4888e064cf9d164678305a53cfc96be9f86effc3266e6f",
+  "statement_sha256": "6a9d15bdab1e45ee0a4b61af778f84cc2eaa47f2fb3c4dd2ae0927b7c2883d63",
+  "original_target": {
+    "id": "1019",
+    "title": "The sharp logarithmic Sobolev constant of a flat torus",
+    "area": "Spectral theory and spectral geometry",
+    "file": "problems/1019-the-sharp-logarithmic-sobolev-constant-of-a-flat-torus.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-7efe90517bc81620",
+    "group": "spectral",
+    "source_sha256": "a5b75a24bd2ba2eabf4888e064cf9d164678305a53cfc96be9f86effc3266e6f",
+    "statement_sha256": "6a9d15bdab1e45ee0a4b61af778f84cc2eaa47f2fb3c4dd2ae0927b7c2883d63",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`T=\\mathbb R^n/\\Lambda`$ be any flat torus of dimension $`n\\geq2`$, with normalized Riemannian volume measure $`\\mu`$ and Dirichlet form $`\\mathcal E(f,f)=\\int_T|\\nabla f|^2\\,d\\mu`$. Write\n\n```math\n\\lambda(T)=\\inf_{\\mathrm{Var}_\\mu(f)>0}\\frac{\\mathcal E(f,f)}{\\mathrm{Var}_\\mu(f)},\\qquad\n\\alpha(T)=\\inf_{\\mathrm{Ent}_\\mu(f^2)>0}\\frac{\\mathcal E(f,f)}{\\mathrm{Ent}_\\mu(f^2)},\n```\n\n\nwhere $`\\mathrm{Ent}_\\mu(f^2)=\\int_T f^2\\log(f^2/\\int_Tf^2\\,d\\mu)\\,d\\mu`$. Is $`\\alpha(T)=\\lambda(T)/2`$ for **every** full-rank lattice $`\\Lambda`$? If equality fails, determine the sharp $`\\alpha(T)`$ in terms of the lattice [1, printed p. 242, (Q1)].",
+  "full_original_page": "# 1019. The sharp logarithmic Sobolev constant of a flat torus\n\n**Area:** Spectral theory and spectral geometry\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`T=\\mathbb R^n/\\Lambda`$ be any flat torus of dimension $`n\\geq2`$, with normalized Riemannian volume measure $`\\mu`$ and Dirichlet form $`\\mathcal E(f,f)=\\int_T|\\nabla f|^2\\,d\\mu`$. Write\n\n```math\n\\lambda(T)=\\inf_{\\mathrm{Var}_\\mu(f)>0}\\frac{\\mathcal E(f,f)}{\\mathrm{Var}_\\mu(f)},\\qquad\n\\alpha(T)=\\inf_{\\mathrm{Ent}_\\mu(f^2)>0}\\frac{\\mathcal E(f,f)}{\\mathrm{Ent}_\\mu(f^2)},\n```\n\n\nwhere $`\\mathrm{Ent}_\\mu(f^2)=\\int_T f^2\\log(f^2/\\int_Tf^2\\,d\\mu)\\,d\\mu`$. Is $`\\alpha(T)=\\lambda(T)/2`$ for **every** full-rank lattice $`\\Lambda`$? If equality fails, determine the sharp $`\\alpha(T)`$ in terms of the lattice [1, printed p. 242, (Q1)].\n\n## Application\n\nThe constant $`\\alpha`$ gives the sharp logarithmic Sobolev inequality and the corresponding hypercontractivity rate of heat flow, while $`\\lambda`$ controls $`L^2`$ relaxation. Equality is known for rectangular products through the circle inequality and tensorization [1, Section 1.2]; the question concerns arbitrary, including skew, lattices. A later problem about uniform comparison $`c\\lambda\\leq\\alpha`$ on all flat tori is weaker and does not determine this sharp identity [2, Section 3.4]. Recent sharp results for **finite cycles and the circle** concern discrete or one-dimensional spaces [3], not arbitrary skew tori of dimension at least two.\n\n## References\n\n1. G.-Y. Chen, W.-W. Liu and L. Saloff-Coste, [*The logarithmic Sobolev constant of some finite Markov chains*](https://www.numdam.org/item/10.5802/afst.1183.pdf), *Ann. Fac. Sci. Toulouse Math.* **17** (2008), no. 2, 239–290, DOI: [10.5802/afst.1183](https://doi.org/10.5802/afst.1183), equations (1.1)–(1.3), printed p. 242, (Q1).\n2. L. Saloff-Coste, [*Analysis on compact Lie groups of large dimension and on connected compact groups*](https://pi.math.cornell.edu/~lsc/papers/hulancoll.pdf), *Colloq. Math.* **118** (2010), no. 1, 183–199, DOI: [10.4064/cm118-1-10](https://doi.org/10.4064/cm118-1-10), Section 3.4, Problem 11 and rectangular-torus discussion.\n3. L. Chen, N. Lam and G. Lu, [*Sharp uniform stability of the logarithmic Sobolev inequality on finite cycles and stability of the cubic Sobolev inequality*](https://arxiv.org/abs/2610.05347), preprint (2026), abstract.\n\n## Status review\n\n\n**Known cases:** Every full-rank lattice is needed. Rectangular products, finite cycles and complete modified log-Sobolev inequalities do not determine the ordinary sharp log-Sobolev constant for arbitrary skew tori.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nEvery full-rank lattice is needed. Rectangular products, finite cycles and complete modified log-Sobolev inequalities do not determine the ordinary sharp log-Sobolev constant for arbitrary skew tori.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe [bounded audit](../FURTHER_problems/_tracking/flat-torus-log-sobolev-status-2026-10-22.json) checks the exact original continuous-torus question, a later author survey, targeted proof/counterexample announcements, and local semantic duplicates through 22 October 2026. No all-flat-tori determination was located.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-7efe90517bc81620**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "flat torus",
+    "logarithmic Sobolev",
+    "Saloff-Coste",
+    "skew torus"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"flat torus\" \"sharp\" \"logarithmic Sobolev\" 2026"
+    },
+    {
+      "query": "\"flat torus\" \"sharp\" \"logarithmic Sobolev\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.numdam.org/item/10.5802/afst.1183.pdf",
+      "locator": "published2008Q1printed242; primary2610.05347v1abstract4October2026"
+    }
+  ],
+  "scope_comparison": "Q1 explicitly asks alpha=lambda/2 for all flat tori. Latest sharp finite-cycle/circle stability is one-dimensional or discrete; tensorization covers rectangular products, not arbitrary skew lattices. Torus Coulomb-gas uniform LSI changes measure and does not compute the sharp flat-Haar constant.",
+  "recommendation": "Retain partial status; bounded current searches locate no complete matching resolution.",
+  "limitations": "Bounded negative evidence, not proof of continued openness. Exact statement and original references/status retained. Shared providers are metadata routing only except primary candidates explicitly described.",
+  "announcement_routing": {
+    "localID": "1019",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "flat torus",
+          "logarithmic Sobolev",
+          "Saloff-Coste",
+          "skew torus"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-09-02-000004",
+            "title": "Nash's isometric embedding theorem for closed manifolds (Günther's proof)",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-02-000004-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "flat torus",
+          "logarithmic Sobolev",
+          "Saloff-Coste",
+          "skew torus"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00559v1",
+            "title": "Finite Truncated Lattice-Length Data on Three-Dimensional Flat Tori",
+            "url": "https://hexagonmath.org/abs/2610.00559v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "flat torus",
+        "logarithmic Sobolev",
+        "Saloff-Coste",
+        "skew torus"
+      ],
+      "hits": [
+        {
+          "entry": "093",
+          "title": "Dimension-free logarithmic Sobolev inequality for subgaussian log-concave measures",
+          "urls": [
+            "https://github.com/openai/math/blob/main/preprints/A-dimension-free-logarithmic-Sobolev-inequality-for-subgaussian-log-concave-measures-September-23-2026/paper.pdf"
+          ]
+        }
+      ],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:43:09.078Z",
+      "previous_outcome": "partial",
+      "localID": "1019",
+      "announcement_hit_disposition": "Hexagon2610.00559v1 primary abstract read from complete shared provider snapshot: exact finite lattice-length/covolume classification and identification-radius bounds in dimension3, not logarithmic Sobolev constants. No alpha=lambda/2 theorem or counterexample asserted. OpenAI093 concerns subgaussian log-concave measures on Euclidean spaces, not normalized Haar torus measure or sharp equality; Nash isometric embedding is different."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "742",
+  "manifest_index": 586,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "742",
+    "title": "Uniform heat-kernel comparison after compact lower-order perturbations",
+    "area": "Diffusion, materials and variational problems",
+    "file": "problems/742-uniform-heat-kernel-comparison-after-compact-lower-order-perturbations.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-eb520a1e2d42f351",
+    "group": "diffusion-materials",
+    "source_sha256": "bf88adf5d54ffa9b75980c04867f757640a2e20341064990b62f42f26febb4b3",
+    "statement_sha256": "a3a94b433ec219c1b8550c24317ab03469e020c9d146a02a0a9ca2858fcf6cd2",
+    "state": "unreviewed"
+  },
+  "source_sha256": "bf88adf5d54ffa9b75980c04867f757640a2e20341064990b62f42f26febb4b3",
+  "statement_sha256": "a3a94b433ec219c1b8550c24317ab03469e020c9d146a02a0a9ca2858fcf6cd2",
+  "actual_source_sha256": "bf88adf5d54ffa9b75980c04867f757640a2e20341064990b62f42f26febb4b3",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`M`$ be a smooth, connected, noncompact Riemannian manifold with a fixed positive smooth measure $`d\\mu`$. Let $`P_1,P_2`$ be real second-order elliptic operators with smooth coefficients and the same principal part. In local coordinates, write\n\n```math\nP_j=-\\sum_{r,s=1}^N a^{rs}(x)\\partial_r\\partial_s\n       +\\sum_{r=1}^N b_j^r(x)\\partial_r+c_j(x),\\qquad j=1,2,\n```\n\n\nwhere the common symmetric matrix $`A=(a^{rs})`$ is positive definite and locally uniformly elliptic. Let $`k_j(x,y,t)`$ be the positive minimal heat kernel of $`\\partial_t+P_j`$, relative to $`d\\mu`$.\n\nAssume that $`P_1=P_2`$ outside a compact subset of $`M`$, and that both operators have generalized principal eigenvalue zero:\n\n```math\n\\lambda_0(P_j,1,M)\n=\\sup\\{\\lambda\\in\\mathbb R:\\exists u\\in C^2(M),\\ u>0,\\ (P_j-\\lambda)u=0\\}=0.\n```\n\n\nAssume also that both are **subcritical**, meaning\n\n```math\n\\int_0^\\infty k_j(x,y,t)\\,dt<\\infty\\qquad(x\\ne y).\n```\n\n\nMust there exist a constant $`C\\ge1`$, depending on the pair of operators but independent of $`x,y,t`$, such that\n\n```math\nC^{-1}k_2(x,y,t)\\le k_1(x,y,t)\\le Ck_2(x,y,t)\n\\qquad\\text{for every }x,y\\in M,\\ t>0?\n```\n\n\nThis is the smooth, zero-threshold case of [1, Conjecture 1.1], including its explicit requirement that the principal parts coincide. Symmetry and on-diagonal doubling are not assumed. The zero-threshold restriction keeps subcriticality at the stated spectral threshold.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"heat kernel\" \"equivalence\" \"compact perturbations\" Pinchover 2026",
+    "site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com \"heat kernels\" \"Ganguly\" equivalence",
+    "site:palomar-registry.org OR site:hexagonmath.org \"heat kernels\" \"compact\""
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1606.08601v2",
+      "primary_body_access_gap": false,
+      "scope_comparison": "Actual Conjecture1.1 retains common principal part/equal generalized threshold/subcriticality and uniform all-x,y,t comparison. Theorem2.5(3) assumes symmetric operators, potential-only difference and both diagonal doubling conditions; local allows nonsymmetric compact drift/reaction changes with no doubling, threshold0. Critical-vs-subcritical ratio/counterexamples differ. No matching general solution located; final subscription-body parity not claimed.",
+      "locator": "Conjecture1.1; Theorem2.5(3)/(2.9); §7.3",
+      "version_or_date": "v2,6July2017; JAnalyseMath140(2020)549–589 metadata"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Actual Conjecture1.1 retains common principal part/equal generalized threshold/subcriticality and uniform all-x,y,t comparison. Theorem2.5(3) assumes symmetric operators, potential-only difference and both diagonal doubling conditions; local allows nonsymmetric compact drift/reaction changes with no doubling, threshold0. Critical-vs-subcritical ratio/counterexamples differ. No matching general solution located; final subscription-body parity not claimed.",
+  "latest_version_check": "v2,6July2017; JAnalyseMath140(2020)549–589 metadata",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

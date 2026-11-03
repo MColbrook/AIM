@@ -1,0 +1,50 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 256,
+  "source_sha256": "8dd1f43a1b776dc86ece00062d39db570e84060c8bd4163fc8fa7235cad913ad",
+  "statement_sha256": "606b7a11d0f8063002e78adc5f65b755db2d518f62d8d3711d7b3f9a52679193",
+  "original_target": {
+    "id": "315",
+    "title": "Optimal asymptotic competitiveness for online bin packing",
+    "area": "Online optimization and resource allocation",
+    "file": "problems/315-online-bin-packing-optimal-ratio.md",
+    "status": "Open",
+    "last_checked": "2026-09-17",
+    "group": "stochastic3",
+    "source_sha256": "8dd1f43a1b776dc86ece00062d39db570e84060c8bd4163fc8fa7235cad913ad",
+    "statement_sha256": "606b7a11d0f8063002e78adc5f65b755db2d518f62d8d3711d7b3f9a52679193",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "315",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "Original exact infimum asymptotic ratio over all deterministic irrevocable online algorithms on rational sizes, with unknown length and no advice. Current results still leave the classical lower/upper gap. New per-bin-delay2609.29589 changes the objective and permits randomized/stochastic models; Hexagon2610.00395 Theorem1.1 determines offline additive configuration-LP gaps for three-item LP-tight instances of bounded pattern dimension. Neither determines the original unrestricted online R_star. Bounded current searches found no full match; not a certification of openness.",
+  "queries": [
+    "optimal asymptotic competitive ratio online bin packing exact 2026",
+    "\"online bin packing\" \"optimal\" asymptotic (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2609.29589",
+      "version": "current HTML3November2026",
+      "locator": "§1 problem/objective and results",
+      "body_inspected": true
+    },
+    {
+      "url": "https://hexagonmath.org/pdf/2610.00395v1",
+      "version": "v1",
+      "locator": "Theorem1.1 and Corollary1.2, printedp2",
+      "body_inspected": true
+    }
+  ],
+  "shared_index_screen": {
+    "palomar_regex": "bin.packing",
+    "palomar_matches": 0,
+    "hexagon_matches": 1,
+    "result": "Only offline three-item additive rounding."
+  }
+}

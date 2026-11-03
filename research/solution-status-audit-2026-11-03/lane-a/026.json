@@ -1,0 +1,60 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "026",
+  "manifest_index": 20,
+  "source_sha256": "e84b9bae797c1a93bdd855e530b8892d0a0a27ac7c9e59d1b95cce9cb0457861",
+  "statement_sha256": "35cb4cbc5d488048b99a167265692ff587dc10c424a76d5682535fc230b9b473",
+  "original_target": {
+    "id": "026",
+    "title": "Hadamard matrices in every admissible order",
+    "area": "Matrix design, coding and experimental design",
+    "file": "problems/026-hadamard-all-orders.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "operators",
+    "source_sha256": "e84b9bae797c1a93bdd855e530b8892d0a0a27ac7c9e59d1b95cce9cb0457861",
+    "statement_sha256": "35cb4cbc5d488048b99a167265692ff587dc10c424a76d5682535fc230b9b473",
+    "state": "unreviewed"
+  },
+  "full_local_statement_read": true,
+  "full_page_review_claimed": false,
+  "reviewed_UTC": "2026-11-03T11:54:06.369140+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "scope_comparison": "No complete matching proof located. Egan etal verifies finite orders and still lists95 missing orders up to10000. Sopin EasyChair8250 claims a general descent4nm->4n, but its entire section2 only supplies definitions/pointers to pigeonhole, Hadamard codes, puncturing/shortening and lattices, with no construction establishing that descent. This is a concrete missing proof step, so not counted as a full announcement without a gap. Circulant Hadamard resolution and finite-order Palomar declarations are different.",
+  "queries": [
+    "Hadamard matrices in every admissible order proof counterexample2026",
+    "Hadamard matrices in every admissible order (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "query_method": "The displayed strings describe focused named/mathematical searches; actual query variants are retained in the session source-search responses. Source-host searches and current Palomar/Hexagon full-metadata alias checks were separately performed.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/2610.27175",
+      "inspection": "Primary statement/abstract or body as recorded in scope comparison; no full proof certification."
+    },
+    {
+      "url": "https://easychair.org/publications/preprint/tkTH/download",
+      "inspection": "Primary statement/abstract or body as recorded in scope comparison; no full proof certification."
+    }
+  ],
+  "provider_checks": {
+    "Palomar_Hexagon": {
+      "routing": "../_sources/026-provider-routing.json",
+      "Palomar_complete_metadata": 954,
+      "Hexagon_complete_metadata": 646,
+      "scope": "Listing/metadata routing only. Individual relevant theorem/interface comparisons detailed above."
+    },
+    "OpenAI": {
+      "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+      "scope": "Current CONTENTS/overview searched; candidate theorem if relevant."
+    },
+    "arXiv_Zenodo_HAL_GitHub": "Focused primary-host and unrestricted web searches; bounded and indexing-dependent."
+  },
+  "known_gap": "The asserted Hadamard descent is not proved in section2 of the complete short note.",
+  "limitations": [
+    "No matching result in bounded search is not a proof of mathematical openness.",
+    "Irrelevant/restricted results were not audited as full proofs."
+  ],
+  "canonical_update_required": false
+}

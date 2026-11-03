@@ -1,0 +1,56 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "664",
+  "manifest_index": 509,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "664",
+    "title": "Sharp uniform approximation widths for small mixed Hölder smoothness",
+    "area": "Approximation theory and numerical analysis",
+    "file": "problems/664-sharp-uniform-approximation-widths-for-small-mixed-holder-smoothness.md",
+    "status": "Open",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-06592f25a3b83569",
+    "group": "numerical-analysis",
+    "source_sha256": "9c890634714d6d75c4b0e229ecd669b3077e45cf0a0abe1e2dd5092977d158b4",
+    "statement_sha256": "04fd42ed1217cb8743fafa6825c7c894ab443669a268d24d726f326432cb2027",
+    "state": "unreviewed"
+  },
+  "source_sha256": "9c890634714d6d75c4b0e229ecd669b3077e45cf0a0abe1e2dd5092977d158b4",
+  "statement_sha256": "04fd42ed1217cb8743fafa6825c7c894ab443669a268d24d726f326432cb2027",
+  "actual_source_sha256": "9c890634714d6d75c4b0e229ecd669b3077e45cf0a0abe1e2dd5092977d158b4",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix an integer $`d\\ge3`$ and a real number $`0<r<1/2`$. On the torus $`\\mathbb T^d=(\\mathbb R/2\\pi\\mathbb Z)^d`$, write\n```math\n\\Delta_{h,j}f(x)=f(x+h e_j)-f(x),\\qquad\n\\Delta_h^{E}f=\\prod_{j\\in E}\\Delta_{h_j,j}f\n```\n\nfor a nonempty subset $`E\\subset\\{1,\\ldots,d\\}`$; $`e_j`$ is the $`j`$th coordinate vector. Let $`\\mathcal H_d^r`$ be the class of continuous complex-valued functions with\n```math\n\\|f\\|_\\infty\\le1,\\qquad\n\\|\\Delta_h^{E}f\\|_\\infty\\le\\prod_{j\\in E}|h_j|^r\n```\n\nfor every nonempty $`E`$ and every $`h_j\\in[-\\pi,\\pi]`$ with $`j\\in E`$. These conditions define a unit ball of dominating mixed Hölder smoothness, equivalently $`H_\\infty^r=B^r_{\\infty,\\infty}`$ up to constants depending on $`d,r`$.\n\nFor $`n\\ge2`$, define its Kolmogorov width in the uniform norm by\n```math\nd_n(\\mathcal H_d^r)=\\inf_{\\substack{V\\subset C(\\mathbb T^d;\\mathbb C)\\text{ linear}\\\\\\dim_{\\mathbb C}V\\le n}}\n\\ \\sup_{f\\in\\mathcal H_d^r}\\ \\inf_{v\\in V}\\|f-v\\|_\\infty.\n```\n\nThe approximating space $`V`$ is fixed for the whole class; the best coefficients may depend on $`f`$ without any sampling or continuity restriction.\n\n**Is the known upper bound sharp?** More precisely, does every fixed pair $`(d,r)`$ admit $`c=c(d,r)>0`$ such that\n```math\nd_n(\\mathcal H_d^r)\\ge c\\,n^{-r}(\\log n)^{d-1+r}\\qquad(n\\ge2)?\n```\n\nThe corresponding upper bound is known. The general lower bound quoted in the source has only $`(\\log n)^{d-1}`$, leaving a logarithmic gap of exponent $`r`$. The two-dimensional case has the sharp order $`n^{-r}(\\log n)^{1+r}`$ and is excluded here. The endpoint $`r=1/2`$ is also excluded.\n\nThis is the mixed Hölder instance of the source's question about sharpness of its small-smoothness width bounds. It concerns unrestricted linear approximation spaces, rather than a specified trigonometric space, a sparse grid, nonlinear parameter manifolds, or approximation measured in a stronger Besov norm.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"mixed Holder\" \"Kolmogorov widths\" uniform 2026",
+    "\"mixed Holder\" \"Kolmogorov widths\" uniform (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2012.11983v2",
+      "locator": "Theorem6.2 and Remark6.4, lines584–591",
+      "version_or_date": "v2,28October2021; latest record inspected",
+      "scope_comparison": "Remark6.4 gives exact Kolmogorov order for d=2, while the local target is d>=3 and0<r<1/2. Lower bounds in stronger Besov target norms, fixed approximating spaces or nonlinear methods do not prove the unrestricted uniform-norm Kolmogorov lower bound.",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "Remark6.4 gives exact Kolmogorov order for d=2, while the local target is d>=3 and0<r<1/2. Lower bounds in stronger Besov target norms, fixed approximating spaces or nonlinear methods do not prove the unrestricted uniform-norm Kolmogorov lower bound.",
+  "latest_version_check": "v2,28October2021; latest record inspected",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

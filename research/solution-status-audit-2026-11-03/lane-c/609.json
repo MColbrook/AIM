@@ -1,0 +1,55 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "609",
+  "manifest_index": 472,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "609",
+    "title": "Low-degree representations determining a unitary shuffle's gap",
+    "area": "Random unitary sampling and spectral analysis",
+    "file": "problems/609-unitary-hypergraph-gap.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-24",
+    "group": "probability-statistics",
+    "source_sha256": "fba06160036c553e25168d6b9f4bee09117e3c8aa3c42b80654f0bab70150fa5",
+    "statement_sha256": "ab6d53b16ec1deaee9895e01e1d5930fb6304aa6f279cac7e99604e113c186dd",
+    "state": "unreviewed"
+  },
+  "source_sha256": "fba06160036c553e25168d6b9f4bee09117e3c8aa3c42b80654f0bab70150fa5",
+  "statement_sha256": "ab6d53b16ec1deaee9895e01e1d5930fb6304aa6f279cac7e99604e113c186dd",
+  "actual_source_sha256": "fba06160036c553e25168d6b9f4bee09117e3c8aa3c42b80654f0bab70150fa5",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Let $`n\\ge2`$ and assign nonnegative weights $`w_B`$ to the nonempty subsets $`B\\subseteq[n]`$. Assume connectivity of the graph joining vertices that share a positive-weight subset. Let $`U_B\\le U(n)`$ consist of matrices acting as the identity outside the coordinate subspace indexed by $`B`$, with normalized Haar measure $`m_B`$.\n\nFor each nontrivial irreducible unitary representation $`\\rho`$ of $`U(n)`$, define the positive semidefinite matrix\n\n```math\nA_\\rho=\\sum_Bw_B\\left(I-\\int_{U_B}\\rho(V)\\,dm_B(V)\\right).\n```\n\nSet $`\\gamma=\\inf_{\\rho\\ne\\mathbf1}\\lambda_{\\min}(A_\\rho)`$. This is the spectral gap of the process that, at rate $`w_B`$, multiplies its current unitary matrix by an independent Haar element of $`U_B`$.\n\nWrite $`\\rho_1,\\rho_2`$ for the irreducible representations with highest weights $`(1,0,\\ldots,0,-1)`$ and $`(2,0,\\ldots,0,-2)`$, respectively; for $`n=2`$ the weights are $`(1,-1)`$ and $`(2,-2)`$. Prove or disprove\n\n```math\n\\gamma=\\min\\{\\lambda_{\\min}(A_{\\rho_1}),\\lambda_{\\min}(A_{\\rho_2})\\}.\n```",
+  "full_local_page_read": true,
+  "queries": [
+    "\"unitary\" \"hypergraph\" \"spectral gap\" conjecture 2026",
+    "\"unitary\" \"hypergraph\" \"spectral gap\" conjecture (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "v1, 27 February 2026",
+      "scope_comparison": "Conjecture 1.7 is the exact all-representation statement. The newer KMP two-particle result proves a weaker conjecture, while Section 1.4.6 explicitly retains full unitary degree-two reduction. Large-block special cases add support restrictions.",
+      "locator": "Conjectures 1.7 and 1.14; Theorem 1.5; later 2609.10450 Section 1.4.6",
+      "url": "https://arxiv.org/html/2603.00353",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Conjecture 1.7 is the exact all-representation statement. The newer KMP two-particle result proves a weaker conjecture, while Section 1.4.6 explicitly retains full unitary degree-two reduction. Large-block special cases add support restrictions.",
+  "latest_version_check": "v1, 27 February 2026",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

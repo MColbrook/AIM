@@ -1,0 +1,118 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "997",
+  "manifest_index": 841,
+  "checked_date": "2026-11-03",
+  "source_sha256": "91c4c670779b49a67688bc99215c719080db821dd6c67bc1cc5a03cbb208be7f",
+  "statement_sha256": "f9fd4b58524fbdb5e1273def1923d2d9bc513e5a228d6c977668f4cab195efb5",
+  "original_target": {
+    "id": "997",
+    "title": "Moment determinacy for Brownian signatures stopped at a domain boundary",
+    "area": "Rough paths and singular stochastic equations",
+    "file": "problems/997-moment-determinacy-for-brownian-signatures-stopped-at-a-domain-boundary.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-389ffa12b5d532ba",
+    "group": "rough-paths-singular-stochastic-equations",
+    "source_sha256": "91c4c670779b49a67688bc99215c719080db821dd6c67bc1cc5a03cbb208be7f",
+    "statement_sha256": "f9fd4b58524fbdb5e1273def1923d2d9bc513e5a228d6c977668f4cab195efb5",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`d\\ge2`$, let $`D\\subset\\mathbb R^d`$ be a nonempty bounded connected open set with $`C^\\infty`$ boundary, and let $`z\\in D`$. Start standard Brownian motion $`B`$ at $`z`$ and put\n```math\n\\tau_D=\\inf\\{t\\ge0:B_t\\notin D\\}.\n```\n\nUse its canonical Stratonovich rough-path lift. Its signature levels are\n```math\nS^0(B)=1,\\qquad\nS^n(B)=\\int_{0<t_1<\\cdots<t_n<\\tau_D}\n\\circ dB_{t_1}\\otimes\\cdots\\otimes\\circ dB_{t_n}\\quad(n\\ge1).\n```\n\nEvery level has finite expectation.\n\nSuppose $`Y`$ is any random continuous geometric $`q`$-rough path in $`\\mathbb R^d`$ on $`[0,1]`$, for some deterministic finite $`q\\ge1`$, with all signature levels integrable and\n```math\n\\mathbb E S^n(Y)=\\mathbb E_z S^n(B)\\qquad\\text{for every }n\\ge0.\n```\n\nMust $`S(Y)`$ and $`S(B_{[0,\\tau_D]})`$ have the same distribution on\n$`\\prod_{n\\ge0}(\\mathbb R^d)^{\\otimes n}`$ with its product Borel sigma algebra, for every such $`D`$ and $`z`$?\n\nThere is no extra analyticity assumption on $`Y`$. The target is the law of the signature sequence. The planar unit disc started at its centre is already an explicit test case.",
+  "full_original_page": "# 997. Moment determinacy for Brownian signatures stopped at a domain boundary\n\n**Area:** Rough paths and singular stochastic equations\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`d\\ge2`$, let $`D\\subset\\mathbb R^d`$ be a nonempty bounded connected open set with $`C^\\infty`$ boundary, and let $`z\\in D`$. Start standard Brownian motion $`B`$ at $`z`$ and put\n```math\n\\tau_D=\\inf\\{t\\ge0:B_t\\notin D\\}.\n```\n\nUse its canonical Stratonovich rough-path lift. Its signature levels are\n```math\nS^0(B)=1,\\qquad\nS^n(B)=\\int_{0<t_1<\\cdots<t_n<\\tau_D}\n\\circ dB_{t_1}\\otimes\\cdots\\otimes\\circ dB_{t_n}\\quad(n\\ge1).\n```\n\nEvery level has finite expectation.\n\nSuppose $`Y`$ is any random continuous geometric $`q`$-rough path in $`\\mathbb R^d`$ on $`[0,1]`$, for some deterministic finite $`q\\ge1`$, with all signature levels integrable and\n```math\n\\mathbb E S^n(Y)=\\mathbb E_z S^n(B)\\qquad\\text{for every }n\\ge0.\n```\n\nMust $`S(Y)`$ and $`S(B_{[0,\\tau_D]})`$ have the same distribution on\n$`\\prod_{n\\ge0}(\\mathbb R^d)^{\\otimes n}`$ with its product Borel sigma algebra, for every such $`D`$ and $`z`$?\n\nThere is no extra analyticity assumption on $`Y`$. The target is the law of the signature sequence. The planar unit disc started at its centre is already an explicit test case.\n\n## Application\n\nExpected signatures provide moment features for stochastic paths and enter cubature methods for stochastic differential equations. This question asks whether all such features identify a signature law when observation stops at a boundary exit; it does not assert identification from a finite truncation.\n\n## References\n\n1. T. Lyons and H. Ni, *Expected signature of Brownian motion up to the first exit time from a bounded domain*, Annals of Probability **43**(5) (2015), 2729–2762, [DOI](https://doi.org/10.1214/14-AOP949); [electronic reprint, arXiv1101.5902v9](https://arxiv.org/pdf/1101.5902v9), open question on PDFp3 and geometric bounds in Theorem3.6.\n2. C. Liu, Z. Lyu and H. Ni, *The $`L^q`$-bounds for Derivatives of Unitary Developments of Random Continuous Geometric Rough Paths*, [arXiv2609.06980v1](https://arxiv.org/html/2609.06980v1), Remark1.3, Proposition2.8 and Corollary3.24.\n3. H. Boedihardjo, J. Diehl, M. Mezzarobba and H. Ni, *The expected signature of Brownian motion stopped on the boundary of a circle has finite radius of convergence*, [arXiv1905.13034v2](https://arxiv.org/pdf/1905.13034v2), Theorem10 and Remark11.\n4. I. Chevyrev and T. Lyons, *Characteristic functions of measures on geometric rough paths*, [arXiv1307.3580v6](https://arxiv.org/pdf/1307.3580v6), Definition6.12 and Remark6.19.\n\n## Status review\n\n\n**Known cases:** Every integrable-signature geometric rough-path competitor is allowed without matrix-characteristic analyticity. The September 2026 theorem retains that additional condition and explicitly leaves the unrestricted competitors open.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nEvery integrable-signature geometric rough-path competitor is allowed without matrix-characteristic analyticity. The September 2026 theorem retains that additional condition and explicitly leaves the unrestricted competitors open.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe September2026 result treats competitors whose matrix characteristic functions are real analytic along every real scale line. Its Remark1.3 explicitly leaves competitors outside that class unresolved. The question above retains those competitors. Finite radius of the expected signature, proved for the disc-centre example, does not itself imply indeterminacy.\n\nCurrent proof, counterexample and announcement searches found no complete resolution of this formulation. Semantic checks against all AIM statuses, the indexed OpenAI result descriptions and the growing FURTHER list found no duplicate. The existing fixed-time Brownian signature-tail constant is a different target. Prove2Me comparison and precise version/access limits are recorded in the [source review](../FURTHER_problems/_tracking/parallel/rough-filtering/stopped-signature-moment-determinacy.json) and [coordinator review](../FURTHER_problems/_tracking/stopped-signature-coordinator-review.json). A negative search does not certify openness.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-389ffa12b5d532ba**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "expected signature",
+    "stopped Brownian",
+    "Ni",
+    "moment determinacy"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"expected signature\" \"moment determinacy\" 2026"
+    },
+    {
+      "query": "\"expected signature\" \"moment determinacy\"",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2609.06980v1",
+      "locator": "Remark1.3 lines108–111 and Proposition2.8"
+    }
+  ],
+  "scope_comparison": "The September2026 result requires both competitors to have real-analytic matrix characteristic functions along scale lines (ROC). Remark1.3 expressly cannot exclude a non-ROC competitor with the same expected signature. The target allows every integrable-signature geometric rough-path competitor, so it is partial.",
+  "recommendation": "Retain partial status; no matching complete resolution located in this bounded current search.",
+  "limitations": "Bounded search is not proof of openness. Full original local page retained; shared announcement metadata scanned for aliases, primary scope used for plausible candidates.",
+  "announcement_routing": {
+    "localID": "997",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "expected signature",
+          "stopped Brownian",
+          "Ni",
+          "moment determinacy"
+        ],
+        "hits": [
+          {
+            "id": "PALOMAR-2026-10-27-000015",
+            "title": "Random walk on sphere packings and Delaunay triangulations in arbitrary dimension",
+            "url": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-27-000015-v1.json"
+          }
+        ]
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "expected signature",
+          "stopped Brownian",
+          "Ni",
+          "moment determinacy"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00545v1",
+            "title": "The missing Lin(ni)k",
+            "url": "https://hexagonmath.org/abs/2610.00545v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "expected signature",
+        "stopped Brownian",
+        "Ni",
+        "moment determinacy"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "announcement_hit_disposition": "Delaunay/sphere-packing random walks and the Linnik arithmetic topic do not establish moment determinacy of the full stopped Brownian signature.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.755Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

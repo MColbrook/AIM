@@ -1,0 +1,80 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 333,
+  "source_sha256": "586ee60648f7b62017de85eb563ce96879d5c951766fba12c907396c1f4b1449",
+  "statement_sha256": "79480410c8effafff38eb1d506b8e084888b8ea3b27bc3fa5e32b5cde367f319",
+  "original_target": {
+    "id": "410",
+    "title": "Quadratic-growth rigidity for the complex Monge–Ampère equation",
+    "area": "Nonlinear elliptic PDEs / geometric analysis",
+    "file": "problems/410-complex-monge-ampere-quadratic-growth.md",
+    "status": "Open",
+    "last_checked": "2026-09-22",
+    "group": "continuum2",
+    "source_sha256": "586ee60648f7b62017de85eb563ce96879d5c951766fba12c907396c1f4b1449",
+    "statement_sha256": "79480410c8effafff38eb1d506b8e084888b8ea3b27bc3fa5e32b5cde367f319",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "410",
+  "outcome": "full",
+  "recommended_status": "Solved",
+  "ready_for_parent": true,
+  "new_discovery": true,
+  "full_match_type": "unverified-announcement",
+  "required_status_qualification": "Complete solution announced in October2026 preprints; the announced proofs have not been independently verified in this audit.",
+  "queries": [
+    "\"complex Monge Ampere\" \"quadratic growth\" 2026",
+    "\"2610.26016\" (correction OR withdrawn OR gap OR error)",
+    "\"Quadratic growth rigidity\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.26016v1",
+      "version": "v1 19October2026 08:39:03UTC; current abs page only v1 checked3November2026",
+      "authors": [
+        "Jianchun Chu",
+        "Yaxiong Liu"
+      ],
+      "locators": "Problem1.1 equations1.1–1.2; Theorem1.2; Section4.3",
+      "body_inspected": true,
+      "scope": "Smooth entire plurisubharmonic solution det(u_i barj)=1 with exact two-sided C0^-1(1+|z|²)<=u<=C0(1+|z|²) is a quadratic polynomial, explicitly without added assumptions."
+    },
+    {
+      "url": "https://arxiv.org/html/2610.28375v1",
+      "version": "v1 20October2026; current abs page onlyv1 checked3November2026",
+      "authors": [
+        "Jingchen Hu",
+        "Li Sheng"
+      ],
+      "locators": "Theorem1.1 equation1.4, Remark1.2; AppendixA TheoremA.1; Section7.3 conclusion",
+      "body_inspected": true,
+      "scope": "Locally bounded entire BedfordTaylor solutions under weaker logarithm-modified quadratic bounds are real quadratic polynomials. Remark1.2 includes exact positive two-sided quadratic growth; AppendixA.1 states smooth exact matching result."
+    },
+    {
+      "url": "https://arxiv.org/html/2610.40004v1",
+      "version": "v1 29October2026; latestabschecked",
+      "authors": [
+        "Jingchen Hu",
+        "Xushan Tu"
+      ],
+      "locators": "Theorem1.1, Corollary1.2",
+      "body_inspected": true,
+      "scope": "Periodic MongeAmpere measure quadratic-plus-periodic classification; broader comparator; constant-density specialization agrees, but primary recommendation relies on two direct theorem statements above."
+    },
+    {
+      "url": "https://arxiv.org/html/2609.18265v1",
+      "version": "v1 16September2026",
+      "locators": "Theorem1.3",
+      "body_inspected": true,
+      "scope": "Earlier real-convexity theorem alone was partial. New October theorems remove that extra condition."
+    }
+  ],
+  "registry_checks": "No matching complexMongeAmpere alias Palomar/Hexagon/OpenAI/Colbrook caches. Current primary arXiv searches found direct full match. Focused Zenodo/HAL/GitHub announcement query and correction/withdrawal search found no further limitation/retraction; this is bounded evidence.",
+  "scope_comparison": "Theorem1.2 ofChuLiu has exactly entire C^n, smooth psh, determinant1 and same solution-dependent two-sided growth bounds, no real convexity, no metric completeness or o(|z|²) asymptote. Positive determinant and smooth psh imply strictly positive Hermitian Hessian, consistent with local target. Conclusion quadratic is in real coordinates, explicitly stated also in HuSheng TheoremA.1. All n>=2 covered.",
+  "rationale": "Full scope matching announced positive resolution. Recommend Solved with explicit unverified-announcement qualification under user instruction. No independent proof certification or publication/peer-review claim.",
+  "suggested_status_text": "Solved — complete solution announced; proof not independently verified in this audit. Chu and Liu (19October2026), Theorem1.2 of arXiv:2610.26016, prove quadratic rigidity under precisely the displayed two-sided growth assumptions, without real convexity or completeness. Hu and Sheng (20October2026), Theorem1.1/Remark1.2 and AppendixA.1 of arXiv:2610.28375, also announce a matching theorem."
+}

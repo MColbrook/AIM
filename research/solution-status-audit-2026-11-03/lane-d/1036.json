@@ -1,0 +1,103 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "1036",
+  "manifest_index": 880,
+  "checked_date": "2026-11-03",
+  "source_sha256": "5f3484dcd8ce2927a2b93793f9b945a84486ae7571437e0543560f7f69148fe0",
+  "statement_sha256": "fde51bfa2363bee491dce3af4d7bc9d2d4dcf9c76b0b2bf90e2fe02d78dbbe20",
+  "original_target": {
+    "id": "1036",
+    "title": "Does absolute PPT imply absolute separability?",
+    "area": "Quantum information and matrix analysis",
+    "file": "problems/1036-does-absolute-ppt-imply-absolute-separability.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-46a04b9f961f5a43",
+    "group": "spectral3",
+    "source_sha256": "5f3484dcd8ce2927a2b93793f9b945a84486ae7571437e0543560f7f69148fe0",
+    "statement_sha256": "fde51bfa2363bee491dce3af4d7bc9d2d4dcf9c76b0b2bf90e2fe02d78dbbe20",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`m,n\\geq3`$ and let $`\\rho\\in M_m(\\mathbb C)\\otimes M_n(\\mathbb C)`$ be a bipartite density matrix: $`\\rho\\geq0`$ and $`\\mathrm{Tr}\\rho=1`$. Say that $`\\rho`$ is **absolutely PPT** if, for every global unitary $`U\\in U(mn)`$,\n\n```math\n(\\mathrm{id}_m\\otimes\\mathrm{transpose})(U\\rho U^*)\\geq0.\n```\n\n\nSay that $`\\rho`$ is **absolutely separable** if $`U\\rho U^*`$ is separable for every such $`U`$: it can be expressed as a convex combination of positive product states on $`\\mathbb C^m\\otimes\\mathbb C^n`$.\n\n**Question.** Must every absolutely PPT state be absolutely separable? Equivalently, do the two spectral sets coincide for every pair of local dimensions? A counterexample may be sought in any $`m,n\\geq3`$. The converse implication is automatic because separable states have positive partial transpose. The $`2\\otimes n`$ case is already known, which is why the stated question starts at three on each side.",
+  "full_original_page": "# 1036. Does absolute PPT imply absolute separability?\n\n**Area:** Quantum information and matrix analysis\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`m,n\\geq3`$ and let $`\\rho\\in M_m(\\mathbb C)\\otimes M_n(\\mathbb C)`$ be a bipartite density matrix: $`\\rho\\geq0`$ and $`\\mathrm{Tr}\\rho=1`$. Say that $`\\rho`$ is **absolutely PPT** if, for every global unitary $`U\\in U(mn)`$,\n\n```math\n(\\mathrm{id}_m\\otimes\\mathrm{transpose})(U\\rho U^*)\\geq0.\n```\n\n\nSay that $`\\rho`$ is **absolutely separable** if $`U\\rho U^*`$ is separable for every such $`U`$: it can be expressed as a convex combination of positive product states on $`\\mathbb C^m\\otimes\\mathbb C^n`$.\n\n**Question.** Must every absolutely PPT state be absolutely separable? Equivalently, do the two spectral sets coincide for every pair of local dimensions? A counterexample may be sought in any $`m,n\\geq3`$. The converse implication is automatic because separable states have positive partial transpose. The $`2\\otimes n`$ case is already known, which is why the stated question starts at three on each side.\n\n## Application\n\nAbsolute separability asks whether a bipartite state's eigenvalues alone guarantee that no global unitary can create entanglement. Absolute PPT has a finite semidefinite characterization in terms of those eigenvalues. If the classes coincide, that characterization would decide this robust separability property; a counterexample would show its exact limitation.\n\n## References\n\n1. S. Arunachalam, N. Johnston and V. Russo, *Is absolute separability determined by the partial transpose?*, **Quantum Information & Computation** 15(7–8) (2015), 694–720. [Published PDF](https://www.rintonpress.com/xxqic15/qic-15-78/0694-0720.pdf), §4, Question 1 on printed p. 699; [author page](https://njohnston.ca/publications/is-absolute-separability-determined-by-the-partial-transpose/). The paper proves selected special cases and necessary conditions.\n2. A. Patra and B. C. Hiesmayr, [*On the separability of Bell-diagonal states with absolutely positive partial transposition*](https://arxiv.org/abs/2610.12000), arXiv:2610.12000v1 (8 October 2026). The abstract explicitly retains the general question and proves basis-specific Bell-diagonal results.\n3. J. Louvet, E. Serrano-Ensástiga, T. Bastin and J. Martin, *Nonequivalence between absolute separability and positive partial transposition in the symmetric subspace*, **Physical Review A** 111 (2025), 042418. [DOI](https://doi.org/10.1103/PhysRevA.111.042418), [author version](https://arxiv.org/abs/2411.16461v2). The counterexamples use a different symmetric-state setting and do not answer the ordinary bipartite question.\n\n## Status review\n\n\n**Known cases:** The full ordinary bipartite APPT class in dimensions at least three is required. The October Bell-diagonal theorem is basis-specific, and symmetric-subspace nonequivalence is a different definition.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nThe full ordinary bipartite APPT class in dimensions at least three is required. The October Bell-diagonal theorem is basis-specific, and symmetric-subspace nonequivalence is a different definition.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe 2015 paper asks the equivalence for all bipartite dimensions and notes that it holds when one local dimension is two. Later results settle some structured state families, but the 8 October 2026 Patra–Hiesmayr abstract still describes the unrestricted question as unresolved. The symmetric-subspace counterexamples in [3] do not transfer to global unitaries on the full bipartite matrix algebra. Bounded searches through 20 October 2026 found no matching complete proof, counterexample or announcement; they cannot certify exhaustive absence. AIM032 and AIM206 concern different PPT/entanglement questions, and no matching FURTHER entry was found.\n\nThe [source review](../FURTHER_problems/_tracking/absolute-ppt-primary-review-2026-10-20.json), [current-status check](../FURTHER_problems/_tracking/absolute-ppt-current-review-2026-10-20.json), [semantic comparison](../FURTHER_problems/_tracking/absolute-ppt-duplicates-review-2026-10-20.json) and [coordinator decision](../FURTHER_problems/_tracking/absolute-ppt-coordinator-review-2026-10-20.json) give the selected evidence and limits. They do not verify every cited proof.\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-46a04b9f961f5a43**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "aliases": [
+    "absolute PPT",
+    "absolute separability",
+    "Arunachalam",
+    "Hiesmayr"
+  ],
+  "outcome": "partial",
+  "review_level": "primary_body_and_search",
+  "searches": [
+    {
+      "query": "\"absolute PPT\" \"absolute separability\" 2026 solution"
+    },
+    {
+      "query": "\"absolutely PPT\" \"separable\" solution",
+      "domains": [
+        "arxiv.org",
+        "zenodo.org",
+        "hal.science",
+        "github.com"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.12000v1",
+      "locator": "Theorem1 eq37 lines404–408; introduction and conclusion,8October2026"
+    }
+  ],
+  "scope_comparison": "Theorem1 is APPT(3,3) intersect fixed Bell-diagonal family subset SEP; arbitrary global-unitary conjugates do not preserve that basis. Two-ququart lattice theorem similarly basis-specific. New2608.03390 geometry characterizes APPT faces/purity rather than ASEP equality; symmetric-subspace counterexamples quantify only symmetry-preserving unitaries. No full match.",
+  "recommendation": "Retain partial status.",
+  "limitations": "Bounded current search and announcement routing; absence is not proof of openness. Actual comparison theorem statements/definitions inspected; no entire proof certification claimed.",
+  "announcement_routing": {
+    "localID": "1036",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "absolute PPT",
+          "absolute separability",
+          "Arunachalam",
+          "Hiesmayr"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "absolute PPT",
+          "absolute separability",
+          "Arunachalam",
+          "Hiesmayr"
+        ],
+        "hits": []
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "absolute PPT",
+        "absolute separability",
+        "Arunachalam",
+        "Hiesmayr"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  }
+}

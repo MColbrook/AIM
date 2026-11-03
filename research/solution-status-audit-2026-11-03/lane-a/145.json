@@ -1,0 +1,101 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "145",
+  "manifest_index": 113,
+  "original_target": {
+    "id": "145",
+    "title": "Surjectivity of the two-dimensional Euler endpoint map",
+    "area": "Geometric hydrodynamics",
+    "file": "problems/145-euler-endpoint-map.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-09-08",
+    "group": "continuum2",
+    "source_sha256": "b855b32db1ca89fa391cf0244b0c42ac1ce1724fcc78e04a3acdb128231c86b5",
+    "statement_sha256": "d7dd9de47d285da17b46af39270088bbbf0d7141df85d2a406bdd0f8c921440b",
+    "state": "unreviewed"
+  },
+  "source_sha256": "b855b32db1ca89fa391cf0244b0c42ac1ce1724fcc78e04a3acdb128231c86b5",
+  "statement_sha256": "d7dd9de47d285da17b46af39270088bbbf0d7141df85d2a406bdd0f8c921440b",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T13:23:09.610801+00:00",
+  "reviewer": "root",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Partially resolved",
+  "scope_comparison": "The actual geometric hydrodynamics Problem8(i) is global Euler exponential-map surjectivity; Problem8(ii) instead asks for minimizing paths. Local inverse-function and global trajectory existence results do not imply surjectivity onto the identity component. Current focused searches located no general matching theorem.",
+  "primary_sources": [
+    {
+      "url": "https://www.math.toronto.edu/khesin/papers/Problems_in_GHD_ARMA.pdf",
+      "locator": "Section5.2 Problem8(i), PDFp12",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "\"Euler exponential map\" \"surjective\" 2026",
+    "\"Euler\" \"endpoint map\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com) surjectivity"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Euler endpoint",
+        "Euler exponential",
+        "surjectivity"
+      ],
+      "metadata_hits": [
+        {
+          "id": "PALOMAR-2026-10-29-000025",
+          "title": "Weak mixing times minimality: transitivity of the product"
+        },
+        {
+          "id": "PALOMAR-2026-10-28-000027",
+          "title": "Pettis automatic continuity for Baire-to-separable topological groups"
+        },
+        {
+          "id": "PALOMAR-2026-10-22-000041",
+          "title": "Open Baire-space representation of Polish spaces"
+        },
+        {
+          "id": "PALOMAR-2026-10-21-000012",
+          "title": "Hermite's signature theorem and the coprime compositum, with the degree-12 compositum of x^3 - x - 1 and x^4 - x - 1"
+        },
+        {
+          "id": "PALOMAR-2026-10-13-000004",
+          "title": "Perfect surjections and paracompactness"
+        },
+        {
+          "id": "PALOMAR-2026-09-02-000001",
+          "title": "Generalized Markoff strong approximation"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Euler endpoint",
+        "Euler exponential",
+        "surjectivity"
+      ],
+      "metadata_hits": [
+        {
+          "id": "hexagon:2610.00724v1",
+          "title": "The $q$-Foulkes problem III: On Foulkes' conjecture with a graded inner factor"
+        }
+      ],
+      "scope": "Metadata routing only; a keyword hit is not proof of a matching theorem."
+    }
+  },
+  "other_provider_search": "Focused current searches across arXiv, Zenodo, HAL and GitHub, with retained current Palomar/Hexagon routing snapshots and Colbrook author listings.",
+  "limitations": [
+    "Bounded searches cannot establish absence of an unindexed solution.",
+    "No whole-proof or Lean-kernel verification is asserted."
+  ],
+  "canonical_update_required": false
+}

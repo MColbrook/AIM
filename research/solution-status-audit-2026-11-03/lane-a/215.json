@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "215",
+  "manifest_index": 165,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "215",
+    "title": "Quantum transport in a dilute periodic potential",
+    "area": "Spectral theory, quantum dynamics and kinetic limits",
+    "file": "problems/215-quantum-transport-in-a-dilute-periodic-potential.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-de737947d0dffb87",
+    "group": "spectral3",
+    "source_sha256": "e243a0c19a1ea49acecd052a134dd4184a6339cdd8c6390d2a1d7cadf7076751",
+    "statement_sha256": "f403d6de2a81fd0fe9f62179134678cdaac6f0cee3f058a873ea3c26964d581d",
+    "state": "unreviewed"
+  },
+  "source_sha256": "e243a0c19a1ea49acecd052a134dd4184a6339cdd8c6390d2a1d7cadf7076751",
+  "statement_sha256": "f403d6de2a81fd0fe9f62179134678cdaac6f0cee3f058a873ea3c26964d581d",
+  "actual_source_sha256": "e243a0c19a1ea49acecd052a134dd4184a6339cdd8c6390d2a1d7cadf7076751",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "Fix $`d\\ge2`$, a real $`W\\in\\mathcal S(\\mathbb R^d)`$ and $`\\lambda>0`$. On $`L^2(\\mathbb R^d)`$ put\n```math\nV_r(x)=\\sum_{m\\in\\mathbb Z^d}W((x+m)/r),\\quad\nH_r=-\\frac{r^2}{8\\pi^2}\\Delta+\\lambda V_r,\\quad\nU_r(s)=e^{-2\\pi i sH_r/r}.\n```\n\nFor a phase-space symbol $`a`$, define\n```math\nD_ra(x,y)=r^{d^2/2}a(r^{d-1}x,ry),\\qquad Q_r(a)=\\mathrm{Op}(D_ra),\n```\n\nwhere $`\\mathrm{Op}(c)`$ has kernel\n```math\n\\int_{\\mathbb R^d}c((x+x')/2,y)e^{2\\pi i(x-x')\\cdot y}\\,dy.\n```\n\nDo linear maps $`L_{W,\\lambda}(t):L^1(\\mathbb R^{2d})\\to L^1(\\mathbb R^{2d})`$ exist such that, for all $`t>0`$ and $`a,b\\in\\mathcal S(\\mathbb R^{2d})`$,\n```math\n\\lim_{r\\downarrow0}\\mathrm{Tr}\\!\\left[\n U_r(tr^{1-d})Q_r(a)U_r(tr^{1-d})^*Q_r(b)^*\n\\right]\n=\\int_{\\mathbb R^{2d}}(L_{W,\\lambda}(t)a)\\,\\overline b\\,dx\\,dy?\n```\n\nThis is the existence component (i) of Griffin–Marklof Conjecture 1.1, with wavelength $`h=r`$ and fixed coupling. No damping or unproved lattice-statistics assumption is imposed.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"quantum transport\" \"periodic\" \"Griffin\" limit 2026",
+    "\"quantum transport\" \"periodic\" \"Griffin\" limit (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"quantum transport\" \"periodic\" \"Griffin\" limit (site:palomar-registry.org OR site:hexagonmath.org)"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "scope_comparison": "The exact target is existence of an unconditional fixed-coupling h=r trace limit for everySchwartz scatterer and all test symbols without damping. Actual Theorem1 supplies a limit only under Assumption1 replacing fine-scale Bloch lattice statistics by a Poisson process, explicitly an unproved input. The2019coupling coefficients do not control the fixed-lambda remainder;damped Lorentz limits change the dynamics/orderoflimits. No new unconditional matching existence theorem/announcement was located.",
+      "url": "https://arxiv.org/html/2012.15312",
+      "locator": "Theorem1andAssumption1inSection6;Section12discussion",
+      "version_or_date": "Griffin–Marklof,finalJStatPhys184(2021)16,DOI10.1007/s10955-021-02797-z;current2026focusedsearch"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "The exact target is existence of an unconditional fixed-coupling h=r trace limit for everySchwartz scatterer and all test symbols without damping. Actual Theorem1 supplies a limit only under Assumption1 replacing fine-scale Bloch lattice statistics by a Poisson process, explicitly an unproved input. The2019coupling coefficients do not control the fixed-lambda remainder;damped Lorentz limits change the dynamics/orderoflimits. No new unconditional matching existence theorem/announcement was located.",
+  "latest_version_check": "Griffin–Marklof,finalJStatPhys184(2021)16,DOI10.1007/s10955-021-02797-z;current2026focusedsearch",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

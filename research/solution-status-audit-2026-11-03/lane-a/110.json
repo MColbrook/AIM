@@ -1,0 +1,51 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "110",
+  "manifest_index": 83,
+  "source_sha256": "56061a071e7b5c2f931bc2350988e11f2aa6d5a0cac944b83131e243aa580e7b",
+  "statement_sha256": "24494773a218c2b226d58754622bfb9d0d50729517ee4f1e3e076a5869cc5b41",
+  "original_target": {
+    "id": "110",
+    "title": "Linear growth of interior Steklov nodal volume",
+    "area": "Boundary-driven wave patterns",
+    "file": "problems/110-steklov-bulk-nodal-volume.md",
+    "status": "Solution claimed",
+    "last_checked": "2026-10-15",
+    "outcome": "Claim: steklov counterexample claim; product reduction checked, underlying nodal-growth theorem awaiting independent review.",
+    "proof": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026/paper.pdf",
+    "review": "research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md",
+    "group": "spectral2",
+    "source_sha256": "56061a071e7b5c2f931bc2350988e11f2aa6d5a0cac944b83131e243aa580e7b",
+    "statement_sha256": "24494773a218c2b226d58754622bfb9d0d50729517ee4f1e3e076a5869cc5b41",
+    "state": "unreviewed"
+  },
+  "full_local_statement_read": true,
+  "reviewed_UTC": "2026-11-03T12:18:12.088791+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "full",
+  "full_match_type": "pre-existing-complete-claim-current-scope-reviewed",
+  "recommended_status": "Solved",
+  "answer": "Negative announcement; unverified",
+  "scope_comparison": "The source supplies a fixed smooth closed5-manifold and eigenfunctions phi_j whose nodal4-volume exceeds every stated square-root eigenvalue bound. On its product with[-L,L], U=phi_j cosh(sqrt(lambda_j)t) is harmonic with the same outward Steklov eigenvalue sqrt(lambda_j)tanh(Lsqrt(lambda_j)) on both smooth boundary components. Its interior nodal5-volume is2L times the original nodal volume, refuting the universal upper linear Steklov bound in dimension6. No lower-bound resolution is asserted.",
+  "primary_sources": [
+    {
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026/paper.pdf",
+      "locator": "Theorem1.1, with explicit product-cylinder reduction",
+      "body_inspected": true,
+      "receipt": {
+        "id": "110",
+        "url": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026/paper.pdf",
+        "PDF_sha256": "b8b6757d7a3a49d70e4cd367848cc017f777403acf72d18337c70cbfc2a410c7",
+        "PDF_bytes": 528085,
+        "PDF_saved": false,
+        "UTC": "2026-11-03T12:09:47.091334+00:00"
+      },
+      "extracted_text": "../_sources/110-primary-text.txt"
+    }
+  ],
+  "search_scope": "Individual named/mathematical primary-host searches plus exact-source correction/withdrawal queries and current Palomar/Hexagon metadata. No universal search completeness is asserted.",
+  "known_gap_check": "No concrete defeating gap established by this bounded scope review. Entire external proof and essential certificates remain unverified.",
+  "verification": "Exact original target compared with actual primary theorem/model body and required reduction. No local kernel, numerical-certificate or full proof replay.",
+  "additional_qualification": null,
+  "canonical_update_required": true
+}

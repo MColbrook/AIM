@@ -1,0 +1,52 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "285",
+  "manifest_index": 228,
+  "reviewed_UTC": "2026-11-03",
+  "source_sha256": "41c4b0ac6a2be4748e94446dad716d070a2c5cec7306603a5f522dba0c24ba28",
+  "statement_sha256": "a005a1e161068b3cf9a78604e7a2da1c9d019726b0ff8da2eca11940fa186cb7",
+  "original_target": {
+    "id": "285",
+    "title": "Does local stability imply global attraction for Nicholson’s blowflies equation?",
+    "area": "Population dynamics with maturation delay",
+    "file": "problems/285-nicholson-local-global-stability.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "stochastic3",
+    "source_sha256": "41c4b0ac6a2be4748e94446dad716d070a2c5cec7306603a5f522dba0c24ba28",
+    "statement_sha256": "a005a1e161068b3cf9a78604e7a2da1c9d019726b0ff8da2eca11940fa186cb7",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "problem_statement": "For $`p>1`$ and $`\\tau>0`$ consider $`x'(t)=-x(t)+p\\,x(t-\\tau)e^{-x(t-\\tau)}`$ with arbitrary continuous history $`x(s)>0`$ on $`[-\\tau,0]`$. The positive equilibrium is $`x_* =\\log p`$. Suppose every root of $`z+1-(1-\\log p)e^{-z\\tau}=0`$ has strictly negative real part, so the equilibrium is locally exponentially stable. Must every such positive solution satisfy $`x(t)\\to\\log p`$ as $`t\\to\\infty`$? Parameter values with imaginary characteristic roots are excluded from the premise.",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-match",
+  "recommendation": "Retain Open; bounded searches found no full match, not a certification of openness.",
+  "scope_comparison": "All p>1, tau>0 satisfying strict characteristic-root stability; all continuous strictly positive histories; eventual convergence to log p. Recent diffusive/viscous or mortality-delay models and sufficient delay conditions do not imply the full local-to-global statement.",
+  "queries": [
+    "Nicholson blowflies local stability global attractivity conjecture proof 2026",
+    "Nicholson blowflies global stability proof (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com OR site:palomarmath.ai OR site:hexagonmath.org)",
+    "Nicholson blowflies (site:palomar-registry.org OR site:hexagonmath.org OR site:github.com/openai/math)"
+  ],
+  "search_date": "2026-11-03",
+  "sources": [
+    {
+      "url": "https://www.math.u-szeged.hu/~rost/papers/Rost2007ProcRSocAWu.pdf",
+      "version": "2007 published author PDF",
+      "locator": "§§3,5–6; Nicholson example printed pp.2665–2666",
+      "scope": "Domain-decomposition and sufficient invariant-domain/delay criteria, not all locally stable parameters."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1007570426002777",
+      "version": "2026, volume159, article109917",
+      "locator": "Introduction model (1.1); abstract",
+      "scope": "Viscous spatial equation and traveling-front stability, not original autonomous scalar local-to-global implication; only abstract/model accessed."
+    }
+  ],
+  "verification": "Literature and theorem-scope review only; no independent proof verification.",
+  "limitations": [
+    "Searches are bounded and web-index coverage is not exhaustive.",
+    "No newly located full matching announcement; theorem-body checks recorded only for plausible primary candidates.",
+    "Palomar initial guessed hostname corrected to palomar-registry.org in follow-up queries."
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "localID": "887",
+  "manifest_index": 731,
+  "checked_date": "2026-11-03",
+  "source_sha256": "ed8f263979ded5cd5f9b3f8bc7d3c00d2d925f81f8aaf5c495e918122ea6d4f5",
+  "statement_sha256": "a09060bb1e2275fcdd868200260051cb2d52cadd0de3f702d869eddfbb16a0bb",
+  "original_target": {
+    "id": "887",
+    "title": "Does a multivariate Riccati diffusion forget its initial covariance under common noise?",
+    "area": "Nonlinear filtering and data assimilation",
+    "file": "problems/887-does-a-multivariate-riccati-diffusion-forget-its-initial-covariance-under-common-noise.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-702a5ee91d9e691a",
+    "group": "nonlinear-filtering-data-assimilation",
+    "source_sha256": "ed8f263979ded5cd5f9b3f8bc7d3c00d2d925f81f8aaf5c495e918122ea6d4f5",
+    "statement_sha256": "a09060bb1e2275fcdd868200260051cb2d52cadd0de3f702d869eddfbb16a0bb",
+    "state": "unreviewed"
+  },
+  "full_original_statement": "Let $`d\\ge2`$, let $`A\\in\\mathbb R^{d\\times d}`$ be arbitrary, and let $`R,S`$ be real symmetric positive-definite $`d\\times d`$ matrices. Write $`\\mathcal S_d^+`$ for the positive-definite symmetric matrices. For an integer $`N\\ge d+1`$, consider the Itô equation\n\n```math\ndP_t=(AP_t+P_tA^\\top+R-P_tSP_t)\\,dt\n +\\frac{2}{\\sqrt N}\\bigl[P_t^{1/2}\\,dM_t\\,R^{1/2}\\bigr]_{\\mathrm{sym}},\n\\qquad P_0=Q\\in\\mathcal S_d^+.\n```\n\nHere $`M`$ is a $`d\\times d`$ matrix of independent standard real Brownian motions, $`[B]_{\\mathrm{sym}}=(B+B^\\top)/2`$, and all matrix square roots are the principal positive square roots. Let $`P_t^{N,Q}`$ denote the unique strong positive-definite solution. In comparing different initial conditions, use **the same matrix Brownian motion and the displayed diffusion coefficient**.\n\nIs the following assertion true? For every $`p\\in[1,\\infty)`$ and every compact $`K\\subset\\mathcal S_d^+`$, there is an integer $`N_0\\ge d+1`$ such that for every integer $`N\\ge N_0`$ there are constants $`C<\\infty`$ and $`\\lambda>0`$ satisfying\n\n```math\n\\left(\\mathbb E\\left\\|P_t^{N,Q_1}-P_t^{N,Q_2}\\right\\|_F^p\\right)^{1/p}\n\\le C e^{-\\lambda t}\\|Q_1-Q_2\\|_F\n\\qquad(t\\ge0,\\;Q_1,Q_2\\in K)?\n```\n\nThe constants may depend on $`A,R,S,d,p,K,N`$, but not on $`t,Q_1,Q_2`$. The threshold $`N_0`$ may depend on $`A,R,S,d,p,K`$. Prove this assertion or give admissible parameters for which it fails for arbitrarily large $`N`$.\n\nThis is a deliberately restricted quantitative version of the multivariate contraction question in Bishop–Del Moral, §8.4. It concerns the $`\\kappa=0`$ covariance diffusion associated with the deterministic ensemble Kalman–Bucy filter. It imposes full-rank $`R,S`$ and restricts initial covariances to a compact subset of the positive cone; it makes no assertion about an optimal rate as $`N\\to\\infty`$.",
+  "full_original_page": "# 887. Does a multivariate Riccati diffusion forget its initial covariance under common noise?\n\n**Area:** Nonlinear filtering and data assimilation\n**Status:** 🟡 PARTIAL\n**Last checked:** 2026-10-30\n\n## Problem statement\n\nLet $`d\\ge2`$, let $`A\\in\\mathbb R^{d\\times d}`$ be arbitrary, and let $`R,S`$ be real symmetric positive-definite $`d\\times d`$ matrices. Write $`\\mathcal S_d^+`$ for the positive-definite symmetric matrices. For an integer $`N\\ge d+1`$, consider the Itô equation\n\n```math\ndP_t=(AP_t+P_tA^\\top+R-P_tSP_t)\\,dt\n +\\frac{2}{\\sqrt N}\\bigl[P_t^{1/2}\\,dM_t\\,R^{1/2}\\bigr]_{\\mathrm{sym}},\n\\qquad P_0=Q\\in\\mathcal S_d^+.\n```\n\nHere $`M`$ is a $`d\\times d`$ matrix of independent standard real Brownian motions, $`[B]_{\\mathrm{sym}}=(B+B^\\top)/2`$, and all matrix square roots are the principal positive square roots. Let $`P_t^{N,Q}`$ denote the unique strong positive-definite solution. In comparing different initial conditions, use **the same matrix Brownian motion and the displayed diffusion coefficient**.\n\nIs the following assertion true? For every $`p\\in[1,\\infty)`$ and every compact $`K\\subset\\mathcal S_d^+`$, there is an integer $`N_0\\ge d+1`$ such that for every integer $`N\\ge N_0`$ there are constants $`C<\\infty`$ and $`\\lambda>0`$ satisfying\n\n```math\n\\left(\\mathbb E\\left\\|P_t^{N,Q_1}-P_t^{N,Q_2}\\right\\|_F^p\\right)^{1/p}\n\\le C e^{-\\lambda t}\\|Q_1-Q_2\\|_F\n\\qquad(t\\ge0,\\;Q_1,Q_2\\in K)?\n```\n\nThe constants may depend on $`A,R,S,d,p,K,N`$, but not on $`t,Q_1,Q_2`$. The threshold $`N_0`$ may depend on $`A,R,S,d,p,K`$. Prove this assertion or give admissible parameters for which it fails for arbitrarily large $`N`$.\n\nThis is a deliberately restricted quantitative version of the multivariate contraction question in Bishop–Del Moral, §8.4. It concerns the $`\\kappa=0`$ covariance diffusion associated with the deterministic ensemble Kalman–Bucy filter. It imposes full-rank $`R,S`$ and restricts initial covariances to a compact subset of the positive cone; it makes no assertion about an optimal rate as $`N\\to\\infty`$.\n\n## Application\n\nAn ensemble Kalman–Bucy filter estimates the covariance needed to weight incoming measurements. Contraction under shared noise would quantify how two such covariance estimates lose their dependence on their initial values, including for unstable linear signal dynamics. This is a stronger statement about coupled trajectories than convergence of their separate distributions to an invariant law.\n\n## References\n\n1. A. N. Bishop and P. Del Moral, [*On the mathematical theory of ensemble (linear-Gaussian) Kalman–Bucy filtering*](https://doi.org/10.1007/s00498-023-00357-2), Mathematics of Control, Signals, and Systems **35** (2023), 835–903. [Author-hosted published PDF](https://people.bordeaux.inria.fr/pierre.delmoral/math-EnKF-2023.pdf): equation (5.2), Theorem 5.1, scalar estimate (6.27), and §8.4, physical PDF pp. 21, 23, 45 and 62. The general multivariate direction is explicit; the precise compact-set assertion above is a formulation of its deterministic-ensemble special case.\n2. A. N. Bishop and P. Del Moral, [*On the stability of matrix-valued Riccati diffusions*](https://doi.org/10.1214/19-EJP342), Electronic Journal of Probability **24** (2019), paper 84, 1–40. [Published institutional copy](https://opus.lib.uts.edu.au/rest/bitstreams/6b773bf0-99dc-4b30-a556-4a26dd2bfaef/retrieve): equations (1.3)–(1.5), Theorems 2.1 and 2.4, and §2.2.1. Here the noise parameter is $`\\epsilon=2/\\sqrt N`$ and $`\\kappa=\\varpi=0`$.\n3. A. N. Bishop, P. Del Moral, K. Kamatani and B. Rémillard, [*On one-dimensional Riccati diffusions*](https://doi.org/10.1214/18-AAP1431), Annals of Applied Probability **29** (2019), 1127–1187. [Author manuscript v3](https://opus.lib.uts.edu.au/bitstream/10453/160470/2/1711.10065v3.pdf): Theorem 5.10 and Appendix B.5 give a common-noise scalar flow estimate in a weighted distance.\n4. P. Del Moral, B. Nasri and B. Rémillard, [*Fluctuations and long-time stability of multivariate ensemble Kalman filters*](https://doi.org/10.1007/s42081-026-00361-1), Japanese Journal of Statistics and Data Science (2026); [arXiv:2601.17392v2](https://arxiv.org/html/2601.17392v2). Equations (5)–(17), Theorem 2.1 and §6.3 concern discrete-generation prediction/update steps.\n\n## Status review\n\n\n**Known cases:** Convergence of laws does not establish the displayed principal-root shared-Brownian coupling estimate. Scalar flow contractions are known, but discrete-generation fluctuation results and multivariate moment or deterministic-flow perturbation estimates do not give the common-noise Lipschitz contraction for all large ensemble sizes.\n\n**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.\n\n### Online recheck, 2026-10-30\n\nConvergence of laws does not establish the displayed principal-root shared-Brownian coupling estimate. Scalar flow contractions are known, but discrete-generation fluctuation results and multivariate moment or deterministic-flow perturbation estimates do not give the common-noise Lipschitz contraction for all large ensemble sizes.\n\nThe primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.\n\nThe 2023 source explicitly leaves multivariate counterparts of its scalar covariance-flow contraction estimate open. Its weighted convergence-of-laws theorem does not specify the coupling required above. The 2026 discrete-generation result controls the error relative to the deterministic discrete Riccati recursion; the inspected statements do not establish this continuous-time shared-noise estimate. Scalar results are already known.\n\nCurrent primary records and targeted searches through 17 October 2026 located no matching solution or complete announcement. Independent primary audits checked the equation, principal roots, positivity threshold, common-noise coupling and quantifiers. The all-status AIM/OpenAI and FURTHER comparisons found no equivalent target; AIM 319 concerns static output-feedback stabilization.\n\nThe fresh Prove2Me listing snapshot contains 4,629 distinct missions on 186 pages. All 14 relevant matching contexts are textually identical to previously reviewed unrelated contexts. This checks listing descriptions, not every mission proof. Scalar published-version parity and the published 2026 discrete-paper parity remain unchecked; those limitations do not identify a matching multivariate result. See the [source review](../FURTHER_problems/_tracking/parallel/rough-filtering/matrix-riccati-contraction-review.json), [independent audit](../FURTHER_problems/_tracking/parallel/complex-bayesian/cross-riccati-review.json) and [fresh catalogue comparison](../FURTHER_problems/_tracking/fresh-catalogue-riccati-skt-rank-review.json).\n\n## Collection provenance\n\nPromoted on 2026-10-30 from retained further problem **FURTHER-702a5ee91d9e691a**, with its scores unchanged. The [integration register](../research/further-integration-2026-10-30/README.md) preserves its original path, source bytes, review evidence and current identity. Earlier AIM-number comparisons describe the collection at their original review dates.\n",
+  "scope": "lane-d; canonical files untouched",
+  "queries": [
+    "\"Riccati diffusion\" \"common noise\" contraction multivariate 2026",
+    "\"Riccati diffusion\" \"contraction\" (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"Riccati\" \"common noise\" \"contraction\" (site:zenodo.org OR site:hal.science OR site:github.com)"
+  ],
+  "review_level": "primary_body_and_search",
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "sources": [
+    {
+      "url": "https://people.bordeaux.inria.fr/pierre.delmoral/math-EnKF-2023.pdf",
+      "locator": "Published2023 equation6.27/PDF44 and §8.4/PDF61",
+      "inspection": "Actual source explicitly reports no multivariate analogue of scalar Lp common-noise Riccati flow contraction. Local principal-square-root shared Brownian coefficient and exponential Lipschitz bound on compact positive cone is stronger than invariant-law convergence. Fresh2026discrete update theorem body remains to compare."
+    }
+  ],
+  "scope_comparison": "Actual source explicitly reports no multivariate analogue of scalar Lp common-noise Riccati flow contraction. Local principal-square-root shared Brownian coefficient and exponential Lipschitz bound on compact positive cone is stronger than invariant-law convergence. Fresh2026discrete update theorem body remains to compare.",
+  "rationale": "No full matching resolution identified in bounded searches; exact remaining theorem-body comparisons recorded explicitly.",
+  "source_gaps": [
+    "Specific pending source-body comparisons described above.",
+    "Snapshot routing pending this batch."
+  ],
+  "announcement_routing": {
+    "localID": "887",
+    "providers": [
+      {
+        "provider": "Palomar",
+        "snapshot": "palomar-current-listing.json",
+        "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+        "snapshot_UTC": "2026-11-03T11:33:39.433435+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Riccati",
+          "covariance contraction"
+        ],
+        "hits": []
+      },
+      {
+        "provider": "Hexagon",
+        "snapshot": "hexagon-current-listing.json",
+        "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+        "snapshot_UTC": "2026-11-03T11:41:42.543868+00:00",
+        "listing_complete": true,
+        "query_type": "local title-and-abstract literal alias scan with Unicode accent folding and word boundaries",
+        "queries": [
+          "Riccati",
+          "covariance contraction"
+        ],
+        "hits": [
+          {
+            "id": "hexagon:2610.00705v1",
+            "title": "Riordan lattice paths counted by area",
+            "url": "https://hexagonmath.org/abs/2610.00705v1"
+          }
+        ]
+      }
+    ],
+    "openai": {
+      "snapshot": "openai-overview.tex",
+      "snapshot_sha256": "39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135",
+      "queries": [
+        "Riccati",
+        "covariance contraction"
+      ],
+      "hits": [],
+      "routing_only": true
+    },
+    "scope": "Routing only; a matching title/summary is not a completed solution check."
+  },
+  "followup_reviews": [
+    {
+      "checked_UTC": "2026-11-03T13:48:36.130Z",
+      "previous_outcome": "hold",
+      "localID": "887",
+      "outcome": "partial",
+      "review_level": "primary_body_and_search",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2601.17392v2",
+          "version": "27January2026",
+          "locator": "§2 model equations5–17; Theorem2.1; §6.3; Theorem6.7",
+          "inspection": "The new uniform covariance fluctuation estimates concern discrete forecast/update covariance p_n vs deterministic P_n. They do not compare two continuous-time Riccati diffusions driven by the SAME matrix Brownian motion and specified principal-square-root coefficient."
+        }
+      ],
+      "scope_comparison": "The original2023 scalar bound6.27 and explicit multivariate question §8.4 were read. Discrete sampling estimates and invariant-law convergence do not give the compact-cone common-noise exponential Lipschitz estimate. Exact newer model now checked; no material candidate gap remains."
+    }
+  ],
+  "material_hold_resolved": true,
+  "remaining_material_source_gaps": [],
+  "announcement_hit_disposition": "Riordan lattice paths satisfy a q-Riccati generating-function equation, not the common-matrix-Brownian Riccati diffusion.",
+  "announcement_hit_disposition_UTC": "2026-11-03T14:01:38.689Z",
+  "announcement_hit_disposition_scope": "Selected exact primary theorem comparisons where plausible; otherwise explicit different-object/parameter restrictions in current provider metadata. No full-proof certification or absence theorem."
+}

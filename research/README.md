@@ -2,6 +2,8 @@
 
 [Repository overview](../README.md) · [Open targets](../CATALOG.md) · [Solved and claimed solutions](../RESOLVED.md)
 
+The [30 October ID replacement register](catalogue-backfill-2026-10-30/README.md) records 111 retained further problems promoted into the vacated AIM numbers. Older reviews and number ranges below are historical; identify an archived problem by its title and path, rather than its reused number. The [path resolver](../cut_problems/verify_cut.py) applies the cut and promotion mappings.
+
 - [Prior-resolution reports for 38 Open or Partial targets, 2026-10-16](literature_reports/2026-10-15-prior-resolutions.md)
 - [Individual solution PR reviews, 15 October 2026](solution_reviews/2026-10-15-active-prs/README.md)
 - [Independent review of active solution PRs #17–#24, 2026-10-02](solution_reviews/2026-10-02-active-prs/README.md)
@@ -42,3 +44,7 @@ The ranges above use current numbering. Historical admission counts below descri
 ## PDE-focused expansion to 500, 22 September 2026
 
 [Expansion overview and source maps](expansion-2026-09-22/README.md) document 141 new entries (now numbered 352–492), later-result searches, cross-reviews and exclusions. The expansion produced **500 active problems**. The [integration audit](expansion-2026-09-22/audit.md) records checks and the distinction between the new forced Navier–Stokes claim and the existing unforced question. Earlier records above remain historical checkpoints.
+
+## Incorporating the October upstream reviews
+
+The [3 November integration record](upstream-integration-2026-11-03/README.md) documents the adopted proof, partial-progress and attribution updates while preserving the local IDs, scoring and cut decisions. The Stiefel problem is retained only as an unnumbered pending candidate outside FURTHER_problems.

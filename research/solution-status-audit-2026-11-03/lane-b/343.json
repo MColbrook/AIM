@@ -1,0 +1,42 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "manifest_index": 280,
+  "source_sha256": "becec719cee8332a73fed38cc56ea034ef8c6cac7309ca98b4ade65108b2630b",
+  "statement_sha256": "65eb02eb1fe44cf7639a28af52aca1b12bd560bcfa9ab8fd4f70928bb6ccf21c",
+  "original_target": {
+    "id": "343",
+    "title": "Private PAC learning with polynomial VC and iterated-logarithm sample cost",
+    "area": "Statistical learning, data privacy and sample complexity",
+    "file": "problems/343-private-pac-vc-logstar.md",
+    "status": "Open",
+    "last_checked": "2026-09-19",
+    "group": "probability-statistics",
+    "source_sha256": "becec719cee8332a73fed38cc56ea034ef8c6cac7309ca98b4ade65108b2630b",
+    "statement_sha256": "65eb02eb1fe44cf7639a28af52aca1b12bd560bcfa9ab8fd4f70928bb6ccf21c",
+    "state": "unreviewed"
+  },
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03",
+  "review_state": "bounded_review_complete",
+  "verification": "Literature and theorem-scope review; no independent whole-proof or Lean verification.",
+  "local_id": "343",
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "queries": [
+    "\"private\" \"learning\" \"log-star\" \"VC\" 2026 conjecture solved",
+    "\"Littlestone\" \"log\" \"VC\" site:zenodo.org OR site:hal.science OR site:github.com 2026 private"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2610.23160v1",
+      "version": "v1 submitted 16 October 2026, current abstract checked",
+      "locators": "section 2.1 Theorem 1 and following log-star discussion",
+      "body_inspected": true,
+      "scope": "Nearly linear O(d log d) dependence on Littlestone dimension, explicitly retains polynomial(VC,log-star d) question."
+    }
+  ],
+  "registry_checks": "No Littlestone alias in Palomar/Hexagon full metadata. Focused arXiv, author, Zenodo, HAL, GitHub searches.",
+  "scope_comparison": "Target is polynomial in v+log-star d, not near-linear in d; finite domains may have huge d compared with v. Fixed inverse cubic privacy slack only adds logarithmic factors in n to the new bound and does not replace d with log-star d. Addition/deletion versus substitution adjacency can change constant privacy parameters, not this dimension gap.",
+  "rationale": "Bounded searches found no full matching resolution or announcement. New October private-learning result is partial for the requested quantitative target.",
+  "new_partial_source": true
+}

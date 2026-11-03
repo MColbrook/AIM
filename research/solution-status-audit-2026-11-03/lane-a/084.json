@@ -1,0 +1,84 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_REVIEW_V1",
+  "local_id": "084",
+  "manifest_index": 63,
+  "original_target": {
+    "id": "084",
+    "title": "The three-dimensional lattice-periodic Kelvin problem",
+    "area": "Foams and geometric optimization",
+    "file": "problems/084-kelvin-lattice-foam.md",
+    "status": "Open",
+    "last_checked": "2026-09-08",
+    "group": "pdes-materials",
+    "source_sha256": "6ca5b87f6e98c7626fb14e05d4bca024cb12dc19df6845abb99d2cca7cce79e3",
+    "statement_sha256": "1cc7b5efece488597cca833268e1fb995277eb8466cf22a20956167ebc4c703e",
+    "state": "unreviewed"
+  },
+  "source_sha256": "6ca5b87f6e98c7626fb14e05d4bca024cb12dc19df6845abb99d2cca7cce79e3",
+  "statement_sha256": "1cc7b5efece488597cca833268e1fb995277eb8466cf22a20956167ebc4c703e",
+  "full_local_page_read": true,
+  "reviewed_UTC": "2026-11-03T12:46:55.318325+00:00",
+  "review_state": "bounded_review_complete",
+  "outcome": "no-full-match",
+  "recommended_status": "Open",
+  "scope_comparison": "September2609.02384 Theorem1.1 proves truncated-octahedron optimality only among parallelohedra, which are convex lattice-translative polyhedra. Its introduction explicitly does not solve the unrestricted Kelvin problem. The local target allows nonconvex finite-perimeter cells with curved interfaces, so neither the convex-polyhedron theorem nor Hexagon2610.00210 covers it.",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2609.02384v1",
+      "locator": "Theorem1.1 and scope paragraph, lines94–110.",
+      "body_inspected": true
+    }
+  ],
+  "queries": [
+    "Kelvin",
+    "foam",
+    "parallelohedra"
+  ],
+  "provider_checks": {
+    "Palomar": {
+      "snapshot": "../_sources/palomar-current-listing.json",
+      "snapshot_sha256": "7471a81611352a5c96e554af4027e8c6532143d1f2ea37de09b19e5baf089d86",
+      "complete_listing": true,
+      "entries": 954,
+      "query_terms": [
+        "Kelvin",
+        "foam",
+        "parallelohedra"
+      ],
+      "metadata_hits": [],
+      "scope": "Routing only; exact target and excluding hypotheses compared above. Loose name/word hits may be unrelated."
+    },
+    "Hexagon": {
+      "snapshot": "../_sources/hexagon-current-listing.json",
+      "snapshot_sha256": "b11f8ccc55b4b3b079b3a50e05806c2651033cd47ade4d6179a196e969110cd8",
+      "complete_listing": true,
+      "entries": 646,
+      "query_terms": [
+        "Kelvin",
+        "foam",
+        "parallelohedra"
+      ],
+      "metadata_hits": [
+        {
+          "id": "2611.00021",
+          "title": "The dodecahedron web and its instanton homology"
+        },
+        {
+          "id": "2610.00470",
+          "title": "Gluing defects for projected coarse graining in finite spin-foam models"
+        },
+        {
+          "id": "2610.00210",
+          "title": "The truncated octahedral conjecture"
+        }
+      ],
+      "scope": "Routing only; exact target and excluding hypotheses compared above. Loose name/word hits may be unrelated."
+    }
+  },
+  "other_provider_search": "Current focused general and site-restricted searches with arXiv, Zenodo, HAL and GitHub; shared complete Palomar/Hexagon and OpenAI metadata screened, plus requested Colbrook author listings.",
+  "limitations": [
+    "Bounded search cannot establish absence of an unindexed solution.",
+    "Clearly excluding primary abstracts are not whole-proof verification."
+  ],
+  "canonical_update_required": false
+}

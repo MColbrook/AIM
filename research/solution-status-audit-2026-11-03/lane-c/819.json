@@ -1,0 +1,58 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "819",
+  "manifest_index": 663,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "819",
+    "title": "One homothety factor for optimal convex-body covers in every dimension",
+    "area": "Geometry and topology / convex geometry",
+    "file": "problems/819-one-homothety-factor-for-optimal-convex-body-covers-in-every-dimension.md",
+    "status": "Partially resolved",
+    "last_checked": "2026-10-30",
+    "source_key": "FURTHER-97a6e82304bc4820",
+    "group": "geometry-topology",
+    "source_sha256": "72bc2ad4e102740bc5f440ac6399d6efeb7d20f965a45382c90d6e62ef3d0657",
+    "statement_sha256": "da708dd939d682c96b5f7a6b6181635d8b6c0300c9c0c5f67b914df3f496b250",
+    "state": "unreviewed"
+  },
+  "source_sha256": "72bc2ad4e102740bc5f440ac6399d6efeb7d20f965a45382c90d6e62ef3d0657",
+  "statement_sha256": "da708dd939d682c96b5f7a6b6181635d8b6c0300c9c0c5f67b914df3f496b250",
+  "actual_source_sha256": "72bc2ad4e102740bc5f440ac6399d6efeb7d20f965a45382c90d6e62ef3d0657",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "A convex body in $`\\mathbb R^d`$ is a compact convex set with nonempty interior. For two such sets define\n```math\nN(K,L)=\\min\\left\\{m\\in\\mathbb N:\nK\\subseteq\\bigcup_{j=1}^{m}(t_j+L)\n\\text{ for some }t_1,\\ldots,t_m\\in\\mathbb R^d\\right\\}.\n```\n\nLet\n```math\nH_d=\\min\\left\\{m\\in\\mathbb N:\n\\text{for every convex body }K\\subset\\mathbb R^d\n\\text{ there exists }\\lambda_K\\in(0,1)\n\\text{ with }N(K,\\lambda_KK)\\le m\\right\\}.\n```\n\nThus $`H_d`$ is the optimal **worst-case** number of smaller copies over all convex bodies in dimension $`d`$.\n\nDoes there exist a single $`\\lambda\\in(0,1)`$, independent of the dimension, such that\n```math\n\\text{for every }d\\ge1\\text{ and every convex body }K\\subset\\mathbb R^d,\n\\qquad N(K,\\lambda K)\\le H_d?\n```\n\nEquivalently, if $`\\overline H_d(\\lambda)=\\sup_KN(K,\\lambda K)`$, is\n$`\\overline H_d(\\lambda)=H_d`$ for one universal $`\\lambda`$ and every $`d`$?\n\nThe copies use translations and one positive scale; individual rotations and reflections are not allowed. No symmetry or boundary regularity is assumed. The number permitted is $`H_d`$, rather than the possibly smaller optimal number for the particular body $`K`$.",
+  "full_local_page_read": true,
+  "queries": [
+    "\"homothety\" \"covering\" \"universal\" Naszodi 2026",
+    "\"homothety\" \"covering\" \"universal\" Naszodi (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"homothety\" \"covering\" \"universal\" Naszodi (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"homothety\" \"Question 3.3\" Naszodi"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "version_or_date": "Current arXiv record onlyv1dated20September2026; actual Theorems1–2 inspected. Original0901.2652v1 exactquestion3.3 read.",
+      "url": "https://arxiv.org/html/2609.23913v1",
+      "scope_comparison": "Original question is one lambda for all d at exact optimal worst-case H_d. New result gives fractional illumination<=2^d and integral bound2^d(dlogd+dloglogd+O(d)); neither proves the cover uses H_d copies, nor a fixed dimension-independent scale. Fixed-d compactness and bounds at lambda1/2 using more copies do not imply optimal exact count. No full match located.",
+      "locator": "Theorems1–2,§4 finite-cover bounds; https://arxiv.org/html/0901.2652v1 Definition3.2,Question3.3",
+      "primary_body_access_gap": false
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Partially resolved",
+  "rationale": "Original question is one lambda for all d at exact optimal worst-case H_d. New result gives fractional illumination<=2^d and integral bound2^d(dlogd+dloglogd+O(d)); neither proves the cover uses H_d copies, nor a fixed dimension-independent scale. Fixed-d compactness and bounds at lambda1/2 using more copies do not imply optimal exact count. No full match located.",
+  "latest_version_check": "Current arXiv record onlyv1dated20September2026; actual Theorems1–2 inspected. Original0901.2652v1 exactquestion3.3 read.",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "AIM_SOLUTION_STATUS_EVIDENCE_V1",
+  "localID": "212",
+  "manifest_index": 162,
+  "checked_date": "2026-11-03",
+  "original_target": {
+    "id": "212",
+    "title": "Poisson nearest-neighbor spacings on almost every flat torus",
+    "area": "Quantum integrability; spectral statistics",
+    "file": "problems/212-berry-tabor-flat-tori.md",
+    "status": "Open",
+    "last_checked": "2026-09-13",
+    "group": "spectral3",
+    "source_sha256": "1f47d95d44da1340fed3eb4bf2585de3a586db444365c68722e3c78274c19b41",
+    "statement_sha256": "315d632ed1e6cc6dcfa83c5ad771596329887524e626e9e707fd89ae83ba5fd8",
+    "state": "unreviewed"
+  },
+  "source_sha256": "1f47d95d44da1340fed3eb4bf2585de3a586db444365c68722e3c78274c19b41",
+  "statement_sha256": "315d632ed1e6cc6dcfa83c5ad771596329887524e626e9e707fd89ae83ba5fd8",
+  "actual_source_sha256": "1f47d95d44da1340fed3eb4bf2585de3a586db444365c68722e3c78274c19b41",
+  "source_hash_matches_manifest": true,
+  "full_original_statement": "For $`\\alpha=(\\alpha_1,\\alpha_2,\\alpha_3)\\in\\mathbb R^3`$ with $`\\alpha_1>0`$ and $`4\\alpha_1\\alpha_3>\\alpha_2^2`$, define\n\n```math\nq_\\alpha(m,n)=\\alpha_1m^2+\\alpha_2mn+\\alpha_3n^2.\n```\n\nArrange the positive numbers\n\n```math\n\\frac{\\pi q_\\alpha(m,n)}{\\sqrt{4\\alpha_1\\alpha_3-\\alpha_2^2}},\\qquad (m,n)\\in\\mathbb Z^2,\\quad m>0\\text{ or }(m=0,n>0),\n```\n\nin increasing order with multiplicity as $`\\lambda_1\\le\\lambda_2\\le\\cdots`$. The normalization gives asymptotic mean spacing one and removes the automatic multiplicity from $`(m,n)\\leftrightarrow(-m,-n)`$.\n\nFor Lebesgue-almost every such $`\\alpha`$, is it true simultaneously for every $`s\\ge0`$ that\n\n```math\n\\lim_{N\\to\\infty}\\frac1N\\#\\{j\\le N:\\lambda_{j+1}-\\lambda_j\\le s\\}=1-e^{-s}?\n```",
+  "full_local_page_read": true,
+  "queries": [
+    "\"flat tori\" \"nearest neighbor\" Poisson 2026",
+    "\"flat tori\" \"nearest neighbor\" Poisson (site:arxiv.org OR site:zenodo.org OR site:hal.science OR site:github.com)",
+    "\"flat tori\" \"nearest neighbor\" Poisson (site:palomar-registry.org OR site:hexagonmath.org)",
+    "\"flat tori\" \"Poisson\" \"spacings\" 2026 proof"
+  ],
+  "searched_channels": [
+    "general web and primary author/publisher routing",
+    "arXiv",
+    "Zenodo",
+    "HAL",
+    "GitHub",
+    "Palomar (site search)",
+    "Hexagon (site search)"
+  ],
+  "sources": [
+    {
+      "primary_body_access_gap": false,
+      "scope_comparison": "The target needs the exponential nearest-neighbor spacing distribution almost everywhere for all s for normalized general binary quadratic forms with sign multiplicity removed. Actual Theorem1 gives averaged triple correlations;Cor2 onlyliminf/limsup bounds and the long-gap theorem only an infinite subsequence of gaps>=2.006mean. Pair correlation or isolated long gaps does not determine the full consecutive-spacing law. Point-scatterer or sums-of-two-squares distributions use different spectral data. No later complete matching theorem/announcement was found.",
+      "url": "https://arxiv.org/html/1809.07881",
+      "locator": "Section1.2,Theorem1,Corollary2 and Section1.3long gaps",
+      "version_or_date": "FinalJEMS26(2024)41–74,DOI10.4171/JEMS/1356;currentarXivbodyand2026focusedsearch"
+    }
+  ],
+  "outcome": "partial",
+  "recommended_status": "Open",
+  "rationale": "The target needs the exponential nearest-neighbor spacing distribution almost everywhere for all s for normalized general binary quadratic forms with sign multiplicity removed. Actual Theorem1 gives averaged triple correlations;Cor2 onlyliminf/limsup bounds and the long-gap theorem only an infinite subsequence of gaps>=2.006mean. Pair correlation or isolated long gaps does not determine the full consecutive-spacing law. Point-scatterer or sums-of-two-squares distributions use different spectral data. No later complete matching theorem/announcement was found.",
+  "latest_version_check": "FinalJEMS26(2024)41–74,DOI10.4171/JEMS/1356;currentarXivbodyand2026focusedsearch",
+  "gap_retraction_check": "No matching complete candidate was identified; no withdrawal banner observed in inspected version record. Restricted proofs were not independently certified.",
+  "limitations": [
+    "Bounded search conclusion, not a guarantee of continued openness.",
+    "No index-only result was promoted to a complete match."
+  ]
+}
