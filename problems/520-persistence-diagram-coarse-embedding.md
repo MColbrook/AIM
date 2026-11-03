@@ -39,7 +39,7 @@ Persistence diagrams summarize topological features of data. Hilbert-space repre
 
 Reviewed 15 October 2026 against the original target in [PR #103](https://github.com/MColbrook/AIM/pull/103). The unrestricted persistence-diagram space has no coarse embedding into Hilbert space for every p in the remaining interval[1,2].
 
-[Proof or source](../research/solutions/520-kaiwen-jin-coarse-persistence-diagrams/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/520-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/520-kaiwen-jin-coarse-persistence-diagrams/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/520-review.md). The linked review records the target comparison.
 
 **Scope:** Nonembeddability for all finite persistence diagrams with no cardinality or coordinate restriction, under each W_p metric with 1<=p<=2.
 

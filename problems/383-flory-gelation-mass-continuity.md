@@ -36,7 +36,7 @@ Mass missing from finite clusters represents a macroscopic gel. Continuity would
 
 Reviewed 15 October 2026 against the original target in [PR #148](https://github.com/MColbrook/AIM/pull/148). Finite-cluster mass is continuous and equals one at every finite positive onset of Flory gelation in the stated kernel class.
 
-[Proof or source](../research/solutions/383-flory-gelation-mass-continuity/paper/flory_onset.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/383-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/383-flory-gelation-mass-continuity/paper/flory_onset.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/383-review.md). The linked review records the target comparison.
 
 **Scope:** Full affirmative answer for every weak solution and every 0<alpha<1, with only finite particle number and first moment.
 

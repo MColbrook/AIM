@@ -30,7 +30,7 @@ Boundary actuators for evolution PDEs are often unbounded operators on the state
 
 Reviewed 15 October 2026 against the original target in [PR #162](https://github.com/MColbrook/AIM/pull/162). Admissibility for all strongly measurable bounded inputs implies zero-class admissibility and norm-continuous convolution states on every closed finite interval.
 
-[Proof or source](../research/solutions/411-bounded-input-state-continuity/paper/continuity.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/411-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/411-bounded-input-state-continuity/paper/continuity.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/411-review.md). The linked review records the target comparison.
 
 **Scope:** Full affirmative answer for arbitrary real or complex Banach state and input spaces in the stated extrapolation representation.
 

@@ -40,7 +40,7 @@ This coefficient measures the energy penalty for steering a quantum wave in a ve
 
 Reviewed 15 October 2026 against the original target in [PR #160](https://github.com/MColbrook/AIM/pull/160). The norm control cost has liminf T log C_S(T,L) at least L^2/pi, strictly excluding the proposed L^2/4 coefficient.
 
-[Proof or source](../research/solutions/403-schrodinger-control-lower-bound/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/403-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/403-schrodinger-control-lower-bound/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/403-review.md). The linked review records the target comparison.
 
 **Scope:** Full negative answer to the proposed limit; the true sharp coefficient and limit existence remain separate questions.
 

@@ -38,7 +38,7 @@ The question asks whether strong randomness at the annealed adsorption threshold
 
 Reviewed 15 October 2026 against the original target in [PR #146](https://github.com/MColbrook/AIM/pull/146). For the specified Gaussian pinning model, strong disorder implies a strictly positive quenched–annealed critical-point shift.
 
-[Proof or source](../research/solutions/191-pinning-strong-disorder-critical-shift/paper/manuscript.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/191-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/191-pinning-strong-disorder-critical-shift/paper/manuscript.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/191-review.md). The linked review records the target comparison.
 
 **Scope:** For the specified Gaussian pinning model, strong disorder implies a strictly positive quenched–annealed critical-point shift.
 

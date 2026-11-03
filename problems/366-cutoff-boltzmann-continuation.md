@@ -35,7 +35,7 @@ The criterion would distinguish breakdown caused by concentration of observable 
 
 Reviewed 15 October 2026 against the original target in [PR #140](https://github.com/MColbrook/AIM/pull/140). Counterexample to rapid-decay continuation in the explicitly stated broad class of jointly smooth solutions, using a positive inverse-sixth-power tail from Gaussian data.
 
-[Proof or source](../research/solutions/366-cutoff-boltzmann-rapid-decay/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/366-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/366-cutoff-boltzmann-rapid-decay/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/366-review.md). The linked review records the target comparison.
 
 **Scope:** The homogeneous nonnegative pointwise-smooth solution satisfies all original initial-Schwartz and uniform mass/energy/entropy hypotheses but cannot have a rapidly decaying endpoint extension. It already continues smoothly in a polynomially weighted class.
 

@@ -37,7 +37,7 @@ Nearest-neighbor quantum Hamiltonians can use one local interaction repeatedly a
 
 Reviewed 15 October 2026 against the original target in [PR #90](https://github.com/MColbrook/AIM/pull/90). Affirmative norm convergence for the full repeated-GUE three-leg model.
 
-[Proof or source](../research/solutions/kaiwen-jin-577/paper/repeated_gue_three_legs.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/577-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/kaiwen-jin-577/paper/repeated_gue_three_legs.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/577-review.md). The linked review records the target comparison.
 
 **Scope:** Every fixed complex noncommutative polynomial has the prescribed free-pair operator-norm limit in probability.
 

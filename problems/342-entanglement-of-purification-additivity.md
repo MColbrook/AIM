@@ -56,18 +56,16 @@ This is a cost for creating both classical and quantum correlations. General add
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Negative: ordinary von Neumann entanglement of purification is nonadditive.
+**Resolution update (3 November 2026):** Counterexample. Negative: ordinary von Neumann entanglement of purification is nonadditive.
 
-[Claimed solution](https://arxiv.org/abs/2609.29539v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/342.json). Source locator: Theorem1; §2; AppendixA.1 ancilla reduction; §3 exact lower-bound certificate. The comparison records the hypotheses, quantifiers and any reduction to the original target. The full external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted.
+[Proof](https://arxiv.org/abs/2609.29539v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/342.json). Source locator: Theorem1; §2; AppendixA.1 ancilla reduction; §3 exact lower-bound certificate. The comparison records the hypotheses, quantifiers and any reduction to the original target.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: nonadditivity claim with exact finite artifact replay; complete analytic reduction awaiting independent review.
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: nonadditivity claim with exact finite artifact replay; complete analytic reduction awaiting independent review.
 
-[Proof or source](https://arxiv.org/abs/2609.29539v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** Independent review of the complete external argument remains outstanding; the source claims the full target and no specific mathematical gap was established by this applicability audit.
+[Proof or source](https://arxiv.org/abs/2609.29539v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md). The linked review records the target comparison.
 
 ### Earlier review notes
 

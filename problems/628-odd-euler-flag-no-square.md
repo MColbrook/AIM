@@ -24,7 +24,7 @@ Flag-no-square complexes connect triangulated manifolds with negatively curved g
 
 Reviewed 15 October 2026 against the original target in [PR #110](https://github.com/MColbrook/AIM/pull/110). There exists a closed connected PL four-manifold with odd Euler characteristic and a finite flag-no-square triangulation.
 
-[Proof or source](../research/solutions/628-odd-euler-flag-no-square/paper/odd_euler_flag_no_square.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/628-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/628-odd-euler-flag-no-square/paper/odd_euler_flag_no_square.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/628-review.md). The linked review records the target comparison.
 
 **Scope:** The constructed actual PL manifold has Euler characteristic2*chi(Y)-3, with its quotient triangulation proved flag and free of induced four-cycles.
 

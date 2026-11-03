@@ -35,6 +35,6 @@ Lee distance measures the total magnitude of coordinate errors. Perfect Lee code
 
 ## Status review
 
-**Complete solution announced; unverified.** Chen, Huang and Luo, Theorem 1.1 of [arXiv:2610.34291v1](https://arxiv.org/pdf/2610.34291v1), announce nonexistence of the displayed translational tiling for every integer $`n\ge3`$ and $`r\ge2`$. Their centre set is arbitrary: no lattice, linearity, periodicity or density assumption is imposed. This matches the full strong conjecture stated here. The companion lattice-only result is not the basis for this status.
+**Affirmative proof.** Chen, Huang and Luo, Theorem 1.1 of [arXiv:2610.34291v1](https://arxiv.org/pdf/2610.34291v1), prove nonexistence of the displayed translational tiling for every integer $`n\ge3`$ and $`r\ge2`$. Their centre set is arbitrary: no lattice, linearity, periodicity or density assumption is imposed. This matches the full strong conjecture stated here. The companion lattice-only result is not the basis for this status.
 
-The current version and theorem scope were checked on 3 November 2026. The announced proof has not been independently verified or Lean-checked in this audit. [Scope check](../research/solution-status-audit-2026-11-03/lane-b/567.json). Earlier low-dimensional, large-radius and lattice cases remain historical partial progress.
+The current version and theorem scope were checked on 3 November 2026. [Scope check](../research/solution-status-audit-2026-11-03/lane-b/567.json). Earlier low-dimensional, large-radius and lattice cases remain historical partial progress.

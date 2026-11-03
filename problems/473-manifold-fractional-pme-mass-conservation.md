@@ -50,7 +50,7 @@ The assertion rules out loss of material at spatial infinity in fractional diffu
 
 Reviewed 15 October 2026 against the original target in [PR #158](https://github.com/MColbrook/AIM/pull/158). Every weak dual solution in the stated spatial-L1 class conserves its initial mass at every finite time.
 
-[Proof or source](../research/solutions/473-manifold-fractional-pme-mass-conservation/paper/mass_conservation.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/473-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/473-manifold-fractional-pme-mass-conservation/paper/mass_conservation.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/473-review.md). The linked review records the target comparison.
 
 **Scope:** Every weak dual solution in the stated spatial-L1 class conserves its initial mass at every finite time.
 

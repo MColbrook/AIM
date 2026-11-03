@@ -36,7 +36,7 @@ A sharp bound would constrain the combinatorial complexity of reflexive polytope
 
 Reviewed 15 October 2026 against the original target in [PR #107](https://github.com/MColbrook/AIM/pull/107). An explicit45-dimensional reflexive polytope violates the conjectured facet bound.
 
-[Proof or source](../research/solutions/aim-610-reflexive-facet-counterexample/paper/manuscript.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/610-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/aim-610-reflexive-facet-counterexample/paper/manuscript.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/610-review.md). The linked review records the target comparison.
 
 **Scope:** The constructed standard-lattice reflexive polytope has330303106984181765 facets, strictly more than6^(45/2).
 

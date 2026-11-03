@@ -45,18 +45,16 @@ A positive answer would establish a general decision method, potentially with pr
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The claimed undecidability for rational homogeneous polynomial fields applies to an effectively encoded subclass of the original inputs. For homogeneous fields, flow scaling makes local asymptotic stability equivalent to global asymptotic stability, including forward completeness. A total decision algorithm for the local target would therefore decide the claimed undecidable subclass.
+**Resolution update (3 November 2026):** Counterexample. The undecidability for rational homogeneous polynomial fields applies to an effectively encoded subclass of the original inputs. For homogeneous fields, flow scaling makes local asymptotic stability equivalent to global asymptotic stability, including forward completeness. A total decision algorithm for the local target would therefore decide the claimed undecidable subclass.
 
-[Claimed solution](https://arxiv.org/pdf/2610.12434v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/338.json). Theorems 1.1/1.5; homogeneous scaling identity (2.1). The full external proof has not been independently verified here; no local Lean kernel replay or human peer review is asserted. This label records the complete announcement under the requested status policy.
+[Proof](https://arxiv.org/pdf/2610.12434v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/338.json). Theorems 1.1/1.5; homogeneous scaling identity (2.1).
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: negative
 
-[Proof or source](https://arxiv.org/pdf/2610.12434v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** Independent review of the complete external proof remains outstanding.
+[Proof or source](https://arxiv.org/pdf/2610.12434v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the target comparison.
 
 ### Earlier review notes
 

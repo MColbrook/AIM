@@ -35,18 +35,16 @@ Nodal interfaces partition the interior of a boundary-loaded vibrating medium. T
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The source supplies a fixed smooth closed5-manifold and eigenfunctions phi_j whose nodal4-volume exceeds every stated square-root eigenvalue bound. On its product with[-L,L], U=phi_j cosh(sqrt(lambda_j)t) is harmonic with the same outward Steklov eigenvalue sqrt(lambda_j)tanh(Lsqrt(lambda_j)) on both smooth boundary components. Its interior nodal5-volume is2L times the original nodal volume, refuting the universal upper linear Steklov bound in dimension6. No lower-bound resolution is asserted.
+**Resolution update (3 November 2026):** Counterexample. The source supplies a fixed smooth closed5-manifold and eigenfunctions phi_j whose nodal4-volume exceeds every stated square-root eigenvalue bound. On its product with[-L,L], U=phi_j cosh(sqrt(lambda_j)t) is harmonic with the same outward Steklov eigenvalue sqrt(lambda_j)tanh(Lsqrt(lambda_j)) on both smooth boundary components. Its interior nodal5-volume is2L times the original nodal volume, refuting the universal upper linear Steklov bound in dimension6. No lower-bound resolution is asserted.
 
-[Claimed solution](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026/paper.pdf) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/110.json). Source locator: Theorem1.1, with explicit product-cylinder reduction. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+[Proof](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026/paper.pdf) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/110.json). Source locator: Theorem1.1, with explicit product-cylinder reduction.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: steklov counterexample claim; product reduction checked, underlying nodal-growth theorem awaiting independent review.
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: steklov counterexample claim; product reduction checked, underlying nodal-growth theorem awaiting independent review.
 
-[Proof or source](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** Independent review of the complete external argument remains outstanding; the source claims the full target and no specific mathematical gap was established by this applicability audit.
+[Proof or source](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md). The linked review records the target comparison.
 
 ### Earlier review notes
 

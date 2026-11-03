@@ -38,7 +38,7 @@ The estimate would quantify spatial regularity under integrable forcing for nonl
 
 Reviewed 15 October 2026 against the original target in [PR #150](https://github.com/MColbrook/AIM/pull/150). The proposed kernel-uniform full-order Sobolev estimate fails at every finite sufficiently large p for strict ellipticity pairs.
 
-[Proof or source](../research/solutions/463-concave-nonlocal-sobolev-counterexample/paper/manuscript.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/463-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/463-concave-nonlocal-sobolev-counterexample/paper/manuscript.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/463-review.md). The linked review records the target comparison.
 
 **Scope:** The proposed kernel-uniform full-order Sobolev estimate fails at every finite sufficiently large p for strict ellipticity pairs.
 

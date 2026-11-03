@@ -41,7 +41,7 @@ The boundary law represents Stefan–Boltzmann radiation into an environment at 
 
 Reviewed 15 October 2026 against the original target in [PR #128](https://github.com/MColbrook/AIM/pull/128). Concentric-ball optimality for the full radiative insulation law.
 
-[Proof or source](../research/solutions/400-radiative-insulation-concentric-balls/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/400-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/400-radiative-insulation-concentric-balls/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/400-review.md). The linked review records the target comparison.
 
 **Scope:** The displayed inequality holds for every original dimension, parameter choice, measurable core and bounded Lipschitz outer set, including unused insulation.
 

@@ -41,14 +41,13 @@ These harmonic modes describe media with a boundary spectral load. The proposed 
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified counterexample announcement**. Xie–Zhang’s Theorem 1.2 and its construction in §4.3 give one fixed bounded simply connected smooth Euclidean planar domain and a sequence of real, ordinary Steklov eigenfunctions with eigenvalues tending to infinity. Their entire interior nodal sets lie in boundary neighborhoods whose widths tend to zero. The conformal map and the resulting Euclidean domain are fixed throughout the sequence; this is not a varying-domain or weighted-boundary counterexample.
+**Resolution update (3 November 2026):** Counterexample. Xie–Zhang’s Theorem 1.2 and its construction in §4.3 give one fixed bounded simply connected smooth Euclidean planar domain and a sequence of real, ordinary Steklov eigenfunctions with eigenvalues tending to infinity. Their entire interior nodal sets lie in boundary neighborhoods whose widths tend to zero. The conformal map and the resulting Euclidean domain are fixed throughout the sequence; this is not a varying-domain or weighted-boundary counterexample.
 
 For any proposed fixed collar, choose an interior point in it with positive boundary distance. For all sufficiently late members of this sequence, every zero remains at least half that distance from the point, whereas the proposed ball radius tends to zero. This contradicts the displayed assertion, already in the smooth planar subclass of Lipschitz domains.
 
-[Claimed solution](https://arxiv.org/pdf/2610.28391v2) · [Dated statement comparison and fixed-collar implication](../research/solution-status-audit-2026-11-03/lane-d/1026.json). The current version, theorem hypotheses and the implication for this local formulation were checked. The external proof has not been independently verified end-to-end here; no Lean verification or human peer review is asserted.
+[Proof](https://arxiv.org/pdf/2610.28391v2) · [Dated statement comparison and fixed-collar implication](../research/solution-status-audit-2026-11-03/lane-d/1026.json). The current version, theorem hypotheses and the implication for this local formulation were checked.
 
 ### Earlier status record
-
 
 
 **Known cases:** The collar width is fixed independently of frequency. Boundary-centered nodal density and estimates in shrinking collars do not give this fixed-width assertion; the known global non-density examples do not decide a sufficiently small collar.

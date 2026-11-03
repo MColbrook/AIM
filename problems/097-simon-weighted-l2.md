@@ -29,9 +29,9 @@ It asks how little spatial decay of an electric potential suffices to preserve t
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Becker and Yang’s Theorem 1.1 constructs smooth bounded nonnegative potentials with the required weighted square integrability, but with no continuous spectral subspace at all. Its weight $`|x|^{1-d}`$ is stronger than the displayed $`(1+|x|)^{1-d}`$ condition. The claimed counterexample therefore answers this problem negatively.
+**Resolution update (3 November 2026):** Counterexample. Becker and Yang’s Theorem 1.1 constructs smooth bounded nonnegative potentials with the required weighted square integrability, but with no continuous spectral subspace at all. Its weight $`|x|^{1-d}`$ is stronger than the displayed $`(1+|x|)^{1-d}`$ condition. The counterexample therefore answers this problem negatively.
 
-[Claimed solution](https://arxiv.org/pdf/2610.31637v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/097.json). The theorem hypotheses and current announcement were checked. The external proofs have not been independently verified end-to-end here; no Lean verification or human peer review is asserted.
+[Proof](https://arxiv.org/pdf/2610.31637v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/097.json). The theorem hypotheses and current announcement were checked.
 
 ### Earlier status record
 

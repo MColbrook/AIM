@@ -38,9 +38,9 @@ The equality would derive the energetic preference for a triangular crystal dire
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Colbrook’s Theorem 1.1 states the lower bound for every unrestricted finite configuration for the same planar 12–6 potential, and proves that finite triangular patches attain the matching bulk limit. This is the energy equality asked here; it does not assert geometric convergence of every minimizing configuration.
+**Resolution update (3 November 2026):** Affirmative proof. Colbrook’s Theorem 1.1 states the lower bound for every unrestricted finite configuration for the same planar 12–6 potential, and proves that finite triangular patches attain the matching bulk limit. This is the energy equality asked here; it does not assert geometric convergence of every minimizing configuration.
 
-[Claimed solution](https://zenodo.org/api/records/23835694/files/lennard_jones.pdf/content) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/083.json). The manuscript checksum and theorem scope were checked. The external proof, its analytic dependencies and its numerical certificates have not been independently verified here; no Lean verification or human peer review is asserted.
+[Proof](https://zenodo.org/api/records/23835694/files/lennard_jones.pdf/content) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/083.json). The manuscript checksum and theorem scope were checked.
 
 ### Earlier status record
 

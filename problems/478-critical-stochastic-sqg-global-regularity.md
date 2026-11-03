@@ -32,7 +32,7 @@ Critical SQG models surface temperature transport with borderline dissipative sm
 
 Reviewed 15 October 2026 against the original target in [PR #168](https://github.com/MColbrook/AIM/pull/168). The critical stochastic SQG equation has the required pathwise unique global adapted H3 solution for the full specified nonlinear finite-noise class.
 
-[Proof or source](../research/solutions/478-critical-stochastic-sqg-global-regularity/paper/manuscript.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/478-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/478-critical-stochastic-sqg-global-regularity/paper/manuscript.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/478-review.md). The linked review records the target comparison.
 
 **Scope:** The critical stochastic SQG equation has the required pathwise unique global adapted H3 solution for the full specified nonlinear finite-noise class.
 

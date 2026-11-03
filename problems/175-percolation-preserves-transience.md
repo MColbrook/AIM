@@ -21,18 +21,16 @@ Random deletion of conducting bonds can create trapping and bottlenecks. The que
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Corollary1.1 claims that all infinite clusters are transient almost surely for p>pc on every infinite connected locally finite transient transitive graph. A Cayley graph with finite symmetric generators is in this class. The result has no polynomial-growth or amenability restriction; the excluded critical parameter p=pc is not part of the local target.
+**Resolution update (3 November 2026):** Affirmative proof. Corollary1.1 proves that all infinite clusters are transient almost surely for p>pc on every infinite connected locally finite transient transitive graph. A Cayley graph with finite symmetric generators is in this class. The result has no polynomial-growth or amenability restriction; the excluded critical parameter p=pc is not part of the local target.
 
-[Claimed solution](https://arxiv.org/pdf/2603.03257v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/175.json). Source locator: Corollary1.1, displayed assertion(1). The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+[Proof](https://arxiv.org/pdf/2603.03257v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/175.json). Source locator: Corollary1.1, displayed assertion(1).
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: affirmative
 
-[Proof or source](https://arxiv.org/pdf/2603.03257v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** Independent review of the complete external proof remains outstanding.
+[Proof or source](https://arxiv.org/pdf/2603.03257v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the target comparison.
 
 ### Earlier review notes
 

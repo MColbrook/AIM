@@ -35,7 +35,7 @@ Center-of-mass diffusion represents translational Brownian motion of polymer mol
 
 Reviewed 15 October 2026 against the original target in [PR #138](https://github.com/MColbrook/AIM/pull/138). The conditional-density argument establishes a subsequential vanishing-center-of-mass-diffusion limit for the complete stated periodic three-dimensional FENE target.
 
-[Proof or source](../research/solutions/376-fene-vanishing-center-of-mass-diffusion/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/376-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/376-fene-vanishing-center-of-mass-diffusion/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/376-review.md). The linked review records the target comparison.
 
 **Scope:** For arbitrary prescribed data in the stated smooth bounded-positive normalized class, every nu>0 and k>2, selected global positive-diffusion solutions have a subsequence converging to the identical full noncorotational zero-diffusion system, with strong L2 velocity, strong L1 density and stress, the original fluxes, initial data and initial-time entropy inequality.
 

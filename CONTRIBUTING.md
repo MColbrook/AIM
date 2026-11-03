@@ -24,8 +24,6 @@ Use the [status labels](README.md#problem-status), keeping the page badge and me
 - **Solved** requires a published resolution or a documented independent audit of the complete argument.
 - **Lean verified** requires a local `verification_record` linked from the page: pinned proof revision, Lean and dependency versions, theorem-to-target comparison, reproduction commands, a dated successful log, and transitive axiom output. Only `propext`, `Classical.choice` and `Quot.sound` are acceptable; no `sorryAx` or unproved custom axioms.
 
-For the [3 November 2026 audit](research/solution-status-audit-2026-11-03/README.md), the editor requested that complete matching solution announcements be recorded as **Solved**. Those entries explicitly retain an unverified-announcement qualification and link the scope review. This audit-specific convention does not establish independent proof or Lean verification.
-
 Only `Open` and `Partially resolved` count as open targets. Use `Solved`, `Lean verified` or `Solution claimed` in the existing page and `data/*.json` row, keeping the ID and linking to the proof and review; Lean-verified rows also need `verification_record`. The generator lists claims separately from solved problems. Other retained statuses use `research/` and `catalogue.json`. Update `last_checked` only after an actual literature or evidence review.
 
 Retained entries need a subject `group`; solved entries also need an `outcome` and direct `proof` and `review` links for the generated lists.

@@ -41,7 +41,7 @@ This random-advection fluid model represents incompressible flow with spatially 
 
 Reviewed 15 October 2026 against the original target in [PR #167](https://github.com/MColbrook/AIM/pull/167). Local well-posedness holds at the exact inhomogeneous B^(-1/2)_(6,4) endpoint for all prescribed transport families in AIM457.
 
-[Proof or source](../research/solutions/transport-noise-navier-stokes-negative-half-data/paper/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/457-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/transport-noise-navier-stokes-negative-half-data/paper/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/457-review.md). The linked review records the target comparison.
 
 **Scope:** Local well-posedness holds at the exact inhomogeneous B^(-1/2)_(6,4) endpoint for all prescribed transport families in AIM457.
 

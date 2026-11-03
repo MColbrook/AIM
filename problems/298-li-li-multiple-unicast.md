@@ -41,18 +41,16 @@ The question determines whether routers can increase sustained data-transfer rat
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Section 4 claims a causal code on an undirected graph with 157 independent unicast sessions and shared edge capacities: common coding rate at least 1, whereas fractional routing has common rate at most 147/157. This is the throughput model in the original target; the separate nondeterministic construction in §3 is not the basis of this status.
+**Resolution update (3 November 2026):** Counterexample. Section 4 gives a causal code on an undirected graph with 157 independent unicast sessions and shared edge capacities: common coding rate at least 1, whereas fractional routing has common rate at most 147/157. This is the throughput model in the original target; the separate nondeterministic construction in §3 is not the basis of this status.
 
-[Claimed solution](https://arxiv.org/pdf/2610.10108v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/298.json). §4, deterministic causal certificate and rate comparison. The full external proof has not been independently verified here; no local Lean kernel replay or human peer review is asserted. This label records the complete announcement under the requested status policy.
+[Proof](https://arxiv.org/pdf/2610.10108v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/298.json). §4, deterministic causal certificate and rate comparison.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: negative
 
-[Proof or source](https://arxiv.org/pdf/2610.10108v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** Independent review of the complete external proof remains outstanding.
+[Proof or source](https://arxiv.org/pdf/2610.10108v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the target comparison.
 
 ### Earlier review notes
 

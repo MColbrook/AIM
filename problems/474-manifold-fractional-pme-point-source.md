@@ -44,7 +44,7 @@ A fundamental solution represents release of a concentrated amount of material a
 
 Reviewed 15 October 2026 against the original target in [PR #157](https://github.com/MColbrook/AIM/pull/157). Every admitted complete manifold and positive point mass has a nonnegative distributional fractional porous-medium solution with the required positive-time continuity and initial trace.
 
-[Proof or source](../research/solutions/474-manifold-fractional-pme-point-source/paper/manuscript.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/474-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/474-manifold-fractional-pme-point-source/paper/manuscript.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/474-review.md). The linked review records the target comparison.
 
 **Scope:** Every admitted complete manifold and positive point mass has a nonnegative distributional fractional porous-medium solution with the required positive-time continuity and initial trace.
 

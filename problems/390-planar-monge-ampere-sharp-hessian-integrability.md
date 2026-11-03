@@ -35,7 +35,7 @@ Hessian bounds control distortion and sensitivity of transport maps used in mesh
 
 Reviewed 15 October 2026 against the original target in [PR #134](https://github.com/MColbrook/AIM/pull/134). Local strong Hessian integrability at the requested exponent for the full planar Alexandrov class, implying the weak endpoint estimate.
 
-[Proof or source](../research/solutions/390-planar-monge-ampere-sharp-hessian-integrability/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/390-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/390-planar-monge-ampere-sharp-hessian-integrability/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/390-review.md). The linked review records the target comparison.
 
 **Scope:** Original-class coordinate/area identities and a local weighted scalar-projection defect estimate establish the endpoint for every parameter and compact interior set.
 

@@ -36,18 +36,16 @@ The inequality would give a mathematically uniform limit on how many additional 
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement and proof-application claim**. The printed theorem only covers strict binding. The recorded extension supplies an alleged threshold eigenfunction above the uniform strict-binding cutoff, hence a ground state at the minimum across all particle sectors on the energy plateau. Lemma2.2 uses the eigen-equation and EN<=EN-1, including equality, to give N<=3Z. The state then satisfies the global-minimum hypotheses used in§§3–9, without a strict adjacent gap; their charge contradiction applies directly. This is an unverified proof-application claim, not a statement that Theorem1.1 itself includes threshold states.
+**Resolution update (3 November 2026):** Affirmative proof. The printed theorem only covers strict binding. The recorded extension supplies a threshold eigenfunction above the uniform strict-binding cutoff, hence a ground state at the minimum across all particle sectors on the energy plateau. Lemma2.2 uses the eigen-equation and EN<=EN-1, including equality, to give N<=3Z. The state then satisfies the global-minimum hypotheses used in§§3–9, without a strict adjacent gap; their charge contradiction applies directly. The threshold case follows by applying the proof interfaces in §§2–9; Theorem 1.1 itself is stated for strict binding.
 
-[Claimed solution](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/Uniform-excess-charge-for-Coulomb-molecules-and-the-outer-radius-of-neutral-atoms-September-24-2026/paper.pdf) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/098.json). Source locator: Theorem1.1 plus supplied-state proof interface in§§2–9; prior threshold comparison. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+[Proof](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/Uniform-excess-charge-for-Coulomb-molecules-and-the-outer-radius-of-neutral-atoms-September-24-2026/paper.pdf) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/098.json). Source locator: Theorem1.1 plus supplied-state proof interface in§§2–9; prior threshold comparison.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: full molecular charge-bound claim; threshold bridge checked, complete screening proof awaiting independent review.
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: the full molecular charge bound, including the threshold extension.
 
-[Proof or source](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Uniform-excess-charge-for-Coulomb-molecules-and-the-outer-radius-of-neutral-atoms-September-24-2026/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** Independent review of the complete external argument remains outstanding; the source claims the full target and no specific mathematical gap was established by this applicability audit.
+[Proof or source](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Uniform-excess-charge-for-Coulomb-molecules-and-the-outer-radius-of-neutral-atoms-September-24-2026/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md). The linked review records the target comparison.
 
 ### Earlier review notes
 

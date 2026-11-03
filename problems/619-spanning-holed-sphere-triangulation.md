@@ -26,7 +26,7 @@ Such spanning planar structures connect surface topology with rigidity in the pl
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Negative
 
-[Proof or source](https://arxiv.org/pdf/math/0507592v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](https://arxiv.org/pdf/math/0507592v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the target comparison.
 
 **Scope:** The author source explicitly supplies closed orientable genus-two triangulations on ten vertices. The first24-face dataset record was independently parsed. Every edge occurs in exactly two triangles, every vertex link is one connected cycle, the dual adjacency is connected, and consistent triangle orientations exist. It has10 vertices,36 edges and24 faces, hence Euler characteristic−2 and orientable genus2/Euler genus4. The finite-check receipt is619-source-example-check.json.
 

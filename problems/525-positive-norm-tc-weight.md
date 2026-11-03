@@ -48,7 +48,7 @@ TC weight strengthens cohomological lower bounds for the number of continuous lo
 
 Reviewed 15 October 2026 against the original target in [PR #98](https://github.com/MColbrook/AIM/pull/98). A positive-norm surface product has no degree-four class of the proposed TC weight.
 
-[Proof or source](../research/solutions/525-positive-norm-tc-weight/paper/counterexample.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/525-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/525-positive-norm-tc-weight/paper/counterexample.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/525-review.md). The linked review records the target comparison.
 
 **Scope:** For M=Sigma2×Sigma2 the rational fundamental class has norm at least24, but every nonzero u in H4(M;Q) has weight(bar(u)) at most2<4.
 

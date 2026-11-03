@@ -36,7 +36,7 @@ For a wireless network or a graph built from sampled data, the statement would m
 
 Reviewed 15 October 2026 against the original target in [PR #121](https://github.com/MColbrook/AIM/pull/121). For every fixed full-dimensional convex polytope in every fixed dimension at least three, connectivity occurs exactly when the last isolated vertex disappears with high probability.
 
-[Proof or source](../research/solutions/647-polytopal-connectivity-last-isolated-point/paper/connectivity-polytope.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/647-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/647-polytopal-connectivity-last-isolated-point/paper/connectivity-polytope.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/647-review.md). The linked review records the target comparison.
 
 **Scope:** For every fixed full-dimensional convex polytope in every fixed dimension at least three, connectivity occurs exactly when the last isolated vertex disappears with high probability.
 

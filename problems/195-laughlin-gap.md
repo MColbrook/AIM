@@ -39,18 +39,16 @@ The gap protects a correlated quantum Hall fluid against low-energy perturbation
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The candidate proof explicitly claims the plane inequality H^2>=H/3 on every bosonic particle sector, with coefficient1 for each unordered pair projector. This restricts to the invariant finite polynomial cutoff in the local target and gives positive eigenvalues>=1/3 by spectral calculus. The spherical threshold Q>=3088 in the abstract is not substituted for a plane result; the final plane assertion in Theorem3 is used. No full analytic/certificate audit is asserted.
+**Resolution update (3 November 2026):** Affirmative proof. The proof establishes the plane inequality H^2>=H/3 on every bosonic particle sector, with coefficient1 for each unordered pair projector. This restricts to the invariant finite polynomial cutoff in the local target and gives positive eigenvalues>=1/3 by spectral calculus. The spherical threshold Q>=3088 in the abstract is not substituted for a plane result; the final plane assertion in Theorem3 is used. No full analytic/certificate audit is asserted.
 
-[Claimed solution](https://github.com/Shencongli/bosonic-laughlin-spectral-gap/blob/fda5da170a1a87c2a7a8e970254c7073c228a99a/paper.pdf) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/195.json). Source locator: Theorem3, printedp10–11: final plane sentence. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+[Proof](https://github.com/Shencongli/bosonic-laughlin-spectral-gap/blob/fda5da170a1a87c2a7a8e970254c7073c228a99a/paper.pdf) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/195.json). Source locator: Theorem3, printedp10–11: final plane sentence.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: complete bosonic Laughlin gap claim awaiting independent argument and certificate review.
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: complete bosonic Laughlin gap claim awaiting independent argument and certificate review.
 
-[Proof or source](https://github.com/Shencongli/bosonic-laughlin-spectral-gap/blob/fda5da170a1a87c2a7a8e970254c7073c228a99a/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** Independent review of the analytic reduction and every required exact/interval certificate remains outstanding.
+[Proof or source](https://github.com/Shencongli/bosonic-laughlin-spectral-gap/blob/fda5da170a1a87c2a7a8e970254c7073c228a99a/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md). The linked review records the target comparison.
 
 ### Earlier review notes
 

@@ -29,7 +29,7 @@ The boundary and propagation cost use the same anisotropy. The question tests wh
 
 Reviewed 15 October 2026 against the original target in [PR #164](https://github.com/MColbrook/AIM/pull/164). Total integrability of the Minkowski billiard in its own norm ball forces an inner-product norm, without an extra symmetry assumption.
 
-[Proof or source](../research/solutions/252-self-ball-minkowski-integrability/paper/minkowski_integrability.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/252-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/252-self-ball-minkowski-integrability/paper/minkowski_integrability.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/252-review.md). The linked review records the target comparison.
 
 **Scope:** Total integrability of the Minkowski billiard in its own norm ball forces an inner-product norm, without an extra symmetry assumption.
 

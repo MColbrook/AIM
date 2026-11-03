@@ -70,7 +70,7 @@ This is the fixed round-sphere prototype of the broader question in [1]. The ord
 
 Reference [2] proves a weak inequality with an additional squared uniform-norm term and an energy coefficient that grows as that defect tends to zero. It does not give the finite constant requested here. Reference [3] proves a positive result under a global-pole assumption that the round sphere does not satisfy; its restricted-domain asymptotics also differ from the full-loop question.
 
-Known counterexamples obtained by changing a sphere's metric, and inequalities for hyperbolic spaces, loop-group heat-kernel measures or ground-state reweightings, do not by their inspected statements settle this prototype. No matching complete positive or negative announcement was located in the recorded bounded current checks. These checks do not certify that no resolution exists.
+Known counterexamples obtained by changing a sphere's metric, and inequalities for hyperbolic spaces, loop-group heat-kernel measures or ground-state reweightings, do not by their inspected statements settle this prototype. No matching complete positive or counterexample was located in the recorded bounded current checks. These checks do not certify that no resolution exists.
 
 The cylindrical inequality is equivalent to a gap for its minimal closed Dirichlet form by closure. No assertion about uniqueness of all extensions of the loop operator is part of this question.
 

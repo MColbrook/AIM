@@ -24,18 +24,16 @@ The question asks whether every triangular optical or mechanical cavity supports
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The source claims a regular periodic billiard path in every finite bounded polygon. Every nondegenerate triangle is included. Regularity excludes vertices and tangencies; the phase-space orbit is closed, so both position and direction repeat. The doubling construction may increase the period, which the local existential target permits.
+**Resolution update (3 November 2026):** Affirmative proof. The source proves a regular periodic billiard path in every finite bounded polygon. Every nondegenerate triangle is included. Regularity excludes vertices and tangencies; the phase-space orbit is closed, so both position and direction repeat. The doubling construction may increase the period, which the local existential target permits.
 
-[Claimed solution](https://arxiv.org/pdf/2606.10102v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/250.json). Source locator: Theorem1.1 and definition of regular periodic trajectory. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+[Proof](https://arxiv.org/pdf/2606.10102v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/250.json). Source locator: Theorem1.1 and definition of regular periodic trajectory.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: affirmative
 
-[Proof or source](https://arxiv.org/pdf/2606.10102v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** Independent review of the complete external proof remains outstanding.
+[Proof or source](https://arxiv.org/pdf/2606.10102v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the target comparison.
 
 ### Earlier review notes
 

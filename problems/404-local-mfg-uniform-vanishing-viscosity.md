@@ -41,7 +41,7 @@ The value function determines an agent’s optimal future cost. Uniform converge
 
 Reviewed 15 October 2026 against the original target in [PR #131](https://github.com/MColbrook/AIM/pull/131). Whole-family local uniform vanishing-viscosity convergence for the exact quadratic local MFG in dimensions one through three, with initial vacuum allowed.
 
-[Proof or source](../research/solutions/local-mfg-uniform-vanishing-viscosity/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/404-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/local-mfg-uniform-vanishing-viscosity/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/404-review.md). The linked review records the target comparison.
 
 **Scope:** Averaged finite-energy path perturbations give uniform continuity; exact-initial heat recovery, convex uniqueness and path calibration identify occupied values; homogeneous comparison identifies vacuum values.
 

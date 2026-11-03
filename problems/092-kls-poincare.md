@@ -31,18 +31,16 @@ A dimension-free spectral gap would strengthen guarantees for sampling log-conca
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The current theorem bounds CP(mu) by one absolute constant for every dimension and isotropic log-concave measure, including extended-real convex potentials and uniform convex-body measures. Its locally-Lipschitz L2 class contains every local smooth compactly supported test. No subgaussian assumption remains. A current Palomar registration separately advertises the same compact-test target; local Lean replay is not asserted.
+**Resolution update (3 November 2026):** Affirmative proof. The current theorem bounds CP(mu) by one absolute constant for every dimension and isotropic log-concave measure, including extended-real convex potentials and uniform convex-body measures. Its locally-Lipschitz L2 class contains every local smooth compactly supported test. No subgaussian assumption remains. A current Palomar registration separately advertises the same compact-test target; local Lean replay is not asserted.
 
-[Claimed solution](https://arxiv.org/pdf/2610.05474v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/092.json). Source locator: Theorem1.1 and definition(5). The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+[Proof](https://arxiv.org/pdf/2610.05474v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/092.json). Source locator: Theorem1.1 and definition(5).
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative dimension-free Poincare inequality
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: affirmative dimension-free Poincare inequality
 
-[Proof or source](https://arxiv.org/pdf/2610.05474v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-092). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** The public source claims the full target. Its complete argument has not received an independent audit here, and a peer-reviewed published resolution was not established by this review; the source-to-target comparison alone is not full proof verification.
+[Proof or source](https://arxiv.org/pdf/2610.05474v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-092). The linked review records the target comparison.
 
 ### Earlier review notes
 

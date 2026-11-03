@@ -39,7 +39,7 @@ Rips filtrations model the topology inferred from data as the distance threshold
 
 Reviewed 15 October 2026 against the original target in [PR #95](https://github.com/MColbrook/AIM/pull/95). The proposed join is the homotopy type of the ordinary strict spherical Rips complex throughout a nonempty interval after the first transition.
 
-[Proof or source](../research/solutions/512-kaiwen-jin-spherical-rips-first-transition/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/512-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/512-kaiwen-jin-spherical-rips-first-transition/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/512-review.md). The linked review records the target comparison.
 
 **Scope:** For every n>=3, an epsilon_n>0 gives VR(S^n;r) homotopy equivalent to S^n*(SO(n+1)/A_(n+2)) for every r in the stated strict interval.
 

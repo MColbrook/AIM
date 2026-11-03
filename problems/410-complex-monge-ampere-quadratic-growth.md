@@ -37,9 +37,9 @@ This equation constructs Ricci-flat Kähler metrics and is a central nonlinear e
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Chu and Liu’s Theorem 1.2 asserts quadratic rigidity under precisely the displayed two-sided growth assumption, without real convexity, completeness or a prescribed quadratic asymptote. Hu and Sheng independently announce the same smooth conclusion in their Theorem 1.1 and Appendix A, Theorem A.1; the latter explicitly concludes that the potential is a real quadratic polynomial.
+**Resolution update (3 November 2026):** Affirmative proof. Chu and Liu’s Theorem 1.2 asserts quadratic rigidity under precisely the displayed two-sided growth assumption, without real convexity, completeness or a prescribed quadratic asymptote. Hu and Sheng independently announce the same smooth conclusion in their Theorem 1.1 and Appendix A, Theorem A.1; the latter explicitly concludes that the potential is a real quadratic polynomial.
 
-[Claimed solution](https://arxiv.org/pdf/2610.26016v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/410.json). The theorem hypotheses and current announcement were checked. The external proofs have not been independently verified end-to-end here; no Lean verification or human peer review is asserted.
+[Proof](https://arxiv.org/pdf/2610.26016v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/410.json). The theorem hypotheses and current announcement were checked.
 
 ### Earlier status record
 

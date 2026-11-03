@@ -30,7 +30,7 @@ The conclusion would turn a condition on small subfamilies into a uniform bound 
 
 Reviewed 15 October 2026 against the original target in [PR #108](https://github.com/MColbrook/AIM/pull/108). The fractional flat-transversal theorem can be rounded to boundedly many actual flats for arbitrary concentric-fat convex bodies.
 
-[Proof or source](../research/solutions/aim-596-fat-convex-transversals/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/596-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/aim-596-fat-convex-transversals/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/596-review.md). The linked review records the target comparison.
 
 **Scope:** For every parameter range stated in AIM596, a constant depending only on dimension, flat dimension, p and fatness pierces every finite qualifying family, with no radius-ratio restriction.
 

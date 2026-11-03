@@ -41,7 +41,7 @@ A universal bound would certify computed shock flows using measured conservation
 
 Reviewed 15 October 2026 against the original target in [PR #133](https://github.com/MColbrook/AIM/pull/133). Counterexample to the proposed universal square-root logarithmic error bound, with one fixed compactly supported small-BV initial datum.
 
-[Proof or source](../research/solutions/367-hyperbolic-error-counterexample/paper/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/367-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/367-hyperbolic-error-counterexample/paper/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/367-review.md). The linked review records the target comparison.
 
 **Scope:** Counterexample satisfies every stated strict-hyperbolicity, genuine-nonlinearity, convex-entropy, residual, support, variation and time-modulus hypothesis; the normalized error diverges.
 

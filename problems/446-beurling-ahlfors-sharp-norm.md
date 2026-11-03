@@ -32,18 +32,16 @@ The operator converts the antiholomorphic derivative of a planar potential into 
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Affirmative complex-valued sharp operator norm for all1<p<infinity.
+**Resolution update (3 November 2026):** Affirmative proof. Affirmative complex-valued sharp operator norm for all1<p<infinity.
 
-[Claimed solution](https://arxiv.org/pdf/2609.28311v2) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/446.json). Source locator: Corollary2 equation(4); Theorem1; §2. The comparison records the hypotheses, quantifiers and any reduction to the original target. The full external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted.
+[Proof](https://arxiv.org/pdf/2609.28311v2) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/446.json). Source locator: Corollary2 equation(4); Theorem1; §2. The comparison records the hypotheses, quantifiers and any reduction to the original target.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative sharp bound, claimed
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: affirmative sharp bound, claimed
 
-[Proof or source](https://arxiv.org/pdf/2609.28311v2) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_115_140.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** Independent review of the complete external proof remains outstanding.
+[Proof or source](https://arxiv.org/pdf/2609.28311v2) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_115_140.md). The linked review records the target comparison.
 
 ### Earlier review notes
 

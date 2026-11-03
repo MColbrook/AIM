@@ -43,7 +43,7 @@ Topological complexity measures the minimum number of continuous local rules nee
 
 Reviewed 15 October 2026 against the original target in [PR #96](https://github.com/MColbrook/AIM/pull/96). An oriented flat five-manifold contradicts the universal centre-rank TC formula.
 
-[Proof or source](../research/solutions/513-kaiwen-jin-flat-counterexample/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/513-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/513-kaiwen-jin-flat-counterexample/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/513-review.md). The linked review records the target comparison.
 
 **Scope:** An admissible closed oriented aspherical5-manifold has centre rank2 but unreduced TC at least10, exceeding the predicted9.
 

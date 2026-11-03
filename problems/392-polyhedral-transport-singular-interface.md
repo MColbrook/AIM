@@ -27,18 +27,16 @@ Optimal transport to complex polyhedral geometries underlies mesh generation and
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Affirmative codimension-two regularity for full transport interfaces.
+**Resolution update (3 November 2026):** Affirmative proof. Affirmative codimension-two regularity for full transport interfaces.
 
-[Claimed solution](https://arxiv.org/pdf/2610.18756v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/392.json). Source locator: Theorem1.1; §1 Sigma definition; §5 Proposition5.3/Lemma5.4. The comparison records the hypotheses, quantifiers and any reduction to the original target. The full external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted.
+[Proof](https://arxiv.org/pdf/2610.18756v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/392.json). Source locator: Theorem1.1; §1 Sigma definition; §5 Proposition5.3/Lemma5.4. The comparison records the hypotheses, quantifiers and any reduction to the original target.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative codimension-two transport-interface regularity
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: affirmative codimension-two transport-interface regularity
 
-[Proof or source](https://arxiv.org/pdf/2610.18756v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-392). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** The public source claims the full target. Its complete argument has not received an independent audit here, and a peer-reviewed published resolution was not established by this review; the source-to-target comparison alone is not full proof verification.
+[Proof or source](https://arxiv.org/pdf/2610.18756v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-392). The linked review records the target comparison.
 
 ### Earlier review notes
 

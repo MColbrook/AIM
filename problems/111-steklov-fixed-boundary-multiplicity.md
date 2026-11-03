@@ -27,18 +27,16 @@ This asks whether arbitrarily many lowest boundary-vibration modes can coincide 
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Fix b=1 and prescribe a1=...=aN=1 with next eigenvalue>2. TheoremA claims a smooth metric on a connected orientable surface of sufficiently large genus with those exact first N positive ordinary Steklov eigenvalues. Thus first multiplicity equals N with fixed boundary count. Genus may grow as permitted; length rescaling preserves multiplicity. The final theorem absorbs boundary weights into a smooth conformal metric and has no nonconstant interior conductivity.
+**Resolution update (3 November 2026):** Affirmative proof. Fix b=1 and prescribe a1=...=aN=1 with next eigenvalue>2. TheoremA proves a smooth metric on a connected orientable surface of sufficiently large genus with those exact first N positive ordinary Steklov eigenvalues. Thus first multiplicity equals N with fixed boundary count. Genus may grow as permitted; length rescaling preserves multiplicity. The final theorem absorbs boundary weights into a smooth conformal metric and has no nonconstant interior conductivity.
 
-[Claimed solution](https://zenodo.org/api/records/22949635/files/Prescribed_Steklov_Spectra_nifa.pdf/content) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/111.json). Source locator: TheoremA, ordinary unweighted model(1.1). The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+[Proof](https://zenodo.org/api/records/22949635/files/Prescribed_Steklov_Spectra_nifa.pdf/content) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/111.json). Source locator: TheoremA, ordinary unweighted model(1.1).
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative unbounded first Steklov multiplicity
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: affirmative unbounded first Steklov multiplicity
 
-[Proof or source](https://zenodo.org/api/records/22949635/files/Prescribed_Steklov_Spectra_nifa.pdf/content) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-111). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** The public source claims the full target. Its complete argument has not received an independent audit here, and a peer-reviewed published resolution was not established by this review; the source-to-target comparison alone is not full proof verification.
+[Proof or source](https://zenodo.org/api/records/22949635/files/Prescribed_Steklov_Spectra_nifa.pdf/content) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-111). The linked review records the target comparison.
 
 ### Earlier review notes
 

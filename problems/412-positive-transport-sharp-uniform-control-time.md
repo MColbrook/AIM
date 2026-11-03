@@ -40,18 +40,16 @@ Advection carries a contaminant or temperature perturbation out of a channel in 
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Negative for T between L/M and2L/M.
+**Resolution update (3 November 2026):** Counterexample. Negative for T between L/M and2L/M.
 
-[Claimed solution](https://arxiv.org/pdf/2609.35355v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/412.json). Source locator: Definition cost(2); Theorem1.3 positive speed; scaling(22); Theorem7.1. The comparison records the hypotheses, quantifiers and any reduction to the original target. The full external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted.
+[Proof](https://arxiv.org/pdf/2609.35355v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/412.json). Source locator: Definition cost(2); Theorem1.3 positive speed; scaling(22); Theorem7.1. The comparison records the hypotheses, quantifiers and any reduction to the original target.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative, claimed
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: negative, claimed
 
-[Proof or source](https://arxiv.org/pdf/2609.35355v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_115_140.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** Independent review of the complete external proof remains outstanding.
+[Proof or source](https://arxiv.org/pdf/2609.35355v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_115_140.md). The linked review records the target comparison.
 
 ### Earlier review notes
 

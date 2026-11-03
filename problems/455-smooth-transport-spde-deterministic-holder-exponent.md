@@ -43,7 +43,7 @@ For diffusion subject to random transport, a deterministic Hölder exponent woul
 
 Reviewed 15 October 2026 against the original target in [PR #166](https://github.com/MColbrook/AIM/pull/166). The entire smooth-transport variational SPDE class has a deterministic positive parabolic Hölder exponent on each positive-time strip.
 
-[Proof or source](../research/solutions/455-smooth-transport-spde-deterministic-holder-exponent/manuscript.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/455-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/455-smooth-transport-spde-deterministic-holder-exponent/manuscript.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/455-review.md). The linked review records the target comparison.
 
 **Scope:** The entire smooth-transport variational SPDE class has a deterministic positive parabolic Hölder exponent on each positive-time strip.
 

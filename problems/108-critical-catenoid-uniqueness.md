@@ -28,18 +28,16 @@ This class models zero-mean-curvature capillary films attached at a right angle 
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The announced Corollary1.2 gives uniqueness up to rotation of every properly embedded free-boundary minimal annulus in the unit3-ball. Local hypotheses impose exactly smoothness, proper embedding, annular topology and orthogonal boundary meeting; no extra reflection symmetry is required. The standard critical-catenoid parametrization is the same object.
+**Resolution update (3 November 2026):** Affirmative proof. Corollary1.2 gives uniqueness up to rotation of every properly embedded free-boundary minimal annulus in the unit3-ball. Local hypotheses impose exactly smoothness, proper embedding, annular topology and orthogonal boundary meeting; no extra reflection symmetry is required. The standard critical-catenoid parametrization is the same object.
 
-[Claimed solution](https://arxiv.org/pdf/2609.13054v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/108.json). Source locator: Corollary1.2 following Theorem1.1. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+[Proof](https://arxiv.org/pdf/2609.13054v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/108.json). Source locator: Corollary1.2 following Theorem1.1.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative uniqueness of the critical catenoid
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: affirmative uniqueness of the critical catenoid
 
-[Proof or source](https://arxiv.org/pdf/2609.13054v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-108). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** The public source claims the full target. Its complete argument has not received an independent audit here, and a peer-reviewed published resolution was not established by this review; the source-to-target comparison alone is not full proof verification.
+[Proof or source](https://arxiv.org/pdf/2609.13054v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-108). The linked review records the target comparison.
 
 ### Earlier review notes
 

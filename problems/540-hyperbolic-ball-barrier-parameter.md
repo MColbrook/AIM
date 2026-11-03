@@ -37,7 +37,7 @@ The barrier parameter controls iteration bounds for interior-point methods on cu
 
 Reviewed 15 October 2026 against the original target in [PR #119](https://github.com/MColbrook/AIM/pull/119). The infimum of full-tensor barrier parameters has quadratic growth in the hyperbolic radius, without any symmetry assumption.
 
-[Proof or source](../research/solutions/540-hyperbolic-ball-barrier-parameter/paper/hyperbolic_ball_barriers.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/540-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/540-hyperbolic-ball-barrier-parameter/paper/hyperbolic_ball_barriers.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/540-review.md). The linked review records the target comparison.
 
 **Scope:** The infimum of full-tensor barrier parameters has quadratic growth in the hyperbolic radius, without any symmetry assumption.
 

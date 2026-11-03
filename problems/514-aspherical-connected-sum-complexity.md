@@ -39,7 +39,7 @@ Connected sums give a concrete way to join two configuration-space models throug
 
 Reviewed 15 October 2026 against the original target in [PR #97](https://github.com/MColbrook/AIM/pull/97). Every connected sum of two closed oriented aspherical n-manifolds has maximal unreduced TC=2n+1 for n>=3.
 
-[Proof or source](../research/solutions/514-kaiwen-jin-aspherical-connected-sums/paper/aspherical-connected-sums.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/514-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/514-kaiwen-jin-aspherical-connected-sums/paper/aspherical-connected-sums.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/514-review.md). The linked review records the target comparison.
 
 **Scope:** The full stated class of summands, including odd dimensions, groups with centre and rational homology spheres, is covered.
 

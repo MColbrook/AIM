@@ -29,7 +29,7 @@ Ionization depletes and defocuses an intense optical pulse. Establishing global 
 
 Reviewed 15 October 2026 against the original target in [PR #137](https://github.com/MColbrook/AIM/pull/137). Counterexample to universal global regularity: finite-time gradient blowup for the actual coupled three-dimensional ionization system from smooth compactly supported optical data and zero nonnegative density, with one admissible positive photoionization coefficient.
 
-[Proof or source](../research/solutions/441-ionization-blowup/paper/ionization_blowup.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/441-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/441-ionization-blowup/paper/ionization_blowup.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/441-review.md). The linked review records the target comparison.
 
 **Scope:** Full negation of the universal target by an admissible Cauchy solution of the original coupled model; the scalar computer-assisted construction and linear spectral estimates are identified external theorem dependencies.
 

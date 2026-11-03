@@ -51,7 +51,7 @@ The limit would justify replacing finite-range population dispersal by a local S
 
 Reviewed 15 October 2026 against the original target in [PR #155](https://github.com/MColbrook/AIM/pull/155). The regional superlinear SKT strong solutions converge along one global subsequence to a genuine no-flux local weak solution for every fixed s>1.
 
-[Proof or source](../research/solutions/superlinear-skt-localization/paper/localization.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/469-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/superlinear-skt-localization/paper/localization.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/469-review.md). The linked review records the target comparison.
 
 **Scope:** The regional superlinear SKT strong solutions converge along one global subsequence to a genuine no-flux local weak solution for every fixed s>1.
 

@@ -40,7 +40,7 @@ Transmission eigenvalues describe frequencies at which an inclusion can fail to 
 
 Reviewed 15 October 2026 against the original target in [PR #142](https://github.com/MColbrook/AIM/pull/142). The constant-index transmission count has the sharp O(r^(d-1)) Weyl remainder at every sufficiently large exact radius.
 
-[Proof or source](../research/solutions/429-transmission-eigenvalue-sharp-weyl-remainder/weyl_remainder.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/429-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/429-transmission-eigenvalue-sharp-weyl-remainder/weyl_remainder.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/429-review.md). The linked review records the target comparison.
 
 **Scope:** The constant-index transmission count has the sharp O(r^(d-1)) Weyl remainder at every sufficiently large exact radius.
 

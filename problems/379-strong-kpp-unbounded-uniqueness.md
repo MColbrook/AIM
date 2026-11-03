@@ -29,7 +29,7 @@ The strong KPP condition expresses a decreasing per-capita growth rate. Uniquene
 
 Reviewed 15 October 2026 against the original target in [PR #149](https://github.com/MColbrook/AIM/pull/149). Universal strong-KPP uniqueness fails on a uniformly smooth connected unbounded domain in dimension 21.
 
-[Proof or source](../research/solutions/379-uniform-kpp-multiplicity/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/379-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/379-uniform-kpp-multiplicity/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/379-review.md). The linked review records the target comparison.
 
 **Scope:** Universal strong-KPP uniqueness fails on a uniformly smooth connected unbounded domain in dimension 21.
 

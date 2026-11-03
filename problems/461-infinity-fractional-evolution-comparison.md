@@ -36,7 +36,7 @@ Comparison would make the continuum evolution associated with a non-Brownian tug
 
 Reviewed 15 October 2026 against the original target in [PR #154](https://github.com/MColbrook/AIM/pull/154). The specified relaxed infinity-fractional subsolution–supersolution comparison fails, even with identical smooth initial data.
 
-[Proof or source](../research/solutions/461-relaxed-infinity-fractional-comparison/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/461-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/461-relaxed-infinity-fractional-comparison/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/461-review.md). The linked review records the target comparison.
 
 **Scope:** The specified relaxed infinity-fractional subsolution–supersolution comparison fails, even with identical smooth initial data.
 

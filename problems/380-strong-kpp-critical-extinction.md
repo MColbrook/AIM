@@ -35,7 +35,7 @@ The equality balances low-density reproduction with diffusive loss exactly. Its 
 
 Reviewed 15 October 2026 against the original target in [PR #151](https://github.com/MColbrook/AIM/pull/151). Critical Dirichlet spectral equality can coexist with a bounded positive strong-KPP equilibrium on a uniformly smooth unbounded domain.
 
-[Proof or source](../research/solutions/380-critical-kpp-counterexample/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/380-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/380-critical-kpp-counterexample/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/380-review.md). The linked review records the target comparison.
 
 **Scope:** Critical Dirichlet spectral equality can coexist with a bounded positive strong-KPP equilibrium on a uniformly smooth unbounded domain.
 

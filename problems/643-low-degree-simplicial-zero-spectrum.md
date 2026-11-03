@@ -46,7 +46,7 @@ The operator $`A_0`$ governs expected signed particle counts in simplicial branc
 
 Reviewed 15 October 2026 against the original target in [PR #115](https://github.com/MColbrook/AIM/pull/115). Counterexample on a countable pure three-complex: maximum triangle degree three, coercive normalized upper Laplacian on the full weighted space, and trivial kernel.
 
-[Proof or source](../research/solutions/643-low-degree-simplicial-zero-spectrum/paper/degree_three_counterexample.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/643-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/643-low-degree-simplicial-zero-spectrum/paper/degree_three_counterexample.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/643-review.md). The linked review records the target comparison.
 
 **Scope:** Counterexample on a countable pure three-complex: maximum triangle degree three, coercive normalized upper Laplacian on the full weighted space, and trivial kernel.
 

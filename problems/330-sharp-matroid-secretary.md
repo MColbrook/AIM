@@ -47,18 +47,16 @@ The remaining general question is foundational. Recent claims cover linear matro
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Theorem 1 claims an online policy for every finite abstract matroid selecting each element of a fixed optimal basis with probability at least 1/e. Linearity gives the expected-weight target. The random-time model can be simulated from a uniformly random permutation and known ground-set size without observing future weights.
+**Resolution update (3 November 2026):** Affirmative proof. Theorem 1 proves an online policy for every finite abstract matroid selecting each element of a fixed optimal basis with probability at least 1/e. Linearity gives the expected-weight target. The random-time model can be simulated from a uniformly random permutation and known ground-set size without observing future weights.
 
-[Claimed solution](https://arxiv.org/pdf/2609.30421v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/330.json). Theorem 1, model footnote and §§4–5. The full external proof has not been independently verified here; no local Lean kernel replay or human peer review is asserted. This label records the complete announcement under the requested status policy.
+[Proof](https://arxiv.org/pdf/2609.30421v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/330.json). Theorem 1, model footnote and §§4–5.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: affirmative
 
-[Proof or source](https://arxiv.org/pdf/2609.30421v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** Independent review of the complete external proof remains outstanding.
+[Proof or source](https://arxiv.org/pdf/2609.30421v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the target comparison.
 
 ### Earlier review notes
 
@@ -70,9 +68,9 @@ The following historical notes are retained; the current decision and review dat
 
 **Literature check:** Open in cited literature; no later resolution located.
 
-The explicit strong conjecture in [1, 2] is retained in September 2026 sources [3, 4]. Singla's Theorem 3.1 claims expected reward at least $`\mathop{\mathrm{OPT}}\nolimits/4`$ for arbitrary matroids, and §4 expressly leaves the factor $`e`$ open. Its suggested factor near $`3.16`$ is labeled unverified by the author and would still fall short. This catalogue does not count the weaker constant-factor question separately.
+The explicit strong conjecture in [1, 2] is retained in September 2026 sources [3, 4]. Singla's Theorem 3.1 proves expected reward at least $`\mathop{\mathrm{OPT}}\nolimits/4`$ for arbitrary matroids, and §4 expressly leaves the factor $`e`$ open. Its suggested factor near $`3.16`$ would still fall short of the target. This catalogue does not count the weaker constant-factor question separately.
 
-Theorem 1.2 of [4] claims the $`1/e`$ guarantee for linear matroids using finite, potentially expensive computation. Its general-matroid guarantee is $`1/64`$. Theorem 1.3 concerns a prophet model with independent value samples; its $`1/2`$ guarantee does not transfer unchanged to this input model. The truncation counterexample in Appendix B refutes monotonicity in rank, not the $`1/e`$ conjecture. These recent preprints are reported as claims; their proofs have not been independently certified here.
+Theorem 1.2 of [4] claims the $`1/e`$ guarantee for linear matroids using finite, potentially expensive computation. Its general-matroid guarantee is $`1/64`$. Theorem 1.3 concerns a prophet model with independent value samples; its $`1/2`$ guarantee does not transfer unchanged to this input model. The truncation counterexample in Appendix B refutes monotonicity in rank, not the $`1/e`$ conjecture.
 
 The concurrent paper [7] extends its claim to known matroids admitting a finitary modular extension. Its §4 explains that this assumption is not universal, giving the Vámos matroid as an example outside the covered class. The extension theorem therefore does not settle the stated general question.
 

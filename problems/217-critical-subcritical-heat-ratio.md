@@ -40,7 +40,7 @@ Heat kernels give the temperature response to a localized pulse and also imagina
 
 Reviewed 15 October 2026 against the original target in [PR #147](https://github.com/MColbrook/AIM/pull/147). One fixed pair of smooth bounded potentials violates the proposed unordered critical/subcritical heat-kernel comparison.
 
-[Proof or source](../research/solutions/217-critical-subcritical-heat-ratio/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/217-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/217-critical-subcritical-heat-ratio/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/217-review.md). The linked review records the target comparison.
 
 **Scope:** One fixed pair of smooth bounded potentials violates the proposed unordered critical/subcritical heat-kernel comparison.
 

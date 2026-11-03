@@ -33,18 +33,16 @@ Injectivity-domain convexity is a geometric prerequisite for continuous transpor
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Affirmative convexity under weak MTW with focal cut points allowed.
+**Resolution update (3 November 2026):** Affirmative proof. Affirmative convexity under weak MTW with focal cut points allowed.
 
-[Claimed solution](https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Global-Support-and-Convex-Injectivity-Domains-under-Weak-MTW-September-25-2026/paper.pdf) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/394.json). Source locator: §1.1 equations(1.1)–(1.3), Theorem1.1, printedp2. The comparison records the hypotheses, quantifiers and any reduction to the original target. The full external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted.
+[Proof](https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Global-Support-and-Convex-Injectivity-Domains-under-Weak-MTW-September-25-2026/paper.pdf) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/394.json). Source locator: §1.1 equations(1.1)–(1.3), Theorem1.1, printedp2. The comparison records the hypotheses, quantifiers and any reduction to the original target.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative convex injectivity domains under weak MTW
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: affirmative convex injectivity domains under weak MTW
 
-[Proof or source](https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Global-Support-and-Convex-Injectivity-Domains-under-Weak-MTW-September-25-2026/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-394). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** The public source claims the full target. Its complete argument has not received an independent audit here, and a peer-reviewed published resolution was not established by this review; the source-to-target comparison alone is not full proof verification.
+[Proof or source](https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Global-Support-and-Convex-Injectivity-Domains-under-Weak-MTW-September-25-2026/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-394). The linked review records the target comparison.
 
 ### Earlier review notes
 

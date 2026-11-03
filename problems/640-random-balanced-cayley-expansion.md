@@ -47,7 +47,7 @@ Coboundary expansion controls how many local consistency checks a binary cochain
 
 Reviewed 15 October 2026 against the original target in [PR #112](https://github.com/MColbrook/AIM/pull/112). Elementary abelian2-groups deterministically refute the proposed uniform random coboundary-expansion assertion.
 
-[Proof or source](../research/solutions/640-random-balanced-cayley-obstruction/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/640-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/640-random-balanced-cayley-obstruction/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/640-review.md). The linked review records the target comparison.
 
 **Scope:** For every fixed k>=2, all subsets A of the conjectured logarithmic size in sufficiently large binary vector groups have nonzero H^(k-1) over F2 and zero expansion.
 

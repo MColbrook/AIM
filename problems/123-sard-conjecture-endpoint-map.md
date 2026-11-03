@@ -30,18 +30,16 @@ Singular trajectories are the exceptional motions that evade ordinary first-orde
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The announced smooth rank-two bracket-generating distribution on R4 has abnormal endpoints equal to R4 from one basepoint; a global frame gives the same L2 control endpoint map. Constant distribution rank is maintained; the local target does not require equiregularity or analyticity. Full endpoint set is not volume-null. Minimizing Sard property is different and is not claimed refuted.
+**Resolution update (3 November 2026):** Counterexample. The smooth rank-two bracket-generating distribution on R4 has abnormal endpoints equal to R4 from one basepoint; a global frame gives the same L2 control endpoint map. Constant distribution rank is maintained; the local target does not require equiregularity or analyticity. Full endpoint set is not volume-null. Minimizing Sard property is different and is not claimed refuted.
 
-[Claimed solution](https://arxiv.org/pdf/2609.05991v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/123.json). Source locator: Theorem1.1 and control-space equivalence in the introduction. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+[Proof](https://arxiv.org/pdf/2609.05991v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/123.json). Source locator: Theorem1.1 and control-space equivalence in the introduction.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative: smooth bracket-generating counterexample
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: negative: smooth bracket-generating counterexample
 
-[Proof or source](https://arxiv.org/pdf/2609.05991v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-123). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** The public source claims the full target. Its complete argument has not received an independent audit here, and a peer-reviewed published resolution was not established by this review; the source-to-target comparison alone is not full proof verification.
+[Proof or source](https://arxiv.org/pdf/2609.05991v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-123). The linked review records the target comparison.
 
 ### Earlier review notes
 

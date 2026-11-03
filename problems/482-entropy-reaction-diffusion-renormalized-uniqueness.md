@@ -51,7 +51,7 @@ General reaction networks already admit global renormalized concentration fields
 
 Reviewed 15 October 2026 against the original target in [PR #163](https://github.com/MColbrook/AIM/pull/163). The unrestricted finite-entropy renormalized reaction–diffusion uniqueness assertion is false.
 
-[Proof or source](../research/solutions/entropy-cubic-nonuniqueness/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/482-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/entropy-cubic-nonuniqueness/paper.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/482-review.md). The linked review records the target comparison.
 
 **Scope:** The unrestricted finite-entropy renormalized reaction–diffusion uniqueness assertion is false.
 

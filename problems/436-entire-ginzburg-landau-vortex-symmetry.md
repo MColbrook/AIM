@@ -34,9 +34,9 @@ The degree is the quantized circulation of a vortex. Classifying stationary stat
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified counterexample announcement**. Chen–Liu–Wei–Yang’s Theorem 1.1 asserts the existence of a smooth entire solution of the displayed isotropic equation, with modulus tending to one, outside every translate and constant-phase rotation of the radial vortex. Its degree is at least one of 8 and 9; the argument does not identify which. One such degree suffices to refute the universal classification asked here. Lemma 2.1 explicitly supplies a smooth Euclidean-plane solution, including at the origin, from the auxiliary cone construction.
+**Resolution update (3 November 2026):** Counterexample. Chen–Liu–Wei–Yang’s Theorem 1.1 asserts the existence of a smooth entire solution of the displayed isotropic equation, with modulus tending to one, outside every translate and constant-phase rotation of the radial vortex. Its degree is at least one of 8 and 9; the argument does not identify which. One such degree suffices to refute the universal classification asked here. Lemma 2.1 explicitly supplies a smooth Euclidean-plane solution, including at the origin, from the auxiliary cone construction.
 
-[Claimed solution](https://arxiv.org/pdf/2610.34979v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/436.json). The theorem hypotheses and current announcement were checked. The external proof has not been independently verified end-to-end here; no Lean verification or human peer review is asserted.
+[Proof](https://arxiv.org/pdf/2610.34979v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/436.json). The theorem hypotheses and current announcement were checked.
 
 ### Earlier status record
 

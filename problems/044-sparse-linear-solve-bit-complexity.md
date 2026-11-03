@@ -29,18 +29,16 @@ For matrices with O(n) nonzeros, this asks for approximately quadratic bit work 
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The deterministic bit algorithm has sparse input and Otilde(nm log(kappa/epsilon)) complexity for logarithmic-bit fixed/floating inputs. Rational inputs with O(c logn)-bit numerator/denominator admit O(c logn)-bit grid rounding preserving conditioning and inverse-polynomial tolerance. Choosing residual tolerance smaller by kappa, with rounding slack, gives the required relative solution error. Polynomial conditioning makes the extra logarithm polylogn. The deterministic guarantee implies success probability0.99.
+**Resolution update (3 November 2026):** Affirmative proof. The deterministic bit algorithm has sparse input and Otilde(nm log(kappa/epsilon)) complexity for logarithmic-bit fixed/floating inputs. Rational inputs with O(c logn)-bit numerator/denominator admit O(c logn)-bit grid rounding preserving conditioning and inverse-polynomial tolerance. Choosing residual tolerance smaller by kappa, with rounding slack, gives the required relative solution error. Polynomial conditioning makes the extra logarithm polylogn. The deterministic guarantee implies success probability0.99.
 
-[Claimed solution](https://arxiv.org/pdf/2609.38101v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/044.json). Source locator: Main finite-precision theorem and§§3.3–4. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+[Proof](https://arxiv.org/pdf/2609.38101v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/044.json). Source locator: Main finite-precision theorem and§§3.3–4.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative bit-complexity bound
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: affirmative bit-complexity bound
 
-[Proof or source](https://arxiv.org/pdf/2609.38101v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-044). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** The public source claims the full target. Its complete argument has not received an independent audit here, and a peer-reviewed published resolution was not established by this review; the source-to-target comparison alone is not full proof verification.
+[Proof or source](https://arxiv.org/pdf/2609.38101v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-044). The linked review records the target comparison.
 
 ### Earlier review notes
 

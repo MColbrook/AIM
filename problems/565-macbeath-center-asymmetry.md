@@ -36,7 +36,7 @@ The inclusion would make the volume-maximizing symmetric intersection a quantita
 
 Reviewed 15 October 2026 against the original target in [PR #105](https://github.com/MColbrook/AIM/pull/105). A square pyramid is a counterexample to the proposed Macbeath-center asymmetry inclusion.
 
-[Proof or source](../research/solutions/565-macbeath-center-asymmetry/paper/macbeath_counterexample.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/565-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/565-macbeath-center-asymmetry/paper/macbeath_counterexample.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/565-review.md). The linked review records the target comparison.
 
 **Scope:** The explicit three-dimensional convex body has a unique Macbeath center whose reflected apex violates the proposed factor-three containment.
 

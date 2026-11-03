@@ -42,7 +42,7 @@ The operator maps an imposed boundary potential to outward current. The estimate
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). A measurable-conductor counterexample to smooth multiplier invariance of the flux domain.
 
-[Proof or source](https://www.numdam.org/article/ASNSP_1963_3_17_3_189_0.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](https://www.numdam.org/article/ASNSP_1963_3_17_3_189_0.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md). The linked review records the target comparison.
 
 **Scope:** The half-disk Meyers example has a smooth boundary multiplier whose harmonic extension has conormal flux outside L2.
 

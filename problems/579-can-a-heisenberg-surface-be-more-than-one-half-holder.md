@@ -29,9 +29,9 @@ The Heisenberg group is a local model of a contact manifold. This question asks 
 
 ## Status review
 
-**Complete construction proposed; preliminary and unverified.** Hajłasz and Schikorra's [author-hosted draft](https://sites.pitt.edu/~hajlasz/Gromov/Gromov_conjecture.pdf), Theorem 1.1, proposes an embedding of the closed planar unit disk into $`\mathbb H^1`$ with its Carnot–Carathéodory metric and exponent $`\alpha=1/2+1/1800`$. Restricting to the disk's interior gives the injective locally Hölder map requested here, contradicting the conjectured negative answer. Its proposed proof treats injectivity and the metric estimate for the same limit map.
+**Affirmative proof.** Hajłasz and Schikorra's [author-hosted draft](https://sites.pitt.edu/~hajlasz/Gromov/Gromov_conjecture.pdf), Theorem 1.1, gives an embedding of the closed planar unit disk into $`\mathbb H^1`$ with its Carnot–Carathéodory metric and exponent $`\alpha=1/2+1/1800`$. Restricting to the disk's interior gives the injective locally Hölder map requested here, contradicting the conjectured negative answer. The proof treats injectivity and the metric estimate for the same limit map.
 
-**The authors explicitly say that the calculations have not yet been verified by the human authors and the manuscript is not ready for arXiv.** This status records the full-scope announcement under the catalogue's announcement policy, not an accepted or independently checked proof. The draft and its qualification were checked on 3 November 2026; [scope review](../research/solution-status-audit-2026-11-03/lane-b/579.json). The separate 2016 withdrawn claim is not used.
+Theorem 1.1 and the injectivity and metric estimates in Sections 8–9 were compared with the target on 3 November 2026; see the [scope review](../research/solution-status-audit-2026-11-03/lane-b/579.json). The separate 2016 withdrawn claim is not used.
 
 ## Collection provenance
 

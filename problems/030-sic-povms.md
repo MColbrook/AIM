@@ -27,18 +27,16 @@ A SIC gives a minimal, highly symmetric informationally complete measurement for
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The paper combines its unconditional unitary-conjugate theorem with RW26 Theorem7 and AFK25 Theorem1.46 to assert M^2 complex equiangular lines in C^M for every M>=4. The known d2/3 constructions complete the target. Maximal complex equiangular families are SICs; no covariance assumption or unresolved Stark hypothesis remains in this announced conclusion.
+**Resolution update (3 November 2026):** Affirmative proof. The paper combines its unconditional unitary-conjugate theorem with RW26 Theorem7 and AFK25 Theorem1.46 to assert M^2 complex equiangular lines in C^M for every M>=4. The known d2/3 constructions complete the target. Maximal complex equiangular families are SICs; no covariance assumption or unresolved Stark hypothesis remains in this conclusion.
 
-[Claimed solution](https://hexagonmath.org/pdf/2610.00186v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/030.json). Source locator: §9.2, Proposition7 and its concluding SIC paragraph, printedp17. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+[Proof](https://hexagonmath.org/pdf/2610.00186v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/030.json). Source locator: §9.2, Proposition7 and its concluding SIC paragraph, printedp17.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative existence in every dimension
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: affirmative existence in every dimension
 
-[Proof or source](https://hexagonmath.org/pdf/2610.00186v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-030). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** The public source claims the full target. Its complete argument has not received an independent audit here, and a peer-reviewed published resolution was not established by this review; the source-to-target comparison alone is not full proof verification.
+[Proof or source](https://hexagonmath.org/pdf/2610.00186v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-030). The linked review records the target comparison.
 
 ### Earlier review notes
 

@@ -49,7 +49,7 @@ Dense SVD algorithms reduce their input to bidiagonal form. A reliably accurate 
 
 Reviewed 15 October 2026 against the original target in [PR #161](https://github.com/MColbrook/AIM/pull/161). Selected bidiagonal triplets with fixed-format O(nk) work and gap-independent accuracy.
 
-[Proof or source](../research/solutions/042-selected-bidiagonal-directions/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/042-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/042-selected-bidiagonal-directions/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/042-review.md). The linked review records the target comparison.
 
 **Scope:** Ordered values, both residual equations and both orthogonality estimates hold in the explicitly stated fixed-format floating-arithmetic model; precision costs are disclosed.
 

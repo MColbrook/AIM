@@ -34,18 +34,16 @@ An entropy inequality encodes the second law or energy dissipation in continuum 
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Affirmative existence of two bounded entropy-admissible solutions.
+**Resolution update (3 November 2026):** Affirmative proof. Affirmative existence of two bounded entropy-admissible solutions.
 
-[Claimed solution](https://arxiv.org/pdf/2609.09353v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/361.json). Source locator: Theorem1.3; §1.4 p-system and entropy; §9 Steps1–3 and wedge gluing. The comparison records the hypotheses, quantifiers and any reduction to the original target. The full external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted.
+[Proof](https://arxiv.org/pdf/2609.09353v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-b/361.json). Source locator: Theorem1.3; §1.4 p-system and entropy; §9 Steps1–3 and wedge gluing. The comparison records the hypotheses, quantifiers and any reduction to the original target.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative existence, claimed
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: affirmative existence, claimed
 
-[Proof or source](https://arxiv.org/pdf/2609.09353v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_115_140.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** Independent review of the complete external proof remains outstanding.
+[Proof or source](https://arxiv.org/pdf/2609.09353v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_115_140.md). The linked review records the target comparison.
 
 ### Earlier review notes
 

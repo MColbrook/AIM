@@ -51,7 +51,7 @@ Limit distributions would calibrate the variability of higher-order connectivity
 
 Reviewed 15 October 2026 against the original target in [PR #100](https://github.com/MColbrook/AIM/pull/100). The normalized high-dimensional Betti numbers converge to an explicitly described nondegenerate law with all positive moments, excluding the proposed power-law tail.
 
-[Proof or source](../research/solutions/529-preferential-attachment-betti-limit/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/529-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/529-preferential-attachment-betti-limit/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/529-review.md). The linked review records the target comparison.
 
 **Scope:** For the precise sequential affine preferential-attachment model, every q>=2 and m>=2q with x<1/(2q) has the stated full-sequence distributional limit; its normalized random variable is positive, nondegenerate and has every positive moment.
 

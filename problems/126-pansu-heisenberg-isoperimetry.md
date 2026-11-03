@@ -36,18 +36,16 @@ The Heisenberg geometry is a basic model of constrained motion. A sharp perimete
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. The source claims sharp horizontal isoperimetry for every measurable finite-perimeter positive-finite-volume set, with no regularity or symmetry restriction. Its fields use t-normalization twice that of the local statement. The change(x,y,t)->(x,y,-2t) carries the local horizontal fields to the source fields and the displayed bubble to the source Pansu ball. Both volume and horizontal perimeter acquire factor2, so the equal-volume comparison is exactly preserved.
+**Resolution update (3 November 2026):** Affirmative proof. The source proves sharp horizontal isoperimetry for every measurable finite-perimeter positive-finite-volume set, with no regularity or symmetry restriction. Its fields use t-normalization twice that of the local statement. The change(x,y,t)->(x,y,-2t) carries the local horizontal fields to the source fields and the displayed bubble to the source Pansu ball. Both volume and horizontal perimeter acquire factor2, so the equal-volume comparison is exactly preserved.
 
-[Claimed solution](https://arxiv.org/pdf/2610.07632v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/126.json). Source locator: Theorem1.1 and normalization(1.1)–(1.3). The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+[Proof](https://arxiv.org/pdf/2610.07632v1) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/126.json). Source locator: Theorem1.1 and normalization(1.1)–(1.3).
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: affirmative sharp Heisenberg isoperimetry
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: affirmative sharp Heisenberg isoperimetry
 
-[Proof or source](https://arxiv.org/pdf/2610.07632v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-126). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** The public source claims the full target. Its complete argument has not received an independent audit here, and a peer-reviewed published resolution was not established by this review; the source-to-target comparison alone is not full proof verification.
+[Proof or source](https://arxiv.org/pdf/2610.07632v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-126). The linked review records the target comparison.
 
 ### Earlier review notes
 

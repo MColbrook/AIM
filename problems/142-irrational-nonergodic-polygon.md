@@ -36,7 +36,7 @@ Polygonal billiards model collision transport without curved focusing or dispers
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). No irrational simple polygon with nonergodic full billiard flow, by the zero-frequency proof extension.
 
-[Proof or source](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Weak-mixing-of-triangular-billiards-with-an-irrational-angle-October-5-2026/weak-mixing-triangular-billiards.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/142-independent-zero-frequency-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Weak-mixing-of-triangular-billiards-with-an-irrational-angle-October-5-2026/weak-mixing-triangular-billiards.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/142-independent-zero-frequency-review.md). The linked review records the target comparison.
 
 **Scope:** The invariant-function argument uses only finitely many flat cone tips, and adjacent irrational reflections force the position-independent angular function constant.
 

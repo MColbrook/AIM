@@ -33,7 +33,7 @@ The operation models point generation in quasicrystal constructions. A character
 
 Reviewed 15 October 2026 against the original target in [PR #111](https://github.com/MColbrook/AIM/pull/111). Discreteness of the finite extrapolation set is equivalent to the full strong-PV conjugate condition.
 
-[Proof or source](../research/solutions/629-extrapolation-discreteness/paper/extrapolation_discreteness.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/629-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/629-extrapolation-discreteness/paper/extrapolation_discreteness.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/629-review.md). The linked review records the target comparison.
 
 **Scope:** For every complex parameter, Q_lambda is discrete exactly when lambda is a strong PV algebraic integer; the proof also gives pairwise separation at least1 in that case.
 

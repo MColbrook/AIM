@@ -33,7 +33,7 @@ This extends small-area phenomena in geometric point configurations to graph dra
 
 Reviewed 15 October 2026 against the original target in [PR #114](https://github.com/MColbrook/AIM/pull/114). Bounded pairwise intersections force a mod-two area four-cycle with area tending uniformly to zero.
 
-[Proof or source](../research/solutions/635-bounded-crossing-heilbronn/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/635-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/635-bounded-crossing-heilbronn/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/635-review.md). The linked review records the target comparison.
 
 **Scope:** For every fixed intersection bound k, the manuscript gives an explicit epsilon_k(n) tending to zero and a nonzero original-edge four-cycle for n>=4, under the full piecewise-smooth curved-edge target.
 

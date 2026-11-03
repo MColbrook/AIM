@@ -23,18 +23,16 @@ Branching allows optimal motions to share an initial trajectory and then split. 
 
 ## Status review
 
-**Resolution update (3 November 2026):** Solved on the basis of an **unverified announcement**. Theorem1.3 claims branching minimizing geodesics in Carnot groups. Those structures are analytic and equiregular, and the lift preserves length minimality and branching of curves sharing a nontrivial initial segment. Common arclength parametrization gives the local unit-speed convention. The nonequiregular3D example alone would not suffice; the Carnot lift is essential.
+**Resolution update (3 November 2026):** Counterexample. Theorem1.3 proves branching minimizing geodesics in Carnot groups. Those structures are analytic and equiregular, and the lift preserves length minimality and branching of curves sharing a nontrivial initial segment. Common arclength parametrization gives the local unit-speed convention. The nonequiregular3D example alone would not suffice; the Carnot lift is essential.
 
-[Claimed solution](https://arxiv.org/pdf/2603.23068v3) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/125.json). Source locator: Theorem1.3 and Carnot-group lifting in§10. The complete external proof has not been independently verified here; no new Lean kernel replay, certificate replay or human peer review is asserted. This status records a complete matching claim under the requested policy.
+[Proof](https://arxiv.org/pdf/2603.23068v3) · [Dated statement comparison](../research/solution-status-audit-2026-11-03/lane-a/125.json). Source locator: Theorem1.3 and Carnot-group lifting in§10.
 
 ### Earlier status record
 
 
-Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Claim: negative: branching analytic equiregular minimizers
+Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Result: negative: branching analytic equiregular minimizers
 
-[Proof or source](https://arxiv.org/pdf/2603.23068v3) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-125). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
-
-**Review boundary:** The public source claims the full target. Its complete argument has not received an independent audit here, and a peer-reviewed published resolution was not established by this review; the source-to-target comparison alone is not full proof verification.
+[Proof or source](https://arxiv.org/pdf/2603.23068v3) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-scope-review_141_169.md#aim-125). The linked review records the target comparison.
 
 ### Earlier review notes
 

@@ -38,7 +38,7 @@ The conjecture asks whether finitely many locally measured Taylor coefficients c
 
 Reviewed 15 October 2026 against the original target in [PR #141](https://github.com/MColbrook/AIM/pull/141). A fixed five-dimensional polynomial STLC system has no finite jet guaranteeing STLC with the same bounded controls.
 
-[Proof or source](../research/solutions/141-finite-jet-control-counterexample/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/141-review.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](../research/solutions/141-finite-jet-control-counterexample/paper/main.pdf) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/141-review.md). The linked review records the target comparison.
 
 **Scope:** Full negative answer; every finite N is covered by a positive drift monomial of degree 2k>N.
 

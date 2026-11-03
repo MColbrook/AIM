@@ -45,7 +45,7 @@ Approximating an unstable model by a nearby matrix with nonpositive spectral abs
 
 Reviewed 15 October 2026 against the original target in [PR #170](https://github.com/MColbrook/AIM/pull/170). Negative
 
-[Proof or source](https://arxiv.org/pdf/2609.14828v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the exact scope and verification limits; this is not human peer review or Lean verification.
+[Proof or source](https://arxiv.org/pdf/2609.14828v1) · [Independent AI review](../research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md). The linked review records the target comparison.
 
 **Scope:** The source explicitly includes defective imaginary-axis eigenvalues, exactly as AIM578 requires. For m>=4 it gives A=[[-m^4,m²,0],[0,0,m²],[m^6,1,0]]. Its columns are orthogonal and its smallest singular value is m². Its determinant is positive, while every real3-by-3 matrix with spectrum in the closed left half-plane has nonpositive determinant. The segment to any real stable matrix therefore meets a singular matrix, forcing Frobenius distance at least m². Zeroing the(2,3) entry attains that bound, with characteristic polynomial z²(z+m^4).
 
