@@ -15,18 +15,6 @@ Contributions made with or without AI are welcome.
 
 **[AIM, explained](https://mathematics-explained.com/)** is our companion website for explanations of the problems, known results, proofs and applications in this collection. Papers and videos are welcome; you do not need to solve a problem to contribute. The aim is to improve human understanding, with credit to explanation authors and their sources.
 
-On 13 October 2026, we cross-referenced AIM with [OpenAI's mathematics collection](https://github.com/openai/math), linking complete results and partial progress while retaining the original problems. The [statement comparisons](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) explain the scope. We welcome carefully checked, human-authored write-ups of the ideas, assumptions and applications for [AIM, explained](https://mathematics-explained.com/).
-
-The [15 October PR reviews](research/solution_reviews/2026-10-15-active-prs/README.md) record individual proof audits, partial progress and claims still awaiting verification, together with further primary-source comparisons. Original IDs and the archived records are preserved.
-
-The [incorporated October reviews](research/upstream-integration-2026-11-03/README.md) document the updated evidence for AIM 458, 482, 541 and 556, plus the original archived 571 and 627. Local IDs, scores and cut decisions are unchanged; the Stiefel problem remains an unnumbered pending candidate.
-
-The [3 November solution-status audit](research/solution-status-audit-2026-11-03/README.md) searched all 912 then-unresolved targets individually. Complete matching announcements are recorded as **Solved** at the editor’s request, explicitly qualified as unverified on each problem page. The audit records source-access limits and does not certify the proofs or establish Lean verification.
-
-On 30 October 2026, we applied the agreed editorial cutoff **I = max(M, A) ≥ 6** to the locally scored collection. The local cut archive preserves the original 111 former AIM entries and 210 further problems, including their local solution material, plus one subsequent explicit editorial exclusion. We filled the 111 vacant IDs from retained further problems in the corresponding subjects, after fresh online status checks; the later exclusion was replaced within its subject. See the [ID replacement register](research/catalogue-backfill-2026-10-30/README.md) for the distinct historical and current identities.
-
-The remaining retained further problems were rechecked online: **402 were added as AIM 666–1067**, and **7 were archived without IDs** following resolution or formulation checks. There are now **1067 AIM entries**; no problems from that integration batch remain staged. Later research discoveries are handled separately. Scores are unchanged. The [integration register](research/further-integration-2026-10-30/README.md) records each decision, evidence and historical path. Claimed complete resolutions are distinguished from certified proofs.
-
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
 **876 open targets** (367 open, 509 partial) · **191 solved entries** · **0 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
@@ -281,7 +269,7 @@ The same labels appear on problem pages and index rows. Only Open and Partial co
 | 🔵 OPEN | The target is unresolved in the literature checked for the entry. | Yes |
 | 🟡 PARTIAL | Some substantive cases of the stated target are proved; the page identifies what remains. | Yes |
 | 🟠 SOLUTION CLAIMED | A source claims a complete resolution; independent proof review is outstanding. | No |
-| ✅ SOLVED | A publication or documented independent audit supports a complete resolution; the audit-specific announcement convention above is explicitly qualified. | No |
+| ✅ SOLVED | A complete resolution is recorded; the problem page states its verification status. | No |
 | 🏆 LEAN VERIFIED | A complete resolution has reviewed Lean kernel-checking evidence and matches the original target. | No |
 | ⚪ NEEDS VERIFICATION | A statement or status issue requires further review. | No |
 | ⚫ WITHDRAWN | The entry was removed for a documented reason; its ID and original statement are retained. | No |
