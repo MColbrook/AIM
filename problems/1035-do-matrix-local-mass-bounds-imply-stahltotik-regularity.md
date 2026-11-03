@@ -1,8 +1,8 @@
 # 1035. Do matrix local-mass bounds imply Stahl–Totik regularity?
 
 **Area:** Spectral theory and matrix orthogonal polynomials
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -29,15 +29,15 @@ The proposed criterion would let local spectral-mass information establish the l
 ## References
 
 - D. Damanik, A. Pushnitski and B. Simon, [*The Analytic Theory of Matrix Orthogonal Polynomials*](https://surveys-in-approximation-theory.com/papers/11/11.pdf), *Surveys in Approximation Theory* **4** (2008), 1–85. See printed pp. 68–72, especially (5.1), Theorem 5.4 and Conjecture 5.9; [publisher record](https://surveys-in-approximation-theory.com/papers/11/index.html).
+1. M. J. Colbrook, [*Local matrix-mass bounds do not imply Stahl-Totik regularity*](../research/solutions/1035-matrix-local-mass-counterexample/aim1035.pdf), 3 November 2026. [TeX source](../research/solutions/1035-matrix-local-mass-counterexample/aim1035.tex), [package and reproduction](../research/solutions/1035-matrix-local-mass-counterexample/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-spectral-batch/1035-review.md).
 
 ## Status review
 
+**Outcome:** Counterexample.
 
-**Known cases:** The local matrix-mass condition must imply determinant regularity for general matrix measures. Scalar direct sums, other matrix regularity criteria and GMP Cesaro-Nevai results do not establish it.
+**Reviewed result, 2026-11-03:** A normalized 2-by-2 matrix measure satisfies polynomial local-mass bounds but its determinant regularity limit is zero. The [manuscript](../research/solutions/1035-matrix-local-mass-counterexample/aim1035.pdf) and [individual audit](../research/solution_reviews/2026-11-03-spectral-batch/1035-review.md) record the proof, checked references and exact target comparison. Review was performed by Codex (AI).
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
-
-### Online recheck, 2026-10-30
+### Earlier status check, 2026-10-30
 
 The local matrix-mass condition must imply determinant regularity for general matrix measures. Scalar direct sums, other matrix regularity criteria and GMP Cesaro-Nevai results do not establish it.
 

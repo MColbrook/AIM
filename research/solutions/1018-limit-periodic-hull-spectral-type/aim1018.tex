@@ -1,0 +1,455 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage{xcolor,graphicx,booktabs,longtable,array}
+\usepackage{microtype,enumitem,fancyhdr,titlesec}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
+ pdftitle={Spectral type can vary within a limit-periodic Schrodinger hull},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 1018: mathematical result and proof}}
+\urlstyle{same}
+\Urlmuskip=0mu plus 1mu
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 1018}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setcounter{secnumdepth}{0}
+\allowdisplaybreaks[2]
+\title{\textbf{Spectral type can vary within a limit-periodic Schrödinger hull}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct a bounded real limit-periodic potential whose uniform hull contains both an operator with an explicit square-summable eigenfunction and an operator with no eigenvalues. The two phases have different nonzero spectral components, answering AIM 1018 negatively. The construction also permits arbitrarily small potentials.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 1018 at revision
+\texttt{3fa50884d129}. Its scope is stated below.
+\medskip
+
+\hypertarget{1018-status}{%
+\section{Status}\label{1018-status}}
+
+This is an elementary counterexample to the exact catalogue statement of
+problem 1018, namely Damanik--Fillman Question~10.2
+\cite[arXiv v1, p.~36]{DF20}; see also \cite[Remark~(v)]{DG11}.
+Every construction and estimate needed below is included.
+The construction gives an explicit phase with a positive,
+square-summable eigenfunction at energy zero, and an explicit phase in
+the same uniform hull with no eigenvalues at all. Consequently their
+sets of nonzero spectral components differ, whether or not the first
+operator has any additional spectral component.
+
+\hypertarget{1018-periodic-triangular-functions-on-an-odometer}{%
+\section{1. Periodic triangular functions on an
+odometer}\label{1018-periodic-triangular-functions-on-an-odometer}}
+
+Let \(G=\mathbb Z_2\) be the additive group of 2-adic integers, and
+write \(x\mapsto x+1\) for its minimal translation. Set
+
+\[
+P_k=16^k,\qquad \epsilon_k=2^{-k},\qquad k\geq1,
+\]
+
+On the cyclic group \(\mathbb Z/P_k\mathbb Z\), use its usual
+nearest-neighbor distance \(d_k\). Define the real, locally constant
+function
+
+\[
+h_k(x)=\epsilon_k\,d_k\bigl(x\bmod P_k,0\bigr).
+\tag{1}
+\]
+
+These functions satisfy:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(h_k\geq0\), \(h_k(-x)=h_k(x)\), and \(h_k(0)=0\).
+\item
+  \(h_k\) has period \(P_k\) under integer translation.
+\item
+  \(|h_k(x+1)-h_k(x)|\leq\epsilon_k\) for every \(x\in G\).
+\end{enumerate}
+
+Put
+
+\[
+b_k(x)=h_k(x+1)-h_k(x),\qquad
+b(x)=\sum_{k=1}^\infty b_k(x).
+\tag{2}
+\]
+
+Because \(\sum\epsilon_k=1\), this series converges uniformly to a
+continuous real function with \(\|b\|_\infty\leq1\). Moreover,
+
+\[
+b(-x-1)=-b(x).
+\tag{3}
+\]
+
+The functions \(h_k\) themselves need not have a convergent sum on all
+of \(G\); no such claim is used.
+
+\hypertarget{1018-a-bounded-even-sampling-function}{%
+\section{2. A bounded, even sampling
+function}\label{1018-a-bounded-even-sampling-function}}
+
+Define
+
+\[
+F(x)=-e^{-b(x)}-e^{b(x-1)},\qquad
+V_x(n)=F(x+n),\quad n\in\mathbb Z.
+\tag{4}
+\]
+
+Then \(F\) is real and continuous, \(\|F\|_\infty\leq2e\), and (3) gives
+
+\[
+F(-x)=-e^{-b(-x)}-e^{b(-x-1)}
+=-e^{b(x-1)}-e^{-b(x)}=F(x).
+\tag{5}
+\]
+
+Let \(b^{(K)}=\sum_{k=1}^K b_k\) and
+\(F^{(K)}(x)=-e^{-b^{(K)}(x)}-e^{b^{(K)}(x-1)}\). Each \(F^{(K)}\) is
+even and \(P_K\)-periodic. The mean value theorem gives the uniform
+bound
+
+\[
+\|F-F^{(K)}\|_\infty\leq2e\,2^{-K}.
+\tag{6}
+\]
+
+Thus every \(V_x\) is a bounded uniform limit of periodic sequences,
+exactly as required in the problem.
+
+The map \(x\mapsto V_x\) is continuous from \(G\) to
+\(\ell^\infty(\mathbb Z)\): this follows either from uniform continuity
+of \(F\) in the translation-invariant group metric, or directly from (6)
+and finite-level periodicity. Integer translations are dense in \(G\),
+so
+
+\[
+\Omega_{V_0}=\{V_x:x\in G\}.
+\tag{7}
+\]
+
+Injectivity of \(x\mapsto V_x\) is unnecessary.
+
+\hypertarget{1018-an-explicit-eigenfunction-at-one-phase}{%
+\section{3. An explicit eigenfunction at one
+phase}\label{1018-an-explicit-eigenfunction-at-one-phase}}
+
+For each integer \(n\), define
+
+\[
+H(n)=\sum_{k=1}^\infty h_k(n).
+\tag{8}
+\]
+
+The series converges to a finite value: by the Lipschitz bound and \(h_k(0)=0\),
+
+\[
+0\leq h_k(n)\leq\epsilon_k|n|,
+\qquad 0\leq H(n)\leq|n|.
+\tag{9}
+\]
+
+Whenever \(P_k\geq2|n|\), the cyclic distance from \(n\) to zero equals
+\(|n|\), so
+
+\[
+h_k(n)=\epsilon_k|n|.
+\tag{10}
+\]
+
+For \(|n|\geq1\), choose the least \(K\geq1\) with \(16^K\geq2|n|\).
+Then \(16^K\leq32|n|\), including the case \(K=1\). Therefore
+
+\[
+H(n)\geq |n|\sum_{k=K}^\infty2^{-k}
+=2|n|\,2^{-K}
+\geq \frac{2}{32^{1/4}}|n|^{3/4}.
+\tag{11}
+\]
+
+Consequently
+
+\[
+u(n)=e^{-H(n)}
+\tag{12}
+\]
+
+is positive and belongs to \(\ell^2(\mathbb Z)\). It is nonzero because
+\(u(0)=1\). Both \(H\) and \(u\) are even sequences. The absolutely
+convergent series in (8) and uniformly convergent series in (2) show
+
+\[
+H(n+1)-H(n)=b(n).
+\tag{13}
+\]
+
+Thus
+
+\[
+\frac{u(n+1)}{u(n)}=e^{-b(n)},\qquad
+\frac{u(n-1)}{u(n)}=e^{b(n-1)}.
+\]
+
+Substituting (4) gives the exact eigenvalue equation
+
+\[
+u(n-1)+u(n+1)+V_0(n)u(n)=0.
+\tag{14}
+\]
+
+Hence \(0\) is an eigenvalue of \(H_{V_0}\), and
+\(\mathrm{pp}\in\mathcal T(V_0)\).
+
+For context, this eigenvalue is at the upper spectral edge. For every
+finitely supported sequence \(f\) and every phase \(x\),
+
+\[
+-\langle f,H_{V_x}f\rangle
+=\sum_{n\in\mathbb Z}e^{b(x+n)}
+\left|f(n+1)-e^{-b(x+n)}f(n)\right|^2\geq0.
+\]
+
+This follows by expansion; boundedness extends it to all of \(\ell^2\).
+Thus every operator is nonpositive, while the phase zero operator has
+the displayed nonzero kernel vector. The potential \(V_0\) is
+necessarily nonperiodic: a full-line periodic second-order difference
+operator has no square-summable eigenfunction, as follows directly by
+iterating its fixed, invertible period transfer matrix in both
+directions.
+
+\hypertarget{1018-an-explicit-phase-with-arbitrarily-accurate-distant-reflections}{%
+\section{4. An explicit phase with arbitrarily accurate distant
+reflections}\label{1018-an-explicit-phase-with-arbitrarily-accurate-distant-reflections}}
+
+Set \(K_1=1\). Recursively define
+
+\[
+n_j=\sum_{r=1}^j P_{K_r},\qquad
+K_{j+1}=n_j^2+K_j+1.
+\tag{15}
+\]
+
+The sequence \(K_j\) is strictly increasing, and
+
+\[
+\theta_*=-\sum_{r=1}^\infty P_{K_r}
+\tag{16}
+\]
+
+converges in \(G\). For each \(j\), the element \(\theta_*+n_j\) is
+divisible by \(P_{K_{j+1}}\). By evenness and periodicity of
+\(F^{(K_{j+1})}\),
+
+\[
+F^{(K_{j+1})}(\theta_*+2n_j-m)
+=F^{(K_{j+1})}(\theta_*+m),\qquad m\in\mathbb Z.
+\]
+
+Writing \(W=V_{\theta_*}\) and using (6), we get
+
+\[
+d_j:=\sup_{m\in\mathbb Z}|W(2n_j-m)-W(m)|
+\leq4e\,2^{-K_{j+1}}
+\leq4e\,2^{-n_j^2}.
+\tag{17}
+\]
+
+In particular \(n_j\to+\infty\) and \(e^{C n_j}\sqrt{d_j}\to0\) for
+every fixed \(C>0\).
+
+\hypertarget{1018-elementary-reflection-lemma-excluding-all-eigenvalues}{%
+\section{5. Elementary reflection lemma excluding all
+eigenvalues}\label{1018-elementary-reflection-lemma-excluding-all-eigenvalues}}
+
+\textbf{Lemma.} Let \(W\) be a bounded real sequence. Suppose there are
+positive integers \(n_j\to\infty\) and nonnegative \(d_j\) satisfying
+
+\[
+\sup_m|W(2n_j-m)-W(m)|\leq d_j,
+\qquad e^{C n_j}\sqrt{d_j}\longrightarrow0
+\]
+
+for every \(C>0\). Then \(H_W\) has no \(\ell^2(\mathbb Z)\)
+eigenfunction.
+
+\textbf{Proof.} Suppose \(H_Wu=Eu\) with \(u\) real, nonzero, and
+\(\|u\|_2=1\). Put \(v_j(m)=u(2n_j-m)\) and
+
+\[
+\mathcal W_j(m)=u(m+1)v_j(m)-u(m)v_j(m+1).
+\]
+
+Subtracting the two difference equations yields
+
+\[
+\mathcal W_j(m)-\mathcal W_j(m-1)
+=[W(2n_j-m)-W(m)]u(m)v_j(m).
+\]
+
+Since both sequences tend to zero at infinity, summation from
+\(-\infty\) and Cauchy--Schwarz give \(|\mathcal W_j(m)|\leq d_j\). At
+the reflection center,
+
+\[
+|u(n_j)[u(n_j+1)-u(n_j-1)]|\leq d_j.
+\tag{18}
+\]
+
+If \(|u(n_j)|\leq\sqrt{d_j}\), set \(w_j=u+v_j\). Then
+
+\[
+w_j(n_j)=2u(n_j),\qquad
+w_j(n_j+1)=(E-W(n_j))u(n_j),
+\]
+
+so this two-component vector is \(O_{E,\|W\|_\infty}(\sqrt{d_j})\).
+Otherwise set \(w_j=u-v_j\). Then \(w_j(n_j)=0\) and (18) gives
+\(|w_j(n_j+1)|\leq\sqrt{d_j}\).
+
+In either case, \((H_W-E)w_j\) has absolute value at most \(d_j\) at
+each site. The inverse one-step transfer matrices have norm at most a
+constant \(C_E\geq1\) depending only on \(E\) and \(\|W\|_\infty\).
+Propagating the two-component vector backwards from \(n_j\) to zero
+gives
+
+\[
+|w_j(0)|+|w_j(1)|
+\leq C'_E C_E^{n_j}(\sqrt{d_j}+n_jd_j)\longrightarrow0.
+\]
+
+But \(v_j(0)=u(2n_j)\to0\) and \(v_j(1)=u(2n_j-1)\to0\), so necessarily
+\(u(0)=u(1)=0\). The second-order recurrence then forces \(u\equiv0\), a
+contradiction. This also covers \(d_j=0\) by the same case distinction.
+\(\square\)
+
+Applying the lemma to (17) shows
+\(\mathrm{pp}\notin\mathcal T(V_{\theta_*})\).
+
+\hypertarget{1018-conclusion-small-potentials-and-limits-of-the-assertion}{%
+\section{6. Conclusion, small potentials, and limits of the
+assertion}\label{1018-conclusion-small-potentials-and-limits-of-the-assertion}}
+
+Both \(V_0\) and \(V_{\theta_*}\) lie in the same uniform limit-periodic
+hull by (7), but
+
+\[
+\mathrm{pp}\in\mathcal T(V_0),\qquad
+\mathrm{pp}\notin\mathcal T(V_{\theta_*}).
+\]
+
+Therefore the answer to the exact problem 1018 is \textbf{no}.
+
+\hypertarget{1018-both-behaviors-occur-densely-in-the-hull}{%
+\subsection{Both behaviors occur densely in the
+hull}\label{1018-both-behaviors-occur-densely-in-the-hull}}
+
+The hull elements with a nonzero point component include the translation
+orbit of \(V_0\), which is dense. The elements with no point spectrum
+contain a dense \(G_\delta\) subset, as follows directly from the
+reflection lemma.
+
+For an integer \(n\), write \((R_nW)(m)=W(2n-m)\). In the compact metric
+hull \(\Omega=\Omega_{V_0}\), define
+
+\[
+\mathcal U_j=\bigcup_{n\geq j}
+\{W\in\Omega:\|W-R_nW\|_\infty<e^{-n^2}\},\qquad j\geq1.
+\]
+
+These sets are open because each reflection map is an isometry in the
+uniform norm. Each \(V_{-n}\) is exactly symmetric about \(n\), since
+\(F\) is even. The set \(\{V_{-n}:n\geq j\}\) is dense in the hull, so
+\(\mathcal U_j\) is dense. Baire's theorem makes
+\(\bigcap_{j\geq1}\mathcal U_j\) a dense \(G_\delta\). Every potential
+in that intersection has an unbounded sequence of reflection centers
+with errors at most \(e^{-n^2}\), and hence has no eigenvalues by the
+lemma. Thus the two different point-spectrum behaviors both occur
+densely.
+
+\hypertarget{1018-arbitrarily-small-examples}{%
+\subsection{Arbitrarily small
+examples}\label{1018-arbitrarily-small-examples}}
+
+The counterexamples can be made arbitrarily small after a constant
+energy shift. Indeed, replace \(\epsilon_k\) by \(\delta2^{-k}\) with
+any \(\delta>0\). Then \(\|b\|_\infty\leq\delta\), the lower bound (11)
+is multiplied by \(\delta\), and the eigenfunction remains
+square-summable. Moreover,
+
+\[
+\|F+2\|_\infty\leq2(e^\delta-1)\longrightarrow0
+\quad(\delta\downarrow0).
+\]
+
+Adding the constant \(2\) to every hull element simply shifts its
+spectrum by \(2\), preserving all spectral types. The reflection error
+bound becomes \(4e^\delta\delta2^{-K_{j+1}}\), which still satisfies the
+lemma. Thus hull spectral-type variation occurs for arbitrarily small
+uniform limit-periodic potentials.
+
+The proof does not classify the rest of either operator's spectrum, does
+not show that \(H_{V_0}\) is pure point, and by itself does not settle
+the separate mixed-type question 1021 or the coupling question 1020. It
+is unnecessary to classify those remaining components to distinguish the
+two sets \(\mathcal T\).
+
+The construction is reproducible from the displayed formulas alone and
+uses no numerical evidence. The related classical theory of continuous
+cocycles with discrete orbits over odometers provides conceptual
+context, but is not invoked in the proof: J. Kwiatkowski and A.
+Siemaszko, \emph{Discrete orbits in topologically transitive cylindrical
+transformations}, Discrete Contin. Dyn. Syst. \textbf{27} (2010),
+945--961, \url{https://doi.org/10.3934/dcds.2010.27.945}.
+
+\begin{thebibliography}{3}
+\raggedright
+\bibitem{DF20}
+D. Damanik and J. Fillman,
+\emph{Spectral Properties of Limit-Periodic Operators},
+in \emph{Analysis and Geometry on Graphs and Manifolds},
+M. Keller, D. Lenz and R. K. Wojciechowski (eds.),
+London Mathematical Society Lecture Note Series~461,
+Cambridge University Press (2020), 382--444.
+\href{https://doi.org/10.1017/9781108615259.016}{doi:10.1017/9781108615259.016}.
+The question and section locators used here refer to
+\url{https://arxiv.org/abs/1802.05794v1}.
+\bibitem{DG11}
+D. Damanik and Z. Gan,
+\emph{Spectral properties of limit-periodic Schr\"odinger operators},
+Communications on Pure and Applied Analysis \textbf{10} (2011),
+859--871.
+\href{https://doi.org/10.3934/cpaa.2011.10.859}{doi:10.3934/cpaa.2011.10.859}.
+\url{https://arxiv.org/abs/0906.3337v3}.
+\bibitem{KS10}
+J. Kwiatkowski and A. Siemaszko,
+\emph{Discrete orbits in topologically transitive cylindrical transformations},
+Discrete and Continuous Dynamical Systems \textbf{27} (2010), 945--961.
+\href{https://doi.org/10.3934/dcds.2010.27.945}{doi:10.3934/dcds.2010.27.945}.
+This reference supplies context for discrete cocycles, not a theorem used
+in the self-contained construction.
+\end{thebibliography}
+\end{document}

@@ -1,8 +1,8 @@
 # 1032. The spectral tree for high-order Heun operators
 
 **Area:** Spectral asymptotics of differential operators and planar potential theory
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -34,15 +34,15 @@ Shapiro and Tater [1, Conjecture 3] proposed the generalized Heun spectral tree 
 1. B. Shapiro and M. Tater, [*On spectral polynomials of the Heun equation. I*](https://arxiv.org/pdf/0812.2321), arXiv:0812.2321 (2008), Section 4, Conjecture 3.
 2. B. Shapiro, [*Van Vleck spectra of high-order Heun operators: finite-band universality and exterior asymptotics*](https://arxiv.org/pdf/2607.02700), arXiv:2607.02700 (2026), Theorems 2–5 and Conjecture 1.
 3. B. Shapiro, K. Takemura and M. Tater, [*On spectral polynomials of the Heun equation. II*](https://arxiv.org/pdf/0904.0650), arXiv:0904.0650 (2009), Theorem 2 for the classical second-order case.
+4. M. J. Colbrook, [*A leading Heun root at a branch point of its limiting spectral tree*](../research/solutions/1032-heun-star-counterexample/aim1032.pdf), 3 November 2026. [TeX source](../research/solutions/1032-heun-star-counterexample/aim1032.tex), [package and reproduction](../research/solutions/1032-heun-star-counterexample/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-spectral-batch/1032-review.md).
 
 ## Status review
 
+**Outcome:** Counterexample.
 
-**Known cases:** General noncollinear simple leading roots and every high order k>=3 require a full positive spectral-tree limit. The July 2026 finite-band and exterior-moment results retain the tree conjecture; the classical second-order result is narrower.
+**Reviewed result, 2026-11-03:** The operator with leading coefficient z^4-z has a limiting three-spoke spectral star, with the leading root zero a branch point rather than a leaf. The [manuscript](../research/solutions/1032-heun-star-counterexample/aim1032.pdf) and [individual audit](../research/solution_reviews/2026-11-03-spectral-batch/1032-review.md) record the proof, checked references and exact target comparison. Review was performed by Codex (AI).
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
-
-### Online recheck, 2026-10-30
+### Earlier status check, 2026-10-30
 
 General noncollinear simple leading roots and every high order k>=3 require a full positive spectral-tree limit. The July 2026 finite-band and exterior-moment results retain the tree conjecture; the classical second-order result is narrower.
 

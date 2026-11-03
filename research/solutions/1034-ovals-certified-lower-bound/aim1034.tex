@@ -1,0 +1,449 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage{xcolor,graphicx,booktabs,longtable,array}
+\usepackage{microtype,enumitem,fancyhdr,titlesec}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
+ pdftitle={A certified lower bound for the ovals problem},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 1034: mathematical result and proof}}
+\urlstyle{same}
+\Urlmuskip=0mu plus 1mu
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 1034}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setcounter{secnumdepth}{0}
+\allowdisplaybreaks[2]
+\title{\textbf{A certified lower bound for the ovals problem}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We derive a universal lower bound greater than $0.96221$ for the lowest curvature Schrödinger eigenvalue of a smooth closed curve of length $2\pi$. Projection averaging and a variation constraint yield an explicit dual certificate with outward-rounded arithmetic. The conjectured sharp bound one in AIM 1034 remains open.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 1034 at revision
+\texttt{3fa50884d129}. Its scope is stated below.
+\medskip
+
+\hypertarget{1034-status}{%
+\section{Status}\label{1034-status}}
+
+This note does \textbf{not} establish the conjectured lower bound 1. It
+gives a complete derivation of the explicit lower bound
+
+\[
+\lambda_1\!\left(-\frac{d^2}{ds^2}+\kappa(s)^2\right)
+\ge C_0>0.96221.
+\]
+
+\[
+C_0\in(0.962217776056501568384828,
+        0.962217776056501568384870).
+\]
+
+The curve has length \(2\pi\); the bound holds for smooth closed curves
+in \(\mathbb R^m\), \(m\ge2\), including the spatial curves in the
+problem. The numerical enclosure is certified by
+\texttt{verify\_ovals\_bound.py}, using only outward-rounded
+standard-library Decimal arithmetic and explicit series remainders. The
+proof relies on Denzler's established reduction of the global
+variational problem to smooth strictly convex planar minimizers, and on
+the projection-averaging inequality of Suragan. The latter is also
+derived below for clarity. No claim of priority or independent peer
+review is made.
+
+The cited September 2026 bound is approximately 0.9618316523. The
+additional input here is a total-variation constraint on the antipodal
+arclength profile. The bound below remains strictly below 1, so problem
+1034 stays unresolved.
+
+\hypertarget{1034-geometric-reduction}{%
+\section{1. Geometric reduction}\label{1034-geometric-reduction}}
+
+Denzler proves that the infimum of the curvature Schrödinger eigenvalue
+among closed curves of length \(2\pi\) is realized by a planar,
+analytic, strictly convex curve with positive curvature; his relaxed
+formulation also permits a digon of quotient 1. Consequently, a lower
+bound below 1 proved for smooth strictly convex planar curves holds for
+all the curves in the original problem. This is Theorem 1 and Theorems
+6, 8, 9 in the arXiv version of his paper, with renumbering in the
+published version.
+
+We therefore consider an oriented strictly convex planar loop with
+tangent
+
+\[
+T(s)=(\cos\phi(s),\sin\phi(s)),\qquad
+\phi'(s)=\kappa(s)>0.
+\]
+
+Let \(s=\sigma(\theta)\) be the inverse tangent-angle coordinate and put
+\(g(\theta)=\sigma'(\theta)\). Then
+
+\[
+g>0,\qquad \int_0^{2\pi}g(\theta)\,d\theta=2\pi,
+\qquad \int_0^{2\pi} e^{i\theta}g(\theta)\,d\theta=0.
+\tag{1}
+\]
+
+The last identity is closure of the original loop. Define the antipodal
+arclength
+
+\[
+\ell(\alpha)=\sigma(\alpha+\pi)-\sigma(\alpha)
+            =\int_\alpha^{\alpha+\pi}g(\theta)\,d\theta.
+\tag{2}
+\]
+
+It obeys three useful constraints:
+
+\[
+\ell(\alpha)+\ell(\alpha+\pi)=2\pi,
+\tag{3}
+\]
+
+\[
+\int_0^\pi \ell(\beta-t)\sin t\,dt=2\pi,
+\tag{4}
+\]
+
+and, on every interval \(I\) of length \(\pi\),
+
+\[
+\operatorname{TV}_{I}(\ell)
+=\int_I|g(\alpha+\pi)-g(\alpha)|\,d\alpha
+\le\int_I(g(\alpha+\pi)+g(\alpha))\,d\alpha
+=2\pi.
+\tag{5}
+\]
+
+For completeness, (4) follows by Fubini from the complex identity
+
+\[
+\int_0^\pi \ell(\beta-t)e^{it}\,dt=2\pi i.
+\]
+
+Indeed, the inner kernel after reversing the integrals is
+\(i(1+e^{i(\beta-\theta)})\); the second term integrates to zero by (1).
+The imaginary part is (4). Constraint (5) is the extra information used
+in this note.
+
+\hypertarget{1034-projection-averaging}{%
+\section{2. Projection averaging}\label{1034-projection-averaging}}
+
+For a real \(\psi\in H^1_{\rm per}(0,2\pi)\), set \(Y(s)=\psi(s)T(s)\).
+Then
+
+\[
+|Y'(s)|^2=|\psi'(s)|^2+\kappa(s)^2\psi(s)^2.
+\tag{6}
+\]
+
+For each angle \(\alpha\), the scalar projection
+\(Y(s)\cdot(-\sin\alpha,\cos\alpha)\) vanishes at the two points with
+tangent angles \(\alpha\) and \(\alpha+\pi\). Apply the sharp Dirichlet
+interval Poincaré inequality separately on the two complementary arcs,
+whose lengths are \(\ell(\alpha)\) and \(\ell(\alpha+\pi)\), and
+integrate in \(\alpha\). The identity
+
+\[
+\int_0^{2\pi}|v\cdot(-\sin\alpha,\cos\alpha)|^2\,d\alpha
+=\pi|v|^2
+\]
+
+gives
+
+\[
+\int_0^{2\pi}(|\psi'|^2+\kappa^2\psi^2)\,ds
+\ge2\pi\int_0^{2\pi}J(\phi(s))\psi(s)^2\,ds,
+\tag{7}
+\]
+
+where
+
+\[
+J(\beta)=\int_0^\pi
+\frac{\sin^2t}{\ell(\beta-t)^2}\,dt.
+\tag{8}
+\]
+
+To verify the factor in (7), one of the two arc contributions, after
+reversing the order of integration, is
+\(\pi^2\int J(\phi(s))\psi(s)^2\,ds\). The other is identical. Their sum
+is divided by \(\pi\), the factor on the averaged left side. For complex
+\(\psi\), apply the real inequality to its real and imaginary parts and
+add.
+
+\hypertarget{1034-symmetrizing-the-arclength-profile}{%
+\section{3. Symmetrizing the arclength
+profile}\label{1034-symmetrizing-the-arclength-profile}}
+
+Fix \(\beta\), and write
+
+\[
+h(t)=\frac{\ell(\beta-t)}\pi,\qquad 0\le t\le\pi.
+\]
+
+Equations (3)--(5) give
+
+\[
+h>0,\quad h(0)+h(\pi)=2,\quad
+\int_0^\pi h(t)\sin t\,dt=2,\quad
+\int_0^\pi|h'(t)|\,dt\le2.
+\tag{9}
+\]
+
+Set \(\widetilde h(t)=(h(t)+h(\pi-t))/2\). Convexity of
+\(x\mapsto x^{-2}\) yields
+
+\[
+\int_0^\pi\frac{\sin^2t}{h(t)^2}\,dt
+\ge\int_0^\pi\frac{\sin^2t}{\widetilde h(t)^2}\,dt.
+\tag{10}
+\]
+
+The symmetrized function still has the same weighted integral and no
+larger total variation. Let \(L=\pi/2\) and let \(v\) be its restriction
+to \([0,L]\). By symmetry,
+
+\[
+v(0)=1,\qquad
+\int_0^L v(t)\sin t\,dt=1,\qquad
+\int_0^L|v'(t)|\,dt\le1.
+\tag{11}
+\]
+
+The right side of (10) equals twice \[
+F(v)=\int_0^L\frac{\sin^2t}{v(t)^2}\,dt.
+\tag{12}
+\]
+
+\hypertarget{1034-a-rigorous-dual-certificate}{%
+\section{4. A rigorous dual
+certificate}\label{1034-a-rigorous-dual-certificate}}
+
+All parameters in the following definition are exact:
+
+\[
+a=\frac{5467}{10000},\qquad
+b=2a,\qquad c=\frac{54893}{50000},\qquad
+\eta=\frac2{c^3}.
+\tag{13}
+\]
+
+Notice \(0<a<b<c\). Define
+
+\[
+t_a=\arcsin((a/c)^3),\qquad
+t_b=\arcsin((b/c)^3),
+\]
+
+and the positive comparison function
+
+\[
+v_*(t)=
+\begin{cases}
+a,&0\le t\le t_a,\\
+c(\sin t)^{1/3},&t_a\le t\le t_b,\\
+b,&t_b\le t\le L.
+\end{cases}
+\tag{14}
+\]
+
+This is a comparison function only; no assertion that it satisfies (11)
+is needed. Put
+
+\[
+r(t)=\eta\sin t-\frac{2\sin^2t}{v_*(t)^3}.
+\]
+
+It is nonnegative on \([0,t_a]\), zero on \([t_a,t_b]\), and nonpositive
+on \([t_b,L]\). Define
+
+\[
+A=\int_0^{t_a}r(t)\,dt,\qquad
+B=-\int_{t_b}^{L}r(t)\,dt,
+\qquad F_* = F(v_*).
+\tag{15}
+\]
+
+Both \(A\) and \(B\) are nonnegative. Let \(q(t)=-\int_t^L r(s)\,ds\).
+Thus \(q'=r\), \(q(L)=0\), \(q(0)=B-A\), and
+
+\[
+\|q\|_\infty=\max\{B,A-B\}.
+\tag{16}
+\]
+
+For any \(v\) satisfying (11), integration by parts gives
+
+\[
+\begin{aligned}
+\int_0^L r(t)v(t)\,dt
+&=-q(0)-\int_0^Lq(t)v'(t)\,dt\\
+&\ge A-B-\max\{B,A-B\}\\
+&=-\max\{0,2B-A\}.
+\end{aligned}
+\tag{17}
+\]
+
+The supporting-line inequality for \(x\mapsto\sin^2t/x^2\) is
+
+\[
+\frac{\sin^2t}{v(t)^2}
+\ge\frac{3\sin^2t}{v_*(t)^2}
+    -\frac{2\sin^2t}{v_*(t)^3}v(t)
+=\frac{3\sin^2t}{v_*(t)^2}
+ +(r(t)-\eta\sin t)v(t).
+\]
+
+Integrate and use (11) and (17). This proves
+
+\[
+F(v)\ge D:=3F_*-\eta-\max\{0,2B-A\}.
+\tag{18}
+\]
+
+It follows from (8), (10), and (12) that \(J(\beta)\ge2D/\pi^2\) for
+every \(\beta\). Substitution into (7) proves the desired universal
+bound with
+
+\[
+\boxed{C_0=\frac{4D}{\pi}.}
+\tag{19}
+\]
+
+\hypertarget{1034-explicit-evaluation-and-numerical-certification}{%
+\section{5. Explicit evaluation and numerical
+certification}\label{1034-explicit-evaluation-and-numerical-certification}}
+
+Let
+
+\[
+I_a=\frac{t_a}{2}-\frac{\sin(2t_a)}4,
+\qquad
+I_b=\frac{L-t_b}{2}+\frac{\sin(2t_b)}4,
+\qquad
+I_m=\int_{t_a}^{t_b}(\sin t)^{4/3}\,dt.
+\]
+
+Then the constants in (15) are
+
+\[
+F_* = \frac{I_a}{a^2}+\frac{I_m}{c^2}+\frac{I_b}{b^2},
+\]
+
+\[
+A=\eta(1-\cos t_a)-\frac{2I_a}{a^3},
+\qquad
+B=\frac{2I_b}{b^3}-\eta\cos t_b.
+\tag{20}
+\]
+
+The certificate encloses these values as follows (digits below are
+abbreviated, not the full outward intervals):
+
+\begin{longtable}[]{@{}lr@{}}
+\toprule\noalign{}
+Quantity & Approximate value \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(A\) & 0.00384988849391648837 \\
+\(B\) & 0.00192548312815568169 \\
+\(D\) & 0.75572407410315354459 \\
+\(C_0\) & 0.96221777605650156838 \\
+\end{longtable}
+
+To avoid dependence on an uncertified special-function routine, put
+\(r_a=a/c\), \(r_b=b/c\), and \(d_j=\binom{2j}{j}/4^j\le1\). The two
+needed expansions are
+
+\[
+\arcsin(r^3)=\sum_{j\ge0}\frac{d_j r^{6j+3}}{2j+1},
+\]
+
+\[
+I_m=\sum_{j\ge0}\frac{3d_j}{6j+7}
+       (r_b^{6j+7}-r_a^{6j+7}).
+\tag{21}
+\]
+
+After \(n\) terms, valid upper bounds for the positive tails are,
+respectively,
+
+\[
+\frac{r^{6n+3}}{(2n+1)(1-r^6)},
+\qquad
+\frac{3r_b^{6n+7}}{(6n+7)(1-r_b^6)}.
+\tag{22}
+\]
+
+The program uses \(n=2000\) and 65-digit outward rounding. It encloses
+\(\pi\) by the alternating Machin formula and bounds the square roots
+\(\cos t_a=\sqrt{1-r_a^6}\), \(\cos t_b=\sqrt{1-r_b^6}\) using the
+documented correctly rounded Decimal square-root operation with a
+deliberately enlarged error interval. It obtains
+
+\[
+0.9622177760565015683848281814
+< C_0 <
+0.9622177760565015683848697651.
+\tag{23}
+\]
+
+In particular \(C_0>0.96221\) is a rigorous numerical comparison.
+
+\hypertarget{1034-scope-and-the-remaining-gap}{%
+\section{6. Scope and the remaining
+gap}\label{1034-scope-and-the-remaining-gap}}
+
+The projection-averaging estimate (7) still loses information about how
+close all scalar projections are to their first Dirichlet interval
+modes. The certificate improves only the pointwise lower bound on \(J\).
+It therefore gives no justification for replacing \(C_0\) by 1.
+
+Numerically optimizing the analogous constrained scalar problem suggests
+a best constant around 0.9622183981, only slightly above the rational
+certificate used here. That numerical observation is not needed in the
+proof and is not asserted as a certified optimum. It suggests that a
+substantial further step must retain more than this pointwise profile
+information.
+
+\hypertarget{1034-references}{%
+\section{References}\label{1034-references}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  J. Denzler, \emph{Existence and regularity for a curvature dependent
+  variational problem}, Transactions of the AMS 367 (2015), 3829--3845.
+  \href{https://arxiv.org/abs/1301.6322}{arXiv:1301.6322}.
+\item
+  D. Suragan, \emph{An Improved Bound for the Ovals Problem},
+  arXiv:2609.10775v1, September 2026. Proposition 3.1 supplies (7),
+  Lemma 2.2 supplies (4), and Section 4 discusses the reduction to
+  arbitrary spatial loops.
+  \href{https://arxiv.org/abs/2609.10775}{Primary manuscript}.
+\end{enumerate}
+\end{document}

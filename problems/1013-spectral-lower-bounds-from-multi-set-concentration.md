@@ -1,8 +1,8 @@
 # 1013. Spectral lower bounds from multi-set concentration
 
 **Area:** Spectral geometry and concentration of measure
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -50,15 +50,15 @@ This would turn concentration of several substantial separated pieces into a qua
 1. N. Gozlan and R. Herry, *Multiple sets exponential concentration and higher order eigenvalues*, Potential Anal. 52 (2020), 203–221. [DOI](https://doi.org/10.1007/s11118-018-9743-1); [primary v1, §§1.1–1.2, Proposition 4.1 and §5.2](https://arxiv.org/html/1804.06133v1).
 2. K. Funano, *Estimates of eigenvalues of Laplacian by a reduced number of subsets*, [primary preprint, Theorem 1.1 and §4](https://arxiv.org/html/1601.07581v1).
 3. K. Funano and Y. Sakurai, *Upper bounds for higher-order Poincaré constants*, [primary v3, Theorem 1.1](https://arxiv.org/html/1907.03617v3).
+4. M. J. Colbrook, [*A variational spectral lower bound from concentration of separated sets*](../research/solutions/1013-multiset-concentration-gap/aim1013.pdf), 3 November 2026. [TeX source](../research/solutions/1013-multiset-concentration-gap/aim1013.tex), [package and reproduction](../research/solutions/1013-multiset-concentration-gap/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-spectral-batch/1013-review.md).
 
 ## Status review
 
+**Outcome:** Affirmative proof.
 
-**Known cases:** The assertion is an inverse spectral lower bound from multi-set concentration. Existing subset comparisons and higher-order Poincare estimates give a different direction; no matching converse found.
+**Reviewed result, 2026-11-03:** The stated multiset concentration hypothesis implies a variational spectral gap with an explicit coefficient depending only on the number of sets, without a discrete-spectrum assumption. The [manuscript](../research/solutions/1013-multiset-concentration-gap/aim1013.pdf) and [individual audit](../research/solution_reviews/2026-11-03-spectral-batch/1013-review.md) record the proof, checked references and exact target comparison. Review was performed by Codex (AI).
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
-
-### Online recheck, 2026-10-30
+### Earlier status check, 2026-10-30
 
 The assertion is an inverse spectral lower bound from multi-set concentration. Existing subset comparisons and higher-order Poincare estimates give a different direction; no matching converse found.
 

@@ -2,7 +2,7 @@
 
 **Area:** Spectral theory and spectral geometry
 **Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -45,15 +45,17 @@ The constant gives the best domain-independent control of a nonlinear Dirichlet 
 - L. Brasco, *On principal frequencies and inradius in convex sets*, **Bruno Pini Mathematical Analysis Seminar** 9(1) (2018), 78–101. [Published article](https://doi.org/10.6092/issn.2240-2829/8945); [published PDF](https://mathematicalanalysis.unibo.it/article/download/8945/8866/28804), Proposition 6.3, equation (15), p. 99, and Open problems 1, p. 100.
 - G. Pisante and F. Prinari, *Sharp Makai-type inequalities for the best Poincaré–Sobolev constants* (2026), [arXiv:2604.11973v1](https://arxiv.org/html/2604.11973), Theorem 1.1 and Section 1.4.
 - F. Bozzola and L. Brasco, *The Role of Topology and Capacity in Some Bounds for Principal Frequencies*, **Journal of Geometric Analysis** 34 (2024), 299. [Published article](https://doi.org/10.1007/s12220-024-01742-2), Theorems 1.2–1.3.
+1. M. J. Colbrook, [*Critical inradius asymptotics and a supremum-norm bound for convex domains*](../research/solutions/1016-inradius-critical-asymptotics/aim1016.pdf), 3 November 2026. [TeX source](../research/solutions/1016-inradius-critical-asymptotics/aim1016.tex), [package and reproduction](../research/solutions/1016-inradius-critical-asymptotics/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-spectral-batch/1016-review.md).
 
 ## Status review
 
+**Known cases:** For $`p=N`$, the critical large-$`q`$ asymptotic is $`q^{N-1}C_{\mathrm{opt}}(N,N,q)\to |S^{N-1}|(eN^2/(N-1))^{N-1}`$. A separate explicit lower bound is proved for $`q=\infty,\ p\ge N+1`$; it is not asserted sharp.
 
-**Known cases:** The sharp constant uses only ordinary inradius and q>p. The 2026 sharp Makai-type results impose q<=p and different geometric factors; extremal functions on a fixed domain do not solve optimization over convex shapes.
+**Remaining target:** Determine the exact optimal constant at fixed finite parameters and in the other admissible regimes. The supremum-norm bound is not proved sharp and does not cover $`N<p<N+1`$.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+**Reviewed result, 2026-11-03:** The critical large-q asymptotic is determined uniformly over convex domains; a separate explicit supremum-norm lower bound holds for p at least N+1. The [manuscript](../research/solutions/1016-inradius-critical-asymptotics/aim1016.pdf) and [individual audit](../research/solution_reviews/2026-11-03-spectral-batch/1016-review.md) record the proof, checked references and exact target comparison. Review was performed by Codex (AI).
 
-### Online recheck, 2026-10-30
+### Earlier status check, 2026-10-30
 
 The sharp constant uses only ordinary inradius and q>p. The 2026 sharp Makai-type results impose q<=p and different geometric factors; extremal functions on a fixed domain do not solve optimization over convex shapes.
 

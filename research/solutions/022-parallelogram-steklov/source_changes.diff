@@ -1,0 +1,93 @@
+--- submitted/sections/022.tex
++++ packaged/aim022.tex
+@@ -1,3 +1,44 @@
+-\hypertarget{022-the-square-is-optimal-among-parallelograms}{%
+-\chapter{022 --- The square is optimal among
+-parallelograms}\label{022-the-square-is-optimal-among-parallelograms}}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=14pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb}
++\usepackage{xcolor,graphicx,booktabs,longtable,array}
++\usepackage{microtype,enumitem,fancyhdr,titlesec}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
++ pdftitle={The square maximizes the first Steklov eigenvalue among parallelograms},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 022: mathematical result and proof}}
++\urlstyle{same}
++\Urlmuskip=0mu plus 1mu
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
++\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
++\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 022}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\setcounter{secnumdepth}{0}
++\allowdisplaybreaks[2]
++\title{\textbf{The square maximizes the first Steklov eigenvalue among parallelograms}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We prove that among nondegenerate planar parallelograms with fixed perimeter, the square uniquely maximizes the first positive Steklov eigenvalue. The argument uses explicit trial functions and rigorous estimates for the constants in the square spectrum. The result addresses a restricted class in AIM 022; the polygonal optimization problem remains open.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 022 at revision
++\texttt{3fa50884d129}. Its scope is stated below.
++\medskip
+@@ -22 +63 @@
+-Let \(Q=(-1,1)^2\), and let \(k\) be the unique root in \((0,π/2)\) of
++Let \(Q=(-1,1)^2\), and let \(k\) be the unique root in \((0,\pi /2)\) of
+@@ -89 +130 @@
+-strictly increasing on \((0,π/2)\), so its rationally enclosed signs at
++strictly increasing on \((0,\pi /2)\), so its rationally enclosed signs at
+@@ -104 +145 @@
+-with \(0≤t<1\), and the angle between \(v,w\) belongs to \((0,π/2]\).
++with \(0\le t<1\), and the angle between \(v,w\) belongs to \((0,\pi /2]\).
+@@ -138,2 +179,2 @@
+-Here the factor \(z≤1\) was discarded. The right side decreases with
+-\(t\); for \(t≥1/8\), it is at most \(224/45<8s\). This proves strict
++Here the factor \(z\le 1\) was discarded. The right side decreases with
++\(t\); for \(t\ge 1/8\), it is at most \(224/45<8s\). This proves strict
+@@ -143 +184 @@
+-products with \(v,w\) are \(a \cos (θ/2), b \cos (θ/2)\). Formula (1)
++products with \(v,w\) are \(a \cos (\theta /2), b \cos (\theta /2)\). Formula (1)
+@@ -153 +194 @@
+-Thus for \(c≥1/2\), the right side is at most \(2\sqrt3<8s\). It remains
++Thus for \(c\ge 1/2\), the right side is at most \(2\sqrt3<8s\). It remains
+@@ -222 +263 @@
+-\(c≥8t^2\)}{Case A: c≥8t\^{}2}}\label{022-case-a-c8t2}}
++\(c\ge 8t^2\)}{Case A: c >= 8t2}}\label{022-case-a-c8t2}}
+@@ -232 +273 @@
+-For \(t≤1/8\),
++For \(t\le 1/8\),
+@@ -238 +279 @@
+-For \(c≤1/2\),
++For \(c\le 1/2\),
+@@ -250 +291 @@
+-Therefore, if \(c≥8t^2\) and \((c,t)≠(0,0)\),
++Therefore, if \(c\ge 8t^2\) and \((c,t)\ne (0,0)\),
+@@ -259 +300 @@
+-\(σ_1(P)<s\).
++\(\sigma _1(P)<s\).
+@@ -288 +329 @@
+-for \(0<t≤1/8\), because the bracket is at least \(4/15-5/24-1/1536>0\).
++for \(0<t\le 1/8\), because the bracket is at least \(4/15-5/24-1/1536>0\).
+@@ -296 +337 @@
+-on this range. Inserting this into (7)--(8) proves \(σ_1(P)<s\).
++on this range. Inserting this into (7)--(8) proves \(\sigma _1(P)<s\).
+@@ -339,0 +381 @@
++\end{document}

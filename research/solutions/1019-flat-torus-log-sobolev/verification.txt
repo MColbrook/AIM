@@ -1,0 +1,10 @@
+Coordinator inspected and reproduced this final standard-library program using Python 3.12.14 -B; exit code 0.
+The sole subsequent source cleanup removed a redundant blank line at EOF; executable syntax is unchanged, and the final public copy was rerun.
+Submitted program SHA256: f27252ceaf459cdaa34bcedd77cc5af4a80d1df672fcd30dc4c949b4c1797932
+Final executed program SHA256: da8977951e0fbacc44892f47e7dc6e260414fd3bcc9a2338f423d56b3bdf385e
+
+PASS: exact moments [Fraction(0, 1), Fraction(3, 2), Fraction(3, 2), Fraction(45, 8)]
+PASS: entropy >= 2669/31104 and alpha <= 1296/2669
+
+The complete argument was independently checked by the coordinator and a second reviewer.
+The finite Fourier arithmetic does not replace the analytic entropy-remainder bound.

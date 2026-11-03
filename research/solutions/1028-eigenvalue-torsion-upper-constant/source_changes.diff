@@ -1,0 +1,159 @@
+--- submitted/sections/1028.tex
++++ packaged/aim1028.tex
+@@ -1,3 +1,44 @@
+-\hypertarget{1028-the-sharp-upper-constant-in-every-dimension}{%
+-\chapter{1028 --- The sharp upper constant in every
+-dimension}\label{1028-the-sharp-upper-constant-in-every-dimension}}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=14pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb}
++\usepackage{xcolor,graphicx,booktabs,longtable,array}
++\usepackage{microtype,enumitem,fancyhdr,titlesec}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
++ pdftitle={The sharp upper constant for the eigenvalue--torsion product on convex domains},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 1028: mathematical result and proof}}
++\urlstyle{same}
++\Urlmuskip=0mu plus 1mu
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
++\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
++\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 1028}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\setcounter{secnumdepth}{0}
++\allowdisplaybreaks[2]
++\title{\textbf{The sharp upper constant for the eigenvalue--torsion product on convex domains}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We establish the sharp upper constant $\pi^2/12$ for the normalized first-eigenvalue--torsional-rigidity product on bounded convex domains in every dimension. The proof explicitly extends the one-dimensional mechanism in Deng's work using a dimension-independent torsion--perimeter inequality. The lower-constant question in AIM 1028 is not settled.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 1028 at revision
++\texttt{3fa50884d129}. Its scope is stated below.
++\medskip
+@@ -457,2 +498,4 @@
+-  The torsion square-root concavity theorem used above is valid in
+-  arbitrary dimension.
++  Theorem~4.1(ii), pp.~695--696, gives the torsion square-root
++  concavity theorem in arbitrary dimension.
++  \url{https://doi.org/10.1512/iumj.1985.34.34036}.
++  \url{https://math.jhu.edu/~js/Math646/kennington.pdf}.
+@@ -460 +503 @@
+-  M. van den Berg, G. Buttazzo, A. Pratelli, \emph{On relations between
++  M. van den Berg, G. Buttazzo, A. Pratelli, \emph{On the relations between
+@@ -468,0 +512,98 @@
++\appendix
++\section{A limitation of a lower-bound proof route}
++This appendix records a limitation of one attempted route to the lower half of AIM 1028. It does not claim a counterexample to the conjecture or an improved general lower bound.
++
++Let \(u\) be the torsion function of a bounded convex domain \(\Omega\subset\mathbb R^d\), and write
++\[
++M=\max_\Omega u,\qquad A=|\Omega|,\qquad T=\int_\Omega u.
++\]
++The proposed estimate would follow from the two inequalities
++\[
++\lambda_1 M\ge\frac{\pi^2}{8},\qquad
++\frac{T}{AM}\ge\frac{4}{(d+1)(d+2)}.
++\]
++The first estimate has a dimension-independent proof. The second, which is sharp on thin cone families if true, was not established here for \(d\ge3\).
++
++\subsection{1. What the verified general result supplies}
++
++Della Pietra, Gavitone and Guarino Lo Bianco, \emph{On functionals involving the torsional rigidity related to some classes of nonlinear operators}, J. Differential Equations \textbf{265} (2018), 6424--6442, DOI \href{https://doi.org/10.1016/j.jde.2018.07.030}{10.1016/j.jde.2018.07.030}, \href{https://arxiv.org/abs/1705.03330}{arXiv:1705.03330}, Theorems 1.1(i) and 4.2, prove
++\[
++\frac{T_p}{A M}\ge \frac{q}{d^{q-1}(d+q)},\qquad q=\frac{p}{p-1}.
++\]
++At \(p=q=2\), this is
++\[
++\frac{T}{AM}\ge\frac{2}{d(d+2)}.
++\]
++Their Remark 4.6 explicitly displays the factor \(2\); a sentence in the introduction drops it, so the theorem rather than that sentence should be used. Briani and Bucur, \emph{Mean-to-max ratio of the torsion function and honeycomb structures}, Calc. Var. \textbf{62} (2023), 198, DOI \href{https://doi.org/10.1007/s00526-023-02530-6}{10.1007/s00526-023-02530-6}, Remark 5.2, discusses the still unknown sharp convex lower bound and the same \(p\)-torsion estimate.
++
++Combining the verified bound with Payne's estimate gives
++\[
++\frac{\lambda_1T}{A}\ge\frac{\pi^2}{4d(d+2)}.
++\]
++This is below the conjectured constant \(\pi^2/[2(d+1)(d+2)]\). The needed improvement factor is \(2d/(d+1)\).
++
++For completeness, the first factor follows from the dimension-independent gradient bound
++\[
++|\nabla u|^2+2u\le2M
++\]
++(Theorem 3.2 of the same 2018 paper, with \(p=2\)). For a nonsmooth convex domain, smooth convex approximation and interior
++\(C^1\) convergence, with maxima controlled by domain monotonicity and
++scaling, pass this gradient inequality to the limit. Put
++\[
++p(t)=\cos\!\left(\frac\pi2\sqrt{1-t/M}\right),\qquad w=p(u).
++\]
++Then \(p''>0\), \(w\in H^1_0(\Omega)\), and
++\[
++-\Delta w-\frac{\pi^2}{8M}w
++=p''(u)\bigl(2(M-u)-|\nabla u|^2\bigr)\ge0.
++\]
++Pairing with the positive first Dirichlet eigenfunction proves \(\lambda_1M\ge\pi^2/8\). This is also the proof in Proposition 2.2 of Deng's planar paper, but the calculation and gradient estimate are valid in every dimension.
++
++\subsection{2. A rigorous obstruction to a proof using only the two usual shape inequalities}
++
++The combination of square-root concavity and the gradient inequality does \textbf{not}, by itself, imply the desired torsion mean-to-maximum bound. This can be shown explicitly.
++
++For \(L>\sqrt2\), define a radial function on \(B_L\subset\mathbb R^d\) by
++\[
++v_L(x)=v_L(r)=
++\begin{cases}
++1-r^2/2,&0\le r\le 2/L,\\[2mm]
++\displaystyle\frac{(L-r)^2}{L^2-2},&2/L\le r\le L,
++\end{cases}
++\qquad r=|x|.
++\]
++The values and first derivatives match at \(r=2/L\): they are respectively \(1-2/L^2\) and \(-2/L\). Thus \(v_L\) is \(C^1\), belongs to \(H^1_0(B_L)\), is positive inside the ball, and has maximum one.
++
++Its square root is concave. On the inner interval it equals \(\sqrt{1-r^2/2}\), a concave decreasing function of \(r\); on the outer interval it is the affine function \((L-r)/\sqrt{L^2-2}\). The radial derivatives match at the interface, and the tangential Hessian eigenvalues have the sign of the nonpositive radial derivative.
++
++Moreover,
++\[
++|\nabla v_L|^2+2v_L\le2=2\max v_L.
++\]
++There is equality on the inner interval. On the outer interval, writing \(R^2=L^2-2\) and \(w=\sqrt{v_L}\), the left side is \(w^2(2+4/R^2)\), and
++\[
++w^2\le v_L(2/L)=\frac{R^2}{R^2+2},
++\]
++which proves the estimate.
++
++Nevertheless, dominated convergence after the substitution \(r=Ls\) gives
++\[
++\frac{1}{|B_L|}\int_{B_L}v_L
++=d\int_0^1v_L(Ls)s^{d-1}\,ds
++\longrightarrow
++d\int_0^1(1-s)^2s^{d-1}\,ds
++=\frac{2}{(d+1)(d+2)}.
++\]
++This is half the proposed efficiency lower bound. In particular, for all sufficiently large \(L\), these functions violate the proposed efficiency inequality while satisfying both square-root concavity and the gradient estimate.
++
++These functions are \textbf{not torsion functions}: on the inner ball, \(-\Delta v_L=d\), while on the outer annulus,
++\[
++-\Delta v_L
++=\frac{2}{L^2-2}\left(\frac{(d-1)(L-r)}{r}-1\right),
++\]
++which is nonconstant and negative near the outer boundary. Therefore this construction does not disprove the conjecture. It pinpoints the limitation of the proposed proof route: the torsion equation must supply additional information beyond its square-root concavity and the usual gradient bound.
++
++\subsection{3. Status}
++
++The all-dimensional sharp upper bound is proved in the preceding sections. The lower bound in dimensions \(d\ge3\) remains unresolved in this work. Deng's planar argument obtains the stronger efficiency estimate through a planar Airy-stress construction and mixed-area geometry; merely retaining its dimension-independent concavity and gradient consequences cannot complete the higher-dimensional lower estimate.
++\end{document}

@@ -1,0 +1,609 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage{xcolor,graphicx,booktabs,longtable,array}
+\usepackage{microtype,enumitem,fancyhdr,titlesec}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,
+ pdftitle={The sharp upper constant for the eigenvalue--torsion product on convex domains},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 1028: mathematical result and proof}}
+\urlstyle{same}
+\Urlmuskip=0mu plus 1mu
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\titleformat{\section}{\normalfont\large\bfseries\color{accent}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 1028}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setcounter{secnumdepth}{0}
+\allowdisplaybreaks[2]
+\title{\textbf{The sharp upper constant for the eigenvalue--torsion product on convex domains}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We establish the sharp upper constant $\pi^2/12$ for the normalized first-eigenvalue--torsional-rigidity product on bounded convex domains in every dimension. The proof explicitly extends the one-dimensional mechanism in Deng's work using a dimension-independent torsion--perimeter inequality. The lower-constant question in AIM 1028 is not settled.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 1028 at revision
+\texttt{3fa50884d129}. Its scope is stated below.
+\medskip
+
+\hypertarget{1028-status-and-attribution}{%
+\section{Status and attribution}\label{1028-status-and-attribution}}
+
+The \textbf{upper half} of problem 1028 follows in every dimension from
+the one-dimensional mechanism in Section 5 of Zikang Deng, \emph{A Proof
+of a Conjecture on a Pólya Functional}, arXiv:2609.13221v1 (2026),
+together with the dimension-independent Pólya torsion-perimeter
+inequality. The argument below checks the extension explicitly and
+supplies a direct proof of that geometric input.
+
+\textbf{Theorem.} Let \(d \ge 2\) and let \(\Omega\) be a nonempty
+bounded open convex subset of \(\mathbb R^d\). Let \(u\) solve
+\(-\Delta u=1\) with zero Dirichlet boundary values, let
+\(T=\int _\Omega u\), and let \(\lambda _1\) be the first Dirichlet
+eigenvalue. Then
+
+\[
+ \frac{\lambda_1(\Omega)T(\Omega)}{|\Omega|}<\frac{\pi^2}{12}.
+\]
+
+Moreover,
+
+\[
+ \sup_{\Omega\subset\mathbb R^d\ \mathrm{bounded,open,convex}}
+ \frac{\lambda_1(\Omega)T(\Omega)}{|\Omega|}=\frac{\pi^2}{12}.
+\]
+
+The proposed \textbf{lower} bound in problem 1028 is not established
+here. Thus this is a complete resolution of one sharp constant, not a
+complete resolution of the combined catalogue entry. No claim of novelty
+beyond the checked extension of Deng's argument is made.
+
+\hypertarget{1028-a-geometric-input-with-no-dimension-restriction}{%
+\section{1. A geometric input with no dimension
+restriction}\label{1028-a-geometric-input-with-no-dimension-restriction}}
+
+For a bounded convex domain \(D\) in \(\mathbb R^d\), write \(V=|D|\),
+\(P=\mathcal H^{d-1}(\partial D)\), and
+\(\rho(x)=\operatorname{dist}(x,\partial D)\). Let
+
+\[
+ D_s=\{\rho>s\},\qquad V(s)=|D_s|,\qquad P(s)=P(D_s),
+\]
+
+for \(0<s<r\), where \(r\) is the inradius. The coarea formula gives
+\(V'(s)=-P(s)\) almost everywhere. Convexity and monotonicity of surface
+area for nested convex bodies give \(P(s)\le P(0)=P\). In fact the
+inequality is strict for \(s>0\) while \(D_s\) has interior. For
+example, \(D_s+sB\) lies in \(D\), and the surface area of \(D_s+sB\) is
+strictly greater than that of \(D_s\) when \(d\ge 2\).
+
+Use the distance-dependent trial
+
+\[
+ v(x)=\int_0^{\rho(x)}\frac{V(s)}{P(s)}\,ds.
+\]
+
+This belongs to \(H^1_0(D)\): since
+\(V(s)=\int _s^r P(t)dt \le (r-s)P(s)\), its defining derivative is
+bounded. Fubini and coarea give
+
+\[
+ \int_D v=\int_D|\nabla v|^2
+  =\int_0^r\frac{V(s)^2}{P(s)}\,ds.
+\]
+
+The variational characterization of torsional rigidity consequently
+yields
+
+\[
+ T(D)\ge\int_0^r\frac{V(s)^2}{P(s)}\,ds
+       =\int_0^{V}\frac{v^2}{P(s(v))^2}\,dv
+       >\frac{V^3}{3P^2}.
+ \tag{1}
+\]
+
+The weak version suffices for the sharp supremum; strictness gives
+nonattainment. This is the all-dimensional Pólya torsion-perimeter
+inequality. It also appears, more generally for the p-Laplacian, in
+Amato--Masiello--Paoli--Sannipoli (2023), Introduction equation (8) and
+Theorem 1.1 with \(f=1,p=2\).
+
+\hypertarget{1028-torsion-superlevels-and-an-ordinary-differential-inequality}{%
+\section{2. Torsion superlevels and an ordinary differential
+inequality}\label{1028-torsion-superlevels-and-an-ordinary-differential-inequality}}
+
+Put
+
+\[
+ A=|\Omega|,\quad M=\max_\Omega u,\quad U=u/M,
+\]
+
+and define for \(0\le t\le 1\)
+
+\[
+ S(t)=\frac{|\{U>t\}|}{A},\qquad
+ I(t)=\int_t^1 S(s)\,ds,\qquad
+ \Phi=I(0)=\frac{T}{AM}.
+ \tag{2}
+\]
+
+The power-concavity theorem of Kennington states that \(\sqrt{u}\) is
+concave on a convex domain in every dimension. In particular, every
+superlevel domain \(\Omega _t={U>t}\) is convex.
+
+For completeness, the level sets with \(0<t<1\) are regular. If two
+points maximized \(u\), concavity of \(\sqrt{u}\) would make it constant
+on the segment between them. Interior analyticity then makes its
+restriction constant along the entire maximal chord containing the
+segment, contradicting zero boundary values at the chord endpoints.
+Hence the maximum is unique. A critical point of \(u\) is a maximum,
+because a differentiable concave function lies below its tangent
+hyperplane. Therefore \(\nabla u\) is nonzero away from this unique
+point. This argument is valid in every dimension.
+
+The function \(u-Mt\) is the torsion function of \(\Omega _t\). Thus
+
+\[
+ |\Omega_t|=AS(t),\qquad T(\Omega_t)=AM I(t).
+ \tag{3}
+\]
+
+Flux and coarea, with \(P_t=P(\Omega _t)\), give
+
+\[
+ \int_{\partial\Omega_t}|\nabla u|\,dS=AS(t),\qquad
+ \int_{\partial\Omega_t}|\nabla u|^{-1}\,dS
+       =-\frac{A}{M}S'(t).
+\]
+
+Cauchy--Schwarz implies
+
+\[
+ P_t^2\le\frac{A^2}{M}S(t)(-S'(t)).
+\]
+
+Combining this with (1) applied to \(\Omega _t\) gives
+
+\[
+ I(t)(-S'(t))>\frac{S(t)^2}{3},
+ \qquad\text{equivalently}\qquad
+ I(t)I''(t)>\frac{I'(t)^2}{3}.
+ \tag{4}
+\]
+
+All powers of \(A\) and \(M\) cancel; there is no dependence on \(d\)
+here. Therefore
+
+\[
+ \big(I^{2/3}\big)''
+  =\frac23 I^{-4/3}\left(II''-\frac13 I'^2\right)>0.
+ \tag{5}
+\]
+
+The standard approximation by smooth convex outer domains can be used
+throughout if desired. Alternatively, all level sets above are compact
+smooth hypersurfaces in the interior, and the identities hold directly
+for a bounded convex domain.
+
+\hypertarget{1028-the-second-moment-factor}{%
+\section{3. The second-moment factor}\label{1028-the-second-moment-factor}}
+
+At the left endpoint, \(I(0)=\Phi\) and \(I'(0+)=-1\); at the right
+endpoint, \(I(1)=0\). The tangent line at zero to the strictly convex
+function \(I^{2/3}\) gives
+
+\[
+ I(t)\ge\Phi\left(1-\frac{2t}{3\Phi}\right)_+^{3/2},
+ \qquad \Phi\le\frac23.
+\]
+
+The inequality is strict at every positive \(t\) before the positive
+part vanishes. Integrating,
+
+\[
+ \int_0^1 I(t)\,dt>\frac{3\Phi^2}{5}.
+\]
+
+Writing \(m_k=A^{-1}\int _\Omega U^k\), layer cake gives
+
+\[
+ m_1=\Phi,\qquad
+ m_2=2\int_0^1tS(t)\,dt=2\int_0^1 I(t)\,dt.
+\]
+
+Consequently,
+
+\[
+ \boxed{\frac{T^2}{A\int_\Omega u^2}
+       =\frac{\Phi^2}{m_2}<\frac56.}
+ \tag{6}
+\]
+
+\hypertarget{1028-a-weighted-coordinate}{%
+\section{4. A weighted coordinate}\label{1028-a-weighted-coordinate}}
+
+Introduce the decreasing coordinate
+
+\[
+ y(t)=\left(\frac{I(t)}{\Phi}\right)^{1/3},
+ \qquad t=t(y),
+ \qquad
+ a(y)=\frac{S(t(y))}{3\Phi y}.
+ \tag{7}
+\]
+
+Then
+
+\[
+ \frac{dt}{dy}=-\frac{y}{a(y)},\qquad
+ S(t(y))=3\Phi y a(y),\qquad
+ \int_0^1\frac{y}{a(y)}\,dy=1.
+ \tag{8}
+\]
+
+Since \((I^{2/3})'=-2 \Phi ^{2/3} a(y(t))\), convexity in (5), together
+with reversal of orientation between \(y\) and \(t\), says that \(a\) is
+nondecreasing. The endpoints satisfy
+
+\[
+ a(1)=\frac1{3\Phi},\qquad
+ y a(y)\longrightarrow0\quad (y\downarrow0).
+\]
+
+The change of Stieltjes measure is
+
+\[
+ \int_{[0,1]}\psi(t)(-dS(t))
+ =3\Phi\int_{[0,1]}\psi(t(y))\,d(ya(y)).
+ \tag{9}
+\]
+
+For every Lipschitz \(H\) with \(H(0)=0\), the trial function \(H(U)\)
+and coarea give
+
+\[
+ \lambda_1M
+ \le\frac{\int_0^1 S(t)H'(t)^2\,dt}
+          {\int_{[0,1]}H(t)^2(-dS(t))}.
+\]
+
+Putting \(f(y)=H(t(y))\), equations (8)--(9) reduce this to
+
+\[
+ \lambda_1M\le
+ \frac{\int_0^1 a(y)^2 f'(y)^2\,dy}
+      {\int_{[0,1]}f(y)^2\,d(ya(y))}.
+ \tag{10}
+\]
+
+Another change of variables and an integration by parts give
+
+\[
+ \frac{m_2}{m_1}
+ =2\int_0^1\frac{y^4}{a(y)}\,dy=2\kappa,
+ \qquad
+ \kappa:=\int_0^1\frac{y^4}{a(y)}\,dy.
+ \tag{11}
+\]
+
+\hypertarget{1028-the-sharp-weighted-inequality}{%
+\section{5. The sharp weighted
+inequality}\label{1028-the-sharp-weighted-inequality}}
+
+Let
+
+\[
+ h(y)=\sin(\pi y/2),\qquad
+ f(y)=\int_y^1\frac{h(s)}{a(s)}\,ds.
+ \tag{12}
+\]
+
+This is admissible in (10). Indeed \(h(y)\le \pi y/2\) and (8) give
+\(f(0)\le \pi /2\). In the original coordinate,
+
+\[
+ H'(t)=\frac{h(y)}{y}\le\frac\pi2,
+ \qquad H(0)=f(1)=0.
+\]
+
+The numerator in (10) is exactly
+
+\[
+ \int_0^1a^2 f'^2=\int_0^1h^2=\frac12.
+ \tag{13}
+\]
+
+For the denominator, Stieltjes integration by parts and Fubini yield
+
+\[
+ D:=\int_{[0,1]}f^2\,d(ya)
+   =2\int_0^1\frac{h(s)}{a(s)}
+                  \left(\int_0^s y h(y)\,dy\right)ds.
+ \tag{14}
+\]
+
+There is no endpoint term because \(f(1)=0\), \(f(0)<\infty\), and
+\(ya(y)\to 0\).
+
+Define
+
+\[
+ r(s)=2h(s)\int_0^s yh(y)\,dy-\frac{10}{\pi^2}s^4,
+\]
+
+and compute its primitive explicitly:
+
+\[
+ R(x):=\int_0^x r(s)\,ds
+   =\frac{2}{\pi^3}
+     \left[\pi x\{2+\cos(\pi x)-x^4\}-3\sin(\pi x)\right].
+ \tag{15}
+\]
+
+We need \(R\ge 0\) on \([0,1]\), with \(R(0)=R(1)=0\). Here is an
+elementary verification. Set
+
+\[
+ q(z)=\frac{z(2+\cos z)-3\sin z}{z^5},\qquad 0<z\le\pi.
+\]
+
+Then
+
+\[
+ z^6 q'(z)=-G(z),\quad
+ G(z)=z(8+7\cos z)-(15-z^2)\sin z.
+\]
+
+Direct differentiation gives
+
+\[
+ G'''(z)=z(\sin z-z\cos z)\ge0,
+ \qquad G(0)=G'(0)=G''(0)=0,
+\]
+
+because \(\sin z-z \cos z=\int _0^z s \sin s ds\ge 0\) on \([0,\pi ]\).
+Thus \(G\ge 0\), so \(q\) is nonincreasing and
+
+\[
+ q(z)\ge q(\pi)=\pi^{-4}.
+\]
+
+With \(z=\pi x\), this is exactly \(R(x)\ge 0\) in (15).
+
+Now \(w=1/a\) is nonincreasing. Integration by parts gives
+
+\[
+ \int_0^1\frac{r(s)}{a(s)}\,ds
+  =-\int_{[0,1]}R(s)\,dw(s)\ge0.
+ \tag{16}
+\]
+
+To justify the possibly singular lower endpoint, monotonicity and (8)
+imply
+
+\[
+ \frac{y^2w(y)}2\le\int_0^y sw(s)\,ds\longrightarrow0;
+\]
+
+also \(R(y)=O(y^5)\). Hence \(R(y)w(y)\to 0\). The upper endpoint
+vanishes because \(R(1)=0\) and \(w(1)=3\Phi\) is finite.
+
+Equations (14)--(16) give
+
+\[
+ D\ge\frac{10}{\pi^2}\kappa.
+\]
+
+Using (10), (11), and (13), we conclude
+
+\[
+ \boxed{\frac{\lambda_1\int_\Omega u^2}{T}
+       =2\kappa\lambda_1M
+       \le\frac{\kappa}{D}\le\frac{\pi^2}{10}.}
+ \tag{17}
+\]
+
+Multiplying (6) and (17) proves
+
+\[
+ \frac{\lambda_1T}{A}
+  =\frac{T^2}{A\int_\Omega u^2}
+      \frac{\lambda_1\int_\Omega u^2}{T}
+  <\frac56\frac{\pi^2}{10}=\frac{\pi^2}{12}.
+\]
+
+\hypertarget{1028-sharpness-in-every-dimension}{%
+\section{6. Sharpness in every
+dimension}\label{1028-sharpness-in-every-dimension}}
+
+Take the rectangular boxes
+
+\[
+ \Omega_L=(-L/2,L/2)^{d-1}\times(0,1),\qquad L\to\infty.
+\]
+
+Separation of variables gives
+
+\[
+ \lambda_1(\Omega_L)=\pi^2\left(1+\frac{d-1}{L^2}\right).
+\]
+
+Let \(u_L\) be their torsion functions and \(w(y)=y(1-y)/2\), the
+infinite-slab torsion function. By comparison, \(0\le u_L\le w\). The
+nonnegative difference \(w-u_L\) is harmonic. Choose
+
+\[
+ C=\max_{0\le y\le1}\frac{w(y)}{\sin(\pi y)}<\infty.
+\]
+
+The harmonic barrier
+
+\[
+ B_L(x,y)=C\sin(\pi y)
+     \sum_{j=1}^{d-1}\frac{\cosh(\pi x_j)}{\cosh(\pi L/2)}
+\]
+
+dominates \(w-u_L\) on every side of the box. Its integral is
+\(O(L^{d-2})\), whereas the volume is \(L^{d-1}\). Consequently
+
+\[
+ \frac{T(\Omega_L)}{|\Omega_L|}
+ =\int_0^1w(y)\,dy+O(L^{-1})
+ =\frac1{12}+O(L^{-1}).
+\]
+
+It follows that
+\(\lambda _1(\Omega _L)T(\Omega _L)/|\Omega _L| \to \pi ^2/12\).
+
+\hypertarget{1028-references-and-source-scope}{%
+\section{References and source
+scope}\label{1028-references-and-source-scope}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Z. Deng, \emph{A Proof of a Conjecture on a Pólya Functional},
+  arXiv:2609.13221v1 (2026), Section 5.
+  \url{https://arxiv.org/abs/2609.13221}. The source states the planar
+  theorem; the calculations above explicitly check the upper-bound
+  mechanism in arbitrary dimension.
+\item
+  V. Amato, A. L. Masiello, G. Paoli, R. Sannipoli, \emph{Sharp and
+  quantitative estimates for the p-Torsion of convex sets}, Nonlinear
+  Differential Equations and Applications NoDEA \textbf{30} (2023),
+  Article 12. \url{https://doi.org/10.1007/s00030-022-00822-y}. Theorem
+  1.1 and Introduction equation (8) are all-dimensional; normalization
+  at \(f=1,p=2\) is \(T=\int u\).
+\item
+  A. U. Kennington, \emph{Power concavity and boundary value problems},
+  Indiana University Mathematics Journal \textbf{34} (1985), 687--704.
+  Theorem~4.1(ii), pp.~695--696, gives the torsion square-root
+  concavity theorem in arbitrary dimension.
+  \url{https://doi.org/10.1512/iumj.1985.34.34036}.
+  \url{https://math.jhu.edu/~js/Math646/kennington.pdf}.
+\item
+  M. van den Berg, G. Buttazzo, A. Pratelli, \emph{On the relations between
+  principal eigenvalue and torsional rigidity}, Communications in
+  Contemporary Mathematics \textbf{23} (2021), 2050093, Conjecture 4.2.
+  \url{https://arxiv.org/abs/1910.14593}.
+\end{enumerate}
+
+The lower constant \(\pi ^2/[2(d+1)(d+2)]\) remains unproved by this
+argument. The planar Airy-stress step used for that constant in Deng's
+paper does not directly generalize to higher dimensions.
+\appendix
+\section{A limitation of a lower-bound proof route}
+This appendix records a limitation of one attempted route to the lower half of AIM 1028. It does not claim a counterexample to the conjecture or an improved general lower bound.
+
+Let \(u\) be the torsion function of a bounded convex domain \(\Omega\subset\mathbb R^d\), and write
+\[
+M=\max_\Omega u,\qquad A=|\Omega|,\qquad T=\int_\Omega u.
+\]
+The proposed estimate would follow from the two inequalities
+\[
+\lambda_1 M\ge\frac{\pi^2}{8},\qquad
+\frac{T}{AM}\ge\frac{4}{(d+1)(d+2)}.
+\]
+The first estimate has a dimension-independent proof. The second, which is sharp on thin cone families if true, was not established here for \(d\ge3\).
+
+\subsection{1. What the verified general result supplies}
+
+Della Pietra, Gavitone and Guarino Lo Bianco, \emph{On functionals involving the torsional rigidity related to some classes of nonlinear operators}, J. Differential Equations \textbf{265} (2018), 6424--6442, DOI \href{https://doi.org/10.1016/j.jde.2018.07.030}{10.1016/j.jde.2018.07.030}, \href{https://arxiv.org/abs/1705.03330}{arXiv:1705.03330}, Theorems 1.1(i) and 4.2, prove
+\[
+\frac{T_p}{A M}\ge \frac{q}{d^{q-1}(d+q)},\qquad q=\frac{p}{p-1}.
+\]
+At \(p=q=2\), this is
+\[
+\frac{T}{AM}\ge\frac{2}{d(d+2)}.
+\]
+Their Remark 4.6 explicitly displays the factor \(2\); a sentence in the introduction drops it, so the theorem rather than that sentence should be used. Briani and Bucur, \emph{Mean-to-max ratio of the torsion function and honeycomb structures}, Calc. Var. \textbf{62} (2023), 198, DOI \href{https://doi.org/10.1007/s00526-023-02530-6}{10.1007/s00526-023-02530-6}, Remark 5.2, discusses the still unknown sharp convex lower bound and the same \(p\)-torsion estimate.
+
+Combining the verified bound with Payne's estimate gives
+\[
+\frac{\lambda_1T}{A}\ge\frac{\pi^2}{4d(d+2)}.
+\]
+This is below the conjectured constant \(\pi^2/[2(d+1)(d+2)]\). The needed improvement factor is \(2d/(d+1)\).
+
+For completeness, the first factor follows from the dimension-independent gradient bound
+\[
+|\nabla u|^2+2u\le2M
+\]
+(Theorem 3.2 of the same 2018 paper, with \(p=2\)). For a nonsmooth convex domain, smooth convex approximation and interior
+\(C^1\) convergence, with maxima controlled by domain monotonicity and
+scaling, pass this gradient inequality to the limit. Put
+\[
+p(t)=\cos\!\left(\frac\pi2\sqrt{1-t/M}\right),\qquad w=p(u).
+\]
+Then \(p''>0\), \(w\in H^1_0(\Omega)\), and
+\[
+-\Delta w-\frac{\pi^2}{8M}w
+=p''(u)\bigl(2(M-u)-|\nabla u|^2\bigr)\ge0.
+\]
+Pairing with the positive first Dirichlet eigenfunction proves \(\lambda_1M\ge\pi^2/8\). This is also the proof in Proposition 2.2 of Deng's planar paper, but the calculation and gradient estimate are valid in every dimension.
+
+\subsection{2. A rigorous obstruction to a proof using only the two usual shape inequalities}
+
+The combination of square-root concavity and the gradient inequality does \textbf{not}, by itself, imply the desired torsion mean-to-maximum bound. This can be shown explicitly.
+
+For \(L>\sqrt2\), define a radial function on \(B_L\subset\mathbb R^d\) by
+\[
+v_L(x)=v_L(r)=
+\begin{cases}
+1-r^2/2,&0\le r\le 2/L,\\[2mm]
+\displaystyle\frac{(L-r)^2}{L^2-2},&2/L\le r\le L,
+\end{cases}
+\qquad r=|x|.
+\]
+The values and first derivatives match at \(r=2/L\): they are respectively \(1-2/L^2\) and \(-2/L\). Thus \(v_L\) is \(C^1\), belongs to \(H^1_0(B_L)\), is positive inside the ball, and has maximum one.
+
+Its square root is concave. On the inner interval it equals \(\sqrt{1-r^2/2}\), a concave decreasing function of \(r\); on the outer interval it is the affine function \((L-r)/\sqrt{L^2-2}\). The radial derivatives match at the interface, and the tangential Hessian eigenvalues have the sign of the nonpositive radial derivative.
+
+Moreover,
+\[
+|\nabla v_L|^2+2v_L\le2=2\max v_L.
+\]
+There is equality on the inner interval. On the outer interval, writing \(R^2=L^2-2\) and \(w=\sqrt{v_L}\), the left side is \(w^2(2+4/R^2)\), and
+\[
+w^2\le v_L(2/L)=\frac{R^2}{R^2+2},
+\]
+which proves the estimate.
+
+Nevertheless, dominated convergence after the substitution \(r=Ls\) gives
+\[
+\frac{1}{|B_L|}\int_{B_L}v_L
+=d\int_0^1v_L(Ls)s^{d-1}\,ds
+\longrightarrow
+d\int_0^1(1-s)^2s^{d-1}\,ds
+=\frac{2}{(d+1)(d+2)}.
+\]
+This is half the proposed efficiency lower bound. In particular, for all sufficiently large \(L\), these functions violate the proposed efficiency inequality while satisfying both square-root concavity and the gradient estimate.
+
+These functions are \textbf{not torsion functions}: on the inner ball, \(-\Delta v_L=d\), while on the outer annulus,
+\[
+-\Delta v_L
+=\frac{2}{L^2-2}\left(\frac{(d-1)(L-r)}{r}-1\right),
+\]
+which is nonconstant and negative near the outer boundary. Therefore this construction does not disprove the conjecture. It pinpoints the limitation of the proposed proof route: the torsion equation must supply additional information beyond its square-root concavity and the usual gradient bound.
+
+\subsection{3. Status}
+
+The all-dimensional sharp upper bound is proved in the preceding sections. The lower bound in dimensions \(d\ge3\) remains unresolved in this work. Deng's planar argument obtains the stronger efficiency estimate through a planar Airy-stress construction and mixed-area geometry; merely retaining its dimension-independent concavity and gradient consequences cannot complete the higher-dimensional lower estimate.
+\end{document}

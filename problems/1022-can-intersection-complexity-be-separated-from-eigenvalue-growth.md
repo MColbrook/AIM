@@ -1,8 +1,8 @@
 # 1022. Can intersection complexity be separated from eigenvalue growth?
 
 **Area:** Spectral geometry and embedded hypersurfaces
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -54,15 +54,15 @@ Bounds involving min-conformal volume [4] or intrinsic packing, volume growth an
 3. B. Colbois, E. B. Dryden and A. El Soufi, [*Bounding the eigenvalues of the Laplace–Beltrami operator on compact submanifolds*](https://doi.org/10.1112/blms/bdp100), *Bulletin of the London Mathematical Society* 42(1) (2010), 96–108, Theorem 1.2; [primary preprint](https://arxiv.org/abs/0909.5346).
 4. A. Hassannezhad, [*Bornes supérieures pour les valeurs propres d’opérateurs naturels sur les variétés riemanniennes compactes*](https://www.applis.univ-tours.fr/theses/2012/asma.hassannezhad_4233.pdf), PhD thesis, Université François Rabelais de Tours, 2012, Theorem 1.1.1, Corollary 1.1.2 and Theorem 2.1.1.
 5. B. Colbois and A. Girouard, [*Metric upper bounds for Steklov and Laplace eigenvalues*](https://aif.centre-mersenne.org/articles/10.5802/aif.3742/), *Annales de l’Institut Fourier* 76(4) (2026), 1519–1536, DOI 10.5802/aif.3742; [arXiv:2108.03101v2](https://arxiv.org/abs/2108.03101), Corollaries 4 and 12.
+6. M. J. Colbrook, [*A counterexample to an additive intersection-index eigenvalue bound*](../research/solutions/1022-additive-intersection-index-counterexample/aim1022.pdf), 3 November 2026. [TeX source](../research/solutions/1022-additive-intersection-index-counterexample/aim1022.tex), [package and reproduction](../research/solutions/1022-additive-intersection-index-counterexample/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-spectral-batch/1022-review.md).
 
 ## Status review
 
+**Outcome:** Counterexample.
 
-**Known cases:** The intersection-index term must be additive with a dimension-only coefficient of eigenvalue growth. Existing multiplicative index bounds and other metric spectral estimates do not separate these terms.
+**Reviewed result, 2026-11-03:** Smooth embedded hypersurfaces violate every proposed dimension-only additive separation of intersection index and eigenvalue growth. The [manuscript](../research/solutions/1022-additive-intersection-index-counterexample/aim1022.pdf) and [individual audit](../research/solution_reviews/2026-11-03-spectral-batch/1022-review.md) record the proof, checked references and exact target comparison. Review was performed by Codex (AI).
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
-
-### Online recheck, 2026-10-30
+### Earlier status check, 2026-10-30
 
 The intersection-index term must be additive with a dimension-only coefficient of eigenvalue growth. Existing multiplicative index bounds and other metric spectral estimates do not separate these terms.
 

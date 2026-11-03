@@ -2,7 +2,7 @@
 
 **Area:** Spectral theory and spectral geometry
 **Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Last checked:** 2026-11-03
 
 ## Problem statement
 
@@ -25,15 +25,17 @@ The constant $`\alpha`$ gives the sharp logarithmic Sobolev inequality and the c
 1. G.-Y. Chen, W.-W. Liu and L. Saloff-Coste, [*The logarithmic Sobolev constant of some finite Markov chains*](https://www.numdam.org/item/10.5802/afst.1183.pdf), *Ann. Fac. Sci. Toulouse Math.* **17** (2008), no. 2, 239–290, DOI: [10.5802/afst.1183](https://doi.org/10.5802/afst.1183), equations (1.1)–(1.3), printed p. 242, (Q1).
 2. L. Saloff-Coste, [*Analysis on compact Lie groups of large dimension and on connected compact groups*](https://pi.math.cornell.edu/~lsc/papers/hulancoll.pdf), *Colloq. Math.* **118** (2010), no. 1, 183–199, DOI: [10.4064/cm118-1-10](https://doi.org/10.4064/cm118-1-10), Section 3.4, Problem 11 and rectangular-torus discussion.
 3. L. Chen, N. Lam and G. Lu, [*Sharp uniform stability of the logarithmic Sobolev inequality on finite cycles and stability of the cubic Sobolev inequality*](https://arxiv.org/abs/2610.05347), preprint (2026), abstract.
+4. M. J. Colbrook, [*A flat torus with logarithmic Sobolev constant below half its spectral gap*](../research/solutions/1019-flat-torus-log-sobolev/aim1019.pdf), 3 November 2026. [TeX source](../research/solutions/1019-flat-torus-log-sobolev/aim1019.tex), [package and reproduction](../research/solutions/1019-flat-torus-log-sobolev/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-spectral-batch/1019-review.md).
 
 ## Status review
 
+**Known cases:** The universal equality fails: a flat torus has $`\lambda(T)=1`$ and $`\alpha(T)\le1296/2669<1/2`$. The witness extends to an open family of metrics and every dimension at least two. Rectangular-product equality remains a separate known case.
 
-**Known cases:** Every full-rank lattice is needed. Rectangular products, finite cycles and complete modified log-Sobolev inequalities do not determine the ordinary sharp log-Sobolev constant for arbitrary skew tori.
+**Remaining target:** Determine the sharp logarithmic Sobolev constant for general lattices, including its exact value for the displayed triangular-dual torus. Disproving universal equality alone does not answer that part of the entry.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+**Reviewed result, 2026-11-03:** An explicit flat torus has spectral gap one and logarithmic Sobolev constant at most 1296/2669, strictly less than one half. The [manuscript](../research/solutions/1019-flat-torus-log-sobolev/aim1019.pdf) and [individual audit](../research/solution_reviews/2026-11-03-spectral-batch/1019-review.md) record the proof, checked references and exact target comparison. Review was performed by Codex (AI).
 
-### Online recheck, 2026-10-30
+### Earlier status check, 2026-10-30
 
 Every full-rank lattice is needed. Rectangular products, finite cycles and complete modified log-Sobolev inequalities do not determine the ordinary sharp log-Sobolev constant for arbitrary skew tori.
 
