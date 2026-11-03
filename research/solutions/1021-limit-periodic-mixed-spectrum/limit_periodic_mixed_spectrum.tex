@@ -1,0 +1,680 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=27mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue]{hyperref}
+\hypersetup{
+  pdftitle={A limit-periodic Schrodinger operator with mixed absolutely continuous and singular continuous spectrum},
+  pdfauthor={Matthew J. Colbrook},
+  pdfsubject={Counterexample to AIM 1021: limit-periodic spectral purity}
+}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\spec}{\sigma}
+\newcommand{\Leb}{\operatorname{Leb}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\dd}{\,d}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\title{\textbf{A limit-periodic Schr\"odinger operator with\\
+mixed absolutely continuous and singular continuous spectrum}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We describe a recursive construction of a bounded real potential on
+$\Z$, uniformly approximated by periodic potentials, for which the
+associated scalar discrete Schr\"odinger operator has nonzero absolutely
+continuous and singular continuous spectral subspaces and no eigenvalues.
+The mechanism combines adiabatic preservation of a local spectral density,
+exponential narrowing of a different spectral cluster, and exact local
+periodic repetitions. The quantitative point is that the protected
+Floquet energies have a margin of order the inverse new period, whereas
+the selected spectral bands have exponentially small widths.
+\end{abstract}
+
+\noindent\textbf{Problem and attribution.}
+This construction gives a negative answer to
+\href{https://github.com/MColbrook/AIM/blob/b014a51815ffd025d2b1abc4a3954205dfbf61e0/problems/1021-must-limit-periodic-discrete-schrodinger-operators-have-pure-spectral-type.md}{AIM problem 1021}
+at repository revision \texttt{b014a51815ff}, namely Question~10.1 in
+Damanik--Fillman~\cite{DF}. The construction is submitted here by
+Matthew J. Colbrook. Periodic spectral formulas and the Gordon
+argument are standard and are identified below.
+
+\section{The construction theorem}
+For a bounded real sequence $V$, let
+\[
+(H_Vu)(n)=u(n-1)+u(n+1)+V(n)u(n)
+\]
+on $\ell^2(\Z)$. Write $\mu_V$ for the spectral measure of $\delta_0$.
+A sequence is limit-periodic if it is a uniform limit of periodic
+sequences.
+
+\begin{theorem}\label{thm:main}
+There is a bounded real limit-periodic potential $V$ such that
+\[
+\mathcal H_{\mathrm{pp}}(H_V)=\{0\},\qquad
+\mathcal H_{\mathrm{ac}}(H_V)\ne\{0\},\qquad
+\mathcal H_{\mathrm{sc}}(H_V)\ne\{0\}.
+\]
+More specifically, there are a compact set $K$ of positive Lebesgue
+measure and a constant $c>0$ such that
+$\mu_V\ge c\mathbf1_K(E)\dd E$. There is also a bounded interval $I$
+with endpoints in the resolvent set for which
+$\mathbf1_I(H_V)\ne0$ and $\Leb(\spec(H_V)\cap I)=0$.
+\end{theorem}
+
+We construct periodic approximants $W_j$ of periods $p_j$, with
+$p_j\mid p_{j+1}$. At each step a slow scalar offset is added to
+successive $p_j$-site cells. One set of energies remains elliptic
+throughout the slow cycle; its local spectral density is preserved
+on a slightly smaller compact set. A second, isolated spectral
+cluster encounters a long forbidden plateau at every energy; its
+new bands are exponentially narrow. A zero plateau at the center
+of the cycle preserves exact three-block repetitions.
+
+\section{Periodic formulas}
+For a real $p$-periodic $W$, put
+\[
+T_v(E)=\begin{pmatrix}E-v&-1\\1&0\end{pmatrix},\quad
+M_W(E)=T_{W(p-1)}(E)\cdots T_{W(0)}(E),\quad
+D_W(E)=\tr M_W(E).
+\]
+The monodromy transfers $(u(0),u(-1))^{\mathsf T}$ to
+$(u(p),u(p-1))^{\mathsf T}$. Define the strictly elliptic set
+\[
+\mathcal E_W=\{E:|D_W(E)|<2\}.
+\]
+The spectrum is $\{|D_W|\le2\}$, a union of at most $p$ bands.
+A closed Floquet gap may satisfy $|D_W|=2$ inside the interior
+of the spectral set; thus strict ellipticity is the relevant
+notion for the construction.
+
+On $\mathcal E_W$, the density of $\mu_W$ is
+\begin{equation}\label{eq:density}
+\rho_W(E)=\frac{|(M_W(E))_{12}|}{\pi\sqrt{4-D_W(E)^2}}.
+\end{equation}
+To check the index and normalization, write
+$M=\begin{psmallmatrix}a&b\\c&d\end{psmallmatrix}$. Bloch solutions
+normalized by $u_\pm(0)=1$ satisfy
+$u_\pm(-1)=(\lambda_\pm-a)/b$, where $\lambda_\pm$ are the
+Floquet multipliers. Their Wronskian gives the diagonal Green
+function, and its boundary imaginary part gives \eqref{eq:density}.
+For $W=0$, this is $1/(\pi\sqrt{4-E^2})$; there is no extra
+period factor. See also \cite[Chapter~7]{Teschl}.
+
+Let
+\[
+J=\begin{pmatrix}0&-1\\1&0\end{pmatrix},\qquad R_\theta=e^{\theta J}.
+\]
+On each open component of $\mathcal E_W$ choose smooth real
+$B(E)\in\SL(2,\R)$ and a real phase lift $\theta(E)$ with
+\begin{equation}\label{eq:elliptic}
+M_W(E)=B(E)R_{\theta(E)}B(E)^{-1}.
+\end{equation}
+There is no topological issue since the component is an interval.
+For an explicit choice, set
+\[
+\tau=-\operatorname{sgn}(b)\sqrt{1-D_W^2/4},\quad
+\beta=-b/\tau>0,\quad t=(a-d)/(2\tau),\quad
+B=\begin{pmatrix}\sqrt\beta&0\\t/\sqrt\beta&1/\sqrt\beta\end{pmatrix},
+\]
+and take $\cos\theta=D_W/2$, $\sin\theta=\tau$.
+The entry $b$ cannot vanish at a real elliptic matrix. In particular,
+\begin{equation}\label{eq:beta}
+(BJB^{-1})_{12}=-\beta,\qquad \rho_W=\beta/(2\pi).
+\end{equation}
+
+The signed phase has a strictly negative energy derivative.
+Put $P_0=\Id$ and $P_r=T_{W(r-1)}\cdots T_{W(0)}$.
+Differentiating the product gives
+\[
+M_W^{-1}(M_W)_E=-JC,\qquad
+C=\sum_{r=0}^{p-1}P_r^{\mathsf T}e_1e_1^{\mathsf T}P_r.
+\]
+In the coordinates of \eqref{eq:elliptic}, the contribution from
+differentiating $B$ is $R_\theta^{-1}LR_\theta-L$, where
+$L=B^{-1}B_E$. Multiplication by $J$ and taking traces kills
+that term. Consequently
+\begin{equation}\label{eq:phase}
+\theta_E=-\tfrac12\tr(B^{\mathsf T}CB)<0.
+\end{equation}
+The matrix $C$ is nonnegative and nonzero. Thus on compact
+subsets of an elliptic component, $-\theta_E$ is bounded
+above and below by positive constants.
+
+\section{The slow profile}
+Fix a smooth real $1$-periodic function $f$ with $|f|\le1$,
+identically zero near $\Z$, and equal to $+1$ and $-1$
+on two other intervals of positive length. Two disjoint
+smooth bumps of opposite signs provide such a function.
+All three plateau lengths are fixed.
+
+For a $p$-periodic $W$, $\delta>0$, and an integer $N$, define
+a $q=pN$-periodic potential by
+\begin{equation}\label{eq:slow}
+\mathcal S_{N,\delta}W(mp+r)=W(r)+\delta f(m/N),
+\qquad 0\le r<p,\quad m\in\Z.
+\end{equation}
+Its distance from $W$ is at most $\delta$. The transfer matrix
+across its $m$th old cell is exactly $M_W(E-\delta f(m/N))$.
+
+\section{Adiabatic preservation of a bulk density}
+Slow-deformation estimates of this kind appear in
+Avila~\cite[Lemmas~2.11--2.12]{Avila}. We give the version
+needed here, including a quantitative margin from every
+new discriminant edge.
+
+\begin{lemma}\label{lem:bulk}
+Let $K$ be a finite union of compact intervals with
+$K+[-\delta,\delta]\Subset\mathcal E_W$.
+For every sufficiently small fixed $\eta>0$ and all sufficiently
+large $N$, there is a finite union of compact intervals
+$G_N\subset K$ such that, for $W_N=\mathcal S_{N,\delta}W$ and
+$q=pN$,
+\begin{align}
+\Leb(K\setminus G_N)&\le C\eta,\label{eq:loss}\\
+\sup_{G_N}|\rho_{W_N}-\rho_W|&\le C/(N\eta^2),\label{eq:rho}\\
+\dist(G_N,\R\setminus\mathcal E_{W_N})&\ge c\eta^2/q.
+\label{eq:margin}
+\end{align}
+The positive constants may depend on $W,p,\delta,K,f$, but not
+on $N$ or $\eta$. The threshold for $N$ may depend on $\eta$.
+\end{lemma}
+
+\begin{proof}
+Choose a slightly enlarged neighborhood $U$ of $K$ with
+$\overline U+[-\delta,\delta]\Subset\mathcal E_W$.
+Every shifted component stays in one old elliptic component.
+Write
+\[
+A(s,E)=M_W(E-\delta f(s))
+=B(s,E)R_{\theta(s,E)}B(s,E)^{-1},
+\]
+where $B(s,E)=B_W(E-\delta f(s))$ is chosen as in
+\eqref{eq:elliptic}. Then $B(1,E)=B(0,E)=B_W(E)$.
+All required derivatives are bounded on the compact parameter set.
+
+Set $h=N^{-1}$ and decompose $B^{-1}B_s=gJ+S$, where $S$
+is symmetric and traceless. On that two-dimensional real
+matrix space, $\Ad_{R_\theta}$ is a rotation through $2\theta$.
+Since $|\sin\theta|$ is bounded away from zero, the equation
+\[
+(\Ad_{R_\theta}-\Id)X=S
+\]
+has a unique smooth bounded solution in that space.
+With $P(s,E)=e^{hX(s,E)}$ and coordinates
+$U_m=B(mh,E)P(mh,E)Z_m$, one old-cell step becomes
+\begin{align}
+Z_{m+1}
+&=P(s+h)^{-1}B(s+h)^{-1}B(s)R_\theta P(s)Z_m\notag\\
+&=\bigl(R_{\theta-hg}+O(h^2)\bigr)Z_m.
+\label{eq:normal}
+\end{align}
+Indeed $B(s+h)^{-1}B(s)=\Id-h(gJ+S)+O(h^2)$,
+and the first-order nonrotational term is
+$\Ad_{R_\theta}X-X-S=0$. The remainder is uniform.
+
+Products of at most $N$ factors in \eqref{eq:normal}
+are uniformly bounded by $(1+Ch^2)^N$. Telescoping against
+their rotation parts gives error $O(Nh^2)=O(N^{-1})$.
+Define
+\[
+\Phi_N(E)=\sum_{m=0}^{N-1}
+\bigl(\theta(m/N,E)-N^{-1}g(m/N,E)\bigr).
+\]
+The full monodromy is therefore
+\begin{equation}\label{eq:full}
+M_{W_N}(E)
+=B_W(E)\bigl(R_{\Phi_N(E)}+O(N^{-1})\bigr)B_W(E)^{-1}.
+\end{equation}
+In fact $X(0,E)=X(1,E)=0$ because the profile is constant
+near those endpoints, so the endpoint correction is trivial.
+All partial transfers inside the $q$-site cell and their inverses
+are bounded independently of $N$. The at most $p$ extra
+one-site factors within an old cell do not change this.
+
+By \eqref{eq:phase}, for all sufficiently large $N$,
+\[
+c_1N\le-\Phi_N'(E)\le C_1N
+\]
+on each component of $U$. Set
+$G_N=\{E\in K:|\sin\Phi_N(E)|\ge\eta\}$.
+The monotone phase change of variables proves \eqref{eq:loss}:
+in a phase interval of length $L$, the set $|\sin\phi|<\eta$
+has length at most $C\eta(L+1)$. There are only finitely many
+crossings, so $G_N$ is a finite union of compact intervals.
+
+With $\beta=-(B_WJB_W^{-1})_{12}>0$, \eqref{eq:full} gives
+\[
+D_{W_N}=2\cos\Phi_N+O(N^{-1}),\qquad
+(M_{W_N})_{12}=-\beta\sin\Phi_N+O(N^{-1}).
+\]
+On $G_N$, when $N^{-1}\ll\eta^2$, the trace lies strictly
+between $-2$ and $2$. With $s=|\sin\Phi_N|\ge\eta$,
+\[
+\sqrt{4-D_{W_N}^2}=2s+O((Ns)^{-1}).
+\]
+Substitution in \eqref{eq:density}
+gives $\rho_{W_N}=\beta/(2\pi)+O((N\eta^2)^{-1})$,
+proving \eqref{eq:rho}.
+
+Differentiate the $q$-site transfer product. It is a sum of
+$q$ terms, each bounded uniformly by the bounds on left and
+right partial transfers. Thus $|D_{W_N}'|\le Cq$ on $U$.
+On $G_N$, the trace has margin $2-|D_{W_N}|\ge c\eta^2$.
+For each $E\in G_N$, the interval of radius $c'\eta^2/q$
+about $E$ lies in its component of $U$ for all large $N$.
+Choosing $c'>0$ small enough, the derivative bound shows
+that this whole interval remains strictly elliptic.
+This proves \eqref{eq:margin}, including when $U$ is disconnected.
+\end{proof}
+
+\begin{remark}
+The margin is measured from every point with $|D_{W_N}|\ge2$,
+including closed gaps. Only the retained cores are used.
+No convergence assertion across the moving band edges,
+and no bound on spectral mass in moving exceptional sets,
+is required.
+\end{remark}
+
+\section{Exponentially narrow target bands}
+\begin{lemma}\label{lem:barrier}
+Let $I$ be a compact interval and suppose for some $d>0$ that
+\begin{equation}\label{eq:forbidden}
+\max\{\dist(E,\spec(H_{W+\delta})),
+\dist(E,\spec(H_{W-\delta}))\}\ge d
+\quad (E\in I).
+\end{equation}
+Every portion in $I$ of a Floquet band of
+$W_N=\mathcal S_{N,\delta}W$ has length at most $Ce^{-cN}$.
+Consequently
+\[
+\Leb(\spec(H_{W_N})\cap I)\le C(pN)e^{-cN}.
+\]
+Constants are independent of $N$. If the endpoints of $I$
+are in spectral gaps, the portions are complete bands.
+\end{lemma}
+
+\begin{proof}
+Each $\pm1$ plateau contains a consecutive run of old cells
+of total length $L\ge a q$, where $q=pN$ and $a>0$ is fixed,
+for large $N$. On it the potential is exactly $W+\delta$
+or $W-\delta$.
+
+For a Floquet energy $E=E_k(\vartheta)\in I$,
+$0<\vartheta<\pi$, normalize the Bloch solution by
+\[
+u(n+q)=e^{i\vartheta}u(n),\qquad
+\sum_{n=0}^{q-1}|u(n)|^2=1.
+\]
+Then $|u(n)|\le1$ for all $n$. Choose the plateau operator
+$H_U$ whose spectrum is at least $d$ from $E$. Cutting $u$
+off to that plateau creates at most four boundary sources
+for $H_U-E$, each of modulus at most one.
+
+The elementary Combes--Thomas bound reads
+\[
+|\langle\delta_m,(H_U-E)^{-1}\delta_n\rangle|
+\le\frac2d e^{-\gamma|m-n|},
+\qquad \gamma=\operatorname{arsinh}(d/4).
+\]
+To see it, conjugate by a bounded clipped exponential weight:
+the two hopping terms change in norm by at most
+$2\sinh\gamma=d/2$, and the conjugated resolvent has norm
+at most $2/d$. Thus at two adjacent middle sites of the
+plateau,
+\[
+|u(r)|,\ |u(r+1)|\le\frac8d e^{-\gamma(L/2-2)}.
+\]
+
+The current $2\operatorname{Im}(u(n+1)\overline{u(n)})$
+is independent of $n$. Hellmann--Feynman differentiation
+of the boundary twist identifies it, up to sign, with
+$E_k'(\vartheta)$ under the stated normalization. Hence
+\[
+|E_k'(\vartheta)|
+\le128d^{-2}e^{4\gamma}e^{-\gamma L}.
+\]
+Scalar Floquet branches are simple and monotone on $(0,\pi)$.
+Simplicity follows from the distinct multipliers
+$e^{\pm i\vartheta}$. The current cannot vanish there,
+since that would make the Bloch solution and its conjugate
+linearly dependent. Integrating over $[0,\pi]$ proves the
+band-portion estimate. There are at most $q$ bands.
+\end{proof}
+
+\begin{lemma}\label{lem:shift}
+If $S$ is a union of at most $p$ compact intervals and
+$r>p\Leb(S)$, there is $\delta\in(r,2r)$ such that
+$(S+\delta)\cap(S-\delta)=\varnothing$.
+\end{lemma}
+\begin{proof}
+If the component lengths are $\ell_1,\ldots,\ell_m$, then
+\[
+\Leb(S-S)\le\sum_{i,k}(\ell_i+\ell_k)
+=2m\Leb(S)\le2p\Leb(S)<2r.
+\]
+Therefore $(2r,4r)$ contains a point outside the compact set
+$S-S$. Take that point to be $2\delta$.
+\end{proof}
+
+Suppose $I$ isolates $S=\spec(H_W)\cap I$ from the rest of
+the spectrum and $\delta$ is smaller than the isolation
+margin. Disjointness of $S+\delta$ and $S-\delta$ then
+implies \eqref{eq:forbidden} for some $d>0$: the two full
+shifted spectra have no common point in $I$, so the
+continuous maximum of the two distances has a positive
+minimum on compact $I$. The value of $d$ may depend on
+the chosen shift.
+
+\section{Concrete initial data}
+Take the period-three background
+\[
+W_0=(100,0,0),\qquad p_0=3,\qquad
+D_0(E)=E^3-100E^2-3E+100.
+\]
+Fix
+\[
+I=[99,101],\qquad K_0=[0.989,0.991],\qquad
+\delta_1=10^{-3}.
+\]
+The factorizations
+\[
+D_0(E)+2=(E-1)(E^2-99E-102),\qquad
+D_0(E)-2=(E+1)(E^2-101E+98)
+\]
+show that the upper band $S_0$ lies in $(100,100.1)$,
+while the other two bands lie in $[-2,2]$.
+Since $D_0'\ge9997$ on the upper interval,
+\[
+\Leb(S_0)\le4/9997<0.000401<2\delta_1.
+\]
+The two translates $S_0\pm\delta_1$ are disjoint, giving
+the barrier hypothesis on $I$.
+
+For $E\in K_0$ and $|t|\le\delta_1$, one has
+$E-t\in[0.988,0.992]$. On this interval $D_0'<0$, and
+\[
+D_0(0.988)=0.386030272,\qquad
+D_0(0.992)=-0.406208512.
+\]
+Hence $K_0+[-\delta_1,\delta_1]\Subset\mathcal E_{W_0}$.
+Let $m_0=\min_{K_0}\rho_{W_0}>0$.
+
+Every later amplitude will be at most one quarter of
+the preceding one. Therefore the total norm change from
+$W_0$ is at most $(4/3)10^{-3}<0.002$.
+The endpoints of $I$ stay in fixed spectral gaps,
+the upper cluster remains nonempty, and the other
+spectrum stays far below $I$.
+
+\section{Induction with explicit parameter order}
+Construct $W_j,p_j,K_j,\delta_{j+1}$ and write
+\[
+S_j=\spec(H_{W_j})\cap I,\qquad
+g_j=\dist(K_j,\R\setminus\mathcal E_{W_j}).
+\]
+Fix positive tolerances $\alpha_j,\epsilon_j$ with
+\[
+\sum_{j\ge1}\alpha_j<\tfrac12\Leb(K_0),\qquad
+\sum_{j\ge1}\epsilon_j<\tfrac12m_0.
+\]
+At the start of stage $j$, the data
+$W_{j-1},p_{j-1},K_{j-1},\delta_j$ are fixed.
+The shifted bulk is strictly elliptic and the shifted
+target clusters are disjoint. This holds at $j=1$ by
+the explicit initial data.
+
+For every candidate $W_N=\mathcal S_{N,\delta_j}W_{j-1}$,
+the already chosen amplitudes give
+\[
+\norm{W_N-W_0}_\infty\le\sum_{k=1}^j\delta_k
+\le\tfrac43\delta_1<0.002.
+\]
+The same bound holds for $W_{j-1}\pm\delta_j$.
+Their spectra are contained in
+$[-2.002,2.002]\cup[99.998,100.102]$.
+This makes the fixed isolation of $I$ a finite-stage invariant.
+
+Apply Lemma~\ref{lem:bulk}. Choose $\eta_j>0$ first so
+that the removed measure is less than $\alpha_j$.
+Let $N$ tend to infinity, keeping those data and
+$\eta_j$ fixed. The candidate outputs
+\[
+W_N=\mathcal S_{N,\delta_j}W_{j-1},\quad
+p_N=p_{j-1}N,\quad K_N=G_N
+\]
+satisfy, for all large $N$,
+\begin{align}
+\Leb(K_{j-1}\setminus K_N)&<\alpha_j,\notag\\
+\sup_{K_N}|\rho_{W_N}-\rho_{W_{j-1}}|&<\epsilon_j,\notag\\
+g_N:=\dist(K_N,\R\setminus\mathcal E_{W_N})
+&\ge\kappa_j/p_N,\label{eq:gN}\\
+\Leb(S_N)&\le C_jp_Ne^{-c_jN}.\label{eq:sN}
+\end{align}
+The constants $\kappa_j,C_j,c_j>0$ are independent of
+the new $N$.
+
+For each candidate define
+\begin{equation}\label{eq:radius}
+r_N=\min\{g_N/8,\ 2^{-j-1}/p_N,\ \delta_j/8\}.
+\end{equation}
+Since $p_N\ge1$, \eqref{eq:gN} gives
+\[
+r_N\ge b_j/p_N,\qquad
+b_j=\min\{\kappa_j/8,2^{-j-1},\delta_j/8\}>0.
+\]
+Meanwhile $p_N\Leb(S_N)\le C_jp_N^2e^{-c_jN}$.
+Because $p_N=p_{j-1}N$, choose $N=N_j$ large enough
+that
+\begin{equation}\label{eq:compatibility}
+p_N\Leb(S_N)<r_N.
+\end{equation}
+This is exactly the comparison $N^3e^{-c_jN}\to0$.
+Also require each $N_j$ to exceed a fixed $N_*$, chosen
+below for the repetitions.
+
+Set $W_j=W_{N_j}$, $p_j=p_{N_j}$, $K_j=K_{N_j}$,
+and $r_j=r_{N_j}$. Lemma~\ref{lem:shift} gives
+$\delta_{j+1}\in(r_j,2r_j)$ separating the target
+translates. Its upper bounds are
+\begin{equation}\label{eq:deltabounds}
+\delta_{j+1}<g_j/4,\qquad
+\delta_{j+1}<2^{-j}/p_j,\qquad
+\delta_{j+1}<\delta_j/4.
+\end{equation}
+The first ensures
+$K_j+[-\delta_{j+1},\delta_{j+1}]\Subset\mathcal E_{W_j}$.
+The fixed target isolation ensures the barrier hypothesis.
+All constants for the following stage are now fixed
+before $N_{j+1}$ is chosen. There is no circular
+choice of parameters.
+
+Since $\norm{W_j-W_{j-1}}_\infty\le\delta_j$, these
+approximants converge uniformly to a real bounded $V$.
+Their periods are nested and tend to infinity.
+Thus $V$ is limit-periodic and $\norm{V}_\infty<100.002$.
+Equivalently, the resulting potential is
+\[
+V(n)=W_0(n)+\sum_{j\ge1}\delta_j
+f\left(\frac{\lfloor n/p_{j-1}\rfloor}{N_j}\right).
+\]
+
+\section{Surviving absolutely continuous spectrum}
+The compact set $K_\infty=\bigcap_{j\ge0}K_j$ has
+positive Lebesgue measure, by the summable losses.
+For $E\in K_\infty$,
+\[
+\rho_{W_j}(E)\ge m_0-\sum_{k=1}^j\epsilon_k>m_0/2.
+\]
+Thus every approximating spectral measure dominates
+the same nonzero absolutely continuous measure
+\[
+\nu=(m_0/2)\mathbf1_{K_\infty}(E)\dd E.
+\]
+Uniform convergence of potentials gives norm convergence
+of their operators and weak convergence
+$\mu_{W_j}\Rightarrow\mu_V$. Pass to the limit against
+each nonnegative continuous test function in
+$\mu_{W_j}\ge\nu$ to obtain $\mu_V\ge\nu$.
+Consequently $\mathcal H_{\mathrm{ac}}(H_V)\ne\{0\}$.
+
+\begin{remark}
+Nonzero absolutely continuous spectrum has an independent
+verification through reflectionless compactness. Each periodic
+$W_j$ is reflectionless on the same set $K_\infty$.
+The bounded reflectionless class on this fixed set is closed
+under coefficientwise convergence; hence $V$ is reflectionless
+there. Remling~\cite[Proposition~4.1(d)]{Remling} gives this compactness
+on the fixed set $K_\infty$, with the common coefficient bound.
+Part~(b) gives absolutely continuous spectrum for the half-line
+restrictions: their Weyl functions have positive boundary imaginary
+parts almost everywhere on $K_\infty$. The formula for the full-line
+diagonal Green function in terms of these Weyl functions then gives a
+nonzero absolutely continuous component for $H_V$; see also
+\cite[Chapter~2]{Teschl}. This optional alternative is not used in the
+direct measure proof.
+The direct measure argument above additionally supplies the
+stated lower bound on the chosen local spectral measure.
+\end{remark}
+
+\section{Surviving singular spectrum}
+Put $t_j=\norm{V-W_j}_\infty$. Geometric decay and
+\eqref{eq:deltabounds} give
+\[
+t_j\le\tfrac43\delta_{j+1},\qquad
+p_jt_j\le\tfrac43\,2^{-j}\longrightarrow0.
+\]
+Hausdorff spectral continuity, together with the fixed
+gaps at the endpoints of $I$, gives for large $j$
+\[
+\spec(H_V)\cap I\subset(S_j)_{t_j},
+\]
+where $(S_j)_{t_j}$ is the closed $t_j$-neighborhood.
+There are at most $p_j$ intervals in $S_j$, so
+\[
+\Leb(\spec(H_V)\cap I)
+\le\Leb(S_j)+2p_jt_j\longrightarrow0.
+\]
+Here $\Leb(S_j)\to0$ also follows directly from
+\eqref{eq:compatibility}--\eqref{eq:radius}, which give
+$\Leb(S_j)<2^{-j-1}/p_j^2$.
+
+The cluster remains nonempty: the initial spectrum has
+a point in $(100,100.1)$ and the total norm change is
+less than $0.002$. Equivalently its isolated nonzero
+spectral projection persists under this perturbation.
+Therefore $\mathbf1_I(H_V)\ne0$, and its range is
+entirely singular because it is supported on a null set.
+
+In fact the same vector $\delta_0$ sees both spectral types.
+Every modulation vanishes at the origin, so $V(0)=100$ and
+\[
+\int (E-100)^2\dd\mu_V(E)
+=\norm{(H_V-100)\delta_0}^2=2.
+\]
+The spectrum outside $I$ lies in $[-2.002,2.002]$.
+Consequently
+\[
+\mu_V(I)\ge1-\frac{2}{97.998^2}>0.99979.
+\]
+Thus $\mu_V$ has positive mass on the null spectral set
+inside $I$, in addition to its absolutely continuous
+component on $K_\infty$.
+
+\section{Exact repetitions exclude eigenvalues}
+Choose $a_0>0$ so that $f(s)=0$ whenever
+$\dist(s,\Z)\le a_0$. Take $N_*\ge3$ with
+$1/N_*<a_0$.
+
+Fix $j$. On $[-p_j,2p_j-1]$ the old-cell indices
+in the next update are $-1,0,1$, so that update
+vanishes there. Every later update also vanishes
+there: its cell length is at least $3p_j$, and
+the indices are only $-1,0$. Hence
+\begin{equation}\label{eq:exact}
+V(n)=W_j(n)\quad(-p_j\le n\le2p_j-1).
+\end{equation}
+
+For a solution $H_Vu=Eu$, write
+$U(n)=(u(n),u(n-1))^{\mathsf T}$ and let $A_j$
+transfer across the middle block. Then
+\[
+U(p_j)=A_jU(0),\quad U(2p_j)=A_j^2U(0),\quad
+U(-p_j)=A_j^{-1}U(0).
+\]
+Cayley--Hamilton gives
+\[
+A_j^2-(\tr A_j)A_j+\Id=0,\qquad
+A_j+A_j^{-1}=(\tr A_j)\Id.
+\]
+If $|\tr A_j|\le1$, use the first identity; otherwise
+use the second. In either case,
+\[
+\max\{\norm{U(-p_j)},\norm{U(p_j)},\norm{U(2p_j)}\}
+\ge\tfrac12\norm{U(0)}.
+\]
+Since $p_j\to\infty$, no nonzero solution is square
+summable. This is the exact three-block Gordon
+argument; no rapid \emph{uniform} approximation rate
+is assumed. See also \cite[Section~6.2]{DF}.
+
+Thus $\mathcal H_{\mathrm{pp}}(H_V)=\{0\}$.
+The nonzero singular projection found above is
+therefore singular continuous. Together with the
+absolutely continuous component, this proves
+Theorem~\ref{thm:main}.
+
+\section*{Scope}
+The construction supplies a nonzero ac submeasure on
+a compact set of positive measure, and a nonzero
+purely sc restriction to the isolated interval $I$.
+It does not classify every energy outside $I$ or
+assert that the protected set contains an interval.
+Neither assertion is needed for failure of purity.
+
+\begin{thebibliography}{4}
+\raggedright
+\bibitem{DF}
+D. Damanik and J. Fillman,
+\emph{Spectral Properties of Limit-Periodic Operators},
+arXiv:1802.05794 (2018); Chapter~15 in
+\emph{Analysis and Geometry on Graphs and Manifolds},
+London Mathematical Society Lecture Note Series~461,
+Cambridge University Press (2020), pp.~382--444.
+\href{https://doi.org/10.1017/9781108615259.016}{doi:10.1017/9781108615259.016}.
+\url{https://arxiv.org/abs/1802.05794v1}.
+\bibitem{Teschl}
+G. Teschl,
+\emph{Jacobi Operators and Completely Integrable Nonlinear Lattices},
+Mathematical Surveys and Monographs 72,
+American Mathematical Society (2000).
+Author-hosted edition:
+\url{https://www.mat.univie.ac.at/~gerald/ftp/book-jac/jacop.pdf}.
+\bibitem{Avila}
+A. Avila,
+\emph{On the Kotani--Last and Schr\"odinger conjectures},
+arXiv:1210.6325v1 (2012), Section~2.6, Lemmas~2.11--2.12.
+\url{https://arxiv.org/abs/1210.6325v1}.
+\bibitem{Remling}
+C. Remling,
+\emph{The absolutely continuous spectrum of Jacobi matrices},
+arXiv:0706.1101, version~2 (2010), Proposition~4.1.
+\url{https://arxiv.org/abs/0706.1101v2}.
+\end{thebibliography}
+\end{document}
