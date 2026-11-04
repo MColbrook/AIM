@@ -1,0 +1,760 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
+\usepackage{microtype,enumitem,fancyhdr}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
+ pdftitle={A strict numerical-index bound for real Lebesgue spaces},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 935: mathematical result and proof}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\Rea}{Re}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\N}{\mathbb N}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 935}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\allowdisplaybreaks[2]
+\title{\textbf{A strict numerical-index bound for real Lebesgue spaces}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We show that the numerical index of a real Lebesgue space is strictly below the proposed two-dimensional value at every non-Hilbert exponent between one and infinity. A three-dimensional analytic perturbation proves the general strict inequality. Independent exact algebraic and rational examples give explicit certificates at exponent four and its conjugate.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 935 at revision
+\texttt{5d7e26e8444e}. The precise scope is stated below.
+\medskip
+
+\section{Main result and proof}
+\label{sec:935}
+
+\paragraph{Answer.} The proposed identity is false for every
+$1<p<\infty$ with $p\ne2$. A three-dimensional perturbation gives the
+strict inequality throughout this range. An independent rational
+certificate at $p=4$ supplies a concrete matrix and an explicit numerical
+gap; its transpose also treats $p=4/3$.
+
+\subsection{Strict inequality for every non-Hilbert exponent}
+\label{sec:935-general}
+
+The counterexample admits an analytic extension to every exponent in the
+question. The explicit rational certificate below remains useful because
+it supplies a concrete matrix and a numerical gap at $p=4$.
+
+\begin{theorem}\label{thm:935-allp}
+For every $1<p<\infty$ with $p\ne2$,
+\[
+ n\bigl(L_p([0,1];\mathbb R)\bigr)
+ \le n\bigl(\ell_p^3(\mathbb R)\bigr)<M_p.
+\]
+In particular, the proposed equality fails for every exponent to which
+Problem~935 applies.
+\end{theorem}
+
+We prove the theorem for $p>2$ by perturbing an operator that attains the
+candidate ratio. The perturbation changes its numerical radius by at most
+$O(\varepsilon^2)$, while increasing a lower bound for its norm by a
+positive multiple of $|\varepsilon|^{p/(p-1)}$. The latter exponent is
+strictly smaller than two.
+
+\begin{lemma}\label{lem:935-scalar}
+For $p>2$, the function
+\[
+ f_p(t)=\frac{t-t^{p-1}}{1+t^p},\qquad 0\le t\le1,
+\]
+has a unique maximum at some $t=t_p\in(0,1)$, and $f_p''(t_p)<0$.
+Set $j_p(s)=|s|^{p-2}s$ for real $s$, with $j_p(0)=0$. The function
+\[
+ h_p(s)=\frac{j_p(s)-s}{1+|s|^p}
+\]
+has maximum $M_p$ precisely at $s=t_p^{-1}$ and $s=-t_p$, and minimum
+$-M_p$ precisely at $s=t_p$ and $s=-t_p^{-1}$. Each of these extrema is
+nondegenerate.
+\end{lemma}
+\begin{proof}
+Write $t=e^{-x}$, $a=(p-2)/2$, and $b=p/2$. For $x>0$,
+\[
+ f_p(e^{-x})=\frac{\sinh(ax)}{\cosh(bx)}.
+\]
+Its logarithmic derivative is
+\[
+ a\coth(ax)-b\tanh(bx),
+\]
+whose derivative is
+\[
+ -a^2\operatorname{csch}^2(ax)-b^2\operatorname{sech}^2(bx)<0.
+\]
+The logarithmic derivative tends to $+\infty$ as $x\downarrow0$ and to
+$a-b=-1$ as $x\to\infty$. It therefore has exactly one zero, where the
+second derivative of the positive function is strictly negative. The
+change of variable transfers nondegeneracy to $t_p$. Both endpoint values
+of $f_p$ are zero, so this is its unique global maximum.
+The assertions about $h_p$ follow from its oddness and the relations
+$h_p(s)=-f_p(s)$ for $0<s<1$ and $h_p(s)=f_p(1/s)$ for $s>1$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:935-allp} for $p>2$]
+Fix $p>2$, write $q=p/(p-1)$, and put
+\[
+ c=2^{-1/p},\qquad u=(c,c),\qquad w=(c,-c).
+\]
+Thus $\|u\|_p=\|w\|_p=1$ and
+$\langle j_p(u),w\rangle=0$. Regard $\ell_p^3$ as
+$\ell_p^2\oplus_p\mathbb R$, with coordinates $(\xi,y)$, where
+$\xi=(x,z)$. Define
+\[
+ T_0(\xi,y)=\bigl(yu,-\langle j_p(u),\xi\rangle\bigr).
+\]
+Since $\|j_p(u)\|_q=1$,
+\[
+ \|T_0(\xi,y)\|_p^p
+ =|y|^p+|\langle j_p(u),\xi\rangle|^p
+ \le |y|^p+\|\xi\|_p^p.
+\]
+Equality occurs, for example, when $\xi=0$, so $\|T_0\|_p=1$.
+
+For any real matrix $T$, smoothness of the $\ell_p$ norm gives
+\[
+ v_p(T)=\sup_{v\ne0}
+ \frac{|\langle j_p(v),Tv\rangle|}{\|v\|_p^p}.
+ \tag{935.G1}\label{eq:935-general-radius}
+\]
+Set $g_p(s,t)=j_p(s)t-j_p(t)s$. The scalar inequality defining $M_p$
+implies
+\[
+ |g_p(s,t)|\le M_p(|s|^p+|t|^p)
+ \qquad(s,t\in\mathbb R).
+\]
+The numerical form of $T_0$ is
+\[
+ F_0(x,z,y)=g_p(x,cy)+g_p(z,cy).
+\]
+Because $2c^p=1$, summing the preceding scalar inequalities yields
+$|F_0(x,z,y)|\le M_p(|x|^p+|z|^p+|y|^p)$. Equality is obtained by choosing
+both scalar pairs to attain the same signed maximum. Consequently
+\[
+ v_p(T_0)=M_p.
+ \tag{935.G2}\label{eq:935-star-radius}
+\]
+
+We next describe all maximizing vectors and their local behavior.
+A maximizing vector has $y\ne0$: otherwise $F_0=0$ while $M_p>0$.
+After a common nonzero real rescaling, use the chart $cy=1$ and set
+\[
+ S=|x|^p+|z|^p+2.
+\]
+In this chart the normalized numerical form is
+\[
+ \phi_0(x,z)
+ =\frac{(1+|x|^p)h_p(x)+(1+|z|^p)h_p(z)}{S}.
+ \tag{935.G3}\label{eq:935-star-chart}
+\]
+Every weight is positive. Thus $\phi_0=M_p$ exactly when
+\[
+ x,z\in\{t_p^{-1},-t_p\},
+\]
+and $\phi_0=-M_p$ exactly when
+\[
+ x,z\in\{t_p,-t_p^{-1}\}.
+\]
+These choices form a finite collection of points. Lemma~\ref{lem:935-scalar} also proves
+that each maximum of $|\phi_0|$ is nondegenerate. For example, at a positive
+maximum,
+\[
+ M_p-\phi_0(x,z)
+ =\frac{(1+|x|^p)(M_p-h_p(x))
+       +(1+|z|^p)(M_p-h_p(z))}{S}.
+\]
+Each one-variable deficit has a zero of order exactly two, with positive
+second derivative. The Hessian of the displayed deficit at a zero is
+therefore diagonal and positive definite. Negative maxima are handled
+by replacing $h_p$ with $-h_p$.
+
+Let $t=t_p$ and define
+\[
+ \kappa=\frac{1-t^{2p}}{t^2-t^{2p-2}},\qquad
+ R=\begin{pmatrix}1&\kappa\\-\kappa&-1\end{pmatrix}.
+\]
+The denominator is positive, and
+\[
+ \kappa-1
+ =\frac{(1-t^2)(1+t^{2p-2})}{t^2-t^{2p-2}}>0.
+ \tag{935.G4}\label{eq:935-kappa}
+\]
+For real $\varepsilon$ set
+\[
+ T_\varepsilon(\xi,y)
+ =\bigl(yu+\varepsilon R\xi,-\langle j_p(u),\xi\rangle\bigr).
+ \tag{935.G5}\label{eq:935-family}
+\]
+Its numerical form is $F_0+\varepsilon G$, where
+\[
+ G(x,z)=|x|^p-|z|^p
+       +\kappa\bigl(j_p(x)z-j_p(z)x\bigr).
+ \tag{935.G6}\label{eq:935-perturbation}
+\]
+This perturbation vanishes at every maximizing vector of $T_0$.
+Indeed, their leaf-coordinate ratios are
+$x/z\in\{1,-t^2,-t^{-2}\}$. The first ratio gives zero directly. For the
+second ratio,
+\[
+ G(-t^2,1)=t^{2p}-1+\kappa(t^2-t^{2p-2})=0.
+\]
+The third follows from antisymmetry under exchanging $x,z$ and homogeneity.
+
+It follows that there are finite constants $C\ge0$ and $\varepsilon_0>0$
+(depending on $p$) such that
+\[
+ v_p(T_\varepsilon)\le M_p+C\varepsilon^2
+ \qquad(|\varepsilon|\le\varepsilon_0).
+ \tag{935.G7}\label{eq:935-quadratic}
+\]
+Here are the compactness details. On the unit sphere, the maximizing set
+of $|F_0|$ is finite. In a chart about each such point, nondegeneracy gives
+$|\phi_0|\le M_p-c_0\|h\|_2^2$ for some $c_0>0$. The normalized
+perturbation is smooth in that chart, because all coordinates of the
+maximizer are nonzero, and vanishes at its center. It is therefore bounded
+in absolute value by $L_0\|h\|_2$. Completing the square gives
+\[
+ |\phi_0+\varepsilon G/S|
+ \le M_p-c_0\|h\|_2^2+|\varepsilon|L_0\|h\|_2
+ \le M_p+\frac{L_0^2}{4c_0}\varepsilon^2.
+\]
+Outside the finitely many neighborhoods, compactness gives a fixed strict
+gap below $M_p$, while the normalized perturbation is bounded. For
+sufficiently small $|\varepsilon|$ this region contributes at most $M_p$.
+Taking the largest of the finitely many constants proves
+\eqref{eq:935-quadratic}.
+
+The norm has a larger leading-order increase. Since
+$Rw=(1-\kappa)u$ and $\langle j_p(u),w\rangle=0$,
+\[
+ T_\varepsilon(sw,y)
+ =\bigl((y-(\kappa-1)\varepsilon s)u,0\bigr).
+\]
+The input norm is $(|s|^p+|y|^p)^{1/p}$. Taking the norm of this scalar
+functional on $\ell_p^2$ gives
+\[
+ \|T_\varepsilon\|_p
+ \ge\bigl(1+(\kappa-1)^q|\varepsilon|^q\bigr)^{1/q}.
+ \tag{935.G8}\label{eq:935-general-norm}
+\]
+As $1<q<2$, equations \eqref{eq:935-quadratic} and
+\eqref{eq:935-general-norm} imply
+\[
+ \begin{split}
+ \frac{v_p(T_\varepsilon)}{\|T_\varepsilon\|_p}
+ &\le\frac{M_p+C\varepsilon^2}
+ {\bigl(1+(\kappa-1)^q|\varepsilon|^q\bigr)^{1/q}}\\
+ &=M_p-\frac{M_p}{q}(\kappa-1)^q|\varepsilon|^q
+      +o(|\varepsilon|^q).
+ \end{split}
+\]
+The leading correction is strictly negative. Hence every sufficiently
+small nonzero $\varepsilon$ gives
+$v_p(T_\varepsilon)/\|T_\varepsilon\|_p<M_p$, proving
+$n(\ell_p^3(\mathbb R))<M_p$.
+\end{proof}
+
+\paragraph{Dual exponents and the Lebesgue space.}
+For any operator $T$ on a finite-dimensional real normed space,
+$\|T^*\|=\|T\|$ and $v(T^*)=v(T)$. Indeed, the correspondence between
+norming pairs $(x,x^*)$ and $(x^*,Jx)$ preserves the scalar $x^*(Tx)$,
+and finite-dimensional reflexivity makes the correspondence exhaustive.
+Thus the transpose of a counterexample on $\ell_p^3$ gives one on
+$\ell_q^3$, where $q=p/(p-1)$. The substitution $s=t^{p-1}$ in the maximum
+shows $M_q=M_p$. This proves the strict inequality for $1<p<2$ as well.
+
+Finally, for any real $3\times3$ matrix $T$, its pointwise action on
+$L_p([0,1];\ell_p^3)$ has the same operator norm and numerical radius as
+$T$. The upper bounds follow by integrating their pointwise defining
+inequalities, and constant vector-valued functions give the reverse
+inequalities. This vector-valued space is isometric to scalar real
+$L_p([0,1])$ by sending the three coordinates to three equal subintervals
+and multiplying values by $3^{1/p}$. Consequently
+$n(L_p([0,1];\mathbb R))\le n(\ell_p^3(\mathbb R))$, and the proof of
+Theorem~\ref{thm:935-allp} is complete.
+
+
+\subsection{A short explicit certificate at \texorpdfstring{$p=4$}{p=4}}
+\label{sec:935-clean}
+
+The perturbation family also gives an explicit algebraic example with a
+short direct proof, independent of the compactness argument. Put
+\[
+ c=2^{-1/4},\qquad \varepsilon=2^{-12},\qquad
+ T=\begin{pmatrix}
+ \varepsilon&4\varepsilon&c\\
+ -4\varepsilon&-\varepsilon&c\\
+ -c^3&-c^3&0
+ \end{pmatrix}
+ \quad\hbox{on real }\ell_4^3,
+ \tag{935.C1}\label{eq:935-clean-matrix}
+\]
+with coordinates ordered as $(x,z,y)$. We prove
+\[
+ \frac{v_4(T)}{\|T\|_4}<M_4=\frac1{2\sqrt2}.
+\]
+
+Write $b=cy$, $S=x^4+z^4+y^4=x^4+z^4+2b^4$, and
+\[
+ F_0=b(x^3+z^3)-b^3(x+z),\qquad
+ G=(x^2-z^2)(x^2+z^2+4xz).
+\]
+The numerical form of $T$ is $F_0+\varepsilon G$. Define
+\[
+ Q_x=x^2-\sqrt2\,bx-b^2,\qquad
+ Q_z=z^2-\sqrt2\,bz-b^2.
+\]
+Two direct polynomial identities are
+\[
+ M_4S-F_0=M_4(Q_x^2+Q_z^2),
+ \tag{935.C2}\label{eq:935-clean-deficit}
+\]
+\[
+ G=(x+z)\bigl[(x+3z+\sqrt2 b)Q_x
+                   -(3x+z+\sqrt2 b)Q_z\bigr].
+ \tag{935.C3}\label{eq:935-clean-G}
+\]
+
+On $S=1$, the Euclidean norm of the coefficient vector multiplying
+$(Q_x,Q_z)$ in \eqref{eq:935-clean-G} is at most
+\[
+ |x+z|\bigl(4\|(x,z)\|_2+2|b|\bigr)\le20^{3/4}.
+ \tag{935.C4}\label{eq:935-clean-coefficients}
+\]
+For completeness, let $r=(x^4+z^4)^{1/4}$. Then
+$|x+z|\le2^{3/4}$, $\|(x,z)\|_2\le2^{1/4}r$, and
+$2|b|=2^{3/4}|y|$, while $r^4+|y|^4=1$. H\"older's inequality gives
+\[
+ 4\|(x,z)\|_2+2|b|
+ \le\bigl((4\,2^{1/4})^{4/3}+(2^{3/4})^{4/3}\bigr)^{3/4}
+ =(8+2)^{3/4}.
+\]
+This proves \eqref{eq:935-clean-coefficients}.
+
+Set $r_Q=(Q_x^2+Q_z^2)^{1/2}$. Equations
+\eqref{eq:935-clean-deficit}--\eqref{eq:935-clean-coefficients} yield
+\[
+ \begin{split}
+ F_0+\varepsilon G
+ &\le M_4-M_4r_Q^2+|\varepsilon|20^{3/4}r_Q\\
+ &\le M_4+\frac{20^{3/2}}{4M_4}\varepsilon^2
+  =M_4+20\sqrt{10}\,\varepsilon^2.
+ \end{split}
+\]
+Replacing $b$ by $-b$ and $\varepsilon$ by $-\varepsilon$ gives the same argument for
+$-F_0-\varepsilon G$. Hence
+\[
+ v_4(T)\le M_4+20\sqrt{10}\,\varepsilon^2.
+ \tag{935.C5}\label{eq:935-clean-v}
+\]
+
+For the norm bound, put $u=(c,c)$ and $w=(c,-c)$. On the isometric copy of
+$\ell_4^2$ consisting of vectors $(sw,y)$,
+\[
+ T(sw,y)=\bigl((y-3\varepsilon s)u,0\bigr).
+\]
+The norm of this scalar functional is therefore a lower bound for the full
+operator norm:
+\[
+ \|T\|_4\ge\bigl(1+3^{4/3}|\varepsilon|^{4/3}\bigr)^{3/4}.
+ \tag{935.C6}\label{eq:935-clean-norm}
+\]
+Let $a=3^{4/3}2^{-16}\in(0,1)$. The elementary inequality
+$(1+a)^{3/4}\ge1+3a/8$ on $[0,1]$ follows, for example, by integrating
+$(3/4)(1+a)^{-1/4}\ge3/8$. Thus the upper bound in
+\eqref{eq:935-clean-v} is strictly less than $M_4$ times the lower bound in
+\eqref{eq:935-clean-norm}: after division by $M_4$ and multiplication by
+$2^{24}$, the required comparison is exactly
+\[
+ 80\sqrt5<96\,3^{4/3}.
+\]
+It follows already from
+$80\sqrt5<240<288<96\,3^{4/3}$. This proves the claimed strict ratio.
+Pointwise amplification transfers this explicit example to real
+$L_4([0,1])$.
+
+
+\subsection{An explicit rational certificate at \texorpdfstring{$p=4$}{p=4}}
+
+\begin{theorem}\label{thm:935}
+For $p\in\{4,4/3\}$,
+\[
+ n\bigl(L_p([0,1];\mathbb R)\bigr)
+ <\frac{1667}{4716}
+ <\frac1{2\sqrt2}=M_p.
+\]
+The rational upper bound is approximately $0.35347752$, whereas
+$1/(2\sqrt2)$ is approximately $0.35355339$.
+\end{theorem}
+
+\subsection{The matrix and the numerical-radius formula}
+
+On $\ell_4^3(\mathbb R)$ define
+\[
+ T=\frac1{1000}
+ \begin{pmatrix}
+ -10&2255&-40\\
+ -1437&0&-1914\\
+ 34&2480&6
+ \end{pmatrix}
+ =\frac{A}{1000}.
+ \tag{935.1}\label{eq:935-matrix}
+\]
+We will certify
+\[
+ v(T)\le\frac{5001}{5000},\qquad
+ \|T\|_{4\to4}>\frac{3537}{1250}.
+ \tag{935.2}\label{eq:935-bounds}
+\]
+For $x=(x_1,x_2,x_3)\in\mathbb R^3$, set
+\[
+ s(x)=x_1^4+x_2^4+x_3^4,
+ \qquad F(x)=\sum_{i=1}^3x_i^3(Tx)_i.
+\]
+The unique norming functional of a unit vector of $\ell_4^3$ is
+$(x_1^3,x_2^3,x_3^3)$, so
+\[
+ v(T)=\sup_{x\ne0}\frac{|F(x)|}{s(x)}.
+ \tag{935.3}\label{eq:935-radius}
+\]
+
+\subsection{Two exact positive Gram matrices}
+
+Let
+\[
+ z(x)=(x_1^2,x_2^2,x_3^2,x_1x_2,x_1x_3,x_2x_3)^{\mathsf T}
+\]
+and define the following symmetric integer matrices:
+\[
+ M_+=
+ \begin{pmatrix}
+10102&-6298&-14&-11275&200&214\\
+-6298&10002&-7757&7185&-4&9570\\
+-14&-7757&9942&-188&-170&-12400\\
+-11275&7185&-188&12596&-214&4\\
+200&-4&-170&-214&28&188\\
+214&9570&-12400&4&188&15514
+ \end{pmatrix},
+ \tag{935.4}\label{eq:935-plus}
+\]
+\[
+ M_-=
+ \begin{pmatrix}
+9902&-6433&-8&11275&-200&218\\
+-6433&10002&-7646&-7185&-4&-9570\\
+-8&-7646&10062&-204&170&12400\\
+11275&-7185&-204&12866&-218&4\\
+-200&-4&170&-218&16&204\\
+218&-9570&12400&4&204&15292
+ \end{pmatrix}.
+ \tag{935.5}\label{eq:935-minus}
+\]
+Direct expansion gives the exact polynomial identities
+\[
+ \frac1{10000}z(x)^{\mathsf T}M_+z(x)
+   =\frac{5001}{5000}s(x)-F(x),
+ \tag{935.6}\label{eq:935-sosplus}
+\]
+\[
+ \frac1{10000}z(x)^{\mathsf T}M_-z(x)
+   =\frac{5001}{5000}s(x)+F(x).
+ \tag{935.7}\label{eq:935-sosminus}
+\]
+For example, the coefficient of $x_1^3x_2$ in the numerator on the left
+of \eqref{eq:935-sosplus} is $2(-11275)=-22550=-10A_{12}$.
+All coefficients of absent monomials cancel.
+
+Both matrices are positive definite. Their leading principal minors, in
+orders one through six, are the following positive integers:
+\[
+ \begin{aligned}
+ M_+:\;&10102,\quad 61375400,\quad 976429002,\\
+       &6319567977,\quad 39156751988,\quad156153016840;
+ \end{aligned}
+ \tag{935.8}\label{eq:935-minorsplus}
+\]
+\[
+ \begin{aligned}
+ M_-:\;&9902,\quad57656315,\quad466262882,\\
+       &4413501692,\quad8528707160,\quad32937577888.
+ \end{aligned}
+ \tag{935.9}\label{eq:935-minorsminus}
+\]
+Sylvester's criterion and \eqref{eq:935-sosplus}--\eqref{eq:935-sosminus}
+therefore imply $|F(x)|\le(5001/5000)s(x)$ for every real $x$.
+Equation~\eqref{eq:935-radius} proves the numerical-radius bound in
+\eqref{eq:935-bounds}.
+
+\subsection{An exact norm witness and comparison with \texorpdfstring{$M_4$}{M4}}
+
+For $w=(185,1000,-179)^{\mathsf T}$ one has
+\[
+ Aw=(2260310,76761,2485216)^{\mathsf T},
+\]
+\[
+ \sum_iw_i^4=1002197976306,\qquad
+ \sum_i(Aw)_i^4=64248592946651712875988977.
+\]
+The integer comparison
+\[
+ \begin{split}
+ 625\sum_i(Aw)_i^4-14148^4\sum_iw_i^4
+ &=916493558274854032306529\\
+ &>0
+ \end{split}
+ \tag{935.10}\label{eq:935-witness}
+\]
+is exactly
+$\|Tw\|_4^4>(3537/1250)^4\|w\|_4^4$, because
+$14148/5=1000(3537/1250)$. This proves the second bound in
+\eqref{eq:935-bounds} and hence
+\[
+ \frac{v(T)}{\|T\|_{4\to4}}
+ <\frac{5001/5000}{3537/1250}
+ =\frac{1667}{4716}.
+ \tag{935.11}\label{eq:935-ratio}
+\]
+
+For $0\le t\le1$ the identity
+\[
+ 1+t^4-2\sqrt2(t-t^3)=(t^2+\sqrt2t-1)^2\ge0
+\]
+has equality at $t=(\sqrt6-\sqrt2)/2$. Therefore
+\[
+ M_4=\max_{0\le t\le1}\frac{t-t^3}{1+t^4}=\frac1{2\sqrt2}.
+\]
+Finally, $4716^2-8\cdot1667^2=9544>0$, so
+$1667/4716<1/(2\sqrt2)$. Thus \eqref{eq:935-ratio} disproves the
+corresponding three-dimensional formula.
+
+\subsection{Pointwise amplification to the exact Lebesgue space}
+
+Set $\mathcal X=L_4([0,1];\ell_4^3(\mathbb R))$ and define
+$(\mathcal T f)(t)=T(f(t))$. Pointwise integration gives
+$\|\mathcal T\|\le\|T\|_{4\to4}$, while constant vector-valued functions
+give the reverse inequality. Thus the norms are equal. For a unit vector
+$f\in\mathcal X$, its norming functional is pointwise $(f_1^3,f_2^3,f_3^3)$.
+Integrating \eqref{eq:935-sosplus}--\eqref{eq:935-sosminus} gives
+\[
+ \left|\int_0^1\sum_i f_i(t)^3(\mathcal T f)_i(t)\,dt\right|
+ \le\frac{5001}{5000}\int_0^1\sum_i|f_i(t)|^4\,dt.
+\]
+Consequently $v(\mathcal T)\le5001/5000$; indeed constant functions show
+$v(\mathcal T)=v(T)$.
+
+The explicit surjective isometry from $\mathcal X$ onto the scalar real
+Lebesgue space is
+\[
+ (Uf)(s)=3^{1/4}f_i(3s-i+1),\qquad
+ \frac{i-1}{3}\le s<\frac{i}{3},\quad i=1,2,3.
+\]
+Transport $\mathcal T$ through $U$ and normalize by its operator norm.
+Equation~\eqref{eq:935-ratio} now proves the assertion of
+Theorem~\ref{thm:935} for the precise space in the catalogue.
+This is a pointwise amplification, not a conditional-expectation
+compression; the latter would not automatically preserve the numerical
+radius.
+
+\subsection{The dual exponent \texorpdfstring{$4/3$}{4/3}}
+
+For an operator $R$ on a reflexive real Banach space $X$,
+$\|R^*\|=\|R\|$ and $v(R^*)=v(R)$. To verify the latter identity, every
+norming pair $(x,x^*)$ for $X$ gives the norming pair $(x^*,J_Xx)$ for
+$X^*$, with
+\[
+ (J_Xx)(R^*x^*)=x^*(Rx).
+\]
+Reflexivity supplies the converse correspondence for every norming pair in
+$X^*\times X^{**}$.
+Apply this to $X=\ell_4^3$. The matrix $T^{\mathsf T}$ on
+$\ell_{4/3}^3$ has the same norm and numerical radius as $T$.
+Pointwise amplification works for every $1<p<\infty$: the norming functional
+is $\operatorname{sign}(f_i)|f_i|^{p-1}$, and the finite-dimensional
+numerical-radius inequality integrates with degree $p$.
+Hence \eqref{eq:935-ratio} also applies on real $L_{4/3}([0,1])$.
+The substitution $s=t^3$ in the defining maximum gives $M_{4/3}=M_4$.
+
+\paragraph{Verification and scope.}
+The displayed integers form a complete certificate. The supplied
+\texttt{verify935\_exact.py} checks both polynomial identities, all twelve
+principal minors, \eqref{eq:935-witness}, and the strict constant comparison
+using only exact integer and rational arithmetic. An independent verifier
+uses separate formulas for the fifteen quartic coefficients and rational
+$LDL^{\mathsf T}$ decomposition. Floating-point searches were used only to
+discover the certificate, and are not premises of the proof.
+The two-dimensional theorem of \cite{Chiclana2026} is not contradicted:
+this matrix has dimension three. The counterexample refutes the real-case conjecture in
+\cite[Problem~5.1]{MMM2011} and resolves the exact catalogue identity
+question \cite{AIM}; it does not determine the numerical index itself.
+
+\subsection{A certified interval of exponents}
+\label{sec:935-robustness}
+
+The same matrix yields a quantitative neighborhood of counterexamples.
+\begin{proposition}\label{prop:935-interval}
+The identity in Problem~935 fails for every exponent in either interval
+\[
+ \left[\frac{39999}{10000},\frac{40001}{10000}\right],
+ \qquad
+ \left[\frac{40001}{30001},\frac{39999}{29999}\right].
+\]
+\end{proposition}
+\begin{proof}
+Write $v_p$ and $\|\cdot\|_p$ for the numerical radius and operator norm on
+real $\ell_p^3$, and keep the matrix $T$ from \eqref{eq:935-matrix}. Set
+\[
+ \varepsilon=\frac1{10000},\quad
+ \gamma=\frac{5001}{5000},\quad L=\frac{3537}{1250},\quad
+ R=\|T\|_{\infty\to\infty}=\frac{3351}{1000}.
+\]
+We first treat $|p-4|\le\varepsilon$. For a nonzero real vector $x$, use
+homogeneity to arrange $\max_i|x_i|=1$, and put
+\[
+ S_p(x)=\sum_i|x_i|^p,\qquad
+ F_p(x)=\sum_i\operatorname{sign}(x_i)|x_i|^{p-1}(Tx)_i.
+\]
+Then $S_p(x)\ge1$, and at least one coordinate has absolute value one.
+For $a>0$,
+\[
+ \max_{0\le t\le1}t^a|\log t|=\frac1{ea},
+\]
+with the value at zero understood by continuity. The mean value theorem,
+$p\ge39/10$, and $|(Tx)_i|\le R$ therefore imply
+\[
+ |F_p(x)-F_4(x)|
+ \le\frac{2R}{e(29/10)}\varepsilon,
+ \qquad
+ |S_p(x)-S_4(x)|
+ \le\frac{2}{e(39/10)}\varepsilon.
+ \tag{935.12}\label{eq:935-pvariation}
+\]
+The factor two is valid because the summand corresponding to a coordinate
+of absolute value one vanishes in each difference. The certificate already
+proved $|F_4(x)|\le\gamma S_4(x)$. Since $e>8/3$, it follows that
+\[
+ \begin{split}
+ |F_p(x)|
+ &\le\gamma S_p(x)+C\varepsilon,\\
+ C&=\frac{15}{2}\left(\frac{R}{29}+\frac{\gamma}{39}\right)
+   =\frac{399237}{377000}.
+ \end{split}
+\]
+After division by $S_p(x)\ge1$ and taking the supremum,
+\[
+ v_p(T)\le\gamma+C\varepsilon.
+ \tag{935.13}\label{eq:935-vp}
+\]
+
+Standard comparison of the three-dimensional $\ell_p$ norms gives
+\[
+ \|T\|_p\ge3^{-d}\|T\|_4,
+ \qquad d=\left|\frac1p-\frac14\right|
+          \le\frac{\varepsilon}{4p}.
+\]
+For $0\le d\le1$, convexity gives $3^d\le1+2d$. As $p\ge39/10>7/2$,
+\[
+ 3^d\le1+\frac{\varepsilon}{2p}
+       \le1+\frac{\varepsilon}{7}.
+\]
+The strict bound $\|T\|_4>L$ hence yields
+\[
+ \frac{v_p(T)}{\|T\|_p}
+ <\frac{(\gamma+C\varepsilon)(1+\varepsilon/7)}{L}
+ =\frac{87994832581079}{248910480000000}.
+ \tag{935.14}\label{eq:935-rp}
+\]
+
+For $p>2$, put $f_p(t)=(t-t^{p-1})/(1+t^p)$ on $[0,1]$.
+Direct differentiation gives
+\[
+ \frac{\partial f_p(t)}{\partial p}
+ =\frac{(-\log t)t^{p-1}(1+t^2)}{(1+t^p)^2},
+ \qquad
+ \left|\frac{\partial f_p(t)}{\partial p}\right|
+ \le\frac{2}{e(p-1)}\le\frac{15}{58}
+\]
+throughout the interval under consideration. Evaluate $f_p$ at the maximizing
+point $t_0=(\sqrt6-\sqrt2)/2$ of $f_4$. Since
+$8\cdot7071^2=399992328<400000000=20000^2$,
+\[
+ M_p\ge f_p(t_0)
+ \ge M_4-\frac{15}{58}\varepsilon
+ >\frac{7071}{20000}-\frac{15}{58}\varepsilon
+ =\frac{51261}{145000}.
+ \tag{935.15}\label{eq:935-Mp}
+\]
+The two rational bounds are strictly separated:
+\[
+ \frac{51261}{145000}
+ -\frac{87994832581079}{248910480000000}
+ =\frac{1030282921}{248910480000000}>0.
+\]
+Thus $v_p(T)/\|T\|_p<M_p$ throughout the first interval.
+Pointwise amplification gives the same strict inequality for the numerical
+index of real $L_p([0,1])$.
+
+For the conjugate exponent $q=p/(p-1)$, reflexive duality gives
+$v_q(T^{\mathsf T})=v_p(T)$ and
+$\|T^{\mathsf T}\|_q=\|T\|_p$. The substitution $s=t^{p-1}$ in the
+maximum defining $M_q$ gives $M_q=M_p$. The decreasing map
+$p\mapsto p/(p-1)$ carries the first interval onto the second, proving
+that case as well.
+\end{proof}
+
+
+
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{3pt}
+
+\bibitem{Chiclana2026}
+R.~Chiclana,
+\emph{The Numerical Index of Two-Dimensional Real $\ell_p$ Spaces},
+preprint, June 2026.
+\href{https://arxiv.org/abs/2606.01675}{arXiv:2606.01675}.
+
+\bibitem{MMM2011}
+M.~Mart\'in, J.~Mer\'i, and M.~Popov,
+\emph{On the numerical radius of operators in Lebesgue spaces},
+J. Funct. Anal. \textbf{261} (2011), 149--168.
+\href{https://doi.org/10.1016/j.jfa.2011.03.007}{doi:10.1016/j.jfa.2011.03.007}.
+Problem 5.1.
+
+\bibitem{AIM}
+MColbrook/AIM, \emph{AIM 935: The numerical index of real Lebesgue spaces},
+repository statement at revision \texttt{5d7e26e8444e}.
+\url{https://github.com/MColbrook/AIM/blob/5d7e26e8444eb98de91988454564e45e011107c4/problems/935-the-numerical-index-of-real-lebesgue-spaces.md}.
+\end{thebibliography}
+\end{document}

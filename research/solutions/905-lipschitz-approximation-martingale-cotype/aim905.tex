@@ -1,0 +1,452 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
+\usepackage{microtype,enumitem,fancyhdr}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
+ pdftitle={Lipschitz affine approximation forces exact martingale cotype},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 905: mathematical result and proof}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\Rea}{Re}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\N}{\mathbb N}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 905}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\allowdisplaybreaks[2]
+\title{\textbf{Lipschitz affine approximation forces exact martingale cotype}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove that the stated support-volume Lipschitz affine-approximation estimate forces martingale cotype at its exact exponent. The proof encodes finite dyadic martingales at separated spatial scales, constructs a power-convex equivalent norm and recovers the full martingale estimate.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 905 at revision
+\texttt{5d7e26e8444e}. The precise scope is stated below.
+\medskip
+
+\section{Main result and proof}
+\label{sec:905}
+
+The question asks whether the Lipschitz affine approximation estimate in
+\cite[Question~10]{HN2019} determines the precise martingale cotype exponent.
+The Sobolev version proved in \cite{HM2019} has a stronger hypothesis;
+the argument below uses the stated Lipschitz estimate with support volume.
+
+Let $X$ be a real normed space of dimension $n\geq1$, with a fixed Lebesgue
+measure, and let $Y$ be a Banach space.  Write $B_X$ for its closed unit ball.
+For $2\leq q<\infty$ set
+\[
+ \mathcal D_X(f)=\int_X\int_0^\infty
+ \inf_{\Lambda\text{ affine}}
+ \frac{1}{|tB_X|}\int_{x+tB_X}\|f(y)-\Lambda(y)\|^q\,dy\,
+ \frac{dt}{t^{q+1}}\,dx.
+\]
+Here affine maps are allowed to take values anywhere in $Y$.
+
+\begin{theorem}\label{thm:905}
+Suppose there is $C<\infty$ such that every compactly supported
+$1$-Lipschitz map $f:X\to Y$ satisfies
+\begin{equation}\label{eq:905-hyp}
+ \mathcal D_X(f)\leq C|\operatorname{supp} f|.
+\end{equation}
+Then $Y$ admits an equivalent uniformly convex norm whose modulus of
+convexity is bounded below by a positive multiple of $\varepsilon^q$.
+Consequently $Y$ has martingale cotype $q$, with the exact exponent in
+\eqref{eq:905-hyp}.
+\end{theorem}
+
+For a compactly supported curve $F:\mathbb R\to Y$ define
+\[
+ \beta_F(s,u)^q=\inf_{a,c\in Y}\frac1{2u}
+ \int_{s-u}^{s+u}\|F(v)-av-c\|^q\,dv,
+ \qquad
+ \mathcal D_b(F)=\int_{\mathbb R}\int_0^b
+ \beta_F(s,u)^q\,\frac{du}{u^{q+1}}\,ds.
+\]
+
+\begin{lemma}[Reduction to curves]\label{lem:905-curves}
+Under \eqref{eq:905-hyp}, there are $b>0$ and $K<\infty$ such that
+$\mathcal D_b(F)\leq K$ for every $1$-Lipschitz curve $F$ supported in
+$[0,1]$ and satisfying $\|F\|_\infty\leq1$.
+\end{lemma}
+\begin{proof}
+Choose coordinates identifying $X$ with $\mathbb R^n$ and its chosen
+Lebesgue measure with ordinary Lebesgue measure, and numbers $b,B>0$
+such that
+\[
+ b[-1,1]^n\subseteq B_X\subseteq B[-1,1]^n.
+\]
+Set $\kappa=(2b)^n/|B_X|$ and
+$L=\sum_{j=1}^n\|\ell_j\|_{X^*}$, where $\ell_j$ is the $j$th coordinate
+functional.  Fix $R\geq\max\{1,2B\}$ and a scalar $1$-Lipschitz cutoff
+$\eta$ taking values in $[0,1]$, equal to $1$ on $[-1,1]$, and zero
+outside $[-2,2]$.  Define
+\[
+ \chi_R(x_2,\ldots,x_n)=\prod_{j=2}^n\eta(x_j/R),
+ \qquad f_R(x)=F(x_1)\chi_R(x_2,\ldots,x_n).
+\]
+For $n=1$ the empty product equals one.  A telescoping product estimate
+gives $\operatorname{Lip}_X(f_R)\leq L$ and
+$|\operatorname{supp}f_R|\leq(4R)^{n-1}$.  Scaling
+\eqref{eq:905-hyp} therefore yields
+\begin{equation}\label{eq:905-upper}
+ \mathcal D_X(f_R)\leq CL^q(4R)^{n-1}.
+\end{equation}
+If $x=(s,z')$, $z'\in[-R/2,R/2]^{n-1}$ and $0<t\leq1$, the cutoff
+equals one throughout $x+tB_X$.  Restrict its local error integral to
+the cube $x+bt[-1,1]^n$.  Averaging an affine map in the transverse
+coordinates produces an affine function of its first coordinate.
+Jensen's inequality consequently gives
+\[
+ \inf_\Lambda\frac1{|tB_X|}\int_{x+tB_X}\|f_R-\Lambda\|^q
+ \geq\kappa\,\beta_F(s,bt)^q.
+\]
+Integrating in $s,z',t$ and substituting $u=bt$ shows that
+\[
+ \mathcal D_X(f_R)\geq\kappa R^{n-1}b^q\mathcal D_b(F).
+\]
+Together with \eqref{eq:905-upper}, this proves the lemma with
+$K=CL^q4^{n-1}/(\kappa b^q)$.
+\end{proof}
+
+\begin{lemma}[Separated binary scales]\label{lem:905-energy}
+Suppose the conclusion of Lemma~\ref{lem:905-curves} holds.  Every finite
+$Y$-valued Walsh--Paley martingale $(M_k)_{k=0}^N$ with $M_0=0$ and
+$\|M_N\|_\infty\leq1$ satisfies
+\begin{equation}\label{eq:905-energy}
+ \sum_{k=1}^N\mathbb E\|M_k-M_{k-1}\|^q\leq A,
+ \qquad A=36\cdot12^qK.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Represent its differences as
+\[
+ M_k(\epsilon_1,\ldots,\epsilon_k)
+ =M_{k-1}(\epsilon_1,\ldots,\epsilon_{k-1})
+ +\epsilon_k a_k(\epsilon_1,\ldots,\epsilon_{k-1}).
+\]
+All values of every $M_k$ belong to $B_Y$.  Choose positive integers
+$m_1<\cdots<m_N$, and put $h_k=2^{-m_k}$.  Require
+\[
+ \frac32h_1\leq b,\qquad h_{k+1}\leq\frac14h_k,
+ \qquad
+ h_{k+1}\leq\frac{h_k\delta_k}{32}
+ \quad\text{whenever }\delta_k\text{ is defined},
+\]
+where $\delta_k$ is the least positive norm among the finitely many
+values of $a_k$.  If all its values vanish, omit the last requirement.
+Such a finite sequence always exists.  Its gaps may depend on the
+martingale, but none of our final constants do.
+
+On $[0,1)$ let $r_m(t)=(-1)^{\lfloor2^mt\rfloor}$ and set
+\[
+ g_k(t)=M_k(r_{m_1}(t),\ldots,r_{m_k}(t)),\qquad
+ F_k(t)=\int_0^t g_k(v)\,dv\quad(0\leq t\leq1).
+\]
+Extend $F_k$ by zero off $[0,1]$.  The selected binary digits are
+independent fair signs, so $\int_0^1g_k=\mathbb EM_k=0$.
+Thus these extensions are continuous, $1$-Lipschitz, supported in
+$[0,1]$, and have supremum norm at most one.  Write $F=F_N$.
+
+For $k<N$, on each dyadic cell of length $2h_{k+1}$ the earlier selected
+digits are fixed and conditional averaging cancels the remaining
+martingale differences.  Hence the integral of $g_N-g_k$ over every
+such cell is zero.  Since its norm is at most two,
+\begin{equation}\label{eq:905-tail}
+ \|F-F_k\|_\infty\leq4h_{k+1}.
+\end{equation}
+
+Fix a full period $I=[2jh_k,(2j+2)h_k]$ of $r_{m_k}$ and write
+$c=(2j+1)h_k$.  All earlier selected digits are constant on $I$.
+There is an affine function $L_I$ such that
+\[
+ F_k(v)=L_I(v)+a_k(I)(h_k-|v-c|),\qquad v\in I.
+\]
+Let $\psi$ equal $+1$ on the middle half of $I$, and $-1$ on its two
+outer quarters.  It has zero zeroth and first moments, and
+\[
+ \frac1{|I|}\int_I\psi(v)(h_k-|v-c|)\,dv=\frac{h_k}{4}.
+\]
+For every affine $\Lambda:\mathbb R\to Y$, the triangle and H\"older
+inequalities imply
+\[
+ \left(\frac1{|I|}\int_I\|F_k-\Lambda\|^q\right)^{1/q}
+ \geq\left\|\frac1{|I|}\int_I\psi(F_k-\Lambda)\right\|
+ =\frac{h_k\|a_k(I)\|}{4}.
+\]
+This argument allows affine approximants with values outside the span
+of the martingale.  Using \eqref{eq:905-tail} and the choice of
+$h_{k+1}$ gives
+\begin{equation}\label{eq:905-tent}
+ \inf_\Lambda\left(\frac1{|I|}\int_I\|F-\Lambda\|^q\right)^{1/q}
+ \geq\frac{h_k\|a_k(I)\|}{8}.
+\end{equation}
+For $k=N$ the tail is zero, and when $a_k(I)=0$ the bound is immediate.
+
+If $|s-c|\leq h_k/4$ and $5h_k/4\leq u\leq3h_k/2$, the interval
+$[s-u,s+u]$ contains $I$ and has length at most $3h_k$.  Thus
+\[
+ \beta_F(s,u)^q\geq\frac23
+ \left(\frac{h_k\|a_k(I)\|}{8}\right)^q.
+\]
+The center windows for a fixed scale are disjoint, the scale windows
+for distinct $k$ are disjoint, and all lie below $b$.  Each period
+therefore contributes at least
+\[
+ \frac23\left(\frac{h_k\|a_k(I)\|}{8}\right)^q
+ \frac{h_k}{2}\frac{h_k}{4}
+ \left(\frac{3h_k}{2}\right)^{-q-1}
+ =\frac{h_k\|a_k(I)\|^q}{18\cdot12^q}
+\]
+to $\mathcal D_b(F)$.  The preceding binary digits have the uniform
+joint distribution over these periods, so
+\[
+ \sum_{I\text{ at scale }k}2h_k\|a_k(I)\|^q
+ =\mathbb E\|M_k-M_{k-1}\|^q.
+\]
+Summing the disjoint contributions and applying
+Lemma~\ref{lem:905-curves} proves \eqref{eq:905-energy}.
+\end{proof}
+
+\begin{lemma}[Renorming at the same exponent]\label{lem:905-renorm}
+If \eqref{eq:905-energy} holds, then $Y$ admits an equivalent uniformly
+convex norm of power type $q$.
+\end{lemma}
+\begin{proof}
+For a unit-ball-valued martingale starting at any deterministic
+$x\in B_Y$, subtracting $x$ and dividing by two permits the use of
+\eqref{eq:905-energy}.  Its original energy is therefore at most
+$2^qA$.  Put $H=\max\{1,2^qA\}$ and define
+\[
+ \Phi(x)=\sup\left\{\mathbb E\sum_{k=1}^N
+ \|M_k-M_{k-1}\|^q:
+ M_0=x,\ (M_k)\text{ a finite Walsh--Paley martingale in }B_Y\right\}.
+\]
+The zero-step martingale is allowed.  We have $0\leq\Phi\leq H$ and
+$\Phi(-x)=\Phi(x)$.  If $Y$ is complex, the same argument gives
+$\Phi(\lambda x)=\Phi(x)$ whenever $|\lambda|=1$, so the norm
+constructed below is also a complex norm.  Join arbitrarily near-optimal martingales starting
+at $x,y$ below a first fair split from $(x+y)/2$ to $x$ and $y$.
+Their horizons can be equalized by constant steps.  Taking suprema gives
+\begin{equation}\label{eq:905-bellman}
+ \Phi\left(\frac{x+y}{2}\right)
+ \geq\frac{\Phi(x)+\Phi(y)}2+\frac{\|x-y\|^q}{2^q}.
+\end{equation}
+Let $u(x)=\Phi(0)-\Phi(x)$.  Then $u$ is even, $u(0)=0$, and
+\[
+ 0\leq u(x)\leq H,\qquad u(x)\geq\|x\|^q,
+\]
+where both lower bounds follow from \eqref{eq:905-bellman} at $x,-x$.
+Moreover
+\begin{equation}\label{eq:905-strong-convexity}
+ u\left(\frac{x+y}{2}\right)
+ \leq\frac{u(x)+u(y)}2-\frac{\|x-y\|^q}{2^q}.
+\end{equation}
+A locally bounded midpoint-convex function is continuous and convex
+on the open unit ball.  Convexity on radial segments, first for dyadic
+fractions and then by continuity, gives $u(x)\leq H\|x\|$ there.
+
+Set $r=2^{-1/q}$, $a=1/(2H)$, and
+\[
+ K=\{x\in B_Y:u(x)\leq1/2\}.
+\]
+The estimates just proved imply $aB_Y\subseteq K\subseteq rB_Y$.
+Since $r<1$, continuity in the open ball implies that $K$ is a closed,
+symmetric convex body.  Its Minkowski functional $p$ is an equivalent
+norm satisfying
+\begin{equation}\label{eq:905-norm-comparison}
+ a p(z)\leq\|z\|\leq r p(z).
+\end{equation}
+For completeness, we extract a power bound for its modulus.
+Write $r'=(1+r)/2$ and $L=H/(1-r')=2H/(1-r)$.
+The convex function $u$, with values in $[0,H]$ on $B_Y$, is
+$L$-Lipschitz on $r'B_Y$.  Indeed, extend a line segment from either
+endpoint a distance arbitrarily close to $1-r'$ within the unit ball,
+and compare secant slopes using its range bound.
+
+For $x,y\in K$ put $m=(x+y)/2$ and
+$\Delta=(\|x-y\|/2)^q\leq r^q=1/2$.
+By \eqref{eq:905-strong-convexity}, $u(m)\leq1/2-\Delta$.
+Let $\eta=\Delta/(4L)$ and $z=m/(1-\eta)$.  Since
+$\eta\leq1/(8L)$,
+\[
+ \|z\|\leq r+2\eta\leq r+\frac1{4L}<r',\qquad
+ \|z-m\|\leq2\eta.
+\]
+It follows that $u(z)\leq1/2-\Delta+2L\eta\leq1/2$, so $z\in K$.
+Consequently $p(m)\leq1-\eta$.  Whenever $p(x-y)\geq\varepsilon$,
+\eqref{eq:905-norm-comparison} implies
+\[
+ p\left(\frac{x+y}{2}\right)
+ \leq1-\frac{a^q}{2^{q+2}L}\varepsilon^q.
+\]
+This proves the asserted modulus of convexity at exponent $q$.
+\end{proof}
+
+\subsection{Passage to arbitrary probability spaces at the same exponent}
+
+The final implication is the classical martingale renorming theorem
+\cite{Pisier1975}, also recalled in \cite[Theorem~1]{HM2019}.
+We include its needed direction directly to keep the exponent and the
+probability-space quantifiers explicit.
+
+\begin{lemma}\label{lem:905-martingale}
+Suppose a norm $p$ satisfies $\delta_p(\varepsilon)\ge c\varepsilon^q$
+for $0\le\varepsilon\le2$, where $q\ge2$ and $c>0$. Set
+\[
+ \kappa=\min\left\{4^{-q},\frac{c}{2\cdot3^q}\right\}.
+\]
+For every finite $L^q$ martingale on any probability space,
+\[
+ 2\kappa\sum_{k=1}^{N-1}\mathbb E\,p(M_{k+1}-M_k)^q
+ \le \mathbb E\,p(M_N)^q.
+\]
+\end{lemma}
+
+\begin{proof}
+We first prove the homogeneous convexity inequality
+\begin{equation}\label{eq:905-power-midpoint}
+ \frac{p(x)^q+p(y)^q}{2}
+ -p\left(\frac{x+y}{2}\right)^q
+ \ge\kappa p(x-y)^q.
+\end{equation}
+Write $A=p(x)\ge B=p(y)$, $d=p(x-y)$, and $t=(A+B)/2$.
+If $A-B\ge d/2$, the scalar Clarkson inequality gives
+\[
+ \frac{A^q+B^q}{2}-t^q
+ \ge\left(\frac{A-B}{2}\right)^q\ge4^{-q}d^q,
+\]
+and $p((x+y)/2)\le t$. This proves \eqref{eq:905-power-midpoint}
+in that case. For completeness, the scalar inequality follows by
+writing $A=t+s$, $B=t-s$: for $z\ge1$ the function
+$(z+1)^q+(z-1)^q-2z^q$ is increasing, and at $z=1$ it is
+$2^q-2\ge2$.
+
+If $A-B<d/2$, the case $d=0$ is trivial, and otherwise $B>t/2$,
+$A<3t/2$. Let $u=x/A$ and $v=y/B$. The triangle inequality implies
+\[
+ p(u-v)\ge\frac{d-(A-B)}A\ge\frac{d}{3t}.
+\]
+Use the modulus bound and
+$(x+y)/2=(A-B)u/2+B(u+v)/2$ to obtain
+\[
+ p\left(\frac{x+y}{2}\right)
+ \le t-Bc\left(\frac{d}{3t}\right)^q
+ \le t-\frac{c\,d^q}{2\cdot3^q t^{q-1}}.
+\]
+For $0\le s\le t$, $t^q-s^q\ge t^{q-1}(t-s)$. Together with
+$(A^q+B^q)/2\ge t^q$, this proves
+\eqref{eq:905-power-midpoint} in the second case.
+
+Put $F(x)=p(x)^q$. Regard $Y$ as a real space when taking supporting
+functionals (use the real part of a complex norming functional). Choose a subgradient $\ell_x$ of $F$ at $x$.
+Such a functional is supplied by a norming functional for $x$:
+for $x\ne0$, take $\ell_x=q p(x)^{q-1}x^*$ with
+$p^*(x^*)=1$ and $x^*(x)=p(x)$, and put $\ell_0=0$.
+The supporting-functional inequality at $x$, evaluated at $(x+y)/2$
+and combined with
+\eqref{eq:905-power-midpoint}, gives
+\begin{equation}\label{eq:905-tangent}
+ F(y)\ge F(x)+\ell_x(y-x)+2\kappa p(y-x)^q.
+\end{equation}
+For a finite-valued martingale, choose $\ell_{M_k}$ separately at its
+finitely many values. Conditional expectation of the linear term in
+\eqref{eq:905-tangent} is zero. Summing over $k$ gives
+\[
+ 2\kappa\sum_{k=1}^{N-1}\mathbb E\,p(M_{k+1}-M_k)^q
+ \le\mathbb E F(M_N)-\mathbb E F(M_1)
+ \le\mathbb E F(M_N).
+\]
+
+Finally, finite-valued martingales suffice even on an arbitrary probability
+space. For each $k$ choose a finite-valued $\mathcal F_k$-measurable
+function $s_k$ approximating $M_k$ in $L^q$ within $\epsilon$.
+Let $\mathcal A_k=\sigma(s_1,\ldots,s_k)\subseteq\mathcal F_k$ and set
+$N_k=\mathbb E[M_N\mid\mathcal A_k]$. This is a finite-valued martingale,
+and the tower identity gives
+$N_k=\mathbb E[M_k\mid\mathcal A_k]$. Since $s_k$ is
+$\mathcal A_k$-measurable, conditional-expectation contraction yields
+\[
+ \|N_k-M_k\|_{L^q(p)}\le2\epsilon.
+\]
+The finite-valued inequality therefore passes to the original finite
+martingale as $\epsilon\to0$. These conditional expectations are over
+finite sigma-algebras and require no extra property of the Banach space.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:905}]
+Apply the first three lemmas to obtain the equivalent norm $p$, with
+$a p(z)\le\|z\|\le r p(z)$ and
+$c=a^q/(2^{q+2}L)$. Lemma~\ref{lem:905-martingale} then gives
+\[
+ \left(\sum_{k=1}^{N-1}\mathbb E\|M_{k+1}-M_k\|^q\right)^{1/q}
+ \le\frac{r}{a}(2\kappa)^{-1/q}
+       \bigl(\mathbb E\|M_N\|^q\bigr)^{1/q}.
+\]
+This is the required martingale cotype inequality on every probability
+space, with precisely the original exponent $q$.
+\end{proof}
+
+The decisive feature is that scale gaps may depend on each finite
+martingale.  This makes every later primitive uniformly smaller than
+the affine-error signal of each earlier difference, while the integral
+with measure $du/u^{q+1}$ assigns the same energy weight at every chosen
+scale.  The Bellman construction retains the exact exponent, so no
+passage to $q+\varepsilon$ occurs.
+
+
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{3pt}
+
+\bibitem{HN2019}
+T.~Hyt\"onen and A.~Naor,
+\emph{Heat flow and quantitative differentiation},
+J. Eur. Math. Soc. \textbf{21} (2019), 3415--3466.
+\href{https://doi.org/10.4171/JEMS/906}{doi:10.4171/JEMS/906}.
+Questions 10 and 19, and Theorem 9.
+
+\bibitem{HM2019}
+T.~Hyt\"onen and J.~Merikoski,
+\emph{Vector-Valued Local Approximation Spaces},
+J. Fourier Anal. Appl. \textbf{25} (2019), 299--320.
+\href{https://doi.org/10.1007/s00041-018-9598-2}{doi:10.1007/s00041-018-9598-2}.
+
+\bibitem{Pisier1975}
+G.~Pisier,
+\emph{Martingales with values in uniformly convex spaces},
+Israel J. Math. \textbf{20} (1975), 326--350.
+\href{https://doi.org/10.1007/BF02760337}{doi:10.1007/BF02760337}.
+\end{thebibliography}
+\end{document}

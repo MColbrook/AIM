@@ -2,14 +2,14 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**868 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**859 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
 | Subject group | Open targets | Solved |
 | --- | ---: | ---: |
 | [Spectral theory and spectral geometry](#spectral-theory-and-spectral-geometry) | [39](#spectral-open) | [16](#spectral-solved) |
-| [Operators, matrices and computation](#operators-matrices-and-computation) | [69](#operators-open) | [18](#operators-solved) |
+| [Operators, matrices and computation](#operators-matrices-and-computation) | [60](#operators-open) | [27](#operators-solved) |
 | [Inverse problems, control and dynamics](#inverse-problems-control-and-dynamics) | [21](#inverse-open) | [8](#inverse-solved) |
 | [PDEs, fluids and materials](#pdes-fluids-and-materials) | [50](#pdes-materials-open) | [11](#pdes-materials-solved) |
 | [Probability, statistics and learning](#probability-statistics-and-learning) | [59](#probability-statistics-open) | [14](#probability-statistics-solved) |
@@ -145,15 +145,11 @@
 | 894 | [Dimension-free bounded approximation for Euclidean Lipschitz-free spaces](problems/894-dimension-free-bounded-approximation-for-euclidean-lipschitz-free-spaces.md) | 🟡 PARTIAL | Functional analysis and metric geometry |
 | 895 | [Does an unconditional basis force a Lipschitz-free space to be $`\ell_1`$?](problems/895-does-an-unconditional-basis-force-a-lipschitz-free-space-to-be-ell-1.md) | 🟡 PARTIAL | Functional analysis and Lipschitz-free Banach spaces |
 | 896 | [A Riesz basis of interior kernels in every Hardy model space](problems/896-a-riesz-basis-of-interior-kernels-in-every-hardy-model-space.md) | 🟡 PARTIAL | Operator theory and complex analysis |
-| 897 | [Pedersen's sharp fractional-power commutator inequality](problems/897-pedersen-s-sharp-fractional-power-commutator-inequality.md) | 🟡 PARTIAL | Matrix analysis and operator theory |
-| 898 | [A universal Lipschitz bound for the canonical affine projection](problems/898-a-universal-lipschitz-bound-for-the-canonical-affine-projection.md) | 🟡 PARTIAL | Banach space geometry and convex geometric analysis |
 | 899 | [Does local reflexivity force exactness for a C*-algebra?](problems/899-does-local-reflexivity-force-exactness-for-a-c-algebra.md) | 🟡 PARTIAL | Operator algebras and functional analysis |
 | 900 | [An infinite-dimensional complex reflexive space with numerical index one](problems/900-an-infinite-dimensional-complex-reflexive-space-with-numerical-index-one.md) | 🟡 PARTIAL | Geometry of Banach spaces / bounded linear operators |
-| 901 | [Finite-dimensional detection of almost-periodic Banach cocycles](problems/901-finite-dimensional-detection-of-almost-periodic-banach-cocycles.md) | 🟡 PARTIAL | Operators, matrices and computation |
 | 902 | [Do small independent perturbations preserve Fourier uniqueness at square-root nodes?](problems/902-do-small-independent-perturbations-preserve-fourier-uniqueness-at-square-root-nodes.md) | 🟡 PARTIAL | Fourier analysis and stable signal reconstruction |
 | 903 | [Does symmetric strong diameter two force a copy of $`c_0`$?](problems/903-does-symmetric-strong-diameter-two-force-a-copy-of-c-0.md) | 🟡 PARTIAL | Operators, matrices and computation |
 | 904 | [Does every separable non-reflexive Banach space admit a Read norm?](problems/904-does-every-separable-non-reflexive-banach-space-admit-a-read-norm.md) | 🟡 PARTIAL | Banach-space geometry and continuous functional analysis |
-| 905 | [Does Lipschitz affine approximation determine the exact martingale cotype?](problems/905-does-lipschitz-affine-approximation-determine-the-exact-martingale-cotype.md) | 🟡 PARTIAL | Banach space geometry and quantitative differentiation |
 | 906 | [Does every reflexive-space $`AC(\sigma)`$ operator admit a $`BV(\sigma)`$ functional calculus?](problems/906-does-every-reflexive-space-ac-sigma-operator-admit-a-bv-sigma-functional-calculus.md) | 🟡 PARTIAL | Operator theory and Banach algebras |
 | 907 | [Weak cancellation in a simple stably finite C*-algebra](problems/907-weak-cancellation-in-a-simple-stably-finite-c-algebra.md) | 🟡 PARTIAL | Operator algebras |
 | 908 | [Kahane's sublogarithmic Beurling–Helson conjecture](problems/908-kahane-s-sublogarithmic-beurlinghelson-conjecture.md) | 🟡 PARTIAL | Harmonic analysis and Wiener-algebra composition operators |
@@ -165,25 +161,20 @@
 | 914 | [Sharp multiparameter Haar small-ball inequality in dimensions at least three](problems/914-sharp-multiparameter-haar-small-ball-inequality-in-dimensions-at-least-three.md) | 🟡 PARTIAL | Harmonic analysis and approximation theory |
 | 915 | [Polynomial endpoint Lorentz bounds for multilinear forms](problems/915-polynomial-endpoint-lorentz-bounds-for-multilinear-forms.md) | 🟡 PARTIAL | Functional analysis / multilinear coefficient inequalities |
 | 916 | [Do spherical Fourier partial sums converge almost everywhere for every $`L^2`$ function on a multidimensional torus?](problems/916-do-spherical-fourier-partial-sums-converge-almost-everywhere-for-every-l-2-function-on-a-multidimens.md) | 🟡 PARTIAL | Harmonic analysis and Fourier series |
-| 917 | [Split products for time-dependent form-sum Schrödinger evolution](problems/917-split-products-for-time-dependent-form-sum-schrodinger-evolution.md) | 🟡 PARTIAL | Operators, matrices and computation |
 | 918 | [Are all $`L^p`$-convolvers $`p`$-pseudomeasures?](problems/918-are-all-l-p-convolvers-p-pseudomeasures.md) | 🟡 PARTIAL | Functional analysis and operator algebras |
 | 919 | [Can the double-logarithmic loss be removed from the bilinear Hilbert transform's edge estimate?](problems/919-can-the-double-logarithmic-loss-be-removed-from-the-bilinear-hilbert-transform-s-edge-estimate.md) | 🟡 PARTIAL | Harmonic analysis and multilinear singular integrals |
-| 920 | [Invariant subspaces under complexification of real operators](problems/920-invariant-subspaces-under-complexification-of-real-operators.md) | 🟡 PARTIAL | Operator theory and real Banach spaces |
-| 921 | [Generic backward uniqueness for linear retarded equations](problems/921-generic-backward-uniqueness-for-linear-retarded-equations.md) | 🟡 PARTIAL | Operators / delay differential equations |
 | 922 | [An integrable weak gradient for the uncentered cube maximal function](problems/922-an-integrable-weak-gradient-for-the-uncentered-cube-maximal-function.md) | 🟡 PARTIAL | Harmonic analysis and endpoint Sobolev regularity |
 | 923 | [Rapid decay for cocompact lattices in semisimple Lie groups](problems/923-rapid-decay-for-cocompact-lattices-in-semisimple-lie-groups.md) | 🟡 PARTIAL | Harmonic analysis / convolution operators and operator algebras |
 | 924 | [Connectedness of invertible upper-triangular operators](problems/924-connectedness-of-invertible-upper-triangular-operators.md) | 🟡 PARTIAL | Operators, matrices and computation |
 | 925 | [Does the infinite-variable Hardy space have a Schauder basis?](problems/925-does-the-infinite-variable-hardy-space-have-a-schauder-basis.md) | 🟡 PARTIAL | Function spaces, harmonic analysis and Dirichlet series |
 | 926 | [Are real Grothendieck constants strictly increasing with vector dimension?](problems/926-are-real-grothendieck-constants-strictly-increasing-with-vector-dimension.md) | 🟡 PARTIAL | Operator inequalities and continuous optimization |
 | 927 | [Can multiqubit pure states attain the smallest product overlap up to a universal factor?](problems/927-can-multiqubit-pure-states-attain-the-smallest-product-overlap-up-to-a-universal-factor.md) | 🟡 PARTIAL | Operators, matrices and computation |
-| 928 | [Does the closed completely positive cone generate the energy-constrained completion?](problems/928-does-the-closed-completely-positive-cone-generate-the-energy-constrained-completion.md) | 🟡 PARTIAL | Operators, matrices and computation |
 | 929 | [A uniform bilinear square-function bound for arbitrary sharp strips](problems/929-a-uniform-bilinear-square-function-bound-for-arbitrary-sharp-strips.md) | 🟡 PARTIAL | Harmonic analysis and bilinear Fourier multipliers |
 | 930 | [The Jacobson radical of a commutative subspace-lattice algebra](problems/930-the-jacobson-radical-of-a-commutative-subspace-lattice-algebra.md) | 🟡 PARTIAL | Operators, matrices and computation |
 | 931 | [Do isomorphic duals determine homogeneous polynomial spaces?](problems/931-do-isomorphic-duals-determine-homogeneous-polynomial-spaces.md) | 🟡 PARTIAL | Infinite-dimensional complex analysis and Banach spaces |
 | 932 | [Half-Hölder regularity for Spencer's random block model](problems/932-half-holder-regularity-for-spencer-s-random-block-model.md) | 🟡 PARTIAL | Operators, matrices and computation |
 | 933 | [Bounded point interpolation in Hardy spaces of Dirichlet series](problems/933-bounded-point-interpolation-in-hardy-spaces-of-dirichlet-series.md) | 🟡 PARTIAL | Function spaces and interpolation theory |
 | 934 | [Bi-invariant subspaces for invertible operators on reflexive Banach spaces](problems/934-bi-invariant-subspaces-for-invertible-operators-on-reflexive-banach-spaces.md) | 🟡 PARTIAL | Operator theory and Banach spaces |
-| 935 | [The numerical index of real Lebesgue spaces](problems/935-the-numerical-index-of-real-lebesgue-spaces.md) | 🟡 PARTIAL | Functional analysis / bounded linear operators |
 | 936 | [Are general Dunkl translations bounded on Lp?](problems/936-are-general-dunkl-translations-bounded-on-lp.md) | 🟡 PARTIAL | Harmonic analysis and reflection operators |
 
 <a name="operators-solved"></a>
@@ -210,6 +201,15 @@
 | 450 | [Stein’s Hilbert-transform bound along Lipschitz directions](problems/450-stein-lipschitz-direction-hilbert-bound.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-uniform-Hilbert-transform-estimate-for-Lipschitz-directions-September-25-2026/main.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
 | 656 | [Poisson kernel bounds for elliptic boundary diffusion on Lipschitz domains](research/resolved/656-dtn-poisson-bounds-lipschitz.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/435-corner-poisson-counterexample/PROOF.md) | [Review](research/solution_reviews/2026-10-02/435-review.md) |
 | 657 | [Finite-density time sampling of an infinite observation window](research/resolved/657-infinite-time-dynamical-frame-discretization.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/siavash-sadeghi-457-558/aim_457_uniform_sampling.pdf) | [Review](research/solution_reviews/2026-10-02/457-review.md) |
+| 897 | [Pedersen's sharp fractional-power commutator inequality](problems/897-pedersen-s-sharp-fractional-power-commutator-inequality.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/897-fractional-power-intertwining/aim897.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/897-review.md) |
+| 898 | [A universal Lipschitz bound for the canonical affine projection](problems/898-a-universal-lipschitz-bound-for-the-canonical-affine-projection.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/898-affine-lipschitz-projection/aim898.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/898-review.md) |
+| 901 | [Finite-dimensional detection of almost-periodic Banach cocycles](problems/901-finite-dimensional-detection-of-almost-periodic-banach-cocycles.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/901-almost-periodic-cocycle-quotients/aim901.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/901-review.md) |
+| 905 | [Does Lipschitz affine approximation determine the exact martingale cotype?](problems/905-does-lipschitz-affine-approximation-determine-the-exact-martingale-cotype.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/905-lipschitz-approximation-martingale-cotype/aim905.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/905-review.md) |
+| 917 | [Split products for time-dependent form-sum Schrödinger evolution](problems/917-split-products-for-time-dependent-form-sum-schrodinger-evolution.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/917-nonautonomous-split-product-counterexamples/aim917.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/917-review.md) |
+| 920 | [Invariant subspaces under complexification of real operators](problems/920-invariant-subspaces-under-complexification-of-real-operators.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/920-real-operator-complexification/aim920.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/920-review.md) |
+| 921 | [Generic backward uniqueness for linear retarded equations](problems/921-generic-backward-uniqueness-for-linear-retarded-equations.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/921-generic-retarded-backward-uniqueness/aim921.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/921-review.md) |
+| 928 | [Does the closed completely positive cone generate the energy-constrained completion?](problems/928-does-the-closed-completely-positive-cone-generate-the-energy-constrained-completion.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/928-energy-constrained-positive-cone/aim928.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/928-review.md) |
+| 935 | [The numerical index of real Lebesgue spaces](problems/935-the-numerical-index-of-real-lebesgue-spaces.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/935-real-lebesgue-numerical-index/aim935.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/935-review.md) |
 
 ## Inverse problems, control and dynamics
 
@@ -1529,7 +1529,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 22 expansion — PDE emphasis | 88 | 2026-09-22–2026-10-30 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
 | Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 117 | 2026-09-23–2026-11-03 |
-| Retained further problems, integrated 30 October 2026 | 393 | 2026-10-30–2026-11-03 |
+| Retained further problems, integrated 30 October 2026 | 384 | 2026-10-30–2026-11-04 |
 
 ## Maintaining the collection
 

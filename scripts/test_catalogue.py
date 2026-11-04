@@ -88,6 +88,27 @@ class ResolutionPresentationTests(unittest.TestCase):
         self.assertNotIn('## Withdrawn\n', text)
         self.assertIn('| Counterexample | 2026-01-01 | [Proof](research/proof.md) | [Review](research/review.md)', text)
 
+    def test_readme_exposes_partial_proofs_without_closing_targets(self):
+        partial = {**self.entries[0], 'title': 'Restricted | result',
+                   'proof': 'research/partial.pdf', 'review': 'research/partial-review.md'}
+        text = render_readme([partial], self.manifest)
+        section = text.split('## Partial progress\n', 1)[1].split('\n## ', 1)[0]
+        self.assertIn('[001. Restricted \\| result](problems/001-open.md)', section)
+        self.assertIn('[Proof](research/partial.pdf)', section)
+        self.assertIn('[Review](research/partial-review.md)', section)
+        self.assertIn('**1 open targets** (0 open, 1 partial)', text)
+        self.assertNotIn('| 001 |', text.split('## Solved problems\n', 1)[1])
+
+    def test_readme_requires_both_evidence_links_for_partial_table(self):
+        linked = {**self.entries[0], 'proof': 'research/partial.pdf',
+                  'review': 'research/partial-review.md'}
+        for missing in ('proof', 'review'):
+            with self.subTest(missing=missing):
+                row = {key: value for key, value in linked.items() if key != missing}
+                self.assertNotIn('## Partial progress\n', render_readme([row], self.manifest))
+        self.assertNotIn('## Partial progress\n',
+                         render_readme([{**linked, 'status': 'Open'}], self.manifest))
+
     def test_claim_keeps_original_page_and_is_not_counted_as_solved(self):
         claim = {**self.claim, 'file': 'problems/003-claim.md'}
         source_manifest = {**self.manifest, 'retired': []}

@@ -1,8 +1,8 @@
 # 905. Does Lipschitz affine approximation determine the exact martingale cotype?
 
 **Area:** Banach space geometry and quantitative differentiation
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -48,14 +48,15 @@ The current OpenAI announcement that nontrivial Markov type implies superreflexi
 3. OpenAI, *Nontrivial Markov Type Forces Superreflexivity* (2026), [preprint](https://github.com/openai/math/blob/main/preprints/Nontrivial-Markov-Type-Forces-Superreflexivity-September-23-2026/paper.pdf), Theorem 1.1, p. 1. Included to distinguish its announced qualitative conclusion from the exact exponent requested here.
 4. S.-Y. Ryoo, *Quantitative nonembeddability of groups of polynomial growth into uniformly convex spaces*, [arXiv:2207.11305v2](https://arxiv.org/pdf/2207.11305v2) (2025), Theorem 34, p. 22, and Theorems 55–57, p. 38.
 
+- M. J. Colbrook, [*Lipschitz affine approximation forces exact martingale cotype*](../research/solutions/905-lipschitz-approximation-martingale-cotype/aim905.pdf), 3 November 2026. [TeX source](../research/solutions/905-lipschitz-approximation-martingale-cotype/aim905.tex), [package and reproduction](../research/solutions/905-lipschitz-approximation-martingale-cotype/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-operators-batch/905-review.md).
+
 ## Status review
 
+**Outcome:** Affirmative proof.
 
-**Known cases:** The Lipschitz support-volume estimate implies qualitative superreflexivity, while the exact-q martingale characterization uses a stronger Sobolev-controlled approximation inequality. Qualitative Markov-type renorming and Banach-lattice q-plus-epsilon progress do not attain the specified exponent from this weaker hypothesis.
+**Resolution:** The stated Lipschitz support-volume approximation estimate implies martingale cotype at exactly the requested exponent, on arbitrary probability spaces. The [manuscript](../research/solutions/905-lipschitz-approximation-martingale-cotype/aim905.pdf) and [individual audit](../research/solution_reviews/2026-11-03-operators-batch/905-review.md) give the complete proof, checked sources and exact target comparison. Review was performed by Codex (AI).
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
-
-### Online recheck, 2026-10-30
+### Earlier literature review, 2026-10-30
 
 The Lipschitz support-volume estimate implies qualitative superreflexivity, while the exact-q martingale characterization uses a stronger Sobolev-controlled approximation inequality. Qualitative Markov-type renorming and Banach-lattice q-plus-epsilon progress do not attain the specified exponent from this weaker hypothesis.
 

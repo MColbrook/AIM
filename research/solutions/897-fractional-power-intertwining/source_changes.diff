@@ -1,0 +1,106 @@
+--- submitted/expanded-897.tex
++++ aim897.tex
+@@ -1 +1,58 @@
+-\section{Problem 897: sharp fractional-power commutators}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=15pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
++\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
++\usepackage{microtype,enumitem,fancyhdr}
++\usepackage{xurl}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
++ pdftitle={Sharp fractional-power intertwining inequalities},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 897: mathematical result and proof}}
++\urlstyle{same}
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\newtheorem{theorem}{Theorem}[section]
++\newtheorem{lemma}[theorem]{Lemma}
++\newtheorem{proposition}[theorem]{Proposition}
++\newtheorem{corollary}[theorem]{Corollary}
++\theoremstyle{remark}
++\newtheorem{remark}[theorem]{Remark}
++\newtheorem{definition}[theorem]{Definition}
++\DeclareMathOperator{\Tr}{Tr}
++\DeclareMathOperator{\supp}{supp}
++\DeclareMathOperator{\Lip}{Lip}
++\DeclareMathOperator{\Rea}{Re}
++\newcommand{\R}{\mathbb R}
++\newcommand{\C}{\mathbb C}
++\newcommand{\E}{\mathbb E}
++\newcommand{\N}{\mathbb N}
++\newcommand{\ip}[2]{\langle #1,#2\rangle}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 897}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\allowdisplaybreaks[2]
++\title{\textbf{Sharp fractional-power intertwining inequalities}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We prove the fractional-power intertwining inequality with sharp constant one for positive matrices and all exponents between zero and one. The argument yields spectral-floor refinements and a logarithmic commutator bound, and extends in operator norm to bounded operators and continuous nonnegative operator-monotone functions.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 897 at revision
++\texttt{5d7e26e8444e}. The precise scope is stated below.
++\medskip
++
++\section{Main result and proof}
+@@ -2,0 +60,3 @@
++
++The original fractional-power question is recorded in \cite[Problem X.5.3]{Bhatia1997}.
++
+@@ -401,0 +462,39 @@
++
++
++\begin{thebibliography}{99}
++\small
++\setlength{\itemsep}{3pt}
++
++\bibitem{LoringVides2013}
++T.~A.~Loring and F.~Vides,
++\emph{Estimating Norms of Commutators},
++Experimental Math. \textbf{24} (2015), 106--122.
++\href{https://arxiv.org/abs/1301.4252v3}{arXiv:1301.4252v3} (2013),
++Conjecture 1.6 and Lemma 1.7.
++
++\bibitem{Herrera2023}
++D.~Herrera,
++\emph{On the commutator modulus of continuity for operator monotone functions},
++preprint, November 2023.
++\href{https://arxiv.org/abs/2311.17448}{arXiv:2311.17448},
++equation (7), Conjectures 1.8--1.9 and Theorems 1.11--1.12.
++
++\bibitem{AIM}
++MColbrook/AIM, \emph{AIM 897: Pedersen's sharp fractional-power commutator inequality},
++repository statement at revision \texttt{5d7e26e8444e}.
++\url{https://github.com/MColbrook/AIM/blob/5d7e26e8444eb98de91988454564e45e011107c4/problems/897-pedersen-s-sharp-fractional-power-commutator-inequality.md}.
++
++\bibitem{Chansangiam2013}
++P.~Chansangiam,
++\emph{Integral Representations and Decompositions of Operator Monotone
++Functions on the Nonnegative Reals}, preprint, 2013.
++\href{https://arxiv.org/abs/1304.7936}{arXiv:1304.7936}, Proposition 1.1.
++
++\bibitem{Bhatia1997}
++R.~Bhatia, \emph{Matrix Analysis}, Graduate Texts in Mathematics
++\textbf{169}, Springer, 1997, Chapter X, Problem X.5.3, p.~317,
++and chapter notes, p.~321.
++\href{https://doi.org/10.1007/978-1-4612-0653-8}{doi:10.1007/978-1-4612-0653-8}.
++
++\end{thebibliography}
++\end{document}

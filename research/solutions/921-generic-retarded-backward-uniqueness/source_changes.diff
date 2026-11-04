@@ -1,0 +1,76 @@
+--- submitted/expanded-921.tex
++++ aim921.tex
+@@ -1 +1,58 @@
+-\section{Problem 921: generic backward uniqueness for delay equations}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=15pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
++\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
++\usepackage{microtype,enumitem,fancyhdr}
++\usepackage{xurl}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
++ pdftitle={Generic backward uniqueness for linear retarded equations},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 921: mathematical result and proof}}
++\urlstyle{same}
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\newtheorem{theorem}{Theorem}[section]
++\newtheorem{lemma}[theorem]{Lemma}
++\newtheorem{proposition}[theorem]{Proposition}
++\newtheorem{corollary}[theorem]{Corollary}
++\theoremstyle{remark}
++\newtheorem{remark}[theorem]{Remark}
++\newtheorem{definition}[theorem]{Definition}
++\DeclareMathOperator{\Tr}{Tr}
++\DeclareMathOperator{\supp}{supp}
++\DeclareMathOperator{\Lip}{Lip}
++\DeclareMathOperator{\Rea}{Re}
++\newcommand{\R}{\mathbb R}
++\newcommand{\C}{\mathbb C}
++\newcommand{\E}{\mathbb E}
++\newcommand{\N}{\mathbb N}
++\newcommand{\ip}[2]{\langle #1,#2\rangle}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 921}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\allowdisplaybreaks[2]
++\title{\textbf{Generic backward uniqueness for linear retarded equations}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We prove residual backward uniqueness for all pairs of real times in the specified compact C1 coefficient topology. A continuous evolution on a Hilbert phase space makes injectivity a countable intersection of open conditions, while a dense gap family supplies the one-to-one solution maps.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 921 at revision
++\texttt{5d7e26e8444e}. The precise scope is stated below.
++\medskip
++
++\section{Main result and proof}
+@@ -333,0 +391,13 @@
++
++
++\begin{thebibliography}{99}
++\small
++\setlength{\itemsep}{3pt}
++
++\bibitem{HaleOliva1976}
++J.~K.~Hale and W.~M.~Oliva,
++\emph{One-to-oneness for linear retarded functional differential equations},
++J. Differential Equations \textbf{20} (1976), 28--36.
++\href{https://doi.org/10.1016/0022-0396(76)90093-0}{doi:10.1016/0022-0396(76)90093-0}.
++\end{thebibliography}
++\end{document}

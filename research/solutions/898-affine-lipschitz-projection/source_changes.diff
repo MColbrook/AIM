@@ -1,0 +1,82 @@
+--- submitted/expanded-898.tex
++++ aim898.tex
+@@ -1 +1,58 @@
+-\section{Problem 898: the canonical affine projection has no universal Lipschitz bound}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=15pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
++\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
++\usepackage{microtype,enumitem,fancyhdr}
++\usepackage{xurl}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
++ pdftitle={Affine Lipschitz projections on nearly Euclidean convex bodies},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 898: mathematical result and proof}}
++\urlstyle{same}
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\newtheorem{theorem}{Theorem}[section]
++\newtheorem{lemma}[theorem]{Lemma}
++\newtheorem{proposition}[theorem]{Proposition}
++\newtheorem{corollary}[theorem]{Corollary}
++\theoremstyle{remark}
++\newtheorem{remark}[theorem]{Remark}
++\newtheorem{definition}[theorem]{Definition}
++\DeclareMathOperator{\Tr}{Tr}
++\DeclareMathOperator{\supp}{supp}
++\DeclareMathOperator{\Lip}{Lip}
++\DeclareMathOperator{\Rea}{Re}
++\newcommand{\R}{\mathbb R}
++\newcommand{\C}{\mathbb C}
++\newcommand{\E}{\mathbb E}
++\newcommand{\N}{\mathbb N}
++\newcommand{\ip}[2]{\langle #1,#2\rangle}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 898}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\allowdisplaybreaks[2]
++\title{\textbf{Affine Lipschitz projections on nearly Euclidean convex bodies}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We construct symmetric convex bodies and scalar Lipschitz functions whose canonical affine-projection norms grow at least as the square root of the dimension. The construction persists at any fixed Banach--Mazur distortion greater than one and gives examples with distortion tending to one while the projection norms diverge.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 898 at revision
++\texttt{5d7e26e8444e}. The precise scope is stated below.
++\medskip
++
++\section{Main result and proof}
+@@ -344,0 +402,14 @@
++
++
++\begin{thebibliography}{99}
++\small
++\setlength{\itemsep}{3pt}
++
++\bibitem{HN2019}
++T.~Hyt\"onen and A.~Naor,
++\emph{Heat flow and quantitative differentiation},
++J. Eur. Math. Soc. \textbf{21} (2019), 3415--3466.
++\href{https://doi.org/10.4171/JEMS/906}{doi:10.4171/JEMS/906}.
++Questions 10 and 19, and Theorem 9.
++\end{thebibliography}
++\end{document}
+--- submitted/report/plot_projection_growth.py
++++ plot_projection_growth.py
+@@ -4 +4 @@
+-the proof in sections/898.tex uses exact moments and a proved Gaussian limit.
++the proof in aim898.tex uses exact moments and a proved Gaussian limit.

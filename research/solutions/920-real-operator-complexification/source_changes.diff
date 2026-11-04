@@ -1,0 +1,98 @@
+--- submitted/expanded-920.tex
++++ aim920.tex
+@@ -1 +1,58 @@
+-\section{Problem 920: complexification can create invariant subspaces}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=15pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
++\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
++\usepackage{microtype,enumitem,fancyhdr}
++\usepackage{xurl}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
++ pdftitle={Invariant subspaces after complexification of a real irreducible operator},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 920: mathematical result and proof}}
++\urlstyle{same}
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\newtheorem{theorem}{Theorem}[section]
++\newtheorem{lemma}[theorem]{Lemma}
++\newtheorem{proposition}[theorem]{Proposition}
++\newtheorem{corollary}[theorem]{Corollary}
++\theoremstyle{remark}
++\newtheorem{remark}[theorem]{Remark}
++\newtheorem{definition}[theorem]{Definition}
++\DeclareMathOperator{\Tr}{Tr}
++\DeclareMathOperator{\supp}{supp}
++\DeclareMathOperator{\Lip}{Lip}
++\DeclareMathOperator{\Rea}{Re}
++\newcommand{\R}{\mathbb R}
++\newcommand{\C}{\mathbb C}
++\newcommand{\E}{\mathbb E}
++\newcommand{\N}{\mathbb N}
++\newcommand{\ip}[2]{\langle #1,#2\rangle}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 920}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\allowdisplaybreaks[2]
++\title{\textbf{Invariant subspaces after complexification of a real irreducible operator}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We construct a real irreducible bounded operator whose complexification has exactly two proper nonzero closed invariant subspaces. A real polynomial approximation recovers the complex structure, and spectral separation determines the complexified invariant-subspace lattice. We compare the construction with the original conjecture and a later proposition.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 920 at revision
++\texttt{5d7e26e8444e}. The precise scope is stated below.
++\medskip
++
++\section{Main result and proof}
+@@ -184,0 +242,35 @@
++
++
++\begin{thebibliography}{99}
++\small
++\setlength{\itemsep}{3pt}
++
++\bibitem{AAST2005}
++Y.~A.~Abramovich, C.~D.~Aliprantis, G.~Sirotkin, and V.~G.~Troitsky,
++\emph{Some open problems and conjectures associated with the invariant
++subspace problem}, Positivity \textbf{9} (2005), 273--286.
++\href{https://doi.org/10.1007/s11117-004-3786-9}{doi:10.1007/s11117-004-3786-9}.
++Conjecture 3.
++
++\bibitem{Read1986}
++C.~J.~Read,
++\emph{A short proof concerning the invariant subspace problem},
++J. London Math. Soc. (2) \textbf{34} (1986), 335--348.
++\href{https://doi.org/10.1112/jlms/s2-34.2.335}{doi:10.1112/jlms/s2-34.2.335}.
++
++\bibitem{GR2014}
++S.~Grivaux and M.~Roginskaya,
++\emph{A general approach to Read's type constructions of operators
++without non-trivial invariant closed subspaces},
++Proc. London Math. Soc. (3) \textbf{109} (2014), 596--652.
++\href{https://doi.org/10.1112/plms/pdu012}{doi:10.1112/plms/pdu012}.
++\href{https://arxiv.org/abs/1301.6143}{arXiv:1301.6143}, Theorem 1.1.
++
++\bibitem{GGGD2023}
++E.~A.~Gallardo-Guti\'errez and F.~J.~Gonz\'alez-Do\~na,
++\emph{Band-diagonal operators on Banach lattices: Matrix dynamics and
++invariant subspaces}, Linear Algebra Appl. \textbf{674} (2023), 155--191.
++\href{https://doi.org/10.1016/j.laa.2023.05.017}{doi:10.1016/j.laa.2023.05.017}.
++The conflict discussed in Section~\ref{sec:920} concerns Proposition 4.1.
++\end{thebibliography}
++\end{document}

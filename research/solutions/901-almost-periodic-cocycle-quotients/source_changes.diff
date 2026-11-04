@@ -1,0 +1,90 @@
+--- submitted/expanded-901.tex
++++ aim901.tex
+@@ -1 +1,58 @@
+-\section{Problem 901: finite-dimensional detection of almost-periodic cocycles}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=15pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
++\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
++\usepackage{microtype,enumitem,fancyhdr}
++\usepackage{xurl}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
++ pdftitle={Finite-dimensional detection of reduced almost-periodic Banach cocycles},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 901: mathematical result and proof}}
++\urlstyle{same}
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\newtheorem{theorem}{Theorem}[section]
++\newtheorem{lemma}[theorem]{Lemma}
++\newtheorem{proposition}[theorem]{Proposition}
++\newtheorem{corollary}[theorem]{Corollary}
++\theoremstyle{remark}
++\newtheorem{remark}[theorem]{Remark}
++\newtheorem{definition}[theorem]{Definition}
++\DeclareMathOperator{\Tr}{Tr}
++\DeclareMathOperator{\supp}{supp}
++\DeclareMathOperator{\Lip}{Lip}
++\DeclareMathOperator{\Rea}{Re}
++\newcommand{\R}{\mathbb R}
++\newcommand{\C}{\mathbb C}
++\newcommand{\E}{\mathbb E}
++\newcommand{\N}{\mathbb N}
++\newcommand{\ip}[2]{\langle #1,#2\rangle}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 901}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\allowdisplaybreaks[2]
++\title{\textbf{Finite-dimensional detection of reduced almost-periodic Banach cocycles}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We prove that every nonzero reduced cohomology class of an almost-periodic Banach representation is detected by an unbounded cocycle in a finite-dimensional quotient. Compact-group spectral approximation and separating finite-type quotient maps give the result for arbitrary topological groups.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 901 at revision
++\texttt{5d7e26e8444e}. The precise scope is stated below.
++\medskip
++
++\section{Main result and proof}
+@@ -72,2 +129 @@
+-central function supported there, of Haar integral one. Peter--Weyl
+-approximation, followed by averaging under conjugation, approximates this
++central function supported there, of Haar integral one. Peter--Weyl approximation~\cite[Theorem 1 and Proposition 6]{Tao2011}, followed by averaging under conjugation, approximates this
+@@ -192,0 +249,23 @@
++
++
++\begin{thebibliography}{99}
++\small
++\setlength{\itemsep}{3pt}
++
++\bibitem{CT2020}
++Y.~Cornulier and R.~Tessera,
++\emph{On the vanishing of reduced 1-cohomology for Banach representations},
++Ann. Inst. Fourier \textbf{70} (2020), 1951--2003.
++\href{https://doi.org/10.5802/aif.3363}{doi:10.5802/aif.3363}.
++Question 4.7 and Proposition 4.3.
++
++\bibitem{Tao2011}
++T.~Tao,
++\emph{The Peter--Weyl theorem, and non-abelian Fourier analysis on compact groups},
++23 January 2011, Theorem 1 and Proposition 6.
++\url{https://terrytao.wordpress.com/2011/01/23/the-peter-weyl-theorem-and-non-abelian-fourier-analysis-on-compact-groups/}.
++The group is assumed compact Hausdorff; normalized Haar measure makes
++the stated $L^2$ approximation sufficient for $L^1$ approximation.
++
++\end{thebibliography}
++\end{document}

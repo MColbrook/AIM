@@ -1,8 +1,8 @@
 # 901. Finite-dimensional detection of almost-periodic Banach cocycles
 
 **Area:** Operators, matrices and computation
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -36,14 +36,15 @@ The question asks whether an obstruction to approximate fixed points of an affin
 - Y. Cornulier and R. Tessera, *On the vanishing of reduced 1-cohomology for Banach representations*, Ann. Inst. Fourier **70** (2020), 1951-2003, [DOI](https://doi.org/10.5802/aif.3363), [2017 primary](https://arxiv.org/html/1711.05566v1), **Definition 4.1 and Question 4.7**; [published text](https://www.numdam.org/item/10.5802/aif.3363.pdf), pp. 1971-1973.
 - A. Thom, *Sublinear growth of 1-cocycles and uniform convexity* (2026), [primary](https://arxiv.org/html/2603.22049v1). Its mixing and Banach-space hypotheses differ from this target.
 
+- M. J. Colbrook, [*Finite-dimensional detection of reduced almost-periodic Banach cocycles*](../research/solutions/901-almost-periodic-cocycle-quotients/aim901.pdf), 3 November 2026. [TeX source](../research/solutions/901-almost-periodic-cocycle-quotients/aim901.tex), [package and reproduction](../research/solutions/901-almost-periodic-cocycle-quotients/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-operators-batch/901-review.md).
+
 ## Status review
 
+**Outcome:** Affirmative proof.
 
-**Known cases:** The source proves the finite-quotient detection property for special structured groups and the unitary Hilbert version. Mixing-cocycle or uniform-convexity results impose different representation assumptions. Compact-open closure of coboundaries cannot be replaced by failure to be a single coboundary.
+**Resolution:** Every nonzero reduced almost-periodic Banach cocycle class is detected by an unbounded cocycle in a finite-dimensional quotient, for arbitrary topological groups. The [manuscript](../research/solutions/901-almost-periodic-cocycle-quotients/aim901.pdf) and [individual audit](../research/solution_reviews/2026-11-03-operators-batch/901-review.md) give the complete proof, checked sources and exact target comparison. Review was performed by Codex (AI).
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
-
-### Online recheck, 2026-10-30
+### Earlier literature review, 2026-10-30
 
 The source proves the finite-quotient detection property for special structured groups and the unitary Hilbert version. Mixing-cocycle or uniform-convexity results impose different representation assumptions. Compact-open closure of coboundaries cannot be replaced by failure to be a single coboundary.
 

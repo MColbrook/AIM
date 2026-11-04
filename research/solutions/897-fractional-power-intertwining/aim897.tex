@@ -1,0 +1,500 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
+\usepackage{microtype,enumitem,fancyhdr}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
+ pdftitle={Sharp fractional-power intertwining inequalities},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 897: mathematical result and proof}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\Rea}{Re}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\N}{\mathbb N}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 897}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\allowdisplaybreaks[2]
+\title{\textbf{Sharp fractional-power intertwining inequalities}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove the fractional-power intertwining inequality with sharp constant one for positive matrices and all exponents between zero and one. The argument yields spectral-floor refinements and a logarithmic commutator bound, and extends in operator norm to bounded operators and continuous nonnegative operator-monotone functions.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 897 at revision
+\texttt{5d7e26e8444e}. The precise scope is stated below.
+\medskip
+
+\section{Main result and proof}
+\label{sec:897}
+
+The original fractional-power question is recorded in \cite[Problem X.5.3]{Bhatia1997}.
+
+
+\paragraph{Answer.} The constant-one inequality holds for every exponent
+$0<r<1$. The main step is a sharp estimate for shifted square roots. A
+positive integral representation proves the result above exponent one
+half, and repeated square roots cover the remaining exponents.
+
+\begin{theorem}\label{thm:897}
+For every integer $n\ge1$, positive semidefinite matrices
+$A,B\in M_n(\mathbb C)$, matrix $X\in M_n(\mathbb C)$, and $0<r<1$,
+\[
+ \boxed{\quad
+ \|A^rX-XB^r\|
+ \le\|X\|^{1-r}\|AX-XB\|^r.
+ \quad}
+\]
+The norms are operator norms, and the constant one is optimal.
+\end{theorem}
+
+\subsection{An estimate at an extremal commutator vector}
+
+\begin{lemma}\label{lem:897-orbit-energy}
+Let $M\ge m_0I$ with $m_0\ge0$, and let $K^*=-K$ be finite complex
+matrices. Put $k=\|K\|$, $H=[M,K]=MK-KM$, and $h=\|H\|>0$.
+After replacing $K$ by $-K$ if necessary, choose a unit vector $w$ with
+$Hw=hw$. Then
+\[
+ w^*Mw\ge m_0+\frac{h}{2k}.
+ \tag{897.1}\label{eq:897-mean}
+\]
+\end{lemma}
+\begin{proof}
+The matrix $H$ is self-adjoint and its spectrum lies in $[-h,h]$.
+A choice of sign ensures that $h$ is an eigenvalue. With $P=ww^*$,
+\[
+ H\ge h(2P-I).
+ \tag{897.2}\label{eq:897-spectral-order}
+\]
+Indeed, both sides agree on the span of $w$, while on its orthogonal
+complement the assertion is $H\ge-hI$. Also $k>0$, since $K=0$ would
+imply $H=0$.
+
+Set $U_t=e^{tK}$ for real $t$. These matrices are unitary. The matrix
+$L=-iK$ is self-adjoint with spectrum in $[-k,k]$, and $U_t=e^{itL}$.
+For $|t|\le\pi/(4k)$, spectral calculus gives
+\[
+ \operatorname{Re}(w^*U_tw)
+ =w^*\cos(tL)w\ge\cos(k|t|)>0.
+\]
+It follows from \eqref{eq:897-spectral-order} that
+\[
+ \begin{split}
+ g(t):=w^*U_t^*HU_tw
+ &\ge h\bigl(2|w^*U_tw|^2-1\bigr)\\
+ &\ge h\cos(2kt)
+ \qquad\left(|t|\le\frac{\pi}{4k}\right).
+ \end{split}
+ \tag{897.3}\label{eq:897-orbit-bound}
+\]
+The function $f(t)=w^*U_t^*MU_tw$ satisfies $f(t)\ge m_0$ and
+\[
+ f'(t)=w^*U_t^*(MK-KM)U_tw=g(t).
+\]
+Integrating over the preceding quarter-period yields
+\[
+ \begin{split}
+ w^*Mw=f(0)
+ &=f\left(-\frac{\pi}{4k}\right)
+   +\int_{-\pi/(4k)}^0g(t)\,dt\\
+ &\ge m_0+h\int_{-\pi/(4k)}^0\cos(2kt)\,dt
+ =m_0+\frac{h}{2k}.
+ \end{split}
+\]
+\end{proof}
+
+\begin{proposition}\label{prop:897-shifted-commutator}
+For $M\ge m_0I\ge0$ and skew-adjoint $K$ with $k=\|K\|>0$, put
+$d=\|[M^2,K]\|$. Then
+\[
+ \|[M,K]\|
+ \le k\left(\sqrt{m_0^2+d/k}-m_0\right).
+ \tag{897.4}\label{eq:897-shifted-commutator}
+\]
+\end{proposition}
+\begin{proof}
+If $h=\|[M,K]\|=0$, the assertion is immediate. Otherwise use the sign
+choice and vector from Lemma~\ref{lem:897-orbit-energy}. With
+$H=[M,K]$, the identity $[M^2,K]=MH+HM$ gives
+\[
+ d\ge\left|w^*[M^2,K]w\right|
+   =2h\,w^*Mw
+   \ge2m_0h+\frac{h^2}{k}.
+\]
+Solving this quadratic inequality for $h\ge0$ proves
+\eqref{eq:897-shifted-commutator}. The sign change of $K$ leaves all
+norms unchanged.
+\end{proof}
+
+\subsection{The shifted square-root inequality}
+
+Let $A,B\ge0$, $X\ne0$, and write
+\[
+ k=\|X\|>0,\qquad d=\|AX-XB\|,\qquad\delta=d/k.
+\]
+For every $s\ge0$ we claim the sharper estimate
+\[
+ \|\sqrt{A+sI}\,X-X\sqrt{B+sI}\|
+ \le k\bigl(\sqrt{s+\delta}-\sqrt s\bigr).
+ \tag{897.5}\label{eq:897-shifted-root}
+\]
+To prove it, use the block matrices
+\[
+ M=\begin{pmatrix}\sqrt{A+sI}&0\\0&\sqrt{B+sI}\end{pmatrix},
+ \qquad
+ K=\begin{pmatrix}0&X\\-X^*&0\end{pmatrix}.
+\]
+Here $M\ge\sqrt s\,I$, $K^*=-K$, and $\|K\|=\|X\|=k$.
+Writing $Y=\sqrt{A+sI}\,X-X\sqrt{B+sI}$ and $Z=AX-XB$ gives
+\[
+ [M,K]=\begin{pmatrix}0&Y\\Y^*&0\end{pmatrix},
+ \qquad
+ [M^2,K]=\begin{pmatrix}0&Z\\Z^*&0\end{pmatrix}.
+\]
+Their norms are $\|Y\|$ and $\|Z\|=d$, respectively; the terms $sX$
+cancel in the second commutator. Proposition~\ref{prop:897-shifted-commutator}
+with $m_0=\sqrt s$ proves \eqref{eq:897-shifted-root}.
+At $s=0$ it gives the desired square-root inequality
+\[
+ \|A^{1/2}X-XB^{1/2}\|\le\|X\|^{1/2}\|AX-XB\|^{1/2}.
+ \tag{897.6}\label{eq:897-root}
+\]
+In particular, if $d=0$, every shifted square-root commutator in
+\eqref{eq:897-shifted-root} is zero.
+
+\subsection{A positive integral for exponents above one half}
+
+Fix $1/2<r<1$ and define
+\[
+ C_r^{-1}
+ =\int_0^\infty\bigl(\sqrt{1+s}-\sqrt s\bigr)s^{r-3/2}\,ds.
+ \tag{897.7}\label{eq:897-constant}
+\]
+This is a finite positive number. Near zero the integrand is bounded by
+$s^{r-3/2}$, whose exponent is greater than $-1$. At infinity it is
+bounded by $\tfrac12s^{r-2}$, whose exponent is less than $-1$.
+Substituting $s=tu$ proves, for $t>0$,
+\[
+ t^r=C_r\int_0^\infty
+       \bigl(\sqrt{t+s}-\sqrt s\bigr)s^{r-3/2}\,ds.
+ \tag{897.8}\label{eq:897-integral}
+\]
+The same identity holds at $t=0$, where the integrand vanishes.
+If an explicit special-function expression is desired, the identity
+\[
+ \sqrt{1+s}-\sqrt s=\frac12\int_0^1(s+u)^{-1/2}\,du
+\]
+and Tonelli's theorem give
+\[
+ C_r=\frac{2r}{\mathrm B(r-1/2,1-r)}
+     =\frac{2r\sqrt\pi}{\Gamma(r-1/2)\Gamma(1-r)}.
+\]
+Only positivity and the normalization in \eqref{eq:897-constant} are
+needed below.
+
+Formula \eqref{eq:897-integral} applies to positive matrices by spectral
+calculus, with convergence in operator norm. To verify the convergence
+explicitly, for $A\ge0$ and $s>0$,
+\[
+ \|\sqrt{A+sI}-\sqrt s\,I\|
+ =\sqrt{\|A\|+s}-\sqrt s
+ \le\min\left\{\sqrt{\|A\|},\frac{\|A\|}{2\sqrt s}\right\}.
+\]
+The same integrable endpoint bounds used above therefore apply.
+Consequently the scalar terms $\sqrt s\,X$ cancel to give
+\[
+ A^rX-XB^r
+ =C_r\int_0^\infty
+   \bigl(\sqrt{A+sI}\,X-X\sqrt{B+sI}\bigr)s^{r-3/2}\,ds.
+\]
+Using \eqref{eq:897-shifted-root}, positivity of the weight, and then
+\eqref{eq:897-integral} with $t=\delta$ yields
+\[
+ \begin{split}
+ \|A^rX-XB^r\|
+ &\le kC_r\int_0^\infty
+       \bigl(\sqrt{s+\delta}-\sqrt s\bigr)s^{r-3/2}\,ds\\
+ &=k\delta^r
+ =\|X\|^{1-r}\|AX-XB\|^r.
+ \end{split}
+ \tag{897.9}\label{eq:897-large-r}
+\]
+This also covers $d=0$, because both the integrand bound and $\delta^r$
+are then zero.
+
+\subsection{All remaining exponents and sharpness}
+
+An inequality with constant one at exponents $\alpha$ and $\beta$ implies
+it at their product. Indeed,
+\[
+ \begin{split}
+ \|A^{\alpha\beta}X-XB^{\alpha\beta}\|
+ &\le\|X\|^{1-\beta}\|A^\alpha X-XB^\alpha\|^\beta\\
+ &\le\|X\|^{1-\alpha\beta}\|AX-XB\|^{\alpha\beta}.
+ \end{split}
+\]
+For any $0<r\le1/2$, choose an integer $j\ge1$ such that
+$\alpha=2^jr\in(1/2,1]$. The exponent $\alpha$ is covered by
+\eqref{eq:897-large-r}, or is $1$, for which the inequality is an equality.
+Compose it with $j$ applications of \eqref{eq:897-root} to obtain the
+inequality at $r=\alpha2^{-j}$.
+
+If $X=0$, both sides of Theorem~\ref{thm:897} are zero, so the case omitted
+when dividing by $k$ is immediate. All $d=0$ cases were included above.
+Finally, the one-dimensional choice $A=1$, $B=0$, $X=1$ gives equality for
+every $r$, proving that the constant cannot be decreased.
+
+\paragraph{Relation to the cited problems.}
+Loring and Vides isolate the square-root constant-one target as
+Conjecture~1.6 in their versioned preprint \cite{LoringVides2013}.
+Herrera's later work \cite{Herrera2023} retains that question while proving
+a factor below $1.00891$ for square roots and below $1.01975$ for the
+broader family. The shifted estimate \eqref{eq:897-shifted-root} is the
+step that makes the positive integral argument exact. The resulting
+Theorem~\ref{thm:897} has all the quantifiers of the catalogue statement
+\cite{AIM}.
+
+\paragraph{Extension to bounded operators and unital $C^*$-algebras.}
+The same inequalities hold in every unital $C^*$-algebra, with its
+$C^*$-norm. To remove the finite-dimensional eigenvector assumption,
+choose the sign of $H$ so that $h=\|H\|\in\sigma(H)$ and a state
+$\varphi$ with $\varphi(H)=h$. In its GNS representation $(\pi,\xi)$,
+$\pi(H)\xi=h\xi$: indeed, $0\le hI-H\le2hI$ implies
+$\varphi((hI-H)^2)=0$. The orbit proof applies to $\pi(M),\pi(K),\xi$
+using the bounds $\|\pi(H)\|\le h$ and $\|\pi(K)\|\le k$, and gives
+$\varphi(M)\ge m_0+h/(2k)$. Thus
+$\|[M^2,K]\|\ge|\varphi(MH+HM)|=2h\varphi(M)$, exactly as before.
+The block matrices belong to $M_2(\mathcal A)$, and all functional-calculus
+integrals converge in norm, so the rest of the proof is unchanged.
+
+\subsection{A sharp bound with a positive spectral lower bound}
+
+\begin{corollary}\label{cor:897-lower-bound}
+Suppose $A,B\ge aI$ with $a\ge0$, and let $X\ne0$. Write
+$k=\|X\|$ and $d=\|AX-XB\|$. Then, for every $0<r<1$,
+\[
+ \|A^rX-XB^r\|
+ \le k\bigl((a+d/k)^r-a^r\bigr).
+ \tag{897.10}\label{eq:897-positive-floor}
+\]
+If $a>0$, one also has
+\[
+ \|(\log A)X-X\log B\|
+ \le k\log\left(1+\frac{d}{ak}\right).
+ \tag{897.11}\label{eq:897-logarithm}
+\]
+Both bounds are sharp.
+\end{corollary}
+\begin{proof}
+Put $\delta=d/k$. For the shifted square-root matrices used above, the
+improved lower bound is $M\ge\sqrt{a+s}\,I$. Thus
+Proposition~\ref{prop:897-shifted-commutator} gives
+\[
+ \|\sqrt{A+sI}\,X-X\sqrt{B+sI}\|
+ \le k\bigl(\sqrt{a+s+\delta}-\sqrt{a+s}\bigr).
+\]
+For $1/2<r<1$, integrating this inequality with the same positive weight
+as in \eqref{eq:897-integral} gives exactly
+$k((a+\delta)^r-a^r)$. The case $r=1/2$ follows by setting $s=0$.
+
+The refined estimate is also preserved under composition. If it holds at
+$\alpha$, then $A^\alpha,B^\alpha\ge a^\alpha I$ and
+\[
+ \delta_\alpha:=k^{-1}\|A^\alpha X-XB^\alpha\|
+ \le(a+\delta)^\alpha-a^\alpha.
+\]
+Applying the refined estimate at $\beta$ and using scalar monotonicity
+therefore gives
+\[
+ k^{-1}\|A^{\alpha\beta}X-XB^{\alpha\beta}\|
+ \le(a^\alpha+\delta_\alpha)^\beta-a^{\alpha\beta}
+ \le(a+\delta)^{\alpha\beta}-a^{\alpha\beta}.
+\]
+The same square-root iteration used in the theorem proves
+\eqref{eq:897-positive-floor} for all remaining $r$.
+
+If $a>0$, divide \eqref{eq:897-positive-floor} by $r$ and let $r\downarrow0$.
+Finite-dimensional spectral calculus gives convergence in operator norm
+of the left-hand side to the logarithmic commutator, and the scalar
+right-hand side tends to $k\log((a+\delta)/a)$. This proves
+\eqref{eq:897-logarithm}. The one-dimensional choices
+$A=a+\delta$, $B=a$, and $X=1$ give equality, with $a>0$ in the logarithmic
+case.
+\end{proof}
+
+\subsection{A real-matrix reduction used during the investigation}
+
+There is also a reduction of potential counterexamples to real matrices
+of the same order, independent of the proof above. Diagonalize $A,B$ and set
+$D_{ij}=a_i-b_j$ and $F_{ij}=a_i^r-b_j^r$. The two commutators become
+$D\circ X$ and $F\circ X$, where $\circ$ denotes entrywise multiplication.
+If $F\circ X=0$, there is no counterexample. Otherwise choose unit singular
+vectors $u,v$ with $u^*(F\circ X)v=\|F\circ X\|$. Diagonal unitary
+matrices $U,V$ can be chosen so that $u=U|u|$ and $v=V|v|$.
+For $Z=U^*XV$, all three relevant norms are unchanged, and
+\[
+ |u|^{\mathsf T}(F\circ Z)|v|=\|F\circ X\|.
+\]
+Set $R=\operatorname{Re}Z=(Z+\overline Z)/2$. Conjugation preserves the
+operator norm, and the multipliers $D,F$ are real. Hence
+\[
+ \|R\|\le\|X\|,\qquad
+ \|D\circ R\|\le\|D\circ X\|,\qquad
+ \|F\circ R\|\le\|F\circ X\|.
+\]
+The last inequality is an equality: taking real parts preserves the
+displayed singular-vector witness. Thus $R$ preserves the numerator
+and cannot increase either factor on the right. Any complex
+counterexample would therefore yield a real one of the same order.
+
+\subsection{Extension to nonnegative operator-monotone functions}
+\label{sec:897-operator-monotone}
+
+The shifted-square-root estimate also yields a broader consequence.
+Here the norm remains the operator norm throughout.
+
+\begin{theorem}\label{thm:897-operator-monotone}
+Let $f:[0,\infty)\to[0,\infty)$ be continuous and operator monotone.
+For positive elements $A,B$ of a unital $C^*$-algebra and any element $X$,
+with $k=\|X\|>0$ and $\delta=\|AX-XB\|/k$, one has
+\[
+ \|f(A)X-Xf(B)\|\le k\bigl(f(\delta)-f(0)\bigr).
+ \tag{897.12}\label{eq:897-monotone}
+\]
+The case $X=0$ has both sides zero. In particular, the weaker right-hand
+side $k f(\delta)$ also holds. The scalar choices $A=\delta$, $B=0$,
+and $X=1$ attain the displayed bound.
+\end{theorem}
+\begin{proof}
+Call a continuous increasing function $g:[0,\infty)\to[0,\infty)$ with
+$g(0)=0$ admissible if
+$\|g(A)X-Xg(B)\|\le k g(\delta)$ for every such $A,B,X$.
+Two admissible functions have admissible composition: applying the
+outer estimate to the inner function and using scalar monotonicity proves
+this directly. The class is also closed under nonnegative linear
+combinations and limits that are uniform on compact intervals, by
+continuous functional calculus and continuity of the norm.
+
+For $h>0$, the function
+\[
+ g_h(t)=\frac{\sqrt{1+4ht}-1}{2h}
+\]
+is admissible by \eqref{eq:897-shifted-root}, applied with shift $1$ to
+$4hA,4hB$. Fix $\tau>0$ and set $h=\tau/n$. If
+$x_0=t>0$ and $x_j=g_h(x_{j-1})$, then
+\[
+ x_{j-1}=x_j+hx_j^2,\qquad 0<x_j\le t,
+ \qquad
+ \frac1{x_j}-\frac1{x_{j-1}}=\frac{h}{1+hx_j}.
+\]
+Summing the bounds $h/(1+ht)\le h/(1+hx_j)\le h$ gives
+\[
+ \frac{t}{1+\tau t}
+ \le g_{\tau/n}^{\circ n}(t)
+ \le\frac{t(1+\tau t/n)}{1+\tau t+\tau t/n}.
+\]
+The same bounds hold at $t=0$. The difference between the two endpoints is
+\[
+ \frac{\tau^2t^3}
+ {n(1+\tau t)(1+\tau t+\tau t/n)}
+ \le\frac{\tau^2R^3}{n}\qquad(0\le t\le R).
+\]
+Thus $t\mapsto t/(1+\tau t)$ is an admissible compact-uniform limit of
+admissible iterates. Taking $\tau=1/s$ and multiplying by $1/s$ shows that
+\[
+ t\longmapsto\frac{t}{t+s}
+ \quad\hbox{is admissible for every }s>0.
+\]
+
+The positive integral representation
+\cite[Proposition~1.1]{Chansangiam2013}, absorbing its factor $1+s$ into
+the measure on $(0,\infty)$, gives
+\[
+ f(t)-f(0)=bt+\int_{(0,\infty)}\frac{t}{t+s}\,d\mu(s),
+ \qquad b\ge0,\quad
+ \int_{(0,\infty)}\frac{d\mu(s)}{1+s}<\infty.
+\]
+For bounded positive operators the integral converges in norm: its integrand is bounded by
+$\min\{1,\|A\|/s\}$, which is dominated by a constant times $(1+s)^{-1}$.
+The identity function is admissible. Integrating the resolvent estimates
+against the positive measure and using the triangle inequality therefore
+proves \eqref{eq:897-monotone}; the scalar constant $f(0)X$ cancels.
+\end{proof}
+
+For a spectral floor $A,B\ge aI$, apply the theorem to
+$t\mapsto f(a+t)-f(a)$ and to $A-aI,B-aI$. This gives the sharper
+increment $k(f(a+\delta)-f(a))$ whenever $f$ is operator monotone on
+$[a,\infty)$ and continuous at $a$. In particular it recovers the
+fractional-power and logarithmic refinements above. No statement for
+arbitrary unitarily invariant norms is being inferred from this argument.
+
+
+
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{3pt}
+
+\bibitem{LoringVides2013}
+T.~A.~Loring and F.~Vides,
+\emph{Estimating Norms of Commutators},
+Experimental Math. \textbf{24} (2015), 106--122.
+\href{https://arxiv.org/abs/1301.4252v3}{arXiv:1301.4252v3} (2013),
+Conjecture 1.6 and Lemma 1.7.
+
+\bibitem{Herrera2023}
+D.~Herrera,
+\emph{On the commutator modulus of continuity for operator monotone functions},
+preprint, November 2023.
+\href{https://arxiv.org/abs/2311.17448}{arXiv:2311.17448},
+equation (7), Conjectures 1.8--1.9 and Theorems 1.11--1.12.
+
+\bibitem{AIM}
+MColbrook/AIM, \emph{AIM 897: Pedersen's sharp fractional-power commutator inequality},
+repository statement at revision \texttt{5d7e26e8444e}.
+\url{https://github.com/MColbrook/AIM/blob/5d7e26e8444eb98de91988454564e45e011107c4/problems/897-pedersen-s-sharp-fractional-power-commutator-inequality.md}.
+
+\bibitem{Chansangiam2013}
+P.~Chansangiam,
+\emph{Integral Representations and Decompositions of Operator Monotone
+Functions on the Nonnegative Reals}, preprint, 2013.
+\href{https://arxiv.org/abs/1304.7936}{arXiv:1304.7936}, Proposition 1.1.
+
+\bibitem{Bhatia1997}
+R.~Bhatia, \emph{Matrix Analysis}, Graduate Texts in Mathematics
+\textbf{169}, Springer, 1997, Chapter X, Problem X.5.3, p.~317,
+and chapter notes, p.~321.
+\href{https://doi.org/10.1007/978-1-4612-0653-8}{doi:10.1007/978-1-4612-0653-8}.
+
+\end{thebibliography}
+\end{document}

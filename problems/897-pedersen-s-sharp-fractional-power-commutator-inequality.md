@@ -1,8 +1,8 @@
 # 897. Pedersen's sharp fractional-power commutator inequality
 
 **Area:** Matrix analysis and operator theory
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -37,14 +37,15 @@ The inequality would give the optimal control of fractional-power functional cal
 2. T. A. Loring and F. Vides, *Estimating Norms of Commutators*, arXiv:1301.4252v3 (2013), Definition 1.4, Conjecture 1.6 and Lemma 1.7. Published in *Experimental Mathematics* **24** (2015), 106–122; the cited locators refer to the versioned preprint. [Preprint](https://arxiv.org/abs/1301.4252v3).
 3. D. Herrera, *On the commutator modulus of continuity for operator monotone functions*, arXiv:2311.17448v1 (2023), equation (7), Conjectures 1.8–1.9 and Theorems 1.11–1.12. [Preprint](https://arxiv.org/abs/2311.17448v1).
 
+- M. J. Colbrook, [*Sharp fractional-power intertwining inequalities*](../research/solutions/897-fractional-power-intertwining/aim897.pdf), 3 November 2026. [TeX source](../research/solutions/897-fractional-power-intertwining/aim897.tex), [package and reproduction](../research/solutions/897-fractional-power-intertwining/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-operators-batch/897-review.md).
+
 ## Status review
 
+**Outcome:** Affirmative proof.
 
-**Known cases:** The current primary Herrera record still gives factors below 1.01975, and below 1.00891 for square roots, while explicitly retaining the desired constant one. Hilbert-Schmidt constant-one inequalities and special commutator-size results do not settle the operator norm for all positive matrices and exponents.
+**Resolution:** The sharp constant-one fractional-power intertwining bound holds in every dimension and at every exponent between zero and one; the bounded-operator and operator-monotone extensions also hold. The [manuscript](../research/solutions/897-fractional-power-intertwining/aim897.pdf) and [individual audit](../research/solution_reviews/2026-11-03-operators-batch/897-review.md) give the complete proof, checked sources and exact target comparison. Review was performed by Codex (AI).
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
-
-### Online recheck, 2026-10-30
+### Earlier literature review, 2026-10-30
 
 The current primary Herrera record still gives factors below 1.01975, and below 1.00891 for square roots, while explicitly retaining the desired constant one. Hilbert-Schmidt constant-one inequalities and special commutator-size results do not settle the operator norm for all positive matrices and exponents.
 

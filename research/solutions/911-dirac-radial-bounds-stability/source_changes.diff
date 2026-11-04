@@ -1,0 +1,128 @@
+--- submitted/expanded-911.tex
++++ aim911.tex
+@@ -1 +1,58 @@
+-\section{Problem 911: an exact result for a restricted spinor class}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=15pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
++\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
++\usepackage{microtype,enumitem,fancyhdr}
++\usepackage{xurl}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
++ pdftitle={Sharp radial Dirac bounds and stability of the scalar spinor},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 911: mathematical result and proof}}
++\urlstyle{same}
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\newtheorem{theorem}{Theorem}[section]
++\newtheorem{lemma}[theorem]{Lemma}
++\newtheorem{proposition}[theorem]{Proposition}
++\newtheorem{corollary}[theorem]{Corollary}
++\theoremstyle{remark}
++\newtheorem{remark}[theorem]{Remark}
++\newtheorem{definition}[theorem]{Definition}
++\DeclareMathOperator{\Tr}{Tr}
++\DeclareMathOperator{\supp}{supp}
++\DeclareMathOperator{\Lip}{Lip}
++\DeclareMathOperator{\Rea}{Re}
++\newcommand{\R}{\mathbb R}
++\newcommand{\C}{\mathbb C}
++\newcommand{\E}{\mathbb E}
++\newcommand{\N}{\mathbb N}
++\newcommand{\ip}[2]{\langle #1,#2\rangle}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 911}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\allowdisplaybreaks[2]
++\title{\textbf{Sharp radial Dirac bounds and stability of the scalar spinor}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We determine the sharp critical Dirac norm constant on an explicitly specified two-channel radial spinor class. We also prove that the scalar Talenti spinor is stationary and has nonnegative second variation in every smooth compactly supported tangent direction, including angular modes. The unrestricted sharp constant remains undetermined.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 911 at revision
++\texttt{5d7e26e8444e}. The precise scope is stated below.
++\medskip
++
++\section{A sharp result on a restricted radial spinor class}
+@@ -25,0 +83,8 @@
++The full target is the infimum of $\|D_d\psi\|_p/\|\psi\|_q$ over
++the distributional graph domain in $L^q$.
++It is posed in \cite[equation (8)]{FrankLoss2022};
++the power-normalized constant there is $C_d^p$.
++Wang and Zhang \cite[Introduction and Theorem 1.5]{WangZhang2025}
++disprove optimality of the older conformal family. Their stability
++result for the spinorial Yamabe quotient is a different variational statement.
++
+@@ -133 +198 @@
+-\section{Problem 911: infinitesimal stability of the scalar competitor}
++\section{Infinitesimal stability of the scalar competitor}
+@@ -142,2 +207 @@
+-competitor could have a smaller quotient. The result below is derived
+-directly; its novelty relative to the literature has not been established.
++competitor could have a smaller quotient. The proof below treats the full set of compactly supported tangent directions.
+@@ -189,0 +254,6 @@
++The second differentiation is legitimate although $p<2$:
++for fixed vectors $a\ne0$ and $b$, the second difference quotient
++of $|a+tb|^p$ is bounded by a constant times $|a|^{p-2}|b|^2$.
++Here the dominating density is locally integrable, since
++$|D\psi_0|^{p-2}=O(r^{2-q})$ and the variation is smooth and compactly supported.
++Dominated convergence therefore justifies the displayed Hessian.
+@@ -387,4 +457,38 @@
+-factorization above and the exact global constant in Problem~911. A
+-finite-element search in dimension three, using spherical harmonic
+-degrees through eight, was consistent with the factorization, but no
+-numerical assertion is used in the proof.
++factorization above and the exact global constant in Problem~911.
++
++
++\begin{thebibliography}{99}
++\small
++\setlength{\itemsep}{3pt}
++
++\bibitem{BM2026}
++B.~Bieganowski and J.~Mederski,
++\emph{Explicit counterexamples to Frank--Loss optimizer conjectures for
++critical Dirac and vector Sobolev inequalities}, preprint, October 2026.
++\href{https://arxiv.org/abs/2610.15787}{arXiv:2610.15787}.
++
++\bibitem{Talenti1976}
++G.~Talenti,
++\emph{Best constant in Sobolev inequality},
++Ann. Mat. Pura Appl. \textbf{110} (1976), 353--372.
++\href{https://doi.org/10.1007/BF02418013}{doi:10.1007/BF02418013}.
++
++\bibitem{FrankLoss2022}
++R.~L.~Frank and M.~Loss,
++\emph{A sharp criterion for zero modes of the Dirac equation},
++J. Eur. Math. Soc. \textbf{28} (2026), 305--331.
++\href{https://doi.org/10.4171/JEMS/1475}{doi:10.4171/JEMS/1475}.
++\href{https://arxiv.org/abs/2201.03610v1}{January 2022 primary preprint},
++pp.~6--7, equation (8); published equation (9).
++
++\bibitem{WangZhang2025}
++G.~Wang and M.~Zhang,
++\emph{Stability of spinorial Sobolev inequalities on $\mathbb S^n$},
++Adv. Math. \textbf{505} (2026), 111318.
++\href{https://doi.org/10.1016/j.aim.2026.111318}{doi:10.1016/j.aim.2026.111318}.
++\href{https://arxiv.org/abs/2508.09047v2}{Primary preprint v2},
++Theorem 1.5, p.~5; the norm quotient is numbered (1.10) in the PDF
++and (1.15) in the HTML.
++
++\end{thebibliography}
++\end{document}

@@ -417,6 +417,20 @@ def render_readme(entries, manifest):
         "## Browse by subject", "",
         *subject_index(entries, manifest, "CATALOG.md"), "",
     ]
+    partial_results = [row for row in entries
+                       if row["status"] == "Partially resolved"
+                       and row.get("proof") and row.get("review")]
+    if partial_results:
+        lines += [
+            "## Partial progress", "",
+            "Partial results with linked proofs and reviews are listed below. These problems remain open targets; each problem page identifies what is proved and what remains.", "",
+            "| Problem | Partial result | Review |", "| --- | --- | --- |",
+        ]
+        for row in sorted(partial_results, key=lambda row: int(row["id"])):
+            title = table_text(row["title"])
+            lines.append(f"| [{row['id']}. {title}]({row['file']}) | "
+                         f"[Proof]({row['proof']}) | [Review]({row['review']}) |")
+        lines.append("")
     resolutions = [row for row in manifest["retired"] if row["status"] in SOLVED_STATUSES]
     if resolutions:
         lines += [

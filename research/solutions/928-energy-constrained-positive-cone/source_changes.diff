@@ -1,0 +1,110 @@
+--- submitted/expanded-928.tex
++++ aim928.tex
+@@ -1 +1,58 @@
+-\section{Problem 928: the closed completely positive cone is generating}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=15pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
++\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
++\usepackage{microtype,enumitem,fancyhdr}
++\usepackage{xurl}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
++ pdftitle={Generating the energy-constrained completion by completely positive maps},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 928: mathematical result and proof}}
++\urlstyle{same}
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\newtheorem{theorem}{Theorem}[section]
++\newtheorem{lemma}[theorem]{Lemma}
++\newtheorem{proposition}[theorem]{Proposition}
++\newtheorem{corollary}[theorem]{Corollary}
++\theoremstyle{remark}
++\newtheorem{remark}[theorem]{Remark}
++\newtheorem{definition}[theorem]{Definition}
++\DeclareMathOperator{\Tr}{Tr}
++\DeclareMathOperator{\supp}{supp}
++\DeclareMathOperator{\Lip}{Lip}
++\DeclareMathOperator{\Rea}{Re}
++\newcommand{\R}{\mathbb R}
++\newcommand{\C}{\mathbb C}
++\newcommand{\E}{\mathbb E}
++\newcommand{\N}{\mathbb N}
++\newcommand{\ip}[2]{\langle #1,#2\rangle}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 928}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\allowdisplaybreaks[2]
++\title{\textbf{Generating the energy-constrained completion by completely positive maps}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We show that every element of the specified energy-constrained completion is a difference of two completely positive elements. A uniform decomposition in finite dimensions passes to the completion through a summable positive series. An exact infimum formula for the norm follows.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 928 at revision
++\texttt{5d7e26e8444e}. The precise scope is stated below.
++\medskip
++
++\section{Main result and proof}
+@@ -122 +179,6 @@
+-program \cite{Watrous2009}. If $J$ is the Hermitian Choi matrix, its dual
++program \cite{Watrous2009}. The precise Choi-form dual is given in
++\cite[Theorem 6 and Section 3.2, pp.~10--12]{Watrous2012}.
++For a Hermitian Choi matrix, average a feasible two-block dual with its
++block swap. The two diagonal blocks then agree, and conjugation by the
++two-by-two Hadamard matrix gives the constraints below.
++If $J$ is the Hermitian Choi matrix, its dual
+@@ -257,0 +320,39 @@
++
++
++\begin{thebibliography}{99}
++\small\raggedright
++\setlength{\itemsep}{3pt}
++
++\bibitem{Watrous2009}
++J.~Watrous,
++\emph{Semidefinite programs for completely bounded norms},
++Theory Comput. \textbf{5} (2009), 217--238.
++\href{https://doi.org/10.4086/toc.2009.v005a011}{doi:10.4086/toc.2009.v005a011}.
++
++\bibitem{Shirokov2019}
++M.~E.~Shirokov,
++\emph{On completion of the cone of completely positive linear maps with
++respect to the energy-constrained diamond norm},
++Lobachevskii J. Math. \textbf{40} (2019), 1549--1568.
++\href{https://doi.org/10.1134/S1995080219100238}{doi:10.1134/S1995080219100238}.
++\href{https://arxiv.org/abs/1810.10922}{arXiv:1810.10922}, Section 5.
++
++\bibitem{Watrous2012}
++J.~Watrous,
++\emph{Simpler semidefinite programs for completely bounded norms},
++\href{https://arxiv.org/abs/1207.5726v2}{arXiv:1207.5726v2},
++2 August 2012, Theorem 6, p.~10, and Section 3.2, pp.~11--12.
++
++\bibitem{vanLuijk2025}
++L.~van Luijk,
++\emph{Energy-Limited Quantum Dynamics},
++Comm. Math. Phys. \textbf{406} (2025), article 120.
++\href{https://doi.org/10.1007/s00220-025-05282-w}{doi:10.1007/s00220-025-05282-w}.
++Lemma 2.19 and footnote 11.
++
++\bibitem{AIM}
++MColbrook/AIM, \emph{AIM 928: Does the closed completely positive cone generate the energy-constrained completion?},
++repository statement at revision \texttt{5d7e26e8444e}.
++\url{https://github.com/MColbrook/AIM/blob/5d7e26e8444eb98de91988454564e45e011107c4/problems/928-does-the-closed-completely-positive-cone-generate-the-energy-constrained-completion.md}.
++\end{thebibliography}
++\end{document}

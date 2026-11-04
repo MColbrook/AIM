@@ -1,0 +1,89 @@
+--- submitted/expanded-905.tex
++++ aim905.tex
+@@ -1 +1,58 @@
+-\section{Problem 905: the exact martingale cotype exponent}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=15pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
++\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
++\usepackage{microtype,enumitem,fancyhdr}
++\usepackage{xurl}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
++ pdftitle={Lipschitz affine approximation forces exact martingale cotype},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 905: mathematical result and proof}}
++\urlstyle{same}
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\newtheorem{theorem}{Theorem}[section]
++\newtheorem{lemma}[theorem]{Lemma}
++\newtheorem{proposition}[theorem]{Proposition}
++\newtheorem{corollary}[theorem]{Corollary}
++\theoremstyle{remark}
++\newtheorem{remark}[theorem]{Remark}
++\newtheorem{definition}[theorem]{Definition}
++\DeclareMathOperator{\Tr}{Tr}
++\DeclareMathOperator{\supp}{supp}
++\DeclareMathOperator{\Lip}{Lip}
++\DeclareMathOperator{\Rea}{Re}
++\newcommand{\R}{\mathbb R}
++\newcommand{\C}{\mathbb C}
++\newcommand{\E}{\mathbb E}
++\newcommand{\N}{\mathbb N}
++\newcommand{\ip}[2]{\langle #1,#2\rangle}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 905}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\allowdisplaybreaks[2]
++\title{\textbf{Lipschitz affine approximation forces exact martingale cotype}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We prove that the stated support-volume Lipschitz affine-approximation estimate forces martingale cotype at its exact exponent. The proof encodes finite dyadic martingales at separated spatial scales, constructs a power-convex equivalent norm and recovers the full martingale estimate.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 905 at revision
++\texttt{5d7e26e8444e}. The precise scope is stated below.
++\medskip
++
++\section{Main result and proof}
+@@ -369,0 +427,26 @@
++
++
++\begin{thebibliography}{99}
++\small
++\setlength{\itemsep}{3pt}
++
++\bibitem{HN2019}
++T.~Hyt\"onen and A.~Naor,
++\emph{Heat flow and quantitative differentiation},
++J. Eur. Math. Soc. \textbf{21} (2019), 3415--3466.
++\href{https://doi.org/10.4171/JEMS/906}{doi:10.4171/JEMS/906}.
++Questions 10 and 19, and Theorem 9.
++
++\bibitem{HM2019}
++T.~Hyt\"onen and J.~Merikoski,
++\emph{Vector-Valued Local Approximation Spaces},
++J. Fourier Anal. Appl. \textbf{25} (2019), 299--320.
++\href{https://doi.org/10.1007/s00041-018-9598-2}{doi:10.1007/s00041-018-9598-2}.
++
++\bibitem{Pisier1975}
++G.~Pisier,
++\emph{Martingales with values in uniformly convex spaces},
++Israel J. Math. \textbf{20} (1975), 326--350.
++\href{https://doi.org/10.1007/BF02760337}{doi:10.1007/BF02760337}.
++\end{thebibliography}
++\end{document}
