@@ -1,0 +1,106 @@
+--- submitted/expanded-935.tex
++++ aim935.tex
+@@ -1 +1,58 @@
+-\section{Problem 935: strict inequality for every non-Hilbert exponent}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=15pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
++\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
++\usepackage{microtype,enumitem,fancyhdr}
++\usepackage{xurl}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
++ pdftitle={A strict numerical-index bound for real Lebesgue spaces},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 935: mathematical result and proof}}
++\urlstyle{same}
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\newtheorem{theorem}{Theorem}[section]
++\newtheorem{lemma}[theorem]{Lemma}
++\newtheorem{proposition}[theorem]{Proposition}
++\newtheorem{corollary}[theorem]{Corollary}
++\theoremstyle{remark}
++\newtheorem{remark}[theorem]{Remark}
++\newtheorem{definition}[theorem]{Definition}
++\DeclareMathOperator{\Tr}{Tr}
++\DeclareMathOperator{\supp}{supp}
++\DeclareMathOperator{\Lip}{Lip}
++\DeclareMathOperator{\Rea}{Re}
++\newcommand{\R}{\mathbb R}
++\newcommand{\C}{\mathbb C}
++\newcommand{\E}{\mathbb E}
++\newcommand{\N}{\mathbb N}
++\newcommand{\ip}[2]{\langle #1,#2\rangle}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 935}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\allowdisplaybreaks[2]
++\title{\textbf{A strict numerical-index bound for real Lebesgue spaces}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We show that the numerical index of a real Lebesgue space is strictly below the proposed two-dimensional value at every non-Hilbert exponent between one and infinity. A three-dimensional analytic perturbation proves the general strict inequality. Independent exact algebraic and rational examples give explicit certificates at exponent four and its conjugate.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 935 at revision
++\texttt{5d7e26e8444e}. The precise scope is stated below.
++\medskip
++
++\section{Main result and proof}
+@@ -678,0 +736,25 @@
++
++
++\begin{thebibliography}{99}
++\small
++\setlength{\itemsep}{3pt}
++
++\bibitem{Chiclana2026}
++R.~Chiclana,
++\emph{The Numerical Index of Two-Dimensional Real $\ell_p$ Spaces},
++preprint, June 2026.
++\href{https://arxiv.org/abs/2606.01675}{arXiv:2606.01675}.
++
++\bibitem{MMM2011}
++M.~Mart\'in, J.~Mer\'i, and M.~Popov,
++\emph{On the numerical radius of operators in Lebesgue spaces},
++J. Funct. Anal. \textbf{261} (2011), 149--168.
++\href{https://doi.org/10.1016/j.jfa.2011.03.007}{doi:10.1016/j.jfa.2011.03.007}.
++Problem 5.1.
++
++\bibitem{AIM}
++MColbrook/AIM, \emph{AIM 935: The numerical index of real Lebesgue spaces},
++repository statement at revision \texttt{5d7e26e8444e}.
++\url{https://github.com/MColbrook/AIM/blob/5d7e26e8444eb98de91988454564e45e011107c4/problems/935-the-numerical-index-of-real-lebesgue-spaces.md}.
++\end{thebibliography}
++\end{document}
+--- submitted/verify935_exact.py
++++ verify935_exact.py
+@@ -67 +67 @@
+-(Path(__file__).resolve().parent / '935_exact_certificate.json').write_text(json.dumps(result,indent=2))
++(Path(__file__).resolve().parent / '935_exact_certificate.json').write_text(json.dumps(result,indent=2)+'\n', encoding='utf-8', newline='\n')
+--- submitted/verify935_independent.py
++++ verify935_independent.py
+@@ -5 +5 @@
+-J=json.loads((Path(__file__).resolve().parent / '935_exact_certificate.json').read_text())
++J=json.loads((Path(__file__).resolve().parent / '935_exact_certificate.json').read_text(encoding='utf-8'))
+@@ -43 +43 @@
+-(Path(__file__).resolve().parent / '935_independent_audit.json').write_text(json.dumps(result,indent=2))
++(Path(__file__).resolve().parent / '935_independent_audit.json').write_text(json.dumps(result,indent=2)+'\n', encoding='utf-8', newline='\n')
+--- submitted/verify935_interval.py
++++ verify935_interval.py
+@@ -2 +2 @@
+-The analytic inequalities are proved in 935_robustness.tex; this verifies
++The analytic inequalities are proved in aim935.tex; this verifies

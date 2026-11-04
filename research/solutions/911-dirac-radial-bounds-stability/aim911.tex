@@ -1,0 +1,494 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
+\usepackage{microtype,enumitem,fancyhdr}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
+ pdftitle={Sharp radial Dirac bounds and stability of the scalar spinor},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 911: mathematical result and proof}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\Rea}{Re}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\N}{\mathbb N}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 911}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\allowdisplaybreaks[2]
+\title{\textbf{Sharp radial Dirac bounds and stability of the scalar spinor}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We determine the sharp critical Dirac norm constant on an explicitly specified two-channel radial spinor class. We also prove that the scalar Talenti spinor is stationary and has nonnegative second variation in every smooth compactly supported tangent direction, including angular modes. The unrestricted sharp constant remains undetermined.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 911 at revision
+\texttt{5d7e26e8444e}. The precise scope is stated below.
+\medskip
+
+\section{A sharp result on a restricted radial spinor class}
+\label{sec:911partial}
+
+\textbf{Partial result only.} The unrestricted sharp Dirac constant in
+Problem~911 is not determined here. We identify the exact constant on a
+natural radial class containing the older conformal spinor ansatz, and
+show that mixing its two orthogonal Clifford channels cannot improve the
+known scalar Talenti competitor. The scalar competitor and its quotient
+are already in \cite[Theorem~4.1]{BM2026}; no novelty claim is made for the
+restricted theorem below.
+
+Fix $d\ge3$ and write
+\[
+ p=\frac{2d}{d+1},\qquad q=\frac{2d}{d-1},\qquad
+ I_d=\frac{|\mathbb S^{d-1}|}{q}
+ B\!\left(\frac{d-1}{2},\frac{d+1}{2}\right),
+ \qquad K_d=dI_d^{1/d}.
+\]
+Here $B$ is Euler's beta function. Let the Hermitian matrices $\gamma_j$
+satisfy the Clifford relations, and put
+\[
+ D_d=-i\sum_{j=1}^d\gamma_j\partial_j,
+ \qquad \Gamma(\omega)=\sum_j\gamma_j\omega_j
+ \quad(\omega\in\mathbb S^{d-1}).
+\]
+The full target is the infimum of $\|D_d\psi\|_p/\|\psi\|_q$ over
+the distributional graph domain in $L^q$.
+It is posed in \cite[equation (8)]{FrankLoss2022};
+the power-normalized constant there is $C_d^p$.
+Wang and Zhang \cite[Introduction and Theorem 1.5]{WangZhang2025}
+disprove optimality of the older conformal family. Their stability
+result for the spinorial Yamabe quotient is a different variational statement.
+
+Choose constant unit spinors $u,v$ satisfying
+\begin{equation}\label{eq:911-orthogonality}
+ \operatorname{Re}\langle u,\gamma_jv\rangle=0
+ \quad(j=1,\ldots,d).
+\end{equation}
+Such pairs exist: one may take $v=iu$.
+
+\begin{theorem}[Restricted-class sharp constant]\label{thm:911partial}
+Suppose
+\[
+ \psi(x)=f(|x|)u+g(|x|)\Gamma(x/|x|)v,
+\]
+where $f,g$ are real-valued profiles, $\psi\in L^q$, and
+$D_d\psi\in L^p$ distributionally. Then
+\[
+ \|D_d\psi\|_p\ge K_d\|\psi\|_q.
+\]
+The constant is optimal in this class. In particular
+$K_3=(18\pi)^{1/3}$.
+\end{theorem}
+
+\begin{proof}
+For smooth profiles supported in an annulus, the Clifford identities give
+\[
+ \Gamma(\omega)^2=I,
+ \qquad
+ \sum_j\gamma_j\partial_j
+ \bigl(g(r)\Gamma(x/r)\bigr)
+   =\left(g'(r)+\frac{d-1}{r}g(r)\right)I.
+\]
+Set $Lg=g'+(d-1)g/r$. By \eqref{eq:911-orthogonality}, both relevant cross
+terms vanish, so pointwise
+\begin{equation}\label{eq:911-pointwise}
+ |\psi(x)|^2=f(r)^2+g(r)^2,
+ \qquad |D_d\psi(x)|^2=f'(r)^2+Lg(r)^2.
+\end{equation}
+All scalar profile norms below use the radial measure
+$|\mathbb S^{d-1}|r^{d-1}\,dr$.
+
+The sharp scalar Sobolev inequality~\cite{Talenti1976} gives
+$K_d\|f\|_q\le\|f'\|_p$. For the other channel define
+\[
+ h(r)=r^{1-d}g(1/r).
+\]
+The change of variables $s=1/r$, using $(d-1)q=2d$ and $(d+1)p=2d$,
+gives
+\[
+ \|h\|_q=\|g\|_q,
+ \qquad \|h'\|_p=\|Lg\|_p.
+\]
+Applying the same scalar Sobolev inequality to $h$ yields
+$K_d\|g\|_q\le\|Lg\|_p$.
+
+Since $p\le2\le q$, two elementary mixed-norm inequalities now give
+\begin{align*}
+ \|\psi\|_q
+ &=\|\sqrt{f^2+g^2}\|_q\\
+ &\le\bigl(\|f\|_q^2+\|g\|_q^2\bigr)^{1/2}\\
+ &\le K_d^{-1}\bigl(\|f'\|_p^2+\|Lg\|_p^2\bigr)^{1/2}\\
+ &\le K_d^{-1}\|\sqrt{f'^2+(Lg)^2}\|_p
+ =K_d^{-1}\|D_d\psi\|_p.
+\end{align*}
+The first mixed-norm step is Minkowski's inequality in $L^{q/2}$. The
+last follows by applying Minkowski's inequality in $\ell^{2/p}_2$ to the
+integral of $(|f'|^p,|Lg|^p)$ and taking a $p$th root.
+
+For general profiles in the stated graph domain, first cut off at zero
+and infinity. The cutoff error is controlled by
+\[
+ \|(\nabla\chi)\psi\|_p
+ \le\|\nabla\chi\|_d
+       \|\psi\|_{L^q(\operatorname{supp}\nabla\chi)},
+ \qquad \frac1p=\frac1q+\frac1d.
+\]
+Choose the usual dilated radial cutoffs, whose gradient $L^d$ norms are
+uniformly bounded. The final factor tends to zero at both ends. On a
+fixed annulus, take real angular inner products of $iD_d\psi$ with
+$\Gamma u$ and $v$. These two pointwise orthogonal unit vectors recover
+$f'$ and $Lg$, respectively, as locally $L^p$ distributions. Since
+$f,g$ are locally $L^q$, the profiles have the required one-dimensional
+Sobolev regularity, and smoothing there preserves their form.
+This gives convergence in $\|\psi\|_q+\|D_d\psi\|_p$, so the inequality
+passes to the limit.
+
+Sharpness follows by taking $g=0$ and
+\[
+ f_0(r)=(1+r^q)^{-(d-1)/2}.
+\]
+Direct beta integration gives
+\[
+ \int_{\mathbb R^d}f_0^q\,dx=I_d,
+ \qquad
+ \int_{\mathbb R^d}|\nabla f_0|^p\,dx=d^pI_d.
+\]
+Thus its quotient is $dI_d^{1/p-1/q}=dI_d^{1/d}=K_d$. For $d=3$,
+$I_3=2\pi/3$, giving $K_3=(18\pi)^{1/3}$.
+\end{proof}
+
+\paragraph{Why this does not settle Problem~911.}
+Condition~\eqref{eq:911-orthogonality} eliminates angular interference.
+Without it, both squared norms contain angular cross terms; general
+spinors have additional angular modes as well. The argument therefore
+does not prove $C_d\ge K_d$ for the full class in the catalogue. It gives
+an exact answer only on the explicitly specified radial class and rules
+out that class as a source of a better competitor.
+
+
+\section{Infinitesimal stability of the scalar competitor}
+\label{sec:911stability}
+
+\textbf{Partial result only.} In every dimension $d\ge3$, the scalar
+Talenti spinor is a stationary point of the full Dirac norm quotient and
+its second variation is nonnegative in every compactly supported tangent
+direction, including arbitrary angular spinor modes. This is stronger
+than the restricted-class result in Section~\ref{sec:911partial}, but it
+still does not identify the global best constant. A different, distant
+competitor could have a smaller quotient. The proof below treats the full set of compactly supported tangent directions.
+
+Fix Hermitian Clifford matrices $\gamma_1,\ldots,\gamma_d$, the operator
+$D=-i\sum_j\gamma_j\partial_j$, and a constant unit spinor $\xi$. Write
+\[
+ p=\frac{2d}{d+1},\quad q=\frac{2d}{d-1},\quad
+ c=\frac{d-1}{2},\quad f(r)=(1+r^q)^{-c},\quad
+ \psi_0(x)=f(|x|)\xi,\quad\lambda=d^p.
+\]
+Spinor spaces below are regarded as real Hilbert spaces, with inner
+product given by the real part of the usual Hermitian inner product.
+
+\begin{theorem}[Nonnegative second variation]\label{thm:911stability}
+For every $\eta\in C_c^\infty(\mathbb R^d;\mathbb C^N)$ satisfying
+\begin{equation}\label{eq:911-tangent}
+ \int_{\mathbb R^d}f^{q-1}\operatorname{Re}\langle\xi,\eta\rangle\,dx=0,
+\end{equation}
+one has
+\begin{align}
+ \mathcal H(\eta):={}&
+ \int_{\mathbb R^d}|D\psi_0|^{p-2}
+ \left(|D\eta|^2+(p-2)
+ \frac{\bigl(\operatorname{Re}\langle D\psi_0,D\eta\rangle\bigr)^2}
+      {|D\psi_0|^2}\right)dx\notag\\
+ &\quad-d^p\int_{\mathbb R^d}f^{q-2}
+ \left(|\eta|^2+(q-2)
+       \bigl(\operatorname{Re}\langle\xi,\eta\rangle\bigr)^2\right)dx
+ \ge0.\label{eq:911-hessian}
+\end{align}
+The value of the integrand at the origin is immaterial. Equivalently,
+the second variation of $\|D\psi\|_p^p/\|\psi\|_q^p$ at $\psi_0$ is
+nonnegative on these tangent directions.
+\end{theorem}
+
+\begin{proof}
+Stationarity follows directly from
+\[
+ |f'|^{p-2}f'=-d^{p-1}rf,
+ \qquad
+ |D\psi_0|^{p-2}D\psi_0
+       =i d^{p-1}(\gamma\cdot x)f(r)\xi.
+\]
+Applying $D=-i\gamma\cdot\nabla$ gives
+\[
+ D\bigl(|D\psi_0|^{p-2}D\psi_0\bigr)
+ =d^{p-1}(df+rf')\xi=d^p f^{q-1}\xi.
+\]
+The second differentiation is legitimate although $p<2$:
+for fixed vectors $a\ne0$ and $b$, the second difference quotient
+of $|a+tb|^p$ is bounded by a constant times $|a|^{p-2}|b|^2$.
+Here the dominating density is locally integrable, since
+$|D\psi_0|^{p-2}=O(r^{2-q})$ and the variation is smooth and compactly supported.
+Dominated convergence therefore justifies the displayed Hessian.
+Under \eqref{eq:911-tangent}, differentiation of the quotient gives
+$p(\int f^q)^{-p/q}\mathcal H(\eta)$ as its second derivative.
+
+Put $\Gamma(\omega)=\gamma\cdot\omega$ and define the angular operator
+\[
+ K=-\sum_{j<k}\gamma_j\gamma_k
+       (\omega_j\partial_{\omega_k}-\omega_k\partial_{\omega_j}).
+\]
+The rotation fields and the constant matrices $\gamma_j\gamma_k$ are
+both skew-adjoint and commute, so $K$ is self-adjoint on each finite
+spherical-harmonic space. The Clifford relations give
+\begin{equation}\label{eq:911-polarD}
+ D=-i\Gamma(\omega)\left(\partial_r-\frac Kr\right).
+\end{equation}
+On spinor-valued spherical harmonics of degree $\ell$, the eigenvalues of
+$K$ lie in
+\begin{equation}\label{eq:911-Kspectrum}
+ \{\ell,-\ell-d+2\},\qquad K=0\text{ if }\ell=0.
+\end{equation}
+For completeness, this follows by decomposing a homogeneous harmonic
+spinor polynomial $P_\ell$ into a monogenic polynomial plus
+$(\gamma\cdot x)Q_{\ell-1}$, where $Q_{\ell-1}$ is monogenic. Indeed,
+$(\gamma\cdot\nabla)P_\ell$ is monogenic and
+\[
+ (\gamma\cdot\nabla)((\gamma\cdot x)Q_{\ell-1})
+       =(d+2\ell-2)Q_{\ell-1}.
+\]
+Taking $Q_{\ell-1}=(d+2\ell-2)^{-1}(\gamma\cdot\nabla)P_\ell$
+gives the decomposition and \eqref{eq:911-Kspectrum}.
+
+Let $P$ now denote the real orthogonal projection onto the line
+$\mathbb R\xi$, applied pointwise on the sphere, and put
+\[
+ m=p-1=\frac{d-1}{d+1},\qquad
+ \nu=q-1=m^{-1},\qquad M=I+(p-2)P,\quad N=I+(q-2)P=M^{-1}.
+\]
+Use the logarithmic radial variable $s=\log r$, and set
+\[
+ a=d-q,\qquad z=\frac{e^{qs}}{1+e^{qs}},\qquad
+ A=e^{as}(1+e^{qs}),\qquad C=\frac{d^2e^{ds}}{1+e^{qs}}.
+\]
+For $h(s,\omega)=\eta(e^s\omega)$, the polar measure and
+\eqref{eq:911-polarD} give
+\begin{equation}\label{eq:911-cylinderH}
+ d^{2-p}\mathcal H(\eta)
+ =\int_{\mathbb R}\left[
+ A\langle h'-Kh,M(h'-Kh)\rangle_{\mathbb S^{d-1}}
+ -C\langle h,Nh\rangle_{\mathbb S^{d-1}}\right]ds.
+\end{equation}
+The projection $P$ preserves spherical harmonic degree, so this is an
+orthogonal sum over $\ell$.
+
+We first prove a scalar inequality. For $\kappa\ge0$, define
+\[
+ w_\kappa=e^{\kappa s}(1+e^{qs})^{-(d+2\kappa)/q},
+ \qquad c_\kappa=\frac{(d+2\kappa)^2}{d^2};
+\]
+for $\kappa\le-(d-1)$, define
+\[
+ w_\kappa=e^{(-\kappa-a)s}(1+e^{qs})^{(2\kappa+a)/q},
+ \qquad c_\kappa=\frac{(-2\kappa-a)^2}{d^2}.
+\]
+Direct differentiation gives
+\[
+ (-\partial_s-\kappa)A(\partial_s-\kappa)w_\kappa
+     =c_\kappa Cw_\kappa.
+\]
+Expanding and integrating by parts therefore gives, for a compactly
+supported scalar function $b$,
+\begin{equation}\label{eq:911-scalarGS}
+ \int A|b'-\kappa b|^2ds-c_\kappa\int C|b|^2ds
+ =\int A w_\kappa^2
+       \left|\left(\frac b{w_\kappa}\right)'\right|^2ds\ge0.
+\end{equation}
+
+For $\ell\ge2$, the smaller scalar constant in
+\eqref{eq:911-Kspectrum} is
+\[
+ c_{-\ell-d+2}=
+ \left(\frac{d+2\ell+q-4}{d}\right)^2.
+\]
+It is at least $\nu^2$: at $\ell=2$ it is exactly
+$((d+q)/d)^2=\nu^2$. Since $M\ge mI$ and $N\le\nu I$, application of
+\eqref{eq:911-scalarGS} to the $K$-eigenspaces bounds the corresponding
+summand in \eqref{eq:911-cylinderH} below by
+\[
+ (m c_{-\ell-d+2}-\nu)\int C\|h\|_{\mathbb S^{d-1}}^2ds\ge0.
+\]
+This treats every degree $\ell\ge2$.
+
+For degree one, put $k=\sqrt{d-1}$,
+\[
+ a_j(\omega)=\sqrt{\frac d{|\mathbb S^{d-1}|}}\,\omega_j\xi,
+ \qquad b_j=Ka_j/k\qquad(j=1,\ldots,d).
+\]
+The identity $Ka_j=a_j-\sqrt{d/|\mathbb S^{d-1}|}\,\Gamma\gamma_j\xi$
+implies $PKa_j=0$, since $\gamma_i\gamma_j$ is skew-Hermitian for $i\ne j$.
+Together with $K^2+(d-2)K=(d-1)I$ on degree one, this shows that the
+$2d$ vectors $a_j,b_j$ are orthonormal in the real angular Hilbert space.
+Their $d$ two-dimensional spans are pairwise orthogonal and invariant
+under $K$. On each pair,
+\begin{equation}\label{eq:911-l1matrices}
+ K_1=\begin{pmatrix}0&k\\k&-(d-2)\end{pmatrix},\quad
+ M_1=\begin{pmatrix}m&0\\0&1\end{pmatrix},\quad
+ N_1=\begin{pmatrix}\nu&0\\0&1\end{pmatrix}.
+\end{equation}
+On their orthogonal complement $P=0$, so $M=N=I$. The smaller scalar
+constant there is $((d+q-2)/d)^2>1$, and
+\eqref{eq:911-scalarGS} proves nonnegativity on that complement.
+
+For the remaining two-dimensional systems, set
+\[
+ S=(1-dz)I-K_1,
+ \qquad
+ R=K_1+N_1S
+ =\begin{pmatrix}\nu(1-dz)&-2/k\\0&1-dz\end{pmatrix}.
+\]
+The matrix $S=M_1(R-K_1)$ is symmetric and satisfies the exact identity
+\begin{equation}\label{eq:911-riccati}
+ (AS)'+A(K_1S+SK_1+SN_1S)+CN_1=0.
+\end{equation}
+To verify it, divide by $A$ and use
+\[
+ z'=qz(1-z),\qquad A'/A=a+qz,\qquad C/A=d^2z(1-z),
+ \qquad q(d-1)=2d.
+\]
+Every matrix entry reduces to an identically zero quadratic polynomial
+in $z$. Expansion and integration by parts now yield
+\begin{align}
+ &\int\left[A(h'-K_1h)^{\mathsf T}M_1(h'-K_1h)
+             -C h^{\mathsf T}N_1h\right]ds\notag\\
+ &\hspace{25mm}=\int A(h'-Rh)^{\mathsf T}M_1(h'-Rh)\,ds\ge0.
+ \label{eq:911-l1factor}
+\end{align}
+This treats degree one. The two zero-mode profiles, which also check the
+factorization, are
+\[
+ \begin{pmatrix}r^{q-1}(1+r^q)^{-(c+1)}\\0\end{pmatrix},\qquad
+ \begin{pmatrix}r\bigl(rf'+(d-1)f\bigr)\\k r f\end{pmatrix}.
+\]
+They are the translation and special-conformal directions.
+
+In degree zero, the real spin directions orthogonal to $\mathbb R\xi$
+have $M=N=I$ and are covered by \eqref{eq:911-scalarGS} with
+$\kappa=0$, $w_0=f$, and $c_0=1$. The remaining real-spin direction is
+exactly the scalar Sobolev second variation about the Talenti optimizer.
+It is nonnegative under \eqref{eq:911-tangent}, because the sharp scalar
+Sobolev inequality is globally minimized by $f$~\cite{Talenti1976}. Only
+this degree-zero real component contributes to the normalization
+constraint. Here is also a direct verification of this last step.
+Write $h=f y(z)$ and put $w(z)=z^{c-1}(1-z)^c$. The normalization
+constraint is $\int_0^1 wy\,dz=0$. The ground-state identity for
+$\kappa=0$ and the change of variable $z=e^{qs}/(1+e^{qs})$ transform
+the real degree-zero quadratic form into
+\[
+ m q\left[\int_0^1 z(1-z)w|y'|^2\,dz
+             -d\int_0^1 w|y|^2\,dz\right].
+\]
+The weighted Poincar\'e inequality
+\[
+ \int_0^1 z(1-z)w|y'|^2\,dz
+ \ge d\int_0^1 w|y|^2\,dz,
+ \qquad \int_0^1 wy\,dz=0,
+\]
+follows by elementary polynomial diagonalization. Indeed, the symmetric
+operator
+\[
+ \mathcal J y=-z(1-z)y''-[c-dz]y'
+\]
+preserves polynomials, and its leading coefficient on degree $j$ is
+$j(j+d-1)$. Orthogonalizing $1,z,z^2,\ldots$ in $L^2(w\,dz)$ therefore
+produces eigenpolynomials with these eigenvalues. Polynomials are dense
+in this weighted $L^2$ space. Integration by parts and Bessel's
+inequality for the corresponding derivative inner product show that
+the energy of $y$ is at least the sum of its squared polynomial
+coefficients weighted by $j(j+d-1)$. The mean-zero condition removes
+$j=0$, and the smallest remaining eigenvalue is $d$. The boundary
+terms vanish because $z(1-z)w=z^c(1-z)^{c+1}$. Equality in this radial
+component is possible only for $y$ proportional to $c-dz$, the dilation
+direction $h=cf+rf'$.
+
+The calculations first apply to variations supported away from zero and
+to finite angular sums. Spherical-harmonic approximations converge in the
+displayed quadratic forms. To remove the restriction at zero, use a
+radial logarithmic cutoff which changes between radii $\varepsilon^2$
+and $\varepsilon$, with gradient at most
+$C/(r|\log\varepsilon|)$. Since
+$|D\psi_0|^{p-2}=O(r^{2-q})$, its extra derivative energy for a smooth
+variation tends to zero: it is $O(1/|\log\varepsilon|)$ when $d=3$, and
+smaller when $d>3$, because $d-q>0$. All other discarded terms tend to
+zero. Restore \eqref{eq:911-tangent}, if needed, by subtracting a vanishing
+multiple of a fixed smooth radial test spinor with nonzero normalization
+integral. The inequality passes to the limit.
+\end{proof}
+
+This stability theorem supplies no nonlinear inequality comparing an
+arbitrary spinor with $\psi_0$. That is the missing step between the
+factorization above and the exact global constant in Problem~911.
+
+
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{3pt}
+
+\bibitem{BM2026}
+B.~Bieganowski and J.~Mederski,
+\emph{Explicit counterexamples to Frank--Loss optimizer conjectures for
+critical Dirac and vector Sobolev inequalities}, preprint, October 2026.
+\href{https://arxiv.org/abs/2610.15787}{arXiv:2610.15787}.
+
+\bibitem{Talenti1976}
+G.~Talenti,
+\emph{Best constant in Sobolev inequality},
+Ann. Mat. Pura Appl. \textbf{110} (1976), 353--372.
+\href{https://doi.org/10.1007/BF02418013}{doi:10.1007/BF02418013}.
+
+\bibitem{FrankLoss2022}
+R.~L.~Frank and M.~Loss,
+\emph{A sharp criterion for zero modes of the Dirac equation},
+J. Eur. Math. Soc. \textbf{28} (2026), 305--331.
+\href{https://doi.org/10.4171/JEMS/1475}{doi:10.4171/JEMS/1475}.
+\href{https://arxiv.org/abs/2201.03610v1}{January 2022 primary preprint},
+pp.~6--7, equation (8); published equation (9).
+
+\bibitem{WangZhang2025}
+G.~Wang and M.~Zhang,
+\emph{Stability of spinorial Sobolev inequalities on $\mathbb S^n$},
+Adv. Math. \textbf{505} (2026), 111318.
+\href{https://doi.org/10.1016/j.aim.2026.111318}{doi:10.1016/j.aim.2026.111318}.
+\href{https://arxiv.org/abs/2508.09047v2}{Primary preprint v2},
+Theorem 1.5, p.~5; the norm quotient is numbered (1.10) in the PDF
+and (1.15) in the HTML.
+
+\end{thebibliography}
+\end{document}

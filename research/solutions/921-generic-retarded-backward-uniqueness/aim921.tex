@@ -1,0 +1,403 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
+\usepackage{microtype,enumitem,fancyhdr}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
+ pdftitle={Generic backward uniqueness for linear retarded equations},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 921: mathematical result and proof}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\Rea}{Re}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\N}{\mathbb N}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 921}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\allowdisplaybreaks[2]
+\title{\textbf{Generic backward uniqueness for linear retarded equations}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove residual backward uniqueness for all pairs of real times in the specified compact C1 coefficient topology. A continuous evolution on a Hilbert phase space makes injectivity a countable intersection of open conditions, while a dense gap family supplies the one-to-one solution maps.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 921 at revision
+\texttt{5d7e26e8444e}. The precise scope is stated below.
+\medskip
+
+\section{Main result and proof}
+\label{sec:921}
+
+\paragraph{Answer.} The set in Problem~921 is residual. The useful change
+of phase space is to retain the current value separately and put the past
+history in $L^2$. The $C^1$ dependence of the history functional in operator
+norm gives a common finite measure dominating all delay measures on a
+compact time interval. This makes the enlarged Hilbert-space evolution
+well defined and continuous in the coefficient. Injectivity is a $G_\delta$
+condition for operators on a separable Hilbert space. The gap truncations
+behind the density theorem of Hale--Oliva~\cite{HaleOliva1976} are injective
+on this enlarged space as well.
+
+Fix $r>0$ and an integer $n\ge1$, and use exactly the coefficient space
+and topology in the question:
+\[
+ C_r=C([-r,0];\mathbb R^n),\qquad
+ \mathcal B_r=\mathcal L(C_r,\mathbb R^n),\qquad
+ \mathcal X=C^1(\mathbb R;\mathcal B_r).
+\]
+Introduce the separable real Hilbert space
+\[
+ \mathcal E=\mathbb R^n\oplus L^2([-r,0];\mathbb R^n).
+ \tag{921.1}\label{eq:921-hilbert-phase}
+\]
+The two components of an initial state $(a,\phi)$ are independent: no
+point value is assigned to the $L^2$ class $\phi$.
+
+\begin{theorem}\label{thm:921}
+There is a countable intersection $\mathcal R$ of open dense subsets of
+$\mathcal X$ such that, for every $L\in\mathcal R$, its enlarged evolution
+$U_L(t,\sigma)$ on $\mathcal E$ is injective for every real $\sigma<t$.
+Consequently the set $\mathcal G_{r,n}$ in Problem~921 is residual in
+$\mathcal X$.
+\end{theorem}
+
+\subsection{A common dominating measure}
+
+By the Riesz representation theorem, write
+\[
+ L(t)f=\int_{[-r,0]}d\mu_t(\theta)f(\theta),
+\]
+where $\mu_t=(\mu_{t,ij})_{i,j=1}^n$ is a matrix of finite real signed
+measures. The norm
+$\|\mu\|_{\mathrm{var}}=\sum_{i,j}|\mu_{ij}|([-r,0])$ is equivalent,
+with constants depending only on $n$, to the operator norm of $L$.
+Thus $t\mapsto\mu_t$ is $C^1$ in variation norm.
+
+Fix a compact time interval $I=[a,b]$. Define the finite positive measure
+\[
+ \nu=\sum_{i,j}\left(
+ |\mu_{a,ij}|+\int_a^b|\mu'_{s,ij}|\,ds\right).
+ \tag{921.2}\label{eq:921-envelope}
+\]
+The integral is an integral of finite measures in variation norm; the
+variation map is continuous in that norm. The fundamental theorem of
+calculus and the triangle inequality for variation give
+\[
+ \sum_{i,j}|\mu_{t,ij}|\le\nu\qquad(t\in I).
+ \tag{921.3}\label{eq:921-domination}
+\]
+In particular, the matrix densities $R(t,\theta)=d\mu_t/d\nu$ may be
+chosen jointly measurable, and
+\[
+ \|R(t,\theta)\|_{\mathrm{op}}
+ \le\sum_{i,j}|R_{ij}(t,\theta)|\le1
+ \quad\text{for almost every }(t,\theta)
+ \text{ with respect to }dt\,d\nu(\theta).
+\]
+For justification of joint measurability, the densities form a continuous
+map from $I$ to $L^1(\nu)$ entry by entry, because the corresponding
+measures are continuous in variation norm. A jointly measurable
+representative of a strongly measurable $L^1$-valued function suffices.
+
+The same construction applies to a difference of two coefficient
+families. On $[a,b]$, its envelope $\nu_\Delta$ satisfies
+\[
+ \nu_\Delta([-r,0])
+ \le\|\mu_a-\widetilde\mu_a\|_{\mathrm{var}}
+ +(b-a)\sup_{s\in[a,b]}
+          \|\mu'_s-\widetilde\mu'_s\|_{\mathrm{var}}.
+ \tag{921.4}\label{eq:921-difference-envelope}
+\]
+This is controlled by a constant times the compact $C^1$ distance in the
+problem statement.
+
+\subsection{Evolution on the Hilbert phase space}
+
+Fix an initial time $\sigma$ and a terminal bound $b>\sigma$. Given
+$(a,\phi)\in\mathcal E$, extend $\phi$ by zero outside $[-r,0]$ and define
+the initial-history forcing, for almost every $s\in[\sigma,b]$, by
+\[
+ F_{L,\phi}(s)=\int_{[-r,0]}d\mu_s(\theta)\,
+ \mathbf1_{\{s+\theta<\sigma\}}
+ \phi(s+\theta-\sigma).
+ \tag{921.5}\label{eq:921-forcing}
+\]
+Using an envelope from
+\eqref{eq:921-envelope} on $[\sigma,b]$, Minkowski's inequality and
+translation invariance of Lebesgue measure give
+\[
+ \begin{split}
+ \|F_{L,\phi}\|_{L^2([\sigma,b])}
+ &\le\int_{[-r,0]}
+ \left(\int_\sigma^b
+   \mathbf1_{\{s+\theta<\sigma\}}
+   |\phi(s+\theta-\sigma)|^2\,ds\right)^{1/2}d\nu(\theta)\\
+ &\le\nu([-r,0])\,\|\phi\|_2.
+ \end{split}
+ \tag{921.6}\label{eq:921-young}
+\]
+This also proves independence of the representative of $\phi$. Indeed,
+translating a Lebesgue null set produces a null set for each fixed
+$\theta$, and Fubini's theorem applies to $ds\,d\nu(\theta)$.
+
+For a continuous future path $x:[\sigma,b]\to\mathbb R^n$, put
+\[
+ (B_Lx)(s)=\int_{[-r,0]}d\mu_s(\theta)\,
+  \mathbf1_{\{s+\theta\ge\sigma\}}x(s+\theta).
+\]
+This is measurable and depends only on values of $x$ up to time $s$.
+If $M=\sup_{s\in[\sigma,b]}\|\mu_s\|_{\mathrm{var}}$, then
+\[
+ |(B_Lx)(s)|\le M\sup_{\sigma\le u\le s}|x(u)|.
+ \tag{921.7}\label{eq:921-volterra-bound}
+\]
+The Volterra integral equation
+\[
+ x(t)=a+\int_\sigma^tF_{L,\phi}(s)\,ds
+          +\int_\sigma^t(B_Lx)(s)\,ds
+ \tag{921.8}\label{eq:921-integral-evolution}
+\]
+therefore has a unique continuous solution, by Picard iteration on short
+intervals or the usual factorial estimate for Volterra iteration.
+It belongs to $W^{1,2}([\sigma,b];\mathbb R^n)$ and obeys, with
+$T=b-\sigma$,
+\[
+ \sup_{\sigma\le t\le b}|x(t)|
+ \le\bigl(|a|+\sqrt T\,\nu([-r,0])\|\phi\|_2\bigr)e^{MT}.
+ \tag{921.9}\label{eq:921-path-bound}
+\]
+
+Concatenate the initial $L^2$ history and this future path, and define
+\[
+ U_L(t,\sigma)(a,\phi)=(x(t),x_t),
+ \qquad x_t(\theta)=x(t+\theta)\quad\text{as an }L^2\text{ class}.
+ \tag{921.10}\label{eq:921-evolution}
+\]
+Equations \eqref{eq:921-young}--\eqref{eq:921-path-bound} make this a
+bounded linear operator on $\mathcal E$. A change of the concatenated
+path at a single joining point has no effect on the equation almost
+everywhere: this follows from the same Fubini argument used for
+representative independence. Uniqueness then gives the evolution law
+\[
+ U_L(t,s)U_L(s,\sigma)=U_L(t,\sigma)
+ \qquad(\sigma\le s\le t).
+ \tag{921.11}\label{eq:921-evolution-law}
+\]
+For each initial state, $U_L(t,\sigma)(a,\phi)$ is strongly continuous
+in $t\ge\sigma$, including at $t=\sigma$. At the initial time this uses
+$x(t)\to a$, strong continuity of translations in $L^2$, and the fact
+that the new future segment has length $t-\sigma\to0$ and bounded values.
+
+\begin{lemma}\label{lem:921-parameter-continuity}
+For each fixed pair $\sigma<t$, the map
+$L\mapsto U_L(t,\sigma)$ from $\mathcal X$ into
+$\mathcal L(\mathcal E)$ is continuous in operator norm.
+\end{lemma}
+\begin{proof}
+Apply \eqref{eq:921-young} to the difference of two coefficient families:
+\[
+ \|F_{L,\phi}-F_{\widetilde L,\phi}\|_2
+ \le\nu_\Delta([-r,0])\|\phi\|_2.
+\]
+For solutions with the same initial state, their difference $z=x-\widetilde x$
+satisfies the difference of \eqref{eq:921-integral-evolution}, with
+\[
+ B_Lx-B_{\widetilde L}\widetilde x
+ =B_Lz+(B_L-B_{\widetilde L})\widetilde x.
+\]
+The last term has absolute value at most
+$\nu_\Delta([-r,0])\sup|\widetilde x|$.
+Use \eqref{eq:921-path-bound} for $\widetilde x$ and Gronwall's inequality
+for $z$. On a neighborhood of $L$ with a uniform bound in
+$C^1([\sigma,t];\mathcal B_r)$, this gives
+\[
+ \sup_{\sigma\le s\le t}|z(s)|
+ \le C\,\nu_\Delta([-r,0])\bigl(|a|+\|\phi\|_2\bigr),
+\]
+where $C$ is independent of the initial state and the nearby coefficient.
+The difference of the terminal histories is at most $\sqrt r\sup|z|$
+in $L^2$, since their older initial-history parts agree. Now use
+\eqref{eq:921-difference-envelope} and take the supremum over the unit
+ball of $\mathcal E$.
+\end{proof}
+
+\subsection{A dense family injective on the enlarged space}
+
+Consider coefficients of the form
+\[
+ L(t)f=A(t)f(-r)+\int_{[-r+\rho,0]}d\eta_t(\theta)f(\theta),
+ \qquad 0<\rho<r,
+ \tag{921.12}\label{eq:921-gap-family}
+\]
+where $A(t)$ is invertible for almost every real $t$ and the coefficient
+family is $C^1$ in variation norm.
+
+\begin{lemma}\label{lem:921-gap-injective}
+Every family \eqref{eq:921-gap-family} has injective $U_L(t,\sigma)$ on
+$\mathcal E$ for every $\sigma<t$.
+\end{lemma}
+\begin{proof}
+Suppose $U_L(t,\sigma)(a,\phi)=0$. Forward uniqueness extends the future
+path by zero after $t$, so the concatenated path is zero almost everywhere
+on $[t-r,\infty)$.
+
+We show how to extend a zero region backward. Suppose that the path is
+zero almost everywhere on $[b,\infty)$, with $b\ge\sigma-r$. For almost
+every
+\[
+ s\ge\max\{\sigma,b+r-\rho\},
+\]
+its derivative is zero, and the integral in
+\eqref{eq:921-gap-family} is zero because all arguments
+$s+\theta\ge s-r+\rho\ge b$. The assertion about the integral is an
+almost-everywhere assertion justified by a common dominating measure
+and Fubini, exactly as in \eqref{eq:921-young}.
+The equation gives $A(s)x(s-r)=0$. Since $A(s)$ is invertible almost
+everywhere, the path is zero almost everywhere on
+\[
+ [\max\{\sigma-r,b-\rho\},\infty).
+\]
+Starting with $b=t-r$, finitely many iterations give zero on
+$[\sigma-r,\infty)$. Thus $\phi=0$ in $L^2$. The future path is
+continuous at $\sigma$, so its almost-everywhere vanishing also gives
+$a=x(\sigma)=0$.
+\end{proof}
+
+\begin{lemma}\label{lem:921-density}
+The families \eqref{eq:921-gap-family} are dense in $\mathcal X$.
+\end{lemma}
+\begin{proof}
+Start with any coefficient $L$, represented by $\mu_t$, and any compact
+time interval on which it is to be approximated. Write
+$A(t)=\mu_t(\{-r\})$. For $\rho\downarrow0$, restriction to
+$(-r,-r+\rho)$ tends strongly to zero on the space of finite measures
+in variation norm. The restriction operators have norm at most one.
+Their convergence is therefore uniform on each norm-compact set of
+measures. Apply this to the compact sets of values of $\mu_t$ and
+$\mu'_t$ on the chosen time interval. It follows that
+\[
+ \mu_t^{\rho}=A(t)\delta_{-r}+\mu_t|_{[-r+\rho,0]}
+\]
+approximates $\mu_t$ in compact $C^1$ norm as $\rho\downarrow0$.
+
+It remains to perturb $A$ so that it is invertible almost everywhere.
+For each fixed $t$, the polynomial
+$S\mapsto\det(A(t)+S)$ on $M_n(\mathbb R)$ is not identically zero.
+Its zero set has Lebesgue measure zero. Fubini's theorem on
+$[-m,m]\times\{S:\|S\|<\epsilon\}$, followed by a countable intersection
+over positive integers $m$, shows that for almost every arbitrarily
+small constant matrix $S$,
+\[
+ \det(A(t)+S)\ne0\quad\text{for almost every }t\in\mathbb R.
+\]
+Replacing $A(t)$ by $A(t)+S$ changes the coefficient by
+$f\mapsto Sf(-r)$ and does not change its time derivative. Combining
+this perturbation with the gap truncation proves density in precisely
+the required compact $C^1$ topology.
+\end{proof}
+
+\subsection{The Baire argument and the original continuous histories}
+
+On a separable Hilbert space, the injective bounded operators form a
+$G_\delta$ in operator norm. Here are the details needed in this setting.
+Choose a countable dense set $D\subset\mathcal E$ and an orthonormal
+basis $(e_j)$. For positive integers $j,m$, let
+\[
+ \mathcal O_{j,m}
+ =\bigcup_{v\in D}
+   \{T\in\mathcal L(\mathcal E):\|T^*v-e_j\|<1/m\}.
+ \tag{921.13}\label{eq:921-open-tests}
+\]
+Each set is open. Moreover,
+\[
+ \bigcap_{j,m}\mathcal O_{j,m}
+ =\{T:\overline{\operatorname{Ran}T^*}=\mathcal E\}
+ =\{T:\ker T=\{0\}\}.
+ \tag{921.14}\label{eq:921-injective-gdelta}
+\]
+The first equality uses density of $D$ and continuity of $T^*$; the
+second is the Hilbert-space orthogonal-complement identity.
+
+For every rational pair $\sigma<t$, take the preimages of the sets
+\eqref{eq:921-open-tests} under $L\mapsto U_L(t,\sigma)$.
+They are open by Lemma~\ref{lem:921-parameter-continuity}. Each contains
+the dense gap family of Lemmas~\ref{lem:921-gap-injective} and
+\ref{lem:921-density}, so each is dense. Their intersection over all
+$j,m$ and all rational pairs $\sigma<t$ is a countable intersection
+$\mathcal R$ of open dense subsets of $\mathcal X$. The latter is a
+Fr\'echet space, hence a Baire space.
+
+For $L\in\mathcal R$, injectivity holds for every real pair as well.
+Suppose $U_L(t,\sigma)v=0$ with real $\sigma<t$. Choose a rational
+$p>t$. For every rational $q\in(\sigma,t)$, the evolution law gives
+\[
+ U_L(p,q)U_L(q,\sigma)v
+ =U_L(p,t)U_L(t,\sigma)v=0.
+\]
+The first factor is injective because $p,q$ are rational. Thus
+$U_L(q,\sigma)v=0$. Let rational $q\downarrow\sigma$ and use strong
+right continuity to conclude that $v=0$.
+
+Finally, the bounded injective map
+\[
+ J:C_r\longrightarrow\mathcal E,\qquad
+ J\phi=(\phi(0),\phi)
+\]
+identifies a continuous history with its compatible enlarged state.
+The classical continuous-history solution satisfies
+\eqref{eq:921-integral-evolution}, so uniqueness gives
+\[
+ U_L(t,\sigma)J\phi=J\bigl(T_L(t,\sigma)\phi\bigr).
+\]
+If $T_L(t,\sigma)\phi=0$, enlarged-space injectivity implies $J\phi=0$,
+and hence $\phi=0$. Therefore $\mathcal R\subseteq\mathcal G_{r,n}$,
+proving Theorem~\ref{thm:921}.
+
+The proof uses the original $C^1$ coefficient topology throughout. It
+does not infer openness of continuous-history injectivity, and it does
+not replace distributed delays by finite step measures. The gap family
+is used to prove density; the $G_\delta$ argument takes place on the
+larger Hilbert phase space before returning to the specified history space.
+
+
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{3pt}
+
+\bibitem{HaleOliva1976}
+J.~K.~Hale and W.~M.~Oliva,
+\emph{One-to-oneness for linear retarded functional differential equations},
+J. Differential Equations \textbf{20} (1976), 28--36.
+\href{https://doi.org/10.1016/0022-0396(76)90093-0}{doi:10.1016/0022-0396(76)90093-0}.
+\end{thebibliography}
+\end{document}

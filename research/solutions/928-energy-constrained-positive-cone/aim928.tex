@@ -1,0 +1,358 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
+\usepackage{microtype,enumitem,fancyhdr}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
+ pdftitle={Generating the energy-constrained completion by completely positive maps},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 928: mathematical result and proof}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\Rea}{Re}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\N}{\mathbb N}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 928}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\allowdisplaybreaks[2]
+\title{\textbf{Generating the energy-constrained completion by completely positive maps}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We show that every element of the specified energy-constrained completion is a difference of two completely positive elements. A uniform decomposition in finite dimensions passes to the completion through a summable positive series. An exact infimum formula for the norm follows.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 928 at revision
+\texttt{5d7e26e8444e}. The precise scope is stated below.
+\medskip
+
+\section{Main result and proof}
+\label{sec:928}
+
+\paragraph{Answer.} The answer to the precise completion question is affirmative.
+The key step is a dimension-independent completely positive decomposition on a
+dense space of maps supported on finite input and output subspaces. An
+absolutely convergent series then puts both components in the specified
+closed cone, rather than merely in the larger cone of maps with finite
+energy-constrained norm.
+
+\begin{theorem}\label{thm:928}
+Let $\mathcal H_A,\mathcal H_B$ be separable complex Hilbert spaces, and suppose
+that $G\ge0$ on $\mathcal H_A$ has compact resolvent, minimum eigenvalue zero,
+and eigenvalues tending to infinity. Fix $E>0$. Let $Y$ be the real vector
+space of Hermiticity-preserving maps on trace class with finite ordinary
+diamond norm, let $X_G$ be its completion for
+$q(T)=\|T\|_{\diamond,E}^{G}$, and let $C_G$ be the closure in $X_G$ of its
+completely positive cone. Then
+\[
+ X_G=C_G-C_G.
+\]
+For every $x\in X_G$ and $\eta>0$, the components may be chosen so that
+$x=a-b$ and $q(a+b)\le 2q(x)+\eta$.
+\end{theorem}
+
+The quantitative constant two is sufficient for the theorem. A refinement
+below replaces it by one, with the same arbitrarily small additive error.
+No attainment of a minimal decomposition is asserted.
+
+\subsection{Subnormalized inputs and finite-dimensional approximation}
+
+Choose a unit vector $g\in\ker G$. If $\sigma\ge0$ is a subnormalized
+input--ancilla state with $\operatorname{Tr}\sigma\le1$ and
+$\operatorname{Tr}((G\otimes I)\sigma)\le E$, then
+\[
+ \|(T\otimes\mathrm{id})(\sigma)\|_1\le q(T).
+ \tag{928.1}\label{eq:928-substate}
+\]
+Indeed, in an enlarged ancillary space add
+$(1-\operatorname{Tr}\sigma)|g\rangle\langle g|$ in an orthogonal ancillary
+flag. The resulting state is normalized and still has energy at most $E$.
+Its output is a direct sum, whose trace norm is at least that of the output
+on $\sigma$. An infinite-dimensional separable ancilla accommodates the
+extra flag isometrically. This argument requires no positivity or
+trace-preservation assumption on $T$.
+
+Let $P_n$ be increasing finite-rank spectral projections of $G$, containing
+the ground eigenspace, with $P_n\to I$ strongly. Choose $g_n\to\infty$ so that
+$G\ge g_n(I-P_n)$. For every normalized state $\rho$ of input energy at most
+$E$, the gentle projection bound gives
+\[
+ \|\rho-(P_n\otimes I)\rho(P_n\otimes I)\|_1
+ \le 2\sqrt{\operatorname{Tr}((I-P_n)\rho_A)}
+ \le 2\sqrt{E/g_n}.
+\]
+Consequently, for $T\in Y$,
+\[
+ q(T-T\circ\operatorname{Ad}_{P_n})
+ \le 2\|T\|_\diamond\sqrt{E/g_n}\longrightarrow0,
+ \qquad \operatorname{Ad}_V(\rho)=V\rho V^*.
+ \tag{928.2}\label{eq:928-input}
+\]
+
+Fix $n$, put $d=\operatorname{rank}P_n$, and restrict the input to $P_n\mathcal
+H_A\cong\mathbb C^d$. The resulting map has a trace-class Choi operator
+\[
+ J_n=\sum_{i,j=1}^d T(|e_i\rangle\langle e_j|)
+                  \otimes|e_i\rangle\langle e_j|
+ \in\mathcal T_1(\mathcal H_B\otimes\mathbb C^d).
+\]
+If $Q_m\to I$ strongly are finite-rank output projections, then
+\[
+ (Q_m\otimes I_d)J_n(Q_m\otimes I_d)\longrightarrow J_n
+ \quad\hbox{in trace norm}.
+\]
+For any Hermiticity-preserving map $R$ with finite-dimensional input,
+\[
+ \|R\|_\diamond\le\|J_R\|_1.
+ \tag{928.3}\label{eq:928-choi}
+\]
+To see this, purify an input state. Up to an ancillary isometry its output
+has the form $(I\otimes\sqrt{\rho})J_R(I\otimes\sqrt{\rho})$, with
+$\|\sqrt{\rho}\|\le1$; a transpose can be absorbed into the input convention.
+Partial trace contracts the trace norm of Hermitian operators, so mixed
+inputs cause no difficulty. Thus the maps
+\[
+ T_{n,m}(\rho)=Q_mT(P_n\rho P_n)Q_m
+\]
+approximate $T\circ\operatorname{Ad}_{P_n}$ in ordinary diamond norm, and
+hence in $q$, as $m\to\infty$.
+
+Let $D$ be the real linear space of maps with such finite input and output
+support. Two of them can be placed in common larger subspaces, so $D$ is
+indeed linear. Equations \eqref{eq:928-input}--\eqref{eq:928-choi} show that
+$D$ is dense in $Y$ for $q$, and therefore dense in $X_G$.
+
+\subsection{A uniform positive decomposition on the dense space}
+
+Take $T\in D$, with input support $P=P_n$. On the finite-dimensional space
+$P\mathcal H_A$, write $G_P=G|_{P\mathcal H_A}$ and set
+\[
+ W=(I+G_P/E)^{-1/2},\qquad S=T\circ\operatorname{Ad}_W.
+\]
+Here $W^{-1}$ is bounded because the input space is finite dimensional.
+For any normalized state $\omega$ on this input space and an ancilla,
+$\sigma=(W\otimes I)\omega(W\otimes I)$ has trace at most one and energy
+at most $E$, since $WG_PW=E(I-W^2)\le EI$. By
+\eqref{eq:928-substate},
+\[
+ \|S\|_\diamond\le q(T).
+ \tag{928.4}\label{eq:928-weight}
+\]
+
+A finite-dimensional Hermiticity-preserving map admits completely positive
+maps $S_+,S_-$ such that
+\[
+ S=S_+-S_-,\qquad
+ \|S_++S_-\|_\diamond=\|S\|_\diamond.
+ \tag{928.5}\label{eq:928-cpdecomp}
+\]
+For clarity, this is the Hermitian form of the diamond-norm semidefinite
+program \cite{Watrous2009}. The precise Choi-form dual is given in
+\cite[Theorem 6 and Section 3.2, pp.~10--12]{Watrous2012}.
+For a Hermitian Choi matrix, average a feasible two-block dual with its
+block swap. The two diagonal blocks then agree, and conjugation by the
+two-by-two Hadamard matrix gives the constraints below.
+If $J$ is the Hermitian Choi matrix, its dual
+minimizes $t$ subject to $Z\ge J$, $Z\ge-J$, and
+$\operatorname{Tr}_B Z\le tI$. Strong duality and attainment hold in finite
+dimensions. The Choi matrices $(Z+J)/2$ and $(Z-J)/2$ give
+\eqref{eq:928-cpdecomp}; a completely positive map has diamond norm equal to
+the operator norm of its trace functional.
+
+Extend $S_\pm$ by zero outside $P\mathcal H_A$ and define ordinary bounded
+completely positive maps
+\[
+ T_\pm=S_\pm\circ\operatorname{Ad}_{W^{-1}P}.
+\]
+They have finite input and output support, and $T=T_+-T_-$. For any full
+input--ancilla state $\rho$ of energy at most $E$, put
+\[
+ \sigma=(P\otimes I)\rho(P\otimes I),\qquad
+ \tau=(W^{-1}\otimes I)\sigma(W^{-1}\otimes I).
+\]
+All operators in this formula act on the finite input subspace, and
+\[
+ \operatorname{Tr}\tau
+ =\operatorname{Tr}\sigma+E^{-1}\operatorname{Tr}((G_P\otimes I)\sigma)
+ \le2.
+\]
+Moreover, $(T_++T_-)\otimes\mathrm{id}(\rho)
+=(S_++S_-)\otimes\mathrm{id}(\tau)$. Therefore
+\[
+ q(T_++T_-)\le2\|S_++S_-\|_\diamond\le2q(T).
+ \tag{928.6}\label{eq:928-uniform}
+\]
+Complete positivity also gives $q(T_\pm)\le q(T_++T_-)$, because the
+positive output of either component has trace at most the trace of their
+sum. This establishes the required uniform decomposition without using an
+infinite-dimensional normal-map decomposition or an unbounded inverse.
+
+\subsection{An absolutely convergent series proves exact cone membership}
+
+Let $x\in X_G$ and $\epsilon>0$. Choose $x_k\in D$ with
+$q(x-x_k)\le\epsilon2^{-k}$ for $k\ge1$. Put $d_1=x_1$ and
+$d_k=x_k-x_{k-1}$ for $k\ge2$. Then
+\[
+ \sum_{k\ge1}q(d_k)
+ \le q(x)+2\sum_{k\ge1}q(x-x_k)
+ \le q(x)+2\epsilon.
+ \tag{928.7}\label{eq:928-series}
+\]
+For each $k$, write $d_k=a_k-b_k$ using
+\eqref{eq:928-uniform}. The series $a=\sum_ka_k$ and $b=\sum_kb_k$
+converge in $X_G$, since $q(a_k),q(b_k)\le2q(d_k)$.
+Every finite partial sum is an ordinary bounded completely positive map.
+By the definition of $C_G$, both limits belong to $C_G$. Finally,
+\[
+ a-b=\sum_{k\ge1}d_k=\lim_{k\to\infty}x_k=x,
+ \qquad q(a+b)\le2q(x)+4\epsilon.
+\]
+Taking $\epsilon<\eta/4$ proves Theorem~\ref{thm:928}.
+
+\subsection{Refinement of the quantitative bound}
+
+In fact, for $T\in D$ there is a decomposition with
+$q(T_++T_-)=q(T)$. Here is a direct finite-dimensional derivation.
+Use an eigenbasis of $G_P$ and let $J=J_T$. Purification and trace-norm
+duality identify $q(T)$ with
+\[
+ \begin{aligned}
+ \text{maximize}\quad&\operatorname{Tr}(JX),\\
+ \text{subject to}\quad&\rho\ge0,\quad\operatorname{Tr}\rho=1,
+   \quad\operatorname{Tr}(G_P\rho)\le E,\\
+ &-I_B\otimes\rho\le X\le I_B\otimes\rho.
+ \end{aligned}
+ \tag{928.8}\label{eq:928-primal}
+\]
+The input transpose in the Choi convention leaves $G_P$ unchanged.
+The finite-input norm equals the full-space norm of $T$: any compressed
+full-space input is subnormalized and can be padded within the input
+subspace, as in \eqref{eq:928-substate}.
+
+Let $A,B\ge0$ multiply the two matrix inequalities in
+\eqref{eq:928-primal}, and let $\lambda\ge0$ and $\mu\in\mathbb R$
+multiply the energy and trace constraints. Supremizing the Lagrangian
+forces $A-B=J$ and
+$\operatorname{Tr}_B(A+B)\le\mu I+\lambda G_P$. Thus, with $Z=A+B$, the dual is
+\[
+ \begin{aligned}
+ \text{minimize}\quad&\mu+\lambda E,\\
+ \text{subject to}\quad&Z\ge J,\quad Z\ge-J,\\
+ &\operatorname{Tr}_B Z\le\mu I+\lambda G_P,\qquad\lambda\ge0.
+ \end{aligned}
+ \tag{928.9}\label{eq:928-dual}
+\]
+There is a positive-definite density matrix of energy strictly below $E$,
+obtained by concentrating sufficiently strongly on a ground vector. With
+$X=0$ this gives strict primal feasibility. Hence the dual optimum is
+attained and equals $q(T)$.
+
+The positive Choi matrices $(Z\pm J)/2$ give $T_\pm$. Their sum has
+energy-constrained norm at most $\mu+\lambda E=q(T)$; the reverse inequality
+follows by applying the triangle inequality to the two positive outputs.
+Extending outside the input subspace is harmless: the dual inequality on a
+ground vector implies $\mu\ge0$, so it remains valid on the omitted spectral
+subspace. Substituting this improved decomposition into
+\eqref{eq:928-series} proves that, for every $\eta>0$, one can arrange
+\[
+ x=a-b,\quad a,b\in C_G,\qquad q(a+b)\le q(x)+\eta.
+\]
+
+\begin{corollary}[Exact infimum formula]\label{cor:928-infnorm}
+For every $x\in X_G$,
+\[
+ q(x)=\inf\{q(a+b):a,b\in C_G,\ x=a-b\}.
+\]
+The formula concerns an infimum; it does not assert that an optimal pair exists.
+\end{corollary}
+\begin{proof}
+For ordinary bounded completely positive maps $A,B$, positivity of the two
+outputs on every admissible input gives
+\[
+ \|(A-B)\otimes\mathrm{id}(\rho)\|_1
+ \le\operatorname{Tr}((A+B)\otimes\mathrm{id}(\rho)).
+\]
+Taking the supremum yields $q(A-B)\le q(A+B)$. Given $a,b\in C_G$, choose
+ordinary bounded completely positive maps $A_n\to a$ and $B_n\to b$ in
+$q$. Continuity of the norm passes this inequality to the limit, giving
+$q(a-b)\le q(a+b)$. This proves that the displayed infimum is at least
+$q(x)$. The decompositions with $q(a+b)\le q(x)+\eta$ established above,
+for arbitrary $\eta>0$, prove the converse inequality.
+\end{proof}
+
+\paragraph{Relation to the cited question.}
+Shirokov's conjecture in Section~5 of \cite{Shirokov2019} asks for components
+in the completed cone $\mathfrak F_G^0$. The decomposition following
+Lemma~2.19 in \cite{vanLuijk2025} produces components in the larger finite
+energy-norm cone. The series above addresses precisely the extra closure
+requirement: its two components are norm limits of ordinary bounded
+completely positive maps. This establishes the catalogue formulation
+\cite{AIM} without identifying those two cones.
+
+
+\begin{thebibliography}{99}
+\small\raggedright
+\setlength{\itemsep}{3pt}
+
+\bibitem{Watrous2009}
+J.~Watrous,
+\emph{Semidefinite programs for completely bounded norms},
+Theory Comput. \textbf{5} (2009), 217--238.
+\href{https://doi.org/10.4086/toc.2009.v005a011}{doi:10.4086/toc.2009.v005a011}.
+
+\bibitem{Shirokov2019}
+M.~E.~Shirokov,
+\emph{On completion of the cone of completely positive linear maps with
+respect to the energy-constrained diamond norm},
+Lobachevskii J. Math. \textbf{40} (2019), 1549--1568.
+\href{https://doi.org/10.1134/S1995080219100238}{doi:10.1134/S1995080219100238}.
+\href{https://arxiv.org/abs/1810.10922}{arXiv:1810.10922}, Section 5.
+
+\bibitem{Watrous2012}
+J.~Watrous,
+\emph{Simpler semidefinite programs for completely bounded norms},
+\href{https://arxiv.org/abs/1207.5726v2}{arXiv:1207.5726v2},
+2 August 2012, Theorem 6, p.~10, and Section 3.2, pp.~11--12.
+
+\bibitem{vanLuijk2025}
+L.~van Luijk,
+\emph{Energy-Limited Quantum Dynamics},
+Comm. Math. Phys. \textbf{406} (2025), article 120.
+\href{https://doi.org/10.1007/s00220-025-05282-w}{doi:10.1007/s00220-025-05282-w}.
+Lemma 2.19 and footnote 11.
+
+\bibitem{AIM}
+MColbrook/AIM, \emph{AIM 928: Does the closed completely positive cone generate the energy-constrained completion?},
+repository statement at revision \texttt{5d7e26e8444e}.
+\url{https://github.com/MColbrook/AIM/blob/5d7e26e8444eb98de91988454564e45e011107c4/problems/928-does-the-closed-completely-positive-cone-generate-the-energy-constrained-completion.md}.
+\end{thebibliography}
+\end{document}

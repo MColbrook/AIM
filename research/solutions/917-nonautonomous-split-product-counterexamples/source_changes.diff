@@ -1,0 +1,82 @@
+--- submitted/expanded-917.tex
++++ aim917.tex
+@@ -1 +1,58 @@
+-\section{Problem 917: both proposed split products can fail}
++\documentclass[11pt,a4paper]{article}
++\usepackage[margin=25mm,headheight=15pt]{geometry}
++\usepackage[T1]{fontenc}
++\usepackage[utf8]{inputenc}
++\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
++\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
++\usepackage{microtype,enumitem,fancyhdr}
++\usepackage{xurl}
++\usepackage{hyperref}
++\definecolor{accent}{HTML}{163B55}
++\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
++ pdftitle={Failure of split-product approximations for time-dependent form sums},pdfauthor={Matthew J. Colbrook},
++ pdfsubject={AIM 917: mathematical result and proof}}
++\urlstyle{same}
++\setlength{\parindent}{0pt}
++\setlength{\parskip}{0.35em}
++\setlength{\emergencystretch}{3em}
++\setlist{itemsep=0.25em,topsep=0.3em}
++\newtheorem{theorem}{Theorem}[section]
++\newtheorem{lemma}[theorem]{Lemma}
++\newtheorem{proposition}[theorem]{Proposition}
++\newtheorem{corollary}[theorem]{Corollary}
++\theoremstyle{remark}
++\newtheorem{remark}[theorem]{Remark}
++\newtheorem{definition}[theorem]{Definition}
++\DeclareMathOperator{\Tr}{Tr}
++\DeclareMathOperator{\supp}{supp}
++\DeclareMathOperator{\Lip}{Lip}
++\DeclareMathOperator{\Rea}{Re}
++\newcommand{\R}{\mathbb R}
++\newcommand{\C}{\mathbb C}
++\newcommand{\E}{\mathbb E}
++\newcommand{\N}{\mathbb N}
++\newcommand{\ip}[2]{\langle #1,#2\rangle}
++\pagestyle{fancy}
++\fancyhf{}
++\fancyhead[L]{\small\sffamily AIM 917}
++\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
++\fancyfoot[C]{\thepage}
++\renewcommand{\headrulewidth}{0.3pt}
++\allowdisplaybreaks[2]
++\title{\textbf{Failure of split-product approximations for time-dependent form sums}}
++\author{Matthew J. Colbrook\\[3pt]
++{\small Department of Applied Mathematics and Theoretical Physics}\\
++{\small University of Cambridge, United Kingdom}\\
++{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
++\date{3 November 2026}
++\begin{document}
++\maketitle
++\begin{abstract}
++We give counterexamples to the stated exponential and resolvent split-product formulas for nonautonomous Schrodinger evolution. Narrow time spikes cause failure of the proposed limits while retaining the required common form domain and time regularity. A separate exponential counterexample uses uniformly bounded perturbations.
++\end{abstract}
++\noindent\textbf{Repository target.}
++This manuscript concerns AIM problem 917 at revision
++\texttt{5d7e26e8444e}. The precise scope is stated below.
++\medskip
++
++\section{Main result and proof}
+@@ -368,0 +426,19 @@
++
++
++\begin{thebibliography}{99}
++\small
++\setlength{\itemsep}{3pt}
++
++\bibitem{AIM}
++MColbrook/AIM, \emph{AIM 917: Split products for time-dependent form-sum Schrödinger evolution},
++repository statement at revision \texttt{5d7e26e8444e}.
++\url{https://github.com/MColbrook/AIM/blob/5d7e26e8444eb98de91988454564e45e011107c4/problems/917-split-products-for-time-dependent-form-sum-schrodinger-evolution.md}.
++
++\bibitem{VV2011}
++P.-A.~Vuillermot and W.~F.~Wreszinski,
++\emph{Product approximations for solutions to a class of evolution
++equations in Hilbert space},
++Portugaliae Math. \textbf{68} (2011), 317--343.
++\href{https://doi.org/10.4171/PM/1894}{doi:10.4171/PM/1894}.
++\end{thebibliography}
++\end{document}

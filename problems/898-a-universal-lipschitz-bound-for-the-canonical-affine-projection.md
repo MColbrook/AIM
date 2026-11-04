@@ -1,8 +1,8 @@
 # 898. A universal Lipschitz bound for the canonical affine projection
 
 **Area:** Banach space geometry and convex geometric analysis
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -59,14 +59,15 @@ The heat-flow estimates of Hytönen–Naor avoid this projection issue by using 
 3. M. Jung, C. Petitjean, A. Prochazka and A. Quilis, *Affine Approximation in Finite Nagata Dimension and Applications to Lipschitz-free spaces*, [arXiv:2606.11723v1](https://arxiv.org/html/2606.11723v1) (2026), Introduction, Theorem A and the definition of affine maps relative to an atlas.
 4. T. Hytönen, S. Li and A. Naor, *Quantitative affine approximation for UMD targets*, Discrete Analysis 2016:6, [DOI](https://doi.org/10.19086/da.614). [Author version](https://web.math.princeton.edu/~naor/homepage%20files/Quant-UAAP-UMD.pdf), Lemma 10, p. 6. The publisher and author versions have different page counts; this locator refers to the 37-page author PDF.
 
+- M. J. Colbrook, [*Affine Lipschitz projections on nearly Euclidean convex bodies*](../research/solutions/898-affine-lipschitz-projection/aim898.pdf), 3 November 2026. [TeX source](../research/solutions/898-affine-lipschitz-projection/aim898.tex), [package and reproduction](../research/solutions/898-affine-lipschitz-projection/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-operators-batch/898-review.md).
+
 ## Status review
 
+**Outcome:** Counterexample.
 
-**Known cases:** The specified L2 orthogonal affine projection is essential. Heat-flow affine approximants, L2 statistical regression estimates and Nagata-atlas approximants are different operators or different norms. No dimension-independent Lipschitz bound for this canonical projection was located.
+**Resolution:** Canonical affine-projection norms diverge on explicit symmetric convex bodies, including examples whose Banach-Mazur distance to a Euclidean ball tends to one. The [manuscript](../research/solutions/898-affine-lipschitz-projection/aim898.pdf) and [individual audit](../research/solution_reviews/2026-11-03-operators-batch/898-review.md) give the complete proof, checked sources and exact target comparison. Review was performed by Codex (AI).
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
-
-### Online recheck, 2026-10-30
+### Earlier literature review, 2026-10-30
 
 The specified L2 orthogonal affine projection is essential. Heat-flow affine approximants, L2 statistical regression estimates and Nagata-atlas approximants are different operators or different norms. No dimension-independent Lipschitz bound for this canonical projection was located.
 

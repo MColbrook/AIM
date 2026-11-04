@@ -1,8 +1,8 @@
 # 917. Split products for time-dependent form-sum Schrödinger evolution
 
 **Area:** Operators, matrices and computation
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -49,14 +49,17 @@ Splitting separates simpler parts of a quantum Hamiltonian. These limits would j
 3. V. A. Zagrebnov, H. Neidhardt and T. Ichinose, *Trotter-Kato Product Formulæ* (2024), [Chapter 12](https://doi.org/10.1007/978-3-031-56720-9_12), Assumptions 12.1.1, and [Chapter 13](https://doi.org/10.1007/978-3-031-56720-9_13), Sections 13.1–13.3.
 4. S. Becker, N. Galke, L. van Luijk and R. Salzmann, [*Convergence Rates for the Trotter Splitting for Unbounded Operators*](https://doi.org/10.1007/s10208-025-09730-w), published online 2025; *Foundations of Computational Mathematics* **26** (2026), 2471–2524, Theorem 3.6.
 
+- M. J. Colbrook, [*Failure of split-product approximations for time-dependent form sums*](../research/solutions/917-nonautonomous-split-product-counterexamples/aim917.pdf), 3 November 2026. [TeX source](../research/solutions/917-nonautonomous-split-product-counterexamples/aim917.tex), [package and reproduction](../research/solutions/917-nonautonomous-split-product-counterexamples/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-operators-batch/917-review.md).
+
 ## Status review
 
+**Outcome:** Counterexample.
 
-**Known cases:** Existing nonautonomous splitting theorems require generation by an algebraic operator-sum closure or stronger domain/commutator control. Parabolic form-sum results and time-integrated autonomous unitary limits do not establish both pointwise-in-time products under only the displayed form assumptions.
+**Resolution:** Under the exact form hypotheses, exponential split products can have no strong limit; resolvent split products can fail weak and strong convergence to the specified unitary propagator. The [manuscript](../research/solutions/917-nonautonomous-split-product-counterexamples/aim917.pdf) and [individual audit](../research/solution_reviews/2026-11-03-operators-batch/917-review.md) give the complete proof, checked sources and exact target comparison. Review was performed by Codex (AI).
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+**Scope:** The resolvent example excludes weak convergence to the specified unitary; it does not assert nonexistence of every arbitrary weak limit. The bounded-family strengthening concerns the exponential products.
 
-### Online recheck, 2026-10-30
+### Earlier literature review, 2026-10-30
 
 Existing nonautonomous splitting theorems require generation by an algebraic operator-sum closure or stronger domain/commutator control. Parabolic form-sum results and time-integrated autonomous unitary limits do not establish both pointwise-in-time products under only the displayed form assumptions.
 

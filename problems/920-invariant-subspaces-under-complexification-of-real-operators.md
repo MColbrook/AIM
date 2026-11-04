@@ -1,8 +1,8 @@
 # 920. Invariant subspaces under complexification of real operators
 
 **Area:** Operator theory and real Banach spaces
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -42,7 +42,7 @@ The question asks whether complexification preserves the absence of decompositio
 
 ## Known cases and scope
 
-Proposition 4.1 of [3] proves the equivalence of real and complexified invariant-subspace existence when $`X`$ is a real Banach lattice whose order is induced by an unconditional basis. That additional structure is absent from the general question above.
+The counterexample also admits a realization on real $`\ell_1`$. It contradicts Proposition 4.1 (i) implies (ii) of [3] as printed, which had previously been recorded here as an affirmative Banach-lattice case. The [audit](../research/solution_reviews/2026-11-03-operators-batch/920-review.md) checks the proposition's hypotheses and keeps this discrepancy separate from the paper's positive band-diagonal results.
 
 Infinite dimension is part of the question: a rotation through a right angle on $`\mathbb R^2`$ has no nontrivial real invariant line, whereas its complexification has eigenlines.
 
@@ -54,20 +54,23 @@ Infinite dimension is part of the question: a rotation through a right angle on 
 
 4. OpenAI, [*Invariant-projection counterexamples for every irrational rotation*](https://github.com/openai/math/blob/main/preprints/Invariant-projection-counterexamples-for-every-irrational-rotation-September-27-2026/paper.pdf), preprint (27 September 2026), Theorem 1.1 and Corollary 1.4; [*Backward intertwiners and a transitive commutant*](https://github.com/openai/math/blob/main/preprints/Backward-intertwiners-and-a-transitive-commutant-September-27-2026/paper.pdf), Theorem 1.1, Corollary 1.2 and §6.1. Announced hyperinvariant-subspace results; no assertion here of independent verification of their full proofs.
 
+- M. J. Colbrook, [*Invariant subspaces after complexification of a real irreducible operator*](../research/solutions/920-real-operator-complexification/aim920.pdf), 3 November 2026. [TeX source](../research/solutions/920-real-operator-complexification/aim920.tex), [package and reproduction](../research/solutions/920-real-operator-complexification/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-operators-batch/920-review.md).
+
 ## Status review
 
+**Outcome:** Counterexample.
 
-**Known cases:** The primary complexification conjecture remains the ordinary invariant-subspace question. The recent factor hyperinvariant example and Banach-lattice special cases do not settle ordinary invariant subspaces for all complexifications.
+**Resolution:** An infinite-dimensional separable real irreducible operator has exactly two proper nonzero closed invariant subspaces after complexification. The [manuscript](../research/solutions/920-real-operator-complexification/aim920.pdf) and [individual audit](../research/solution_reviews/2026-11-03-operators-batch/920-review.md) give the complete proof, checked sources and exact target comparison. Review was performed by Codex (AI).
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+**Scope:** The example contradicts Proposition 4.1 (i) implies (ii) of [3] as printed. It makes no assertion against that paper's separate positive band-diagonal theorems.
 
-### Online recheck, 2026-10-30
+### Earlier literature review, 2026-10-30
 
-The primary complexification conjecture remains the ordinary invariant-subspace question. The recent factor hyperinvariant example and Banach-lattice special cases do not settle ordinary invariant subspaces for all complexifications.
+The earlier review distinguished the ordinary invariant-subspace target from hyperinvariant-subspace results. The present explicit construction resolves that target negatively.
 
 The primary-source formulation and earlier dated status review are retained below. Fresh query results and hypothesis comparisons are recorded in the [integration register](../research/further-integration-2026-10-30/README.md). This is a bounded literature and announcement search, not a guarantee of continued openness or certification of every cited proof.
 
-The revised and published survey preserves the precise complexification question. The 2023 result above covers the stated Banach-lattice case. Bounded searches checked the original authors and title, the conjecture number, complexification, later solutions and counterexamples, and indexed Prove2Me results. No matching complete resolution was located; these checks do not certify exhaustive absence of a solution.
+The revised and published survey preserves the precise complexification question. The earlier interpretation of the 2023 proposition as an affirmative Banach-lattice case is corrected above. Bounded searches checked the original authors and title, the conjecture number, complexification, later solutions and counterexamples, and indexed Prove2Me results. No matching complete resolution was located; these checks do not certify exhaustive absence of a solution.
 
 The current OpenAI Math family 293 [4] concerns hyperinvariant subspaces and invariant projections inside a specified factor. Its two linked native manuscripts were checked at their main statements. The direct construction explicitly retains nontrivial ordinary invariant tail subspaces, including in Section 6.1. It therefore does not assert the complexification implication asked here.
 

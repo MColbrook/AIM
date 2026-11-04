@@ -2,7 +2,7 @@
 
 **Area:** Operators, matrices and computation
 **Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -34,17 +34,20 @@ This inequality measures how the free Dirac operator controls the size of a spin
 ## References
 
 1. R. L. Frank and M. Loss, [A sharp criterion for zero modes of the Dirac equation](https://arxiv.org/abs/2201.03610), January 2022 preprint, pp. 6–7, “Relation to Sobolev inequalities”; published in *Journal of the European Mathematical Society* **28** (2026), 305–331, [doi:10.4171/JEMS/1475](https://doi.org/10.4171/JEMS/1475), p. 311.
-2. G. Wang and M. Zhang, [Stability of spinorial Sobolev inequalities on $`\mathbb S^n`$](https://arxiv.org/abs/2508.09047), latest arXiv version v2, Introduction, equation (1.15), Theorem 1.5 and the following paragraph; published in *Advances in Mathematics* **505** (2026), 111318, [doi:10.1016/j.aim.2026.111318](https://doi.org/10.1016/j.aim.2026.111318).
+2. G. Wang and M. Zhang, [Stability of spinorial Sobolev inequalities on $`\mathbb S^n`$](https://arxiv.org/abs/2508.09047), latest arXiv version v2, Introduction (norm quotient (1.10) in the PDF, (1.15) in the HTML), Theorem 1.5 and the following paragraph; published in *Advances in Mathematics* **505** (2026), 111318, [doi:10.1016/j.aim.2026.111318](https://doi.org/10.1016/j.aim.2026.111318).
 3. B. Bieganowski and J. Mederski, [Explicit counterexamples to Frank–Loss optimizer conjectures for critical Dirac and vector Sobolev inequalities](https://arxiv.org/abs/2610.15787), October 2026 preprint, Theorem 1.1, Section 4 and Section 7.
+
+- M. J. Colbrook, [*Sharp radial Dirac bounds and stability of the scalar spinor*](../research/solutions/911-dirac-radial-bounds-stability/aim911.pdf), 3 November 2026. [TeX source](../research/solutions/911-dirac-radial-bounds-stability/aim911.tex), [package and reproduction](../research/solutions/911-dirac-radial-bounds-stability/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-operators-batch/911-review.md).
 
 ## Status review
 
+**Known cases:** The specified two-channel radial class has exact constant $`K_d=dI_d^{1/d}`$, with $`I_d=|\mathbb S^{d-1}|q_d^{-1}B((d-1)/2,(d+1)/2)`$. The scalar Talenti spinor is stationary with nonnegative second variation in every smooth compactly supported tangent direction, including angular modes. The previously recorded smaller explicit quotients remain valid.
 
-**Known cases:** The October 2026 counterexamples disprove the proposed optimizers and give smaller explicit quotients, not the exact critical Dirac norm constant. Spinorial Yamabe quotients and magnetic zero-mode thresholds are different variational quantities. The current exact-constant target remains.
+**Remaining target:** Determine the global constant $`C_d`$ over all of $`\mathcal X_d`$ for every $`d\ge3`$. The radial theorem and local second-variation result do not prove a global inequality for arbitrary spinors.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+**Reviewed result, 2026-11-04:** The [manuscript](../research/solutions/911-dirac-radial-bounds-stability/aim911.pdf) and [individual audit](../research/solution_reviews/2026-11-03-operators-batch/911-review.md) establish the stated radial theorem and second-variation result. Review was performed by Codex (AI), including a second independent proof check.
 
-### Online recheck, 2026-10-30
+### Earlier literature review, 2026-10-30
 
 The October 2026 counterexamples disprove the proposed optimizers and give smaller explicit quotients, not the exact critical Dirac norm constant. Spinorial Yamabe quotients and magnetic zero-mode thresholds are different variational quantities. The current exact-constant target remains.
 

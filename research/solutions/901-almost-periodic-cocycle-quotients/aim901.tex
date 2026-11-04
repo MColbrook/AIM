@@ -1,0 +1,271 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
+\usepackage{microtype,enumitem,fancyhdr}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
+ pdftitle={Finite-dimensional detection of reduced almost-periodic Banach cocycles},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 901: mathematical result and proof}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\Rea}{Re}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\N}{\mathbb N}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 901}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\allowdisplaybreaks[2]
+\title{\textbf{Finite-dimensional detection of reduced almost-periodic Banach cocycles}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove that every nonzero reduced cohomology class of an almost-periodic Banach representation is detected by an unbounded cocycle in a finite-dimensional quotient. Compact-group spectral approximation and separating finite-type quotient maps give the result for arbitrary topological groups.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 901 at revision
+\texttt{5d7e26e8444e}. The precise scope is stated below.
+\medskip
+
+\section{Main result and proof}
+\label{sec:901}
+
+\paragraph{Answer.} The answer to the stated question is affirmative. In fact,
+local compactness of the acting group is unnecessary. The essential distinction
+in the proof is between a representation with finitely many irreducible types
+and a finite-dimensional representation: the former can have arbitrary Banach
+multiplicity spaces.
+
+\begin{theorem}\label{thm:901}
+Let $G$ be a topological group, let $V$ be a real or complex Banach space, and
+let $\pi:G\to\mathrm{GL}(V)$ be a strongly continuous representation such that
+each orbit has compact norm closure. If a continuous $1$-cocycle $b:G\to V$
+does not belong to the compact-open closure of
+\[
+ B^1(G,V)=\{g\mapsto v-\pi(g)v:v\in V\},
+\]
+then there is a closed invariant subspace $W\subset V$ with
+$0<\dim(V/W)<\infty$ such that $\sup_{g\in G}\|b(g)+W\|=\infty$.
+\end{theorem}
+
+\subsection{The compact group associated with the representation}
+
+Uniform boundedness gives $M:=\sup_{g\in G}\|\pi(g)\|<\infty$.
+Embed $\pi(G)$ into the product of the compact orbit closures, one factor
+for each $v\in V$. Every point in its product closure is a linear operator
+of norm at most $M$. Consequently its strong operator closure $K$ is compact.
+Multiplication is jointly strongly continuous on uniformly bounded sets:
+if $A_\alpha\to A$ and $B_\alpha\to B$ strongly with
+$\sup_\alpha\|A_\alpha\|<\infty$, then
+\[
+ \|A_\alpha B_\alpha v-ABv\|
+ \le \|A_\alpha\|\,\|B_\alpha v-Bv\|
+       +\|(A_\alpha-A)Bv\|\longrightarrow0.
+\]
+If $\pi(g_\alpha)\to k$, compactness supplies a subnet along which
+$\pi(g_\alpha^{-1})\to l\in K$; the displayed estimate implies
+$kl=lk=I$. Thus $K$ is a compact group of invertible operators, with
+continuous inversion. Write $\rho$ for its strongly continuous action on $V$.
+The image of $G$ is dense in $K$.
+
+\subsection{Central spectral approximations}
+
+For now suppose $V$ is complex. For an irreducible unitary representation
+$\tau$ of $K$, write $d_\tau=\dim\tau$, $\chi_\tau=\operatorname{tr}\tau$,
+and, with normalized Haar measure, define
+\[
+ E^{\tau}_{ij}=d_\tau\int_K\overline{\tau_{ij}(k)}\rho(k)\,dk,
+ \qquad
+ P_\tau=\sum_{i=1}^{d_\tau}E^{\tau}_{ii}
+       =d_\tau\int_K\overline{\chi_\tau(k)}\rho(k)\,dk .
+\]
+These formulas mean integration after applying the integrand to a vector.
+The resulting operators are bounded. Schur orthogonality and invariance of
+Haar measure give the usual matrix-unit relations and
+\[
+ P_\tau^2=P_\tau,\qquad P_\tau P_\sigma=0\quad(\tau\ne\sigma),
+ \qquad
+ \rho(k)P_\tau=\sum_{i,j=1}^{d_\tau}\tau_{ij}(k)E^{\tau}_{ij}.
+ \tag{901.1}\label{eq:901-matrix}
+\]
+In particular, all $P_\tau$ commute with $\rho(K)$. On the range of any
+finite sum of these projections, the operator span of the representation is
+finite dimensional and the representation is continuous in operator norm.
+The range itself need not be finite dimensional.
+
+There is a uniformly bounded net $(R_\alpha)$ of finite linear combinations
+of the $P_\tau$ such that $R_\alpha v\to v$ for every $v\in V$.
+Here is a construction which also addresses nonmetrizable $K$. Compact groups
+have a basis of conjugation-invariant neighborhoods of the identity. For
+each sufficiently small such neighborhood take a nonnegative continuous
+central function supported there, of Haar integral one. Peter--Weyl approximation~\cite[Theorem 1 and Proposition 6]{Tao2011}, followed by averaging under conjugation, approximates this
+function in $L^1(K)$ by a central trigonometric polynomial. Choose the
+approximation errors tending to zero and the $L^1$ norms at most two.
+Integration against $\rho$ gives the asserted net: central trigonometric
+polynomials are finite sums of characters, concentration at the identity
+gives strong convergence, and $\|R_\alpha\|\le2M$.
+It follows, by a finite-net argument, that
+\[
+ \sup_{v\in C}\|R_\alpha v-v\|\longrightarrow0
+ \quad\hbox{for every norm-compact }C\subset V.
+ \tag{901.2}\label{eq:901-compact}
+\]
+Let $P_0=\int_K\rho(k)\,dk$ be the projection onto the invariant vectors.
+
+\subsection{A finite-type cocycle lemma}
+
+\begin{lemma}\label{lem:901-type}
+Let $U$ be the range of a finite sum of nontrivial isotypic projections.
+Suppose $c:G\to U$ is a continuous cocycle whose image in every
+finite-dimensional invariant quotient of $U$ is bounded. Then $c$ is an
+exact coboundary.
+\end{lemma}
+
+\begin{proof}
+First, such quotients separate points of $U$. Indeed, for $\ell\in U^*$,
+\[
+ D_\ell=\operatorname{span}\{\ell\circ\rho(k)|_U:k\in K\}
+\]
+is finite dimensional by \eqref{eq:901-matrix}. Its common annihilator
+$W_\ell$ is closed and invariant, and $U/W_\ell$ is finite dimensional.
+If $u\ne0$, choose $\ell$ with $\ell(u)\ne0$.
+
+The Haar average on $U$ is zero. Since the representation on $U$ is
+operator-norm continuous and has finite-dimensional operator span, this
+average can be approximated in operator norm by finite convex combinations
+of the operators $\pi(g)|_U$. Choose $g_1,\ldots,g_m\in G$ and
+$t_j\ge0$, $\sum_jt_j=1$, so that
+\[
+ A=\sum_{j=1}^m t_j\pi(g_j)|_U,\qquad \|A\|<1,
+ \qquad
+ v=(I-A)^{-1}\sum_{j=1}^m t_jc(g_j).
+ \tag{901.3}\label{eq:901-v}
+\]
+For any finite-dimensional invariant quotient $q:U\to F$, the bounded
+cocycle $qc$ is a coboundary. To see this directly, average an inner
+product on $F$ over the compact linear group induced by $K$. The affine
+action $z\mapsto\pi_F(g)z+qc(g)$ is then an action by Euclidean isometries
+with a bounded orbit. The unique circumcenter of that orbit is fixed.
+Thus, for some $w\in F$,
+\[
+ qc(g)=(I-\pi_F(g))w\qquad(g\in G).
+\]
+On the quotient, $\|A_F\|\le\|A\|<1$. Applying $q$ to
+\eqref{eq:901-v} and using this identity gives $qv=w$. Therefore
+\[
+ q\bigl(c(g)-(I-\pi(g))v\bigr)=0\qquad(g\in G).
+\]
+The separating family of finite-dimensional quotients now gives
+$c(g)=(I-\pi(g))v$ for every $g$.
+\end{proof}
+
+Every quotient in this lemma is available as a quotient of $V$: if $P_U$
+is the sum of the corresponding isotypic projections, then
+$qP_U:V\to F$ is bounded, onto, and equivariant.
+
+\subsection{Proof of the theorem}
+
+We prove the contrapositive. Suppose that every finite-dimensional invariant
+quotient of $V$ sends $b$ to a bounded cocycle. On the trivial isotypic
+component, $P_0b$ is a homomorphism into the additive group of $V^K$.
+Each scalar functional on this space, composed with $P_0$, is an
+equivariant quotient map. A bounded scalar homomorphism is zero, since
+$h(g^n)=nh(g)$ for every positive integer $n$. Hence $P_0b=0$.
+
+For a nontrivial type $\tau$, the cocycle $P_\tau b$ satisfies
+Lemma~\ref{lem:901-type}, because its finite-dimensional quotient maps
+extend to $V$. It is therefore an exact coboundary. Every $R_\alpha b$ is
+a finite linear combination of these coboundaries and is itself a
+coboundary. If $C\subset G$ is compact, continuity of $b$ makes $b(C)$
+norm compact. Equation~\eqref{eq:901-compact} consequently gives
+\[
+ \sup_{g\in C}\|R_\alpha b(g)-b(g)\|\longrightarrow0.
+\]
+This proves the complex theorem with the required compact-open closure;
+no sequential-closure assumption has been made.
+
+For real $V$, complexify $V$, $\pi$, and $b$. The complexified representation
+is still almost periodic: an orbit of $x+iy$ lies in the sum of the compact
+orbit closures of $x$ and $iy$. If $b$ were in the compact-open closure of
+complex coboundaries, taking real parts of their primitives would put it
+in the closure of real coboundaries. Thus a nonzero real reduced class
+remains nonzero after complexification. The complex result supplies a
+finite-dimensional complex equivariant quotient with unbounded image of
+$b$. Restrict that quotient map to $V$ and take its finite-dimensional
+real image. Its kernel is the desired $W$. \qed
+
+\paragraph{Scope and source.}
+The statement resolves the catalogue's precise finite-quotient question,
+associated with Question~4.7 of Cornulier--Tessera~\cite{CT2020}.
+The proof uses neither separability nor reflexivity of $V$, nor compact
+generation or local compactness of $G$. The uniform approximations have
+finite representation type, not finite rank; no approximation property
+of the underlying Banach space is assumed. The argument concerns reduced
+cohomology and unbounded quotient cocycles, as required in Problem~901.
+
+
+\begin{corollary}[Consequences for the source questions]
+Every locally compact group has property $\mathcal{AP}_{\mathrm{fd}}$
+in the terminology of \cite[Definition~4.1]{CT2020}. Consequently
+$\mathcal{WAP}_{\mathrm{ap}}$ and $\mathcal{WAP}_{\mathrm{fd}}$ are equivalent
+properties of locally compact groups.
+\end{corollary}
+\begin{proof}
+The first assertion is precisely Theorem~\ref{thm:901}. The second
+follows from \cite[Proposition~4.3]{CT2020}, which expresses
+$\mathcal{WAP}_{\mathrm{fd}}$ as the conjunction of
+$\mathcal{WAP}_{\mathrm{ap}}$ and $\mathcal{AP}_{\mathrm{fd}}$.
+Thus the same argument answers Questions~4.5--4.7 of that paper;
+these consequences are counted as one catalogue entry here.
+\end{proof}
+
+
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{3pt}
+
+\bibitem{CT2020}
+Y.~Cornulier and R.~Tessera,
+\emph{On the vanishing of reduced 1-cohomology for Banach representations},
+Ann. Inst. Fourier \textbf{70} (2020), 1951--2003.
+\href{https://doi.org/10.5802/aif.3363}{doi:10.5802/aif.3363}.
+Question 4.7 and Proposition 4.3.
+
+\bibitem{Tao2011}
+T.~Tao,
+\emph{The Peter--Weyl theorem, and non-abelian Fourier analysis on compact groups},
+23 January 2011, Theorem 1 and Proposition 6.
+\url{https://terrytao.wordpress.com/2011/01/23/the-peter-weyl-theorem-and-non-abelian-fourier-analysis-on-compact-groups/}.
+The group is assumed compact Hausdorff; normalized Haar measure makes
+the stated $L^2$ approximation sufficient for $L^1$ approximation.
+
+\end{thebibliography}
+\end{document}

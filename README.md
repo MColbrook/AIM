@@ -15,16 +15,16 @@ Contributions made with or without AI are welcome.
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**868 open targets** (367 open, 501 partial) · **198 solved entries** · **1 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
+**859 open targets** (367 open, 492 partial) · **207 solved entries** · **1 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 868 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 859 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
 | Subject group | Open targets | Solved |
 | --- | ---: | ---: |
 | [Spectral theory and spectral geometry](CATALOG.md#spectral-theory-and-spectral-geometry) | [39](CATALOG.md#spectral-open) | [16](CATALOG.md#spectral-solved) |
-| [Operators, matrices and computation](CATALOG.md#operators-matrices-and-computation) | [69](CATALOG.md#operators-open) | [18](CATALOG.md#operators-solved) |
+| [Operators, matrices and computation](CATALOG.md#operators-matrices-and-computation) | [60](CATALOG.md#operators-open) | [27](CATALOG.md#operators-solved) |
 | [Inverse problems, control and dynamics](CATALOG.md#inverse-problems-control-and-dynamics) | [21](CATALOG.md#inverse-open) | [8](CATALOG.md#inverse-solved) |
 | [PDEs, fluids and materials](CATALOG.md#pdes-fluids-and-materials) | [50](CATALOG.md#pdes-materials-open) | [11](CATALOG.md#pdes-materials-solved) |
 | [Probability, statistics and learning](CATALOG.md#probability-statistics-and-learning) | [59](CATALOG.md#probability-statistics-open) | [14](CATALOG.md#probability-statistics-solved) |
@@ -49,6 +49,21 @@ If a problem here is resolved, we encourage you to improve the proof, explain it
 | [Mathematical relativity](CATALOG.md#mathematical-relativity) | [12](CATALOG.md#mathematical-relativity-open) | [0](CATALOG.md#mathematical-relativity-solved) |
 | [Nonlinear filtering and data assimilation](CATALOG.md#nonlinear-filtering-and-data-assimilation) | [4](CATALOG.md#nonlinear-filtering-data-assimilation-open) | [0](CATALOG.md#nonlinear-filtering-data-assimilation-solved) |
 | [Rough paths and singular stochastic equations](CATALOG.md#rough-paths-and-singular-stochastic-equations) | [13](CATALOG.md#rough-paths-singular-stochastic-equations-open) | [0](CATALOG.md#rough-paths-singular-stochastic-equations-solved) |
+
+## Partial progress
+
+Partial results with linked proofs and reviews are listed below. These problems remain open targets; each problem page identifies what is proved and what remains.
+
+| Problem | Partial result | Review |
+| --- | --- | --- |
+| [022. The regular-polygon Steklov conjecture](problems/022-steklov-polygon-optimizer.md) | [Proof](research/solutions/022-parallelogram-steklov/aim022.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/022-review.md) |
+| [040. Uniformly effective algebraic multigrid for diagonally dominant systems](problems/040-universal-algebraic-multigrid.md) | [Proof](https://arxiv.org/pdf/1506.08204v2) | [Review](research/solution_reviews/2026-10-15-active-prs/170-source-scope-root.md) |
+| [541. Low-degree convergence of relaxed minimal-deformation surface elements](problems/541-low-degree-relaxed-minimal-deformation.md) | [Proof](research/solutions/541-linear-failure-cubic-convergence/paper/manuscript.pdf) | [Review](research/solution_reviews/2026-10-21-active-prs/172-review.md) |
+| [911. The sharp constant in the critical Dirac norm inequality](problems/911-the-sharp-constant-in-the-critical-dirac-norm-inequality.md) | [Proof](research/solutions/911-dirac-radial-bounds-stability/aim911.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/911-review.md) |
+| [1016. The sharp inradius bound for superhomogeneous Dirichlet frequencies](problems/1016-the-sharp-inradius-bound-for-superhomogeneous-dirichlet-frequencies.md) | [Proof](research/solutions/1016-inradius-critical-asymptotics/aim1016.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1016-review.md) |
+| [1019. The sharp logarithmic Sobolev constant of a flat torus](problems/1019-the-sharp-logarithmic-sobolev-constant-of-a-flat-torus.md) | [Proof](research/solutions/1019-flat-torus-log-sobolev/aim1019.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1019-review.md) |
+| [1028. Sharp convex Pólya-functional bounds in dimensions three and higher](problems/1028-sharp-convex-polya-functional-bounds-in-dimensions-three-and-higher.md) | [Proof](research/solutions/1028-eigenvalue-torsion-upper-constant/aim1028.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1028-review.md) |
+| [1034. The sharp curvature Schrödinger inequality for closed loops](problems/1034-the-sharp-curvature-schrodinger-inequality-for-closed-loops.md) | [Proof](research/solutions/1034-ovals-certified-lower-bound/aim1034.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1034-review.md) |
 
 ## Solved problems
 
@@ -246,6 +261,15 @@ Complete resolutions recorded in this collection, including counterexamples to t
 | 660 | [Small-ball ratios for general symmetric product priors](research/resolved/660-product-prior-small-ball-ratios.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-506/aim506_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/506-review.md) |
 | 662 | [Variance ordering for Gaussian alpha-divergence approximations](research/resolved/662-gaussian-variational-variance-ordering.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-457-558/aim_558_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/558-review.md) |
 | 665 | [Smooth-gradient approximation of finite-Fisher-information scores](research/resolved/665-fisher-score-gradient-closure.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/618-fisher-score/PROOF.md) | [Review](research/solution_reviews/2026-10-02/618-review.md) |
+| 897 | [Pedersen's sharp fractional-power commutator inequality](problems/897-pedersen-s-sharp-fractional-power-commutator-inequality.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/897-fractional-power-intertwining/aim897.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/897-review.md) |
+| 898 | [A universal Lipschitz bound for the canonical affine projection](problems/898-a-universal-lipschitz-bound-for-the-canonical-affine-projection.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/898-affine-lipschitz-projection/aim898.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/898-review.md) |
+| 901 | [Finite-dimensional detection of almost-periodic Banach cocycles](problems/901-finite-dimensional-detection-of-almost-periodic-banach-cocycles.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/901-almost-periodic-cocycle-quotients/aim901.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/901-review.md) |
+| 905 | [Does Lipschitz affine approximation determine the exact martingale cotype?](problems/905-does-lipschitz-affine-approximation-determine-the-exact-martingale-cotype.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/905-lipschitz-approximation-martingale-cotype/aim905.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/905-review.md) |
+| 917 | [Split products for time-dependent form-sum Schrödinger evolution](problems/917-split-products-for-time-dependent-form-sum-schrodinger-evolution.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/917-nonautonomous-split-product-counterexamples/aim917.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/917-review.md) |
+| 920 | [Invariant subspaces under complexification of real operators](problems/920-invariant-subspaces-under-complexification-of-real-operators.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/920-real-operator-complexification/aim920.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/920-review.md) |
+| 921 | [Generic backward uniqueness for linear retarded equations](problems/921-generic-backward-uniqueness-for-linear-retarded-equations.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/921-generic-retarded-backward-uniqueness/aim921.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/921-review.md) |
+| 928 | [Does the closed completely positive cone generate the energy-constrained completion?](problems/928-does-the-closed-completely-positive-cone-generate-the-energy-constrained-completion.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/928-energy-constrained-positive-cone/aim928.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/928-review.md) |
+| 935 | [The numerical index of real Lebesgue spaces](problems/935-the-numerical-index-of-real-lebesgue-spaces.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/935-real-lebesgue-numerical-index/aim935.pdf) | [Review](research/solution_reviews/2026-11-03-operators-batch/935-review.md) |
 | 1007 | [Embedded eigenvalues in asymptotically flat twisted strips](problems/1007-embedded-eigenvalues-in-asymptotically-flat-twisted-strips.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-1007/twisted-strip-counterexample.pdf) | [Review](research/solution_reviews/2026-11-03-pr181/1007-review.md) |
 | 1013 | [Spectral lower bounds from multi-set concentration](problems/1013-spectral-lower-bounds-from-multi-set-concentration.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/1013-multiset-concentration-gap/aim1013.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1013-review.md) |
 | 1018 | [Can spectral type vary within a limit-periodic Schrödinger hull?](problems/1018-can-spectral-type-vary-within-a-limit-periodic-schrodinger-hull.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/1018-limit-periodic-hull-spectral-type/aim1018.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1018-review.md) |

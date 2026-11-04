@@ -1,8 +1,8 @@
 # 921. Generic backward uniqueness for linear retarded equations
 
 **Area:** Operators / delay differential equations
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -49,14 +49,15 @@ Hale and Oliva proved density in the full coefficient space and explicitly left 
 - J. K. Hale and W. M. Oliva, *One-to-Oneness for Linear Retarded Functional Differential Equations*, JDE 20 (1976), 28–36, definitions pp. 28–31, Corollaries 3.1–3.2, Theorem 4.1 and opening of §5 on p. 35. [Author institutional copy](https://repositorio.usp.br/directbitstream/e2db4023-5223-4344-8a90-cb614512aaec/3189103.pdf), [DOI](https://doi.org/10.1016/0022-0396(76)90093-0).
 - J. K. Hale and S. M. Verduyn Lunel, *Introduction to Functional Differential Equations* (1993), §12.5, Theorems 5.2–5.5 and the intervening question. [Publisher chapter](https://doi.org/10.1007/978-1-4612-4342-7_13).
 
+- M. J. Colbrook, [*Generic backward uniqueness for linear retarded equations*](../research/solutions/921-generic-retarded-backward-uniqueness/aim921.pdf), 3 November 2026. [TeX source](../research/solutions/921-generic-retarded-backward-uniqueness/aim921.tex), [package and reproduction](../research/solutions/921-generic-retarded-backward-uniqueness/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-operators-batch/921-review.md).
+
 ## Status review
 
+**Outcome:** Affirmative proof.
 
-**Known cases:** Residuality in the full compact-C1 coefficient space and simultaneous injectivity at all times are the target. Density and restricted step-measure/local-time genericity do not supply this assertion. Bounded fresh searches found no matching full announcement.
+**Resolution:** Backward uniqueness for every pair of real times is residual in the full specified compact operator-norm C1 coefficient topology. The [manuscript](../research/solutions/921-generic-retarded-backward-uniqueness/aim921.pdf) and [individual audit](../research/solution_reviews/2026-11-03-operators-batch/921-review.md) give the complete proof, checked sources and exact target comparison. Review was performed by Codex (AI).
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
-
-### Online recheck, 2026-10-30
+### Earlier literature review, 2026-10-30
 
 Residuality in the full compact-C1 coefficient space and simultaneous injectivity at all times are the target. Density and restricted step-measure/local-time genericity do not supply this assertion. Bounded fresh searches found no matching full announcement.
 

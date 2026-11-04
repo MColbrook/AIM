@@ -1,8 +1,8 @@
 # 928. Does the closed completely positive cone generate the energy-constrained completion?
 
 **Area:** Operators, matrices and computation
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -34,14 +34,17 @@ This asks whether limits of quantum operations controlled on energy-constrained 
 - M. E. Shirokov, *On completion of the cone of completely positive linear maps with respect to the energy-constrained diamond norm*, **Lobachevskii Journal of Mathematics** 40(10) (2019), 1549–1568. [Published article](https://doi.org/10.1134/S1995080219100238); [author manuscript](https://arxiv.org/html/1810.10922v2), Theorems 1B and 3B, equation (31), and the conjecture in §5.
 - L. van Luijk, *Energy-Limited Quantum Dynamics*, **Communications in Mathematical Physics** 406 (2025), article 120. [Published article](https://doi.org/10.1007/s00220-025-05282-w), Lemma 2.19(6), the following paragraph and footnote 11.
 
+- M. J. Colbrook, [*Generating the energy-constrained completion by completely positive maps*](../research/solutions/928-energy-constrained-positive-cone/aim928.pdf), 3 November 2026. [TeX source](../research/solutions/928-energy-constrained-positive-cone/aim928.tex), [package and reproduction](../research/solutions/928-energy-constrained-positive-cone/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-operators-batch/928-review.md).
+
 ## Status review
 
+**Outcome:** Affirmative proof.
 
-**Known cases:** The CP components must lie in the closed cone obtained by completing ordinary bounded CP maps. Van Luijk Lemma 2.19(6) allows a larger finite-energy-norm cone and therefore does not prove generation of this particular closed cone.
+**Resolution:** The specified closed completely positive cone generates the entire energy-constrained completion; the norm also satisfies an exact infimum formula. The [manuscript](../research/solutions/928-energy-constrained-positive-cone/aim928.pdf) and [individual audit](../research/solution_reviews/2026-11-03-operators-batch/928-review.md) give the complete proof, checked sources and exact target comparison. Review was performed by Codex (AI).
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+**Scope:** The norm formula is an infimum over decompositions; attainment for every element of the completion is not claimed.
 
-### Online recheck, 2026-10-30
+### Earlier literature review, 2026-10-30
 
 The CP components must lie in the closed cone obtained by completing ordinary bounded CP maps. Van Luijk Lemma 2.19(6) allows a larger finite-energy-norm cone and therefore does not prove generation of this particular closed cone.
 

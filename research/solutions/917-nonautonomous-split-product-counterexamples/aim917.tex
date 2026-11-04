@@ -1,0 +1,444 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{xcolor,graphicx,booktabs,tabularx,array,longtable}
+\usepackage{microtype,enumitem,fancyhdr}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{accent}{HTML}{163B55}
+\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
+ pdftitle={Failure of split-product approximations for time-dependent form sums},pdfauthor={Matthew J. Colbrook},
+ pdfsubject={AIM 917: mathematical result and proof}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=0.25em,topsep=0.3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\Rea}{Re}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\N}{\mathbb N}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily AIM 917}
+\fancyhead[R]{\small\sffamily Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\allowdisplaybreaks[2]
+\title{\textbf{Failure of split-product approximations for time-dependent form sums}}
+\author{Matthew J. Colbrook\\[3pt]
+{\small Department of Applied Mathematics and Theoretical Physics}\\
+{\small University of Cambridge, United Kingdom}\\
+{\small\href{mailto:mjc249@maths.cam.ac.uk}{\texttt{mjc249@maths.cam.ac.uk}}}}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give counterexamples to the stated exponential and resolvent split-product formulas for nonautonomous Schrodinger evolution. Narrow time spikes cause failure of the proposed limits while retaining the required common form domain and time regularity. A separate exponential counterexample uses uniformly bounded perturbations.
+\end{abstract}
+\noindent\textbf{Repository target.}
+This manuscript concerns AIM problem 917 at revision
+\texttt{5d7e26e8444e}. The precise scope is stated below.
+\medskip
+
+\section{Main result and proof}
+\label{sec:917}
+
+\textbf{Outcome.} The two assertions in Problem~917 are false under its
+stated hypotheses. The counterexample below has a bounded, finite-rank,
+self-adjoint perturbation at every individual time. The restricted forms
+are continuously differentiable in operator norm from the common form
+domain to its dual. Thus no convention concerning non-semibounded closed
+forms is involved. These assumptions allow time dependence that is
+smooth on the form scale while remaining badly behaved on fixed
+Hilbert-space vectors. The final strengthening even has uniformly
+bounded perturbations. The precise question is in the catalogue~\cite{AIM}; its
+source is \cite[conditions (V), (V$'$), and Remark~(3), equations
+(32)--(33)]{VV2011}.
+
+\begin{theorem}\label{thm:917}
+There exist a positive self-adjoint operator $H_0$ on a separable complex
+Hilbert space $\mathcal H$ and a family of bounded finite-rank
+self-adjoint operators $V(t)$, $0\le t\le1$, satisfying every hypothesis of
+Problem~917, for which the exponential split products at $(t,s)=(1,0)$
+have no strong limit. The resolvent split products do not converge
+strongly, or weakly, to the specified unitary propagator $U(1,0)$.
+\end{theorem}
+
+\begin{proof}
+We first specify the sampling scales. Set
+\[
+ \alpha=\frac\pi2,\qquad \delta=\frac1{64},\qquad
+ \beta(s)=\begin{cases}(1-s^2)^2,&|s|\le1,\\0,&|s|>1.\end{cases}
+\]
+The function $\beta$ is $C^1$, satisfies $\beta(0)=1$ and
+$0\le\beta\le1$, and has $|\beta'|\le2$. Choose positive integers $N_n$
+recursively, beginning with $N_1\ge4$, with $N_n\ge4N_{n-1}$. Once $N_n$
+is chosen, define
+\[
+ h_n=N_n^{-1},\qquad \tau_n=1-h_n,\qquad g_n=\alpha N_n,
+ \qquad w_n=\frac{2^{-n}}{1024g_n},
+ \qquad v_n(t)=g_n\beta\!\left(\frac{t-\tau_n}{w_n}\right).
+\]
+In choosing $N_n$, require also
+\begin{equation}\label{eq:917-riemann}
+ \frac1{N_n}\sum_{j=0}^{N_n-1}\sum_{k<n}v_k(j/N_n)\le\delta.
+\end{equation}
+This is a valid recursive choice: the finite sum $\sum_{k<n}v_k$ is
+already determined and continuous, and
+\[
+ \int_0^1\sum_{k<n}v_k(t)\,dt
+ \le\sum_{k<n}2g_kw_k
+ \le\frac1{512}<\delta.
+\]
+Its left Riemann sums converge to this integral. Consequently arbitrarily
+large integers meet \eqref{eq:917-riemann} and the growth requirement.
+
+Write $I_n=(\tau_n-w_n,\tau_n+w_n)$. Since $w_n<h_n/10$ and
+$h_{n+1}\le h_n/4$, these intervals are disjoint. In fact all $I_k$ with
+$k>n$ lie strictly to the right of $\tau_n$. The uniform $N_n$-grid used
+in the question therefore samples $I_n$ exactly once, at its last point
+$\tau_n=(N_n-1)/N_n$, and samples none of the later intervals. The endpoint
+$1$ is not sampled.
+
+Let $\mathcal H=\ell^2(\mathbb N_0)$ with orthonormal basis
+$e_0,e_1,\ldots$. Define a diagonal positive self-adjoint operator by
+\[
+ H_0e_0=e_0,\qquad H_0e_n=\lambda_ne_n,
+ \qquad \lambda_n=\left(\frac{g_n}{w_n^2}\right)^2\quad(n\ge1).
+\]
+Thus $\lambda_n\ge1$, and its form domain and form are
+\[
+ Q=D(H_0^{1/2}),\qquad
+ q_0[u]=|u_0|^2+\sum_{n\ge1}\lambda_n|u_n|^2.
+\]
+Let $S_n=|e_0\rangle\langle e_n|+|e_n\rangle\langle e_0|$, zero on the
+orthogonal complement, and put
+\[
+ V(t)=\begin{cases}v_n(t)S_n,&t\in I_n,\\0,&t\notin\bigcup_n I_n.
+ \end{cases}
+\]
+In particular $V(1)=0$. At every time, $V(t)$ is a bounded finite-rank
+self-adjoint operator. Its closed Hermitian form has domain all of
+$\mathcal H$.
+
+We check the uniform form assumptions explicitly. For $u\in Q$ and
+$t\in I_n$,
+\begin{align}
+ |q_{V(t)}[u]|
+ &\le\frac{g_n}{\sqrt{\lambda_n}}
+       \beta\!\left(\frac{t-\tau_n}{w_n}\right)
+       \bigl(|u_0|^2+\lambda_n|u_n|^2\bigr)\notag\\
+ &\le w_n^2q_0[u].\label{eq:917-formbound}
+\end{align}
+Use $q_0^{1/2}$ as the norm on $Q$. Under the natural identifications of
+$Q$ and its dual, the restricted form operator is represented by
+\[
+ B(t)=H_0^{-1/2}V(t)H_0^{-1/2}
+     =w_n^2\beta\!\left(\frac{t-\tau_n}{w_n}\right)S_n
+       \quad(t\in I_n),
+\]
+and by zero outside the intervals. Hence
+\begin{equation}\label{eq:917-derivative}
+ \|B'(t)\|\le2w_n\qquad(t\in I_n).
+\end{equation}
+Both $\beta$ and $\beta'$ vanish at the interval endpoints, so $B$ is
+norm $C^1$ away from $1$. At the accumulation point,
+\[
+ \frac{\|B(t)\|}{1-t}
+ \le\frac{w_n^2}{h_n-w_n}
+ \le\frac{2w_n^2}{h_n}\longrightarrow0
+ \quad(t\in I_n,\ n\to\infty),
+\]
+while \eqref{eq:917-derivative} tends to zero. It follows that $B$ is
+norm $C^1$ on $[0,1]$, with $B'(1)=0$. Equivalently,
+$t\mapsto\widetilde V(t)$ is norm $C^1$ as a map into
+$\mathcal L(Q,Q^*)$. Every $w_n$ is smaller than $1/8$, so
+\eqref{eq:917-formbound}--\eqref{eq:917-derivative} imply both of the
+catalogue's bounds with $a=1/4$ and $b=0$. Moreover
+\[
+ q_t[u]=q_0[u]+q_{V(t)}[u]
+ \ge\frac34q_0[u]\ge\frac34\|u\|^2.
+\]
+The standing positivity condition holds with $c=3/4$. The hypotheses
+therefore provide the unitary form propagator $U(t,s)$.
+
+We next examine the exponential product on the grid of size $N_n$.
+Denote by $K_n^E$ the product of its first $N_n-1$ factors, omitting the
+last factor at $\tau_n$. All perturbations sampled in $K_n^E$ come from
+the earlier spikes $k<n$. Telescoping the unitary factors and using
+$\|e^{-ihV}-I\|\le h\|V\|$ gives
+\begin{equation}\label{eq:917-prefixE}
+ \|K_n^E-e^{-i\tau_nH_0}\|
+ \le h_n\sum_{j=0}^{N_n-2}\|V(jh_n)\|\le\delta.
+\end{equation}
+At the last grid point, $V(\tau_n)=g_nS_n$ and $h_ng_n=\pi/2$, whence
+\[
+ e^{-ih_nV(\tau_n)}e_0=-ie_n.
+\]
+Since $H_0e_0=e_0$, \eqref{eq:917-prefixE} implies
+\[
+ P_{N_n}^Ee_0=c_ne_n+r_n,
+ \qquad c_n=-ie^{-i\tau_n}e^{-ih_n\lambda_n},
+ \qquad |c_n|=1,\quad\|r_n\|\le\delta.
+\]
+Consequently, whenever $m\ne n$,
+\[
+ \|P_{N_n}^Ee_0-P_{N_m}^Ee_0\|\ge\sqrt2-2\delta>0.
+\]
+The exponential products are not strongly Cauchy, and therefore have no
+strong limit.
+
+Finally, let $R_n=(I+ih_nH_0)^{-1}$ and let $K_n^R$ be the analogous
+resolvent prefix with the last factor omitted. All factors are
+contractions, and
+$\|(I+ihV)^{-1}-I\|\le h\|V\|$. The same telescoping argument yields
+\[
+ \|K_n^R-R_n^{N_n-1}\|\le\delta.
+\]
+Thus $K_n^Re_0=b_ne_0+s_n$ with $|b_n|\le1$ and $\|s_n\|\le\delta$.
+On the two-dimensional span of $e_0,e_n$,
+\[
+ (I+i\alpha S_n)^{-1}e_0
+   =\frac{e_0-i\alpha e_n}{1+\alpha^2},
+ \qquad
+ \|(I+i\alpha S_n)^{-1}e_0\|=(1+\alpha^2)^{-1/2}.
+\]
+The final $R_n$ is a contraction, so
+\[
+ \|P_{N_n}^Re_0\|\le(1+\alpha^2)^{-1/2}+\delta<1.
+\]
+As $U(1,0)$ is unitary,
+\[
+ \|P_{N_n}^Re_0-U(1,0)e_0\|
+ \ge1-(1+\alpha^2)^{-1/2}-\delta>0.
+\]
+This excludes the proposed strong limit. It excludes weak convergence to
+$U(1,0)$ as well: for contractions $P_n$ and a unitary $U$, weak
+convergence $P_n\to U$ implies strong convergence, because
+\[
+ \|P_nx-Ux\|^2
+ \le2\|x\|^2-2\operatorname{Re}\langle P_nx,Ux\rangle\longrightarrow0.
+\]
+\end{proof}
+
+\paragraph{An independent construction of the propagator.}
+In this example the existence of a unitary propagator can also be seen
+without an abstract form-evolution theorem. Indeed,
+\[
+ \int_0^1\|V(t)\|\,dt
+ =\left(\int_{-1}^1(1-s^2)^2\,ds\right)\sum_{n\ge1}g_nw_n
+ =\frac{16}{15}\frac1{1024}=\frac1{960}.
+\]
+The operator-valued function is Bochner measurable: on each spike it is
+a continuous scalar multiple of a fixed finite-rank operator, and its
+range lies in a separable subspace of $\mathcal B(\mathcal H)$.
+The interaction-picture perturbation
+$W(t)=e^{itH_0}V(t)e^{-itH_0}$ is also Bochner measurable and has the
+same integrable norm. On $I_n$ its two matrix entries merely acquire
+the continuous phases $e^{\pm it(\lambda_n-1)}$.
+The norm-convergent Dyson series therefore solves
+\[
+ Z(t,s)=I-i\int_s^t W(\tau)Z(\tau,s)\,d\tau.
+\]
+It is unitary because $W(t)$ is self-adjoint almost everywhere. Hence
+$e^{-itH_0}Z(t,s)e^{isH_0}$ is a unitary propagator. It agrees with the
+form propagator: testing the form equation against finite-support
+vectors transported by $e^{-itH_0}$ cancels the free generator and gives
+the same integral equation; its solution is unique. By density this
+identifies the propagators on all of $\mathcal H$. Unitarity in the
+integral equation gives the stronger quantitative statement
+\[
+ \|U(1,0)-e^{-iH_0}\|=\|Z(1,0)-I\|\le\frac1{960}.
+\]
+Thus the actual evolution is very close to the free evolution even
+though the selected grids produce the failures proved above.
+
+The obstruction is an exact sampling effect. Each narrow time spike is
+small, together with its
+first derivative, on the form scale, but its peak acts strongly on a
+fixed low-energy vector in the Hilbert space. A selected uniform grid
+hits that peak and transfers the vector to a new high-energy basis
+vector. Earlier sampled spikes have uniformly small total effect by
+construction. The example even has a common operator domain
+$D(H_0)$ for all $H_0+V(t)$, since each $V(t)$ is bounded. The form
+hypotheses do not control the action of the sampled perturbations on
+fixed Hilbert-space vectors. The following strengthening shows that a
+uniform operator bound alone still does not ensure the exponential
+limit.
+
+\subsection{The exponential product can fail even for uniformly bounded perturbations}
+\label{sec:917bounded}
+
+The exponential obstruction has a stronger version. A uniform bound on
+$\|V(t)\|$ alone does not repair the statement; time regularity in the
+Hilbert-space operator topology matters as well.
+
+\begin{theorem}\label{thm:917bounded}
+For every $\varepsilon>0$, there is a family satisfying all hypotheses of
+Problem~917, with every $V(t)$ self-adjoint and finite rank, such that
+\[
+ \sup_{0\le t\le1}\|V(t)\|\le1,
+ \qquad \int_0^1\|V(t)\|\,dt\le\varepsilon,
+\]
+but its exponential split products at $(t,s)=(1,0)$ have no strong limit.
+The restricted forms are continuously differentiable in operator norm,
+and $V(t)$ is continuous in the weak operator topology.
+\end{theorem}
+
+\begin{proof}
+Fix $\delta=1/100$ and put
+$\varepsilon_0=\min\{\varepsilon,\delta/8\}$.
+Let $\beta(s)=(1-s^2)^2$ on $[-1,1]$ and zero elsewhere, as before.
+We recursively choose integers $N_n$, finite sets
+$J_n\subset\{0,\ldots,N_n-1\}$, and widths $w_n>0$.
+
+Suppose the earlier groups have been chosen. Let $E_{n-1}$ be the
+union of their closed bump intervals, and let
+\[
+ Z_{n-1}=\{0,1\}\cup
+  \bigcup_{k<n}\{j/N_k:0\le j\le N_k-1\}.
+\]
+The set $E_{n-1}$ is a finite union of intervals; its length will be at
+most $\varepsilon_0$. Its indicator is Riemann integrable. Choose $N_n$
+sufficiently large that
+\[
+ \frac1{N_n}\#\{0\le j<N_n:j/N_n\in E_{n-1}\}\le\frac\delta4,
+ \qquad
+ \frac{\# Z_{n-1}}{N_n}\le\frac\delta4.
+\]
+This is possible because $|E_{n-1}|\le\varepsilon_0\le\delta/8$ and
+$Z_{n-1}$ is finite. Require also $N_n>N_{n-1}$ when $n>1$, and take
+$1/N_n$ smaller than every positive point of
+$E_{n-1}\cup Z_{n-1}$. The latter requirement is possible because this
+finite union of closed intervals and points stays a positive distance
+from zero after zero itself is removed. Set
+\[
+ J_n=\{0\le j<N_n:j/N_n\notin E_{n-1}\cup Z_{n-1}\},
+ \qquad m_n=\#J_n.
+\]
+Then $m_n/N_n\ge1-\delta/2$, and $1\in J_n$. Choose
+$w_n<1/(4N_n)$ so small that the closed
+intervals
+\[
+ [j/N_n-w_n,j/N_n+w_n],\qquad j\in J_n,
+\]
+are pairwise disjoint, lie in $(0,1)$, and avoid
+$E_{n-1}\cup Z_{n-1}$. Also impose
+\[
+ 2N_nw_n\le\varepsilon_0\,2^{-n}.
+\]
+All these requirements are possible because there are finitely many
+chosen centers, each at positive distance from the closed forbidden set.
+They ensure that all bump intervals in all groups are disjoint and that
+\[
+ |E_{n-1}|\le\sum_{k<n}2m_kw_k\le\varepsilon_0,
+\]
+justifying the induction. Define
+\[
+ b_n(t)=\sum_{j\in J_n}\beta\!\left(\frac{t-j/N_n}{w_n}\right).
+\]
+Each $b_n$ is $C^1$, with $0\le b_n\le1$ and
+$\|b_n'\|_\infty\le2/w_n$. Every later group vanishes at every point
+of the $N_n$-grid, by its avoidance of $Z_{k-1}$.
+
+On $\ell^2(\mathbb N_0)$ let $H_0e_0=e_0$ and
+$H_0e_n=\lambda_ne_n$, choosing
+\[
+ \lambda_n=1+2\pi k_nN_n,\qquad k_n\in\mathbb N,
+\]
+so large that
+\[
+ \lambda_n^{-1/2}(1+2/w_n)\le2^{-n}/16.
+\]
+Let $S_n=|e_0\rangle\langle e_n|+|e_n\rangle\langle e_0|$, and put
+\[
+ V(t)=\sum_{n\ge1}b_n(t)S_n.
+\]
+At each time at most one summand is nonzero. Thus $V(t)$ is bounded,
+self-adjoint and of rank at most two, with $\|V(t)\|\le1$. Moreover,
+\[
+ \int_0^1\|V(t)\|\,dt
+ \le\sum_{n\ge1}2m_nw_n\le\varepsilon_0\le\varepsilon.
+\]
+For $Q=D(H_0^{1/2})$, the restricted form is represented by
+\[
+ B(t)=H_0^{-1/2}V(t)H_0^{-1/2}
+     =\sum_{n\ge1}\lambda_n^{-1/2}b_n(t)S_n.
+\]
+Both this series and its derivative series converge uniformly in
+operator norm, and
+$\sup_t\|B(t)\|\le1/16$, $\sup_t\|B'(t)\|\le1/16$.
+Hence $B$ is norm $C^1$. The form bounds hold, for example, with
+$a=1/8$ and $b=0$, while
+$q_0+q_{V(t)}\ge(15/16)q_0\ge(15/16)\|\cdot\|^2$.
+This verifies every form hypothesis. Matrix elements are continuous
+first for vectors in $Q$, by form continuity, and then for arbitrary
+Hilbert-space vectors by density and the uniform bound on $\|V(t)\|$.
+Thus $V$ is weak-operator continuous. It is not strongly continuous
+at zero: $V(0)e_0=0$, while $V(1/N_n)e_0=e_n$ and $1/N_n\to0$.
+Its Bochner measurability and the existence of the unitary propagator
+follow as in the preceding Dyson construction.
+
+Consider the product on the $N_n$-grid, with $h_n=1/N_n$. At a node
+$j\in J_n$, its perturbation is exactly $S_n$. At all other nodes it is
+an earlier perturbation or zero; no later group contributes. Compare the
+product with the ideal one that keeps $S_n$ at the nodes of $J_n$ and
+uses zero at all other nodes. Telescoping products of unitaries and using
+$\|e^{-ihV}-I\|\le h\|V\|$ bounds their operator-norm difference by
+\[
+ \frac1{N_n}\#\{0\le j<N_n:j/N_n\in E_{n-1}\}
+ \le\frac\delta4\le\delta.
+\]
+On $\operatorname{span}\{e_0,e_n\}$, the free step is precisely
+$e^{-ih_n}I$, since
+$h_n(\lambda_n-1)=2\pi k_n$. It therefore commutes with each retained
+$S_n$-step on this subspace. Writing $a_n=m_n/N_n\in[1-\delta,1]$,
+the ideal product sends $e_0$ to
+\[
+ v_n=e^{-i}\bigl(\cos(a_n)e_0-i\sin(a_n)e_n\bigr).
+\]
+Consequently $\|P_{N_n}^Ee_0-v_n\|\le\delta$. For $m\ne n$,
+\[
+ \|P_{N_n}^Ee_0-P_{N_m}^Ee_0\|
+ \ge\sqrt2\sin(1-\delta)-2\delta>0.
+\]
+The sequence is not strongly Cauchy. Finally, the Dyson estimate gives
+$\|U(1,0)-e^{-iH_0}\|\le\varepsilon_0$, so the actual evolution can be
+made arbitrarily close to the free evolution while the splitting still
+has this fixed nonconvergence gap.
+\end{proof}
+
+
+
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{3pt}
+
+\bibitem{AIM}
+MColbrook/AIM, \emph{AIM 917: Split products for time-dependent form-sum Schrödinger evolution},
+repository statement at revision \texttt{5d7e26e8444e}.
+\url{https://github.com/MColbrook/AIM/blob/5d7e26e8444eb98de91988454564e45e011107c4/problems/917-split-products-for-time-dependent-form-sum-schrodinger-evolution.md}.
+
+\bibitem{VV2011}
+P.-A.~Vuillermot and W.~F.~Wreszinski,
+\emph{Product approximations for solutions to a class of evolution
+equations in Hilbert space},
+Portugaliae Math. \textbf{68} (2011), 317--343.
+\href{https://doi.org/10.4171/PM/1894}{doi:10.4171/PM/1894}.
+\end{thebibliography}
+\end{document}

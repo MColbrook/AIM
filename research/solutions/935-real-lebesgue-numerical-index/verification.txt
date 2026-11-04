@@ -1,0 +1,100 @@
+Final packaged standard-library programs inspected and reproduced by the coordinator on 3 November 2026; all exit codes zero.
+The independent reviewer also reproduced the submitted originals. Public I/O now explicitly uses UTF-8 and LF with one final newline; the arithmetic is unchanged. Both final certificate objects equal the submitted originals.
+Run without Python -O so assertions remain enabled.
+
+$ python -B verify935_exact.py
+plus leading principal minors: [10102, 61375400, 976429002, 6319567977, 39156751988, 156153016840]
+minus leading principal minors: [9902, 57656315, 466262882, 4413501692, 8528707160, 32937577888]
+Av = [2260310, 76761, 2485216]
+sum v_i^4 = 1002197976306
+sum (Av)_i^4 = 64248592946651712875988977
+norm witness integer margin = 916493558274854032306529
+certified numerical-index upper bound = 1667/4716
+strict comparison integer margin = 9544
+ALL EXACT CHECKS PASSED
+
+$ python -B verify935_independent.py
+{
+  "plus": {
+    "quartic_coefficients": [
+      10102,
+      10002,
+      9942,
+      -22550,
+      400,
+      14370,
+      19140,
+      -340,
+      -24800,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ldl_diagonal": [
+      "10102",
+      "30687700/5051",
+      "488214501/30687700",
+      "2106522659/325476334",
+      "39156751988/6319567977",
+      "39038254210/9789187997"
+    ],
+    "determinants": [
+      10102,
+      61375400,
+      976429002,
+      6319567977,
+      39156751988,
+      156153016840
+    ]
+  },
+  "minus": {
+    "quartic_coefficients": [
+      9902,
+      10002,
+      10062,
+      22550,
+      -400,
+      -14370,
+      -19140,
+      340,
+      24800,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ldl_diagonal": [
+      "9902",
+      "57656315/9902",
+      "466262882/57656315",
+      "2206750846/233131441",
+      "2132176790/1103375423",
+      "4117197236/1066088395"
+    ],
+    "determinants": [
+      9902,
+      57656315,
+      466262882,
+      4413501692,
+      8528707160,
+      32937577888
+    ]
+  },
+  "norm_quotient_fourth": "64248592946651712875988977/1002197976306000000000000",
+  "norm_quotient_numeric": 2.829616145705593,
+  "upper_index": "1667/4716",
+  "upper_index_numeric": 0.35347752332485155,
+  "M4_numeric": 0.35355339059327373,
+  "strict_squared_gap": "1193/22240656"
+}
+
+$ python -B verify935_interval.py
+PASS: every exact arithmetic check in the 935 interval corollary.
+Ratio upper bound: 87994832581079/248910480000000
+M_p lower bound: 51261/145000
+Strict rational separation: 1030282921/248910480000000

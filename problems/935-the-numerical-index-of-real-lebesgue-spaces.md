@@ -1,8 +1,8 @@
 # 935. The numerical index of real Lebesgue spaces
 
 **Area:** Functional analysis / bounded linear operators
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -30,14 +30,17 @@ The numerical index measures the best uniform recovery of operator norm from eva
 1. M. Martín, J. Merí and M. Popov, *On the numerical radius of operators in Lebesgue spaces*, **Journal of Functional Analysis 261** (2011), 149–168, §5, Problem 5.1. [DOI](https://doi.org/10.1016/j.jfa.2011.03.007); [eligible arXiv record](https://arxiv.org/abs/1011.4785); [author preprint](https://www.ugr.es/~mmartins/Curriculum/Papers/pre-MarMerPop(2).pdf).
 2. R. Chiclana, *The Numerical Index of Two-Dimensional Real $`\ell_p`$ Spaces*, [arXiv:2606.01675v1](https://arxiv.org/pdf/2606.01675v1), submitted 1 June 2026, introduction pp1–2 and Theorem 1.1. This gives the corresponding formula for real two-dimensional $`\ell_p^2`$ and explicitly distinguishes the still-open general real $`L_p`$ problem.
 
+- M. J. Colbrook, [*A strict numerical-index bound for real Lebesgue spaces*](../research/solutions/935-real-lebesgue-numerical-index/aim935.pdf), 3 November 2026. [TeX source](../research/solutions/935-real-lebesgue-numerical-index/aim935.tex), [package and reproduction](../research/solutions/935-real-lebesgue-numerical-index/README.md), and [independent AI review](../research/solution_reviews/2026-11-03-operators-batch/935-review.md).
+
 ## Status review
 
+**Outcome:** Counterexample.
 
-**Known cases:** The June 2026 Chiclana result is exactly two-dimensional real ell-p; its introduction retains the general real Lebesgue-space numerical index problem. Rank-one, absolute and complex indices do not supply the missing lower bound.
+**Resolution:** The proposed real Lebesgue numerical-index identity fails at every permitted non-Hilbert exponent, using three-dimensional perturbations and additional exact certificates at exponent four. The [manuscript](../research/solutions/935-real-lebesgue-numerical-index/aim935.pdf) and [individual audit](../research/solution_reviews/2026-11-03-operators-batch/935-review.md) give the complete proof, checked sources and exact target comparison. Review was performed by Codex (AI).
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+**Scope:** The original identity question is answered negatively for every permitted exponent. The exact numerical index itself is not determined.
 
-### Online recheck, 2026-10-30
+### Earlier literature review, 2026-10-30
 
 The June 2026 Chiclana result is exactly two-dimensional real ell-p; its introduction retains the general real Lebesgue-space numerical index problem. Rank-one, absolute and complex indices do not supply the missing lower bound.
 
