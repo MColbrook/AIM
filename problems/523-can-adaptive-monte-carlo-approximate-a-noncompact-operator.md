@@ -1,8 +1,8 @@
 # 523. Can adaptive Monte Carlo approximate a noncompact operator?
 
 **Area:** Information-based complexity / operator approximation
-**Status:** 🔵 OPEN
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -20,6 +20,12 @@ Is there a constant $`c>0`$ such that $`e_n(I)\ge c`$ for every $`n\ge1`$? Equiv
 This asks whether randomization and adaptive measurements can give uniformly accurate recovery even when the operator is not compact. The source reduces the general compactness-necessity question for bounded linear operators between Banach spaces to this one inclusion.
 
 ## Status review
+
+**Resolution:** The [manuscript](../research/solutions/523-adaptive-monte-carlo-error-floor/main.pdf) proves the exact identity $`e_n(I)=1/2`$ for every $`n\ge1`$ in the stated adaptive expected-budget RMS model. Its lower bound allows arbitrary history-to-query rules and the required joint output/count measurability. The one-query upper bound returns the constant sequence with value $`\tfrac12\sum_jx_j`$. This resolves the full displayed question affirmatively.
+
+**Audit, 4 November 2026:** The solutions were found by AI and are written up by Matthew J. Colbrook. A [fresh independent AI audit](../research/solution_reviews/2026-11-04-numerical-analysis/523-review.md) checked the submitted argument, target match and dependencies. No independent human review or formal verification is claimed.
+
+### Earlier status history
 
 Nonadaptive Monte Carlo methods have a positive error floor, and cannot approximate noncompact operators arbitrarily well in the model of Kunsch, Novak and Wnuk (2024). Their Remark 2.10 still discusses the adaptive case as a conjectural extension. Their strict-budget, expected-norm model has additional measurement-selection measurability assumptions; the question above retains the expected-budget, root-mean-square model of the 2011 source. Dimension-dependent adaptive algorithms on finite sequence spaces do not automatically answer the infinite-dimensional question. The particular value $`1/2`$ is not part of the target.
 

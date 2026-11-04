@@ -1,0 +1,528 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=27mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem,microtype}
+\usepackage{xcolor,fancyhdr}
+\usepackage[unicode,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{bookmark}
+\definecolor{ink}{RGB}{25,42,64}
+\definecolor{accent}{RGB}{35,91,120}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pbb}{\mathbb P}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\spanop}{span}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Lip}{Lip}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\setlist{topsep=4pt,itemsep=2pt,parsep=0pt}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{ink}AIM 496}
+\fancyhead[R]{\small 4 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+
+\urlstyle{same}
+\title{Global uniqueness of semilinear Galerkin solutions: the planar case and three-dimensional restrictions}
+\author{Matthew J. Colbrook\thanks{The solutions were found by AI. The submitted arguments and the repository audit are AI work; independent human review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{4 November 2026}
+\hypersetup{pdftitle={Global uniqueness of semilinear Galerkin solutions: the planar case and three-dimensional restrictions},pdfauthor={Matthew J. Colbrook},pdfsubject={AIM 496: AI-found solution or partial result}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove eventual global uniqueness for the full two-dimensional catalogue problem, without an angle condition or a growth bound on the reaction. In three dimensions, we exclude bounded spurious branches and prove global uniqueness for positive separable reactions. The general three-dimensional target remains unresolved.
+\end{abstract}
+\noindent\textbf{Catalogue target.} \href{https://github.com/MColbrook/AIM/blob/c4036871b0bf15cbc83e79c780b7191bcbb2cfed/problems/496-semilinear-galerkin-global-uniqueness.md}{AIM 496 at repository revision \texttt{c4036871b0bf}}. The package preserves its full statement in \texttt{statement.md}; the review and target comparison are linked from the package README.
+\medskip
+
+\section{Problem 496: global Galerkin uniqueness in dimension two}
+\label{sec:galerkin}
+
+The full two-dimensional case of Problem 496 has an affirmative answer. The proof below allows arbitrary measurable dependence of the reaction on $x$, arbitrary growth in its scalar argument, and arbitrary shape-regular, quasi-uniform simplicial meshes. It does not require an angle condition. In dimension three we prove two further statements: every additional branch must escape every bounded set in $H_0^1$, and global uniqueness holds for positive separable reactions. The general three-dimensional case remains unresolved here.
+
+\subsection{Setting and a continuous comparison lemma}
+
+Retain all assumptions of the catalogue statement. Thus $\Omega\subset\R^d$, $d\in\{2,3\}$, is a bounded convex polygon or polyhedron; $a_{ij}\in W^{1,\infty}(\Omega)$ satisfy
+\[
+ \sum_{i,j=1}^d a_{ij}(x)\xi_i\xi_j\ge\Lambda\abs{\xi}^2,
+ \qquad \Lambda>0;
+\]
+$b\in L^p(\Omega)^d$, where $p>2$ if $d=2$ and $p\ge3$ if $d=3$; and $\operatorname{div}b\in L^2(\Omega)$. Write
+\[
+ H=H_0^1(\Omega),\qquad \norm{v}_H=\norm{\nabla v}_2,
+ \qquad
+ a(v,w)=\int_\Omega\sum_{i,j}a_{ij}\partial_i v\,\partial_jw
+              +(b\cdot\nabla v)w.
+\]
+The finite element spaces $V_h\subset H$ consist of continuous piecewise affine functions on conforming, shape-regular, quasi-uniform simplicial meshes. Their maximal element diameter is $h\to0$. All reaction integrals are exact.
+
+The reaction $f(x,t)$ is Carath\'eodory and nondecreasing in $t$, $f(\cdot,0)\in L^2$, and for every $M<\infty$ there is $\phi_M\in L^2$, chosen nonnegative, such that
+\[
+ \abs{f(x,s)-f(x,t)}\le\phi_M(x)\abs{s-t}
+ \quad (\abs{s},\abs{t}\le M).
+\]
+For fixed $u\in L^2$, the discrete equation is
+\begin{equation}\label{eq:gal-discrete}
+ a(y_h,v_h)+\int_\Omega f(x,y_h)v_h=\int_\Omega u v_h
+ \qquad(v_h\in V_h).
+\end{equation}
+The continuous theory gives a unique bounded solution $y$. Theorem~3.7 of Casas--Mateos--R\"osch\cite{cmr2021}, based on the continuous results in\cite{cmr2020}, gives a discrete branch $\bar y_h$ for all sufficiently small $h$, with
+\begin{equation}\label{eq:gal-bounded-branch}
+ \bar y_h\longrightarrow y\text{ in }H\text{ and uniformly},
+ \qquad \sup_h\norm{\bar y_h}_\infty<\infty.
+\end{equation}
+We use the G\aa rding inequality
+\begin{equation}\label{eq:gal-garding}
+ a(v,v)\ge\lambda_G\norm{v}_H^2-C_G\norm{v}_2^2,
+ \qquad \lambda_G>0,\quad C_G\ge0,
+\end{equation}
+whose constants depend only on the fixed operator and domain.
+
+\begin{lemma}[Comparison from superlevel tests]\label{lem:gal-comparison}
+Suppose $w\in H$ and
+\[
+ a(w,(w-k)_+)\le0
+\]
+for every $k>0$ outside a countable exceptional set. Then $w\le0$ almost everywhere. Consequently the continuous operator with any nonnegative $c\in L^2$ has trivial kernel in $H$.
+\end{lemma}
+\begin{proof}
+Set $v_k=(w-k)_+$ and $E_k=\{w>k,\ \nabla w\ne0\}$. Ellipticity, H\"older's inequality, and $H\hookrightarrow L^{2p/(p-2)}$ give
+\[
+ \Lambda\norm{\nabla v_k}_2^2
+ \le\abs{\int_{E_k}(b\cdot\nabla v_k)v_k}
+ \le C\norm{b\mathbf1_{E_k}}_p\norm{\nabla v_k}_2^2.
+\]
+For bounded $b$ choose a finite admissible exponent $p$. If $M=\operatorname*{ess\,sup}w$ is positive and finite, take admissible $k\uparrow M$. The sets $E_k$ decrease to a null set, because a Sobolev gradient vanishes almost everywhere on each level set. If $M=+\infty$, take admissible $k\to+\infty$; the intersection is again null, since $w$ is finite almost everywhere. Absolute continuity of the $L^p$ norm then forces $\nabla v_k=0$ for some $k<M$. Since $v_k\in H$, it vanishes, contradicting the definition of $M$. Thus $w\le0$.
+
+If $a(w,v)+\int cwv=0$ for all $v\in H$, the potential contribution is nonnegative for $v=(w-k)_+$. Apply the first assertion to $w$, and then to $-w$.
+\end{proof}
+
+\subsection{A potential-uniform stability theorem in dimension two}
+
+\begin{theorem}[Uniform stability, independent of the potential]\label{thm:gal-2d-stability}
+Let $d=2$. There are $h_0>0$ and $C<\infty$, depending only on the fixed differential operator, domain, and mesh-family constants, such that, for every $h<h_0$, every nonnegative $c\in L^2(\Omega)$, and every $z_h\in V_h$,
+\begin{equation}\label{eq:gal-uniform-infsup}
+ \norm{z_h}_H\le C
+ \sup_{\substack{v_h\in V_h\\\norm{v_h}_H=1}}
+ \abs{a(z_h,v_h)+\int_\Omega c z_hv_h}.
+\end{equation}
+In particular, $h_0$ and $C$ are independent of $c$ and of $\norm{c}_2$.
+\end{theorem}
+
+\begin{corollary}[The entire two-dimensional case of Problem 496]\label{cor:gal-2d}
+Under all the catalogue assumptions with $d=2$, equation \eqref{eq:gal-discrete} has exactly one solution for every sufficiently small $h$, without any bound imposed on the discrete solutions.
+\end{corollary}
+\begin{proof}[Proof of the corollary]
+Existence follows from \eqref{eq:gal-bounded-branch}. For any two solutions $z_h,y_h$, define
+\[
+ c_h(x)=\begin{cases}
+ \displaystyle\frac{f(x,z_h(x))-f(x,y_h(x))}{z_h(x)-y_h(x)},
+       &z_h(x)\ne y_h(x),\\[5pt]
+ 0,&z_h(x)=y_h(x).
+ \end{cases}
+\]
+Monotonicity gives $c_h\ge0$. On each fixed mesh both solutions are bounded, so the local Lipschitz assumption gives $c_h\in L^2$. Their difference has zero right-hand side in \eqref{eq:gal-uniform-infsup}; hence it vanishes.
+\end{proof}
+
+We first give the cutoff construction that accounts for the dimension restriction.
+
+\begin{lemma}[Removing finitely many high-oscillation triangles]\label{lem:gal-2d-cutoff}
+Suppose $d=2$, $h_j\to0$, $e_j\in V_{h_j}$, and $\norm{e_j}_H\le1$. Fix $\eta>0$. Call a triangle bad if the oscillation of its nodal values of $e_j$ exceeds $\eta$. There are continuous piecewise affine functions $\chi_j$, with no boundary condition required, such that
+\begin{equation}\label{eq:gal-cutoff-properties}
+ 0\le\chi_j\le1,\qquad
+ \chi_j=0\text{ on every bad triangle},\qquad
+ \norm{1-\chi_j}_{H^1(\Omega)}\longrightarrow0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Affine scaling on a shape-regular triangle gives
+\[
+ \int_K\abs{\nabla e_j}^2\ge c\bigl(\operatorname{osc}_K e_j\bigr)^2.
+\]
+Thus the number $N_j$ of bad triangles is at most $C\eta^{-2}$, independently of $j$.
+
+Put $h=h_j$, $R_h=\sqrt h$, and $D_h=\log(R_h/(2h))$, for sufficiently small $h$. For a point $q_K$ in a bad triangle, define an ambient radial function
+\[
+ \zeta_{K,h}(x)=\begin{cases}
+ 1,&\abs{x-q_K}\le2h,\\
+ \displaystyle\frac{\log(R_h/\abs{x-q_K})}{D_h},
+       &2h<\abs{x-q_K}<R_h,\\
+ 0,&\abs{x-q_K}\ge R_h.
+ \end{cases}
+\]
+Its nodal interpolant on the mesh, including boundary vertices, satisfies
+\begin{equation}\label{eq:gal-log-capacity}
+ \norm{I_h\zeta_{K,h}}_2^2\le Ch,
+ \qquad
+ \norm{\nabla I_h\zeta_{K,h}}_2^2\le\frac{C}{\abs{\log h}}.
+\end{equation}
+Here the constants are uniform in $q_K$. For completeness, the support is contained in the ball of radius $R_h+h$, proving the first estimate. On triangles within distance $3h$ of $q_K$, nodal differences are at most $C/D_h$; quasi-uniformity bounds the number of these triangles, and their total gradient energy is at most $C/D_h^2$. On a dyadic annulus of radius $r\ge Ch$, nodal differences are at most $Ch/(rD_h)$, the gradient is at most $C/(rD_h)$, and the total area of intersecting triangles is at most $Cr^2$. Each such annulus therefore contributes at most $C/D_h^2$. There are $O(\abs{\log h})$ annuli. Triangles crossing the outer radial breakpoint are included in an annulus of radius comparable to $R_h$ and obey the same estimate. Restriction to $\Omega$ only removes triangles. This proves \eqref{eq:gal-log-capacity}.
+
+At every mesh vertex $i$, set
+\[
+ \theta_i=\min\!\left(1,\sum_{K\text{ bad}}\zeta_{K,h}(i)\right),
+ \qquad \theta_j=I_h(\theta_i),\qquad \chi_j=1-\theta_j.
+\]
+The standard affine graph norm equivalences in two dimensions are
+\[
+ \norm{v_h}_2^2\asymp h^2\sum_i\abs{v_i}^2,
+ \qquad
+ \norm{\nabla v_h}_2^2\asymp\sum_{\{i,l\}\text{ edge}}\abs{v_i-v_l}^2.
+\]
+Since scalar truncation is $1$-Lipschitz, these equivalences and the triangle inequality bound $\norm{\theta_j}_{H^1}$ by a constant times the sum of the $N_j$ individual norms in \eqref{eq:gal-log-capacity}. This tends to zero for fixed $\eta$. Every vertex of a bad triangle lies within $h$ of its chosen point $q_K$, so $\theta_i=1$ at all its vertices. Hence $\chi_j$ vanishes identically on that triangle.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:gal-2d-stability}]
+\emph{1. Compactness and an energy measure on the scalar value axis.}
+If the assertion fails, choose $h_j\to0$, $c_j\in L^2$, $c_j\ge0$, $e_j\in V_{h_j}$ and $\varepsilon_j\to0$ such that
+\begin{equation}\label{eq:gal-small-residual}
+ \norm{e_j}_H=1,
+ \qquad
+ \abs{a(e_j,v_h)+\int c_j e_jv_h}\le\varepsilon_j\norm{v_h}_H
+ \quad(v_h\in V_{h_j}).
+\end{equation}
+Pass to a subsequence with $e_j\rightharpoonup e$ in $H$ and $e_j\to e$ in every finite $L^q$. Testing with $e_j$ and using \eqref{eq:gal-garding} gives
+\begin{equation}\label{eq:gal-nonzero-limit}
+ \lambda_G\le C_G\norm{e_j}_2^2+\varepsilon_j.
+\end{equation}
+If $C_G=0$ there is already a contradiction; otherwise $\norm{e}_2>0$.
+
+Define positive Radon measures on $\R$ by
+\[
+ \nu_j(B)=\int_{\{x:e_j(x)\in B\}}\abs{\nabla e_j(x)}^2\,dx.
+\]
+They have total mass one. After another subsequence they converge vaguely to a finite positive Radon measure $\nu$. For each compact $Q\subset\R$,
+\begin{equation}\label{eq:gal-vague-upper}
+ \limsup_j\nu_j(Q)\le\nu(Q).
+\end{equation}
+Possible loss of mass at infinity is harmless. The atoms of $\nu$ form a countable set.
+
+\emph{2. A test with an exactly nonnegative reaction contribution.}
+Fix $k>0$ and $L>0$ such that both $k$ and $k+L$ are nonatoms of $\nu$. Let
+\[
+ C_{k,L}(s)=\min((s-k)_+,L).
+\]
+For fixed $0<\eta<k$, use Lemma~\ref{lem:gal-2d-cutoff} and define
+\[
+ p_j=I_{h_j}\bigl[C_{k,L}(e_j)\bigr],\qquad
+ t_j=I_{h_j}(\chi_jp_j).
+\]
+Both interpolations use nodal values. We have $t_j\in V_{h_j}$ and $0\le t_j,p_j\le L$. On a bad triangle $t_j=0$. On a good triangle where $t_j$ is nonzero, one vertex has $e_j>k$, and all vertices have $e_j>k-\eta>0$. Since $e_j$ is affine, it is positive on that whole triangle. Therefore
+\begin{equation}\label{eq:gal-reaction-sign}
+ \int_\Omega c_j e_jt_j\ge0
+\end{equation}
+exactly, with no bound on $c_j$.
+
+The Lipschitz property of $C_{k,L}$ and affine scaling give
+\begin{equation}\label{eq:gal-p-estimates}
+ \norm{\nabla p_j}_2\le C,
+ \qquad
+ \norm{p_j-C_{k,L}(e_j)}_2\le Ch_j\norm{e_j}_H\longrightarrow0.
+\end{equation}
+Here is the needed product estimate explicitly. For affine $p,\chi$ on a simplex with barycentric coordinates $\lambda_i$,
+\[
+ I_h(p\chi)-p\chi
+  =\sum_{i<l}\lambda_i\lambda_l(p_i-p_l)(\chi_i-\chi_l).
+\]
+Consequently
+\begin{equation}\label{eq:gal-product-estimate}
+ \abs{\nabla(I_h(p\chi)-p\chi)}
+   \le Ch_K\abs{\nabla p}\abs{\nabla\chi}.
+\end{equation}
+On good triangles $h_K\abs{\nabla p_j}\le C\eta$; on bad triangles both $\chi_j$ and $\nabla\chi_j$ vanish. Since $\abs{p_j}\le L$, it follows that
+\begin{equation}\label{eq:gal-test-gradient}
+ \norm{\nabla t_j-\chi_j\nabla p_j}_2
+ \le C(L+\eta)\norm{\nabla\chi_j}_2\longrightarrow0.
+\end{equation}
+Nodal positivity also gives $0\le p_j-t_j\le L(1-\chi_j)$. Thus
+\begin{equation}\label{eq:gal-test-limit}
+ t_j\longrightarrow C_{k,L}(e)\text{ in }L^2,
+ \qquad t_j\rightharpoonup C_{k,L}(e)\text{ in }H.
+\end{equation}
+
+\emph{3. The diffusion defect is confined to two small scalar intervals.}
+Write $A_s=(A+A^T)/2$ for the symmetric principal matrix. Except on triangles whose nodal range crosses $k$ or $k+L$, the scalar truncation is affine on the full nodal range, and
+\[
+ \nabla p_j=\nabla C_{k,L}(e_j).
+\]
+On every good exceptional triangle all values of $e_j$ lie in
+\[
+ Q_\eta=[k-\eta,k+\eta]\cup[k+L-\eta,k+L+\eta].
+\]
+Both gradients are bounded by $C\abs{\nabla e_j}$. The chain rule and \eqref{eq:gal-test-gradient} therefore give
+\begin{align}
+ &\int_\Omega\sum_{i,l}a_{il}\partial_i e_j\partial_l t_j\notag\\
+ &\quad\ge
+ \int_\Omega\chi_j\,
+   \nabla C_{k,L}(e_j)^T A_s\nabla C_{k,L}(e_j)
+       -C\nu_j(Q_\eta)-o_j(1).
+ \label{eq:gal-diffusion-lower}
+\end{align}
+The antisymmetric part vanishes in the main term, where the two gradient factors coincide.
+
+The sequence $C_{k,L}(e_j)$ converges weakly in $H$ to $C_{k,L}(e)$. In addition,
+\[
+ \sqrt{\chi_j}\nabla C_{k,L}(e_j)
+       \rightharpoonup\nabla C_{k,L}(e)\quad\text{in }L^2.
+\]
+Indeed, the difference from the unweighted gradient has vanishing pairing with every bounded $L^2$ test because $1-\sqrt{\chi_j}\to0$ in $L^2$ and the gradients are uniformly $L^2$ bounded. Density extends the conclusion to arbitrary $L^2$ tests. Weak lower semicontinuity after multiplication by $A_s^{1/2}$ yields
+\begin{equation}\label{eq:gal-weighted-lsc}
+ \liminf_j\int_\Omega\chi_j\,
+   \nabla C_{k,L}(e_j)^T A_s\nabla C_{k,L}(e_j)
+ \ge\int_\Omega\nabla C_{k,L}(e)^T A_s\nabla C_{k,L}(e).
+\end{equation}
+
+\emph{4. The drift is compact.}
+For $B_b(v,w)=\int(b\cdot\nabla v)w$, integration by parts gives
+\[
+ B_b(v,w)=-\int bv\cdot\nabla w-\int(\operatorname{div}b)vw.
+\]
+If $v_j\rightharpoonup v$ in $H$, the compact two-dimensional embeddings give convergence in $L^{2p/(p-2)}$ and $L^4$. Hence
+\[
+ \norm{B_b(v_j-v,\cdot)}_{H^*}
+ \le C\left(\norm{b}_p\norm{v_j-v}_{2p/(p-2)}
+    +\norm{\operatorname{div}b}_2\norm{v_j-v}_4\right)\longrightarrow0.
+\]
+Together with \eqref{eq:gal-test-limit}, this proves
+\begin{equation}\label{eq:gal-drift-limit}
+ B_b(e_j,t_j)\longrightarrow B_b(e,C_{k,L}(e)).
+\end{equation}
+
+\emph{5. Maximum principle for the limit.}
+Equations \eqref{eq:gal-small-residual} and \eqref{eq:gal-reaction-sign} imply $a(e_j,t_j)\le\varepsilon_j\norm{t_j}_H\to0$. Combining \eqref{eq:gal-vague-upper} and \eqref{eq:gal-diffusion-lower}--\eqref{eq:gal-drift-limit} gives
+\[
+ a(e,C_{k,L}(e))\le C\nu(Q_\eta).
+\]
+First let $j\to\infty$ as above, and then let $\eta\downarrow0$. Since the two endpoints are nonatoms,
+\[
+ a(e,C_{k,L}(e))\le0.
+\]
+For any positive nonatom $k$, choose $L_m\to\infty$ with $k+L_m$ nonatoms. The truncations converge strongly in $H$ to $(e-k)_+$, giving $a(e,(e-k)_+)\le0$. Lemma~\ref{lem:gal-comparison} yields $e\le0$.
+
+Repeat the construction with
+\[
+ -I_{h_j}\left[\chi_j I_{h_j}C_{k,L}(-e_j)\right]
+\]
+and choose $-k,-k-L$ to be nonatoms. Its product with $c_je_j$ is again nonnegative; the resulting inequalities apply the same lemma to $-e$. Thus $e\ge0$, so $e=0$, contradicting \eqref{eq:gal-nonzero-limit}. This proves the theorem.
+\end{proof}
+
+\begin{remark}[Why this proof stops in dimension three]
+For a quasi-uniform tetrahedron, affine scaling instead gives
+\[
+ \int_K\abs{\nabla e_h}^2\ge ch(\operatorname{osc}_K e_h)^2.
+\]
+The number of high-oscillation tetrahedra can be $O(h^{-1}\eta^{-2})$. A ball of radius $h$ in three dimensions has $H^1$ capacity of order $h$, so their total capacity need not tend to zero. Lemma~\ref{lem:gal-2d-cutoff} is therefore unavailable by this argument. The theorem above makes no three-dimensional claim.
+\end{remark}
+
+\subsection{In either dimension, additional branches must diverge in energy norm}
+
+The following results retain both $d=2$ and $d=3$; their new unresolved-case content is in dimension three. Put
+\[
+ f_0(x)=f(x,0),\qquad r=u-f_0,\qquad
+ g(x,t)=f(x,t)-f_0(x),\qquad F(x,t)=\int_0^t g(x,s)\,ds.
+\]
+Then $F(x,\cdot)$ is nonnegative and convex, with minimum zero at zero. For $\abs{t}\le M$,
+\begin{equation}\label{eq:gal-local-potential-bound}
+ 0\le F(x,t)\le\tfrac12\phi_M(x)t^2.
+\end{equation}
+Let $K(v,w)=\int\nabla v^T A_s\nabla w$ and write $a=K+B$. The map $B:H\to H^*$ is compact. The antisymmetric principal part can be integrated by parts into a form $\int dv\cdot\nabla w$ with $d\in L^\infty$, because its second derivative terms cancel; compactness follows from $H\hookrightarrow L^2$. For the original drift, use the integration-by-parts identity above. In three dimensions, its divergence term is compact by strong $L^3$ convergence and $H\hookrightarrow L^6$. At the endpoint $p=3$, split $b$ into a bounded part and an $L^3$-small tail: the bounded part uses strong $L^2$ convergence and the tail uses the uniform $L^6$ bound. This proves the claimed compactness in all cases.
+
+\begin{lemma}[Fixed-potential recovery and convergence of bounded roots]\label{lem:gal-bounded-roots}
+Every sequence of solutions $z_j\in V_{h_j}$, $h_j\to0$, bounded in $H$, converges strongly in $H$ to the continuous bounded solution $y$.
+\end{lemma}
+\begin{proof}
+Define the extended functional
+\[
+ J(v)=\int_\Omega F(x,v(x))\,dx,\qquad
+ \Phi(v)=\tfrac12K(v,v)+J(v),\qquad v\in H.
+\]
+It is proper, lower semicontinuous, and strongly convex. Its restriction to each $V_h$ is finite and differentiable: on bounded sets of this finite-dimensional space, the local Lipschitz hypothesis supplies an integrable derivative bound. Each discrete root $z_j$ is the unique minimizer over $V_{h_j}$ of
+\begin{equation}\label{eq:gal-fixed-min}
+ \Phi(v)-\langle r-Bz_j,v\rangle.
+\end{equation}
+
+The restrictions of $\Phi$ to $V_h$ have the following recovery property: for every $v\in H$ with $J(v)<\infty$, there are $v_h\in V_h$ such that
+\begin{equation}\label{eq:gal-fixed-recovery}
+ v_h\to v\text{ in }H,\qquad J(v_h)\to J(v).
+\end{equation}
+To prove this, truncate $v$ at $\pm M$. Truncation converges strongly in $H$, and its potential increases to $J(v)$. For the required range-preserving smooth approximation, extend the truncation by zero, contract its support toward a fixed interior point of the convex domain by a dilation with factor tending to one, and then convolve with a nonnegative unit-mass mollifier of radius smaller than the resulting boundary margin. Dilation and mollification converge strongly in $H$, while both preserve every scalar interval containing zero. A subsequence converges almost everywhere. The bound \eqref{eq:gal-local-potential-bound} permits dominated convergence. Finally interpolate a fixed smooth approximation. Barycentric positivity preserves its range, while interpolation converges uniformly and in $H$, so the same bound again permits dominated convergence. A diagonal choice proves \eqref{eq:gal-fixed-recovery}. The weak lower bound for $\Phi$ follows from almost-everywhere subsequential convergence, Fatou's lemma, and weak lower semicontinuity of $K$.
+
+Take a subsequence $z_j\rightharpoonup z$ in $H$. Compactness of $B$ gives $r-Bz_j\to q:=r-Bz$ in $H^*$. Passing minimality in \eqref{eq:gal-fixed-min} to the limit using \eqref{eq:gal-fixed-recovery} shows that $z$ minimizes $\Phi(v)-\langle q,v\rangle$ on $H$. The energies of the minimizers converge. Strong convexity, applied to a recovery sequence for $z$, then gives $z_j\to z$ strongly in $H$.
+
+It remains to identify $z$, without assuming a growth bound. The competitor $(1-\epsilon)z$ and Fatou's lemma give
+\begin{equation}\label{eq:gal-gz-integrable}
+ \int g(x,z)z\le\langle q,z\rangle-K(z,z)<\infty.
+\end{equation}
+The integrand is nonnegative. Thus $g(x,z)\in L^1$: on $\abs z\ge1$ use $\abs{g(x,z)}\le g(x,z)z$, and on $\abs z\le1$ use $\phi_1$.
+
+For $k\ge0$, set $v_k=(z-y-k)_+$. The competitor $z-\epsilon v_k$ lies between $z$ and the bounded function $y+k$ wherever it differs from $z$, so its potential is integrable by convexity. Passing to the directional derivative in the minimizer inequality gives
+\[
+ K(z,v_k)+\int g(x,z)v_k\le\langle q,v_k\rangle.
+\]
+This passage is justified by \eqref{eq:gal-gz-integrable}: on the unbounded positive part of $z$, $v_k\le z+\norm y_\infty$; on the remaining bounded range use $\phi_M$ and $v_k\in L^2$. The same estimates dominate the difference quotients along the segment to $y+k$.
+Subtract the continuous equation for $y$. Monotonicity yields
+\[
+ a(z-y,v_k)+\int[g(x,z)-g(x,y)]v_k\le0,
+ \qquad a(z-y,v_k)\le0.
+\]
+Lemma~\ref{lem:gal-comparison} gives $z\le y$. The competitors $z+\epsilon(y-z-k)_+$ give $z\ge y$. Thus $z=y$. Every subsequence has the same limit, proving the lemma.
+\end{proof}
+
+\begin{lemma}[A cutoff for small energy-norm perturbations]\label{lem:gal-small-cutoff}
+For $w_h\in V_h$ and $\eta>0$, there is a piecewise affine $\chi_h$, without prescribed boundary values, satisfying
+\[
+\begin{gathered}
+ 0\le\chi_h\le1,\qquad
+ \chi_h=0\text{ on every element with }\norm{w_h}_{L^\infty(K)}>\eta,\\
+ \norm{1-\chi_h}_{H^1}\le C\eta^{-1}\norm{w_h}_{H^1}.
+\end{gathered}
+\]
+For each fixed $\varphi\in C_c^\infty(\Omega)$, if $w_h\to0$ in $H$, then $I_h(\chi_h\varphi)\to\varphi$ in $H$ and these tests are uniformly bounded in $L^\infty$.
+\end{lemma}
+\begin{proof}
+Let $N(i)$ be the vertices sharing an element with vertex $i$, including $i$ itself. With nodal values $w_i$, set
+\[
+ m_i=\max_{l\in N(i)}\abs{w_l},\qquad
+ \theta_i=\min(1,m_i/\eta),\qquad
+ \chi_h=1-I_h(\theta_i).
+\]
+If an element has a vertex with $\abs{w_l}>\eta$, all its vertices have $\theta_i=1$. For adjacent $i,k$,
+\[
+ (m_i-m_k)_+\le\max_{l\in N(i)}\abs{w_l-w_i},
+\]
+and the reverse inequality uses $N(k)$. Shape regularity bounds the vertex degree. The graph norm equivalences
+\[
+ \norm{v_h}_2^2\asymp h^d\sum_i\abs{v_i}^2,
+ \qquad
+ \norm{\nabla v_h}_2^2\asymp h^{d-2}
+          \sum_{\{i,k\}\text{ edge}}\abs{v_i-v_k}^2
+\]
+and the $\eta^{-1}$-Lipschitz property of truncation prove the asserted norm bound. Finally nodal multiplication by a fixed smooth $\varphi$ is bounded in $H^1$, uniformly in $h$: expand edge differences of $\theta_i\varphi_i$ and use $\abs{\varphi_i-\varphi_k}\le C_\varphi h$. This gives the convergence assertion; barycentric positivity gives the uniform supremum bound.
+\end{proof}
+
+\begin{theorem}[Every additional branch escapes in $H^1$]\label{thm:gal-H1-escape}
+For every $R<\infty$, there is $h_R>0$ such that any solution $z_h$ of \eqref{eq:gal-discrete} with $h<h_R$ and $\norm{z_h}_H\le R$ equals $\bar y_h$. Consequently, if $h_j\to0$ and $z_j\ne\bar y_{h_j}$ are solutions, then $\norm{z_j}_H\to\infty$.
+\end{theorem}
+\begin{proof}
+Otherwise choose a bounded sequence of distinct roots. Lemma~\ref{lem:gal-bounded-roots} and \eqref{eq:gal-bounded-branch} give $w_j=z_j-\bar y_{h_j}\to0$ in $H$. Set $e_j=w_j/\norm{w_j}_H$ and define the nonnegative secant coefficient $c_j$ between the two roots. Then
+\[
+ a(e_j,v_h)+\int c_je_jv_h=0\qquad(v_h\in V_{h_j}).
+\]
+G\aa rding gives $\lambda_G\le C_G\norm{e_j}_2^2$. After a subsequence, $e_j\rightharpoonup e$ in $H$, $e_j\to e$ in $L^2$, and $e\ne0$.
+
+Apply Lemma~\ref{lem:gal-small-cutoff} to $w_j$ with $\eta=1$. Let $D_j$ be the union of the removed elements and choose $M_0$ with $\norm{\bar y_h}_\infty\le M_0$. On $\Omega\setminus D_j$,
+\[
+ 0\le c_j\le\phi_{M_0+1}.
+\]
+Thus $\widehat c_j=c_j\mathbf1_{\Omega\setminus D_j}$ has a weak $L^2$ limit $c$ after a subsequence, with $0\le c\le\phi_{M_0+1}$. For fixed $\varphi\in C_c^\infty$, use $v_j=I_{h_j}(\chi_j\varphi)$, which vanishes on $D_j$ and converges strongly to $\varphi$ in $H$. The uniform supremum bound and strong $L^2$ convergence of $e_j$ imply $e_jv_j\to e\varphi$ in $L^2$. Passing to the limit gives
+\[
+ a(e,\varphi)+\int ce\varphi=0.
+\]
+Since $H\hookrightarrow L^4$ in both dimensions, density extends this identity to all tests in $H$. Lemma~\ref{lem:gal-comparison} gives $e=0$, a contradiction.
+\end{proof}
+
+\begin{corollary}[An energy domination criterion]\label{cor:gal-energy-criterion}
+Suppose additionally that $g(x,t)t\ge q(x)t^2-G(x)$ for all $t$, where $q\ge0$, $G\in L^1$, $G\ge0$, and $a(v,v)+\int qv^2$ is a well-defined coercive form on $H$. Then eventual global uniqueness holds in either dimension. In particular, it suffices that
+\[
+ g(x,t)t\ge L t^2-G(x),\qquad L>C_G.
+\]
+\end{corollary}
+\begin{proof}
+Testing any discrete solution by itself gives a uniform $H$ bound:
+\[
+ c\norm{z_h}_H^2\le\norm r_{H^*}\norm{z_h}_H+\norm G_1.
+\]
+Apply Theorem~\ref{thm:gal-H1-escape} and the existing bounded branch.
+\end{proof}
+
+\subsection{Global uniqueness for positive separable reactions in dimension three}
+
+\begin{theorem}[No growth restriction for a separable reaction]\label{thm:gal-separable}
+In either dimension, suppose
+\[
+ f(x,t)=f_0(x)+c(x)g(t),
+\]
+where $c\in L^2(\Omega)$, $c>0$ almost everywhere, and $g:\R\to\R$ is locally Lipschitz and nondecreasing, with $g(0)=0$. Then \eqref{eq:gal-discrete} has exactly one solution for every sufficiently small $h$, with no growth condition on $g$. This includes every $x$-independent reaction allowed by the catalogue statement.
+\end{theorem}
+\begin{proof}
+Suppose there are roots $z_j$ with $h_j\to0$ and $\alpha_j=\norm{z_j}_H\to\infty$. Put $e_j=z_j/\alpha_j$ and
+\[
+ G(t)=\int_0^t g(s)\,ds,\qquad G_j(t)=\frac{G(\alpha_jt)}{\alpha_j^2}.
+\]
+The functions $G_j$ are finite, convex, nonnegative, and vanish at zero. A subsequence has a proper lower semicontinuous convex epi-limit $G_\infty$, also nonnegative and zero at zero. We record the elementary compactness and recovery facts needed here, since the limit may be extended-real.
+
+Choose a diagonal subsequence on the rational scalar arguments, taking limits in $[0,+\infty]$. The rational arguments with finite limits form an interval in the rational convexity sense, with endpoints $a\le0\le b$. On every compact subinterval of $(a,b)$, convexity and nonnegativity give uniform local Lipschitz bounds from finite bounds at rational endpoints. Thus the rational limits extend to a finite convex function there, and $G_j$ converges locally uniformly. Define its endpoint values by lower semicontinuity, its value outside $[a,b]$ as $+\infty$, and its value at zero as zero. If zero is an endpoint, convexity gives, for $0\le t\le s$,
+\[
+ G_j(t)\le\frac{t}{s}G_j(s),
+\]
+with the reflected inequality on the negative side. Hence convergence is uniform on compact intervals reaching such a zero endpoint. If $a=b=0$, the limit is the indicator of $\{0\}$.
+
+The scalar epi-liminf at a nonzero endpoint or outside the domain follows by comparing any $t_j\to t$ with a rational $q$ strictly between zero and $t$:
+\[
+ G_j(q)\le\abs{q/t_j}\,G_j(t_j)
+\]
+for all large $j$, and then sending $q$ to $t$ through the interior, or through an infinite-limit rational when $t$ is outside. Endpoint recovery follows by approaching from the interior and taking a diagonal sequence; zero is an exact recovery point. These arguments establish all stated scalar convergence properties.
+
+Define the finite-element convex functionals on $H$ by
+\[
+ \Psi_j(v)=\begin{cases}
+ \displaystyle\tfrac12K(v,v)+\int c(x)G_j(v(x))\,dx,&v\in V_{h_j},\\
+ +\infty,&v\notin V_{h_j},
+ \end{cases}
+\]
+\[
+ \Psi(v)=\tfrac12K(v,v)+\int c(x)G_\infty(v(x))\,dx.
+\]
+They have the weak lower bound and strong recovery property on $H$. For the lower bound use almost-everywhere subsequential convergence, the scalar epi-liminf, and Fatou's lemma. For recovery first shrink a finite-energy $v$ toward zero and truncate its values. Because $c>0$ almost everywhere, finite energy requires the values of $v$ to lie in the scalar effective domain almost everywhere. Shrinking and truncating therefore place the values in a compact interval strictly inside the nonzero endpoints, allowing zero as an endpoint. These operations converge in $H$ and in potential energy; domination follows from convexity and the minimum at zero. Approximate by bounded smooth compactly supported functions preserving this interval, and then by their piecewise affine interpolants. Barycentric positivity preserves the same interval. Uniform scalar convergence on it, together with $c\in L^1$, gives the required potential convergence. A diagonal argument completes recovery. If the effective domain is only $\{0\}$, the sole finite-energy function is zero and recovery is immediate.
+
+Each $e_j$ minimizes
+\[
+ \Psi_j(v)-\langle r/\alpha_j-Be_j,v\rangle.
+\]
+After a subsequence $e_j\rightharpoonup e$ in $H$, and the linear functionals converge strongly to $-Be$. Passing minimality to the limit by the preceding lower bound and recovery shows that $e$ minimizes $\Psi(v)+\langle Be,v\rangle$.
+
+For $k\ge0$, set $v_k=(e-k)_+$. The competitor $e-\epsilon v_k$ moves every altered scalar value toward zero, so its potential cannot increase. Minimality therefore gives
+\[
+ 0\le-\epsilon\bigl[K(e,v_k)+\langle Be,v_k\rangle\bigr]
+             +\tfrac12\epsilon^2K(v_k,v_k),
+\]
+and hence $a(e,v_k)\le0$. Lemma~\ref{lem:gal-comparison} yields $e\le0$. Negative truncations similarly give $e\ge0$, so $e=0$.
+
+On the other hand, testing the normalized discrete equation by $e_j$ gives, by nonnegativity of the reaction,
+\[
+ \lambda_G\le C_G\norm{e_j}_2^2+\alpha_j^{-1}\norm{r}_{H^*}.
+\]
+Strong $L^2$ convergence contradicts $e=0$. Thus all roots have uniformly bounded $H$ norm along sufficiently fine meshes. Theorem~\ref{thm:gal-H1-escape} proves uniqueness.
+\end{proof}
+
+\begin{remark}[Precisely remaining scope]
+For general $x$-dependent reactions in dimension three, the normalized potentials are $F(x,\alpha_j t)/\alpha_j^2$. The scalar interval recovery argument above does not apply to this varying $x$ dependence, and the two-dimensional capacity argument is unavailable. A claim that all resulting finite-element energy limits are Markov forms or nonnegative killing measures would require a separate proof, especially on meshes without an angle condition. No such claim is used here. The assumption $c>0$ almost everywhere in Theorem~\ref{thm:gal-separable} is also retained: arbitrary zero sets of $c$ are not covered by its recovery proof.
+\end{remark}
+
+\begin{thebibliography}{99}
+\bibitem{cmr2021}E. Casas, M. Mateos and A. R\"osch, \emph{Numerical approximation of control problems of non-monotone and non-coercive semilinear elliptic equations}, Numer. Math. \textbf{149} (2021), 305--340. \url{https://doi.org/10.1007/s00211-021-01222-7}.
+\bibitem{cmr2020}E. Casas, M. Mateos and A. R\"osch, \emph{Analysis of control problems of nonmontone semilinear elliptic equations}, ESAIM Control Optim. Calc. Var. \textbf{26} (2020), article 80. \url{https://doi.org/10.1051/cocv/2020032}; \url{https://arxiv.org/abs/1905.13493}.
+\end{thebibliography}
+\end{document}

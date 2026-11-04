@@ -1,0 +1,342 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=27mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem,microtype}
+\usepackage{xcolor,fancyhdr}
+\usepackage[unicode,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{bookmark}
+\definecolor{ink}{RGB}{25,42,64}
+\definecolor{accent}{RGB}{35,91,120}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pbb}{\mathbb P}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\spanop}{span}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Lip}{Lip}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\setlist{topsep=4pt,itemsep=2pt,parsep=0pt}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{ink}AIM 568}
+\fancyhead[R]{\small 4 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+
+\urlstyle{same}
+\title{A linear information bound for nonsymmetric convex classes under scalar-error measurability}
+\author{Matthew J. Colbrook\thanks{The solutions were found by AI. The submitted arguments and the repository audit are AI work; independent human review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{4 November 2026}
+\hypersetup{pdftitle={A linear information bound for nonsymmetric convex classes under scalar-error measurability},pdfauthor={Matthew J. Colbrook},pdfsubject={AIM 568: AI-found solution or partial result}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We extend the $27n$ comparison of Krieg, Novak and Ullrich to the scalar-error measurability convention in AIM 568. A finite-dimensional measurable-majorant lemma supplies the bridge without assuming that the original adaptive rules or reconstruction are measurable. The source theorem supplies the geometric lower bound; the contribution here is this bridge.
+\end{abstract}
+\noindent\textbf{Catalogue target.} \href{https://github.com/MColbrook/AIM/blob/c4036871b0bf15cbc83e79c780b7191bcbb2cfed/problems/568-a-linear-information-bound-for-arbitrary-convex-model-classes.md}{AIM 568 at repository revision \texttt{c4036871b0bf}}. The package preserves its full statement in \texttt{statement.md}; the review and target comparison are linked from the package README.
+\medskip
+
+\section{Problem 568: closing the measurability gap}
+\label{sec:568}
+
+Throughout, \(e_n^{\rm ran}(S,F)\) uses expected norm error and a strict
+budget of at most \(n\) queries in every realization, as required by AIM 568.
+The class \(F\subset X\) is bounded and convex, without a symmetry
+assumption. Its measurability convention uses the norm
+\(p_F\) on \(\operatorname{span}(F-F)\).
+
+Krieg, Novak and Ullrich's October 2026 preprint
+\cite{knu2026} proves the \(27n\) comparison with measurable adaptive
+decision rules and reconstruction. The catalogue retains only
+measurability of the scalar error, so the theorem cannot simply be
+quoted in its stated model. The result below supplies the missing
+bridge.
+
+\begin{theorem}
+\label{thm:568}
+Under exactly the assumptions of Problem 568,
+\[
+ e_{2n}^{\rm det,non}(S,F)
+ \le e_{2n-1}^{\rm det,non}(S,F)
+ \le a_{2n-1}(S,F)
+ \le 27n\,e_n^{\rm ran}(S,F),\qquad n\ge1,
+ \tag{568.1}
+\]
+where \(a_m\) is the minimal worst-case error of continuous affine
+algorithms whose linear part has rank at most \(m\).
+\end{theorem}
+
+The numerical comparison constant is inherited from
+\cite{knu2026}. The contribution here is its extension to the larger
+admissibility class specified in the question.
+
+\subsection{The catalogue measurability convention}
+Let $X,Y$ be real Banach spaces, $S:X\to Y$ bounded and linear, and $F\subset X$ nonempty, bounded and convex. On $\operatorname{span}(F-F)$ define
+\[
+p_F(v)=\inf\{t>0:v\in t(F-F)\}.
+\]
+The input Borel structure is that of the metric $d_F(f,g)=p_F(f-g)$ (the one-point topology in the trivial case). Each randomized realization uses at most $n$ adaptive continuous linear measurements. Only the scalar error $(f,\omega)\mapsto\|Sf-A_\omega(f)\|_Y$ must be jointly measurable. Its criterion is $\sup_{f\in F}\mathbb E\|Sf-A_\omega(f)\|_Y$, denoted $e_n^{\rm ran}(S,F)$ after minimization. The deterministic quantity $e_m^{\rm det,non}(S,F)$ minimizes the worst-case norm error over $m$ fixed continuous linear measurements and arbitrary reconstruction. We prove the requested comparison with $C=27$, in fact at budget $2n-1$.
+
+\subsection{A measurable-majorant principle}
+
+\begin{lemma}
+\label{lem:majorant}
+Let \(K\subset\R^d\) be compact, \(T:K\to\R^q\) continuous,
+\(\nu\) a Borel probability measure on \(K\), and
+\(g:K\to[0,\infty]\) Borel. Suppose an algorithm \(A\), with entirely
+arbitrary adaptive decisions and decoder, uses at most \(k\) affine
+scalar measurements and satisfies
+\[
+                       \norm{T(x)-A(x)}_2\le g(x)
+ \tag{B1}
+\]
+outside a Borel \(\nu\)-null set. Then, for every \(\varepsilon>0\),
+there is an algorithm \(B\) with at most \(k\) affine scalar
+measurements, Borel history-to-query maps and a Borel decoder, such
+that
+\[
+       \int_K\norm{T(x)-B(x)}_2\,d\nu(x)
+                    \le \int_K g\,d\nu+\varepsilon .
+ \tag{B2}
+\]
+The algorithm's own error in (B1) need not be measurable.
+\end{lemma}
+
+\begin{proof}
+Choose a closed Euclidean ball \(C\) of radius \(R\) containing \(T(K)\).
+Projecting a decoder onto \(C\) cannot increase its distance to any
+\(T(x)\). We may therefore restrict all candidate decoders to \(C\);
+their losses are bounded by \(2R\).
+
+For each \(j\ge0\), let \(\mathcal C_j\) be the countable family of
+\(j\)-query policies whose affine query coefficients are
+rational-coefficient polynomials of the previous answers and whose
+decoder is the projection onto \(C\) of a rational-coefficient
+polynomial map. Each complete input-output map in this family is
+continuous on \(K\).
+
+We first establish, for every Borel probability \(\lambda\) on \(K\),
+\[
+ \inf_{B\in\mathcal C_j}\int_K\norm{T-B}_2\,d\lambda
+   =\inf_{\substack{B:\ j\text{ queries}\\
+                    \text{Borel decisions and decoder}}}
+                  \int_K\norm{T-B}_2\,d\lambda .
+ \tag{B3}
+\]
+Start with a Borel policy and consider each of its \emph{original}
+finite-history probability laws. By Lusin's theorem, its query
+coefficient map is continuous on a compact set of that history space
+having probability at least \(1-\delta\). Extend the coefficients
+continuously by coordinatewise Tietze extension. Do the same for the
+decoder, then project the extension onto \(C\). On the event that
+every original history belongs to its designated compact set, the
+modified policy follows precisely the same history and gives the
+same output, by induction through the stages. The complement has
+probability at most \((j+1)\delta\). Hence the change in mean loss is
+at most \(2R(j+1)\delta\).
+
+The modified policy is continuous in its histories. Its reachable
+histories on compact \(K\) are compact. Approximate all coefficient
+maps and the decoder on compact boxes containing neighborhoods of
+those histories by rational-coefficient polynomials. Successive
+uniform continuity through the finite observation recursion shows
+that sufficiently close approximations give uniformly close final
+outputs on \(K\). Projection onto \(C\) is nonexpansive. This proves
+(B3); the reverse inequality is immediate.
+
+Define
+\[
+              V_j(\lambda)=
+              \inf_{B\in\mathcal C_j}
+                    \int_K\norm{T(x)-B(x)}_2\,d\lambda(x).
+ \tag{B4}
+\]
+For each fixed \(B\in\mathcal C_j\), its loss is continuous and
+bounded on \(K\), so its integral is continuous for the weak topology
+on \(\mathcal P(K)\). Thus \(V_j\) is an infimum of countably many
+continuous functions, and is upper semicontinuous and Borel.
+By (B3), it is exactly the optimal Borel-policy average error.
+
+We now prove \(\int g\,d\nu\ge V_k(\nu)\) by induction on \(k\).
+For \(k=0\), \(A\) is constant, and the claim follows by projecting
+its value to \(C\). For \(k\ge1\), fix the first affine query and
+subtract its known constant, leaving \(x\mapsto a\cdot x\).
+There is a Borel regular conditional-law kernel
+\[
+                  y\longmapsto\nu_y\in\mathcal P(K)
+ \tag{B5}
+\]
+for \(\nu\) given \(a\cdot x=y\), supported on that fiber for almost
+every \(y\). This standard conditional law can also be constructed
+directly: condition on the dyadic interval of length \(2^{-m}\)
+containing \(y\), take normalized restrictions, and then take their
+weak limit where it exists. Martingale convergence for a countable
+dense family in \(C(K)\), together with compactness of
+\(\mathcal P(K)\), gives that limit almost everywhere; use a fixed
+point mass elsewhere. This yields a Borel kernel.
+
+For almost every \(y\), the Borel null witness in (B1) has
+\(\nu_y\)-measure zero. Freeze the first history. The remaining
+\(k-1\) stages are some well-defined adaptive algorithm on the fiber,
+whether or not their choice depends measurably on \(y\). Induction
+applied separately to this conditional law gives
+\[
+                        \int_K g\,d\nu_y\ge V_{k-1}(\nu_y).
+ \tag{B6}
+\]
+Enumerate \(\mathcal C_{k-1}=(B_i)_{i\ge1}\). For each \(y\), choose
+the least \(i=i(y)\) satisfying
+\[
+       \int_K\norm{T-B_i}_2\,d\nu_y
+                          \le V_{k-1}(\nu_y)+\varepsilon .
+ \tag{B7}
+\]
+All quantities in (B7) are Borel in \(y\), so this is a Borel
+integer-valued choice. The policy which first measures \(a\cdot x\)
+and then follows \(B_{i(y)}\) is a Borel \(k\)-query policy. Ordinary
+disintegration of its bounded Borel loss gives
+\[
+\begin{split}
+ V_k(\nu)
+ &\le \int_\R V_{k-1}(\nu_y)\,d(a_*\nu)(y)+\varepsilon\\
+ &\le \int_K g\,d\nu+\varepsilon .
+\end{split}
+ \tag{B8}
+\]
+Let \(\varepsilon\downarrow0\), and then use (B3) once more to obtain
+(B2). The proof has never integrated the original nonmeasurable
+query choices or decoder.
+\end{proof}
+
+\subsection{Apply the bridge to the fixed simplex lower bound}
+
+\begin{proof}[Proof of Theorem~\ref{thm:568}]
+We specify exactly which geometric facts from \cite{knu2026} are
+used. For \(j\ge1\), define
+\[
+ D_j=\sup_{\substack{f_0,\ldots,f_j\in F\\
+                    Q:Y\to\ell_2^j,\ \norm Q\le1}}
+       \abs{\det[QS(f_1-f_0),\ldots,QS(f_j-f_0)]}.
+ \tag{568.2}
+\]
+If \(D_{2n}=0\), the affine span of \(S(F)\) has dimension at most
+\(2n-1\). A bounded projection onto that finite-dimensional
+direction space then gives an exact continuous affine algorithm,
+and (568.1) is immediate.
+
+Suppose \(D_{2n}>0\), and write
+\[
+                         Q_n=(D_{2n}/D_n)^{1/n}.
+ \tag{568.3}
+\]
+Lemma 2.2 of \cite{knu2026} gives
+\[
+                      a_{2n-1}(S,F)\le2\sqrt n\,Q_n.
+ \tag{568.4}
+\]
+Its Lemma 2.3, Proposition 3.2, and the constant calculation in
+Sections 4--5 give the following stronger ingredient underlying
+the randomized theorem. For every \(0<\eta<1\), one can fix a
+\(2n\)-dimensional simplex \(\Delta\subset F\), a contraction
+\(Q:Y\to\R^{2n}\), and an affine parametrization
+\[
+             f=\bar f+Vz,\quad z\in K,\qquad T=QSV,
+ \tag{568.5}
+\]
+where \(K\) is a compact centered simplex with its uniform
+probability law \(\nu\), such that every Borel finite-dimensional
+algorithm \(\widetilde B\) using at most \(n\) affine measurements
+satisfies
+\[
+ \int_K\norm{Tz-\widetilde B(z)}_2\,d\nu(z)
+      \ge L_\eta,\qquad
+ L_\eta=\frac{2(1-\eta)^{1/n}}{27\sqrt n}\,Q_n .
+ \tag{568.6}
+\]
+The simplex, contraction and probability law are chosen independently
+of the algorithm and its random seed. Equation (568.6) is the
+Euclidean uniform-simplex lower bound from that proof, not an
+application of its global randomized theorem to a different model.
+
+Now take an algorithm admissible in the catalogue's broader model.
+For each seed \(\omega\), put
+\[
+\begin{split}
+ g_\omega(z)
+   &=\norm{S(\bar f+Vz)-A_\omega(\bar f+Vz)}_Y,\\
+ \widetilde A_\omega(z)
+   &=Q A_\omega(\bar f+Vz)-QS\bar f .
+\end{split}
+ \tag{568.7}
+\]
+The function \(g_\omega\) is Borel. To check the precise topology,
+the restriction of \(p_F\) to the finite-dimensional span of the
+simplex differences is a norm, hence is equivalent to the Euclidean
+norm. Thus \(z\mapsto\bar f+Vz\) is continuous for the stipulated
+input topology. Joint measurability in \((z,\omega)\) follows in
+the same way.
+
+The algorithm \(\widetilde A_\omega\) uses at most \(n\) affine
+scalar measurements on \(K\), and contraction gives the pointwise
+majorization
+\[
+               \norm{Tz-\widetilde A_\omega(z)}_2
+                              \le g_\omega(z).
+ \tag{568.8}
+\]
+The left side need not be measurable. This is why a
+\emph{measurable-majorant} lemma, rather than an unqualified
+measurable-output replacement, was proved.
+
+Apply Lemma~\ref{lem:majorant} to (568.8). Since every Borel simulator
+is bounded below by (568.6), it follows that
+\[
+                         \int_K g_\omega\,d\nu\ge L_\eta
+                          \quad\text{for every }\omega.
+ \tag{568.9}
+\]
+Tonelli, using only the scalar error's given joint measurability,
+therefore yields
+\[
+ \sup_{f\in F}\E_\omega\norm{Sf-A_\omega(f)}_Y
+       \ge \int_K\E_\omega g_\omega(z)\,d\nu(z)
+       \ge L_\eta .
+ \tag{568.10}
+\]
+Take the infimum over all catalogue-admissible algorithms, let
+\(\eta\downarrow0\), and combine with (568.4):
+\[
+       a_{2n-1}(S,F)\le27n\,e_n^{\rm ran}(S,F).
+ \tag{568.11}
+\]
+Finally, an affine algorithm of rank at most \(2n-1\) is realized
+by that many fixed continuous linear measurements. Monotonicity
+in the deterministic budget proves all inequalities in (568.1).
+\end{proof}
+
+
+\begin{thebibliography}{99}
+\bibitem{knu2026}D. Krieg, E. Novak and M. Ullrich, \emph{On the power of adaption and randomization 2: Non-symmetric convex sets}, 24 October 2026, arXiv:2610.33733v1, especially Theorem 1.1, Proposition 3.2 and its geometric proof. \url{https://arxiv.org/abs/2610.33733}.
+\end{thebibliography}
+\end{document}

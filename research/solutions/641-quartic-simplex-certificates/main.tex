@@ -1,0 +1,653 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=27mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem,microtype}
+\usepackage{xcolor,fancyhdr}
+\usepackage[unicode,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{bookmark}
+\definecolor{ink}{RGB}{25,42,64}
+\definecolor{accent}{RGB}{35,91,120}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pbb}{\mathbb P}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\spanop}{span}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Lip}{Lip}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\setlist{topsep=4pt,itemsep=2pt,parsep=0pt}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{ink}AIM 641}
+\fancyhead[R]{\small 4 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+
+\urlstyle{same}
+\title{Quartic simplex interpolation: a tetrahedral Fej\'er theorem and a dimension-free fourth-power bound}
+\author{Matthew J. Colbrook\thanks{The solutions were found by AI. The submitted arguments and the repository audit are AI work; independent human review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{4 November 2026}
+\hypersetup{pdftitle={Quartic simplex interpolation: a tetrahedral Fej\'er theorem and a dimension-free fourth-power bound},pdfauthor={Matthew J. Colbrook},pdfsubject={AIM 641: AI-found solution or partial result}}
+\begin{document}
+\maketitle
+\begin{abstract}
+For Bos's prescribed quartic interpolation nodes, we prove the Fej\'er inequality on a tetrahedron and the fourth-power inequality in every dimension, including the equality set. Finite exact-arithmetic witnesses and reconstructing verifiers are supplied. These resolve assertions 2 and 4 of AIM 641; the all-dimensional quartic Fekete assertion remains unresolved.
+\end{abstract}
+\noindent\textbf{Catalogue target.} \href{https://github.com/MColbrook/AIM/blob/c4036871b0bf15cbc83e79c780b7191bcbb2cfed/problems/641-bos-simplex-interpolation-nodes.md}{AIM 641 at repository revision \texttt{c4036871b0bf}}. The package preserves its full statement in \texttt{statement.md}; the review and target comparison are linked from the package README.
+\medskip
+
+\section{Quartic simplex interpolation: Problems 641(2) and 641(4)}
+\label{sec:simplex}
+
+We prove two assertions from Problem 641: the prescribed quartic nodes are
+Fej\'er points on a tetrahedron, and their cardinal polynomials satisfy the
+fourth-power inequality in every dimension.  Both proofs reduce the required
+inequalities to explicit finite calculations in an algebraic number field.
+The accompanying standard-library Python verifiers reconstruct these
+calculations exactly.  The known planar quartic Fej\'er theorem
+\cite[Proposition 4.1]{bos2023}, attributed there to \cite{bos1983}, is the
+base case; we supply an independent elementary proof below, making the
+argument self-contained.  The all-dimensional quartic Fekete assertion
+remains open in this report.
+
+\subsection{Nodes and homogeneous cardinal polynomials}
+
+Write $m=d+1$ and use barycentric coordinates on
+\[
+ \Delta_{m-1}=\{x\in[0,\infty)^m:p_1(x)=1\},
+ \qquad p_j(x)=\sum_{i=1}^m x_i^j.
+\]
+Set
+\[
+ r=\sqrt5,\qquad q=\sqrt{3/7},\qquad
+ a=\frac{4+r}{11},\qquad b=\frac{7-r}{22}.
+\]
+The node set $\mathcal F_{4,m-1}$ consists of all distinct coordinate
+permutations of the following vectors, padded with zero coordinates:
+\begin{equation}\label{eq:simplex-nodes}
+ (1),\quad (\tfrac12,\tfrac12),\quad
+ (\tfrac{1+q}{2},\tfrac{1-q}{2}),\quad
+ (a,b,b),\quad (\tfrac14,\tfrac14,\tfrac14,\tfrac14).
+\end{equation}
+An orbit is omitted when it has more than $m$ nonzero coordinates.  The
+number of nodes is
+\[
+ N_m=m+3\binom m2+3\binom m3+\binom m4=\binom{m+3}{4},
+\]
+the dimension of polynomials of degree at most four on $\Delta_{m-1}$.
+
+We use the following degree-four homogeneous polynomials on $\R^m$.
+Their restrictions to $p_1=1$ are the cardinal polynomials.  The vertex
+polynomials are
+\begin{equation}\label{eq:simplex-vertex}
+\begin{split}
+ V_i=2x_i\bigg[&\frac{101+17r}{11}x_i^3-(13+2r)x_i^2p_1
+      +\frac{130+27r}{22}x_ip_1^2-\frac{259+51r}{264}p_1^3\\
+ &+p_2\left(\frac{9+r}{8}p_1-\frac{24+17r}{22}x_i\right)
+      +p_3\left(\frac{45+3r}{44}-\frac53\right)\bigg].
+\end{split}
+\end{equation}
+For each unordered pair $\{i,j\}$, define
+\begin{align}
+ U_{ij}={}&\frac{61+7r}{22}(x_i^2+x_j^2)
+       +\frac{3+9r}{11}x_ix_j
+       -\frac{41+13r}{22}(x_i+x_j)p_1 \notag\\
+       &+\frac{8+2r}{11}p_1^2-\frac{7-r}{11}p_2,
+       \label{eq:simplex-U}\\
+ W_{ij}={}&\frac{7+r}{2}(x_j^2-x_i^2)
+       +\frac{5+r}{2}(x_i-x_j)p_1,\label{eq:simplex-W}\\
+ E_{ij}^{\pm}={}&\frac{49}{6}x_ix_j(U_{ij}\pm qW_{ij}),
+       \label{eq:simplex-edge}\\
+ M_{ij}={}&\frac4{33}x_ix_j\big[(100-8r)(x_i^2+x_j^2)
+       +(672-96r)x_ix_j \notag\\
+       &\hspace{24mm}+(62r-302)(x_i+x_j)p_1
+       +(82-40r)p_2+(76-14r)p_1^2\big].
+       \label{eq:simplex-midpoint}
+\end{align}
+Interchanging $i,j$ interchanges the two labels $+$ and $-$.  For each
+unordered triple there are three polynomials, one for each distinguished
+coordinate:
+\begin{equation}\label{eq:simplex-triple}
+ T_{i;jk}=\frac{73+r}{2}x_ix_jx_k
+ \left[(1+r)x_i+\frac{3-r}{2}(x_j+x_k)-p_1\right].
+\end{equation}
+For each unordered quadruple there is one polynomial,
+\begin{equation}\label{eq:simplex-quadruple}
+ C_{ijkl}=256x_ix_jx_kx_l.
+\end{equation}
+Let $\mathcal L_m$ denote this family of $N_m$ polynomials.
+
+\begin{lemma}[Exact cardinal verification]\label{lem:simplex-cardinal}
+The evaluation matrix of $\mathcal L_m$ at
+$\mathcal F_{4,m-1}$ is a permutation matrix.  Consequently
+$\mathcal F_{4,m-1}$ is unisolvent, and the restrictions of
+$\mathcal L_m$ to $\Delta_{m-1}$ are its cardinal polynomials.
+\end{lemma}
+
+\begin{proof}
+For $m=4$, direct substitution in
+\eqref{eq:simplex-vertex}--\eqref{eq:simplex-quadruple} gives all
+$35^2=1225$ entries exactly.  This calculation is reproduced by
+\texttt{verify\_641\_exact.py}, using rational arithmetic in
+$\mathbb Q(r,q)$.  There are $35$ ones, one in each row and column,
+and all other entries are zero.
+
+This finite check proves the assertion for arbitrary $m$.  Every node has
+at most four nonzero coordinates.  Every polynomial involving a
+distinguished coordinate that is zero at the node vanishes there.  The
+remaining polynomial formulas depend only on their distinguished
+coordinates and $p_1,p_2,p_3$, and so agree exactly with their
+four-coordinate versions after zero coordinates are added or deleted.
+Thus every possible evaluation is already covered by the $m=4$ check.
+The node count is the dimension of the polynomial space, which completes
+the assertion.
+\end{proof}
+
+\begin{remark}[A correction verified by interpolation]
+The displayed midpoint formula in the public 2022 preprint of
+\cite{bos2023} omits the term $(76-14\sqrt5)p_1^2$ in
+\eqref{eq:simplex-midpoint}; without it, the midpoint value is
+$(14\sqrt5-43)/33$ instead of $1$.  A paired-edge formula also repeats
+one coordinate index.  We use the formulas above, whose values are checked
+independently at every node.  No claim is made here about whether these
+typographical issues persist in the final journal version.
+\end{remark}
+
+\subsection{An independent proof of the known planar base case}
+
+The planar result is already known and is not counted as a new resolution.
+The following short proof removes any need to assume its original
+algebraic certificate.
+
+\begin{lemma}[Planar quartic Fej\'er inequality]\label{lem:planar-fejer}
+For every $x\in[0,\infty)^3$,
+\[
+ F_3(x):=(x_1+x_2+x_3)^8-\sum_{L\in\mathcal L_3}L(x)^2\ge0.
+\]
+\end{lemma}
+
+\begin{proof}
+Let $e_1=x_1+x_2+x_3$, $e_2=x_1x_2+x_1x_3+x_2x_3$ and
+$e_3=x_1x_2x_3$.  Direct expansion of the cardinal formulas gives
+\begin{equation}\label{eq:planar-elementary}
+\begin{split}
+ F_3={}&20e_1^6e_2-360e_1^4e_2^2+2100e_1^2e_2^3-3920e_2^4\\
+ &+e_3\left[\frac{4623-57r}{11}e_1^5
+       +\frac{-125333+7219r}{33}e_1^3e_2
+       +\frac{29764-2772r}{3}e_1e_2^2\right]\\
+ &+e_3^2\left[\frac{-136228+14134r}{11}e_1^2
+       +\frac{77200-3296r}{3}e_2\right].
+\end{split}
+\end{equation}
+For nonnegative coordinates, $e_2\le e_1^2/3$.  The coefficient of
+$e_2$ in the last bracket is positive, so that bracket is at most
+\[
+ \frac{-376852+90950r}{99}e_1^2<0
+ \qquad(e_1>0).
+\]
+Thus $F_3$ is concave as a function of $e_3$ when $e_1,e_2$ are fixed.
+
+For fixed feasible $e_1,e_2$, the set of nonnegative coordinate triples
+is compact.  At either extreme value of their product $e_3$, at least
+one coordinate is zero or two coordinates are equal.  To see this,
+suppose all coordinates are positive and distinct.  The gradients of
+$e_1,e_2$ are then independent, so the Lagrange multiplier equations
+at a product extremum have the form
+$x_2x_3=\lambda+\mu(x_2+x_3)$ and its cyclic analogues.  Subtracting
+two equations forces the remaining coordinate to equal $\mu$;
+distinctness would force all three coordinates to equal $\mu$, a
+contradiction.  Degeneracy of the constraint gradients already means
+all three coordinates are equal.  Concavity therefore reduces the
+desired inequality to a zero coordinate and to two equal coordinates.
+
+Both restrictions have explicit factorizations:
+\begin{align}
+ F_3(u,v,0)&=20uv(u-v)^2(u^2-5uv+v^2)^2,
+       \label{eq:planar-edge}\\
+ F_3(u,v,v)&=40uv\left(u-\frac{3+r}{2}v\right)^2Q(u,v),
+       \label{eq:planar-repeated}
+\end{align}
+where
+\begin{equation}\label{eq:planar-quartic-sos}
+ Q(u,v)=(u^2+\kappa uv+v^2)^2
+          +v^2(\alpha u^2+\beta uv+\gamma v^2)
+\end{equation}
+with
+\begin{align*}
+ \kappa&=\frac{-4397+383r}{880},&
+ \alpha&=\frac{23382299+5935673r}{1161600},\\
+ \beta&=\frac{-229907+88485r}{1320},&
+ \gamma&=\frac{39579-17344r}{165}.
+\end{align*}
+Here $\alpha,\gamma>0$ and
+\[
+ 4\alpha\gamma-\beta^2
+   =\frac{-529859170431+237067014259r}{11979000}>0.
+\]
+All displayed signs follow from the elementary bounds
+$559/250<\sqrt5<9/4$.  Hence the quadratic form in
+\eqref{eq:planar-quartic-sos} is positive definite, and both
+\eqref{eq:planar-edge} and \eqref{eq:planar-repeated} are nonnegative
+for $u,v\ge0$.  Concavity proves the result; the origin is immediate.
+
+Every identity and algebraic sign in this proof is checked directly
+from the frozen cardinal formulas by
+\texttt{verify\_641\_planar\_base.py}, using only the same exact
+standard-library arithmetic.  In particular, the factorization is
+verified as a polynomial identity, rather than inferred from sampled
+values or a numerical semidefinite calculation.
+\end{proof}
+
+\subsection{The tetrahedral Fej\'er inequality}
+
+\begin{theorem}[Problem 641(2)]\label{thm:tetra-fejer}
+For every $x\in\Delta_3$,
+\begin{equation}\label{eq:tetra-fejer}
+ \sum_{L\in\mathcal L_4}L(x)^2\le1.
+\end{equation}
+Hence the prescribed $35$ quartic nodes are also Fekete points on a
+tetrahedron.
+\end{theorem}
+
+\begin{proof}
+Define the degree-eight homogeneous deficit
+\[
+ F(x)=p_1(x)^8-\sum_{L\in\mathcal L_4}L(x)^2.
+\]
+The family is invariant under coordinate permutations, so $F$ is
+symmetric.  The radical $q$ cancels between the two edge terms, and all
+coefficients of $F$ belong to $\mathbb Q(\sqrt5)$.
+It suffices to prove $F\ge0$ on the nonnegative orthant.
+
+Order the coordinates and write
+\[
+ x_1=u+v+w+t,\qquad x_2=v+w+t,\qquad
+ x_3=w+t,\qquad x_4=t,
+ \qquad u,v,w,t\ge0.
+\]
+Put
+\[
+ G(u,v,w,t)=F(u+v+w+t,v+w+t,w+t,t),
+ \qquad
+ R=G(u,v,w,t)-G(u,v,w,0).
+\]
+The following is the finite algebraic certificate:
+\begin{equation}\label{eq:fejer-cert}
+ \mathcal Q(u,v,w,t)=(u+v+w+t)^{12}R(u,v,w,t)
+ \quad\text{has only nonnegative coefficients.}
+\end{equation}
+More precisely, $R$ has $116$ nonzero coefficients and $\mathcal Q$
+has $1536$.  Every nonzero coefficient of $\mathcal Q$ is at least
+$60$, and each has the form
+\begin{equation}\label{eq:fejer-field}
+ \frac{A_\alpha+B_\alpha\sqrt5}{363},
+ \qquad A_\alpha,B_\alpha\in\mathbb Z.
+\end{equation}
+The coefficient of $u^{19}t$ is exactly $60$.
+
+The attached file
+\texttt{fejer\_641\_certificate\_independent.json} records these
+integer pairs.  The verifier regenerates them from the cardinal formulas;
+it does not assume the correctness of the stored coefficient list.
+For an explicit description of the computation, expand $R$ by ordinary
+polynomial convolution in $\mathbb Q(\sqrt5)$, then use the recurrence
+\begin{equation}\label{eq:fejer-recurrence}
+ c_\alpha^{(j+1)}=\sum_{s=1}^4c_{\alpha-e_s}^{(j)},
+ \qquad 0\le j<12,
+\end{equation}
+with missing or negative-index entries zero and $c^{(0)}$ the
+coefficients of $R$.  Every sign is checked exactly by integer
+comparisons: for the mixed-sign cases of $A+B\sqrt5$, compare
+$A^2$ and $5B^2$.  A separate rational enclosure check uses
+\[
+ \frac{2236067977499789}{10^{15}}<\sqrt5<
+ \frac{2236067977499790}{10^{15}},
+\]
+with both endpoint inequalities verified by squaring integers.
+These finite operations prove \eqref{eq:fejer-cert}.
+
+It follows that $R\ge0$, because $u+v+w+t>0$ away from the
+origin and the assertion is trivial at the origin.  When $t=0$, all
+polynomials involving coordinate four vanish, and the remaining family
+is exactly the planar quartic cardinal family.
+Lemma~\ref{lem:planar-fejer} gives $G(u,v,w,0)\ge0$ directly in
+homogeneous form.  Hence $G\ge0$, and symmetry proves $F\ge0$.
+
+For the Fekete conclusion, evaluate the cardinal family at any competing
+$35$ nodes and call the resulting matrix $\mathsf L$.  Each row has
+Euclidean norm at most one by \eqref{eq:tetra-fejer}.  Hadamard's
+inequality gives $|\det\mathsf L|\le1$.  The determinant of
+$\mathsf L$ is the ratio of the competing Vandermonde determinant to
+the one at the prescribed nodes, for any fixed polynomial basis.
+Thus the latter nodes maximize the absolute Vandermonde determinant.
+\end{proof}
+
+\subsection{A stable symmetric deficit for fourth powers}
+
+\begin{theorem}[Problem 641(4)]\label{thm:simplex-fourth}
+For every $m\ge2$ and every $x\in\Delta_{m-1}$,
+\begin{equation}\label{eq:simplex-fourth}
+ \sum_{L\in\mathcal L_m}|L(x)|^4\le1.
+\end{equation}
+In particular, every individual quartic cardinal polynomial is bounded
+in absolute value by one, in every dimension.
+\end{theorem}
+
+We first construct one symmetric polynomial which works for every
+coordinate count.  For $x\in[0,\infty)^m$, put
+\[
+ H_m(x)=p_1(x)^{16}-\sum_{L\in\mathcal L_m}L(x)^4.
+\]
+There is a polynomial
+$H\in\mathbb Q(\sqrt5)[p_1,\ldots,p_{16}]$, independent of $m$,
+with weighted degree $16$, whose specialization is $H_m$.
+Here the weight of $p_j$ is $j$.
+It has $163$ nonzero power-sum monomials.  This polynomial can be
+reconstructed from the displayed cardinal formulas using only
+\begin{align}
+ \sum_i x_i^a={}&p_a,\notag\\
+ \sum_{i\ne j}x_i^ax_j^b={}&p_ap_b-p_{a+b},\notag\\
+ \sum_{\substack{i,j,k\\\text{distinct}}}x_i^ax_j^bx_k^c
+ ={}&p_ap_bp_c-p_{a+b}p_c-p_{a+c}p_b-p_{b+c}p_a
+       +2p_{a+b+c},\label{eq:stable-sums}\\
+ \sum_{i<j<k<l}x_i^4x_j^4x_k^4x_l^4
+ ={}&\frac{p_4^4-6p_4^2p_8+3p_8^2+8p_4p_{12}-6p_{16}}{24}.
+       \notag
+\end{align}
+The exponents $a,b,c$ in the distinguished variables are positive.
+For the paired-edge and midpoint contribution, apply the ordered-pair
+identity to $(E_{ij}^{+})^4+(E_{ij}^{-})^4+M_{ij}^4$ and divide by
+two.  For the triple contribution, apply the ordered-triple identity to
+$T_{i;jk}^4$ and divide by two, since its two nondistinguished indices
+are interchangeable.  The last line treats the quadruple contribution.
+As before, the radical $q$ cancels.
+
+Define formal derivatives in the polynomial ring by
+\begin{equation}\label{eq:AB}
+ A=\frac{\partial H}{\partial p_1},\qquad
+ B=\sum_{k=2}^{16}k p_{k-1}\frac{\partial H}{\partial p_k}.
+\end{equation}
+The chain rule gives
+\begin{equation}\label{eq:directional-deficit}
+ D_m(x):=\sum_{i=1}^m\partial_{x_i}H_m(x)
+       =mA(p(x))+B(p(x)).
+\end{equation}
+The next certificate is dimension independent.
+
+\begin{lemma}[Exact derivative certificate]\label{lem:derivative-cert}
+For the power sums of any finite collection of nonnegative numbers,
+\begin{equation}\label{eq:derivative-cert}
+ p_1^8A\ge0,\qquad p_1^8(5A+B)\ge0.
+\end{equation}
+Consequently $D_m(x)\ge0$ for every $m\ge5$ and
+$x\in[0,\infty)^m$.
+\end{lemma}
+
+\begin{proof}
+For a partition $\lambda=(\lambda_1,\ldots,\lambda_\ell)$ into
+positive parts, let $m_\lambda^{(m)}$ be the monomial symmetric
+polynomial in $m$ variables: each distinct monomial with nonzero
+exponent multiset $\lambda$ occurs once.  It is zero when $m<\ell$.
+The first exact expansion is
+\begin{equation}\label{eq:A-monomials}
+ p_1^8A=\sum_{\lambda\vdash23}a_\lambda m_\lambda,
+ \qquad a_\lambda\ge0.
+\end{equation}
+All $1255$ partition types of $23$ occur.  For the second polynomial,
+write
+\[
+ p_1^8(5A+B)=\sum_{\lambda\vdash23}b_\lambda m_\lambda.
+\]
+Exactly eleven coefficients $b_\lambda$ are negative.  They are
+removed by the $28$ same-length Muirhead transfers in
+Table~\ref{tab:muirhead-payments}.
+
+The normalization is essential.  If $\mu_j$ are the multiplicities of
+the distinct positive parts of $\lambda$, put
+\begin{equation}\label{eq:mean-normalization}
+ o_\lambda=\frac{\ell!}{\prod_j\mu_j!},\qquad
+ M_\lambda^{(m)}=\frac{m_\lambda^{(m)}}{o_\lambda}.
+\end{equation}
+For each $\ell$-element subset of the coordinates, the corresponding
+contribution to $M_\lambda^{(m)}$ is the average of all distinct
+permutations of the exponent vector $\lambda$.  Therefore, if
+$\lambda$ majorizes $\nu$ and they have the \emph{same length},
+Muirhead's inequality\cite{muirhead} applied on each such coordinate subset yields
+\begin{equation}\label{eq:muirhead-dimension-free}
+ M_\lambda^{(m)}\ge M_\nu^{(m)}\qquad\text{for every }m.
+\end{equation}
+For $m$ smaller than their common length both sides are zero.
+There is no dimension-dependent combinatorial factor in
+\eqref{eq:muirhead-dimension-free}.  This would generally be false if
+one transferred a normalized inequality between partitions of different
+lengths without correcting their multiplicities.
+
+The exact identity is
+\begin{equation}\label{eq:muirhead-identity}
+ p_1^8(5A+B)=
+ \sum_{e=1}^{28}c_e\big(M_{\lambda_e}-M_{\nu_e}\big)
+ +\sum_{\lambda\vdash23}r_\lambda M_\lambda,
+ \qquad c_e>0,\quad r_\lambda\ge0.
+\end{equation}
+Every pair in the first sum has equal length and satisfies all the
+majorization prefix inequalities.  There are nine length-three pairs,
+eighteen length-four pairs, and one length-five pair.
+The integers in Table~\ref{tab:muirhead-payments} specify
+\[
+ c_e=\frac{A_e+B_e\sqrt5}{395307}.
+\]
+The coefficients in \eqref{eq:A-monomials}, the coefficients
+$b_\lambda$, and the residual coefficients $r_\lambda$ have the same
+common denominator and are all supplied in
+\texttt{fourth\_641\_muirhead\_certificate.json}.
+Equivalently, the residuals are uniquely determined from the table by
+\begin{equation}\label{eq:muirhead-residual}
+ r_\lambda=o_\lambda b_\lambda
+       -\sum_{e:\lambda_e=\lambda}c_e
+       +\sum_{e:\nu_e=\lambda}c_e.
+\end{equation}
+There are $1227$ nonzero residual coefficients.
+
+For reproducibility, the verifier expands $H$ using
+\eqref{eq:stable-sums}, differentiates to obtain $A,B$, and converts
+power-sum products to monomial coefficients by the following elementary
+recurrence.  If $C_\mu$ is the coefficient of $m_\mu$, the
+coefficient of $m_\nu$ in $p_k\sum C_\mu m_\mu$ is
+\begin{equation}\label{eq:symmetric-recurrence}
+ \sum_{j:\nu_j\ge k}
+ C_{\operatorname{sort}(\nu-k e_j)}.
+\end{equation}
+Zero parts are deleted and equal positions are counted separately.
+Indeed, consider the coefficient of one fixed monomial: its factor
+from $p_k$ can be supplied by any coordinate whose exponent is at least
+$k$.  Repeated multiplication with $k=1$ gives the factor $p_1^8$.
+The verifier checks every coefficient of
+\eqref{eq:A-monomials}, every majorization relation in the table, every
+positive payment, every residual sign in
+\eqref{eq:muirhead-residual}, and the complete identity
+\eqref{eq:muirhead-identity}.  All signs are decided by exact rational
+and integer arithmetic in $\mathbb Q(\sqrt5)$.
+
+Nonnegative monomial coefficients prove the first inequality in
+\eqref{eq:derivative-cert}.  Muirhead and
+\eqref{eq:muirhead-identity} prove the second.  Finally,
+\[
+ p_1^8D_m=p_1^8(5A+B)+(m-5)p_1^8A\ge0
+ \qquad(m\ge5).
+\]
+For nonzero $x\ge0$, division by $p_1^8>0$ is legitimate; at the
+origin the result follows directly by homogeneity.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:simplex-fourth}]
+Theorem~\ref{thm:tetra-fejer}, homogeneity, and restriction to faces
+give the base cases $m\le4$:
+\[
+ \sum_{L\in\mathcal L_m}L(x)^4
+ \le\left(\sum_{L\in\mathcal L_m}L(x)^2\right)^2
+ \le p_1(x)^{16}.
+\]
+Suppose $m\ge5$ and the result holds for $m-1$.  Given $x\ge0$, set
+\[
+ a=\min_i x_i,\qquad y=x-a\boldsymbol1.
+\]
+At least one coordinate of $y$ is zero.  Lemma~\ref{lem:derivative-cert}
+implies
+\[
+ H_m(x)-H_m(y)=\int_0^a D_m(y+t\boldsymbol1)\,dt\ge0.
+\]
+Delete a zero coordinate to obtain $\widehat y$.  The cardinal formulas
+are stable under this deletion: terms with that distinguished
+coordinate vanish and all other terms agree.  Hence
+\[
+ H_m(x)\ge H_m(y)=H_{m-1}(\widehat y)\ge0.
+\]
+Induction proves the homogeneous inequality in all dimensions.
+Restricting to $p_1=1$ proves \eqref{eq:simplex-fourth}.
+\end{proof}
+
+\begin{corollary}[The equality set]\label{cor:simplex-equality}
+For the quartic cardinal family in every dimension, equality in
+\eqref{eq:simplex-fourth} holds exactly at the prescribed interpolation nodes.
+\end{corollary}
+\begin{proof}
+The frozen certificate has $a_{(23)}=40$ and $r_{(23)}=160$.
+Since $m_{(23)}=M_{(23)}=p_{23}$, the nonnegative expansions
+\eqref{eq:A-monomials} and \eqref{eq:muirhead-identity} give
+\[
+ p_1^8D_m\ge40(m-1)p_{23}>0
+ \qquad(m\ge5,\ x\ge0,\ x\ne0).
+\]
+If $x$ has at least five positive coordinates, first delete its zero
+coordinates, obtaining a $k$-variable point with $k\ge5$ and strictly
+positive minimum coordinate. The preceding minimum-coordinate
+integration is then strict, so $H_k(x)>0$.
+
+If the support has at most four coordinates, the square-sum Fej\'er
+bound applies. Equality in
+\[
+ \sum L(x)^4\le\left(\sum L(x)^2\right)^2\le1
+\]
+forces exactly one cardinal value to be $1$ or $-1$ and all others to
+vanish. Partition of unity forces that value to be $1$.
+Reproduction of each barycentric linear coordinate then identifies
+$x$ with the corresponding interpolation node. Conversely, the
+cardinal equations give equality at every node.
+\end{proof}
+
+\clearpage
+\subsection{Exact witness and verification scope}
+
+The table below is the entire Muirhead transfer witness.  Its role is
+to remove the eleven negative monomial coefficients of
+$p_1^8(5A+B)$, leaving the nonnegative residuals given by
+\eqref{eq:muirhead-residual}.  Partitions are written as lists of
+positive parts, and every row has total degree $23$.
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}rllll@{}}
+\caption{The 28 exact Muirhead payments, $c_e=(A_e+B_e\sqrt5)/395307$.}
+\label{tab:muirhead-payments}\\
+\toprule
+$e$ & $\lambda_e$ & $\nu_e$ & $A_e$ & $B_e$ \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Table \thetable\ continued}}\\
+\toprule
+$e$ & $\lambda_e$ & $\nu_e$ & $A_e$ & $B_e$ \\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r}{\textit{Continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+1 & $(13,7,3)$ & $(13,6,4)$ & $1498725325337592$ & $4787655964691688$ \\
+2 & $(13,7,3)$ & $(13,5,5)$ & $8536773533222352$ & $-3672905515511760$ \\
+3 & $(13,8,2)$ & $(13,5,5)$ & $10632178332256140$ & $86958143772588$ \\
+4 & $(14,7,2)$ & $(14,5,4)$ & $5877037193901192$ & $-79287322949208$ \\
+5 & $(14,6,3)$ & $(14,5,4)$ & $1634552277469224$ & $849845887111560$ \\
+6 & $(14,6,3)$ & $(13,5,5)$ & $2236877237687496$ & $-901354494250296$ \\
+7 & $(13,9,1)$ & $(13,5,5)$ & $1971824645149920$ & $256388529713184$ \\
+8 & $(15,6,2)$ & $(15,4,4)$ & $445045370515296$ & $-99159682090224$ \\
+9 & $(15,6,2)$ & $(13,5,5)$ & $-22491224378121804$ & $10692363542691444$ \\
+10 & $(8,7,5,3)$ & $(8,6,5,4)$ & $42053528057751292992$ & $323944859138228352$ \\
+11 & $(8,7,5,3)$ & $(8,5,5,5)$ & $29821869380033387424$ & $-349721950787748864$ \\
+12 & $(8,7,5,3)$ & $(7,7,5,4)$ & $15227149544040964512$ & $-1045096302260394240$ \\
+13 & $(9,6,5,3)$ & $(7,7,5,4)$ & $34890784624009578288$ & $1842836406593505648$ \\
+14 & $(9,6,5,3)$ & $(7,6,6,4)$ & $48888060142970622096$ & $-2773939678701409200$ \\
+15 & $(9,7,4,3)$ & $(7,6,6,4)$ & $66937003491622708368$ & $-1294371475424784336$ \\
+16 & $(8,7,6,2)$ & $(7,6,6,4)$ & $-6029137221319679280$ & $3087929711581169136$ \\
+17 & $(8,7,6,2)$ & $(7,6,5,5)$ & $64746162104032292976$ & $-1885735473280680240$ \\
+18 & $(10,6,4,3)$ & $(7,6,5,5)$ & $49084587467364645744$ & $-195796276763905296$ \\
+19 & $(9,7,5,2)$ & $(7,6,5,5)$ & $48480702963344097792$ & $-661283746644118176$ \\
+20 & $(8,6,6,3)$ & $(7,6,5,5)$ & $41670056935663240176$ & $438034863058464816$ \\
+21 & $(7,7,6,3)$ & $(7,6,5,5)$ & $34233944530210993200$ & $1531159251798766608$ \\
+22 & $(10,6,5,2)$ & $(7,6,5,5)$ & $4453774166762859552$ & $27706801221905184$ \\
+23 & $(10,6,5,2)$ & $(6,6,6,5)$ & $33665566828687711536$ & $-1354359951228246096$ \\
+24 & $(8,8,4,3)$ & $(6,6,6,5)$ & $36283080992417756064$ & $-838102952190264960$ \\
+25 & $(9,6,4,4)$ & $(6,6,6,5)$ & $31927055780967653856$ & $-271911363432951264$ \\
+26 & $(10,5,5,3)$ & $(6,6,6,5)$ & $28779142391558571360$ & $78345804440140896$ \\
+27 & $(9,8,4,2)$ & $(6,6,6,5)$ & $-163447391863139040$ & $1812146122265513472$ \\
+28 & $(8,6,5,3,1)$ & $(6,6,5,5,1)$ & $44030842344222195840$ & $-7861535751971828640$ \\
+\end{longtable}
+\endgroup
+
+The verification requires Python 3 and its standard library only:
+\begin{verbatim}
+python3 verify_641_exact.py
+python3 verify_641_planar_base.py
+python3 verify_641_fourth_exact.py
+\end{verbatim}
+The first program checks all cardinal evaluations, symmetry and
+homogeneity of the degree-eight deficit, and all $1536$ coefficient
+signs.  The planar program verifies the elementary symmetric identity,
+the two factorizations, concavity, and positivity of the residual
+quadratic form.  The fourth-power program reconstructs the stable
+polynomial $H$, checks its
+$163$ terms and the exact derivative identity, and verifies
+\eqref{eq:A-monomials} and \eqref{eq:muirhead-identity}.  It also
+compares the power-sum expression with direct cardinal evaluations at
+exact rational points with $2,3,4,5,6,9,17$ coordinates.  These pointwise
+checks supplement the formal algebraic derivation; they are not used as
+a substitute for it.
+
+The two results establish 641(2) and 641(4).  The tetrahedral Fekete
+property follows as a corollary, but a fourth-power bound does not imply
+the Hadamard bound needed for the all-dimensional Fekete assertion
+641(3).  That assertion remains unresolved here.  The cubic Fej\'er
+assertion 641(1) was already marked solved in the catalogue and is not
+counted as new work.  The proofs above are computer-assisted exact
+proofs with explicit finite witnesses; they have not been checked by a
+formal proof assistant or external human peer review.
+
+\begin{thebibliography}{99}
+\bibitem{bos2023}L. Bos, \emph{On Fekete points for a real simplex}, Indag. Math. \textbf{34} (2023), 274--293. Primary preprint: \url{https://arxiv.org/abs/2205.06498}; \url{https://doi.org/10.1016/j.indag.2022.11.003}.
+\bibitem{bos1983}L. Bos, \emph{Bounding the Lebesgue function for Lagrange interpolation in a simplex}, J. Approx. Theory \textbf{38} (1983), 43--59. \url{https://doi.org/10.1016/0021-9045(83)90140-5}. The planar Fej\'er result is restated in Proposition 4.1 of\cite{bos2023}. The 1983 full text was not independently retrieved; this report also supplies its own elementary proof of the needed planar case.
+\bibitem{muirhead}R. F. Muirhead, \emph{Some Methods applicable to Identities and Inequalities of Symmetric Algebraic Functions of n Letters}, Proc. Edinburgh Math. Soc. \textbf{21} (1902), 144--162. \url{https://doi.org/10.1017/S001309150003460X}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,341 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=27mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem,microtype}
+\usepackage{xcolor,fancyhdr}
+\usepackage[unicode,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{bookmark}
+\definecolor{ink}{RGB}{25,42,64}
+\definecolor{accent}{RGB}{35,91,120}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pbb}{\mathbb P}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\spanop}{span}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Lip}{Lip}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\setlist{topsep=4pt,itemsep=2pt,parsep=0pt}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{ink}AIM 569}
+\fancyhead[R]{\small 4 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+
+\urlstyle{same}
+\title{Discontinuous information can improve randomized recovery on an incomplete normed space}
+\author{Matthew J. Colbrook\thanks{The solutions were found by AI. The submitted arguments and the repository audit are AI work; independent human review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{4 November 2026}
+\hypersetup{pdftitle={Discontinuous information can improve randomized recovery on an incomplete normed space},pdfauthor={Matthew J. Colbrook},pdfsubject={AIM 569: AI-found solution or partial result}}
+\begin{document}
+\maketitle
+\begin{abstract}
+On $F=(\ell_1,\|\cdot\|_2)$, for $S(x)=\|x\|_2^2$ on the unit ball, every finite expected-budget algorithm using continuous linear information has optimal root-mean-square error $1/2$. One discontinuous algebraic linear query attains error at most $\sqrt6-2<1/2$. This is a counterexample to AIM 569 as stated for normed spaces; no conclusion for Banach spaces alone is claimed.
+\end{abstract}
+\noindent\textbf{Catalogue target.} \href{https://github.com/MColbrook/AIM/blob/c4036871b0bf15cbc83e79c780b7191bcbb2cfed/problems/569-does-discontinuous-information-help-randomized-approximation.md}{AIM 569 at repository revision \texttt{c4036871b0bf}}. The package preserves its full statement in \texttt{statement.md}; the review and target comparison are linked from the package README.
+\medskip
+
+\section{Problem 569: a counterexample with one discontinuous query}
+\label{sec:569}
+
+The statement permits incomplete normed input spaces and continuous
+nonlinear target maps. Both points matter here. Take
+\[
+ F=(\ell_1,\norm{\cdot}_2),\qquad G=\R,\qquad
+ S(x)=\norm x_2^2,\qquad B=\{x\in\ell_1:\norm x_2<1\}.
+ \tag{569.1}
+\]
+Thus the underlying vector space is \(\ell_1\), but its topology is
+the one inherited from \(\ell_2\). Let $\Lambda_c$ be its continuous linear functionals and $\Lambda_a$ all algebraic linear functionals. In either class an algorithm may choose its next query and stopping rule from the preceding answers and a random seed. Its finite query count $N(x,\omega)$ and output $A_\omega(x)$ must be jointly measurable for the norm Borel structures and the seed sigma algebra. For $\Lambda\in\{\Lambda_c,\Lambda_a\}$ define
+\[
+e_n^{\rm ran}(S,\Lambda)=\inf_A\sup_{x\in B}\bigl(\E_\omega|S(x)-A_\omega(x)|^2\bigr)^{1/2},
+\]
+where $\sup_{x\in B}\E_\omega N(x,\omega)\le n$. No measurability of the history-to-query rule is added.
+
+\begin{theorem}
+\label{thm:569}
+For (569.1), in the precise expected-budget RMS model of the problem,
+\[
+ e_n^{\rm ran}(S,\Lambda_c)=\frac12\qquad(n\ge1).
+ \tag{569.2}
+\]
+On the other hand, with \(\kappa_n=\sqrt{2/(n+2)}\),
+\[
+ e_n^{\rm ran}(S,\Lambda_a)
+           \le\frac{\kappa_n}{1+\kappa_n}\longrightarrow0 .
+ \tag{569.3}
+\]
+In particular,
+\[
+ e_1^{\rm ran}(S,\Lambda_a)
+          \le\sqrt6-2<\frac12
+          =e_1^{\rm ran}(S,\Lambda_c).
+ \tag{569.4}
+\]
+Consequently the universal equality in Problem 569 is false.
+\end{theorem}
+
+This settles the stated model. It does not assert a counterexample to
+a version requiring the input space to be Banach. The distinction
+between continuous and algebraic information discussed in
+\cite{hnw2011} is retained exactly.
+
+\subsection{An admissible algebraic estimator}
+
+Let \(\Omega=\{-1,1\}^{n\times\N}\) carry product fair-sign measure, and
+write \(r_{ij}\) for its coordinate signs. Define
+\[
+ L_i^\omega(x)=\sum_{j\ge1}r_{ij}(\omega)x_j,\qquad
+ T_n(x,\omega)=\frac1n\sum_{i=1}^nL_i^\omega(x)^2 .
+ \tag{569.5}
+\]
+For every \(x\in F\) and every seed, these series converge absolutely.
+Thus each probe is an everywhere-defined algebraic real linear
+functional. It is discontinuous for the chosen norm: a continuous
+functional on the dense subspace \((\ell_1,\norm{\cdot}_2)\) extends
+to \(\ell_2\), whereas its coefficient sequence
+\((r_{ij})_j\) is not in \(\ell_2\).
+
+Each probe is nevertheless jointly Borel in \(x\) and \(\omega\):
+the finite partial sums are jointly continuous, and their pointwise
+limit exists everywhere. Hence the estimator and its constant
+cardinality \(n\) satisfy all stated measurability requirements.
+There is no exceptional-input modification or algebraic-basis
+extension.
+
+For \(s=\norm x_2^2\), the independent rows satisfy
+\[
+ \E L_i^2=s,\qquad
+ \E L_i^4=3s^2-2\sum_jx_j^4\le3s^2,\qquad
+ \operatorname{Var}(T_n)\le \frac{2s^2}{n}.
+ \tag{569.6}
+\]
+The fourth-moment identity follows first for finite sums and then by
+\(L^4\) convergence of Rademacher series. In particular, the unbiased
+estimator already gives error at most \(\sqrt{2/n}\).
+
+For the stronger bound, set
+\[
+ a_n=\frac{\kappa_n}{1+\kappa_n},\qquad
+ b_n=1-\kappa_n,\qquad A_n=a_n+b_nT_n .
+ \tag{569.7}
+\]
+For arbitrary real \(a,b\), (569.6) gives
+\[
+ \E\abs{a+bT_n-s}^2
+       \le \bigl(a+(b-1)s\bigr)^2+\frac{2b^2}{n}s^2 .
+ \tag{569.8}
+\]
+This quadratic is convex in \(s\in[0,1]\), so its maximum is attained
+at an endpoint. For a fixed \(a\), the endpoint at \(s=1\) is minimized
+by \(b=n(1-a)/(n+2)\), with value
+\(\kappa_n^2(1-a)^2\). Balancing this with the endpoint \(a^2\)
+gives exactly (569.7), and both endpoint values equal \(a_n^2\).
+This proves (569.3). For \(n=1\), \(a_1=\sqrt6-2\).
+These constants optimize this affine-estimator calculation; no
+optimality claim is made for all algebraic-information algorithms.
+
+\subsection{A local weak-shift lemma}
+
+The continuous-information lower bound requires a different
+consequence of Gaussian conditioning.
+
+\begin{lemma}[Insensitivity to weakly null shifts]
+\label{lem:weakshift}
+Let \(H\) be a real separable Hilbert space, and let \(F\subset H\)
+be a dense Borel linear subspace with the inherited norm. Let \(\mu\)
+be a centered Gaussian law on \(H\), with injective covariance \(C\),
+such that
+\[
+                       \mu(F)=1,\qquad C(H)\subset F.
+ \tag{W1}
+\]
+Let \(U\subset H\) be open. Suppose
+\(A:U\cap F\to[-M,M]\) is Borel and uses at most \(k\) adaptive
+continuous affine scalar measurements on \(F\).
+
+Let \(w:H\to[0,\infty)\) be bounded and Borel, with
+\[
+             w(x)=0\quad\text{unless }
+             \operatorname{dist}(x,H\setminus U)\ge R
+ \tag{W2}
+\]
+for some \(R>0\). If \(v_j\in F\) is weakly null in \(H\) and
+\(\limsup_j\norm{v_j}_H<R\), then, extending \(A\) by zero outside
+\(U\cap F\),
+\[
+             \int_H w(x)\bigl[A(x+v_j)-A(x)\bigr]\,d\mu(x)
+                        \longrightarrow0.
+ \tag{W3}
+\]
+Again, no measurability of the adaptive decision rules is assumed.
+\end{lemma}
+
+\begin{proof}
+The zero extension is Borel because \(F\) is Borel in \(H\).
+For large \(j\), both evaluated points lie in \(U\cap F\) wherever
+\(w>0\), almost surely. We induct on \(k\). With no queries the output
+is constant on its domain, so the claim is immediate.
+
+The continuous linear part of the first affine query extends uniquely
+from \(F\) to \(H\), and can be written as
+\(x\mapsto\langle a,x\rangle\). A zero linear part merely fixes the
+first answer and reduces the number of stages. Otherwise put
+\[
+\begin{aligned}
+ \sigma^2&=\langle Ca,a\rangle>0,
+ &m(t)&=\frac{Ca}{\sigma^2}t,\\
+ H_0&=\ker a,
+ &F_0&=F\cap H_0,\\
+ C_0&=C-\frac{Ca\otimes Ca}{\sigma^2}.
+\end{aligned}
+ \tag{W4}
+\]
+As before, \(Z=m(Y)+Z_0\), with \(Y\) having the normal density \(p\)
+and \(Z_0\) an independent centered Gaussian on \(H_0\).
+Its covariance \(C_0\) is injective on \(H_0\). Indeed, equality in
+the covariance Cauchy--Schwarz inequality would make
+\(C^{1/2}h\) proportional to \(C^{1/2}a\); injectivity of \(C\)
+then makes \(h\) proportional to \(a\), and \(h\in H_0\) forces
+\(h=0\). Moreover \(C_0(H_0)\subset F_0\), and \(Z_0\in F_0\)
+almost surely. The subspace \(F_0\) is Borel and dense in \(H_0\):
+approximate an element of \(H_0\) by elements of \(F\), then correct
+their \(a\)-values using one fixed vector of \(F\) on which \(a\)
+does not vanish. These are exactly the hypotheses needed for
+induction.
+
+Set
+\[
+ c_j=\langle a,v_j\rangle\longrightarrow0,\qquad
+ v'_j=v_j-m(c_j)\in F_0 .
+ \tag{W5}
+\]
+The \(v'_j\) are weakly null in \(H_0\), and have the same limiting
+upper norm as the \(v_j\). After changing \(y=t+c_j\), the shifted
+integral in (W3) becomes
+\[
+ \int_\R\int_{H_0}p(y-c_j)w(m(y-c_j)+z)
+       A(m(y)+z+v'_j)\,d\mu_0(z)\,dy .
+ \tag{W6}
+\]
+The function \(f(y,z)=p(y)w(m(y)+z)\) belongs to
+\(L^1(dy\,d\mu_0)\). Thus \(f(y-c_j,z)\) can be replaced by
+\(f(y,z)\) in (W6), with an error tending to zero, by ordinary
+\(L^1\) translation continuity. Boundedness of \(A\) is all that is
+used in this replacement.
+
+For each fixed \(y\), let
+\[
+ U_y=(U-m(y))\cap H_0,\qquad
+ A_y(z)=A(m(y)+z),\qquad w_y(z)=w(m(y)+z).
+ \tag{W7}
+\]
+The actual output \(A_y\) is Borel, and the first answer is fixed, so
+it is realized by the remaining \(k-1\) affine measurements.
+The support of \(w_y\) has distance at least \(R\) from
+\(H_0\setminus U_y\), since distance in the affine fiber is at least
+ambient distance. Induction therefore gives
+\[
+ \int_{H_0}w_y(z)\bigl[A(m(y)+z+v'_j)-A(m(y)+z)\bigr]\,d\mu_0(z)
+                         \longrightarrow0
+ \tag{W8}
+\]
+for every fixed \(y\). These inner integrals are Borel functions of
+\(y\), because they are written using the actual Borel output,
+not the possibly nonmeasurable continuation rules. They are bounded
+in absolute value by \(2M\norm w_\infty\). Dominated convergence
+against \(p(y)\,dy\), together with (W6), proves (W3).
+\end{proof}
+
+\subsection{The continuous-information lower bound}
+
+\begin{proof}[Completion of the proof of Theorem~\ref{thm:569}]
+The continuous dual of \(F=(\ell_1,\norm{\cdot}_2)\) consists exactly
+of restrictions of \(\ell_2\) functionals. Also \(F\) is Borel in
+\(H=\ell_2\), since
+\[
+ \ell_1=\bigcup_{q\in\N}\bigcap_{m\in\N}
+       \left\{x\in\ell_2:\sum_{j=1}^m\abs{x_j}\le q\right\}.
+ \tag{569.9}
+\]
+Take \(Z_j=2^{-j}g_j\). Then \(Z\in\ell_1\) almost surely, and its
+covariance \(C=\operatorname{diag}(4^{-j})\) is injective and maps
+\(\ell_2\) into \(\ell_1\), by Cauchy--Schwarz. Thus (W1) holds.
+
+Fix \(0<r<1\), choose \(0<\rho<1-r\), and condition on
+\(\norm Z_2\le\rho\). This event has positive probability: make a
+finite Gaussian head small, and make the independent tail small by
+first making its expected squared norm small. In
+Lemma~\ref{lem:weakshift}, use the corresponding normalized indicator
+weight, the open unit ball \(U\) of \(\ell_2\), any
+\(r<R<1-\rho\), and \(v_j=re_j\).
+
+First consider a strict finite query budget, and clip every output
+to \([0,1]\). This does not increase error, and makes the lemma
+applicable. For every fixed seed,
+\[
+ \E\bigl[A_\omega(Z+re_j)-A_\omega(Z)
+                 \mid\norm Z_2\le\rho\bigr]\longrightarrow0.
+ \tag{569.10}
+\]
+Joint measurability of the original output and boundedness allow
+averaging (569.10) over an arbitrary seed probability space.
+The conditioned Gaussian is symmetric, so
+\[
+ \E\bigl[S(Z+re_j)-S(Z)\mid\norm Z_2\le\rho\bigr]
+       =r^2+2r\,\E[Z_j\mid\norm Z_2\le\rho]=r^2 .
+ \tag{569.11}
+\]
+If \(E_*=\sup_{x\in B}\E_\omega\abs{S(x)-A_\omega(x)}\), the
+triangle inequality yields
+\[
+ r^2\le 2E_*+
+       \abs{\E_{Z,\omega}
+             [A_\omega(Z+re_j)-A_\omega(Z)\mid\norm Z_2\le\rho]} .
+ \tag{569.12}
+\]
+Let \(j\to\infty\), then \(r\uparrow1\), choosing \(\rho<1-r\)
+each time. This proves the expected-absolute-error floor \(E_*\ge1/2\),
+and hence the same RMS floor.
+
+For expected cardinality, truncate the clipped algorithm after \(k\)
+queries and return zero when it has not stopped. Output and
+cardinality measurability make this a jointly Borel strict-budget
+algorithm. If the original uniform RMS error is \(e\), then
+\[
+        \E\abs{S(x)-A^{(k)}_\omega(x)}^2\le e^2+n/k ,
+ \tag{569.13}
+\]
+because \(0\le S(x)<1\). The strict-budget result gives
+\(e^2+n/k\ge1/4\) for all \(k\), and hence \(e\ge1/2\).
+The constant output \(1/2\) attains that supremal error without
+measurements. This proves (569.2).
+\end{proof}
+
+
+\begin{thebibliography}{99}
+\bibitem{hnw2011}A. Hinrichs, E. Novak and H. Wo\'zniakowski, \emph{Discontinuous information in the worst case and randomized settings}, Math. Nachr. \textbf{286} (2013), 679--690. Primary manuscript: \url{https://arxiv.org/abs/1106.2945}; \url{https://doi.org/10.1002/mana.201100128}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,226 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=27mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem,microtype}
+\usepackage{xcolor,fancyhdr}
+\usepackage[unicode,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{bookmark}
+\definecolor{ink}{RGB}{25,42,64}
+\definecolor{accent}{RGB}{35,91,120}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pbb}{\mathbb P}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\spanop}{span}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Lip}{Lip}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\setlist{topsep=4pt,itemsep=2pt,parsep=0pt}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{ink}AIM 651}
+\fancyhead[R]{\small 4 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+
+\urlstyle{same}
+\title{Global convergence of the simple CRDT iteration for quadrilaterals}
+\author{Matthew J. Colbrook\thanks{The solutions were found by AI. The submitted arguments and the repository audit are AI work; independent human review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{4 November 2026}
+\hypersetup{pdftitle={Global convergence of the simple CRDT iteration for quadrilaterals},pdfauthor={Matthew J. Colbrook},pdfsubject={AIM 651: AI-found solution or partial result}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove global convergence of the four-prevertex CRDT simple iteration for every simple quadrilateral, including concave quadrilaterals. For the catalogue algorithm this applies when its prescribed boundary subdivision leaves four vertices. Polygons and quadrilaterals with additional subdivision vertices remain unresolved.
+\end{abstract}
+\noindent\textbf{Catalogue target.} \href{https://github.com/MColbrook/AIM/blob/c4036871b0bf15cbc83e79c780b7191bcbb2cfed/problems/651-simple-crdt-convergence.md}{AIM 651 at repository revision \texttt{c4036871b0bf}}. The package preserves its full statement in \texttt{statement.md}; the review and target comparison are linked from the package README.
+\medskip
+
+\section{Problem 651: global convergence for simple quadrilaterals}
+\label{sec:crdt}
+
+The general catalogue question concerns a constrained-Delaunay system after a prescribed boundary subdivision\cite{dv1998,bishop2010}. We prove the four-prevertex case for every simple quadrilateral, including concave quadrilaterals. This applies to the catalogue algorithm whenever its subdivision leaves four vertices. It does not cover quadrilaterals that acquire additional vertices, nor general polygons.
+
+\begin{theorem}\label{thm:quad}
+Fix a bounded simple quadrilateral with interior angles strictly between $0$ and $2\pi$. Let $g(s)$ be the logarithm of the absolute cross ratio of its Schwarz--Christoffel image vertices when the logarithmic absolute cross ratio of the prevertices is $s\in\R$, with the four angles held fixed. Then
+\[
+0<g'(s)<1\qquad(s\in\R).
+\]
+Let $c_{\rm tar}$ be the target logarithmic cross ratio and let $s_*$ be its true conformal prevertex parameter. The iteration
+\[
+s_{k+1}=s_k-g(s_k)+c_{\rm tar}
+\]
+is well defined and converges monotonically to $s_*$ from every finite $s_0$. If $I$ is the closed interval with endpoints $s_0,s_*$, then
+\[
+\abs{s_k-s_*}\le
+\left(1-\min_{s\in I}g'(s)\right)^k\abs{s_0-s_*}.
+\]
+\end{theorem}
+
+\subsection{Four positive side integrals}
+Normalize the upper-half-plane prevertices to $0,t,1,\infty$, with
+\[
+t=(1+e^s)^{-1}\in(0,1).
+\]
+For the convention in Problem 651,
+\[
+\rho(0,t,1,\infty)=-\frac{1-t}{t}=-e^s.
+\]
+Write the interior angles as $\pi a,\pi b,\pi c,\pi d$, where
+\[
+0<a,b,c,d<2,\qquad a+b+c+d=2.
+\]
+Up to a nonzero constant, the Schwarz--Christoffel derivative is
+\[
+z^{a-1}(z-t)^{b-1}(z-1)^{c-1}.
+\]
+Its four side lengths, with the common scale suppressed, are positive real integrals. Define the beta integral and normalized hypergeometric integral by
+\begin{align*}
+B(B_0,C-B_0)&=\int_0^1 u^{B_0-1}(1-u)^{C-B_0-1}\dd u,\\
+H(A,B_0;C;z)&=\frac{1}{B(B_0,C-B_0)}
+\int_0^1u^{B_0-1}(1-u)^{C-B_0-1}(1-zu)^{-A}\dd u.
+\end{align*}
+The integral definition is used whenever $B_0>0$, $C-B_0>0$, and $0<z<1$. Direct substitutions yield
+\begin{align}
+L_{01}&=t^{a+b-1}B(a,b)H(1-c,a;a+b;t),\label{eq:side01}\\
+L_{12}&=(1-t)^{b+c-1}B(b,c)H(1-a,c;b+c;1-t),\\
+L_{23}&=B(c,d)H(1-b,d;c+d;t),\\
+L_{30}&=t^{a+b-1}B(a,d)H(1-c,a;a+d;1-t).\label{eq:side30}
+\end{align}
+For example, the first formula follows from $z=tu$ in the integral over $(0,t)$. The second follows from an affine substitution in $(t,1)$, with reversal of the new variable. For the third, use $z=1/u$ in the integral over $(1,\infty)$; the resulting power of $u$ is $d-1$. For the last, write $z=-r$ and set $r=tu/(1-u)$; the resulting powers are $u^{a-1}(1-u)^{d-1}$. These substitutions directly give the displayed beta and hypergeometric factors, for all the angle parameters under consideration.
+
+The modulus of the image cross ratio is
+\[
+\frac{L_{30}L_{12}}{L_{23}L_{01}}.
+\]
+All four integrals are finite and strictly positive for every $t\in(0,1)$. In particular, $g$ is finite and smooth for every real $s$.
+
+\subsection{The derivative formula and the convex case}
+For any real $A$, differentiating the defining integral shows that $H'/H$ is $A$ times a positively weighted mean of $u/(1-zu)$ for $0<u<1$. In particular, for $A>0$,
+\begin{equation}\label{eq:hyperbound}
+0<\frac{H'(A,B_0;C;z)}{H(A,B_0;C;z)}<\frac{A}{1-z}.
+\end{equation}
+For $A=0$ this logarithmic derivative is zero, and for $A<0$ it is negative. Since $\dd t/\dd s=-t(1-t)$, logarithmic differentiation gives, without a convexity restriction,
+\begin{align}
+g'(s)={}&t(b+c-1)+t(1-t)\left[
+\frac{H'(1-c,a;a+d;1-t)}{H(1-c,a;a+d;1-t)}\right.\notag\\
+&\quad+\frac{H'(1-a,c;b+c;1-t)}{H(1-a,c;b+c;1-t)}
++\frac{H'(1-b,d;c+d;t)}{H(1-b,d;c+d;t)}\notag\\
+&\left.\quad+\frac{H'(1-c,a;a+b;t)}{H(1-c,a;a+b;t)}\right].\label{eq:quadderivative}
+\end{align}
+Primes on $H$ mean differentiation with respect to its last argument.
+
+A one-step cyclic relabelling inverts both cross ratios. It thus changes $s$ to $-s$ and $g$ to $-g$; two steps leave both unchanged. Consequently the value of $g'$ at the corresponding parameter is invariant under cyclic relabelling. Reversing the labels and reflecting the polygon has the same invariance. In particular, interchanging $a,c$ while retaining $b,d$ sends $t$ to $1-t$ and replaces both cross ratios by their reciprocals. This can also be checked by the substitution $x\mapsto1-x$ in the positive side integrals.
+
+Suppose first that all four angles are strictly less than $\pi$. For the lower estimate, choose either the displayed labelling or its two-step cyclic shift so that $b+c\ge1$. This is possible because $(b+c)+(d+a)=2$. The first term in \eqref{eq:quadderivative} is then nonnegative and all four terms in brackets are strictly positive. Thus $g'(s)>0$.
+
+For the upper estimate, apply \eqref{eq:hyperbound} to all four terms:
+\begin{align*}
+g'(s)&<t(b+c-1)
++(1-t)\bigl[(1-c)+(1-a)\bigr]
++t\bigl[(1-b)+(1-c)\bigr]\\
+&=t+(1-t)(b+d).
+\end{align*}
+Choose a cyclic labelling for which $b+d\le1$; one exists because the two opposite-angle sums add to $2$. Derivative invariance then gives $g'(s)<1$. The two estimates may use different cyclic labellings.
+
+\subsection{A reflex or straight angle}
+There is at most one angle parameter greater than or equal to $1$. First place it at $a\ge1$ by cyclic relabelling. The second logarithmic derivative in \eqref{eq:quadderivative} has first parameter $1-a\le0$, while the other three have positive first parameters. Discarding that nonpositive term and applying \eqref{eq:hyperbound} to the others gives
+\begin{align*}
+g'(s)&<t(b+c-1)+(1-t)(1-c)
+                 +t\bigl[(1-b)+(1-c)\bigr]\\
+     &=t+(1-t)(1-c)<1.
+\end{align*}
+This proves the upper bound, including a straight angle.
+
+For the lower bound, put the exceptional angle at $d\ge1$. Then $a,b,c\in(0,1)$. By reflection if necessary, arrange $a\ge c$. Set $D=1-b-c>0$ and
+\[
+G(t)=H(1-d,b;a+b;t).
+\]
+Euler's transformation gives
+\begin{equation}\label{eq:quad-euler}
+H(1-c,a;a+b;t)=(1-t)^{-D}G(t).
+\end{equation}
+For completeness, the general identity
+\[
+H(A,B_0;C;t)=(1-t)^{C-A-B_0}H(C-A,C-B_0;C;t)
+\]
+follows directly by $u=(1-v)/(1-tv)$ in the defining Euler integral. It is also the last equality in DLMF~15.8.1\cite{dlmf}. All beta parameters here are positive, so the substitution is valid even though $1-d\le0$.
+
+In \eqref{eq:quadderivative}, the contribution $D/(1-t)$ from the last logarithmic derivative cancels $t(b+c-1)=-tD$. The first two remaining logarithmic derivatives are positive. It therefore suffices to prove
+\begin{equation}\label{eq:quad-pair-positive}
+\frac{H'(1-b,d;c+d;t)}{H(1-b,d;c+d;t)}+\frac{G'(t)}{G(t)}>0.
+\end{equation}
+Let $\mathbb E_3$ and $\mathbb E_G$ denote expectations with respect to the normalized positive densities on $(0,1)$ proportional to
+\begin{align*}
+w_3(u)&=u^{d-1}(1-u)^{c-1}(1-tu)^{-(1-b)},\\
+w_G(u)&=u^{b-1}(1-u)^{a-1}(1-tu)^{d-1}.
+\end{align*}
+Their ratio, up to a positive constant, is
+\[
+R(u)=u^{d-b}(1-u)^{c-a}(1-tu)^{b-d},
+\]
+which is strictly increasing because $d>b$, $a\ge c$ and $0<t<1$. The function $q(u)=u/(1-tu)$ is also strictly increasing. Consequently
+\[
+\mathbb E_3 q-\mathbb E_G q
+  =\frac{\operatorname{Cov}_G(R,q)}{\mathbb E_G R}>0.
+\]
+Indeed, twice this covariance is the expectation of
+$(R(U)-R(V))(q(U)-q(V))$ for independent $U,V$ with the $G$ density; the integrand is positive off the diagonal. All integrals are finite, since $t<1$ and the beta parameters are positive.
+
+The left-hand side of \eqref{eq:quad-pair-positive} is
+\[
+(1-b)\mathbb E_3 q-(d-1)\mathbb E_G q>0,
+\]
+because $1-b-(d-1)=a+c>0$ and $\mathbb E_G q>0$. The same conclusion holds when $d=1$, in which case $G'=0$. This proves $g'(s)>0$ for the remaining angle configurations and completes the derivative estimate for every simple quadrilateral.
+
+\subsection{Convergence and catalogue scope}
+The true conformal parameter satisfies $g(s_*)=c_{\rm tar}$. If $s>s_*$, integrating $0<g'<1$ gives
+\[
+0<g(s)-g(s_*)<s-s_*.
+\]
+It follows that
+\[
+s_*<s-g(s)+g(s_*)<s.
+\]
+The reversed inequalities hold when $s<s_*$. Thus iterates remain in $I$ and move monotonically toward $s_*$. Continuity and strict positivity give $\min_Ig'>0$, and the mean value theorem gives the stated geometric error bound. This proves Theorem~\ref{thm:quad}.
+
+One concrete family covered by the exact catalogue procedure consists of rectangles with aspect ratio at most $3\sqrt2$. No corner has angle at most $\pi/4$, and the distance from a nonincident vertex to an edge is at least that edge's length divided by $3\sqrt2$, so the prescribed subdivision inserts no vertices. More generally, a parallelogram with smallest angle $\theta>\pi/4$ and longer-to-shorter side ratio at most $3\sqrt2\sin\theta$ satisfies the same sufficient condition. The theorem applies to any available triangulation. In the convex case, changing the diagonal changes the scalar coordinate by the corresponding sign convention.
+
+A concave covered example is the counterclockwise polygon with vertices
+\[
+(-1,0),\quad (1/20,1/10),\quad (1,0),\quad (0,\sqrt3).
+\]
+Its three convex angles exceed $\pi/4$. Its two outer sides have length $2$, and the distances of the dent vertex to their supporting lines are respectively
+$(\sqrt3+\sqrt3/20-1/10)/2$ and
+$(\sqrt3-\sqrt3/20-1/10)/2$, both larger than $2/(3\sqrt2)$. For either short side the nonincident vertices have distance at least $\sqrt{(19/20)^2+(1/10)^2}$ or $\sqrt3-1/10$, both exceeding that side's length divided by $3\sqrt2$. Thus no subdivision is triggered. Geodesic distances inside the polygon are at least these Euclidean distances.
+
+Numerical explorations also exhibited convergence for many higher-vertex examples, but those computations are not used in this proof. No assertion about the full system's Jacobian, arbitrary polygons, or subdivision-generated vertices follows from the scalar estimate above.
+
+\begin{thebibliography}{99}
+\bibitem{dv1998}T. A. Driscoll and S. A. Vavasis, \emph{Numerical conformal mapping using cross-ratios and Delaunay triangulation}, SIAM J. Sci. Comput. \textbf{19} (1998), 1783--1803. \url{https://doi.org/10.1137/S1064827596298580}.
+ Author-hosted copy: \url{https://www.math.stonybrook.edu/~bishop/classes/math401.F09/crdt.pdf}.
+\bibitem{bishop2010}C. J. Bishop, \emph{Bounds for the CRDT conformal mapping algorithm}, Comput. Methods Funct. Theory \textbf{10} (2010), 325--366. \url{https://www.math.stonybrook.edu/~bishop/papers/crdt.pdf}; \url{https://doi.org/10.1007/BF03321771}.
+\bibitem{dlmf}NIST Digital Library of Mathematical Functions, equation 15.8.1, Euler's hypergeometric transformation. \url{https://dlmf.nist.gov/15.8.E1}.
+\end{thebibliography}
+\end{document}

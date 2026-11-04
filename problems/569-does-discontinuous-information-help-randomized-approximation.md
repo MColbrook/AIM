@@ -1,8 +1,8 @@
 # 569. Does discontinuous information help randomized approximation?
 
 **Area:** Information-based complexity and randomized numerical recovery
-**Status:** 🔵 OPEN
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -25,6 +25,12 @@ hold for every $`F,G,S`$ and $`n\ge1`$? The errors may be infinite. Completeness
 This tests whether idealized discontinuous observations change what randomized numerical recovery can achieve. The deterministic worst-case counterpart is proved in the source for every continuous $`S`$. The paper also gives comparison bounds for compact linear operators between Hilbert spaces. The randomized general question is explicitly retained in Remark 8; the 2026 Acta survey again refers to the continuity assumption as conjecturally unnecessary. Those partial results do not by themselves give the displayed equality in its full model.
 
 ## Status review
+
+**Resolution:** The [manuscript](../research/solutions/569-discontinuous-randomized-information/main.pdf) gives a counterexample on the incomplete normed space $`F=(\ell_1,\|\cdot\|_2)`$, with $`S(x)=\|x\|_2^2`$. Every finite positive expected budget using continuous information has RMS error exactly $`1/2`$, whereas one algebraic query attains at most $`\sqrt6-2<1/2`$. Output and count meet the stipulated joint measurability. This disproves the normed-space assertion as written; the Banach-only variant is not settled.
+
+**Audit, 4 November 2026:** The solutions were found by AI and are written up by Matthew J. Colbrook. A [fresh independent AI audit](../research/solution_reviews/2026-11-04-numerical-analysis/569-review.md) checked the submitted argument, target match and dependencies. No independent human review or formal verification is claimed.
+
+### Earlier status history
 
 Bounded searches through 18 October 2026 found no complete matching claim. The final 2013 publication body has not been compared with the fully read 2011 primary manuscripts. The later author manuscript retains this question; its added-in-proof notice resolves separate worst-case locality. The 2026 survey uses a different error, budget and measurability model and is cited as current context. No separate measurability of raw probes is imposed here. These distinctions prevent an automatic-continuity argument from silently narrowing the question.
 

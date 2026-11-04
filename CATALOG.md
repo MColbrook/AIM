@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**859 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**856 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -13,7 +13,7 @@
 | [Inverse problems, control and dynamics](#inverse-problems-control-and-dynamics) | [21](#inverse-open) | [8](#inverse-solved) |
 | [PDEs, fluids and materials](#pdes-fluids-and-materials) | [50](#pdes-materials-open) | [11](#pdes-materials-solved) |
 | [Probability, statistics and learning](#probability-statistics-and-learning) | [59](#probability-statistics-open) | [14](#probability-statistics-solved) |
-| [Numerical analysis and scientific computing](#numerical-analysis-and-scientific-computing) | [20](#numerical-analysis-open) | [9](#numerical-analysis-solved) |
+| [Numerical analysis and scientific computing](#numerical-analysis-and-scientific-computing) | [17](#numerical-analysis-open) | [12](#numerical-analysis-solved) |
 | [Geometry and topology](#geometry-and-topology) | [167](#geometry-topology-open) | [24](#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [22](#optimization-information-open) | [4](#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](#waves-quantum-systems-and-spectral-geometry) | [24](#spectral2-open) | [8](#spectral2-solved) |
@@ -434,21 +434,18 @@
 | 505 | [Polynomial fewnomial root bounds in fixed dimension](problems/505-polynomial-fewnomial-root-bounds-in-fixed-dimension.md) | 🔵 OPEN | Numerical analysis; approximation and complexity |
 | 518 | [Whitney extension with a 2^D test threshold and single-exponential loss](problems/518-whitney-extension-with-a-2-d-test-threshold-and-single-exponential-loss.md) | 🟡 PARTIAL | Numerical analysis; approximation and complexity |
 | 522 | [Sharp uniform approximation of Lipschitz functions by shallow ReLU networks](problems/522-sharp-uniform-approximation-of-lipschitz-functions-by-shallow-relu-networks.md) | 🔵 OPEN | Approximation theory / numerical analysis |
-| 523 | [Can adaptive Monte Carlo approximate a noncompact operator?](problems/523-can-adaptive-monte-carlo-approximate-a-noncompact-operator.md) | 🔵 OPEN | Information-based complexity / operator approximation |
 | 527 | [Arbitrarily slow strong approximation of a smooth scalar stochastic equation](problems/527-arbitrarily-slow-strong-approximation-of-a-smooth-scalar-stochastic-equation.md) | 🔵 OPEN | Numerical analysis of stochastic differential equations |
 | 536 | [Optimal star-discrepancy lower bound for infinite sequences](problems/536-star-discrepancy-sequence-lower-bound.md) | 🔵 OPEN | Uncertainty quantification and quasi-Monte Carlo integration |
 | 541 | [Low-degree convergence of relaxed minimal-deformation surface elements](problems/541-low-degree-relaxed-minimal-deformation.md) | 🟡 PARTIAL | Numerical analysis of evolving surfaces |
 | 542 | [Optimal stable manifold widths of Besov balls](problems/542-stable-manifold-widths-besov.md) | 🟡 PARTIAL | Stable nonlinear approximation and numerical analysis |
 | 554 | [Optimal cubature error with small mixed smoothness](problems/554-optimal-cubature-error-with-small-mixed-smoothness.md) | 🔵 OPEN | Numerical integration and approximation theory |
 | 561 | [Linear-size equal-weight discretization of the L1 norm](problems/561-linear-size-equal-weight-discretization-of-the-l1-norm.md) | 🔵 OPEN | Approximation theory and numerical analysis |
-| 568 | [A linear information bound for arbitrary convex model classes](problems/568-a-linear-information-bound-for-arbitrary-convex-model-classes.md) | 🟡 PARTIAL | Information-based complexity and optimal recovery |
-| 569 | [Does discontinuous information help randomized approximation?](problems/569-does-discontinuous-information-help-randomized-approximation.md) | 🔵 OPEN | Information-based complexity and randomized numerical recovery |
 | 581 | [Infinitely many obstacle resonances in a fixed strip under trapping](problems/581-modified-lax-phillips-trapping.md) | 🟡 PARTIAL | Scattering theory and numerical wave propagation |
 | 605 | [Intermediate-time recovery of the physical measure under deterministic rounding](problems/605-intermediate-time-recovery-of-the-physical-measure-under-deterministic-rounding.md) | 🔵 OPEN | Numerical dynamics and ergodic theory |
 | 626 | [Polynomial-size nonobtuse tetrahedral meshes](problems/626-polynomial-nonobtuse-tetrahedral-meshes.md) | 🟡 PARTIAL | Numerical PDEs and computational geometry |
-| 639 | [Sharp complexity of noisy continuous sensing of a Sobolev ellipsoid](problems/639-sharp-complexity-of-noisy-continuous-sensing-of-a-sobolev-ellipsoid.md) | 🔵 OPEN | Numerical analysis / information-based complexity |
+| 639 | [Sharp complexity of noisy continuous sensing of a Sobolev ellipsoid](problems/639-sharp-complexity-of-noisy-continuous-sensing-of-a-sobolev-ellipsoid.md) | 🟡 PARTIAL | Numerical analysis / information-based complexity |
 | 641 | [Bos's cubic and quartic simplex interpolation nodes](problems/641-bos-simplex-interpolation-nodes.md) | 🟡 PARTIAL | Multivariate approximation and optimal experimental design |
-| 651 | [Global convergence of the simple CRDT conformal-mapping iteration](problems/651-simple-crdt-convergence.md) | 🔵 OPEN | Numerical conformal mapping |
+| 651 | [Global convergence of the simple CRDT conformal-mapping iteration](problems/651-simple-crdt-convergence.md) | 🟡 PARTIAL | Numerical conformal mapping |
 | 664 | [Sharp uniform approximation widths for small mixed Hölder smoothness](problems/664-sharp-uniform-approximation-widths-for-small-mixed-holder-smoothness.md) | 🔵 OPEN | Approximation theory and numerical analysis |
 
 <a name="numerical-analysis-solved"></a>
@@ -459,9 +456,12 @@
 | --- | --- | --- | --- | --- | --- |
 | 517 | [Sharp local approximation widths for rough elliptic equations](problems/517-sharp-local-elliptic-widths.md) | ✅ SOLVED | Affirmative: sharp local elliptic widths with exponent1/(d-1) for arbitrary measurable symmetric elliptic coefficients in d=2,3. | [Proof](research/solutions/kaiwen-jin-517/paper/main.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/517-review.md) |
 | 519 | [Universal identities for Euclidean mechanical Lie brackets](problems/519-euclidean-mechanical-lie-algebra.md) | ✅ SOLVED | Affirmative: no additional universal Euclidean mechanical Lie identities, in every order. | [Proof](research/solutions/519-euclidean-mechanical-lie-algebra/paper/main.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/519-review.md) |
+| 523 | [Can adaptive Monte Carlo approximate a noncompact operator?](problems/523-can-adaptive-monte-carlo-approximate-a-noncompact-operator.md) | ✅ SOLVED | Exact error 1/2 at every finite positive expected budget for the noncompact inclusion. | [Proof](research/solutions/523-adaptive-monte-carlo-error-floor/main.pdf) | [Review](research/solution_reviews/2026-11-04-numerical-analysis/523-review.md) |
 | 553 | [Minimum number of continuous adaptive measurements for vector recovery](problems/553-continuous-adaptive-measurement-complexity.md) | ✅ SOLVED | Sharp asymptotic established | [Proof](research/solutions/siavash-sadeghi-553/aim553_report.pdf) | [Review](research/solution_reviews/2026-10-04-active-prs/553-review.md) |
 | 555 | [Maximal gain from randomization with nonadaptive linear measurements](problems/555-nonadaptive-randomization-gain.md) | ✅ SOLVED | Affirmative: maximal finite-rate gain from nonadaptive randomization is one. | [Proof](research/solutions/555-nonadaptive-randomization-gain/paper/main.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/555-review.md) |
 | 556 | [Does integration of uniformly derivative-bounded analytic functions suffer the dimensional curse?](problems/556-smooth-integration-dimensional-curse.md) | ✅ SOLVED | Dimensional curse proved | [Proof](https://doi.org/10.1016/j.jco.2026.102074) | [Review](research/solution_reviews/2026-10-21-yui-prior-art/556-prior-solution.md) |
+| 568 | [A linear information bound for arbitrary convex model classes](problems/568-a-linear-information-bound-for-arbitrary-convex-model-classes.md) | ✅ SOLVED | The 27n comparison holds with scalar-error measurability, already at deterministic budget 2n-1. | [Proof](research/solutions/568-convex-information-measurability/main.pdf) | [Review](research/solution_reviews/2026-11-04-numerical-analysis/568-review.md) |
+| 569 | [Does discontinuous information help randomized approximation?](problems/569-does-discontinuous-information-help-randomized-approximation.md) | ✅ SOLVED | Counterexample on the incomplete normed space (ell1, norm2): one algebraic query beats every finite continuous-information budget. | [Proof](research/solutions/569-discontinuous-randomized-information/main.pdf) | [Review](research/solution_reviews/2026-11-04-numerical-analysis/569-review.md) |
 | 570 | [The cost of continuous reconstruction on Banach unit balls](problems/570-continuous-decoder-banach-balls.md) | ✅ SOLVED | Universal bound disproved | [Proof](research/solutions/siavash-sadeghi-570/aim570_report.pdf) | [Review](research/solution_reviews/2026-10-04-active-prs/570-review.md) |
 | 578 | [A real nearest matrix with spectrum in the closed left half-plane](problems/578-nearest-hurwitz-real-minimizer.md) | ✅ SOLVED | Negative | [Proof](https://arxiv.org/pdf/2609.14828v1) | [Review](research/solution_reviews/2026-10-15-active-prs/170-source-scope-review_90_114.md) |
 | 582 | [Full Sobolev invertibility range for Hausdorff-measure screen operators](problems/582-fractal-screen-sobolev-invertibility.md) | ✅ SOLVED | Negative: an admissible accumulating-gap screen disproves the full regularity-isomorphism conjecture. | [Proof](research/solutions/582-accumulating-gaps/paper/main.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/582-review.md) |
@@ -1528,7 +1528,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 2026 expansion — batch 6 | 6 | 2026-09-19–2026-10-13 |
 | September 22 expansion — PDE emphasis | 88 | 2026-09-22–2026-10-30 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
-| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 117 | 2026-09-23–2026-11-03 |
+| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 114 | 2026-09-23–2026-11-04 |
 | Retained further problems, integrated 30 October 2026 | 384 | 2026-10-30–2026-11-04 |
 
 ## Maintaining the collection

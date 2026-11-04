@@ -4,6 +4,7 @@
 
 The [30 October ID replacement register](catalogue-backfill-2026-10-30/README.md) records 111 retained further problems promoted into the vacated AIM numbers. Older reviews and number ranges below are historical; identify an archived problem by its title and path, rather than its reused number. The [path resolver](../cut_problems/verify_cut.py) applies the cut and promotion mappings.
 
+- [Seven numerical-analysis manuscripts and independent AI audits, 2026-11-04](solution_reviews/2026-11-04-numerical-analysis/README.md)
 - [Colbrook Palomar cross-check against the current catalogue, 2026-11-03](solution_reviews/2026-11-03-colbrook-palomar/README.md)
 - [Prior-resolution reports for 38 Open or Partial targets, 2026-10-16](literature_reports/2026-10-15-prior-resolutions.md)
 - [Individual solution PR reviews, 15 October 2026](solution_reviews/2026-10-15-active-prs/README.md)
