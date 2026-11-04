@@ -1,8 +1,8 @@
 # 568. A linear information bound for arbitrary convex model classes
 
 **Area:** Information-based complexity and optimal recovery
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-11-03
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -51,10 +51,15 @@ Convex prior classes arise when unknown functions are constrained to be nonnegat
 
 ## Status review
 
+**Resolution:** The [manuscript](../research/solutions/568-convex-information-measurability/main.pdf) proves $`e_{2n}^{\mathrm{det,non}}\le e_{2n-1}^{\mathrm{det,non}}\le27n\,e_n^{\mathrm{ran}}`$ under the exact scalar-error measurability convention above. A measurable-majorant lemma bridges to Krieg, Novak and Ullrich, [arXiv:2610.33733v1](https://arxiv.org/abs/2610.33733v1), equation (1.4), Lemma 2.2 and Theorem 1.1. Their geometric estimate and constant are credited explicitly. This closes the previously recorded measurability gap for the full target.
 
-**Known cases:** Ullrich's 2026 all-s-number result treats symmetric operator balls. Its nonsymmetric convex-set extension yields a linear factor for Hilbert targets and a larger factor in general; it does not supply the requested general Banach-target randomized-error estimate.
+**Audit, 4 November 2026:** The solutions were found by AI and are written up by Matthew J. Colbrook. A [fresh independent AI audit](../research/solution_reviews/2026-11-04-numerical-analysis/568-review.md) checked the submitted argument, target match and dependencies. No independent human review or formal verification is claimed.
 
-**Remaining target:** Resolve the complete question stated under Problem statement, with all its quantifiers and hypotheses. The restricted results described here do not cover that full target.
+### Earlier status history
+
+**Previously recorded cases:** Ullrich's 2026 all-s-number result treats symmetric operator balls. Its nonsymmetric convex-set extension yields a linear factor for Hilbert targets and a larger factor in general; it does not supply the requested general Banach-target randomized-error estimate.
+
+**Previous remaining target:** Resolve the complete question stated under Problem statement, with all its quantifiers and hypotheses. The restricted results described here do not cover that full target.
 
 **Literature check: 18 October 2026.** The published source explicitly asks the extension from symmetric to arbitrary convex classes. Its geometric-mean and polynomial-rate comparisons do not give the displayed individual-budget bound. [1, Theorems 1.1/5.1; §6.1]
 

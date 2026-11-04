@@ -4,7 +4,7 @@
 
 **Status:** 🟡 PARTIAL
 
-**Last checked:** 2026-09-23
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -47,8 +47,16 @@ These equations discretize convection–diffusion–reaction states in PDE-const
 
 ## Status review
 
-**Known cases:** Theorem 3.5 of [1] proves eventual global uniqueness when one $`\phi\in L^2`$ bounds both $`|f(x,t)|`$ and its global Lipschitz coefficient. Under the full assumptions, Theorem 3.7 proves existence and uniqueness within every sufficiently large fixed $`L^\infty`$ ball for sufficiently small $`h`$.
+**Known cases:** The new [manuscript](../research/solutions/496-galerkin-uniqueness-partial/main.pdf) proves eventual global uniqueness under all stated assumptions in dimension two, with no angle condition or growth bound. In both dimensions additional branches must escape every bounded H1 set. In dimension three it proves global uniqueness for positive separable reactions, with the coefficient strictly positive almost everywhere, and under a stated energy domination condition.
 
-**Remaining target:** Exclude additional solutions outside those balls, or construct a fixed-data counterexample. Convergence of the bounded branch alone is insufficient.
+**Remaining target:** Global uniqueness for arbitrary reactions under the original assumptions in dimension three. The planar capacity proof and the separable-reaction theorem do not cover that case.
+
+**Audit, 4 November 2026:** The solutions were found by AI and are written up by Matthew J. Colbrook. A [fresh independent AI audit](../research/solution_reviews/2026-11-04-numerical-analysis/496-review.md) checked the submitted argument, target match and dependencies. No independent human review or formal verification is claimed.
+
+### Earlier status history
+
+**Previously recorded cases:** Theorem 3.5 of [1] proves eventual global uniqueness when one $`\phi\in L^2`$ bounds both $`|f(x,t)|`$ and its global Lipschitz coefficient. Under the full assumptions, Theorem 3.7 proves existence and uniqueness within every sufficiently large fixed $`L^\infty`$ ball for sufficiently small $`h`$.
+
+**Previous remaining target:** Exclude additional solutions outside those balls, or construct a fixed-data counterexample. Convergence of the bounded branch alone is insufficient.
 
 The 23 September 2026 search found no matching full resolution or announcement. Later linear Neumann and coercive bilinear-control results have different hypotheses. Registry coverage is not exhaustive.

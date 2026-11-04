@@ -1,0 +1,549 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=27mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem,microtype}
+\usepackage{xcolor,fancyhdr}
+\usepackage[unicode,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{bookmark}
+\definecolor{ink}{RGB}{25,42,64}
+\definecolor{accent}{RGB}{35,91,120}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pbb}{\mathbb P}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\spanop}{span}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Lip}{Lip}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\setlist{topsep=4pt,itemsep=2pt,parsep=0pt}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{ink}AIM 523}
+\fancyhead[R]{\small 4 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+
+\urlstyle{same}
+\title{An exact error floor for adaptive Monte Carlo approximation of a noncompact operator}
+\author{Matthew J. Colbrook\thanks{The solutions were found by AI. The submitted arguments and the repository audit are AI work; independent human review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{4 November 2026}
+\hypersetup{pdftitle={An exact error floor for adaptive Monte Carlo approximation of a noncompact operator},pdfauthor={Matthew J. Colbrook},pdfsubject={AIM 523: AI-found solution or partial result}}
+\begin{document}
+\maketitle
+\begin{abstract}
+For the canonical embedding $\ell_1\hookrightarrow\ell_\infty$, we prove that the optimal worst-case root-mean-square error is exactly $1/2$ at every positive finite expected information budget. The proof permits adaptive continuous linear information and the joint measurability conventions of AIM 523. We also give compactness and separable-target consequences.
+\end{abstract}
+\noindent\textbf{Catalogue target.} \href{https://github.com/MColbrook/AIM/blob/c4036871b0bf15cbc83e79c780b7191bcbb2cfed/problems/523-can-adaptive-monte-carlo-approximate-a-noncompact-operator.md}{AIM 523 at repository revision \texttt{c4036871b0bf}}. The package preserves its full statement in \texttt{statement.md}; the review and target comparison are linked from the package README.
+\medskip
+
+\section{Problem 523: an exact error floor for adaptive Monte Carlo}
+\label{sec:523}
+
+Let \(I:\ell_1\to\ell_\infty\) be the identity inclusion. The input set is
+\(B=\{x:\norm{x}_1<1\}\). Measurements are continuous linear functionals,
+their choice and the stopping rule may depend arbitrarily on the preceding
+answers and the random seed, and the output and cardinality maps have the
+joint measurability required in the problem. The cost bound is
+\(\sup_{x\in B}\E N(x,\omega)\le n\), and the error is the worst-input
+root mean square error. More explicitly, the seed ranges over an arbitrary probability space, $N(x,\omega)$ is finite and takes values in $\N\cup\{0\}$, and $(x,\omega)\mapsto N(x,\omega)$ and $(x,\omega)\mapsto A_\omega(x)$ are jointly measurable for the norm Borel structures and the seed sigma algebra. We write
+\[
+e_n(I)=\inf_A\sup_{x\in B}\bigl(\E_\omega\|x-A_\omega(x)\|_\infty^2\bigr)^{1/2},
+\]
+where the infimum is over those algorithms satisfying the stated expected cost bound.
+
+\begin{theorem}
+\label{thm:523}
+In this model,
+\[
+                 \boxed{e_n(I)=\frac12\qquad(n\ge1).}
+\]
+\end{theorem}
+
+The issue left open in the sources is adaptivity, rather than the
+nonadaptive error floor; see \cite{hnw2011,knw2024}. The proof below treats arbitrary
+adaptive decision rules. Its main ingredient is a tightness statement for
+the actual measurable output, which avoids imposing measurability on the
+rules selecting the queries.
+
+\subsection{A tightness lemma for finite adaptive information}
+
+\begin{lemma}[Uniform tightness under bounded shifts]
+\label{lem:tightness}
+Let \(E\) be a separable real Banach space, and let \(\mu\) be a centered
+Radon Gaussian measure on \(E\), with full support and finite second
+moment. Let \(U\subset E\) be open. Suppose that
+\(R:U\to\N_0\) is Borel measurable and is the output of an algorithm using
+at most \(k\) adaptive continuous affine scalar measurements.
+
+Let \(V\subset E\) be countable and bounded, and let
+\(w:E\to[0,\infty)\) be bounded and Borel measurable. Assume that, for
+some \(\eta>0\),
+\[
+ \operatorname{dist}(x+v,E\setminus U)\ge\eta
+ \quad\text{whenever }w(x)>0,\ v\in V.
+ \tag{T1}
+\]
+Extend \(R\) by zero outside \(U\). Then
+\[
+ \lim_{M\to\infty}\sup_{v\in V}
+       \int_E w(x)\mathbf1_{\{R(x+v)\ge M\}}\,d\mu(x)=0.
+ \tag{T2}
+\]
+Neither the query-selection rules nor the decoder need be measurable as
+functions of the answer history.
+\end{lemma}
+
+\begin{proof}
+We induct on \(k\). With no measurements, the output is a fixed integer
+on \(U\); (T1) then proves the assertion. An algorithm that stops early
+can be padded with zero measurements.
+
+The first affine query has a fixed continuous linear part \(a\in E'\).
+Its known additive constant may be subtracted from the answer. If
+\(a=0\), freeze this first answer and apply induction to the remaining
+queries. Otherwise, for \(Z\sim\mu\), put
+\[
+ \sigma^2=\E[a(Z)^2]>0,\qquad
+ c=\E[Z\,a(Z)]\in E,\qquad
+ m(t)=\frac{c}{\sigma^2}t,\qquad E_0=\ker a .
+ \tag{T3}
+\]
+The Bochner expectation exists by the second-moment assumption.
+Moreover \(a(c)=\sigma^2\), so \(a(m(t))=t\). Gaussian regression gives
+\[
+              Z=m(Y)+Z_0,\qquad Y=a(Z),
+ \tag{T4}
+\]
+where \(Y\) has the \(N(0,\sigma^2)\) density \(p\), and \(Z_0\) is an
+independent centered Gaussian random element of \(E_0\).
+Indeed, every continuous linear functional of
+\(Z-m(a(Z))\) has zero covariance with \(a(Z)\); joint Gaussianity
+then gives independence. The law \(\mu_0\) of \(Z_0\) has full support
+in \(E_0\), because
+\[
+                   P=\operatorname{Id}-m\circ a:E\to E_0
+\]
+is a continuous surjection and \(\mu\) has full support.
+Its second moment is finite. Thus the Gaussian hypotheses are preserved
+under conditioning.
+
+For \(v\in V\), write
+\[
+                  b=a(v),\qquad v'=v-m(b)\in E_0.
+ \tag{T5}
+\]
+The scalar \(b\) and the residual shift \(v'\) range over bounded sets.
+Define the nonnegative integrable Borel function
+\[
+                  f(y,z)=p(y)w(m(y)+z)
+       \quad\text{on }\R\times E_0.
+\]
+Changing the first-answer variable from \(t\) to \(y=t+b\) gives
+\[
+\begin{split}
+ I_M(v)&:=\int_Ew(x)\mathbf1_{\{R(x+v)\ge M\}}\,d\mu(x)\\
+ &=\int_{\R}\int_{E_0}
+       f(y-b,z)\,
+       \mathbf1_{\{R(m(y)+z+v')\ge M\}}\,d\mu_0(z)\,dy.
+\end{split}
+ \tag{T6}
+\]
+
+Fix \(\varepsilon>0\). Translation in the first real variable is
+continuous in \(L^1(dy\,d\mu_0)\). Choose \(h>0\) such that
+\[
+ \norm{f(\,\cdot-t,\cdot)-f}_{L^1}<\varepsilon
+ \quad\text{and}\quad \norm{m(t)}_E<\eta/2
+                   \qquad(\abs t<h).
+ \tag{T7}
+\]
+Since \(a(V)\) is bounded, finitely many intervals of radius less than
+\(h\), with centers \(b_1,\ldots,b_L\), cover it. Partition \(V\) into
+corresponding countable sets \(V_l\), and put
+\[
+                 W_l=\{v-m(a(v)):v\in V_l\}\subset E_0 .
+ \tag{T8}
+\]
+Each \(W_l\) is countable and bounded. For \(v\in V_l\), replacing
+\(f(y-a(v),z)\) in (T6) by \(f(y-b_l,z)\) changes the integral by at
+most \(\varepsilon\), uniformly in \(v\) and \(M\).
+
+Fix \(l\) and \(y\), and define
+\[
+\begin{split}
+ U_y&=(U-m(y))\cap E_0,\\
+ R_y(z)&=R(m(y)+z)\quad(z\in U_y),\\
+ w_{l,y}(z)&=w(m(y-b_l)+z).
+\end{split}
+ \tag{T9}
+\]
+The function \(R_y\) is Borel measurable. All inputs \(m(y)+z\),
+\(z\in E_0\), have the same first answer. Consequently \(R_y\) uses at
+most \(k-1\) adaptive continuous affine measurements, with that answer
+frozen.
+
+The shifted-support condition remains valid. If \(w_{l,y}(z)>0\), let
+\(x=m(y-b_l)+z\). For \(v\in V_l\), with \(v'\) as in (T5),
+\[
+             m(y)+z+v'=x+v+m(b_l-a(v)).
+ \tag{T10}
+\]
+By (T1) and (T7), this point has distance at least \(\eta/2\) from
+\(E\setminus U\). Distance within the affine subspace
+\(m(y)+E_0\) is at least ambient distance. Hence
+\[
+ \operatorname{dist}_{E_0}(z+v',E_0\setminus U_y)\ge\eta/2
+ \quad(w_{l,y}(z)>0,\ v'\in W_l).
+ \tag{T11}
+\]
+Notice that the unshifted point \(m(y)+z\) need not lie in \(U\).
+This is why the hypothesis was formulated as (T1), rather than as a
+condition on the unshifted support alone.
+
+Induction now implies, for every fixed \(y\),
+\[
+ T_{M,l}(y):=
+ \sup_{v'\in W_l}\int_{E_0}w_{l,y}(z)
+       \mathbf1_{\{R_y(z+v')\ge M\}}\,d\mu_0(z)
+                  \longrightarrow0.
+ \tag{T12}
+\]
+The supremum is countable. Each term is Borel measurable in \(y\),
+directly from the Borel measurability of the original output \(R\)
+and of \(w\). Thus \(T_{M,l}\) is Borel, and
+\(0\le T_{M,l}\le\norm w_\infty\). Dominated convergence gives
+\[
+                 \int_\R p(y-b_l)T_{M,l}(y)\,dy\longrightarrow0 .
+ \tag{T13}
+\]
+There are only finitely many \(l\). Combining (T6)--(T13) yields
+\[
+                    \limsup_{M\to\infty}\sup_{v\in V}I_M(v)
+                         \le\varepsilon .
+\]
+Letting \(\varepsilon\downarrow0\) proves (T2). No history-to-query
+map has been integrated.
+\end{proof}
+
+\subsection{Proof of the exact error floor}
+
+\begin{proof}[Proof of Theorem~\ref{thm:523}]
+For the upper bound, one measurement suffices:
+\[
+ s=\sum_{j\ge1}x_j,\qquad A(x)=(s/2,s/2,\ldots).
+\]
+This is an admissible \(\ell_\infty\)-valued output, and
+\[
+ \abs{x_j-s/2}
+   =\frac12\abs{x_j-\sum_{i\ne j}x_i}
+   \le\frac12\norm x_1 .
+ \tag{523.1}
+\]
+
+For the lower bound, first impose a strict finite budget \(k\).
+Let
+\[
+                    Z_j=2^{-j}g_j,
+\]
+where the \(g_j\) are independent standard Gaussians.
+Then \(Z\in\ell_1\) almost surely and \(\E\norm Z_1^2<\infty\).
+Its law has full support in \(\ell_1\): a finite Gaussian head can
+approximate any prescribed finite vector with positive probability,
+and the independent tail can be made small with positive probability
+by first making its expected norm small.
+
+Choose
+\[
+        0<r<1,\qquad 0<\rho<\min\{r/2,1-r\},\qquad
+        \tau=r/2-\rho>0 .
+ \tag{523.2}
+\]
+Condition \(Z\) on \(\norm Z_1\le\rho\), an event of positive
+probability. Equivalently, use the bounded weight
+\[
+ w(z)=\frac{\mathbf1_{\{\norm z_1\le\rho\}}}
+                 {\Pbb(\norm Z_1\le\rho)}.
+ \tag{523.3}
+\]
+Take \(U=B\) and \(V=\{re_j:j\ge1\}\). The margin in
+Lemma~\ref{lem:tightness} is at least \(1-r-\rho>0\).
+
+For a fixed seed \(\omega\), define from the algorithm's output
+\[
+ R_\omega(x)=\min\{i\ge1:(A_\omega(x))_i>r/2\},
+ \tag{523.4}
+\]
+with value zero if the set is empty. Coordinate evaluation is continuous
+on \(\ell_\infty\), so \(R_\omega\) is Borel. It uses the same
+measurements as \(A_\omega\). If \(x=z+re_j\), \(\norm z_1\le\rho\),
+and \(\norm{x-A_\omega(x)}_\infty<\tau\), then
+\[
+ (A_\omega(x))_j>r/2,\qquad
+ (A_\omega(x))_i<r/2\quad(i\ne j).
+ \tag{523.5}
+\]
+Thus \(R_\omega(x)=j\). Uniform tightness implies
+\[
+ \Pbb\bigl(R_\omega(Z+re_j)=j\mid\norm Z_1\le\rho\bigr)
+       \longrightarrow0,
+ \tag{523.6}
+\]
+because this probability is bounded by the uniformly vanishing tail
+at threshold \(j\).
+
+The probabilities in (523.6) are measurable functions of \(\omega\),
+by the joint measurability of the actual output. They are bounded by
+one. Dominated convergence therefore permits averaging (523.6) over
+any seed probability space. The norm error is jointly measurable even
+though \(\ell_\infty\) is nonseparable: the map \(x\mapsto Ix\) has
+separable range, so approximate it by countably valued Borel maps and
+take limits of their norm differences from the actual output.
+If \(e\) is the uniform RMS error, every shifted input law in
+(523.6) is supported in \(B\), and hence
+\[
+ e^2\ge
+ \E_{Z,\omega}\bigl[\norm{Z+re_j-A_\omega(Z+re_j)}_\infty^2
+                    \mid\norm Z_1\le\rho\bigr]
+ \ge \tau^2(1-o(1)).
+ \tag{523.7}
+\]
+Let \(j\to\infty\), then \(\rho\downarrow0\) and \(r\uparrow1\).
+This proves \(e\ge1/2\) for every strict finite budget.
+
+For an expected budget, truncate the algorithm after \(k\) queries
+and return zero if it has not stopped. The truncated output is jointly
+Borel, since the original output and cardinality are jointly Borel.
+For every \(x\in B\),
+\[
+\begin{split}
+ \E\norm{x-A^{(k)}_\omega(x)}_\infty^2
+ &\le \E\norm{x-A_\omega(x)}_\infty^2
+          +\norm x_\infty^2\,\Pbb(N(x,\omega)>k)\\
+ &\le e^2+n/k .
+\end{split}
+ \tag{523.8}
+\]
+The strict-budget result gives \(e^2+n/k\ge1/4\) for every \(k\).
+Letting \(k\to\infty\) completes the proof.
+\end{proof}
+
+\begin{corollary}[If the output is required to belong to \(c_0\)]
+\label{cor:523-c0}
+For the inclusion \(I:\ell_1\to c_0\), equipped with the same
+continuous-linear information, joint output/cardinality measurability,
+expected-budget convention, and worst-input RMS error,
+\[
+                    e_n(I:\ell_1\to c_0)=1
+                 \qquad\text{for every finite }n.
+\]
+\end{corollary}
+\begin{proof}
+Fix \(\varepsilon>0\). For a deterministic realization with output
+\(A(x)\in c_0\), the integer
+\[
+ R_A(x)=\max\{j\ge1:\abs{A(x)_j}>\varepsilon\},
+\]
+with value zero when the set is empty, is finite and Borel measurable.
+Indeed, \(\{R_A\le M\}=\bigcap_{j>M}\{\abs{A(x)_j}\le\varepsilon\}\).
+Use the same Gaussian law, conditioning, and shifts \(re_j\) as in
+the preceding proof. If \(x=z+re_j\), \(\norm z_1\le\rho\), and
+\[
+                   \norm{x-A(x)}_\infty<r-\rho-\varepsilon,
+\]
+then \(\abs{A(x)_j}>\varepsilon\), and therefore \(R_A(x)\ge j\).
+Lemma~\ref{lem:tightness} makes this event's conditioned
+probability tend to zero, for each seed, as \(j\to\infty\).
+Dominated convergence over the seed gives an RMS lower bound
+\(r-\rho-\varepsilon\) for every strict finite query budget.
+Let \(\rho,\varepsilon\downarrow0\) and \(r\uparrow1\).
+For expected budgets, truncation and zero output on unfinished paths
+give the same estimate \(e^2+n/k\) as in (523.8), so the lower
+bound remains one. The zero algorithm attains one.
+\end{proof}
+
+\begin{remark}
+The value \(1/2\) for the \(\ell_\infty\) codomain uses the constant
+sequence output of the one-query algorithm. A nonzero constant
+sequence does not belong to \(c_0\); restricting the allowed output
+space therefore changes the exact randomized error.
+\end{remark}
+
+\subsection{A direct compactness criterion}
+
+\begin{corollary}
+\label{cor:compactness}
+Let \(S:X\to Y\) be a bounded linear operator between real Banach
+spaces, with the same continuous-linear information, joint
+output/cardinality measurability, expected-budget convention, and
+worst-input RMS error. Then
+\[
+                 \lim_{n\to\infty}e_n(S)=0
+                    \quad\Longleftrightarrow\quad
+                 S\text{ is compact}.
+ \tag{523.9}
+\]
+More quantitatively, if there are \(v_j\in X\), \(\norm{v_j}_X\le1\),
+such that \(\norm{Sv_i-Sv_j}_Y\ge\alpha>0\) for \(i\ne j\), then
+\(e_n(S)\ge\alpha/2\) for every finite \(n\).
+\end{corollary}
+
+\begin{proof}
+Suppose first that \(S\) is noncompact and choose such a separated
+sequence. Its closed linear span \(E\subset X\) is a separable Banach
+space. A full-support centered Gaussian with finite second moment
+exists on \(E\). For example, if \((u_l)\) lies in its unit ball and
+has dense linear span, the series
+\[
+                         Z=\sum_{l\ge1}2^{-l}g_lu_l
+ \tag{523.10}
+\]
+converges absolutely almost surely and in \(L^2(E)\); the finite-head
+and independent-tail argument used above proves full support.
+
+Choose \(0<r<1\), and then choose \(\rho>0\) so that
+\[
+         r+\rho<1,\qquad \tau=r\alpha/2-\norm S\,\rho>0.
+\]
+Condition on \(\norm Z_X\le\rho\) and apply
+Lemma~\ref{lem:tightness} with the shifts \(rv_j\). Classify the output
+by
+\[
+ R_A(x)=\min\{j:\norm{A(x)-rSv_j}_Y<r\alpha/2\},
+ \tag{523.11}
+\]
+with value zero when no such \(j\) exists. The balls in (523.11) are
+disjoint, and this is a Borel integer output. If
+\(x=Z+rv_j\) and \(\norm{Sx-A(x)}_Y<\tau\), then (523.11) returns
+\(j\). The same tightness and averaging argument as in (523.6)--(523.7)
+gives error at least \(\tau\). Let \(\rho\downarrow0\) and
+\(r\uparrow1\).
+
+Restriction to \(E\) preserves all required measurability. In
+particular, \(S(E)\) is separable, so the norm error is jointly
+measurable even when \(Y\) is nonseparable: approximate \(Sx\) by
+countably valued Borel maps and take limits of the corresponding norm
+differences. Expected budgets are handled without any projection of
+the \(Y\)-valued output:
+\[
+ \E\norm{Sx-A^{(k)}(x)}_Y^2
+       \le e^2+\norm S^2\,n/k .
+ \tag{523.12}
+\]
+Thus the lower bound \(\alpha/2\) survives expected cardinality.
+
+Conversely, suppose that \(K=\overline{S(B_X)}\) is compact. Fix
+\(\varepsilon>0\). For each \(z\in K-K\) with \(\norm z_Y\ge\varepsilon\),
+choose a norm-one functional \(y'_z\in Y'\) with
+\(y'_z(z)=\norm z_Y\). Compactness gives finitely many of these
+functionals, \(y'_1,\ldots,y'_m\), such that
+\[
+ z,w\in K,\quad
+ \max_i\abs{y'_i(z-w)}\le\varepsilon/2
+                 \quad\Longrightarrow\quad
+ \norm{z-w}_Y<\varepsilon .
+ \tag{523.13}
+\]
+Indeed, the open sets
+\(\{q:\abs{y'_z(q)}>\varepsilon/2\}\) cover the compact subset
+\(\{q\in K-K:\norm q_Y\ge\varepsilon\}\).
+
+Measure the fixed functionals \(L_i=y'_i\circ S\), and take a finite
+\(\varepsilon/4\)-net \(z_1,\ldots,z_N\) in \(K\). Given the data
+\(t=(t_i)\), return the first \(z_j\) satisfying
+\[
+                  \max_i\abs{t_i-y'_i(z_j)}\le\varepsilon/4,
+ \tag{523.14}
+\]
+and return zero outside the union of these finitely many boxes.
+For actual data, such a center exists; (523.13) gives error less than
+\(\varepsilon\). This decoder is Borel and has finite range.
+If the compact set used in (523.13) is empty, a constant decoder
+already suffices. Hence every desired accuracy is achieved by
+deterministic nonadaptive continuous-linear information. No
+approximation property of \(X\) or \(Y\) is needed.
+\end{proof}
+
+\begin{corollary}[A quantitative lower bound for separable codomains]
+\label{cor:noncompactness-radius}
+Under the hypotheses of Corollary~\ref{cor:compactness}, suppose also
+that \(Y\) is separable. Define the Hausdorff noncompactness radius by
+\[
+ \chi(S(B_X))=\inf\bigl\{r>0:S(B_X)\text{ is covered by finitely
+ many open }Y\text{-balls of radius }r\bigr\}.
+\]
+Then every finite expected budget satisfies
+\[
+                         e_n(S)\ge\chi(S(B_X)).
+\]
+\end{corollary}
+\begin{proof}
+Assume \(\chi(S(B_X))>0\), and fix \(0<r<\chi(S(B_X))\).
+Choose a countable \(V\subset B_X\) such that \(S(V)\) is dense
+in \(S(B_X)\), and let \(E\) be its closed linear span in \(X\).
+Use a full-support Gaussian \(Z\) on \(E\), conditioned on
+\(\norm Z_X\le\rho\). Fix \(0<\theta<1\) with \(\theta+\rho<1\),
+and use the bounded countable shifts \(\theta V\).
+
+Let \((y_i)\) be dense in \(Y\). For \(\varepsilon>0\), set
+\[
+       R_\varepsilon(y)=\min\{i\ge1:\norm{y-y_i}_Y<\varepsilon\}.
+\]
+This is a finite Borel integer. For a strict finite-query algorithm,
+Lemma~\ref{lem:tightness} applied to \(R_\varepsilon\circ A_\omega\)
+gives, for each seed,
+\[
+ q_M(\omega):=\sup_{v\in V}
+ \Pbb_Z\!\left(R_\varepsilon(A_\omega(\theta v+Z))>M
+                    \,\middle|\,\norm Z_X\le\rho\right)
+                         \longrightarrow0.
+\]
+Countability of \(V\) and joint output measurability make \(q_M\)
+measurable in the seed. Thus \(\E_\omega q_M\to0\).
+
+For each \(M\), the definition of \(\chi\) and the density of \(S(V)\)
+give \(v_M\in V\) with
+\[
+              \min_{i\le M}\norm{\theta Sv_M-y_i}_Y>\theta r.
+\]
+Indeed, failure would give a finite closed-ball cover of
+\(S(B_X)\) with radius \(r\), and hence open-ball covers of every
+larger radius, contrary to \(r<\chi\).
+On \(R_\varepsilon(A_\omega(\theta v_M+Z))\le M\), the error is
+at least \(\theta r-\norm S\rho-\varepsilon\). Its probability tends
+to one by the uniform averaged bound above. The worst-input RMS
+error is consequently at least this number. Let
+\(\rho,\varepsilon\downarrow0\), then \(\theta\uparrow1\), and
+finally \(r\uparrow\chi(S(B_X))\).
+
+For expected budgets, truncate after \(k\) queries and use
+(523.12). The strict-budget lower bound gives
+\(e^2+\norm S^2n/k\ge\chi(S(B_X))^2\); let \(k\to\infty\).
+\end{proof}
+
+
+\begin{thebibliography}{99}
+\bibitem{hnw2011}A. Hinrichs, E. Novak and H. Wo\'zniakowski, \emph{Discontinuous information in the worst case and randomized settings}, Math. Nachr. \textbf{286} (2013), 679--690. Primary manuscript: \url{https://arxiv.org/abs/1106.2945}; \url{https://doi.org/10.1002/mana.201100128}.
+\bibitem{knw2024}R. J. Kunsch, E. Novak and M. Wnuk, \emph{Randomized approximation of summable sequences---adaptive and non-adaptive}, J. Approx. Theory \textbf{304} (2024), 106056. \url{https://arxiv.org/abs/2308.01705}; \url{https://doi.org/10.1016/j.jat.2024.106056}.
+\end{thebibliography}
+\end{document}

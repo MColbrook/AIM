@@ -1,0 +1,328 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=27mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem,microtype}
+\usepackage{xcolor,fancyhdr}
+\usepackage[unicode,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{bookmark}
+\definecolor{ink}{RGB}{25,42,64}
+\definecolor{accent}{RGB}{35,91,120}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pbb}{\mathbb P}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\spanop}{span}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Lip}{Lip}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\setlist{topsep=4pt,itemsep=2pt,parsep=0pt}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{ink}AIM 639}
+\fancyhead[R]{\small 4 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+
+\urlstyle{same}
+\title{Noisy continuous sensing of a Sobolev ellipsoid: a uniform upper bound}
+\author{Matthew J. Colbrook\thanks{The solutions were found by AI. The submitted arguments and the repository audit are AI work; independent human review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{4 November 2026}
+\hypersetup{pdftitle={Noisy continuous sensing of a Sobolev ellipsoid: a uniform upper bound},pdfauthor={Matthew J. Colbrook},pdfsubject={AIM 639: AI-found solution or partial result}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct adaptive continuous noisy measurements for the Sobolev ellipsoid in AIM 639. Writing $L=\log_2(1/\delta)$, the bound is $e_{n,\delta}\le256/[L\log_2(1+2^n/L)]$. It matches known lower bounds in two parameter regimes. A transition gap remains, so this is partial progress on the joint asymptotic target.
+\end{abstract}
+\noindent\textbf{Catalogue target.} \href{https://github.com/MColbrook/AIM/blob/c4036871b0bf15cbc83e79c780b7191bcbb2cfed/problems/639-sharp-complexity-of-noisy-continuous-sensing-of-a-sobolev-ellipsoid.md}{AIM 639 at repository revision \texttt{c4036871b0bf}}. The package preserves its full statement in \texttt{statement.md}; the review and target comparison are linked from the package README.
+\medskip
+
+\section{Problem 639: a uniform upper bound, with a transition gap}
+\label{sec:639}
+
+This section is a partial result. It does not determine the joint order
+throughout the full \((n,\delta)\) range.
+Let \(D:\ell_2\to\ell_2\) be given by \((Dx)_j=x_j/j\), with input
+the closed unit ball, and let
+\[
+                         L=\log_2(1/\delta)\ge1 .
+ \tag{639.1}
+\]
+Measurements take values in \([-1,1]\), are continuous in the input
+for each fixed history, and receive adversarial errors of magnitude
+at most \(\delta\).
+
+\begin{theorem}[A quantitative partial result]
+\label{thm:639}
+For every integer \(m\ge1\), there is an admissible algorithm with
+error at most \(4/m\) using no more than
+\[
+          \left\lceil\log_2(m+1)\right\rceil
+                     +\left\lceil\frac{10m}{L}\right\rceil
+ \tag{639.2}
+\]
+measurements. Consequently,
+\[
+             e_n(\delta)\le
+       \frac{256}{\,L\log_2(1+2^n/L)\,}
+             \qquad(n\ge1,\ 0<\delta\le1/2).
+ \tag{639.3}
+\]
+\end{theorem}
+
+The colored-grid construction for exact measurements originates in
+\cite[Algorithm 2]{knu2024}; the robust binary selection principle is
+related to \cite[Theorem 3]{knpw2026}. The additional ingredients here
+are robust finite-alphabet cell coding, a quantitative cell count for
+the Sobolev ellipsoid, and the uniform inversion of the resulting
+budget.
+
+\subsection{A robust encoder for a colored cover}
+
+\begin{lemma}
+\label{lem:coloredencoder}
+Let \(E\) be compact metric, with a finite open cover
+\(U_1,\ldots,U_N\) whose members have diameter at most \(\rho\).
+Suppose they can be colored with \(q\) colors so that distinct
+members of the same color are disjoint. For \(0<\delta<1\), put
+\(M=\lceil1/\delta\rceil\ge2\). There is a continuous adaptive
+measurement algorithm, with adversarial noise \(\delta\), which
+recovers a point of \(E\) to error at most \(\rho\) using
+\[
+                     \lceil\log_2q\rceil+
+                     \lceil\log_M N\rceil
+ \tag{C1}
+\]
+queries with values in \([-1,1]\).
+\end{lemma}
+
+\begin{proof}
+For a fixed previous noisy history \(h\), let \(C_h\) be the feasible
+input set. It is compact: each previously fixed branch functional is
+continuous, and its noise-admissibility inequality is closed.
+Maintain a set \(I\) of candidate colors whose cover sets cover \(C_h\).
+Initially, all colors are candidates.
+
+Split \(I\) into two parts \(I_0,I_1\), each of size at most
+\(\lceil\abs I/2\rceil\), and let \(V_b\) be the union of the cover
+members of colors in \(I_b\). The compact sets
+\[
+                       F_0=C_h\setminus V_0,\qquad
+                       F_1=C_h\setminus V_1
+ \tag{C2}
+\]
+are disjoint. Choose a continuous \(\lambda:E\to[-1,1]\) that is
+\(-1\) on \(F_0\) and \(+1\) on \(F_1\); a suitable constant
+handles an empty set. On an answer \(y\ge0\), retain \(I_0\); on
+\(y<0\), retain \(I_1\). If an input lay outside the retained union,
+its exact answer would be respectively \(-1\) or \(+1\), incompatible
+with \(\abs{y-\lambda(x)}\le\delta<1\). Thus the covering invariant
+persists, and after \(\lceil\log_2q\rceil\) queries one color remains.
+
+The surviving cover members are pairwise disjoint and cover \(C_h\).
+Their intersections with \(C_h\) are finitely many clopen pieces of
+\(C_h\), hence are compact. Choose \(M\) equally spaced levels in
+\([-1,1]\). Their separation is
+\[
+                             \frac{2}{M-1}>2\delta ,
+ \tag{C3}
+\]
+because \(M-1<1/\delta\). Encode the cell indices by \(M\)-ary
+strings of length \(\lceil\log_M N\rceil\). For each digit, the
+assigned level is continuous on \(C_h\), being constant on its
+finitely many clopen pieces. Tietze extension gives a continuous
+function on \(E\) with values in \([-1,1]\). Every admissible noisy
+digit answer determines its unique level, so all digits recover the
+cell index. Return a fixed point of that cover member. Empty feasible
+branches may use arbitrary constant queries. No continuity in the
+previous answers is needed.
+\end{proof}
+
+\subsection{A cover with exponentially many cells and \texorpdfstring{\(m+1\)}{m+1} colors}
+
+Consider the finite-dimensional ellipsoid
+\[
+             E_m=\left\{z\in\R^m:
+                         \sum_{j=1}^m j^2z_j^2\le1\right\}.
+ \tag{639.4}
+\]
+Set \(s=1/(m\sqrt m)\), and use the cubical grid \(s\mathbb Z^m\).
+For \(k=0,\ldots,m\), let \(F_k\) be the union of its
+\(k\)-dimensional faces, and put
+\[
+ \tau_k=\frac{m+1-k}{4(m+1)},\qquad
+ H_k=\{z:\operatorname{dist}_\infty(z,F_k)\le\tau_ks\}.
+ \tag{639.5}
+\]
+The sets
+\[
+                  C_0=H_0,\qquad
+                  C_k=H_k\setminus\bigcup_{l<k}H_l
+ \tag{639.6}
+\]
+partition \(\R^m\), since \(H_m=\R^m\).
+
+For \(k\ge1\), a point of \(C_k\) has exactly \(m-k\) coordinates
+within \(\tau_ks\) of a grid hyperplane, while the remaining
+\(k\) coordinates are farther than \(\tau_{k-1}s\) from the grid.
+It therefore has a unique associated \(k\)-face: the first
+coordinates specify its fixed integer coordinates, and the others
+specify their open unit grid intervals. Partition \(C_k\) by these
+associated faces; for \(k=0\), use the unique nearby grid vertex.
+Take closures of all resulting cells.
+
+Each closed cell has \(\ell_\infty\) diameter at most \(s\), and
+therefore Euclidean diameter at most \(1/m\). Distinct cells of the
+same \(k\) have \(\ell_\infty\) separation at least
+\[
+                            g=\frac{s}{4(m+1)}.
+ \tag{639.7}
+\]
+To verify this, if their fixed/free coordinate patterns differ,
+some coordinate is within \(\tau_ks\) of the grid for one cell and
+at least \(\tau_{k-1}s\) away for the other. If the patterns agree,
+either a fixed integer or a free grid interval differs, giving at
+least that separation. At \(k=0\), the separation is at least \(s/2\).
+
+Enlarge each cell by its open \(\ell_\infty\) neighborhood of radius
+\(g/3\), intersect it with \(E_m\), and retain the nonempty sets.
+They form an open cover of \(E_m\), with colors \(k=0,\ldots,m\).
+Same-color sets remain disjoint, and each has Euclidean diameter
+less than \(2/m\).
+
+The number \(N\) of retained cells is at most \(2^{10m}\). Associate
+each cell with a vertex of its grid face. If its enlargement meets
+\(E_m\), that vertex lies within \(\ell_\infty\) distance \(2s\)
+of \(E_m\). The disjoint half-open cubes of side \(s\) attached to
+these vertices lie in
+\[
+ E_m+3s[-1,1]^m
+      \subset E_m+\frac3m B_2^m
+      \subset4E_m ,
+ \tag{639.8}
+\]
+because \(E_m\) contains \(m^{-1}B_2^m\).
+There are at most \(3^m\) incident grid faces per vertex, and
+\(\operatorname{vol}(E_m)=\omega_m/m!\), where \(\omega_m\) is
+the volume of the Euclidean unit ball. Hence
+\[
+\begin{split}
+ N&\le 3^m\,\frac{4^m\omega_m}{m!\,s^m}\\
+  &\le \bigl(12e\sqrt{2\pi e}\bigr)^m
+   <2^{8m}\le2^{10m}.
+\end{split}
+ \tag{639.9}
+\]
+Here we used
+\(\omega_m\le(2\pi e/m)^{m/2}\) and \(m!\ge(m/e)^m\).
+All constants are independent of \(m\).
+
+\subsection{The sensing algorithm and its budget}
+
+\begin{proof}[Proof of Theorem~\ref{thm:639}]
+Apply Lemma~\ref{lem:coloredencoder} to the cover just constructed.
+Compose each query with the continuous map
+\[
+               x\longmapsto (x_1,x_2/2,\ldots,x_m/m)\in E_m .
+ \tag{639.10}
+\]
+Since \(\log_2M\ge L\), the number of measurements is at most
+(639.2), and the first \(m\) output coordinates are recovered within
+\(2/m\). Return zero in the tail, for which
+\[
+                    \sum_{j>m}\frac{x_j^2}{j^2}
+                            \le\frac1{(m+1)^2}.
+ \tag{639.11}
+\]
+The total error is less than \(3/m\), and hence at most \(4/m\).
+All queries are continuous on the original unit ball, take values in
+\([-1,1]\), and handle every admissible adversarial answer.
+
+For the explicit inversion, put
+\[
+                         Z=L\log_2(1+2^n/L).
+ \tag{639.12}
+\]
+If \(Z<64\), the zero-output algorithm has error at most
+\(1\le64/Z\). Otherwise choose \(m=\lfloor Z/32\rfloor\), so
+\(m\ge Z/64\). The budget in (639.2) is bounded by
+\[
+                         \log_2m+3+\frac{10m}{L}.
+ \tag{639.13}
+\]
+Write \(t=2^n/L\) and \(u=\log_2(1+t)\), so \(Z=Lu\).
+Using \(m\le Lu/32\), (639.13) is at most
+\[
+                   n-2+\log_2(u/t)+\frac5{16}u .
+ \tag{639.14}
+\]
+The last two terms are less than \(2\) for every \(t>0\).
+For \(t\le1\), use \(u\le t/\log2\) and \(u\le1\).
+For \(t\ge1\), write \(v=\log_2t\ge0\) and \(u\le1+v\);
+the terms are bounded by
+\[
+                    \frac5{16}+\log_2(1+v)-\frac{11}{16}v,
+ \tag{639.15}
+\]
+whose maximum is less than \(2\), as follows by differentiation.
+Thus the integer budget is at most \(n\), and the error is at most
+\[
+                             \frac4m\le\frac{256}{Z}.
+ \tag{639.16}
+\]
+This proves (639.3).
+\end{proof}
+
+\subsection{What the result does and does not settle}
+
+Combining (639.3) with the entropy lower bound
+\cite{knpw2026} and the antipodal lower bound recorded in the
+catalogue via the adversarial-transcript argument of \cite{aim553} gives
+\[
+ c\max\left\{2^{-n},\frac1{nL}\right\}
+   \le e_n(\delta)
+   \le \frac{256}{L\log_2(1+2^n/L)} .
+ \tag{639.17}
+\]
+These estimates match up to absolute constants in two regimes:
+\[
+\begin{array}{c|c}
+ L\le2^{n/2} & e_n(\delta)\asymp (nL)^{-1}\\
+ L\ge2^n     & e_n(\delta)\asymp 2^{-n}.
+\end{array}
+ \tag{639.18}
+\]
+For example, in the first regime
+\(\log_2(1+2^n/L)\) lies between \(n/2\) and \(n+1\);
+in the second it is comparable to \(2^n/L\).
+The intermediate transition is not determined. At
+\(L\) of order \(2^n/n\), the remaining ratio can be of order
+\(n/\log n\). Neither the cover construction nor the two separate
+lower bounds justify declaring Problem 639 solved.
+
+\begin{thebibliography}{99}
+\bibitem{knu2024}D. Krieg, E. Novak and M. Ullrich, \emph{How many continuous measurements are needed to learn a vector?}, arXiv:2412.06468v2, 22 September 2026. \url{https://arxiv.org/abs/2412.06468}.
+\bibitem{knpw2026}D. Krieg, E. Novak, L. Plaskota and M. Ullrich, \emph{Noisy nonlinear information and entropy numbers}, J. Fourier Anal. Appl. \textbf{32} (2026), 36. \url{https://arxiv.org/abs/2510.23213}; \url{https://doi.org/10.1007/s00041-026-10249-z}.
+\bibitem{aim553} S. Sadeghi, \emph{Continuous adaptive measurements: a sharp asymptotic bound}, AIM 553 research submission, 4 October 2026, Section 1.3. \href{https://github.com/MColbrook/AIM/blob/c4036871b0bf15cbc83e79c780b7191bcbb2cfed/research/solutions/siavash-sadeghi-553/aim553_report.tex}{Pinned source}; see also the pinned catalogue statement of AIM 639 for the ellipsoid restriction.
+\end{thebibliography}
+\end{document}

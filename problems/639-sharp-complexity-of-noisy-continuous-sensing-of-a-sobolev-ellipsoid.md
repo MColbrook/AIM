@@ -1,8 +1,8 @@
 # 639. Sharp complexity of noisy continuous sensing of a Sobolev ellipsoid
 
 **Area:** Numerical analysis / information-based complexity
-**Status:** 🔵 OPEN
-**Last checked:** 2026-10-30
+**Status:** 🟡 PARTIAL
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -53,6 +53,20 @@ This is a compact function approximation problem. In the normalized sine basis o
 3. [AIM 553: Continuous adaptive measurements](https://github.com/MColbrook/AIM/blob/main/research/solutions/siavash-sadeghi-553/aim553_report.tex), §1.3, adversarial transcript proof. Its fixed-radius argument gives the additional exponential lower bound above.
 
 ## Status review
+
+**Known cases:** The new [manuscript](../research/solutions/639-noisy-continuous-sensing-partial/main.pdf) proves
+
+```math
+e_n(\delta)\le\frac{256}{L\log_2(1+2^n/L)},\qquad L=\log_2(1/\delta).
+```
+
+Together with the existing lower bounds this gives the sharp orders $`(nL)^{-1}`$ for $`L\le2^{n/2}`$ and $`2^{-n}`$ for $`L\ge2^n`$. Queries are continuous into $`[-1,1]`$ and tolerate the stated adversarial errors.
+
+**Remaining target:** Determine the uniform joint order in the intermediate transition, including $`L`$ of order $`2^n/n`$, where the remaining ratio can grow like $`n/\log n`$.
+
+**Audit, 4 November 2026:** The solutions were found by AI and are written up by Matthew J. Colbrook. A [fresh independent AI audit](../research/solution_reviews/2026-11-04-numerical-analysis/639-review.md) checked the submitted argument, target match and dependencies. No independent human review or formal verification is claimed.
+
+### Earlier status history
 
 Checked on **18 October 2026**. The published source explicitly leaves the behavior for infinite-dimensional diagonal operators unresolved. This formulation fixes $`p=2`$ and $`\sigma_j=1/j`$ and asks for constants uniform in the noise level. The source's finite-rank noise-correction construction, the known noise-free exponential order, and the entropy bounds for arbitrary discontinuous queries do not supply that characterization. No matching later complete result or announcement was located in the documented searches.
 

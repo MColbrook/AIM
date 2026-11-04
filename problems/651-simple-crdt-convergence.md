@@ -2,9 +2,9 @@
 
 **Area:** Numerical conformal mapping
 
-**Status:** 🔵 OPEN
+**Status:** 🟡 PARTIAL
 
-**Last checked:** 2026-09-24
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -54,6 +54,14 @@ A convergence theorem would supply a mathematical guarantee for a numerical conf
 2. C. J. Bishop, [Bounds for the CRDT conformal mapping algorithm](https://doi.org/10.1007/BF03321771), *Computational Methods and Function Theory* 10(1) (2010), 325–366. [Author manuscript](https://www.math.stonybrook.edu/~bishop/papers/crdt.pdf), Section 7, Figure 26 and Question (3).
 
 ## Status review
+
+**Known cases:** The new [manuscript](../research/solutions/651-crdt-quadrilaterals-partial/main.pdf) proves global convergence for all simple quadrilaterals with four prevertices, including concave and straight-angle cases. It proves $`0<g'(s)<1`$ for every finite scalar parameter, giving convergence from every finite initial value. This applies to the catalogue procedure when its prescribed subdivision leaves four vertices, with explicit nonempty examples.
+
+**Remaining target:** General subdivided polygons, including originally four-sided polygons whose prescribed subdivision adds vertices. No general Jacobian or vector-iteration bound follows from the scalar theorem.
+
+**Audit, 4 November 2026:** The solutions were found by AI and are written up by Matthew J. Colbrook. A [fresh independent AI audit](../research/solution_reviews/2026-11-04-numerical-analysis/651-review.md) checked the submitted argument, target match and dependencies. No independent human review or formal verification is claimed.
+
+### Earlier status history
 
 The original numerical experiments suggest convergence and even a polygon-dependent residual contraction factor below 1. Bishop proves a uniform quasiconformal bound for the initial guess, but explicitly leaves convergence of the iteration unresolved. His paper also disproves the separate proposed uniform bound on differences of logarithmic cross-ratios; that disproved bound is not part of this problem.
 

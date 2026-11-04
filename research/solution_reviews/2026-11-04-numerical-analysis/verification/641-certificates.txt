@@ -1,0 +1,29 @@
+Independent AI audit, 4 November 2026.
+Python: 3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]
+All distributed certificate scripts and JSON files match their submitted SHA-256 hashes.
+COMMAND: python -B verify_641_exact.py
+PASS: all 35 x 35 cardinal values verified in the exact number field.
+PASS: exact degree-eight deficit is symmetric and belongs to Q(sqrt5).
+PASS: all 1536 coefficients of (u+v+w+t)^12 R are positive; each is at least 60.
+
+
+EXIT: 0
+COMMAND: python -B verify_641_planar_base.py
+PASS: planar deficit identity and strict e3 concavity verified exactly.
+PASS: edge and two-equal-coordinate factorizations verified exactly.
+PASS: the remaining quartic is a square plus a positive-definite quadratic form times b^2.
+PASS: all algebraic ingredients of the independent planar Fejer proof hold.
+
+
+EXIT: 0
+COMMAND: python -B verify_641_fourth_exact.py
+PASS: stable fourth-power deficit independently derived (163 power-sum terms).
+PASS: exact cardinal/power-sum evaluations in seven dimensions and derivative check.
+PASS: all 1255 slope coefficients nonnegative; 28 exact, equal-length Muirhead payments.
+PASS: the derivative certificate holds for every number of variables, hence proves the fourth-power induction.
+
+
+EXIT: 0
+Reconstructed Fejer JSON equals the supplied JSON: PASS
+Equality-set coefficient D1_coefficients[(23)] = 40: PASS
+Equality-set coefficient residual_mean_coefficients[(23)] = 160: PASS

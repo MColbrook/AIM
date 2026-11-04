@@ -4,7 +4,7 @@
 
 **Status:** 🟡 PARTIAL
 
-**Last checked:** 2026-10-04
+**Last checked:** 2026-11-04
 
 ## Problem statement
 
@@ -63,8 +63,16 @@ Explicit extremal interpolation nodes support stable polynomial approximation on
 
 ## Status review
 
-**Known cases:** The cubic Fejér property is now proved for every $`d\ge1`$. [PR #32](https://github.com/MColbrook/AIM/pull/32) supplies the [proof](../research/solutions/siavash-sadeghi-641/aim641_report.pdf) and [editable source](../research/solutions/siavash-sadeghi-641/aim641_report.tex). A [fresh independent AI audit](../research/solution_reviews/2026-10-04-active-prs/641-review.md) on 4 October 2026 checked the complete argument against this target and found no blocking mathematical defect. No independent human audit or formal verification is claimed. The proof uses a dimension-independent symmetric deficit, exact low-dimensional bases, and 45 coefficient types checked symbolically in the dimension. A separately written symbolic expansion reproduces the uniform identity; normal and optimized runs and controlled corruption checks pass.
+**Known cases:** The previously reviewed [cubic proof](../research/solutions/siavash-sadeghi-641/aim641_report.pdf) resolves assertion 1 in every dimension. The new [quartic manuscript](../research/solutions/641-quartic-simplex-certificates/main.pdf) resolves assertion 2 (tetrahedral Fejér) and assertion 4 (the fourth-power bound in every dimension, with equality exactly at the nodes), with exact reconstructing verifiers and finite certificates. Hadamard also gives quartic Fekete in dimension three. The known one- and two-dimensional cases remain; Bos's quartic square-sum violation from dimension four onward is unchanged.
+
+**Remaining target:** Assertion 3, the quartic Fekete property, in dimensions $`d\ge4`$. The fourth-power bound does not imply this determinant maximum. The grouped entry remains partially resolved.
+
+**Audit, 4 November 2026:** The solutions were found by AI and are written up by Matthew J. Colbrook. A [fresh independent AI audit](../research/solution_reviews/2026-11-04-numerical-analysis/641-review.md) checked the submitted argument, target match and dependencies. No independent human review or formal verification is claimed.
+
+### Earlier status history
+
+**Previously recorded cases:** The cubic Fejér property is now proved for every $`d\ge1`$. [PR #32](https://github.com/MColbrook/AIM/pull/32) supplies the [proof](../research/solutions/siavash-sadeghi-641/aim641_report.pdf) and [editable source](../research/solutions/siavash-sadeghi-641/aim641_report.tex). A [fresh independent AI audit](../research/solution_reviews/2026-10-04-active-prs/641-review.md) on 4 October 2026 checked the complete argument against this target and found no blocking mathematical defect. No independent human audit or formal verification is claimed. The proof uses a dimension-independent symmetric deficit, exact low-dimensional bases, and 45 coefficient types checked symbolically in the dimension. A separately written symbolic expansion reproduces the uniform identity; normal and optimized runs and controlled corruption checks pass.
 
 The quartic Fejér property holds for $`d\le2`$ but fails for $`d\ge4`$: Bos's four-dimensional centroid violation persists on faces in higher dimensions. These published cases are unchanged.
 
-**Remaining target:** The quartic Fejér property in dimension three, the quartic Fekete property in every dimension, and the quartic fourth-power bound in every dimension remain outside this result. The grouped entry therefore stays partially resolved; no quartic conclusion is inferred from the cubic proof.
+**Previous remaining target:** The quartic Fejér property in dimension three, the quartic Fekete property in every dimension, and the quartic fourth-power bound in every dimension remain outside this result. The grouped entry therefore stays partially resolved; no quartic conclusion is inferred from the cubic proof.
