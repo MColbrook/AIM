@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**856 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**855 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -21,7 +21,7 @@
 | [Fluids, kinetic theory and continuum mechanics](#fluids-kinetic-theory-and-continuum-mechanics) | [36](#continuum2-open) | [12](#continuum2-solved) |
 | [Stochastic growth, populations and statistical mechanics](#stochastic-growth-populations-and-statistical-mechanics) | [22](#stochastic2-open) | [9](#stochastic2-solved) |
 | [Many-body physics, quantum information and wave analysis](#many-body-physics-quantum-information-and-wave-analysis) | [24](#spectral3-open) | [15](#spectral3-solved) |
-| [Nonlinear waves, fluids and kinetic equations](#nonlinear-waves-fluids-and-kinetic-equations) | [52](#waves-fluids-kinetics-open) | [7](#waves-fluids-kinetics-solved) |
+| [Nonlinear waves, fluids and kinetic equations](#nonlinear-waves-fluids-and-kinetic-equations) | [51](#waves-fluids-kinetics-open) | [7](#waves-fluids-kinetics-solved) |
 | [Diffusion, materials and variational problems](#diffusion-materials-and-variational-problems) | [54](#diffusion-materials-open) | [16](#diffusion-materials-solved) |
 | [Applied geometry, control and information](#applied-geometry-control-and-information) | [38](#inverse3-open) | [11](#inverse3-solved) |
 | [Stochastic dynamics, reaction networks and applied optimization](#stochastic-dynamics-reaction-networks-and-applied-optimization) | [37](#stochastic3-open) | [9](#stochastic3-solved) |
@@ -1016,7 +1016,6 @@
 | 1045 | [Does the period of Wright's slowly oscillating cycle increase with the parameter?](problems/1045-does-the-period-of-wright-s-slowly-oscillating-cycle-increase-with-the-parameter.md) | 🟡 PARTIAL | Delay differential equations and population dynamics |
 | 1046 | [Does sub-half-Hölder vorticity alignment improve mixed integrability?](problems/1046-does-sub-half-holder-vorticity-alignment-improve-mixed-integrability.md) | 🟡 PARTIAL | Three-dimensional incompressible fluids and vortex stretching |
 | 1047 | [Global energy-class propagation for the three-dimensional hyperbolic cubic Schrödinger equation](problems/1047-global-energy-class-propagation-for-the-three-dimensional-hyperbolic-cubic-schrodinger-equation.md) | 🟡 PARTIAL | Nonlinear waves, fluids and kinetic equations; dispersive PDEs |
-| 1048 | [Can neighboring water-wave Bloch bands overlap?](problems/1048-can-neighboring-water-wave-bloch-bands-overlap.md) | 🟡 PARTIAL | Water waves and spectral theory |
 | 1049 | [Scalar integrable PDEs with the same quasilinear part](problems/1049-scalar-integrable-pdes-with-the-same-quasilinear-part.md) | 🟡 PARTIAL | Integrable nonlinear evolution equations; formal conservation-law hierarchies |
 | 1050 | [Uniqueness for a planar plasma coupled to an attractive moving point charge](problems/1050-uniqueness-for-a-planar-plasma-coupled-to-an-attractive-moving-point-charge.md) | 🟡 PARTIAL | Kinetic equations and singular particle–field coupling |
 | 1051 | [Vanishing-thickness dynamics of straight non-circular rods in Stokes flow](problems/1051-vanishing-thickness-dynamics-of-straight-non-circular-rods-in-stokes-flow.md) | 🟡 PARTIAL | Nonlinear waves, fluids and kinetic equations |
@@ -1050,6 +1049,12 @@
 | 367 | [A universal quantitative error bound for small-BV hyperbolic flows](problems/367-universal-hyperbolic-error-rate.md) | ✅ SOLVED | Counterexample to the proposed universal square-root logarithmic error bound, with one fixed compactly supported small-BV initial datum. | [Proof](research/solutions/367-hyperbolic-error-counterexample/paper/paper.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/367-review.md) |
 | 376 | [The zero center-of-mass diffusion limit for kinetic FENE fluids](problems/376-fene-vanishing-center-of-mass-diffusion.md) | ✅ SOLVED | The conditional-density argument establishes a subsequential vanishing-center-of-mass-diffusion limit for the complete stated periodic three-dimensional FENE target. | [Proof](research/solutions/376-fene-vanishing-center-of-mass-diffusion/paper/main.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/376-review.md) |
 | 441 | [Global smooth propagation for a laser envelope coupled to ionization](problems/441-ionization-laser-envelope-global-regularity.md) | ✅ SOLVED | Counterexample to universal global regularity: finite-time gradient blowup for the actual coupled three-dimensional ionization system from smooth compactly supported optical data and zero nonnegative density, with one admissible positive photoionization coefficient. | [Proof](research/solutions/441-ionization-blowup/paper/ionization_blowup.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/441-review.md) |
+
+### Solution claimed
+
+| ID | Problem | Status | Outcome | Proof | Review |
+| --- | --- | --- | --- | --- | --- |
+| 1048 | [Can neighboring water-wave Bloch bands overlap?](problems/1048-can-neighboring-water-wave-bloch-bands-overlap.md) | 🟠 SOLUTION CLAIMED | Affirmative proof | [Proof](research/solutions/siavash-sadeghi-1048/research_nonoverlap_proof.pdf) | [Review](research/solutions/siavash-sadeghi-1048/SUBMISSION_REVIEW.md) |
 
 ## Diffusion, materials and variational problems
 
@@ -1529,7 +1534,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 22 expansion — PDE emphasis | 88 | 2026-09-22–2026-10-30 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
 | Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 114 | 2026-09-23–2026-11-04 |
-| Retained further problems, integrated 30 October 2026 | 384 | 2026-10-30–2026-11-04 |
+| Retained further problems, integrated 30 October 2026 | 383 | 2026-10-30–2026-11-04 |
 
 ## Maintaining the collection
 
