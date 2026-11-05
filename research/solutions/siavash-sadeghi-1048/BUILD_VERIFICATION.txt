@@ -1,0 +1,37 @@
+SUBMISSION BUILD AND VERIFICATION
+Date: 5 November 2026
+Reviewer/operator: Codex (AI). No human review or formal verification.
+
+Diagnostics: Python 3.12.14, NumPy 2.3.5.
+- normal: 21 diagnostic cases passed; parsed results equal supplied JSON exactly.
+- normal: 5 regression tests passed, including broken phase, non-finite data, energy increase and mass decrease rejection.
+- optimized: 21 diagnostic cases passed; parsed results equal supplied JSON exactly.
+- optimized: 5 regression tests passed, including broken phase, non-finite data, energy increase and mass decrease rejection.
+The underlying construction and floating-point results are unchanged.
+The test runner checks rejection of broken data; it does not prove the theorem.
+
+PDFs:
+- Installed MiKTeX-pdfTeX; two successful passes per source.
+- Shell escape and automatic package installation disabled.
+- Proof: 6 pages. Review guide: 4 pages.
+- No overfull boxes, undefined references or pending rerun warnings.
+- One underfull paragraph notice in the proof and two in the guide;
+  all corresponding pages were inspected and have readable, unclipped layout.
+- All ten pages rendered with Poppler at 105 dpi and visually inspected.
+- Both PDFs contain the submitter name and explicit absence of human review.
+
+Repository and integrity:
+- Original ZIP manifest verified before editing.
+- Mathematical proof body unchanged from the supplied package.
+- All four supplied AI audit reports and original numeric JSON unchanged byte for byte.
+- Target and contribution snapshots match the pinned repository revision.
+- Original problem statement unchanged; only data row 1048 changed.
+- python scripts/catalogue.py --write --catalogue-only: successful;
+  855 open targets and 212 retained entries in the proposed catalogue.
+- python scripts/catalogue.py --check --catalogue-only: successful;
+  1,058 unique problems, metadata, required sections, math delimiters,
+  registered local links and generated index freshness validated.
+- Final whitespace check, file manifest and ZIP CRC checked before publication.
+
+These checks support reproducibility and presentation. Numerical agreement,
+informal AI review and successful compilation are not formal proof verification.

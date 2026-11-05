@@ -1,0 +1,195 @@
+FRESH ADVERSARIAL AUDIT: DOUBLED-STRIP RECONSTRUCTION, MASS, AND GEOMETRY
+Date: 5 November 2026
+Source read: research_nonoverlap_proof.tex only. No earlier audit was read.
+No edits to the proof were made.
+
+VERDICT
+
+PASS in the requested scope. I found no algebraic, phase, parity, measure,
+orientation, density, or boundary-regularity error in Sections 1 and 5 or in
+the reconstruction of the divided functions used in Sections 3-4. In
+particular, formula (7) is correct for arbitrary complex Bloch data and real
+non-even p. Its real-part operator is essential. Positivity of
+p=cosh(dD)rho is indeed forced by every analytic physical graph bottom.
+The positivity assumption is not being inferred just from positive rho.
+
+1. INDEPENDENT RECONSTRUCTION AND ENERGY DERIVATION
+
+Put k_m=m+theta and v_m=u_m/cosh(d k_m). Then
+  V(s+ir)=sum_m v_m exp(i k_m s) exp(-k_m r),
+  V(s-ir)=sum_m v_m exp(i k_m s) exp(+k_m r).
+Their half-sum is sum_m v_m cosh(k_m r) exp(i k_m s).
+This solves the scalar complex harmonic equation, has zero r derivative
+at r=0, and equals u at r=d. No reality constraint on u or v is needed.
+
+Orthogonality uses k_m-k_n=m-n, so it remains valid for every real phase.
+For each nonzero k,
+  integral_{-d}^d |k v exp(-k t)|^2 dt = k sinh(2dk)|v|^2.
+Thus Q=(P/2)sum_m k_m sinh(2dk_m)|v_m|^2
+      =P sum_m k_m tanh(dk_m)|u_m|^2,
+with zero contribution from a zero-frequency constant. This matches (5)
+and the stated single-strip energy, including its factor 1/2.
+
+For fixed phase, exponential decay of 1/cosh(dk) makes V holomorphic in
+the open doubled strip. On either edge its coefficient multiplier from
+u is exp(+/-dk)/cosh(dk), whose modulus is at most 2. Edge convergence
+therefore holds in H^{1/2}, not just in L^2. Also
+  k sinh(2dk)/cosh^2(dk)=2 k tanh(dk),
+so the derivative integral is finite when u is in H^{1/2}. The L^2
+part of the H^1 norm is finite as well; the zero-frequency contribution
+is 2dP|v_0|^2. Conversely, the H^1 Fourier weights of a holomorphic
+Bloch function imply that v_m cosh(dk_m) are H^{1/2} coefficients.
+Reconstruction is injective because cosh(dk_m)>0 on all real frequencies.
+
+2. THE NON-EVEN, COMPLEX CROSS TERM
+
+Use f(s)=sum_l f_l exp(ils). For finite sums the complex cross integral is
+  I=P sum_{m,n} rho_{n-m} v_m conjugate(v_n) exp(d(n-m)).
+Reality of rho gives conjugate(rho_{m-n})=rho_{n-m}; evenness is not used.
+After conjugating I and swapping m,n,
+  Re I=P sum_{m,n} rho_{n-m} cosh(d(n-m))
+                         v_m conjugate(v_n)
+      =P sum_{m,n} p_{n-m} v_m conjugate(v_n)
+      =integral p(s)|V(s)|^2 ds.
+The Bloch phase cancels before this calculation. One must not replace
+rho_{n-m} by rho_{m-n} without conjugation; the proof does not do that.
+Expanding |(V_++V_-)/2|^2 gives exactly (6), with the factors 1/4 and 1/2.
+
+For general form-domain traces, Fourier truncations converge on both
+edges and on the middle line in L^2. Since rho and p are bounded,
+weighted products converge in L^1 by Cauchy-Schwarz. This justifies (7)
+and (6) without additional smoothness or an illicit infinite rearrangement.
+The harmonic middle-line interpretation of rho_k=p_k/cosh(dk) also works
+for non-even p. Positive continuous boundary values on both edges give
+min p <= rho <= max p by the maximum principle on the periodic cylinder.
+
+3. PHYSICAL GEOMETRY, PERIOD, AND ORIENTATION
+
+Under z=x+iy -> exp(-iz), the physical top is the unit circle and the
+bottom is exp(-H(x))exp(-ix). The latter is analytic, simple and regular:
+its argument fixes x modulo 2pi, and its derivative is its nonzero value
+times (-H'(x)-i). Positive depth separates it from the top circle.
+An annulus uniformization can be chosen to send outer to outer and inner
+to inner. Its lift has deck transformation Z(w+2pi)=Z(w)+2pi. Equivalently,
+the induced winding degree is +1, so there is no free horizontal scaling
+left after setting the parameter period to 2pi. The annulus modulus is
+retained as d, with inner standard-annulus radius exp(-d).
+
+Analytic embedded boundary curves permit local analytic reflection for
+the map and its inverse. On these compact boundary circles this gives
+local analytic extension everywhere and nonvanishing boundary derivative.
+This is the regularity fact needed here. I did not independently verify
+the manuscript's bibliographic page numbers.
+
+On the top, Z(s) is real, so Z'(s) is real and nonzero. On the bottom,
+  Z(s-id)=X(s)+i[-h+b(X(s))],
+  Z'(s-id)=X'(s)[1+i b'(X(s))].
+If X' vanished, Z' would vanish. Thus X' has a constant nonzero sign.
+Since X(s+P)-X(s)=P, its integral over one period is P, fixing the sign
+as positive. The same reasoning fixes the positive sign on the top.
+This does not confuse the induced boundary orientation (opposite on the
+two boundary components) with the increasing horizontal parameter s.
+
+Expand the periodic holomorphic derivative using its top coefficients:
+  Z'(w)=sum_k rho_k exp(ikw),  rho_{-k}=conjugate(rho_k).
+On the bottom this becomes sum_k rho_k exp(dk)exp(iks). Its real part
+has coefficient
+  [exp(dk)rho_k+exp(-dk)conjugate(rho_{-k})]/2
+  =cosh(dk)rho_k.
+Therefore p=Re Z'(s-id)=X'>0 is necessary for EVERY analytic graph in
+the theorem. No symmetry of b, X, rho, or p has entered. Physical maps
+also satisfy rho_0=p_0=1, consistently with the period; the abstract
+weighted theorem may allow other means without harming this application.
+
+The physical top line element is |Z'(s)|ds=rho(s)ds. The conformal
+Dirichlet invariance holds componentwise for complex harmonic functions.
+Zero Neumann data remain zero under the conformal normal scaling.
+The period identity preserves exp(iPtheta) exactly. The energy and top
+mass densities are periodic despite the functions being quasiperiodic,
+so choosing curved instead of vertical sides for a fundamental cell
+does not change either integral.
+
+4. DIVIDED OUTPUT REGULARITY AND DENSITY
+
+Finite Bloch Fourier sums are dense in H^{1/2} after removing the fixed
+Bloch gauge. The strip form and bounded positive weighted mass are
+continuous in that topology. Approximating a finite eigenfunction basis
+therefore gives convergent finite Gram matrices and preserves independence
+for sufficiently accurate approximation. No uniform approximation in n
+or theta is required by the min-max comparison.
+
+For the actual finite-series inputs, V is entire. V(a)=0 implies a zero
+at every a+jP by its character. The denominator has only simple zeros
+at this lattice, so V/B has removable singularities there. The denominator
+is nonzero near either horizontal edge. Normal convergence of its product
+there gives analytic extension, so W is smooth on the closed doubled
+cell. Its reconstructed top trace is therefore admissible and smooth,
+and belongs to the new character. The reconstruction remains injective
+by the positive cosh multipliers. The proof never needs a bounded division
+operator on the whole rough form domain. Positivity of p and equality of
+edge moduli then legitimately imply M(W)>=M(V).
+
+5. NUMERICAL ADVERSARIAL TESTS, INCLUDING A PHYSICAL NON-EVEN EXAMPLE
+
+These numerical tests supplement, rather than replace, the exact algebra.
+They were evaluated in JavaScript double precision using periodic
+trapezoidal sums, with no pre-existing audit code or data.
+
+Use d=0.8 and
+  Z(w)=w+0.18 sin(w)+0.02 cos(2w),
+  rho(s)=1+0.18 cos(s)-0.04 sin(2s),
+  p(s)=1+0.18 cosh(0.8)cos(s)-0.04 cosh(1.6)sin(2s).
+This is an actual conformal physical graph example: Re Z'>=1-
+0.18cosh(0.8)-0.04cosh(1.6)>0 throughout the strip, which also implies
+injectivity by integrating Z' on straight segments in the convex strip.
+The bottom is
+  X=s+0.18cosh(0.8)sin(s)+0.02cosh(1.6)cos(2s),
+  Y=-0.8-0.18sinh(0.8)cos(s)+0.02sinh(1.6)sin(2s).
+Here X'>0 and Y<0; inverting X gives an analytic periodic graph bottom.
+The sampled minima are p=0.7019634094 and rho=0.8051436797.
+The sine term makes both weights non-even.
+
+A. Five complex modes:
+  m=(-3,-1,0,2,4),
+  u_m=(1+0.3i,-0.7+0.4i,0.2-0.8i,1.1+0.9i,-0.4-0.2i).
+Using 32768 points, compare direct top mass and formula (6):
+  theta       direct mass          absolute error
+  -0.43       29.088634698118675    4.47e-14
+   0          29.088634698118668    1.96e-13
+   0.27       29.088634698118675    2.40e-13
+   0.91       29.088634698118660    2.13e-13
+   4.27       29.088634698118668    1.68e-13
+The maximum reconstruction error was below 1.84e-15.
+At theta=0.27, the cross integral is
+  8.36527814712008 - 0.566444645128745 i,
+while integral p|V_0|^2 is 8.365278147120012. Thus this is a sensitive
+test of taking the real part; the unsymmetrized cross term is NOT real.
+The top mass being constant across these phases is expected because the
+same u_m yield a common pointwise modulus after multiplication by e^{i theta s}.
+
+B. Division and a changed character:
+Take a=0.41+0.3i, theta=0.37, and
+  V(z)=exp(i(theta-2)z)[exp(iz)-exp(ia)]
+       [1+(0.3+0.4i)exp(-2iz)+(-0.2+0.1i)exp(3iz)].
+Then V(a)=0 exactly by construction. Use the manuscript's B_y with six
+normalized product pairs, and set W=V/B_y. Its character shift is
+chi=(1-0.3/0.8)/2=0.3125, so theta_out=0.0575.
+Using 16384 points gives
+  input top mass                    111.28417111377127
+  output top mass                   112.73719727218028
+  output formula (6)                112.73719727218024
+  output identity error             4.47e-14
+  output cross integral             13.326914501937981-0.0267741080511865i
+  output middle p integral          13.326914501938012
+  maximum edge modulus error of B   2.89e-15
+  B character-ratio error            5.67e-16
+  W character-ratio error            1.03e-15
+No mass identity or phase failure appeared; the mass increased as claimed.
+
+6. LIMIT OF THIS VERDICT
+
+The check establishes the requested reconstruction/mass/geometric
+ingredients and the admissibility and density issues they depend on.
+It is not an independent bibliographic audit of the quoted reference
+locations or a separate full review of the final C^1 perturbation section.
+No correction to the requested mathematical ingredients is indicated.

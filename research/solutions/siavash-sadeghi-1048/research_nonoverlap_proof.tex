@@ -1,0 +1,389 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,geometry,hyperref}
+\geometry{margin=1in}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\D}{\mathcal D}
+\hypersetup{pdftitle={AIM 1048: Band nonoverlap},pdfauthor={AI-assisted research; submitted by Siavash Sadeghi}}
+\begin{document}
+\title{Band nonoverlap from division by a strip Blaschke factor}
+\author{AI-assisted research draft for review}
+\date{5 November 2026}
+\maketitle
+\noindent\textbf{Review status.} This is a proposed resolution of AIM problem
+1048, prepared with AI assistance. No human review or formal verification
+has taken place. Submitted by Siavash Sadeghi. See the accompanying review
+note for scope and provenance.
+
+
+\begin{theorem}[Graph-bottom water waves]
+Let $h>0$, and let $b$ be real, $2\pi$-periodic and $C^1$, with
+$\min_x(h-b(x))>0$. For the exact harmonic-extension
+Dirichlet--Neumann operator with a flat top and homogeneous Neumann
+bottom condition, its ordered Bloch eigenvalues satisfy
+\[
+ \Lambda_n(\theta_a)\le\Lambda_{n+1}(\theta_b)
+ \quad\text{for every }n\ge0\text{ and every }\theta_a,\theta_b\in\mathbb R.
+ \tag{1}
+\]
+Consequently $\max_\theta\Lambda_n(\theta)\le
+\min_\theta\Lambda_{n+1}(\theta)$ for every $n$. Eigenvalues are counted
+with multiplicity, and touching bands are allowed.
+\end{theorem}
+
+The proof first establishes a weighted strip theorem. Its crucial
+geometric condition is a positive weight on the middle of a doubled
+strip. An arbitrary positive surface weight does not suffice for this
+argument.
+
+\section*{1. Weighted strip and its analytic representation}
+Fix $P=2\pi$ and $d>0$. Let $p$ be a continuous real periodic function
+with $\min p>0$, and let
+\[
+ \rho_k=\frac{p_k}{\cosh(dk)},\qquad k\in\mathbb Z. \tag{2}
+\]
+Then $\rho$ is continuous and positive. Indeed it is the value on the
+middle line of the harmonic function on $|\operatorname{Im}z|<d$ with
+boundary value $p$ on both edges, so $\min p\le\rho\le\max p$ by the
+maximum principle. Consider the harmonic extension in the single
+strip $-d<t<0$, with zero Neumann data at $t=-d$, and use top mass
+$\int_0^P\rho(s)|u(s)|^2ds$. All quasiperiodic functions below have
+unitary character $e^{iP\theta}$.
+The strip form has the explicit Fourier value
+\[
+ q_\theta[u]=P\sum_m (m+\theta)\tanh(d(m+\theta))|u_m|^2.
+\]
+Consequently $q_\theta+\int\rho|u|^2$ is equivalent to the
+$H^{1/2}$ norm squared. The form is closed, and the compact embedding
+$H^{1/2}\hookrightarrow L^2(\rho ds)$ gives compact resolvent.
+Its ordered min--max formula can also be seen directly from an
+orthonormal eigenbasis: an $(n+1)$-dimensional subspace contains a
+nonzero vector orthogonal to the first $n$ basis vectors, while the
+span of the first $n+1$ attains the opposite inequality.
+
+For a top trace
+$u(s)=\sum_m u_m e^{i(m+\theta)s}\in H^{1/2}$ define its bottom trace
+and holomorphic continuation by
+\[
+ v(s)=\sum_m\frac{u_m}{\cosh(d(m+\theta))}e^{i(m+\theta)s},
+ \qquad
+ V(z)=\sum_m\frac{u_m}{\cosh(d(m+\theta))}e^{i(m+\theta)z}.
+ \tag{3}
+\]
+Thus $V$ is holomorphic on $\D_d=\{|\operatorname{Im}z|<d\}$, has
+the same character, belongs to $H^1$ on one doubled cell, and its two
+edge traces belong to $H^{1/2}$. The original harmonic extension, with
+$r=t+d\in[0,d]$, is
+\[
+ U(s,-d+r)=\frac{V(s+ir)+V(s-ir)}2. \tag{4}
+\]
+Conversely every holomorphic $H^1$ function on a doubled cell with
+unitary character gives an admissible top trace by (4). These claims
+follow directly from Fourier series: the multipliers on either edge
+in (3) are bounded, and the analytic Dirichlet energy weights a
+coefficient $v_m$ by
+$(m+\theta)\sinh(2d(m+\theta))$, with its nonnegative limiting
+interpretation at zero.
+
+Write $V_\pm(s)=V(s\pm id)$ and $V_0(s)=V(s)$. The strip energy and
+weighted top mass are respectively
+\[
+ Q(V)=\frac12\int_{(0,P)\times(-d,d)}|V'(z)|^2\,ds\,dt, \tag{5}
+\]
+\[
+ M(V)=\frac14\int_0^P\rho(s)
+       \bigl(|V_+(s)|^2+|V_-(s)|^2\bigr)\,ds
+       +\frac12\int_0^P p(s)|V_0(s)|^2\,ds. \tag{6}
+\]
+For (5), differentiate (4) and use
+$|a+b|^2+|a-b|^2=2|a|^2+2|b|^2$.
+For (6), expand the top square in (4). The real part of its cross
+term is
+\[
+ \operatorname{Re}\int_0^P\rho V_+\overline{V_-}\,ds
+ =\int_0^P p|V_0|^2\,ds. \tag{7}
+\]
+For finite Fourier sums this follows because symmetrizing the
+coefficient $e^{d((n+\theta)-(m+\theta))}\rho_{n-m}$ replaces it by
+$\cosh(d(n-m))\rho_{n-m}=p_{n-m}$. General functions follow by
+Fourier truncation: both edge traces converge in $L^2$, and the middle
+trace also converges in $L^2$. Notice that (7) is independent of the
+Bloch phase.
+The real-part operation in (7) is essential: the unsymmetrized
+cross integral need not be real for complex data or a non-even
+weight. No evenness or reality of the Bloch function is assumed.
+
+\section*{2. An inner factor with any prescribed nontrivial character}
+Fix $s_0\in\mathbb R$ and $y\in(-d,d)$, and put
+\[
+ c=\frac{\pi}{4d},\qquad \tau=\tan(cy),\qquad
+ b_y(z)=\frac{\tanh(cz)-i\tau}{1+i\tau\tanh(cz)}.
+\]
+The map $\tanh(cz)$ maps $\D_d$ conformally to the unit disk;
+$b_y$ is its disk Blaschke factor for the point $iy$. Therefore
+$|b_y|<1$ inside, $|b_y|=1$ on the two edges, and its only zero in
+the strip is $iy$, a simple zero. Its limits as $\operatorname{Re}z$
+tends to plus or minus infinity are
+\[
+ b_+=e^{-2icy},\qquad b_-=-e^{2icy}.
+\]
+Define
+\[
+ B_y(z)=b_y(z-s_0)\prod_{j=1}^\infty
+ \frac{b_y(z-s_0-jP)}{b_-}
+ \frac{b_y(z-s_0+jP)}{b_+}. \tag{8}
+\]
+Each normalized factor differs from one by an exponentially decaying
+quantity as $j\to\infty$, uniformly on a closed period rectangle and
+on a small neighborhood of its two horizontal edges. The product and
+its derivatives thus converge normally there. It defines a
+holomorphic function on the whole strip, smooth through the edges,
+whose zeros are exactly $s_0+jP+iy$, all simple. Every factor has
+modulus at most one in the closed strip, so
+\[
+ |B_y|\le1\text{ in }\D_d,
+ \qquad |B_y|=1\text{ on its two edges}. \tag{9}
+\]
+More explicitly, fix $0<\eta<d-|y|$. The nearest poles of a single
+factor are at heights $2d-y$ and $-2d-y$, outside
+$|\operatorname{Im}z|\le d+\eta$. On a bounded horizontal interval
+the normalized tails are $1+O(e^{-2cjP})$, uniformly in that enlarged
+strip. Their deviations from one are summable. The infinite tail
+therefore has a nonzero limit away from the listed zeros, and normal
+convergence on a slightly larger compact set also gives convergence
+of derivatives. Thus the assertion about the exact zero set does
+not follow merely from boundedness of the finite products.
+Reindexing a finite symmetric product and taking its limit gives
+\[
+ \frac{B_y(z+P)}{B_y(z)}=\frac{b_+}{b_-}
+ =\exp\!\left(i\pi\left(1-\frac yd\right)\right).
+ \tag{10}
+\]
+The identity extends through the zeros. Hence its character parameter
+is
+\[
+ \chi(y)=\frac{1-y/d}{2}\in(0,1). \tag{11}
+\]
+In particular every nontrivial unitary character occurs. Finally
+$\log|B_y|$ vanishes on the edges and is negative immediately inside;
+its outward normal derivative there is nonnegative. This follows
+already by taking the one-sided derivative of a smooth function
+that is nonpositive on an inward normal segment and zero at its
+endpoint. Write
+\[
+ \beta_\pm(s)=\partial_\nu\log|B_y(s\pm id)|\ge0. \tag{12}
+\]
+The product is character-automorphic, not generally periodic.
+No uniform edge regularity as $y\to\pm d$ is asserted or needed.
+
+\section*{3. Division decreases energy and increases mass}
+For the main argument it suffices to take a finite Bloch Fourier
+series $u$, so that $V$ in (3) is entire. Suppose it vanishes at
+$a=s_0+iy$. By its character it vanishes at all $a+jP$. Consequently
+\[
+ W=V/B_y \tag{13}
+\]
+is holomorphic throughout the strip and has character parameter
+$\theta-\chi(y)$ modulo integers. The apparent poles are removable,
+and $B_y$ is analytic and nonzero through the two horizontal edges.
+Thus $W$ is smooth through the closed doubled cell. It represents
+an admissible top trace by (4); no assertion about division of a
+rough trace is needed. Reconstruction is injective: on each real
+Bloch frequency it multiplies the middle Fourier coefficient by
+$\cosh(d(m+\theta-\chi(y)))>0$, after an integer relabeling if needed.
+
+The equal edge moduli and (6), together with $p>0$ and $|B_y|\le1$,
+give
+\[
+ M(V)\le M(W). \tag{14}
+\]
+For the energy, the exact identity is
+\[
+ Q(V)-Q(W)
+ =\frac14\sum_{\pm}\int_0^P\beta_\pm(s)|W_\pm(s)|^2\,ds\ge0.
+ \tag{15}
+\]
+Indeed, for a holomorphic smooth function $F$,
+$\Delta|F|^2=4|F'|^2$, and hence (5) is one eighth of the boundary
+integral of $\partial_\nu|F|^2$. The lateral contributions cancel
+because $|F|^2$ is periodic. On the horizontal edges $|B_y|=1$ and
+\[
+ \partial_\nu|B_yW|^2-\partial_\nu|W|^2
+ =2\beta_\pm|W|^2.
+\]
+This proves (15) for precisely the smooth functions used below.
+
+Combining (14)--(15) yields
+\[
+ \frac{Q(W)}{M(W)}\le\frac{Q(V)}{M(V)}
+ \quad(V\ne0). \tag{16}
+\]
+The division map is complex linear and injective on its domain.
+
+\section*{4. All-phase ordered interlacing on the weighted strip}
+Let $\lambda_n(\theta)$ denote the ordered weighted strip
+eigenvalues. Fix arbitrary $\theta_a,\theta_b$. If their characters
+coincide, $\lambda_n(\theta_a)\le\lambda_{n+1}(\theta_b)$ is the
+ordinary ordering. Otherwise choose $y$ so that
+\[
+ \chi(y)=\theta_b-\theta_a\pmod1,
+ \qquad 0<\chi(y)<1. \tag{17}
+\]
+Fix $\varepsilon>0$. Approximate a basis of the first $n+2$
+eigenfunctions in phase $\theta_b$ by finite Bloch Fourier series in
+$H^{1/2}$. Since the form and mass Gram matrices converge, with the
+mass matrix remaining positive definite, this gives an
+$(n+2)$-dimensional finite Fourier subspace $L$ such that
+\[
+ \max_{0\ne u\in L}\frac{q_{\theta_b}[u]}{\int\rho|u|^2}
+ \le\lambda_{n+1}(\theta_b)+\varepsilon. \tag{17a}
+\]
+This remains true when eigenvalues have multiplicity: any orthonormal
+eigenbasis for their span can be approximated in this way.
+Evaluation $V\mapsto V(s_0+iy)$ is one complex linear functional on
+$L$. Its kernel intersection has dimension at least $n+1$.
+Apply division (13) and reconstruct top traces by (4). This gives an
+injective linear image of dimension at least $n+1$ in phase
+$\theta_a$, and (16) holds for every nonzero vector. The min--max
+principle consequently gives
+\[
+ \lambda_n(\theta_a)\le\lambda_{n+1}(\theta_b)+\varepsilon.
+\]
+More explicitly, the maximum quotient on $L$ is at least the maximum
+on its kernel intersection, which is at least the maximum on the
+divided image, which is at least $\lambda_n(\theta_a)$. Letting
+$\varepsilon\downarrow0$ proves
+\[
+ \lambda_n(\theta_a)\le\lambda_{n+1}(\theta_b). \tag{18}
+\]
+The approximation is only in one finite-dimensional spectral
+subspace for fixed $n$ and phase. No uniform-in-index approximation
+or division of a general form-domain function is being assumed.
+
+\section*{5. Exact geometric reduction for analytic graph bottoms}
+Suppose first that $b$ is real analytic and periodic, with positive
+depth $H(x)=h-b(x)$. The physical channel modulo horizontal period
+is conformally an annulus. For example $\zeta=e^{-iz}$ identifies
+it with the doubly connected planar domain bounded by the unit
+circle and the analytic simple curve
+$\zeta=e^{-H(x)}e^{-ix}$; its two boundary components are disjoint.
+Annular uniformization, with its analytic boundary extension, gives
+after lifting logarithms a conformal map
+\[
+ Z:\{-d<\operatorname{Im}w<0\}\longrightarrow\Omega_b,
+ \qquad Z(w+P)=Z(w)+P, \tag{19}
+\]
+for some $d>0$, taking top to top and bottom to bottom. The map and
+its inverse extend analytically locally through either boundary,
+and their derivatives are nonzero there. The horizontal period is
+still exactly $P$; no depth-to-period ratio is discarded.
+
+For precise standard references, annular uniformization is the
+connectivity-two case of L.~V.~Ahlfors, \emph{Complex Analysis},
+third edition, McGraw--Hill, 1979, Chapter VI, Section 5.1,
+Theorem 10, pp.~255--256. The analytic boundary extension is the
+local reflection argument in Chapter VI, Sections 1.3--1.4,
+Theorems 3--4, pp.~233--235; locally straightening an analytic
+boundary arc and a circular annulus boundary gives the same
+reflection situation. The required hypotheses here are analytic
+embedded boundary circles separated by a positive distance.
+
+On the top $Z(s)$ is real and strictly increasing, so
+\[
+ \rho(s)=Z'(s)>0.
+\]
+On the bottom write $Z(s-id)=X(s)+i(-h+b(X(s)))$. This parametrizes
+the graph once with the positive horizontal orientation, so
+\[
+ p(s)=\operatorname{Re}Z'(s-id)=X'(s)>0. \tag{20}
+\]
+For completeness, $X'$ cannot vanish: the derivative of a regular
+parametrization of a $C^1$ graph is proportional to
+$(1,b'(X))$, and the conformal derivative is nonzero. Orientation
+and degree one fix its positive sign.
+The periodic holomorphic function $Z'$ is real on the top. Its
+Fourier series therefore has conjugate-symmetric coefficients,
+and taking its real part at depth $d$ gives
+\[
+ p_k=\cosh(dk)\rho_k, \tag{21}
+\]
+exactly (2). Both weights are continuous and strictly positive.
+
+Conformal invariance of the two-dimensional Dirichlet integral
+transforms the physical harmonic minimization into the flat-strip
+minimization. The natural bottom condition remains zero Neumann.
+The physical surface measure becomes $dx=\rho(s)ds$, and (19)
+preserves the Bloch character exactly. The image of a conformal
+period cell may have curved lateral sides; the energy and mass
+densities are periodic, so integration over this fundamental cell
+agrees with integration over the physical vertical-sided cell.
+Thus the physical spectrum
+is precisely the weighted strip spectrum used in (18). This proves
+(1) for analytic graph bottoms, without amplitude, parity,
+fundamental-period or genericity assumptions.
+
+\section*{6. Passage to every admissible $C^1$ graph}
+Choose real trigonometric polynomials $b_j\to b$ in $C^1$ and keep
+a common positive lower depth. With $H_j=h-b_j$ and $H=h-b$,
+pull the physical bulk energies back by $y=H_j(x)z$ and $y=H(x)z$
+to the fixed cell $(0,P)\times(-1,0)$. Their coefficient matrices
+are
+\[
+ A_H(x,z)=
+ \begin{pmatrix}
+ H&-zH'\\
+ -zH'&(1+z^2(H')^2)/H
+ \end{pmatrix}, \tag{22}
+\]
+acting on $((\partial_x+i\theta)U,U_z)$. Uniform positivity of
+the depths and $C^1$ convergence imply uniform ellipticity and
+uniform convergence of these matrices. Consequently, for numbers
+$\varepsilon_j\to0$,
+\[
+ (1-\varepsilon_j)q_{b,\theta}
+ \le q_{b_j,\theta}\le
+ (1+\varepsilon_j)q_{b,\theta}, \tag{23}
+\]
+uniformly in phase. This follows first for every bulk competitor
+and then by taking the infimum with its fixed top trace. Min--max
+therefore gives convergence of every fixed ordered eigenvalue,
+including its multiplicities. For fixed $n,\theta_a,\theta_b$,
+pass (1) for $b_j$ to the limit using (23). This proves (1) for
+$b$. Since the phase pair was arbitrary, it gives the asserted
+max--min inequality.
+
+For clarity, phase continuity follows directly from that same bulk
+realization. If $u$ is the top trace of $U$ and $d_+=\max H$, vertical
+integration gives
+\[
+ \|U\|_{L^2(\mathcal C_b)}^2
+ \le 2d_+\|u\|_{L^2}^2+2d_+^2\|U_y\|_{L^2(\mathcal C_b)}^2.
+\]
+Writing $a_\theta[U]$ for the bulk energy, expansion of
+$|(\partial_x+i\theta+i\delta)U|^2$ and Cauchy--Schwarz therefore
+give, for $|\delta|\le1$,
+\[
+ |a_{\theta+\delta}[U]-a_\theta[U]|
+ \le C|\delta|\bigl(a_\theta[U]+\|u\|_{L^2}^2\bigr),
+\]
+where $C$ depends only on $d_+$. Apply the upper bound to the
+minimizing extension at $\theta$, and interchange the two phases
+for the reverse bound. The resulting two-sided comparison of
+$q_\theta+\|u\|^2$ and $q_{\theta+\delta}+\|u\|^2$, followed by
+min--max, proves continuity of each fixed ordered eigenvalue.
+Compactness of the phase interval gives its maximum and minimum.
+
+The functional-analytic ingredients are the representation of a
+densely defined closed nonnegative form by its self-adjoint
+operator and its compact-resolvent min--max principle; the form
+domain here is $H^{1/2}$ on the top circle and its embedding in
+$L^2$ is compact. Standard form background is T.~Kato,
+\emph{Perturbation Theory for Linear Operators}, second edition,
+corrected printing, Springer, 1980, Chapter VI, Theorem 2.1.
+All phase-changing comparisons in the proof were established
+explicitly by a single analytic evaluation constraint and inner
+factor division. No finite-rank assertion about a vertical
+cross-section, or oscillation theorem for real Bloch functions,
+is used.
+\end{document}
