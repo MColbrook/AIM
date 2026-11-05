@@ -1,8 +1,8 @@
 # 1048. Can neighboring water-wave Bloch bands overlap?
 
 **Area:** Water waves and spectral theory
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** 🟠 SOLUTION CLAIMED
+**Last checked:** 2026-11-05
 
 ## Problem statement
 
@@ -47,6 +47,17 @@ These bands govern propagation of linearized free-surface waves above periodic s
 The source also asks about periodic/antiperiodic band edges. That additional question and stronger monotonicity statements are separate from the inequality above.
 
 ## Status review
+
+### Solution claim, 2026-11-05
+
+Siavash Sadeghi submits an AI-assisted [proposed proof](../research/solutions/siavash-sadeghi-1048/research_nonoverlap_proof.pdf) of the full nonoverlap inequality for every admissible C¹ graph bottom, every ordered index, and all phase pairs. The [resolution report](../research/solutions/siavash-sadeghi-1048/RESOLUTION_REPORT.md) compares the proof with the exact target; the [review guide](../research/solutions/siavash-sadeghi-1048/review_note.pdf) explains the argument and its scope.
+
+**Review:** No human has reviewed this work. The supplied audits were performed by AI in the original research workflow. Codex (AI) conducted the additional [submission review](../research/solutions/siavash-sadeghi-1048/SUBMISSION_REVIEW.md), reproduced the 21 floating-point diagnostic cases and checked the publication package. No formal verification is claimed. The status is **Solution claimed**, pending further independent mathematical review.
+
+The proof uses conformal geometry, an exact complex mass identity and a strip Blaschke division argument followed by ordered min-max and C¹ form convergence. It adds no amplitude, symmetry, mean-zero or simplicity assumption. Touching is allowed; band-edge localization and monotonicity are not claimed. [Reproduction details](../research/solutions/siavash-sadeghi-1048/BUILD_VERIFICATION.txt) distinguish computational checks from the analytic proof.
+
+### Earlier status review (retained for provenance)
+
 
 
 **Known cases:** No small bottom-amplitude condition is allowed and band labels are ordered fiber eigenvalues. Perturbative gap constructions and analytic branch relabeling do not prove the no-overlap inequality.
