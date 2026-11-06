@@ -2,9 +2,9 @@
 
 **Area:** Nonlinear inverse problems / electrical materials
 
-**Status:** 🟡 PARTIAL
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-08
+**Last checked:** 2026-11-06
 
 ## Problem statement
 
@@ -28,15 +28,14 @@ The power-law constitutive relation models nonlinear conducting media. The quest
 1. C.-Y. Guo, M. Kar and M. Salo, *Inverse problems for p-Laplace type equations under monotonicity assumptions* (2016). [Paper](https://arxiv.org/abs/1602.02591).
 2. M. Kar, J. Railo and P. Zimmermann, *The fractional p-biharmonic systems: optimal Poincaré constants, unique continuation and inverse problems*, Calculus of Variations **62** (2023), 130, introduction. [Paper](https://doi.org/10.1007/s00526-023-02468-9).
 3. C. I. Cârstea and A. Feizmohammadi, *Two uniqueness results in the inverse boundary value problem for the weighted p-Laplace equation*, Forum of Mathematics, Sigma **13** (2025), e147, Theorems 1.2–1.3 and Corollary 1.1. [Paper](https://doi.org/10.1017/fms.2025.10095).
+4. M. J. Colbrook, *Global uniqueness for the weighted p-Calderón problem*, preprint (6 November 2026), Theorem 1.1, p. 2. [Zenodo record](https://zenodo.org/records/24017133), DOI [10.5281/zenodo.24017133](https://doi.org/10.5281/zenodo.24017133). [PDF](https://zenodo.org/api/records/24017133/files/weighted_p_calderon.pdf/content).
 
 ## Status review
 
-**Known cases:** The cited 2025 paper proves higher-dimensional uniqueness for certain analytic or direction-independent weights.
+**Resolution:** Colbrook's Theorem 1.1 in reference 4 states a complete affirmative resolution of the original target.
 
-**Remaining target:** Uniqueness for arbitrary smooth positive weights in dimensions at least three, without those structural assumptions.
+**Statement comparison:** The theorem covers every bounded connected smooth domain in dimension at least three, every known exponent between one and infinity other than two, and arbitrary smooth strictly positive scalar weights. Equality of the full weak nonlinear Dirichlet-to-Neumann maps on the complete trace space implies equality of the weights. It adds no ordering, smallness, analyticity, or directional-invariance assumption.
 
-**Literature check:** Open in cited literature; no later resolution located
+**Review scope:** Recorded as solved following the maintainer's resolution report. The [dated scope review](../research/solution_reviews/2026-11-06-049-zenodo-review.md) compares the deposited preprint's Theorem 1.1, weak-map definition and smoothness convention with this entry. This AI-assisted statement comparison is not a complete independent audit of the proof or Lean verification.
 
-Reference 2 explicitly records unrestricted interior uniqueness as open. The 2025 paper resolves smooth planar weights and certain higher-dimensional analytic or direction-independent weights. It does not prove the general smooth $`n\geq3`$ statement above.
-
-Checked on 2026-09-08 using `p-Laplace Calderón open problem`, `p Calderon 2026 uniqueness`, and the exact title of reference 3. The theorem hypotheses were inspected to exclude its solved cases. No full higher-dimensional resolution was located.
+**Source and date:** Public Zenodo preprint, DOI 10.5281/zenodo.24017133, deposited 6 November 2026; checked on the same date. Earlier restricted results remain listed in references 1–3 for context.

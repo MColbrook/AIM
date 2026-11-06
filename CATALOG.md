@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**856 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**855 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -10,7 +10,7 @@
 | --- | ---: | ---: |
 | [Spectral theory and spectral geometry](#spectral-theory-and-spectral-geometry) | [39](#spectral-open) | [16](#spectral-solved) |
 | [Operators, matrices and computation](#operators-matrices-and-computation) | [60](#operators-open) | [27](#operators-solved) |
-| [Inverse problems, control and dynamics](#inverse-problems-control-and-dynamics) | [21](#inverse-open) | [8](#inverse-solved) |
+| [Inverse problems, control and dynamics](#inverse-problems-control-and-dynamics) | [20](#inverse-open) | [9](#inverse-solved) |
 | [PDEs, fluids and materials](#pdes-fluids-and-materials) | [50](#pdes-materials-open) | [11](#pdes-materials-solved) |
 | [Probability, statistics and learning](#probability-statistics-and-learning) | [59](#probability-statistics-open) | [14](#probability-statistics-solved) |
 | [Numerical analysis and scientific computing](#numerical-analysis-and-scientific-computing) | [17](#numerical-analysis-open) | [12](#numerical-analysis-solved) |
@@ -219,7 +219,6 @@
 
 | ID | Problem | Status | Area |
 | --- | --- | --- | --- |
-| 049 | [Global conductivity uniqueness for the p-Laplacian in higher dimensions](problems/049-nonlinear-p-calderon.md) | 🟡 PARTIAL | Nonlinear inverse problems / electrical materials |
 | 052 | [Global uniqueness from inverse backscattering data](problems/052-inverse-backscattering.md) | 🔵 OPEN | Inverse scattering / monostatic imaging |
 | 053 | [Recover an arbitrary sound speed from one incident direction](problems/053-fixed-angle-sound-speed.md) | 🔵 OPEN | Inverse scattering / acoustic tomography |
 | 054 | [Determine a smooth sound-soft obstacle from one far-field pattern](problems/054-single-wave-obstacle.md) | 🔵 OPEN | Inverse obstacle scattering / acoustic detection |
@@ -250,6 +249,7 @@
 | 046 | [Calderón uniqueness for bounded measurable conductivities](problems/046-rough-conductivity-calderon.md) | ✅ SOLVED | Counterexample | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Nonuniqueness-for-Bounded-Measurable-Scalar-Conductivities-in-Three-Dimensions-September-23-2026/paper.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
 | 047 | [Smooth anisotropic Calderón uniqueness](problems/047-smooth-anisotropic-calderon.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026/paper.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
 | 048 | [Calderón uniqueness from an arbitrary local boundary patch](problems/048-arbitrary-local-calderon-data.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026/paper.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
+| 049 | [Global conductivity uniqueness for the p-Laplacian in higher dimensions](problems/049-nonlinear-p-calderon.md) | ✅ SOLVED | Affirmative proof | [Proof](https://zenodo.org/api/records/24017133/files/weighted_p_calderon.pdf/content) | [Review](research/solution_reviews/2026-11-06-049-zenodo-review.md) |
 | 050 | [Recover both Lamé moduli from static boundary measurements](problems/050-static-lame-uniqueness.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Global-Uniqueness-for-the-Smooth-Isotropic-Elasticity-Inverse-Problem-September-24-2026/article.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
 | 051 | [Recover a potential on a general known Riemannian manifold](problems/051-potential-on-general-manifold.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/051-potential-on-general-manifold/paper/main.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/051-review.md) |
 | 063 | [Characterizing realizable geodesic scattering data](problems/063-range-of-geodesic-scattering.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/063-geodesic-scattering/paper/geodesic_scattering.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/063-review.md) |
@@ -1517,7 +1517,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 
 | Publication batch | Open targets | Entry review dates |
 | --- | ---: | --- |
-| Original collection | 63 | 2026-09-08–2026-11-03 |
+| Original collection | 62 | 2026-09-08–2026-11-03 |
 | Second collection | 76 | 2026-09-08–2026-11-03 |
 | Third collection | 77 | 2026-09-13–2026-11-03 |
 | September 2026 expansion — batch 1 | 8 | 2026-09-17 |

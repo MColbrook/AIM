@@ -15,9 +15,9 @@ Contributions made with or without AI are welcome.
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**856 open targets** (363 open, 493 partial) · **210 solved entries** · **1 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
+**855 open targets** (363 open, 492 partial) · **211 solved entries** · **1 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 856 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 855 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
@@ -25,7 +25,7 @@ If a problem here is resolved, we encourage you to improve the proof, explain it
 | --- | ---: | ---: |
 | [Spectral theory and spectral geometry](CATALOG.md#spectral-theory-and-spectral-geometry) | [39](CATALOG.md#spectral-open) | [16](CATALOG.md#spectral-solved) |
 | [Operators, matrices and computation](CATALOG.md#operators-matrices-and-computation) | [60](CATALOG.md#operators-open) | [27](CATALOG.md#operators-solved) |
-| [Inverse problems, control and dynamics](CATALOG.md#inverse-problems-control-and-dynamics) | [21](CATALOG.md#inverse-open) | [8](CATALOG.md#inverse-solved) |
+| [Inverse problems, control and dynamics](CATALOG.md#inverse-problems-control-and-dynamics) | [20](CATALOG.md#inverse-open) | [9](CATALOG.md#inverse-solved) |
 | [PDEs, fluids and materials](CATALOG.md#pdes-fluids-and-materials) | [50](CATALOG.md#pdes-materials-open) | [11](CATALOG.md#pdes-materials-solved) |
 | [Probability, statistics and learning](CATALOG.md#probability-statistics-and-learning) | [59](CATALOG.md#probability-statistics-open) | [14](CATALOG.md#probability-statistics-solved) |
 | [Numerical analysis and scientific computing](CATALOG.md#numerical-analysis-and-scientific-computing) | [17](CATALOG.md#numerical-analysis-open) | [12](CATALOG.md#numerical-analysis-solved) |
@@ -92,6 +92,7 @@ Complete resolutions recorded in this collection, including counterexamples to t
 | 046 | [Calderón uniqueness for bounded measurable conductivities](problems/046-rough-conductivity-calderon.md) | ✅ SOLVED | Counterexample | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Nonuniqueness-for-Bounded-Measurable-Scalar-Conductivities-in-Three-Dimensions-September-23-2026/paper.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
 | 047 | [Smooth anisotropic Calderón uniqueness](problems/047-smooth-anisotropic-calderon.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026/paper.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
 | 048 | [Calderón uniqueness from an arbitrary local boundary patch](problems/048-arbitrary-local-calderon-data.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026/paper.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
+| 049 | [Global conductivity uniqueness for the p-Laplacian in higher dimensions](problems/049-nonlinear-p-calderon.md) | ✅ SOLVED | Affirmative proof | [Proof](https://zenodo.org/api/records/24017133/files/weighted_p_calderon.pdf/content) | [Review](research/solution_reviews/2026-11-06-049-zenodo-review.md) |
 | 050 | [Recover both Lamé moduli from static boundary measurements](problems/050-static-lame-uniqueness.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Global-Uniqueness-for-the-Smooth-Isotropic-Elasticity-Inverse-Problem-September-24-2026/article.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
 | 051 | [Recover a potential on a general known Riemannian manifold](problems/051-potential-on-general-manifold.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/051-potential-on-general-manifold/paper/main.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/051-review.md) |
 | 063 | [Characterizing realizable geodesic scattering data](problems/063-range-of-geodesic-scattering.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/063-geodesic-scattering/paper/geodesic_scattering.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/063-review.md) |
