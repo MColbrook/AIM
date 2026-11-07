@@ -1,8 +1,8 @@
 # 721. Real C¹,¹ regularity of complex Hessian obstacle envelopes
 
 **Area:** Complex analysis, potential theory and nonlinear obstacle problems
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -32,10 +32,23 @@ The envelope enforces a pointwise obstacle constraint on a nonlinear potential. 
 
 ## Status review
 
+### Reviewed manuscript, 2026-11-07
 
-**Known cases:** The June complex Hessian flow paper, Lemma 8.1, supplies continuity of the obstacle envelope, not bounds on all real second derivatives. Compact-background complex Hessian estimates and the withdrawn 2017 envelope proof do not give this bounded-domain real C1,1 conclusion.
+Matthew J. Colbrook provides the following AI-found [manuscript](../research/solutions/721-real-c1-1-regularity-of-complex-hessian-obstacle/main.pdf). Real local C1,1 regularity for every stated complex Hessian obstacle envelope.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+
+**Review:** The [separate Codex AI audit](../research/solution_reviews/2026-11-07-complex-analysis/721-review.md) checks the complete argument against this exact target and records the primary-source comparisons. No unresolved mathematical gap was identified in the complete resolution. The results were found by AI; human peer review and formal verification are not claimed.
+
+### Earlier status record (historical)
+
+The following dated record describes the pre-submission state.
+
+
+
+**Previously recorded known cases:** The June complex Hessian flow paper, Lemma 8.1, supplies continuity of the obstacle envelope, not bounds on all real second derivatives. Compact-background complex Hessian estimates and the withdrawn 2017 envelope proof do not give this bounded-domain real C1,1 conclusion.
+
+**Previously recorded remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
 
 ### Online recheck, 2026-10-30
 

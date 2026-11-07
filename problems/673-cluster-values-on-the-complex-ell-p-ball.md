@@ -1,8 +1,8 @@
 # 673. Cluster values on the complex $`\ell_p`$ ball
 
 **Area:** Complex analysis and potential theory
-**Status:** 🔵 OPEN
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -31,6 +31,19 @@ This is a weak corona problem in infinite-dimensional complex analysis. It asks 
 - V. Dimant, S. Lassalle and M. Maestre, *Fibers and Gleason parts for the maximal ideal space of $`\mathcal A_u(B_{\ell_p})`$*, Banach Journal of Mathematical Analysis **19** (2025),4, [DOI](https://doi.org/10.1007/s43037-024-00388-0), introduction, for the distinction between corona and cluster-value properties and the known origin/Hilbert cases.
 
 ## Status review
+
+### Reviewed manuscript, 2026-11-07
+
+Matthew J. Colbrook provides the following AI-found [manuscript](../research/solutions/673-cluster-values-on-the-complex-ell-p-ball/main.pdf). Cluster-value equality at every interior point of the complex ell-p ball, for all 1<p<infinity.
+
+The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+
+**Review:** The [separate Codex AI audit](../research/solution_reviews/2026-11-07-complex-analysis/673-review.md) checks the complete argument against this exact target and records the primary-source comparisons. No unresolved mathematical gap was identified in the complete resolution. The results were found by AI; human peer review and formal verification are not claimed.
+
+### Earlier status record (historical)
+
+The following dated record describes the pre-submission state.
+
 
 
 ### Online recheck, 2026-10-30

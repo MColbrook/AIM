@@ -1,0 +1,188 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 682}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 682},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{Binomial coefficient powers: an entire-function reduction and small-degree cases}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\begin{abstract}
+The Le Roy equivalence and all degrees at most five are proved. Arbitrary noninteger exponents at least two in degrees six and above remain unresolved here.
+\end{abstract}
+\noindent\textbf{Catalogue scope.} AIM 682; partial progress. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/682-real-rootedness-of-real-powers-of-binomial-coefficients.md}{Canonical target at revision \texttt{1e56463}}.
+The binomial-power question is stated in \cite[Section 4.5]{Jalowy}. The classical multiplier-sequence normalization is that of \cite[Theorem 6]{CsordasForgacs}.
+
+\section{Statement and argument}
+\label{sec:682partial}
+
+\textbf{Status: partial only; this problem is not counted as resolved.}
+The target asks whether
+\[
+ B_{n,\gamma}(x)=\sum_{k=0}^n\binom nk^\gamma x^k
+\]
+has only real zeros for every $n\ge1$ and every real $\gamma\ge2$.
+The following exact reduction identifies one remaining entire-function
+question.  It does not settle that question for noninteger $\gamma$.
+
+\begin{proposition}
+Fix $\gamma>1$, and define the Le Roy entire function
+\[
+ E_\gamma(z)=\sum_{k=0}^\infty\frac{z^k}{(k!)^\gamma}.
+\]
+The following are equivalent:
+\begin{enumerate}
+\item $B_{n,\gamma}$ has only real zeros for every $n\ge1$;
+\item $E_\gamma$ belongs to the Laguerre--P\'olya class of type I, with
+      nonnegative Taylor coefficients;
+\item every zero of $E_\gamma$ is a negative real number.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+First observe that $E_\gamma$ is entire.  For fixed $k$,
+\[
+ \frac{\binom nk^\gamma}{n^{\gamma k}}
+       \longrightarrow\frac1{(k!)^\gamma},
+ \qquad
+ 0\le\frac{\binom nk^\gamma}{n^{\gamma k}}
+       \le\frac1{(k!)^\gamma}.
+\]
+Dominated convergence for the power series, uniformly on every compact
+disk, gives
+\[
+ B_{n,\gamma}(z/n^\gamma)\longrightarrow E_\gamma(z).
+\]
+All coefficients of $B_{n,\gamma}$ are positive and its constant term is
+one.  Therefore real zeros, when all zeros are real, are strictly
+negative.  The displayed local uniform limit proves (1)$\Rightarrow$(2).
+
+The implication (2)$\Rightarrow$(3) follows from Hurwitz's theorem and
+$E_\gamma(0)=1$.  Conversely, the coefficient formula for the order of an
+entire function, together with Stirling's formula, gives
+\[
+ \operatorname{ord}(E_\gamma)
+ =\limsup_{k\to\infty}\frac{k\log k}{\gamma\log(k!)}
+ =\frac1\gamma<1.
+\]
+If (3) holds, Hadamard factorization therefore expresses $E_\gamma$ as
+a genus-zero product over negative real zeros, with constant factor one.
+Finite products converge locally uniformly and have nonnegative
+coefficients.  This proves (3)$\Rightarrow$(2).
+
+For (2)$\Rightarrow$(1), the P\'olya--Schur theorem says that
+\[
+ \delta_k=(k!)^{1-\gamma},\qquad k\ge0,
+\]
+is a multiplier sequence, since
+$E_\gamma(z)=\sum\delta_k z^k/k!$.  Let $T$ be the corresponding
+coefficient multiplier.  Apply $T$ to $(1+x)^n$, reverse its
+coefficients, and apply $T$ again.  Each step preserves real-rootedness:
+the reversal sends each nonzero real root to its reciprocal, and the
+constant and leading coefficients remain nonzero.  Direct calculation
+gives
+\begin{align*}
+ T(1+x)^n
+   &=\sum_{k=0}^n\frac{n!}{(k!)^\gamma(n-k)!}\,x^k,\\
+ T\left[x^n\bigl(T(1+x)^n\bigr)(1/x)\right]
+   &=\sum_{k=0}^n\frac{n!}{(k!)^\gamma((n-k)!)^\gamma}\,x^k\\
+   &=(n!)^{1-\gamma}B_{n,\gamma}(x).
+\end{align*}
+Thus every $B_{n,\gamma}$ has only real zeros.
+\end{proof}
+
+\begin{proposition}
+For every real $\gamma\ge2$, the polynomial $B_{n,\gamma}$ has only
+negative real zeros when $1\le n\le5$.
+\end{proposition}
+
+\begin{proof}
+The degree-one assertion is immediate.  In degree two,
+$B_{2,\gamma}(x)=x^2+2^\gamma x+1$ has nonnegative discriminant for
+$\gamma\ge1$, and both roots are negative.  In degree three,
+\[
+ B_{3,\gamma}(x)=(1+x)\left(x^2+(3^\gamma-1)x+1\right),
+\]
+which also has only negative real roots for $\gamma\ge1$.
+
+For degree four put $A=4^\gamma$, $B=6^\gamma$.  Dividing by $x^2$
+and setting $y=x+x^{-1}$ gives
+\[
+ x^{-2}B_{4,\gamma}(x)=y^2+Ay+(B-2).
+\]
+The two roots in $y$ are real and at most $-2$ provided
+\[
+ A\ge4,\qquad D:=A^2-4B+8\ge0,
+ \qquad D\le(A-4)^2.
+\]
+The last condition is equivalent to $B\ge2A-2$.  For $\gamma\ge2$,
+\[
+ \frac{A^2}{B}=(8/3)^\gamma>4,
+ \qquad \frac BA=(3/2)^\gamma>2,
+\]
+so all three conditions hold.  For every real $y\le-2$, the two roots
+of $x^2-yx+1=0$ are negative real numbers.  This proves degree four.
+
+For degree five put $A=5^\gamma$, $B=10^\gamma$.  Then
+\[
+ B_{5,\gamma}(x)
+ =(1+x)\left[x^4+(A-1)x^3+(B-A+1)x^2+(A-1)x+1\right].
+\]
+After division of the bracket by $x^2$, the same substitution gives
+\[
+ y^2+(A-1)y+(B-A-1).
+\]
+Its discriminant is $D=A^2+2A+5-4B$.  Its roots are real and at most
+$-2$ provided $A\ge5$, $D\ge0$, and
+$D\le(A-5)^2$, the latter being equivalent to $B\ge3A-5$.
+For $\gamma\ge2$,
+\[
+ \frac{A^2}{B}=(5/2)^\gamma>4,
+ \qquad \frac BA=2^\gamma\ge4,
+\]
+which proves these conditions.  The four roots of the bracket are
+negative real numbers, and its remaining factor has root $-1$.
+\end{proof}
+
+The reduction leaves the negative-real-zero assertion for $E_\gamma$
+at arbitrary noninteger $\gamma\ge2$ unresolved.  Checking finitely many
+degrees, or invoking integer-parameter hypergeometric formulas, does not
+establish that assertion.
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{Jalowy} J. Jalowy, Z. Kabluchko and A. Marynych, \emph{Zeros and Exponential Profiles of Polynomials II: Examples}, Constructive Approximation (2026), Section 4.5, Theorem 4.7 and Remark 4.8. \url{https://doi.org/10.1007/s00365-026-09775-2}.
+\bibitem{CsordasForgacs} G. Csordas and T. Forgacs, \emph{Multiplier sequences, classes of generalized Bessel functions and open problems}, J. Math. Anal. Appl. \textbf{433} (2016), 1369--1389. \url{https://arxiv.org/abs/1505.00355v2}. DOI: \url{https://doi.org/10.1016/j.jmaa.2015.08.047}.
+\end{thebibliography}
+\endgroup
+\end{document}

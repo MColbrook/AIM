@@ -1,8 +1,8 @@
 # 707. Smooth Chern–Ricci collapse on non-Kähler elliptic bundles
 
 **Area:** Complex geometry and geometric partial differential equations
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -41,10 +41,23 @@ The problem asks for derivative and curvature control while a nonlinear metric f
 
 ## Status review
 
+### Reviewed manuscript, 2026-11-07
 
-**Known cases:** The May general-type surface theorem has Kodaira dimension two and Gromov-Hausdorff conclusions; this elliptic-bundle question requires global smooth tensor convergence and normalized full-curvature bounds for arbitrary Gauduchon data.
+Matthew J. Colbrook provides the following AI-found [manuscript](../research/solutions/707-smooth-chernricci-collapse-on-non-kahler-elliptic-bundles/main.pdf). Counterexample to bounded normalized full Chern curvature, despite smooth normalized convergence.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+
+**Review:** The [separate Codex AI audit](../research/solution_reviews/2026-11-07-complex-analysis/707-review.md) checks the complete argument against this exact target and records the primary-source comparisons. No unresolved mathematical gap was identified in the complete resolution. The results were found by AI; human peer review and formal verification are not claimed.
+
+### Earlier status record (historical)
+
+The following dated record describes the pre-submission state.
+
+
+
+**Previously recorded known cases:** The May general-type surface theorem has Kodaira dimension two and Gromov-Hausdorff conclusions; this elliptic-bundle question requires global smooth tensor convergence and normalized full-curvature bounds for arbitrary Gauduchon data.
+
+**Previously recorded remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
 
 ### Online recheck, 2026-10-30
 

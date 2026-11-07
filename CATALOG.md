@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**854 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**844 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -26,7 +26,7 @@
 | [Applied geometry, control and information](#applied-geometry-control-and-information) | [38](#inverse3-open) | [11](#inverse3-solved) |
 | [Stochastic dynamics, reaction networks and applied optimization](#stochastic-dynamics-reaction-networks-and-applied-optimization) | [37](#stochastic3-open) | [9](#stochastic3-solved) |
 | [Bayesian inverse problems and uncertainty quantification](#bayesian-inverse-problems-and-uncertainty-quantification) | [3](#bayesian-inverse-uncertainty-quantification-open) | [0](#bayesian-inverse-uncertainty-quantification-solved) |
-| [Complex analysis and potential theory](#complex-analysis-and-potential-theory) | [60](#complex-analysis-potential-theory-open) | [0](#complex-analysis-potential-theory-solved) |
+| [Complex analysis and potential theory](#complex-analysis-and-potential-theory) | [50](#complex-analysis-potential-theory-open) | [10](#complex-analysis-potential-theory-solved) |
 | [Continuous optimization and variational analysis](#continuous-optimization-and-variational-analysis) | [4](#continuous-optimization-open) | [0](#continuous-optimization-solved) |
 | [Electrochemistry and energy storage](#electrochemistry-and-energy-storage) | [5](#electrochemistry-energy-storage-open) | [0](#electrochemistry-energy-storage-solved) |
 | [Fluid–structure interaction](#fluid–structure-interaction) | [4](#fluid-structure-interaction-open) | [0](#fluid-structure-interaction-solved) |
@@ -1290,17 +1290,14 @@ No solved problems are currently recorded in this subject.
 
 | ID | Problem | Status | Area |
 | --- | --- | --- | --- |
-| 669 | [Does metric completion preserve minimal Sobolev gradients?](problems/669-does-metric-completion-preserve-minimal-sobolev-gradients.md) | 🟡 PARTIAL | Nonlinear potential theory on metric spaces |
 | 670 | [Sharp local integrability of complex m-subharmonic functions](problems/670-sharp-local-integrability-of-complex-m-subharmonic-functions.md) | 🟡 PARTIAL | Complex analysis and potential theory |
 | 671 | [Are all isometries of the Mabuchi completion induced by smooth Kähler-potential isometries?](problems/671-are-all-isometries-of-the-mabuchi-completion-induced-by-smooth-kahler-potential-isometries.md) | 🔵 OPEN | Complex geometry and pluripotential theory |
 | 672 | [Algebraicity of the three-dimensional two-source quadrature domain](problems/672-algebraicity-of-the-three-dimensional-two-source-quadrature-domain.md) | 🔵 OPEN | Potential theory and free boundary problems |
-| 673 | [Cluster values on the complex $`\ell_p`$ ball](problems/673-cluster-values-on-the-complex-ell-p-ball.md) | 🔵 OPEN | Complex analysis and potential theory |
 | 674 | [One shared value with multiplicity among four meromorphic shared values](problems/674-one-shared-value-with-multiplicity-among-four-meromorphic-shared-values.md) | 🟡 PARTIAL | Complex analysis and value distribution |
 | 675 | [Gradient propagation of smallness below codimension one](problems/675-gradient-propagation-of-smallness-below-codimension-one.md) | 🟡 PARTIAL | Elliptic PDE and quantitative unique continuation |
 | 676 | [Attenuating the singularities of positive closed currents by finite modifications](problems/676-attenuating-the-singularities-of-positive-closed-currents-by-finite-modifications.md) | 🟡 PARTIAL | Complex analysis and Kähler geometry |
 | 677 | [The sharp Landau image-disk constant](problems/677-the-sharp-landau-image-disk-constant.md) | 🔵 OPEN | Complex analysis and conformal geometry |
 | 678 | [Sharp exponential volume decay for plurisubharmonic sublevel sets](problems/678-sharp-exponential-volume-decay-for-plurisubharmonic-sublevel-sets.md) | 🟡 PARTIAL | Complex analysis and potential theory |
-| 679 | [The square-root factorial multiplier sequence](problems/679-the-square-root-factorial-multiplier-sequence.md) | 🔵 OPEN | Polynomial zero preservation and entire functions |
 | 680 | [Maximal arclength of polynomial lemniscates in every degree](problems/680-maximal-arclength-of-polynomial-lemniscates-in-every-degree.md) | 🟡 PARTIAL | Complex analysis and potential theory |
 | 681 | [Positive capacity of transcendental quasiregular backward-orbit closures](problems/681-positive-capacity-of-transcendental-quasiregular-backward-orbit-closures.md) | 🟡 PARTIAL | Geometric function theory and nonlinear potential theory |
 | 682 | [Real-rootedness of real powers of binomial coefficients](problems/682-real-rootedness-of-real-powers-of-binomial-coefficients.md) | 🟡 PARTIAL | Polynomial zeros and coefficient transformations |
@@ -1310,9 +1307,6 @@ No solved problems are currently recorded in this subject.
 | 686 | [Boundary-pole decay of the pluricomplex Green function](problems/686-boundary-pole-decay-of-the-pluricomplex-green-function.md) | 🟡 PARTIAL | Complex analysis and potential theory |
 | 687 | [Does polynomial Fischer surjectivity force a quadratic-order degree bound?](problems/687-does-polynomial-fischer-surjectivity-force-a-quadratic-order-degree-bound.md) | 🟡 PARTIAL | Complex analysis and potential theory; polyharmonic equations |
 | 688 | [Interior regularity of a single-pole pluricomplex Green function](problems/688-interior-regularity-of-a-single-pole-pluricomplex-green-function.md) | 🔵 OPEN | Complex analysis and potential theory |
-| 689 | [A sharp affine-modulus bound for harmonic homeomorphisms](problems/689-a-sharp-affine-modulus-bound-for-harmonic-homeomorphisms.md) | 🟡 PARTIAL | Complex analysis and geometric function theory |
-| 690 | [A Smirnov function without a Hilbert-domain holomorphic extension](problems/690-a-smirnov-function-without-a-hilbert-domain-holomorphic-extension.md) | 🔵 OPEN | Infinite-variable complex analysis and function spaces |
-| 691 | [Finite-time singularities of the Chern–Ricci flow](problems/691-finite-time-singularities-of-the-chernricci-flow.md) | 🟡 PARTIAL | Complex analysis, geometric analysis and nonlinear PDEs |
 | 692 | [Half-Hölder extension of the Brjuno-corrected infimum radius](problems/692-half-holder-extension-of-the-brjuno-corrected-infimum-radius.md) | 🟡 PARTIAL | Holomorphic dynamics and small divisors |
 | 693 | [An analytic twist map with an irrational invariant circle that is not C1](problems/693-an-analytic-twist-map-with-an-irrational-invariant-circle-that-is-not-c1.md) | 🔵 OPEN | Conservative dynamics and small divisors |
 | 694 | [Does a strict Laguerre inequality for every imaginary translate force real zeros?](problems/694-does-a-strict-laguerre-inequality-for-every-imaginary-translate-force-real-zeros.md) | 🟡 PARTIAL | Entire functions and zero distribution |
@@ -1328,7 +1322,6 @@ No solved problems are currently recorded in this subject.
 | 704 | [Can every Blaschke product be uniformly approximated by interpolating Blaschke products?](problems/704-can-every-blaschke-product-be-uniformly-approximated-by-interpolating-blaschke-products.md) | 🟡 PARTIAL | Complex analysis and Hardy spaces |
 | 705 | [Boundary Hölder regularity of harmonic quasiconformal maps on arbitrary domains](problems/705-boundary-holder-regularity-of-harmonic-quasiconformal-maps-on-arbitrary-domains.md) | 🟡 PARTIAL | Complex analysis and geometric function theory |
 | 706 | [Relative proper embedding of a punctured closed disc in the affine plane](problems/706-relative-proper-embedding-of-a-punctured-closed-disc-in-the-affine-plane.md) | 🟡 PARTIAL | Complex analysis and holomorphic embeddings |
-| 707 | [Smooth Chern–Ricci collapse on non-Kähler elliptic bundles](problems/707-smooth-chernricci-collapse-on-non-kahler-elliptic-bundles.md) | 🟡 PARTIAL | Complex geometry and geometric partial differential equations |
 | 708 | [The critical opening for asymptotic Borel surjectivity](problems/708-the-critical-opening-for-asymptotic-borel-surjectivity.md) | 🟡 PARTIAL | Complex analysis and asymptotic analysis |
 | 709 | [Moderate measures and Hölder continuous Monge–Ampère potentials](problems/709-moderate-measures-and-holder-continuous-mongeampere-potentials.md) | 🟡 PARTIAL | Complex analysis and potential theory |
 | 710 | [Are polynomial Fischer operators bijective on all entire functions?](problems/710-are-polynomial-fischer-operators-bijective-on-all-entire-functions.md) | 🟡 PARTIAL | Complex analysis and potential theory; holomorphic partial differential equations |
@@ -1342,20 +1335,28 @@ No solved problems are currently recorded in this subject.
 | 718 | [Continuous subsolutions for the complex Monge–Ampère Dirichlet problem](problems/718-continuous-subsolutions-for-the-complex-mongeampere-dirichlet-problem.md) | 🟡 PARTIAL | Complex analysis and potential theory |
 | 719 | [Can a rational Julia set be an indecomposable continuum?](problems/719-can-a-rational-julia-set-be-an-indecomposable-continuum.md) | 🟡 PARTIAL | Complex analysis and potential theory |
 | 720 | [Polynomial Dirichlet solvability characterizes smooth three-dimensional ellipsoids](problems/720-polynomial-dirichlet-solvability-characterizes-smooth-three-dimensional-ellipsoids.md) | 🟡 PARTIAL | Complex analysis and potential theory |
-| 721 | [Real C¹,¹ regularity of complex Hessian obstacle envelopes](problems/721-real-c1-1-regularity-of-complex-hessian-obstacle-envelopes.md) | 🟡 PARTIAL | Complex analysis, potential theory and nonlinear obstacle problems |
 | 722 | [Vanishing Bergman logarithmic term forces spherical boundary in higher dimensions](problems/722-vanishing-bergman-logarithmic-term-forces-spherical-boundary-in-higher-dimensions.md) | 🟡 PARTIAL | Complex analysis and potential theory |
 | 723 | [Does every smooth real-algebraic CR submanifold have Nash–Artin approximation?](problems/723-does-every-smooth-real-algebraic-cr-submanifold-have-nashartin-approximation.md) | 🟡 PARTIAL | Complex analysis and CR geometry |
-| 724 | [Is polynomial local mass almost necessary for regular orthogonal polynomials?](problems/724-is-polynomial-local-mass-almost-necessary-for-regular-orthogonal-polynomials.md) | 🟡 PARTIAL | Orthogonal polynomials and logarithmic potential theory |
 | 725 | [Logarithmic comparison and strong Euler homogeneity of free divisors](problems/725-logarithmic-comparison-and-strong-euler-homogeneity-of-free-divisors.md) | 🟡 PARTIAL | Complex analysis and potential theory |
 | 726 | [Smooth solutions and fibrewise positivity for homogeneous complex Monge–Ampère](problems/726-smooth-solutions-and-fibrewise-positivity-for-homogeneous-complex-mongeampere.md) | 🟡 PARTIAL | Complex analysis and potential theory |
 | 727 | [Positive-area images of non-removable Jordan curves](problems/727-positive-area-images-of-non-removable-jordan-curves.md) | 🟡 PARTIAL | Complex analysis, conformal welding and geometric measure theory |
-| 728 | [Do continuous polynomial roots have weak endpoint derivative regularity?](problems/728-do-continuous-polynomial-roots-have-weak-endpoint-derivative-regularity.md) | 🟡 PARTIAL | Complex analysis and potential theory |
 
 <a name="complex-analysis-potential-theory-solved"></a>
 
 ### Solved problems
 
-No solved problems are currently recorded in this subject.
+| ID | Problem | Status | Outcome | Proof | Review |
+| --- | --- | --- | --- | --- | --- |
+| 669 | [Does metric completion preserve minimal Sobolev gradients?](problems/669-does-metric-completion-preserve-minimal-sobolev-gradients.md) | ✅ SOLVED | Counterexample: minimal Sobolev gradients need not be preserved by completion. | [Proof](research/solutions/669-does-metric-completion-preserve-minimal-sobolev-gradients/main.pdf) | [Review](research/solution_reviews/2026-11-07-complex-analysis/669-review.md) |
+| 673 | [Cluster values on the complex $`\ell_p`$ ball](problems/673-cluster-values-on-the-complex-ell-p-ball.md) | ✅ SOLVED | Cluster-value equality at every interior point of the complex ell-p ball, for all 1<p<infinity. | [Proof](research/solutions/673-cluster-values-on-the-complex-ell-p-ball/main.pdf) | [Review](research/solution_reviews/2026-11-07-complex-analysis/673-review.md) |
+| 679 | [The square-root factorial multiplier sequence](problems/679-the-square-root-factorial-multiplier-sequence.md) | ✅ SOLVED | The square-root factorial sequence is a multiplier sequence; nonzero generating-function zeros are simple and negative. | [Proof](research/solutions/679-the-square-root-factorial-multiplier-sequence/main.pdf) | [Review](research/solution_reviews/2026-11-07-complex-analysis/679-review.md) |
+| 689 | [A sharp affine-modulus bound for harmonic homeomorphisms](problems/689-a-sharp-affine-modulus-bound-for-harmonic-homeomorphisms.md) | ✅ SOLVED | Counterexample to the sharp bound after the complete real-affine optimization. | [Proof](research/solutions/689-a-sharp-affine-modulus-bound-for-harmonic-homeomorphisms/main.pdf) | [Review](research/solution_reviews/2026-11-07-complex-analysis/689-review.md) |
+| 690 | [A Smirnov function without a Hilbert-domain holomorphic extension](problems/690-a-smirnov-function-without-a-hilbert-domain-holomorphic-extension.md) | ✅ SOLVED | Every stated Smirnov function extends holomorphically to the Hilbert polydisc; no proposed nonextendible example exists. | [Proof](research/solutions/690-a-smirnov-function-without-a-hilbert-domain-holomorphic/main.pdf) | [Review](research/solution_reviews/2026-11-07-complex-analysis/690-review.md) |
+| 691 | [Finite-time singularities of the Chern–Ricci flow](problems/691-finite-time-singularities-of-the-chernricci-flow.md) | ✅ SOLVED | Counterexample to the analyticity conclusion: the collapsing-subvariety locus is nonanalytic for an admissible Hermitian flow. | [Proof](research/solutions/691-finite-time-singularities-of-the-chernricci-flow/main.pdf) | [Review](research/solution_reviews/2026-11-07-complex-analysis/691-review.md) |
+| 707 | [Smooth Chern–Ricci collapse on non-Kähler elliptic bundles](problems/707-smooth-chernricci-collapse-on-non-kahler-elliptic-bundles.md) | ✅ SOLVED | Counterexample to bounded normalized full Chern curvature, despite smooth normalized convergence. | [Proof](research/solutions/707-smooth-chernricci-collapse-on-non-kahler-elliptic-bundles/main.pdf) | [Review](research/solution_reviews/2026-11-07-complex-analysis/707-review.md) |
+| 721 | [Real C¹,¹ regularity of complex Hessian obstacle envelopes](problems/721-real-c1-1-regularity-of-complex-hessian-obstacle-envelopes.md) | ✅ SOLVED | Real local C1,1 regularity for every stated complex Hessian obstacle envelope. | [Proof](research/solutions/721-real-c1-1-regularity-of-complex-hessian-obstacle/main.pdf) | [Review](research/solution_reviews/2026-11-07-complex-analysis/721-review.md) |
+| 724 | [Is polynomial local mass almost necessary for regular orthogonal polynomials?](problems/724-is-polynomial-local-mass-almost-necessary-for-regular-orthogonal-polynomials.md) | ✅ SOLVED | The required capacity limit holds for every fixed exponent greater than two, with ambient ball centers. | [Proof](research/solutions/724-is-polynomial-local-mass-almost-necessary-for-regular/main.pdf) | [Review](research/solution_reviews/2026-11-07-complex-analysis/724-review.md) |
+| 728 | [Do continuous polynomial roots have weak endpoint derivative regularity?](problems/728-do-continuous-polynomial-roots-have-weak-endpoint-derivative-regularity.md) | ✅ SOLVED | The weak endpoint derivative estimate holds for every continuous polynomial root, with an explicit coefficient bound. | [Proof](research/solutions/728-do-continuous-polynomial-roots-have-weak-endpoint-derivative/main.pdf) | [Review](research/solution_reviews/2026-11-07-complex-analysis/728-review.md) |
 
 ## Continuous optimization and variational analysis
 
@@ -1529,7 +1530,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 22 expansion — PDE emphasis | 88 | 2026-09-22–2026-10-30 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
 | Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 114 | 2026-09-23–2026-11-04 |
-| Retained further problems, integrated 30 October 2026 | 383 | 2026-10-30–2026-11-04 |
+| Retained further problems, integrated 30 October 2026 | 373 | 2026-10-30–2026-11-07 |
 
 ## Maintaining the collection
 

@@ -1,0 +1,215 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 691}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 691},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{A nonanalytic collapsing locus for Chern--Ricci flow}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\begin{abstract}
+An explicit Hermitian metric on $\mathbb P^1\times E$ has a nonanalytic locus of collapsing analytic subvarieties, while the total volume stays bounded below. Equality with the singular set alone is not decided. The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+\end{abstract}
+\noindent\textbf{Catalogue scope.} AIM 691; complete resolution. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/691-finite-time-singularities-of-the-chernricci-flow.md}{Canonical target at revision \texttt{1e56463}}.
+
+
+\section{Statement and argument}
+\label{sec:691}
+
+The conjunction in Problem 691 is false for arbitrary initial Hermitian metrics. The example below determines the union of all collapsing positive-dimensional analytic subvarieties exactly and shows that this union is not complex analytic. The proof does not decide equality of the two loci separately.
+
+\begin{theorem}
+Let $E=\mathbb C/(\mathbb Z+i\mathbb Z)$, write $y=u+iv$, and set
+\[
+ \eta=\frac{i}{2}\,dy\wedge d\bar y,\qquad
+ a(u)=1+\sin^2(\pi u).
+\]
+On $\mathbb P^1$ let $\theta=i\partial\bar\partial\log(1+|z|^2)$. On $X=\mathbb P^1\times E$, start the Chern--Ricci flow at
+\[
+ \omega_0=a\theta+100\eta.
+\]
+Its maximal existence time is $T=1/2$. The whole surface has volume bounded away from zero as $t\uparrow T$, and the union of all collapsing positive-dimensional irreducible analytic subvarieties is
+\[
+ \Sigma_0=\mathbb P^1\times\{y\in E:\Re y=0\pmod 1\}.
+\]
+This is a proper nonempty subset of $X$ which is not complex analytic. Consequently it is impossible that both $\Sigma=\Sigma_0$ and complex analyticity of their common value hold in this example.
+\end{theorem}
+
+\begin{proof}
+All forms from the factors are identified with their pullbacks to $X$. The normalizations give
+\[
+ \int_E\eta=1,\qquad
+ \operatorname{Ric}^{\mathrm{Ch}}(\theta)=2\theta,\qquad
+ \int_{\mathbb P^1}\theta=2\pi.
+\]
+For a function on $E$ put $\mathcal D h=(h_{uu}+h_{vv})/2$, so that
+$i\partial\bar\partial h=(\mathcal D h)\eta$. Write $B=100$.
+The initial form is smooth and positive because $1\le a\le2$. It is not Gauduchon:
+\[
+ i\partial\bar\partial\omega_0
+ =(i\partial\bar\partial a)\wedge\theta\not\equiv0.
+\]
+Its determinant in product coordinates gives
+\begin{equation}
+ \operatorname{Ric}^{\mathrm{Ch}}(\omega_0)
+ =2\theta-i\partial\bar\partial\log a.
+ \label{eq:691-initial-ricci}
+\end{equation}
+
+\paragraph{Maximal time.}
+The standard maximal-time theorem for the Chern--Ricci flow is
+\begin{equation}
+ T_{\max}=\sup\left\{t>0:\exists q\in C^\infty(X),\quad
+ \omega_0-t\operatorname{Ric}^{\mathrm{Ch}}(\omega_0)
+       +i\partial\bar\partial q>0\right\}.
+ \label{eq:691-time-criterion}
+\end{equation}
+This is the theorem of Tosatti--Weinkove \cite{TosattiWeinkove2015}, also stated as equation (2.2) in \cite{TosattiWeinkove2022}. For $t<1/2$, choose $q=-t\log a$. By \eqref{eq:691-initial-ricci} the resulting form is
+\[
+ (a-2t)\theta+B\eta>0.
+\]
+Thus $T_{\max}\ge1/2$. Conversely, if $a(y)=1$, integration over the fiber
+$F_y=\mathbb P^1\times\{y\}$ gives, for every smooth $q$,
+\[
+ \int_{F_y}\left(\omega_0-t\operatorname{Ric}^{\mathrm{Ch}}(\omega_0)
+                  +i\partial\bar\partial q\right)=2\pi(1-2t).
+\]
+A positive form has strictly positive integral over this compact complex curve, so \eqref{eq:691-time-criterion} gives $T_{\max}\le1/2$. Therefore $T=1/2$, and the unique smooth positive solution exists throughout $[0,T)$.
+
+\paragraph{Scalar reduction.}
+The group $\operatorname{PSU}(2)$ acts on the first factor and preserves $\omega_0$. Uniqueness preserves this symmetry along the flow. At a point of $\mathbb P^1$, its stabilizer acts nontrivially by rotation on the tangent line. Invariance therefore rules out mixed metric components; transitivity forces the vertical component to be a scalar multiple of $\theta$. The solution consequently has the form
+\[
+ \omega(t)=c(y,t)\theta+b(y,t)\eta.
+\]
+Direct calculation gives
+\[
+ \operatorname{Ric}^{\mathrm{Ch}}(\omega(t))
+ =2\theta-i\partial\bar\partial_E\log(cb).
+\]
+The vertical equation yields $c=a-2t$. The horizontal equation preserves $\int_E b\eta=B$. We may therefore write
+\[
+ b\eta=B\eta+i\partial\bar\partial\psi,
+ \qquad b=B+\mathcal D\psi>0.
+\]
+Choosing the additive function of time in $\psi$ appropriately gives
+\begin{equation}
+ \psi_t=\log\left[(a-2t)\left(1+\frac{\mathcal D\psi}{B}\right)\right],
+ \qquad \psi(0)=0.
+ \label{eq:691-potential}
+\end{equation}
+Indeed, applying $i\partial\bar\partial$ to its right-hand side gives
+$i\partial\bar\partial\log[(a-2t)b]$, as required. Thus
+\begin{equation}
+ \omega(t)=(a-2t)\theta+B\eta+i\partial\bar\partial\psi(t).
+ \label{eq:691-solution-form}
+\end{equation}
+
+\paragraph{Uniform potential bounds.}
+The spatially constant functions
+\[
+ \ell(t)=\int_0^t\log(1-2s)\,ds,
+ \qquad U(t)=t\log2
+\]
+are respectively sub- and supersolutions of \eqref{eq:691-potential}. This follows from $1-2t\le a-2t\le2$ and their vanishing spatial Hessians. The maximum principle therefore gives
+\[
+ -\frac12\le\ell(t)\le\psi(y,t)\le U(t)<\frac12,
+ \qquad 0\le t<T.
+\]
+In particular,
+\begin{equation}
+ \|\psi(t)\|_{L^\infty(E)}\le\frac12.
+ \label{eq:691-potential-bound}
+\end{equation}
+These bounds are independent of $B$.
+
+\paragraph{The surface does not collapse.}
+Using \eqref{eq:691-solution-form} and integration by parts on $E$,
+\begin{align}
+ \operatorname{Vol}_t(X)
+ &=\frac12\int_X\omega(t)^2\notag\\
+ &=2\pi\int_E(a-2t)(B+\mathcal D\psi)\eta\notag\\
+ &=2\pi\left[B\int_E(a-2t)\eta
+                 +\int_E\psi\,\mathcal D a\,\eta\right].
+ \label{eq:691-volume}
+\end{align}
+Here
+\[
+ \int_E a\eta=\frac32,\qquad
+ \mathcal D a=\pi^2\cos(2\pi u),\qquad
+ \int_E|\mathcal D a|\eta=2\pi.
+\]
+It follows from \eqref{eq:691-potential-bound} that, for every $t<T$,
+\begin{equation}
+ \operatorname{Vol}_t(X)
+ \ge2\pi\bigl[100(3/2-2t)-\pi\bigr]
+ >2\pi(50-\pi)>0.
+ \label{eq:691-volume-lower}
+\end{equation}
+No statement about a limiting metric or limiting measure is needed.
+
+\paragraph{All collapsing curves.}
+For a fiber,
+\[
+ \operatorname{Vol}_t(F_y)=2\pi(a(y)-2t)
+ \longrightarrow2\pi\sin^2(\pi u(y)).
+\]
+Thus exactly the fibers above $Z=\{y\in E:u(y)=0\pmod1\}$ collapse.
+
+If an irreducible compact complex curve $C\subset X$ is not a fiber, the projection of its normalization to $E$ is a nonconstant holomorphic map of compact Riemann surfaces. It is surjective of some finite positive degree $d$. The vertical summand $(a-2t)\theta$ is semipositive, whereas the integral of the horizontal summand on $C$ is
+\[
+ \int_C\pi_E^*(b\eta)=d\int_E b\eta=dB.
+\]
+Consequently
+\[
+ \operatorname{Vol}_t(C)\ge dB\ge100
+ \qquad(0\le t<T).
+\]
+This also applies to singular curves by integration on their normalizations. A positive-dimensional irreducible analytic subvariety of the connected complex surface $X$ is either a curve or $X$ itself. The preceding curve classification and \eqref{eq:691-volume-lower} therefore show that
+\[
+ \Sigma_0=\mathbb P^1\times Z.
+\]
+
+\paragraph{Nonanalyticity.}
+If this set were complex analytic, its inverse image under the holomorphic section $y\mapsto(p,y)$, for a fixed $p\in\mathbb P^1$, would be an analytic subset of $E$. That inverse image is the real circle $Z$. A proper analytic subset of a compact connected Riemann surface is finite, so this is impossible. This proves the theorem.
+\end{proof}
+
+\paragraph{Scope of the counterexample.}
+The unrestricted Hermitian formulation is explicitly present in Conjecture/Question 6.1 of \cite{TosattiWeinkove2022}. The construction disproves the assertion that the singular set and the collapsing-subvariety locus must coincide in a complex analytic set. It does not prove $\Sigma=\Sigma_0$ in this example, and it does not disprove equality alone. Either equality holds and the singular set is nonanalytic, or equality fails. Both alternatives contradict the conjunction asked in Problem 691. The example is outside the Gauduchon hypothesis of the established surface result.
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{TosattiWeinkove2015} V. Tosatti and B. Weinkove, \emph{On the evolution of a Hermitian metric by its Chern--Ricci form}, J. Differential Geom. \textbf{99} (2015), 125--163. \url{https://arxiv.org/abs/1201.0312v3}.
+\bibitem{TosattiWeinkove2022} V. Tosatti and B. Weinkove, \emph{The Chern--Ricci flow}, Atti Accad. Naz. Lincei Rend. Lincei Mat. Appl. \textbf{33}(1) (2022), 73--107. \url{https://doi.org/10.4171/RLM/965}. \url{https://arxiv.org/abs/2107.12928}.
+\end{thebibliography}
+\endgroup
+\end{document}

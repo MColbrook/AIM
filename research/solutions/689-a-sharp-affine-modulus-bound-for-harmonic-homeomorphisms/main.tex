@@ -1,0 +1,267 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 689}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 689},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{Failure of the sharp affine-modulus bound}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\begin{abstract}
+A small explicit harmonic perturbation of the critical circular-annulus map violates the proposed bound even after optimizing over all real affine transformations. The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+\end{abstract}
+\noindent\textbf{Catalogue scope.} AIM 689; complete resolution. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/689-a-sharp-affine-modulus-bound-for-harmonic-homeomorphisms.md}{Canonical target at revision \texttt{1e56463}}.
+
+
+\section{Statement and argument}
+\label{sec:689}
+
+The sharp necessary lower bound proposed in \cite[Conjecture 1.3]{IwaniecKovalevOnninen} fails under a small explicit harmonic perturbation of the critical circular-annulus map. The affine optimization is included below; decreasing ordinary modulus alone would not settle the question.
+
+\begin{theorem}
+Fix $\tau>0$ and put $R=\cosh\tau$. For every sufficiently small nonzero real $\varepsilon$, the harmonic map
+\begin{equation}
+ h_\varepsilon(z)=\frac12\left(z+\frac1{\bar z}\right)
+       +\frac\varepsilon2\left(z^2+\frac1{\bar z^2}\right),
+ \qquad 1<|z|<e^\tau,
+ \label{eq:689-map}
+\end{equation}
+is a homeomorphism onto a bounded ring $\Omega_\varepsilon$ with analytic boundary. Its target satisfies
+\[
+ \operatorname{Mod}_{\mathrm{aff}}(\Omega_\varepsilon)
+ <\log R=\log\cosh\!\left(\operatorname{Mod}\{1<|z|<e^\tau\}\right).
+\]
+Thus the inequality in Problem 689 is false.
+\end{theorem}
+
+\begin{proof}
+Write
+\[
+ S=\cosh(2\tau)=2R^2-1,\qquad m=\log R>0.
+\]
+In logarithmic polar coordinates,
+\begin{equation}
+ h_\varepsilon(e^{t+i\theta})
+ =\cosh t\,e^{i\theta}+\varepsilon\cosh(2t)\,e^{2i\theta}.
+ \label{eq:689-polar-map}
+\end{equation}
+Its two boundary curves are
+\begin{equation}
+ \Gamma_{0,\varepsilon}(\theta)=e^{i\theta}+\varepsilon e^{2i\theta},
+ \qquad
+ \Gamma_{1,\varepsilon}(\theta)=R e^{i\theta}+\varepsilon S e^{2i\theta}.
+ \label{eq:689-boundaries}
+\end{equation}
+For sufficiently small $|\varepsilon|$, these are analytic Jordan curves. They are nested, for example, whenever $|\varepsilon|<(R-1)/(S+1)$, since the inner curve lies in the disk of radius $1+|\varepsilon|$ while the outer curve encloses the disk of radius $R-|\varepsilon|S$. Let $\Omega_\varepsilon$ be the ring between them.
+
+\paragraph{Homeomorphism.}
+The Jacobian of \eqref{eq:689-polar-map} with respect to $(t,\theta)$ is
+\begin{equation}
+ J_\varepsilon(t,\theta)
+ =\frac12\sinh(2t)+2\varepsilon\sinh(3t)\cos\theta
+       +2\varepsilon^2\sinh(4t).
+ \label{eq:689-jacobian}
+\end{equation}
+Because $\sinh(3t)/\sinh(2t)$ extends continuously to $t=0$ and is bounded on $[0,\tau]$, this is positive for $0<t\le\tau$ when $|\varepsilon|$ is small enough. Each intermediate curve is a Jordan curve: the polynomial
+\[
+ w\longmapsto\cosh t\,w+\varepsilon\cosh(2t)w^2
+\]
+is injective on the closed unit disk if $2|\varepsilon|\cosh(2t)<\cosh t$, which holds uniformly for $0\le t\le\tau$ after reducing $|\varepsilon|$. The boundary winding degree is one between \eqref{eq:689-boundaries}, and zero outside. Every interior preimage has positive Jacobian by \eqref{eq:689-jacobian}. The degree theorem therefore gives exactly one preimage for every point between the boundary curves, and none outside. Local invertibility proves that $h_\varepsilon$ is a homeomorphism onto $\Omega_\varepsilon$. Each summand in \eqref{eq:689-map} is holomorphic or antiholomorphic, so the map is harmonic.
+
+\paragraph{Second-order modulus formula.}
+We record a short boundary-perturbation calculation used twice below. Work on the logarithmic cylinder with coordinate $s+i\phi$, of imaginary period $2\pi$. Suppose the boundaries of a perturbed ring are
+\begin{equation}
+ s=s_j+\delta p_j\cos(k\phi)
+       +\delta^2(q_j+\text{zero-mean Fourier terms})+O(\delta^3),
+ \quad s_0=0,\ s_1=m.
+ \label{eq:689-generic-boundaries}
+\end{equation}
+The remainder is uniform with its first two derivatives. Let $A,B$ solve
+\begin{equation}
+ A+B=p_0,\qquad Ae^{km}+Be^{-km}=p_1,
+ \qquad t_j=Ae^{ks_j}-Be^{-ks_j}.
+ \label{eq:689-first-order-constants}
+\end{equation}
+Then its modulus is
+\begin{equation}
+ m+\delta^2\left[q_1-q_0-\frac{k}{2}(p_1t_1-p_0t_0)\right]+O(\delta^3).
+ \label{eq:689-general-modulus}
+\end{equation}
+To verify this, use the periodic conformal approximation
+\[
+ W(\zeta)=\zeta+\delta(Ae^{k\zeta}+Be^{-k\zeta})+\delta^2K(\zeta).
+\]
+On the $j$th source boundary the angular variable becomes
+$\phi=y+\delta t_j\sin(ky)+O(\delta^2)$. Substitution into
+\eqref{eq:689-generic-boundaries} makes the mean of the real boundary coordinate
+\[
+ s_j+\delta^2\left(q_j-\frac{k}{2}p_jt_j\right)+O(\delta^3).
+\]
+The mean of $\Re K$ is the same on both straight boundaries. Hence their separation changes by the difference of these two second-order means, proving the coefficient in \eqref{eq:689-general-modulus}.
+
+Here the calculation can be justified without assuming an unproved smooth dependence of uniformization. The second-order boundary discrepancies are finite Fourier sums. For each nonzero Fourier mode, two periodic exponential terms in $K$ match the two boundary discrepancies; the relevant two-by-two system is invertible since $m>0$. The two mean discrepancies determine the source-circle shifts. The resulting finite-Laurent map is injective for small $\delta$, since it is $C^1$-close to the identity on a slightly larger closed annulus. Its boundary mismatch is $O(\delta^3)$. Moving the source boundaries inward and outward by $C|\delta|^3$, for a sufficiently large fixed $C$, sandwiches the desired ring between two such conformal images. Modulus monotonicity bounds the error by $O(\delta^3)$. The same construction with finitely many real parameters gives a joint quadratic Taylor polynomial with a uniform cubic remainder: the boundary data and the Fourier correction coefficients depend polynomially on those parameters to this order.
+
+\paragraph{Joint analytic dependence.}
+There is also a fixed-domain justification of the uniform Taylor remainder used below. On $A_R=\{1<|w|<R\}$ the smooth map
+\[
+F_\varepsilon(w)=w+\varepsilon(2|w|^2-1)(w/|w|)^2
+\]
+maps both boundary circles exactly to \eqref{eq:689-boundaries} and is a diffeomorphism for small complex $\varepsilon$. For small complex $\beta$, the composition $L_\beta\circ F_\varepsilon$, where $L_\beta(z)=z+\beta\bar z$, is a real-analytic parameter family of diffeomorphisms. Pulling back the condenser energy gives a uniformly elliptic quadratic energy on the fixed annulus, with matrix coefficients real-analytic in the four real parameters. After fixing a smooth lift of the boundary values, Lax--Milgram and the Neumann series for the perturbed inverse give real-analytic dependence of the $H^1_0$ minimizer and its energy. The modulus is $2\pi$ divided by this positive capacity, and is therefore jointly real-analytic as well. This supplies the uniform cubic Taylor remainder independently of the finite-Laurent construction.
+
+\paragraph{The harmonic perturbation decreases modulus.}
+For a curve $z=r e^{i\theta}+\varepsilon c e^{2i\theta}$, put $d=c/r$. Expanding in the physical angular coordinate $\phi=\arg z$ yields
+\begin{equation}
+ \log|z|=\log r+\varepsilon d\cos\phi
+    +\varepsilon^2\left(\frac{d^2}{2}-d^2\cos2\phi\right)
+    +O(\varepsilon^3).
+ \label{eq:689-harmonic-boundary-expansion}
+\end{equation}
+Indeed, $\phi=\theta+\varepsilon d\sin\theta+O(\varepsilon^2)$; substituting its inverse into $\Re\log(1+\varepsilon d e^{i\theta})$ gives the displayed formula. For the two curves in \eqref{eq:689-boundaries}, use $k=1$, $p_0=1$, $p_1=S/R$, and $q_j=p_j^2/2$ in \eqref{eq:689-general-modulus}. The constants in \eqref{eq:689-first-order-constants} are $A=2$ and $B=-1$. It follows that
+\begin{equation}
+ \operatorname{Mod}(\Omega_\varepsilon)
+ =m-\left(1-R^{-2}\right)\varepsilon^2+O(\varepsilon^3).
+ \label{eq:689-ordinary-modulus}
+\end{equation}
+
+\paragraph{Local affine optimization.}
+After composition with a similarity and, if needed, conjugation, any invertible real affine map relevant to modulus is represented by
+\[
+ L_\beta(z)=z+\beta\bar z,\qquad |\beta|<1.
+\]
+Translations and similarities do not affect modulus. Set
+\[
+ M(\varepsilon,\beta)=\operatorname{Mod}(L_\beta\Omega_\varepsilon).
+\]
+First take $\varepsilon=0$ and $\beta=b$ real. On the image of a circle,
+\begin{equation}
+ \log|r(e^{i\theta}+b e^{-i\theta})|
+ =\log r+b\cos2\phi
+        +b^2\left(-1+\frac12\cos4\phi\right)+O(b^3).
+ \label{eq:689-affine-boundary-expansion}
+\end{equation}
+Now \eqref{eq:689-general-modulus} applies with $k=2$, $p_0=p_1=1$, $q_0=q_1=-1$, and
+\[
+ A=\frac1{R^2+1},\qquad B=\frac{R^2}{R^2+1}.
+\]
+Consequently,
+\begin{equation}
+ M(0,b)=m-2\frac{R^2-1}{R^2+1}b^2+O(b^3).
+ \label{eq:689-affine-modulus}
+\end{equation}
+Rotational invariance makes the complex-$\beta$ quadratic term a multiple of $|\beta|^2$ with the same coefficient.
+
+There are no mixed quadratic terms between the harmonic and affine perturbations. To see this, temporarily allow $\varepsilon$ to be complex in the boundary parametrizations. Rotation by an angle $\alpha$ and boundary reparametrization give
+\begin{equation}
+ M(\varepsilon,\beta)=M(e^{-i\alpha}\varepsilon,e^{2i\alpha}\beta).
+ \label{eq:689-rotation-identity}
+\end{equation}
+A quadratic monomial with one factor from $\varepsilon,\bar\varepsilon$ and one from $\beta,\bar\beta$ cannot be invariant under this action. Equivalently, the first-order perturbations have angular frequencies one and two, whose pairwise products have no constant Fourier coefficient. The joint Taylor construction above, together with \eqref{eq:689-ordinary-modulus} and \eqref{eq:689-affine-modulus}, therefore yields
+\begin{equation}
+ M(\varepsilon,\beta)
+ =m-q|\varepsilon|^2-a|\beta|^2
+       +O\bigl((|\varepsilon|+|\beta|)^3\bigr),
+ \qquad
+ q=1-R^{-2}>0,\quad a=2\frac{R^2-1}{R^2+1}>0.
+ \label{eq:689-joint-expansion}
+\end{equation}
+In a fixed neighborhood of $(0,0)$ this gives
+\begin{equation}
+ M(\varepsilon,\beta)
+ \le m-\frac q2|\varepsilon|^2-\frac a2|\beta|^2.
+ \label{eq:689-local-upper}
+\end{equation}
+
+\paragraph{Excluding affine maps far from the identity.}
+For a smooth ring whose two boundary curves enclose areas $A_0<A_1$, Carleman's area inequality and its equality case are
+\begin{equation}
+ \operatorname{Mod}(\Omega)\le\frac12\log(A_1/A_0),
+ \quad\text{with equality only for a circular annulus up to similarity.}
+ \label{eq:689-carleman}
+\end{equation}
+The needed version has a short proof. A conformal parametrization
+$f(w)=\sum_{k\in\mathbb Z}a_kw^k$ from $1<|w|<e^M$, taking inner boundary to inner boundary, satisfies
+\[
+ A(r)=\pi\sum_{k\in\mathbb Z}k|a_k|^2r^{2k}.
+\]
+For analytic Jordan boundaries the map extends across the boundaries, so this area identity and its boundary limits are valid. Then
+\[
+ A(e^M)-e^{2M}A(1)
+ =\pi\sum_k k|a_k|^2(e^{2kM}-e^{2M})\ge0.
+\]
+All nonzero summands are positive except those for $k=0,1$. Equality forces $f(w)=a_0+a_1w$, proving \eqref{eq:689-carleman} with its equality case.
+For the image of the round annulus under $L_\beta$, the enclosed-area ratio remains $R^2$, since the affine determinant cancels. If $\beta\ne0$ the boundary curves are noncircular ellipses. Thus
+\begin{equation}
+ M(0,\beta)<m\qquad(\beta\ne0).
+ \label{eq:689-strict-affine-max}
+\end{equation}
+On a compact set of parameters bounded away from both $0$ and the unit circle, this strict deficit is uniform and persists for sufficiently small $\varepsilon$ by continuity under smooth boundary perturbations. That continuity also follows from the fixed-domain Dirichlet-energy formulation.
+
+It remains to control $|\beta|\uparrow1$ uniformly. The bounded inner complementary component of $\Omega_\varepsilon$ contains the disk of radius $1-|\varepsilon|$, while its outer boundary lies inside the disk of radius $R+|\varepsilon|S$. Hence, by ring-modulus monotonicity,
+\begin{equation}
+ M(\varepsilon,\beta)
+ \le\operatorname{Mod}\left(L_\beta
+        \{1-|\varepsilon|<|z|<R+|\varepsilon|S\}\right).
+ \label{eq:689-ellipse-comparison}
+\end{equation}
+Up to rotation, $L_\beta$ has axes $1+|\beta|$ and $1-|\beta|$. For the elliptical ring obtained from $r<|z|<s$, every horizontal coordinate
+$|x|\le(1+|\beta|)r/2$ determines an upper vertical segment joining the two boundary ellipses. Its length is at most $(1-|\beta|)s$. Every admissible condenser potential changes by one on this segment. Cauchy--Schwarz and integration in $x$ bound its Dirichlet energy below by
+\[
+ \frac{(1+|\beta|)r}{(1-|\beta|)s}.
+\]
+Since ring modulus is $2\pi$ divided by condenser capacity, the modulus is at most
+\[
+ 2\pi\frac{(1-|\beta|)s}{(1+|\beta|)r}.
+\]
+For the radii in \eqref{eq:689-ellipse-comparison}, $r$ stays bounded below and $s$ bounded above as $\varepsilon\to0$. Thus $M(\varepsilon,\beta)\to0$ uniformly as $|\beta|\uparrow1$.
+
+Choose a small parameter neighborhood in which \eqref{eq:689-local-upper} holds. The compact strict bound from \eqref{eq:689-strict-affine-max} and the degeneration estimate show that all remaining affine parameters have modulus at most $m-\gamma$ for some fixed $\gamma>0$, for sufficiently small $|\varepsilon|$. Shrinking $|\varepsilon|$ further if necessary, the full affine supremum is bounded by
+\[
+ \operatorname{Mod}_{\mathrm{aff}}(\Omega_\varepsilon)
+ \le m-\frac q2\varepsilon^2<m
+ \qquad(\varepsilon\ne0).
+\]
+Together with the harmonic homeomorphism \eqref{eq:689-map}, this proves the theorem.
+\end{proof}
+
+\paragraph{Independent numerical check.}
+The proof is asymptotic and does not depend on numerical optimization. As a cross-check, at $\tau=1$ the baseline is $m=0.4337808304830271$. Harmonic Laurent collocation gives
+$(\operatorname{Mod}(\Omega_\varepsilon)-m)/\varepsilon^2$ equal to
+$-0.5841929$, $-0.5810615$, $-0.5802843$, and $-0.5800670$ at
+$\varepsilon=0.02,0.01,0.005,0.002$, respectively, approaching the proved coefficient $-(1-R^{-2})=-0.5800256584$. At $\varepsilon=0.02$, numerical affine optimization gives $\beta\simeq0.003933496$ and modulus $0.433559780729$, still below the proposed bound. These values provide a consistency check only.
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{IwaniecKovalevOnninen} T. Iwaniec, L. V. Kovalev and J. Onninen, \emph{Harmonic mapping problem and affine capacity}, Proc. Roy. Soc. Edinburgh Sect. A \textbf{141} (2011), 1017--1030. \url{https://arxiv.org/abs/1001.2124}.
+\end{thebibliography}
+\endgroup
+\end{document}

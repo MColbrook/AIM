@@ -2,7 +2,7 @@
 
 **Area:** Potential theory and free boundary problems
 **Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -41,10 +41,25 @@ A harmonic potential that is constant on each boundary represents an equilibrium
 
 ## Status review
 
+### Reviewed manuscript, 2026-11-07
 
-**Known cases:** Arbitrary componentwise boundary fluxes on a bounded domain are required. Steklov proportionality, a common signed normal derivative, and unbounded hollow-vortex constructions impose different conditions.
+Matthew J. Colbrook provides the following AI-found [manuscript](../research/solutions/702-vekua-s-harmonic-boundary-problem-in-connectivity-at/main.pdf). Nonexistence is proved in connectivity three, with a critical-point multiplicity restriction at higher connectivity.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+**Known cases:** Nonexistence is proved in connectivity three, with a critical-point multiplicity restriction at higher connectivity.
+
+**Remaining target:** Connectivity four and higher remains unresolved here.
+
+**Review:** The [separate Codex AI audit](../research/solution_reviews/2026-11-07-complex-analysis/702-review.md) checks the complete argument against this exact target and records the primary-source comparisons. The verified restricted results do not resolve the remaining target, so this entry remains partially resolved. The results were found by AI; human peer review and formal verification are not claimed.
+
+### Earlier status record (historical)
+
+The following dated record describes the pre-submission state.
+
+
+
+**Previously recorded known cases:** Arbitrary componentwise boundary fluxes on a bounded domain are required. Steklov proportionality, a common signed normal derivative, and unbounded hollow-vortex constructions impose different conditions.
+
+**Previously recorded remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
 
 ### Online recheck, 2026-10-30
 

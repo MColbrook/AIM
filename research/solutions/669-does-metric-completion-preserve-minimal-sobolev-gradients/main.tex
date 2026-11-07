@@ -1,0 +1,285 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 669}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 669},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{Metric completion need not preserve minimal Sobolev gradients}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\begin{abstract}
+A doubling metric measure space supporting a Poincar\'e inequality has a function with source minimal gradient at most $1$ and completion gradient $\sqrt2$. The completion complement is nonmeasurable. The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+\end{abstract}
+\noindent\textbf{Catalogue scope.} AIM 669; complete resolution. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/669-does-metric-completion-preserve-minimal-sobolev-gradients.md}{Canonical target at revision \texttt{1e56463}}.
+The corrected completion-measure convention is also discussed in \cite[Section 4]{BjornBjornLahti}.
+
+\section{Statement and argument}
+\label{sec:669}
+
+The statement in the catalog allows the original metric space to be
+nonmeasurable in its completion.  Under exactly this allowance the answer is
+negative.  The construction below uses the axiom of choice, but does not use
+the continuum hypothesis.  The measure hypotheses are those of
+\cite{BjornBjorn}: a positive complete Borel measure, finite and nonzero on
+balls.  Compact inner regularity is not an additional hypothesis there.
+
+\begin{theorem}
+For every $1<p<\infty$ there is a globally doubling metric measure space $X$
+supporting a global $1$-Poincar\'e inequality, whose metric and measure
+completion is the Euclidean plane with Lebesgue measure, and a bounded
+Lipschitz function $u$ on a ball $\Omega\subset X$ such that
+\[
+ g_{u,\Omega}\leq 1\quad\text{$\mu$-almost everywhere},
+ \qquad
+ g_{\widehat u,\Omega^\wedge}=\sqrt{2}
+       \quad\text{$\mu$-almost everywhere on $\Omega$}
+\]
+for every Dirichlet-space extension $\widehat u$ agreeing with $u$
+quasieverywhere.  Thus the constant $A_0=1$ in Problem 669 is impossible.
+\end{theorem}
+
+\subsection{A set excluding oblique curves}
+
+\begin{lemma}
+There is a set $A\subset\mathbb R$, containing $0$, such that both $A$ and
+$\mathbb R\setminus A$ meet every positive-measure Borel subset of
+$\mathbb R$, and every rectifiable curve in
+\[
+ X=(A\times\mathbb R)\cup(\mathbb R\times A)
+\]
+has an axis-parallel tangent at almost every arclength parameter.
+\end{lemma}
+
+\begin{proof}
+Call a Lipschitz map $\gamma:[0,1]\to\mathbb R^2$ oblique if
+\[
+ \mathcal L^1\{t:\gamma_1'(t)\ne0\text{ and }\gamma_2'(t)\ne0\}>0.
+\]
+There are at most $\mathfrak c$ such maps, since continuous maps are
+determined by their values on a countable dense set.  There are exactly
+$\mathfrak c$ positive-measure Borel subsets of $\mathbb R$.
+
+For each oblique map there is a positive-measure set $S\subset[0,1]$ on
+which both coordinate functions are injective.  Indeed, choose $\delta>0$
+so that the set of differentiability points satisfying
+$|\gamma_i'(t)|\ge\delta$, $i=1,2$, has positive measure.  At each such
+point, for all sufficiently small nonzero $h$ with $t+h\in[0,1]$,
+\[
+ |\gamma_i(t+h)-\gamma_i(t)|\ge\tfrac{\delta}{2}|h|,
+ \qquad i=1,2.
+\]
+The measurable subsets on which this holds for every $0<|h|<1/m$,
+$m\in\mathbb N$, cover that set.  One of them has positive measure.
+Intersect it with an interval of length less than $1/m$ having
+positive-measure intersection.  The resulting set $S$ satisfies the
+displayed inequality for every pair of its points.  In particular each
+coordinate is injective on $S$, and $|S|=\mathfrak c$.
+
+Well-order, in one list of cardinality $\mathfrak c$, all the oblique maps
+and all positive-measure Borel subsets of $\mathbb R$.  Maintain disjoint
+sets of real numbers assigned to $A$ and to $B$, initially assigning $0$
+to $A$.  At a Borel-set task choose two previously unassigned points of
+that set, assigning one to $A$ and one to $B$.  At an oblique-map task
+choose $t\in S$ such that both $\gamma_1(t)$ and $\gamma_2(t)$ are
+previously unassigned, and assign both to $B$.
+
+These choices are always possible.  At a stage indexed by an ordinal
+$\alpha<\mathfrak c$, fewer than $\mathfrak c$ numbers have been assigned.
+Every positive-measure Borel set has cardinality $\mathfrak c$.  At a
+curve task, coordinate injectivity on $S$ implies that fewer than
+$\mathfrak c$ parameters are prohibited by earlier assignments.  This
+argument does not require $\mathfrak c$ to be a regular cardinal.
+
+After all tasks assign every remaining number to $B$, and let $A$ be the
+set assigned to $A$.  The Borel-set tasks give the first assertion.  Every
+oblique map has a selected point in $B\times B$, so cannot have its whole
+image in $X$.  Apply this observation to arclength parametrizations of
+rectifiable curves, affinely rescaled to $[0,1]$, to obtain the second
+assertion.
+\end{proof}
+
+\subsection{The trace measure}
+
+Equip $X$ with the Euclidean subspace metric.  The set $A$ is dense, so
+$\widehat X=\mathbb R^2$.  Every positive-measure ambient Borel set meets
+$A\times\mathbb R$, hence meets $X$: by Fubini, the set of first
+coordinates with positive-measure vertical section has positive measure
+and therefore meets $A$.  Thus $\mathbb R^2\setminus X$ has inner
+Lebesgue measure zero.
+
+Define a measure on the trace Borel sigma algebra by
+\begin{equation}
+ \mu(E\cap X)=\mathcal L^2(E),\qquad E\subset\mathbb R^2\text{ Borel},
+ \label{eq:669trace}
+\end{equation}
+and complete it.  This is well-defined: if two ambient Borel sets have the
+same trace, their Borel symmetric difference is contained in
+$\mathbb R^2\setminus X$ and is null.  If traces are pairwise disjoint,
+their representatives have null pairwise intersections; disjointifying
+the representatives proves countable additivity.  Every ball satisfies
+\[
+ \mu(B_X(c,r))=\pi r^2,
+ \qquad \mu(B_X(c,2r))=4\mu(B_X(c,r)).
+\]
+The completion measure prescribed in the question is consequently
+ordinary completed Lebesgue measure.
+
+We will use two elementary properties of this trace construction.  Every
+$\mu$-null set is contained in $N\cap X$ for some ambient null Borel set
+$N$.  Also, every $\mu$-measurable real-valued function has an ambient
+Lebesgue-measurable representative agreeing with it outside such a trace
+null set.  To see the latter, first take a Borel version for the completed
+trace measure.  A real-valued Borel function on a subspace has an ambient
+Borel extension: construct it from Borel extensions of simple-function
+approximations and their pointwise limits.  Trace integrals then equal
+ambient integrals by \eqref{eq:669trace} and simple-function approximation.
+These are also the measure-extension conventions in the corrigendum to
+\cite{BjornBjorn}.
+
+\subsection{A global Poincar\'e inequality}
+
+We prove the $1$-Poincar\'e inequality directly; H\"older's inequality
+then gives the $p$-Poincar\'e inequality for every $p\ge1$.
+Let $B=B_X(c,r)$, let $v$ be integrable on $2B$, and let $g$ be a Borel
+upper gradient of $v$ there.  We may suppose $g\in L^1(2B)$, since
+otherwise the required inequality is trivial.  Choose ambient Borel
+representatives $V,G$ on the Euclidean ball $\widehat B(c,2r)$, with
+$G\ge0$, and one ambient null Borel set $N$ outside whose trace both
+representatives agree with the original functions.  Let
+$Q=I_1\times I_2$ be the open axis-aligned square of side $2r$ centered
+at $c$.  Then
+\[
+ \widehat B(c,r)\subset Q\subset\widehat B(c,2r).
+\]
+
+By Fubini, outside a null set $Z\subset I_2$ the functions
+$V(\cdot,y)$ and $G(\cdot,y)$ are integrable on $I_1$ and the section
+$N_y$ is null.  For every $y\in(A\cap I_2)\setminus Z$, the whole
+horizontal chord $I_1\times\{y\}$ lies in $X$.  Thus, for every pair
+$s,t\in I_1\setminus N_y$, the upper-gradient inequality gives
+\begin{equation}
+ |V(s,y)-V(t,y)|
+       \le\int_{\min(s,t)}^{\max(s,t)}G(x,y)\,dx.
+ \label{eq:669line}
+\end{equation}
+This gives an absolutely continuous representative of the slice and
+$|\partial_1V(\cdot,y)|\le G(\cdot,y)$ almost everywhere.  For example,
+absolute continuity of the integral on the right first extends $V$ from
+the full-measure set $I_1\setminus N_y$ continuously to $I_1$; applying
+\eqref{eq:669line} to finitely many disjoint intervals proves absolute
+continuity and the derivative bound.
+
+The passage from the possibly nonmeasurable family $A$ to almost every
+line is justified as follows.  Fix a countable family
+$\mathcal T\subset C_c^\infty(I_1)$ dense in the $C^1$ topology on each
+of a countable compact exhaustion of $I_1$.  The set of parameters
+$y\in I_2\setminus Z$ for which at least one inequality
+\begin{equation}
+ \left|\int_{I_1}V(x,y)\varphi'(x)\,dx\right|
+       \le\int_{I_1}G(x,y)|\varphi(x)|\,dx,
+       \qquad \varphi\in\mathcal T,
+ \label{eq:669tests}
+\end{equation}
+fails is Lebesgue measurable, by Fubini and countability.  By the previous
+paragraph it is disjoint from $A$.  It must therefore be null: every
+positive-measure measurable set contains a positive-measure Borel set,
+and $A$ meets all such sets.  Density extends
+\eqref{eq:669tests} to every smooth compactly supported test function.
+The one-dimensional distributional characterization of absolute
+continuity gives $|\partial_1V|\le G$ on almost every horizontal slice.
+Repeating the argument on the vertical lines whose first coordinate is
+in $A$ gives $|\partial_2V|\le G$ on almost every vertical slice.
+
+Fubini and integration by parts on the slices now show that
+$V\in W^{1,1}(Q)$ and
+\[
+ |\nabla V|\le\sqrt2\,G\quad\text{almost everywhere on }Q.
+\]
+The usual Euclidean $L^1$ Poincar\'e inequality on $\widehat B(c,r)$,
+followed by the ball-volume ratio, therefore gives
+\[
+ \fint_B|v-v_B|\,d\mu
+ \le C r\fint_{\widehat B(c,r)}|\nabla V|\,d\mathcal L^2
+ \le C' r\fint_{2B}g\,d\mu.
+\]
+The constants are absolute and independent of $B,v,g$.  This proves the
+claimed global Poincar\'e inequality with dilation factor $2$.
+
+\subsection{The gradient gap}
+
+Take $B_0=B_X(0,2)$ and $\Omega=B_X(0,1)$.  The definition
+$\Omega^\wedge=\widehat X\setminus\overline{X\setminus\Omega}$ gives
+the ordinary open Euclidean unit disk, since $A$ is dense.  Set
+$u(x_1,x_2)=x_1+x_2$ on $\Omega$.  Every rectifiable curve in $\Omega$,
+parametrized by arclength, has at most one nonzero coordinate derivative
+almost everywhere.  Consequently
+\[
+ |(u\circ\gamma)'|
+       =|\gamma_1'+\gamma_2'|=|\gamma'|
+       \quad\text{almost everywhere}.
+\]
+Thus $g=1$ is an upper gradient of $u$, belongs to $L^p(\Omega)$, and
+$g_{u,\Omega}\le1$ almost everywhere.
+
+Suppose $\widehat u\in D^p(\Omega^\wedge)$ agrees with $u$ outside a
+set of zero $C_p^X$ capacity.  Zero Sobolev capacity implies zero
+$\mu$-measure, since the capacity includes the $L^p$ term.  The
+disagreement set is therefore contained in $N\cap X$ for an ambient
+null Borel set $N$.  Since $X$ meets every positive-measure ambient Borel
+set, the measurable function $\widehat u-(x_1+x_2)$ must vanish
+Lebesgue-almost everywhere on $\Omega^\wedge$.  Indeed, a positive-measure
+set of disagreement outside $N$ would contain a positive-measure Borel
+set meeting $X$, a contradiction.
+
+Euclidean Sobolev theory identifies the minimal $p$-weak upper gradient
+with the length of the weak gradient.  It follows that
+\[
+ g_{\widehat u,\Omega^\wedge}
+       =|\nabla(x_1+x_2)|=\sqrt2
+       \quad\text{Lebesgue-almost everywhere}.
+\]
+By the trace-measure identity this also holds $\mu$-almost everywhere on
+$\Omega$.  This proves the theorem.  In this example any valid comparison
+constant $A_0$ is at least $\sqrt2$.
+
+The construction addresses the exact generality of the catalog.  It
+does not assert failure when $X$ is required to be measurable in its
+completion.
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{BjornBjornLahti} A. Bj\"orn, J. Bj\"orn and P. Lahti, \emph{Removable sets for Newtonian Sobolev spaces and a characterization of $p$-path almost open sets}, Rev. Mat. Iberoam. \textbf{39} (2023), 1143--1180. \url{https://arxiv.org/abs/2105.09012v2}. DOI: \url{https://doi.org/10.4171/RMI/1419}.
+\bibitem{BjornBjorn} A. Bj\"orn and J. Bj\"orn, \emph{Poincar\'e inequalities and Newtonian Sobolev functions on noncomplete metric spaces}, J. Differential Equations \textbf{266} (2019), 44--69; corrigendum, \textbf{285} (2021), 493--495. \url{https://arxiv.org/abs/1705.02253}; \url{https://doi.org/10.1016/j.jde.2021.03.008}. DOI: \url{https://doi.org/10.1016/j.jde.2018.07.029}.
+\end{thebibliography}
+\endgroup
+\end{document}

@@ -1,8 +1,8 @@
 # 669. Does metric completion preserve minimal Sobolev gradients?
 
 **Area:** Nonlinear potential theory on metric spaces
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -49,10 +49,23 @@ Minimal upper gradients measure the local variation used in Sobolev energies and
 
 ## Status review
 
+### Reviewed manuscript, 2026-11-07
 
-**Known cases:** The completion question asks for equality of the minimal gradients, not equivalence of Sobolev definitions on a complete space. Path-almost-open special cases remain stronger assumptions. The 2026 S-gradient/Hajlasz characterization and single-test-plan results do not imply exact preservation for every noncomplete doubling PI space. No matching full resolution located.
+Matthew J. Colbrook provides the following AI-found [manuscript](../research/solutions/669-does-metric-completion-preserve-minimal-sobolev-gradients/main.pdf). Counterexample: minimal Sobolev gradients need not be preserved by completion.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+
+**Review:** The [separate Codex AI audit](../research/solution_reviews/2026-11-07-complex-analysis/669-review.md) checks the complete argument against this exact target and records the primary-source comparisons. No unresolved mathematical gap was identified in the complete resolution. The results were found by AI; human peer review and formal verification are not claimed.
+
+### Earlier status record (historical)
+
+The following dated record describes the pre-submission state.
+
+
+
+**Previously recorded known cases:** The completion question asks for equality of the minimal gradients, not equivalence of Sobolev definitions on a complete space. Path-almost-open special cases remain stronger assumptions. The 2026 S-gradient/Hajlasz characterization and single-test-plan results do not imply exact preservation for every noncomplete doubling PI space. No matching full resolution located.
+
+**Previously recorded remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
 
 ### Online recheck, 2026-10-30
 

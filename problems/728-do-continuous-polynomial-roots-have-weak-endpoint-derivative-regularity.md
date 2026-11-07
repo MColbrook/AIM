@@ -1,8 +1,8 @@
 # 728. Do continuous polynomial roots have weak endpoint derivative regularity?
 
 **Area:** Complex analysis and potential theory
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -38,10 +38,23 @@ Polynomial-root regularity controls how branches change as coefficients vary. Th
 
 ## Status review
 
+### Reviewed manuscript, 2026-11-07
 
-**Known cases:** The September reparameterization theorem assumes Cd coefficients and changes the time parameter. It retains subcritical Sobolev bounds and does not imply weak endpoint derivative regularity in the original parameter under C(n-1,1) coefficients.
+Matthew J. Colbrook provides the following AI-found [manuscript](../research/solutions/728-do-continuous-polynomial-roots-have-weak-endpoint-derivative/main.pdf). The weak endpoint derivative estimate holds for every continuous polynomial root, with an explicit coefficient bound.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+
+**Review:** The [separate Codex AI audit](../research/solution_reviews/2026-11-07-complex-analysis/728-review.md) checks the complete argument against this exact target and records the primary-source comparisons. No unresolved mathematical gap was identified in the complete resolution. The results were found by AI; human peer review and formal verification are not claimed.
+
+### Earlier status record (historical)
+
+The following dated record describes the pre-submission state.
+
+
+
+**Previously recorded known cases:** The September reparameterization theorem assumes Cd coefficients and changes the time parameter. It retains subcritical Sobolev bounds and does not imply weak endpoint derivative regularity in the original parameter under C(n-1,1) coefficients.
+
+**Previously recorded remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
 
 ### Online recheck, 2026-10-30
 

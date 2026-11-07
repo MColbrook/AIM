@@ -1,0 +1,183 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 694}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 694},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{A translated Laguerre criterion in the positive-Gaussian case}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\begin{abstract}
+The strict translated Laguerre criterion is proved when the Gaussian coefficient is positive. The case of Gaussian coefficient zero remains unresolved here.
+\end{abstract}
+\noindent\textbf{Catalogue scope.} AIM 694; partial progress. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/694-does-a-strict-laguerre-inequality-for-every-imaginary-translate-force-real-zeros.md}{Canonical target at revision \texttt{1e56463}}.
+
+
+\section{Statement and argument}
+\label{sec:694partial}
+
+\textbf{Status: partial only; this problem is not counted as resolved.}
+We prove the stated implication when the coefficient $a$ of the explicit
+Gaussian factor in the canonical product is strictly positive.  The case
+$a=0$ remains unresolved here.
+
+For a real entire function $f$, write
+\[
+ U(x,y)=\operatorname{Re}f(x+iy),\qquad
+ V(x,y)=\operatorname{Im}f(x+iy).
+\]
+Since $f$ is real on the real axis, the translated function in the
+question is $f_y(x)=2U(x,y)$.  Its strict Laguerre inequality is therefore
+equivalent to
+\begin{equation}
+ U_x(x,y)^2-U(x,y)U_{xx}(x,y)>0
+ \qquad(x\in\mathbb R, y>0).
+ \label{eq:694-strict}
+\end{equation}
+
+\begin{lemma}[A horizontal-decay criterion]
+Suppose that a real entire function $f$ satisfies
+\eqref{eq:694-strict} and, for every finite $Y>0$,
+\begin{equation}
+ \sup_{|y|\le Y}|f(x+iy)|\longrightarrow0
+ \qquad\text{as }x\longrightarrow\pm\infty.
+ \label{eq:694-decay}
+\end{equation}
+Then every zero of $f$ is real.
+\end{lemma}
+
+\begin{proof}
+Suppose to the contrary that $f(x_0+iy_0)=0$ with $y_0>0$.
+At any point of the nodal set $U=0$ in the upper half-plane,
+\eqref{eq:694-strict} implies $U_x\ne0$.  The implicit-function theorem
+therefore produces a local graph $x=x(y)$ through $(x_0,y_0)$ on which
+$U=0$.  Continue this graph downward over its maximal interval
+$(\beta,y_0]$, where $0\le\beta<y_0$.
+Equivalently, it is the maximal solution of
+\[
+ x'(y)=-\frac{U_y(x(y),y)}{U_x(x(y),y)},\qquad x(y_0)=x_0,
+\]
+restricted to the nodal set.  Local uniqueness permits this continuation
+as long as the graph remains in a bounded part of the upper half-plane.
+
+Along the graph $U_x$ is continuous and never zero, hence has constant
+sign.  The Cauchy--Riemann equations give
+\begin{equation}
+ \frac{d}{dy}V(x(y),y)
+ =\frac{U_y(x(y),y)^2+U_x(x(y),y)^2}{U_x(x(y),y)}.
+ \label{eq:694-monotone}
+\end{equation}
+Thus $V(x(y),y)$ is strictly monotone, with derivative of one fixed
+sign, and its value at $y_0$ is zero.  In particular, after fixing any
+$y_1\in(\beta,y_0)$, all values at $\beta<y\le y_1$ have the same sign
+and have absolute value at least $|V(x(y_1),y_1)|>0$.
+
+If $\beta>0$ and there were a bounded sequence $x(y_j)$ with
+$y_j\downarrow\beta$, a subsequence would converge to $x_*$.  Continuity
+would give $U(x_*,\beta)=0$ and \eqref{eq:694-strict} would give
+$U_x(x_*,\beta)\ne0$.  The implicit-function theorem at this point gives
+a unique graph on a whole neighborhood of $\beta$.  The original graph,
+which meets that neighborhood at $(x(y_j),y_j)$, agrees with it by local
+uniqueness and extends below $\beta$.  This contradicts maximality.
+Consequently $|x(y)|\to\infty$ as $y\downarrow\beta$ when $\beta>0$.
+Condition \eqref{eq:694-decay}, with $Y=y_0$, then gives
+$V(x(y),y)\to0$, contradicting the lower bound just established.
+
+It remains to consider $\beta=0$.  Take a sequence $y_j\downarrow0$.
+If $x(y_j)$ has a bounded subsequence, pass to a further convergent
+subsequence.  Since $f$ is real on the real axis, continuity gives
+$V(x(y_j),y_j)\to0$ on that subsequence.  If no bounded subsequence
+exists, pass to a subsequence with $|x(y_j)|\to\infty$ and use
+\eqref{eq:694-decay} to reach the same conclusion.  Either alternative
+contradicts \eqref{eq:694-monotone}.  There are therefore no zeros in the
+upper half-plane.  Conjugation excludes zeros in the lower half-plane.
+\end{proof}
+
+\begin{proposition}
+Let $f$ satisfy the hypotheses of Problem 694 and have the canonical
+product
+\[
+ f(z)=C e^{-az^2+bz}z^m
+       \prod_k\left(1-\frac z{z_k}\right)e^{z/z_k},
+ \qquad
+ \sum_k|z_k|^{-2}<\infty,
+\]
+as in \cite[Definition 1.1]{CsordasEscassut2005}.  If $a>0$, then every
+zero of $f$ is real and $f$ belongs to the Laguerre--P\'olya class.
+\end{proposition}
+
+\begin{proof}
+The strict inequality excludes $f\equiv0$.
+Set $E_1(w)=(1-w)e^w$.  There is an absolute constant $C_0$ such that
+\[
+ \log|E_1(w)|\le C_0|w|^2\qquad(w\in\mathbb C).
+\]
+For $|w|\le1/2$ this follows by expanding
+$\log(1-w)+w$; for $|w|>1/2$ use
+$\log|1-w|+\operatorname{Re}w\le\log(1+|w|)+|w|$.
+Fix $\varepsilon>0$ and split the canonical product into a finite head
+and a tail with $C_0\sum_{k>K}|z_k|^{-2}<\varepsilon$.
+The logarithm of the modulus of the finite head, including $C e^{bz}z^m$,
+is at most $O(|z|+\log(2+|z|))$, uniformly in the argument of $z$.
+The tail is at most $\varepsilon|z|^2$ in logarithmic modulus.
+It follows that
+\[
+ \log\left|C e^{bz}z^m\prod_kE_1(z/z_k)\right|
+ \le o(|z|^2)
+\]
+as an upper bound uniform in the argument.  More precisely, for every
+$\varepsilon>0$ this logarithm is at most
+$C_\varepsilon+\varepsilon|z|^2$.
+
+For $z=x+iy$ with $|y|\le Y$, choose $0<\varepsilon<a$.  Then
+\[
+ \log|f(x+iy)|
+ \le C_\varepsilon-(a-\varepsilon)x^2
+             +(a+\varepsilon)Y^2,
+\]
+which proves \eqref{eq:694-decay}.  The preceding lemma excludes all
+nonreal zeros.  The canonical-product characterization in
+\cite[Definition 1.2]{CsordasEscassut2005} now gives
+$f\in\mathcal{L}\mathcal{P}$.
+\end{proof}
+
+The proof uses horizontal decay supplied by $a>0$.  It does not provide
+that decay when $a=0$, and it does not resolve the full conjecture.
+
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{CsordasEscassut2005} G. Csordas and A. Escassut, \emph{The Laguerre inequality and the distribution of zeros of entire functions}, Ann. Math. Blaise Pascal \textbf{12} (2005), 331--345. \url{https://doi.org/10.5802/ambp.210}.
+\end{thebibliography}
+\endgroup
+\end{document}

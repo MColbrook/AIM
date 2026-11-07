@@ -1,0 +1,207 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 724}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 724},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{Polynomial local mass for regular orthogonality measures}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\begin{abstract}
+For every fixed $L>2$, the capacity of ambient ball centers with local mass at least $r^L$ tends to the support capacity. This implies the requested iterated limit. The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+\end{abstract}
+\noindent\textbf{Catalogue scope.} AIM 724; complete resolution. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/724-is-polynomial-local-mass-almost-necessary-for-regular-orthogonal-polynomials.md}{Canonical target at revision \texttt{1e56463}}.
+
+
+\section{Statement and argument}
+\label{sec:724}
+
+The catalogue asks for an iterated-limit necessary condition for Stahl--Totik regularity. In its definition the centers of the balls range over all of $\mathbb C$. We prove the stronger assertion that every fixed exponent greater than two works. The proof uses the regularity definition, the Vandermonde determinant identity, and the equality between logarithmic capacity and transfinite diameter; see \cite{StahlTotik,BloomVandermonde} for this background.
+
+\begin{theorem}\label{thm:724}
+Let $\mu$ be a nonzero finite positive Borel measure on $\mathbb C$, with compact support $S$ of positive logarithmic capacity. Let $\kappa_j>0$ be the leading coefficients of its orthonormal polynomials. Suppose
+\[
+ \lim_{j\to\infty}\kappa_j^{1/j}=\operatorname{cap}(S)^{-1}.
+\]
+For $L>0$ and $r>0$, put
+\[
+ G_L(r)=\{z\in\mathbb C:\mu(B(z,r))\ge r^L\}.
+\]
+Then, for every fixed $L>2$,
+\[
+ \lim_{r\downarrow0}\operatorname{cap}(G_L(r))
+ =\operatorname{cap}(S).
+\]
+In particular the iterated limit in Problem 724 equals $\operatorname{cap}(S)$.
+\end{theorem}
+
+\begin{proof}
+We first prove the assertion when $\mu(S)=1$ and $\operatorname{diam}(S)\le1$. Write
+\[
+ c=\operatorname{cap}(S)>0,\qquad V=-\log c.
+\]
+All pairwise logarithmic energies on $S$ are then nonnegative.
+
+\paragraph{The optimal Vandermonde scale.}
+For $n\ge1$, define
+\[
+ \Delta_n(z_1,\ldots,z_n)=\prod_{1\le i<j\le n}(z_i-z_j),
+ \qquad Z_n=\int_{S^n}|\Delta_n|^2\,d\mu^{\otimes n}.
+\]
+Replacing the monomials in the Vandermonde determinant by orthonormal polynomials, and expanding the squared determinant, gives the exact identity
+\[
+ Z_n=n!\prod_{j=0}^{n-1}\kappa_j^{-2}.
+\]
+Regularity therefore implies
+\begin{equation}\label{eq:724-Z}
+ \frac{\log Z_n}{n^2}\longrightarrow\log c.
+\end{equation}
+Indeed, $\log\kappa_j=-j\log c+o(j)$ and the sum of the $o(j)$ terms is $o(n^2)$.
+If
+\[
+ M_n=\max_{S^n}|\Delta_n|^2,
+\]
+the transfinite-diameter characterization of capacity similarly gives
+\begin{equation}\label{eq:724-M}
+ \frac{\log M_n}{n^2}\longrightarrow\log c.
+\end{equation}
+
+\paragraph{Few coordinates can lie at low-mass centers.}
+Fix $L>2$ and set
+\[
+ A_r=\{z\in S:\mu(B(z,r))\ge(2r)^L\},\qquad B_r=S\setminus A_r.
+\]
+There is a constant $C$ independent of small $r$ such that
+\begin{equation}\label{eq:724-badmass}
+ q_r:=\mu(B_r)\le Cr^{L-2}.
+\end{equation}
+To prove this, take a maximal $r/2$-separated subset of $B_r$. Its radius-$r/2$ balls cover $B_r$, and it contains at most $Cr^{-2}$ points. Each covering ball has measure less than $(2r)^L$, since its center belongs to $B_r$. The empty-set case is immediate.
+
+Choose fixed $\varepsilon>0$, $0<\delta<1$, and let
+\[
+ n=n(r)=\left\lfloor\frac{\log(1/r)}{\varepsilon}\right\rfloor.
+\]
+Then $\log(1/r)/n\to\varepsilon$. Let $\mathcal B_r\subset S^n$ consist of configurations with at least $\delta n$ coordinates in $B_r$. Since $\mu$ is a probability measure,
+\[
+ \mu^{\otimes n}(\mathcal B_r)\le 2^nq_r^{\delta n}
+\]
+for small $r$; if $q_r=0$ the bad contribution is zero. Consequently,
+\[
+ \int_{\mathcal B_r}|\Delta_n|^2\,d\mu^{\otimes n}
+ \le M_n2^nq_r^{\delta n}.
+\]
+By \eqref{eq:724-M}--\eqref{eq:724-badmass}, the limsup of the logarithm of this upper bound divided by $n^2$ is at most
+\[
+ \log c-\delta\varepsilon(L-2)<\log c.
+\]
+In view of \eqref{eq:724-Z}, this contribution is $o(Z_n)$.
+
+For fixed $\eta>0$, configurations with
+\[
+ |\Delta_n|^2<\exp\{n^2(\log c-\eta)\}
+\]
+also contribute $o(Z_n)$, because the product measure has total mass one. Hence for every sufficiently small $r$ there exists a configuration $z_1,\ldots,z_n$ with fewer than $\delta n$ bad coordinates and
+\[
+ |\Delta_n(z_1,\ldots,z_n)|^2
+ \ge\exp\{n^2(\log c-\eta)\}.
+\]
+The points are distinct. Keep its $N>(1-\delta)n$ good points $x_1,\ldots,x_N$. Deleting the other points decreases the unnormalized logarithmic energy, because each pairwise term is nonnegative. Therefore
+\begin{equation}\label{eq:724-discrete}
+ \sum_{i\ne j\le N}\log\frac1{|x_i-x_j|}
+ \le n^2(V+\eta).
+\end{equation}
+
+\paragraph{Turn these points into a finite-energy measure.}
+Let $\sigma_i$ be normalized arclength on the circle of radius $r/2$ centered at $x_i$, and set $\sigma=N^{-1}\sum_i\sigma_i$. For every point $w$ on this circle,
+\[
+ B(x_i,r)\subset B(w,2r),\qquad
+ \mu(B(w,2r))\ge(2r)^L.
+\]
+Thus the compact support of $\sigma$ lies in $G_L(2r)$.
+
+The circle self-energy is $I(\sigma_i)=\log(2/r)$. Moreover, for distinct centers,
+\begin{equation}\label{eq:724-pair}
+ I(\sigma_i,\sigma_j)\le\log\frac1{|x_i-x_j|}.
+\end{equation}
+Here and below $I$ denotes logarithmic energy. To check \eqref{eq:724-pair}, the circle mean identity gives
+\[
+ \int\log\frac1{|z-w|}\,d\sigma_i(z)
+ =\log\frac1{\max\{r/2,|x_i-w|\}}
+ \le\log\frac1{|x_i-w|}.
+\]
+Integrating again over the second circle gives
+\[
+ I(\sigma_i,\sigma_j)
+ \le\log\frac1{\max\{r/2,|x_i-x_j|\}}
+ \le\log\frac1{|x_i-x_j|}.
+\]
+This argument also covers overlapping circles.
+
+By \eqref{eq:724-discrete}--\eqref{eq:724-pair},
+\[
+ I(\sigma)
+ \le\frac{V+\eta}{(1-\delta)^2}
+ +\frac{\log(2/r)}{(1-\delta)n}.
+\]
+The energy characterization of logarithmic capacity yields
+\[
+ \liminf_{r\downarrow0}\operatorname{cap}(G_L(2r))
+ \ge\exp\left(-\frac{V+\eta}{(1-\delta)^2}
+              -\frac{\varepsilon}{1-\delta}\right).
+\]
+Let $\eta$, $\delta$, and $\varepsilon$ tend to zero, after taking this liminf. It follows that the liminf is at least $e^{-V}=c$.
+On the other hand, $G_L(2r)$ lies in the closed $2r$-neighborhood of $S$. Capacity is continuous from above along these compact neighborhoods, so the limsup is at most $c$. This proves the normalized assertion.
+
+\paragraph{Remove the normalization.}
+Choose $R\ge\max\{1,\operatorname{diam}(S)\}$ and a translation $a$. Push $\mu/\mu(S)$ forward under $z\mapsto(z-a)/R$, obtaining a regular probability measure $\mu'$ with support $S'$ of diameter at most one. Given the desired $L>2$, choose $2<L'<L$. For $r=R\rho$, if
+\[
+ \mu'(B(w,\rho))\ge\rho^{L'},
+\]
+then
+\[
+ \mu(B(a+Rw,r))\ge \mu(S)R^{-L'}r^{L'}\ge r^L
+\]
+for all sufficiently small $r$. Capacity scaling and the normalized result with exponent $L'$ give the required lower bound. The support-neighborhood upper bound is unchanged. This finishes the proof.
+\end{proof}
+
+\paragraph{Scope.}
+The centers in $G_L(r)$ range over all of $\mathbb C$, exactly as in the catalogue. The smoothing circles used in the proof need not lie in $S$. Accordingly, this proof does not claim the same statement with $G_L(r)$ replaced by $G_L(r)\cap S$ for arbitrary supports, nor does it claim that the capacity of the complementary bad set tends to zero. No absolute continuity, absence of atoms, or regularity of the support for the Dirichlet problem is assumed.
+
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{StahlTotik} H. Stahl and V. Totik, \emph{General Orthogonal Polynomials}, Encyclopedia of Mathematics and its Applications 43, Cambridge University Press, 1992. \url{https://doi.org/10.1017/CBO9780511759420}.
+\bibitem{BloomVandermonde} T. Bloom, \emph{Asymptotics of integrals of Vandermonde determinants}, Dolomites Research Notes on Approximation \textbf{7} (2014), 20--25. \url{https://emis.de/ft/41335}.
+\end{thebibliography}
+\endgroup
+\end{document}

@@ -1,8 +1,8 @@
 # 690. A Smirnov function without a Hilbert-domain holomorphic extension
 
 **Area:** Infinite-variable complex analysis and function spaces
-**Status:** 🔵 OPEN
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -24,6 +24,19 @@ The question determines the natural domain of holomorphy of the logarithmic clos
 Kunyu Guo, Jiaqi Ni and Qi Zhou, *Nevanlinna class, Dirichlet series and Szegő’s problem*, Annales de l’Institut Fourier **75** (2025), 1603–1647, [Question 2.28 and Theorem 2.27](https://aif.centre-mersenne.org/articles/10.5802/aif.3696/), printed pp.1627–1628. Final published source pinned and fully read; first arXiv submission 6 January 2022, latest preprint revision 1 June 2022.
 
 ## Status review
+
+### Reviewed manuscript, 2026-11-07
+
+Matthew J. Colbrook provides the following AI-found [manuscript](../research/solutions/690-a-smirnov-function-without-a-hilbert-domain-holomorphic/main.pdf). Every stated Smirnov function extends holomorphically to the Hilbert polydisc; no proposed nonextendible example exists.
+
+The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+
+**Review:** The [separate Codex AI audit](../research/solution_reviews/2026-11-07-complex-analysis/690-review.md) checks the complete argument against this exact target and records the primary-source comparisons. No unresolved mathematical gap was identified in the complete resolution. The results were found by AI; human peer review and formal verification are not claimed.
+
+### Earlier status record (historical)
+
+The following dated record describes the pre-submission state.
+
 
 
 ### Online recheck, 2026-10-30

@@ -1,0 +1,189 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 702}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 702},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{Vekua boundary data in triply connected domains}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\noindent\textbf{Catalogue scope.} AIM 702; partial progress. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/702-vekua-s-harmonic-boundary-problem-in-connectivity-at-least-three.md}{Canonical target at revision \texttt{1e56463}}.
+
+
+\section{Statement and argument}
+\label{sec:702}
+
+The argument below settles the case of three boundary components in
+the stated analytic-boundary problem.  The full catalogue target,
+which includes every connectivity $n\ge3$, remains unresolved here
+for $n\ge4$.
+
+Let $\Omega$ be a bounded connected planar domain bounded by $n$
+pairwise disjoint real-analytic Jordan curves.  Label the outer curve
+$\Gamma_0$ and the inner curves $\Gamma_1,\ldots,\Gamma_{n-1}$.
+Suppose a nonconstant real harmonic function
+$u\in C^2(\Omega)\cap C^1(\overline\Omega)$ satisfies
+\begin{equation}
+ u=c_j,\qquad \partial_\nu u=d_j\qquad\hbox{on }\Gamma_j,
+ \label{eq:702-1}
+\end{equation}
+where the $c_j,d_j$ are real constants and $\nu$ is the outward
+unit normal of $\Omega$.
+Every $d_j$ is nonzero: constant Dirichlet data and zero normal
+derivative on one analytic boundary arc would make $u$ constant by
+harmonic reflection and Cauchy uniqueness.
+
+\begin{lemma}[A holomorphic primitive with bounded valence]
+Put $q=u_x-iu_y$.  Then $q$ has exactly $n-2$ zeros in $\Omega$,
+counted with multiplicity.  There is a single-valued holomorphic
+function $F$ on $\Omega$, continuous up to its boundary, such that
+\begin{equation}
+ F'=q^2,\qquad
+ F(z)=-d_j^2\overline z+C_j\quad(z\in\Gamma_j)
+ \label{eq:702-2}
+\end{equation}
+for constants $C_j\in\mathbb C$.
+For every $w\notin F(\partial\Omega)$, the number of solutions of
+$F(z)=w$ in $\Omega$, counted with multiplicity, is at most $n-1$.
+\end{lemma}
+
+\begin{proof}
+Orient every boundary component positively with respect to $\Omega$:
+the outer component is counterclockwise and the inner components are
+clockwise.  Let $\tau=dz/ds$ be the complex unit tangent in this
+orientation.  Then $\nu=-i\tau$.
+Because $u$ is constant along a boundary component, its tangential
+derivative is zero and its gradient is $d_j\nu$.  Consequently
+\begin{equation}
+ q=d_j\overline\nu=i d_j\overline\tau
+ \qquad\hbox{on }\Gamma_j.
+ \label{eq:702-3}
+\end{equation}
+The winding of $q$ about zero is $-1$ on the outer component and $+1$
+on each inner component.  The turning-number theorem for smooth
+Jordan curves and the argument principle therefore give
+\begin{equation}
+ \#\{q=0\}\ \hbox{with multiplicity}
+ =-1+(n-1)=n-2.
+ \label{eq:702-4}
+\end{equation}
+These uses of the argument principle are legitimate up to the
+boundary: locally straighten an analytic boundary arc conformally;
+$u-c_j$ has zero boundary values and extends harmonically by odd
+reflection.  Thus $q$ extends holomorphically across each boundary
+arc and, by $d_j\ne0$, has no boundary zero.
+
+Squaring \eqref{eq:702-3} and using $dz=\tau ds$ gives
+\begin{equation}
+ q^2\,dz=-d_j^2\overline\tau\,ds
+         =-d_j^2\,d\overline z
+ \qquad\hbox{on }\Gamma_j.
+ \label{eq:702-5}
+\end{equation}
+In particular every boundary period of $q^2\,dz$ is zero.
+The inner boundary cycles generate the first homology of $\Omega$,
+so all its periods vanish.  Integrating $q^2\,dz$ defines a
+single-valued holomorphic primitive $F$; integrating \eqref{eq:702-5} along
+each component proves \eqref{eq:702-2}.
+
+Let $D_0$ be the bounded Jordan domain enclosed by $\Gamma_0$, and
+let $D_j$ be the hole enclosed by $\Gamma_j$ for $j\ge1$.
+Define the reflected and scaled Jordan domains
+\[
+ K_j=\{-d_j^2\overline z+C_j:z\in D_j\}.
+\]
+They need not be disjoint.  The map in this display reverses
+orientation.  Hence $F(\Gamma_0)$ winds clockwise around $K_0$, and
+each $F(\Gamma_j)$, $j\ge1$, winds counterclockwise around $K_j$.
+For $w$ off all these boundary images, the argument principle gives
+the exact formula
+\begin{equation}
+ N_F(w)=\sum_{j=1}^{n-1}{\bf1}_{K_j}(w)-{\bf1}_{K_0}(w).
+ \label{eq:702-6}
+\end{equation}
+The left side counts zeros of $F-w$ with multiplicity, since $F$ has
+no poles.  In particular it is nonnegative and is at most $n-1$.
+\end{proof}
+
+\begin{theorem}[Triply connected nonexistence]
+No nonconstant harmonic function can satisfy \eqref{eq:702-1} on a bounded
+triply connected domain with real-analytic Jordan boundary components.
+\end{theorem}
+
+\begin{proof}
+For $n=3$, \eqref{eq:702-4} says that $q$ has one zero $a$, of multiplicity
+one.  Since $F'=q^2$, the holomorphic map $F$ has local degree three
+at $a$.  More explicitly,
+\[
+ F(z)-F(a)=c(z-a)^3+O((z-a)^4),\qquad c\ne0.
+\]
+Choose a sufficiently small closed disc about $a$ contained in
+$\Omega$.  For every $w$ sufficiently close to $F(a)$, Rouch\'e's
+theorem gives three solutions of $F(z)=w$ in this disc, counted with
+multiplicity.  Choose such a $w$ outside the finite union
+$F(\partial\Omega)$ of Jordan curves; this is possible because that
+union has empty interior.
+Then $N_F(w)\ge3$, contradicting $N_F(w)\le2$ from \eqref{eq:702-6}.
+\end{proof}
+
+\begin{corollary}[A restriction at higher connectivity]
+Under \eqref{eq:702-1}, if $q$ has a zero of multiplicity $k\ge1$, then
+\begin{equation}
+ 2k+1\le n-1.
+ \label{eq:702-7}
+\end{equation}
+In particular, a nonconstant solution at connectivity $n\ge3$ would
+have at least two distinct interior critical points.  At connectivity
+four or five all zeros of $q$ would be simple.
+\end{corollary}
+
+\begin{proof}
+The local degree of $F$ at such a zero is $2k+1$.  The same nearby
+value argument bounds it by the global valence $n-1$.
+Since the sum of the multiplicities is $n-2$, \eqref{eq:702-7} excludes a
+single distinct critical point and gives the last assertions.
+\end{proof}
+
+The underlying harmonic problem and the annular classification appear
+in \cite[Section 5, Theorem 5.5]{KhavinsonSolyninVassilev2005}.
+No sign restriction on the separate fluxes was imposed above: their
+squares enter \eqref{eq:702-2}, while their nonzero signs change the argument
+of $q$ only by a constant on each boundary component.
+
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{KhavinsonSolyninVassilev2005} D. Khavinson, A. Yu. Solynin and D. Vassilev, \emph{Overdetermined boundary value problems, quadrature domains and applications}, Comput. Methods Funct. Theory \textbf{5} (2005), 19--48, \S5. \url{https://www.unm.edu/~vassilev/quadr.pdf}.
+\end{thebibliography}
+\endgroup
+\end{document}
