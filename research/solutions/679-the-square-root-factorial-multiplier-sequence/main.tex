@@ -1,0 +1,241 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 679}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 679},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{The sequence \texorpdfstring{$\sqrt{k}/k!$}{sqrt(k)/k!} is a multiplier sequence}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\begin{abstract}
+$\{\sqrt{k}/k!\}_{k\ge0}$ is a multiplier sequence; its exponential generating function has simple negative nonzero zeros with explicit quadratic localization. The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+\end{abstract}
+\noindent\textbf{Catalogue scope.} AIM 679; complete resolution. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/679-the-square-root-factorial-multiplier-sequence.md}{Canonical target at revision \texttt{1e56463}}.
+
+
+\section{Statement and argument}
+\label{sec:679}
+
+The answer to the question of Csordas and Forg\'acs
+\cite{CsordasForgacs} is affirmative.  We prove the stronger assertion
+that the associated entire function has only simple negative zeros,
+apart from its simple zero at the origin, and locate every zero between
+two explicit bounds.
+
+\begin{theorem}
+The sequence $\gamma_0=0$, $\gamma_k=\sqrt{k}/k!$ for $k\ge1$, is a
+classical multiplier sequence.  More precisely, write
+\[
+ \Phi(w)=\sum_{k=1}^{\infty}\frac{\sqrt{k}}{(k!)^2}w^k.
+\]
+Its zeros are $0$ and $-\lambda_j$, $j\ge1$, all simple, where
+\[
+ \frac{j^2\pi^2}{4}<\lambda_j<\frac{(j+1)^2\pi^2}{4}.
+\]
+In particular $\Phi$ belongs to the Laguerre--P\'olya class of type I,
+with nonnegative Taylor coefficients.
+\end{theorem}
+
+\subsection{A cosine subtraction lemma}
+
+\begin{lemma}
+Let $\mu$ be a nonatomic probability measure on $(0,1)$.  The entire
+function
+\[
+ F(z)=\cos z-\int_{(0,1)}\cos(tz)\,d\mu(t)
+\]
+has only real zeros.  Its zero at $0$ has multiplicity two; in each
+interval $(j\pi,(j+1)\pi)$, $j\ge1$, it has exactly one simple zero.
+The remaining zeros are the negatives of these zeros.
+\end{lemma}
+
+\begin{proof}
+Local uniform domination proves that the integral is entire.  The
+function $F$ is even and has real Taylor coefficients.  Since
+$0<\int t^2\,d\mu(t)<1$,
+\[
+ F(z)=-\frac{1-\int t^2\,d\mu(t)}{2}z^2+O(z^4),
+\]
+so the zero at $0$ is exactly double.
+
+For a nonzero integer $j$ and $z=j\pi+iy$,
+\[
+ |\cos z|=\cosh y,
+ \qquad
+ \left|\int\cos(tz)\,d\mu(t)\right|
+       \le\int\cosh(ty)\,d\mu(t).
+\]
+When $y\ne0$ the second quantity is strictly less than $\cosh y$,
+because $0<t<1$.  When $y=0$ use instead
+\[
+ \left|\int\cos(j\pi t)\,d\mu(t)\right|
+ \le\int|\cos(j\pi t)|\,d\mu(t)<1.
+\]
+Here the equality set of $|\cos(j\pi t)|=1$ in $(0,1)$ is finite and
+has zero $\mu$-measure.
+
+On a horizontal line $z=x\pm iR$, uniformly in real $x$,
+\[
+ |\cos z|\ge\sinh R,
+ \qquad
+ \left|\int\cos(tz)\,d\mu(t)\right|
+       \le\int\cosh(tR)\,d\mu(t).
+\]
+Moreover
+\[
+ \frac{\int\cosh(tR)\,d\mu(t)}{\sinh R}\longrightarrow0
+       \quad(R\longrightarrow\infty).
+\]
+Indeed, the integrand ratio tends to zero for every $t<1$ and is bounded
+by $\coth1$ for $R\ge1$.  Dominated convergence applies.
+
+For every sufficiently large $R$, Rouch\'e's theorem on the rectangle
+with vertical sides $j\pi$ and $(j+1)\pi$, $j\ge1$, and horizontal
+sides at imaginary parts $\pm R$ therefore gives exactly one zero of
+$F$, counted with multiplicity: this is the zero count for $\cos z$.
+Conjugation invariance forces this zero to be real, and it is simple.
+Letting $R$ increase excludes any other zero in the strip.  On the
+central rectangle with vertical sides $-\pi$ and $\pi$, the same
+argument gives two zeros counted with multiplicity, already accounted
+for by the double zero at $0$.  Evenness handles the negative strips.
+The strict vertical-side estimates exclude zeros on their boundaries.
+These regions cover the plane.
+\end{proof}
+
+\subsection{A moment representation for a gamma ratio}
+
+\begin{lemma}
+For $x>0$ define
+\[
+ W(x)=\sqrt{x}\,\frac{\Gamma(x+\tfrac12)}{\Gamma(x+1)}.
+\]
+There is a nonatomic probability measure $\mu$ on $(0,1)$ such that
+\[
+ W(x)=1-\int_{(0,1)}t^{2x}\,d\mu(t),\qquad x>0.
+\]
+\end{lemma}
+
+\begin{proof}
+For $s>0$ put
+\begin{align*}
+ K(s)
+ &=\frac1\pi\int_0^s\frac{dt}{\sqrt{s-t}\sqrt{e^t-1}}\\
+ &=\frac1\pi\int_0^1\frac1{\sqrt{1-u}}
+                   \sqrt{\frac{s}{e^{su}-1}}\,du.
+\end{align*}
+Since $e^{su}-1\ge su$, the integrand is bounded by the integrable
+function $\pi^{-1}[u(1-u)]^{-1/2}$.  For fixed $0<u<1$,
+$s/(e^{su}-1)$ is strictly decreasing in $s$: the sign of its derivative
+is the sign of $e^v(1-v)-1<0$, where $v=su>0$.  Thus $K$ is continuous
+and strictly decreasing.  Dominated convergence gives
+\[
+ K(0+)=\frac1\pi\int_0^1[u(1-u)]^{-1/2}\,du=1,
+ \qquad K(\infty)=0.
+\]
+It follows that $K$ is the survival function of a nonatomic probability
+measure $\nu$ on $(0,\infty)$, so that
+$\nu((s,\infty))=K(s)$.
+
+Tonelli's theorem, the gamma integral, and the beta integral show that
+\begin{align*}
+ \int_0^\infty e^{-xs}K(s)\,ds
+ &=\frac1\pi
+   \left(\int_0^\infty e^{-xr}r^{-1/2}\,dr\right)
+   \left(\int_0^\infty e^{-xt}(e^t-1)^{-1/2}\,dt\right)\\
+ &=\frac1\pi\frac{\sqrt\pi}{\sqrt x}
+                 B\left(x+\tfrac12,\tfrac12\right)\\
+ &=\frac1{\sqrt x}\frac{\Gamma(x+\tfrac12)}{\Gamma(x+1)}.
+\end{align*}
+For the second integral the substitution $q=e^{-t}$ gives
+$\int_0^1q^{x-1/2}(1-q)^{-1/2}\,dq$.
+The survival-function identity, also directly obtained by Tonelli, is
+\[
+ 1-\int_0^\infty e^{-xs}\,d\nu(s)
+  =x\int_0^\infty e^{-xs}K(s)\,ds=W(x).
+\]
+Push $\nu$ forward by $s\mapsto e^{-s/2}$.  The resulting measure $\mu$
+is nonatomic, has total mass one, is supported in $(0,1)$, and has the
+required moment identity.
+\end{proof}
+
+\subsection{Identification and factorization}
+
+Let $\mu$ be the measure just constructed.  Termwise integration of the
+locally uniformly convergent cosine series and the gamma duplication
+formula give
+\begin{align*}
+ \frac1{\sqrt\pi}
+ \left(\cos z-\int\cos(tz)\,d\mu(t)\right)
+ &=\frac1{\sqrt\pi}\sum_{k=1}^\infty
+            \frac{(-1)^kW(k)}{(2k)!}z^{2k}\\
+ &=\sum_{k=1}^\infty\frac{\sqrt{k}}{(k!)^2}
+                         \left(-\frac{z^2}{4}\right)^k
+ =\Phi\left(-\frac{z^2}{4}\right).
+\end{align*}
+The coefficient identity here is
+\[
+ \frac{\Gamma(k+\tfrac12)}{\sqrt\pi\,\Gamma(k+1)}
+       =\frac{(2k)!}{4^k(k!)^2}.
+\]
+The cosine subtraction lemma now implies that all zeros of $\Phi$ are
+nonpositive real numbers.  In fact every complex number $w$ has a
+square root $z$ with $w=-z^2/4$, and if $\Phi(w)=0$ then the lemma
+forces this $z$ to be real.  Multiplicities and the interval bounds in
+the theorem follow from the same substitution.
+
+For completeness, $\Phi$ has order at most $1/2$.  For $r\ge0$,
+\[
+ M_\Phi(r)\le\sum_{k\ge1}\frac{k r^k}{(k!)^2}
+   =\sum_{k\ge1}\frac{r^k}{(k-1)!k!}
+   \le\sqrt r\,e^{2\sqrt r}.
+\]
+The last inequality follows by comparison with the product of two
+exponential series.  Hadamard factorization for an entire function of
+order less than one therefore gives
+\[
+ \Phi(w)=w\prod_{j=1}^\infty\left(1+\frac{w}{\lambda_j}\right).
+\]
+The factor in front is exactly $w$ because $\Phi'(0)=1$.  The product
+converges locally uniformly, also immediately from
+$\lambda_j>j^2\pi^2/4$.  Its finite products have only nonpositive
+zeros and nonnegative coefficients.  Hence $\Phi$ is in the required
+Laguerre--P\'olya class.  The P\'olya--Schur characterization, in the
+normalization $\Phi(w)=\sum\gamma_k w^k/k!$, proves that
+$\{\sqrt{k}/k!\}_{k\ge0}$ is a multiplier sequence.
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{CsordasForgacs} G. Csordas and T. Forgacs, \emph{Multiplier sequences, classes of generalized Bessel functions and open problems}, J. Math. Anal. Appl. \textbf{433} (2016), 1369--1389. \url{https://arxiv.org/abs/1505.00355v2}. DOI: \url{https://doi.org/10.1016/j.jmaa.2015.08.047}.
+\end{thebibliography}
+\endgroup
+\end{document}

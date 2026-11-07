@@ -1,8 +1,8 @@
 # 689. A sharp affine-modulus bound for harmonic homeomorphisms
 
 **Area:** Complex analysis and geometric function theory
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -42,10 +42,23 @@ Harmonic homeomorphisms model planar elastic deformations that remain globally i
 
 ## Status review
 
+### Reviewed manuscript, 2026-11-07
 
-**Known cases:** The September Kalaj-Liu-Zhu examples disprove an upper distortion bound and satisfy the present lower bound. Higher-dimensional annular results and the known circular planar case do not settle arbitrary doubly connected planar domains.
+Matthew J. Colbrook provides the following AI-found [manuscript](../research/solutions/689-a-sharp-affine-modulus-bound-for-harmonic-homeomorphisms/main.pdf). Counterexample to the sharp bound after the complete real-affine optimization.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+
+**Review:** The [separate Codex AI audit](../research/solution_reviews/2026-11-07-complex-analysis/689-review.md) checks the complete argument against this exact target and records the primary-source comparisons. No unresolved mathematical gap was identified in the complete resolution. The results were found by AI; human peer review and formal verification are not claimed.
+
+### Earlier status record (historical)
+
+The following dated record describes the pre-submission state.
+
+
+
+**Previously recorded known cases:** The September Kalaj-Liu-Zhu examples disprove an upper distortion bound and satisfy the present lower bound. Higher-dimensional annular results and the known circular planar case do not settle arbitrary doubly connected planar domains.
+
+**Previously recorded remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
 
 ### Online recheck, 2026-10-30
 

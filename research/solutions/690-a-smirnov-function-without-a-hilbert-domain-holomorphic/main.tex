@@ -1,0 +1,326 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 690}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 690},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{Every logarithmic Smirnov function extends to the Hilbert polydisc}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\begin{abstract}
+Every radial Nevanlinna function on the $\ell^1$ polydisc extends uniquely and Fr\'echet holomorphically to the Hilbert polydisc. The latter is exactly the domain of continuous polynomial evaluation for the logarithmic metric. The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+\end{abstract}
+\noindent\textbf{Catalogue scope.} AIM 690; complete resolution. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/690-a-smirnov-function-without-a-hilbert-domain-holomorphic-extension.md}{Canonical target at revision \texttt{1e56463}}.
+
+
+\section{Statement and argument}
+\label{sec:690}
+
+For $q=1,2$, write
+$D_q^\infty=\ell^q(\mathbb C)\cap\mathbb D^\infty$, with its
+$\ell^q$ topology.  The space $N_*(\mathbb T^\infty)$ is the closure
+of analytic polynomials depending on finitely many coordinates for
+the metric
+\[
+ d_0(f,g)=\int_{\mathbb T^\infty}\log(1+|f-g|)\,dm.
+\]
+The answer to the existence question is negative: every element of
+$N_*(\mathbb T^\infty)$ has a Fr\'echet-holomorphic extension to
+$D_2^\infty$, agreeing with its canonical representative on
+$D_1^\infty$.
+
+The key is a dimension-independent estimate for the logarithmic metric.
+We construct a bounded averaging density from analytic discs; the
+ordinary product Poisson density itself need not be bounded uniformly
+in the dimension.  No infinite-dimensional change of variables is
+needed.
+
+Write $m_N$ for normalized Haar measure on $\mathbb T^N$.
+For $0<r<1$ and $M\ge0$, set
+\begin{equation}
+ C(r,M)=\exp\left(
+ 2M+\left[1+\frac1{1-r^2}\right]M^2
+ \right).
+ \label{eq:690-1}
+\end{equation}
+
+\begin{lemma}[Dimension-independent logarithmic evaluation]
+For every $N\ge1$, every $z\in\mathbb D^N$ with
+$\max_j|z_j|\le r$ and $\sum_j|z_j|^2\le M^2$, and every analytic
+polynomial $P$ in $N$ variables,
+\begin{equation}
+ \log(1+|P(z)|)
+ \le C(r,M)\int_{\mathbb T^N}\log(1+|P(w)|)\,dm_N(w).
+ \label{eq:690-2}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Define the coordinatewise disc automorphism
+\[
+ T_z(v)_j=\frac{z_j+v_j}{1+\overline{z_j}v_j}.
+\]
+The pushforward $(T_z)_*m_N$ has the product Poisson density
+\[
+ P_z(w)=\prod_{j=1}^N
+ \frac{1-|z_j|^2}{|1-\overline{z_j}w_j|^2}.
+\]
+In particular,
+\begin{equation}
+ P_z(T_z(v))
+ =\prod_{j=1}^N
+ \frac{|1+\overline{z_j}v_j|^2}{1-|z_j|^2}.
+ \label{eq:690-3}
+\end{equation}
+For $v\in\mathbb T^N$, put
+\begin{equation}
+ S_z(v)=\sum_{j=1}^N\overline{z_j}v_j,\qquad
+ Z_z=\int_{\mathbb T^N}e^{-2|S_z(v)|}\,dm_N(v),\qquad
+ h_z(v)=\frac{e^{-2|S_z(v)|}}{Z_z}.
+ \label{eq:690-4}
+\end{equation}
+The density $h_z$ is continuous and positive, and $h_zm_N$ is a
+probability measure.  Crucially,
+\begin{equation}
+ h_z(\lambda v)=h_z(v)\qquad(|\lambda|=1).
+ \label{eq:690-5}
+\end{equation}
+
+For each fixed $v\in\mathbb T^N$, the holomorphic disc
+$\lambda\mapsto T_z(\lambda v)$ has center $z$ and extends
+holomorphically past the closed unit disc.  The function
+$\log(1+|P(T_z(\lambda v))|)$ is subharmonic, so
+\[
+ \log(1+|P(z)|)
+ \le\int_{\mathbb T}
+ \log(1+|P(T_z(\lambda v))|)\,dm_1(\lambda).
+\]
+Integrating against $h_z(v)dm_N(v)$ and using \eqref{eq:690-5} gives
+\begin{equation}
+ \log(1+|P(z)|)
+ \le\int_{\mathbb T^N}
+ \log(1+|P(T_z(v))|)h_z(v)\,dm_N(v).
+ \label{eq:690-6}
+\end{equation}
+After $w=T_z(v)$, the probability measure in this integral has density
+\[
+ g_z(w)=h_z(T_z^{-1}(w))P_z(w).
+\]
+We now bound this density independently of $N$.
+For $|u|<1$, the elementary inequality $\log(1+t)\le t$ gives
+\[
+ \log|1+u|^2
+ =\log(1+2\operatorname{Re}u+|u|^2)
+ \le2\operatorname{Re}u+|u|^2.
+\]
+Set
+\[
+ A_z=\|z\|_2^2-\sum_j\log(1-|z_j|^2).
+\]
+Equation \eqref{eq:690-3} then implies
+\[
+ P_z(T_z(v))\le\exp(2|S_z(v)|+A_z).
+\]
+Consequently
+\begin{equation}
+ g_z(T_z(v))
+ =h_z(v)P_z(T_z(v))\le\frac{e^{A_z}}{Z_z}.
+ \label{eq:690-7}
+\end{equation}
+Orthogonality of the coordinate functions and Cauchy--Schwarz give
+\[
+ \int_{\mathbb T^N}|S_z(v)|\,dm_N(v)
+ \le\left(\sum_j|z_j|^2\right)^{1/2}.
+\]
+Jensen's inequality therefore yields
+\begin{equation}
+ Z_z\ge\exp\left(-2\int|S_z|\,dm_N\right)
+ \ge e^{-2\|z\|_2}.
+ \label{eq:690-8}
+\end{equation}
+Finally $-\log(1-t)\le t/(1-r^2)$ for $0\le t\le r^2$, so
+\begin{equation}
+ \frac{e^{A_z}}{Z_z}
+ \le\exp\left(2\|z\|_2+
+ \left[1+\frac1{1-r^2}\right]\|z\|_2^2\right)
+ \le C(r,M).
+ \label{eq:690-9}
+\end{equation}
+Combining \eqref{eq:690-6}--\eqref{eq:690-9} proves \eqref{eq:690-2}.
+\end{proof}
+
+\begin{theorem}
+Every $f\in N_*(\mathbb T^\infty)$ admits a unique
+Fr\'echet-holomorphic function $G:D_2^\infty\to\mathbb C$ whose
+restriction to $D_1^\infty$ is the canonical representative of $f$.
+\end{theorem}
+
+\begin{proof}
+By the definition of $N_*$, there are analytic polynomials $P_k$, each
+depending on finitely many coordinates, such that $d_0(P_k,f)\to0$.
+In particular $(P_k)$ is $d_0$-Cauchy.
+For $0<r<1$ and $M<\infty$, write
+\[
+ V_{r,M}=\{\zeta\in\ell^2:
+ \|\zeta\|_\infty\le r,\ \|\zeta\|_2\le M\}.
+\]
+Apply the lemma to $P_k-P_l$ using the finite set of its coordinates.
+Projection onto this set does not increase either norm of $\zeta$,
+and the finite-dimensional Haar integral is exactly the
+infinite-dimensional integral for this cylindrical polynomial.  Thus
+\begin{equation}
+ \sup_{\zeta\in V_{r,M}}|P_k(\zeta)-P_l(\zeta)|
+ \le\exp\bigl(C(r,M)d_0(P_k,P_l)\bigr)-1
+ \longrightarrow0.
+ \label{eq:690-10}
+\end{equation}
+There is therefore a well-defined limit $G$ on $D_2^\infty$, with
+uniform convergence on every $V_{r,M}$.
+
+The set $D_2^\infty$ is open in $\ell^2$.  Indeed, every
+$\zeta\in D_2^\infty$ has $\|\zeta\|_\infty<1$: its coordinates
+tend to zero, while each of the finitely many remaining coordinates
+has modulus less than one.  Every such point has an open Hilbert-space
+neighborhood contained in some $V_{r,M}$.  The $P_k$ are continuous
+Fr\'echet-holomorphic polynomials on $\ell^2$; their locally uniform
+limit is Fr\'echet holomorphic on $D_2^\infty$.
+
+On $D_1^\infty$, the canonical representative is the pointwise limit
+of the same $d_0$-approximating polynomials, by the construction in
+\cite[Lemma 2.24 and Theorem 2.27]{GuoNiZhou2025}.
+Thus $G$ has the required restriction.  Estimate \eqref{eq:690-10} also proves
+independence of the polynomial approximation.  Uniqueness follows
+from continuity and the density of $D_1^\infty$ in $D_2^\infty$,
+witnessed by finite-support truncations.
+\end{proof}
+
+\begin{corollary}[Extension for the full radial Nevanlinna class]
+Let $F$ be holomorphic on $D_1^\infty$ and suppose
+\begin{equation}
+ K:=\sup_{0<s<1}\int_{\mathbb T^\infty}
+ \log^+\left|F(sw_1,s^2w_2,s^3w_3,\ldots)\right|\,dm(w)<\infty.
+ \label{eq:690-11}
+\end{equation}
+Then $F$ extends uniquely to a Fr\'echet-holomorphic function on
+$D_2^\infty$.  Thus the conclusion holds for the full class
+$N(D_1^\infty)$ defined by \cite[Section 2.1, equation (2.3)]{GuoNiZhou2025},
+as well as for its Smirnov subclass.
+\end{corollary}
+
+\begin{proof}
+For $0<s<1$, let $D_s z=(s^jz_j)_{j\ge1}$ and set
+$F_s=F\circ D_s$.  The map $D_s:\ell^2\to\ell^1$ is bounded,
+so $F_s$ is holomorphic on $D_2^\infty$.
+Moreover, the weighted closed polydisc
+\[
+ K_s=\prod_{j\ge1}s^j\overline{\mathbb D}
+\]
+is compact in $\ell^1$ and contained in $D_1^\infty$.
+Uniform continuity of $F$ on $K_s$ shows that its finite-coordinate
+truncations approximate $F_s$ uniformly on the closed coordinate
+polydisc.  Each truncation is holomorphic on a neighborhood of its
+finite-dimensional closed polydisc, and hence is uniformly
+approximable there by analytic polynomials.  Thus $F_s$ belongs to the
+infinite polydisc algebra, as also recorded immediately before the
+proof of \cite[Proposition 2.3]{GuoNiZhou2025}.
+
+Passing to uniform polynomial limits in \eqref{eq:690-2}, and using
+$\log(1+x)\le\log2+\log^+x$, gives
+\begin{equation}
+ \log(1+|F_s(\zeta)|)
+ \le C(r,M)(K+\log2)
+ \qquad(\zeta\in V_{r,M},\ 0<s<1).
+ \label{eq:690-12}
+\end{equation}
+The family $(F_s)_{0<s<1}$ is therefore locally uniformly bounded in
+the Hilbert-space topology on $D_2^\infty$.
+
+Fix a point $\zeta\in D_2^\infty$ and a Hilbert ball about it whose
+doubled ball lies in some $V_{r,M}$.  Cauchy's estimate on complex
+lines gives a uniform bound for the operator norms of $DF_s$ on the
+smaller ball.  Consequently the $F_s$ are equi-Lipschitz there.
+At every finite-support point $a$, $D_sa\to a$ in $\ell^1$ as
+$s\uparrow1$, so $F_s(a)\to F(a)$.
+Finite-support points are dense in $\ell^2$; comparing two functions
+$F_s,F_t$ at a nearby such point and using the common Lipschitz bound
+proves that $F_s(\zeta)$ is Cauchy as $s\uparrow1$.
+Denote its limit by $G(\zeta)$.
+
+The limit $G$ is locally bounded by \eqref{eq:690-12}.  On each compact disc
+in any complex line in $D_2^\infty$, the common local Lipschitz bounds
+and pointwise convergence imply uniform convergence, by a finite
+net argument.  Hence the restriction of $G$ to every such line is
+holomorphic.  Local boundedness and this G\^ateaux holomorphy imply
+Fr\'echet holomorphy.  This argument does not require a
+finite-dimensional Montel theorem on a noncompact Hilbert ball.
+
+Finally, for every $\zeta\in D_1^\infty$, dominated convergence gives
+$\|D_s\zeta-\zeta\|_1\to0$.  Therefore
+$F_s(\zeta)\to F(\zeta)$, proving that $G$ extends $F$.
+Density again proves uniqueness.
+\end{proof}
+
+The uniform bound \eqref{eq:690-10} also excludes polynomials with arbitrarily
+small logarithmic metric but large evaluation at a fixed Hilbert-polydisc
+point.  The averaging measure is correlated across coordinates through
+their common rotation; this is why unboundedness of the usual product
+Poisson density does not provide such a construction.
+
+\begin{corollary}[Sharpness of the Hilbert threshold]
+Among coordinate points $z\in\mathbb D^\infty$, polynomial evaluation
+$P\mapsto P(z)$ is continuous for the logarithmic metric if and only
+if $z\in\ell^2$.
+\end{corollary}
+
+\begin{proof}
+Sufficiency follows from \eqref{eq:690-2}.  Conversely, let
+$z\in\mathbb D^\infty\setminus\ell^2$ and put
+$s_N^2=\sum_{j=1}^N|z_j|^2$.  For all sufficiently large $N$, define
+\[
+ Q_N(w)=\frac{\sum_{j=1}^N\overline{z_j}w_j}{s_N^2}.
+\]
+Then $Q_N(z)=1$, whereas orthogonality and Cauchy--Schwarz give
+\[
+ d_0(Q_N,0)\le\int_{\mathbb T^N}|Q_N|\,dm_N
+ \le\left(\int_{\mathbb T^N}|Q_N|^2\,dm_N\right)^{1/2}
+ =s_N^{-1}\longrightarrow0.
+\]
+This contradicts continuity of evaluation at such a point.
+\end{proof}
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{GuoNiZhou2025} K. Guo, J. Ni and Q. Zhou, \emph{Nevanlinna class, Dirichlet series and Szeg\H{o}'s problem}, Ann. Inst. Fourier \textbf{75} (2025), 1603--1647. \url{https://doi.org/10.5802/aif.3696}. Numbered passages refer to \url{https://arxiv.org/abs/2201.01993v2}.
+\end{thebibliography}
+\endgroup
+\end{document}

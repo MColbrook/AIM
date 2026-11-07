@@ -1,8 +1,8 @@
 # 724. Is polynomial local mass almost necessary for regular orthogonal polynomials?
 
 **Area:** Orthogonal polynomials and logarithmic potential theory
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -39,10 +39,23 @@ Regularity controls the leading exponential scale of orthogonal polynomials and 
 
 ## Status review
 
+### Reviewed manuscript, 2026-11-07
 
-**Known cases:** The required necessary condition uses polynomial local-mass thresholds and an iterated limit. Fixed-exponent sufficient Bernstein-Markov criteria, exponential-threshold necessity and unbounded spectral regularity do not establish it.
+Matthew J. Colbrook provides the following AI-found [manuscript](../research/solutions/724-is-polynomial-local-mass-almost-necessary-for-regular/main.pdf). The required capacity limit holds for every fixed exponent greater than two, with ambient ball centers.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+
+**Review:** The [separate Codex AI audit](../research/solution_reviews/2026-11-07-complex-analysis/724-review.md) checks the complete argument against this exact target and records the primary-source comparisons. No unresolved mathematical gap was identified in the complete resolution. The results were found by AI; human peer review and formal verification are not claimed.
+
+### Earlier status record (historical)
+
+The following dated record describes the pre-submission state.
+
+
+
+**Previously recorded known cases:** The required necessary condition uses polynomial local-mass thresholds and an iterated limit. Fixed-exponent sufficient Bernstein-Markov criteria, exponential-threshold necessity and unbounded spectral regularity do not establish it.
+
+**Previously recorded remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
 
 ### Online recheck, 2026-10-30
 

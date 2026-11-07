@@ -1,0 +1,626 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 721}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 721},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{Real regularity of complex Hessian obstacle envelopes}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\begin{abstract}
+The complex $m$-Hessian obstacle envelope is locally $C^{1,1}$ in all real coordinates for every $1\le m\le n$, under the stated strict defining-function assumption. The penalized Bellman estimates are uniform in both approximation parameters. The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+\end{abstract}
+\noindent\textbf{Catalogue scope.} AIM 721; complete resolution. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/721-real-c1-1-regularity-of-complex-hessian-obstacle-envelopes.md}{Canonical target at revision \texttt{1e56463}}.
+The domain-envelope question is asked in \cite[p.~998]{BenaliZeriahi}. The accompanying erratum \cite{BenaliErratum} is retained in the references; its incomplete original boundary-data argument is not used here.
+
+\section{Statement and argument}
+\label{sec:721}
+
+The exact obstacle-envelope question has an affirmative answer under the
+stated strict defining-function hypothesis.  The argument uses smooth Bellman
+approximants with a quadratic stopping penalty.  The essential new estimate
+compensates the discount when the diffusion clock is perturbed; this keeps the
+large discount out of the second-variation bound.  We give the approximation,
+control comparison, and limiting argument explicitly.
+
+\begin{theorem}
+\label{thm:721}
+Let $\Omega\Subset\mathbb C^n$ have smooth boundary and a smooth defining
+function $\rho$ on a neighborhood of $\overline\Omega$ such that
+$\rho<0$ in $\Omega$, $d\rho\ne0$ on $\partial\Omega$, and $\rho$ is
+strictly $m$-subharmonic on that neighborhood.  If
+$h\in C^2(\overline\Omega;\mathbb R)$, then
+\begin{equation}
+ P_{m,\Omega}h
+ :=\bigl(\sup\{w\in\operatorname{SH}_m(\Omega):w\le h\}\bigr)^*
+ \in C^{1,1}_{\mathrm{loc}}(\Omega)\cap C^{0,1}(\overline\Omega).
+ \label{eq:721-1}
+\end{equation}
+Here $C^{1,1}$ concerns the full real Hessian.  The conclusion holds for all
+$1\le m\le n$, including the intermediate orders in AIM 721.
+\end{theorem}
+
+\subsection{Covariances and smooth approximants}
+
+Let $\Gamma_m\subset\operatorname{Herm}(n)$ be the open G\aa rding cone,
+and put
+\begin{equation}
+ \mathcal A=\{A\in\overline\Gamma_m^{\,*}:\operatorname{tr}A=1\},
+ \qquad L_Au=\operatorname{tr}(Au_{z\bar z}).
+ \label{eq:721-2}
+\end{equation}
+The cone contains the positive definite cone, so its dual consists of positive
+semidefinite matrices.  Consequently $\mathcal A$ is compact and convex.
+It is invariant under unitary conjugation and contains $I/n$, since
+$\Gamma_m\subset\{H:\operatorname{tr}H>0\}$.  The constant-coefficient
+dual-cone characterization says that $u$ is $m$-subharmonic if and only if
+$L_Au\ge0$ for every $A\in\mathcal A$, in the distributional, equivalently
+viscosity, sense.  For smooth functions this is convex duality; the general
+statement follows by convolution and the usual viscosity characterization of
+constant-coefficient linear subharmonicity.
+
+Strictness and compactness give $L_A\rho\ge\delta_0>0$ uniformly on
+$\overline\Omega$ and $A\in\mathcal A$.  Scale $-\rho$ to obtain $\psi$
+with
+\begin{equation}
+ \Omega=\{\psi>0\},\qquad \psi=0\text{ on }\partial\Omega,
+ \qquad |\nabla\psi|\ge1\text{ on }\partial\Omega,
+ \qquad L_A\psi\le-1.
+ \label{eq:721-3}
+\end{equation}
+Enlarge this fixed scaling, if necessary, so that
+$-L_A\psi\ge4\sup_A\|\sigma_A\|^2$, where in real coordinates
+$L_A=(1/2)\sigma_A\sigma_A^{\mathsf T}:D^2$.  This is the normalization
+used immediately before \cite[Lemma 7.1]{ZhouBellman2015}.
+All covariance traces are bounded uniformly.
+
+Set $g=-h$ and, for $0<\nu<1$, define
+\begin{equation}
+ \mathcal A_\nu=\{(1-\nu)A+\nu I/n:A\in\mathcal A\},\qquad
+ F_\nu(D^2v)=\sup_{A\in\mathcal A_\nu}L_Av.
+ \label{eq:721-4}
+\end{equation}
+The sets $\mathcal A_\nu$ are unitary invariant, contain $I/n$, and satisfy
+\eqref{eq:721-3}.  Each fixed $\nu$ gives a uniformly elliptic operator.  The estimates
+below use an upper bound for the covariances but no positive lower bound.
+Initially take $g$ smooth on a neighborhood of $\overline\Omega$.
+
+Choose
+\[
+ C_0\ge\sup_{\nu,A\in\mathcal A_\nu}\|L_Ag\|_\infty,
+ \qquad C_*=C_0+1,\qquad b_K=\sqrt{2C_*K},\qquad K\ge1,
+\]
+and write
+\[
+ H_b(s)=\max_{0\le c\le b}\left(cs-\frac{c^2}{2K}\right).
+\]
+For fixed $K,\nu$ solve
+\begin{equation}
+ F_\nu(D^2v)+H_{2b_K}(g-v)=0\quad\text{in }\Omega,
+ \qquad v=g\quad\text{on }\partial\Omega.
+ \label{eq:721-5}
+\end{equation}
+This is a uniformly elliptic Bellman equation with compact controls
+$(A,c)\in\mathcal A_\nu\times[0,2b_K]$ and running payoff
+$cg-c^2/(2K)$.  Standard nondegenerate Bellman Dirichlet theory gives
+$v=v_{K,\nu}\in C^{2,\alpha}(\overline\Omega)$ for some $\alpha>0$.
+Precisely this fixed-parameter regularization is used in
+\cite[\S5, Remark 5.1]{ZhouBellman2015}, citing
+\cite[\S6.2, Theorem 7]{Krylov1987}.  Only the existence of a $C^2$ solution
+for fixed parameters is used here, not a uniform estimate from that theorem.
+
+\paragraph{The two discount caps.}
+At a positive maximum of $w=g-v$, one has $D^2v\ge D^2g$, whence
+\[
+ H_{2b_K}(w)=-F_\nu(D^2v)\le-F_\nu(D^2g)\le C_0.
+\]
+If $w\ge b_K/K$, the admissible choice $c=b_K$ would give
+$H_{2b_K}(w)\ge C_*>C_0$.  Thus $w<b_K/K$ everywhere, the maximizing
+discount is $c=K(g-v)_+$, and
+\begin{equation}
+ F_\nu(D^2v)+\frac K2(g-v)_+^2=0,
+ \qquad (g-v)_+\le\sqrt{2C_0/K}.
+ \label{eq:721-6}
+\end{equation}
+The same $v$ therefore solves the Bellman problem with the smaller cap
+$[0,b_K]$, and verification identifies it with the value function for either
+cap.  We shall use base controls $c_t\le b_K$, so that
+\begin{equation}
+ q_t:=\frac{c_t^2}{2K}\le C_*.
+ \label{eq:721-7}
+\end{equation}
+A perturbed control will use the larger cap.  This bound holds for every base
+control, without any assumption of exact optimality.
+
+\paragraph{Uniform value and gradient bounds.}
+For a fixed sufficiently large $C$, $g+C\psi$ and $g-C\psi$ are respectively
+a supersolution and a subsolution of \eqref{eq:721-5}.  Indeed the first has
+$F_\nu(D^2(g+C\psi))\le C_0-C$ and zero penalty, whereas the second has
+$F_\nu(D^2(g-C\psi))\ge-C_0+C$ and nonnegative penalty.  Thus
+\begin{equation}
+ |v-g|\le C\psi.
+ \label{eq:721-8}
+\end{equation}
+For a small real translation $a$, put
+$v_a(x)=v(x+a)-L|a|$ on $\Omega\cap(\Omega-a)$.  If
+$L\ge\operatorname{Lip}(g)$, then
+$g(x)-v_a(x)\ge g(x+a)-v(x+a)$, so $v_a$ is a subsolution of \eqref{eq:721-5}.
+On the boundary of the intersection, one of $x,x+a$ lies on
+$\partial\Omega$.  Formula \eqref{eq:721-8} gives $v_a\le v$ there if
+$L\ge\operatorname{Lip}(g)+C\operatorname{Lip}(\psi)$.
+Comparison, followed by the reversed translation, proves
+\begin{equation}
+ \|v\|_{C^{0,1}(\overline\Omega)}\le C
+ \label{eq:721-9}
+\end{equation}
+uniformly in $K,\nu$.  The Lipschitz constants of the fixed smooth extensions
+of $g,\psi$ are finite.  Larger translation lengths are harmless by the
+uniform value bound.  In particular the boundary normal derivative is
+uniformly bounded.
+
+\subsection{The covariance quasiderivatives and their estimates}
+
+We use the covariance constructions in
+\cite[Lemmas 6.2--6.4 and 7.4]{ZhouBellman2015}; theorem and equation numbers
+here refer to the inspected arXiv version.  These constructions concern the
+controlled diffusion and its defining-function barrier and have no running
+payoff or discount.  The unitary adaptation requires a sign convention and
+one drift term to be made explicit.
+
+Near $\partial\Omega$, let $\eta$ be the complex column vector corresponding
+to $\nabla\psi$, and let $\eta_\xi$ denote its real directional derivative.
+Set
+\begin{equation}
+ r_0=-\frac{\operatorname{Re}(\eta^*\eta_\xi)}{|\eta|^2},
+ \qquad b=-\eta_\xi-r_0\eta,
+ \qquad
+ Q=\frac{b\eta^*-\eta b^*}{|\eta|^2}
+     -\frac{\eta^*b}{|\eta|^4}\eta\eta^*.
+ \label{eq:721-10}
+\end{equation}
+Since $\operatorname{Re}(\eta^*b)=0$, $Q$ is skew Hermitian,
+$Q\eta=b$, and $|Q|+|r_0|\le C|\xi|$.  Set
+$P=-\operatorname{Real}(Q)$, the negative of its real representation.  Then
+$P$ is skew symmetric, its exponential represents a unitary map, and
+\begin{equation}
+ D^2\psi\,\xi+r_0\nabla\psi-P\nabla\psi=0,
+ \qquad
+ \psi_{\xi\sigma^k}+r_0\psi_{\sigma^k}+\psi_{P\sigma^k}=0.
+ \label{eq:721-11}
+\end{equation}
+The minus sign in $P$ is required by the column-vector convention.
+This supplies the rotation allowed by the covariance cone; full orthogonal
+invariance in real dimension $2n$ is not needed.  Compare the complex
+construction in \cite[\S3.2, equations (3.14)--(3.15)]{ZhouHessian2013}.
+
+There is a minor correction to the source calculation that is useful to
+record.  The displayed assertion in the proof of
+\cite[Lemma 7.1]{ZhouBellman2015} that
+\[
+ S:=\sum_k(D^2\psi\,\sigma^k,P\sigma^k)
+   =\operatorname{tr}(\sigma\sigma^{\mathsf T}D^2\psi P)=0
+\]
+is not true in general.  Instead $|S|\le C|\xi|$.
+Keeping this drift in that proof changes its term $J_4$ to
+\begin{equation}
+ J_4=2\frac{\psi_\xi}{\psi}
+       \bigl((L\psi)_\xi+2r_0L\psi+S\bigr)
+ \le C|\xi|^2+\frac{|\psi_\xi|^2}{\psi^2}.
+ \label{eq:721-12}
+\end{equation}
+This is the same bound used there, with an enlarged geometric constant.
+Taking the fixed geometric parameter $\lambda_0>0$ sufficiently small
+therefore gives the same negative drift for its barrier $B_1$.
+The remaining first-quasiderivative estimates use \eqref{eq:721-11}, skew symmetry,
+$|P|+|r_0|\le C|\xi|$, and this negative drift; derivatives of $P$ are not
+needed.  Thus the unitary version has those estimates as well.
+
+Here is the precise input we need.  Let
+$D_\delta=\{\psi>\delta\}$ and let $X_t$ be a base controlled diffusion,
+starting at $x\in D_\delta$, with exit time $\tau_\delta$.
+For a real vector $\xi$, the constructions supply first and second
+quasiderivatives $\xi_t,\eta_t$, with $\xi_0=\xi$, $\eta_0=0$,
+scalar adjoint process $Z_t$, and adjustments
+$r_t,\widehat r_t,\pi_t,\widehat\pi_t,P_t$.  In the rest of the proof
+$\eta_t$ denotes this second quasiderivative, independently of the gradient
+vector used in \eqref{eq:721-10}.  We have
+\[
+ dZ_t=\pi_t\,dW_t,\qquad Z_0=0,
+ \qquad \widehat\pi_t=-2\pi_tZ_t,\qquad \widehat P_t=0.
+\]
+The perturbed states $X_t^s$ start at $x+s\xi$ and have derivatives
+$\xi_t,\eta_t$ at $s=0$.  Their density $p_t(s)$ satisfies
+\begin{equation}
+ p_t(0)=1,\qquad p_t'(0)=Z_t,\qquad p_t''(0)=0.
+ \label{eq:721-13}
+\end{equation}
+The last identity follows from the choice of $\widehat\pi$ and It\^o's
+formula for $Z_t^2$.  Their time factor is
+\begin{equation}
+ \theta_t(s)=1+\pi^{-1}\arctan\!\left(\pi(2sr_t+s^2\widehat r_t)\right),
+ \quad \tfrac12<\theta_t(s)<\tfrac32,
+ \quad \theta_t'(0)=2r_t,
+ \quad \theta_t''(0)=2\widehat r_t.
+ \label{eq:721-14}
+\end{equation}
+There is a positive quadratic barrier $B(x,\xi)$, bounded by $C_E|\xi|^2$
+when $x$ ranges over any compact $E\Subset\Omega$, such that
+\begin{equation}
+ \begin{split}
+ &\mathbb E\sup_{t\le\tau_\delta}(|\xi_t|^2+|Z_t|^2)
+ +\mathbb E\int_0^{\tau_\delta}
+ \left(|\xi_t|^2+
+       \frac{|\psi_{\xi_t}(X_t)|^2}{\psi(X_t)^2}
+       +r_t^2+|\widehat r_t|+|\pi_t|^2\right)dt
+ \le CB(x,\xi).
+ \end{split}
+ \label{eq:721-15}
+\end{equation}
+These are \cite[Lemma 7.4(1)--(3)]{ZhouBellman2015} and the explicit
+coefficient formulas.  Near the boundary
+$r=r_0+\psi_\xi/\psi$ and $\widehat r=(\psi_\xi/\psi)^2$;
+in the interior $\psi\ge\lambda_0^2$.
+For fixed $\delta$ there is also $\ell=\ell(\delta)>0$ such that
+\begin{equation}
+ \sup_{\text{controls}}\sup_{\gamma\le\tau_\delta}
+ \mathbb E|\xi_\gamma|^{2(1+\ell)}<\infty,
+ \label{eq:721-16}
+\end{equation}
+by \cite[Lemma 7.4(4)]{ZhouBellman2015}.
+All constants in \eqref{eq:721-15} depend only on the domain, barrier, dimension and
+upper covariance bound.  In particular they are independent of $K,\nu,\delta$.
+
+\paragraph{An additional occupation estimate and a direct second-derivative estimate.}
+We shall also need
+\begin{equation}
+ \mathbb E\int_0^{\tau_\delta}Z_t^2dt\le CB(x,\xi).
+ \label{eq:721-17}
+\end{equation}
+Apply It\^o's formula, with localization, to $\psi(X_t)Z_t^2$.
+Using $L_A\psi\le-1$ and bounded covariances and gradient of $\psi$, its
+drift is at most
+\[
+ -Z_t^2+C|\pi_t|^2+2C|Z_t\pi_t|
+ \le-\tfrac12Z_t^2+C'|\pi_t|^2.
+\]
+The initial product is zero and the terminal product is nonnegative.
+Expectation, followed by \eqref{eq:721-15} and monotone convergence, proves \eqref{eq:721-17}.
+It follows that
+\begin{equation}
+ \mathbb E\int_0^{\tau_\delta}
+       (|r_tZ_t|+|\pi_tZ_t|)dt\le CB(x,\xi).
+ \label{eq:721-18}
+\end{equation}
+This is Cauchy--Schwarz on the product of probability and time measures.
+
+The estimate for $\eta_t$ can now be proved directly, since the underlying
+diffusion has zero drift.  By the source's equation (6.4),
+\[
+ \begin{split}
+ d\eta_t&=G_t\,dW_t+H_t\,dt,\\
+ G_t&=\bigl((\widehat r_t-r_t^2)I+P_t^2+2r_tP_t\bigr)\sigma_t,\\
+ H_t&=-\sigma_t\widehat\pi_t-2(r_tI+P_t)\sigma_t\pi_t.
+ \end{split}
+\]
+Put $w_t=\psi_{\xi_t}(X_t)/\psi(X_t)$.  Near the boundary the $w_t^2$
+terms in $\widehat r_t-r_t^2$ cancel.  In the interior, $\psi\ge\lambda_0^2$
+implies $w_t=O_{\lambda_0}(|\xi_t|)$.  Hence globally
+\[
+ |G_t|\le C|\xi_t|(|\xi_t|+|w_t|),\qquad
+ |H_t|\le C(|\xi_t|^2+|w_t|^2)+C|\pi_tZ_t|.
+\]
+The Burkholder--Davis--Gundy inequality and \eqref{eq:721-15}--\eqref{eq:721-18} give
+\begin{equation}
+ \begin{split}
+ \mathbb E\sup_{t\le\tau_\delta}|\eta_t|
+ &\le C\mathbb E\left(\int_0^{\tau_\delta}|G_t|^2dt\right)^{1/2}
+       +\mathbb E\int_0^{\tau_\delta}|H_t|dt\\
+ &\le C\left(\mathbb E\sup|\xi_t|^2\right)^{1/2}
+        \left(\mathbb E\int(|\xi_t|^2+|w_t|^2)dt\right)^{1/2}
+       +CB(x,\xi)
+ \le CB(x,\xi).
+ \end{split}
+ \label{eq:721-19}
+\end{equation}
+Thus no extra integrability assertion for a random exit time times a
+supremum is required.
+
+\paragraph{The unchanged terminal comparison.}
+Near the boundary, the source's barrier is
+\begin{equation}
+ B_1(y,\zeta)=\gamma(y)
+       \left(\beta(y)|\zeta|^2+
+             \frac{|\psi_\zeta(y)|^2}{\psi(y)}\right),
+ \qquad \gamma(y)\longrightarrow\lambda_0^2>0,
+ \quad\beta(y)\longrightarrow1.
+ \label{eq:721-20}
+\end{equation}
+Let $\gamma_s$ be the minimum of the exit times of
+$X,X^s,X^{-s}$ from $D_\delta$, a bounded time localization, and
+quasiderivative localizations.  For a fixed $C^2$ function $v$, the terminal
+transfer in \cite[equation (9.16)]{ZhouBellman2015} gives, after taking
+$s\to0$ and removing the other localizations,
+\begin{equation}
+ \begin{split}
+ \limsup\sup_{\text{controls}}
+ \mathbb E[-e^{-\phi_{\gamma_s}}
+                 v_{\xi_{\gamma_s}\xi_{\gamma_s}}(X_{\gamma_s})]
+ \le CB(x,\xi)
+ \left(1+\sup_{\psi(y)=\delta,\,\zeta\ne0}
+               \frac{|v_{\zeta\zeta}(y)|}{B_1(y,\zeta)}\right).
+ \end{split}
+ \label{eq:721-21}
+\end{equation}
+This holds for any nonnegative accumulated discount $\phi$: the terminal
+comparison uses only $e^{-\phi}\le1$, and has no derivatives of $\phi$.
+We spell out the needed uniform-integrability point below when applying it.
+
+\subsection{Compensating the discount clock}
+
+Fix $K,\nu$, so $v$ is $C^2$ up to the boundary.  Use base controls
+$A_t\in\mathcal A_\nu$, $c_t\in[0,b_K]$, and put
+\[
+ \phi_t=\int_0^tc_sds,\qquad q_t=c_t^2/(2K)\le C_*.
+\]
+For the perturbed process with clock $\theta_t(s)$ choose the discount
+\begin{equation}
+ c_t(s)=c_t/\theta_t(s).
+ \label{eq:721-22}
+\end{equation}
+This is admissible for the larger cap because $\theta>1/2$.
+The covariance rotations are admissible by unitary invariance.  The identities
+\begin{equation}
+ \theta_t(s)c_t(s)=c_t,
+ \qquad
+ \theta_t(s)\left(c_t(s)g(X_t^s)-\frac{c_t(s)^2}{2K}\right)
+ =c_tg(X_t^s)-\frac{q_t}{\theta_t(s)}
+ \label{eq:721-23}
+\end{equation}
+show that the killing clock is exactly independent of $s$.
+
+For the common localized stopping time $\gamma_s$, set
+\begin{equation}
+ J_s=\mathbb E\left[
+ e^{-\phi_{\gamma_s}}p_{\gamma_s}(s)v(X_{\gamma_s}^s)
+ +\int_0^{\gamma_s}e^{-\phi_t}p_t(s)
+       \left(c_tg(X_t^s)-\frac{q_t}{\theta_t(s)}\right)dt
+ \right].
+ \label{eq:721-24}
+\end{equation}
+Then $J_s\le v(x+s\xi)$.  Here is a direct verification, avoiding any
+filtration issue in the transformed control.  In It\^o's formula for
+$e^{-\phi_t}p_t(s)v(X_t^s)$, the Girsanov drift in $X^s$ cancels the
+quadratic-covariation term with $p(s)$.  After adding the integral in
+\eqref{eq:721-24}, the remaining drift divided by $e^{-\phi_t}p_t(s)>0$ is
+\[
+ \theta_t(s)\left[
+ L_{A_t(s)}v-c_t(s)v+c_t(s)g-\frac{c_t(s)^2}{2K}
+ \right]\le0,
+\]
+where $A_t(s)$ is the admissible unitary conjugate of $A_t$.
+This is precisely the larger-cap Bellman inequality.
+The bounded localizations make the stochastic integrals true martingales.
+
+At $s=0$, the supremum of $J_0$ over smaller-cap base controls is $v(x)$,
+by the usual Bellman verification/dynamic-programming equality and the
+coincidence of the two value functions.  This remains true for the common
+control-dependent bounded stopping time; an approximately optimal policy
+for the smaller-cap equation may be stopped at that time.
+Consequently
+\begin{equation}
+ -\frac{v(x+s\xi)-2v(x)+v(x-s\xi)}{s^2}
+ \le\sup_{\text{base controls}}
+       \frac{2J_0-J_s-J_{-s}}{s^2}.
+ \label{eq:721-25}
+\end{equation}
+For each base control the same $\gamma_s$ is used in all three terms.  There
+is therefore no differentiation of an indicator of an obstacle-stopping
+region.  The value function being differentiated is the smooth approximant.
+
+\subsection{Every changed second-variation term is uniformly bounded}
+
+First take $s\to0$ with the time and quasiderivative localizations fixed.
+The finite-time convergence in \cite[Lemmas 6.2--6.3]{ZhouBellman2015}
+justifies the state and density expansions uniformly over the base controls.
+For each fixed $K$ the cap $b_K$ is finite.  Remainder convergence may depend
+on $K,\nu$, while the estimate obtained after taking this limit will not.
+
+By \eqref{eq:721-13} and the constant killing clock, the terminal second variation is
+\begin{equation}
+ e^{-\phi_\gamma}\left[
+ v_{\xi_\gamma\xi_\gamma}(X_\gamma)
+ +v_{\eta_\gamma}(X_\gamma)
+ +2Z_\gamma v_{\xi_\gamma}(X_\gamma)
+ \right].
+ \label{eq:721-26}
+\end{equation}
+The last two terms have expected absolute value at most $CB(x,\xi)$ by
+\eqref{eq:721-9}, \eqref{eq:721-15}, \eqref{eq:721-19}, and Cauchy--Schwarz.
+
+The running second variation is exactly
+\begin{equation}
+ \begin{split}
+ R_\gamma=\int_0^\gamma e^{-\phi_t}\bigl[
+ &c_t\{g_{\xi_t\xi_t}(X_t)+g_{\eta_t}(X_t)
+                   +2Z_tg_{\xi_t}(X_t)\}\\
+ &-q_t\{8r_t^2-2\widehat r_t-4r_tZ_t\}\bigr]dt.
+ \end{split}
+ \label{eq:721-27}
+\end{equation}
+Indeed $(1/\theta)'(0)=-2r$ and
+$(1/\theta)''(0)=8r^2-2\widehat r$, while $p'(0)=Z$ and $p''(0)=0$.
+This accounts for all terms introduced by the quadratic penalty.
+
+For the terms with $c_t$, use the pathwise identity
+\[
+ \int_0^\gamma c_te^{-\phi_t}dt\le1.
+\]
+Their expected absolute value is at most
+\[
+ C\|g\|_{C^2}\mathbb E\left[
+ \sup|\xi_t|^2+\sup|\eta_t|+2\sup|Z_t\xi_t|
+ \right]\le CB(x,\xi).
+\]
+For the other terms, use $q_t\le C_*$, \eqref{eq:721-15}, and \eqref{eq:721-18}.
+Thus
+\begin{equation}
+ \mathbb E|R_\gamma|\le CB(x,\xi),
+ \label{eq:721-28}
+\end{equation}
+uniformly in $K,\nu$ and every localization.
+
+For clarity, the passage through the localizations uses the following precise
+facts.  Keep $\delta,K,\nu$ fixed.  Stop at time $T$ and when
+$|\xi_t|+|Z_t|$ first exceeds $N$.  Then $r,\widehat r,P,\pi,\widehat\pi$
+are bounded, and the finite-time difference-quotient lemmas apply to the
+common stopping time.  After $s\to0$, \cite[Lemma 6.4]{ZhouBellman2015}
+controls the difference between the base exit time and the minimum of the
+three exit times.  Formula \eqref{eq:721-16} makes $|\xi_\gamma|^2$ uniformly
+integrable over controls and stopped times.  The probability of the
+$N$-cutoff is at most $CB/N^2$ by \eqref{eq:721-15}, while
+$\mathbb P(\tau_\delta>T)\le\|\psi\|_\infty/T$ by \eqref{eq:721-3}.
+H\"older's inequality therefore removes these exceptional events from the
+terminal Hessian term, bounded for the fixed approximant by
+$\|D^2v\|_\infty|\xi_\gamma|^2$.
+On the remaining events uniform continuity of $D^2v$ on the fixed closed
+set $\overline D_\delta$, together with the exit-time comparison, gives
+\eqref{eq:721-21}.  The intermediate continuity moduli and higher-moment constants
+may depend on $\delta,K,\nu$; their sole role is to make errors tend to zero
+before these parameters vary.  The lower-order terminal and running terms
+need no convergence statement: their absolute expectations are bounded by
+$CB$ at every localization, so their bounds survive a limsup.
+
+Combining \eqref{eq:721-25}--\eqref{eq:721-28} in this order yields
+\begin{equation}
+ -v_{\xi\xi}(x)\le CB(x,\xi)
+ +\limsup\sup_{\text{controls}}
+       \mathbb E[-e^{-\phi_\gamma}
+                         v_{\xi_\gamma\xi_\gamma}(X_\gamma)].
+ \label{eq:721-29}
+\end{equation}
+The remaining term is the unchanged terminal term in \eqref{eq:721-21}.
+
+\subsection{Boundary passage and all real second derivatives}
+
+For each fixed $K,\nu$, $v\in C^2(\overline\Omega)$.
+If $y\in\partial\Omega$ and $\zeta$ is real tangent to the boundary,
+differentiating $v=g$ along a boundary curve gives
+\begin{equation}
+ |v_{\zeta\zeta}(y)|
+ \le C\left(\|g\|_{C^2}
+                  +\|\nabla v\|_{L^\infty(\partial\Omega)}\right)
+          |\zeta|^2\le C|\zeta|^2.
+ \label{eq:721-30}
+\end{equation}
+This includes the second fundamental form term; Euclidean tangential second
+derivatives are not identified with those of an arbitrary extension of $g$.
+
+By \eqref{eq:721-20}, every limiting nontangential direction has a denominator tending
+to infinity.  Limiting tangent directions have numerator bounded by
+\eqref{eq:721-30}.  For fixed $K,\nu$, continuity of $D^2v$ makes the normal and
+mixed contributions vanish as the directions approach a tangent direction.
+Normalize $|\zeta|=1$ and use compactness to obtain
+\begin{equation}
+ \limsup_{\delta\downarrow0}
+ \sup_{\psi(y)=\delta,\,\zeta\ne0}
+       \frac{|v_{\zeta\zeta}(y)|}{B_1(y,\zeta)}\le C,
+ \label{eq:721-31}
+\end{equation}
+where $C$ is independent of $K,\nu$.
+The order matters: reach the boundary for each fixed smooth approximant
+before varying the approximation parameters.  Its possibly large normal
+Hessian disappears from this ratio.
+
+Equations \eqref{eq:721-21}, \eqref{eq:721-29}, and \eqref{eq:721-31} give
+\begin{equation}
+ v_{\xi\xi}(x)\ge-CB(x,\xi).
+ \label{eq:721-32}
+\end{equation}
+On each compact $E\Subset\Omega$, this is a uniform lower bound
+$D^2v\ge-C_EI$.  Moreover \eqref{eq:721-6} implies $F_\nu(D^2v)\le0$.
+Since $I/n\in\mathcal A_\nu$, $\Delta_{\mathbb R^{2n}}v\le0$.
+The lower eigenvalue bound and this nonpositive trace bound each real
+Hessian eigenvalue above by $(2n-1)C_E$.  We have proved
+\begin{equation}
+ \|v_{K,\nu}\|_{C^{1,1}(E)}\le C_E
+ \label{eq:721-33}
+\end{equation}
+with constants depending on $\Omega,\rho,m,n,E$ and a $C^2$ bound for $h$,
+but not on $K,\nu$.
+
+\subsection{Identification of the limit with the exact envelope}
+
+Choose smooth $h_j\to h$ in $C^2(\overline\Omega)$,
+$K_j\to\infty$, $\nu_j\to0$, and put $u_j=-v_{K_j,\nu_j}$ with
+$g_j=-h_j$.  The preceding uniform estimates give a subsequence converging
+uniformly on $\overline\Omega$ and in $C^1$ on compact subsets to
+\[
+ u\in C^{0,1}(\overline\Omega)\cap C^{1,1}_{\mathrm{loc}}(\Omega).
+\]
+By \eqref{eq:721-6}, $u_j\le h_j+C/\sqrt{K_j}$, so $u\le h$.
+For each $A\in\mathcal A$ set
+$A_j=(1-\nu_j)A+\nu_jI/n$.  Formula \eqref{eq:721-6} gives $L_{A_j}u_j\ge0$.
+Passing to distributions shows $L_Au\ge0$ for all $A$, hence $u$ is
+$m$-subharmonic.  The boundary barriers give $u=h$ on $\partial\Omega$.
+
+Let $w\in\operatorname{SH}_m(\Omega)$ with $w\le h$ be any competitor.
+A fixed sufficiently large $C$ makes $h+C\rho$ $m$-subharmonic, by the
+uniform strictness of $\rho$.  Replacing $w$ by
+$\max(w,h+C\rho)$ increases it and allows us to assume it is bounded.
+Put $\varepsilon_j=\|h_j-h\|_\infty$.  For $t>0$ the function
+\[
+ w_{j,t}=w-\varepsilon_j+t\rho
+\]
+is strictly subharmonic for every $L_{A_j}$, is at most $h_j$, and has
+boundary upper limits at most $h_j$.  If $w_{j,t}-u_j$ had a positive
+interior maximum, the smooth function $u_j$ plus a constant would touch
+$w_{j,t}$ from above there.  The linear viscosity inequalities would imply
+$L_{A_j}u_j\ge t\delta_0$ for every $A_j$, hence
+$F_{\nu_j}(D^2v_j)\le-t\delta_0$.  On the other hand, at this point
+$u_j<w_{j,t}\le h_j$, so the penalty vanishes and \eqref{eq:721-6} gives
+$F_{\nu_j}(D^2v_j)=0$, a contradiction.  Thus $w_{j,t}\le u_j$.
+Let $t\downarrow0$ and $j\to\infty$ to obtain $w\le u$.
+
+The function $u$ is an admissible competitor and dominates every admissible
+competitor.  Therefore $u=P_{m,\Omega}h$, and \eqref{eq:721-33} proves the theorem.
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{BenaliZeriahi} A. Benali and A. Zeriahi, \emph{The H\"older continuous subsolution theorem for complex Hessian equations}, J. \'Ec. polytech. Math. \textbf{7} (2020), 981--1007, p.~998. \url{https://doi.org/10.5802/jep.133}.
+\bibitem{BenaliErratum} A. Benali and A. Zeriahi, \emph{Erratum to The H\"older continuous subsolution theorem for complex Hessian equations}, J. \'Ec. polytech. Math. \textbf{8} (2021), 779--789. \url{https://doi.org/10.5802/jep.157}.
+\bibitem{ZhouBellman2015} W. Zhou, \emph{Interior regularity of fully nonlinear degenerate elliptic equations I: Bellman equations with constant coefficients}, SIAM J. Math. Anal. \textbf{47} (2015), 2375--2415. \url{https://doi.org/10.1137/130912724}. Numbered passages cited in the text refer to the inspected preprint \url{https://arxiv.org/abs/1302.7062v2}.
+\bibitem{Krylov1987} N. V. Krylov, \emph{Nonlinear Elliptic and Parabolic Equations of the Second Order}, Mathematics and its Applications 7, D. Reidel, Dordrecht, 1987, \S6.2, Theorem 7, as quoted in Zhou's Remark 5.1. \url{https://link.springer.com/book/9781402003349}.
+\bibitem{ZhouHessian2013} W. Zhou, \emph{Representation and regularity for the Dirichlet problem for real and complex degenerate Hessian equations}, preprint (2013), Theorem 6.1. \url{https://arxiv.org/abs/1311.6450}.
+\end{thebibliography}
+\endgroup
+\end{document}

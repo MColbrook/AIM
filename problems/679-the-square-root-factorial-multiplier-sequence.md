@@ -1,8 +1,8 @@
 # 679. The square-root factorial multiplier sequence
 
 **Area:** Polynomial zero preservation and entire functions
-**Status:** 🔵 OPEN
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -39,6 +39,19 @@ This is a concrete test of when a diagonal operation on polynomial coefficients 
 3. Jonas Jalowy, Zakhar Kabluchko and Alexander Marynych, [*Zeros and Exponential Profiles of Polynomials II: Examples*](https://doi.org/10.1007/s00365-026-09775-2), published 11 September 2026, Theorems 2.4 and 5.6, Lemma 5.9 and Remark 5.10. The real-rootedness assumptions and absence of the factorial in its integer-power family distinguish those results from this question.
 
 ## Status review
+
+### Reviewed manuscript, 2026-11-07
+
+Matthew J. Colbrook provides the following AI-found [manuscript](../research/solutions/679-the-square-root-factorial-multiplier-sequence/main.pdf). The square-root factorial sequence is a multiplier sequence; nonzero generating-function zeros are simple and negative.
+
+The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+
+**Review:** The [separate Codex AI audit](../research/solution_reviews/2026-11-07-complex-analysis/679-review.md) checks the complete argument against this exact target and records the primary-source comparisons. No unresolved mathematical gap was identified in the complete resolution. The results were found by AI; human peer review and formal verification are not claimed.
+
+### Earlier status record (historical)
+
+The following dated record describes the pre-submission state.
+
 
 
 ### Online recheck, 2026-10-30

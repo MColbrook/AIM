@@ -1,0 +1,387 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 728}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 728},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{The weak endpoint for derivatives of polynomial roots}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\begin{abstract}
+Continuous roots of a $C^{n-1,1}$ polynomial curve have derivative in weak $L^{n/(n-1)}$, with a coefficient bound. The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+\end{abstract}
+\noindent\textbf{Catalogue scope.} AIM 728; complete resolution. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/728-do-continuous-polynomial-roots-have-weak-endpoint-derivative-regularity.md}{Canonical target at revision \texttt{1e56463}}.
+
+
+\section{Statement and argument}
+\label{sec:728}
+
+The answer to the stated question is affirmative.  The argument below combines
+known estimates for radicals and lower-degree polynomials with a maximal-function
+covering argument.  In particular, it does not sum local weak-Lebesgue
+quasinorms, whose failure of additivity is the obstruction mentioned in
+\cite[Open Problem 2]{ParusinskiRainer}.
+
+For an interval $I$, write
+\[
+ \|f\|_{C^{m,1}(I)}
+ =\max\left\{\max_{0\le s\le m}\|f^{(s)}\|_{L^\infty(I)},
+                 \operatorname{Lip}_I(f^{(m)})\right\},
+ \qquad
+ \|f\|_{p,\infty;I}
+ =\sup_{u>0}u\,|\{|f|>u\}\cap I|^{1/p}.
+\]
+Equivalent conventions for the first norm only change constants.
+
+\begin{theorem}
+\label{thm:728}
+For every integer $n\ge3$ there is a constant $C_n$ with the following
+property.  Let
+\[
+ P_t(z)=z^n+\sum_{j=1}^n a_j(t)z^{n-j},\qquad
+ a_j\in C^{n-1,1}([0,1];\mathbb C),
+\]
+and let $\lambda:(0,1)\to\mathbb C$ be any continuous root.  Then, with
+$p=n/(n-1)$,
+\[
+ \|\lambda'\|_{p,\infty;(0,1)}
+ \le C_n\max_{1\le j\le n}
+               \|a_j\|_{C^{n-1,1}([0,1])}^{1/j}.
+ \tag{728.1}
+\]
+Consequently every root in the exact hypotheses of AIM 728 has derivative in
+$L^{n/(n-1),\infty}(I)$.
+\end{theorem}
+
+\subsection{Established inputs and an elementary interpolation estimate}
+
+We use two previously established results, with their roles kept distinct.
+First, the complex radical estimate
+\cite[Proposition 1 and Corollary 2]{ParusinskiRainer}, based on
+\cite{GhisiGobbino}, says that if $a\in C^{j-1,1}(T;\mathbb C)$, then every
+continuous $j$th root is absolutely continuous and
+\[
+ g_a(t)=
+ \begin{cases}
+ \displaystyle\frac{|a'(t)|}{j|a(t)|^{1-1/j}},&a(t)\ne0,\\[4pt]
+ 0,&a(t)=0
+ \end{cases}
+ \quad\hbox{belongs to } L^{j/(j-1),\infty}(T).
+ \tag{728.2}
+\]
+Its weak norm is bounded by a constant depending only on $j$ times
+\[
+ \max\left\{
+ \operatorname{Lip}_T(a^{(j-1)})^{1/j}|T|^{(j-1)/j},
+ \|a'\|_{L^\infty(T)}^{1/j}\right\}.
+\]
+The function in (728.2) is the absolute value of the derivative of any
+continuous root, almost everywhere.
+
+Second, the polynomial-root theorem
+\cite[Theorem 1]{ParusinskiRainer} gives a uniform strong $L^q$ derivative
+estimate in degree $d$ whenever $q<d/(d-1)$, in terms of the
+$C^{d-1,1}$ coefficient norms and the interval length.  We will apply this
+estimate only with $d<n$.  Degree one is immediate.  We also use the already
+known absolute continuity of degree-$n$ roots, which does not assume the
+endpoint conclusion.
+
+\begin{lemma}
+\label{lem:728interpolation}
+If $f\in C^{m-1,1}(I)$ and $\ell=|I|>0$, then
+\[
+ \ell^s\|f^{(s)}\|_{L^\infty(I)}
+ \le C_m\left(\|f\|_{L^\infty(I)}
+           +\ell^m\operatorname{Lip}_I(f^{(m-1)})\right),
+ \qquad 0\le s\le m-1.
+ \tag{728.3}
+\]
+\end{lemma}
+\begin{proof}
+Scale $I$ to a unit interval and subtract the Taylor polynomial of degree
+$m-1$ at its midpoint.  Lipschitz continuity of the top derivative bounds
+all derivatives of the remainder through order $m-1$ by
+$C_m\operatorname{Lip}(f^{(m-1)})$.  On the finite-dimensional space of
+polynomials of degree at most $m-1$, every derivative supremum is bounded
+by a constant times the polynomial's supremum.  The latter is at most
+$\|f\|_\infty+C_m\operatorname{Lip}(f^{(m-1)})$.  Rescaling proves
+(728.3).  The argument applies to complex-valued functions as well.
+\end{proof}
+
+\subsection{Reduction and the stopping intervals}
+
+Put
+\[
+ R=\max_{1\le j\le n}\|a_j\|_{C^{n-1,1}([0,1])}^{1/j}.
+\]
+The Tschirnhausen substitution $z=w-a_1(t)/n$ removes the coefficient of
+$w^{n-1}$.  Its new coefficients $\widetilde a_j$, $2\le j\le n$, are
+polynomials of weighted degree $j$ in the original coefficients, where
+$a_i$ has weight $i$.  Leibniz's rule therefore gives
+\[
+ \|\widetilde a_j\|_{C^{n-1,1}([0,1])}\le C_nR^j.
+\]
+Extend these functions to $T=(-2,3)$ by a bounded $C^{n-1,1}$ extension
+operator.  Endpoint Taylor extensions already provide such an operator on
+this fixed larger interval.  After changing $C_n$, the same bounds hold
+on $T$.  Since $\widetilde\lambda=\lambda+a_1/n$, it suffices to prove the
+estimate for the transformed root and then add the bounded derivative
+$a_1'/n$.  Suppress tildes for the moment, so that $a_1=0$.
+
+Define
+\[
+ A_0=\max_{2\le j\le n}\|a_j\|_{C^{n-1,1}(T)}^{1/j},
+ \qquad A(t)=\max_{2\le j\le n}|a_j(t)|^{1/j}.
+\]
+If $A_0=0$, the transformed root is zero.  Hence assume $A_0>0$.  Let $g_j$
+be the function in (728.2) for $a_j$, and set
+\[
+ h(t)=2A_0+\sum_{j=2}^n g_j(t)\quad(t\in T),
+ \qquad h(t)=0\quad(t\notin T).
+ \tag{728.4}
+\]
+For $j<n$, the $C^{j-1,1}$ norm needed in (728.2) is controlled by the
+$C^{n-1,1}$ norm; for $j=n$ it is exactly the available regularity.
+Since $T$ has fixed finite length and $j/(j-1)\ge p$, the radical estimate
+and the finite-sum inequality for weak norms give
+\[
+ h\in L^{p,\infty}(\mathbb R),\qquad
+ \|h\|_{p,\infty;\mathbb R}\le C_nA_0.
+ \tag{728.5}
+\]
+In particular $h$ is locally integrable, since $p>1$.
+
+Fix a sufficiently small constant $\eta>0$, depending only on $n$; its
+required smallness will be specified by the splitting construction below.
+Take $\eta<1/3$.  For each
+\[
+ t\in E=\{t\in(0,1):A(t)>0\},
+\]
+choose the centered open interval $I_t$ satisfying
+\[
+ \int_{I_t}h(s)\,ds=\eta A(t).
+ \tag{728.6}
+\]
+The radius exists uniquely: the integral is continuous and strictly
+increasing while the interval lies in $T$, and $h\ge2A_0$ there.  If
+$\ell_t=|I_t|$, then
+\[
+ \ell_t\le\frac{\eta A(t)}{2A_0}\le\frac\eta2.
+ \tag{728.7}
+\]
+Thus $I_t\subset T$, and $I_t\cap(0,1)$ has length between $\ell_t/2$
+and $\ell_t$.
+
+Choose continuous $j$th roots of $a_j$ on $I_t$.  Absolute continuity and
+(728.6) imply that their variation from the center is at most $\eta A(t)$.
+With $A=A(t)$ this gives
+\[
+ \sup_{I_t}|a_j|\le(1+\eta)^jA^j,
+ \qquad
+ \sup_{s\in I_t}\frac{|a_j(s)-a_j(t)|}{A^j}
+       \le j(1+\eta)^{j-1}\eta.
+ \tag{728.8}
+\]
+Let $L_j=\operatorname{Lip}_T(a_j^{(n-1)})\le A_0^j$.  From (728.7),
+\[
+ \frac{L_j\ell_t^n}{A^j}
+ \le \left(\frac\eta2\right)^n
+           \left(\frac{A}{A_0}\right)^{n-j}
+ \le \left(\frac\eta2\right)^n.
+ \tag{728.9}
+\]
+Apply Lemma~\ref{lem:728interpolation} with $m=n$.  Equations
+(728.8)--(728.9) show that all the functions
+\[
+ s\longmapsto\frac{a_j(t+\ell_ts)}{A^j},
+ \qquad -\tfrac12\le s\le\tfrac12,
+ \tag{728.10}
+\]
+have uniformly bounded $C^{n-1,1}$ norms, with constants depending only
+on $n$.
+
+\subsection{Uniform splitting and the gain in the local exponent}
+
+Consider the compact set
+\[
+ K=\left\{(c_2,\ldots,c_n)\in\mathbb C^{n-1}:
+                   \max_{2\le j\le n}|c_j|^{1/j}=1\right\}.
+\]
+For every $c\in K$, the polynomial
+$z^n+\sum_{j=2}^nc_jz^{n-j}$ has at least two distinct roots.  Indeed, if
+all roots were equal, the missing $z^{n-1}$ coefficient would force their
+common value to be zero, contradicting $c\in K$.
+
+Group the distinct roots into two nonempty groups and form the corresponding
+monic coprime factors $B$ and $C$.  The derivative of the multiplication map
+on their coefficient vectors is
+\[
+ (\dot B,\dot C)\longmapsto C\dot B+B\dot C,
+ \qquad \deg\dot B<\deg B,\quad\deg\dot C<\deg C.
+\]
+This map is injective: coprimality implies that $B$ divides $\dot B$ when
+$C\dot B+B\dot C=0$, and the degree bound forces $\dot B=0$, then
+$\dot C=0$.  Equal dimensions make it invertible.  The analytic implicit
+function theorem therefore gives an analytic factorization chart near
+$c$, in which both factors remain coprime and have degrees less than $n$.
+
+Choose nested neighborhoods for these charts, with the closures of the
+inner neighborhoods contained in the outer ones.  Compactness of $K$
+provides a finite inner cover, a positive uniform margin, and uniform bounds
+on the finitely many derivatives of the factor-coefficient maps needed
+below.  At the center of $I_t$, the fixed-scale coefficient vector
+\[
+ \left(\frac{a_2(t)}{A^2},\ldots,\frac{a_n(t)}{A^n}\right)
+\]
+belongs to $K$.  Choose $\eta$ small enough that (728.8) keeps its entire
+path on $I_t$ inside a single outer chart, within the chosen margin.
+Together with (728.10), the chain rule then gives uniformly bounded
+$C^{n-1,1}$ norms for the coefficients of both normalized factors on the
+unit rescaled interval.
+
+Fix
+\[
+ \frac{n}{n-1}<q<\frac{n-1}{n-2}.
+ \tag{728.11}
+\]
+The root under consideration belongs throughout the connected interval
+$I_t\cap(0,1)$ to one of these two factors.  It cannot switch factors:
+their root sets are disjoint at every parameter, so the choice of factor
+is locally constant.  If this factor has degree $d<n$, then
+$q<d/(d-1)$ when $d\ge2$; degree one is elementary.  Apply the established
+strong subcritical theorem in degree $d$ to
+\[
+ \widehat\lambda(s)=\frac{\lambda(t+\ell_ts)}{A}.
+\]
+The rescaled parameter interval has length between $1/2$ and $1$, and
+its normalized factor coefficients have bounded $C^{d-1,1}$ norms.
+Consequently
+\[
+ \int_{I_t\cap(0,1)}|\lambda'(s)|^q\,ds
+       \le C_{n,q} A(t)^q |I_t|^{1-q}.
+ \tag{728.12}
+\]
+This is the essential gain: the local exponent is strictly greater than
+$p$, because the polynomial has split into smaller degrees.  No
+above-endpoint estimate in degree $n$ has been assumed.
+
+\subsection{Patching by disjoint cores and a maximal function}
+
+Let $J_t$ be the concentric interval with one fifth the length of $I_t$.
+The $5r$ covering lemma selects a countable pairwise disjoint family
+$J_i=J_{t_i}$ such that
+\[
+ E\subset\bigcup_i5J_i=\bigcup_iI_{t_i}.
+\]
+Write $I_i=I_{t_i}$ and $A_i=A(t_i)$.  We do not need bounded overlap of
+the larger intervals $I_i$.
+
+Let $\mathcal M$ be the uncentered Hardy--Littlewood maximal operator on
+$\mathbb R$.  By Chebyshev's inequality and (728.12), for $u>0$,
+\[
+ \big|\{s\in I_i\cap(0,1):|\lambda'(s)|>u\}\big|
+ \le |I_i|\min\left\{1,
+       C_{n,q}\left(\frac{A_i}{u|I_i|}\right)^q\right\}.
+\]
+Equation (728.6) identifies
+$A_i/|I_i|=\eta^{-1}|I_i|^{-1}\int_{I_i}h$.
+For every $x\in J_i\subset I_i$, this average is at most
+$\mathcal Mh(x)$.  Since $|I_i|=5|J_i|$, summing over the disjoint cores
+therefore gives
+\[
+ \big|\{s\in E:|\lambda'(s)|>u\}\big|
+ \le5\int_{\mathbb R}
+           \min\{1,C_{n,q}(\mathcal Mh(x)/u)^q\}\,dx.
+ \tag{728.13}
+\]
+The known absolute continuity of the root implies that its derivative
+vanishes almost everywhere on $\{A=0\}$, where the transformed root is
+zero.  Thus the left side of (728.13) can be replaced by the distribution
+function on all of $(0,1)$.
+
+For completeness, $\mathcal M$ is bounded on $L^{p,\infty}$ when $p>1$.
+One can see this directly by splitting $h$ at height $u/2$: the maximal
+function of the lower part is at most $u/2$, while the weak $(1,1)$ estimate
+applied to the upper part and integration of its distribution function
+ give
+\[
+ |\{\mathcal Mh>u\}|\le C_p u^{-p}\|h\|_{p,\infty}^p.
+\]
+Put $H=\|\mathcal Mh\|_{p,\infty}$.  For any fixed $D>0$, layer-cake
+integration and $q>p$ yield
+\[
+ \begin{split}
+ \int_{\mathbb R}\min\{1,(D\mathcal Mh/u)^q\}\,dx
+ &=q(D/u)^q\int_0^{u/D}
+                v^{q-1}|\{\mathcal Mh>v\}|\,dv\\
+ &\le\frac{q}{q-p}(DH/u)^p.
+ \end{split}
+ \tag{728.14}
+\]
+Combining (728.5), (728.13), and (728.14), with a fixed choice of $q$ in
+(728.11), proves
+\[
+ \|\widetilde\lambda'\|_{p,\infty;(0,1)}\le C_nA_0\le C_nR.
+\]
+Restoring $\lambda=\widetilde\lambda-a_1/n$ and using the finite-sum
+inequality for weak norms proves (728.1).
+
+\subsection{An explicit estimate on any bounded interval}
+
+If $I=(a,b)$ has length $\ell$, define
+\[
+ N_{j,I}=\max\left\{
+      \max_{0\le s\le n-1}\ell^s\|a_j^{(s)}\|_{L^\infty(I)},
+      \ell^n\operatorname{Lip}_I(a_j^{(n-1)})\right\}.
+\]
+Rescaling Theorem~\ref{thm:728} gives
+\[
+ \boxed{\quad
+ \|\lambda'\|_{n/(n-1),\infty;I}
+       \le C_n\ell^{-1/n}\max_{1\le j\le n}N_{j,I}^{1/j}.
+ \quad}
+ \tag{728.15}
+\]
+The dependence on constant coefficient parts is not asserted to be
+optimal.  The estimate is finite under exactly the stated hypotheses and
+has the correct homogeneity under scaling the root and the parameter.
+The example $z^n-t$ still excludes ordinary strong endpoint integrability;
+there is no conflict with that sharp obstruction.
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{ParusinskiRainer} A. Parusinski and A. Rainer, \emph{Optimal Sobolev regularity of roots of polynomials}, Ann. Sci. Ecole Norm. Sup. (4) \textbf{51} (2018), 1343--1387. \url{https://math.univ-cotedazur.fr/~parus/publis/ens.pdf}. DOI: \url{https://doi.org/10.24033/asens.2376}.
+\bibitem{GhisiGobbino} M. Ghisi and M. Gobbino, \emph{Higher order Glaeser inequalities and optimal regularity of roots of real functions}, Ann. Scuola Norm. Sup. Pisa Cl. Sci. (5) \textbf{12} (2013), 1001--1021. \url{https://www.numdam.org/item/ASNSP_2013_5_12_4_1001_0.pdf}.
+\end{thebibliography}
+\endgroup
+\end{document}

@@ -2,7 +2,7 @@
 
 **Area:** Complex analysis and asymptotic analysis
 **Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -49,10 +49,25 @@ The endpoint controls how far a divergent formal expansion can be realized by an
 
 ## Status review
 
+### Reviewed manuscript, 2026-11-07
 
-**Known cases:** The critical opening, Roumieu quantifiers and three different asymptotic classes are retained. Interior/exterior bounds, rational-index exclusions and Beurling statements do not settle both unrestricted endpoint decisions.
+Matthew J. Colbrook provides the following AI-found [manuscript](../research/solutions/708-the-critical-opening-for-asymptotic-borel-surjectivity/main.pdf). Both uniform critical endpoints are excluded for every strongly regular sequence.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+**Known cases:** Both uniform critical endpoints are excluded for every strongly regular sequence.
+
+**Remaining target:** The nonuniform critical endpoint inclusion remains unresolved here.
+
+**Review:** The [separate Codex AI audit](../research/solution_reviews/2026-11-07-complex-analysis/708-review.md) checks the complete argument against this exact target and records the primary-source comparisons. The verified restricted results do not resolve the remaining target, so this entry remains partially resolved. The results were found by AI; human peer review and formal verification are not claimed.
+
+### Earlier status record (historical)
+
+The following dated record describes the pre-submission state.
+
+
+
+**Previously recorded known cases:** The critical opening, Roumieu quantifiers and three different asymptotic classes are retained. Interior/exterior bounds, rational-index exclusions and Beurling statements do not settle both unrestricted endpoint decisions.
+
+**Previously recorded remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
 
 ### Online recheck, 2026-10-30
 

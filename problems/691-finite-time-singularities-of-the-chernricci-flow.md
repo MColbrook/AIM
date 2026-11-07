@@ -1,8 +1,8 @@
 # 691. Finite-time singularities of the Chern–Ricci flow
 
 **Area:** Complex analysis, geometric analysis and nonlinear PDEs
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -45,10 +45,23 @@ The question asks whether the degeneration of this nonlinear metric flow occurs 
 
 ## Status review
 
+### Reviewed manuscript, 2026-11-07
 
-**Known cases:** The Hermitian null-locus results impose lower-volume and metric or bounded-mass hypotheses. Kähler surface Type I theorems and Chern holonomy flows do not settle arbitrary Hermitian finite-time singularities.
+Matthew J. Colbrook provides the following AI-found [manuscript](../research/solutions/691-finite-time-singularities-of-the-chernricci-flow/main.pdf). Counterexample to the analyticity conclusion: the collapsing-subvariety locus is nonanalytic for an admissible Hermitian flow.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+
+**Review:** The [separate Codex AI audit](../research/solution_reviews/2026-11-07-complex-analysis/691-review.md) checks the complete argument against this exact target and records the primary-source comparisons. No unresolved mathematical gap was identified in the complete resolution. The results were found by AI; human peer review and formal verification are not claimed.
+
+### Earlier status record (historical)
+
+The following dated record describes the pre-submission state.
+
+
+
+**Previously recorded known cases:** The Hermitian null-locus results impose lower-volume and metric or bounded-mass hypotheses. Kähler surface Type I theorems and Chern holonomy flows do not settle arbitrary Hermitian finite-time singularities.
+
+**Previously recorded remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
 
 ### Online recheck, 2026-10-30
 

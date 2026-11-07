@@ -1,0 +1,299 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 673}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 673},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{Cluster values at every interior point of the complex \texorpdfstring{$\ell^p$}{ell-p} ball}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\begin{abstract}
+Every value of a character over an interior point of the complex $\ell^p$ ball is a weak cluster value in the same ball, for $1<p<\infty$. The exact tail-radius estimate and origin approximation are proved directly. The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+\end{abstract}
+\noindent\textbf{Catalogue scope.} AIM 673; complete resolution. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/673-cluster-values-on-the-complex-ell-p-ball.md}{Canonical target at revision \texttt{1e56463}}.
+The interior-point question is recorded in \cite[Question 8]{CarandoQuestion}; the corrigendum is explicitly accounted for below.
+
+\section{Statement and argument}
+\label{sec:673}
+
+Let $1<p<\infty$, let $X=\ell^p(\mathbb N;\mathbb C)$, and let
+$B$ be its open unit ball.  We prove the cluster-value equality
+\begin{equation}
+ \operatorname{Cl}_B(f,z)=\{\varphi(f):\varphi\in M_z\}
+ \qquad(f\in A_u(B),\ z\in B).
+ \label{eq:673-1}
+\end{equation}
+Here $M_z$ consists of the characters of $A_u(B)$ whose restriction
+to $X^*$ is evaluation at $z$, and the cluster set uses weakly
+convergent nets in the same open unit ball.  This includes the
+nonzero interior points and non-Hilbert exponents in the catalogue
+question.  The mechanism is an exact estimate for a character on
+polynomials depending only on the tail coordinates.
+
+We use continuous polynomials on a Banach space in their usual sense:
+finite sums of continuous homogeneous polynomials.  They need not
+depend on finitely many coordinates.  Their restrictions are dense
+in $A_u(B)$; indeed, radial dilations of a uniformly continuous
+holomorphic function converge uniformly to it on $B$, and the Taylor
+series of each strict radial dilation converges uniformly there.
+Every character of a unital uniform algebra has norm one.
+
+The cluster-value theorem at the origin was proved in
+\cite[Theorem 3.1]{AronCarandoGamelinLassalleMaestre2012}.
+We include the polynomial form needed below, so that the proof does
+not depend on any unproved general cluster-value theorem.
+
+\begin{lemma}[Origin approximation]
+Let $R>0$ and let $\psi$ be a character of $A_u(RB)$ such that
+$\psi(x^*)=0$ for every $x^*\in X^*$.  For every continuous polynomial
+$Q$ on $X$, every weak neighborhood $V$ of $0$, and every
+$\varepsilon>0$, there exists $v\in RB\cap V$ with
+\begin{equation}
+ |Q(v)-\psi(Q)|<\varepsilon.
+ \label{eq:673-2}
+\end{equation}
+The same statement holds for any coordinate-tail copy of $\ell^p$.
+\end{lemma}
+
+\begin{proof}
+Write $T_Kx=(0,\ldots,0,x_{K+1},x_{K+2},\ldots)$.
+Because $X^*=\ell^{p/(p-1)}$, a sufficiently large $K$ satisfies
+$R B_{T_KX}\subset V$.  The polynomial identity
+\[
+ Q(x)-Q(T_Kx)=\sum_{j=1}^K x_j Q_j(x)
+\]
+holds for suitable continuous polynomials $Q_j$.  It follows either
+by multilinear expansion or by freezing the coordinates one at a
+time.  Consequently $\psi(Q\circ T_K)=\psi(Q)$.
+If \eqref{eq:673-2} failed throughout $R B_{T_KX}$, then
+$|Q(T_Kx)-\psi(Q)|\ge\varepsilon$ for all $x\in RB$.
+The function
+\[
+ x\longmapsto\frac1{Q(T_Kx)-\psi(Q)}
+\]
+would then be holomorphic and uniformly continuous on $RB$, and hence
+belong to $A_u(RB)$.  It would invert an element whose value under
+$\psi$ is zero, contradicting multiplicativity.
+\end{proof}
+
+\begin{lemma}[Exact tail radius]
+Fix $\varphi\in M_z$ and a positive integer $N$.  Split
+$X=H_N\oplus_p Y_N$ into the first $N$ coordinates and the remaining
+coordinates, and put
+\begin{equation}
+ z=z_H+z_T,\qquad
+ u=\|z_H\|_p,\qquad r=(1-u^p)^{1/p}.
+ \label{eq:673-3}
+\end{equation}
+For every continuous polynomial $Q$ on $Y_N$,
+\begin{equation}
+ |\varphi(Q\circ T_N)|\le\sup_{\|y\|_p<r}|Q(y)|.
+ \label{eq:673-4}
+\end{equation}
+Thus $Q\mapsto\varphi(Q\circ T_N)$ extends to a character
+$\eta_N$ of $A_u(rB_{Y_N})$, lying in the fiber over $z_T$.
+\end{lemma}
+
+\begin{proof}
+First let $Q$ be $k$-homogeneous with $k\ge1$, and set
+$\|Q\|_1=\sup_{\|y\|_p<1}|Q(y)|$.
+If $u>0$, choose a complex-linear functional $\ell$ on $H_N$ of
+norm one with $\ell(z_H)=u$.  Put
+\[
+ c=\frac{k u^{p-1}}{1-u^p}.
+\]
+The function $x\mapsto e^{c\ell(x_H)}Q(x_T)$ belongs to $A_u(B)$.
+For $t=\|x_H\|_p$ and $x\in B$, its modulus is at most
+\[
+ \|Q\|_1 e^{ct}(1-t^p)^{k/p}.
+\]
+The logarithm of the last factor has derivative
+\[
+ c-\frac{k t^{p-1}}{1-t^p}.
+\]
+Since $t\mapsto t^{p-1}/(1-t^p)$ is strictly increasing on $(0,1)$,
+the maximum occurs at $t=u$.  Therefore
+\[
+ \|e^{c\ell(x_H)}Q(x_T)\|_B
+ \le e^{cu}r^k\|Q\|_1.
+\]
+On the other hand, multiplicativity, the uniformly convergent
+exponential series, and the fiber condition give
+\[
+ \varphi(e^{c\ell(x_H)}Q(x_T))
+ =e^{c\ell(z_H)}\varphi(Q(x_T))
+ =e^{cu}\varphi(Q(x_T)).
+\]
+The norm-one bound for $\varphi$ now yields
+\begin{equation}
+ |\varphi(Q(x_T))|\le r^k\|Q\|_1.
+ \label{eq:673-5}
+\end{equation}
+When $u=0$, take $c=0$ and $r=1$ to obtain the same estimate.
+It also holds for constant polynomials, with $k=0$.
+
+Now let $Q$ have degree $d$, and for an integer $m\ge1$ decompose
+$Q^m=\sum_{k=0}^{md}Q_{m,k}$ into homogeneous components.
+Cauchy's coefficient formula for the one-variable polynomial
+$\lambda\mapsto Q(\lambda y)^m$ gives
+\[
+ r^k\|Q_{m,k}\|_1
+ =\|Q_{m,k}\|_{rB_{Y_N}}
+ \le\|Q^m\|_{rB_{Y_N}}
+ =\|Q\|_{rB_{Y_N}}^m.
+\]
+Using \eqref{eq:673-5}, linearity and multiplicativity, we obtain
+\[
+ |\varphi(Q(x_T))|^m
+ \le\sum_{k=0}^{md}|\varphi(Q_{m,k}(x_T))|
+ \le(md+1)\|Q\|_{rB_{Y_N}}^m.
+\]
+Taking $m$th roots and letting $m\to\infty$ proves \eqref{eq:673-4}.
+Polynomial density extends this unital multiplicative functional
+continuously to $A_u(rB_{Y_N})$.  Its value on a linear functional
+on $Y_N$ is that functional's value at $z_T$, as claimed.
+\end{proof}
+
+\begin{theorem}
+The equality \eqref{eq:673-1} holds for every $1<p<\infty$.
+\end{theorem}
+
+\begin{proof}
+Fix $f\in A_u(B)$, $z\in B$, and $\varphi\in M_z$.
+It suffices to show that every weak neighborhood of $z$ contains
+a point $w\in B$ with $f(w)$ arbitrarily close to $\varphi(f)$.
+We first give the construction for one fixed continuous polynomial
+$P$ on $X$.
+
+For each $N$, use \eqref{eq:673-3} and write $t_N=\|z_T\|_p$ and
+$R_N=r+t_N$.  On polynomials $Q$ on $Y_N$, define
+\[
+ \psi_N(Q)=\eta_N\bigl(Q(\,\cdot-z_T)\bigr).
+\]
+The exact tail-radius bound and the triangle inequality imply
+\[
+ |\psi_N(Q)|
+ \le\sup_{\|y\|_p<r}|Q(y-z_T)|
+ \le\sup_{\|v\|_p<R_N}|Q(v)|.
+\]
+Hence $\psi_N$ extends to a character of $A_u(R_NB_{Y_N})$.
+It is in the zero fiber because
+$\eta_N(L)=L(z_T)$ for all linear functionals $L$ on $Y_N$.
+
+Freezing the finite head coordinates of a polynomial gives an exact
+algebraic identity
+\[
+ P(x_H+x_T)-P(z_H+x_T)
+ =\sum_{j=1}^N(x_j-z_j)P_j(x)
+\]
+for continuous polynomials $P_j$.  Applying $\varphi$ yields
+\[
+ \varphi(P)=\eta_N\bigl(P(z_H+\,\cdot\,)\bigr).
+\]
+Consequently the polynomial $Q_N(v)=P(z+v)$ on $Y_N$ satisfies
+\begin{equation}
+ \psi_N(Q_N)=\varphi(P).
+ \label{eq:673-6}
+\end{equation}
+The origin-approximation lemma supplies points $v\in R_NB_{Y_N}$
+arbitrarily close weakly to $0$ for which $P(z+v)$ is arbitrarily
+close to $\varphi(P)$.
+
+These preliminary points have a precisely controlled norm excess:
+\begin{equation}
+ \|z+v\|_p
+ \le L_N:=\left(u^p+(r+2t_N)^p\right)^{1/p}.
+ \label{eq:673-7}
+\end{equation}
+As $N\to\infty$, $t_N\to0$, $u\to\|z\|_p$, and
+$r\to(1-\|z\|_p^p)^{1/p}$, so $L_N\to1$.
+Set $a_N=(L_N+1/N)^{-1}$ and $w=a_N(z+v)$.
+Then $w\in B$ by \eqref{eq:673-7}, and $a_N\to1$.
+Since a continuous polynomial is uniformly continuous on bounded
+sets, and the $L_N$ are bounded,
+\begin{equation}
+ \sup_{\|x\|_p\le L_N}|P(a_Nx)-P(x)|\longrightarrow0.
+ \label{eq:673-8}
+\end{equation}
+This also follows directly by writing $P$ as a finite sum of
+homogeneous polynomials and using $a_N^k\to1$ for each degree $k$.
+
+To check the weak topology explicitly, a prescribed neighborhood of
+$z$ contains a set given by finitely many inequalities
+$|x_j^*(w-z)|<\delta$, $1\le j\le m$.
+Choose $N$ large enough that
+$|(a_N-1)x_j^*(z)|<\delta/2$ for all $j$ and that \eqref{eq:673-8} is as
+small as desired.  Then use the origin-approximation lemma to choose
+$v\in R_NB_{Y_N}$ with $|a_Nx_j^*(v)|<\delta/2$ for all $j$, and
+with $|P(z+v)-\varphi(P)|$ as small as desired.
+The resulting $w=a_N(z+v)$ is in the prescribed weak neighborhood
+and in $B$, and $P(w)$ is arbitrarily close to $\varphi(P)$.
+
+For the original function $f$, first choose one polynomial $P$ with
+$\|f-P\|_B<\varepsilon$.  Choose $N$ and $v$ as just described for
+this fixed polynomial, making
+$|P(w)-\varphi(P)|<\varepsilon$.
+Because $\|\varphi\|=1$,
+\[
+ |f(w)-\varphi(f)|
+ \le |f(w)-P(w)|+|P(w)-\varphi(P)|
+       +|\varphi(P-f)|<3\varepsilon.
+\]
+Directing the choices by weak neighborhoods and positive tolerances
+proves $\varphi(f)\in\operatorname{Cl}_B(f,z)$.
+The opposite inclusion follows by taking a convergent subnet of
+evaluation characters in the compact spectrum: its restriction to
+$X^*$ is evaluation at the weak limit $z$.
+\end{proof}
+
+\paragraph{Scope and relation to the corrigendum.}
+The final approximating points lie in the original open unit ball.
+The proof uses the exact identity
+$\|x_H+x_T\|_p^p=\|x_H\|_p^p+\|x_T\|_p^p$ and therefore asserts
+the result for $\ell^p$, not for arbitrary Banach spaces with an
+approximation property.
+The corrigendum \cite{CarandoGalicerMuroSevillaPeris2018Corrigendum}
+withdraws the general ball-algebra conclusion obtained from an
+incorrect bounded-set argument.  No result from that withdrawn
+argument is used here: the exact-radius estimate is proved above,
+and the origin approximation is included with its elementary proof.
+
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{CarandoQuestion} D. Carando, D. Garc\'ia, M. Maestre and P. Sevilla-Peris, \emph{On the spectra of algebras of analytic functions}, Contemporary Mathematics \textbf{561} (2012), 165--198, Question 8. \url{https://doi.org/10.1090/conm/561/11114}.
+\bibitem{AronCarandoGamelinLassalleMaestre2012} R. M. Aron, D. Carando, T. W. Gamelin, S. Lassalle and M. Maestre, \emph{Cluster values of analytic functions on a Banach space}, Math. Ann. \textbf{353} (2012), 293--303. \url{https://doi.org/10.1007/s00208-011-0681-0}; \url{https://mate.dm.uba.ar/~slassall/clustervalues.pdf}.
+\bibitem{CarandoGalicerMuroSevillaPeris2018Corrigendum} D. Carando, D. Galicer, S. Muro and P. Sevilla-Peris, \emph{Corrigendum to ``Cluster values for algebras of analytic functions''}, Adv. Math. \textbf{329} (2018), 1307--1309. \url{https://doi.org/10.1016/j.aim.2018.03.019}.
+\end{thebibliography}
+\endgroup
+\end{document}

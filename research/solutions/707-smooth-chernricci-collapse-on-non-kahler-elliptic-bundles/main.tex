@@ -1,0 +1,236 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 707}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 707},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{Smooth collapse with unbounded normalized Chern curvature}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\begin{abstract}
+An explicit Gauduchon Chern--Ricci flow on a non-K\"ahler elliptic bundle converges smoothly after normalization while its normalized full Chern curvature grows at least as $c\sqrt t$. The conclusion concerns exactly the catalogue target; no historical priority claim is made.
+\end{abstract}
+\noindent\textbf{Catalogue scope.} AIM 707; complete resolution. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/707-smooth-chernricci-collapse-on-non-kahler-elliptic-bundles.md}{Canonical target at revision \texttt{1e56463}}.
+
+
+\section{Statement and argument}
+
+The curvature assertion in Problem 707 fails even for an explicit solution whose normalized metrics converge smoothly. The tensor in the source is expressly the full curvature tensor of the Chern connection \cite[Conjecture 4.2]{TosattiWeinkove2022}.
+
+\begin{theorem}
+For every compact connected Riemann surface $\Sigma$ of genus $g\ge2$, there exist a compact connected non-K\"ahler holomorphic elliptic bundle $f:M\to\Sigma$ and a smooth positive Gauduchon metric $\omega_0$ on $M$ such that the unnormalized Chern--Ricci flow exists for all $t\ge0$ and
+\[
+\frac{\omega(t)}t\longrightarrow f^*\omega_\Sigma\quad\text{in }C^\infty(M),
+\qquad
+\sup_M\left|\operatorname{Rm}^{\mathrm{Ch}}\left(\frac{\omega(t)}t\right)\right|_{\omega(t)/t}
+\ge c\frac{t}{\sqrt{t+1}}
+\]
+for all $t>0$, with $c>0$. Here $\operatorname{Ric}(\omega_\Sigma)=-\omega_\Sigma$. In particular, the normalized Chern curvature is unbounded.
+\end{theorem}
+
+\begin{proof}
+We construct the bundle and compute the flow and one curvature component explicitly.
+
+\paragraph{The compact non-K\"ahler elliptic bundle.}
+Write the K\"ahler--Einstein form locally as
+\[
+\omega_\Sigma=i\,g(w)\,dw\wedge d\bar w,
+\qquad i\partial\bar\partial\log g=\omega_\Sigma.
+\]
+Let $L=K_\Sigma$ be the canonical line bundle with the induced Hermitian norm. For $v=\xi\,dw$, this norm has squared value $|\xi|^2/g(w)$, up to an immaterial constant. On $L^\times=L\setminus\{0\}$ put
+\[
+\rho=\log|v|_h^2,
+\qquad
+M=L^\times/\langle v\mapsto e^\pi v\rangle.
+\]
+This holomorphic quotient is compact and connected. Its projection $f:M\to\Sigma$ is locally a product with the fixed elliptic curve
+\[
+E=\mathbb C^*/e^{\pi\mathbb Z}
+\cong\mathbb C/(\pi\mathbb Z+2\pi i\mathbb Z).
+\]
+To check the non-K\"ahler hypothesis directly, let $P$ be the unit circle bundle of $K_\Sigma$. Radial length identifies $M$ diffeomorphically with $P\times S^1$. The Euler class of $P\to\Sigma$ has nonzero degree $2g-2$. The real Gysin sequence gives $H^1(P;\mathbb R)\cong H^1(\Sigma;\mathbb R)$, and therefore $b_1(M)=2g+1$. Compact K\"ahler manifolds have even first Betti number, so $M$ is non-K\"ahler.
+
+Under the quotient generator, $\rho$ increases by $2\pi$. Thus the following descend to globally defined smooth objects on $M$:
+\[
+\theta=\partial\rho,
+\qquad q=e^{i\rho},\qquad |q|=1.
+\]
+We suppress pullbacks of forms from the base. The defining equations give
+\begin{align}
+i\partial\bar\partial\rho&=-\omega_\Sigma,
+&\partial\theta&=0,
+&\bar\partial\theta&=-i\omega_\Sigma,
+\label{eq:707-struct1}\\
+\partial\bar\theta&=i\omega_\Sigma,
+&\bar\partial\bar\theta&=0,
+&\partial q&=iq\theta,
+&\bar\partial q&=iq\bar\theta.
+\label{eq:707-struct2}
+\end{align}
+
+\paragraph{The metric and the Gauduchon condition.}
+Choose a nonzero holomorphic one-form $\alpha$ on $\Sigma$, and define
+\[
+\gamma=\theta+\bar q\alpha,
+\qquad
+\boxed{\quad \omega(t)=i\gamma\wedge\bar\gamma+(t+1)\omega_\Sigma.\quad}
+\tag{707.1}\label{eq:707-flow}
+\]
+The form $\gamma$ is nonzero on each vertical complex tangent line, while $\omega_\Sigma$ is positive in the transverse complex direction. Hence $\omega(t)$ is a positive Hermitian form for every $t\ge0$.
+
+Expanding the metric gives
+\[
+\omega(t)=i\theta\wedge\bar\theta
++i q\theta\wedge\bar\alpha
++i\bar q\alpha\wedge\bar\theta
++i\alpha\wedge\bar\alpha
++(t+1)\omega_\Sigma.
+\]
+The last two summands are closed. Equations \eqref{eq:707-struct1}--\eqref{eq:707-struct2} show that $\partial\bar\partial(\theta\wedge\bar\theta)$ is a multiple of $\omega_\Sigma^2=0$. Moreover,
+\[
+\partial(q\theta\wedge\bar\alpha)=0,
+\]
+since $\partial q=iq\theta$, $\partial\theta=0$ and $\partial\bar\alpha=0$. The conjugate mixed term is $\bar\partial$-closed. Every summand is therefore $\partial\bar\partial$-closed, and $\omega(t)$ is Gauduchon for every $t\ge0$.
+
+\paragraph{Verification of the exact Chern--Ricci flow.}
+Choose a local logarithmic fibre coordinate $z=\log\xi$. Then
+\[
+\rho=z+\bar z-\log g(w),
+\qquad
+\theta=dz+A(w,\bar w)\,dw,
+\qquad A=-\partial_w\log g.
+\]
+Writing $\alpha=a(w)\,dw$, set
+\[
+B=A+\bar q a,
+\qquad H=(t+1)g(w).
+\]
+The Hermitian matrix in the holomorphic coordinates $(z,w)$ is
+\[
+G(t)=
+\begin{pmatrix}
+1&\bar B\\
+B&H+|B|^2
+\end{pmatrix},
+\qquad \det G(t)=H=(t+1)g(w).
+\tag{707.2}\label{eq:707-matrix}
+\]
+It follows immediately that
+\[
+\operatorname{Ric}^{\mathrm{Ch}}(\omega(t))
+=-i\partial\bar\partial\log\det G(t)
+=-i\partial\bar\partial\log g
+=-\omega_\Sigma.
+\]
+As $\partial_t\omega(t)=\omega_\Sigma$, formula \eqref{eq:707-flow} is an exact solution of the unnormalized Chern--Ricci flow for all $t\ge0$, with the smooth positive Gauduchon initial value $\omega_0=\omega(0)$.
+
+It also gives the smooth normalized convergence directly:
+\[
+\frac{\omega(t)}t
+=\frac{i}{t}\gamma\wedge\bar\gamma
++\left(1+\frac1t\right)\omega_\Sigma
+\longrightarrow\omega_\Sigma\qquad\text{in }C^\infty(M).
+\]
+
+\paragraph{An exact curvature component.}
+Use the Chern curvature convention
+\[
+R_{i\bar j k\bar\ell}
+=-\partial_i\partial_{\bar j}g_{k\bar\ell}
++\sum_{p,r}g^{p\bar r}
+(\partial_i g_{k\bar r})(\partial_{\bar j}g_{p\bar\ell}).
+\]
+An overall change of sign convention does not affect the norm. For fixed $i=j=z$, the matrix with row $k$ and column $\bar\ell$ is
+\[
+-G_{z\bar z}+G_zG^{-1}G_{\bar z}.
+\]
+Since $H$ is independent of $z$, direct multiplication using \eqref{eq:707-matrix} yields
+\[
+R_{z\bar z z\bar z}=\frac{\bar B_z B_{\bar z}}H,
+\qquad
+R_{z\bar z w\bar z}
+=-B_{z\bar z}+\frac{B\bar B_z B_{\bar z}}H.
+\]
+At each point take
+\[
+Z=\partial_z,
+\qquad W=\partial_w-B\partial_z.
+\]
+These are orthogonal for $G(t)$ and have squared lengths $1,H$, respectively. Consequently the two terms containing $H^{-1}$ cancel in the tensor component
+\[
+R^{G(t)}(Z,\bar Z,W,\bar Z)=-B_{z\bar z}.
+\]
+The formula for $\rho$ shows that $q_z=iq$, $q_{\bar z}=iq$, and $\bar q_{z\bar z}=-\bar q$. Since $A$ and $a$ are independent of $z$,
+\[
+B_{z\bar z}=-\bar q a,
+\qquad
+R^{G(t)}(Z,\bar Z,W,\bar Z)=\bar q a.
+\tag{707.3}\label{eq:707-component}
+\]
+
+Let $h(t)=G(t)/t$. Constant rescaling leaves the Chern connection unchanged and scales the covariant curvature tensor by $1/t$. The vectors
+\[
+Z_h=\sqrt t\,Z,
+\qquad W_h=\sqrt{t/H}\,W
+\]
+are orthonormal for $h(t)$. By \eqref{eq:707-component},
+\[
+\left|R^{h(t)}(Z_h,\bar Z_h,W_h,\bar Z_h)\right|
+=\frac{t|a(w)|}{\sqrt{(t+1)g(w)}}.
+\]
+Fix $w_0$ such that $a(w_0)\ne0$. The full tensor norm dominates the absolute value of its value on unit vectors, giving
+\[
+\sup_M\left|\operatorname{Rm}^{\mathrm{Ch}}\left(\frac{\omega(t)}t\right)\right|_{\omega(t)/t}
+\ge
+\frac{|a(w_0)|}{\sqrt{g(w_0)}}\frac{t}{\sqrt{t+1}}
+\longrightarrow\infty.
+\]
+This proves the theorem.
+\end{proof}
+
+\paragraph{Scope and compatibility with known special cases.}
+The construction satisfies global smooth tensor convergence and has a fixed flat metric on each elliptic fibre throughout the unnormalized flow. It disproves the bounded normalized full-curvature conclusion for arbitrary Gauduchon data, and hence the conjunction in Problem 707. It makes no contrary claim about smooth convergence alone. The previously established smooth bounded-curvature result assumes a special initial $\partial\bar\partial$-class, as recorded in \cite[Section 4.2]{TosattiWeinkove2022}; that hypothesis is absent from the problem. All flow and curvature assertions above follow from the displayed explicit metric, without invoking an unproved regularity estimate.
+
+For the natural reference metric $\omega_{\mathrm{TV}}=i\theta\wedge\bar\theta+\omega_\Sigma$, the difference satisfies
+\[
+\partial(\omega_0-\omega_{\mathrm{TV}})
+=\bar q\,\theta\wedge\alpha\wedge\bar\theta,
+\]
+which is nonzero wherever $\alpha\ne0$. Thus the example is explicitly outside this reference metric's $i\partial\bar\partial$-class, since every $i\partial\bar\partial$-exact difference is closed.
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{TosattiWeinkove2022} V. Tosatti and B. Weinkove, \emph{The Chern--Ricci flow}, Atti Accad. Naz. Lincei Rend. Lincei Mat. Appl. \textbf{33}(1) (2022), 73--107. \url{https://doi.org/10.4171/RLM/965}. \url{https://arxiv.org/abs/2107.12928}.
+\end{thebibliography}
+\endgroup
+\end{document}

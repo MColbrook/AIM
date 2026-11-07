@@ -1,0 +1,321 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint,graphicx}
+\usepackage[a4paper,margin=22mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,enumitem}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\setlist{nosep,leftmargin=1.5em}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 708}
+\fancyhead[R]{\small Revised 7 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,pdftitle={AIM 708},pdfauthor={Matthew J. Colbrook; results found by AI}}
+\begin{document}
+\title{Uniform critical endpoints of asymptotic Borel surjectivity}
+\author{Matthew J. Colbrook\thanks{The solutions and partial results in this document were found by AI. The supplied research and the separate repository review are AI work; human peer review and formal verification are not claimed.}\\[4pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small\href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{7 November 2026}
+\maketitle
+\begin{abstract}
+Both uniform critical endpoints are excluded for every strongly regular sequence. The nonuniform critical endpoint inclusion remains unresolved here.
+\end{abstract}
+\noindent\textbf{Catalogue scope.} AIM 708; partial progress. \href{https://github.com/MColbrook/AIM/blob/1e564633494c109edfd3ec46da1366adcff925a5/problems/708-the-critical-opening-for-asymptotic-borel-surjectivity.md}{Canonical target at revision \texttt{1e56463}}.
+
+
+\section{Statement and argument}
+\label{sec:708}
+
+This section proves two of the three assertions in Problem~708:
+\begin{equation}
+ \mathcal S(\mathcal A_M)
+ =\mathcal S(\widetilde{\mathcal A}^{u}_M)
+ =(0,\gamma(M))
+ \label{eq:708-1}
+\end{equation}
+for every strongly regular sequence $M$.
+The nonuniform endpoint inclusion
+$\gamma(M)\in\mathcal S(\widetilde{\mathcal A}_M)$ is not proved here.
+Thus the complete catalogue target is not counted as resolved.
+
+Here $M=(M_p)_{p\ge0}$, $M_0=1$, is strongly regular if it is positive
+and logarithmically convex, and there are $A_0,B_0>0$ such that
+\[
+ M_{p+q}\le A_0^{p+q}M_pM_q,\qquad
+ \sum_{q\ge p}\frac{M_q}{(q+1)M_{q+1}}
+ \le B_0\frac{M_p}{M_{p+1}}.
+\]
+Writing $m_p=M_{p+1}/M_p$, define
+\[
+ \gamma(M)=\sup\{a>0:(m_p/(p+1)^a)_p
+ \text{ is almost increasing}\}.
+\]
+Almost increasing means $c_p\le Kc_q$ for $p\le q$ and one fixed $K$.
+The sector $S_\alpha$ is the unbounded sector
+$|\arg z|<\pi\alpha/2$ on the logarithm's Riemann surface.
+An $M$-bounded series $\sum a_pz^p$ satisfies
+$|a_p|\le CA^pM_p$ for some $C,A>0$.
+The derivative class $\mathcal A_M(S_\alpha)$ satisfies
+$\sup_{S_\alpha}|f^{(p)}|\le CA^pp!M_p$.
+The class $\widetilde{\mathcal A}^{u}_M(S_\alpha)$ consists of
+holomorphic functions for which one pair $C,A$ satisfies
+\begin{equation}
+ \left|f(z)-\sum_{p<N}a_pz^p\right|
+ \le CA^NM_N|z|^N
+ \qquad(z\in S_\alpha,\ N\ge0).
+ \label{eq:708-2}
+\end{equation}
+The nonuniform class permits constants depending on each bounded
+proper subsector.  The Borel map sends a function to its unique formal
+series, and $\mathcal S$ denotes the openings where it is onto all
+$M$-bounded series.
+
+We use the established rational-opening criterion
+\cite[Theorem 4.17 and Corollary 4.18]{JimenezSanzSchindl2019}:
+if $N$ is strongly regular and $r>0$ is rational, then
+uniform-asymptotic surjectivity on $S_r$ holds exactly when
+$r<\gamma(N)$.  The following inverse-Borel transform transfers a
+hypothetical critical endpoint to a smaller rational critical endpoint
+without losing an angular margin.
+
+\begin{theorem}[Inverse-Borel transfer]
+Let $M$ be strongly regular and assume that the Borel map from
+$\widetilde{\mathcal A}^{u}_M(S_\alpha)$ is surjective.
+If $0<s<\alpha$ and $Q_p=M_p/\Gamma(1+sp)$, then the Borel map from
+$\widetilde{\mathcal A}^{u}_Q(S_{\alpha-s})$ onto all $Q$-bounded
+formal series is surjective.
+\end{theorem}
+
+\begin{proof}
+\par\smallskip\noindent\textbf{A decaying cutoff preserving every coefficient.}
+Surjectivity supplies a function $F$ whose formal series is $z$.
+It is bounded because the estimate with $N=0$ is global.
+Put $U(z)=F(z)/z$.
+The estimate \eqref{eq:708-2} at order $N+1$ and moderate growth give
+\[
+ |U(z)-1|\le C A^{N+1}M_{N+1}|z|^N
+ \le C'B^NM_N|z|^N\qquad(N\ge1).
+\]
+The estimate for $F$ at order $1$ bounds $U$ near the vertex, and
+boundedness of $F$ bounds $U$ at infinity.  Thus
+$U\in\widetilde{\mathcal A}^{u}_M(S_\alpha)$ has formal series $1$ and
+\begin{equation}
+ |U(z)|\le C\min\{1,|z|^{-1}\}.
+ \label{eq:708-3}
+\end{equation}
+If $f$ realizes any prescribed series, multiplication by $U$ preserves
+every coefficient and retains its uniform $M$-asymptotics: for
+$P_{N-1}(z)=\sum_{p<N}a_pz^p$,
+\[
+ Uf-P_{N-1}=(f-P_{N-1})+(U-1)f,
+\]
+and $f$ is bounded while $U-1$ is uniformly $M$-flat.
+Repeating this operation, we may arrange, for any fixed integer $L\ge1$,
+\begin{equation}
+ |f(z)|\le C_L\min\{1,|z|^{-L}\}.
+ \label{eq:708-4}
+\end{equation}
+There is no change of opening and no pole in this cutoff construction.
+
+\par\smallskip\noindent\textbf{The inverse-Borel contour.}
+For $z\in S_{\alpha-s}$, choose
+$\vartheta\in(\pi/2,3\pi/4)$ sufficiently close to $\pi/2$ that both
+rays $\arg t=\arg z-s\vartheta$ and
+$\arg t=\arg z+s\vartheta$ lie inside $S_\alpha$.
+Let $H_R$ travel from the vertex outward along the lower ray to radius
+$R$, counterclockwise along the circular arc to the upper ray, and
+back to the vertex along that ray.  Define
+\begin{equation}
+ (\mathcal B_sf)(z)=\frac1{2\pi i s}
+ \int_{H_R}e^{(z/t)^{1/s}}f(t)\,\frac{dt}{t}.
+ \label{eq:708-5}
+\end{equation}
+All powers are taken on the logarithm surface.  On the rays the real
+part of $(z/t)^{1/s}$ is strictly negative, making the integral
+convergent at the vertex.
+Cauchy deformation proves independence of $R$ and of nearby admissible
+ray choices: the connecting small arcs tend to zero exponentially.
+The local definitions glue to a holomorphic function on the exact
+sector $S_{\alpha-s}$.  For holomorphy fix a contour on a neighborhood
+of any chosen $z$; independence allows its radius and rays to be
+chosen subsequently for estimates.
+
+Under $v=(z/t)^{1/s}$, the contour becomes the usual Hankel contour
+with rays in the left half-plane.  The reversed orientation cancels
+the minus sign in $dt/t=-s\,dv/v$.  The reciprocal-gamma Hankel formula
+therefore gives
+\begin{equation}
+ \mathcal B_s(t^p)(z)=\frac{z^p}{\Gamma(1+sp)}
+ \qquad(p\ge0).
+ \label{eq:708-6}
+\end{equation}
+In particular $\mathcal B_s1=1$.
+
+\par\smallskip\noindent\textbf{Uniform remainders up to the angular edges.}
+Put $R_N(t)=f(t)-\sum_{p<N}a_pt^p$.  Its bound is
+\[
+ |R_N(t)|\le CA^NM_N|t|^N\qquad(t\in S_\alpha).
+\]
+For $N\ge1$, use the contour radius
+$R=|z|/(sN)^s$.  On either ray the exponential has modulus at most
+$1$, so the absolute contribution of $R_N$ is bounded by a fixed
+multiple of
+\[
+ CA^NM_N\int_0^R r^{N-1}\,dr
+ =CA^NM_N\frac{R^N}{N}.
+\]
+The circular arc has angular length at most $3\pi s/2$, and its kernel
+has modulus at most $e^{sN}$.  Hence
+\[
+ \left|\mathcal B_sf(z)-
+ \sum_{p<N}\frac{a_p}{\Gamma(1+sp)}z^p\right|
+ \le C_s A^NM_N|z|^N(sN)^{-sN}
+       \left(e^{sN}+\frac1N\right).
+\]
+Stirling's estimate, with its polynomial factor absorbed into an
+exponential constant, yields
+\begin{equation}
+ \left|\mathcal B_sf(z)-
+ \sum_{p<N}\frac{a_p}{\Gamma(1+sp)}z^p\right|
+ \le CB^N\frac{M_N}{\Gamma(1+sN)}|z|^N
+ =CB^NQ_N|z|^N
+ \qquad(N\ge1).
+ \label{eq:708-7}
+\end{equation}
+The constants are independent of the angle of $z$ throughout the full
+output sector.  No inverse angular cosine appears.
+
+\par\smallskip\noindent\textbf{Boundedness on the unbounded output sector.}
+The estimate at $N=1$ bounds $\mathcal B_sf$ for $|z|\le1$.
+For $|z|\ge1$, choose $R=|z|$ in \eqref{eq:708-5}.  The arc contribution is
+bounded because the kernel has modulus at most $e$ and $f$ is bounded.
+On a ray of angle $\theta$, write
+\[
+ f(re^{i\theta})=a_0\mathbf1_{(0,1]}(r)+k_\theta(r).
+\]
+The first remainder estimate near the vertex and \eqref{eq:708-4} at infinity
+give
+\begin{equation}
+ \sup_\theta\int_0^\infty |k_\theta(r)|\,\frac{dr}{r}<\infty.
+ \label{eq:708-8}
+\end{equation}
+Thus $k_\theta$ contributes a uniformly bounded amount on each ray.
+For the constant term put
+$\eta=\exp(i(\arg z-\theta)/s)$, so $|\eta|=1$ and
+$\operatorname{Re}\eta<0$.  Substitution gives
+\[
+ \int_0^1e^{\eta(|z|/r)^{1/s}}\frac{dr}{r}
+ =s\int_{|z|^{1/s}}^\infty e^{\eta y}\frac{dy}{y}.
+\]
+Integration by parts bounds the last expression by
+$2s/|z|^{1/s}$, uniformly even as $\operatorname{Re}\eta\uparrow0$.
+This proves boundedness on $S_{\alpha-s}$ and supplies $N=0$ in
+\eqref{eq:708-7}.
+
+Given any $Q$-bounded coefficients $b_p$, set
+$a_p=b_p\Gamma(1+sp)$.  These are $M$-bounded.
+Realize them by the assumed surjectivity, apply the coefficient-preserving
+cutoff, and then \eqref{eq:708-5}.  Its coefficients are $b_p$ by \eqref{eq:708-6}, and
+\eqref{eq:708-7}, including $N=0$, proves the transfer theorem.
+\end{proof}
+
+\begin{lemma}[Regularizing the divided sequence]
+If $0<s<\gamma(M)$, then $Q_p=M_p/\Gamma(1+sp)$ is exponentially
+equivalent to a strongly regular sequence $Q'$ satisfying
+$\gamma(Q')=\gamma(M)-s$.
+Here exponential equivalence means
+$C^{-p}Q_p\le Q'_p\le C^pQ_p$ for a fixed $C\ge1$; it preserves both
+the formal-series class and the uniform-asymptotic class.
+\end{lemma}
+
+\begin{proof}
+Put
+\[
+ \ell_p=\frac{\Gamma(1+s(p+1))}{\Gamma(1+sp)},\qquad
+ q_p=\frac{Q_{p+1}}{Q_p}=\frac{m_p}{\ell_p}.
+\]
+The gamma quotient satisfies $\ell_p\asymp(p+1)^s$.
+Since $s<\gamma(M)$, $(q_p)$ is almost increasing.  Define
+\[
+ \widetilde q_p=\inf_{j\ge p}q_j,\qquad
+ Q'_0=1,\qquad Q'_p=\prod_{j=0}^{p-1}\widetilde q_j.
+\]
+For some $K\ge1$, $K^{-1}q_p\le\widetilde q_p\le q_p$.
+Thus $Q'$ is logarithmically convex and
+$K^{-p}Q_p\le Q'_p\le Q_p$.
+
+Moderate growth holds for $Q$ itself: the logarithmically convex
+sequence $D_p=\Gamma(1+sp)$ has $D_0=1$ and
+$D_{p+q}\ge D_pD_q$, so
+\[
+ Q_{p+q}\le A_0^{p+q}Q_pQ_q.
+\]
+Exponential equivalence transfers moderate growth to $Q'$.
+
+Choose $s<\beta<\gamma(M)$.  Almost increase of
+$m_p/(p+1)^\beta$ and comparison of the gamma quotient imply, for
+$j\ge p$,
+\[
+ \widetilde q_j\ge c\,\widetilde q_p
+ \left(\frac{j+1}{p+1}\right)^{\beta-s}.
+\]
+Because $\beta-s>0$, summation gives
+\[
+ \sum_{j\ge p}\frac1{(j+1)\widetilde q_j}
+ \le\frac{C}{\widetilde q_p},
+\]
+which is strong nonquasianalyticity.
+Finally $\widetilde q_p\asymp m_p/(p+1)^s$, so the defining
+almost-increase conditions give exactly
+$\gamma(Q')=\gamma(M)-s$.
+\end{proof}
+
+\begin{theorem}
+For every strongly regular sequence $M$, the equality \eqref{eq:708-1} holds.
+\end{theorem}
+
+\begin{proof}
+The known interior and exterior bounds are
+\[
+ (0,\gamma(M))\subseteq\mathcal S(\mathcal A_M)
+ \subseteq\mathcal S(\widetilde{\mathcal A}^{u}_M)
+ \subseteq(0,\gamma(M)]
+\]
+by \cite[Corollary 4.19]{JimenezSanzSchindl2019}.
+Suppose uniform surjectivity held at $\alpha=\gamma(M)$.
+Choose $0<s<\gamma(M)$ so that $r=\gamma(M)-s$ is positive and
+rational.  The inverse-Borel transfer and the regularization lemma
+give uniform surjectivity for the strongly regular $Q'$ on $S_r$,
+where $r=\gamma(Q')$.  This contradicts the rational-opening criterion
+\cite[Theorem 4.17]{JimenezSanzSchindl2019}.
+Thus the uniform endpoint, and consequently the derivative endpoint,
+are excluded.
+\end{proof}
+
+
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{JimenezSanzSchindl2019} J. Jim\'enez-Garrido, J. Sanz and G. Schindl, \emph{Injectivity and surjectivity of the asymptotic Borel map in Carleman ultraholomorphic classes}, J. Math. Anal. Appl. \textbf{469} (2019), 136--168. \url{https://arxiv.org/abs/1805.01153}; \url{https://doi.org/10.1016/j.jmaa.2018.09.011}.
+\end{thebibliography}
+\endgroup
+\end{document}

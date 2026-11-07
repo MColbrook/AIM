@@ -2,7 +2,7 @@
 
 **Area:** Polynomial zeros and coefficient transformations
 **Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -28,10 +28,25 @@ This tests how a simple nonlinear change of coefficients affects polynomial zero
 
 ## Status review
 
+### Reviewed manuscript, 2026-11-07
 
-**Known cases:** The September published conjecture covers all degrees and all real powers at least two. The Evidence Press quartic candidate only addresses degree four, and asymptotic free-probability results do not supply the missing uniform finite-degree assertion.
+Matthew J. Colbrook provides the following AI-found [manuscript](../research/solutions/682-real-rootedness-of-real-powers-of-binomial-coefficients/main.pdf). The Le Roy equivalence and all degrees at most five are proved.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+**Known cases:** The Le Roy equivalence and all degrees at most five are proved.
+
+**Remaining target:** Arbitrary noninteger exponents at least two in degrees six and above remain unresolved here.
+
+**Review:** The [separate Codex AI audit](../research/solution_reviews/2026-11-07-complex-analysis/682-review.md) checks the complete argument against this exact target and records the primary-source comparisons. The verified restricted results do not resolve the remaining target, so this entry remains partially resolved. The results were found by AI; human peer review and formal verification are not claimed.
+
+### Earlier status record (historical)
+
+The following dated record describes the pre-submission state.
+
+
+
+**Previously recorded known cases:** The September published conjecture covers all degrees and all real powers at least two. The Evidence Press quartic candidate only addresses degree four, and asymptotic free-probability results do not supply the missing uniform finite-degree assertion.
+
+**Previously recorded remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
 
 ### Online recheck, 2026-10-30
 
