@@ -1,0 +1,245 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,geometry,hyperref}
+\geometry{margin=1in}
+\setlength{\emergencystretch}{3em}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,pdftitle={AIM 1048: review note}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\begin{document}
+\begin{center}
+{\LARGE AIM 1048: review note}\\[5pt]
+{\large Can neighboring water-wave Bloch bands overlap?}\\[5pt]
+5 November 2026
+\end{center}
+
+\textbf{Claim status: solution claimed, awaiting independent review.}
+
+Submitted by Siavash~Sadeghi. The proof and audit records were produced
+with AI assistance. No human has reviewed this work, and no formal
+verification is claimed. The submission proposes the repository status
+\emph{Solution claimed}, pending further independent mathematical review.
+
+\section*{1. Exact target and covered class}
+The repository is \url{https://github.com/MColbrook/AIM}. This package
+addresses problem 1048 at revision
+\begin{center}
+\texttt{4f5b1659355cb61d194da94ef14615214e1363a8}.
+\end{center}
+The exact problem page and contribution instructions at that revision
+are preserved in \texttt{TARGET\_SNAPSHOT.md} and
+\texttt{CONTRIBUTING\_SNAPSHOT.md}. The repository status at that revision
+is \emph{Partially resolved}. The proposed update preserves the original
+problem statement and its ID.
+
+Fix $h>0$ and a real, $2\pi$-periodic $b\in C^1(\mathbb R)$ with
+$d_-:=\min_x(h-b(x))>0$. In
+\[
+\Omega_b=\{(x,y):-h+b(x)<y<0\},
+\]
+extend top traces harmonically, with homogeneous Neumann data on the
+bottom, finite energy per period cell, and character $e^{2\pi i\theta}$.
+The free-surface Dirichlet--Neumann operator is $f\mapsto\partial_y\Phi(x,0)$
+in physical $L^2(dx)$. Order the eigenvalues separately in each fiber,
+including multiplicities:
+$\Lambda_0(\theta)\le\Lambda_1(\theta)\le\cdots$.
+
+The proposed theorem is
+\[
+\boxed{\Lambda_n(\theta_a)\le\Lambda_{n+1}(\theta_b)
+\quad(n\ge0,\ \theta_a,\theta_b\in\mathbb R).}
+\]
+Phase continuity and compactness of $[-\tfrac12,\tfrac12]$ give precisely
+the repository target
+\[
+\max_\theta\Lambda_n(\theta)\le\min_\theta\Lambda_{n+1}(\theta).
+\]
+Conversely the max--min target implies each displayed pairwise inequality,
+so these formulations have the same strength.
+
+\textbf{There is no additional restriction on the profile.} The proof
+claims the whole stated $C^1$ graph class, not just analytic or small
+profiles. The bottom may be non-even and have nonzero mean; its amplitude
+and slope have no imposed smallness bound. The given period need not be
+fundamental. Every fixed profile has finite depth bounds and bounded slope
+by periodicity and $C^1$ regularity, but no uniform bound across profiles
+is assumed. Band touching and eigenvalue multiplicity are allowed.
+The common form domain is $H^{1/2}$; its closed realization is the natural
+extension of the harmonic problem stated for $H^1_{\rm loc}$ traces.
+
+\newpage
+\section*{2. Map of the proof and hypothesis comparison}
+The full argument is in \texttt{research\_nonoverlap\_proof.tex} and its PDF.
+Its six sections have the following roles.
+
+\textbf{Sections 1 and 5: the exact geometry supplies the mass identity.}
+For an analytic graph, a conformal map $Z$ takes a strip of depth $d>0$
+and horizontal period $P=2\pi$ to the physical channel, with
+$Z(w+P)=Z(w)+P$. It preserves the Bloch character and Dirichlet energy.
+The top measure is $dx=\rho(s)ds$ with $\rho(s)=Z'(s)>0$.
+The bottom horizontal derivative is
+\[
+p(s)=\operatorname{Re}Z'(s-id)>0,\qquad p_k=\cosh(dk)\rho_k.
+\]
+Positivity of $p$ follows from the regular graph geometry. It is not
+inferred from positivity of an arbitrary surface weight $\rho$.
+
+For a holomorphic representation $V$ on the doubled strip, put
+$V_\pm(s)=V(s\pm id)$ and $V_0(s)=V(s)$. The energy and physical mass are
+\begin{align*}
+Q(V)&=\frac12\int_{(0,P)\times(-d,d)}|V'|^2,\\
+M(V)&=\frac14\int_0^P\rho(|V_+|^2+|V_-|^2)
+       +\frac12\int_0^P p|V_0|^2.
+\end{align*}
+The cross term uses
+$\operatorname{Re}\int\rho V_+\overline{V_-}=\int p|V_0|^2$.
+Taking the real part is essential; the identity permits complex Bloch
+data and non-even weights.
+
+\textbf{Sections 2 and 3: one zero changes any nontrivial character.}
+For $-d<y<d$, a normally convergent strip Blaschke product $B_y$ has one
+simple zero per period, unit modulus on both horizontal edges, and
+character parameter $\chi=(1-y/d)/2\in(0,1)$. Thus all nontrivial
+characters occur. If $V$ vanishes at its chosen zero, $W=V/B_y$ is
+holomorphic and represents a trace at phase $\theta-\chi$. On the
+smooth functions used in min--max,
+\[
+M(W)\ge M(V),\qquad
+Q(V)-Q(W)=\frac14\sum_{\pm}\int_0^P
+   (\partial_\nu\log|B_y|)\,|W_\pm|^2\ge0.
+\]
+The quotient singularities are removable. Lateral boundary terms cancel
+because both characters have unit modulus.
+
+\textbf{Section 4: ordered min--max for arbitrary phase pairs.}
+Approximate a source spectral space of complex dimension $n+2$ at phase
+$\theta_b$ by finite Fourier traces. A single complex evaluation constraint
+leaves dimension at least $n+1$. Choose $\chi=\theta_b-\theta_a$ modulo
+one. Division and top reconstruction are injective and do not increase
+the Rayleigh quotient. Min--max gives the claimed ordered comparison.
+Coincident characters use ordinary eigenvalue ordering. This step assumes
+neither simplicity nor tracking of analytic eigenvalue branches.
+
+\textbf{Section 6: all $C^1$ graphs.}
+Approximate $b$ in $C^1$ by real trigonometric polynomials, retaining a
+positive lower depth. Pulling bulk energies back by $y=(h-b(x))z$ gives
+uniformly convergent, uniformly elliptic coefficient matrices. Relative
+form comparison yields convergence of every fixed ordered eigenvalue.
+Pass the inequality for each fixed index and phase pair. A separate bulk
+estimate proves phase continuity and hence existence of the band extrema.
+
+\newpage
+\section*{3. Review provenance and questions for a reviewer}
+The user requested an adversarial audit of the Blaschke factor, the mass
+identity and the all-phase min--max argument. Three fresh AI review
+contexts read the proof without the earlier audit reports. The coordinating
+AI also checked the central identities and numerical diagnostics.
+
+\begin{description}
+\item[\texttt{fresh\_blaschke\_audit.txt}] Product convergence and nonvanishing,
+exact zero set, boundary regularity, character sign, quotient removal and
+energy comparison. Its stated scope does not independently cover the
+geometric reduction and $C^1$ limit.
+\item[\texttt{fresh\_mass\_audit.txt}] Complex reconstruction, the real-part
+mass identity, conformal measure and positivity forced by graph geometry.
+\item[\texttt{fresh\_minmax\_audit.txt}] Complex dimension, arbitrary phase
+differences, ordered indices, multiplicities, finite Fourier approximation
+and the $C^1$ passage.
+\item[\texttt{research\_nonoverlap\_fresh\_audit.txt}] Coordinating audit and
+the combined findings, including stress-test limitations.
+\end{description}
+These reports found no fatal flaw within their stated scopes. Their
+terminology ``independent reviewer'' refers to separate AI contexts in
+the same workflow. It does not mean independent human peer review.
+The reports prompted expository clarifications now present in the proof;
+they are not cryptographic attestations of the final file revision.
+No human review has been reported. The package is a proposed mathematical
+argument for examination, not a certification of correctness by the
+repository or by a formal proof assistant.
+
+The main points for fresh scrutiny are:
+\begin{enumerate}
+\item Does the normalized product converge to a nonzero holomorphic
+function away from exactly the prescribed zeros, with the stated
+character and sufficient regularity through both edges?
+\item Does the symmetrized cross term equal the middle-line mass for all
+complex Bloch data, and is $p>0$ supplied by every admissible analytic graph?
+\item Does one complex constraint, followed by injective reconstruction,
+give the correct $n+2$ to $n+1$ dimension comparison for every phase pair?
+\item Does physical-domain form convergence remove the analytic-profile
+restriction without adding a uniform slope, amplitude or spectral-index
+assumption?
+\end{enumerate}
+
+\textbf{Numerical evidence is supplementary.} The included NumPy script
+checks 21 cases with complex coefficients, non-even positive weights,
+several strip depths and phases near the character endpoints. It checks
+product, phase, mass and energy identities and records reconstruction
+errors. A deep-strip case has a large top-to-bottom norm ratio and visible
+relative cancellation at the smaller bottom trace; the report retains
+that limitation. The tests are ordinary floating-point diagnostics,
+not interval certificates, exhaustive counterexample searches or proof
+dependencies. A successful run cannot establish the theorem.
+
+\newpage
+\section*{4. Reproduction, exclusions and references}
+Both TeX sources are standalone articles. From the extracted package
+directory, compile each twice with \texttt{pdflatex}, using
+\texttt{-no-shell-escape -interaction=nonstopmode -halt-on-error}.
+The required packages are standard: \texttt{amsmath}, \texttt{amssymb},
+\texttt{amsthm}, \texttt{geometry} and \texttt{hyperref}. No bibliography
+database, custom style, figure or additional TeX input is required.
+The README gives complete commands and optional diagnostic instructions.
+
+\texttt{metadata.json} pins the repository revision and records source
+hashes and provenance. \texttt{MANIFEST.json} gives packaged-file hashes
+and sizes. \texttt{BUILD\_VERIFICATION.txt} records the checks actually
+performed during packaging. The mathematical text of the proof is unchanged
+by packaging; only attribution, a review-status notice and line wrapping
+are edited.
+The four supplied AI audit reports and recorded diagnostic results are
+preserved byte for byte. Diagnostic validation now uses explicit exceptions
+so that Python optimization cannot disable it. A separate submission review
+records the final source hashes and the checks reproduced for this PR.
+
+\textbf{Scope boundaries.} This claim concerns finite-depth, flat-top,
+two-dimensional graph channels with homogeneous Neumann bottom data.
+It does not assert the theorem for arbitrary positive strip weights,
+nongraph channels, obstacles, pinched depths, different boundary conditions
+or a shallow-water approximation. It also does not claim endpoint
+localization of all band edges, monotonicity of band functions, simplicity
+or strict opening of every gap. None of those stronger statements is
+part of problem 1048's target.
+
+The cited mathematical background and primary problem sources are:
+\begin{enumerate}
+\item L. V. Ahlfors, \emph{Complex Analysis}, third edition, McGraw--Hill,
+1979. Chapter VI, \S5.1, Theorem 10, pp.~255--256: annular
+uniformization in connectivity two. Chapter VI, \S\S1.3--1.4,
+Theorems 3--4, pp.~233--235: the local reflection argument used after
+straightening analytic boundary arcs. The proof checks the separated,
+analytic embedded boundary components needed here.
+\item T. Kato, \emph{Perturbation Theory for Linear Operators}, second
+edition, corrected printing, Springer, 1980. Chapter VI, Theorem 2.1:
+representation of a closed form by its associated operator. The proof
+states the form domain and compact embedding and supplies the required
+min--max and phase comparisons.
+\item W. Craig, M. Gazeau, C. Lacave and C. Sulem, ``Bloch theory and
+spectral gaps for linearized water waves,'' \emph{SIAM J. Math. Anal.}
+\textbf{50}(5) (2018), 5477--5501.
+\href{https://doi.org/10.1137/17M113561X}{DOI: 10.1137/17M113561X}.
+The nonoverlap question is stated separately from band-edge localization;
+see the introduction after Definition 1.1.
+\item C. Lacave, M. M\'enard and C. Sulem, ``Bloch--Floquet band gaps for
+water waves over a periodic bottom,'' \emph{EMS Surv. Math. Sci.}
+\textbf{12}(1) (2025), 243--288.
+\href{https://doi.org/10.4171/EMSS/93}{DOI: 10.4171/EMSS/93}.
+The repository cites \S4, p.~270 for the general ordering question and
+\S3.4 for ordered eigenvalues versus analytic relabelings.
+\end{enumerate}
+
+The problem snapshot preserves the repository's dated literature review.
+This package makes no claim of priority or exhaustive knowledge of all
+subsequent work. Original books and papers are not redistributed here.
+See the package README and resolution report for the submission links,
+current reproduction record and explicit review limitations.
+\end{document}

@@ -1,0 +1,208 @@
+FRESH ADVERSARIAL AUDIT: STRIP BLASCHKE FACTOR AND COMPLEX ENERGY COMPARISON
+5 November 2026
+
+Source inspected: research_nonoverlap_proof.tex only. No earlier audit files were consulted.
+Scope: Sections 1--4, especially existence/nonzero convergence of (8), boundary values, monodromy, complex Bloch reconstruction, and (14)--(16). The conformal/geometric reduction and C^1 limit in Sections 5--6 were not independently audited here.
+
+VERDICT
+
+I found no fatal gap or counterexample in the assigned part. Division does decrease the energy, with precisely the factor 1/4 and the outward-normal signs printed in (15). The argument works for complex Bloch functions, not just real functions. The claimed character in (10)--(11) has the correct sign. The product does not collapse to zero away from its prescribed zeros.
+
+The hypotheses actually used are present in the manuscript: finite d > 0; a strictly interior zero -d < y < d; unitary characters; p >= 0 for the mass comparison (the stated p > 0 also ensures positivity elsewhere); and smoothness through the edges for the energy calculation. In the min--max proof that smoothness is obtained from finite Fourier input, so no unproved bounded division map on a rough form domain is needed. No uniformity as y approaches an edge or d tends to infinity is established or needed.
+
+1. INDEPENDENT CONSTRUCTION AND NONZERO LIMIT
+
+Put c = pi/(4d), tau = tan(cy), w(z) = tanh(cz). Since |tau| < 1, the disk factor
+
+    b_y(z) = (w(z) - i tau)/(1 + i tau w(z))
+
+has the correct disk-automorphism denominator. A direct identity is
+
+    1 - |b_y(z)|^2
+      = (1 - tau^2)(1 - |w(z)|^2)/|1 + i tau w(z)|^2.
+
+The strip |Im z| < d maps to |w| < 1. Thus |b_y| < 1 inside and |b_y| = 1 on both edges. Its only zero in this strip is z = iy and it is simple. The meromorphic continuation has zeros at iy + 4di*l and poles at i(2d-y) + 4di*l, l an integer; this also includes y = 0, when b_y = tanh(cz). In particular a neighborhood of the closed strip with width epsilon < d - |y| is free of poles. This establishes the edge regularity used in the product argument.
+
+Its horizontal limits are exactly
+
+    b_+ = exp(-2icy),     b_- = -exp(2icy),
+
+both of modulus one. For a fixed compact set K in the slightly enlarged strip, the two normalized tails satisfy
+
+    sup_K |b_y(z-s0-jP)/b_- - 1| <= C_K exp(-2cjP),
+    sup_K |b_y(z-s0+jP)/b_+ - 1| <= C_K exp(-2cjP),
+
+for all sufficiently large j. The same exponential rate holds for derivatives, or follows on smaller compact sets from Cauchy's estimates. Their sums converge because cP > 0.
+
+This summability is enough for the important NONZERO conclusion, not merely existence of a possibly zero product: beyond a finite index the factors are within 1/2 of 1, their analytic logarithms have an absolutely and locally uniformly convergent sum, and their product is the exponential of that sum. Therefore the tail is nonzero. The finitely many initial factors account for exactly the zeros s0+jP+iy, with multiplicity one. At such a zero the remaining product is nonzero.
+
+Every finite normalized product has modulus at most one in the closed strip, because the normalization constants have modulus one. Each finite product has modulus exactly one on the edges. Uniform convergence on an edge period interval gives |B_y| = 1 there, so there is no zero-limit or loss-of-modulus problem on the boundary. The strict interior inequality |B_y| < 1 follows already from the central factor and the bounds on the remaining factors.
+
+The manuscript's exponential-tail assertion contains enough information for these conclusions. An explicit sentence using the convergent logarithm would make the nonzero-limit point more transparent, but this is not a missing hypothesis or substantive gap.
+
+2. MONODROMY: SIGN, NORMALIZATION, AND ALL CHARACTERS
+
+Let B_N be the symmetric product through j = N. Its normalization is constant in z, so away from its zeros
+
+    B_N(z+P)/B_N(z)
+      = b_y(z-s0+(N+1)P)/b_y(z-s0-NP).
+
+The limit is consequently b_+/b_-, not its inverse:
+
+    b_+/b_- = -exp(-4icy)
+             = exp(i*pi*(1-y/d)).
+
+The resulting holomorphic identity extends across the zeros. Thus for P = 2pi the character parameter is
+
+    chi(y) = (1-y/d)/2,     0 < chi < 1.
+
+It decreases continuously from 1 to 0 as y runs from -d to d. This covers every nontrivial unitary character exactly once modulo integers. Division changes phase theta_b to theta_b - chi; choosing chi = theta_b - theta_a modulo 1 gives the target phase theta_a with the correct sign.
+
+The trivial character is not supplied by an interior one-zero factor. The proof explicitly handles it by ordinary eigenvalue ordering. Thus there is no excluded phase pair, and no need to take a singular endpoint limit of this family.
+
+3. COMPLEX BLOCH RECONSTRUCTION AND MASS
+
+For any complex holomorphic V, define
+
+    U(s,r) = (V(s+ir) + V(s-ir))/2,     0 <= r <= d.
+
+This is a complex harmonic function and U_r(s,0) = 0. With A = V'(s+ir), C = V'(s-ir), its bulk density is
+
+    |U_s|^2 + |U_r|^2
+      = (|A+C|^2 + |A-C|^2)/4
+      = (|A|^2 + |C|^2)/2.
+
+Hence the energy is exactly Q(V) = (1/2) integral_doubled_cell |V'|^2, with no reality assumption.
+
+For the mass identity, write k_m = m+theta and
+
+    V(z) = sum_m v_m exp(i*k_m*z).
+
+The cross term is
+
+    C = integral rho V_+ conjugate(V_-)
+      = P sum_{m,n} rho_{n-m} v_m conjugate(v_n) exp(d(n-m)).
+
+Since rho is real, taking conjugates and interchanging m,n gives
+
+    Re C = P sum_{m,n} rho_{n-m} cosh(d(n-m)) v_m conjugate(v_n)
+         = P sum_{m,n} p_{n-m} v_m conjugate(v_n)
+         = integral p |V_0|^2.
+
+The Bloch parameter cancels before symmetrization. Thus (7) is valid for genuinely complex coefficients and arbitrary unitary phases. There is no hidden assumption V_- = conjugate(V_+), which would indeed have been false for general complex Bloch functions.
+
+For V = B_y W, equal edge moduli leave the two edge terms in (6) unchanged. The exact remaining difference is
+
+    M(W) - M(V)
+      = (1/2) integral_0^P p(s) (1-|B_y(s)|^2) |W(s)|^2 ds >= 0.
+
+This explicitly shows where the positive middle weight is essential. Positivity of rho by itself would not justify this step. The stated relation rho_k = p_k/cosh(dk) and p > 0 provide precisely the missing structure that an arbitrary surface weight would lack.
+
+4. THE ENERGY IDENTITY, INCLUDING LATERAL CANCELLATION
+
+For a complex holomorphic F,
+
+    Delta |F|^2 = 4|F'|^2,
+    Q(F) = (1/8) integral_boundary partial_nu |F|^2.
+
+If F(z+P) = exp(i*alpha) F(z) with alpha real, both |F|^2 and its x derivative are P-periodic. The vertical-side contributions cancel point by point in height: the outward normal is +x on the right and -x on the left. This works separately for V and W; they do not need the same character.
+
+On either horizontal edge, |B_y| = 1 and
+
+    partial_nu (|B_y W|^2 - |W|^2)
+      = (partial_nu |B_y|^2)|W|^2
+      = 2 beta |W|^2,
+
+where beta = partial_nu log|B_y|. Therefore
+
+    Q(V) - Q(W)
+      = (1/4) sum_edges integral beta(s)|W(s)|^2 ds.
+
+The outward signs are correct. The lower-edge outward normal is -y, and the upper-edge outward normal is +y. Since log|B_y| is zero on each edge and nonpositive on an inward segment, its outward derivative is nonnegative.
+
+One can check more strongly without a maximum-principle argument. Put a0 = pi/(2d). Direct differentiation of the single-strip factor and summation over its translates give
+
+    beta_+(s) = sum_{j in Z} a0*cos(a0*y)
+                         /[cosh(a0*(s-s0-jP)) - sin(a0*y)],
+
+    beta_-(s) = sum_{j in Z} a0*cos(a0*y)
+                         /[cosh(a0*(s-s0-jP)) + sin(a0*y)].
+
+Every term is strictly positive for -d < y < d. Their integrals over one period are
+
+    integral beta_+ ds = pi*(1+y/d),
+    integral beta_- ds = pi*(1-y/d),
+    sum_edges integral beta ds = 2pi.
+
+This independently checks the sign and the energy coefficient. In particular the smooth test V = B_y, W = 1 gives exactly
+
+    Q(B_y) = pi/2,     Q(1) = 0.
+
+No interior boundary terms from the zeros are missing: W = V/B_y has removable singularities, so the divergence theorem is applied to globally smooth V and W, not to a singular logarithm.
+
+5. REGULARITY, INJECTIVITY, AND THE MIN--MAX APPLICATION
+
+For finite Fourier input, V is entire. The assumed zero at a = s0+iy and its quasiperiodic translates cancel all the simple zeros of B_y in the strip. B_y is analytic and nonzero through both horizontal edges. Thus W is holomorphic in the strip and smooth on a neighborhood of a closed period cell. Zeros on a vertical boundary cause no problem because they are removable before any integration.
+
+The character of W is unitary. Its reconstruction has frequency multiplier cosh(d*(m+theta_b-chi)), which never vanishes on real frequencies. Therefore reconstruction cannot turn a nonzero W into the zero top trace. Division and reconstruction are complex linear and injective on the kernel of evaluation.
+
+The finite Fourier subspace has dimension n+2. One complex evaluation constraint has codimension at most one over the complex numbers, leaving dimension at least n+1. No real-dimension argument is being substituted here. The divided image is an admissible complex trial space of that dimension. Its positive mass and nonnegative energy justify the Rayleigh-quotient inequality.
+
+Thus the all-phase min--max step introduces no additional hidden assumption in the audited portion. The proof does not need the eigenfunctions themselves to be entire or smooth, because only a finite-dimensional spectral subspace is approximated by finite Fourier functions before division.
+
+6. PATHOLOGICAL LIMITS: WHAT DOES AND DOES NOT HOLD
+
+(a) As y increases to d, the factors tend locally inside the strip to -i, the character tends to 1, beta_+ tends to a periodic mass 2pi at s0, and beta_- tends to zero. As y decreases to -d, the corresponding limiting constant is i and the mass is on the lower edge. Nevertheless Q(B_y) = pi/2 for every interior y. Thus energy can concentrate on an edge even while the functions converge locally to a constant. Uniform boundary derivative convergence or H^1 convergence would be false here. The proof makes no such assertion and fixes y strictly inside the strip for each distinct phase pair.
+
+(b) As d tends to infinity, the product's exponential tail rate pi*P/(2d) tends to zero. Convergence is not uniform over unbounded d. The theorem and argument only use a fixed finite conformal depth, so this does not invalidate the construction.
+
+(c) For d tending to zero with y/d fixed, the translated tails decay faster; beta becomes strongly localized in s. Again constants in edge derivative bounds need not be uniform, but fixed-d use is sound.
+
+(d) The unitarity assumption is substantive. With a nonunitary multiplier, |F|^2 would not be periodic and the lateral terms would not cancel. The Bloch phases in the theorem are real, so the required assumption holds.
+
+(e) A nonpositive p can reverse the mass comparison. The manuscript explicitly assumes p > 0; its geometric origin must be checked in the separate geometric audit.
+
+7. EXPLICIT COMPUTATIONAL CHECKS
+
+I independently evaluated the product and its derivative, and tested a two-frequency function that meets the zero constraint exactly:
+
+    P = 2pi, theta_b = 0.17, s0 = 0.37, a = s0+iy,
+    V(z) = exp(i*theta_b*z) [exp(iz) - exp(ia)],
+    W(z) = V(z)/B_y(z).
+
+The product was truncated at N = ceil(20d/P)+3 translated factors in each direction. Q(V) was evaluated analytically:
+
+    Q(V) = (P/2) [theta_b*sinh(2d*theta_b)*exp(-2y)
+                   +(theta_b+1)*sinh(2d*(theta_b+1))].
+
+Q(W) was independently integrated from |W'|^2 over the doubled cell using 768 equally spaced horizontal points and 48-point Gauss--Legendre quadrature vertically. Refinement to 72 vertical points changed Q(W) by at most 4.4e-12 in these tests. The right side of (15) used the explicit beta kernels above and 8192 horizontal points.
+
+    d       y         Q(V)               Q(W)               boundary RHS
+    0.25    0.2325     2.303573703383     2.279085757234      0.024487946150
+    1       0         19.087034529265    13.349695624386     5.737338904879
+    1       0.37      18.990246823739    14.877917839897     4.112328983842
+    3      -2.79      2226.912121053343  1720.872041513202   506.040079540120
+
+The absolute residual |Q(V)-Q(W)-boundary RHS| was at most 2.1e-11; for the first three cases it was below 8e-14. The numerical monodromy error was below 4e-16 and the maximum sampled boundary error in |B_y|^2 was below 8e-15.
+
+For a nonconstant weight, I also used
+
+    p(s) = 1 + 0.6 cos(s) + 0.2 sin(2s),
+    rho(s) = 1 + 0.6 cos(s)/cosh(d) + 0.2 sin(2s)/cosh(2d).
+
+Here p >= 0.2. Direct top-trace mass agrees with formula (6) to below 1.4e-12 in all four cases. The mass pairs (M(V),M(W)) were, in the same order,
+
+    (7.970367599401, 7.978811211357),
+    (21.985004387155, 25.346415295904),
+    (19.865933509481, 21.880214565430),
+    (3790.314224590507, 3988.834754961482).
+
+These numerical checks are corroboration, not the basis of the verdict. The exact identities and convergence argument above establish the audited claims.
+
+FINAL ASSESSMENT
+
+The Blaschke division mechanism survives this fresh adversarial audit. I have no requested correction to Sections 1--4 beyond optional exposition of the convergent-logarithm nonzero-limit argument. Any remaining risk to the overall theorem lies outside this audit's scope, in the geometric identification/regularity or the final limiting argument, rather than in the phase-changing inner-factor comparison itself.
+
+ADDENDUM: VALIDATION OF ROOT'S SUBSEQUENT CLARIFICATION
+
+After completing the independent derivations and report, I inspected the newly added paragraph in Section 2 at the root reviewer's request. Its nearest upper and lower pole heights 2d-y and -2d-y agree with the complete pole lattice i(2d-y)+4di*l derived above. Choosing 0 < eta < d-|y| indeed keeps both poles outside |Im z| <= d+eta. The stated O(exp(-2cjP)) tail bound on each bounded horizontal interval, its summability, the nonzero-product conclusion, and derivative convergence from a slightly larger compact set are correct. The additional character-automorphic and nonuniform-edge-limit sentences are also correct. This added paragraph addresses my optional expository suggestion; I have no remaining requested change within the audited scope. I did not edit the proof.

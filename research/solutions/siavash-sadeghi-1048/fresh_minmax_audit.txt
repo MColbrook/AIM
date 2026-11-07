@@ -1,0 +1,58 @@
+Fresh independent mathematical audit of research_nonoverlap_proof.tex
+5 November 2026
+
+Scope: I read the proof itself and did not consult prior audits. I independently checked the all-phase ordered min-max step and the analytic identities on which it depends, with particular attention to complex dimensions, arbitrary phase differences, finite-Fourier approximation, reconstruction, multiplicities, limiting phases, flat touching, and the C1 limit.
+
+VERDICT
+
+I found no fatal flaw or counterexample in the requested part of the argument. The ordered comparison in Section 4 follows with its stated quantifiers from the identities in Sections 1-3. Its direction and index shift are correct. The C1 passage preserves the non-strict comparison for every fixed index and pair of phases. I found no hidden assumption of simple eigenvalues, a real-valued Bloch basis, uniform approximation in index/phase, or regularity of division on the whole form domain.
+
+1. Independent check of the analytic representation and mass identity
+
+Write k_m=m+theta and V(z)=sum_m v_m exp(i k_m z). Its reconstructed top trace has coefficients u_m=cosh(d k_m)v_m. This multiplier is strictly positive even at k_m=0, where it equals 1. Consequently reconstruction has no kernel on any real Bloch phase. The zero-frequency constant is not lost.
+
+For one Fourier mode, Q(V)=(P/2) k_m sinh(2d k_m)|v_m|^2, which equals P k_m tanh(d k_m)|u_m|^2. This verifies the energy normalization, including its nonnegative zero-frequency limit.
+
+The cross term in the top mass has coefficients v_m conjugate(v_n) exp(d(k_n-k_m)) rho_{n-m}. Taking its real part and swapping m,n in the conjugate term replaces the exponential by cosh(d(n-m)). Thus (2) gives exactly the middle-line mass with p, with no dependence on theta. This argument works for genuinely complex coefficients. It is not an argument that only works for real functions or for phases 0 and 1/2. Fourier truncation justifies the identity on the form domain because the two edge traces and the middle trace converge in L2 and the weights are bounded.
+
+2. Inner factor and phase direction
+
+The normalized factors in (8) have modulus at most one since their normalizing constants have modulus one. Their tail errors are exponentially summable on a fixed period rectangle. Therefore the asserted infinite product is nonzero except at the listed simple zeros, and it has unit modulus on both horizontal edges.
+
+Reindexing the symmetric finite product gives the ratio b_y(z-s_0+(N+1)P)/b_y(z-s_0-NP), which tends to b_+/b_-=exp(i*pi*(1-y/d)). Hence chi(y)=(1-y/d)/2 really ranges over the whole open interval (0,1). Division subtracts chi from the input phase. Choosing chi=(theta_b-theta_a) mod 1 therefore sends phase theta_b to phase theta_a; the sign in (17) is correct.
+
+If theta_b-theta_a is an integer, the Bloch spaces and forms agree after integer relabeling of Fourier coefficients. Ordinary ordering covers precisely this excluded character. No endpoint of the open y interval is needed.
+
+3. Division and its domain
+
+For finite input Fourier series, V is entire. Vanishing at a gives vanishing at every translated zero a+jP by quasiperiodicity. Every pole of V/B_y inside the closed cell is therefore removable. The factor is nonzero through the horizontal edges, so the quotient is smooth there. This is enough to produce admissible top traces; the proof does not need a bounded division operator on arbitrary H1/2 data.
+
+Both division and reconstruction are complex linear and injective. Nonzero V gives nonzero W, and a nonzero holomorphic W cannot reconstruct to zero because the real-frequency multipliers cosh(d(m+theta_a)) are all positive.
+
+The sign and constant in (15) also check: Delta|F|^2=4|F'|^2, so Q(F) is one eighth of the normal-flux integral. The horizontal flux difference is 2 beta |W|^2, giving the stated one-quarter factor. Lateral fluxes cancel separately for V and W because their squared moduli and derivatives are periodic, even though their characters differ. The positive middle weight gives M(V)<=M(W). Since both energies are nonnegative and both masses positive, the quotient inequality follows in the stated direction.
+
+4. Ordered min-max, dimensions, and multiplicity
+
+All dimensions here are complex dimensions. Approximate any complex orthonormal basis of the first n+2 eigenvectors in H1/2. Continuity of the energy and mass forms gives convergence of the two finite Gram matrices. The mass matrix stays positive definite for sufficiently good approximation, so the approximants stay independent and the largest Rayleigh quotient converges to at most lambda_(n+1)(theta_b). Repeated eigenvalues cause no change to this statement; an arbitrary orthonormal basis of the relevant spectral subspace works.
+
+For a fixed chosen a, evaluation V(a) is one complex linear functional. Its kernel in this (n+2)-dimensional space therefore has complex dimension at least n+1, not n and not n+2 by assumption. Division and reconstruction preserve that dimension. Their output lies in the target phase form domain, and every nonzero vector in the output has quotient at most lambda_(n+1)(theta_b)+epsilon. The min-max characterization of lambda_n needs precisely n+1 dimensions, so it yields the desired index shift. If the kernel happens to be larger, selecting any n+1-dimensional subspace suffices.
+
+The choices and limits are in a sound order: first fix n and the two phases, then fix y and the factor, then take finite-dimensional approximations for each epsilon, then send epsilon to zero. No bounds uniform in n, in y, or in the two phases are used or required. Taking the universal quantifiers after this pointwise argument is legitimate.
+
+5. Flat touching, extreme phases, and potentially stronger statements
+
+For a flat channel with constant weights, put f(r)=r*tanh(d*r). On 0<=theta<=1/2 the ordered values are f(theta), f(1-theta), f(1+theta), f(2-theta), f(2+theta), etc. Adjacent bands touch at theta=1/2 or theta=0, at the same character on both sides. Thus flat touching is not a counterexample to the different-character comparison.
+
+For a fixed interior zero, Hopf's lemma in fact makes the edge normal derivatives beta strictly positive. This suggests (and the same identities can justify) a positive comparison margin for a fixed nonzero character difference in the weighted-strip setting. That stronger observation does not force open gaps between adjacent bands: their extrema can occur at the same character, which is exactly the case treated only by ordinary ordering.
+
+As chi tends to 0 or 1, y tends to a strip edge. The factor tends to a constant of modulus one on compact subsets of the open strip, while its boundary behavior near the approaching zero is not uniform. Neither a uniform lower bound on the energy loss nor uniform division estimates can be inferred in this limit. The proof does not infer them. Thus no strict same-character inequality is obtained by passing to the endpoint, and the flat touching cases remain intact. Likewise, no uniform strict margin is claimed in the subsequent C1 approximation.
+
+6. C1 passage and phase quantifiers
+
+The matrix in (22) is correct: the change y=H(x)z gives physical derivatives U_x-(zH'/H)U_z and U_z/H, with area factor H. In a periodic gauge the first derivative becomes (partial_x+i theta)U. Uniform positive depth and C1 convergence give a common ellipticity lower bound and a uniform operator-norm bound on A_(H_j)-A_H. Therefore the relative matrix inequalities hold on every complex two-vector, including every covariant bulk gradient, with errors independent of theta.
+
+The competitors are on the same fixed rectangle with the same prescribed top trace. Taking their infima preserves both relative inequalities. The surface L2 mass is unchanged by this vertical flattening. Applying min-max therefore gives the stated convergence at each ordered index, with no simplicity hypothesis and with the zero eigenvalue harmless. Passing to the limit for arbitrary fixed n, theta_a, theta_b proves the full pairwise assertion for the C1 graph.
+
+The final continuity assertion is standard and can also be checked directly from this fixed bulk realization: changing theta changes only the covariant derivative, while the bulk L2 norm is controlled by the vertical energy and the top L2 norm. This gives local form estimates with an additive top-mass term and hence continuity of every fixed ordered eigenvalue. Periodicity then supplies attained extrema on a compact phase circle. No eigenvalue labeling through crossings is needed.
+
+Residual issue level: no necessary correction identified. Expanding the final phase-continuity sentence would make that last routine step more explicit, but it is not a gap in the pairwise nonoverlap proof or a hidden extra hypothesis.

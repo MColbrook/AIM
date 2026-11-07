@@ -1,8 +1,8 @@
 # 1048. Can neighboring water-wave Bloch bands overlap?
 
 **Area:** Water waves and spectral theory
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-10-30
+**Status:** ✅ SOLVED
+**Last checked:** 2026-11-07
 
 ## Problem statement
 
@@ -48,12 +48,17 @@ The source also asks about periodic/antiperiodic band edges. That additional que
 
 ## Status review
 
+### Reviewed resolution, 2026-11-07
 
-**Known cases:** No small bottom-amplitude condition is allowed and band labels are ordered fiber eigenvalues. Perturbative gap constructions and analytic branch relabeling do not prove the no-overlap inequality.
+The AI-assisted [proof submitted by Siavash Sadeghi](../research/solutions/siavash-sadeghi-1048/research_nonoverlap_proof.pdf) establishes the full nonoverlap inequality for every admissible C¹ graph bottom, every ordered index, and all phase pairs. The [resolution report](../research/solutions/siavash-sadeghi-1048/RESOLUTION_REPORT.md) compares the submission with the exact target; the [review guide](../research/solutions/siavash-sadeghi-1048/review_note.pdf) explains the argument and its scope.
 
-**Remaining target:** Resolve the full Problem statement with its stated quantifiers and hypotheses; the restricted advances discussed here do not settle that target.
+**Review:** On 7 November 2026, Codex (AI), separately from the submission workflow, checked the complete six-section proof against the canonical target, rederived its central identities, checked the cited primary sources and reproduced the supplementary diagnostics. The [independent audit](../research/solution_reviews/2026-11-07-pr186/1048-review.md) documents the argument and the limits of the review. No mathematical gap or restriction excluding part of the target was found, so the status is **Solved** under the repository's documented-audit criterion. This is an independent AI review, not human peer review or Lean verification. The supplied audits and [submission review](../research/solutions/siavash-sadeghi-1048/SUBMISSION_REVIEW.md) remain historical evidence.
 
-### Online recheck, 2026-10-30
+The proof uses conformal geometry, an exact complex mass identity and a strip Blaschke division argument followed by ordered min-max and C¹ form convergence. It adds no amplitude, symmetry, mean-zero or simplicity assumption. Touching is allowed; band-edge localization and monotonicity are not claimed. [Reproduction details](../research/solutions/siavash-sadeghi-1048/BUILD_VERIFICATION.txt) distinguish computational checks from the analytic proof.
+
+### Earlier status review, 2026-10-30 (historical)
+
+Before this submission, the recorded remaining target was the full nonoverlap inequality. The following dated search describes that earlier state, rather than a remaining gap in the reviewed proof.
 
 No small bottom-amplitude condition is allowed and band labels are ordered fiber eigenvalues. Perturbative gap constructions and analytic branch relabeling do not prove the no-overlap inequality.
 

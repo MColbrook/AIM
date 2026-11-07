@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-07",
+  "reviewer": "Codex (AI), separate maintainer review",
+  "pull_request": "https://github.com/MColbrook/AIM/pull/186",
+  "reviewed_head": "e9e846b886ada1710f4bfd1b40213b4b34eb0bff",
+  "integration_base": "cfcb1142cc56f0908f70d0c6e9baf3807474c172",
+  "decision": "Solved",
+  "scope": "Complete canonical AIM 1048 nonoverlap target; no additional restrictions",
+  "human_review": false,
+  "formal_verification": false,
+  "proof_source_sha256": "cf679519556de61fb2e30caff19e49b8b078e7f308adbc11e5b94ae56e9e4e8f",
+  "original_package_manifest_sha256": "dfab14322d4b80f17985bba022420dce6d5fc3407029dd3633d4599b455a5f32",
+  "original_manifest_entries_verified": 22,
+  "package_changes": [
+    "README.md: dated acceptance notice",
+    "MANIFEST.json: refresh README entry"
+  ],
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "diagnostics": {
+    "normal_passed": 21,
+    "optimized_passed": 21,
+    "normal_equals_optimized": true,
+    "equals_supplied_json": false,
+    "maximum_metrics": {
+      "phase_error": 1.0053497077208614e-15,
+      "product_error": 1.0934428697813141e-15,
+      "edge_modulus_error": 1.5765166949677223e-14,
+      "mass_identity_relative": 2.8016311243139364e-16,
+      "output_mass_identity_relative": 4.202193552819579e-16,
+      "energy_identity_relative": 8.806776649386328e-15,
+      "bottom_reconstruction_relative": 2.529818346862906e-07,
+      "reconstruction_error_relative_to_top": 1.271072547336812e-15,
+      "top_to_bottom_norm_ratio": 14730054593.356474,
+      "middle_max_modulus": 1.0,
+      "minimum_edge_beta": 0.49505478443438433,
+      "mass_ratio": 1.0712813711842608,
+      "energy_ratio": 0.9984988166867041,
+      "quotient_ratio": 0.9984506992995014
+    },
+    "maximum_absolute_difference_from_supplied": {
+      "phase_error": 0.0,
+      "product_error": 0.0,
+      "edge_modulus_error": 0.0,
+      "mass_identity_relative": 0.0,
+      "output_mass_identity_relative": 0.0,
+      "energy_identity_relative": 0.0,
+      "bottom_reconstruction_relative": 1.0339757656912846e-25,
+      "reconstruction_error_relative_to_top": 2.465190328815662e-32,
+      "top_to_bottom_norm_ratio": 2.842170943040401e-14,
+      "middle_max_modulus": 0.0,
+      "minimum_edge_beta": 0.0,
+      "mass_ratio": 0.0,
+      "energy_ratio": 0.0,
+      "quotient_ratio": 0.0
+    }
+  },
+  "regression_tests": {
+    "normal_passed": 5,
+    "optimized_passed": 5
+  },
+  "documents": {
+    "proof_pages": 6,
+    "review_guide_pages": 4,
+    "pdflatex_passes_per_document": 2,
+    "shell_escape": false,
+    "supplied_vs_rebuilt_text_equal_ignoring_whitespace": true,
+    "all_supplied_pages_rendered_and_visually_inspected": true,
+    "errors": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 3,
+    "supplied_pdfs_unchanged": true
+  },
+  "checks": {
+    "catalogue_check": "passed: 1058 unique problems; metadata, sections, math delimiters, local links and generated-index freshness",
+    "diff_check": "passed",
+    "protected_paths": "no tracked files or incoming PR history in FURTHER_problems, PROBLEM_SCORING or cut_problems"
+  },
+  "catalogue_count_change": {
+    "open_targets": {
+      "before": 855,
+      "after": 854
+    },
+    "partially_resolved": {
+      "before": 492,
+      "after": 491
+    },
+    "solved": {
+      "before": 211,
+      "after": 212
+    },
+    "reason": "AIM 1048 only: Partially resolved -> Solved; other statuses unchanged"
+  }
+}

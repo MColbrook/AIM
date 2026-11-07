@@ -15,9 +15,9 @@ Contributions made with or without AI are welcome.
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**855 open targets** (363 open, 492 partial) · **211 solved entries** · **1 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
+**854 open targets** (363 open, 491 partial) · **212 solved entries** · **1 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 855 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 854 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
@@ -36,7 +36,7 @@ If a problem here is resolved, we encourage you to improve the proof, explain it
 | [Fluids, kinetic theory and continuum mechanics](CATALOG.md#fluids-kinetic-theory-and-continuum-mechanics) | [36](CATALOG.md#continuum2-open) | [12](CATALOG.md#continuum2-solved) |
 | [Stochastic growth, populations and statistical mechanics](CATALOG.md#stochastic-growth-populations-and-statistical-mechanics) | [22](CATALOG.md#stochastic2-open) | [9](CATALOG.md#stochastic2-solved) |
 | [Many-body physics, quantum information and wave analysis](CATALOG.md#many-body-physics-quantum-information-and-wave-analysis) | [24](CATALOG.md#spectral3-open) | [15](CATALOG.md#spectral3-solved) |
-| [Nonlinear waves, fluids and kinetic equations](CATALOG.md#nonlinear-waves-fluids-and-kinetic-equations) | [52](CATALOG.md#waves-fluids-kinetics-open) | [7](CATALOG.md#waves-fluids-kinetics-solved) |
+| [Nonlinear waves, fluids and kinetic equations](CATALOG.md#nonlinear-waves-fluids-and-kinetic-equations) | [51](CATALOG.md#waves-fluids-kinetics-open) | [8](CATALOG.md#waves-fluids-kinetics-solved) |
 | [Diffusion, materials and variational problems](CATALOG.md#diffusion-materials-and-variational-problems) | [54](CATALOG.md#diffusion-materials-open) | [16](CATALOG.md#diffusion-materials-solved) |
 | [Applied geometry, control and information](CATALOG.md#applied-geometry-control-and-information) | [38](CATALOG.md#inverse3-open) | [11](CATALOG.md#inverse3-solved) |
 | [Stochastic dynamics, reaction networks and applied optimization](CATALOG.md#stochastic-dynamics-reaction-networks-and-applied-optimization) | [37](CATALOG.md#stochastic3-open) | [9](CATALOG.md#stochastic3-solved) |
@@ -287,6 +287,7 @@ Complete resolutions recorded in this collection, including counterexamples to t
 | 1031 | [Are non-Cantor spectra dense among nonperiodic limit-periodic potentials?](problems/1031-are-non-cantor-spectra-dense-among-nonperiodic-limit-periodic-potentials.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/1031-limit-periodic-finite-interval-spectra/aim1031.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1031-review.md) |
 | 1032 | [The spectral tree for high-order Heun operators](problems/1032-the-spectral-tree-for-high-order-heun-operators.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/1032-heun-star-counterexample/aim1032.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1032-review.md) |
 | 1035 | [Do matrix local-mass bounds imply Stahl–Totik regularity?](problems/1035-do-matrix-local-mass-bounds-imply-stahltotik-regularity.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/1035-matrix-local-mass-counterexample/aim1035.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1035-review.md) |
+| 1048 | [Can neighboring water-wave Bloch bands overlap?](problems/1048-can-neighboring-water-wave-bloch-bands-overlap.md) | ✅ SOLVED | Nonoverlap for every positive-depth periodic C¹ graph bottom, every ordered band index and all Bloch phases. | [Proof](research/solutions/siavash-sadeghi-1048/research_nonoverlap_proof.pdf) | [Review](research/solution_reviews/2026-11-07-pr186/1048-review.md) |
 
 ## Local working material
 

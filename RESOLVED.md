@@ -221,6 +221,7 @@ Documented resolutions of the exact target. Proof and review links give the argu
 | 1031 | [Are non-Cantor spectra dense among nonperiodic limit-periodic potentials?](problems/1031-are-non-cantor-spectra-dense-among-nonperiodic-limit-periodic-potentials.md) | ✅ SOLVED | Affirmative proof | 2026-11-03 | [Proof](research/solutions/1031-limit-periodic-finite-interval-spectra/aim1031.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1031-review.md) |
 | 1032 | [The spectral tree for high-order Heun operators](problems/1032-the-spectral-tree-for-high-order-heun-operators.md) | ✅ SOLVED | Counterexample | 2026-11-03 | [Proof](research/solutions/1032-heun-star-counterexample/aim1032.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1032-review.md) |
 | 1035 | [Do matrix local-mass bounds imply Stahl–Totik regularity?](problems/1035-do-matrix-local-mass-bounds-imply-stahltotik-regularity.md) | ✅ SOLVED | Counterexample | 2026-11-03 | [Proof](research/solutions/1035-matrix-local-mass-counterexample/aim1035.pdf) | [Review](research/solution_reviews/2026-11-03-spectral-batch/1035-review.md) |
+| 1048 | [Can neighboring water-wave Bloch bands overlap?](problems/1048-can-neighboring-water-wave-bloch-bands-overlap.md) | ✅ SOLVED | Nonoverlap for every positive-depth periodic C¹ graph bottom, every ordered band index and all Bloch phases. | 2026-11-07 | [Proof](research/solutions/siavash-sadeghi-1048/research_nonoverlap_proof.pdf) | [Review](research/solution_reviews/2026-11-07-pr186/1048-review.md) |
 
 ## Lean verified
 
