@@ -1,0 +1,44 @@
+\section{Introduction}
+
+The homogeneous Landau equation with Coulomb interaction describes collisions between charged particles in a spatially uniform plasma. For a nonnegative velocity density $f(t,v)$ on $\R^3$, we use the normalization
+\begin{equation}\label{eq:landau}
+ \partial_tf=\nabla_v\cdot(A[f]\nabla_vf-f\nabla_va[f]),
+\end{equation}
+where
+\begin{equation}\label{eq:coefficients}
+ A[f](v)=\frac1{8\pi}\int_{\R^3}\frac{\Pi(v-w)}{|v-w|}f(w)\dw,
+ \qquad a[f](v)=\frac1{4\pi}\int_{\R^3}\frac{f(w)}{|v-w|}\dw,
+ \qquad\Pi(z)=I_3-\frac{z\otimes z}{|z|^2}.
+\end{equation}
+The projection is defined for $z\ne0$; its value at zero does not affect the locally integrable convolution. Mass, momentum and energy are conserved, and the Boltzmann entropy $\int f\log f$ decreases. The regularizing effect of this nonlocal diffusion is delicate: it competes with the quadratic reaction in the equivalent equation $f_t=A[f]:D^2f+f^2$, while its ellipticity deteriorates at large velocities.
+
+The global classical theory changed with the Fisher information monotonicity of Guillen and Silvestre \cite{GS}. For initial data with a Maxwellian upper bound they constructed a global classical solution; the ordinary Fisher information controls its $L^3$ norm throughout the evolution. Golding, Gualdani and Loher \cite[Theorem~1.1]{GGL} established a local theory for polynomially weighted $L^{3/2}$ data, with quantitative short-time estimates. Their global theorem \cite[Theorem~1.3 and (1.5)]{GGL} additionally assumes a higher moment and a compatible polynomial lower bound on the initial density. Fisher information production was also proved by Ji \cite[Theorem~1.4]{Ji} and by Desvillettes, Golding, Gualdani and Loher \cite[Theorem~1]{DGGL}; in the Coulomb case the respective constants retain a fifth and an eighteenth initial moment. These results distinguish global smoothness for each datum from a bound uniform over a class specified only by macroscopic quantities.
+
+The first open problem in \cite[Section~1]{GGL} asks whether smooth solutions admit regularization estimates using only mass, energy and entropy, and then asks for the conjectured $1/t$ rate. We prove the finite-bound statement for normalized smooth rapidly decaying solutions. The normalization is the same as in that paper:
+\begin{equation}\label{eq:normalization}
+ \int_{\R^3}f(0,v)\dv=1,\qquad
+ \int_{\R^3}vf(0,v)\dv=0,\qquad
+ \int_{\R^3}|v|^2f(0,v)\dv=3.
+\end{equation}
+
+\begin{theorem}\label{thm:main}
+For every $H\in\R$ and every $0<\tau<T<\infty$, there is a finite constant $C(H,\tau,T)$ with the following property. Every nonnegative smooth rapidly decaying solution of \eqref{eq:landau} on $[0,T]\times\R^3$ satisfying \eqref{eq:normalization} and
+\[
+ \int_{\R^3}f(0,v)\log f(0,v)\dv\le H
+\]
+obeys
+\begin{equation}\label{eq:main-bound}
+ \sup_{\tau\le t\le T}\|f(t)\|_{L^\infty(\R^3)}\le C(H,\tau,T).
+\end{equation}
+The constant is independent of all initial higher moments, Fisher information, pointwise bounds and derivative norms.
+\end{theorem}
+
+The theorem concerns the macroscopic dependence of an a priori bound on a given smooth solution, including nonnegative initial profiles with vacuum. No sharp waiting-time exponent is asserted. In particular the separate conjectural $1/t$ rate in \cite{GGL} is not obtained here.
+
+There are two difficulties in proving \eqref{eq:main-bound}. First, the ordinary Fisher information need not be bounded uniformly by mass, energy and entropy. We instead estimate
+$\int\ip v^{-1}f|\nabla\log f|^2$. Its dissipation controls a weighted Hessian term strongly enough for a quadratic scalar inequality, using the second moment rather than a higher one. The doubled-variable rotations and the even spherical inequality of \cite{GS} remain useful, but the one-body weight introduces signed commutators. A near/far decomposition controls them without losing the Hessian damping. This yields positive-time weighted $L^3$ and unweighted $L^{9/5}$ bounds.
+
+Second, weighted concentration control alone does not rule out a peak moving to infinity. Near $v_0=Re_1$, a bounded entropy core supplies transverse diffusion of size $R^{-1}$. We keep those two directions and the full nonlinear collision form. An explicit tangential factorization of its drift gives a Nash inequality involving only transverse Fisher information and collision gradient energy. Combining it with the truncated entropy calculation of \cite{GIJV} and spatial hole filling gives a local small-entropy criterion. Under the exact velocity change $v=v_0+R^{-1/2}w$, the core diffusion becomes fixed, while the rescaled local positive entropy tends to zero: its mass contributes $R^{-2}$ and its volume factor only $R^{3/2}$. This excludes high-velocity peaks. The remaining bounded region is controlled by a divergence-form Moser estimate using the positive-time global $L^2$ and $L^3$ bounds.
+
+The weighted estimate is proved in \cref{sec:weighted}, the local criterion in \cref{sec:local}, and the global bound in \cref{sec:global}. We write $\ip v=(1+|v|^2)^{1/2}$, $\kap=1/(8\pi)$, and use Lebesgue measure and the convention $0\log0=0$. Norms without a domain are on $\R^3$; matrix inequalities refer to quadratic forms. Constants denoted by $C$ may change between lines, with dependencies stated locally; $\asymp$ means two-sided comparison by such constants. The kernel identities
+$\Div(\Pi/r)=-2z/r^3$ and $\Div\Div(\Pi/r)=-8\pi\delta_0$ follow by differentiation away from zero and the small-sphere flux. Thus $\Div A=\nabla a$ and $\Div\Div A=-f$, giving the nondivergence equation used above.

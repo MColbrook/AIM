@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{aliascnt}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newaliascnt{proposition}{theorem}
+\newtheorem{proposition}[proposition]{Proposition}
+\aliascntresetthe{proposition}
+\newaliascnt{lemma}{theorem}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+\newaliascnt{corollary}{theorem}
+\newtheorem{corollary}[corollary]{Corollary}
+\aliascntresetthe{corollary}
+\theoremstyle{remark}
+\newaliascnt{remark}{theorem}
+\newtheorem{remark}[remark]{Remark}
+\aliascntresetthe{remark}
+\crefname{proposition}{Proposition}{Propositions}
+\crefname{lemma}{Lemma}{Lemmas}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{section}{Section}{Sections}
+\hypersetup{pdftitle={Macroscopic L-infinity bounds for the Landau-Coulomb equation},pdfauthor={Kaiwen Jin},pdfsubject={Homogeneous Landau-Coulomb regularity}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ip}[1]{\langle #1\rangle}
+\newcommand{\kap}{\kappa_0}
+\newcommand{\dv}{\,\mathrm dv}
+\newcommand{\dw}{\,\mathrm dw}
+\newcommand{\dt}{\,\mathrm dt}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\Div}{\operatorname{div}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\diag}{\operatorname{diag}}
+\title{Macroscopic $L^\infty$ bounds for the Landau--Coulomb equation}
+\author{Kaiwen Jin\\\small\href{mailto:yui.ui.siki@gmail.com}{yui.ui.siki@gmail.com}}
+\date{}
+\begin{document}
+\maketitle
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/weighted}
+\input{sections/local}
+\input{sections/global}
+\section*{AI-use statement}
+OpenAI Codex assisted with proof development, source checking and manuscript preparation. The author is responsible for the mathematical claims and references.
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

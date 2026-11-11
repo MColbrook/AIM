@@ -1,0 +1,271 @@
+\section{A local regularity lemma}\label{sec:local}
+
+Near a large velocity, a bounded core provides two useful diffusion directions. The following lemma retains those directions together with the nonlinear collision energy. Its constants depend on the potentials divided by the cutoff scales, which allows the local ball to grow after velocity dilation.
+
+Write $v=(x,y)\in\R\times\R^2$ and $P_y=\diag(0,1,1)$. For a density $F$, let
+\[
+ P_F(v)=\int\frac{F(w)}{|v-w|}\dw,\qquad
+ c_{2,F}(v)=\int\frac{F(w)\wedge2}{|v-w|^2}\dw.
+\]
+
+\begin{proposition}\label{prop:local}
+Let $F$ be a nonnegative smooth rapidly decaying solution of \eqref{eq:landau} on $[a,b]\times\R^3$, and let $L\ge1$. Suppose that, at every time, a measurable set $C\subset\R^3\setminus B_L$ satisfies
+\begin{equation}\label{eq:core-local}
+ A[F\ind_C](v)\ge cP_y\quad(v\in B_L),\qquad c>0.
+\end{equation}
+Assume also
+\begin{equation}\label{eq:pot-local}
+ \sup_{[a,b]\times B_L}P_F\le\Lambda,\qquad
+ \sup_{[a,b]\times B_L}c_{2,F}\le\Xi,\qquad
+ \Lambda/L^2+\Xi/L\le K_*.
+\end{equation}
+For each $0<\theta<b-a$ there exists $\epsilon_*(c,K_*,b-a,\theta)>0$ such that
+\begin{equation}\label{eq:entropy-small}
+ \int_a^b\int_{B_L}F(\log_+F+\log_+^2F)\dv\dt\le\epsilon_*
+ \quad\Longrightarrow\quad
+ F\le2\quad\hbox{on }[a+\theta,b]\times B_{L/2}.
+\end{equation}
+No normalization of the total mass of $F$ is imposed.
+\end{proposition}
+
+\subsection{A tangential factorization and a Nash inequality}
+
+The collision drift can be expressed using only the two $y$-derivatives of a density. For $z=(x,y)$, $r=|z|$, $a_x=|x|$ and $\sigma=\operatorname{sgn}x$, define, for $x\ne0$,
+\begin{equation}\label{eq:tangent-kernel}
+ \mathcal K(z)=\begin{pmatrix}
+ \sigma y^T/[r(r+a_x)]\\
+ -I_2/(r+a_x)+yy^T/[r(r+a_x)^2]
+ \end{pmatrix}.
+\end{equation}
+Its values on $x=0$ are immaterial for integration. Direct multiplication and differentiation give
+\begin{equation}\label{eq:tangent-identities}
+ z^T\mathcal K=0,\quad
+ \mathcal K^T\mathcal K=I_2/(r+a_x)^2,\quad
+ \mathcal K\mathcal K^T=\Pi(z)/(r+a_x)^2,\quad
+ \Div_y\mathcal K=z/r^3.
+\end{equation}
+To check the first three, let $e_r=y/|y|$ and let $e_\theta$ be perpendicular to it in $\R^2$. Their images are
+$(\sigma|y|,-a_xe_r)/[r(r+a_x)]$ and $(0,-e_\theta)/(r+a_x)$, two orthogonal tangent vectors of equal length. The first-row divergence is $x/r^3$. For the lower block, differentiation of $qI_2+dyy^T$, with $q=-1/(r+a_x)$ and $d=1/[r(r+a_x)^2]$, gives $y/r^3$, using $|y|^2=(r-a_x)(r+a_x)$.
+
+The last identity is distributional on $\R^3$. A jump across $x=0$ contributes no $y$-divergence delta. At zero $\mathcal K=O(r^{-1})$, so the small-sphere flux is $O(\epsilon)$; the ordinary derivative is $O(r^{-2})$ and is locally integrable. Therefore, with $A_0[h]=(\Pi/r)*h$ and $b_0[h]=\Div A_0[h]$,
+\[
+ b_0[h]=-2\mathcal K*\nabla_yh.
+\]
+For every vector $\xi$, Cauchy--Schwarz and $r/(r+a_x)^2\le1/r$ imply
+\begin{equation}\label{eq:drift-direction}
+ |\xi\cdot b_0[h](v)|^2\le4\xi^TA_0[h](v)\xi\ p(v),\qquad
+ p(v)=\int\frac{|\nabla_yh(w)|^2/h(w)}{|v-w|}\dw.
+\end{equation}
+No inverse matrix is needed in this estimate.
+
+Let $M_h=\int h$ and $I_y(h)=\int|\nabla_yh|^2/h$. The marginal $\rho(y)=\int h(x,y)\dd x$ satisfies $I(\rho)\le I_y(h)$. In two dimensions,
+$\Div_y((y-y_0)/|y-y_0|)=1/|y-y_0|$, without a delta at zero. Integration by parts gives
+\begin{equation}\label{eq:transverse-potential}
+ \sup_v P_h(v)\le\sup_{y_0}\int\frac{\rho(y)}{|y-y_0|}\dd y
+ \le\int|\nabla\rho|\dd y\le\sqrt{M_hI_y(h)}.
+\end{equation}
+For compact bounded profiles the boundary passages follow directly; for the current decaying profiles the infinity cutoff error tends to zero by integrability. In particular Tonelli gives $\int hp\le M_h^{1/2}I_y(h)^{3/2}$.
+
+\begin{lemma}\label{lem:nash}
+Let $h$ be a nonnegative density. With $E[h]=\int(\nabla h)^TA[h]\nabla h/h$, one has
+\begin{equation}\label{eq:nash}
+ \left(\int h^2\dv\right)^2\le\frac1{2\pi}
+ M_h^{1/2}I_y(h)^{3/2}E[h].
+\end{equation}
+It holds for the smooth rapidly decaying profiles and the compact square-root level truncations used below, whenever the displayed energies are finite.
+\end{lemma}
+\begin{proof}
+Since $\Div b_0[h]=-8\pi h$,
+\[
+ 8\pi\int h^2=\int\nabla h\cdot b_0[h]
+ \le2\{E[h]/\kap\}^{1/2}\left(\int hp\right)^{1/2}.
+\]
+Equations \eqref{eq:drift-direction}--\eqref{eq:transverse-potential} and $\kap=1/(8\pi)$ give \eqref{eq:nash}. Zero mass is trivial. If $\sqrt h$ is compactly supported Lipschitz, use $\nabla h=2\sqrt h\nabla\sqrt h$ in these same integrations. The kernels are locally integrable and their potentials are bounded on the support, so weak integration by parts or smooth approximation gives the identical formulas. Below $\sqrt h=\chi(\sqrt F-\sqrt k)_+$ with $k\ge1$, which is of this class.
+\end{proof}
+
+\subsection{The local collision energy and entropy}
+
+For $1\le k\le2$ put
+\[
+ g=(F-k)_+,\quad u=(\sqrt F-\sqrt k)_+,\quad q=u^2,\quad
+ V=\ind_{\{F>k\}}\nabla\log F,
+\]
+\[
+ h_k(F)=(F\log(F/k)-F+k)\ind_{\{F>k\}},\qquad
+ W_k(F)=F\{\log_+(F/k)+\log_+^2(F/k)\}.
+\]
+Then $q\le h_k\le W_k$ and $g\le F\log_+(F/k)$.
+For $0\le\psi\le1$ smooth and supported in $B_L$, set
+\begin{align*}
+ D_\psi&=\frac12\iint FF_*
+ (\psi V-\psi_*V_*)^TK(v-w)(\psi V-\psi_*V_*),\\
+ E_\psi&=\int\psi^2FV^TA[F]V,\qquad
+ C_\psi=\iint\psi(v)\nabla g(v)^TK(v-w)\psi(w)\nabla g(w),
+\end{align*}
+where a star means evaluation at $w$ and $K=\kap\Pi/r$ is the physical kernel. Symmetry gives $D_\psi=E_\psi-C_\psi\ge0$.
+Restrict the positive pair integral to $B_L\times C$ and $C\times B_L$. As $\psi=0$ on $C$, \eqref{eq:core-local} gives
+\begin{equation}\label{eq:pair-core}
+ D_\psi\ge\int\psi^2FV^TA[F\ind_C]V
+ \ge c\int\psi^2\ind_{\{F>k\}}\frac{|\nabla_yF|^2}{F}.
+\end{equation}
+
+For a cutoff with $|\nabla\psi|\le C\delta^{-1}$ and $|D^2\psi|\le C\delta^{-2}$, put $G=\psi g$. Expanding $\psi\nabla g=\nabla G-g\nabla\psi$ in both variables gives
+\begin{align*}
+ C_\psi={}&\iint\nabla G_v^TK\nabla G_w
+ -\iint\nabla G_v^TKg_w\nabla\psi_w\\
+ &-\iint g_v\nabla\psi_v^TK\nabla G_w
+ +\iint g_vg_w\nabla\psi_v^TK\nabla\psi_w.
+\end{align*}
+Here subscripts indicate the evaluation variable. With $b_K=\Div K$, the first term is
+\[
+ -\iint G_vG_w\Div\Div K=\int G^2.
+\]
+Integrating the two middle terms in $v$ and $w$, respectively, gives the sum
+\[
+ \iint G_vg_w b_K\cdot\nabla\psi_w
+ -\iint g_vG_w b_K\cdot\nabla\psi_v.
+\]
+Thus
+\begin{align}\label{eq:cross-exact}
+ C_\psi={}&\int\psi^2g^2+\iint gg_*
+ \{\nabla\psi(v)^TK\nabla\psi(w)\notag\\
+ &\hspace{35mm}+b_K\cdot[\psi(v)\nabla\psi(w)-\psi(w)\nabla\psi(v)]\}.
+\end{align}
+Here $\Div\Div K=-\delta_0$. The bracket in the $b_K$ term is bounded by $C\delta^{-2}|v-w|$, and both error variables lie in $B_L$. Symmetrizing
+$2g(v)g(w)\le g(v)^2F(w)/F(v)+g(w)^2F(v)/F(w)$, with zero values on $F=0$, shows
+\[
+ \iint_{B_L^2}\frac{gg_*}{|v-w|}\dv\dw
+ \le\Lambda\int_{B_L}g^2/F\le4\Lambda\int_{B_L}q.
+\]
+Thus
+\begin{equation}\label{eq:cross-bound}
+ E_\psi\le D_\psi+\int\psi^2g^2+C\Lambda\delta^{-2}\int_{B_L}q.
+\end{equation}
+The linear dependence on the truncation mass will allow a superlinear level recurrence.
+
+We next give the entropy estimate at the cutoff scales used here. The calculation follows \cite[(3.29)--(3.34)]{GIJV}, before its subsequent isotropic coercivity step. We give it for smooth solutions and arbitrary $\delta$, since the final small-radius weak-solution lemma of that paper has different geometric restrictions.
+
+\begin{lemma}\label{lem:local-entropy}
+For a nondecreasing time cutoff $0\le\eta\le1$ with $\eta(a)=0$,
+\begin{equation}\label{eq:local-entropy}
+ \sup_t\eta(t)\int\psi^2h_k(F(t))
+ +c_0\int_a^b\eta D_\psi\dt
+ \le C(\|\eta'\|_\infty+1+\Lambda\delta^{-2}+\Xi\delta^{-1})
+ \int_{[a,b]\times\supp\psi}W_k(F).
+\end{equation}
+The constants are absolute, apart from the fixed cutoff shapes.
+\end{lemma}
+\begin{proof}
+Let $l=F\wedge k$, $d_K=-\Div\Div K=\delta_0$ and $H_\psi=\int\psi^2h_k(F)$. Testing the divergence equation against $\psi^2\log_+(F/k)$ splits $H_\psi'=T_1+T_2$, with the derivatives falling on the logarithm and cutoff, respectively. Before symmetrization,
+\begin{align*}
+ T_1={}&-\iint\psi_v^2 V_v^TK(v-w)
+       [F_w\nabla F_v-F_v\nabla F_w]\\
+ ={}&-E_\psi+\iint\psi_v^2\nabla g_v^TK\nabla g_w
+             +\iint\psi_v^2\nabla g_v^TK\nabla l_w.
+\end{align*}
+We used $FV=\nabla g$ and $\nabla F=\nabla g+\nabla l$. Subtracting $C_\psi$ from the high--high integral and using $E_\psi-C_\psi=D_\psi$ leaves $\tfrac12\iint(\psi_v-\psi_w)^2\nabla g_v^TK\nabla g_w$ as its remainder. Integrating this remainder and the high--low integral twice gives
+\[
+ T_1=-D_\psi+\iint gg_*\Gamma_1+\iint g(v)l(w)\Gamma_2,
+\]
+\begin{align*}
+ \Gamma_1={}&\tfrac12 d_K(v-w)(\psi_v-\psi_w)^2
+ -b_K\cdot(\nabla\psi_v+\nabla\psi_w)(\psi_v-\psi_w)
+ -\nabla\psi_v^TK\nabla\psi_w,\\
+ \Gamma_2={}&d_K(v-w)\psi_v^2-b_K\cdot\nabla(\psi_v^2).
+\end{align*}
+The delta term in $\Gamma_1$ vanishes. The other terms are bounded by $C\delta^{-2}/r$, with at least one variable in $\supp\psi$. They contribute at most $C\Lambda\delta^{-2}\int_{\supp\psi}g$. The delta in $\Gamma_2$ gives $k\int\psi^2g$; its remaining term is bounded by
+$C\Xi\delta^{-1}\int_{\supp\psi}g$, because
+$\int(F\wedge k)(w)/|v-w|^2\dw\le c_{2,F}(v)$.
+
+Write $\ell_v=\log_+(F(v)/k)$. In $T_2$, the high part is
+\begin{align*}
+ T_2^+={}&-2\iint FF_*K(\psi_vV_v-\psi_wV_w)\cdot\ell_v\nabla\psi_v\\
+ &+2\int F\ell_v\nabla\psi_v\cdot\int\Gamma_3(v,w)g(w)\dw\dv,\\
+ \Gamma_3(v,w)={}&b_K(v-w)(\psi_v-\psi_w)+K(v-w)\nabla\psi_w.
+\end{align*}
+Cauchy--Schwarz in the pair measure bounds the first term by
+$D_\psi/2+C\Lambda\delta^{-2}\int F\ell^2$.
+Since $|\Gamma_3|\le C\delta^{-1}/r$, the second is bounded by
+$C\Lambda\delta^{-2}\int F\ell$, with $v$ in $\supp\psi$.
+The low part is $\int(b_K*l)\cdot F\ell\nabla(\psi^2)$ and is bounded by $C\Xi\delta^{-1}\int F\ell$ on the same support. These estimates and $g\le F\ell$, $k\le2$ give the differential entropy inequality. Multiply by $\eta$ and integrate. The term $\eta'H_\psi$ is bounded by $\|\eta'\|_\infty\int W_k$, giving \eqref{eq:local-entropy} after taking a supremum and the final-time energy bound.
+
+The truncations have the stated weak derivatives; the square root is used only above $k\ge1$. Smooth truncation approximations pass to the limit using local smoothness, bounded level derivatives and the locally integrable kernels $r^{-1},r^{-2}$. The only double-divergence distribution is the explicitly evaluated delta. No relation between $\delta$ and the time length, and no restriction $\delta\le1$, has entered this calculation.
+\end{proof}
+
+\subsection{Spatial hole filling}
+
+Fix a time and level $k$, and recall $u=(\sqrt F-\sqrt k)_+$ and $q=u^2$. For $r<s$, choose $\chi=1$ on $B_r$, supported in an intermediate ball, and $\psi=1$ on $\supp\chi$, supported in $B_s$. Their derivative length $\delta$ is comparable to $s-r$. Put
+\[
+ M_q=\int_{B_s}q,\quad I_q=4\int_{B_s}|\nabla_yu|^2,\quad
+ J_\delta=C(I_q+\delta^{-2}M_q),\quad K_\delta=k+\Lambda\delta^{-2},
+ \qquad Z(r)=\int_{B_r}q^2.
+\]
+Apply \cref{lem:nash} to $h=\chi^2q$. Its mass is at most $M_q$ and its transverse information is at most $J_\delta$. Matrix positivity gives $A[h]\le A[F]$. Since $\nabla u=\ind_{\{F>k\}}\nabla F/(2\sqrt F)$, product differentiation gives
+\[
+ E[h]\le C(E_\psi+\Lambda\delta^{-2}M_q).
+\]
+The first term bounds the $\chi\nabla u$ contribution, while the second bounds $u\nabla\chi$. Using \eqref{eq:cross-bound} and $g^2\le2q^2+8kq$,
+\[
+ Z(r)^2\le CM_q^{1/2}J_\delta^{3/2}
+ [D_\psi+Z(s)+K_\delta M_q].
+\]
+Take square roots and use Young on the term containing $Z(s)$. For any fixed $0<\epsilon<1$,
+\begin{equation}\label{eq:hole-step}
+ Z(r)\le\epsilon Z(s)+C_\epsilon
+ [M_q^{1/2}J_\delta^{3/2}
+ +M_q^{1/4}J_\delta^{3/4}D_\psi^{1/2}
+ +K_\delta^{1/2}M_q^{3/4}J_\delta^{3/4}].
+\end{equation}
+
+Choose $\rho_j=R_o-(R_o-R_i)2^{-j}$ between fixed interior radii $R_i<R_o$. Iterate \eqref{eq:hole-step}, using common mass and transverse information on $B_{R_o}$ and gaps $\delta_j\asymp(R_o-R_i)2^{-j}$. The residual $\epsilon^NZ(\rho_N)$ tends to zero for each individual smooth profile, since it is bounded on $B_{R_o}$. Interpolation
+$\int_{B_{R_i}}q^{5/3}\le M_q^{1/3}Z(R_i)^{2/3}$ and concavity give
+\begin{align}\label{eq:hole-series}
+ \int_{B_{R_i}}q^{5/3}\le C_\epsilon\sum_{j\ge0}\epsilon^{2j/3}
+ [M_q^{2/3}J_j+M_q^{1/2}J_j^{1/2}D_j^{1/3}
+ +K_j^{1/3}M_q^{5/6}J_j^{1/2}],
+\end{align}
+where $J_j=C(I_q+\delta_j^{-2}M_q)$, $K_j=k+\Lambda\delta_j^{-2}$ and $D_j$ is the actual energy of the $j$th cutoff. All terms are nonnegative, so this series may now be integrated in time.
+
+\subsection{The level iteration}
+
+\begin{proof}[Proof of \cref{prop:local}]
+Set
+\[
+ k_n=2-2^{-n},\quad r_n=L(1+2^{-n})/2,\quad
+ t_n=a+\theta(1-2^{-n}),\quad \mathcal J_n=(t_n,b),\quad
+ Z_n=\int_{\mathcal J_n\times B_{r_n}}W_{k_n}(F).
+\]
+Then $Z_1\le Z_0$. For $n\ge1$, take a time cutoff vanishing before $t_{n-1}$ and equal to one after $t_n$, with derivative bounded by $C2^n/\theta$. Apply \cref{lem:local-entropy} on $[t_{n-1},b]$. A base spatial cutoff equals one on $B_{r_n}$ and is supported in $B_{r_{n-1}}$. Since $W_{k_n}\le W_{k_{n-1}}$, \eqref{eq:pair-core} gives, for $A_n=C_04^nZ_{n-1}$,
+\begin{equation}\label{eq:level-base}
+ \sup_{\mathcal J_n}M_q\le A_n,\qquad\int_{\mathcal J_n}I_q\dt\le A_n,
+ \quad M_q(t)=\int_{B_{r_n}}q_{k_n},\quad I_q(t)=4\int_{B_{r_n}}|\nabla_yu_{k_n}|^2.
+\end{equation}
+Here and below the constants depend only on $c,K_*,b-a,\theta$.
+
+Use \eqref{eq:hole-series} between $r_{n+1}$ and $r_n$; its gaps are $\delta_{n,j}\asymp L2^{-n-j}$. Applying \eqref{eq:local-entropy} to each hole cutoff on the same time interval gives
+\begin{equation}\label{eq:level-hole}
+ \int_{\mathcal J_n}D_j\dt\le C4^jA_n,\qquad
+ \int_{\mathcal J_n}J_j\dt\le C_{b-a}4^{n+j}A_n,\qquad
+ K_j\le C4^{n+j}.
+\end{equation}
+Indeed $\Lambda\delta_{n,j}^{-2}\le CK_*4^{n+j}$ and
+$\Xi\delta_{n,j}^{-1}\le CK_*2^{n+j}$, while $L\ge1$.
+The three terms in the series \eqref{eq:hole-series} have time integrals bounded by
+\[
+ C_{b-a}4^{n+j}A_n^{5/3},\qquad
+ C_{b-a}4^{n/2+5j/6}A_n^{4/3},\qquad
+ C_{b-a}4^{5(n+j)/6}A_n^{4/3},
+\]
+respectively. These follow from \eqref{eq:level-base}--\eqref{eq:level-hole}, using H\"older exponents $2,3,6$ for the middle term and Cauchy--Schwarz for the last. Their growth in $j$ is at most $4^j$. Fix $\epsilon=1/256$ in \eqref{eq:hole-step}; then $4\epsilon^{2/3}<1$. Summation yields a fixed $B>1$ such that
+\[
+ \int_{\mathcal J_n\times B_{r_{n+1}}}q_{k_n}^{5/3}
+ \le CB^n(Z_{n-1}^{5/3}+Z_{n-1}^{4/3}).
+\]
+Each cutoff energy was integrated separately in \eqref{eq:level-hole}.
+
+On $F>k_{n+1}$ the level gap gives $F\le C4^nq_{k_n}$. Since $F(\log_+F+\log_+^2F)\le CF^{5/3}$ for $F\ge1$, we obtain, after enlarging $B$,
+\begin{equation}\label{eq:level-recursion}
+ Z_{n+1}\le CB^n(Z_{n-1}^{4/3}+Z_{n-1}^{5/3}),\qquad n\ge1.
+\end{equation}
+One may take $B=4^6$: before the level comparison the growth is at most $4^{8n/3}$, and that comparison adds at most $C4^{5n/3}$. Choose $0<d\le1$ so that $2Cd^{1/3}B^7\le1$, and require $Z_0\le dB^{-3}$. The two base cases follow from $Z_1\le Z_0$; substitution in \eqref{eq:level-recursion} gives $Z_n\le dB^{-3n}$. Fatou on $(a+\theta,b)\times B_{L/2}$ gives $W_2(F)=0$, hence $F\le2$. Continuity includes the time endpoints. This proves the proposition with constants independent of $L,\Lambda,\Xi$ separately.
+\end{proof}

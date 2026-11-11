@@ -1,0 +1,150 @@
+\section{A global density bound}\label{sec:global}
+
+We now verify the hypotheses of \cref{prop:local} near every sufficiently distant velocity. The local mass decreases like $R^{-2}$, whereas the volume factor in the useful velocity dilation grows only like $R^{3/2}$. This leaves the small entropy needed for the level iteration.
+
+Fix $0<\tau<T$. By \cref{prop:weighted}, uniformly for $\tau/4\le t\le T$,
+\begin{equation}\label{eq:positive-input}
+ \|f(t)/\ip v\|_3+\|f(t)\|_{9/5}\le B(H,\tau).
+\end{equation}
+For a fixed $d>0$, energy gives
+\begin{equation}\label{eq:local-mass}
+ \int_{B_d(v_0)}f(t,v)\dv\le C_dR^{-2},\qquad |v_0|=R\ge2d+2.
+\end{equation}
+These two estimates also control positive log-squared entropy on that ball:
+\begin{equation}\label{eq:tail-entropy}
+ \int_{B_d(v_0)}f(\log_+f+\log_+^2f)\dv
+ \le C_{H,\tau,d}R^{-2}\log^2R.
+\end{equation}
+Indeed let $m$ be the mass of $f\ind_{B_d(v_0)\cap\{f>1\}}$. If $m=0$ there is nothing to prove. Under the probability measure $m^{-1}f\dv$ on this set, $Z=\log f$ satisfies
+$\mathbb E e^{(4/5)Z}\le C_B/m$ by \eqref{eq:positive-input}. Thus
+$\mathbb P(Z>s)\le\min(1,C_Bm^{-1}e^{-4s/5})$.
+Integrating $2s\mathbb P(Z>s)$ gives
+$\mathbb EZ^2\le C[1+\log^2(C_B/m)]$. The first logarithm has the same bound. For small $m$, the function $m[1+\log^2(C_B/m)]$ is increasing; \eqref{eq:local-mass} proves \eqref{eq:tail-entropy} for large $R$.
+
+\subsection{Coefficients near a distant point}
+
+Rotate so that $v_0=Re_1$. Uniformly for $v\in B_{1/4}(v_0)$ and $\tau/4\le t\le T$,
+\begin{equation}\label{eq:physical-potentials}
+ P_f(v)\le C_{H,\tau}R^{-1/2},\qquad
+ c_{2,f}(v)\le CR^{-2/3}.
+\end{equation}
+For the first bound, let $g=f\ind_{B_2(v_0)}$. Its mass is $O(R^{-2})$, and $\|g\|_3\le CBR$ by \eqref{eq:positive-input}. Splitting the Coulomb integral at $\rho$ gives
+\[
+ \||\cdot|^{-1}*g\|_\infty
+ \le C\|g\|_3\rho+\|g\|_1/\rho
+ \le C\sqrt{\|g\|_1\|g\|_3}=O(R^{-1/2}).
+\]
+The part $|w|\le R/2$ outside this ball contributes $O(R^{-1})$, and the remaining separated tail contributes $O(R^{-2})$ by energy. For the second bound take $h=(f\wedge2)\ind_{B_2(v_0)}$. It is bounded by two and has mass $O(R^{-2})$, so
+\[
+ \||\cdot|^{-2}*h\|_\infty\le C\rho+\|h\|_1\rho^{-2}
+ \le C\|h\|_1^{1/3}.
+\]
+The two far pieces are $O(R^{-2})$. This proves \eqref{eq:physical-potentials}.
+
+Let $C=B_{R_0}$ be the fixed core ball selected in the good-set construction of \cref{sec:weighted}. Its mass $m\ge m_0>0$ and its mean
+$u_0=m^{-1}\int_Cwf(w)\dw$ satisfy $|u_0|\le R_0$. Recall that $C$ contains a set $E$ on which $f\ge\ell$ and $|E|\ge\mu_0>0$, with $\ell,\mu_0$ depending only on $H$. The fixed tube radius $d$ from that construction leaves volume at least $\mu_0/2$ of $E$ outside every line tube. In particular, for $\xi\ne0$, outside the tube around $u_0+\R\xi$, the distance to that line is at least $d$. Integrating over this remaining set gives
+\[
+ \int_Cf(w)|\xi\times(w-u_0)|^2\dw\ge c_H|\xi|^2.
+\]
+The core mean cancels the mixed term in
+\begin{align}\label{eq:core-variance}
+ \int_Cf|\xi\times(v-w)|^2
+ &=m|\xi\times(v-u_0)|^2+\int_Cf|\xi\times(w-u_0)|^2\notag\\
+ &\ge c_H'(|\xi\times v|^2+|\xi|^2).
+\end{align}
+Here we used $|\xi\times v|^2\le2|\xi\times(v-u_0)|^2+2R_0^2|\xi|^2$. On the core $|v-w|^3\le C_HR^3$, so
+\[
+ \xi^TA[f\ind_C](v)\xi\ge c_HR^{-3}(|\xi\times v|^2+|\xi|^2).
+\]
+If $v=Re_1+h$, $|h|\le1/4$, then
+$R^2|\xi_y|^2\le2|\xi\times v|^2+2|h|^2|\xi|^2$.
+Consequently the full quadratic form satisfies
+\begin{equation}\label{eq:physical-core}
+ A[f\ind_C](v)\ge c_HR^{-1}P_y\qquad(v\in B_{1/4}(Re_1)).
+\end{equation}
+The small radial term in \eqref{eq:core-variance} pays for the tilt of the transverse directions; a bound on the transverse block alone would not give this matrix inequality. All constants are uniform in the direction of $v_0$ and in time, since entropy does not increase.
+
+\subsection{Velocity dilation and the tail bound}
+
+Set
+\begin{equation}\label{eq:tail-dilation}
+ \mu=R^{-1/2},\qquad F(t,w)=f(t,v_0+\mu w),\qquad L=(4\mu)^{-1}=\sqrt R/4.
+\end{equation}
+The amplitude and time are unchanged. A change of variables in the full convolution gives
+\begin{equation}\label{eq:dilation-rules}
+ A[F](w)=\mu^{-2}A[f](v_0+\mu w),\quad
+ D_w^2F=\mu^2D_v^2f,\quad
+ P_F=\mu^{-2}P_f,\quad c_{2,F}=\mu^{-1}c_{2,f}.
+\end{equation}
+In particular $F_t=A[F]:D_w^2F+F^2$, the same Coulomb equation. The cap two is unchanged because the amplitude is unchanged.
+
+The transformed core is outside $B_L$ for large $R$. Equations \eqref{eq:physical-potentials}--\eqref{eq:physical-core} give \eqref{eq:core-local}--\eqref{eq:pot-local} with
+\[
+ c=c_H,\qquad \Lambda\le C_{H,\tau}R^{1/2},\qquad
+ \Xi\le CR^{-1/6},\qquad
+ \Lambda/L^2+\Xi/L\le K_*(H,\tau),\qquad L\ge1.
+\]
+The rescaled mass is $\mu^{-3}$; this does not enter \cref{prop:local}. On $[a,b]=[\tau/4,T]$, \eqref{eq:tail-entropy} gives
+\begin{equation}\label{eq:rescaled-entropy}
+ \int_{\tau/4}^T\int_{B_L}F(\log_+F+\log_+^2F)
+ \le C(H,\tau,T)\mu^{-3}R^{-2}\log^2R
+ =C(H,\tau,T)R^{-1/2}\log^2R\longrightarrow0.
+\end{equation}
+Use \cref{prop:local} with $\theta=\tau/4$. Its threshold depends only on the displayed permitted constants. Choose a single $R_*=R_*(H,\tau,T)$ large enough for all the geometric conditions and \eqref{eq:rescaled-entropy} whenever $R\ge R_*$. Evaluate its conclusion at $w=0$ for every center $v_0$ to obtain
+\begin{equation}\label{eq:tail-sup}
+ f(t,v)\le2\qquad(\tau/2\le t\le T,\ |v|\ge R_*).
+\end{equation}
+This treats the entire unbounded velocity region.
+
+\subsection{The bounded velocity region}
+
+\begin{proof}[Proof of \cref{thm:main}]
+On $[\tau/2,T]$, \eqref{eq:positive-input} and \eqref{eq:tail-sup} give
+\[
+ \int f^3\le\ip{R_*}^3B^3+4\int f\le C(H,\tau,T).
+\]
+Interpolation with mass one gives a uniform $L^2$ bound. The potential split then bounds $A[f]$ above, and the good set gives a uniform ellipticity lower bound on $B_{R_*+2}$.
+
+Write $b[f]=\Div A[f]=\nabla a[f]$. We need
+\begin{equation}\label{eq:drift-L6}
+ \|b[f]\|_6\le C\|f\|_2.
+\end{equation}
+Here is a direct Newtonian proof. For a compact smooth source $f_n$, let $a_n=(4\pi|\cdot|)^{-1}*f_n$. It is smooth and $-\Delta a_n=f_n$. Outside its support $D^ja_n=O(|v|^{-1-j})$. Two integrations by parts on expanding balls therefore give
+$\int|D^2a_n|^2=\int(\Delta a_n)^2=\int f_n^2$.
+The field $\nabla a_n$ belongs to $H^1$, so Sobolev gives $\|\nabla a_n\|_6\le C\|f_n\|_2$. Take $f_n=\chi_nf$. The actual profile is smooth and rapidly decaying; the locally integrable gradient kernel $|z|^{-2}$ gives $\nabla a_n(v)\to b[f](v)$ by dominated convergence, and $f_n\to f$ in $L^2$. Fatou proves \eqref{eq:drift-L6}. Thus the drift is uniformly in $L^\infty_tL^6_v$ on the positive-time interval.
+
+For completeness, perform the bounded-region iteration in the divergence equation
+$f_t=\Div(A\nabla f-bf)$. On $Q=(\tau/2,T)\times B_{R_*+2}$ let
+$\lambda_*I\le A\le\Lambda_*I$ and $\sup_t\|b(t)\|_6\le B_*$, with permitted-data constants. Choose a compact space-time cutoff $\zeta$ vanishing at the initial time, and test by $\zeta^2f^{p-1}$, $p\ge2$. Put $w=f^{p/2}$ and $U=\zeta w$. After multiplication by $p$ the principal energy is
+\[
+ \frac{4(p-1)}p\int\zeta^2\nabla w^TA\nabla w.
+\]
+The diffusion cutoff term is $-4\int\zeta w\nabla\zeta^TA\nabla w$; the drift terms are
+$2(p-1)\int\zeta^2w b\cdot\nabla w$ and $2p\int\zeta w^2b\cdot\nabla\zeta$.
+Young's inequality spends a fixed fraction of the energy and leaves
+$Cp^2\int|b|^2U^2+C\int w^2|\nabla\zeta|^2$, together with the time-cutoff term. At each time,
+\[
+ \int|b|^2U^2\le B_*^2\|U\|_3^2
+ \le CB_*^2\|U\|_2\|\nabla U\|_2.
+\]
+A second Young inequality absorbs the gradient and leaves $Cp^4B_*^4\|U\|_2^2$. Therefore
+\begin{equation}\label{eq:moser-energy}
+ \sup_t\int U^2+\int_Q|\nabla U|^2
+ \le C[p^4(1+B_*^4)+\|\nabla\zeta\|_\infty^2+\|\zeta_t\|_\infty]
+ \int_{\supp\zeta}f^p.
+\end{equation}
+Nonnegative solutions are covered by regularizing the test power on this compact cylinder. All individual bounds used for this passage justify integration only; the constants in \eqref{eq:moser-energy} are uniform.
+
+Spatial interpolation and Sobolev imply
+\[
+ \|U\|_{L^{10/3}(Q)}^2
+ \le C(\sup_t\|U(t)\|_2^2)^{2/5}
+       \left(\int_Q|\nabla U|^2\right)^{3/5}.
+\]
+Use nested cylinders with initial times $a_j=\tau-\tau2^{-j-1}$ and radii $R_*+1+2^{-j}$, cutoffs equal to one on the next cylinder, and $p_j=2(5/3)^j$. Their derivatives are bounded by $C_\tau4^j$. Equation \eqref{eq:moser-energy} gives
+\[
+ \|f\|_{L^{p_{j+1}}(Q_{j+1})}
+ \le[C_*p_j^4 4^j]^{1/p_j}\|f\|_{L^{p_j}(Q_j)}.
+\]
+The product converges since $\sum j/p_j$ and $\sum\log(p_j)/p_j$ are finite. The starting space-time $L^2$ norm is uniformly bounded. Hence $f\le C(H,\tau,T)$ on $(\tau,T)\times B_{R_*+1}$, first almost everywhere and then pointwise by continuity, including the time endpoints. Together with \eqref{eq:tail-sup} this proves the global bound in \cref{thm:main}.
+\end{proof}

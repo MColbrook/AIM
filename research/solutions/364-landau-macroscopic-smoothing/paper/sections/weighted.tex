@@ -1,0 +1,295 @@
+\section{A weighted Fisher information estimate}\label{sec:weighted}
+
+The ordinary Fisher information may be large in an entropy-bounded class. The weight $\ip v^{-1}$ permits a quadratic coercivity estimate using only the second moment. We prove the estimate first for positive solutions whose logarithmic derivatives have suitable Gaussian integrability, then identify an approximation limit with the given solution.
+
+Put $W(v)=\ip v^{-1}$ and, on the positive set of a density, write $S=\nabla\log f$ and $H_f=D^2\log f$. Define
+\begin{equation}\label{eq:JZ}
+ J(f)=\int Wf|S|^2\dv,\qquad
+ Z(f)=\int\ip v^{-4}f|H_f|^2\dv.
+\end{equation}
+At a zero of a smooth nonnegative density, the Fisher integrand is set to zero.
+
+\begin{proposition}\label{prop:weighted}
+Let $f$ be a solution as in \cref{thm:main}. There is a constant depending only on $H$ such that, for $0<t\le T$,
+\begin{equation}\label{eq:weighted-result}
+ J(f(t))\le C_H(1+t^{-1}),\qquad
+ \|Wf(t)\|_3\le C_H(1+t^{-1}),\qquad
+ \|f(t)\|_{9/5}\le C_H(1+t^{-2/3}).
+\end{equation}
+\end{proposition}
+
+\subsection{The lifted first variation}
+
+For now $f>0$. All calculations in this subsection and the next two are made in the following class: $f$ has a Gaussian upper bound, and its logarithmic derivatives grow more slowly than any fixed Gaussian. Such bounds on compact positive-time intervals justify the integrations by parts. We return to the original nonnegative class at the end of this section.
+
+For $z=v-w$ and $r=|z|$, set
+\[
+ b_j=e_j\times z,\quad B_j=(b_j,-b_j),\quad a_*(r)=r^{-3/2},\quad V_j=a_*B_j,\quad Q_6=\sum_{j=1}^3V_j^2.
+\]
+We use the doubled-variable rotations of \cite[Sections~3--4]{GS}. These are vector fields, acting as directional derivatives on $\R^6$. They are divergence-free and preserve the center $(v+w)/2$ and the relative radius $r$. For
+\[
+ F(v,w)=f(v)f(w),\quad u=\log F,\quad s=\nabla_{v,w}u,\quad
+ M=\diag(W(v)I_3,W(w)I_3),
+\]
+write $\mathcal I_M(F)=\iint F s^TMs\dv\dw$. The identity $\sum_jb_j\otimes b_j=r^2\Pi(z)$ shows that $Q_6$ has divergence matrix
+\[
+ \begin{pmatrix}K_0&-K_0\\-K_0&K_0\end{pmatrix},\qquad K_0(z)=\Pi(z)/|z|.
+\]
+Consequently $\kap\int Q_6(f\otimes f)\dw=Q(f,f)$, where $Q$ denotes the physical collision operator in \eqref{eq:landau}. At the product profile,
+\[
+ \frac{\delta\mathcal I_M}{\delta F}=\Phi(v)+\Phi(w),\qquad
+ \Phi=-2\Div(WS)-W|S|^2.
+\]
+The two marginals are equal, and therefore
+\begin{equation}\label{eq:product-variation}
+ J'[Q(f,f)]=\frac{\kap}{2}\mathcal I_M'(F)[Q_6F].
+\end{equation}
+
+For a divergence-free field $V$, introduce the matrix expression
+\[
+ \mathcal T_VM=(DV)M+M(DV)^T-V\cdot\nabla M,
+ \qquad (DV)_{ij}=\partial_jV_i.
+\]
+Differentiating the Fisher integral and integrating once along $V$ gives
+$\mathcal I_M'[VF]=\int F s^T\mathcal T_VM s$. Indeed,
+$\nabla(Vu)=(DV)^Ts+Vs$, and the two terms containing $Vs$ cancel. The second density variation is
+$\mathcal I_M''[VF,VF]=2\int F|\nabla(Vu)|_M^2$. Differentiating the first identity along $VF$ thus yields
+\begin{equation}\label{eq:metric-identity}
+ \mathcal I_M'[V^2F]
+ =-2\int F|\nabla(Vu)|_M^2+\int F s^T\mathcal T_V^2M s.
+\end{equation}
+
+To compute the last term, put $t_* =\nabla_{v,w}a_*$ and $N_j=\mathcal T_{B_j}M$. Since $B_ja_*=0$, $B_jt_*=(DB_j)t_*$, and $DB_j$ is antisymmetric,
+\begin{equation}\label{eq:metric-correction}
+ \mathcal T_{V_j}^2M
+ =a_*^2\mathcal T_{B_j}^2M
+ +2a_*\{B_j\otimes N_jt_*+N_jt_*\otimes B_j\}
+ +2(t_*^TMt_*)B_j\otimes B_j.
+\end{equation}
+For completeness, if $J_jx=e_j\times x$, then
+\[
+ N_j=\begin{pmatrix}
+ -(b_j\cdot\nabla W(v))I_3&(W(v)-W(w))J_j\\
+ (W(w)-W(v))J_j&(b_j\cdot\nabla W(w))I_3
+ \end{pmatrix}.
+\]
+One way to check \eqref{eq:metric-correction} is to write
+$\mathcal T_{a_*B_j}M=a_*N_j+B_j\otimes Mt_*+Mt_*\otimes B_j$.
+Applying $\mathcal T_{a_*B_j}$ again gives the two mixed terms in \eqref{eq:metric-correction}; its two remaining rank-one terms give the last positive term.
+
+\subsection{Near relative velocities}
+
+Let $D_<$ denote the integral in \eqref{eq:metric-identity}, summed over $j$ and restricted to $r<\varepsilon$. Write $G_j=a_*B_ju$. Integration of $a_*^2\mathcal T_{B_j}^2M$ along $B_j$ gives
+\begin{align}\label{eq:near-signed}
+ D_<={}&-2\sum_j\int_{r<\varepsilon}F|\nabla G_j|_M^2
+ +2\sum_j\int_{r<\varepsilon}F\frac{t_*^TMt_*}{a_*^2}G_j^2\notag\\
+ &+\sum_j\int_{r<\varepsilon}F
+ \{2a_*\nabla G_j\cdot N_js+2G_jt_*\cdot N_js+a_*G_js^TN_js\}.
+\end{align}
+There is no radial boundary flux, since $B_jr=0$. In this integration, the derivative of $F$ produces the last, cubic-score term. Before adding the mixed term of \eqref{eq:metric-correction}, the two terms linear in $N_js$ are
+$2a_*\nabla G_j\cdot N_js-2G_jt_*\cdot N_js$; that mixed term adds $4G_jt_*\cdot N_js$. This explains the sign in \eqref{eq:near-signed}.
+
+The spherical estimate used here is \cite[Lemma~9.1]{GS}: for every positive even $C^2$ function $h$ on $S^2$, with $L_j=(e_j\times\sigma)\cdot\nabla_\sigma$,
+\begin{equation}\label{eq:sphere}
+ \sum_{i,j}\int_{S^2}h(L_iL_j\log h)^2\dd\sigma
+ \ge\frac{19}{4}\sum_j\int_{S^2}h(L_j\log h)^2\dd\sigma.
+\end{equation}
+With $c=(v+w)/2$, the slice $F(c+r\sigma/2,c-r\sigma/2)$ is even. In these coordinates $B_j=2L_j$ and
+\[
+ |\nabla_{v,w}G|^2=\tfrac12|\nabla_cG|^2+2|\nabla_zG|^2.
+\]
+Set $R_c=\ip c$, $\omega=R_c^{-1}$, and
+\[
+ \mathcal A_< =\sum_j\int_{r<\varepsilon}\omega F|\nabla G_j|^2,
+ \qquad \mathcal R_< =\sum_j\int_{r<\varepsilon}\omega FG_j^2/r^2.
+\]
+Equation \eqref{eq:sphere} gives $\mathcal A_<\ge(19/2)\mathcal R_<$.
+For a fixed sufficiently small absolute $\varepsilon_0$ and $\varepsilon\le\varepsilon_0$,
+\[
+ (1-\delta)\omega I_6\le M\le(1+\delta)\omega I_6,\quad
+ \delta\le C\varepsilon,\quad |N_j|\le Cr\omega/R_c,\quad
+ |t_*|^2/a_*^2=9/(2r^2).
+\]
+The first line of \eqref{eq:near-signed} is at most
+\[
+ -\{2(1-\delta)-(18/19)(1+\delta)\}\mathcal A_<.
+\]
+A fixed negative fraction remains for the three commutators. Young's inequality applied to the first two leaves a multiple of
+\[
+ P=\iint_{r<\varepsilon}F\frac{\omega}{rR_c^2}|s|^2.
+\]
+For the cubic term, for any small fixed $\eta>0$,
+\[
+ a_*|G_j||s^TN_js|
+ \le\eta\omega G_j^2/r^2+C_\eta\omega r|s|^4/R_c^2.
+\]
+Absorbing its first term by the spherical inequality gives
+\begin{equation}\label{eq:near-PT}
+ D_<\le-c\mathcal A_<+C(P+\mathcal Q),\qquad
+ \mathcal Q=\iint_{r<\varepsilon}F\frac{\omega r}{R_c^2}|s|^4.
+\end{equation}
+
+Apply the Sobolev inequality to $\sqrt{Wf}$ to get
+$B:=\|Wf\|_3\le C(1+J)$. On $r<1$ the three weights at $v,w,c$ are comparable. Splitting the local Coulomb potential at a radius $\rho$ gives
+\[
+ \int_{|w-v|<\varepsilon}\frac{f(w)}{|v-w|}\dw
+ \le C\ip v B\rho+\rho^{-1}
+ \le C(\ip v B)^{1/2}
+\]
+when the optimizing radius is at most $\varepsilon$. If it is larger, the near estimate on the entire ball gives the same last bound. Therefore
+\[
+ P\le CB^{1/2}\int f|S|^2\ip v^{-5/2}\dv\le C(1+J^{3/2}).
+\]
+Mass and energy give $\int_{|w-v|<1}f(w)\dw\le C\ip v^{-2}$. Hence
+$\mathcal Q\le C\varepsilon\int\ip v^{-5}f|S|^4\dv$.
+Recall that $S=\nabla\log f$, $H_f=D^2\log f$ and $Z=\int\ip v^{-4}f|H_f|^2$. For $\beta(v)=\ip v^{-5}$, integration of $\Div(\beta f|S|^2S)$ gives
+\[
+ \int\beta f|S|^4=-\int\beta f
+ \{|S|^2\tr H_f+2S^TH_fS+(\nabla\log\beta\cdot S)|S|^2\}.
+\]
+Using $|\nabla\log\beta|\le5/\ip v$ and Young's inequality shows
+$\int\beta f|S|^4\le C Z+C$. We conclude that
+\begin{equation}\label{eq:near-bound}
+ D_<\le-c\mathcal A_<+C(1+J^{3/2})+C\varepsilon Z.
+\end{equation}
+The constants here are independent of decreasing $\varepsilon\le\varepsilon_0$.
+
+\subsection{Separated coercivity and a scalar inequality}
+
+Mass, energy and entropy supply a good set inside a fixed ball. To see this explicitly, energy puts at least three quarters of the mass in $B_{R_0}$. The negative entropy is bounded by mass and energy, since
+$-x\log x\le\ip v x+e^{-\ip v-1}$ for $0\le x\le1$. Thus the positive entropy is bounded by $H$ plus an absolute constant. Choose $\ell$ small and $N$ large so the portions $f<\ell$ inside this ball and $f>N$ each have mass at most $1/8$. The remaining set has mass at least $1/2$, and hence volume at least $1/(2N)$. In particular
+\[
+ E=\{w\in B_{R_0}:f(w)\ge\ell\}
+ \quad\hbox{has volume at least }\mu_0>0,
+\]
+with $R_0,\ell,\mu_0$ depending only on $H$.
+
+Choose $d>0$ so that every radius-$d$ tube around a line has volume at most $\mu_0/2$ in $B_{R_0}$. For each unit $e$ and each $v$, a subset of $E$ of volume at least $\mu_0/2$ is distance at least $d$ from $v+\R e$. On this set
+\[
+ |v-w|^{-1}e^T\Pi(v-w)e
+ =\frac{\operatorname{dist}(w,v+\R e)^2}{|v-w|^3}
+ \ge c_H\ip v^{-3}.
+\]
+Consequently, for every $0<\varepsilon\le d/2$,
+\begin{equation}\label{eq:separated-ellipticity}
+ \int_{|v-w|\ge\varepsilon}\frac{\Pi(v-w)}{|v-w|}f(w)\dw
+ \ge c_H\ip v^{-3}I_3,
+\end{equation}
+with a lower constant independent of $\varepsilon$.
+
+Return to $G_j=r^{-3/2}B_j\log(f(v)f(w))$ and $M=\diag(W(v)I_3,W(w)I_3)$. In the $v$-gradient of $G_j$, the Hessian term is $a_*H_f(v)b_j$ and the remainder is bounded by $Cr^{-3/2}|S(v)-S(w)|$. Using \eqref{eq:separated-ellipticity} and $W(v)/W(w)\le1+r$ gives
+\[
+ \sum_j\iint_{r\ge\varepsilon}F|\nabla G_j|_M^2
+ \ge c_H Z-C_\varepsilon J.
+\]
+Conjugation by $M^{-1/2}$ bounds the three terms of \eqref{eq:metric-correction} by
+\[
+ Cr^{-3}(1+r)^2,\qquad Cr^{-3}(1+r)^{3/2},\qquad Cr^{-3}(1+r),
+\]
+respectively. They are bounded on $r\ge\varepsilon$, so the separated contribution obeys
+\begin{equation}\label{eq:far-bound}
+ D_\ge\le-c_H Z+C_\varepsilon J.
+\end{equation}
+The lower constant is independent of decreasing $\varepsilon$; the positive constant need not be.
+
+First fix the entropy good set and $d$, then choose $\varepsilon\le d/2$ sufficiently small to absorb the last term of \eqref{eq:near-bound} into \eqref{eq:far-bound}. Combining with \eqref{eq:product-variation},
+\begin{equation}\label{eq:weighted-evolution}
+ J'\le-c_HZ+C_H(1+J^{3/2}).
+\end{equation}
+On the other hand, integration by parts gives
+\[
+ J=-\int Wf\tr H_f-\int f\nabla W\cdot S
+ \le C Z^{1/2}+C J^{1/2},
+\]
+since $\int fW^2\ip v^4=\int f\ip v^2=4$. Thus $Z\ge cJ^2-C$. Above a threshold depending only on $H$, \eqref{eq:weighted-evolution} implies $J'\le-a_HJ^2/2$. Integrating the reciprocal on each above-threshold interval yields
+\begin{equation}\label{eq:J-gaussian}
+ J(f(t))\le C_H(1+(t-s)^{-1}),\qquad 0<s<t.
+\end{equation}
+Letting $s\downarrow0$ proves the first estimate in \eqref{eq:weighted-result} in the current integration class.
+
+The singular integrations can be performed first on $\delta<r<R$ with bounded center. The rotations preserve both boundaries. Near $r=0$, $S(v)-S(w)=O(r)$, so $G_j=O(r^{1/2})$ and $\nabla G_j=O(r^{-1/2})$, giving integrable relative kernels. At infinity the Gaussian bounds dominate all the displayed terms. These observations justify removal of the cutoffs.
+
+\subsection{The original nonnegative solution class}
+
+\begin{proof}[Completion of the proof of \cref{prop:weighted}]
+Fix one solution $f$ of the original problem and let $f_0=f(0)$. In the following approximation argument, auxiliary constants may depend on this individual datum. They will be absent from the estimate transferred to $f$.
+
+First $i(f_0)=\int|\nabla f_0|^2/f_0$ is finite, even if $f_0$ vanishes. For any $N>3$, the nonnegative function $h=\ip v^Nf_0$ has bounded Hessian. Taylor's formula along a unit direction gives
+$|\partial_eh|^2\le2\|D^2h\|_\infty h$; choose the step $-\partial_eh/\|D^2h\|_\infty$, with the zero-Hessian case treated directly. Expanding the derivative of $\ip v^{-N}h$ yields
+\[
+ \frac{|\nabla f_0|^2}{f_0}\le C_{f_0,N}\ip v^{-N}+C_Nf_0\ip v^{-2},
+\]
+which is integrable. At zeros of $f_0$ its gradient vanishes.
+
+Choose a smooth $\chi_R$ equal to one on $B_R$, supported in $B_{2R}$, with gradient bounded by $C/R$. For a small fixed $\beta>0$, form
+\[
+ g_R=\chi_R^2f_0+\epsilon_R\phi_\beta,\quad
+ \phi_\beta=(\beta/\pi)^{3/2}e^{-\beta|v|^2},\quad
+ h_R=g_R/\int g_R.
+\]
+Let $m_R=\int vh_R$ and $\theta_R=\frac13\int|v-m_R|^2h_R$. Set
+\begin{equation}\label{eq:normalized-approx}
+ f_{0,R}(v)=\theta_R^{3/2}h_R(m_R+\sqrt{\theta_R}v).
+\end{equation}
+For large $R$ these are positive smooth profiles with mass one, mean zero and energy three; $m_R\to0$, $\theta_R\to1$. Outside a compact set they agree with a shifted isotropic Gaussian.
+
+The pointwise Cauchy--Schwarz inequality gives $i(g+h)\le i(g)+i(h)$ and
+\[
+ i(\chi_R^2f_0)\le2i(f_0)+8\int f_0|\nabla\chi_R|^2.
+\]
+For each chosen $\beta$, take $\epsilon_R\downarrow0$ so fast that its contributions to Fisher information, the initial supremum and any fixed moments needed below are bounded by one and tend to zero. Thus the normalized family has uniformly bounded ordinary Fisher information and every such moment, in terms of $f_0$ alone. Write $M_k(h)=\int\ip v^kh(v)\dv$. Choose a moment exponent $k_*$ sufficiently large for \cite[Theorem~2.3]{GS}, and also $k_*\ge18$; both $M_{18}$ and $M_{k_*}$ are controlled. The bounds can be fixed before choosing $\beta$ small enough for Gaussian propagation, since decreasing the added Gaussian mass compensates for its broadening.
+
+Let $\mathcal P_2$ be the probability measures with finite second moment and let $W_2(\mu,\nu)^2$ be the infimum of $\int|v-w|^2\dd\pi(v,w)$ over their probability couplings $\pi$. The profiles converge to $f_0$ in $W_2$. Indeed,
+$\int(1+|v|^2)|h_R-f_0|\dv\to0$. Couple the common part identically and couple the two remaining equal-mass portions by their normalized product. The quadratic cost tends to zero by this weighted $L^1$ convergence. Applying the affine map in \eqref{eq:normalized-approx} adds a cost tending to zero, since $m_R\to0$, $\theta_R\to1$ and the second moments stay bounded.
+
+Also $\int f_{0,R}\log f_{0,R}\to\int f_0\log f_0$. On compact sets this follows by dominated convergence and the uniform individual-datum supremum bound. Positive entropy tails are bounded by a constant times the mass tails. For the negative tails use
+$-x\log x\le\ip v x+e^{-\ip v-1}$; outside $B_L$ the first term is $O(L^{-1})$ by energy. Mass normalization and the affine map change entropy only by terms tending to zero. In particular the approximants have entropy at most $H+1$ for large $R$.
+
+Guillen--Silvestre's global existence theorem \cite[Theorem~1.2]{GS} supplies the actual nonlinear solution $f_R$ from each $f_{0,R}$. Their source equation is the physical equation with source time $s=\kap t$. Their ordinary Fisher monotonicity and moment propagation \cite[Theorems~1.1 and~2.4]{GS} give, on any fixed finite interval, uniform bounds for $i(f_R)$, $\|f_R\|_3$, $M_{18}(f_R)$ and $M_{k_*}(f_R)$ depending on $f_0$ and the interval. These bounds are used for identification only.
+
+The collision matrices are bounded above by splitting the potential into a unit ball and its complement and using the auxiliary $L^3$ bound. The entropy good set gives $A[f_R]\ge c_H\ip v^{-3}I_3$ and hence
+\[
+ \det A[f_R]\ge\delta(1+|v|)^{-9},\qquad
+ \int(1+|v|)^9f_R^2\dv
+ \le C\Big(\int f_R^3\Big)^{1/2}
+       \Big(\int\ip v^{18}f_R\Big)^{1/2}\le N_*.
+\]
+Moreover $f_{R,t}=A[f_R]:D^2f_R+f_R^2$. Apply \cite[Theorem~2.1]{Silvestre} with
+\[
+ d=3,\quad p=2,\quad\alpha=1<4/3,\quad\beta=0,\quad\kappa=9.
+\]
+Its hypotheses are the just established determinant lower bound, matrix upper bound and weighted $L^2$ bound, with $\beta\ge-\kappa/d$. Each approximation is individually bounded and classical on every unit interval, as required by that theorem. It gives a fixed short interval of length $h>0$, depending on the auxiliary bounds, on which the bound is $Ct^{-3/4}$. Apply it from zero for $t\le h$ and from $t-h$ for $t>h$, using the global approximants and their auxiliary bounds on $[0,T+1]$. We obtain
+\begin{equation}\label{eq:approx-sup}
+ \|f_R(t)\|_\infty\le C_{f_0,T}(1+t^{-3/4}),\qquad0<t\le T.
+\end{equation}
+In particular the time integrals of these suprema are uniformly bounded.
+
+We also need the logarithmic integrations leading to \eqref{eq:J-gaussian}. The initial suprema are bounded uniformly in $R$. For $M(t)=\|f_R(t)\|_\infty$, the maximum principle gives the upper Dini inequality $M'\le M^2$, which bounds them on a common short interval from zero. Combining with \eqref{eq:approx-sup} gives a uniform auxiliary supremum on $[0,T]$. Together with $M_{k_*}$ this supplies the hypotheses of \cite[Theorem~2.3]{GS}. Choose the fixed initial $\beta$ sufficiently small, leaving room for $\theta_R\to1$. In the translated tail coordinates the initial upper and lower Gaussians have the same exponent; that theorem propagates the upper Gaussian, and \cite[Propositions~B.1--B.2]{GS} give a lower exponent arbitrarily close to it and corresponding derivative bounds. Their following logarithmic-derivative statement justifies all preceding computations for each $f_R$ on compact positive-time intervals. The Gaussian prefactors can depend on $R$ and are not used in \eqref{eq:J-gaussian}.
+
+For the identification we use \cite[Theorem~2(ii)]{Fournier}. Its weak solutions are probability curves in $L^\infty_t\mathcal P_2\cap L^1_tL^\infty_v$. If initial data converge in $W_2$ and the approximants' $L^1_tL^\infty_v$ norms are uniformly bounded, then the solutions converge uniformly in time in $W_2$. The given classical solution has an individual finite $L^1_tL^\infty_v$ norm on its compact classical interval. With $K_0(z)=\Pi(z)/|z|$, the source generator is
+\[
+ \tfrac12 K_0(v-w):D^2\varphi(v)-2(v-w)|v-w|^{-3}\cdot\nabla\varphi(v).
+\]
+Multiplication by $2\kap$ gives the physical weak generator, so the source time here is $s=2\kap t$. All its hypotheses are satisfied by \eqref{eq:normalized-approx} and \eqref{eq:approx-sup}. Consequently
+\begin{equation}\label{eq:approx-W2}
+ \sup_{0\le t\le T}W_2(f_R(t),f(t))\longrightarrow0.
+\end{equation}
+
+The weighted Fisher functional has the dual formula
+\begin{equation}\label{eq:Fisher-dual}
+ J(h)=\sup_{\xi\in C_c^\infty(\R^3;\R^3)}
+ \int h\{-2\Div(W\xi)-W|\xi|^2\}\dv.
+\end{equation}
+On the positive set write $S_h=\nabla\log h$. Integration by parts and $2S_h\cdot\xi-|\xi|^2\le|S_h|^2$ give one inequality. For the reverse, use compact cutoffs times $\nabla h/(h+\epsilon)$ and remove the cutoff and $\epsilon$ monotonically. The coefficient of $W h|S_h|^2$ tends to one and lies between zero and one. This proves the formula also with the extended-energy convention.
+Each test integrand is compact smooth and globally Lipschitz; the coupling inequality gives convergence of its integral under \eqref{eq:approx-W2}. Taking the supremum in \eqref{eq:Fisher-dual},
+\[
+ J(f(t))\le\liminf_R J(f_R(t))\le C_{H+1}(1+t^{-1}).
+\]
+The auxiliary Fisher, moment, supremum and Gaussian constants have disappeared. Rename the permitted function $C_{H+1}$ as $C_H$.
+
+Finally $\sqrt{Wf}\in H^1$: regularize it by $\sqrt{Wf+\epsilon}-\sqrt\epsilon$, whose function and gradient converge in $L^2$ by the finite $J$ and mass. Sobolev gives $\|Wf\|_3\le C(J+1)$. The exact factorization
+\[
+ f^{9/5}=(f^3\ip v^{-3})^{2/5}(f\ip v^2)^{3/5}
+\]
+and H\"older, together with $\int f\ip v^2=4$, give $\|f\|_{9/5}\le C\|Wf\|_3^{2/3}$. This proves \eqref{eq:weighted-result} for the entire original class.
+\end{proof}
