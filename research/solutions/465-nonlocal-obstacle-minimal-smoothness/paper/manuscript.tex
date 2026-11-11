@@ -1,0 +1,1054 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Sn}{S^{n-1}}
+\newcommand{\Lip}{\operatorname{Lip}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\PV}{\operatorname{PV}}
+\newcommand{\osc}{\operatorname{osc}}
+\newcommand{\T}{\mathcal T}
+\newcommand{\Hh}{\mathbb H}
+\newcommand{\Bfun}{\mathrm B}
+\DeclareMathOperator*{\esssup}{ess\,sup}
+\setlength{\emergencystretch}{2em}
+
+\title{Optimal obstacle regularity for stable operators\\
+with minimally smooth obstacles}
+\author{Kaiwen Jin\thanks{Contact: \href{mailto:yui.ui.siki@gmail.com}{\texttt{yui.ui.siki@gmail.com}}.}}
+\date{12 November 2026}
+\hypersetup{pdftitle={Optimal obstacle regularity for stable operators with minimally smooth obstacles},pdfauthor={Kaiwen Jin},pdfsubject={Regularity for nonlocal obstacle problems}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove the interior $C^{1+s}$ estimate for obstacle problems driven by
+symmetric stable operators with positive angular Lipschitz density, for every
+obstacle in $C^\beta$ with noninteger $\beta>1+s$. The exterior values of the
+solution are arbitrary bounded data. This gives the minimally smooth obstacle
+threshold in the local anisotropic problem. After subtracting and localizing
+the obstacle, the forcing need only be H\"older continuous. We compare the solution
+with shifted half-space profiles in a known positive half-ball. A thin-strip
+Dirichlet decomposition controls the constant forcing defect; a flat boundary
+quotient estimate gives the outer variation. Blow-ups at actual free-boundary
+points identify the quotient's signed trace, yielding improvement of the value bounds
+and of the compensated tail. A scale dichotomy and an interior covering
+argument give the full $C^{1+s}$ norm estimate.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+The nonlocal obstacle problem asks for a function that lies above a prescribed
+obstacle and is harmonic for a nonlocal elliptic operator wherever it separates
+from that obstacle. It is also the stationary optimal stopping equation for a
+stable jump process, with the obstacle playing the role of its payoff; see
+\cite[Chapter 4]{FRRO}. The set where the two functions meet is unknown.
+Regularity across its boundary is therefore stronger than an interior
+estimate in the harmonic region. The characteristic detachment profile has
+degree $1+s$ for an operator of order $2s$, making $C^{1+s}$ the natural
+regularity to seek.
+
+For the fractional Laplacian, Caffarelli, De Silva and Savin proved this
+regularity with obstacles in $C^\beta$ for $\beta>1+s$
+\cite[Theorem 6.1]{CDS}. Their argument uses a truncated frequency formula
+for the extension equation. For general stable operators, the local result
+of Ros-Oton, Torres-Latorre and Weidner gives every subcritical estimate
+$C^q$, $q<1+s$, and the endpoint $C^{1+s}$ estimate when
+$\beta>1+2s$ \cite[Corollary 1.3]{RTW}. Their estimates allow arbitrary
+bounded exterior values. The remaining minimally smooth anisotropic question
+is recorded in \cite[Open Question 4.1, Section 4.6.1]{FRRO}.
+
+We prove the same local endpoint estimate for every $\beta>1+s$ under
+angular Lipschitz control. More precisely, let
+\begin{equation}\label{eq:intro-operator}
+ Lu(x)=\PV\int_{\R^n}(u(x)-u(x+y))
+                   \frac{a(y/|y|)}{|y|^{n+2s}}\,dy.
+\end{equation}
+
+\begin{theorem}\label{thm:main}
+Let $n\geq2$, $0<s<1$, and let $\beta>1+s$ be noninteger. Suppose
+$a\in\Lip(S^{n-1})$ is even and $0<\lambda\leq a\leq\Lambda$.
+For every $\phi\in C^\beta(B_1)$ and every bounded continuous viscosity
+solution of
+\[
+                         \min\{Lu,u-\phi\}=0\quad\hbox{in }B_1,
+\]
+one has
+\begin{equation}\label{eq:main-estimate}
+ \|u\|_{C^{1+s}(B_{1/2})}
+       \leq C\left(\|\phi\|_{C^\beta(B_1)}+
+                                  \|u\|_{L^\infty(\R^n)}\right).
+\end{equation}
+Here $C$ depends only on $n,s,\beta,\lambda,\Lambda$ and
+$\|a\|_{\Lip(S^{n-1})}$.
+\end{theorem}
+
+Thus the obstacle, solution concept, operator sign and quantitative norm
+are those of the local question. The estimate includes arbitrary bounded
+exterior values and does not require the coincidence set to stay away from
+$\partial B_1$. Its new range relative to the cited anisotropic endpoint
+statement is $1+s<\beta\leq1+2s$.
+
+The difficulty is visible after subtracting the obstacle. If its usable
+smoothness is $1+s+\alpha$, the new forcing is only
+$C^{1-s+\alpha}$, below Lipschitz regularity when $\alpha<s$.
+The convexity and classification of blow-ups from \cite[Theorem 1.5]{RTW}
+still provide a coarse half-space profile. Turning this coarse information
+into an endpoint bound requires finer control of the contact layer. Merely
+locating the free boundary does not order the values above it.
+
+We obtain that control from a value sandwich between two shifted profiles.
+It supplies a known positive half-ball above the thin uncertain layer. A
+Dirichlet decomposition on this fixed flat geometry separates the layer's
+harmonic influence from a part that vanishes on the flat boundary. Torsion
+at the layer scale bounds the unknown constant forcing defect. The quotient
+of the zero-exterior part by the distance to the flat boundary to the power
+$s$ then has a first-order expansion. We prove the required flat quotient
+estimate using only angular Lipschitz regularity and the one-dimensional
+higher Liouville theorem of \cite[Proposition 3.11]{AR}.
+
+The sign of the expansion is fixed by blowing up at actual free-boundary
+points inside the layer. Matching these inner limits to the outer quotient
+ties its trace to the true contact displacement. This also excludes positive
+pockets below the limiting contact plane. The resulting value comparison and
+tail improvement iterate. A first-failure choice of scale treats the
+nondegenerate branch, while the complementary branch already has stronger
+decay. Finally, derivatives of a localized solution satisfy linear equations
+in the positive phase, which converts the one-point estimate into
+\eqref{eq:main-estimate}.
+
+The strict inequality $\beta>1+s$ supplies a positive H\"older margin in
+this argument. We do not address the equality case or nonhomogeneous kernels.
+Section~\ref{sec:linear} proves the flat boundary estimate;
+Section~\ref{sec:flatness} proves improvement of flatness; and
+Section~\ref{sec:interior} completes the localization, scale selection and
+norm estimate. We use the positive operator convention
+\eqref{eq:intro-operator}; the norms and weighted tails are specified at
+their first use below.
+
+\section{Linear estimates in a flat half-space}\label{sec:linear}
+
+Throughout the paper the operator has the positive sign convention
+\begin{equation}\label{eq:operator}
+ Lu(x)=\PV\int_{\R^n}(u(x)-u(x+y))K(y)\,dy,
+ \qquad K(y)=\frac{a(y/|y|)}{|y|^{n+2s}},
+\end{equation}
+where $a$ is even, $\lambda\leq a\leq\Lambda$, and
+$\|a\|_{\Lip(\Sn)}\leq M$. Constants may depend on $n,s,\lambda,\Lambda,M$
+and on the fixed auxiliary exponents. They do not depend on an individual
+solution's bound at infinity unless that bound is displayed.
+We write $x=(x',t)$ and $\Hh=\{t>0\}$.
+
+For noninteger $\nu=k+\theta$, $k\geq0$ and $0<\theta<1$, $C^\nu$
+has its usual inhomogeneous norm: the supremum norms of derivatives through
+order $k$, together with the $\theta$-H\"older seminorm of the derivatives of
+order $k$. Brackets $[\cdot]_{C^\nu}$ denote the homogeneous seminorm.
+The weighted value norm used below is
+\[
+ \|w\|_{L^\infty_\mu}=\sup_{x\in\R^n}
+                 \frac{|w(x)|}{(1+|x|)^\mu}.
+\]
+All equations in this section can be read distributionally. At the regularity
+greater than $2s$ used in the nonlinear argument, this agrees with the
+classical integral and the corresponding viscosity equation.
+
+\subsection{Growing profiles and local estimates}
+
+The functions $t_+^{1+s}$ and $x_i t_+^s$ are useful comparison functions,
+but their full integrals in \eqref{eq:operator} need not converge at infinity.
+We use their operator only up to an additive constant. More precisely, for a
+smooth radial cutoff $\chi_R$, equal to one on $B_R$ and zero outside $B_{2R}$,
+the assertion $LU=F$ modulo constants means that there are constants $c_R$
+such that
+\[
+ L(\chi_R U)-c_R\longrightarrow F
+\]
+on compact subsets of the domain, in distributions. The estimates below
+also give convergence of the oscillatory far part. This is the $k=1$
+interpretation of \cite[Definition 3.1]{AR}.
+
+Angular Lipschitz continuity gives, for $|y|>2\max\{|x|,|z|\}$,
+\begin{equation}\label{eq:kernel-difference}
+ |K(x-y)-K(z-y)|\leq C|x-z|\,|y|^{-n-2s-1}.
+\end{equation}
+Consequently, if $|U(y)|\leq A(1+|y|)^{1+s+\tau}$ and $\tau<s$, then
+\begin{equation}\label{eq:compensated-tail}
+ \int_{|y|>R}|U(y)|\,|K(x-y)-K(z-y)|\,dy
+       \leq CA|x-z|R^{\tau-s}
+\end{equation}
+for $x,z$ in a fixed ball and $R$ sufficiently large. The radial integral is
+$\int_R^\infty r^{\tau-s-1}\,dr$. In particular, truncations can change
+the operator by a divergent constant, but their spatial oscillations converge.
+
+We use the following local estimates from \cite{FRRO}; theorem numbering in
+that reference refers to its specified author manuscript. A weak solution
+with zero local exterior on a known flat boundary, bounded right-hand side
+and bounded weighted tail is locally $C^s$ up to that boundary
+\cite[Proposition 2.6.4]{FRRO}. For a continuous distributional solution the
+same assertion follows from \cite[Proposition 2.6.13]{FRRO}. In the latter
+statement choose its boundary exponent to be $s/2$; a bounded right-hand side
+controls the required weighted right-hand side. These results are used on
+fixed flat charts, away from any corner of the auxiliary domain.
+
+In the interior, a bounded cutoff solution of $Lw=F$ with $F\in C^\gamma$
+is $C^{2s+\gamma}$, provided $2s+\gamma$ is noninteger and the kernel has
+the integrated $C^\gamma$ regularity in \cite[Definition 2.1.22]{FRRO}
+\cite[Theorem 2.4.1]{FRRO}. Here every $0<\gamma<1$ is allowed by
+\eqref{eq:kernel-difference}. The weighted-tail version will always be
+applied after the compensation just described.
+
+There is one useful way of controlling a missing constant. Suppose $LU=0$
+modulo constants in a fixed half-ball and $U$ has the growth in
+\eqref{eq:compensated-tail}. For a fixed compact cutoff $U_0=\chi U$, write
+\[
+ LU_0=d+G,
+\]
+where $G$ has bounded Lipschitz oscillation, by \eqref{eq:compensated-tail}.
+Normalize $G$ to vanish at one interior point. Testing against a fixed smooth
+function $\zeta$ supported strictly inside the half-ball, with
+$\int\zeta=1$, gives
+\begin{equation}\label{eq:constant-test}
+ d=\int_{\R^n} U_0 L\zeta-\int G\zeta.
+\end{equation}
+Both terms are bounded by $CA$. Indeed $L\zeta\in L^1$, using the
+second difference of $\zeta$ near zero and integrability of $K$ at infinity.
+Thus the flat $C^s$ estimate applies with a controlled full right-hand side.
+This argument also applies to equations whose right-hand-side oscillation
+tends to zero.
+
+These observations justify compactness with varying kernels. Uniformly
+Lipschitz angular densities have a uniformly convergent subsequence on the
+sphere. On finite annuli this convergence passes the operator to the limit;
+\eqref{eq:compensated-tail} controls the remaining tails. No convergence of
+angular derivatives is needed. Equivalently, one may test against compact
+smooth functions of integral zero: their images under $L$ have the extra
+far decay $|y|^{-n-2s-1}$.
+
+\subsection{A higher half-space Liouville theorem}
+
+For one-variable functions, polar coordinates and evenness give
+\begin{equation}\label{eq:one-dimensional}
+ L(F(x\cdot e))=A_e L_sF(x\cdot e),\qquad
+ A_e=\frac12\int_{\Sn}a(\theta)|\theta\cdot e|^{2s}\,d\theta>0,
+\end{equation}
+where
+$L_sF(t)=\PV\int_\R(F(t)-F(t+y))|y|^{-1-2s}\,dy$.
+The same formula holds for compensated operator differences.
+In particular $L(t_+^s)=0$ in $\Hh$
+\cite[Lemma 2.6.2 and Lemma B.1.5]{FRRO}.
+We will also use
+\begin{equation}\label{eq:affine-profile-harmonic}
+ L\bigl((a_0+b\cdot x)t_+^s\bigr)=0
+                 \quad\hbox{modulo constants in }\Hh.
+\end{equation}
+For the normal linear term, differentiate $t_+^{1+s}$ spatially and use
+$L(t_+^s)=0$. For a tangential index $i<n$, vary the unit normal along
+\[
+ e(\varepsilon)=\frac{e_n+\varepsilon e_i}{|e_n+\varepsilon e_i|},
+ \qquad
+ \left.\frac{d}{d\varepsilon}(x\cdot e(\varepsilon))_+^{1+s}
+                                      \right|_{\varepsilon=0}
+                         =(1+s)x_i t_+^s.
+\]
+Use radial cutoffs of radius $R$ first and differentiate their spatial
+operator oscillation with respect to this normal parameter. The derivative tail
+errors on compact sets are $O(R^{-s})$. In the directional calculation the
+factor $|\theta\cdot e|^{s-1}$ is integrable on the sphere. Differentiation
+of the finite integrals, followed by $R\to\infty$, shows that the spatial
+oscillation of the operator vanishes, which is exactly
+\eqref{eq:affine-profile-harmonic}.
+
+\begin{lemma}\label{lem:liouville}
+Let $0<\tau<\min\{s,1-s\}$. Suppose that $U$ is continuous on $\R^n$,
+vanishes in $\{t\leq0\}$, solves $LU=0$ modulo constants in $\Hh$, and
+satisfies $|U(x)|\leq A(1+|x|)^{1+s+\tau}$. Then
+\[
+                  U(x)=(a_0+b\cdot x)t_+^s.
+\]
+\end{lemma}
+
+\begin{proof}
+Apply the cutoff estimate and \eqref{eq:constant-test} to
+$R^{-1-s-\tau}U(R\,\cdot)$, and then the flat boundary estimate. This gives
+\begin{equation}\label{eq:liouville-Cs}
+                 [U]_{C^s(B_R)}\leq CA R^{1+\tau},\qquad R\geq1.
+\end{equation}
+A tangential increment, divided by $|h|^s$, has growth at most
+$1+\tau$, vanishes on the lower half-space, and still solves the zero
+equation modulo constants. The same estimate can be applied repeatedly;
+the compensated-tail calculation remains valid as the growth decreases.
+For a fixed number $j$ with $js>1+\tau$, the $C^s(B_R)$ seminorm of a
+$j$-fold tangential increment is bounded by $CR^{1+\tau-js}$.
+Sending $R$ to infinity shows that this increment is constant, and its
+vanishing on the lower half-space makes it zero.
+
+Thus $U(\cdot,t)$ is a polynomial in $x'$. For completeness, convolve in
+$x'$, divide the vanishing finite differences by their step sizes, and let
+the steps tend to zero. The resulting smooth function has zero derivatives
+of order $j$; passing back through the convolution gives the assertion for
+the continuous function. Since $1+s+\tau<2$, its degree in $x'$ is at most
+one. Write
+\[
+              U(x',t)=A_0(t)+\sum_{i=1}^{n-1}x_i B_i(t).
+\]
+Evaluating this identity at $x'=(1+|t|)e_i$ and at $x'=0$ bounds
+$|B_i(t)|\leq CA(1+|t|)^{s+\tau}$. Tangential differences of the equation
+show that $LB_i=0$ modulo constants. This operator is now an ordinary
+convergent integral, because $s+\tau<2s$, and its value is a constant.
+Scaling by $R$ and testing inside the half-space bounds that constant by
+$CR^{\tau-s}$, so it is zero. The lower-growth half-space Liouville theorem
+\cite[Theorem 2.7.2]{FRRO} gives $B_i(t)=b_i t_+^s$.
+
+Subtract these tangential terms using \eqref{eq:affine-profile-harmonic}.
+The remaining one-dimensional $A_0$ is zero for $t\leq0$, has growth
+$1+s+\tau$, and solves $L_sA_0=0$ modulo constants by
+\eqref{eq:one-dimensional}. The one-dimensional higher Liouville theorem
+\cite[Proposition 3.11, $k=1$]{AR} gives
+$A_0(t)=(a_0+b_n t)t_+^s$.
+\end{proof}
+
+\subsection{The quotient estimate}
+
+\begin{proposition}\label{prop:flat-quotient}
+Fix $0<\alpha<\min\{s,1-s\}$, put $\gamma=1-s+\alpha$, and let
+$0<\tau<\alpha$. If $q$ is bounded on $\R^n$, continuous in $B_1$, and
+\[
+ Lq=F\quad\hbox{in }B_1\cap\Hh,\qquad
+ q=0\quad\hbox{in }B_1\cap\{t\leq0\},
+ \qquad F\in C^\gamma(\overline{B_1\cap\Hh}),
+\]
+then $q/t^s$ extends to $C^{1,\tau}(\overline{B_{1/2}\cap\Hh})$ and
+\begin{equation}\label{eq:flat-quotient}
+ \left\|\frac{q}{t^s}\right\|_{C^{1,\tau}(\overline{B_{1/2}\cap\Hh})}
+     \leq C\bigl(\|q\|_{L^\infty(\R^n)}+\|F\|_{C^\gamma}\bigr).
+\end{equation}
+Only local vanishing on the lower half-space is assumed.
+\end{proposition}
+
+\begin{proof}
+Normalize the right side to one. We first prove, at every flat boundary
+point $z$ in a smaller ball, an affine approximation
+\begin{equation}\label{eq:boundary-affine}
+ \|q-Q_z t_+^s\|_{L^\infty(B_r(z))}\leq Cr^{1+s+\tau},
+             \qquad Q_z(x)=a_z+b_z\cdot(x-z),
+\end{equation}
+with bounded coefficients. Translate $z$ to zero. If the estimate fails,
+take a sequence $q_j,L_j$ with the fixed structural bounds. Let
+$Q_{j,r}(x)=a_{j,r}+b_{j,r}\cdot x$ be the least-squares affine fit to
+$q_j/t^s$ on $B_r\cap\Hh$, that is, the
+minimizer of $\int_{B_r\cap\Hh}|q_j-Q t^s|^2$. The Gram matrix of
+$\{t^s,x_1t^s,\ldots,x_nt^s\}$ on the unit half-ball is positive definite.
+Define
+\[
+ \Theta(r)=\sup_j\sup_{\rho\geq r}
+       \rho^{-1-s-\tau}\|q_j-Q_{j,\rho}t_+^s\|_{L^\infty(B_\rho)}.
+\]
+The failure gives $\Theta(r)\to\infty$ as $r\downarrow0$. Choose scales
+$r_j\downarrow0$ and corresponding solutions for which the normalized
+error is at least $\Theta(r_j)/2$, and set
+\[
+ V_j(x)=\frac{q_j(r_jx)-Q_{j,r_j}(r_jx)r_j^s t_+^s}
+                  {r_j^{1+s+\tau}\Theta(r_j)}.
+\]
+Finite-dimensional norm equivalence at two consecutive scales gives
+\[
+ |a_{j,r}-a_{j,2r}|\leq C\Theta(r)r^{1+\tau},\qquad
+ |b_{j,r}-b_{j,2r}|\leq C\Theta(r)r^\tau.
+\]
+Telescoping from $r_j$ to $Rr_j$ therefore yields
+\begin{equation}\label{eq:Campanato-growth}
+ \|V_j\|_{L^\infty(B_R)}\leq CR^{1+s+\tau}\quad(R\geq1),
+ \qquad \|V_j\|_{L^\infty(B_1)}\geq\tfrac12.
+\end{equation}
+When $Rr_j$ exceeds the original ball, boundedness of $q_j$ and the same
+coefficient estimates give this bound as well.
+
+The subtracted affine multiple of $t_+^s$ has zero operator oscillation in
+$\Hh$ by \eqref{eq:affine-profile-harmonic}. Thus the right-hand-side
+oscillation in the equation for $V_j$, on each fixed half-ball, is bounded by
+\[
+                C_R\frac{r_j^{\alpha-\tau}}{\Theta(r_j)}\longrightarrow0.
+\]
+The cutoff test \eqref{eq:constant-test} and the flat $C^s$ estimate give
+compactness up to the flat boundary. After extracting the angular densities,
+\eqref{eq:compensated-tail} passes the equation to a locally uniform limit
+$V$. It vanishes on the lower half-space and has the growth
+\eqref{eq:Campanato-growth}. Lemma~\ref{lem:liouville} makes it an affine
+polynomial times $t_+^s$. But least-squares orthogonality gives
+\[
+       \int_{B_1\cap\Hh}V_j(x)Q(x)t^s\,dx=0
+                 \quad\hbox{for every affine }Q.
+\]
+Passing to the limit and choosing its coefficient polynomial shows $V=0$,
+contradicting \eqref{eq:Campanato-growth}. This proves
+\eqref{eq:boundary-affine}; dyadic telescoping gives the limiting
+coefficients $a_z,b_z$ and their boundedness.
+
+It remains to recover the quotient's normal derivative. Let $x_0$ have
+height $d>0$, let $z=(x_0',0)$, and put $w=q-Q_z t_+^s$.
+Estimate~\eqref{eq:boundary-affine}, extended away from $z$ by boundedness
+and the coefficient bounds, gives
+$|w(x)|\leq C|x-z|^{1+s+\tau}$.
+Rescale at $d$ and divide by $d^{1+s+\tau}$. On a fixed interior ball
+around $e_n$ the remainder and its compensated tail are bounded, and the
+$C^\gamma$ oscillation of its right-hand side is at most
+$Cd^{\alpha-\tau}$. After a fixed cutoff, \eqref{eq:constant-test} controls
+the remaining scalar. The interior estimate gives a uniform
+$C^{1+s+\alpha}$ norm there. Dividing by the smooth positive function
+$t^s$ and scaling back gives, with $h=q/t^s$,
+\[
+ |h(x_0)-Q_z(x_0)|\leq Cd^{1+\tau},\qquad
+ |\nabla h(x_0)-b_z|\leq Cd^\tau,
+\]
+and the corresponding interior $C^\tau$ bound for $\nabla h$.
+Comparing the affine approximations on overlapping half-balls gives
+$|b_z-b_{\widetilde z}|\leq C|z-\widetilde z|^\tau$ for boundary points
+$z,\widetilde z$, and the compatible first-order estimate for
+$a_z,a_{\widetilde z}$. The interior and boundary cases together prove
+\eqref{eq:flat-quotient}.
+\end{proof}
+
+\section{Improvement of flatness for the actual solution}\label{sec:flatness}
+
+Put $p=1+s$ and $P_{\kappa,e}(x)=\kappa(x\cdot e)_+^p$. For a growing
+difference from such a profile, the tail that controls the oscillation of
+the operator is
+\begin{equation}\label{eq:tail-definition}
+             \T(w)=\int_{|y|>1}|w(y)|\,|y|^{-n-2s-1}\,dy.
+\end{equation}
+The extra power in this weight is dictated by
+\eqref{eq:kernel-difference}. In particular $\T(P_{\kappa,e})<\infty$,
+although its raw operator diverges.
+
+We first recall the precise compactness input. For a bounded nonnegative
+solution of $\min\{Lw-f,w\}=0$ in $B_1$, for an exponent
+$\vartheta\in(\max\{1,2s\},1+s)$ and $\sigma\in(0,s)$,
+\cite[Lemma 6.5]{RTW} gives a local $C^q$ bound for some
+$q>\max\{1,2s\}$ in terms of
+\begin{equation}\label{eq:rough-compactness}
+          [f]_{C^{\vartheta-2s}(B_1)}+
+                           \|w\|_{L^\infty_{1+s+\sigma}}.
+\end{equation}
+The bound uses the forcing seminorm, without its constant value. We apply
+this estimate to finite cutoffs and rescalings of actual solutions. The
+classification \cite[Theorem 1.5]{RTW} says the following: if a globally
+nonnegative, locally Lipschitz and locally $C^{2s+\varepsilon}$ function
+$V$ satisfies, for every $R\geq1$ and $h\in\R^n\setminus\{0\}$,
+\begin{equation}\label{eq:classification-hypotheses}
+ \|\nabla V\|_{L^\infty(B_R)}\leq CR^{s+\sigma},\quad
+ L\left(\frac{V(\cdot+h)-V}{|h|}\right)\geq0\ \hbox{in }\{V>0\},
+ \quad 0<\sigma<\min\{s,1-s\},
+\end{equation}
+then it is convex. For our homogeneous kernels, if
+$z_0\in\partial\{V>0\}$ and $L(\nabla V)=0$ in its positive phase, then
+$V(x)=\kappa((x-z_0)\cdot e)_+^{1+s}$.
+
+\begin{proposition}\label{prop:improvement}
+Fix $0<\tau'<\tau<\alpha<\min\{s,1-s\}$ and
+$0<\kappa_0<\kappa_1<\infty$. There are $\rho\in(0,1/100)$ and
+$\delta_*>0$, depending only on these parameters and the structural bounds,
+with the following property. Suppose $v$ is bounded individually on
+$\R^n$, nonnegative there, locally $C^q$ for some $q>\max\{1,2s\}$, and
+\begin{gather}\label{eq:slab-input}
+ \min\{Lv-f,v\}=0\ \hbox{in }B_4,\qquad 0\in\partial\{v>0\},\qquad
+ [f]_{C^\gamma(B_4)}\leq\eta\leq\delta\leq\delta_*,\quad \delta>0,
+ \\
+ \kappa(t-\delta)_+^p\leq v(x)\leq\kappa(t+\delta)_+^p
+                   \quad(x\in B_2),\qquad
+ \T(v-P_{\kappa,e_n})\leq\delta,\qquad
+ \kappa_0\leq\kappa\leq\kappa_1,\notag
+\end{gather}
+where $\gamma=1-s+\alpha$. Then there are $\kappa',e'$ with
+$|\kappa'-\kappa|+|e'-e_n|\leq C\delta$ such that
+$v_\rho(x)=\rho^{-p}v(\rho x)$ satisfies
+\begin{gather}\label{eq:slab-output}
+ \kappa'(x\cdot e'-\delta')_+^p\leq v_\rho(x)
+                    \leq\kappa'(x\cdot e'+\delta')_+^p
+                         \quad(x\in B_2),\\
+ \T(v_\rho-P_{\kappa',e'})\leq\delta',\qquad
+             \delta'=\delta\rho^{\tau'} .\notag
+\end{gather}
+The rescaled forcing seminorm is at most $\eta\rho^\alpha\leq\delta'$.
+The constants are independent of the individual global bound of $v$.
+\end{proposition}
+
+\subsection{A strip decomposition and the forcing constant}
+
+We prove Proposition~\ref{prop:improvement} by contradiction as
+$\delta\downarrow0$. First we obtain estimates valid for each admissible
+$v$. Choose $\chi$ supported in $B_2$, equal to one on $B_1$, and put
+$P=\kappa t_+^p$ and $W=\chi(v-P)$. In the known positive half-ball
+$D_\delta=B_{1/2}\cap\{t>\delta\}$, direct subtraction of the operator at
+zero gives
+\begin{equation}\label{eq:W-equation}
+ LW=D+g,\qquad
+ g(x)=f(x)-f(0)+\int(1-\chi(y))(v-P)(y)
+                         (K(x-y)-K(-y))\,dy.
+\end{equation}
+Here $D$ is a scalar. At the actual free-boundary point zero, $Lv(0)=f(0)$
+by continuity of the operator from positive points, since $q>2s$.
+The compensated difference $LP(x)-LP(0)$ is zero for $t>0$, by
+\eqref{eq:affine-profile-harmonic} and the derivative of $P$.
+Formula~\eqref{eq:kernel-difference} and the tail assumption imply
+\begin{equation}\label{eq:g-bound}
+                      \|g\|_{C^\gamma(D_\delta)}\leq C\delta.
+\end{equation}
+The value bounds also imply, on the support of $\chi$,
+\begin{equation}\label{eq:W-values}
+ |W|\leq C\delta^p\quad(|t|\leq\delta),\qquad
+ |W|\leq C\delta(t+\delta)^s\quad(t\geq\delta),\qquad
+ W=0\quad(t\leq-\delta).
+\end{equation}
+
+We need a bound for $D$, whose size is not controlled by the forcing
+seminorm alone. The harmonic influence of a thin exterior strip provides
+it. Exterior data bounded by $M_0\delta^s$ on
+$-\delta<t<\delta$ have harmonic extension to $D_\delta$ bounded by
+\begin{equation}\label{eq:strip-barrier}
+ E_\delta(t)=\frac{\sin(\pi s)}{\pi}M_0\delta^s(t-\delta)^s
+       \int_{-\delta}^{\delta}\frac{(\delta-y)^{-s}}{t-y}\,dy,
+                         \qquad t>\delta.
+\end{equation}
+On $t\leq\delta$ this function is the strip datum
+$M_0\delta^s\mathbf1_{(-\delta,\delta)}$. The formula is the half-line
+Poisson formula. It follows from the one-dimensional interval formula
+\cite[Proposition 1.10.10]{FRRO} by sending the right endpoint to infinity:
+the ratio
+\[
+ \frac{(t-\delta)(2R-t+\delta)}{(\delta-y)(2R+\delta-y)}
+                       \longrightarrow\frac{t-\delta}{\delta-y}
+\]
+has an integrable majorant on the strip. The limit equation follows by
+bounded stability or direct verification. Formula~\eqref{eq:one-dimensional}
+makes this a barrier for the same anisotropic operator. It satisfies
+\begin{equation}\label{eq:strip-decay}
+ E_\delta\leq M_0\delta^s,
+ \qquad E_\delta(t)\leq CM_0\delta\,t^{s-1}\quad(t\geq2\delta).
+\end{equation}
+
+Let $\tau_\delta$ be the torsion function of $D_\delta$, with zero exterior
+datum and $L\tau_\delta=1$. At $x_\delta=2\delta e_n$,
+\begin{equation}\label{eq:torsion}
+                  c\delta^s\leq\tau_\delta(x_\delta)\leq C\delta^s.
+\end{equation}
+For the lower bound compare with the unit-forcing torsion function of a
+fixed-radius ball inside $D_\delta$ and tangent to its flat boundary. A fixed
+smooth interior bump gives a uniform positive interior lower bound. The
+Hopf estimate and its proof in \cite[Proposition 2.6.6]{FRRO} then give the
+lower bound in \eqref{eq:torsion}. For the upper bound, a nonnegative smooth
+cutoff equal to one on $B_1$ is a supersolution after multiplication by a
+structural constant, so $\tau_\delta$ is uniformly bounded. The flat
+boundary $C^s$ estimate gives the desired upper bound.
+
+All the auxiliary Dirichlet problems here exist in the weak energy class
+by \cite[Theorem 2.2.24]{FRRO}; $n\geq2$ and $s<1$ imply $n>2s$.
+The datum $W$ is compactly supported and $C^1$ for each solution. Split its
+exterior values by smooth cutoffs into a strip part near zero and a part
+separated from the local flat boundary. The partitions have finite-energy
+extensions; in particular no artificial jump is made at the curved boundary.
+Weak comparison follows by testing the negative part in the symmetric energy
+form. The weak boundary estimate \cite[Proposition 2.6.4]{FRRO} gives the
+continuous representatives before the continuous-solution boundary theorem
+or Proposition~\ref{prop:flat-quotient} is applied.
+
+At $x_\delta$, the harmonic extension of the strip part of $W$ is
+$O(\delta^p)$, by \eqref{eq:strip-decay} with $M_0=C\delta$.
+The separated harmonic part has norm $O(\delta)$, vanishes on the local flat
+exterior, and is therefore also $O(\delta^p)$ there. The zero-exterior
+solution of $Lb=g$ is bounded in absolute value by
+$\|g\|_\infty\tau_\delta$. Representing $W$ as these three terms plus
+$D\tau_\delta$, and using \eqref{eq:W-values}, gives
+\[
+ |D|\tau_\delta(x_\delta)
+      \leq C\delta^p+C\delta\tau_\delta(x_\delta).
+\]
+It follows that
+\begin{equation}\label{eq:D-bound}
+                              |D|\leq C\delta.
+\end{equation}
+
+\subsection{Outer quotient and inner profile}
+
+Write $z=W/\delta$. Let $e$ be the harmonic extension carrying its strip
+datum, with a smooth horizontal cutoff equal to one near zero and supported
+away from the curved boundary, and set $q_0=z-e$. It is uniformly bounded,
+has zero local exterior on $t\leq\delta$, and satisfies
+$Lq_0=D/\delta+g/\delta$. Proposition~\ref{prop:flat-quotient}, after
+translation and a fixed rescaling, gives
+\[
+ q_0(x',t)=(t-\delta)^s H_\delta(x',t-\delta),\qquad
+                    \|H_\delta\|_{C^{1,\tau}}\leq C
+\]
+on a fixed smaller half-ball. The strip bound gives
+$|e(x)|\leq C\delta t^{s-1}$ for $t\geq2\delta$. Hence
+\begin{equation}\label{eq:outer-expansion}
+ v(x)=\kappa t^p+\delta(t-\delta)^sH_\delta(x',t-\delta)
+                           +O(\delta^2t^{s-1}),\qquad t\geq2\delta.
+\end{equation}
+
+Now let $\delta_j\downarrow0$ and choose arbitrary actual free-boundary
+points $x_j=(x_j',\delta_j h_j)$ in a fixed small ball, so $|h_j|\leq1$.
+Pass to a subsequence with $x_j'\to x_*'$, $h_j\to h$ and
+$\kappa_j\to\kappa$. Center at $x_j$, rescale by $\delta_j$, and divide
+values by $\delta_j^p$. For applying \eqref{eq:rough-compactness}, first
+multiply the actual $v_j$ by a nonnegative fixed cutoff supported in $B_2$
+and equal to one near all these points. Its rescaling agrees with the actual
+solution on every fixed ball eventually. The sandwich on the cutoff support
+gives a uniform global value bound
+\begin{equation}\label{eq:inner-value-growth}
+                    |V_j(y)|\leq C(1+|y|)^p.
+\end{equation}
+The separated-tail forcing has Lipschitz oscillation bounded on a fixed
+rescaled ball by $C\delta_j^s$. This uses
+$\T(v_j-P_j)\leq\delta_j$ and the finite first-order tail of $P_j$.
+The original forcing contributes at most $\eta_j\delta_j^\alpha$ to its
+$C^\gamma$ seminorm. Thus \eqref{eq:rough-compactness} gives compactness
+in $C^1_{\rm loc}$ and in a lower $C^q_{\rm loc}$ with $q>2s$.
+Let $V$ be the nonnegative limit.
+
+For every fixed $R$, dilate the finite $V_j$ by $R$, divide by $R^p$, and
+apply \eqref{eq:rough-compactness} before letting $j$ tend to infinity.
+The weighted value norm is bounded by \eqref{eq:inner-value-growth}, and
+the forcing oscillation tends to zero for that fixed $R$. This gives
+\begin{equation}\label{eq:inner-gradient-growth}
+                       \|\nabla V\|_{L^\infty(B_R)}\leq CR^s.
+\end{equation}
+It does not require an ordinary operator on the unbounded profile $V$.
+To pass complementarity to increments, let $f_j$ be the forcing of the
+uncutoff $v_j$. Whenever $v_j(x)>0$ and both $x,x+\delta_jh$ lie in $B_4$,
+the finite equation gives
+\[
+ L_j\bigl(v_j(\cdot+\delta_jh)-v_j\bigr)(x)
+                         \geq f_j(x+\delta_jh)-f_j(x).
+\]
+There is equality if $v_j(x+\delta_jh)>0$ as well. On each fixed inner
+ball the cutoff agrees with the actual rescaling. Its additional forcing
+has the vanishing separated-tail oscillation estimated above. After
+rescaling and division by $|h|$, the right-hand-side differences tend to
+zero for fixed $h\ne0$. For the far part, transfer a signed
+increment to a difference of kernels with a smooth cutoff; its error is
+$O(|h|R^{-s})$ by the value growth. Passing first to the local limit and
+then sending the tail radius $R$ to infinity gives the increment inequality
+in \eqref{eq:classification-hypotheses}. On a compact set where both shifted
+points are positive, the limiting inequality is an equality. Sending the
+shift to zero gives $L(\nabla V)=0$ in the positive phase, with the
+viscosity interpretation supplied by local interior regularity.
+The classification following \eqref{eq:classification-hypotheses} applies.
+The inherited slab bounds at every fixed radius force the resulting profile
+to have direction $e_n$ and amplitude $\kappa$.
+
+We must still retain the actual free-boundary point at the origin. A direct
+compensated calculation supplies this. For $t<0$,
+\[
+ L_s(t_+^s)=-\Bfun(s+1,s)(-t)^{-s},\qquad
+ \Bfun(s+1,s)=\int_0^\infty z^s(1+z)^{-1-2s}\,dz>0.
+\]
+Differentiate large cutoffs of $t_+^p$, use their $O(R^{-s})$ derivative
+tail error, and integrate from zero to a fixed negative point. Since
+$p>2s$, the resulting difference is continuous at zero. The compensated
+operator of $P_{\kappa,e}$ at signed distance $-d<0$, relative to its
+positive-side value, is
+\begin{equation}\label{eq:negative-cusp}
+                 A_e\kappa\frac{p\Bfun(s+1,s)}{1-s}d^{1-s}>0.
+\end{equation}
+Here $A_e>0$ is the one-dimensional factor defined in
+\eqref{eq:one-dimensional}.
+If the origin were strictly inside the contact region of the limiting
+profile, choose positive points $y_j\to0$ of $V_j$ and a fixed positive
+point $z$ of $V$. Local $C^q$ convergence with $q>2s$ and compensated tail
+convergence give
+\[
+ L_jV_j(y_j)-L_jV_j(z)
+             \longrightarrow (LV)(0)-(LV)(z)
+                         \quad\hbox{in the compensated sense}.
+\]
+The left side is a forcing difference and tends to zero. The right side is
+strictly positive by \eqref{eq:negative-cusp}, a contradiction. Thus
+\begin{equation}\label{eq:centered-inner-limit}
+                              V(y)=\kappa(y_n)_+^p.
+\end{equation}
+The same calculation excludes actual positive pockets on any fixed compact
+set strictly below the limiting plane: a sequence of positive points in
+such a set would give the identical contradiction.
+
+\subsection{Signed matching and the improved value bounds}
+
+Extract a locally $C^1$ convergent subsequence of the uniformly
+$C^{1,\tau}$ functions $H_{\delta_j}$ in \eqref{eq:outer-expansion}, with
+limit $H_\infty$. Return to the arbitrary actual centers
+$x_j=(x_j',\delta_jh_j)$, with $x_j'\to x_*'$ and
+$h_j=x_{j,n}/\delta_j\to h$. Fix $T>3$ and evaluate at the original point
+\[
+             x=x_j+\delta_jTe_n,\qquad t=\delta_j(T+h_j).
+\]
+Divide the outer expansion \eqref{eq:outer-expansion} by the value scale
+$\delta_j^p$. Its left side is
+$v_j(x_j+\delta_jTe_n)/\delta_j^p\to\kappa T^p$ by
+\eqref{eq:centered-inner-limit}. Letting $j\to\infty$ at this fixed $T$ gives
+\begin{equation}\label{eq:matching-finite-T}
+ \kappa T^p=\kappa(T+h)^p+(T+h-1)^sH_\infty(x_*',0)
+                                        +O(T^{s-1}).
+\end{equation}
+The error constant is uniform in $T>3$. Only after taking $j\to\infty$
+with $T$ fixed do we subtract $\kappa T^p$, divide by $T^s$, and send
+$T$ to infinity. We obtain
+\begin{equation}\label{eq:signed-matching}
+                         H_\infty(x_*',0)=-p\kappa h.
+\end{equation}
+Because the free-boundary sequence was arbitrary, this matching is uniform
+on compact horizontal sets. At the original free-boundary point zero it
+gives $H_\infty(0,0)=0$. Multiple components are included in this assertion.
+
+Write $H_\infty(x)=b\cdot x+O(|x|^{1+\tau})$. Choose
+\begin{equation}\label{eq:new-profile}
+ \kappa_j'=\kappa_j+\delta_j b_n,\qquad
+ e_j'=\frac{e_n+\delta_j b'/(p\kappa_j)}
+                         {|e_n+\delta_j b'/(p\kappa_j)|}.
+\end{equation}
+The first variation of $P_{\kappa_j',e_j'}$ is
+$P_{\kappa_j,e_n}+\delta_j t^s(b\cdot x)$. The quotient Taylor remainder
+on $B_{2\rho}$ is bounded by $C\rho^{1+\tau}$. By
+\eqref{eq:signed-matching}, every actual free-boundary point lies within
+this normalized height error, plus $o(1)$, of the new plane. Choose $\rho$
+small enough that $C\rho^{\tau-\tau'}$ is small.
+
+We verify value ordering in two regions. If
+$t\geq M_1\delta_j/\rho^{1+\tau'}$, the strip error in
+\eqref{eq:outer-expansion}, divided by $\delta_jt^s$, is at most
+$C\delta_j/t\leq(C/M_1)\rho^{1+\tau'}$. With $M_1$ fixed sufficiently
+large, the quotient remainder and profile Taylor error are absorbed by
+the shifts $\delta_j\rho^{1+\tau'}$ in the original variables.
+The mean-value formula gives both value inequalities there.
+
+In the remaining strip, choose actual free-boundary points on the vertical
+fibers. A top such point exists between heights $-\delta_j$ and
+$\delta_j$. More explicitly, for a fixed small $r_0$ within the quotient
+chart, set $\Gamma_j=\partial\{v_j>0\}\cap B_{r_0}$. For every fixed
+$R<\infty$, the unique centered limit \eqref{eq:centered-inner-limit} gives
+\[
+ \sup_{z\in\Gamma_j}\ \sup_{y\in B_R}
+ \left|\frac{v_j(z+\delta_j y)}{\delta_j^p}
+                         -\kappa_j(y_n)_+^p\right|\longrightarrow0.
+\]
+A violating sequence of centers would have a subsequence with that same
+unique limit. Choose $\rho$ first and then the finite inner radius
+$R=M_1/\rho^{1+\tau'}$, before sending $j$ to infinity. The resulting
+value error is $o(\delta_j^p)$,
+smaller than the gap between the two positively shifted profiles, whose
+required nonzero gap is at least
+$c(\delta_j\rho^{1+\tau'})^p$.
+
+For the zero region in the upper comparison one also needs actual contact,
+rather than small values. A positive pocket below the improved matching
+band would have a boundary point there: on its vertical fiber the solution
+is zero at height $-\delta_j$. This contradicts the arbitrary-point
+matching \eqref{eq:signed-matching}. The lower comparison is automatic
+where its model vanishes. These facts prove the genuine sandwich on
+$B_{2\rho}$ for large $j$, without an assumption of vertical monotonicity.
+
+\subsection{Tail improvement and iteration}
+
+Under the scaling in the proposition,
+\begin{equation}\label{eq:tail-scaling}
+ \T(v_\rho-P_{\kappa',e'})=
+       \rho^s\int_{|y|>\rho}|v(y)-P_{\kappa',e'}(y)|
+                                      |y|^{-n-2s-1}\,dy.
+\end{equation}
+On each fixed annulus $\rho<|y|<r_0$, division by $\delta_j$ and passage
+to the limit gives
+$t_+^s(H_\infty(y)-b\cdot y)$. The original sandwich bounds the quotient
+through the vanishing strip, so dominated convergence applies. Its
+contribution to \eqref{eq:tail-scaling} is at most
+$C\delta_j\rho^\tau$, since $\tau<s$. Outside a fixed small $r_0$, the
+original sandwich, the tail assumption and the $O(\delta_j)$ profile change
+give at most $C\delta_j\rho^s$. Further decreasing $\rho$ ensures
+\[
+                       C(\rho^\tau+\rho^s)<\tfrac12\rho^{\tau'}.
+\]
+Thus the tail in \eqref{eq:slab-output} is at most
+$\delta_j\rho^{\tau'}$ for large $j$. Together with the value bounds this
+contradicts a sequence violating Proposition~\ref{prop:improvement} and
+proves the existence of $\delta_*$.
+
+For iteration, fix $0<\varepsilon<(\kappa_1-\kappa_0)/2$ and start in
+the nonempty interval $[\kappa_0+\varepsilon,\kappa_1-\varepsilon]$,
+allowing the larger interval $[\kappa_0,\kappa_1]$. Decrease $\delta_*$
+so that $C\delta_* /(1-\rho^{\tau'})<\varepsilon$. Then
+$\delta_j=\delta_0\rho^{j\tau'}$, and the changes of amplitude and direction
+are summable. The value sandwiches imply
+\begin{equation}\label{eq:endpoint-value}
+                           \|v\|_{L^\infty(B_r)}\leq Cr^p,
+                                  \qquad 0<r<1.
+\end{equation}
+To obtain the gradient, cut off the actual $v$ in $B_2$. Its separated-tail
+forcing has uniformly Lipschitz oscillation by the original sandwich and
+$\T$, although its constant value need not be small. At scale $r$ divide
+values by $r^p$. Estimate~\eqref{eq:endpoint-value} bounds the global
+weighted value norm of this cutoff. Its forcing seminorm is bounded by
+$C(\eta r^\alpha+r^s)$. Applying \eqref{eq:rough-compactness} to each finite
+rescaling gives
+\begin{equation}\label{eq:endpoint-gradient}
+                           \|\nabla v\|_{L^\infty(B_r)}\leq Cr^s,
+                                  \qquad 0<r<1.
+\end{equation}
+
+\section{The interior estimate}\label{sec:interior}
+
+We now return to the original obstacle problem and prove
+Theorem~\ref{thm:main}. Normalize
+\begin{equation}\label{eq:normalization}
+             \|\phi\|_{C^\beta(B_1)}+\|u\|_{L^\infty(\R^n)}=1.
+\end{equation}
+If the left side is zero, the result is immediate. Choose, once and for all,
+\begin{equation}\label{eq:exponents}
+ \begin{gathered}
+ 0<\alpha<\min\{\beta-1-s,s,1-s\},\qquad
+ b=1+s+\alpha<\min\{\beta,1+2s,2\},\\
+ \gamma=1-s+\alpha,\qquad 0<\sigma<\alpha,\qquad
+ 0<\tau'<\tau<\alpha.
+ \end{gathered}
+\end{equation}
+All these choices depend only on $s,\beta$.
+
+\subsection{Localization of the rough obstacle}
+
+The subcritical part of \cite[Corollary 1.3]{RTW} gives a uniform
+$C^q$ bound in $B_{15/16}$ for a fixed
+$\max\{1,2s\}<q<1+s$. Only that subcritical statement is used here.
+Take $\xi\in C_c^\infty(B_1)$ equal to one on $B_{15/16}$ and set
+$\widetilde\phi=\xi\phi$, extended by zero. Its global $C^b$ norm is
+uniformly bounded. With $0\leq\chi\leq1$ supported in $B_{7/8}$ and equal
+to one on $B_{3/4}$, put
+\begin{equation}\label{eq:localized-v}
+                         v=\chi(u-\widetilde\phi).
+\end{equation}
+It is globally nonnegative, bounded and Lipschitz, with uniform bounds.
+In $B_{2/3}$ it agrees with $u-\phi$ and solves
+\begin{equation}\label{eq:localized-equation}
+ \min\{Lv-f,v\}=0,\qquad
+ f=-L\widetilde\phi-L((1-\chi)(u-\widetilde\phi)),\qquad
+                            \|f\|_{C^\gamma(B_{2/3})}\leq C.
+\end{equation}
+The mapping estimate \cite[Lemma 2.2.6]{FRRO} gives the first term's
+$C^\gamma$ bound, since $b=2s+\gamma$. The second term is a separated tail;
+differentiate its kernel once to obtain a Lipschitz bound, with no
+derivative of the exterior data. The local exponent $q>2s$ makes the
+equation hold both classically and distributionally. At every zero of $v$,
+$\nabla v=0$.
+
+\subsection{Coarse entry at a nondegenerate scale}
+
+We record the compactness consequence needed for the scale selection.
+Given $c_0>0$ and $\delta_0>0$, there is $\eta_0>0$ such that a bounded,
+globally nonnegative solution with
+\begin{gather}\label{eq:coarse-hypotheses}
+ \min\{Lv-f,v\}=0\ \hbox{in }B_{1/\eta},\quad
+ 0\in\partial\{v>0\},\quad [f]_{C^\gamma}\leq\eta\leq\eta_0,\\
+ \|\nabla v\|_{L^\infty(B_R)}\leq R^{s+\sigma}\quad(R\geq1),\qquad
+                  \|\nabla v\|_{L^\infty(B_1)}\geq c_0\notag
+\end{gather}
+has a profile $P_{\kappa,e}$ with amplitude bounded above and bounded away
+from zero, and satisfies
+\begin{equation}\label{eq:coarse-sandwich}
+ \kappa(x\cdot e-\delta_0)_+^p\leq v(x)
+                    \leq\kappa(x\cdot e+\delta_0)_+^p\quad(x\in B_2),
+ \qquad \T(v-P_{\kappa,e})\leq\delta_0.
+\end{equation}
+The amplitude bounds depend only on $c_0$ and the structural parameters.
+
+Indeed, otherwise let $\eta_j\downarrow0$. The gradient growth in
+\eqref{eq:coarse-hypotheses} gives weighted value growth of degree
+$p+\sigma$. The compactness estimate \eqref{eq:rough-compactness} gives a
+locally $C^1$ limit with a local exponent greater than $2s$.
+Complementarity passes to the signed increment inequalities as in the
+inner argument above. The classification
+\eqref{eq:classification-hypotheses} makes the limit a nonzero half-space
+profile. The compensated cusp argument \eqref{eq:negative-cusp} retains
+the origin as its actual free-boundary point and excludes positive points
+in negative compact sets. Thus it is $\kappa(x\cdot e)_+^p$, with a fixed
+positive lower amplitude from $c_0$.
+
+In particular $v_j=0$ on $B_2\cap\{x\cdot e\leq-\delta_0/4\}$ for
+large $j$. Uniform value convergence, with error $o(\delta_0^p)$, and
+the positive lower amplitude give the shifted comparisons
+\eqref{eq:coarse-sandwich}. Where the lower profile vanishes its inequality
+is automatic. In the remaining region its positive shift gap, and likewise
+the upper shift gap above the actual zero region, dominate that error.
+For the tail, convergence on fixed annuli is local convergence, while the
+part beyond $R$ is bounded by $CR^{\sigma-s}$. Since $\sigma<s$, first
+choose $R$ large, then $j$ large. This proves the coarse assertion.
+
+Choose $\delta_0$ below the threshold of Proposition~\ref{prop:improvement}
+for comfortable nested amplitude intervals, and then $\eta_0\leq\delta_0$
+accordingly. Rotating $e$ to $e_n$ preserves all structural bounds.
+The iteration leading to \eqref{eq:endpoint-gradient} gives
+\begin{equation}\label{eq:coarse-to-endpoint}
+       \|\nabla v\|_{L^\infty(B_r)}\leq Cr^s\qquad(0<r<1)
+\end{equation}
+whenever \eqref{eq:coarse-hypotheses} holds.
+
+\subsection{First failure of subcritical decay}
+
+Fix an arbitrary actual free-boundary point $z\in B_{5/8}$ and translate
+it to zero. There is a fixed $R_{\rm loc}>0$ on which
+\eqref{eq:localized-equation} holds, uniformly in $z$. Let $C_1$ bound
+the global Lipschitz norm of $v$ and $C_f$ its local forcing seminorm.
+Choose $r_*\leq R_{\rm loc}\eta_0/2$ and then $A$ sufficiently large that
+\begin{equation}\label{eq:first-scale-choice}
+ \frac{C_1}{Ar_*^{s+\sigma}}\leq1,\qquad
+                     \frac{C_f r_*^{\alpha-\sigma}}A\leq\eta_0.
+\end{equation}
+For $r_k=r_*2^{-k}$ define
+\begin{equation}\label{eq:dyadic-normalization}
+ w_k(x)=\frac{v(r_kx)}{Ar_k^{1+s+\sigma}},\qquad
+ f_k(x)=\frac{r_k^{s-1-\sigma}}A f(r_kx).
+\end{equation}
+Their equations hold in $B_{1/\eta_0}$ and
+\[
+                 [f_k]_{C^\gamma}\leq C_f r_k^{\alpha-\sigma}/A
+                                             \leq\eta_0.
+\]
+The strict inequality $\alpha>\sigma$ is used here. Let $G_k$ denote
+\begin{equation}\label{eq:Gk}
+          \|\nabla w_k\|_{L^\infty(B_R)}\leq R^{s+\sigma}
+                                      \quad\hbox{for every }R\geq1.
+\end{equation}
+By \eqref{eq:first-scale-choice}, $G_0$ holds. If every $G_k$ holds, scaling
+back gives $\|\nabla v\|_{L^\infty(B_r)}\leq Cr^{s+\sigma}$ and hence
+the endpoint estimate.
+
+Otherwise let $K+1$ be the first failing index. The identity
+\[
+             \nabla w_{K+1}(x)=2^{s+\sigma}\nabla w_K(x/2)
+\]
+and $G_K$ already give $G_{K+1}$ for $R\geq2$. If
+$\|\nabla w_K\|_{L^\infty(B_1)}\leq2^{-s-\sigma}$, they give it also
+for $1\leq R\leq2$. Thus
+\[
+              \|\nabla w_K\|_{L^\infty(B_1)}>c_0=2^{-s-\sigma}.
+\]
+Apply the coarse assertion with this fixed $c_0$, followed by
+\eqref{eq:coarse-to-endpoint}. For $r<r_K$ it yields
+\[
+ \|\nabla v\|_{L^\infty(B_r)}\leq AC r_K^\sigma r^s
+                                           \leq AC r_*^\sigma r^s.
+\]
+For $r_K\leq r\leq r_*$, $G_K$ gives
+$\|\nabla v\|_{L^\infty(B_r)}\leq Ar^{s+\sigma}
+\leq Ar_*^\sigma r^s$. Larger fixed radii are controlled by the original
+Lipschitz bound. We have therefore proved, uniformly at every actual
+free-boundary point $z\in B_{5/8}$,
+\begin{equation}\label{eq:one-point-original}
+       \|\nabla(u-\phi)\|_{L^\infty(B_r(z))}\leq Cr^s
+\end{equation}
+for all sufficiently small fixed radii. No nondegeneracy hypothesis remains.
+
+\subsection{From the one-point estimate to the full norm}
+
+Set $E=\{u=\phi\}\cap B_{2/3}$. Take a smooth cutoff $\theta$ supported
+in $B_{3/4}$ and equal to one on $B_{2/3}$, and let $U=\theta u$.
+The subcritical estimate bounds $W_i=\partial_iU$ globally. On the actual
+positive phase inside $B_{2/3}$,
+\begin{equation}\label{eq:derivative-equation}
+ LU=F_{\rm tail}=-L((1-\theta)u),\qquad
+                         LW_i=\partial_iF_{\rm tail}
+\end{equation}
+in distributions. The separated tail is uniformly Lipschitz by one kernel
+derivative, so the last right-hand side is bounded. We have differentiated
+neither $L\phi$ nor the exterior data.
+
+At a contact point $z$, $W_i(z)=\partial_i\phi(z)$. At a free-boundary
+point, \eqref{eq:one-point-original} and
+$\nabla\phi\in C^{s+\alpha}$ give
+\begin{equation}\label{eq:derivative-at-contact}
+          |W_i(y)-\partial_i\phi(z)|\leq C|y-z|^s
+\end{equation}
+near $z$. For $x,y\in B_{1/2}$ put $h=|x-y|$. If $x$ is in the positive
+phase and $h$ is comparable to or greater than $d=\dist(x,E)$, a closest
+contact point and \eqref{eq:derivative-at-contact} give the $Ch^s$ bound
+for small $d,h$. For distances bounded below the global derivative bound
+suffices.
+
+Suppose next $h$ is much smaller than $d$ and $d$ is small. Choose a
+closest contact point $z$, which is an actual interior free-boundary point,
+and put
+\[
+                  Z_i(X)=\frac{W_i(z+dX)-\partial_i\phi(z)}{d^s}.
+\]
+Estimate~\eqref{eq:derivative-at-contact} near $z$ and boundedness away
+from $z$ imply the uniform weighted value growth
+$|Z_i(X)|\leq C(1+|X|)^s$. On a fixed interior ball around $(x-z)/d$,
+its equation has bounded right-hand side $d^s\partial_iF_{\rm tail}$.
+Choose a finite integrability exponent $p_0$ so that
+\[
+                   s<\mu=2s-n/p_0<\min\{2s,1\}.
+\]
+The interior estimate \cite[Theorem 2.4.3]{FRRO} gives a uniform $C^\mu$
+bound there; the tail growth $s<2s$ is admissible. Consequently
+\[
+       |W_i(x)-W_i(y)|\leq Cd^s(h/d)^\mu\leq Ch^s.
+\]
+If $d$ is bounded below, $u$ is harmonic on a fixed ball and the interior
+estimate \cite[Theorem 2.4.1]{FRRO}, with the regular kernel tail, gives
+the same conclusion. If both points lie in $E$, use
+$\nabla u=\nabla\phi$. For a mixed pair with a point in the interior of
+$E$, the segment to the positive point meets an actual free-boundary point
+within distance $h$ of both. Apply \eqref{eq:one-point-original} there
+and then the obstacle-gradient modulus. If the coincidence set is locally
+empty, the harmonic case applies.
+
+These cases cover $B_{1/2}$ and show $[\nabla u]_{C^s(B_{1/2})}\leq C$.
+The supremum norms of $u$ and $\nabla u$ were already bounded by the
+normalization and the subcritical estimate. Restoring
+\eqref{eq:normalization} proves
+\[
+ \|u\|_{C^{1+s}(B_{1/2})}
+       \leq C\bigl(\|\phi\|_{C^\beta(B_1)}+\|u\|_{L^\infty(\R^n)}\bigr),
+\]
+where $C$ depends only on $n,s,\beta,\lambda,\Lambda$ and
+$\|a\|_{\Lip(\Sn)}$, as asserted.\hfill$\square$
+
+\section*{AI assistance}
+An AI assistant was used to develop the argument, check sources, and draft
+this manuscript. AI feedback was also used during revision.
+The paper is submitted as a proposed solution for independent
+mathematical review.
+
+\begin{thebibliography}{9}
+\bibitem{AR}
+N. Abatangelo and X. Ros-Oton,
+\emph{Obstacle problems for integro-differential operators: higher regularity
+of free boundaries}, author manuscript,
+\href{https://arxiv.org/abs/1909.10339v2}{arXiv:1909.10339v2} (2019).
+
+\bibitem{CDS}
+L. A. Caffarelli, D. De Silva and O. Savin,
+\emph{The two membranes problem for different operators},
+Ann. Inst. H. Poincar\'e C Anal. Non Lin\'eaire \textbf{34} (2017), 899--932.
+\href{https://doi.org/10.1016/j.anihpc.2016.05.006}{doi:10.1016/j.anihpc.2016.05.006}.
+
+\bibitem{FRRO}
+X. Fern\'andez-Real and X. Ros-Oton,
+\emph{Integro-Differential Elliptic Equations}, Progress in Mathematics 350,
+Birkh\"auser, 2024.
+The numbered statements cited here are in the author manuscript
+\href{https://arxiv.org/abs/2411.12455v1}{arXiv:2411.12455v1}.
+
+\bibitem{RTW}
+X. Ros-Oton, C. Torres-Latorre and M. Weidner,
+\emph{Semiconvexity estimates for nonlinear integro-differential equations},
+Comm. Pure Appl. Math. \textbf{78} (2025),
+\href{https://doi.org/10.1002/cpa.22237}{doi:10.1002/cpa.22237}.
+The numbered statements cited here refer to
+\href{https://arxiv.org/abs/2306.16751v2}{arXiv:2306.16751v2}.
+\end{thebibliography}
+\end{document}
