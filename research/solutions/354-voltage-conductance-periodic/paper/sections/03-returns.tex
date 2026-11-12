@@ -1,0 +1,366 @@
+\section{The reset process and one firing cycle}\label{sec:returns}
+
+The first-return description will be used to locate a characteristic
+root. We therefore identify both the state law and the firing-count
+measure, rather than using a formal stochastic representation.
+
+\subsection{The process, the first hit, and the outgoing law}
+
+Let $Z_t=(V_t,Y_t)$, where
+\begin{equation}\label{eq:reset-process}
+ \dd Y_t=(m-Y_t)\dd t+\sqrt{2a}\dd W_t+\dd K_t,\qquad Y_t\ge0,
+ \qquad \dot V_t=J(V_t,Y_t).
+\end{equation}
+Here $K$ is the minimal continuous regulator at zero. Whenever $V$ reaches
+$1$ with $Y>1$, it is reset to zero without changing $Y$. Write $t_j$ for
+these successive hits and $\tf$ for the next hit, including when the
+initial voltage is not zero. The half-line Skorokhod map constructs $Y$
+pathwise; the voltage equation then constructs the path between hits.
+The absence of grazing and accumulation of hits is included in the next
+proposition.
+
+\begin{proposition}[Law and firing counts]\label{prop:process}
+For a nonnegative $h\in\HH_\sigma$ of mass one, the process
+\eqref{eq:reset-process} has density $S(t)h$ at every deterministic time.
+Almost surely every threshold hit is outgoing and has $Y_{t_j}>1$.
+There are finitely many hits on each bounded time interval, with finite
+expected count. For every bounded Borel function $q$,
+\begin{equation}\label{eq:count-measure}
+ \E_h\sum_{t_j\le t}q(t_j,Y_{t_j})
+ =\int_0^t\int_1^\infty q(s,y)J_F(y)(S(s)h)_F(y)\dd y\dd s.
+\end{equation}
+The same identity applies to integrable unbounded functions by
+exhaustion.
+\end{proposition}
+
+The proof in Appendix~\ref{app:boundary} lifts the forward density to a
+circle times a signed conductance line, applies Euclidean superposition,
+and folds the conductance. A conditional-density argument excludes
+grazing before identifying the circle path with the reset path.
+Finally the voltage test $vq(t,y)$ identifies the entire count measure.
+This proves the statement for the prescribed semigroup class in
+Proposition~\ref{prop:frozen}; no converse for arbitrary weak solutions is
+needed.
+
+We now restrict $m$ to $I=[2,3]$ and decrease $a_0>0$ as necessary.
+Set
+\[
+ \varepsilon=\sqrt a,\qquad \eta=\frac{y-m}{\varepsilon},\qquad
+ \mathcal A=\partial_{\eta\eta}-\eta\partial_\eta,\qquad
+ w_\beta(\eta)=e^{\beta\eta^2}.
+\]
+The reflecting floor is $\eta=-m/\varepsilon$.
+
+\begin{lemma}[Uniform first-hit estimates]\label{lem:hitting}
+There is $r_*>0$ such that
+\begin{equation}\label{eq:hitting-time}
+ \sup_{\substack{m\in I,\,0<a\le a_0\\z\in[0,1)\times[0,\infty)}}
+                         \E_z e^{r_*\tf}<\infty.
+\end{equation}
+For $0<\beta<1/2$, after reducing $r_*$ if needed, every stopping time
+$S\le\tf$ satisfies
+\begin{align}
+ \E_z e^{r_*S}w_\beta(\eta_S)&\le C_\beta w_\beta(\eta_0),
+                                                   \label{eq:stopped-weight}\\
+ \E_z\int_0^\tf e^{r_*s}w_\beta(\eta_s)\dd s
+       &\le C_\beta w_\beta(\eta_0).                 \label{eq:killed-reward}
+\end{align}
+Constants are uniform on this small-noise family.
+\end{lemma}
+
+\begin{proof}
+Choose $\delta>0$ with $4\delta<\min_I(m-1)$ and choose $t_0$ such that
+$m(1-e^{-t_0})\ge1+2\delta$ on $I$. Couple $Y$ with the unreflected OU
+process $U$ starting from zero. The explicit equations give
+\[
+ Y_t-U_t=e^{-t}Y_0+\int_0^t e^{-(t-s)}\dd K_s\ge0,\qquad
+ U_t=m(1-e^{-t})+\varepsilon \zeta_t.
+\]
+For $B=t_0+1/\delta$, the stochastic-integral isometry and the maximal
+inequality imply $\E\sup_{[0,B]}|\zeta_t|^2\le C_B$. For small $a$,
+with probability at least $1/2$, $Y\ge1+\delta$ throughout $[t_0,B]$.
+On this event, before a hit, $J(V,Y)\ge J(1,1+\delta)=\delta$.
+A hit must occur by $B$, from every initial state. Independence of the
+Brownian increments on successive blocks gives
+$\Pp_z(\tf>nB)\le2^{-n}$ and hence \eqref{eq:hitting-time}.
+
+For the weights,
+\begin{equation}\label{eq:OU-weight}
+ \mathcal A w_\beta
+   =[2\beta-2\beta(1-2\beta)\eta^2]w_\beta.
+\end{equation}
+The regulator term is nonpositive because $w_\beta'$ is negative at the
+floor. The expression $(\mathcal A+r_*)w_\beta$ is bounded above
+uniformly in the floor location. Stop at a finite time, a finite upper
+conductance and $S$. It\^o's formula and \eqref{eq:hitting-time} give
+\eqref{eq:stopped-weight} by Fatou's lemma. The stronger inequality
+$(\mathcal A+r_*)w_\beta\le C_\beta-w_\beta$, which follows from the
+same negative quadratic term, gives \eqref{eq:killed-reward}.
+\end{proof}
+
+Let $N_0=\ell M$ be the stationary rate, and define the outgoing mark law
+\begin{equation}\label{eq:mark-law}
+ \pi_a(\dd y)=N_0^{-1}J_F(y)M_F(y)\dd y,\qquad y>1.
+\end{equation}
+We also write $\pi_a$ for its image under $y\mapsto(y-m)/\sqrt a$.
+This law describes conductance at a firing time, whereas the conductance
+marginal of $M$ describes a typical time.
+
+\begin{lemma}[Stationary moments and cycle occupation]\label{lem:occupation}
+The conductance marginal is exactly
+\begin{equation}\label{eq:Gaussian-marginal}
+ p_a(y)=C_a\exp[-(y-m)^2/(2a)]\,\one_{\{y\ge0\}}.
+\end{equation}
+For $L=\log2$, the stationary rate and mark law satisfy
+\begin{equation}\label{eq:rate-mark-bounds}
+ \frac{m-1}{L}\le N_0\le\frac{\E_M Y}{L},\qquad
+ \int w_\beta\dd\pi_a\le C_\beta\quad(0<\beta<1/2).
+\end{equation}
+For every nonnegative measurable $g$, or every integrable complex $g$,
+\begin{equation}\label{eq:occupation}
+ \int_D Mg=N_0\,\E_{\pi_a}\int_0^\tf g(Z_s)\dd s.
+\end{equation}
+The cycle starts at voltage zero with conductance distributed as $\pi_a$.
+In particular $N_0\E_{\pi_a}\tf=1$.
+\end{lemma}
+
+\begin{proof}
+Integrating the stationary equation in voltage cancels the reset flux.
+The marginal has zero current, so $ap_a'=(m-y)p_a$ and normalization
+gives \eqref{eq:Gaussian-marginal}. In the $\eta$ variable it is a
+standard Gaussian restricted to $\eta\ge-m/\varepsilon$, with
+normalization at least $1/2$. Thus
+\[
+ \int_D M(1+|\eta|^j)w_\beta\le C_{\beta,j},\qquad \E_M Y\ge m.
+\]
+Put $X=\log[2/(2-v)]$ and $b(X)=e^X-1$. Between hits,
+$\dot X=Y-b(X)$; a reset decreases $X$ by $L$. The stationary identity
+with this bounded voltage test is
+$LN_0=\E_M[Y-b(X)]$. Since $0\le b\le1$, it gives the first bounds
+in \eqref{eq:rate-mark-bounds}.
+
+To control the different measure $\pi_a$, use the concave truncations
+$\zeta_n(s)=n(1-e^{-s/n})$ and test with
+$(X/L)\zeta_n(w_\beta)$. The reset loss is $\zeta_n(w_\beta)$.
+Its floor derivative is nonpositive, so the regulator has the favorable
+sign. Concavity and \eqref{eq:OU-weight} imply
+\[
+ \G\bigl[(X/L)\zeta_n(w_\beta)\bigr]
+       \le (Y/L+2\beta)w_\beta.
+\]
+Stationarity, followed by monotone convergence, bounds
+$N_0\pi_a(w_\beta)$ by the preceding Gaussian moment. This proves the
+second assertion in \eqref{eq:rate-mark-bounds}. Truncating in $y$ first
+justifies this test in the forward identity.
+
+For bounded $g$, put $k_g(z)=\E_z\int_0^\tf g(Z_s)\dd s$ and
+$k_{g,0}(y)=k_g(0,y)$. The first-hit estimate makes $k_g$ bounded.
+Dynamic programming, patched over the finitely many cycles, gives
+\[
+ \E_h[k_g(Z_t)-k_g(Z_0)]
+   =-\E_h\int_0^t g(Z_s)\dd s+
+                  \E_h\sum_{t_j\le t}k_{g,0}(Y_{t_j}).
+\]
+Start at $M$ and apply \eqref{eq:count-measure}. The left side is zero,
+and division by $t$ proves \eqref{eq:occupation}. Monotone convergence
+\cite[Theorem 1.4.44]{Tao11} and then domination give the asserted extensions.
+\end{proof}
+
+\subsection{Killed values and the generator pairing}
+
+Fix henceforth $\beta=1/32$. The boundary space is
+\[
+ \BB_\beta=\left\{f\in C(\R;\C):
+       f(\eta)/w_\beta(\eta)\longrightarrow0\text{ as }|\eta|\to\infty\right\},
+ \qquad \norm f_\beta=\sup_\eta |f(\eta)|/w_\beta(\eta).
+\]
+Choose $r_0>0$ so that $4r_0<r_*$. For $|\operatorname{Re}\lambda|\le r_0$,
+define
+\begin{equation}\label{eq:killed-return}
+ V_\lambda f(v,y)=\E_{v,y}[e^{-\lambda\tf}f(\eta_\tf)],
+ \qquad
+ P_a(\lambda)f(\eta)=V_\lambda f(0,m+\varepsilon\eta).
+\end{equation}
+For $\eta<-m/\varepsilon$ the last expression means its value at the
+floor. Estimates \eqref{eq:stopped-weight}--\eqref{eq:killed-reward}
+also apply when an interior reward is added. In particular a value with
+terminal bound $F w_\beta$ and source bound $R w_\beta$ is bounded by
+$C(F+R)w_\beta$. Discount derivatives follow from
+$t^j e^{r_0t}\le j!(r_*-r_0)^{-j}e^{r_*t}$, giving local norm
+holomorphy. Continuity of point-start values and the local backward
+equation are proved in Appendix~\ref{app:boundary}.
+
+The invariance of $\pi_a$ under $P_a(0)$ follows without an additional
+renewal theorem. For a bounded terminal $f$, patch the harmonic
+$V_0f$ over cycles and start at $M$. Its mean reset jump is
+$\pi_a(f-P_a(0)f)$, hence is zero by \eqref{eq:count-measure}.
+Monotone convergence extends this to nonnegative data, and domination
+to $\pi_a$-integrable complex data. In particular it applies to $|f|^2$
+for $f\in\BB_\beta$.
+
+\begin{proposition}[A constant reset jump]\label{prop:constant-jump}
+Suppose $u=V_\lambda f$ has the constant outgoing jump
+\begin{equation}\label{eq:constant-jump}
+ u(1,y)-u(0,y)=A,\qquad y>1.
+\end{equation}
+Then $u$ has at most polynomial growth at infinity, belongs to
+$\HH_{-\sigma}$, and for every $h\in D(\LL)$,
+\begin{equation}\label{eq:generator-pairing}
+ \langle\LL h,u\rangle=\lambda\langle h,u\rangle-A\ell h.
+\end{equation}
+If $A=0$, this is the actual transpose-domain relation
+$u\in D(\LL^T)$, $\LL^Tu=\lambda u$. At a frequency where the
+zero-mass resolvent exists, the independently completed inverse in
+Proposition~\ref{prop:divergence} gives
+\begin{equation}\label{eq:divergence-pairing}
+ u_y\in\HH_{-\sigma},\qquad
+ A\ell R_\lambda Bg=-\int_Dg u_y,\quad g\in\HH_\sigma.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Appendix~\ref{app:boundary} proves polynomial growth by stopping at a
+fixed large conductance and estimating discounted counts before that
+stop. It also constructs the local Neumann floor. Patch the killed
+martingales over cycles to obtain
+\[
+ u(z)=\E_z[e^{-\lambda t}u(Z_t)]
+                 +A\E_z\sum_{t_j\le t}e^{-\lambda t_j}.
+\]
+The required domination follows from polynomial growth, finite moments
+of the reflected OU path supremum, and the pathwise bound
+\begin{equation}\label{eq:count-bound}
+ L\,\#\{j:t_j\le t\}\le X_0+\int_0^tY_s\dd s.
+\end{equation}
+Pair with $h$ and use \eqref{eq:count-measure}, splitting signed data
+into positive densities when necessary:
+\[
+ \langle S(t)h,u\rangle=e^{\lambda t}\langle h,u\rangle
+   -A\int_0^t e^{\lambda(t-s)}\ell S(s)h\dd s.
+\]
+For $h\in D(\LL)$, graph continuity of the trace in
+Lemma~\ref{lem:forward-energy} permits differentiation at zero.
+This proves \eqref{eq:generator-pairing}.
+
+For compact smooth $g$ in the interior set $h=R_\lambda Bg$.
+The resolvent equation and \eqref{eq:generator-pairing} imply
+$A\ell h=\int_Du\,\partial_y g$. Proposition~\ref{prop:divergence}
+bounds this functional by $C|A|\norm g_{\HH_\sigma}$.
+Weighted $L^2$ Riesz representation therefore supplies the
+distributional derivative $u_y\in\HH_{-\sigma}$. Complete the inputs
+$g$ by the triple estimate \eqref{eq:triple-bound}; this gives
+\eqref{eq:divergence-pairing}, including its natural floor flux.
+The derivative of a killed harmonic was not used to construct that
+inverse.
+\end{proof}
+
+\subsection{Cycle energies and the feedback functional}
+
+For an interior source we use smooth functions on the closed physical
+half-strip: on each finite part they admit smooth local extensions,
+with the two voltage faces treated separately. No matching condition
+on the source across reset is imposed. If $f\in\BB_\beta$ and
+$|r(v,y)|\le Rw_\beta((y-m)/\sqrt a)$, define the inhomogeneous killed value by
+\[
+ u(z)=\E_z\left[e^{-\lambda\tf}f(\eta_\tf)
+                    +\int_0^\tf e^{-\lambda s}r(Z_s)\dd s\right].
+\]
+The source is assumed smooth as just specified; a weighted size bound
+alone is not a regularity assumption. The local construction in
+Appendix~\ref{app:boundary} gives $\G u=\lambda u-r$ and the
+reflecting derivative for these values. This is the source class
+used in the next lemma and in its forced-feedback consequence.
+
+\begin{lemma}[Stationary Fisher and killed-value energy]\label{lem:cycle-energy}
+Uniformly for $m\in I$, $0<a\le a_0$,
+\begin{equation}\label{eq:Fisher}
+ a\int_D\frac{|M_y|^2}{M}\le \E_M Y+2\le C.
+\end{equation}
+The quotient is defined as zero where numerator and denominator vanish.
+If $u$ is the killed value above with the stated smooth source,
+terminal norm $F=\norm f_\beta$ and source bound $R w_\beta$, then
+\begin{equation}\label{eq:cycle-energy}
+ \int_D M|u|^2+a\int_D M|u_y|^2\le C(F+R)^2,
+       \qquad |\operatorname{Re}\lambda|\le r_0.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For the first estimate use the smooth convex entropy caps
+\[
+ b_{\delta,n}(0)=b_{\delta,n}'(0)=0,\qquad
+ b_{\delta,n}''(s)=\frac1{(s+\delta)(1+s/n)^2},\quad s\ge0.
+\]
+Their even extensions are $C^2$; their first derivatives are bounded
+for fixed $\delta,n$, and
+$0\le s b_{\delta,n}'(s)-b_{\delta,n}(s)\le s$.
+The bounded-argument extension in the proof of
+Lemma~\ref{lem:forward-energy} makes these valid renormalizations.
+Apply them to the stationary equation, first with a large-$y$ cutoff.
+The floor loss and the reset loss are nonnegative by convexity.
+For fixed $n,\delta$ the exponential tails of $M,M_y$ remove the
+cutoff. Drop these losses, let $n\to\infty$ and then $\delta\downarrow0$.
+The remaining volume coefficient is $y+2$, giving \eqref{eq:Fisher}
+by Fatou's lemma. Interior smoothness and nonnegativity imply
+$M_y=0$ at an interior zero of $M$; no boundary lower bound is used.
+
+For the second estimate, the local equation and constructed floor permit
+It\^o's formula for $|u|^2$ before $\tf$:
+\[
+ \G|u|^2=2\operatorname{Re}\lambda\,|u|^2
+                 -2\operatorname{Re}(r\overline u)+2a|u_y|^2.
+\]
+Stop away from the grazing corners and at bounded conductance and time.
+Point starts have no grazing hit, and a path cannot reach the floor
+at voltage zero. The estimates with $4\beta$ and $4r_0$ give uniform
+integrability for the endpoint terms; Fatou retains the gradient.
+Start the cycle with $\pi_a$. Its invariance for $P_a(0)$, followed by
+\eqref{eq:occupation}, yields
+\[
+ a\int_D M|u_y|^2\le
+ \frac{N_0}{2}\pi_a|f|^2+
+ |\operatorname{Re}\lambda|\int_D M|u|^2+
+ \left|\int_DMr\overline u\right|.
+\]
+The reward bound, the exact Gaussian marginal, and
+$\pi_a w_{2\beta}\le C$ bound every term on the right by $C(F+R)^2$.
+They also bound $\int M|u|^2$, proving \eqref{eq:cycle-energy}.
+\end{proof}
+
+For a complex coupling $c$ define the complete weak feedback by
+\begin{equation}\label{eq:feedback-functional}
+ \fb_{\lambda,c}(f)
+   =c\int_D M(V_\lambda f)_y-c^2\int_D M_y(V_\lambda f)_y.
+\end{equation}
+Its second term represents diffusion feedback, including the reflecting
+floor. It is defined by first derivatives. For a smooth Neumann test
+$u$ with integrable tails it equals $c^2\int M u_{yy}$.
+
+\begin{corollary}[Small feedback and holomorphy]\label{cor:feedback}
+On the preceding strip,
+\begin{equation}\label{eq:feedback-bound}
+ \norm{\fb_{\lambda,c}}_{\BB_\beta^*}
+       \le C\left(\frac{|c|}{\sqrt a}+\frac{|c|^2}{a}\right).
+\end{equation}
+For a terminal-zero value with a smooth source in the same class and
+source norm $R$, its feedback is bounded
+by the same right side times $R$. The functional is norm holomorphic
+in $\lambda$ and polynomial in $c$.
+\end{corollary}
+
+\begin{proof}
+Cauchy--Schwarz with \eqref{eq:Fisher} and
+\eqref{eq:cycle-energy} proves the bounds. For holomorphy, compact
+interior tests satisfy
+\[
+ \int_D M\varphi(V_\lambda f)_y
+       =-\int_DV_\lambda f\,\partial_y(M\varphi).
+\]
+The right side is holomorphic by the stopped estimates. Compact smooth
+tests are dense in $L^2(M)$, and \eqref{eq:cycle-energy} bounds the
+gradient locally uniformly. The pairing therefore extends
+holomorphically to every $L^2(M)$ test. Take the tests $1$ and $M_y/M$,
+the latter admissible by \eqref{eq:Fisher}. The uniform functional bound
+then gives a norm-convergent Cauchy series. This argument requires no
+positive lower bound for $M$ at a boundary.
+\end{proof}

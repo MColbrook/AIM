@@ -1,0 +1,424 @@
+\section{Process identification and the reflecting boundary}\label{app:boundary}
+
+This appendix supplies the boundary facts used in Sections
+\ref{sec:linear}--\ref{sec:returns}. The interior regularity theorem
+is used only after a distributional equation has been established.
+The reflecting condition is constructed separately.
+
+\subsection{From the forward density to the reset process}
+
+\begin{proof}[Proof of Proposition~\ref{prop:process}]
+Let $F_t=S(t)h$. Put
+$\Phi(v)=(\cos(2\pi v),\sin(2\pi v))$ and lift $F_t$ to a
+probability $\nu_t$ on $\R^3$: choose $(v,y)$ with density $F_t$
+and an independent fair sign, then set $(\xi,z)=(\Phi(v),\pm y)$.
+This probability is supported on the unit circle times $\R$ and
+need not have an ambient density. Away from the circle cut
+$p=(1,0)$ use the inverse angle $v(\xi)\in(0,1)$ and define
+\[
+ B_\xi=2\pi J(v(\xi),|z|)(-\xi_2,\xi_1),\qquad
+ B_z=m\,\operatorname{sign}z-z,\qquad
+ A=\operatorname{diag}(0,0,2a).
+\]
+Choose any finite Borel angular drift at the cut and extend it
+by zero off the circle. The value at the cut does not affect
+the forward equation, since $\nu_t$ gives it zero mass.
+
+For a compact smooth ambient test $\Psi$, its even pullback is
+\[
+ \varphi(v,y)=\tfrac12[\Psi(\Phi(v),y)+\Psi(\Phi(v),-y)].
+\]
+It has equal voltage endpoint values and $\varphi_y(v,0)=0$.
+The reset terms cancel in the forward Green identity and the
+low-conductance traces vanish. Integration by parts in $y$ has
+no remaining floor contribution. The result is precisely the
+Euclidean Fokker--Planck equation with drift $B$ and covariance
+$A$, whose second-order term is $(1/2)A:D^2=a\partial_{zz}$.
+The lifted probabilities are narrowly continuous and
+\[
+ \int_0^t\int_{\R^3}(|B|+|A|)\dd\nu_s\dd s<\infty,
+\]
+since $|B|\le C(1+|z|)$ on their support and $F$ has a bounded
+first conductance moment.
+
+Trevisan's superposition theorem \cite[Definition 2.2,
+condition (4), and Theorem 2.5]{Trevisan15} supplies a continuous
+martingale solution with these one-time laws. The angular
+component lies on the circle at all rational times, and hence
+at all times by continuity. Localized coordinate and product
+tests show that its angular martingale has zero quadratic
+variation, while its signed conductance satisfies
+\begin{equation}\label{eq:signed-conductance}
+ \dd Z_t=(m\,\operatorname{sign}Z_t-Z_t)\dd t+\sqrt{2a}\dd W_t .
+\end{equation}
+Here $W$ is scalar Brownian motion in the full solution
+filtration, by the martingale quadratic variation and the scalar
+L\'evy characterization. The stochastic integral, maximal
+inequality, localized It\^o formula, and scalar characterization
+used here can, for example, be taken from
+\cite[Theorems 2.32, 4.10, 4.17, 4.19--4.20 and the scalar case
+of Theorem 5.11]{DeVecchi22}.
+
+We justify folding directly. Stop at
+$\tau_R=\inf\{t:|Z_t|\ge R\}$ and apply the localized It\^o formula
+to $\varphi_\delta(z)=\sqrt{z^2+\delta^2}$, made bounded outside
+$[-R-1,R+1]$. For $0<\delta<1$,
+\[
+ a\E\int_0^{t\wedge\tau_R}\varphi_\delta''(Z_s)\dd s
+       \le2R+2+(m+R)t .
+\]
+On $|z|\le\delta$ its second derivative is at least
+$(2\sqrt2\,\delta)^{-1}$. Hence
+\[
+ \E\int_0^{t\wedge\tau_R}\one_{\{|Z_s|\le\delta\}}\dd s
+       \le C_{a,R,t}\delta .
+\]
+Let $\delta\downarrow0$ and then $R\uparrow\infty$ to conclude
+that $Z$ spends zero time at zero. The drift terms in the
+same It\^o formula converge to those for $|Z|$; the stochastic
+integrals converge uniformly in probability by isometry and
+the maximal inequality. Consequently
+\[
+ K_t=|Z_t|-|Z_0|-\int_0^t(m-|Z_s|)\dd s
+       -\sqrt{2a}\int_0^t\operatorname{sign}(Z_s)\dd W_s
+\]
+is a continuous nondecreasing limit of
+$a\int_0^t\varphi_\delta''(Z_s)\dd s$.
+On a path interval where $|Z|\ge d>0$, the latter increments
+are bounded by $at\delta^2/d^3$ and vanish. Thus $K$ increases
+only when $|Z|=0$. The martingale
+$W'_t=\int_0^t\operatorname{sign}(Z_s)\dd W_s$ has quadratic
+variation $t$, so it is scalar Brownian motion in the same
+filtration. The folded $Y=|Z|$ satisfies
+\eqref{eq:reset-process}.
+
+The half-line Skorokhod map
+$x(t)\mapsto x(t)+\sup_{s\le t}(-x(s))_+$
+has supremum-norm Lipschitz constant at most two. Its integral
+equation with drift $m-Y$ is a contraction on any interval of
+length less than $1/2$. Iteration proves pathwise uniqueness
+and makes $Y$ a measurable function of $Y_0,W'$. Brownian
+increments are independent of the initial full sigma-field.
+If $p(y)=\int_0^1h(v,y)\dd v$, Fubini therefore shows that the
+conditional density of $V_0$ given the entire future $Y$ path
+is $h(v,Y_0)/p(Y_0)$ on the set $p(Y_0)>0$.
+
+For a fixed continuous conductance path, before a reset,
+\begin{equation}\label{eq:voltage-flow}
+ V_t=A_tV_0+C_t,\quad
+ A_t=\exp\!\left[-\int_0^t(Y_s+1)\dd s\right],\quad
+ C_t=\int_0^t\exp\!\left[-\int_s^t(Y_r+1)\dd r\right]2Y_s\dd s .
+\end{equation}
+The $C^1$ function $H(t)=(1-C_t)/A_t$ satisfies
+$H'(t)=-J_F(Y_t)/A_t$. A grazing threshold hit would make
+$V_0$ a critical value of $H$. Critical values of a $C^1$
+real function on a bounded interval have Lebesgue measure
+zero: cover the zero-derivative set by open intervals where
+$|H'|<\epsilon$ and bound the lengths of their images by
+$\epsilon$ times their total length, then let $\epsilon$
+decrease to zero. Exhaust the time intervals.
+The conditional density just proved excludes such a hit.
+A first hit from below has $J_F\ge0$, and thus in fact $Y>1$.
+
+After a reset the initial voltage is zero, so a separate
+point-start argument is required. Until a floor encounter the
+auxiliary unreflected conductance and voltage flow have a joint
+density at every positive time. Indeed It\^o's formula gives
+their distributional forward equation. The smooth fields
+$\partial_y$ and
+$\partial_t+J\partial_v+(m-y)\partial_y$, and their bracket
+$(2-v)\partial_v-\partial_y$, span all time--space directions
+for $v<2$. H\"ormander's theorem
+\cite[Theorem 1.1]{Hormander67} gives a smooth space--time
+density there. The explicit flow stays below $2$; narrow
+continuity against compact tests upgrades the almost-every-time
+density identification to every positive time.
+
+Starting after a reset with $Y>1$, wait $\delta=1/n$ before the
+next hit or first floor encounter. The law at $\delta$ restricted
+to this survival event is dominated by the auxiliary law and
+has a joint density. Future Brownian increments are independent
+of the past event. The conditional-density critical-value
+argument therefore applies after $\delta$.
+The countable collection of these events covers all possible
+finite next hits. Independence after stopping times follows by
+approximating them from above by dyadic stopping times and
+using Brownian continuity and deterministic-time independence.
+Thus the argument repeats after every reset.
+
+Before its first cut encounter the circle path inverts to the
+ordinary voltage equation. It cannot reach zero from inside,
+since $V_t\ge V_0A_t>0$. At a non-grazing outgoing hit the
+angular speeds on both sides of the cut are positive, as
+$J_F>0$ and $J_0=2Y>0$. Continuity of $Y$ makes them bounded
+away from zero in a neighborhood. The path crosses in the
+positive direction and enters the unique voltage trajectory
+from zero. It cannot stick on an interval; in addition its
+total occupation of the cut is zero by the one-time marginals.
+The pathwise identity for $X$ gives \eqref{eq:count-bound}.
+Since $Y$ is continuous, there is no finite-time accumulation
+of hits. The same bound and the first conductance moment make
+the expected count finite. This identifies the circle process
+with the reset process, proving its law assertion.
+
+For smooth $q$ supported in $(0,t)\times(1,\infty)$ apply
+piecewise It\^o to $\varphi(s,v,y)=vq(s,y)$, whose reset jump
+is $q$. Comparing with the forward Green formula gives
+\eqref{eq:count-measure} against these tests. The trace of a
+nonnegative forward density is nonnegative in its kinetic
+trace measure; this also follows by the bounded negative-part
+renormalization in the same Green identity. Both measures are
+therefore locally finite positive measures. All hits have
+$Y>1$. A spike at a deterministic time would put the circle
+path at the cut, which its marginal excludes. There is no
+initial spike for a density. Exhaust the conductance and
+time endpoints. Finite expected count controls the total
+measure, and monotone convergence extends equality first to
+bounded Borel tests and then to integrable tests. This proves
+the complete statement.
+\end{proof}
+
+\subsection{Local backward equations, including the floor}
+
+We give the local construction for killed values with the weights
+of Section~\ref{sec:returns}. Their interior sources belong to the
+smooth class specified before Lemma~\ref{lem:cycle-energy} and obey
+the stated Gaussian weighted bound. We also treat bounded
+full-process resolvents with compact smooth source.
+In both cases write
+\begin{equation}\label{eq:backward-source-equation}
+ \G u=\lambda u-r .
+\end{equation}
+The source is zero for a killed harmonic. Nonzero killed sources
+used below are the constant source in the static block and the
+smooth corrected-mode residual. The full-process case has
+$\operatorname{Re}\lambda>0$ and compact smooth bounded $r$.
+
+First establish the interior distributional equation. On an interior
+rectangle use the unreflected, unreset process until exit from a larger
+rectangle. Its conductance is explicit and its voltage is
+\eqref{eq:voltage-flow}; the stochastic flow is triangular in the
+initial variables, with positive Jacobian $e^{-t}A_t$. For a compact
+smooth initial density $\varphi$, Taylor expansion of its inverse flow
+and inverse Jacobian gives
+\begin{equation}\label{eq:local-transpose-expansion}
+ P_h^T\varphi
+  =\varphi+h[-\partial_v(J\varphi)
+             -\partial_y((m-y)\varphi)+a\varphi_{yy}]+o(h)
+\end{equation}
+in local $L^1$ and in the fixed Gaussian-weighted $L^1$ used to pair
+with $u$. To see the remainder explicitly, the conductance increment
+has mean $(m-y)h+O(h^2)$, variance $2ah+O(h^2)$, and $j$th absolute
+moment $O(h^{j/2})$; its random contribution to the voltage increment
+is $O(h^{3/2})$ in every fixed finite moment. The inverse Jacobian
+is $1+h(y+2)+O_{L^p}(h^{3/2})$. Bounded third derivatives of
+$\varphi$ control the Taylor remainder. Outside an enlarged compact
+set the transported density has a Gaussian small-time tail, which
+dominates the fixed exponential-quadratic weight. The probability
+of leaving the larger rectangle before $h$ is $O(e^{-c/h})$;
+higher stopped weights make its contribution $o(h)$.
+For a smooth killed source the reward increment is $hr+o(h)$ on
+compact sets of starts. The same localization and the higher-weight
+reward bounds justify this term in the paired limit.
+Dynamic programming, pairing with $\varphi$ and division by $h$,
+now give \eqref{eq:backward-source-equation} in distributions.
+
+We use the real-coefficient regularity theorem literally at complex
+frequency. Introduce a real variable $z$ and set
+$U(z,v,y)=e^{-\lambda z}u(v,y)$. Then
+$(\partial_z+\G)U=-e^{-\lambda z}r$.
+The fields $\partial_y$ and
+$\partial_z+J\partial_v+(m-y)\partial_y$, with the same bracket
+$(2-v)\partial_v-\partial_y$, span all three directions.
+Apply \cite[Theorem 1.1]{Hormander67} to the real and imaginary
+parts of $U$ separately. Thus $u$ is interior smooth.
+
+At $v=0,y>0$ extend the auxiliary voltage a fixed small distance
+below zero. An interior physical path never exits through zero;
+the high-conductance block argument still bounds the hitting
+time from the added finite voltage interval. The weak equation
+and interior regularity on this extension make $u(0,y)$ smooth
+for $y>0$. For a constant reset jump, the outgoing datum is
+therefore smooth on $y>1$. Its positive outgoing speed gives
+the terminal trace. At $v=1,y<1$, choose a small rectangle
+straddling that face on which $J\le-j_0<0$. Stop the auxiliary
+process on its exit. Its exit time is bounded by the voltage
+width divided by $j_0$. Retain the original data on reachable
+physical sides and extend side data continuously to the added
+part. A physical start cannot exit through the added upper
+voltage side. The local value agrees with $u$ inside, solves
+the weak equation across the face, and is smooth there.
+The deterministic exit bound suffices for any fixed complex
+discount; no global hitting estimate outside the physical
+voltage interval is assumed.
+
+Point starts at positive conductance have no grazing hit by the
+positive-time density argument above. For a start at $y=0$,
+before any finite threshold hit the conductance first reaches
+$1/2$ strictly earlier; start the same argument at that stop.
+Continuous dependence of the Skorokhod and voltage equations
+then implies almost-sure continuity of $\tf,Y_\tf$ in the
+initial state at a transverse hit. Before the hit the voltage
+on each shorter compact interval stays a positive distance
+below threshold, and the final transverse crossing persists.
+The stopped $4\beta$ weights and stronger discount moment give
+uniform integrability on compact sets of starts. Thus killed
+values are continuous, including at the floor. For a bounded
+full-process source, the same coupling on finite intervals
+and the discounted tail prove continuity.
+
+Fix $0<v_-<v_+<1$ and choose $y_c>0$ so that $q=-J$ satisfies
+$0<q_-\le q\le q_+$ on the resulting floor rectangle.
+The backward equation becomes the forward voltage-clock problem
+\begin{equation}\label{eq:floor-clock}
+ q u_v=au_{yy}+(m-y)u_y-\lambda u+r,\qquad
+ u_y(v,0)=0 .
+\end{equation}
+Give it the continuous initial data at $v_-$ and the upper-side
+data at $y_c$. After a smooth lifting of that side, use a mixed
+Neumann--Dirichlet basis on $(0,y_c)$. Its $q$-weighted mass
+matrix is uniformly positive. Testing the finite systems by
+their solutions yields
+\[
+ \tfrac12\partial_v\int_0^{y_c}q|w|^2\dd y
+        +a\int_0^{y_c}|w_y|^2\dd y
+ \le C\int_0^{y_c}(|w|^2+|\text{source}|^2)\dd y .
+\]
+The drift floor term is $-m|w(v,0)|^2/2$, with favorable sign.
+Weak Hilbert limits, the variational equation, and the
+zero-data energy inequality give existence and uniqueness,
+with continuous $L^2$ time representative. Testing with $w_v$
+after a positive voltage interval bounds $w_v,w_{yy}$ in $L^2$;
+repeated differentiated estimates give the local boundary
+regularity needed for It\^o. The absence of a diffusion floor
+term in the variational identity encodes its Neumann trace.
+For continuous initial data, approximation and the maximum
+bound give the same solution. The full Galerkin passage and
+positive-time arguments are detailed for the analogous
+Dirichlet clock in Appendix~\ref{app:clock}; here the variational
+space imposes only the upper-side zero value.
+
+Until this rectangle is exited, physical voltage decreases
+strictly. In its inverse clock the conductance generator is
+$q^{-1}[a\partial_{yy}+(m-y)\partial_y]$, its discount is
+$\lambda/q$, and its source is $r/q$. It\^o applied to the
+constructed solution cancels the drift and the Neumann
+derivative cancels the regulator. Physical exit time is
+bounded by $(v_+-v_-)/q_-$. Stopped dynamic programming has
+the same boundary data, so this solution equals $u$.
+This proves the actual floor derivative for $v>0$, without
+applying an interior theorem at a boundary.
+
+\subsection{Growth for a constant jump and a bounded-source energy}
+
+We first supply the growth assertion used in
+Proposition~\ref{prop:constant-jump}. Suppose the reset jump is $A$.
+Choose $p>\max\{1,r_0\}$ and a fixed $y_c>m,1$ so large that
+\[
+ (\G_y+r_0)y^p\le-d(y+r_0L),\qquad
+ \G_y=(m-y)\partial_y+a\partial_{yy},\quad y\ge y_c .
+\]
+This follows from
+$\G_y y^p=-py^p+pmy^{p-1}+ap(p-1)y^{p-2}$.
+For $S=\inf\{t:Y_t\le y_c\}$, stopped It\^o gives
+\[
+ \E e^{r_0S}+
+ \E\int_0^S e^{r_0t}(Y_t+r_0L)\dd t\le C(1+y^p).
+\]
+Recall $X=\log[2/(2-V)]\in[0,L]$, $L=\log2$.
+Between hits $\dot X=Y-(e^X-1)$, and each reset decreases $X$ by $L$.
+Including the reset jumps in $e^{r_0t}X_t$ gives
+\[
+ L\sum_{t_j\le S}e^{r_0t_j}
+       \le X_0+\int_0^S e^{r_0t}(Y_t+r_0L)\dd t .
+\]
+Patching the killed martingales until $S$ consequently yields
+\[
+ u(z)=\E_z[e^{-\lambda S}u(Z_S)]
+                +A\E_z\sum_{t_j\le S}e^{-\lambda t_j}.
+\]
+To remove upper-conductance and time localizations before asserting
+this equality, choose $\beta<\beta'<1/2$ and enlarge $y_c$ so that
+$(\G_y+r_0+d_0)w_{\beta'}\le0$ above it. The upper-exit term
+is bounded by a fixed starting-state constant times
+$w_\beta((H-m)/\varepsilon)/w_{\beta'}((H-m)/\varepsilon)$,
+which tends to zero. The time endpoint is bounded by
+$e^{-d_0t}w_{\beta'}(\eta_0)$.
+The displayed count bound controls the spike sum independently.
+Since $u$ is bounded on $y=y_c$, this proves
+\begin{equation}\label{eq:polynomial-growth}
+ |u(v,y)|\le C_{a,m,\lambda}(\norm f_\beta+|A|)(1+y^p).
+\end{equation}
+A bounded interior source adds a controlled
+$\E\int_0^S e^{r_0t}|r|\dd t$ and gives the same conclusion.
+These are fixed-$a$ growth constants.
+
+The independent dual estimate of Section~\ref{sec:linear} needs
+only bounded full-process source values. We state it separately
+to keep its proof independent of killed-value gradients.
+
+\begin{proposition}[Bounded-source backward energy]\label{prop:backward-source}
+For bounded compact smooth $r$ and $\lambda=s+i\theta$ with $s>0$,
+let
+\[
+ u(z)=\E_z\int_0^\infty e^{-\lambda t}r(Z_t)\dd t .
+\]
+It is bounded by $\norm r_\infty/s$, has zero reset jump,
+satisfies \eqref{eq:backward-source-equation}, and has the local
+Neumann floor constructed above. For $s$ larger than a fixed
+constant,
+\begin{equation}\label{eq:backward-energy}
+ (s-C)\norm u_{\HH_{-\sigma}}^2+
+          a\norm{u_y}_{\HH_{-\sigma}}^2
+ \le \norm r_{\HH_{-\sigma}}\norm u_{\HH_{-\sigma}},
+\end{equation}
+uniformly in $\theta$. For $s$ also larger than the forward
+growth bound, this value is the transpose of the full forward
+resolvent.
+\end{proposition}
+
+\begin{proof}
+The local construction above applies to this bounded value,
+including its homogeneous reset and actual floor derivative.
+Let $\rho=e^{-2\sigma y}$. On an exhausted domain the real
+energy identity has volume coefficient
+\[
+ C_\sigma(y)=(\tfrac12-\sigma)y+1+\sigma m+2a\sigma^2,
+\]
+gradient term $-a\int|u_y|^2\rho$, floor term
+$-(m/2+a\sigma)\int|u(v,0)|^2\dd v$, and voltage term
+$\frac12\int\rho[J_F|u_F|^2-J_0|u_0|^2]\dd y$.
+The floor and low-conductance voltage terms are nonpositive.
+At high conductance $u_F=u_0$ and $J_F<J_0$, so that term is
+nonpositive too. Since $\sigma>1$, $C_\sigma$ is bounded above.
+
+Here is a localization that proves the first global gradient
+bound rather than assuming it. Remove rectangles of voltage
+width $\delta^3$ and conductance width $\delta$ around $(1,1)$
+and $(0,0)$. Choose cutoffs $\chi_\delta$ with
+$|\partial_v\chi_\delta|\le C\delta^{-3}$,
+$|\partial_y\chi_\delta|\le C\delta^{-1}$ and zero floor
+derivative. Add a large-$y$ cutoff $\zeta_R$ and test with
+$\chi_\delta^2\zeta_R^2\overline u\rho$.
+Near a corner $u$ is bounded, $|J|=O(\delta)$, and area is
+$O(\delta^4)$. The voltage-cutoff error is $O(\delta^2)$,
+the squared conductance-cutoff error is $O(\delta^2)$, and the
+drift-cutoff error is $O(\delta^3)$. Young's inequality absorbs
+the unknown gradient cross terms before any global gradient
+integrability is assumed. A reset-cutoff mismatch is confined
+to an outgoing interval with $\int J_F\dd y=O(\delta^2)$.
+At large $y$, boundedness of $u$ and the exponential weight
+remove all tail errors after the same absorption.
+
+The resulting gradient bounds are uniform in $\delta,R$,
+so Fatou gives $u_y\in\HH_{-\sigma}$. Repeat the passage with
+this known gradient: the first-derivative cutoff errors now
+tend to zero by Cauchy--Schwarz, since
+$\norm{(\chi_\delta)_yu}_2=O(\delta)$.
+The exact energy inequality and the preceding signs yield
+\eqref{eq:backward-energy}. Finally Proposition~\ref{prop:process}
+and Fubini identify the value paired against any positive
+initial density with the full forward Laplace resolvent.
+Splitting signed data and density in the weighted spaces
+give the claimed transpose identification.
+\end{proof}

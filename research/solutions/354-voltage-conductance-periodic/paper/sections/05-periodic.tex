@@ -1,0 +1,368 @@
+\section{Periodic rates and nonnegative full densities}\label{sec:periodic}
+
+The selected first characteristic mode does not by itself produce a
+periodic density. We first remove all other harmonic resonances, solve
+a scalar periodic rate equation, and finally identify its signed
+linear response with a positive prescribed evolution.
+
+\subsection{Physical parameter dependence and harmonic selection}
+
+All parameter perturbations in this section use the original physical
+variables on the unchanged half-strip. In particular the floor does
+not move when $m$ or $a$ changes.
+
+\begin{lemma}[Analyticity at positive noise]\label{lem:parameter-analyticity}
+Locally at every $a>0$ under consideration, the completed inverse
+$R_{i\theta}B:\HH_\sigma\to\EE_\sigma$ is holomorphic in $(m,a)$,
+uniformly in $\theta\in\R$ on a sufficiently small complex parameter
+neighborhood. The stationary triple $(M,M_y,M_F)$ and $N_0=\ell M$
+are locally analytic. The response \eqref{eq:physical-response} is
+locally analytic in $(\lambda,c,m,a)$ near every imaginary frequency.
+The selected crossing functions $\cH,\OmH$ are real analytic on
+$U=(0,a_0)\times(2,3)$.
+\end{lemma}
+
+\begin{proof}
+At a fixed base $(m,a)$, regard the density, derivative, and outgoing
+trace as separate components of $\EE_\sigma$. A perturbed inverse solves
+\begin{equation}\label{eq:parameter-inverse}
+ h=R_{i\theta}B[g-\delta_m h+\delta_a h_y].
+\end{equation}
+The right side uses the first and second components of $h$. The
+uniform triple bound makes its linear perturbation small on the
+ambient product for small complex $\delta_m,\delta_a$, independently
+of $\theta$. Its Neumann series is analytic. Every output has its
+derivative and trace identified by the completed weak equation;
+closedness of the distributional derivative and passage in that
+equation retain these identities in the limit. Its floor flux is
+the perturbed natural flux. For real parameters, homogeneous
+uniqueness identifies it with the actual prescribed inverse.
+
+Likewise the nearby normalized stationary density is $M+h$, where
+\begin{equation}\label{eq:parameter-stationary}
+ h=R_0B[-\delta_m(M+h)+\delta_a(M_y+h_y)],\qquad \int_Dh=0.
+\end{equation}
+The same series gives analyticity. For real parameters normalized
+stationary uniqueness identifies this density with the stationary
+state supplied by Proposition~\ref{prop:frozen}, including its
+positivity. Weighted norm closeness alone is not used for that
+conclusion. Local frequency analyticity follows from the ordinary
+resolvent identity as in Proposition~\ref{prop:divergence}. This
+proves the response statement.
+
+The simple zero and the nonzero real coupling derivative in
+\eqref{eq:crossing} and \eqref{eq:response-root} give analytic crossing
+functions by the implicit function argument. Local solutions patch
+on $U$ by uniqueness of the selected branch and its crossing.
+No uniform radius in $m$ as $a\downarrow0$, and no convergence of
+parameter derivatives in that limit, is asserted.
+\end{proof}
+
+\begin{lemma}[A base point with only first-harmonic resonance]\label{lem:selection}
+There is $(a,m_*)\in U$ such that, writing
+\[
+ c_*=\cH(a,m_*),\qquad \Omega_*=\OmH(a,m_*),\qquad T=2\pi/\Omega_*,
+\]
+one has
+\begin{equation}\label{eq:nonresonance}
+ \partial_m\OmH(a,m_*)\ne0,\qquad
+ 1-\resp(ik\Omega_*;m_*,a,c_*)\ne0
+                         \quad(k\in\mathbb Z\setminus\{-1,1\}).
+\end{equation}
+The first-harmonic zeros are simple.
+\end{lemma}
+
+\begin{proof}
+For each fixed $k\ge2$, Proposition~\ref{prop:return-root} gives, at
+$c=\cH$,
+\[
+ \operatorname{Re}\lambda_k
+ =a\left[-k^2D+\frac D{\gamma_1}\gamma_k\right]+O(a^{3/2})<0
+\]
+for small $a$ depending on this $k$. The strict sign follows from
+$\gamma_k/k^2<\gamma_1$. The real analytic complex-valued function
+\[
+ r_k(a,m)=1-\resp(ik\OmH(a,m);m,a,\cH(a,m))
+\]
+is not identically zero on $U$. Indeed, for this fixed $k$ take $a$
+small enough that $ik\OmH$ lies in its fixed return-root disk.
+A zero of $r_k$ would, by the imaginary-axis matching in
+\eqref{eq:response-match}, give an eigenvalue-one equation for $K$
+there. Its only root is $\lambda_k$, which has negative real part,
+a contradiction.
+
+Also $\OmH(a,m)\to\omega(m)$ uniformly on $I$, while
+\[
+ \tau_m=-\int_0^L[m-b(x)]^{-2}\dd x<0.
+\]
+Choose two interior means with different $\omega$. For all sufficiently
+small $a$, $\OmH(a,\cdot)$ has different values at those means.
+Thus $\partial_m\OmH$ is not the zero analytic function on $U$.
+The zero set of a nonzero real analytic function on this connected
+open set has empty interior: vanishing on a ball makes all its
+power-series coefficients zero and propagates along a chain of
+overlapping balls. For complex-valued $r_k$, apply this observation
+to a nonzero real or imaginary part.
+
+The zero sets of all $r_k$ and of $\partial_m\OmH$ are closed with
+empty interior in $U$. Successively choose nested closed balls,
+each inside the preceding interior, avoiding the next zero set,
+with radii tending to zero and the first ball compactly inside $U$.
+Completeness gives a point avoiding every set. The static multiplier
+is nonzero by \eqref{eq:static-response}; negative harmonics are
+complex conjugates. This proves \eqref{eq:nonresonance}.
+Simplicity at the first harmonics follows from
+\eqref{eq:response-root}.
+\end{proof}
+
+The selection is existential and uses only a fixed-$k$ asymptotic
+for each integer $k$. It does not require a small-noise expansion
+uniform over infinitely many harmonics.
+
+\subsection{The periodic inverse and the rate equation}
+
+From now on fix the point and the period in Lemma~\ref{lem:selection}.
+Use Fourier coefficients
+$u_k=T^{-1}\int_0^T u(t)e^{-ik\Omega_*t}\dd t$, so that
+\[
+ \norm u_{H^1(0,T;E)}^2
+   =T\sum_{k\in\mathbb Z}(1+k^2\Omega_*^2)\norm{u_k}_E^2
+\]
+for a Hilbert space $E$.
+
+\begin{lemma}[High-frequency response and periodic inverse]\label{lem:periodic-inverse}
+At fixed positive parameters,
+\begin{equation}\label{eq:response-tail}
+ \resp(i\theta;m,a,c)\longrightarrow0\quad(|\theta|\to\infty).
+\end{equation}
+The coefficientwise map
+\[
+ (\mathcal R_TBg)_k=\mathcal R_{k\Omega_*}g_k
+\]
+is bounded from $H^1_{\per}(0,T;\HH_\sigma)$ to
+$H^1_{\per}(0,T;\EE_\sigma)$, with its density, gradient, trace, and
+floor identities. The linear rate-response multiplier on
+$H^1_{\per}(0,T)$ is compact.
+\end{lemma}
+
+\begin{proof}
+For fixed $h\in\HH_{\sigma,0}$, $t\mapsto S(t)h$ is Bochner
+integrable by the frozen gap. Approximate it in $L^1_t\HH_\sigma$
+by finitely many step functions and integrate their scalar
+exponentials. Formula \eqref{eq:ordinary-resolvent} then shows
+$R_{i\theta}h\to0$ in $\HH_\sigma$. Apply
+\eqref{eq:domain-energy} to this resolvent:
+\[
+ \norm{(R_{i\theta}h)_F}_{\OO_\sigma}^2
+ \le C_a\norm{R_{i\theta}h}_{\HH_\sigma}^2+
+              C_a\norm h_{\HH_\sigma}\norm{R_{i\theta}h}_{\HH_\sigma}.
+\]
+Its outgoing trace tends to zero as well. Approximate $g_c$ in
+$\HH_\sigma$ by compact smooth $g_j$ supported away from the floor.
+For fixed $j$, $Bg_j$ is an ordinary zero-mass datum, so the preceding
+argument applies. The uniform completed trace estimate controls
+the approximation error independently of $\theta$, proving
+\eqref{eq:response-tail}.
+
+Parseval's identity and \eqref{eq:triple-bound} give the stated
+periodic bound first on finite Fourier sums, then by completion.
+The completed weak equation identifies the limiting derivative
+and traces, preserves mass zero, and retains the natural floor input.
+The density belongs to $C_{\per}(0,T;\HH_\sigma)$.
+Finally the scalar multipliers tend to zero by
+\eqref{eq:response-tail}, so finite Fourier truncations approximate
+the linear response in operator norm on the same $H^1$ space.
+\end{proof}
+
+Keep $a$ fixed and allow $c,m$ near $c_*,m_*$. For a small real
+$n\in H^1_{\per}(0,T)$ solve the completed equation
+\begin{equation}\label{eq:nonlinear-response}
+ h_n=R_TB\{n g_c+n[-c h_n+c^2(h_n)_y]\},\qquad \int_Dh_n(t)=0.
+\end{equation}
+Here and below $R_TB$ denotes the density component when the entire
+triple is understood. The one-dimensional Sobolev product inequality
+and Lemma~\ref{lem:periodic-inverse} bound the last term on
+$H^1_t\EE_\sigma$ by $C\norm n_{H^1}$ times the triple norm.
+A Neumann series therefore gives a unique small analytic solution.
+Parameter analyticity follows uniformly in Fourier frequency from
+\eqref{eq:parameter-inverse}. Put $F_n=M+h_n$. Its weak equation
+has precisely the prescribed mean $m+cn$ and diffusion $a+c^2n$,
+with the voltage traces and the natural floor flux. At this stage
+$F_n$ is allowed to be signed.
+
+The actual self-consistency equation is the scalar equation
+\begin{equation}\label{eq:rate-equation}
+ \mathcal F(n,c,m):=n-\ell h_n=0 .
+\end{equation}
+Its linearization at $n=0$ is the Fourier multiplier
+\[
+ d_k=1-\resp(ik\Omega_*;m,a,c).
+\]
+At the base point only $k=\pm1$ are singular. Its restriction to
+the complement is boundedly invertible: finitely many nonzero
+$d_k$ are bounded away from zero, and
+\eqref{eq:response-tail} gives $|d_k|\ge1/2$ in the remaining tail.
+
+\begin{proposition}[A nonconstant self-consistent rate]\label{prop:rate-branch}
+For all sufficiently small $r>0$ there are real analytic parameter
+values $c(r^2),m(r^2)$ near $c_*,m_*$ and real
+$n_r\in H^1_{\per}(0,T)$ solving \eqref{eq:rate-equation}, with exact
+first Fourier coefficient $(n_r)_1=r$ and
+$\norm{n_r}_{H^1}\to0$.
+\end{proposition}
+
+\begin{proof}
+Write
+$n=ze^{i\Omega_*t}+\overline z e^{-i\Omega_*t}+w$, with
+$w_{\pm1}=0$. The complementary equation has an analytic solution
+$w=w(z,\overline z,c,m)$ by its bounded inverse and the local
+implicit function argument. Equivalently, subtract its linear part
+and use the resulting contraction. Time translations commute with
+the equation and its projections, so uniqueness makes $w$
+translation covariant. In the remaining first coefficient,
+a real analytic monomial $z^p\overline z^{\,q}$ must have $p-q=1$.
+Consequently
+\begin{equation}\label{eq:reduced-equation}
+ \mathcal F_1=z\,g(|z|^2,c,m),\qquad
+ g(0,c,m)=1-\resp(i\Omega_*;m,a,c).
+\end{equation}
+The latter equality holds also for nearby parameters: the linear
+rate operator remains diagonal in Fourier modes, so its first-mode
+input has zero complementary projection. The persistent
+complementary inverse thus gives $w_z(0)=0$.
+
+Let $\lambda(c,m)$ be the simple characteristic root near
+$i\Omega_*$. Along its crossing curve,
+\[
+ \lambda_m+\lambda_c\,\partial_m\cH=i\,\partial_m\OmH,\qquad
+ \det_{\R}(\lambda_c,\lambda_m)
+       =\operatorname{Re}\lambda_c\,\partial_m\OmH\ne0.
+\]
+The determinant uses the real and imaginary parts as its two rows.
+If $d(\lambda,c,m)=1-\resp(\lambda;m,a,c)$, differentiation of
+$d(\lambda(c,m),c,m)=0$ multiplies these two parameter columns
+by the same nonzero complex number $-d_\lambda$. It therefore
+preserves nonsingularity. The real Jacobian of $g(0,c,m)$ in
+$(c,m)$ is invertible. The finite-dimensional analytic implicit
+function argument now gives $c(\rho),m(\rho)$ with
+$g(\rho,c(\rho),m(\rho))=0$ for small real $\rho$.
+Take $\rho=r^2$, $z=r>0$. This proves the proposition.
+The use of two free physical parameters avoids any assumption
+about a cubic coefficient in a one-parameter bifurcation.
+\end{proof}
+
+\subsection{Positivity and the physical solution}
+
+An $H^1_t\HH_\sigma$ perturbation of $M$ need not be pointwise
+nonnegative. The next argument uses a positive period map instead.
+
+\begin{lemma}[Comparison of prescribed evolutions]\label{lem:flow-comparison}
+On each fixed finite interval $[0,t_*]$, let $S_n(t,0)$ be the
+prescribed positive conservative evolution with mean $m+cn(t)$
+and diffusion $a+c^2n(t)$. For small real $n$ and nearby $m,c$,
+\begin{equation}\label{eq:flow-comparison}
+ \norm{S_n(t_*,0)-S_*(t_*)}_{\HH_\sigma\to\HH_\sigma}
+ \le C_{a,t_*}\bigl(|m-m_*|+\norm n_\infty\bigr),
+\end{equation}
+where $S_*$ is the frozen evolution at $(m_*,a)$.
+\end{lemma}
+
+\begin{proof}
+For the same initial datum $f$ put $u_n=S_n(\cdot,0)f$.
+The homogeneous forward energy is uniform on a small positive
+coefficient neighborhood, so
+$\norm{u_n}_{L^\infty_t\HH_\sigma}
+ +\norm{(u_n)_y}_{L^2_t\HH_\sigma}\le C_{a,t_*}\norm f_{\HH_\sigma}$.
+The difference $u_n-S_*f$ solves the base forced equation with
+zero initial datum and input
+\[
+ g=-[(m-m_*)+cn]u_n+c^2n(u_n)_y .
+\]
+Its $L^2_t\HH_\sigma$ norm is at most the right side of
+\eqref{eq:flow-comparison} times $\norm f$. The completed weak
+flux identity and prescribed uniqueness identify this difference
+with the solution in Lemma~\ref{lem:causal}. Estimate
+\eqref{eq:causal-bound} proves the assertion. This uses a causal
+forcing estimate, not an assumed forced renormalization formula.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Choose the base point in Lemma~\ref{lem:selection}. By the frozen gap,
+there is an integer $p$ with
+$\norm{S_*(pT)}_{\HH_{\sigma,0}\to\HH_{\sigma,0}}<1/4$.
+Keep this integer fixed. For the solution in
+Proposition~\ref{prop:rate-branch}, choose $r>0$ so small that
+\eqref{eq:flow-comparison} at $pT$ is less than $1/4$.
+The prescribed $pT$ map then contracts every mass-zero difference
+by a factor less than $1/2$.
+
+Iterate that map from the normalized nonnegative density $M$.
+Every iterate is nonnegative and has mass one. The affine
+mass-one space in $\HH_\sigma$ is complete, so the iterates
+converge to its unique fixed point $F_0^*$. Positivity and mass
+one pass to the limit, since their defining sets are closed.
+If $P_n=S_n(T,0)$, periodic coefficients and uniqueness give
+$S_n(pT,0)=P_n^p$. The operator $P_n$ commutes with this power,
+and $P_nF_0^*$ is another mass-one fixed point of it.
+Uniqueness gives $P_nF_0^*=F_0^*$.
+Thus $F^*(t)=S_n(t,0)F_0^*$ is nonnegative and $T$-periodic.
+
+The signed response $F_n=M+h_n$ in \eqref{eq:nonlinear-response}
+lies in $C_t\HH_\sigma$ with its derivative and traces in the
+prescribed energy class. Its completed weak equation is the
+same prescribed homogeneous equation. Prescribed uniqueness
+identifies it with its evolution from $F_n(0)$. Since it is
+$T$-periodic and of mass one, $F_n(0)$ is a fixed point of the
+$pT$ map on the full affine space, and hence equals $F_0^*$.
+This proves $F_n=F^*\ge0$ without a lower bound for $M$.
+
+Set, with $m=m(r^2)$ and $c=c(r^2)$,
+\begin{equation}\label{eq:physical-reconstruction}
+ y_*=m-cN_0(m,a),\qquad a_*=a-c^2N_0(m,a).
+\end{equation}
+At the base point $c=O(a)$ and $N_0$ is uniformly bounded, while
+$m>1$. First choose $a$ small and then $r$ small. This makes
+$y_*,a_*,c$ positive. The exact rate equation gives
+$N=N_0+n_r$, so its first Fourier coefficient is $r>0$.
+Moreover
+\[
+ y_*+cN=m+cn_r,\qquad a_*+c^2N=a+c^2n_r .
+\]
+The prescribed equation for $F_n$ is therefore the original
+nonlinear equation with both feedback terms. The choices
+$v_E=2,v_F=1,y_L=1$ satisfy all remaining physical parameter
+inequalities.
+
+We verify the requested solution properties. The density belongs
+to $H^1_{\per}(0,T;\HH_\sigma)$, hence to
+$C_{\per}(0,T;\HH_\sigma)\subset C_{\per}(0,T;L^1(D))$.
+The continuous representative has mass one at every time.
+Exponential-weight Cauchy--Schwarz bounds all finite conductance
+moments uniformly in time, in particular $\int y^2F$.
+The positive entropy part is bounded by $\int(F^2+F)$.
+For the negative part choose the normalized density
+$q_0(v,y)=C e^{-y^2}$. The pointwise inequality
+$s\log(s/q_0)\ge s-q_0$, together with the second moment and the
+finite positive part, bounds $\int|F\log F|$ uniformly over
+the period, with $0\log0=0$.
+
+The low-conductance zero traces and high-conductance flux reset
+are the strong completed voltage traces in
+\eqref{eq:nonlinear-response}, equivalently those of the
+prescribed evolution. Its floor trace is zero for
+\[
+ Q=(m+cn_r-y)F-(a+c^2n_r)F_y
+      =(y_*+cN-y)F-(a_*+c^2N)F_y.
+\]
+Finally pair $Q$ with any smooth periodic time test and any
+smooth test on the closed voltage interval. This pairing lies
+in $L^1(\dd y)$ by the weighted energy bounds. The PDE,
+integration by parts in $t,v$, and the integrable outgoing and
+reset traces put its distributional $y$ derivative in $L^1$
+on every tail. It has an absolutely continuous tail
+representative with a finite limit at infinity. Its own
+$L^1$ integrability forces that limit to be zero. This is the
+vanishing distributional flux trace in the theorem.
+All required boundary, entropy, continuity, and moment
+properties follow for the nonnegative full density $F=F_n$.
+\end{proof}
