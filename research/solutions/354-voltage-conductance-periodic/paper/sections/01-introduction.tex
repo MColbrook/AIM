@@ -1,0 +1,113 @@
+\section{Introduction}
+
+The voltage--conductance equation describes a population of neurons
+by a joint probability density in voltage and synaptic conductance.
+Conductance diffusion supplies the noise, voltage transport carries
+neurons to threshold, and a boundary reset returns a firing neuron
+to its resting voltage. The firing flux also changes the conductance
+drift and diffusion. The resulting autonomous equation can therefore
+couple fluctuations of the population to its own firing rhythm.
+
+Let $v_E>v_F>0$ and $y_L,y_*,a_*,c>0$. On
+$D=(0,v_F)\times(0,\infty)$ put
+\begin{align}\label{eq:full-coefficients}
+ J(v,y)&=y(v_E-v)-y_Lv,&
+ y_F&=\frac{y_Lv_F}{v_E-v_F},\notag\\
+ K_F(t,y)&=y_*+cN(t)-y,& a_F(t)&=a_*+c^2N(t).
+\end{align}
+The firing rate is
+$N(t)=\int_{y_F}^\infty J(v_F,y)F(t,v_F,y)\dd y$.
+We seek a nonnegative mass-one density satisfying
+\begin{equation}\label{eq:full-equation}
+ \partial_tF+\partial_v(JF)+\partial_y(K_FF)-a_F\partial_{yy}F=0 .
+\end{equation}
+Writing $J_0(y)=J(0,y)$ and $J_F(y)=J(v_F,y)$, its voltage
+traces obey
+\begin{equation}\label{eq:full-voltage-boundaries}
+ \begin{cases}
+  F(t,0,y)=F(t,v_F,y)=0,&0<y<y_F,\\
+  J_0(y)F(t,0,y)=J_F(y)F(t,v_F,y),&y>y_F.
+ \end{cases}
+\end{equation}
+The conductance flux $Q=K_FF-a_FF_y$ has zero trace at $y=0$
+and vanishes at infinity.
+Voltage conditions are kinetic weak traces; the floor condition is
+the natural conormal condition in the distributional formulation.
+At infinity we mean that $Q$ paired against every smooth periodic
+time test and smooth closed-voltage test has tail limit zero.
+There is no prescribed value at the single grazing conductance $y_F$.
+
+For this full equation, Fonte Sanchez and Mischler developed the
+prescribed linear evolution and stationary theory, including
+exponential relaxation in the frozen linear problem
+\cite[Theorems 1.2 and 2.2]{FM24}. Fonte Sanchez, Mischler and Salort
+proved global weak existence for general connectivity
+\cite[Theorem 1.1 and Definition 4.1]{FMS26}. These results give
+the evolution and trace framework used here. A nonconstant
+periodic trajectory is a separate long-time question:
+the voltage--conductance discussion in the survey of Carrillo
+and Roux explicitly lists periodic-solution existence as open
+\cite[Section 7.6]{CR25}. Carrillo, Dou and Zhou studied a
+separable simplified equation and its fast-conductance limit;
+their periodic solutions concern that limit
+\cite[Section 4]{CDZ22}. The result below concerns the full
+nonseparable transport field, positive conductance diffusion,
+and both firing-feedback terms in \eqref{eq:full-coefficients}.
+
+\begin{theorem}\label{thm:main}
+There are positive constants $y_*,a_*,c,T$ such that, with
+$v_E=2$, $v_F=1$ and $y_L=1$, equations
+\eqref{eq:full-coefficients}--\eqref{eq:full-voltage-boundaries}
+admit a nonnegative $T$-periodic distributional density $F$
+of mass one whose firing rate $N$ is nonconstant.
+The density is continuous in time into $L^1(D)$, has the
+stated voltage and zero conductance-flux traces, and satisfies
+\begin{equation}\label{eq:main-moment-entropy}
+ \sup_{0\le t\le T}\int_D
+       \bigl(y^2F(t,v,y)+|F(t,v,y)\log F(t,v,y)|\bigr)\dd v\dd y<\infty .
+\end{equation}
+One may choose
+$F\in H^1_{\per}(0,T;L^2(D,e^{4y}\dd v\dd y))$ and
+$N\in H^1_{\per}(0,T)$, with nonzero first Fourier coefficient
+of $N$. The convention is $0\log0=0$.
+\end{theorem}
+
+The construction uses small frozen conductance diffusion and a mean
+strictly above the deterministic firing threshold. One firing cycle
+then provides a useful phase coordinate. We compare its noisy return
+operator with an OU evolution over the deterministic cycle in a
+common Gaussian weighted boundary space. The comparison holds in
+operator norm for arbitrary data in that space. A corrected phase
+mode, transferred through its isolated one-dimensional projection,
+gives an actual simple characteristic root. Its real part has a
+negative noise contribution and a positive mean-feedback contribution.
+The reflecting-floor part of diffusion feedback is retained throughout.
+
+Two further points are needed to obtain the theorem. First, the
+fixed-noise physical resolvent is analytic in the mean and diffusion,
+so a countable zero-set argument selects parameters with no other
+integer harmonic resonance. The mean and coupling then serve as
+two free parameters in a fixed-period rate equation. Second, its
+initially signed density response is identified with the fixed
+point of a positive prescribed period map. This step establishes
+nonnegativity without requiring a pointwise positive lower bound
+for the stationary density. Stability of the resulting periodic
+solutions and explicit numerical parameter values are not determined
+by this construction.
+
+Section~\ref{sec:linear} constructs the divergence inverse with its
+complete outgoing trace and natural floor input.
+Section~\ref{sec:returns} establishes the process and cycle estimates.
+Section~\ref{sec:crossing} proves the simple full-response crossing,
+and Section~\ref{sec:periodic} closes the periodic rate equation and
+proves the theorem. Appendix~\ref{app:boundary} gives the boundary
+and process constructions; Appendix~\ref{app:clock} supplies the
+bounded-clock comparison.
+
+All complex transpose pairings below are bilinear; only energy
+inner products use conjugation. We keep separate the random first
+hit $\tf$, deterministic cycle time $\tau$, and final period $T$.
+Constants in fixed-positive-noise resolvent estimates may depend on
+that noise. Small-noise estimates are uniform only on the specified
+compact mean and frequency sets, and harmonic expansions are for
+each fixed harmonic.

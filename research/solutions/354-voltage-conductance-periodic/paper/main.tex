@@ -1,0 +1,60 @@
+\documentclass[11pt]{amsart}
+\input{preamble}
+\hypersetup{
+ pdftitle={Periodic probability densities for the full voltage-conductance equation},
+ pdfauthor={Kaiwen Jin},
+ pdfsubject={Periodic full-density solutions of a kinetic neuron equation},
+ pdfkeywords={voltage-conductance, periodic solution, firing rate, reset boundary}
+}
+
+\title[Periodic voltage--conductance densities]{Periodic probability densities
+for the full voltage--conductance equation}
+\author{Kaiwen Jin}
+\email{yui.ui.siki@gmail.com}
+\date{}
+\subjclass[2020]{35B10, 35Q84, 92B20}
+\keywords{Voltage--conductance equation, periodic solution, firing rate,
+reset boundary, kinetic Fokker--Planck equation}
+
+\begin{document}
+
+\begin{abstract}
+We construct a nonnegative periodic probability density with nonconstant
+firing rate for the full voltage--conductance neuron equation, for
+suitable positive physical parameters. The model retains voltage
+transport, conductance diffusion, threshold reset, reflection at zero
+conductance, and firing feedback in both drift and diffusion.
+A small-noise return-operator comparison and a corrected phase mode
+give a genuine simple crossing of the full firing response.
+Analytic parameter selection removes all other integer harmonic
+resonances, and two free physical parameters close a fixed-period
+rate equation. A positive prescribed period map then identifies
+the analytic response with a nonnegative full density. The solution
+is continuous in time into $L^1$, has the complete kinetic and
+conormal boundary traces, finite entropy, and a uniformly finite
+second conductance moment.
+\end{abstract}
+
+\maketitle
+\input{sections/01-introduction}
+\input{sections/02-linear}
+\input{sections/03-returns}
+\input{sections/04-crossing}
+\input{sections/05-periodic}
+
+\appendix
+\input{sections/appendix-a}
+\input{sections/appendix-b}
+
+\section*{AI use statement}
+OpenAI Codex was used extensively for mathematical exploration,
+proof development, internal consistency checks, literature retrieval,
+and preparation and revision of this manuscript. These internal AI
+checks do not constitute independent proof verification.
+Two additional Codex contexts provided reader and referee feedback
+on the initial draft. This version incorporates one combined
+revision responding to that feedback.
+The author is responsible for the final manuscript.
+
+\input{references}
+\end{document}

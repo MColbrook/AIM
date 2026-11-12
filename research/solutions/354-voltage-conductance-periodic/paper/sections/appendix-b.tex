@@ -1,0 +1,204 @@
+\section{The bounded clock comparison}\label{app:clock}
+
+We prove \eqref{eq:clock-sup} with no regularity modulus assumed
+for the terminal datum. This is the local estimate that permits
+the operator norm, rather than strong-operator, limit in
+Proposition~\ref{prop:return-norm}.
+
+Return to the scaled conductance $\eta=(y-m)/\sqrt a$ and the OU
+expression $\mathcal A=\partial_{\eta\eta}-\eta\partial_\eta$.
+The deterministic phase interval is $[0,\tau]$, with
+$\tau=s(\log2)$ and scalar coefficient
+$Z(s)=[m-b(x(s))]^{-1}$ from \eqref{eq:phase}.
+These phase objects determine the reversed coefficient
+$Z(\tau-t)$ used below.
+
+Let $I_R=(-R,R)$, $\dd\gamma=e^{-\eta^2/2}\dd\eta$,
+$E=L^2(I_R,\dd\gamma)$, and $V=H^1_0(I_R)$.
+For a smooth positive coefficient $q$ with fixed upper and
+lower bounds consider
+\begin{equation}\label{eq:clock-general}
+ q u_t=(\mathcal A-\lambda)u,\qquad
+ u(t,\pm R)=0,\qquad u(0)=f .
+\end{equation}
+The coefficient and its needed derivatives are bounded on
+the fixed rectangle; $\lambda$ ranges in a compact set.
+
+\subsection{Construction and positive-time estimates}
+
+Choose a smooth Dirichlet basis with finite spans dense in
+$V$ and $E$, and project the initial datum in $E$. On each
+finite span the $q$-weighted mass matrix is uniformly positive,
+so the finite linear system has a solution. Testing with $u_N$
+and using $\langle\mathcal A u,v\rangle_\gamma
+=-\langle u_\eta,v_\eta\rangle_\gamma$ gives
+\[
+ \frac{\dd}{\dd t}\int q|u_N|^2\dd\gamma
+ =-2\norm{(u_N)_\eta}_2^2
+   -2\operatorname{Re}\lambda\norm{u_N}_2^2
+   +\int q_t|u_N|^2\dd\gamma .
+\]
+Consequently
+\begin{equation}\label{eq:clock-energy}
+ \sup_{0\le t\le\tau}\norm{u_N(t)}_2^2
+            +\int_0^\tau\norm{(u_N)_\eta}_2^2\dd t
+       \le C\norm f_2^2 .
+\end{equation}
+Take a weak subsequence in the Hilbert space $L^2_tV$.
+The $L^\infty_tE$ bound survives: testing the lower norm
+bound on every measurable time set $A$ gives
+$\int_A\norm u_E^2\dd t\le C\norm f_2^2|A|$.
+Integrate the finite equations by parts in time against
+smooth tests with values in any fixed finite span. Every
+term is linear, so weak convergence passes it, including
+$q_t$ and the initial datum. Density gives the full
+variational equation. Strong time compactness is unnecessary.
+
+Multiplication by $q^{\pm1}$ preserves $V$, and the equation
+gives $u_t\in L^2_tV'$. Time Steklov averages justify the
+energy identity: on a smaller interval the averages lie in
+$H^1_tV$, so differentiating their squared $E$ norm is
+legitimate. The supremum norm of the difference of two
+averages is bounded by its time-average $E$ norm squared
+plus twice its $L^2_tV$ norm times its derivative's
+$L^2_tV'$ norm. Translation continuity makes both terms
+tend to zero. Forward averages near the initial endpoint
+and backward averages near the final endpoint give a
+$C_tE$ representative and the limiting energy identity.
+Equivalently one may apply the same argument to the
+$q$-weighted norm, retaining its bounded $q_t$ term.
+The initial weak datum and the energy limsup give $u(0)=f$.
+The zero-data energy inequality proves uniqueness. The
+entire Galerkin sequence therefore has this limit.
+
+Testing the finite equation by $(u_N)_t$ instead gives
+\[
+ \frac{\dd}{\dd t}\norm{(u_N)_\eta}_2^2
+       +c\norm{(u_N)_t}_2^2\le C\norm{u_N}_2^2 .
+\]
+Choose an earlier time with bounded gradient using
+\eqref{eq:clock-energy}, then integrate. Passing weakly
+gives, for each $t_*>0$,
+\begin{equation}\label{eq:clock-smoothing}
+ \sup_{t_*\le t\le\tau}\norm{u(t)}_V^2
+       +\int_{t_*}^\tau\norm{u_t}_2^2\dd t
+       \le C_{t_*}\norm f_2^2 .
+\end{equation}
+The equation gives $u_{\eta\eta}\in L^2$ there.
+Repeated differentiated equations, with the smooth $q$
+commutators, and the one-dimensional equation give the
+local $C^1_tC^2_\eta$ representative on positive-time
+closed subrectangles. The $V$ bound extends to each
+positive time by weak $V$ compactness and strong $E$
+continuity; hence the spatial output is continuous.
+No compatibility at the initial Dirichlet corners is used.
+
+For $q=1$ the equation is autonomous. Its derivative $v=u_t$
+satisfies the same homogeneous equation. Choose a time
+strictly before $\tau/2$ with controlled $\norm v_2$ using
+\eqref{eq:clock-smoothing}, then apply the energy and
+positive-time estimates to $v$. The one-dimensional
+Dirichlet inequality now gives
+\begin{equation}\label{eq:clock-autonomous-derivative}
+ \sup_{\tau/2\le t\le\tau}
+       \norm{(\mathcal A-\lambda)u_0(t)}_\infty
+       \le C\norm f_2 .
+\end{equation}
+
+The maximum comparison is asserted for the weak limit,
+not for pointwise values of a Galerkin approximation.
+Regularize the modulus by $\sqrt{|u|^2+\delta^2}$ and test
+the positive part above a scalar exponential barrier.
+The extra second-derivative term has nonnegative sign
+and can be dropped. The $V$ energy permits the limit
+$\delta\downarrow0$. This proves the maximum bound
+and its version with an inhomogeneous bounded source.
+
+\subsection{Perturbation in supremum norm}
+
+Take $q_\varepsilon=1+\varepsilon\eta\chi(t)$, where
+$\chi(t)=Z(\tau-t)$ and
+$\varepsilon R\norm\chi_\infty\le1/2$.
+Put $w=u_\varepsilon-u_0$ and $h=1-q_\varepsilon$.
+Its exact equation is
+\[
+ q_\varepsilon w_t=(\mathcal A-\lambda)w+
+                          h(\mathcal A-\lambda)u_0,\qquad w(0)=0 .
+\]
+The forcing integration by parts reads
+\[
+ \langle h\mathcal A u_0,w\rangle_\gamma
+   =-\int (h\overline{w_\eta}+h_\eta\overline w)
+                       (u_0)_\eta\dd\gamma .
+\]
+Both $h,h_\eta$ are $O(\varepsilon)$ on the fixed rectangle.
+Young's inequality and \eqref{eq:clock-energy} give
+\begin{equation}\label{eq:clock-difference}
+ \sup_{t\le\tau}\norm{w(t)}_2^2+
+           \int_0^\tau\norm{w_\eta}_2^2\dd t
+       \le C\varepsilon^2\norm f_2^2 .
+\end{equation}
+Choose $t_1\in[\tau/2,3\tau/4]$ with
+$\norm{w_\eta(t_1)}_2\le C\varepsilon\norm f_2$.
+The Dirichlet inequality on the bounded interval implies
+$\norm{w(t_1)}_\infty\le C_R\varepsilon\norm f_2$.
+On the remaining interval the divided equation has source
+\[
+ F=q_\varepsilon^{-1}h(\mathcal A-\lambda)u_0,\qquad
+ \norm F_\infty\le C\varepsilon\norm f_2
+\]
+by \eqref{eq:clock-autonomous-derivative}. Modulus comparison
+with $M'=C_\Lambda M+\norm F_\infty$ therefore gives
+\[
+ \norm{w(\tau)}_\infty
+ \le e^{C_\Lambda\tau}\norm{w(t_1)}_\infty+
+       \int_{t_1}^\tau e^{C_\Lambda(\tau-t)}\norm{F(t)}_\infty\dd t
+ \le C\varepsilon\norm f_2
+ \le C_R\varepsilon\norm f_\infty .
+\]
+This is \eqref{eq:clock-sup}. Rescaling the compact family
+of intervals $\tau(m)$ to a unit interval makes its
+constants uniform for $m\in I$.
+
+\subsection{Identification with the stopped return}
+
+On the bounded conductance interval the physical phase speed
+is positive. Reverse the remaining phase time as in
+\eqref{eq:clock-equation}. The inverse-clock conductance has
+generator $q_\varepsilon^{-1}\mathcal A$ and killing rate
+$\lambda/q_\varepsilon$. Apply stopped It\^o to the
+constructed positive-time classical representative.
+Its equation cancels the drift. The clock bounds make
+physical duration at most $\tau/q_-$, and the maximum
+bound controls the limiting stopped values.
+
+There is no simultaneous terminal-phase and side exit.
+To verify this, extend $q_\varepsilon$ smoothly to a
+globally positive bounded coefficient. The unrestricted
+inverse-clock OU law satisfies its smooth uniformly
+parabolic forward equation. Interior regularity followed
+by narrow continuity gives a density at each positive
+phase time. A side exit exactly at the fixed terminal
+phase would put this conductance at $R$ or $-R$,
+an event of probability zero. Thus continuous $f$ is
+attained on surviving terminal paths and the zero
+Dirichlet value on earlier side exits. Dominated
+convergence in the stopped identity identifies the
+weak evolution with the killed return kernel.
+Approximation in $E$ and the maximum bound give the
+same identification for arbitrary continuous initial
+data used in the comparison.
+
+For the floor clock \eqref{eq:floor-clock}, replace $V$
+by $\{w\in H^1(0,y_c):w(y_c)=0\}$ and use Lebesgue
+measure. The $q$-weighted mass remains positive, and
+the first energy has the favorable floor drift
+$-m|w(0)|^2/2$. In the derivative estimate bound the
+drift term against $w_v$ by Young's inequality before
+any spatial integration by parts. The same weak
+passage, uniqueness, and positive-time argument apply.
+Reflection contributes $u_y\dd K=0$ in It\^o.
+The corresponding nondegenerate auxiliary clock law
+also excludes a tie of the absorbing upper side
+and initial voltage. This completes the construction
+used for the reflecting boundary in Appendix~\ref{app:boundary}.

@@ -1,0 +1,328 @@
+\section{The linear equation and the firing trace}\label{sec:linear}
+
+For the construction we fix
+\begin{equation}\label{eq:physical-choice}
+ v_E=2,\qquad v_F=1,\qquad y_L=1.
+\end{equation}
+Thus $D=(0,1)\times(0,\infty)$,
+$J(v,y)=y(2-v)-v$, $y_F=1$, $J_0(y)=2y$ and $J_F(y)=y-1$.
+We first keep the conductance mean and diffusion prescribed. Write them as
+$\mu(t)$ and $\mathfrak a(t)$, bounded above and below by positive constants.
+The conductance flux is
+\[
+ Q_{\mu,\mathfrak a}f=(\mu-y)f-\mathfrak a f_y.
+\]
+The weak formulation we use retains this flux at the reflecting boundary.
+If $\gamma_0 f,\gamma_F f$ are the voltage traces, they satisfy
+\begin{equation}\label{eq:voltage-traces}
+ \gamma_0 f=\gamma_F f=0\quad(0<y<1),\qquad
+ J_0\gamma_0 f=J_F\gamma_F f\quad(y>1).
+\end{equation}
+For a smooth test $\varphi$, compactly supported in $y$ and allowed to be
+nonzero at all physical faces, the equation reads
+\begin{align}\label{eq:weak-prescribed}
+ \left[\int_D f\varphi\right]_{t_1}^{t_2}
+ &+\int_{t_1}^{t_2}\!\int_1^\infty
+ J_F\gamma_F f\,[\varphi(t,1,y)-\varphi(t,0,y)]\dd y\dd t\notag\\
+ &=\int_{t_1}^{t_2}\!\int_D
+ f\,[\varphi_t+J\varphi_v+(\mu-y)\varphi_y]
+       -\mathfrak a f_y\varphi_y.
+\end{align}
+There is no boundary term at $y=0$. This is the zero conormal-flux condition.
+For periodic solutions the endpoint term cancels when the test is periodic.
+All voltage conditions are understood almost everywhere in their kinetic
+trace measures. No trace value is needed at $y=1$.
+
+\subsection{The frozen evolution}
+
+Let $m$ belong to $I=[2,3]$ and let $a>0$. Fix $\sigma>1$ with
+$2a\sigma<m$; we eventually take $\sigma=2$. Define
+\[
+ W(y)=e^{2\sigma y},\qquad
+ \HH_\sigma=L^2(D,W\dd v\dd y),\qquad
+ \HH_{-\sigma}=L^2(D,W^{-1}\dd v\dd y).
+\]
+\[
+ \HH_{\sigma,0}=\left\{h\in\HH_\sigma:\int_Dh=0\right\}.
+\]
+We complexify these spaces. Their transpose pairing is the bilinear integral
+$\langle h,u\rangle=\int_Dhu$; conjugation is used only in Hilbert energy
+identities. The mass functional is bounded on $\HH_\sigma$.
+
+We use the following consequences of the prescribed linear theory of
+Fonte Sanchez and Mischler.
+
+\begin{proposition}[The frozen linear evolution]\label{prop:frozen}
+For prescribed positive bounded $\mu,\mathfrak a$ and initial data in
+$\HH_\sigma$, there is a unique solution of the linear equation in
+$C([0,t_*];\HH_\sigma)$, with local $L^2$ conductance derivative and the
+renormalized weak traces, for every finite $t_*$. It preserves positivity
+and mass. For $\mu=m$, $\mathfrak a=a$, its evolution is a strongly continuous
+semigroup $S(t)$ on $\HH_\sigma$ with generator $\LL=\LL_{m,a}$.
+There is a normalized nonnegative invariant density $M=M_{m,a}$, belonging
+to every fixed exponential weighted space, and constants $C_a,\kappa_a>0$
+such that
+\begin{equation}\label{eq:frozen-gap}
+ \norm{S(t)h}_{\HH_\sigma}\le C_a e^{-\kappa_a t}
+           \norm{h}_{\HH_\sigma},\qquad h\in\HH_{\sigma,0}.
+\end{equation}
+The stationary density is in $D(\LL)$ and $\LL M=0$.
+\end{proposition}
+
+\begin{proof}
+The prescribed statement and its renormalized Green identity are
+\cite[Theorem 2.2 and (2.18)--(2.19)]{FM24}. The stationary and decay
+statements follow from \cite[Theorem 1.2]{FM24} by setting the source's
+connectivity to zero and its background mean and diffusion to $m,a$.
+In particular its coefficients are then exactly $m-y,a$. The invariant
+state is the generator-domain stationary state constructed in Section 7
+of that paper. Autonomy and uniqueness give the semigroup property;
+the asserted time continuity gives strong continuity. Its $p=2$ decay
+estimate is \eqref{eq:frozen-gap}. These are estimates for the frozen
+equation. The firing feedback will be included in Section~\ref{sec:crossing}.
+\end{proof}
+
+The domain $D(\LL)$ means the strong semigroup generator domain. We do not
+replace it by a prescribed collection of smooth functions at the two
+characteristic corners. The differential expressions in the interior are
+\[
+ \LL h=-\partial_v(Jh)-\partial_y((m-y)h)+ah_{yy},
+ \qquad
+ \G u=Ju_v+(m-y)u_y+au_{yy}.
+\]
+
+The outgoing space and the firing functional are
+\begin{equation}\label{eq:out-space}
+ \OO_\sigma=L^2((1,\infty),J_FW\dd y),\qquad
+ \ell h=\int_1^\infty J_F(y)h_F(y)\dd y.
+\end{equation}
+The next estimate defines these quantities on the actual generator domain.
+
+\begin{lemma}[Forward energy and the generator trace]\label{lem:forward-energy}
+There is a constant $C=C_{m,a,\sigma}$ such that
+\begin{align}\label{eq:forward-energy}
+ \norm{S(t)h}_{\HH_\sigma}^2
+ &+2a\int_0^t\norm{\partial_yS(s)h}_{\HH_\sigma}^2\dd s
+ +\int_0^t\!\int_1^\infty J_F(1-J_F/J_0)
+       |(S(s)h)_F|^2W\dd y\dd s\notag\\
+ &\le \norm h_{\HH_\sigma}^2+
+ C\int_0^t\norm{S(s)h}_{\HH_\sigma}^2\dd s.
+\end{align}
+For $h\in D(\LL)$, its derivative and outgoing trace satisfy
+\begin{equation}\label{eq:domain-energy}
+ 2a\norm{h_y}_{\HH_\sigma}^2+\tfrac12\norm{h_F}_{\OO_\sigma}^2
+ \le C\norm h_{\HH_\sigma}^2-2\operatorname{Re}(\LL h,h)_{\HH_\sigma}.
+\end{equation}
+In particular $\ell$ is continuous for the graph norm of $D(\LL)$.
+The finite-time version of \eqref{eq:forward-energy} is uniform for
+prescribed coefficients in a sufficiently small positive neighborhood of $m,a$.
+\end{lemma}
+
+\begin{proof}
+Here are the truncations in the Green identity. For real $f$ use
+\[
+ b_n(s)=2n^2\bigl(\sqrt{1+s^2/n^2}-1\bigr),\qquad
+ D_n(s)=s b_n'(s)-b_n(s).
+\]
+These are smooth convex functions with bounded first and second
+derivatives, $0\le D_n\le b_n\le s^2$, and $b_n''\to2$. If boundedness of
+the renormalization itself is required, first compose $b_n$ with a smooth
+bounded argument truncation at height $A$. For fixed $n$ its first and
+second derivatives are bounded independently of $A$. On compact physical
+intervals the local $L^2$ derivative and the source trace bounds dominate
+every term, so $A\to\infty$ recovers $b_n$. This also applies to the
+entropy renormalizations used later.
+
+Use $b_n$ with $W$ cut off between $R$ and $2R$. At high conductance the
+reset condition, with $r=J_F/J_0\in(0,1)$, makes the boundary loss
+\[
+ J_F\bigl[b_n(f_F)-r^{-1}b_n(rf_F)\bigr]\ge0.
+\]
+It converges to $J_F(1-r)|f_F|^2$. Integrate the cross diffusion term as
+$-a\int\partial_y b_n(f)W_y$. At the floor this gives
+$-mD_n(f_0)+2a\sigma b_n(f_0)$. The source local $H^1_y$ class gives
+$f_0\in L^2(\dd t\dd v)$, so this term converges to
+$-(m-2a\sigma)|f_0|^2$. Its sign is used after, rather than before,
+the truncation is removed.
+
+Away from the cutoff the volume term is
+\[
+ (y+2)D_n(f)+2\sigma(m-y)b_n(f)+4a\sigma^2 b_n(f)
+ \le C|f|^2,
+\]
+since $2\sigma>1$. The $y$-cutoff errors are bounded by a weighted
+$\HH_\sigma$ tail: on their support $y/R$ is bounded. Pass $n\to\infty$
+for fixed $R$, then $R\to\infty$. Fatou's lemma retains the nonnegative
+gradient and reset losses. This proves \eqref{eq:forward-energy} and also
+the favorable floor loss. Apply the argument to real and imaginary parts.
+
+For $h\in D(\LL)$ divide by $t$. The norm difference quotient tends to
+$2\operatorname{Re}(\LL h,h)$. The averages
+$t^{-1}\int_0^t S(s)h\dd s$ tend to $h$ in graph norm. Jensen's inequality
+and the preceding estimate bound their gradients and traces weakly;
+their averaged Green identities identify the limits. As
+$1-J_F/J_0\ge1/2$, weak lower semicontinuity gives
+\eqref{eq:domain-energy}. Finally
+\[
+ |\ell h|\le
+ \left(\int_1^\infty J_FW^{-1}\dd y\right)^{1/2}\norm{h_F}_{\OO_\sigma}.
+\]
+All coefficients and the limiting floor sign remain controlled in a
+small positive prescribed-coefficient neighborhood.
+\end{proof}
+
+\subsection{Divergence inputs and the reflecting boundary}
+
+The linearized feedback is a conductance divergence. For compact smooth
+$g$ supported inside $D$, put $Bg=\partial_y g$. The completion for
+general $g\in\HH_\sigma$ will be defined by
+\begin{equation}\label{eq:B-definition}
+ \langle Bg,\varphi\rangle=-\int_Dg\varphi_y,
+\end{equation}
+including tests nonzero at the floor. In particular it does not assign
+a point value to $g(0)$.
+
+By \eqref{eq:frozen-gap}, on the zero-mass space the ordinary inverse is
+\begin{equation}\label{eq:ordinary-resolvent}
+ R_{i\theta}h=\int_0^\infty e^{-i\theta t}S(t)h\dd t,
+ \qquad \theta\in\R.
+\end{equation}
+It maps into $D(\LL)$ and $(i\theta-\LL)R_{i\theta}h=h$.
+This follows by taking the difference quotient of the integral under
+$S(s)$; the omitted integral over $(0,s)$ tends to $h$ after division by
+$s$. The gap also excludes a homogeneous zero-mass solution.
+
+We first bound divergence inputs independently of a killed backward
+harmonic. The bounded-source backward construction needed in this proof
+is given in Appendix~\ref{app:boundary}; in particular it proves the
+actual Neumann condition before taking a global dual energy estimate.
+
+\begin{proposition}[Completed divergence resolvent]\label{prop:divergence}
+There is a bounded map
+\[
+ \mathcal R_\theta:g\longmapsto(h,h_y,h_F)
+ \quad\hbox{from }\HH_\sigma\hbox{ to }
+ \EE_\sigma:=\HH_{\sigma,0}\times\HH_\sigma\times\OO_\sigma,
+\]
+uniformly for all $\theta\in\R$, whose density component extends
+$h=R_{i\theta}Bg$ for compact smooth $g$. Its weak equation is
+\begin{align}\label{eq:completed-resolvent}
+ i\theta\int_Dh\varphi
+ -\int_Dh[J\varphi_v+(m-y)\varphi_y]
+ +a\int_Dh_y\varphi_y
+ &+\int_1^\infty J_Fh_F(\varphi_F-\varphi_0)\dd y\notag\\
+ &=-\int_Dg\varphi_y.
+\end{align}
+Thus the natural flux $(m-y)h-ah_y-g$ has zero floor trace.
+The original voltage conditions hold in the completed trace sense.
+We continue to denote the density component by $R_{i\theta}Bg$.
+The maps extend holomorphically to a neighborhood of each fixed
+imaginary frequency where the ordinary zero-mass resolvent exists.
+Constants and neighborhood sizes may depend on the fixed $a>0$.
+\end{proposition}
+
+\begin{proof}
+Let $s$ exceed the full semigroup growth bound and a fixed dual-energy
+constant. Here $Z_t=(V_t,Y_t)$ has reflected conductance
+$\dd Y_t=(m-Y_t)\dd t+\sqrt{2a}\dd W_t+\dd K_t$ and voltage
+$\dot V_t=J(V_t,Y_t)$; a threshold hit resets voltage from $1$ to $0$
+without changing conductance. Proposition~\ref{prop:process} establishes
+its density law, and Proposition~\ref{prop:backward-source} supplies
+the transpose-resolvent representation below.
+For bounded compact smooth $r$ the full-process value
+\[
+ u(z)=\E_z\int_0^\infty e^{-(s+i\theta)t}r(Z_t)\dd t
+\]
+is the transpose of the full forward resolvent. It is bounded by
+$\norm r_\infty/s$. Proposition~\ref{prop:backward-source} in the appendix
+gives, by localization at the corners and the actual Neumann floor,
+\begin{equation}\label{eq:large-real-dual}
+ (s-C)\norm u_{\HH_{-\sigma}}^2+
+ a\norm{u_y}_{\HH_{-\sigma}}^2
+ \le\norm r_{\HH_{-\sigma}}\norm u_{\HH_{-\sigma}}.
+\end{equation}
+Completion of compact smooth $r$, using closedness of the distributional
+derivative, gives the same estimate for every $r\in\HH_{-\sigma}$.
+
+For an arbitrary such $r$ set $r_0=r-(\int_DMr)\one$. The transpose of
+\eqref{eq:ordinary-resolvent}, represented in $\int_D M\psi=0$, gives
+\[
+ (i\theta-\LL^T)\psi=r_0,\qquad
+ \norm\psi_{\HH_{-\sigma}}\le C_a\norm r_{\HH_{-\sigma}}.
+\]
+The representative is an actual transpose-domain element: decompose
+$h\in D(\LL)$ into $(\int h)M+h_0$. The stationary terms vanish by the
+two mean-zero normalizations. The shifted identity is
+\[
+ \psi=(R^{\rm full}_{s+i\theta})^T(r_0+s\psi).
+\]
+Its input is bounded uniformly in $\theta$. Applying
+\eqref{eq:large-real-dual} at this same frequency proves
+$\norm{\psi_y}_{\HH_{-\sigma}}\le C_a\norm r_{\HH_{-\sigma}}$.
+
+For compact $g$, $h=R_{i\theta}Bg\in D(\LL)$ and transpose duality now
+gives
+\[
+ \langle h,r\rangle=\langle Bg,\psi\rangle=-\int_Dg\psi_y.
+\]
+Taking the dual norm bounds $\norm h_{\HH_\sigma}$ by $C_a\norm g_{\HH_\sigma}$.
+Use \eqref{eq:domain-energy} with
+$\LL h=i\theta h-Bg$. The remaining source term is
+\[
+ (Bg,h)_{\HH_\sigma}
+   =-\int_Dg(\overline{h_y}+2\sigma\overline h)W.
+\]
+Young's inequality absorbs its derivative term. Hence
+\begin{equation}\label{eq:triple-bound}
+ \norm h_{\HH_\sigma}+\norm{h_y}_{\HH_\sigma}
+       +\norm{h_F}_{\OO_\sigma}\le C_a\norm g_{\HH_\sigma},
+\end{equation}
+uniformly in $\theta$, including zero.
+
+Approximate general $g$ by compact smooth functions away from $y=0$.
+Apply \eqref{eq:triple-bound} to differences. All three components
+converge strongly, and their weak equations give
+\eqref{eq:completed-resolvent}. This is why the inhomogeneous floor flux
+is retained even though the approximants vanish there. The product
+$\EE_\sigma$ is an ambient Hilbert space; derivative and trace identities
+are consequences of the weak equation for these outputs.
+
+Finally, for $\lambda_0=i\theta$ use
+\[
+ R_\lambda B=R_{\lambda_0}B+
+       (\lambda_0-\lambda)R_\lambda R_{\lambda_0}B.
+\]
+The second term has an ordinary $\HH_{\sigma,0}$ datum, so the ordinary
+resolvent identity and domain energy give the local holomorphic extension.
+\end{proof}
+
+We will also need a finite-time form of the same completion.
+
+\begin{lemma}[Causal divergence forcing]\label{lem:causal}
+For $g\in L^2((0,t_*);\HH_\sigma)$ there is a unique zero-initial-data
+solution of $(\partial_t-\LL)w=Bg$ in the completed energy class, with
+\begin{equation}\label{eq:causal-bound}
+ \sup_{0\le t\le t_*}\norm{w(t)}_{\HH_\sigma}^2+
+ \int_0^{t_*}\bigl(\norm{w_y}_{\HH_\sigma}^2+
+                  \norm{w_F}_{\OO_\sigma}^2\bigr)\dd t
+ \le C_{a,m,t_*}\norm g_{L^2_t\HH_\sigma}^2.
+\end{equation}
+Its mass is zero and its natural base flux equals $g$ at the floor in
+the weak formulation.
+\end{lemma}
+
+\begin{proof}
+First take $g$ continuously differentiable in time and compactly supported
+inside $D$. Its divergence is a differentiable $\HH_\sigma$ forcing, so
+the semigroup convolution is a classical $D(\LL)$ solution. This also
+follows by integrating the time derivative of $Bg$ in that convolution.
+Apply \eqref{eq:domain-energy} to $w(t)$. Integrating the input as above,
+Young's inequality and Gronwall give \eqref{eq:causal-bound}.
+Complete the inputs in $L^2_t\HH_\sigma$. The outputs converge in
+$C_t\HH_\sigma$, and their derivatives and traces converge in $L^2$.
+Their weak equations retain the same floor input. The difference of two
+completions is a homogeneous zero-initial-data solution, so prescribed
+uniqueness in Proposition~\ref{prop:frozen} proves uniqueness. All these
+solutions lie in its local energy class; a smaller exponential weight
+may be used for this uniqueness comparison.
+\end{proof}

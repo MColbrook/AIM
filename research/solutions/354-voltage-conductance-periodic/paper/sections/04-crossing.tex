@@ -1,0 +1,417 @@
+\section{A simple characteristic crossing}\label{sec:crossing}
+
+We next turn a small-noise cycle calculation into a zero of the full
+firing-response multiplier. The operator norm comparison and the
+one-dimensional spectral projection are essential: a small residual
+alone would not locate a characteristic root of this nonselfadjoint
+problem.
+
+\subsection{Phase coordinates and the return norm limit}
+
+Recall $X=\log[2/(2-v)]$, $L=\log2$, and $b(X)=e^X-1$. Define
+\begin{equation}\label{eq:phase}
+ s(x)=\int_0^x\frac{\dd r}{m-b(r)},\quad
+ \tau=s(L)=\frac1{m+1}\log\frac{2m}{m-1},\quad
+ \omega=\frac{2\pi}{\tau},\quad Z(s)=\frac1{m-b(x(s))}.
+\end{equation}
+Here $\tau$ is the deterministic cycle duration; it differs from the
+random first hit $\tf$ and from the nonlinear period $T$ used later.
+Writing $A=m+1$, direct integration gives
+\begin{equation}\label{eq:Z-formula}
+ Z(s)=\frac1A+\frac1{mA}e^{As},\qquad
+ \Delta Z=Z(\tau)-Z(0)>0.
+\end{equation}
+In $(s,\eta)$ variables the backward expression is exactly
+\begin{equation}\label{eq:phase-generator}
+ \G=(1+\varepsilon\eta Z(s))\partial_s+\mathcal A.
+\end{equation}
+Phase endpoints are identified by reset. Functions with equal endpoint
+values have no reset jump; $Z$ itself has different one-sided values
+there.
+
+Let $Q_t$ be the OU operator with mean $e^{-t}\eta$ and variance
+$1-e^{-2t}$.
+
+\begin{proposition}[Return comparison in operator norm]\label{prop:return-norm}
+For each compact set $\Lambda$ in a sufficiently small strip
+$|\operatorname{Re}\lambda|<r_0$,
+\begin{equation}\label{eq:return-norm}
+ \sup_{m\in I,\,\lambda\in\Lambda}
+ \norm{P_a(\lambda)-e^{-\lambda\tau(m)}Q_{\tau(m)}}_{\BB_\beta\to\BB_\beta}
+       \longrightarrow0\qquad(a\downarrow0).
+\end{equation}
+The physical return operator, extended constantly below the reflecting
+boundary as in \eqref{eq:killed-return}, maps $\BB_\beta$ into itself and is locally
+norm holomorphic in $\lambda$. No rate in \eqref{eq:return-norm} is
+asserted after the conductance cutoffs have been removed.
+\end{proposition}
+
+\begin{proof}
+We give the three estimates and the order of their limits.
+For $\kappa>0$,
+\[
+ \frac{\G(e^{\kappa X}w_\beta)}{e^{\kappa X}w_\beta}
+ =\kappa(m+\varepsilon\eta-b(X))
+                     +2\beta-2\beta(1-2\beta)\eta^2.
+\]
+After adding a fixed positive discount exponent this is nonpositive
+outside a core $|\eta|\le R_\kappa$, uniformly in small $\varepsilon$.
+Reflection again contributes nonpositively. Stop at the core entrance
+$S$ or $\tf$. On $\tf<S$, $X_\tf=L$, so the terminal expectation gains
+the factor $e^{-\kappa L}$. On $S<\tf$, the continued killed expectation
+is bounded by $Cw_\beta(R_\kappa)$, and
+$\E e^{rS}\one_{\{S<\tf\}}\le\E e^{r\tf}\le C$. Consequently
+\begin{equation}\label{eq:return-rows}
+ \sup_{|\eta|\ge M}
+ \frac{|P_a(\lambda)f(\eta)|}{w_\beta(\eta)}
+ \le\left[e^{-\kappa L}+Cw_\beta(R_\kappa)e^{-\beta M^2}\right]\norm f_\beta
+\end{equation}
+on physical rows. For the constantly extended rows, the estimate at the floor is
+multiplied by $w_\beta(-m/\varepsilon)/w_\beta(\eta)\le1$.
+First choose $\kappa$, then $M$. This makes the weighted row tails
+small uniformly as $a\downarrow0$. The comparison operator has the same
+property, since, with $v_t=1-e^{-2t}$,
+\[
+ Q_tw_\beta(\eta)=(1-2\beta v_t)^{-1/2}
+     \exp\!\left(\frac{\beta e^{-2t}\eta^2}{1-2\beta v_t}\right).
+\]
+For $t=\tau(m)$ its exponent is strictly below $\beta$, uniformly on $I$.
+
+Next fix $|\eta_0|\le M$ and $R>M$. For small enough $\varepsilon$,
+the floor lies below $-R$ and the voltage speed before leaving
+$|\eta|<R$ is bounded below by $j_*>0$. A hit or an exit therefore
+occurs before $D=1/j_*$. The explicit unreflected OU representation
+and the maximal inequality give
+\[
+ \Pp(\text{exit }(-R,R)\text{ before }\tf)\le \frac{C_D}{(R-M)^2}.
+\]
+By the stopped estimate with $2\beta$ and twice the discount exponent,
+Cauchy--Schwarz bounds its terminal weighted contribution by a constant
+depending on $M$ times the square root of this probability. The same
+argument removes paths exiting $(-R,R)$ for $Q_\tau$. These bounds
+hold for every datum in the unit ball of $\BB_\beta$.
+
+On the fixed interval $(-R,R)$, phase is a positive clock. In reversed
+phase time the killed evolution is
+\begin{equation}\label{eq:clock-equation}
+ q_\varepsilon(t,\eta)u_t=(\mathcal A-\lambda)u,\qquad
+ q_\varepsilon(t,\eta)=1+\varepsilon\eta Z(\tau-t),\qquad
+ u|_{\eta=\pm R}=0,\quad u(0)=f.
+\end{equation}
+Appendix~\ref{app:clock} constructs this evolution for arbitrary
+continuous data and proves
+\begin{equation}\label{eq:clock-sup}
+ \norm{u_\varepsilon(\tau)-u_0(\tau)}_\infty
+       \le C_{R,I,\Lambda}\varepsilon\norm f_\infty.
+\end{equation}
+Thus choose $\kappa,M$, then $R$, and finally $\varepsilon$. On the
+fixed interval a unit $\BB_\beta$ datum has supremum at most
+$e^{\beta R^2}$; \eqref{eq:clock-sup} now proves
+\eqref{eq:return-norm}.
+
+For fixed $a>0$, continuity of the return rows follows from continuous
+Skorokhod and voltage dependence up to a transverse hit, point-start
+non-grazing, and higher-weight uniform integrability. This includes
+the floor, as proved in Appendix~\ref{app:boundary}. The constant extension
+is continuous at that boundary. Estimate \eqref{eq:return-rows} gives vanishing weighted
+tails, so the output belongs to $\BB_\beta$. The stopped discount
+series gives norm holomorphy.
+\end{proof}
+
+\subsection{The corrected phase mode}
+
+A stationary phase average is useful before constructing the mode.
+For every continuous $\tau$-periodic function $h$, let
+$\overline h=\tau^{-1}\int_0^\tau h(s)\dd s$ and take a periodic
+primitive $q'=h-\overline h$. Along a stationary process $q$ has no
+reset jump and no reflecting derivative. Therefore
+\begin{equation}\label{eq:phase-average}
+ \E_M h-\overline h
+   =-\varepsilon\E_M[\eta Z(s)(h-\overline h)],\qquad
+ |\E_M h-\overline h|\le C\varepsilon\norm h_\infty.
+\end{equation}
+The Gaussian marginal justifies the expectation. This identity avoids
+any assertion of a joint phase--conductance product limit.
+
+Fix a nonzero integer $k$ and set $q=k\omega$. Choose correctors with
+equal endpoint values by
+\begin{align}\label{eq:correctors}
+ \phi'-\phi&=-iqZ,&
+ \mathcal W&=Z(iq\phi+\phi'),&
+ \lambda_2&=\overline{\mathcal W},\notag\\
+ \psi'-2\psi&=-\mathcal W,&
+ \chi'&=\lambda_2-\mathcal W,& \overline\chi&=0.
+\end{align}
+The first two periodic first-order equations are uniquely solvable,
+and the last has a solution because its right side has mean zero.
+All interval derivatives needed below are bounded for this fixed $k$,
+uniformly in $m\in I$. Define initially
+\begin{equation}\label{eq:base-mode}
+ u_a=e^{iqs}\bigl[1+\varepsilon\eta\phi+
+                  a((\eta^2-1)\psi+\chi)\bigr].
+\end{equation}
+Since $\mathcal A\eta=-\eta$ and
+$\mathcal A(\eta^2-1)=-2(\eta^2-1)$, the coefficients of orders
+$1,\varepsilon,a$ in $(\G-iq-a\lambda_2)u_a$ vanish exactly.
+Using a smooth cutoff, make the corrections flat in a fixed-width layer at the physical
+floor $\eta=-m/\varepsilon$. They remain unchanged above that layer.
+The resulting $u_a$ has exact Neumann derivative at the floor and zero
+reset jump. Cutoff errors are polynomial in $\varepsilon^{-1}$ times
+a Gaussian-small weighted tail, hence are exponentially small.
+
+Let the feedback of this smooth field be
+\[
+ \alpha=c\int_D M(u_a)_y-c^2\int_D M_y(u_a)_y.
+\]
+Put
+\begin{equation}\label{eq:approx-mode}
+ u_{\rm app}=u_a+\alpha(s/\tau)e^{iqs},\qquad
+ \lambda_{\rm app}=iq+a\lambda_2+\alpha/\tau,\qquad
+ f_{\rm app}=(u_{\rm app})_F.
+\end{equation}
+The added term has zero $y$ derivative. The reset jump and the feedback
+of $u_{\rm app}$ both equal $\alpha$.
+
+\begin{lemma}[Damping, gain, and residual]\label{lem:quasimode}
+For a fixed $k\ne0$ and a fixed $C_0$, uniformly for complex
+$|c|\le C_0a$,
+\begin{align}
+ \norm{f_{\rm app}-\one}_\beta&\le C\sqrt a,&
+ \sup_{\text{physical }s,\eta}
+       \frac{|(\G-\lambda_{\rm app})u_{\rm app}|}{w_\beta(\eta)}
+       &\le Ca^{3/2}.                             \label{eq:mode-residual}
+\end{align}
+There are real $D=D(m)>0$ and complex $G_k=G_k(m)$ such that
+\begin{align}
+ \operatorname{Re}\lambda_2&=-k^2D,&
+ \frac{\alpha}{\tau}&=cG_k+O(|c|\sqrt a+|c|^2),     \label{eq:mode-gain}\\
+ G_k&=\frac{\Delta Z}{\tau^2}
+           \frac{iq}{(A+iq)(1+iq)},&
+ \gamma_k:=\operatorname{Re}G_k
+   &=\frac{\Delta Z}{\tau^2}
+       \frac{q^2(A+1)}{(A^2+q^2)(1+q^2)}>0.       \label{eq:gamma}
+\end{align}
+Moreover $\gamma_k/k^2$ strictly decreases for positive integers $k$.
+\end{lemma}
+
+\begin{proof}
+Let the real periodic $\mathcal C$ solve $\mathcal C'-\mathcal C=-Z$.
+Then $\phi=iq\mathcal C$, and
+\[
+ \operatorname{Re}\lambda_2
+   =-q^2\overline{Z\mathcal C}
+   =-q^2\overline{\mathcal C^2}=-k^2D,\qquad
+ D=\omega^2\overline{\mathcal C^2}>0.
+\]
+Here $Z=\mathcal C-\mathcal C'$ and periodicity give the second equality.
+Positivity follows also from
+$\mathcal C(s)=\int_0^\infty e^{-t}Z(s+t\ {\rm mod}\ \tau)\dd t>0$.
+
+The leading conductance derivative of \eqref{eq:base-mode} is
+$e^{iqs}\phi(s)$, continuous at the phase seam. Formula
+\eqref{eq:phase-average} replaces its $M$ average by its phase average
+with $O(\sqrt a)$ error. The next derivative term is $\sqrt a$ times
+$\eta$ times a bounded phase function; the floor error is Gaussian
+small. With the Fourier convention
+$Z_j=\tau^{-1}\int_0^\tau Z(s)e^{-ij\omega s}\dd s$,
+\[
+ Z_{-k}=\frac{\Delta Z}{\tau(A+iq)},\qquad
+ \phi_{-k}=\frac{iqZ_{-k}}{1+iq}.
+\]
+Integration by parts in the diffusion term is valid for the smooth
+Neumann field and bounds $\int M(u_a)_{yy}$ uniformly. These facts
+give \eqref{eq:mode-gain}. Taking the real part yields
+\eqref{eq:gamma}; its displayed denominators prove the strict decrease.
+
+In particular $\alpha=O(a)$. The exact cancellations in
+\eqref{eq:correctors} leave $O(a^{3/2})$ times a fixed polynomial in
+$\eta$. The added term in \eqref{eq:approx-mode} contributes
+$O(\alpha\varepsilon)+O(\alpha a)$ after its leading frequency shift
+has canceled. All polynomial terms are bounded in the weighted
+supremum norm. The floor cutoff contributes exponentially small errors.
+Extending $f_{\rm app}$ constantly below the reflecting boundary preserves
+the reset identity.
+These observations prove \eqref{eq:mode-residual}.
+\end{proof}
+
+\subsection{An actual root and the full response}
+
+Define the coupled return operator
+\begin{equation}\label{eq:coupled-return}
+ K(\lambda,c)=P_a(\lambda)+\one\otimes\fb_{\lambda,c}
+                 \quad\hbox{on }\BB_\beta.
+\end{equation}
+By Corollary~\ref{cor:feedback} and Proposition~\ref{prop:return-norm},
+for $|c|\le C_0a$ it converges in norm to
+$e^{-\lambda\tau}Q_\tau$ on fixed complex neighborhoods of
+$ik\omega$.
+
+\begin{proposition}[The simple return root]\label{prop:return-root}
+For each fixed $k\ne0$ and all sufficiently small $a$, there is a unique
+root $\lambda_k$ near $ik\omega$ of the simple eigenvalue-one equation
+for $K$. It is simple and holomorphic in $c$ for $|c|<C_0a$, and
+\begin{align}
+ \lambda_k&=ik\omega+a\lambda_2+cG_k+O(a^{3/2}),   \label{eq:true-root}\\
+ \partial_c\lambda_k&=G_k+O(\sqrt a)              \label{eq:root-derivative}
+\end{align}
+on interior $c$ disks of radius comparable to $a$. Constants are
+uniform in $m\in I$ for fixed $k$. There are real positive
+$\cH(a,m)$ and $\OmH(a,m)$ satisfying
+\begin{equation}\label{eq:crossing}
+ \lambda_1(\cH)=i\OmH,\qquad
+ \frac{\cH}{a}=\frac D{\gamma_1}+O(\sqrt a),\qquad
+ \OmH\to\omega,\qquad
+ \operatorname{Re}\partial_c\lambda_1(\cH)>0.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Let $\Pi_\gamma f=(\int f\dd\gamma)\one$, where $\gamma$ is standard
+Gaussian measure. The Mehler formula gives
+\begin{equation}\label{eq:Mehler-gap}
+ \norm{Q_{n\tau}-\Pi_\gamma}_{\BB_\beta\to\BB_\beta}\le Ce^{-n\tau}.
+\end{equation}
+For completeness, differentiate its Gaussian kernel in the mean
+$e^{-t}\eta$ and variance $1-e^{-2t}$. After multiplication by
+$e^{-\beta\eta^2}$, the kernel difference is bounded, for large $t$,
+by $Ce^{-t}$ times a polynomial in $\eta$ times
+$e^{-\beta\eta^2/2}$. Integrating against $w_\beta$ proves the
+bound; the finitely many earlier times are absorbed in $C$.
+The estimate is uniform for $\tau(m)$ on its compact interval.
+
+It follows that the constant eigenvalue of $Q_\tau$ is simple and that
+the complement resolvent outside $|\zeta|=e^{-\tau}$ is given by a
+uniformly convergent series. Choose a small circle around $1$ in the
+$\zeta$ plane and a sufficiently small fixed $\lambda$ disk around
+$ik\omega$. The limiting resolvent on that circle is uniformly
+bounded. The actual resolvent exists there by a Neumann series.
+Its contour projection $\Pi=\Pi_{a,c,\lambda}$ tends in norm to
+$\Pi_\gamma$ and has rank one: projections at distance less than one
+are injective on each other's ranges. Resolvent identities give
+idempotence and commutation. Normalizing by Gaussian mean gives a
+holomorphic eigenvalue $e(a,c,\lambda)$ with
+\[
+ e\longrightarrow e^{-\lambda\tau},\qquad
+ e_\lambda\longrightarrow-\tau
+\]
+at the harmonic; derivative convergence on a smaller disk follows
+from Cauchy's formula.
+
+At $\lambda_{\rm app}$ let
+$v=V_{\lambda_{\rm app}}f_{\rm app}$ and $w=u_{\rm app}-v$.
+It has zero outgoing terminal value and source
+$r=-(\G-\lambda_{\rm app})u_{\rm app}$ bounded by
+$Ca^{3/2}w_\beta$. This source is smooth on the closed physical
+half-strip: the phase correctors are smooth up to their separate
+voltage endpoints, and the floor cutoff is smooth.
+Thus it belongs to the source class of Lemma~\ref{lem:cycle-energy}.
+The killed-reward bound and the forced version of
+\eqref{eq:feedback-bound} therefore give
+\[
+ (I-K(\lambda_{\rm app},c))f_{\rm app}
+       =w(0,\cdot)+\fb_{\rm field}(w)\one,\qquad
+ \norm{(I-K)f_{\rm app}}_\beta\le Ca^{3/2}.
+\]
+Here $\fb_{\rm field}(w)=c\int Mw_y-c^2\int M_yw_y$.
+Since $\Pi f_{\rm app}\to\one$, projecting this identity yields
+$|e(\lambda_{\rm app},c)-1|\le Ca^{3/2}$.
+
+On a smaller fixed convex disk choose
+$|e_\lambda+\tau|<\tau/3$; $e_{\lambda\lambda}$ is bounded there.
+With $b=e_\lambda(\lambda_{\rm app},c)$, the map
+\[
+ \delta\longmapsto
+ \delta-\frac{e(\lambda_{\rm app}+\delta,c)-1}{b}
+\]
+is a contraction on $|\delta|\le C'a^{3/2}$ for sufficiently large
+fixed $C'$. Its value at zero is $O(a^{3/2})$, and its Lipschitz
+constant on that disk is $O(a^{3/2})$. It gives an actual root with
+\eqref{eq:true-root}. If two roots lay in the fixed convex disk,
+integrating $e_\lambda+\tau$ on the segment between them would give
+$\tau|\lambda-\lambda'|\le(\tau/3)|\lambda-\lambda'|$.
+Thus the root is unique there and simple.
+
+Holomorphy and Cauchy's formula on $c$ disks of radius comparable to
+$a$ turn the uniform $O(a^{3/2})$ error into the $O(\sqrt a)$ derivative
+error in \eqref{eq:root-derivative}. Choose
+$C_0>4\sup_I D/\gamma_1$. On a real interior interval of $c$ of
+length $C_1a$, the real part of $\lambda_1$ starts negative, ends
+positive, and has strictly positive derivative. Its unique zero
+gives \eqref{eq:crossing}. This concerns the indicated branch;
+no stability assertion about the remaining spectrum is required.
+\end{proof}
+
+We now compare this root with the physical forward response. Define
+\begin{equation}\label{eq:physical-response}
+ g_c=-cM+c^2M_y,\qquad
+ \resp(\lambda;m,a,c)=\ell R_\lambda Bg_c .
+\end{equation}
+The response is defined on the entire imaginary axis and locally
+holomorphic near each frequency by Proposition~\ref{prop:divergence}.
+
+\begin{proposition}[Response crossing and the static block]\label{prop:response-crossing}
+At the crossing in \eqref{eq:crossing},
+\begin{equation}\label{eq:response-root}
+ \resp(i\OmH;m,a,\cH)=1,\qquad
+ \partial_\lambda(1-\resp)(i\OmH;m,a,\cH)\ne0.
+\end{equation}
+For $c=O(a)$,
+\begin{equation}\label{eq:static-response}
+ \resp(0;m,a,c)=O(\sqrt a).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Near the chosen nonzero harmonic $I-P_a(\lambda)$ is Fredholm of index
+zero. Indeed the norm limit splits into a one-dimensional part and a
+complement on which $I-P$ is invertible; block elimination leaves a
+finite-dimensional block. On the nonzero imaginary axis its kernel
+is zero. If $(I-P)f=0$, then $u=V_\lambda f$ has zero reset jump.
+Proposition~\ref{prop:constant-jump} puts $u$ in the actual transpose
+domain. Its $M$ mean is zero since $\lambda\ne0$, and the frozen gap
+excludes this imaginary eigenfunction. Thus $I-P$ is invertible at
+the crossing and in a possibly $a$-dependent complex neighborhood.
+
+Set $f_0=(I-P)^{-1}\one$. Its killed value has jump one. The completed
+Green pairing, with both feedback terms, gives
+\begin{equation}\label{eq:response-match}
+ \resp(\lambda)=\fb_{\lambda,c}(f_0),\qquad
+ (I-K)f_0=(1-\resp(\lambda))\one.
+\end{equation}
+At a $K$ root on this imaginary axis the jump of an eigenfunction
+cannot be zero, by the same frozen transpose argument. The first
+identity follows from \eqref{eq:divergence-pairing}; the second
+therefore implies $\resp=1$.
+
+Let $\nu$ be the left eigenfunctional of the simple eigenvalue of $K$,
+normalized by $\nu(f_0)=1$ at the root. It satisfies
+$\nu(I-P)=\nu(\one)\fb$. If $\nu(\one)=0$, invertibility of $I-P$
+would force $\nu=0$. Differentiating \eqref{eq:response-match} and
+pairing with $\nu$ thus gives
+\[
+ -e_\lambda=\partial_\lambda(1-\resp)\,\nu(\one).
+\]
+This proves \eqref{eq:response-root}, including simplicity.
+
+At zero frequency, $P_a(0)\one=\one$. Its simple spectral projection
+is $\Pi_a f=\pi_a(f)\one$, by the invariant mark law. The inverse of
+$I-P_a(0)$ on $\pi_a$-mean-zero data is uniformly bounded, by the
+same separated complement. Let $t(z)=\E_z\tf$, with reset value $t_0$.
+The occupation formula gives $\pi_a(1-N_0t_0)=0$. Solve
+\[
+ (I-P_a(0))f=1-N_0t_0,\qquad \pi_a f=0,
+ \qquad w=V_0f-N_0t.
+\]
+Here $t$ has zero terminal datum and source $r=1$, while $w$ has
+source $r=-N_0$ at $\lambda=0$. These constant sources satisfy the
+smoothness and weighted bounds in Lemma~\ref{lem:cycle-energy}.
+Then $\G w=N_0$ and $w_F-w_0=1$. Killed-reward and forced cycle
+energy estimates give $\int M|w|^2+a\int M|w_y|^2\le C$.
+The polynomial-growth argument in Appendix~\ref{app:boundary}
+also applies with this bounded interior source. The generator
+pairing now has the constant volume term $N_0\int h$. It vanishes
+for $h=R_0Bg_c$, whose mass is zero. The same Riesz completion
+therefore gives
+$\resp(0)=c\int Mw_y-c^2\int M_yw_y=O(\sqrt a)$.
+For small $a$, the static multiplier $1-\resp(0)$ is nonzero.
+\end{proof}
