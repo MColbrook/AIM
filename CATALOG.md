@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**844 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**843 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -15,7 +15,7 @@
 | [Probability, statistics and learning](#probability-statistics-and-learning) | [59](#probability-statistics-open) | [14](#probability-statistics-solved) |
 | [Numerical analysis and scientific computing](#numerical-analysis-and-scientific-computing) | [17](#numerical-analysis-open) | [12](#numerical-analysis-solved) |
 | [Geometry and topology](#geometry-and-topology) | [167](#geometry-topology-open) | [24](#geometry-topology-solved) |
-| [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [22](#optimization-information-open) | [4](#optimization-information-solved) |
+| [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [21](#optimization-information-open) | [4](#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](#waves-quantum-systems-and-spectral-geometry) | [24](#spectral2-open) | [8](#spectral2-solved) |
 | [Imaging, control, geometry and dynamics](#imaging-control-geometry-and-dynamics) | [22](#inverse2-open) | [8](#inverse2-solved) |
 | [Fluids, kinetic theory and continuum mechanics](#fluids-kinetic-theory-and-continuum-mechanics) | [36](#continuum2-open) | [12](#continuum2-solved) |
@@ -703,7 +703,6 @@
 | 622 | [What is the one-dimensional convex-bandit minimax cumulative regret?](problems/622-what-is-the-one-dimensional-convex-bandit-minimax-cumulative-regret.md) | 🟡 PARTIAL | Optimization and information |
 | 623 | [Costas arrays at every order](problems/623-costas-all-orders.md) | 🟡 PARTIAL | Combinatorial signal design |
 | 627 | [Generic one-to-one boundary parametrization of the SDP-exact distance region](problems/627-generic-one-to-one-boundary-parametrization-of-the-sdp-exact-distance-region.md) | 🔵 OPEN | Algebraic geometry of continuous optimization |
-| 632 | [Classifying Costas polynomials over extension fields](problems/632-costas-polynomial.md) | 🟡 PARTIAL | Finite-field signal design |
 
 <a name="optimization-information-solved"></a>
 
@@ -715,6 +714,12 @@
 | 540 | [Sharp barrier-parameter growth for hyperbolic balls](problems/540-hyperbolic-ball-barrier-parameter.md) | ✅ SOLVED | The infimum of full-tensor barrier parameters has quadratic growth in the hyperbolic radius, without any symmetry assumption. | [Proof](research/solutions/540-hyperbolic-ball-barrier-parameter/paper/hyperbolic_ball_barriers.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/540-review.md) |
 | 567 | [Perfect Lee codes beyond dimension two](problems/567-golomb-welch.md) | ✅ SOLVED | Affirmative proof | [Proof](https://arxiv.org/pdf/2610.34291v1) | [Review](research/solution-status-audit-2026-11-03/lane-b/567.json) |
 | 585 | [Sidorenko's lower bound for bipartite homomorphism counts](problems/585-sidorenko.md) | ✅ SOLVED | Counterexample | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/paper.pdf) | [Review](research/solution_reviews/2026-10-13-openai-crosscheck/README.md) |
+
+### Solution claimed
+
+| ID | Problem | Status | Outcome | Proof | Review |
+| --- | --- | --- | --- | --- | --- |
+| 632 | [Classifying Costas polynomials over extension fields](problems/632-costas-polynomial.md) | 🟠 SOLUTION CLAIMED | Complete classification claim: permutation powers followed by invertible prime-field-linear maps. | [Proof](research/solutions/aim-632-costas-classification/paper/costas-classification.pdf) | [Review](research/solutions/aim-632-costas-classification/README.md) |
 
 ## Waves, quantum systems and spectral geometry
 
@@ -1529,7 +1534,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 2026 expansion — batch 6 | 6 | 2026-09-19–2026-10-13 |
 | September 22 expansion — PDE emphasis | 88 | 2026-09-22–2026-10-30 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
-| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 114 | 2026-09-23–2026-11-04 |
+| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 113 | 2026-09-23–2026-11-04 |
 | Retained further problems, integrated 30 October 2026 | 373 | 2026-10-30–2026-11-07 |
 
 ## Maintaining the collection
