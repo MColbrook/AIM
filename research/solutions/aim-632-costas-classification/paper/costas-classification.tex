@@ -1,0 +1,1060 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Fp}{\mathbb F_p}
+\newcommand{\Fq}{\mathbb F_q}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Nrm}{\operatorname{N}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\rank}{\operatorname{rank}}
+\DeclareMathOperator{\lcm}{lcm}
+\numberwithin{equation}{section}
+\title{Classification of Costas polynomials over finite extension fields}
+\author{Kaiwen Jin\\ \small\href{mailto:yui.ui.siki@gmail.com}{yui.ui.siki@gmail.com}}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A Costas polynomial over a finite field fixes zero and has a permutation
+as every multiplicative difference \(f(dx)-f(x)\), \(d\ne1\).
+We prove that over every nontrivial finite extension of a prime field,
+these functions are exactly the permutation monomials followed by
+invertible prime-field-linear maps. This establishes the extension-field
+classification conjectured by Muratovi\'c-Ribi\'c, Pott, Thomson, and Wang,
+without a shifting hypothesis. The proof combines the difference-set
+structure of scalar trace components with a count of their Frobenius
+multiplier parameters. Two rank inequalities force a full-length
+Frobenius orbit, allowing a normalization that leaves only norm-dependent
+terms. A direction theorem and a three-root multiplicative character
+estimate then give the classification.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:introduction}
+
+Costas polynomials describe a distinct-difference property in which
+the argument is shifted multiplicatively and the values are compared
+additively. More precisely, over a finite field \(\Fq\), a function
+\(f:\Fq\to\Fq\) with \(f(0)=0\) is Costas if
+\[
+ x\longmapsto f(dx)-f(x)
+\]
+is a permutation for every \(d\in\Fq\setminus\{1\}\).
+Every function on \(\Fq\) has a unique polynomial representative of
+degree less than \(q\), so the terminology imposes no additional
+polynomial restriction. These functions arise from circular Costas
+structures and are related to relative difference sets and finite
+geometries~\cite{Costas2015,RubioTorres}. Their permutation differences
+also produce complete families of mutually orthogonal Latin
+squares~\cite{Costas2026}.
+
+The basic construction is
+\[
+ f(x)=L(x^s),\qquad \gcd(s,q-1)=1,
+\]
+where \(L\) is an invertible linear map over the prime field.
+Muratovi\'c-Ribi\'c, Pott, Thomson, and Wang proved the prime-field
+classification and conjectured that this construction gives all
+Costas polynomials over extension fields~\cite[author version,
+Corollary~4.2 and Conjecture~4.4]{Costas2015}.
+Torres and Rubio proved the extension-field classification under the
+stronger shifting condition: for each \(d\ne1\), there is an \(a\ne0\)
+such that \(f(dx)-f(x)=f(ax)\) for all \(x\)
+\cite[Definition~35 and Theorem~38 of arXiv:2210.16661v1]{RubioTorres}.
+The orthomorphism formulation of
+Muratovi\'c-Ribi\'c and Bala\v sev-Samarski retains the unrestricted
+classification as a conjecture~\cite[Sections~1--2]{Costas2026}.
+The issue is whether bijectivity of the differences alone forces the
+same form.
+
+\begin{theorem}\label{thm:main}
+Let \(p\) be a prime, \(r\ge2\), \(q=p^r\), and let
+\(f:\Fq\to\Fq\) satisfy \(f(0)=0\).
+Then \(x\mapsto f(dx)-f(x)\) is a permutation of \(\Fq\) for every
+\(d\in\Fq\setminus\{1\}\) if and only if there exist a positive
+integer \(s\) with \(\gcd(s,q-1)=1\) and an invertible
+\(\Fp\)-linear map \(L:\Fq\to\Fq\) such that
+\[
+ f(x)=L(x^s)\qquad(x\in\Fq).
+\]
+Equivalently, \(L\) is a linearized permutation polynomial
+\(L(X)=\sum_{j=0}^{r-1}a_jX^{p^j}\).
+\end{theorem}
+
+The theorem has the same function class and conclusion as the
+extension-field conjecture.
+
+The main difficulty is to recover one vector-valued structure from all
+its scalar components. Each nonzero trace component is balanced and
+difference-balanced. Results of Pott and Wang give homogeneity and
+relative difference sets for these scalar functions, and multiplier
+theorems give a Frobenius multiplier for each component.
+Counting the fixed points of \(x\mapsto bx^p\) shows that these
+multiplier parameters run bijectively through a multiplicative subgroup
+as the trace functional runs through the projective dual space.
+Comparing this bijection with the image and kernel of a trace
+coefficient gives two complementary rank inequalities.
+
+Those inequalities force each active exponent orbit to have a rank
+determined by its common divisor with \(q-1\).
+If all ranks were smaller than \(r\), a cyclotomic divisor would give
+a nontrivial multiplicative period of \(f\). Thus one full-rank orbit
+can be changed to the term \(x\). In this normalization, coefficient
+comparison leaves only terms controlled by the norm to the prime
+field. Characteristic two then follows at once. In odd characteristic
+the remaining possibilities are a binomial, excluded by Ball's
+direction theorem, or scalar multiplication on multiplicative cosets.
+For the latter, a three-root character estimate forces a collision
+unless the successive scalars have a constant ratio. That condition
+gives a permutation monomial.
+
+Section~\ref{sec:multipliers} establishes the scalar multiplier
+properties. Section~\ref{sec:coefficients} proves the rank identities
+and the normalized form. Section~\ref{sec:completion} completes the
+two remaining cases and proves Theorem~\ref{thm:main}.
+
+\section{Scalar components and Frobenius multipliers}
+\label{sec:multipliers}
+
+Throughout, let \(p\) be a prime, \(r\geq2\), and
+\[
+ K=\Fq,\qquad q=p^r,\qquad m=q-1,\qquad
+ n=\frac{m}{p-1}.
+\]
+Write \(K^*=K\setminus\{0\}\), and put
+\[
+ T(z)=\Tr_{K/\Fp}(z)=\sum_{j=0}^{r-1}z^{p^j},
+ \qquad U=(K^*)^{p-1}.
+\]
+The group \(K^*\) is cyclic of order \(m\), and \(U\) has order \(n\).
+All polynomial representatives on \(K\) have degree less than \(q\).
+On \(K^*\), exponents are read modulo \(m\).
+
+Call \(u:K\to K\) a Costas function if \(u(0)=0\) and
+\begin{equation}\label{eq:costas}
+ x\longmapsto u(dx)-u(x)
+ \quad\hbox{is bijective for every }d\in K\setminus\{1\}.
+\end{equation}
+In particular, \(d=0\) shows that \(u\) is a permutation. For
+\(\lambda\in K\), define its scalar component by
+\[
+ h_\lambda(x)=T(\lambda u(x)).
+\]
+We use the nondegeneracy of the trace pairing: every \(\Fp\)-linear
+functional on \(K\) is \(z\mapsto T(\lambda z)\) for a unique \(\lambda\).
+These functionals separate points.
+
+\subsection{Balance and prime-field homogeneity}
+
+\begin{lemma}\label{lem:balance}
+If \(u\) is Costas and \(\lambda\ne0\), then \(h_\lambda\) and every
+difference \(h_\lambda(dx)-h_\lambda(x)\), \(d\ne1\), take each value in
+\(\Fp\) exactly \(p^{r-1}\) times on \(K\).
+On \(K^*\), each has \(p^{r-1}-1\) zeros and \(p^{r-1}\) occurrences of
+each nonzero value. Moreover, \(h_\lambda\) has no multiplicative period
+other than \(1\).
+\end{lemma}
+\begin{proof}
+The nonzero trace functional has fibers of size \(p^{r-1}\).
+Apply it to the permutations \(u\) and \(u(d\,\cdot)-u\).
+Removing the input \(0\), where all these functions vanish, gives the
+counts on \(K^*\). If \(h_\lambda(ax)=h_\lambda(x)\) for every \(x\) and
+\(a\ne1\), the corresponding difference is identically zero, contradicting
+the same counts.
+\end{proof}
+
+For a scalar function on \(K^*\), we use \emph{balanced} to mean exactly
+the deficient-zero counts in Lemma~\ref{lem:balance}. It is
+\emph{difference-balanced} if all its differences with multipliers
+in \(K^*\setminus\{1\}\) have those counts. The normalization matters:
+no constant is added to the scalar components.
+
+We use two results of Pott and Wang~\cite[Theorem~5.4 and
+Corollary~5.5]{PottWang}, in the normalization of their Remark~3.2.
+For odd \(p\), a balanced difference-balanced function
+\(h:K^*\to\Fp\) satisfies
+\begin{equation}\label{eq:scalarhom}
+ h(ax)=a^d h(x)\qquad(a\in\Fp^*,\ x\in K^*)
+\end{equation}
+for some \(d\) coprime to \(p-1\).
+Its nonzero fibers
+\(R_b=\{x\in K^*:h(x)=b\}\) are relative difference sets in \(K^*\),
+relative to \(\Fp^*\), with parameters
+\begin{equation}\label{eq:rdsparams}
+ (n,p-1,p^{r-1},p^{r-2}).
+\end{equation}
+Their images under \(\pi:K^*\to K^*/\Fp^*\) are ordinary difference
+sets with parameters
+\[
+ (n,p^{r-1},(p-1)p^{r-2}),
+\]
+and their complement is \(\pi(R_0)\).
+
+Here a \((v,k,\ell)\) difference set in a group of order \(v\) is a
+\(k\)-element set in which every nonidentity group element has exactly
+\(\ell\) ordered representations as a quotient of two set elements.
+A relative \((v,w,k,\ell)\) difference set has ambient group order \(vw\)
+and a specified subgroup of order \(w\); quotients outside that subgroup
+have \(\ell\) representations, and its nonidentity elements have none.
+The projection is then an ordinary \((v,k,w\ell)\) difference set.
+
+\begin{lemma}\label{lem:homogeneity}
+For every Costas function \(u\), there is a positive integer \(d\) with
+\(\gcd(d,p-1)=1\) such that
+\begin{equation}\label{eq:commonhom}
+ u(ax)=a^d u(x)\qquad(a\in\Fp^*,\ x\in K).
+\end{equation}
+The polynomial representatives of \(u\) and all \(h_\lambda\) have
+zero constant coefficient and zero coefficient at \(X^m\).
+Every exponent with a nonzero coefficient is congruent to \(d\) modulo
+\(p-1\), and hence is coprime to \(p-1\).
+\end{lemma}
+\begin{proof}
+Suppose first that \(p\) is odd. By Lemma~\ref{lem:balance} and
+\eqref{eq:scalarhom}, each nonzero component is homogeneous with an
+exponent coprime to \(p-1\).
+Choose components \(h_1,\ldots,h_r\) corresponding to a basis of the
+dual space of \(K\). They are linearly independent as functions, since
+\(u\) is surjective. The component \(h_i+h_j\), for \(i\ne j\), is
+also nonzero. If the three homogeneity exponents are \(d_i,d_j,d_{ij}\),
+then, for every \(a\in\Fp^*\),
+\[
+ (a^{d_i}-a^{d_{ij}})h_i+(a^{d_j}-a^{d_{ij}})h_j=0.
+\]
+Independence and cyclicity of \(\Fp^*\) give
+\(d_i\equiv d_j\equiv d_{ij}\pmod{p-1}\).
+Thus the exponents have a common residue \(d\). The dual basis
+separates points, giving \eqref{eq:commonhom}.
+For \(p=2\) the same identity holds with \(d=1\).
+
+All constant coefficients vanish because \(u(0)=h_\lambda(0)=0\).
+The scalar balance counts, together with \(r\ge2\), give
+\(\sum_{x\in K}h_\lambda(x)=0\) in \(\Fp\); trace separation gives
+\(\sum_{x\in K}u(x)=0\).
+For \(1\le j<m\), the sum of \(x^j\) over \(K\) is zero, while
+\(\sum_{x\in K}x^m=-1\). Hence the coefficients at \(X^m\) vanish.
+Finally compare coefficients in \eqref{eq:commonhom}, and in its scalar
+versions. Every active exponent is \(d\) modulo \(p-1\).
+\end{proof}
+
+\subsection{A common multiplier for the scalar fibers}
+
+A numerical multiplier \(t\) of a subset \(D\) of a finite abelian
+group means that powering by \(t\) is a group automorphism and
+\(D^{(t)}=aD\) for some group element \(a\).
+We use Hall's sufficient multiplier theorem in the form stated by
+Turyn~\cite[p.~386]{Turyn}: for a cyclic \((v,k,\ell)\) difference set,
+let \(M\) be a positive divisor of \(k-\ell\), with
+\[
+ M>\ell,\qquad \gcd(M,v)=1.
+\]
+An integer \(t\) coprime to \(v\) is a multiplier if, for every prime
+\(P\mid M\), some nonnegative power of \(P\) is congruent to \(t\)
+modulo \(v\).
+
+We also use the following specialization of
+Pott--Reuschling--Schmidt~\cite[Result~2]{PRS}.
+Let \(R\) be an abelian relative \((v,w,p^a,\ell)\) difference set
+in a group of exponent \(e\), with \(a\ge1\), \(p\nmid e\), and \(p^a>\ell\).
+If \(p\) is a multiplier of the projected ordinary difference set,
+then \(p\) is a multiplier of \(R\).
+In Result~2, choose the divisor of the relative set's size to be
+\(k_1=p^a\). Its second size parameter is
+\(k_2=k_1/\gcd(e,k_1)=p^a\), so \(k_2>\ell\).
+The only prime factor \(P=p\) is coprime to \(e\), allowing its
+auxiliary integer to be \(Q=p\).
+Taking the identity as an already existing multiplier and the
+auxiliary exponent to be \(1\) gives the required congruence
+\(1\cdot Q^1\equiv p\pmod e\).
+
+\begin{proposition}\label{prop:scalar-multiplier}
+For every Costas function \(u\) and every \(\lambda\ne0\), there is a
+unique \(\gamma_\lambda\in K^*\) such that
+\begin{equation}\label{eq:scalar-multiplier}
+ h_\lambda(x^p)=h_\lambda(\gamma_\lambda x)\qquad(x\in K).
+\end{equation}
+Both \(\gamma_\lambda\) and
+\(\beta_\lambda=\gamma_\lambda^{-p}\) are constant on each
+nonzero \(\Fp\)-line in the parameter \(\lambda\).
+\end{proposition}
+\begin{proof}
+We first show that one \(a\in K^*\) satisfies
+\begin{equation}\label{eq:fiber-multiplier}
+ R_b^{(p)}=aR_b\qquad(b\in\Fp),
+ \qquad R_b=\{x\in K^*:h_\lambda(x)=b\}.
+\end{equation}
+
+If \(p=2\), put \(Z=R_0\). For a multiplier \(c\ne1\), the two
+off-diagonal counts of \((h_\lambda(x),h_\lambda(cx))\) are equal,
+since both coordinates have the same number of zeros. Their sum is
+\(q/2\) by difference balance. The zero-zero count is therefore
+\(q/4-1\). Thus \(Z\) is a cyclic
+\((q-1,q/2-1,q/4-1)\) difference set.
+When \(r\ge3\), Hall's theorem applies with \(M=q/4\) and \(t=2\):
+\(M\) is a power of \(2\), is coprime to \(q-1\), and exceeds
+\(q/4-1\). When \(r=2\), \(Z\) is a singleton, and the multiplier
+assertion is direct. Since \(R_1\) is its complement in \(K^*\),
+the same translate works for both fibers.
+
+Now suppose \(p\) is odd. By \eqref{eq:rdsparams},
+\(C=\pi(R_0)\) is the complement of the projected nonzero fiber.
+The complement parameters are
+\[
+ \left(n,\frac{p^{r-1}-1}{p-1},
+            \frac{p^{r-2}-1}{p-1}\right).
+\]
+For \(r\ge3\), its difference-set order is \(p^{r-2}\), which is
+coprime to \(n\) and exceeds its last parameter.
+Hall's theorem with \(M=p^{r-2}\), \(t=p\), shows that \(p\) is a
+multiplier of \(C\). For \(r=2\), \(C\) is a singleton.
+Complementation therefore shows in both cases that \(p\) is a
+multiplier of \(\pi(R_1)\).
+The relative multiplier result applies to \(R_1\), since its size
+is \(p^{r-1}>p^{r-2}\) and \(p\nmid m\).
+Consequently \(R_1^{(p)}=aR_1\) for some \(a\).
+By Lemma~\ref{lem:homogeneity}, every nonzero fiber is \(cR_1\)
+for a suitable \(c\in\Fp^*\). Frobenius fixes \(c\), so the same
+\(a\) works for all nonzero fibers. It works for \(R_0\) as well,
+by taking complements. This proves \eqref{eq:fiber-multiplier}.
+
+Let \(\gamma_\lambda^p=a\). Equation~\eqref{eq:fiber-multiplier}
+is equivalent to
+\(h_\lambda(a^{-1}y^p)=h_\lambda(y)\) on \(K^*\).
+Substitute \(y=\gamma_\lambda x\) to obtain
+\eqref{eq:scalar-multiplier}; it also holds at \(0\).
+Two choices of \(\gamma_\lambda\) would give a nontrivial multiplicative
+period of \(h_\lambda\), excluded by Lemma~\ref{lem:balance}.
+For \(c\in\Fp^*\), \(h_{c\lambda}=c h_\lambda\), so uniqueness
+also gives the asserted constancy on parameter lines.
+\end{proof}
+
+\subsection{Counting the multiplier parameters}
+
+\begin{proposition}\label{prop:projective}
+The map \(\lambda\mapsto\beta_\lambda\) induces a bijection from
+the nonzero \(\Fp\)-lines in \(K\) onto \(U\).
+More precisely, for every \(b\in K^*\),
+\begin{equation}\label{eq:beta-count}
+ \#\{\lambda\in K^*:\beta_\lambda=b\}
+ =\begin{cases}p-1,&b\in U,\\0,&b\notin U.\end{cases}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Since \(u\) is injective, \(u(bx^p)=u(x)\) if and only if
+\(bx^p=x\). The number \(C_b\) of such \(x\) is \(p\) when \(b\in U\)
+and \(1\) otherwise: besides \(0\), the equation is
+\(x^{p-1}=b^{-1}\).
+
+Fix a primitive complex \(p\)-th root \(\zeta\).
+Additive character orthogonality gives
+\begin{equation}\label{eq:fixedorthog}
+ qC_b=\sum_{\lambda\in K}\sum_{x\in K}
+ \zeta^{\,h_\lambda(bx^p)-h_\lambda(x)}.
+\end{equation}
+The \(\lambda=0\) term is \(q\).
+For \(\lambda\ne0\), choose \(v\) with \(v^p=b\).
+By \eqref{eq:scalar-multiplier} the inner sum is
+\[
+ \sum_{x\in K}\zeta^{\,h_\lambda(\gamma_\lambda vx)-h_\lambda(x)}.
+\]
+It equals \(q\) if \(\gamma_\lambda v=1\), and equals \(0\) otherwise
+by Lemma~\ref{lem:balance}. The first condition is precisely
+\(b=\beta_\lambda\). Dividing \eqref{eq:fixedorthog} by \(q\) proves
+\eqref{eq:beta-count}. Each nonzero parameter line has \(p-1\) elements,
+and Proposition~\ref{prop:scalar-multiplier} makes \(\beta\) constant
+on it. The fiber count proves the bijection.
+\end{proof}
+
+\section{Trace coefficients and normalization}
+\label{sec:coefficients}
+
+\subsection{Frobenius orbits and their ranks}
+
+Let \(S\) contain the least positive representative of each orbit of
+multiplication by \(p\) on the residues \(1,\ldots,m-1\).
+For \(t\in S\), let \(\ell_t\) be its orbit length and put
+\(E_t=\mathbb F_{p^{\ell_t}}\subset K\).
+The length \(\ell_t\) divides \(r\), and \(x^t\in E_t\) for \(x\in K\).
+
+\begin{lemma}\label{lem:trace-expansion}
+For a Costas function \(u\), there are unique \(\Fp\)-linear maps
+\(A_t:K\to E_t\), \(t\in S\), such that
+\begin{equation}\label{eq:trace-expansion}
+ h_\lambda(x)=\sum_{t\in S}
+ \Tr_{E_t/\Fp}\bigl(A_t(\lambda)x^t\bigr)
+ \qquad(\lambda,x\in K).
+\end{equation}
+There are unique \(\Fp\)-linear maps \(L_t:E_t\to K\) with
+\begin{equation}\label{eq:adjoint}
+ T(\lambda L_t(z))=\Tr_{E_t/\Fp}(A_t(\lambda)z),
+ \qquad u(x)=\sum_{t\in S}L_t(x^t).
+\end{equation}
+The term \(L_t(x^t)\) has polynomial exponents only in the \(t\)-orbit.
+It is nonzero exactly when \(A_t\) is nonzero.
+\end{lemma}
+\begin{proof}
+Since \(h_\lambda\) is \(\Fp\)-valued, \(h_\lambda^p=h_\lambda\).
+Lemma~\ref{lem:homogeneity} removes the constant and \(X^m\) terms.
+Comparing coefficients on \(K^*\) shows that the coefficients along
+the orbit of \(t\) are
+\[
+ A_t(\lambda),\ A_t(\lambda)^p,\ \ldots,\
+ A_t(\lambda)^{p^{\ell_t-1}}.
+\]
+Closing the orbit gives \(A_t(\lambda)^{p^{\ell_t}}=A_t(\lambda)\).
+Coefficient extraction is \(\Fp\)-linear in \(\lambda\), proving
+\eqref{eq:trace-expansion} and uniqueness.
+
+The nondegenerate trace pairings on \(K\) and \(E_t\) give the unique
+adjoint \(L_t\) in \eqref{eq:adjoint}. Summing that identity and using
+trace separation gives the expression for \(u\).
+Every \(\Fp\)-linear endomorphism of \(K\) is uniquely a linearized
+polynomial \(\sum_{j=0}^{r-1}a_jX^{p^j}\): evaluation is injective by
+the degree bound \(p^{r-1}<q\), and both vector spaces have dimension
+\(r^2\) over \(\Fp\). Extend \(L_t\) linearly from \(E_t\) to \(K\);
+substituting \(X^t\) in such a polynomial shows the orbit assertion.
+Trace nondegeneracy also gives \(L_t=0\) if and only if \(A_t=0\).
+No division by an orbit length is involved.
+\end{proof}
+
+Call the \(t\)-orbit active when \(A_t\ne0\).
+Taking the coefficient at exponent \(t\) in
+\eqref{eq:scalar-multiplier} gives
+\[
+ A_t(\lambda)^{p^{\ell_t-1}}
+       =A_t(\lambda)\gamma_\lambda^t.
+\]
+Raise this identity to the \(p\)-th power. For every \(\lambda\ne0\),
+\begin{equation}\label{eq:coefficient-multiplier}
+ A_t(\lambda)=0
+ \quad\hbox{or}\quad
+ A_t(\lambda)^{p-1}=\beta_\lambda^t.
+\end{equation}
+
+\begin{proposition}\label{prop:rank}
+For an active orbit \(t\), let \(a=\rank_{\Fp} A_t\) and
+\(c=\gcd(t,m)\). Then
+\begin{equation}\label{eq:rank-result}
+ a=\ell_t,\qquad a\mid r,\qquad
+ c=\frac{m}{p^a-1}.
+\end{equation}
+In particular, \(A_t\) is onto \(E_t\). If \(t\) is coprime to \(m\),
+then \(a=r\) and \(A_t:K\to K\) is invertible.
+\end{proposition}
+\begin{proof}
+We have \(1\le a\le\ell_t\le r\).
+An active scalar coefficient implies an active polynomial exponent of
+\(u\) in the same orbit. By Lemma~\ref{lem:homogeneity},
+\(\gcd(t,p-1)=1\), so
+\(c=\gcd(t,m)=\gcd(t,n)\).
+The image of the \(t\)-th power map on \(U\) has size \(n/c\).
+
+The nonzero \(\Fp\)-lines in \(\operatorname{im}A_t\) give
+\((p^a-1)/(p-1)\) distinct \((p-1)\)-st powers.
+By \eqref{eq:coefficient-multiplier} and
+Proposition~\ref{prop:projective}, all lie in \(U^t\). Hence
+\begin{equation}\label{eq:rank-ineq-one}
+ \frac{p^a-1}{p-1}\le\frac nc.
+\end{equation}
+For a fixed nonzero image value \(z\), its preimage under \(A_t\)
+has \(p^{r-a}\) elements. They lie in distinct parameter lines:
+if \(\lambda_2=b\lambda_1\) and both map to \(z\ne0\), then
+\(bz=z\), so \(b=1\). The corresponding \(\beta_\lambda\) are
+distinct elements of \(U\) satisfying
+\(\beta_\lambda^t=z^{p-1}\).
+Such a power-map fiber has \(c\) elements. Therefore
+\begin{equation}\label{eq:rank-ineq-two}
+ p^{r-a}\le c.
+\end{equation}
+Together these give the integer constraint
+\[
+ \frac{p^a-1}{p-1}\le\frac nc
+ \le\frac{p^r-1}{(p-1)p^{r-a}}<\frac{p^a}{p-1}.
+\]
+The left endpoint is an integer and the interval has length at most
+\(1\). Thus \(n/c=(p^a-1)/(p-1)\), yielding the formula for \(c\).
+The identity
+\(\gcd(p^a-1,p^r-1)=p^{\gcd(a,r)}-1\) gives \(a\mid r\).
+Finally, \(p^j t\equiv t\pmod m\) is equivalent to
+\(p^j\equiv1\pmod{p^a-1}\), whose least positive solution is \(a\).
+The only degenerate modulus, \(p^a-1=1\), would force \(c=m\)
+and \(t\equiv0\pmod m\), which is excluded. Thus \(\ell_t=a\).
+\end{proof}
+
+\begin{lemma}\label{lem:cyclotomic-divisor}
+For \(r\ge2\),
+\begin{equation}\label{eq:cyclotomic-divisor}
+ \gcd_{\substack{a\mid r\\a<r}}\frac{p^r-1}{p^a-1}
+ =\frac{p^r-1}{\lcm_{a\mid r,\ a<r}(p^a-1)}
+ =\Phi_r(p)>1,
+\end{equation}
+where \(\Phi_r\) is the \(r\)-th cyclotomic polynomial.
+\end{lemma}
+\begin{proof}
+All denominators divide \(p^r-1\), giving the first equality by prime
+valuations. Every proper divisor of \(r\) divides \(r/P\) for some
+prime \(P\mid r\); it suffices to take the least common multiple over
+these maximal proper divisors.
+For any finite list of prime valuations, the maximum is the
+alternating sum of the minima over nonempty sublists. Using
+\(\gcd(p^a-1,p^b-1)=p^{\gcd(a,b)}-1\), and writing
+\(\mathcal P\) for the distinct prime divisors of \(r\), this gives
+\[
+ \frac{p^r-1}{\lcm_{a\mid r,\ a<r}(p^a-1)}
+ =\prod_{J\subseteq\mathcal P}
+       \bigl(p^{\,r/\prod_{P\in J}P}-1\bigr)^{(-1)^{|J|}}
+ =\Phi_r(p).
+\]
+The last identity follows by grouping the roots of \(X^b-1\) by
+their exact orders and applying inclusion-exclusion.
+Each primitive \(r\)-th root of unity \(\xi\) differs from \(1\), so
+\(|p-\xi|>p-1\ge1\). The positive integer \(\Phi_r(p)\), the product
+of these factors, is therefore greater than \(1\).
+\end{proof}
+
+\begin{proposition}\label{prop:normalization}
+Every Costas function has an active orbit \(t\) coprime to \(m\).
+There are such a \(t\), its positive inverse \(e\) modulo \(m\), and
+an invertible \(\Fp\)-linear map \(L_0:K\to K\), for which
+\begin{equation}\label{eq:normalization}
+ F(x)=L_0^{-1}\bigl(u(x^e)\bigr),\qquad
+ u(x)=L_0\bigl(F(x^t)\bigr)
+\end{equation}
+is Costas and its entire exponent-\(1\) Frobenius orbit is exactly \(X\).
+\end{proposition}
+\begin{proof}
+If every active orbit had rank a proper divisor \(a\) of \(r\),
+Proposition~\ref{prop:rank} and Lemma~\ref{lem:cyclotomic-divisor}
+would give a common divisor \(D=\Phi_r(p)>1\) of all active
+exponents. Choose \(z\in K^*\) of order \(D\).
+Then \eqref{eq:adjoint} gives \(u(zx)=u(x)\), contradicting
+injectivity. Some active orbit therefore has rank \(r\), and
+\eqref{eq:rank-result} makes its representative \(t\) coprime to \(m\).
+
+For this orbit, the adjoint \(L_t\) in \eqref{eq:adjoint} is an
+invertible map \(K\to K\); set \(L_0=L_t\).
+If \(e>0\) satisfies \(et\equiv1\pmod m\), then
+\eqref{eq:normalization} holds on all of \(K\).
+Unit input powers and invertible \(\Fp\)-linear output maps preserve
+the Costas property, since
+\[
+ J(u((dx)^e))-J(u(x^e))
+       =J\bigl(u(d^e x^e)-u(x^e)\bigr)
+\]
+and \(d\ne1\) implies \(d^e\ne1\), also when \(d=0\).
+The chosen term \(L_0(x^t)\) becomes \(x\).
+Multiplication of exponents by \(e\) permutes their Frobenius orbits,
+and a linearized output map moves exponents only within an orbit.
+Thus no other orbit contributes to the exponent-\(1\) orbit of \(F\).
+\end{proof}
+
+We call a Costas function with this last polynomial property
+\emph{normalized}. For such an \(F\), apply the preceding definitions
+to \(F\). Its exponent-\(1\) coefficient satisfies
+\(A_1(\lambda)=\lambda\). Equation~\eqref{eq:coefficient-multiplier}
+then gives
+\begin{equation}\label{eq:normalized-beta}
+ \beta_\lambda=\lambda^{p-1}\qquad(\lambda\ne0).
+\end{equation}
+
+\subsection{The form of a normalized function}
+
+\begin{lemma}\label{lem:power-differences}
+The nonzero differences of distinct residues in
+\(\{1,p,\ldots,p^{r-1}\}\) modulo \(p^r-1\) have unique ordered
+representations.
+\end{lemma}
+\begin{proof}
+Write \(a=b+L\pmod r\), with \(1\le L<r\).
+The least nonnegative representative of \(p^a-p^b\) is the length-\(r\)
+base-\(p\) word with digit \(p-1\) in the cyclic positions
+\(b,b+1,\ldots,b+L-1\), and zero elsewhere. This follows from
+\(p^L-1=(p-1)(1+p+\cdots+p^{L-1})\), reducing \(p^r\) to \(1\).
+The word is neither all zero nor all \(p-1\); its unique beginning and
+ending recover \(b\) and \(a\). Uniqueness of base-\(p\) digits proves
+the assertion, including \(p=2,r=2\).
+\end{proof}
+
+\begin{lemma}\label{lem:block-form}
+For a normalized \(F\), the coefficient map \(B=A_t\) of an active
+orbit satisfies
+\begin{equation}\label{eq:B}
+ B(\lambda)^p=\lambda^{(p-1)t}B(\lambda)\qquad(\lambda\in K^*).
+\end{equation}
+If \((p-1)t\not\equiv0\pmod m\), then
+\[
+ B(\lambda)=c\lambda^{p^j},\qquad
+ c\in\Fp^*,\quad 0\le j<r,\quad t\equiv p^j\pmod n.
+\]
+Its field-valued contribution to \(F\) is \(cx^v\), with
+\(v\equiv1\pmod n\).
+If \((p-1)t\equiv0\pmod m\), then \(n\mid t\), \(\ell_t=1\),
+and its contribution is \(\gamma x^t\) for some \(\gamma\in K\).
+\end{lemma}
+\begin{proof}
+Equations~\eqref{eq:coefficient-multiplier} and
+\eqref{eq:normalized-beta} give \eqref{eq:B}, including when
+\(B(\lambda)=0\).
+Write the linearized polynomial \(B(X)=\sum_j c_jX^{p^j}\).
+Let \(\delta=(p-1)t\not\equiv0\pmod m\).
+Comparing supports in \eqref{eq:B} on \(K^*\), each nonzero
+coefficient \(c_j\) requires
+\(\delta+p^j\equiv p^i\pmod m\) for an \(i\ne j\).
+Lemma~\ref{lem:power-differences} permits only one such ordered pair.
+Thus \(B(X)=cX^{p^j}\).
+Comparing its coefficient and exponent gives \(c^p=c\) and
+\(\delta+p^j\equiv p^{j+1}\pmod m\).
+Cancel \(p-1\) to obtain \(t\equiv p^j\pmod n\).
+The map \(B\) has rank \(r\), so Proposition~\ref{prop:rank} gives
+\(E_t=K\). Frobenius invariance of the trace yields
+\[
+ T(c\lambda^{p^j}x^t)
+    =T\bigl(\lambda c x^{\,t p^{r-j}}\bigr).
+\]
+By the adjoint identity, the contribution is \(cx^v\), with
+\(v\equiv t p^{r-j}\equiv1\pmod n\).
+
+If \(\delta=0\), then \(n\mid t\), \(pt\equiv t\pmod m\), and
+\(\ell_t=1\). The map \(B:K\to\Fp\) is a trace functional
+\(B(\lambda)=T(\lambda\gamma)\); its adjoint contribution is
+\(\gamma x^t\), as \(x^t\in\Fp\).
+\end{proof}
+
+\begin{proposition}\label{prop:normal-form}
+Put \(\Nrm(x)=x^n\), the norm from \(K\) to \(\Fp\).
+A normalized function has, on \(K^*\), the form
+\begin{equation}\label{eq:norm-form}
+ F(x)=x\sum_{k=0}^{p-2}c_k\Nrm(x)^k
+            +\sum_{d=1}^{p-2}\gamma_d\Nrm(x)^d,
+ \qquad c_k\in\Fp,\quad \gamma_d\in K,\quad c_0=1.
+\end{equation}
+It is homogeneous of degree \(1\) over \(\Fp\), and
+\begin{equation}\label{eq:norm-restrictions}
+ c_k\ne0\ \Longrightarrow\ rk\equiv0\pmod{p-1},\qquad
+ \gamma_d\ne0\ \Longrightarrow\ rd\equiv1\pmod{p-1}.
+\end{equation}
+Consequently:
+\begin{enumerate}
+\item If \(p=2\), then \(F(x)=x\) on \(K\).
+\item If \(p\) is odd and \(\gcd(r,p-1)=1\), then
+\begin{equation}\label{eq:binomial-form}
+ F(x)=x+\gamma x^{nd}
+\end{equation}
+on \(K\), where \(1\le d\le p-2\) and \(rd\equiv1\pmod{p-1}\).
+\item If \(g=\gcd(r,p-1)>1\), then
+\begin{equation}\label{eq:cyclo-form}
+ F(x)=xV(x^{m/g})\qquad(x\in K^*),
+\end{equation}
+where \(V\in\Fp[X]\), \(\deg V<g\), and \(V\) is nonzero at every
+\(g\)-th root of unity. In this case \(g\mid n\) and
+\((p-1)\mid m/g\).
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Lemma~\ref{lem:block-form} leaves only exponents
+\(1+kn\), \(0\le k\le p-2\), with \(\Fp\)-coefficients, and
+\(nd\), \(1\le d\le p-2\), with \(K\)-coefficients.
+They are disjoint because \(n>1\). The coefficient at \(X\) is \(1\).
+This gives \eqref{eq:norm-form}.
+Lemma~\ref{lem:homogeneity}, applied to the active exponent \(1\),
+makes the common homogeneity degree \(1\) modulo \(p-1\).
+Since \(n\equiv r\pmod{p-1}\), coefficient comparison gives
+\eqref{eq:norm-restrictions}.
+
+For \(p=2\) the first sum contains only \(c_0=1\), and the second
+is empty. If \(p\) is odd and \(\gcd(r,p-1)=1\), only \(k=0\)
+and the single indicated residue \(d\) can remain.
+For \(g>1\), the second congruence in
+\eqref{eq:norm-restrictions} has no solution; the first requires
+\(k=j(p-1)/g\), \(0\le j<g\). This gives \eqref{eq:cyclo-form}.
+Here \(g\mid r\), \(p\equiv1\pmod g\), and thus
+\(n=1+p+\cdots+p^{r-1}\equiv r\equiv0\pmod g\).
+Every \(g\)-th root \(y\) is \(x^{m/g}\) for some \(x\in K^*\)
+by cyclicity. If \(V(y)=0\), then \(F(x)=F(0)=0\), contrary to
+injectivity. All the assertions include \(0\) where stated, since
+\(F(0)=0\) and all displayed monomial exponents are positive.
+\end{proof}
+
+\section{Completion of the classification}
+\label{sec:completion}
+
+\subsection{The binomial case}
+
+We first exclude the second term in \eqref{eq:binomial-form}.
+The connection with graph directions is useful because the Costas
+condition controls products of slopes, rather than individual slopes.
+
+\begin{lemma}\label{lem:binomial}
+Suppose \(p\) is odd, \(c\in K^*\), and \(1<k\le q-1\).
+If \(x+cx^k\) is Costas, then \(k=p^j\) for some \(0\le j<r\).
+\end{lemma}
+\begin{proof}
+Let
+\[
+ D=\left\{\frac{y^k-x^k}{y-x}:x,y\in K,\ x\ne y\right\},
+ \qquad D^+=D\setminus\{0\},
+\]
+and define subsets of \(K^*\) by
+\[
+ H=(K^*)^{k-1},\qquad
+ S^+=\left\{\frac{a^k-1}{a-1}:
+                   a\in K,\ a\ne1,\ a^k\ne1\right\}.
+\]
+The value \(a=0\) gives \(1\in S^+\).
+Writing a secant's endpoints as \(x,ax\), with \(x\ne0\), gives
+\[
+ D^+=HS^+,\qquad S^+D^+=D^+D^+,
+\]
+since \(H\) is a subgroup. Secants through \(0\) are included by
+the same value \(a=0\).
+
+For \(a\ne1\), divide the Costas difference of \(x+cx^k\) by
+\(a-1\). For every \(s=(a^k-1)/(a-1)\ne0\), the resulting map
+\(x+csx^k\) is a permutation. A collision at distinct \(x,y\)
+would be equivalent to
+\[
+ \frac{y^k-x^k}{y-x}=-\frac1{cs}.
+\]
+It follows that
+\[
+ -c^{-1}\notin S^+D^+=D^+D^+.
+\]
+Thus \(D^+\) and \(-c^{-1}(D^+)^{-1}\) are disjoint, whence
+\begin{equation}\label{eq:directions-bound}
+ 2|D^+|\le q-1,\qquad |D|\le\frac{q+1}{2}.
+\end{equation}
+
+We apply Ball's direction theorem~\cite[Theorem~1.1]{Ball} to
+the graph of \(v(x)=x^k\).
+In its notation, let \(s\) be the largest power of \(p\) dividing
+the size of every nonempty graph intersection with a line whose slope
+is determined by the graph. The theorem gives: either \(s=1\) and
+\(|D|\ge(q+3)/2\); or \(\mathbb F_s\subset K\) and
+\[
+ q/s+1\le |D|\le(q-1)/(s-1);
+\]
+or \(s=q\) and \(|D|=1\). Moreover, for \(s>2\) the graph is
+\(\mathbb F_s\)-linear. The first possibility contradicts
+\eqref{eq:directions-bound}. In odd characteristic any remaining
+\(s>1\) is greater than \(2\). Therefore either the graph is a
+linear subspace through \((0,0)\), or it is a line through \((0,0)\).
+In both cases \(v\) is additive.
+
+For completeness, additivity of \(x^k\) forces \(k\) to be a
+\(p\)-power. The polynomial
+\((X+Y)^k-X^k-Y^k\) has degree less than \(q\) in each variable
+and vanishes on \(K^2\), so all its coefficients vanish.
+Write \(k=\sum_j d_jp^j\) in base \(p\), and let \(j\) be its
+least nonzero digit position. In
+\[
+ (1+X)^k=\prod_i(1+X^{p^i})^{d_i}
+\]
+over \(\Fp\), the coefficient at \(X^{p^j}\) is \(d_j\ne0\).
+It would be a proper binomial coefficient unless \(k=p^j\).
+The bound \(k<q\) gives \(j<r\).
+\end{proof}
+
+\begin{corollary}\label{cor:coprime-case}
+If \(p\) is odd and \(\gcd(r,p-1)=1\), every normalized Costas
+function is the identity.
+\end{corollary}
+\begin{proof}
+In \eqref{eq:binomial-form}, the exponent \(nd\) satisfies
+\(1<nd<m\) and is not coprime to \(m\), since \(n>1\) divides
+both \(nd\) and \(m\). If \(\gamma\ne0\),
+Lemma~\ref{lem:binomial} would make \(nd\) a \(p\)-power,
+which is coprime to \(m\). Hence \(\gamma=0\).
+\end{proof}
+
+\subsection{A character count}
+
+The remaining form \eqref{eq:cyclo-form} acts by a prime-field scalar
+on each multiplicative coset of index \(g\). We will show that unequal
+successive scalar ratios force a collision in a Costas difference.
+The required simultaneous coset conditions follow from the next count.
+
+\begin{lemma}\label{lem:size}
+If \(g>1\) divides both \(r\) and \(p-1\), then
+\[
+ \sqrt q>2(g-1)^2.
+\]
+\end{lemma}
+\begin{proof}
+For \(g=2\), \(p\ge3,r\ge2\) give \(\sqrt q\ge3>2\).
+For \(g=3\), the prime \(p\equiv1\pmod3\) is at least \(7\),
+so \(\sqrt q\ge7^{3/2}>8\).
+For \(g=4\), \(\sqrt q\ge5^2>18\).
+For \(g\ge5\), use \(p\ge g+1\) and \(r\ge g\).
+The sequence
+\[
+ R(v)=\frac{(v+1)^{v/2}}{2(v-1)^2}\qquad(v\ge5)
+\]
+has \(R(5)=36\sqrt6/32>1\), and
+\[
+ \frac{R(v+1)}{R(v)}
+ >\sqrt{v+2}\,\frac{(v-1)^2}{v^2}
+ >\frac{32}{25}>1.
+\]
+Thus \(\sqrt q\ge(g+1)^{g/2}>2(g-1)^2\).
+\end{proof}
+
+\begin{lemma}\label{lem:character-count}
+Let \(g>1\) divide \(r\) and \(p-1\), let \(\chi\) be a complex
+multiplicative character of \(K^*\) of exact order \(g\), and let
+\(\omega\) be a primitive \(g\)-th root of unity.
+Suppose \(A,B\in K^*\) are distinct and
+\(\chi(A)=\chi(B)=\omega\). For any \(g\)-th root
+\(\eta\ne1\), the number \(N\) of \(b\in K\setminus\{0,A,B\}\) with
+\begin{equation}\label{eq:count-conditions}
+ \chi(b)=1,\qquad
+ \chi\left(\frac{b-A}{b-B}\right)=\eta
+\end{equation}
+satisfies
+\begin{equation}\label{eq:count-lower}
+ N\ge\frac{q+1-2(g-1)^2\sqrt q}{g^2}>0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Extend each nontrivial multiplicative character by zero at \(0\).
+For \(0\le j,k<g\), put
+\[
+ S_{jk}=\sum_{b\notin\{0,A,B\}}
+          \chi(b)^j\chi\left(\frac{b-A}{b-B}\right)^k.
+\]
+Character orthogonality on the group of \(g\)-th roots gives
+\begin{equation}\label{eq:character-orthog}
+ g^2N=\sum_{j,k=0}^{g-1}\eta^{-k}S_{jk}.
+\end{equation}
+Here \(S_{00}=q-3\). For \(j\ne0\), the full nontrivial character
+sum is zero; removing \(A,B\) gives
+\(S_{j0}=-2\omega^j\).
+For \(k\ne0\), the substitution \(y=(b-A)/(b-B)\) maps
+\(K\setminus\{B\}\) bijectively to \(K\setminus\{1\}\).
+Removing \(b=0\) removes the value
+\(\chi(A/B)^k=1\), and the \(b=A\) term is zero.
+Thus \(S_{0k}=-2\). Consequently the two nonprincipal axes in
+\eqref{eq:character-orthog} each contribute \(2\):
+\[
+ \sum_{j=1}^{g-1}S_{j0}=2,\qquad
+ \sum_{k=1}^{g-1}\eta^{-k}S_{0k}=2.
+\]
+
+For \(1\le j,k<g\), the remaining sum is
+\[
+ S_{jk}=\sum_{b\in K}
+       \chi\bigl(b^j(b-A)^k(b-B)^{g-k}\bigr).
+\]
+The polynomial is monic and has exactly the three distinct roots
+\(0,A,B\). Each root multiplicity is positive and less than \(g\),
+so the polynomial is not a \(g\)-th power.
+We use the Weil bound in the form
+of~\cite[Theorem~2.1]{AGW}: if \(\chi\) has order \(g>1\) and a
+monic polynomial \(P\) is not a \(g\)-th power, then
+\[
+ \left|\sum_{b\in K}\chi(P(b))\right|
+       \le (D-1)\sqrt q,
+\]
+where \(D\) is the number of distinct roots in a splitting field.
+Its hypotheses here give \(|S_{jk}|\le2\sqrt q\).
+The \((g-1)^2\) mixed terms have weights of modulus \(1\).
+Since the left side of \eqref{eq:character-orthog} is real,
+the triangle inequality proves the first inequality in
+\eqref{eq:count-lower}. Lemma~\ref{lem:size} makes its numerator
+strictly positive.
+\end{proof}
+
+\subsection{Rigidity on the multiplicative cosets}
+
+\begin{proposition}\label{prop:cyclotomic-rigidity}
+Let \(g>1\) divide both \(r\) and \(p-1\).
+Suppose \(u\) is Costas and
+\[
+ u(x)=xV(x^{m/g})\qquad(x\in K^*),
+\]
+where \(V\in\Fp[X]\) is nonzero on the \(g\)-th roots of unity.
+Then
+\[
+ u(x)=a_0x^{\,1+km/g}\qquad(x\in K)
+\]
+for some \(a_0\in\Fp^*\) and \(0\le k<g\), and the exponent
+\(1+km/g\) is coprime to \(m\).
+\end{proposition}
+\begin{proof}
+Choose a primitive \(\alpha\in K^*\), a primitive complex
+\(g\)-th root \(\omega\), and the character
+\(\chi(\alpha^j)=\omega^j\).
+Since \(g\mid r,p-1\), we have \(g\mid n\) and
+\((p-1)\mid m/g\). Thus \(\chi\) is trivial on \(\Fp^*\).
+The element \(\rho=\alpha^{m/g}\) is a primitive \(g\)-th root
+in \(\Fp\). On the coset \(\chi(x)=\omega^i\), write
+\[
+ a_i=V(\rho^i)\in\Fp^*,\qquad u(x)=a_i x,
+ \qquad c_i=\frac{a_{i+1}}{a_i},
+\]
+with indices modulo \(g\).
+Because \(\chi(a_i)=1\), \(u\) preserves each coset.
+Conjugate multiplication by \(\alpha\) through \(u\):
+\[
+ G=u\circ(\alpha\,\id)\circ u^{-1}.
+\]
+For \(x\ne0\) with \(\chi(x)=\omega^i\),
+\begin{equation}\label{eq:G}
+ G(x)=\alpha c_i x,\qquad
+ \prod_{i=0}^{g-1}c_i=1,\qquad
+ G^g(x)=\alpha^g x.
+\end{equation}
+These identities also hold at \(0\) where appropriate.
+Moreover, \(G^m=\id\).
+
+For every integer \(k\not\equiv0\pmod m\), the map \(G^k-\id\)
+is a permutation, because
+\[
+ (G^k-\id)\circ u
+      =u(\alpha^k\,\cdot)-u
+\]
+is a Costas difference. Negative iterates use the inverse permutation.
+If \(b\in\ker\chi\), write \(b=\alpha^{gt}\) for an integer \(t\).
+Equation~\eqref{eq:G} gives \(G^{gt}=b\,\id\), a linear scalar map.
+Therefore
+\begin{equation}\label{eq:kernel-difference}
+ G-b\,\id=(b\,\id)\circ(G^{1-gt}-\id)
+\end{equation}
+is a permutation. Indeed \(1-gt\not\equiv0\pmod m\), since
+\(g>1\) divides \(m\).
+
+Suppose \(c_i\ne c_j\). Then \(i\ne j\), and
+\[
+ A=\alpha c_i,\qquad B=\alpha c_j,\qquad
+ \eta=\omega^{j-i}
+\]
+satisfy the hypotheses of Lemma~\ref{lem:character-count}:
+\(\chi(A)=\chi(B)=\omega\), \(A\ne B\), and \(\eta\ne1\).
+Choose the \(b\in\ker\chi\setminus\{0,A,B\}\) supplied by that lemma.
+On input cosets \(i,j\), the map \(G-b\,\id\) multiplies by
+\(A-b,B-b\), respectively. Their output cosets have characters
+\[
+ \omega^i\chi(A-b),\qquad \omega^j\chi(B-b).
+\]
+They are equal by \eqref{eq:count-conditions}.
+Each nonzero scalar multiplication maps an entire input coset onto
+the corresponding output coset. The two distinct input cosets
+therefore have overlapping images, contradicting
+\eqref{eq:kernel-difference}. Thus all \(c_i\) are equal to one \(c\).
+
+Their product is \(1\), so \(c^g=1\) and \(c=\rho^k\) for some
+\(0\le k<g\). The recurrence gives \(a_i=a_0\rho^{ki}\).
+For \(x\) in coset \(i\), \(x^{m/g}=\rho^i\), whence
+\[
+ u(x)=a_i x=a_0x^{\,1+km/g}.
+\]
+Both sides vanish at \(0\). Finally \(u\) is a permutation, so
+the power map with exponent \(1+km/g\) permutes \(K^*\);
+cyclicity makes this equivalent to coprimality with \(m\).
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The converse follows directly: if \(f(x)=L(x^s)\), where
+\(L\) is invertible and \(\Fp\)-linear and \(\gcd(s,m)=1\), then
+\[
+ f(dx)-f(x)=L\bigl((d^s-1)x^s\bigr)
+\]
+is a permutation for every \(d\ne1\), including \(d=0\).
+
+For the forward implication, apply
+Proposition~\ref{prop:normalization} to the given \(f\), obtaining
+\(f(x)=L_0(F(x^t))\) with \(\gcd(t,m)=1\) and \(F\) normalized.
+If \(p=2\), Proposition~\ref{prop:normal-form} gives \(F=\id\).
+If \(p\) is odd and \(\gcd(r,p-1)=1\),
+Corollary~\ref{cor:coprime-case} gives \(F=\id\).
+In the remaining case set \(g=\gcd(r,p-1)>1\).
+Proposition~\ref{prop:normal-form} gives \eqref{eq:cyclo-form},
+and Proposition~\ref{prop:cyclotomic-rigidity} gives
+\(F(x)=a_0x^v\), with \(a_0\in\Fp^*\) and \(\gcd(v,m)=1\).
+In every case there are a positive unit exponent \(v\) and an
+invertible \(\Fp\)-linear map \(J\) such that \(F(x)=J(x^v)\).
+Thus
+\[
+ f(x)=(L_0\circ J)(x^{tv})\qquad(x\in K).
+\]
+The exponent \(s=tv\) is positive and coprime to \(m\), and
+\(L=L_0\circ J\) is an invertible \(\Fp\)-linear map, as required.
+\end{proof}
+
+\paragraph{AI assistance.}
+OpenAI Codex assisted in developing the proof, drafting the manuscript,
+and obtaining automated reader and referee feedback. These automated
+reviews are AI reviews.
+
+\begin{thebibliography}{9}
+
+\bibitem{AGW}
+A.~Akbary, D.~Ghioca, and Qiang Wang,
+\emph{On permutation polynomials of prescribed shape},
+Finite Fields Appl. \textbf{15} (2009), 195--206.
+\href{https://doi.org/10.1016/j.ffa.2008.12.001}{doi:10.1016/j.ffa.2008.12.001}.
+Author version, Theorem~2.1:
+\url{https://people.math.carleton.ca/~wang/papers/distributionPP.pdf}.
+
+\bibitem{Ball}
+S.~Ball,
+\emph{The number of directions determined by a function over a finite field},
+author version, 15 September 2003, Theorem~1.1.
+\url{https://web.mat.upc.edu/simeon.michael.ball/hassedirection.pdf}.
+
+\bibitem{Costas2015}
+A.~Muratovi\'c-Ribi\'c, A.~Pott, D.~Thomson, and Qiang Wang,
+\emph{On the characterization of a semi-multiplicative analogue of planar
+functions over finite fields},
+in \emph{Topics in Finite Fields}, Contemp. Math. \textbf{632},
+Amer. Math. Soc., 2015, 317--325.
+\href{https://doi.org/10.1090/conm/632/12635}{doi:10.1090/conm/632/12635}.
+\href{https://www.academia.edu/79639197/On_the_characterization_of_a_semi_multiplicative_analogue_of_planar_functions_over_finite_fields}{Author version consulted}
+(Corollary~4.2 and Conjecture~4.4).
+
+\bibitem{Costas2026}
+A.~Muratovi\'c-Ribi\'c and A.~Bala\v sev-Samarski,
+\emph{Note on the Equivalence of Costas Polynomials and Orthomorphisms},
+arXiv:2606.07097v1, 2026.
+\url{https://arxiv.org/abs/2606.07097v1}.
+
+\bibitem{PRS}
+A.~Pott, D.~Reuschling, and B.~Schmidt,
+\emph{A multiplier theorem for projections of affine difference sets},
+J. Statist. Plann. Inference \textbf{62} (1997), 63--67, Result~2.
+\url{https://personal.ntu.edu.sg/bernhard/Publications/pub/AffineDSMult.pdf}.
+
+\bibitem{PottWang}
+A.~Pott and Qi Wang,
+\emph{Difference balanced functions and their generalized difference sets},
+arXiv:1309.7842v1, 2013.
+\url{https://arxiv.org/abs/1309.7842v1}.
+
+\bibitem{RubioTorres}
+J.~Torres and I.~Rubio,
+\emph{Circular Costas maps: a multidimensional analog of circular Costas sequences},
+Cryptogr. Commun. \textbf{15} (2023), 941--958.
+\href{https://doi.org/10.1007/s12095-023-00654-2}{doi:10.1007/s12095-023-00654-2}.
+Preprint v1 (I.~Rubio and J.~Torres), used for the numbered locators:
+\url{https://arxiv.org/abs/2210.16661v1}.
+
+\bibitem{Turyn}
+R.~J.~Turyn,
+\emph{The multiplier theorem for difference sets},
+Canad. J. Math. \textbf{16} (1964), 386--388.
+\href{https://doi.org/10.4153/CJM-1964-039-1}{doi:10.4153/CJM-1964-039-1}.
+
+\end{thebibliography}
+\end{document}
