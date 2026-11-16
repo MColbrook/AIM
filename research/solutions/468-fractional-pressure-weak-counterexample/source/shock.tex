@@ -1,0 +1,224 @@
+\section{The initial shock and all power inequalities}\label{sec:shock}
+
+We examine the internal jump at $r=S$, where the velocity is positive.
+For $\lambda\downarrow0$ put
+\begin{equation}\label{eq:tangent}
+ U_\lambda(\tau,\xi)=u(\lambda\tau,S+\lambda\xi),\quad
+ r_\lambda=S+\lambda\xi,\quad
+ v_\lambda=v[u](\lambda\tau,r_\lambda),\quad v_0=v[F](S)>0.
+\end{equation}
+On every fixed half-cylinder, $r_\lambda^2\to S^2$ and
+$v_\lambda\to v_0$ uniformly, and $A/2\leq U_\lambda\leq U$ for
+small $\lambda$. The initial data tend in every finite local $L^q$ to
+the step $d_*(\xi)=1$ for $\xi<0$ and $d_*(\xi)=U$ for $\xi>0$.
+
+\subsection{Compactness and identification of the tangent}
+
+The scaled mass flux is $r_\lambda^2v_\lambda f(U_\lambda)$ and the
+scaled entropy flux is $r_\lambda^2v_\lambda Q_\eta(U_\lambda)$.
+For the linear fractional term, let
+\[
+ \widetilde g(t,r)=rF_\eta(u(t,|r|))\quad(r\in\R),\qquad
+ g_\lambda(\tau,\xi)=\widetilde g(\lambda\tau,S+\lambda\xi).
+\]
+It is the pullback of the odd physical radial profile. Its supremum norm
+is bounded uniformly, although its support in $\xi$ grows. The scaled term is
+\begin{equation}\label{eq:scaled-source}
+ \lambda^{1-\alpha}r_\lambda L_{1,\alpha}g_\lambda.
+\end{equation}
+Transferring $L_{1,\alpha}$ to a compact smooth test bounds its pairing by
+$\lambda^{1-\alpha}\|g_\lambda\|_\infty
+\|L_{1,\alpha}(r_\lambda\varphi)\|_1\to0$.
+The last norm is uniformly bounded by \eqref{eq:fractional-L1}.
+
+For a convex entropy the other scaled sources are positive measures.
+Testing the entropy balance with a nonnegative cutoff equal to one on a
+fixed rectangle bounds their mass there: the entropy, flux and initial
+terms are bounded, and \eqref{eq:scaled-source} has a bounded pairing.
+In particular the quadratic measure has a uniform local mass bound.
+The exact coefficients for Lemma~\ref{lem:increments} at zero viscosity are
+\[
+ \omega_\lambda=r_\lambda^2,\qquad
+ b_\lambda=\lambda^{1-\alpha}r_\lambda,\qquad
+ g=g_\lambda,\qquad\eps=0.
+\]
+The weights are uniformly positive and Lipschitz on each fixed rectangle.
+The spatial H\"older seminorm of $v_\lambda$ gains $\lambda^\beta$ from
+\eqref{eq:velocity-holder}; no time derivative of $v_\lambda$ is required.
+Thus, on a smaller fixed rectangle,
+\begin{equation}\label{eq:scaled-increments}
+ \int|U_\lambda(\tau,\xi+h)-U_\lambda(\tau,\xi)|^4\,\dd\xi\dd\tau
+ \leq K|h|^{1-\alpha}.
+\end{equation}
+This is a fourth-power bound; the corresponding $L^4$ norm has exponent
+$(1-\alpha)/4$. It uses the uniform supremum of $g_\lambda$, without
+a bound on its growing spatial $L^1$ norm.
+
+Cauchy--Schwarz turns \eqref{eq:scaled-increments} into a squared
+$L^2$ increment bound $K|h|^{(1-\alpha)/2}$. After spatial localization,
+the translation formula for Sobolev norms gives a uniform
+$L^2_\tau H^\sigma_\xi$ bound for each
+$0<\sigma<(1-\alpha)/4$. The weighted mass equation bounds
+$\partial_\tau(r_\lambda^2U_\lambda)$ in $L^1_\tau H^{-1}_\xi$.
+Use \cite[Lemma~7.5]{Stan2016} on bounded intervals with
+$X=H^\sigma$, $B=L^2$, $Y=H^{-1}$ and exponent two, then divide by the
+smooth positive weight. A diagonal extraction gives, from every scale
+sequence, a tangent $Z$ with strong local $L^2$ convergence.
+If compactness is first applied away from $\tau=0$, the cap discards an
+initial strip with squared $L^2$ mass $O(\delta)$ uniformly, so the
+convergence extends to compact half-cylinders. Bounded states upgrade it
+to every finite local $L^q$.
+
+Passing the scaled mass and convex entropy balances yields
+\begin{equation}\label{eq:scalar-limit}
+ Z_\tau+v_0\partial_\xi f(Z)=0,\qquad
+ \partial_\tau\eta(Z)+v_0\partial_\xi Q_\eta(Z)\leq0,
+\end{equation}
+with the actual step initial mass and entropy terms. Subtracting affine
+functions extends the normalized inequalities to all smooth convex
+entropies. The mass equation selects compact-test continuous pairings.
+The localized quadratic entropy inequality gives
+\[
+ \limsup_{\tau\downarrow0}\int\chi Z(\tau)^2
+ \leq\int\chi d_*^2
+\]
+for nonnegative compact $\chi$, first at good times and then by weak
+lower semicontinuity for the representative. Its weak initial trace and
+bounded states give $\int\chi Z(\tau)d_*\to\int\chi d_*^2$, by smooth
+approximation of $\chi d_*$. Expanding the square proves the strong
+local $L^2$, hence local $L^1$, initial trace. This supplies the scalar
+initial trace without assuming a strong trace at the unscaled inner jump.
+
+The bounded scalar uniqueness theorem
+\cite[Section~6.1, Theorem~4]{Bressan2009} now identifies the tangent.
+To match its smooth-flux hypothesis, extend $v_0k^a$ smoothly to $\R$
+outside a neighborhood of $[A/2,U]$, using a cutoff supported in the
+positive half-line. All compared states stay in that interval, so the
+equation and entropy flux derivatives are unchanged. The step itself
+need not be integrable; the theorem treats bounded data, and the compared
+initial difference is zero. The solution is
+\begin{equation}\label{eq:shock}
+ Z_*(\tau,\xi)=\begin{cases}1,&\xi<\sigma_0\tau,\\
+ U,&\xi>\sigma_0\tau,\end{cases}
+ \qquad \sigma_0=v_0\frac{U^a-1}{U-1}=\frac{v_0}{11}.
+\end{equation}
+It satisfies Rankine--Hugoniot. Recall the chord deficit
+$H_U(k)=f(k)-f(1)-[(f(U)-f(1))/(U-1)](k-1)$.
+For every convex $C^2$ entropy, integration by parts in $k$, using
+$H_U(1)=H_U(U)=0$, gives its exact
+entropy distribution
+\begin{equation}\label{eq:shock-production}
+ \partial_\tau\eta(Z_*)+v_0\partial_\xi Q_\eta(Z_*)
+ =-v_0\left(\int_1^U\eta''(k)H_U(k)\,\dd k\right)
+             \delta_{\xi=\sigma_0\tau}\,\dd\tau.
+\end{equation}
+Its sign is nonpositive. Uniqueness identifies every subsequential tangent
+with \eqref{eq:shock}. Since every scale sequence is relatively compact,
+the entire family $U_\lambda$ converges to $Z_*$ in every finite local
+$L^q$.
+
+\subsection{Dissipation at higher densities}
+
+Fix any $A<B<1$. Choose $0\leq\zeta\leq1$ smooth, zero for $k\leq B$
+and one on $[1,U]$, and define a normalized convex entropy by
+$\eta''(k)=\zeta(k)/k$, with zero extension near zero. It has bounded
+second derivative on $[0,U]$, so \eqref{eq:limit-local-entropy} applies.
+Its shock coefficient in \eqref{eq:shock-production} is $-v_0J$, where
+$J=\int_1^U H_U(k)/k\,\dd k$.
+
+Under $t=\lambda\tau$, $r=S+\lambda\xi$, the radial viscosity measure is
+\[
+ \bar\nu_\lambda=\lambda^{-1}
+ (t,r,k\mapsto t/\lambda,(r-S)/\lambda,k)_\#\bar\nu.
+\]
+The factor $\lambda^{-1}$ follows from the first derivative scaling
+and the two-dimensional time-radius Jacobian. In the exact entropy
+balance, the linear fractional term vanishes by
+\eqref{eq:scaled-source}, while \eqref{eq:tube-defect} makes the separated
+nonlocal defect $o(\lambda)$ on each physical tube of width and length
+$O(\lambda)$. Full tangent convergence therefore gives, weakly against
+compact tests with $\tau>0$,
+\begin{equation}\label{eq:viscosity-shock}
+ \int\frac{\zeta(k)}k\,\bar\nu_\lambda(\dd\tau,\dd\xi,\dd k)
+ \ \rightharpoonup\ S^2v_0J\,
+              \delta_{\xi=\sigma_0\tau}\,\dd\tau.
+\end{equation}
+The local positive measure bounds above justify this weak interpretation.
+In particular the nonlocal defect has not been counted as viscosity
+production.
+
+Test \eqref{eq:viscosity-shock} by a nonnegative cutoff at most one,
+supported in $0<\tau<1$ and a fixed spatial interval containing the
+shock segment, and equal to one on the shock for
+$\delta\leq\tau\leq1-\delta$. Since
+$\zeta(k)/k\leq\mathbf1_{[B,U]}(k)/k$, positivity and
+\eqref{eq:radial-nu} imply, on sending $\delta\downarrow0$,
+\begin{equation}\label{eq:high-density}
+ \liminf_{t\downarrow0}\frac1t
+ \int_{(0,t)\times\R^3\times[B,U]}\frac1k\,\dd\nu
+ \geq4\pi S^2v_0J=W[F;S]J.
+\end{equation}
+This is a full liminf, since the tangent convergence used no favorable
+scale sequence.
+
+The outer weight $W[u(t);R(t)]$ is positive and continuous at zero, with
+value $W[F;R_0]$. Recall that $G_A=\int_0^A g_A(k)/k\,\dd k$ and
+the fixed strict margin is $W[F;R_0]G_A<W[F;S]J$. This margin and
+\eqref{eq:high-density} therefore supply one $0<T_1<T$ such that
+\begin{equation}\label{eq:payment}
+ \int_{(0,t)\times\R^3\times[B,U]}\frac1k\,\dd\nu
+ \geq G_A\int_0^tW[u(r);R(r)]\,\dd r,
+ \qquad0<t\leq T_1.
+\end{equation}
+For example choose an error smaller than one third of the positive gap in
+\eqref{eq:strict-margin}, apply the definition of liminf on one interval
+and continuity of the averaged outer weight on another, and intersect
+them. This time is chosen independently of every later power exponent.
+
+\subsection{The exact power coefficient and every terminal time}
+
+For $b>0$ and $r,z\geq0$, Cauchy--Schwarz on the interval between the
+two states gives
+\begin{equation}\label{eq:scalar-power}
+ (r^b-z^b)(r-z)\geq\frac{4b}{(b+1)^2}
+       (r^{(b+1)/2}-z^{(b+1)/2})^2.
+\end{equation}
+Indeed apply it to $\int_z^r k^{(b-1)/2}\dd k$, and then use a positive
+lower endpoint and monotone convergence if one state is zero.
+Set $b=a+q-1$, so
+$\Psi_{k^q}(k)=q(q-1)k^b/b$ by \eqref{eq:psi-power}.
+Combining this formula, \eqref{eq:scalar-power} and the positive pair form gives
+\begin{equation}\label{eq:power-fractional}
+ \mathcal B_\alpha(\Psi_{k^q},w)
+ \geq\frac{4q(q-1)}{(a+q)^2}
+ \|(-\Delta)^{\alpha/4}w^{(a+q)/2}\|_2^2.
+\end{equation}
+This holds as a comparison of nonnegative extended integrals. For
+$q=2-a$ the scalar inequality is equality; no strict fractional remainder
+is available at that exponent.
+
+Take, for example, $B=(A+1)/2$. On $k\geq B$,
+$k^{q-2}\geq B^{q-1}/k$. The viscosity moment in
+\eqref{eq:limit-power-cost} is therefore at least $B^{q-1}$ times the
+left side of \eqref{eq:payment}. The positive boundary contribution in that balance is at most
+$A^{q-1}G_A\int_0^tW[u;R]$ by \eqref{eq:density-cost}.
+Both terms carry the same factor $q(q-1)$ in \eqref{eq:limit-power-cost}.
+Since $B>A$, the same measure and the same $T_1$ make the viscosity
+contribution dominate the boundary contribution for every $q>1$.
+At good times the result, followed by
+\eqref{eq:power-fractional}, is
+\begin{equation}\label{eq:short-power}
+ \|u(t)\|_q^q+\frac{4q(q-1)}{(a+q)^2}
+ \int_0^t\|(-\Delta)^{\alpha/4}u^{(a+q)/2}\|_2^2\,\dd r
+ \leq\|F\|_q^q.
+\end{equation}
+For any terminal $t\leq T_1$, approach it by increasing good times.
+Bounded-test weak $L^1$ continuity gives lower semicontinuity of the
+convex power norm, and the nonnegative time integral increases to its
+full value. This extends \eqref{eq:short-power} to every terminal time.
+The dense-exponent passage described after \eqref{eq:limit-power-cost}
+gives every real $q>1$ without changing the measure or time interval.
+Together with \eqref{eq:limit-pressure}, the distributional equation,
+mass, cap and \eqref{eq:weak-time}, this proves all required energy weak
+solution properties on $[0,T_1]$. Its support is contained in the finite
+$C^1$ radius $R(t)$ there.

@@ -1,0 +1,171 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Compact short-time support for fractional-pressure diffusion},pdfauthor={Kaiwen Jin}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\eps}{\varepsilon}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\numberwithin{equation}{section}
+\title{An energy weak solution with compact short-time support\protect\\
+ for fractional-pressure diffusion}
+\author{Kaiwen Jin\\\small\texttt{yui.ui.siki@gmail.com}}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct a global bounded energy weak solution of
+$u_t=\nabla\cdot(u^{m-1}\nabla(-\Delta)^{-s}u)$ in three dimensions,
+with $m=3/2$ and one $s\in(7/8,1)$, whose support remains compact for a
+positive time. The solution conserves mass, obeys the initial supremum
+bound, is continuous into weak $L^1$, and satisfies the pressure energy
+and every dissipative $L^q$ inequality from the initial time. Thus the
+energy class specified in AIM Question~468 does not force instantaneous
+spreading. The construction retains a moving jump to vacuum. Its positive
+boundary entropy contribution is compensated by an interior compressive
+shock at higher densities.
+A weighted interaction estimate separates the nonlocal entropy production
+from the viscosity measure and identifies enough dissipation at that shock
+to dominate the boundary contributions for all powers on a single time interval.
+\end{abstract}
+
+\section{Introduction and main result}\label{sec:intro}
+
+Nonlocal pressure makes the support of a diffusing density sensitive to
+both the mobility and the solution concept. We consider
+\begin{equation}\label{eq:model}
+ u_t=\nabla\cdot(u^{m-1}\nabla p),\qquad
+ p=(-\Delta)^{-s}u,\qquad x\in\R^N,
+\end{equation}
+where $m>1$, $0<s<1$, and the inverse fractional Laplacian has Fourier
+multiplier $|\xi|^{-2s}$. This is the porous-medium model with fractional
+potential pressure studied by Stan, del Teso and V\'azquez
+\cite{Stan2015,Stan2016,Stan2018}. The pressure couples distant regions,
+while the mobility degenerates at vacuum; deciding whether a compact
+front persists is therefore a qualitative question beyond global existence.
+
+The global existence theory supplies mass and supremum bounds and two
+families of energy estimates \cite[Theorem~2.2]{Stan2016}. Propagation
+depends on the parameter range. The survey \cite[Theorems~5.3--5.4]{Stan2018}
+records finite propagation for constructed solutions when $m\geq2$, and
+infinite propagation in dimension one when $1<m<2$. The latter uses an
+integrated scalar problem; Remark~7 there identifies the multidimensional
+extension as an open issue. A result for one selected construction and a
+statement about every solution in a given energy class are distinct
+questions. The formulation in AIM Question~468 \cite{AIM468} explicitly
+asks the second question for $N\geq2$ and $1<m<2$.
+
+We state its solution class precisely. In the following definition the
+initial datum is nonzero, nonnegative and compactly supported.
+
+\begin{definition}\label{def:class}
+Let $N\geq2$, $1<m<2$, $0<s<1$, and
+$d\in L^1(\R^N)\cap L^\infty(\R^N)$.
+A bounded energy weak solution from $d$ is a nonnegative distributional
+solution of \eqref{eq:model} with locally integrable flux, such that
+\[
+ t\longmapsto\int_{\R^N}u(t,x)\psi(x)\,\dd x
+ \quad\hbox{is continuous for every }\psi\in L^\infty(\R^N),
+ \qquad u(0)=d,
+\]
+and, at every $t\geq0$, $\int u(t)=\int d$ and
+$\|u(t)\|_\infty\leq\|d\|_\infty$. For every $t>0$ it satisfies
+\begin{equation}\label{eq:class-pressure}
+ \frac12\|(-\Delta)^{-s/2}u(t)\|_2^2+
+ \int_0^t\int u^{m-1}|\nabla(-\Delta)^{-s}u|^2
+ \leq\frac12\|(-\Delta)^{-s/2}d\|_2^2,
+\end{equation}
+and, for every real $q>1$ and $t>0$,
+\begin{equation}\label{eq:class-power}
+ \|u(t)\|_q^q+\frac{4q(q-1)}{(m+q-1)^2}
+ \int_0^t\|(-\Delta)^{(1-s)/2}u^{(m+q-1)/2}\|_2^2\,\dd r
+ \leq\|d\|_q^q.
+\end{equation}
+\end{definition}
+
+These are inequalities from the initial time. Local entropy admissibility
+or membership in a specified approximation limit would impose additional
+conditions on this definition. The question is whether every solution in
+this class has
+$\int_{|x|>R}u(t,x)\dd x>0$ for every finite $R>0$ and every $t>0$.
+This expresses unbounded essential support and does not require pointwise
+positivity. Our result gives a negative answer to that universal assertion.
+
+\begin{theorem}\label{thm:main}
+There exist $0<\alpha<1/4$, $s=1-\alpha/2$, $T_*>0$, and a global
+bounded energy weak solution on $\R^3$ with $m=3/2$ and initial datum
+$F$ given by \eqref{eq:datum}, such that $\|F\|_\infty=100$ and
+\[
+ u(t,x)=0\quad\hbox{for almost every }|x|>R(t),
+ \qquad 0<t<T_*.
+\]
+Here $R$ is a positive finite $C^1$ function on $[0,T_*]$ with
+$R(0)=101/100$. The solution is radial on this initial interval.
+In particular the universal instantaneous-spreading assertion in
+Question~468 is false for the class of Definition~\ref{def:class}.
+\end{theorem}
+
+All the inequalities in the definition hold for every terminal time, with
+one time interval supporting all exponents. The construction gives one
+choice of parameters and solution; it makes no propagation assertion
+about every other solution or about the whole range $1<m<2$, $0<s<1$.
+This quantifier distinction is enough to answer the stated universal
+question, and leaves the behavior of separately selected solution classes
+as a different problem.
+
+The reason a compact front can meet these global inequalities is visible
+in its entropy balance. A downward jump from a positive density to vacuum
+creates a positive boundary entropy contribution. We put an upward jump at a smaller
+radius, so the concave transport flux creates a compressive scalar shock.
+The internal shock dissipates at densities strictly above those entering
+the boundary contribution. One weighted dissipation bound can consequently dominate
+the boundary term for every power, including exponents for which the fractional inequality
+has no strict remainder.
+
+Two analytic points are needed to make this comparison rigorous. The
+moving viscous ball must exist on a time interval independent of its
+viscosity; a boundary layer adapted to the singular fractional source
+provides the required normal-flux control. At the internal jump the
+nonlocal production must be distinguished from surviving viscosity.
+An interaction estimate gives fourth-power spatial increments, which
+make the nonlocal defect strongly compact in $L^2$. At the hyperbolic
+scale of the initial jump this defect vanishes, and scalar entropy
+uniqueness identifies the viscosity production with that of a single
+compressive shock. This is the comparison used to prove the exact
+inequalities in Definition~\ref{def:class}.
+
+Section~\ref{sec:construction} constructs the common-time viscous family
+and its compact limit. Section~\ref{sec:interaction} proves the
+interaction and defect estimates. Section~\ref{sec:shock} identifies the
+initial shock and proves all power inequalities. Section~\ref{sec:continuation}
+extends the solution globally and completes the theorem.
+We use the unitary Fourier transform
+$\widehat w(\xi)=(2\pi)^{-N/2}\int e^{-ix\cdot\xi}w(x)\dd x$.
+Sobolev spaces on bounded domains are restriction spaces, and
+$H^{-1}=(H^1_0)^*$. Constants denoted by $K$ may change between estimates;
+after its selection, $\alpha$ is fixed throughout the construction.
+
+\input{construction}
+\input{compactness}
+\input{interaction}
+\input{shock}
+\input{continuation}
+
+\section*{AI-use statement}
+AI tools, including OpenAI Codex, were used in developing the argument, checking cited source
+applications and preparing the manuscript. The paper is presented under
+the author's responsibility.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

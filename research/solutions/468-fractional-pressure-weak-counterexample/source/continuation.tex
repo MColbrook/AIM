@@ -1,0 +1,137 @@
+\section{Global continuation}\label{sec:continuation}
+
+The construction so far is on a positive finite interval. The question
+requires a global solution, with every bounded spatial pairing continuous
+and both kinds of inequality at every terminal time. We give the
+representative argument needed to use an existing global existence theorem.
+
+\begin{proposition}\label{prop:global-source}
+For the fixed $0<\alpha<1/4$ and every nonzero nonnegative compactly
+supported $d\in L^1(\R^3)\cap L^\infty(\R^3)$, there is a global
+solution in the energy weak class of Definition~\ref{def:class}, with
+$m=1+a=3/2$ and $s=1-\alpha/2$.
+\end{proposition}
+
+\begin{proof}
+Apply \cite[Definition~2.1 and Theorem~2.2]{Stan2016} with
+$N=3$, $m=3/2$ and pressure parameter $s=1-\alpha/2$.
+It supplies a nonnegative global distributional solution $z$, its initial
+compact-test formulation, locally integrable pressure gradient and flux,
+boundedness and integrability on finite cylinders, conserved mass
+$M=\int d$, cap $U_d=\|d\|_\infty$, and the pressure and every-$q$
+power inequalities with coefficient $4q(q-1)/(a+q)^2$.
+The source differentiating order is $1-s=\alpha/2$, so its seminorm is
+exactly $\|(-\Delta)^{\alpha/4}z^{(a+q)/2}\|_2$.
+In this dimension $3>2s$, the scalar inverse pressure is well defined
+with \eqref{eq:riesz}; its composed gradient equals $\nabla K_\alpha z$.
+The initial energy is finite for bounded compact $d$, as proved above.
+We interpret time-slice estimates initially on their good-time set and
+prove the stronger representative assertions next.
+
+Split the kernel $k(x)=c_\alpha x/|x|^{3+\alpha}$ into
+$k_{\rm near}=k\mathbf1_{|x|<1}$ and
+$k_{\rm far}=k\mathbf1_{|x|\geq1}$. The radial integrals show
+$k_{\rm near}\in L^1$ and
+$k_{\rm far}\in L^2\cap L^\infty$. For any nonnegative bounded
+integrable spatial density $z$ with this mass and cap,
+\begin{align}
+ \|v[z]\|_\infty&\leq U_d\|k_{\rm near}\|_1
+                         +M\|k_{\rm far}\|_\infty,\nonumber\\
+ \|z^av[z]\|_1&\leq U_d^aM\|k_{\rm near}\|_1
+                         +M^{3/2}\|k_{\rm far}\|_2.\label{eq:global-flux}
+\end{align}
+The near estimate uses $z^a\leq U_d^a$ and the $L^1$ convolution bound.
+For the far estimate, Young and Cauchy--Schwarz give
+$\|k_{\rm far}*z\|_2\leq M\|k_{\rm far}\|_2$ and
+$\|z^a\|_2=\sqrt M$, since $a=1/2$.
+Thus the source flux has a uniform spatial $L^1$ bound at almost every
+time. Every compact smooth spatial pairing is absolutely continuous,
+with its prescribed initial value.
+
+Choose the continuous representatives simultaneously on a countable
+dense family of compact smooth tests on increasing balls. Positivity
+and the cap extend from almost every time to all times by continuity.
+At each time these pairings define a density $z_*(t)$ between zero and
+$U_d$, with $z_*(0)=d$. Nonnegative compact cutoffs show
+$\int z_*(t)\leq M$ at every time. It agrees with the original solution
+at almost every time. We now prove the tightness needed for equality of
+mass and continuity against arbitrary bounded tests.
+
+Let $\varphi(x)=\sqrt{1+|x|^2}-1$, so $|\nabla\varphi|\leq1$.
+Choose smooth nondecreasing concave caps $\vartheta_L$ of the identity,
+with derivative between zero and one, constant $c_L$ at infinity, and
+$\vartheta_L\uparrow\mathrm{id}$. They can be obtained by scaling one
+concave cap; its ratio to its argument is decreasing, which gives the
+monotonicity in $L$. The function
+$\vartheta_L(\varphi)-c_L$ is a compact smooth test. At good times add
+$c_L$ times the known mass and use \eqref{eq:global-flux} to obtain
+\[
+ \int z(t)\vartheta_L(\varphi)\leq\int d\varphi+Kt.
+\]
+At an arbitrary time the compact part is continuous and the constant
+part is at most $c_LM$, by the preliminary upper mass bound. Hence the
+same upper bound holds for $z_*(t)$. Monotone convergence gives
+\begin{equation}\label{eq:moment}
+ \int z_*(t,x)\varphi(x)\,\dd x\leq\int d\varphi+Kt,
+ \qquad t\geq0.
+\end{equation}
+This yields uniform tails on every bounded time interval. Approach an
+arbitrary time by good times, pass a compact cutoff using continuity,
+and let the cutoff radius increase using \eqref{eq:moment}. The result
+is $\int z_*(t)=M$ at every time. For $\psi\in L^\infty$, first choose
+a ball with uniformly small tails, then approximate $\psi$ there in
+$L^1$ by a compact smooth function with bounded supremum. The cap
+controls the on-ball error and \eqref{eq:moment} the exterior error.
+The smooth pairing is continuous, so every bounded-test pairing is
+continuous, including at zero. This representative is unique among
+bounded-test continuous representatives of the same space-time solution.
+
+The convex power norm is weak-$L^1$ lower semicontinuous, by its dual
+variational formula with bounded tests. The pressure energy is lower
+semicontinuous as well: each Fourier value is a bounded sine/cosine
+pairing, and Fatou applies to the nonnegative integral
+$\tfrac12\int|\xi|^{-2s}|\widehat z_*(\xi)|^2\dd\xi$.
+Approach a terminal $t>0$ by increasing good times. The nonnegative
+dissipation integrals increase to their full values. Both source
+inequalities consequently hold at every terminal time. A countable
+dense set of exponents and Fatou in the positive pair form give all
+real $q>1$ simultaneously if needed. The equation and flux are unchanged
+by the representative choice. These are all clauses of the stated class.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The fixed $\alpha$ chosen in \eqref{eq:strict-margin} produces, by
+Sections~\ref{sec:construction}--\ref{sec:shock}, a solution $u_c$ on
+$[0,T_1]$ with the exact mass, cap, bounded-test continuity, pressure
+inequality and every-real-$q$ power inequality. It vanishes outside
+$B_{R(t)}$ at every such time, and $R$ is finite, positive and $C^1$,
+with $R(0)=R_0$. Its final slice $d=u_c(T_1)$ is nonzero, nonnegative,
+bounded and compactly supported; its pressure energy is finite.
+Proposition~\ref{prop:global-source} supplies a global continuation
+$z_*$ from this $d$, with the same parameters. Set
+\[
+ u(t)=\begin{cases}u_c(t),&0\leq t\leq T_1,\\
+ z_*(t-T_1),&t>T_1.\end{cases}
+\]
+Split a compact space-time test at $T_1$. The equal terminal and initial
+pairings with $d$ cancel, by their bounded-test continuity. This gives
+the whole-space weak equation from $F$, with locally integrable flux.
+All bounded pairings and the mass match at the junction, and the cap
+remains $U$.
+
+For $t>T_1$ add the pressure inequality for $u_c$ at $T_1$ to the one
+for $z_*$ at $t-T_1$. The common energy $\mathcal E_\alpha(d)$ cancels,
+giving the required inequality from $F$ and the full integral over
+$(0,t)$. For each $q>1$ the identical coefficient
+$4q(q-1)/(a+q)^2$ and common value $\|d\|_q^q$ give the same
+cancellation in the power inequality. For $t\leq T_1$ the inequalities
+have already been proved. This uses only inequalities from each
+segment's own initial time.
+
+Take $T_*=T_1$. The support assertion is required only for $0<t<T_*$.
+At, for example,
+$t=T_*/2$, take the finite radius $R(t)$. Nonnegativity and compact
+support give $\int_{|x|>R(t)}u(t,x)\dd x=0$.
+Since $s=1-\alpha/2\in(7/8,1)$ and $m=3/2$, this supplies one
+admissible global solution contradicting the universal assertion.
+\end{proof}

@@ -15,9 +15,9 @@ Contributions made with or without AI are welcome.
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**844 open targets** (360 open, 484 partial) · **222 solved entries** · **1 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
+**843 open targets** (359 open, 484 partial) · **222 solved entries** · **1 Lean verified** · **1 solution claim**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 844 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 843 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
@@ -37,7 +37,7 @@ If a problem here is resolved, we encourage you to improve the proof, explain it
 | [Stochastic growth, populations and statistical mechanics](CATALOG.md#stochastic-growth-populations-and-statistical-mechanics) | [22](CATALOG.md#stochastic2-open) | [9](CATALOG.md#stochastic2-solved) |
 | [Many-body physics, quantum information and wave analysis](CATALOG.md#many-body-physics-quantum-information-and-wave-analysis) | [24](CATALOG.md#spectral3-open) | [15](CATALOG.md#spectral3-solved) |
 | [Nonlinear waves, fluids and kinetic equations](CATALOG.md#nonlinear-waves-fluids-and-kinetic-equations) | [51](CATALOG.md#waves-fluids-kinetics-open) | [8](CATALOG.md#waves-fluids-kinetics-solved) |
-| [Diffusion, materials and variational problems](CATALOG.md#diffusion-materials-and-variational-problems) | [54](CATALOG.md#diffusion-materials-open) | [16](CATALOG.md#diffusion-materials-solved) |
+| [Diffusion, materials and variational problems](CATALOG.md#diffusion-materials-and-variational-problems) | [53](CATALOG.md#diffusion-materials-open) | [16](CATALOG.md#diffusion-materials-solved) |
 | [Applied geometry, control and information](CATALOG.md#applied-geometry-control-and-information) | [38](CATALOG.md#inverse3-open) | [11](CATALOG.md#inverse3-solved) |
 | [Stochastic dynamics, reaction networks and applied optimization](CATALOG.md#stochastic-dynamics-reaction-networks-and-applied-optimization) | [37](CATALOG.md#stochastic3-open) | [9](CATALOG.md#stochastic3-solved) |
 | [Bayesian inverse problems and uncertainty quantification](CATALOG.md#bayesian-inverse-problems-and-uncertainty-quantification) | [3](CATALOG.md#bayesian-inverse-uncertainty-quantification-open) | [0](CATALOG.md#bayesian-inverse-uncertainty-quantification-solved) |

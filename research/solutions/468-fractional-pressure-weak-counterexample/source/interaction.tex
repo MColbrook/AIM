@@ -1,0 +1,298 @@
+\section{Interior dissipation}\label{sec:interaction}
+
+The global balance \eqref{eq:limit-power-cost} contains a positive boundary
+entropy contribution. To compare it with dissipation at the internal jump, we must separate
+the viscosity measure from the nonlocal production. The latter will have
+an $L^2$ density near $S$ and therefore no contribution at the scale of the
+initial shock.
+
+For a normalized smooth entropy, $\eta(0)=\eta'(0)=0$. Recall
+$\Psi_\eta'=\eta''f$, $F_\eta'=\Psi_\eta$, with zero constants at zero,
+and $Q_\eta=\eta'f-\Psi_\eta$. Define
+\begin{equation}\label{eq:defect}
+ \mathcal D_\eta[w](x)=c_{3,\alpha}\int
+ \frac{F_\eta(w(y))-F_\eta(w(x))
+ -\Psi_\eta(w(x))(w(y)-w(x))}{|x-y|^{3+\alpha}}\,\dd y.
+\end{equation}
+It equals $\Psi_\eta(w)L_\alpha w-L_\alpha F_\eta(w)$ wherever the
+terms are realized by their integrals. Since $F_\eta''=\eta''f$, it is
+nonnegative for convex $\eta$. On an interior annulus the regularized
+equation gives the two exact radial balances
+\begin{align}
+ \partial_t(r^2w)+\partial_r(r^2v f(w)-\eps r^2w_r)&=0,
+                                                        \label{eq:radial-mass}\\
+ \partial_t(r^2\eta(w))+
+ \partial_r(r^2v Q_\eta(w)-\eps r^2\eta'(w)w_r)
+ &=-r^2\bigl(\eps\eta''(w)w_r^2+\mathcal D_\eta[w]\bigr)
+       -rL_{1,\alpha}[rF_\eta(w)].\label{eq:radial-entropy}
+\end{align}
+Here the profile $rF_\eta(w)$ is extended oddly to the real line.
+The identity behind the last term is
+\begin{equation}\label{eq:radial-operator}
+ rL_{3,\alpha}h=L_{1,\alpha}[rh]
+\end{equation}
+for bounded compactly supported radial $h$. For smooth $h$, the
+three-dimensional radial Fourier transform is a constant times
+$\rho^{-1}\int_0^\infty rh(r)\sin(r\rho)\dd r$; the odd
+one-dimensional transform has the same sine transform. Multiplication
+by $|\rho|^\alpha$ proves \eqref{eq:radial-operator}, with the same
+normalization on both sides. Radial mollification passes it to bounded
+compact $h$: the odd profiles converge in $L^1(\R)$, since their integral
+near zero is uniformly $O(\delta^2)$ and away from zero radial weighted
+$L^1$ convergence suffices. Transfer the fractional operator to the smooth
+test to pass to distributions. The boundedness assumption here includes
+the actual profiles $F_\eta(w)$.
+
+For $\eta(k)=k^2/2$, the transforms are
+$\Psi_\eta(k)=k^{a+1}/(a+1)$ and
+$F_\eta(k)=k^{a+2}/((a+1)(a+2))$.
+The total masses of $\eps|\nabla w|^2$ and
+$\mathcal D_\eta[w]$ are uniformly bounded. Indeed the former is in
+\eqref{eq:compactness-bounds}, while integration of the latter over space
+is $\mathcal B_\alpha(\Psi_\eta,w)$: symmetric truncation gives
+$\int L_\alpha F_\eta(w)=0$. Equation \eqref{eq:entropy-global}
+then bounds it. In radial coordinates these measures have the weight
+$r^2$ and the full-space integrals are $4\pi$ times the radial ones.
+
+\subsection{A weighted interaction estimate}
+
+We use the interaction calculation of \cite[Section~2]{GolsePerthame2013},
+with the weighted and fractional terms retained explicitly. If compactly
+supported smooth fields satisfy
+$A_t+B_r=C$ and $D_t+E_r=H$, set
+\[
+ I(t)=\int A(t,r)\int_r^\infty D(t,z)\,\dd z\dd r,
+ \qquad P(t,r)=\int_{-\infty}^r A(t,z)\,\dd z.
+\]
+Differentiation and integration by parts give
+\begin{equation}\label{eq:interaction-identity}
+ \int_0^T\int(AE-DB)=I(T)-I(0)
+ -\int_0^T\int C(t,r)\int_r^\infty D(t,z)\,\dd z\dd r\dd t
+ -\int_0^T\int HP.
+\end{equation}
+The identity also holds for bounded measurable mass and entropy densities
+and fluxes, bounded $C$, and a source
+$H=\mu+\sum_l b_lL_{1,\alpha}g_l$, where $\mu$ is a finite signed
+measure, $b_l$ are compactly supported Lipschitz functions, and $g_l$ are
+bounded on the full line. The necessary interpretation is
+\[
+ \int HP=\int P\,\dd\mu+
+             \sum_l\int g_lL_{1,\alpha}(b_lP).
+\]
+To verify it, the mass equation gives
+$P_r=A$ and $P_t=-B+\int_{-\infty}^rC$, so $P$ has a locally Lipschitz
+representative in both variables. Multiply by a spatial cutoff equal to
+one on the entropy support and mollify. The primitives converge uniformly
+on compact sets, their derivatives converge locally in $L^1$, and their
+$W^{1,1}$ norms stay bounded. The fractional pairings converge by
+\begin{equation}\label{eq:fractional-L1}
+ \|L_{1,\alpha}\psi\|_1
+ \leq K_\alpha\|\psi\|_1^{1-\alpha}\|\psi'\|_1^\alpha,
+ \qquad \psi\in W^{1,1}(\R).
+\end{equation}
+This estimate follows by integrating
+$\|\psi(\cdot+h)-\psi\|_1\leq
+\min(2\|\psi\|_1,|h|\|\psi'\|_1)$ against $|h|^{-1-\alpha}$.
+Uniform convergence handles the measure pairing. Thus
+\eqref{eq:interaction-identity} holds at Lebesgue trace endpoints with no
+source-measure atom, or with smooth time cutoffs. A prescribed bounded
+initial mass and entropy trace is included if there is no initial atom;
+approach zero through good times and retain the initial terms. Source
+integrals between endpoints use the open time interval.
+
+Write $\Delta_hz(r)=z(r+h)-z(r)$ and take a fixed smooth spatial cutoff
+$\chi$. For a bounded field $z_0$ and a bounded Lipschitz weight $\omega$,
+\[
+ P_h(r)=\int_{-\infty}^r\chi(z)\Delta_h(\omega z_0)(z)\,\dd z
+ \quad\hbox{satisfies}\quad
+ \|P_h\|_\infty\leq K|h|,\qquad \|(P_h)'\|_\infty\leq K
+\]
+for bounded $z_0$. Move the translation to the integration endpoint and
+the cutoff to obtain the first bound. For a uniformly Lipschitz coefficient
+$b$ near the cutoff support, the compact test
+\begin{equation}\label{eq:correct-test}
+ \psi_h=b\,\Delta_{-h}(\chi P_h)
+\end{equation}
+satisfies $\|\psi_h\|_1\leq K|h|$ and
+$\|\psi_h'\|_1\leq K$. Equation \eqref{eq:fractional-L1} therefore
+bounds its pairing with $L_{1,\alpha}g$ by
+$K\|g\|_\infty|h|^{1-\alpha}$. No $L^1$ bound on $g$ is needed.
+
+\begin{lemma}\label{lem:increments}
+Let bounded states $z_\eps\in[A/2,U]$ obey, on a larger time-interval
+cylinder with spatial interval $J_+$,
+\begin{align*}
+ \partial_t(\omega z_\eps)+
+ \partial_r(\omega vf(z_\eps)-\eps\omega\partial_rz_\eps)&=0,\\
+ \partial_t(\omega\eta(z_\eps))+
+ \partial_r(\omega vQ_\eta(z_\eps)-\eps\omega\eta'(z_\eps)\partial_rz_\eps)
+ &=-\mu-bL_{1,\alpha}g,
+ \qquad\eta(k)=k^2/2.
+\end{align*}
+Assume $\omega$ is time independent and uniformly positive, $\omega,b$
+have bounded Lipschitz norms, $v\geq v_*>0$ is bounded and spatially
+$C^\beta$, $\mu\geq0$ has bounded mass, and $g$ is uniformly bounded
+on the full line. For $\eps>0$ assume local boundedness of
+$\partial_rz_\eps$ for each member and
+$\eps\int|\partial_rz_\eps|^2\leq K$; for $\eps=0$ no derivative is
+required. At good endpoints as above, or with a fixed smooth time cutoff,
+every smaller cylinder $Q$ satisfies
+\begin{equation}\label{eq:L4-increment}
+ \int_Q|\Delta_hz_\eps|^4\leq K_Q(|h|^\beta+\sqrt\eps).
+\end{equation}
+The constants depend on the listed bounds, intervals and cutoffs. The
+support of $g$ may grow.
+\end{lemma}
+
+\begin{proof}
+For $z_0,z_1\in[A/2,U]$, $Q_\eta'=\eta'f'$ gives
+\begin{align}
+ &(z_1-z_0)(Q_\eta(z_1)-Q_\eta(z_0))
+ -(\eta(z_1)-\eta(z_0))(f(z_1)-f(z_0))\nonumber\\
+ &\quad=\frac12\int_{z_0}^{z_1}\int_{z_0}^{z_1}
+ (r-q)(f'(r)-f'(q))\,\dd r\dd q
+ \leq-\frac{a(1-a)U^{a-2}}{12}|z_1-z_0|^4.\label{eq:determinant}
+\end{align}
+The formula and inequality hold in either ordering of the states, since
+$f''(k)\leq-a(1-a)U^{a-2}$ on this interval.
+
+Put $J_m=\omega vf(z_\eps)-\eps\omega\partial_rz_\eps$ and
+$J_e=\omega vQ_\eta(z_\eps)-\eps\omega\eta'(z_\eps)\partial_rz_\eps$.
+In \eqref{eq:interaction-identity} use
+\[
+ A=\chi\Delta_h(\omega z_\eps),\ B=\chi\Delta_hJ_m,
+ \ C=\chi'\Delta_hJ_m,\quad
+ D=\chi\Delta_h(\omega\eta(z_\eps)),\ E=\chi\Delta_hJ_e,
+\]
+and $H=\chi'\Delta_hJ_e-\chi\Delta_h\mu
+-\chi\Delta_h(bL_{1,\alpha}g)$. The weak extension applies: at each
+fixed viscous member the fluxes are locally bounded; at zero viscosity
+bounded states and velocity suffice. The mass primitive has the bounded
+space and time derivatives described above, so its measure pairing is
+well defined. Both density primitives are $O(|h|)$ uniformly. Endpoints,
+cutoff sources and the translated measure therefore cost $O(|h|)$,
+apart from viscous fluxes, whose $L^1$ norms are $O(\sqrt\eps)$ by
+Cauchy--Schwarz.
+
+Move the fractional-source translation onto the primitive. The resulting
+test is exactly $b\Delta_{-h}(\chi P_h)$, with $b$ outside the difference.
+Equations \eqref{eq:fractional-L1} and \eqref{eq:correct-test} bound this
+term by $K|h|^{1-\alpha}$ using only $\|g\|_\infty$.
+Freezing $\omega,v$ at the unshifted point in $AE-DB$ leaves
+$\chi^2\omega^2v$ times \eqref{eq:determinant}. Weight errors cost
+$O(|h|)$ and velocity errors $O(|h|^\beta)$; the remaining viscous
+products have integral $O(\sqrt\eps)$ because all other factors are
+bounded. The positive lower bounds for $\omega$ and $v$ now give
+\eqref{eq:L4-increment}. The same proof at $\eps=0$ has no viscosity
+error, and the cutoff version retains the corresponding initial terms.
+\end{proof}
+
+\subsection{Separation of the nonlocal defect}
+
+Apply Lemma~\ref{lem:increments} to \eqref{eq:radial-mass}--\eqref{eq:radial-entropy}
+with quadratic entropy. The actual coefficients are
+\[
+ \omega=r^2,\qquad b=r,\qquad
+ g=rF_\eta(w_j)\ \hbox{extended oddly},\qquad
+ \mu=r^2\bigl(\eps_j|\partial_rw_j|^2+\mathcal D_\eta[w_j]\bigr)\,\dd r\dd t.
+\]
+The common annulus \eqref{eq:positive-annulus}, the weighted mass bounds
+above and \eqref{eq:velocity-holder} verify all its hypotheses.
+
+\begin{lemma}\label{lem:defect-convergence}
+For each fixed normalized $C^2$ entropy $\eta$ with bounded second
+derivative on $[0,U]$, convex or not,
+\[
+ \mathcal D_\eta[w_j]\longrightarrow\mathcal D_\eta[u]
+ \quad\hbox{strongly in }L^2
+\]
+on each smaller time-annulus cylinder, including the initial endpoint.
+In particular, for every fixed $K_1$,
+\begin{equation}\label{eq:tube-defect}
+ \frac1\lambda\int_0^\lambda
+ \int_{|r-S|<K_1\lambda}|\mathcal D_\eta[u](t,r)|\,\dd r\dd t
+ \longrightarrow0.
+\end{equation}
+The same statement holds with the full radial volume weight.
+\end{lemma}
+
+\begin{proof}
+For $r,\rho$ in an annulus away from zero, angular integration of the
+three-dimensional kernel is a positive constant times
+\[
+ \frac\rho r\left(|r-\rho|^{-1-\alpha}-(r+\rho)^{-1-\alpha}\right).
+\]
+Near its diagonal it is bounded by $K|r-\rho|^{-1-\alpha}$.
+Taylor's integral remainder in \eqref{eq:defect} is bounded in absolute
+value by $K_\eta|w_j(\rho)-w_j(r)|^2$, since
+$F_\eta''=\eta''f$ is bounded on $[0,U]$.
+Minkowski consequently bounds the $L^2$ norm of the contribution from
+$|r-\rho|<\delta$ by
+\begin{equation}\label{eq:diagonal-bound}
+ K_\eta\int_0^\delta h^{-1-\alpha}\|\Delta_hw_j\|_4^2\,\dd h.
+\end{equation}
+The norms here are on a slightly larger time-annulus cylinder.
+Bounded states and the viscous gradient estimate give
+\[
+ \|\Delta_hw_j\|_4^2\leq K\|\Delta_hw_j\|_2
+ \leq K|h|/\sqrt{\eps_j}.
+\]
+Lemma~\ref{lem:increments} also gives
+$\|\Delta_hw_j\|_4^2\leq K(h^{(1-\alpha)/2}+\eps_j^{1/4})$.
+Split \eqref{eq:diagonal-bound} at $h_j=\eps_j^{2/3}$.
+The first estimate below $h_j$ gives
+$O(\eps_j^{1/6-2\alpha/3})$; the second above $h_j$ gives
+\[
+ K_\eta\delta^{(1-3\alpha)/2}
+       +O(\eps_j^{1/4-2\alpha/3}).
+\]
+Both error exponents are positive because $\alpha<1/4$.
+Thus the iterated near-diagonal bound tends to zero with $\delta$,
+also on intervals abutting zero.
+
+Away from the diagonal the kernel has bounded integrable operator norms.
+The remainder depends Lipschitz continuously on its two states in
+$[0,U]$. Strong density convergence therefore gives strong $L^2$
+convergence of this truncated defect, including its separated contribution
+from the origin and exterior vacuum. Fatou gives the same near-diagonal
+bound for the limit. Let $j\to\infty$ and then $\delta\downarrow0$ to
+obtain strong $L^2$ convergence and local $L^2$ integrability of the limit.
+
+The tubes in \eqref{eq:tube-defect} lie in one such fixed cylinder about
+$S$ and have area $O(\lambda^2)$. Cauchy--Schwarz bounds their integral
+divided by $\lambda$ by a constant times the $L^2$ norm on the tube,
+which tends to zero by absolute continuity. The volume weight $4\pi r^2$
+is bounded there, proving the full-space version.
+\end{proof}
+
+We may now pass the local entropy equation without a chain rule for the
+weak limit. The viscous entropy flux tends to zero in $L^2$, since
+$\eta'$ is bounded on $[A/2,U]$ and
+$\eps_j\int|\nabla w_j|^2$ is bounded. The moment of $\eta''$ in
+\eqref{eq:nu} converges. Lemma~\ref{lem:defect-convergence} passes the
+nonlocal defect; the linear fractional term passes by transferring the
+operator to the test. Density and other fluxes pass strongly, and the
+initial entropies pass from $g_j\to F$. Therefore, on each smaller
+time-annulus cylinder contained in $[0,T]\times J_+$,
+\begin{equation}\label{eq:limit-local-entropy}
+ \partial_t\eta(u)+\nabla\cdot(v[u]Q_\eta(u))+L_\alpha F_\eta(u)
+ =-\int\eta''(k)\nu(\dd t,\dd x,\dd k)
+   -\mathcal D_\eta[u]\,\dd t\dd x,
+\end{equation}
+with initial term $\eta(F)$. The notation on the right means the
+state-variable moment of the single measure $\nu$ already extracted.
+It holds for each fixed normalized $C^2$ entropy with bounded second
+derivative, by the same argument, including nonconvex ones.
+
+Rotational invariance of the approximants implies rotational invariance
+of $\nu$. Define its radial measure by
+\begin{equation}\label{eq:radial-nu}
+ \bar\nu=\frac1{4\pi}(t,x,k\mapsto t,|x|,k)_\#\nu.
+\end{equation}
+The radial version of \eqref{eq:limit-local-entropy} has precisely
+$-\int\eta''(k)\bar\nu$ and
+$-r^2\mathcal D_\eta[u]\dd r\dd t-rL_{1,\alpha}[rF_\eta(u)]\dd r\dd t$
+as its sources. Thus the radial measure is determined by the full-space
+one; it is not another independently selected limit. The strong initial
+trace and absence of an initial atom established above justify the same
+initial terms in this radial equation.

@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**844 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**843 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -22,7 +22,7 @@
 | [Stochastic growth, populations and statistical mechanics](#stochastic-growth-populations-and-statistical-mechanics) | [22](#stochastic2-open) | [9](#stochastic2-solved) |
 | [Many-body physics, quantum information and wave analysis](#many-body-physics-quantum-information-and-wave-analysis) | [24](#spectral3-open) | [15](#spectral3-solved) |
 | [Nonlinear waves, fluids and kinetic equations](#nonlinear-waves-fluids-and-kinetic-equations) | [51](#waves-fluids-kinetics-open) | [8](#waves-fluids-kinetics-solved) |
-| [Diffusion, materials and variational problems](#diffusion-materials-and-variational-problems) | [54](#diffusion-materials-open) | [16](#diffusion-materials-solved) |
+| [Diffusion, materials and variational problems](#diffusion-materials-and-variational-problems) | [53](#diffusion-materials-open) | [16](#diffusion-materials-solved) |
 | [Applied geometry, control and information](#applied-geometry-control-and-information) | [38](#inverse3-open) | [11](#inverse3-solved) |
 | [Stochastic dynamics, reaction networks and applied optimization](#stochastic-dynamics-reaction-networks-and-applied-optimization) | [37](#stochastic3-open) | [9](#stochastic3-solved) |
 | [Bayesian inverse problems and uncertainty quantification](#bayesian-inverse-problems-and-uncertainty-quantification) | [3](#bayesian-inverse-uncertainty-quantification-open) | [0](#bayesian-inverse-uncertainty-quantification-solved) |
@@ -1090,7 +1090,6 @@
 | 464 | [Hölder regularity under directional nonlocal ellipticity alone](problems/464-rough-jump-kernel-holder-regularity.md) | 🔵 OPEN | Nonlocal PDEs; heterogeneous jump diffusion |
 | 465 | [Optimal nonlocal obstacle regularity with a minimally smooth obstacle](problems/465-nonlocal-obstacle-minimal-smoothness.md) | 🔵 OPEN | Nonlocal free-boundary PDEs; optimal stopping |
 | 466 | [Multidimensional weak uniqueness for porous-medium flow with fractional pressure](problems/466-fractional-pressure-pme-multidimensional-uniqueness.md) | 🔵 OPEN | Nonlocal PDEs; porous-medium transport |
-| 468 | [Instantaneous spreading for fractional-pressure flow in several dimensions](problems/468-fractional-pressure-multidimensional-instantaneous-spread.md) | 🔵 OPEN | Nonlocal PDEs; propagation of a diffusing front |
 | 470 | [Instantaneous strict separation for three-dimensional local Cahn–Hilliard](problems/470-local-cahn-hilliard-three-dimensional-separation.md) | 🔵 OPEN | Phase-field PDEs; binary mixtures |
 | 471 | [Flatness of three-dimensional fractional minimizing cones for every interaction order](problems/471-fractional-minimizing-cones-three-dimensional.md) | 🟡 PARTIAL | Nonlocal variational PDEs; phase interfaces |
 | 472 | [Uniqueness of all weak dual solutions of fractional porous-medium flow](problems/472-manifold-fractional-pme-weak-dual-uniqueness.md) | 🔵 OPEN | Nonlocal PDEs; diffusion on curved spaces |
@@ -1136,6 +1135,12 @@
 | 482 | [Unconditional uniqueness for entropy-dissipating reaction–diffusion](problems/482-entropy-reaction-diffusion-renormalized-uniqueness.md) | ✅ SOLVED | The unrestricted finite-entropy renormalized reaction–diffusion uniqueness assertion is false. | [Proof](research/solutions/entropy-cubic-nonuniqueness/paper.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/482-review.md) |
 | 485 | [Optimal obstacle regularity for stable jump kernels with only angular integrability](problems/485-general-stable-obstacle-optimal-regularity.md) | ✅ SOLVED | The full support-independent global C^(1,s) obstacle estimate holds for the stated integrable angular-density class. | [Proof](research/solutions/485-general-stable-obstacle-optimal-regularity/paper/main.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/485-review.md) |
 | 658 | [Does directional ellipticity force a fractional energy bound?](research/resolved/658-nonlocal-directional-ellipticity-coercivity.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/471-nonlocal-coercivity/PROOF.md) | [Review](research/solution_reviews/2026-10-02/471-review.md) |
+
+### Solution claimed
+
+| ID | Problem | Status | Outcome | Proof | Review |
+| --- | --- | --- | --- | --- | --- |
+| 468 | [Instantaneous spreading for fractional-pressure flow in several dimensions](problems/468-fractional-pressure-multidimensional-instantaneous-spread.md) | 🟠 SOLUTION CLAIMED | Proposed counterexample for N=3, m=3/2 and some s in (7/8, 1); independent review pending. | [Proof](research/solutions/468-fractional-pressure-weak-counterexample/paper.pdf) | [Review](research/solutions/468-fractional-pressure-weak-counterexample/REVIEW_SCOPE.md) |
 
 ## Applied geometry, control and information
 
@@ -1527,7 +1532,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 2026 expansion — batch 4 | 7 | 2026-09-18–2026-10-30 |
 | September 2026 expansion — batch 5 | 8 | 2026-09-18–2026-10-13 |
 | September 2026 expansion — batch 6 | 6 | 2026-09-19–2026-10-13 |
-| September 22 expansion — PDE emphasis | 88 | 2026-09-22–2026-10-30 |
+| September 22 expansion — PDE emphasis | 87 | 2026-09-22–2026-10-30 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
 | Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 114 | 2026-09-23–2026-11-04 |
 | Retained further problems, integrated 30 October 2026 | 373 | 2026-10-30–2026-11-07 |
