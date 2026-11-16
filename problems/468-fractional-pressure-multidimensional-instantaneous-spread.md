@@ -2,9 +2,9 @@
 
 **Area:** Nonlocal PDEs; propagation of a diffusing front
 
-**Status:** 🔵 OPEN
+**Status:** 🟠 SOLUTION CLAIMED
 
-**Last checked:** 2026-09-22
+**Last checked:** 2026-11-17
 
 ## Problem statement
 
@@ -50,6 +50,10 @@ The assertion would locate the transition between a moving compact front and imm
 
 ## Status review
 
-**Literature check:** Open in cited literature; no later resolution located.
+**Resolution claim (2026-11-17):** Kaiwen Jin's [proposed analytic counterexample](../research/solutions/468-fractional-pressure-weak-counterexample/paper.pdf) gives one $`N=3`$, $`m=3/2`$ and $`s\in(7/8,1)`$ for which a global solution in the stated energy class retains compact support for a positive initial interval. Such a solution would negate the universal assertion. The status is **Solution claimed**, with independent review outstanding.
+
+The package includes [editable source](../research/solutions/468-fractional-pressure-weak-counterexample/source/main.tex), a [clause-by-clause target comparison](../research/solutions/468-fractional-pressure-weak-counterexample/TARGET_COMPARISON.md), and an [AI-use and review-scope disclosure](../research/solutions/468-fractional-pressure-weak-counterexample/REVIEW_SCOPE.md). One reader and one specialist AI context examined the complete draft; one revision and final artifact checks followed. No independent human acceptance is claimed.
+
+**Historical literature check (2026-09-22):** Open in cited literature; no later resolution located.
 
 Remark 7 of the survey explicitly leaves the multidimensional extension of infinite propagation open. The 2026 PDE review still states the infinite-propagation result only for dimension one. Searches on 2026-09-22 checked higher-dimensional spreading and later pressure-model papers; no whole-space result for the stated class was located. Infinite spreading of self-similar profiles, results on a torus, and finite propagation for $`m\ge2`$ do not answer this question. The weak formulation uses positive exterior mass because continuity is not being assumed.

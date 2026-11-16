@@ -1,0 +1,137 @@
+\subsection{A compact limit and its global balances}
+
+Taking $q=2-a$ in \eqref{eq:entropy-global} makes
+$\Psi_{k^q}$ a positive multiple of $k$; taking $q=2$ controls the
+viscous gradient. The boundary errors are $O(\eps_j^\beta)$ and the
+outer weights are uniformly bounded. Thus
+\begin{equation}\label{eq:compactness-bounds}
+ \sup_j\int_0^T\|w_j\|_{H^{\alpha/2}(\R^3)}^2\,\dd t<\infty,
+ \qquad \sup_j\eps_j\int_0^T\int_{D_j(t)}|\nabla w_j|^2<\infty.
+\end{equation}
+The pressure flux is bounded on a common enclosing ball. The zero-extended
+viscous flux tends to zero in $L^2$, and \eqref{eq:extended-mass} gives
+\begin{equation}\label{eq:time-bound}
+ \partial_tw_j\ \hbox{bounded in }L^2_tH^{-1}_x,
+ \qquad \|w_j(t)-g_j\|_{H^{-1}}\leq K(t+\sqrt{\eps_jt}).
+\end{equation}
+Here $H^{-1}$ is the dual of $H^1_0$ on a slightly larger fixed ball;
+no whole-space $H^1$ norm across the outer jump is used.
+
+The compactness lemma \cite[Lemma~7.5]{Stan2016} applies with
+$X=H^{\alpha/2}$, $B=L^2$, $Y=H^{-1}$ and exponent two. Rellich gives
+the first compact embedding, and Poincar\'e gives the second continuous
+one. The derivative bound implies the required $L^1$-in-time bound on
+finite intervals. A subsequence therefore satisfies
+\begin{equation}\label{eq:limit-convergence}
+ w_j\to u\quad\hbox{strongly in }L^2([0,T]\times\R^3),
+ \qquad R_j\to R\quad\hbox{uniformly}.
+\end{equation}
+For smooth spatial tests, \eqref{eq:time-bound} gives equicontinuity.
+A diagonal extraction on a countable dense family selects a density
+$u(t)$ at every time, with $0\leq u(t)\leq U$. Approximate any bounded
+spatial test in $L^1$ on the common support by a smooth test; the cap
+bounds both approximation errors uniformly in time. Hence
+\begin{equation}\label{eq:weak-time}
+ \sup_{0\leq t\leq T}\left|\int(w_j(t)-u(t))\psi\right|\to0
+ \quad(\psi\in L^\infty),\qquad
+ u(0)=F,\quad \int u(t)=\int F.
+\end{equation}
+All such pairings are continuous. The uniformly convergent radii imply
+$u(t)=0$ outside $B_{R(t)}$ at every time.
+
+Truncate the near singularities of the potential and velocity. The retained
+kernels on the common support form a compact family of spatial $L^1$
+tests as the evaluation point varies on a compact set. A finite cover,
+\eqref{eq:weak-time} and the near-field bounds give
+\begin{equation}\label{eq:field-limit}
+ K_\alpha w_j\to K_\alpha u,\qquad v[w_j]\to v[u]
+ \quad\hbox{uniformly on compact space-time sets}.
+\end{equation}
+The Stefan law and \eqref{eq:boundary-flux} then yield
+\begin{equation}\label{eq:radius-limit}
+ R_j\to R\quad\hbox{in }C^1([0,T]),\qquad
+ R'=A^{a-1}v[u](R),\qquad R(0)=R_0.
+\end{equation}
+The layer limit gives $u\geq c(t)\geq A/2$ inside its ball and
+\begin{equation}\label{eq:trace-modulus}
+ |u(t,r)-A|\leq\frac{K}{\kappa\beta}(R(t)-r)^\beta
+ \quad\hbox{near }R(t).
+\end{equation}
+These inequalities pass by bounded-test pairings, so hold at every time
+in the essential spatial sense. In particular the inner trace is $A$.
+Strong density convergence and \eqref{eq:field-limit} pass the nonlinear
+flux in local $L^1$; the viscous flux vanishes. The same $u$ solves the
+whole-space equation with initial $F$ and locally integrable flux.
+
+The energies in \eqref{eq:pressure-identity} converge at every terminal
+time by \eqref{eq:weak-time}, \eqref{eq:field-limit} and
+$\mathcal E_\alpha(w)=\tfrac12\int wK_\alpha w$.
+The pressure dissipation converges in $L^1$ on time intervals by bounded
+fields and strong density convergence. Its positive error
+$\eps_j A\int_0^tW[w_j;R_j]\dd r$ vanishes, while the other viscous term
+is nonnegative. Therefore
+\begin{equation}\label{eq:limit-pressure}
+ \mathcal E_\alpha(u(t))+
+ \int_0^t\int u^a|\nabla K_\alpha u|^2
+ \leq\mathcal E_\alpha(F),\qquad 0\leq t\leq T.
+\end{equation}
+
+To retain the viscosity in the power balances, extract once the joint
+nonnegative finite measures
+\begin{equation}\label{eq:nu}
+ \nu_j=\eps_j|\nabla w_j|^2\mathbf1_{D_j(t)}\,\dd x\dd t\,
+             \delta_{w_j(t,x)}(\dd k)\ \rightharpoonup\ \nu.
+\end{equation}
+Their mass is bounded by \eqref{eq:compactness-bounds}; they have common
+compact space-time support and state support $[A/2,U]$.
+Weak compactness follows, for example, by diagonal extraction on a
+countable dense family of continuous functions on that compact set and
+extension of the resulting positive bounded functional. This extraction
+is independent of the entropy exponent.
+
+At good terminal times, \eqref{eq:entropy-global} passes to
+\begin{align}
+ &\|u(t)\|_q^q+\int_0^t\mathcal B_\alpha(\Psi_{k^q},u(r))\,\dd r\nonumber\\
+ &\quad+q(q-1)\int_{(0,t)\times\R^3\times[A/2,U]}k^{q-2}\,\dd\nu\nonumber\\
+ &\leq\|F\|_q^q+q(q-1)\int_0^tW[u(r);R(r)]\,\dd r
+             \int_0^A k^{q-2}g_A(k)\,\dd k.\label{eq:limit-power-cost}
+\end{align}
+A good time has strong spatial convergence along the subsequence and no
+time atom of $\nu$. Fatou gives the positive fractional term, measure
+convergence gives the state moment, and \eqref{eq:field-limit} passes the
+surface weight. The boundary error vanishes. Take first a countable dense
+set of $q>1$ and intersect the good-time sets. Extension to real $q$ uses
+bounded endpoint powers, continuity of $k^{q-2}$ on $[A/2,U]$ and Fatou
+for the positive pair integrands. Near zero, the outer density integrals
+are dominated by a multiple of
+$k^{a+q_{\min}-2}+k^{q_{\min}-1}$ in a neighborhood of each $q>1$.
+
+In this passage initially include time zero in the measure moment. The
+quadratic case gives, at good times,
+\[
+ \|u(t)\|_2^2\leq\|F\|_2^2+Kt,\qquad
+ 2\nu([0,t]\times\R^3\times[A/2,U])
+ \leq\|F\|_2^2-\|u(t)\|_2^2+Kt.
+\]
+Weak-time lower semicontinuity extends the first bound to every time.
+The initial weak trace and cap imply weak $L^2$ convergence to $F$ on
+the common support. The norm bound makes it strong as $t\downarrow0$.
+The second bound now excludes an initial atom of $\nu$, justifying
+$(0,t)$ in \eqref{eq:limit-power-cost}.
+
+There is a fixed annulus about $S$ on which the velocity remains positive
+for a common interval beginning at zero, uniformly in the retained
+approximants. Indeed \eqref{eq:time-bound} controls smooth retained
+velocity kernels; their omitted near kernels are uniformly small. A finite
+test cover gives a common time modulus near $S$, and the initial fields
+converge uniformly there to $v[F]$. Its value at $S$ is positive and its
+radial component is continuous. Shorten $T$ and discard a finite prefix
+so that an annulus $J_+$, separated from zero and all outer boundaries,
+satisfies
+\begin{equation}\label{eq:positive-annulus}
+ v[w_j](t,r),\ v[u](t,r)\geq v_*>0,
+ \qquad (t,r)\in[0,T]\times J_+.
+\end{equation}
+Finite deletion changes neither limit. A restriction time with no terminal
+atom of $\nu$ can be chosen. We use this same restricted density, radius,
+tail sequence and measure in the rest of the proof.

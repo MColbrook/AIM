@@ -1,0 +1,512 @@
+\section{Construction on a moving ball}\label{sec:construction}
+
+We fix
+\[
+ a=\frac12,\qquad A=\frac1{16},\qquad U=100,\qquad
+ S=1,\qquad R_0=\frac{101}{100}.
+\]
+The small positive order $\alpha$ will be chosen below. We write
+$s=1-\alpha/2$, $\beta=1-\alpha$, and
+\[
+ L_\alpha=(-\Delta)^{\alpha/2},\qquad
+ K_\alpha=(-\Delta)^{-1+\alpha/2},\qquad
+ v[w]=-\nabla K_\alpha w,\qquad f(k)=k^a.
+\]
+Thus the equation is $u_t+\nabla\cdot(v[u]f(u))=0$ and
+$\nabla\cdot v[u]=L_\alpha u$. Densities defined on a ball are always
+extended by zero when a whole-space operator is applied.
+
+\subsection{The profile and the pressure field}
+
+Set $h(z)=10z^3-15z^4+6z^5$ on $[0,1]$, and define the radial datum
+\begin{equation}\label{eq:datum}
+ F(r)=\begin{cases}
+ 1,&0\leq r<S,\\
+ U-(U-A)h\bigl((r-S)/(R_0-S)\bigr),&S<r<R_0,\\
+ 0,&r>R_0.
+ \end{cases}
+\end{equation}
+Its values on the two spheres are immaterial. There is an upward jump from
+$1$ to $U$ at $S$, and a downward jump from $A$ to zero at $R_0$.
+The first two derivatives of the annular profile vanish at both endpoints.
+In particular $F$ is nonzero, nonnegative, compactly supported and in
+$BV\cap L^1\cap L^\infty$, with $\|F\|_\infty=U$.
+Every positive power of $F$ belongs to $H^{\alpha/2}(\R^3)$ for $0<\alpha<1$.
+Indeed it is piecewise Lipschitz, and flattening a jump sphere bounds the
+cross-interface part of its Gagliardo integral by a constant times
+\[
+ \int_0^1\int_0^1(d_1+d_2)^{-1-\alpha}\,\dd d_1\dd d_2<\infty.
+\]
+The same-region part follows from Lipschitz continuity, and the part away
+from the diagonal follows from bounded support.
+
+For $0\leq\alpha<1$ the normalized potential and velocity are
+\begin{align}
+ K_\alpha w(x)&=d_\alpha\int_{\R^3}|x-y|^{-1-\alpha}w(y)\,\dd y,
+ &d_\alpha&=\frac{\Gamma((1+\alpha)/2)}
+ {2^{2-\alpha}\pi^{3/2}\Gamma(1-\alpha/2)},\label{eq:riesz}\\
+ v[w](x)&=c_\alpha\int_{\R^3}
+ \frac{x-y}{|x-y|^{3+\alpha}}w(y)\,\dd y,
+ &c_\alpha&=(1+\alpha)d_\alpha.\label{eq:velocity}
+\end{align}
+These integrals are continuous for bounded integrable densities.
+The velocity kernel is locally integrable since
+$\int_0^1r^{-\alpha}\,\dd r<\infty$. Its near-field contribution on a ball
+of radius $\delta$ is at most $K\|w\|_\infty\delta^{1-\alpha}$;
+the corresponding potential contribution is at most
+$K\|w\|_\infty\delta^{2-\alpha}$. The far kernels are bounded, so mass
+controls the remaining contributions. For fixed $0<\alpha<1$, splitting a
+velocity difference at twice the displacement gives
+\begin{equation}\label{eq:velocity-holder}
+ |v[w](x)-v[w](x')|\leq K\|w\|_\infty |x-x'|^{1-\alpha}
+\end{equation}
+on a common bounded support, with the far-field contribution controlled by
+mass. Constants in this estimate need not stay bounded as $\alpha\downarrow0$.
+
+For clarity, the Fourier normalization in \eqref{eq:riesz} can be checked
+without an operator convention left implicit. Insert
+\[
+ |z|^{-1-\alpha}=\frac1{\Gamma((1+\alpha)/2)}
+ \int_0^\infty t^{(1+\alpha)/2-1}e^{-t|z|^2}\,\dd t.
+\]
+The unitary Fourier transform of the Gaussian is
+$(2t)^{-3/2}e^{-|\xi|^2/(4t)}$. Substitution of $|\xi|^2/(4t)$,
+including the convolution factor $(2\pi)^{3/2}$, gives the multiplier
+$|\xi|^{\alpha-2}$. Testing first on Schwartz functions and then truncating
+the locally integrable kernels justifies the identity in distributions.
+Differentiation gives \eqref{eq:velocity} and
+\begin{equation}\label{eq:divv}
+ -\Delta K_\alpha w=\nabla\cdot v[w]=L_\alpha w.
+\end{equation}
+The singular-integral normalization, in dimension $n=1$ or $3$, is
+\begin{equation}\label{eq:frac-kernel}
+ L_{n,\alpha}w(x)=c_{n,\alpha}\,\operatorname{PV}
+ \int\frac{w(x)-w(y)}{|x-y|^{n+\alpha}}\,\dd y,
+ \qquad c_{n,\alpha}=
+ \frac{\alpha2^{\alpha-1}\Gamma((n+\alpha)/2)}
+ {\pi^{n/2}\Gamma(1-\alpha/2)}.
+\end{equation}
+One obtains this coefficient by the same Gaussian representation applied to
+$1-\cos(z\cdot\xi)$ and one integration by parts. Symmetric truncation and
+Plancherel identify the positive quadratic form with
+$\|(-\Delta)^{\alpha/4}w\|_2^2$.
+
+Two further bounds will be used repeatedly. Inside a ball $D$,
+\begin{equation}\label{eq:indicator}
+ 0\leq L_\alpha\mathbf1_D(x)\leq K\operatorname{dist}(x,\partial D)^{-\alpha}.
+\end{equation}
+Also $L_\alpha$ maps bounded compactly supported $C^\theta$ functions to
+bounded functions if $\theta>\alpha$. Both statements follow by splitting
+the singular integral at the distance to the boundary or at one. The
+radial integrals are respectively $\int_d^\infty r^{-1-\alpha}\dd r$ and
+$\int_0^1r^{\theta-\alpha-1}\dd r$.
+
+For radial $w$ write $v[w](r)$ for the outward component, and put
+\[
+ W[w;r]=4\pi r^2v[w](r).
+\]
+If $w\geq0$ is supported in $B_r$ and has mass $M>0$, then at $x=rn$,
+$|n|=1$, the inequality $r-y\cdot n\geq |rn-y|^2/(2r)$ gives
+\begin{equation}\label{eq:boundary-positive}
+ v[w](r)\geq c_\alpha M(2r)^{-2-\alpha}>0.
+\end{equation}
+At $\alpha=0$, Gauss' formula yields
+$v_0[w](r)=r^{-2}\int_0^r\rho^2w(\rho)\,\dd\rho$.
+Consequently
+\[
+ W_0[F;S]=\frac{4\pi}3,\qquad W_0[F;R_0]=\int F,
+ \qquad
+ \frac{W_0[F;R_0]}{W_0[F;S]}
+ \leq1+100\bigl((101/100)^3-1\bigr)=4.0301.
+\]
+For this fixed datum the two velocity values converge to their Newtonian
+values as $\alpha\downarrow0$. A majorant with any fixed order less than
+one controls the near kernel, and dominated convergence applies on the
+remaining compact support. Thus both weights are positive and their ratio
+is less than five for all sufficiently small positive $\alpha$.
+
+The concavity deficits that will be compared are
+\begin{align}
+ g_A(k)&=k^a-A^{a-1}k, &0\leq k\leq A,\\
+ H_U(k)&=k^a-1-\frac{U^a-1}{U-1}(k-1), &1\leq k\leq U.
+\end{align}
+They are positive in the interiors by strict concavity. Direct integration gives
+\begin{equation}\label{eq:margin}
+ G_A:=\int_0^A\frac{g_A(k)}k\,\dd k=\frac14,
+ \qquad J:=\int_1^U\frac{H_U(k)}k\,\dd k
+ =9-\frac{10}{11}\log100>4.
+\end{equation}
+We henceforth fix one $0<\alpha<1/4$ sufficiently small that
+\begin{equation}\label{eq:strict-margin}
+ W[F;R_0]G_A<W[F;S]J.
+\end{equation}
+There is no numerical endpoint asserted for this choice. Notice also that,
+for every $q>1$,
+\begin{equation}\label{eq:density-cost}
+ \int_0^A k^{q-2}g_A(k)\,\dd k\leq A^{q-1}G_A.
+\end{equation}
+
+\subsection{A viscous free boundary problem}
+
+We approximate only the internal jump of $F$. There are radial
+$g_j\in C^2(\overline B_{R_0})$, $A\leq g_j\leq U$, with
+$g_j=A$, $\partial_ng_j=0$ on the boundary, whose zero extensions converge
+to $F$ in every finite $L^q$ and in $L^1$. They agree with $F$ in one fixed
+outer collar, with a common $C^1$ bound there. To construct them, mollify
+the radial profile near $S$ and join it to $F$ with a fixed smooth cutoff.
+Only values in $[A,U]$ are averaged. Their masses lie in a common interval
+$[M_-,M_+]$ with $M_->0$, after deleting a finite prefix if necessary.
+Choose $\eps_j=2^{-j}$, with a harmless relabeling after that deletion.
+
+For fixed $\eps>0$ and one such datum consider, in $D(t)=B_{R(t)}$,
+\begin{align}
+ w_t&=\nabla\cdot(w^a\nabla K_\alpha w)+\eps\Delta w,
+ &w|_{\partial D(t)}&=A,\label{eq:viscous}\\
+ R'&=A^{a-1}v[w](R)-\frac\eps A\partial_nw,
+ &R(0)&=R_0,\qquad w(0)=g.\label{eq:stefan}
+\end{align}
+The positive boundary value permits a discontinuity to exterior vacuum.
+The law \eqref{eq:stefan} is precisely the cancellation required by mass
+conservation for the zero extension.
+
+We first give the local realization used in subsequent integrations by
+parts. Choose $3<p_0<1/\alpha$. On $L^{p_0}(B_1)$ let
+\[
+ Gz=\Delta z,\qquad D(G)=W^{2,p_0}(B_1)\cap W^{1,p_0}_0(B_1),
+ \qquad \Sigma(t)=e^{tG}.
+\]
+The Dirichlet Laplacian is densely defined and sectorial
+\cite[Section~2.4]{Lunardi2004}. Its analytic semigroup satisfies
+\begin{align}
+ \|\Sigma(t)h\|_{C^1}&\leq K(1+t^{-\lambda})\|h\|_{p_0},
+ &\lambda&=\frac12+\frac3{2p_0}<1,\label{eq:heat-smoothing}\\
+ \|[\Sigma(h)-I]\Sigma(r)\|_{L^{p_0}\to C^1}
+ &\leq K\min(r^{-\lambda},hr^{-1-\lambda}).\label{eq:heat-increment}
+\end{align}
+Here and below bounded time intervals are understood in heat estimates.
+The semigroup is uniformly bounded and strongly continuous on the space of
+$C^1$ functions with zero boundary value, in the full $C^1$ norm.
+This space imposes no zero normal derivative.
+
+Here are details of the boundary and $C^1$ assertions. Comparison with the
+whole-space Gaussian gives the $L^{p_0}$ to $L^\infty$ estimate. At a tangent
+plane to the convex ball, comparison with
+$\|h\|_\infty\operatorname{erf}(\ell/(2\sqrt t))$, where $\ell$ is the
+inward affine distance, bounds the boundary gradient by
+$\|h\|_\infty/\sqrt{\pi t}$. For a heat solution,
+\[
+ (\partial_t-\Delta)(t|\nabla z|^2+z^2)
+ =-|\nabla z|^2-2t|D^2z|^2.
+\]
+The maximum principle and semigroup factorization give
+\eqref{eq:heat-smoothing}. For zero-trace $C^1$ data with Lipschitz constant
+$L$, the stationary barriers $\pm L\ell$ instead give a uniform gradient
+bound. For smooth such data,
+$\Sigma(t)h-h=\int_0^t\Sigma(r)\Delta h\,\dd r$ tends to zero in $C^1$
+by $\lambda<1$. Smooth zero-trace approximation and the uniform bound
+extend this to all zero-trace $C^1$ data. Finally the analytic estimate
+$\|G\Sigma(r)\|_{L^{p_0}\to L^{p_0}}\leq K/r$
+\cite[Theorem~1.2.3]{Lunardi2004}, combined with
+\eqref{eq:heat-smoothing}, proves \eqref{eq:heat-increment} by integration.
+
+To solve \eqref{eq:viscous}--\eqref{eq:stefan}, put
+$y=x/R(t)$, $\dd\tau/\dd t=\eps/R(t)^2$, $\rho(\tau)=R(t)$ and
+$z(\tau,y)=w(t,x)$. Write
+$\theta=\rho^{2-\alpha}/\eps$ and
+$\widetilde v=v[z\mathbf1_{B_1}]$. The equations become
+\begin{align}
+ z- A&=\Sigma(\tau)(g(R_0\cdot)-A)
+       +\int_0^\tau\Sigma(\tau-r)\mathcal N(z(r),\rho(r))\,\dd r,
+                                                        \label{eq:mild}\\
+ \rho_\tau&=\theta\rho A^{a-1}\widetilde v(1)
+              -\frac\rho A\partial_nz(1),\label{eq:rho}\\
+ \mathcal N(z,\rho)&=
+ \left[\theta A^{a-1}\widetilde v(1)y
+ -\frac{\partial_nz(1)}A y-a\theta z^{a-1}\widetilde v(y)\right]\cdot\nabla z
+ \nonumber\\[-2mm]
+ &\hspace{8mm}-\theta z^a
+ \left(L_\alpha[(z-A)\mathbf1_{B_1}]+A L_\alpha\mathbf1_{B_1}\right).
+                                                        \label{eq:forcing}
+\end{align}
+For positive radial $C^1$ functions with trace $A$ and positive radii,
+$\mathcal N$ is locally Lipschitz into $L^{p_0}$. Indeed the zero extension
+of $z-A$ is globally Lipschitz, so its fractional Laplacian is bounded;
+\eqref{eq:indicator} is in $L^{p_0}$ because $\alpha p_0<1$.
+All boundary derivatives and the remaining products are locally Lipschitz
+in the indicated $C^1$ norm. The radius vector field has the same property.
+On continuous $C^1$ density paths and continuous radius paths, the two
+integral equations have contraction constants bounded by
+$K\tau_0^{1-\lambda}$ and $K\tau_0$. Strong $C^1$ continuity of the linear
+path permits a positive closed ball of paths on a sufficiently short
+interval. The contraction gives a unique positive radial local solution.
+
+This mild solution has the required strict realization. The increment
+estimate \eqref{eq:heat-increment}, split at $r=h$, gives a time
+$C^{1-\lambda}$ bound in $C^1$ for the Duhamel term. The initial datum
+$g(R_0\cdot)-A$ belongs to $D(G)$, and the same bound follows for its heat
+path by integrating $\Sigma(r)G(g(R_0\cdot)-A)$. Hence
+$\mathcal N(z,\rho)$ is H\"older continuous in time into $L^{p_0}$.
+The strict-solution theorem \cite[Theorem~4.2.6(ii)]{Lunardi2004} applies:
+the compatibility condition is
+$G(g(R_0\cdot)-A)+\mathcal N(z(0),R_0)\in\overline{D(G)}$,
+which is automatic since $D(G)$ is dense in $L^{p_0}$. Thus
+\[
+ z-A\in C^1_\tau L^{p_0}\cap C_\tau D(G).
+\]
+Interior localization and the Gaussian heat formula give classical
+$C^1$ time and $C^2$ space regularity for positive times: after subtracting
+the forcing value at the evaluation point, the differentiated heat kernel
+has an integrable time singularity by the positive H\"older exponent.
+The established $W^{2,p_0}$ realization gives spatial
+$C^{1,1-3/p_0}$ regularity by Sobolev embedding. Thus the drift--gradient
+product is H\"older on interior subballs, and the fractional kernel
+estimates also make the remaining forcing terms spatially H\"older.
+This also treats the origin in Cartesian
+coordinates. Finally
+\[
+ v[w](Ry)=R^{1-\alpha}\widetilde v(y),\qquad
+ L_\alpha w(Ry)=R^{-\alpha}L_\alpha[z\mathbf1_{B_1}](y),
+ \qquad \frac{\dd t}{\dd\tau}=\frac{\rho^2}\eps
+\]
+undo the transformation and give exactly
+\eqref{eq:viscous}--\eqref{eq:stefan}. Regularity here concerns the interior
+and its one-sided boundary traces; the exterior jump is retained.
+
+\subsection{Identities at the moving boundary}
+
+Put $j=w^a\nabla K_\alpha w+\eps\nabla w$ inside $D(t)$.
+The boundary law says $AR'=-j\cdot n$. Reynolds' rule therefore gives
+\begin{equation}\label{eq:extended-mass}
+ \partial_tw=\nabla\cdot(j\mathbf1_{D(t)}),\qquad
+ \int w(t)=\int g
+\end{equation}
+for the zero extension, including its initial trace. At an interior global
+maximum, $L_\alpha w\geq0$, $\nabla w=0$ and $\Delta w\leq0$.
+The equation and a strict first-contact argument imply $w\leq U$ as long
+as the positive local solution exists.
+
+For an entropy $\eta$ with $\eta(0)=0$, define
+\begin{equation}\label{eq:entropy-transforms}
+ \Psi_\eta(k)=\int_0^k\eta''(z)f(z)\,\dd z,
+ \quad F_\eta(k)=\int_0^k\Psi_\eta(z)\,\dd z,
+ \quad Q_\eta(k)=\eta'(k)f(k)-\Psi_\eta(k).
+\end{equation}
+For local distributional identities we normalize also $\eta'(0)=0$.
+The powers $\eta(k)=k^q$, $q>1$, and $k\log k$ are admitted by
+approximation whenever the displayed integrals at zero converge.
+For increasing $G$ set
+\begin{equation}\label{eq:pair}
+ \mathcal B_\alpha(G,w)=\frac{c_{3,\alpha}}2
+ \iint\frac{(G(w(x))-G(w(y)))(w(x)-w(y))}
+ {|x-y|^{3+\alpha}}\,\dd x\dd y.
+\end{equation}
+This is a nonnegative extended integral. When finite it is the symmetric
+form of $\int G(w)L_\alpha w$.
+
+Reynolds' rule and integration by parts yield the exact identity
+\begin{align}
+ \frac\dd{\dd t}\int_D\eta(w)
+ +\mathcal B_\alpha(\Psi_\eta,w)
+ +\eps\int_D\eta''(w)|\nabla w|^2
+ ={}&W[w;R]\int_0^A\eta''(k)g_A(k)\,\dd k\nonumber\\
+ &+\eps|\partial B_R|\partial_nw
+       \left(\eta'(A)-\frac{\eta(A)}A\right).
+                                                        \label{eq:entropy-global}
+\end{align}
+Here $W[w;R]=4\pi R^2v[w](R)$ and
+$g_A(k)=k^a-A^{a-1}k$.
+In fact the initial boundary term is
+$j\cdot n[\eta'(A)-\eta(A)/A]$. Since
+$\nabla\Psi_\eta(w)=\eta''(w)w^a\nabla w$ and
+$\nabla\cdot\nabla K_\alpha w=-L_\alpha w$, integrating the pressure
+term contributes $W[w;R]\Psi_\eta(A)$.
+The remaining coefficient is
+\[
+ \Psi_\eta(A)-A^a\eta'(A)+A^{a-1}\eta(A)
+ =\int_0^A\eta''(k)g_A(k)\,\dd k.
+\]
+This proves \eqref{eq:entropy-global}, including its sign. For fixed
+$\eps$ the established strict $L^{p_0}$ realization, positive density and
+$C^1$ traces justify the time-integrated calculation; the boundary
+singularity has size $d^{-\alpha}$ and is integrable. Entropy approximation
+on positive interior values gives the asserted non-smooth-at-zero cases.
+For powers,
+\begin{equation}\label{eq:psi-power}
+ \Psi_{k^q}(k)=\frac{q(q-1)}{a+q-1}k^{a+q-1}.
+\end{equation}
+For the logarithmic entropy, \eqref{eq:entropy-global} reads
+\begin{equation}\label{eq:log-identity}
+ \frac\dd{\dd t}\int w\log w+
+ \frac1a\int w^aL_\alpha w+
+ \eps\int_D\frac{|\nabla w|^2}{w}
+ =W[w;R]G_A+\eps|\partial B_R|\partial_nw.
+\end{equation}
+
+The pressure energy is
+\[
+ \mathcal E_\alpha(w)=\frac12\|(-\Delta)^{-s/2}w\|_2^2
+ =\frac12\int wK_\alpha w.
+\]
+It is finite for bounded compact densities, since the potential kernel is
+locally integrable and bounded away from its singularity. Its identity is
+\begin{equation}\label{eq:pressure-identity}
+ \frac\dd{\dd t}\mathcal E_\alpha(w)
+ +\int_Dw^a|\nabla K_\alpha w|^2
+ +\eps\int wL_\alpha w=\eps A W[w;R].
+\end{equation}
+To justify differentiating the energy, truncate the symmetric double
+potential integral and differentiate both moving domains. The terms with
+$AR'$ cancel those with $j\cdot n$, leaving
+$-\int_D\nabla K_\alpha w\cdot j$.
+The potential and its first derivative have integrable majorants;
+the potential is also integrable on the two-dimensional boundary since
+$\alpha<1$. Truncations can thus be removed after time integration.
+Finally
+$\int_D\nabla w\cdot\nabla K_\alpha w
+=\int wL_\alpha w-AW[w;R]$, proving
+\eqref{eq:pressure-identity}.
+
+\subsection{Uniform barriers and continuation}
+
+Recall $\beta=1-\alpha$. The regularized boundary layer must respond to the singularity
+$d^{-\alpha}$ in \eqref{eq:indicator}. For $\kappa>0$ define
+\begin{equation}\label{eq:layer}
+ \ell_\eps(d)=\int_0^d y_\eps(z)\,\dd z,
+ \qquad y_\eps(d)=\frac1\eps\int_0^\infty
+ e^{-\kappa h/\eps}(d+h)^{-\alpha}\,\dd h.
+\end{equation}
+The function is increasing and concave, and
+\begin{align}
+ \kappa\ell_\eps'-\eps\ell_\eps''&=d^{-\alpha},
+ &\ell_\eps(d)&\leq\frac{d^\beta}{\kappa\beta},\label{eq:layer-eq}\\
+ \ell_\eps'(0)&=\Gamma(1-\alpha)\kappa^{\alpha-1}\eps^{-\alpha}.
+                                                        \label{eq:layer-slope}
+\end{align}
+These follow by differentiation and the Gamma integral. The decreasing
+derivative gives
+$|\ell_\eps(d+h)-\ell_\eps(d)|\leq\ell_\eps(|h|)$,
+so the $C^\beta$ seminorm is uniform. The exponential approximate identity
+in \eqref{eq:layer} gives uniform convergence on bounded intervals to
+$d^\beta/(\kappa\beta)$, by the integrable bound in
+\eqref{eq:layer-eq} and this common modulus.
+
+\begin{lemma}\label{lem:uniform-family}
+After deleting a finite prefix of the seed sequence, there is a common
+$T>0$ on which \eqref{eq:viscous}--\eqref{eq:stefan} have the local
+realizations above. Constants independent of $j$ give
+\begin{gather}
+ A/2\leq w_j\leq U\quad\hbox{in }D_j(t),\qquad
+ R_0/2<R_j(t)<2R_0,\qquad |R_j'|\leq K,\label{eq:uniform-basic}\\
+ \max\{c(t),A-K\ell_{\eps_j}(R_j-r)\}
+ \leq w_j(t,r)\leq
+ \min\{U,A+K\ell_{\eps_j}(R_j-r)\},\label{eq:barriers}\\
+ |\eps_j\partial_nw_j|\leq K\eps_j^\beta.\label{eq:boundary-flux}
+\end{gather}
+Here $c(0)=3A/4$ and $A/2\leq c(t)\leq3A/4$.
+Constants may depend on the fixed $\alpha$, profile and seed collar bounds,
+but not on the interior seed gradients.
+\end{lemma}
+
+\begin{proof}
+Initially stop a regular solution when its radius leaves $[R_0/2,2R_0]$
+or $|\eps\partial_nw|$ reaches a small constant $J_0$.
+Mass conservation, the cap, and \eqref{eq:boundary-positive} give
+$v[w](R)\geq v_*>0$, uniformly before this stopping time.
+The velocity is uniformly bounded and has the common spatial modulus
+\eqref{eq:velocity-holder}. For a collar state $z\geq A/2$,
+\begin{align*}
+ az^{a-1}v[w](r)-R'
+ \leq{}&-[1-a2^{1-a}]A^{a-1}v[w](R)\\
+ &+a(A/2)^{a-1}|v[w](r)-v[w](R)|+J_0/A.
+\end{align*}
+The margin $1-a2^{1-a}=1-1/\sqrt2$ is positive. Choose the collar width
+$\delta_0$ and then $J_0$ so that the last two errors each take at most
+one quarter of this margin. For some $\kappa>0$ this gives
+\begin{equation}\label{eq:collar-drift}
+ az^{a-1}v[w](r)-R'\leq-2\kappa
+ \quad (R-\delta_0<r<R).
+\end{equation}
+
+Consider the two functions in \eqref{eq:barriers}. The lower one is initially
+below $g_j\geq A$. A sufficiently large $K$ makes the upper one dominate
+the common outer $C^1$ collar, and outside that collar it is the cap $U$.
+This uses the uniform positive lower bound for $\ell_\eps$ at each fixed
+positive distance and its concavity, which bound $d/\ell_\eps(d)$ there.
+Subtract $A\mathbf1_D$ from either zero-extended barrier. The remainder
+is globally $C^\beta$ with norm at most a constant times $K$.
+Since $\beta>\alpha$, \eqref{eq:indicator} and the H\"older estimate for
+$L_\alpha$ give
+\[
+ |L_\alpha(\hbox{barrier}-A\mathbf1_D)|\leq K_2K,
+ \qquad 0\leq L_\alpha\mathbf1_D\leq K_2d^{-\alpha}.
+\]
+At a smooth contact in the lower collar, \eqref{eq:collar-drift} and
+\eqref{eq:layer-eq} bound the residual of
+$\partial_t+a z^{a-1}v[w]\cdot\nabla+z^aL_\alpha-\eps\Delta$
+by
+\[
+ -K d^{-\alpha}+K_2U^aA d^{-\alpha}+K_2U^aK.
+\]
+The radial curvature term is favorable. First enlarge $K$ to absorb the
+$A$ term, then reduce $\delta_0$ so that $d^{-\alpha}$ absorbs the last
+term, and finally enlarge $K$ to place both nonconstant collars inside the
+reduced $\delta_0$. The fractional bound is linear in $K$, so the last
+choice preserves the sign. The upper collar has reversed favorable
+transport and layer signs and is a supersolution by the same choices.
+
+The constant lower branch lies a fixed positive distance from the boundary:
+at its join, $A-c\geq A/4$ and
+$\ell_\eps(d)\leq d^\beta/(\kappa\beta)$. At a minimum of this barrier
+only exterior vacuum makes a positive contribution to its fractional
+Laplacian; it is at most $K_3c$ with a uniform $K_3$.
+Choose $c'=-K_1c$ to dominate this term. Then $c\geq A/2$ on a common
+positive time interval. The upper constant branch is a global maximum.
+The lower join is convex and the upper join concave, so the incompatible
+one-sided slopes preclude a forbidden first contact there.
+
+Comparison uses the actual field $v[w]$ throughout. At a lower smooth
+contact the zero-extended difference has global minimum zero and
+$L_\alpha(w-w_-)\leq0$; at an upper contact the sign is reversed.
+For fixed $\eps$, the difference equation has a zeroth-order coefficient
+bounded below: the barrier gradient is bounded at that $\eps$, its density
+is positive, and its fractional Laplacian is bounded below by $-K_2K$.
+An exponential time factor therefore gives the non-strict minimum
+principle. This proves comparison without assuming monotonicity of the
+map $w\mapsto v[w]$.
+
+Dividing the collar inequalities by $d$ at the boundary and using
+\eqref{eq:layer-slope} gives \eqref{eq:boundary-flux}, which is strictly
+below $J_0$ for sufficiently small viscosities. Thus the flux stopping
+condition cannot occur first. Equation \eqref{eq:stefan} bounds $R'$;
+shortening the common interval prevents either radius exit or $c=A/2$.
+
+It remains to exclude an earlier loss of the fixed-$\eps$ realization.
+Recall the fixed-ball variables $y=x/R(t)$,
+$z(\tau,y)=w(t,R(t)y)$, $\rho(\tau)=R(t)$ and
+$\dd\tau/\dd t=\eps/R(t)^2$.
+The boundary derivative in \eqref{eq:forcing} is bounded at fixed $\eps$
+by \eqref{eq:boundary-flux}. The other drift coefficients are bounded by
+the density cap, positive floor and radius bounds. The fractional map of
+$(z-A)\mathbf1_{B_1}$ is linear and bounded from $C^1$ to $L^\infty$.
+Consequently
+\[
+ \|\mathcal N(z,\rho)\|_{p_0}\leq K_\eps(1+\|z\|_{C^1}).
+\]
+Equation \eqref{eq:heat-smoothing} gives a Volterra inequality with kernel
+$1+r^{-\lambda}$, $\lambda<1$. Split each bounded rescaled interval into
+finitely many pieces on which
+$K_\eps\int_0^\delta(1+r^{-\lambda})\dd r<1/2$;
+successive absorption bounds the $C^1$ norm on the whole interval.
+The contraction can be restarted from positive $C^1$ data using these same
+bounds and heat comparison. At positive elapsed times, the increment
+estimate gives H\"older forcing. Applying $G$ to Duhamel after subtracting
+the terminal forcing value is legitimate since
+$\int_0^h r^{-1}r^\theta\dd r<\infty$ for $\theta>0$; the constant part
+has generator $(\Sigma(h)-I)\mathcal N(z(t),\rho(t))$.
+Closedness of $G$ gives the strict realization there, and interior heat
+localization gives its classical derivatives. Local uniqueness matches
+this restart to the earlier strict solution. Finite physical time is
+bounded rescaled time at fixed $\eps$ because the radius stays between
+positive bounds. Hence each fixed-$\eps$ solution continues to the common
+physical time. No $C^1$ bound uniform in $\eps$ is asserted.
+\end{proof}
