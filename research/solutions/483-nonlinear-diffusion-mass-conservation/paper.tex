@@ -1,0 +1,580 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+
+\title{Failure of automatic mass conservation for\\
+renormalized nonlinear reaction--diffusion}
+\author{Kaiwen Jin\thanks{\href{mailto:yui.ui.siki@gmail.com}{\texttt{yui.ui.siki@gmail.com}}}}
+\date{27 November 2026}
+\hypersetup{pdfauthor={Kaiwen Jin},pdftitle={Failure of automatic mass conservation for renormalized nonlinear reaction-diffusion}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The truncated formulation of a nonlinear reaction--diffusion system does
+not by itself imply conservation of every reaction invariant. We construct
+a five-component system on an interval with a locally Lipschitz,
+quasi-positive, entropy-controlled reaction. The solution satisfies the
+full truncated identity and the required diffusion energy bounds, while
+the mass associated with a reaction invariant exceeds its prescribed
+initial value. The excess mass concentrates at the boundary as
+\(t\downarrow0\), while the bounded renormalizations have the prescribed
+initial trace. This
+gives a counterexample to AIM Problem~483.
+\end{abstract}
+
+\section{Introduction}
+
+For a classical reaction--diffusion solution with no flux through the
+boundary, a linear combination of the species masses is conserved whenever
+the corresponding linear combination of the reaction rates vanishes.
+For renormalized solutions, the admissible tests have compactly supported
+derivatives in the concentration variables. The linear mass test is outside
+this class, and the cutoff limit must be justified. For linear diffusion,
+Fischer's author preprint gives conservation in the no-flux case
+under its entropy-dissipation and solution hypotheses
+\cite[Proposition~6 in arXiv:1703.00730v1]{Fischer}.
+
+Fellner, Fischer, Kniely and Tang construct global renormalized solutions
+with nonlinear diffusion \cite[Theorem~1.3]{FFKT}. Their solution definition
+includes the truncated identity, an entropy inequality and conservation
+laws. They ask whether the truncated identity alone implies the last two
+properties \cite[Remark~1.2]{FFKT}. AIM Problem~483 poses the question for
+the conservation laws with all diffusion exponents in \((0,2)\)
+\cite{AIM483}.
+
+We give a negative answer. In the example, a concentrating first species
+has finite diffusion energy. A second species with a broader heat profile
+supplies the diffusion potential required by the balance for their sum.
+The excess mass in their sum concentrates at \(x=0\) as \(t\downarrow0\).
+The prescribed datum has finite entropy, and tests with compactly
+supported concentration derivatives do not detect the excess.
+A third species permits the pointwise entropy bound on the reaction. Two bounded components make
+the prescribed reaction residuals functions of the concentrations.
+The construction is explicit near the initial time, and the existence
+theorem of \cite{FFKT} supplies a global continuation.
+
+\section{The truncated formulation}
+
+Let \(\Omega\subset\mathbb R^d\) be smooth and bounded. The system is
+\begin{equation}
+ \partial_t u_i=d_i\Delta u_i^{m_i}+f_i(u),\qquad
+ \partial_\nu u_i^{m_i}=0,\qquad 1\le i\le N ,
+ \label{eq:system}
+\end{equation}
+where \(N\ge 2\), \(d_i>0\), and \(0<m_i<2\), with at least one \(m_i\ne1\).
+The map \(f:[0,\infty)^N\to\mathbb R^N\) is locally Lipschitz and \(f_i(z)\ge0\)
+when \(z_i=0\). We require
+\begin{equation}
+ \sum_i f_i(z)(\log z_i+\mu_i)
+ \le C\sum_i(1+z_i\log z_i),\qquad z\in(0,\infty)^N ,
+ \label{eq:entropy}
+\end{equation}
+for fixed \(\mu_i\in\mathbb R\) and \(C\ge0\). The nonnegative datum \(u_0\)
+satisfies \(\sum_i\int_\Omega u_{i,0}(1+|\log u_{i,0}|)<\infty\),
+with the logarithm-weighted factor set to zero at zero.
+
+Put \(Q_T=(0,T)\times\Omega\) and \(w_i=u_i^{m_i/2}\). The regularity
+requirements are \(u_i\ge0\), \(u_i\in L^\infty(0,T;L^1(\Omega))\), and
+\(w_i\in L^2(0,T;H^1(\Omega))\) for every \(T<\infty\).
+For every smooth \(\xi\) on \([0,\infty)^N\) with compactly supported \(D\xi\),
+every smooth space-time test \(\psi\) on the closed cylinder, and almost every
+terminal time \(T>0\), the truncated identity reads
+\begin{equation}
+\begin{aligned}
+ &\int_\Omega \xi(u(T))\psi(T)-\int_\Omega \xi(u_0)\psi(0)
+       -\int_{Q_T}\xi(u)\partial_t\psi\\
+ &\quad=-\sum_{i,j}\frac{4d_i}{m_j}\int_{Q_T}
+       \psi\,\xi_{ij}(u)w_i u_j^{1-m_j/2}\nabla w_i\cdot\nabla w_j\\
+ &\qquad\phantom{=}-\sum_i2d_i\int_{Q_T}\xi_i(u)w_i\nabla w_i\cdot\nabla\psi
+       +\sum_i\int_{Q_T}\xi_i(u)f_i(u)\psi .
+\end{aligned}
+\label{eq:renormalized}
+\end{equation}
+Here \(\xi_i,\xi_{ij}\) are derivatives in the concentration variables.
+The flux and mixed gradient terms of \eqref{eq:system} are written
+in terms of \(w_i\) in \eqref{eq:renormalized}. Tests have unrestricted
+boundary values. The solution requirements consist of these spaces and
+\eqref{eq:renormalized}.
+
+\begin{theorem}\label{thm:counterexample}
+There are data and a solution of \eqref{eq:renormalized} under the stated
+hypotheses with \(\Omega=(0,1)\), \(N=5\), \(d_i=1\), and
+\((m_1,m_2,m_3,m_4,m_5)=(1/8,1,1,1,1)\). The vector \(q=(1,1,0,0,0)\)
+satisfies \(q\cdot f(z)=0\) on the whole nonnegative cone. For some
+\(t_*>0\) and \(M>0\), the solution has
+\[
+ \int_0^1\bigl(u_1(t,x)+u_2(t,x)\bigr)\,dx
+ =\int_0^1\bigl(u_{1,0}(x)+u_{2,0}(x)\bigr)\,dx+M
+ \qquad (0<t\le t_*) .
+\]
+\end{theorem}
+
+\section{Profiles for small positive times}
+
+We write \(m=1/8\). Estimates in this section hold for all sufficiently
+small \(t>0\), with constants independent of \(t\) and \(x\). The symbols
+\(\lesssim\) and \(\asymp\) denote a bound by a fixed positive multiple and
+the corresponding two-sided comparison.
+
+\subsection{A heat background and a pair of concentrations}
+
+Take \(p=3/4\), \(\beta=p/2=3/8\), and \(b_0(x)=1+x^{-p}\) on \((0,1)\).
+Let \(B\) solve the Neumann heat equation with this datum. Gaussian
+convolution of the even, \(2\)-periodic extension of \(b_0\) gives \(B\)
+explicitly. It is smooth for \(t>0\), even at both endpoints, and at least
+\(2\). The Neumann kernel has integral one in each variable, so \(B\)
+has mass \(\int_0^1 b_0\). At every \(x\in(0,1)\), \(B(t,x)\to b_0(x)\).
+The datum has finite entropy since \(p<1\).
+
+For \(0\le x\le\sqrt t\), we have
+\begin{equation}
+ B(t,x)\asymp t^{-\beta},\qquad
+ |B_x(t,x)|\lesssim t^{-\beta-1/2},\qquad
+ |B_t(t,x)|\lesssim t^{-\beta-1}.
+ \label{eq:heatbounds}
+\end{equation}
+For the lower bound, integrate the Gaussian against \(z^{-p}\) on
+\(0<z<\sqrt t\). In the upper bound, the contribution from \(|z|<1\)
+is estimated by \(z=\sqrt t\,s\), with \(x/\sqrt t\) in \([0,1]\).
+The other cusps of the periodic extension give an exponentially small
+contribution, by the Gaussian bound on successive periods. The \(x\)
+and \(t\) derivatives of the Gaussian are bounded by the Gaussian at
+twice the time times \(Ct^{-1/2}\) and \(Ct^{-1}\), respectively.
+In addition,
+\begin{equation}
+ \int_0^T\!\int_0^1 |\partial_x\sqrt B|^2\,dx\,dt<\infty .
+ \label{eq:heatenergy}
+\end{equation}
+Indeed, on a positive-time strip the entropy \(\int_0^1 B(\log B-1)\,dx\)
+has derivative \(-4\int_0^1|\partial_x\sqrt B|^2\,dx\).
+Jensen's inequality for the Neumann kernel bounds the entropy by its
+finite initial value. The entropy is bounded below by \(-1\), which
+gives \eqref{eq:heatenergy} as the lower end of the strip tends to zero.
+
+We prescribe the sum of the first two concentrations and the sum of their
+diffusion potentials. Let \(\alpha=3/4\), \(L=t^\alpha\), and \(y=x/L\).
+Choose the smooth even bump
+\[
+ \phi(y)=
+ \begin{cases}
+ \exp\!\bigl(-1/(1-y^2)\bigr),& |y|<1,\\
+ 0,& |y|\ge1 .
+ \end{cases}
+\]
+On \(0\le y\le1\) set \(\Phi(y)=\int_y^1 s\phi(s)\,ds\), set it to zero
+for \(y\ge1\), and extend it evenly. Then \(\Phi'=-y\phi\) and
+\(0\le\Phi\le\phi/2\) for \(y\ge0\). Define
+\begin{equation}
+ k=L^{-1}\phi(y),\qquad P=\dot L\,\Phi(y),\qquad
+ M=\int_0^1\phi(y)\,dy .
+ \label{eq:spike}
+\end{equation}
+Both profiles are supported on \(0\le x\le L\).
+We have \(\int_0^1 k\,dx=M>0\) and \(k_t=P_{xx}\) since both
+derivatives equal \(-\dot L L^{-2}(\phi+y\phi')\).
+
+Our first two concentrations \(U,W\) will have sum \(B+1+k\) and
+diffusion potentials with sum \(B+1+P\). Their difference determines
+\(U-U^m=k-P\). Since \(0<m<1\), the function \(s\mapsto s-s^m\)
+is strictly increasing from \(0\) to infinity on \(s\ge1\). Denote
+its inverse by \(g\). The inequality \(L\dot L\to0\) gives \(k-P\ge k/2\)
+for small \(t\), and we set
+\begin{equation}
+ U=g(k-P),\qquad W=B+1+P-U^m .
+ \label{eq:pair}
+\end{equation}
+Outside the support of \(k\), \(U=1\) and \(W=B\).
+On the support, \(U\asymp 1+k\), \(P=O(t^{\alpha-1})\), and
+\(U^m=O(t^{-\alpha m})\). Both \(P\) and \(U^m\) are \(o(t^{-\beta})\),
+since \(\alpha+\beta>1\) and \(\beta>\alpha m\).
+Consequently \(W\ge B/2\) and \(W\ge2\) on the support for sufficiently
+small \(t\).
+
+By \eqref{eq:pair}, \(U+W=B+1+k\) and \(U^m+W=B+1+P\).
+The equations \(B_t=B_{xx}\) and \(k_t=P_{xx}\) give
+\[
+ (U+W)_t=(U^m+W)_{xx}.
+\]
+Thus the individual residuals are \(F=U_t-(U^m)_{xx}\) and \(-F\).
+The function \(F\) is supported on \(0\le x\le L\).
+The profiles in \eqref{eq:pair} are smooth for \(t>0\) and even at
+both endpoints.
+
+\subsection{The integrated entropy residual}
+
+Let
+\[
+ \ell=\log B(t,0),\qquad e=F\log(U/W),\qquad E(t)=\int_0^1 e(t,x)\,dx .
+\]
+These are the entropy contributions from the first two species.
+We will use both a pointwise bound on \(e\) and the limit
+\begin{equation}
+ \lim_{t\downarrow0}t E(t)=-\alpha M .
+ \label{eq:E-limit}
+\end{equation}
+
+For the estimates, use \(\mathcal D=t\partial_t\) on profiles at fixed
+\(y=x/L(t)\). Thus \(t\partial_t\) at fixed \(x\) is represented by
+\(\mathcal D-\alpha y\partial_y\). Set \(\epsilon=1/64\) and
+\(a=1+L^{-1}\phi\), and write \(\sigma=k-P\) in scaled coordinates.
+Derivatives of \(\phi\) of any fixed order are bounded by
+\(C_\epsilon\phi^{1-\epsilon}\). This follows by differentiating the
+exponential near its support edge. For \(\Phi\) the same bounds
+follow from \(\Phi'=-y\phi\) and \(\Phi\le\phi/2\).
+Since \(\mathcal D\) multiplies each power of \(t\) by a constant,
+\[
+ |\mathcal D^j\sigma|\lesssim a,\qquad
+ |\mathcal D^j\partial_y^h\sigma|
+ \lesssim L^{-1}\phi^{1-\epsilon}\lesssim L^{-\epsilon}a
+ \quad (j\le 2,\ 1\le h\le2).
+\]
+The latter derivatives also have the bound \(CL^{-1}\).
+The identity \(g'=1/(1-mg^{m-1})\) gives \(|g'|\lesssim1\) and
+\(|g''|\lesssim a^{-1}\). For \(J=g^m\), differentiation up to order
+three yields \(|J^{(j)}(\sigma)|\lesssim a^{m-j}\).
+Here \(g(\sigma)\asymp a\), and the second and third derivatives of
+\(g\) are bounded by \(Cg^{m-2}\) and \(Cg^{m-3}\), as follows by
+differentiating \(g'\).
+We obtain on \(0\le x\le L\)
+\begin{equation}
+\begin{aligned}
+ |U_t|+|\mathcal D U_t|&\lesssim (tL)^{-1},\\
+ |(U^m)_{xx}|+|\mathcal D (U^m)_{xx}|&\lesssim L^{-2-m-2\epsilon},\\
+ |\partial_x U^{m/2}|&\lesssim L^{-1-m/2-\epsilon}.
+\end{aligned}
+\label{eq:corebounds}
+\end{equation}
+In the first estimate use the bound \(CL^{-1}\) for \(\sigma_y\)
+and \(\mathcal D\sigma_y\) in
+\(U_t=t^{-1}g'(\sigma)(\mathcal D-\alpha y\partial_y)\sigma\).
+In the second estimate the terms are
+\(L^{-2}J''(\sigma)\sigma_y^2\) and
+\(L^{-2}J'(\sigma)\sigma_{yy}\). The \(\mathcal D\)-derivative of
+either term has the same bound because
+\(\mathcal D\sigma=O(a)\). The last estimate uses
+\((g^{m/2})'=O(a^{m/2-1})\).
+
+Since \(\alpha(1+m+2\epsilon)<1\), \eqref{eq:corebounds} gives
+\(|F|+|\mathcal D F|\lesssim (tL)^{-1}\). On the support,
+\(\ell\asymp\log(1/t)\). Also
+\begin{equation}
+ |\log W-\ell|\lesssim t^\kappa,\qquad
+ |\mathcal D\log U|+|\mathcal D\log W|\lesssim1
+ \label{eq:logW}
+\end{equation}
+for some \(\kappa>0\). To see the first estimate, use \eqref{eq:heatbounds}
+to compare \(B(t,Ly)\) with \(B(t,0)\). Their relative difference is
+\(O(L/\sqrt t)\), and the relative size of \(1+P-U^m\) is
+\(O(t^{\alpha+\beta-1}+t^{\beta-\alpha m})\).
+For the second estimate,
+\(\mathcal D B(t,Ly)=tB_t+\alpha x B_x=O(t^{-\beta})\).
+The other terms in \(W\) and their scaled time derivatives are
+\(O(1+\dot L+L^{-m})\). For \(U\), use \(\mathcal D\sigma=O(a)\)
+and \(U\asymp a\).
+It follows that \(|e|+|\mathcal D e|\lesssim\ell/(tL)\) on \(0\le x\le L\).
+
+We now prove \eqref{eq:E-limit}. The diffusion part of \(E\) has
+absolute value \(O(L^{-1-m-2\epsilon}\ell)=o(t^{-1})\).
+Write \(U=1+k+R\), with \(R=U^m-1-P\) supported on \(0\le x\le L\).
+The bounds on the scaled derivatives give
+\[
+ |R_t|\lesssim t^{-1}(L^{-m-\epsilon}+\dot L),\qquad
+ \int_0^1 |R_t|\,dx
+ \lesssim t^{-1}(L^{1-m-\epsilon}+L\dot L)=o((t\ell)^{-1}).
+\]
+Thus we may replace \(U_t\) by \(k_t\) against either logarithm in
+\(E\), at an error \(o(t^{-1})\). The term \(\int k_t\log W\) is
+\(o(t^{-1})\) by \(\int k_t=0\), \eqref{eq:logW}, and
+\(\int |k_t|=O(t^{-1})\). In the other term, \(\log U-\log(1+k)\)
+is uniformly bounded and tends to zero for each fixed \(y\) with
+\(\phi(y)>0\). These facts follow from \(U\asymp1+k\),
+\(m<1\), and \(P/k=O(L\dot L)\) where \(k>0\).
+Since \(t k_t\,dx=-\alpha(y\phi)'dy\), dominated convergence
+allows replacement by \(\log(1+k)\). Integration by parts gives
+\[
+\begin{aligned}
+ t\int_0^1 k_t\log(1+k)\,dx
+ &=-\alpha\int_0^1(\phi+y\phi')\log(1+\phi/L)\,dy\\
+ &=\alpha\int_0^1 y\phi'\frac{\phi}{L+\phi}\,dy
+ \longrightarrow\alpha\int_0^1y\phi'\,dy=-\alpha M .
+\end{aligned}
+\]
+The boundary term is zero at \(y=0,1\). This proves \eqref{eq:E-limit}.
+
+\subsection{A third concentration and the pointwise entropy bound}
+
+To use the negative integral in \eqref{eq:E-limit}, we introduce a
+third concentration whose reaction term redistributes \(e\) across the
+support. Let \(\rho\) be an even smooth function, supported on
+\([-2,2]\), positive on \((-2,2)\), nonincreasing for \(y\ge0\), and
+normalized by \(\int_0^2\rho(y)\,dy=1\). Set
+\(\rho_L(x)=L^{-1}\rho(x/L)\), and restrict \(t\) so that
+\(2L<1\). Define
+\begin{equation}
+ S=-\frac{e}{\ell}+\frac{E}{\ell}\rho_L,\qquad
+ K(t,x)=-\int_x^1(s-x)S(t,s)\,ds,\qquad V=B+K .
+ \label{eq:reservoir}
+\end{equation}
+The choice of \(S\) gives \(\int S=0\), so \(-K_{xx}=S\) with
+\(K_x(0)=K_x(1)=0\). Also \(K=0\) for \(x\ge2L\).
+Evenness of \(S\) at zero and \(K_x(0)=0\) give a smooth even
+extension of \(K\). The reaction residual of \(V\) is \(G=K_t+S\).
+
+Writing \(E=L\int_0^1 e(t,Ly)\,dy\) gives
+\(|E|+|tE'|\lesssim \ell/t\), and \(t|\ell'|\lesssim1\) by
+\eqref{eq:heatbounds}. Since \(\rho\) has a positive minimum on
+\([0,1]\),
+\[
+ |S(t,Ly)|+|\mathcal D S(t,Ly)|\lesssim (tL)^{-1}\rho(y)
+ \qquad (0\le y\le 2).
+\]
+In scaled coordinates \(K=-L^2\int_y^2(s-y)S(t,Ls)\,ds\).
+Using monotonicity of \(\rho\) in this integral and in its \(y\)
+derivative gives
+\begin{equation}
+ |K|+|\mathcal D K|\lesssim (L/t)\rho(y),\qquad
+ |K_x|\lesssim t^{-1}\rho(y),\qquad
+ |K_t|\lesssim (L/t^2)\rho(y).
+ \label{eq:Kbounds}
+\end{equation}
+For the last bound apply
+\(t\partial_t|_x=\mathcal D-\alpha y\partial_y\).
+In particular these estimates retain the factor \(\rho(y)\) even
+at the edge of its support.
+
+Since \(\alpha+\beta>1\) and \(2L\le\sqrt t\) for small \(t\),
+\(|K|/B=O(t^{\alpha+\beta-1})\) on \(0\le x\le 2L\). Hence
+\(V\ge B/2\), and \(V\ge c_0t^{-\beta}\) there for some \(c_0>0\).
+We also have \(|\log V-\ell|=O(t^\kappa)\) on this support for
+some \(\kappa>0\), and \(V\ge2\) there for small \(t\).
+The three reaction residuals now obey the pointwise inequality
+\begin{equation}
+\begin{aligned}
+ e+G\log V
+ &=E\rho_L+S(\log V-\ell)+K_t\log V\\
+ &\le \frac{\rho(y)}{tL}
+   \bigl(-c+C t^\kappa+C(L^2/t)\ell\bigr)\le0
+ \qquad (0\le x\le2L).
+\end{aligned}
+\label{eq:pointwiseentropy}
+\end{equation}
+Here \(E\le-c/t\) by \eqref{eq:E-limit}, and
+\(L^2\ell/t\to0\) because \(2\alpha>1\).
+The residuals are zero for \(x\ge2L\).
+
+\subsection{Energy bounds for the diffusion powers}
+
+The identity \(U+W=1+B+k\) and positivity give uniform \(L^1\)
+bounds on \(U,W\). From \eqref{eq:Kbounds},
+\(\int|K|\,dx\lesssim L^2/t\), so the same holds for \(V\).
+The spatial integral of \(|\partial_x U^{m/2}|^2\) is
+\(O(L^{-1-m-2\epsilon})\) by \eqref{eq:corebounds}, an integrable
+function of time. For the other two components, use
+\(|P_x|=(\dot L/L)|y\phi(y)|\lesssim t^{-1}\) from \eqref{eq:spike},
+the bound on \(K_x\) in \eqref{eq:Kbounds}, and the lower bound on \(B\).
+These give
+\[
+ \int_0^{2L}\frac{|P_x|^2+|K_x|^2}{B}\,dx
+ \lesssim L t^{\beta-2}
+ \quad\text{and}\quad
+ \frac{|(U^m)_x|^2}{B}
+   =4\,\frac{U^m}{B}\,|\partial_x U^{m/2}|^2 .
+\]
+The first right-hand side is time-integrable by
+\(\alpha+\beta>1\), and \(U^m/B\) is bounded on the support
+of its derivative. Combining these estimates with
+\eqref{eq:heatenergy} and \(W,V\ge B/2\) bounds the two square-root
+gradient energies. The \(L^2\) norms of the half-powers follow
+from the mass bounds and \(U^m\le1+U\).
+
+\section{The reaction and the initial trace}
+
+\subsection{An autonomous reaction}
+
+Choose \(t_*>0\) small enough that all preceding estimates and inequalities
+hold for \(0<t\le2t_*\). To realize the residuals as a function of the
+concentrations, take two further linear components
+\[
+ A(t,x)=1+t,\qquad X(x)=2+\cos(\pi x).
+\]
+Let \(\eta_4,\eta_5\) be smooth cutoffs with compact supports in
+\((0,\infty)\) and equal to one on \([1,1+t_*]\) and \([1,3]\),
+respectively. Define \(f_4(z)=\eta_4(z_4)\) and
+\(f_5(z)=\pi^2(z_5-2)\eta_5(z_5)\). These give the residuals of
+\(A,X\) on \(0<t\le t_*\).
+
+For the first three components of \(f(z)\), put \(\tau=z_4-1\).
+Use \(x(z_5)=X^{-1}(z_5)\) on \([1,3]\), continued constantly
+as \(1\) on \(z_5\le1\) and \(0\) on \(z_5\ge3\).
+When \(0<\tau<2t_*\), evaluate the profiles \(F,G\) at
+\((\tau,x(z_5))\). Choose smooth cutoffs valued in \([0,1]\)
+with the following properties. The cutoff \(\theta\) equals one on
+\([0,t_*]\) and vanishes near \([2t_*,\infty)\). Each
+\(\zeta_1,\zeta_2\) is zero below and at \(1/2\), and equals one
+at arguments at least \(1\). The cutoff \(\zeta_3\) is zero
+below and at \(3/2\), and equals one at arguments at least \(2\).
+Finally, \(\chi\) is zero below and at \(c_0/2\), and equals one
+at arguments at least \(c_0\), with \(c_0\) from the lower bound on \(V\).
+Set
+\[
+ \lambda=\theta(\tau)\zeta_1(z_1)\zeta_2(z_2)
+           \zeta_3(z_3)\chi(\tau^\beta z_3).
+\]
+Where \(0<\tau<2t_*\) and \(\lambda>0\), define
+\begin{equation}
+\begin{aligned}
+ H_z&=F(\log z_1-\log z_2)+G\log z_3,\\
+ (f_1,f_2,f_3)&=\lambda
+       \left(F,-F,G-\frac{(H_z)_+}{\log z_3}\right),
+\end{aligned}
+\label{eq:reaction}
+\end{equation}
+where \(r_+=\max(r,0)\). Elsewhere set \((f_1,f_2,f_3)=0\).
+
+This is a locally Lipschitz function on the whole closed cone.
+On a compact positive-time strip in \(0<\tau<2t_*\), \(F\) and \(G\)
+are smooth and even at the spatial endpoints. Their \(x\)-derivatives
+are therefore bounded by \(C\operatorname{dist}(x,\{0,1\})\).
+Since \(|X'(x)|=\pi\sin(\pi x)\) is bounded below by a positive
+multiple of this distance, the compositions with the clamped inverse
+are Lipschitz in \(z_5\), uniformly on the strip. Their time
+derivatives are bounded there, which gives joint local Lipschitz
+continuity. On such a strip one can replace \(z_1,z_2,z_3\) inside
+the logarithms of \eqref{eq:reaction} by their maxima with
+\(1/2,1/2,3/2\), respectively. These values coincide with the
+original arguments where \(\lambda>0\) and keep the denominator
+positive. The resulting locally Lipschitz product also gives the
+specified zero value where \(\lambda=0\). At a finite state with
+\(\tau=0\), \(z_3\)
+is locally bounded, and \(\chi(\tau^\beta z_3)\) vanishes in a
+right neighborhood of zero. This gives local Lipschitz continuity
+across \(\tau=0\). The cutoff \(\theta\) gives the corresponding
+zero neighborhood at \(2t_*\).
+
+The reaction vanishes in its own component on each zero-coordinate
+face, hence is quasi-positive. The relation \(f_1+f_2=0\) holds on the
+whole cone. On the positive cone the first three terms in
+\(\sum_i f_i\log z_i\) sum to \(\lambda(H_z-(H_z)_+)\le0\) on
+the active region and to zero outside. The last two terms are
+bounded, and \(1+s\log s\ge1-\mathrm e^{-1}\) for \(s>0\). Thus
+\eqref{eq:entropy} holds with all \(\mu_i=0\) and a fixed finite
+\(C\ge0\).
+
+Along \(u=(U,W,V,A,X)\) for \(0<t\le t_*\), the time and space recovered
+from \(z_4,z_5\) are the actual \(t,x\). Where \(F,G\) may be nonzero,
+we have \(U\ge1\), \(W,V\ge2\), and \(t^\beta V\ge c_0\), so
+\(\lambda=1\). The inequality \eqref{eq:pointwiseentropy} gives
+\(H_z\le0\) along the profiles. Therefore the first three components
+of the reaction are exactly \(F,-F,G\) there. Outside their support
+both \(F\) and \(G\) vanish. All five components solve
+\eqref{eq:system} classically on each positive-time strip up to \(t_*\)
+with zero normal derivative of their diffusion potentials.
+
+\subsection{The truncated initial terms}
+
+Take the assigned initial data
+\begin{equation}
+ u_0=(1,b_0,b_0,1,2+\cos(\pi x)).
+ \label{eq:initial}
+\end{equation}
+Every component has finite initial entropy. At each fixed
+\(x\in(0,1)\), eventually \(x>2L(t)\), and the five fields there are
+\((1,B,B,1+t,X)\). This proves \(u(t,x)\to u_0(x)\) almost everywhere.
+The first three components have the required mass and energy bounds
+proved above. The last two are smooth and bounded up to time zero.
+
+Fix a permitted \(\xi,\psi\) and \(0<\varepsilon<T\le t_*\).
+On \((\varepsilon,T)\) the classical chain rule and spatial
+integration by parts give \eqref{eq:renormalized} with initial term
+at \(\varepsilon\). Write \(w_i=u_i^{m_i/2}\) as in
+\eqref{eq:renormalized}. The concentrations are positive on this strip, so
+\[
+ u_i^{m_i-1}\nabla u_i=\frac{2}{m_i}w_i\nabla w_i,\qquad
+ \nabla u_j=\frac{2}{m_j}u_j^{1-m_j/2}\nabla w_j .
+\]
+These yield exactly the coefficients in \eqref{eq:renormalized}.
+The no-flux conditions eliminate all spatial boundary terms.
+
+The function \(\xi\) is bounded, as it is constant along each ray
+after that ray leaves a ball containing \(\operatorname{supp} D\xi\).
+Thus bounded convergence gives the initial term with \eqref{eq:initial}
+as \(\varepsilon\downarrow0\). The terms involving \(D\xi,D^2\xi\)
+have bounded concentration weights on their compact supports.
+The gradient product is integrable by the two \(L^2\) gradient
+bounds, and the single-gradient flux term is integrable on the finite
+cylinder. The reaction term is integrable since \(f\) is bounded on the
+support of \(D\xi\). The time test term converges by boundedness of
+\(\xi\). This proves \eqref{eq:renormalized} for every
+\(T\in(0,t_*]\).
+
+\subsection{Continuation and the mass difference}
+
+Theorem 1.3 of Fellner, Fischer, Kniely and Tang \cite{FFKT} gives a
+global renormalized solution starting from \(u(t_*)\). Indeed
+\((0,1)\) is bounded Lipschitz, all diffusion exponents are in
+\((0,2)\), and \(u(t_*)\) is bounded and positive with finite entropy.
+Their conditions (F1)--(F3) are local Lipschitz continuity,
+quasi-positivity, and the logarithmic reaction bound \eqref{eq:entropy}.
+The bound extends to zero concentrations by giving \(f_i\log z_i\) value
+zero at \(z_i=0\), because each \(f_i\) vanishes in a neighborhood of
+that face. Their Definition 1.1 gives the truncated identity (1.4) and
+the \(L^\infty_tL^1_x\) bound on every finite cylinder. Remark 1.4
+gives the \(L^2_tH^1_x\) bound for the diffusion half-powers of the
+constructed solution. Write \(v\) for this continuation, with time
+starting at zero.
+
+Keep \(u\) on \((0,t_*]\), and take \(v(t-t_*)\) for \(t>t_*\).
+For a smooth \(\psi\) and almost every \(T>t_*\), apply the
+continuation identity on \((0,T-t_*)\) with the translated test.
+Add it to the identity for the first segment at \(t_*\).
+The two terms \(\int_0^1 \xi(u(t_*))\psi(t_*)\,dx\) cancel by the
+prescribed initial datum of \(v\). This gives
+\eqref{eq:renormalized} on the whole cylinder, and the two segments
+give its regularity requirements for every finite \(T\).
+
+On \(0<t\le t_*\), the first two concentrations satisfy
+\(U+W=B+1+k\). Therefore
+\[
+ \int_0^1(U+W)\,dx
+ =1+\int_0^1 b_0\,dx+M,\qquad
+ \int_0^1(u_{1,0}+u_{2,0})\,dx=1+\int_0^1 b_0\,dx .
+\]
+Since \(M>0\), this proves Theorem~\ref{thm:counterexample}.
+
+\section*{AI-use disclosure}
+OpenAI Codex assisted in developing the construction, checking the argument,
+and drafting and reviewing the manuscript.
+
+\begin{thebibliography}{9}
+
+\bibitem{AIM483}
+AIM problem collection.
+\newblock Problem 483, \emph{Automatic conservation laws for renormalized
+nonlinear diffusion}.
+\newblock \href{https://github.com/MColbrook/AIM/blob/b2ec0fac559f532fc0ed04fce81deea0ce07c68b/problems/483-nonlinear-diffusion-renormalization-mass-conservation.md}{Pinned problem statement}.
+
+\bibitem{FFKT}
+K.~Fellner, J.~Fischer, M.~Kniely, and B.~Q.~Tang.
+\newblock Global renormalised solutions and equilibration of
+reaction--diffusion systems with nonlinear diffusion.
+\newblock \emph{Journal of Nonlinear Science}, 33, article~66, 2023.
+\newblock \href{https://doi.org/10.1007/s00332-023-09926-w}{doi:10.1007/s00332-023-09926-w}.
+
+\bibitem{Fischer}
+J.~Fischer.
+\newblock Weak--strong uniqueness of solutions to entropy-dissipating
+reaction--diffusion equations.
+\newblock \emph{Nonlinear Analysis}, 159:181--207, 2017.
+\newblock \href{https://doi.org/10.1016/j.na.2017.03.001}{doi:10.1016/j.na.2017.03.001}.
+\newblock Author preprint \href{https://arxiv.org/abs/1703.00730v1}{arXiv:1703.00730v1}.
+
+\end{thebibliography}
+\end{document}

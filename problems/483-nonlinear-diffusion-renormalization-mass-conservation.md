@@ -2,9 +2,9 @@
 
 **Area:** Nonlinear diffusion PDEs; chemical mass conservation
 
-**Status:** 🔵 OPEN
+**Status:** 🟠 SOLUTION CLAIMED
 
-**Last checked:** 2026-09-22
+**Last checked:** 2026-11-27
 
 ## Problem statement
 
@@ -52,6 +52,10 @@ The question asks whether the weakest available continuum formulation itself pre
 
 ## Status review
 
-**Literature check:** Open in cited literature; no later resolution located.
+**Previous literature check (2026-09-22):** Open in cited literature; no later resolution located.
 
 Remark 1.2 explicitly asks whether the truncated identity entails the conservation and entropy laws for nonlinear diffusion. The present entry isolates conservation as one definite assertion and retains the source’s exponent interval. For linear diffusion, or for bounded solutions, the implication is known; neither restriction is imposed here. Searches on 2026-09-22 for nonlinear diffusion, renormalized solutions, and automatic mass conservation found no later resolution. Existence of solutions constructed to satisfy conservation does not establish the implication for every solution of the truncated identity.
+
+**Proposed resolution (2026-11-27).** The linked manuscript gives a five-component counterexample on an interval. It verifies the full truncated identity with a locally Lipschitz, quasi-positive, entropy-controlled reaction and finite-entropy initial data. For the reaction invariant $`q=(1,1,0,0,0)`$, the mass exceeds the prescribed initial value on a positive-time interval. The target comparison describes the AI-assisted proof and manuscript checks. The claim awaits the collection’s assessment.
+
+[Proof](../research/solutions/483-nonlinear-diffusion-mass-conservation/paper.pdf) · [Target comparison and review scope](../research/solutions/483-nonlinear-diffusion-mass-conservation/target-comparison.md)
