@@ -1,0 +1,208 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[margin=1.08in]{geometry}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\raggedbottom
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\title[Multiplicity two in planar network flow]{Multiplicity two in a tangent flow of an embedded planar network}
+\author{Kaiwen Jin}
+\email{yui.ui.siki@gmail.com}
+\subjclass[2020]{53E10, 35K55}
+\keywords{curvature flow, planar network, tangent flow, multiplicity}
+\hypersetup{pdfauthor={Kaiwen Jin},pdftitle={Multiplicity two in a tangent flow of an embedded planar network}}
+
+\begin{document}
+
+\begin{abstract}
+We construct a smooth embedded network in a disk whose first singularity
+under curvature flow has a shrinking tangent flow with multiplicity two.
+The network has six triple junctions and four fixed boundary endpoints.
+The shrinking tangent has the two arcs of a symmetric lens and its
+diameter, each with weight one. Its two exterior rays have weight two.
+This gives a counterexample to the multiplicity-one conjecture for
+planar network flow. A local minimum of Gaussian length in a symmetric
+fixed-area class keeps the normalized evolution near the lens profile,
+and a comparison for the area between the outgoing branches excludes
+premature collapse of the short connectors.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+In planar network flow the normal velocity of each arc is its curvature,
+and arcs meet at \(120^\circ\) triple junctions. Several arcs of an embedded
+network can approach the same image in a blow-up at a singular point.
+Arclength varifolds record the number of such arcs.
+
+The multiplicity-one conjecture asks whether every shrinking tangent
+flow of a regular embedded planar network is embedded and has weight
+one \cite[Open Problem~10.1]{survey}. For the fixed-endpoint
+flow in a bounded strictly convex domain, the conjecture holds when
+the initial network has at most two triple junctions. It also holds
+for trees whose junctions stay uniformly separated from one another
+and from the fixed vertices \cite[Theorem~2.11]{mnp}. Reflection symmetry
+across two perpendicular axes also allows a detailed description of
+singular times in the two-junction case \cite{sym}. One familiar
+shrinking limit is the symmetric lens, bounded by two curved arcs
+and with a horizontal ray at each end \cite{lens}. We use its
+profile to construct a flow with two bounded cells.
+
+For an embedded network \(\Gamma\), \(V_\Gamma\) integrates
+arclength along its arcs with the unoriented tangent line attached to each
+point. We test against continuous compactly supported functions of
+position and tangent line. A dilation includes the corresponding change
+of arclength.
+
+\begin{theorem}\label{thm:main}
+There exists a smooth embedded network with six triple junctions in a
+disk whose curvature flow, with \(120^\circ\) junctions and four fixed
+boundary endpoints, first becomes singular at \(T=1/2\). The origin
+is an interior singular point. For every sequence
+\(\lambda_j\to\infty\) and every fixed \(s<0\),
+\[
+ V_{\lambda_j\Gamma(T+s/\lambda_j^2)}
+ \ \longrightarrow\ \sqrt{-2s}\,\mathcal L
+\]
+locally as varifolds. The varifold \(\mathcal L\) is the sum of the
+two bounded arcs of the ordinary symmetric lens at time \(-1/2\),
+its horizontal diameter, and its two exterior rays. The bounded
+arcs and diameter have weight one. Each exterior ray has weight two.
+\end{theorem}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=.89cm,y=.89cm,edge/.style={line width=.95pt,draw=black!88},
+ rayheavy/.style={line width=2pt,draw=black!78}]
+ \begin{scope}[shift={(-3.75,0)}]
+  \draw[edge] (-2.75,.37)--(-1.22,.37)
+    ..controls (-.85,1.12) and (.85,1.12)..(1.22,.37)--(2.75,.37);
+  \draw[edge] (-2.75,-.37)--(-1.22,-.37)
+    ..controls (-.85,-1.12) and (.85,-1.12)..(1.22,-.37)--(2.75,-.37);
+  \draw[edge] (-1.22,.37)--(-1.005,0)--(-1.22,-.37);
+  \draw[edge] (1.22,.37)--(1.005,0)--(1.22,-.37);
+  \draw[edge] (-1.005,0)--(1.005,0);
+  \foreach \u/\v in {-1.22/.37,1.22/.37,-1.22/-.37,1.22/-.37,-1.005/0,1.005/0}
+    \fill[black] (\u,\v) circle[radius=1.45pt];
+  \foreach \u/\v in {-2.75/.37,2.75/.37,-2.75/-.37,2.75/-.37}
+    \draw[fill=white,line width=.7pt] (\u,\v) circle[radius=1.5pt];
+  \node[above] at (0,.92) {\small upper edge};
+  \node at (0,-1.25) {\small (a) Initial topology};
+ \end{scope}
+ \begin{scope}[shift={(3.7,0)}]
+  \draw[rayheavy] (-2.8,0)--(-1.24,0) (1.24,0)--(2.8,0);
+  \draw[edge] (-1.24,0)--(1.24,0);
+  \draw[edge] (-1.24,0)..controls (-.85,.95) and (.85,.95)..(1.24,0)
+                        ..controls (.85,-.95) and (-.85,-.95)..(-1.24,0);
+  \fill[black] (-1.24,0) circle[radius=1.4pt];
+  \fill[black] (1.24,0) circle[radius=1.4pt];
+  \node[above] at (-2.08,.13) {\small weight \(2\)};
+  \node[above] at (2.08,.13) {\small weight \(2\)};
+  \node at (0,-1.25) {\small (b) Normalized tangent};
+ \end{scope}
+\end{tikzpicture}
+\caption{The six-junction initial topology and its weighted limit.
+Open circles mark the fixed endpoints in (a). Each triple of vertices
+on one side coalesces in the normalized tangent in (b). The two rays
+shown in heavier lines have weight two.}
+\label{fig:network}
+\end{figure}
+
+The initial topology is shown in Figure~\ref{fig:network}. The two
+bounded cells share the horizontal segment. At either end of that
+segment, two short connectors join its vertex to the upper and lower
+vertices. The limit is degenerate because these connectors have
+vanishing length even in the normalized coordinates. The theta
+nonexistence theorem of Baldi, Haus and Mantegazza \cite{theta}
+concerns regular two-junction shrinkers. Chang \cite[Theorem~1.3]{chang}
+changes the tangent of a regular shrinker with two or more bounded
+regions by perturbing the relative cell areas. Reflection symmetry keeps
+our two cell areas equal throughout the flow.
+Pluda and Pozzetta \cite[Theorem~1.1]{pp} treat uniqueness for compact
+nondegenerate blow-ups of networks without endpoints. Here the limiting
+connectors collapse and the four exterior branches become unbounded
+under rescaling. Bellettini and Novaga \cite[\S6.2]{bn} give a
+premature collision for a double bubble with moving contact points
+and different contact angles.
+
+The cell area law fixes a candidate extinction time. To reach it with
+the prescribed topology, we use Gaussian length in coordinates scaled
+by the remaining time. Fixing the rescaled cell area removes the
+dilation variation of the lens. The remaining variations increase
+Gaussian length locally, including variations of the height of the
+short connectors. This confines the evolving network to a neighborhood
+of the lens. An earlier singularity would require the connectors on a
+side to disappear while the two cells still have positive areas.
+At a collapse site with a repeated-ray tangent, estimates for the tangent
+angle localize all three vertices to a region smaller than the
+parabolic scale. A scalar comparison for the area between the outgoing
+arcs then precludes their coincidence at that scale.
+
+\input{body.tex}
+
+\section*{AI-use statement}
+AI tools were used to develop and check the mathematical argument and
+to prepare this manuscript. An AI reader and an AI referee reviewed an
+earlier draft in separate contexts with access to a shared workspace.
+
+\begin{thebibliography}{99}
+\bibitem{theta}
+P. Baldi, E. Haus, and C. Mantegazza,
+\emph{Non-existence of theta-shaped self-similarly shrinking networks moving by curvature},
+arXiv:1604.01284.
+
+\bibitem{bn}
+G. Bellettini and M. Novaga, \emph{Curvature evolution of nonconvex
+lens-shaped domains}, \href{https://arxiv.org/abs/0906.0166v1}{arXiv:0906.0166v1}
+(2009).
+
+\bibitem{chang}
+J.-E. Chang, \emph{Stability of regular shrinkers in the network flow},
+\href{https://arxiv.org/abs/2107.04338v1}{arXiv:2107.04338v1} (2021).
+
+\bibitem{eh}
+K. Ecker and G. Huisken,
+\emph{Interior estimates for hypersurfaces moving by mean curvature},
+Invent. Math. \textbf{105} (1991), 547--569.
+
+\bibitem{ins}
+T. Ilmanen, A. Neves, and F. Schulze,
+\emph{On short time existence for the planar network flow},
+J. Differential Geom. \textbf{111} (2019), 39--89.
+
+\bibitem{mnp}
+C. Mantegazza, M. Novaga, and A. Pluda,
+\emph{Type-0 singularities in the network flow -- Evolution of trees},
+J. Reine Angew. Math. \textbf{792} (2022), 189--221.
+
+\bibitem{survey}
+C. Mantegazza, M. Novaga, A. Pluda, and F. Schulze,
+\emph{Evolution of networks with multiple junctions},
+arXiv:1611.08254v4 (2026).
+The numbering used here is that of version~4.
+
+\bibitem{sym}
+M. Novaga and L. Sciaraffia,
+\emph{Singularities of the network flow with symmetric initial data},
+\url{https://cvgmt.sns.it/media/doc/paper/6234/Singularities.pdf}.
+
+\bibitem{pp}
+A. Pluda and M. Pozzetta, \emph{On the uniqueness of nondegenerate blowups
+for the motion by curvature of networks},
+\href{https://arxiv.org/abs/2204.11675v2}{arXiv:2204.11675v2} (2022).
+
+\bibitem{lens}
+O. C. Schn\"urer, A. Azouani, M. Georgi, J. Hell, N. Jangle,
+A. Koeller, T. Marxen, S. Ritthaler, M. S\'aez, F. Schulze, and B. Smith,
+\emph{Evolution of convex lens-shaped networks under the curve shortening flow},
+Trans. Amer. Math. Soc. \textbf{363} (2011), 2265--2294.
+Locators refer to \href{https://arxiv.org/abs/0711.1108v1}{arXiv:0711.1108v1}.
+\end{thebibliography}
+
+\end{document}

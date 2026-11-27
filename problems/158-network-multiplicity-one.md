@@ -2,9 +2,9 @@
 
 **Area:** Grain-boundary evolution
 
-**Status:** 🟡 PARTIAL
+**Status:** 🟠 SOLUTION CLAIMED
 
-**Last checked:** 2026-09-08
+**Last checked:** 2026-11-27
 
 ## Problem statement
 
@@ -30,10 +30,10 @@ Multiple hidden sheets at a collapsing grain boundary obstruct a geometric rule 
 
 ## Status review
 
-**Known cases:** Multiplicity one is established for networks with at most two triple junctions.
+**Claimed outcome:** Kaiwen Jin's proposed counterexample constructs one smooth embedded network with six triple junctions and four fixed boundary endpoints. At its first singular time, the two exterior rays of the shrinking tangent flow each carry two copies of arclength. This refutes the multiplicity-one clause if the argument is accepted.
 
-**Remaining target:** Embedded multiplicity-one shrinking limits for every network in the stated class, without a junction-count restriction.
+**Known cases:** Multiplicity one is established for networks with at most two triple junctions and for the separated tree class of Mantegazza, Novaga and Pluda, Theorem 2.11. The proposed example has six triple junctions and two bounded cells.
 
-**Literature check:** Open in cited literature; no later resolution located.
+**Evidence:** [Counterexample manuscript](../research/solutions/158-network-multiplicity-one/paper/article.pdf) and [comparison with the original statement](../research/solutions/158-network-multiplicity-one/TARGET_COMPARISON.md).
 
-The book retains the conjecture without a bound on the number of junctions. Searches for “network flow multiplicity one conjecture 2026” and “planar networks M1 solved” found no general proof. The known case with at most two triple junctions is insufficient here.
+**Review:** The author-side workflow used AI assistance, including one AI reader and one AI referee on an earlier draft, followed by a revision. The reviewers used separate contexts in a shared workspace. Independent mathematical review remains outstanding.
