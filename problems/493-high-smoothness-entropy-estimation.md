@@ -2,9 +2,9 @@
 
 **Area:** Nonparametric statistics and information estimation
 
-**Status:** 🔵 OPEN
+**Status:** 🟠 SOLUTION CLAIMED
 
-**Last checked:** 2026-09-23
+**Last checked:** 2026-11-27
 
 ## Problem statement
 
@@ -54,6 +54,8 @@ Differential-entropy estimation supports independence testing and independent co
 
 ## Status review
 
-**Open in cited literature; no later resolution located.** The originating discussion identifies the high-smoothness obstruction. Bounds proved for $`0<s\le2`$, or for different classes controlling behaviour near zeros, do not settle the displayed general target. The lower bound alone does not justify a Partial label.
+A proposed resolution establishes the two-sided minimax root-mean-square rate for the displayed class over the full parameter range. The analytic proof uses a likelihood mixture when $`s\ge d`$ and signed local polynomial estimation when $`2<s<d`$.
 
-On 23 September 2026, searches covered high-smoothness differential entropy, Lipschitz classes, weighted nearest-neighbour estimators and later functional-estimation results, including indexed arXiv, Zenodo, GitHub and Palomar searches. No matching full-scope proof or announcement was located. Registry searches were not exhaustive exports.
+[Manuscript](../research/solutions/493-high-smoothness-entropy-estimation/paper/main.pdf) · [Target comparison and AI review scope](../research/solutions/493-high-smoothness-entropy-estimation/TARGET_COMPARISON.md). The submission awaits independent mathematical review.
+
+The earlier literature review on 23 September 2026 identified the high-smoothness upper-bound question. The present status records the new proposed proof.

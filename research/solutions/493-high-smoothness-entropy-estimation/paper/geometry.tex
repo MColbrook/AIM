@@ -1,0 +1,209 @@
+\section{Local projections and amplitude levels}\label{sec:geometry}
+
+For the remainder of the proof suppose \(2<s<d\).
+Partition \(\T^d\) into half-open dyadic cubes \(I\) of side
+\(h\le1/8\). For each \(I\), enlarge its Euclidean lift by a
+factor of three about its center and denote the resulting cube
+by \(J_I\), with volume \(v=(3h)^d\). Its image \(J_I^{\rm phys}\)
+on the torus is Borel, and the quotient restricted to the lift
+is injective and measure preserving. Integrals and restrictions
+to \(J_I\) refer to this lift with the periodized density. The
+physical supports have overlap at most \(5^d\). Indeed, the center
+of any support containing a point lies within circular distance
+\(3h/2\) in each coordinate on a grid of spacing \(h\). Two
+intersecting supports have centers within circular distance \(3h\)
+in every coordinate. Thus the graph joining intersecting physical
+supports has maximum degree at most \(7^d-1\).
+
+Use real polynomials of total degree at most \(r=\lceil s\rceil\).
+Let \(Q_I\) be the ordinary \(L^2\) projection of \(f\) on \(J_I\)
+and \(e_I=\|f-Q_I\|_{2,J_I}\). The kernel on the volume-one cube
+\(\Omega=[0,1)^d\) is \(K_\Omega(x,y)=\sum_i\phi_i(x)\phi_i(y)\)
+for a real orthonormal basis. It is uniformly bounded and
+reproduces the polynomial space. Rescaling the kernel shows that
+\(Q_I\) has mean \(b_I=P_I/v\) and supremum norm at most \(C_V b_I\),
+where \(P_I=\int_{J_I} f\). Write \(\mu_I=\int_I f\).
+Under the affine map \(T_I\) from \(\Omega\) into the torus
+through \(J_I\), the central cube \(W=[1/3,2/3)^d\)
+maps to \(I\). The volume Jacobian of \(T_I\) is \(v\),
+and \(vb_I=P_I\). If \(P_I>0\), set
+\[
+ w_I=f\circ T_I/b_I,\qquad q_I=Q_I\circ T_I/b_I,\qquad
+ E_I=\|w_I-q_I\|_{2,\Omega}.
+\]
+Then \(w_I\) is a probability density, \(q_I\) is its ordinary
+projection, \(\mu_I=P_I\int_W w_I\), and \(P_I E_I=\sqrt v\,e_I\).
+If \(P_I=0\) the density and projection vanish almost everywhere on
+\(J_I\), and products \(P_I E_I\) are defined to be zero.
+
+We record the projection errors needed below. For every dyadic
+\(h\le1/8\) and each dyadic \(\ell\in[h,1]\), let \(P_\ell\) be the
+ordinary piecewise projection on disjoint cubes of side \(\ell\).
+With gradients taken separately in the cubes,
+\begin{equation}\label{eq:projection}
+ \sum_I\sqrt v\,e_I\le C h^s,\qquad
+ \|\nabla(f-P_\ell)\|_{2,\mathrm{piecewise}}\le C\ell^{s-1}.
+\end{equation}
+To see this, at side \(\ell\) split \(f\) at frequency of order
+\(\ell^{-1}\). The tail and its gradient are \(O(\ell^s)\) and
+\(O(\ell^{s-1})\) in \(L^2\). Indeed \eqref{eq:tail}
+gives squared shell bounds \(C2^{-2js}\), and the
+squared gradient tail is bounded by
+\(C\sum_{2^j\gtrsim \ell^{-1}} 2^{-2j(s-1)}\).
+In particular \(f\in W^{1,2}(\T^d)\). For the smooth
+part \(g\), on any cube of side \(\ell\) choose the degree-\(r\)
+polynomial \(P\) for which the derivatives of \(g-P\) through
+order \(r\) have mean zero. Its coefficients are obtained in
+descending order of total degree using the nonzero constant
+derivative of the matching monomial. Poincaré's inequality on
+each derivative with mean zero, iterated, gives
+\[
+ \|D^j(g-P)\|_2\le C\ell^{r+1-j}\|D^{r+1}g\|_2,\qquad j=0,1 ,
+\]
+on that cube, with the norms summing over derivatives of each order.
+If \(\Pi\) is the local orthogonal projection, then
+\(g-\Pi g=(g-P)+\Pi(P-g)\). Apply \(L^2\) contraction and
+\(\|\nabla \Pi(P-g)\|_2\le C\ell^{-1}\|\Pi(P-g)\|_2\)
+to retain the estimates for \(j=0,1\). The inverse inequality
+follows by rescaling and finite-dimensional norm equivalence.
+It also bounds the gradient of the projected tail. Over the torus,
+\(\|D^{r+1}g\|_2\le C\ell^{s-r-1}\) by summing shells, since
+\(r+1>s\). The argument works on the bounded-overlap family
+\(J_I\) at side \(3h\) as well, giving
+\(\sum_I e_I^2\le C h^{2s}\). Cauchy--Schwarz and
+\(\sum_I v=3^d\) give the first bound in \eqref{eq:projection}.
+Every estimate holds uniformly over the class on this mesh range.
+
+\begin{lemma}\label{lem:sublevel}
+For fixed degree bound \(r\), there are \(\beta>0\) and \(C<\infty\)
+such that any real polynomial \(q\) of degree at most \(r\) on
+\(\Omega\) with \(\|q\|_1\ge1\) satisfies
+\[
+ |\{x\in\Omega:|q(x)|\le z\}|\le C z^\beta
+ \quad(z>0),\qquad \|\log^-|q|\|_{2,\Omega}\le C .
+\]
+\end{lemma}
+\begin{proof}
+In one dimension, if the sublevel set has length \(\lambda>0\),
+choose \(r+1\) points from it with successive pairwise distances at
+least \(\lambda/(4(r+1))\) by excluding intervals around the
+points already chosen. Lagrange interpolation yields
+\(\|q\|_\infty\le C z\lambda^{-r}\). Constant polynomials satisfy
+the claim directly. For induction on dimension, write
+\(q(x_1,x')=\sum_{i=0}^r x_1^i q_i(x')\).
+Some coefficient has \(L^1\) norm at least \(1/(r+1)\). Outside
+a set of measure \(O(z^{\beta'/2})\), its magnitude is at least
+\(\sqrt z\) for \(0<z<1\), by the induction bound with exponent
+\(\beta'\), scaled by its norm. A slice with such a coefficient
+has supremum at least \(c\sqrt z\) by finite-dimensional norm
+equivalence. The interval bound and Fubini prove the induction.
+The zero set is null, and the tail of \(\log^-|q|\) is bounded
+by \(C e^{-\beta t}\) for \(t\ge0\). Integrating the squared
+tail formula gives the second bound.
+\end{proof}
+
+Put \(\psi(z)=z\log|z|\) for \(z\ne0\) and \(\psi(0)=0\).
+Our deterministic surrogate on cell \(I\) is
+\begin{equation}\label{eq:surrogate}
+ F_I=P_I\int_W\psi(q_I)+\mu_I\log b_I
+\end{equation}
+for positive mass, and zero otherwise. For \(u\ge0\) and \(z\ne0\)
+the divided difference of \(\psi\) in absolute value is at most
+\[
+ C+\log^+(u+|z|)+\log^-|z|.
+\]
+For \(z>0\) it is \(\log z + x\log x/(x-1)\) when \(x=u/z<1\),
+and \(\log u+\log x/(x-1)\) when \(x>1\). The logarithmic ratios
+here belong to \([0,1]\), including the endpoint limits. For \(z<0\)
+the quotient is \(\log(u+|z|)+x\log x+(1-x)\log(1-x)\),
+where \(x=u/(u+|z|)\). The last two terms have bounded sum.
+As \(w_I\) has mass one and \(q_I\) has bounded \(L^1\) norm and
+mean one, \((\log^+ t)^2\le C t\) and Lemma~\ref{lem:sublevel}
+bound the divided difference in \(L^2(W)\) uniformly. Thus
+Cauchy--Schwarz and the change of variables to \(W\) yield
+\begin{equation}\label{eq:transfer}
+ \sum_I\left|\int_I f\log f-F_I\right|
+ \le C\sum_I P_I E_I\le C h^s .
+\end{equation}
+The scale term \(\mu_I\log b_I\) is common to the integral and
+the surrogate, since it is formed with the mass of \(w_I\) on \(W\).
+
+For \(P_I>0\) set \(\nu_I=\one_{\{\inf_W|q_I|<1/2\}}\),
+and take \(\nu_I=0\) at zero mass.
+This indicator records when the infimum of the absolute projected value
+on \(I\) is below half the mean on \(J_I\).
+Set \(\tau=h^s\) and \(\omega=2/(2s-1)\).
+\begin{lemma}\label{lem:bands}
+For \(B\ge\tau\), let \(\mathcal V_B\) contain the cells with
+\(\nu_I=1\) and \(B/2<b_I\le B\). At \(\xi=B/\tau\),
+\[
+ h^d\#\mathcal V_B\le
+ C\left(\xi^{-\omega}+h+
+         B^{-1}\sum_{B/2<b_I\le B}\sqrt v\,e_I\right).
+\]
+\end{lemma}
+\begin{proof}
+Take \(U=f\wedge (C_0B)\) with \(C_0\ge \max(1,2C_V)\).
+Let \(\Phi(y)=y^2\) on \(0\le y\le1\) and \(\Phi(y)=2y-1\)
+on \(y>1\). On each \(J_I\),
+\[
+ \|U-\overline U_{J_I}\|_2^2
+ \le C B^2\sum_{j=1}^d\int_{J_I}\Phi(h|\partial_j U|/B).
+\]
+On a coordinate slice, a pairwise difference is bounded by both
+\(C_0 B\) and the integral of the absolute derivative on the whole
+slice. Its square is bounded by \(CB^2\Phi\) of the latter integral
+divided by \(B\). Use Jensen along the slice, whose length is \(3h\),
+and average the pairwise differences. In the product cube, telescope
+in coordinates and sum their squares, or use the coordinate
+averaging contractions, to obtain the displayed inequality.
+
+On each macro cube of side \(\ell\), fix a slice in direction \(j\)
+and write \(g=\partial_j f\), \(k=\partial_j P_\ell\), \(M=B/h\).
+The scalar bound
+\[
+ \Phi(|g|/M)\le
+ C\bigl(\cl(k/M,[-1,1])\,g/M+(g-k)^2/M^2\bigr)
+\]
+holds for all real \(g,k\). For \(|k|\le M\), completing the
+square controls \(g^2/M^2\). For \(k/M\ge1\), the right side
+without the constant is \(y+(y-k/M)^2\) with \(y=g/M\).
+For \(y\ge1/2\) use the linear term, for \(0\le y<1/2\)
+use the squared term, and for \(y<0\) use
+\(-|y|+(|y|+1)^2\). Reversing both signs covers \(k/M\le-1\).
+Apply the inequality on \(\{f<C_0 B\}\), where
+\(\partial_j U=g\). Elsewhere \(\partial_j U=0\) almost
+everywhere by the Sobolev chain rule for a truncation.
+The integral of \(\cl(k/M,[-1,1])\,\partial_j U/M\) on the
+slice is at most \(C B/M\). Indeed the clipped polynomial
+has bounded variation uniformly, from its finitely many
+monotonicity intervals, and integration by parts also bounds the
+two endpoint contributions. Sobolev slicing justifies the
+one-dimensional integrals. The cross-sectional volume of each
+macro cube is \(\ell^{d-1}\) and there are \(\ell^{-d}\) cubes,
+so the linear term contributes \(O(h/\ell)\). The squared
+term contributes at most \(M^{-2}\|\nabla(f-P_\ell)\|_2^2\)
+up to a constant. Hence \eqref{eq:projection} gives
+\begin{equation}\label{eq:huber}
+ \sum_j\int_{\T^d}\Phi(h|\partial_j U|/B)
+ \le C\left(h/\ell+h^2\ell^{2s-2}/B^2\right).
+\end{equation}
+
+In the band under study, \(Q_I\le C_VB\), so
+\(\|f-U\|_{2,J_I}\le e_I\) and \(\|U-Q_I\|_{2,J_I}\le2e_I\).
+The centered functions \(U-\overline U_{J_I}\) and \(Q_I-b_I\)
+are bounded by \(CB\). Comparing squares and using
+Cauchy--Schwarz gives
+\(\|Q_I-b_I\|_{2,J_I}^2\le
+\|U-\overline U_{J_I}\|_2^2+CB\sqrt v\,e_I\).
+For \(\nu_I=1\) the supremum of \(|Q_I-b_I|\) is at least
+\(b_I/2\), and by norm equivalence its squared \(L^2(J_I)\)
+norm is at least \(cB^2 v\). Sum, use the bounded overlap
+and \eqref{eq:huber}, then divide by \(B^2\). This proves the
+claimed estimate with \(h/\ell+h^2\ell^{2s-2}/B^2\)
+in place of \(\xi^{-\omega}+h\). When \(h\xi^\omega\le1\),
+take a dyadic \(\ell\) within a factor of two of \(h\xi^\omega\)
+in \([h,1]\). The two terms are \(O(\xi^{-\omega})\).
+When \(h\xi^\omega>1\), use \(\ell=1\) and
+\(h^{2-2s}\xi^{-2}\le h\).
+\end{proof}

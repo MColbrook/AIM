@@ -15,9 +15,9 @@ Contributions made with or without AI are welcome.
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**844 open targets** (360 open, 484 partial) · **222 solved entries** · **1 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
+**843 open targets** (359 open, 484 partial) · **222 solved entries** · **1 Lean verified** · **1 solution claim**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 844 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 843 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
@@ -27,7 +27,7 @@ If a problem here is resolved, we encourage you to improve the proof, explain it
 | [Operators, matrices and computation](CATALOG.md#operators-matrices-and-computation) | [60](CATALOG.md#operators-open) | [27](CATALOG.md#operators-solved) |
 | [Inverse problems, control and dynamics](CATALOG.md#inverse-problems-control-and-dynamics) | [20](CATALOG.md#inverse-open) | [9](CATALOG.md#inverse-solved) |
 | [PDEs, fluids and materials](CATALOG.md#pdes-fluids-and-materials) | [50](CATALOG.md#pdes-materials-open) | [11](CATALOG.md#pdes-materials-solved) |
-| [Probability, statistics and learning](CATALOG.md#probability-statistics-and-learning) | [59](CATALOG.md#probability-statistics-open) | [14](CATALOG.md#probability-statistics-solved) |
+| [Probability, statistics and learning](CATALOG.md#probability-statistics-and-learning) | [58](CATALOG.md#probability-statistics-open) | [14](CATALOG.md#probability-statistics-solved) |
 | [Numerical analysis and scientific computing](CATALOG.md#numerical-analysis-and-scientific-computing) | [17](CATALOG.md#numerical-analysis-open) | [12](CATALOG.md#numerical-analysis-solved) |
 | [Geometry and topology](CATALOG.md#geometry-and-topology) | [167](CATALOG.md#geometry-topology-open) | [24](CATALOG.md#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](CATALOG.md#combinatorics-optimization-and-information-theory) | [22](CATALOG.md#optimization-information-open) | [4](CATALOG.md#optimization-information-solved) |

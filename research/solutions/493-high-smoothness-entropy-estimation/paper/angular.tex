@@ -1,0 +1,396 @@
+\section{A polynomial estimator for the cell functional}
+\label{sec:angular}
+
+We construct an estimator of the signed entropy of an ordinary
+projection \(q\) on \(\Omega\), evaluated on \(W\).
+In this section, \(w\ge0\) is in \(L^2(\Omega)\), with mass
+\(p_0\), and \(e=\|w-q\|_2\). Fix an integer \(J\ge1\) and set
+\(\alpha=3/4\), \(\epsilon=\alpha^J/2\).
+Write \(K=\lfloor c_K\log n\rfloor\), with \(c_K>0\)
+sufficiently small. We use two observation models.
+\begin{enumerate}
+\item For a Poisson correction cloud with intensity \(m w(x)\dd x\)
+  on \(\Omega\), with \(m\asymp n\), assume \(p_0\le A\), where
+  \(A=C_A\log n/n\). The cloud is the restriction of a parent
+  sample of mean \(m\). Use \(a_*=A\) and \(r_*=A/K^2\).
+\item For \(N\) observations from the probability density \(w\),
+  with \(C_*\log n\le N\le n\), use an interval pilot and
+  an independent correction fraction, each of size comparable
+  to \(N\). Here \(p_0=1\), \(a_*=1\),
+  \(t=\log n/N\) and \(r_*=t/K^2\).
+\end{enumerate}
+For fixed \(J\) and any \(\eta>0\), we will estimate
+\(\int_W [\psi(q)-q\log a_*]\) with absolute bias at most
+\begin{equation}\label{eq:angular-bias}
+ C\left[e+r_*\left(1+(p_0/r_*)^\epsilon
+                      \one_{\{\inf_W|q|<p_0/2\}}\right)\right].
+\end{equation}
+The second moment bounds will be \(C n^\eta A^2\log^2 n\) in
+the Poisson model and \(C n^\eta\log^2 n\) in the fixed-count
+model. In the latter model the bounds condition on the interval
+pilot on an event with probability at least \(1-n^{-M}\)
+for any prescribed \(M\). We describe the event and the statistic
+on arbitrary pilot histories.
+
+\subsection{Regional scores and angular intervals}
+
+For a Borel set \(S\subset\Omega\) with \(v_S=|S|>0\),
+we need a polynomial reproducing kernel on \(S\) with bounded
+observation scores. On the polynomial space of dimension \(D\)
+use the norm \(v_S^{-1}\int_S|P|\), which is definite by
+Lemma~\ref{lem:sublevel}. Maximize the absolute determinant of
+\(D\) vectors in its compact unit ball. The maximizing vectors
+\(\varphi_i\) have norm one, since the maximum is positive.
+Replacing one by another vector in the ball shows that its
+coordinate functional has norm at most one.
+Extend these functionals by Hahn--Banach to \(L^1\) of normalized
+volume on \(S\). Duality gives representatives
+\(\sigma_i\) bounded by one, with
+\(v_S^{-1}\int_S\sigma_i\varphi_j=\delta_{ij}\).
+Use finite Borel versions, clipped to \([-1,1]\) on \(S\)
+and extended by zero off \(S\). Changing a Lebesgue null set
+preserves these pairings and the score means in both models.
+
+Let
+\[
+ B_S=\sum_i|\varphi_i|,\qquad
+ \ell_S=B_S/v_S,\qquad
+ K_S(x,y)=v_S^{-1}\one_S(y)\sum_i\varphi_i(x)\sigma_i(y).
+\]
+Since the constant one has all coordinates of magnitude at most
+one, \(B_S\ge1\). Also \(\int_S B_S=Dv_S\).
+The kernel reproduces every polynomial in the space and obeys
+\(|K_S(x,y)|\le\ell_S(x)\one_S(y)\). Define
+\(q_S=\int K_S(\cdot,y)w(y)\dd y\), \(c_S=q_S/\ell_S\)
+and \(p_S=\int_S w\). Subtracting the reproduction of \(q\)
+inside the integral and using Cauchy--Schwarz gives
+\begin{equation}\label{eq:regional}
+ |c_S|\le p_S,\qquad \int_S\ell_S=D,\qquad
+ \|q_S-q\|_{1,S}\le D\sqrt{v_S}\,e .
+\end{equation}
+The actual scores \(g_{S,0}=\one_S\) and
+\(g_{S,i}=\one_S(1+\sigma_i)/2\) belong to \([0,1]\)
+everywhere. Their means against \(w\) are in \([0,p_S]\).
+Using \(2\int w g_{S,i}-p_S\) for the signed coordinate
+makes \(c_S(x)\) a linear form in the means with total absolute
+coefficient bounded by three. For the ordinary root
+\(S_0=\Omega\) use \(q_0=q\) and a constant envelope
+\(\ell_0\ge\max(1,\|K_\Omega\|_\infty)\). The ordinary basis
+scores are affine rescalings of the bounded basis polynomials
+to \([0,1]\), together with the mass indicator. Their linear
+form for \(c_0=q/\ell_0\) has bounded coefficient sum, and
+\(|c_0|\le p_0\). The first kernel uses \(\Omega\) and its
+first cut acts on \(X_0=W\). Each later kernel uses the
+remaining part of that evaluation set.
+
+In the Poisson model each score mean has interval \([0,A]\).
+In the other model an empirical mean \(\widehat u\) gives
+\[
+ [l,l+B]=[(\widehat u-\Delta)_+,\widehat u+\Delta],
+ \qquad \Delta=L_1(\sqrt{t\widehat u}+t).
+\]
+These intervals always have width at least \(L_1t\).
+For a true mean \(u\), Bernstein's inequality uses
+\(0\le g\le1\) and \(\Var(g)\le u\) to give
+\(|\widehat u-u|\le C(\sqrt{tu}+t)\) at any fixed
+inverse-polynomial failure probability. This implies
+\(\sqrt{t\widehat u}+t\asymp\sqrt{tu}+t\), by separating
+\(u\le C't\) from \(u>C't\) with \(C'\) sufficiently large.
+Thus, with \(L_1\) large enough,
+\begin{equation}\label{eq:interval}
+ u\in[l,l+B],\qquad B\asymp\sqrt{tu}+t
+\end{equation}
+on that event. The fixed dictionaries of scores used below
+have polynomial size in \(n\), so this bound holds simultaneously
+with probability at least \(1-n^{-M}\) by a union bound.
+Every interval lies in a fixed bounded nonnegative range,
+including on failing histories.
+
+Write \(u=l+B(1+\cos\theta)/2\) for one interval of width \(B\).
+The derivative satisfies \(|u'(\theta)|^2=(u-l)(l+B-u)\).
+In either model, valid intervals give the increment bound
+\begin{equation}\label{eq:increment}
+ |u(\theta+z)-u(\theta)|
+ \le C\left(\sqrt{r_*p_S}\,K|z|+r_*(K|z|)^2\right)
+\end{equation}
+for a score supported on \(S\). In the Poisson model
+\(B=A\), \(l=0\), and the first derivative has magnitude at most
+\(\sqrt{Au}\) while the second derivative is \(O(A)\).
+For the fixed-count model and \(u\ge t\), use
+\(B|z|\le C\sqrt{tu}|z|\).
+For \(u<t\) use \(B\le Ct\), first derivative bounded by
+\(\sqrt{B(u-l)}\) and second derivative \(O(B)\).
+The same increment estimate with a different constant applies
+to \(c_S(x)\), uniformly in \(x\) and with a norm of the angle
+vector in place of \(|z|\). Set \(D_S=r_*+\sqrt{r_*p_S}\).
+
+\subsection{Polynomial selection and approximation}
+
+On the angle circle, use a nonnegative even trigonometric
+polynomial density of degree at most \(K\). For any fixed
+integer \(b\ge1\) and large \(K\), we can take the normalized
+\(2b\)-th power of the modulus of
+\(\sum_{k=0}^{\lfloor K/b\rfloor}e^{ikz}\).
+Its bound on \([-\pi,\pi]\) is
+\(C_b K(1+K|z|)^{-2b}\). The geometric sum is bounded by
+\(C\min(K,|z|^{-1})\) and has magnitude at least \(c_b K\)
+on an interval of length \(c_b/K\), which yield the bound.
+To define path probabilities at the true means, shift the
+angles independently by this density, transform back to the
+score intervals, and round on a nonnegative mesh of spacing at
+most \(n^{-3}\). The statistic uses the polynomial path
+probabilities in its coefficients, as shown below.
+This size is \(O(r_*)\) throughout our count ranges.
+
+For any rounded vector its probability, as a function of true
+angles, is convolution of the product shift density with the
+indicator of a bin. The bin is invariant under sign change in
+each angle, so the probability is an even trigonometric
+polynomial in each angle, hence a polynomial in the normalized
+means \((u-l)/B\), of degree \(O(K)\). The sum of the
+coefficient norms over all bins is at most \(C^K\).
+Indeed the Fourier coefficients of the shift density, using
+normalized Haar measure, have modulus at most one.
+Each Fourier coefficient of a bin indicator is bounded by
+its Haar measure, and those bin measures sum to one.
+The number of Fourier indices is polynomial in \(K\).
+The monomial coefficient norm of
+\(\cos(k\theta)=T_k(2(u-l)/B-1)\) is at most \(C^k\)
+by the Chebyshev recurrence. Multiplying over the fixed
+number of angles gives the summed bound. Here and below the
+coefficient norm is the sum of absolute monomial coefficients
+in the normalized means.
+
+Use a separate signed filter for approximation. In each score
+angle its Fourier multiplier is \(\chi(k/K)\), where
+\(\chi\) is even and smooth, supported in \([-1,1]\) and
+equal to one on \([-1/2,1/2]\). Use the product filter in all
+angles. Its kernel is the periodization of a rescaled Schwartz
+function on Euclidean space, by Fourier inversion, and it
+reproduces every trigonometric polynomial whose coordinate
+degrees are at most \(K/2\).
+For \(G(z)=\psi(z)-z\log r_*\), applying this filter to
+\(G(c_S(x))\) as a function of angles produces a polynomial
+\(L_{S,x}\) in the normalized means, of degree \(O(K)\),
+with the following bound at the true angles on valid intervals
+for any fixed \(b'>0\):
+\begin{equation}\label{eq:filter}
+ |L_{S,x}-G(c_S(x))|\le
+        C_{b'} D_S(1+|c_S(x)|/D_S)^{-b'}.
+\end{equation}
+To prove the bound, write \(c=c_S(x)\) at the true means
+and \(v\) for the increment due to the angle shift.
+With \(z/K\) denoting the Euclidean shift before
+periodization, \eqref{eq:increment} bounds \(|v|\) by
+\(CD_S(|z|+|z|^2)\).
+If \(|c|\le D_S\), subtract the exactly reproduced linear term
+\(z'\log(D_S/r_*)\) in the function argument \(z'\), and
+rescale the remaining \(z'\log|z'/D_S|\) by \(D_S\).
+The Schwartz bound gives error \(O(D_S)\). If \(|c|>D_S\),
+subtract the Taylor polynomial in \(v\) at \(c\) up to some
+fixed order \(a-1\), with \(a\ge2\). Its powers of the increment
+have finite angle degree at most \(a-1\) and are reproduced
+for large \(K\). On \(|v|\le |c|/2\) the error is bounded by
+\(C_a|v|^a|c|^{1-a}\). On the complement,
+\(|z|+|z|^2\ge c'|c|/D_S\). After cancellation of the linear
+part containing \(\log(|c|/r_*)\), the remaining difference,
+including the Taylor terms, is bounded by \(|c|\) times a fixed
+polynomial in \(1+|v|/|c|\). This follows by scaling
+\(\psi(c+v)\) by \(|c|\) and bounding
+\(|u\log|u||\le C(1+|u|^2)\). Choosing \(a\) and the
+Schwartz decay order large proves \eqref{eq:filter}.
+The approximation is even in each angle, which justifies
+the polynomial representation.
+
+On all rectangle arguments, \(|c_S(x)|\le C a_*\) in
+either model. The Fourier coefficients of \(G(c_S(x))\)
+are then at most \(C a_*(1+|\log(r_*/a_*)|)\) in
+absolute value. As for the selection probabilities, conversion
+from angle modes gives coefficient norm at most
+\(C^K a_*(1+|\log(r_*/a_*)|)\), uniformly in \(x\).
+
+\subsection{The recursive partition and its bias}
+
+At stage \(j<J\), use the positive selection at \(S_j\) to
+produce the rounded mass \(\widehat p_j\) and the rounded
+projection \(a_j\), for which \(a_j/\ell_j\) uses the linear
+form for \(c_j=c_{S_j}\). Set
+\[
+ B_j=L_2 r_*(1+\widehat p_j/r_*)^\alpha,\qquad
+ T_j=\{x\in X_j:|a_j(x)|>\ell_j(x)B_j\},\qquad
+ S_{j+1}=X_j\setminus T_j .
+\]
+Use \(X_j=S_j\) for \(j\ge1\), take \(T_J=S_J\),
+and let null regions have zero contribution.
+All possible cuts from any rounded vector in the fixed
+bounded mesh range give a finite dictionary before observing
+the interval-pilot sample. Its cardinality is polynomial in \(n\), since
+the dimension and \(J\) are fixed. Define the regional kernels
+there in advance, independently of the pilot and correction
+observations. The dictionary can depend on \(n,N\).
+On \(T_j\), the identity
+\(\ell_j G(q/\ell_j)+q\log(\ell_j r_*/a_*)=\psi(q)-q\log a_*\)
+decomposes the target using the envelope \(\ell_j\) of the
+current kernel. We approximate the \(G\) term at \(c_j=q_{S_j}/\ell_j\)
+and account for its difference from \(q/\ell_j\) below.
+The resulting polynomial contribution on \(T_j\) is
+\begin{equation}\label{eq:piece}
+ \int_{T_j}\ell_j(x)L_{S_j,x}\dd x+
+ \int_{T_j}q(x)\log(\ell_j(x)r_*/a_*)\dd x .
+\end{equation}
+The last term is linear in the ordinary global score means.
+For the weighted envelope, \(\ell_S\ge1\) and
+\[
+ \int_S\log\ell_S
+   = \int_S\log B_S+v_S\log(1/v_S)
+   \le C v_S+v_S\log(1/v_S)\le C.
+\]
+This also gives a uniform bound for its coefficient norm after
+including \(\log(r_*/a_*)\). The coefficient functions of the observed endpoints and the
+angles are Borel. In particular the bin indicator uses the
+specified rounding map, while \(G\) and the filter are continuous.
+The subsequent operations are Fourier integrals over the angle
+torus and spatial integrals of Borel integrands on predetermined
+regions. These define Borel coefficients for the polynomial in
+the score means once the real pilot has been observed.
+
+To check the bias, condition the artificial selections on the
+preceding rounded vectors, and put \(u_j=p_{S_j}/r_*\).
+At each stage the probability that the scaled projection or mass
+moves by more than \(C r_*(1+u_j)^\alpha\) is at most
+\(C_M(1+u_j)^{-M}\), for any prescribed fixed \(M\).
+In fact, \eqref{eq:increment} shows that for large \(u_j\)
+such a move requires \(K|z|\ge c(1+u_j)^{(\alpha-1/2)/2}\)
+in some angle, and the positive kernel has tails of arbitrarily
+large fixed order by choice of \(b\). Rounding contributes
+\(O(r_*)\). Bounded \(u_j\) are included by increasing \(C_M\).
+Call the complementary event a good selection.
+On it \(1+\widehat p_j/r_*\asymp1+u_j\) by \(\alpha<1\).
+Choosing \(L_2\) sufficiently large, a good selection gives
+\[
+ |c_j|\ge c r_*(1+u_j)^\alpha\ \text{on }T_j,\qquad
+ |c_j|\le C r_*(1+u_j)^\alpha\ \text{on } S_{j+1}.
+\]
+Consequently \eqref{eq:filter}, with \(b'\) sufficiently large,
+and \(\int_{X_j}\ell_j\le C\) bound the mean filter error at
+each nonterminal stage by \(C r_*\). The bad selection term
+uses \(C D_{S_j}(1+u_j)^{-M}\le C r_*\).
+
+Also on a good selection,
+\[
+ p_{S_{j+1}}\le C r_*(1+u_j)^\alpha+Ce.
+\]
+This follows by integrating \(|q_{S_j}|\) over \(S_{j+1}\),
+using the bound on \(|c_j|\) and \(\int_{X_j}\ell_j\le C\),
+then using \eqref{eq:regional} and
+\(\|w-q\|_{1,S_j}\le\sqrt{v_{S_j}}e\).
+On other selections \(p_{S_{j+1}}\le p_{S_j}\).
+For any \(0<b_0\le1\) these bounds give the conditional estimate
+\[
+ \E[(1+u_{j+1})^{b_0}\mid\text{preceding vectors}]
+ \le C\bigl((1+u_j)^{\alpha b_0}+(1+e/r_*)^{b_0}\bigr).
+\]
+The terminal filter error is bounded by \(C\E D_{S_J}\),
+where \(D_{S_J}=r_*(1+\sqrt{u_J})\).
+Iterate the conditional bound starting with \(b_0=1/2\),
+reducing the exponent by \(\alpha\) at each prior stage.
+After \(J\) steps the exponent on \(1+u_0\) is \(\epsilon\).
+All residual powers have exponent at most one, so each
+contributes \(O(r_*+e)\) after multiplication by \(r_*\).
+The terminal error is at most \(C[r_*(1+u_0^\epsilon)+e]\). Terminated paths
+can be assigned zero mass and zero contributions.
+If \(\inf_W|q|\ge p_0/2\), for sufficiently large \(u_0\)
+the first good selection empties \(S_1\) since
+\(r_*(1+u_0)^\alpha=o(p_0)\). On the bad first selection
+use \(D_{S_J}\le D_{S_0}\), together with its small
+probability. Bounded \(u_0\) give the same \(O(r_*)\) bound
+directly. Thus the terminal power loss is confined to
+\(\inf_W|q|<p_0/2\).
+
+It remains to replace \(q_{S_j}\) by \(q\) in the nonlinear
+term of \eqref{eq:piece}. On an interval
+\([-C p_0,C p_0]\), replace \(G\) by zero on
+\([-r_*,r_*]\) and leave it equal to \(G\) outside.
+The resulting function is continuous with Lipschitz constant
+\(C(1+\log(1+u_0))\) and differs from \(G\) by at most \(C r_*\).
+Both \(q_{S_j}/\ell_j\) and \(q/\ell_j\) lie in that interval.
+After multiplication by \(\ell_j\) and integration on \(T_j\),
+\eqref{eq:regional} bounds the error of the replacement by
+\[
+ C r_*+ C(1+\log(1+u_0))\sqrt{|S_j|}\,e .
+\]
+At the ordinary root \(q_0=q\). On a good first selection,
+\(|q|\le C r_*(1+u_0)^\alpha\) on \(S_1\); for large \(u_0\)
+apply Lemma~\ref{lem:sublevel} to \(q/p_0\), of mean one, to
+bound \(|S_1|\le C(1+u_0)^{-(1-\alpha)\beta}\).
+On a bad first selection the probability bound suffices, since
+\(|S_j|\le1\). The expected replacement error is therefore
+\(O(r_*+e)\). Bounded \(u_0\), including \(p_0=0\),
+need only the volume bound. The rescaling identity used to define \eqref{eq:piece} now
+applies on every piece of the partition. Summing the mean
+errors proves \eqref{eq:angular-bias}.
+
+\subsection{Estimating the path polynomial}
+
+Average the contributions \eqref{eq:piece} exactly with their
+polynomial path probabilities, multiplying by the probability
+of each selection up to and including the one defining \(T_j\).
+No selections are sampled in the implemented estimate.
+At each node the outgoing coefficient norms sum to at most
+\(C^K\); submultiplicativity and the fixed depth give total
+degree at most \(C_J K+1\) and total coefficient norm at most
+\begin{equation}\label{eq:path-C}
+ C_J^K a_*(1+|\log(r_*/a_*)|).
+\end{equation}
+This bounds the sum of coefficients over the entire path
+expansion, including products of scores on different regions.
+
+To estimate a monomial, use the ordered distinct products
+of the actual normalized observations \(Y=(g-l)/B\).
+In the fixed-count correction fraction of size \(m_c\), divide
+the degree-\(k\) ordered sum by \((m_c)_k=m_c(m_c-1)
+\cdots(m_c-k+1)\). It is unbiased, conditional on the real
+pilot. On valid intervals \(|\E Y|\le1\) and
+\(\E Y^2\le1+C/t\), since \(\Var(g)\le u\) and
+\(B\asymp\sqrt{tu}+t\).
+In the Poisson model normalize \(Y=g/A\).
+If \(p_0\le A<1\), a single parent observation may be represented
+by the law on \(\Omega\) with density \(w\) and extra mass
+\(1-p_0\) at one point outside \(\Omega\), where all scores
+are zero. Consequently \(\E Y\le1\) and \(\E Y^2\le1/A\),
+using \(g^2\le g\) pointwise. The Poisson ordered sum is divided
+by \(m^k\), where \(m\) is the deterministic parent mean.
+It can use just the restricted cloud since tuples with an
+outside score vanish. The expectation is the product of the
+parent score means, by the factorial moments of \(\Pois(m)\).
+Equivalently, the local count law is \(\Pois(m p_0)\), and for
+\(p_0>0\) its marks have conditional density \(w/p_0\), yielding
+the same expectation. The degree-zero term is one in either
+model, including with an empty cloud.
+
+Here is a second moment bound that also applies to mixed scores.
+Let \(B_2\) bound their individual second moments. Two ordered
+\(k\)-tuples sharing \(i\) observations have pair contribution
+at most \(B_2^i\) by Cauchy--Schwarz on each common observation
+and the bound on unshared means. In the fixed-count group,
+the pairing count after division by the squared denominator
+is at most \(\binom{k}{i}(2k/m_c)^i\) for \(k\le m_c/2\).
+For the second tuple, choose the positions of the common points,
+assign distinct points from the first tuple, and bound the
+remaining choices by \((m_c-i)_{k-i}\). Division by
+\((m_c)_k\) yields the bound. The Poisson count instead gives
+the factor \(m^{2k-i}/m^{2k}\) for the distinct points,
+so the bound holds with \(2k/m\) in place of \(2k/m_c\).
+Thus the second moment is at most \((1+2k B_2/m_c)^k\)
+or its Poisson analogue. In our applications
+\(mA\asymp\log n\) and \(m_c t\asymp\log n\).
+Choose \(c_K\) so \(C_J K+1\le m_c/2\) at the
+smallest allowed \(N\). The bounds on the monomials and
+Minkowski with \eqref{eq:path-C} give second moments
+\(C_J^K A^2\log^2 n\) and \(C_J^K\log^2 n\), respectively,
+with \(C_J\) increased if necessary.
+For any prescribed \(\eta>0\), further decrease \(c_K\)
+to bound the exponential factor by \(C n^\eta\).
+Our estimator is finite on arbitrary allowed actual pilot
+histories, because the interval widths are positive and the
+computed paths use only the finite set of Borel scores.

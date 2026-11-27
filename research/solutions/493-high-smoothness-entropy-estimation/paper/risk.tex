@@ -1,0 +1,295 @@
+\section{The Poisson experiment and fixed-sample risk}\label{sec:risk}
+
+Choose a dyadic \(h\asymp(n\log n)^{-1/(s+d)}\), and set
+\(\tau=h^s\), \(v=(3h)^d\), so that \(v\tau\asymp(n\log n)^{-1}\).
+Write \(a_s=s/(s+d)\) and fix \(\eta,\gamma>0\) with
+\(\gamma+\eta<1-2a_s\). Choose \(J\) so that
+\(\epsilon=(3/4)^J/2<\min(\omega,1/(s+d))\).
+
+Start with a \(\Pois(n/2)\) sample and give each point an
+independent uniform label among six groups and an independent
+continuous order mark. The six groups are used for selection,
+low-mass correction, shape estimation, estimation of the
+enlarged-cell mass, estimation of the evaluation-cell mass,
+and estimation of the log density scale. Each group has
+mean \(m=n/12\).
+A local group count is computed on \(J_I^{\rm phys}\);
+apply the inverse of \(T_I\) only after this restriction.
+The local count is Poisson of mean \(mP_I\) and, conditional
+on that count, the positions in unit coordinates are iid
+of density \(w_I\). Ordering by independent marks applies a
+permutation independent of the positions. These laws follow
+by splitting the original count according to its point
+categories. For disjoint physical supports, the generating
+function of the counts for labels and support indicators is
+\(\prod_j\exp(\lambda_j(z_j-1))\) with the appropriate means
+\(\lambda_j\), by averaging the conditional multinomial
+generating function. Given the counts, the marked positions
+are iid within each category and independent across categories.
+Thus the entire marked restrictions on disjoint physical
+supports are independent. All cell estimators below use their
+own marked restriction only.
+
+Use the selector group to choose the low rule when its
+count in \(J_I^{\rm phys}\) is less than \(D_{\rm sel}\log n\).
+The low rule is valid at \(P_I\le A=C_A\log n/n\), and the
+other rule at \(P_I\ge C_H\log n/n\).
+First choose \(C_H\) sufficiently large for the nonlow rule.
+Then take \(D_{\rm sel}\) so that for
+\(P_I<C_H\log n/n\) the selector mean is at most half the
+threshold, and \(C_A\) so that for \(P_I>A\) that mean
+is at least twice the threshold. Poisson tails give failure
+probability \(O(n^{-M})\) for any required fixed \(M\) by
+increasing these constants. The validity ranges overlap.
+In the nonlow rule, the shape group count \(N\) obeys
+\(N\asymp nP_I\) and \(C_*\log n\le N\le n\) on an
+event of probability at least \(1-O(n^{-M})\) in that
+range, by the same concentration and \(P_I\le1\).
+Outside the observed window use zero for the shape statistic.
+
+\subsection{Low mass}
+The local Poisson intensity in unit coordinates is
+\(m w(x)\dd x\), where \(w=v f\circ T_I=P_I w_I\)
+for a cell of positive mass \(P_I\). Its projection and residual
+are \(q=P_I q_I\) and \(e=P_I E_I\).
+For a point from the full correction label, the position
+on the torus has density \(f\). Map it to \(T_I^{-1}\) of
+its location if in \(J_I^{\rm phys}\), and to the outside
+point of Section~\ref{sec:angular} otherwise. This gives
+precisely the parent observation probability and restriction
+used there. Put \(r_*=A/K^2\). By
+\(\psi(P_I q_I)=P_I\psi(q_I)+q\log P_I\) for \(P_I>0\),
+\begin{equation}\label{eq:low-decomp}
+ F_I=\int_W [\psi(q)-q\log A]
+       +\left(\mu_I-\int_W q\right)\log(P_I/A)
+       +\mu_I\log(A/v).
+\end{equation}
+At \(P_I=0\) all terms are interpreted as zero.
+The first term is estimated by Section~\ref{sec:angular},
+with residual \(P_I E_I\) and indicator
+\(\one_{\{\inf_W |q|<P_I/2\}}=\nu_I\), also valid at \(P_I=0\)
+under the zero-mass convention.
+The final term is estimated linearly with the score \(\one_W\).
+
+For the middle term, a degree-\(K\) polynomial \(P_K\)
+approximates \(x\log x\) uniformly on \([0,1]\) to error
+\(C/K^2\), with coefficient norm at most \(C^K\).
+For a construction, put \(x=(1+\cos\theta)/2\).
+The cosine coefficients of \(\log x\) at modes \(j\ge1\) are
+\(2(-1)^{j-1}/j\), by the radial
+logarithm expansion of \(\log|1+\rho e^{i\theta}|^2-\log 4\)
+as \(\rho\) increases to one. The series converges in \(L^2\)
+by square summability, and its pointwise limit off
+\(\theta=\pi\) identifies the \(L^2\) limit. Multiplication by
+\(x\) combines two adjacent coefficients and the central one,
+giving \(O(j^{-3})\) for \(j\ge2\). The absolutely summable
+series for \(x\log x\) therefore has tail \(O(K^{-2})\)
+uniformly, and its truncation has the coefficient bound by
+the Chebyshev recurrence. Now \(B_{K-1}(x)=(P_K(x)-P_K(0))/x\)
+is a polynomial with
+\(x|B_{K-1}(x)-\log x|\le C/K^2\) for \(x>0\).
+The multiplier \(\mu_I-\int_W q\) is the mean of
+\[
+ b(y)=\one_W(y)-\int_W K_\Omega(x,y)\dd x
+\]
+on the parent law, extended by zero outside \(\Omega\).
+Its absolute value is \(O(P_I)\).
+For clarity, the score \(b\) is represented in the statistic
+as \(2D_b g_b-D_b\one_\Omega\), where
+\(D_b\ge\max(1,\|b\|_\infty)\) and
+\(g_b=\one_\Omega(1+b/D_b)/2\) belongs pointwise to \([0,1]\).
+Use the factorial polynomial estimator for the product of
+this mean and \(B_{K-1}(P_I/A)\).
+Together with the linear term, its coefficient norm in the
+scaled score means is \(O(C^K A\log n)\).
+The bias from the replacement of the logarithm is at most
+\(C A/K^2\), including zero mass by continuity of the
+mass-multiplied target and the polynomial formula.
+All terms have the parent denominator \(m^k\).
+The factorial bound and Minkowski give a combined second
+moment at most \(C n^\eta A^2\log^2 n\); decrease \(c_K\) if
+needed for this combined bound. The bias is at most
+\begin{equation}\label{eq:low-bias}
+ C\bigl[P_I E_I+r_*(1+(P_I/r_*)^\epsilon
+                          \nu_I)\bigr].
+\end{equation}
+
+\subsection{Nonlow mass}
+Conditional on \(N\) in the observed range, the ordered
+shape sample supplies the independent fractions in
+Section~\ref{sec:angular} for \(N<n^\gamma\) and
+Section~\ref{sec:high} for \(N\ge n^\gamma\).
+The shape estimate of \(\int_W\psi(q_I)\) is multiplied
+by the independent shape-mass count divided by \(m\), an
+unbiased estimate \(\widehat P_I\) with variance \(P_I/m\).
+On the good counts and good actual pilots, the resulting
+conditional bias for \(P_I\int_W\psi(q_I)\) is bounded by
+\begin{equation}\label{eq:mass-shape-bias}
+ C\left[P_I E_I+\frac{P_I}{N\log n}
+       \bigl(1+(N\log n)^\epsilon\nu_I\bigr)\right].
+\end{equation}
+Here \(r_*=\log n/(NK^2)\asymp (N\log n)^{-1}\).
+Its conditional variance at these histories is
+\(C n^\eta\log^C n\, P_I^2\) for \(N<n^\gamma\), and
+\(C n^\eta\log^C n\,P_I/n\) for \(N\ge n^\gamma\).
+Indeed \(\E\widehat P_I^2=O(P_I^2)\) on the valid
+range. The product variance for an independent mass factor
+and shape factor is this second moment times the shape
+variance, plus the mass variance times the squared shape
+mean. In the high range use \(N\asymp nP_I\) and the
+\(C\log n\) mean bound from Section~\ref{sec:high}.
+In the intermediate range the shape second moment alone
+and \(nP_I\gtrsim\log n\) suffice.
+
+Use two more independent groups for \(\mu_I\log b_I\).
+Estimate \(\mu_I\) by the evaluation-cell count divided by
+\(m\), and use the enlarged-cell count \(C_I\) in the
+other group to form
+\[
+ L_{C_I}=\sum_{j=1}^{C_I}j^{-1}-\gamma_{\rm E}-\log(mv),
+\]
+where \(\gamma_{\rm E}\) is Euler's constant and the empty
+sum is zero. For \(\lambda=mP_I\), the mean of the harmonic
+sum equals \(\int_0^\lambda(1-e^{-u})\dd u/u\), by using
+\(\sum_{j=1}^k j^{-1}=\int_0^1 (1-t^k)\dd t/(1-t)\)
+and the Poisson generating function. For \(C_I\ge\lambda/2\) and \(\lambda\ge2\),
+the harmonic sum differs from the sum at \(\lfloor\lambda\rfloor\)
+by at most \(C|C_I-\lfloor\lambda\rfloor|/\lambda\).
+The complementary event has exponentially small probability
+and squared difference at most \(C(1+\log\lambda)^2\).
+The expected squared difference is therefore at most \(C/\lambda\).
+This bounds the variance and shows that the mean harmonic sum
+minus \(\log\lambda\) tends to \(\gamma_{\rm E}\) as
+\(\lambda\to\infty\). Subtracting \(\log\lambda\) in its
+integral representation and integrating the derivative
+\(-e^{-\lambda}/\lambda\) to infinity gives
+\(\gamma_{\rm E}+\int_\lambda^\infty e^{-u}\dd u/u\).
+As \(\lambda/(mv)=b_I\), the bias of \(L_{C_I}\) for \(\log b_I\)
+is \(\int_\lambda^\infty e^{-u}\dd u/u\).
+The bias can be made \(O(n^{-M})\) on the nonlow range
+by \(C_H\) large. Independence, \(\mu_I\le P_I\) and
+\(|\log b_I|\le C\log n\) there give variance at most
+\(C P_I\log^2 n/n\) for the product with the estimate of
+\(\mu_I\).
+
+\subsection{Summation and return to fixed sample size}
+
+Let \(Z_I\) be the output selected in cell \(I\), clipped
+to \([-n^{B_0},n^{B_0}]\) for a fixed sufficiently large
+\(B_0\). Let \(\mathcal H_I\) be the sigma-field of the
+local selector and, on nonlow routes, the count \(N\) and
+actual shape pilots used by the rule. The good event consists
+of a valid route and, for a nonlow rule, count comparability
+and validity of the real pilots. It is \(\mathcal H_I\)-measurable
+for fixed \(f\), with failure probability \(O(n^{-M})\).
+The estimator only checks observed conditions. In particular
+it uses the actual interval-pilot regional count for the
+gate in Section~\ref{sec:high}, and the auxiliary path
+probabilities there and in Section~\ref{sec:angular} are
+built into the estimator.
+
+The good-history second moments of the unclipped outputs
+are bounded by a fixed power of \(n\) uniformly over \(f,I\).
+This follows from the bounds on their biases, variance and
+means, with \(|F_I|\le C\log n\) even at small mass since
+\(P_I|\log P_I|\) is bounded. One may choose the clipping
+exponent before making the failure probability arbitrarily
+small: the powers in the good-history bounds are controlled
+by the fixed \(\eta,\gamma,s,d\), with arbitrary concentration
+constants absorbed by enlarging the sample-size cutoff.
+Clipping changes each good-history mean by \(o(v\tau)\)
+using the second moment divided by the clipping threshold,
+and contracts the conditional variance by the independent-copy
+formula. On bad histories the squared conditional bias and
+the conditional variance are bounded by
+\(C(n^{B_0}+\log n)^2\). Choose \(M>2B_0+3\).
+The sum of the bad-history conditional bias contributions
+in \(L^2\) is at most
+\(C h^{-d}(n^{B_0}+\log n)n^{-M/2}=o(\tau)\).
+For the variance sum the bound is
+\(C h^{-d}n^{2B_0-M}=o(\tau^2)\).
+
+Combining \eqref{eq:low-bias} and
+\eqref{eq:mass-shape-bias}, on all good histories
+\begin{equation}\label{eq:per-cell}
+ \left|\E[Z_I\mid\mathcal H_I]-F_I\right|
+ \le C P_I E_I+ C v\tau\left(1+(b_I/\tau)^\epsilon
+                                 \nu_I\right).
+\end{equation}
+On low routes \(A/K^2\asymp v\tau\) and
+\(P_I/(A/K^2)\asymp b_I/\tau\) when \(P_I>0\).
+On the good nonlow histories \(N\asymp nP_I\) gives
+\(P_I/(N\log n)\asymp v\tau\) and \(N\log n\asymp b_I/\tau\).
+The residuals sum to \(O(\tau)\) by \eqref{eq:projection}.
+The terms for \(b_I\le\tau\) and the constant term
+also sum to \(O(\tau)\). For the remaining term partition
+the amplitudes into disjoint dyadic bands
+\(B/2<b_I\le B\) with \(B=2^k\tau\), \(k\ge1\).
+At \(\xi=B/\tau\), Lemma~\ref{lem:bands} gives
+a contribution at most
+\[
+ C\tau\,\xi^\epsilon(\xi^{-\omega}+h)
+       +C \xi^{\epsilon-1}\sum_{B/2<b_I\le B}\sqrt v\,e_I .
+\]
+The largest \(\xi\) is at most \(C h^{-(s+d)}\)
+since \(P_I\le1\). The dyadic sum of \(\xi^{\epsilon-\omega}\)
+is bounded since \(\epsilon<\omega\), and that of
+\(h\xi^\epsilon\) is \(O(h^{1-(s+d)\epsilon})\). The residuals remain in disjoint
+bands and \(\xi^{\epsilon-1}\le1\). Therefore the sum of the
+conditional biases has \(L^2\) norm \(O(\tau)\) by Minkowski,
+including the bad-history contribution.
+
+For the centered part, color the intersection graph of the
+physical supports by at most \(D_{\rm col}=7^d\) colors,
+using the degree bound from Section~\ref{sec:geometry}.
+Within each color the local marked restrictions are independent.
+Both \(Z_I\) and its conditional mean given \(\mathcal H_I\)
+are measurable with respect to this local restriction.
+Consequently the centered terms have mean zero and are
+independent inside each color. By Cauchy--Schwarz across colors,
+\[
+ \E\left|\sum_I (Z_I-\E[Z_I\mid\mathcal H_I])\right|^2
+ \le D_{\rm col}\sum_I \E\Var(Z_I\mid\mathcal H_I).
+\]
+On good low histories the sum of the conditional variances is
+bounded by \(C h^{-d} n^\eta A^2\log^2 n\). Good intermediate
+histories occur only for \(P_I\le C n^{-1+\gamma}\),
+by \(N<n^\gamma\) and count comparability there.
+The good intermediate variances thus sum, in expectation,
+to at most \(C n^{-1+\gamma+\eta}\log^C n\),
+using \(\sum_I P_I\le5^d\).
+The good high histories contribute
+\(C n^{-1+\eta}\log^C n\) by the same mass sum.
+Together these bounds give
+\[
+ C\log^C n\bigl(h^{-d}n^\eta A^2+n^{-1+\gamma+\eta}\bigr)
+   +o(\tau^2)=O(\tau^2).
+\]
+For the first term the strict power slack is
+\(\eta<1-a_s\), and for the others it is
+\(\eta+\gamma<1-2a_s\). Both follow from our choices.
+
+The Poisson output \(\sum_I Z_I\) is bounded for each \(n\)
+and measurable. The centered variance and conditional bias
+bounds and \eqref{eq:transfer} give its root-mean-square
+error at most \(C\tau\) for \(\int f\log f\), uniformly
+over the class. The mesh cutoff \(h\le1/8\) and all
+stochastic cutoffs are achieved by increasing a single
+\(n_0(d,s,p,L)\), since all estimates above are uniform.
+
+To use exactly \(n\) observations, draw \(M\sim\Pois(n/2)\)
+independently. If \(M\le n\), apply the Poisson procedure to
+the first \(M\) observations with independent auxiliary labels
+and marks, and reverse its sign. Otherwise output zero.
+Couple to an infinite iid sequence to see that the squared
+error on \(M\le n\) is at most the squared error in the
+complete Poisson experiment. On \(M>n\) the squared error
+is \(H(f)^2\), bounded uniformly by \(\|f\|_2\le L\) and
+\(|u\log u|\le C(1+u^2)\). The overflow probability is at most
+\(\exp[-n(\log 2-1/2)]\) by the exponential moment at
+\(\log 2\). The auxiliary-randomness average at each sample
+vector is a finite measurable estimator. Jensen's inequality
+gives no larger squared error for this deterministic estimator.
+This proves the upper bound for \(2<s<d\). The likelihood
+mixture of Section~\ref{sec:large-s} gives the rest of the
+upper bound, completing Theorem~\ref{thm:main}.

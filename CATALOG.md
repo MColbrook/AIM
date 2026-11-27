@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**844 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**843 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -12,7 +12,7 @@
 | [Operators, matrices and computation](#operators-matrices-and-computation) | [60](#operators-open) | [27](#operators-solved) |
 | [Inverse problems, control and dynamics](#inverse-problems-control-and-dynamics) | [20](#inverse-open) | [9](#inverse-solved) |
 | [PDEs, fluids and materials](#pdes-fluids-and-materials) | [50](#pdes-materials-open) | [11](#pdes-materials-solved) |
-| [Probability, statistics and learning](#probability-statistics-and-learning) | [59](#probability-statistics-open) | [14](#probability-statistics-solved) |
+| [Probability, statistics and learning](#probability-statistics-and-learning) | [58](#probability-statistics-open) | [14](#probability-statistics-solved) |
 | [Numerical analysis and scientific computing](#numerical-analysis-and-scientific-computing) | [17](#numerical-analysis-open) | [12](#numerical-analysis-solved) |
 | [Geometry and topology](#geometry-and-topology) | [167](#geometry-topology-open) | [24](#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [22](#optimization-information-open) | [4](#optimization-information-solved) |
@@ -350,7 +350,6 @@
 | 343 | [Private PAC learning with polynomial VC and iterated-logarithm sample cost](problems/343-private-pac-vc-logstar.md) | 🔵 OPEN | Statistical learning, data privacy and sample complexity |
 | 345 | [The sharp support–concentration bound for subset sums](problems/345-subset-sum-support-concentration.md) | 🔵 OPEN | Combinatorial probability, information theory and packing algorithms |
 | 347 | [Polynomial-time proper learning of univariate Gaussian mixtures](problems/347-univariate-gaussian-mixture-proper-learning.md) | 🔵 OPEN | Statistical density estimation and unsupervised learning |
-| 493 | [Minimax entropy estimation beyond two derivatives](problems/493-high-smoothness-entropy-estimation.md) | 🔵 OPEN | Nonparametric statistics and information estimation |
 | 495 | [Cardy's crossing formula for the real planar Bargmann–Fock field](problems/495-cardy-s-crossing-formula-for-the-real-planar-bargmannfock-field.md) | 🔵 OPEN | Probability, smooth Gaussian fields and continuum percolation |
 | 516 | [Is the Brownian Lévy transformation ergodic?](problems/516-is-the-brownian-levy-transformation-ergodic.md) | 🔵 OPEN | Stochastic analysis and ergodic theory |
 | 528 | [Minimax estimation of topic distributions with weak sparsity](problems/528-weak-sparse-topic-minimax.md) | 🔵 OPEN | Statistical inference and topic models |
@@ -421,6 +420,12 @@
 | 636 | [A uniform Gaussian approximation bound for Jack measures](problems/636-jack-normal.md) | ✅ SOLVED | Uniform Jack normal-approximation bound without logarithmic loss. | [Proof](research/solutions/636-uniform-jack-normal/paper/jack_normal.pdf) | [Review](research/solution_reviews/2026-10-13-yui-prs/636-review.md) |
 | 660 | [Small-ball ratios for general symmetric product priors](research/resolved/660-product-prior-small-ball-ratios.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-506/aim506_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/506-review.md) |
 | 662 | [Variance ordering for Gaussian alpha-divergence approximations](research/resolved/662-gaussian-variational-variance-ordering.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-457-558/aim_558_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/558-review.md) |
+
+### Solution claimed
+
+| ID | Problem | Status | Outcome | Proof | Review |
+| --- | --- | --- | --- | --- | --- |
+| 493 | [Minimax entropy estimation beyond two derivatives](problems/493-high-smoothness-entropy-estimation.md) | 🟠 SOLUTION CLAIMED | Claimed full minimax root-mean-square entropy rate for the displayed high-smoothness class. | [Proof](research/solutions/493-high-smoothness-entropy-estimation/paper/main.pdf) | [Review](research/solutions/493-high-smoothness-entropy-estimation/TARGET_COMPARISON.md) |
 
 ## Numerical analysis and scientific computing
 
@@ -1529,7 +1534,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 2026 expansion — batch 6 | 6 | 2026-09-19–2026-10-13 |
 | September 22 expansion — PDE emphasis | 88 | 2026-09-22–2026-10-30 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
-| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 114 | 2026-09-23–2026-11-04 |
+| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 113 | 2026-09-23–2026-11-04 |
 | Retained further problems, integrated 30 October 2026 | 373 | 2026-10-30–2026-11-07 |
 
 ## Maintaining the collection
