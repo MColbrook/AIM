@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**844 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**843 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -14,7 +14,7 @@
 | [PDEs, fluids and materials](#pdes-fluids-and-materials) | [50](#pdes-materials-open) | [11](#pdes-materials-solved) |
 | [Probability, statistics and learning](#probability-statistics-and-learning) | [59](#probability-statistics-open) | [14](#probability-statistics-solved) |
 | [Numerical analysis and scientific computing](#numerical-analysis-and-scientific-computing) | [17](#numerical-analysis-open) | [12](#numerical-analysis-solved) |
-| [Geometry and topology](#geometry-and-topology) | [167](#geometry-topology-open) | [24](#geometry-topology-solved) |
+| [Geometry and topology](#geometry-and-topology) | [166](#geometry-topology-open) | [24](#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [22](#optimization-information-open) | [4](#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](#waves-quantum-systems-and-spectral-geometry) | [24](#spectral2-open) | [8](#spectral2-solved) |
 | [Imaging, control, geometry and dynamics](#imaging-control-geometry-and-dynamics) | [22](#inverse2-open) | [8](#inverse2-solved) |
@@ -504,7 +504,6 @@
 | 566 | [Can a nonresonant elliptic equilibrium be unstable in an analytic two-degree Hamiltonian?](problems/566-can-a-nonresonant-elliptic-equilibrium-be-unstable-in-an-analytic-two-degree-hamiltonian.md) | 🔵 OPEN | Geometry and topology |
 | 571 | [Sharp few-distance bound for arbitrary normed spaces](problems/571-sharp-few-distance-bound-for-arbitrary-normed-spaces.md) | 🟡 PARTIAL | Geometry and topology |
 | 572 | [Does mixing force exponential decay for smooth Anosov flows?](problems/572-does-mixing-force-exponential-decay-for-smooth-anosov-flows.md) | 🟡 PARTIAL | Hyperbolic dynamics and statistical relaxation |
-| 573 | [Unimodal connectivity by 2–3 and 3–2 Pachner moves](problems/573-unimodal-pachner-connectivity.md) | 🔵 OPEN | Computational topology and triangulated 3-manifolds |
 | 580 | [Does lower one-dimensional density above one half force planar rectifiability?](problems/580-does-lower-one-dimensional-density-above-one-half-force-planar-rectifiability.md) | 🟡 PARTIAL | Geometric measure theory |
 | 586 | [Freeness of real hyperplane arrangements from their intersection lattice](problems/586-freeness-of-real-hyperplane-arrangements-from-their-intersection-lattice.md) | 🟡 PARTIAL | Geometry and topology |
 | 587 | [The minimizing Sard conjecture for smooth sub-Riemannian structures](problems/587-the-minimizing-sard-conjecture-for-smooth-sub-riemannian-structures.md) | 🟡 PARTIAL | Geometric control and sub-Riemannian geometry |
@@ -673,6 +672,12 @@
 | 640 | [Coboundary expansion of random balanced Cayley complexes](problems/640-random-balanced-cayley-expansion.md) | ✅ SOLVED | Elementary abelian2-groups deterministically refute the proposed uniform random coboundary-expansion assertion. | [Proof](research/solutions/640-random-balanced-cayley-obstruction/paper/main.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/640-review.md) |
 | 643 | [Zero in the upper-Laplacian spectrum of low-degree simplicial complexes](problems/643-low-degree-simplicial-zero-spectrum.md) | ✅ SOLVED | Counterexample on a countable pure three-complex: maximum triangle degree three, coercive normalized upper Laplacian on the full weighted space, and trivial kernel. | [Proof](research/solutions/643-low-degree-simplicial-zero-spectrum/paper/degree_three_counterexample.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/643-review.md) |
 | 647 | [Connectivity when the last isolated point disappears in a polytope](problems/647-polytopal-connectivity-last-isolated-point.md) | ✅ SOLVED | For every fixed full-dimensional convex polytope in every fixed dimension at least three, connectivity occurs exactly when the last isolated vertex disappears with high probability. | [Proof](research/solutions/647-polytopal-connectivity-last-isolated-point/paper/connectivity-polytope.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/647-review.md) |
+
+### Solution claimed
+
+| ID | Problem | Status | Outcome | Proof | Review |
+| --- | --- | --- | --- | --- | --- |
+| 573 | [Unimodal connectivity by 2–3 and 3–2 Pachner moves](problems/573-unimodal-pachner-connectivity.md) | 🟠 SOLUTION CLAIMED | Affirmative proof claim | [Proof](research/solutions/573-unimodal-pachner-connectivity/main.pdf) | [Review](problems/573-unimodal-pachner-connectivity.md) |
 
 ## Combinatorics, optimization and information theory
 
@@ -1529,7 +1534,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 2026 expansion — batch 6 | 6 | 2026-09-19–2026-10-13 |
 | September 22 expansion — PDE emphasis | 88 | 2026-09-22–2026-10-30 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
-| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 114 | 2026-09-23–2026-11-04 |
+| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 113 | 2026-09-23–2026-11-04 |
 | Retained further problems, integrated 30 October 2026 | 373 | 2026-10-30–2026-11-07 |
 
 ## Maintaining the collection
