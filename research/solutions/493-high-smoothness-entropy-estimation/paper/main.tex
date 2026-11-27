@@ -1,0 +1,145 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.10in]{geometry}
+\usepackage{microtype}
+\usepackage{mathtools,amssymb}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Minimax entropy estimation beyond two derivatives},
+  pdfauthor={Kaiwen Jin}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}[lemma]{Proposition}
+\numberwithin{equation}{section}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\E}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\osc}{\operatorname{osc}}
+\newcommand{\cl}{\operatorname{clip}}
+\newcommand{\Pois}{\operatorname{Pois}}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cV}{\mathcal V}
+\title{Minimax entropy estimation beyond two derivatives}
+\author{Kaiwen Jin}
+\email{yui.ui.siki@gmail.com}
+\subjclass[2020]{62G05, 62C20, 94A17}
+\begin{document}
+\begin{abstract}
+We determine the minimax root-mean-square error for differential
+entropy over zero-extended, cube-supported Lipschitz classes of
+smoothness \(s>2\), in dimension \(d\ge3\) and with integrability
+\(2\le p<\infty\). For sufficiently large fixed radius, the rate is
+\((n\log n)^{-s/(s+d)}+n^{-1/2}\), which matches the known lower
+bound. For \(s\ge d\) the upper bound follows from a joint likelihood
+mixture over a finite Fourier net. For \(2<s<d\) we use signed
+local polynomial projections. We bound how many cells have a projected value small in magnitude
+relative to the mean on the enlarged cell. This permits summing
+the bias of a recursive polynomial estimator across amplitude levels.
+\end{abstract}
+\maketitle
+\section{Introduction}
+For a density \(f\) on \([0,1]^d\), its entropy is
+\(H(f)=-\int_{[0,1]^d} f\log f\), with \(0\log 0=0\) and natural
+logarithms. Smoothness controls how well a density can be
+approximated locally, but the logarithm near zero complicates the
+passage from density approximation to entropy estimation.
+Han, Jiao, Weissman and Wu \cite[Theorem~1, p.~3229]{HJWW} obtained the sharp rate for
+smoothness at most two and proved a lower bound that also applies
+at higher smoothness. They discuss the higher-smoothness upper
+bound in Section 4.2 of their author manuscript \cite{HJWWv4}.
+
+Here we use the centered differences of order \(r=\lceil s\rceil\).
+For \(u\in\R^d\) and \(t>0\), set
+\[
+ \Delta_u^r f(x)=\sum_{j=0}^r(-1)^{r-j}\binom rj
+    f\bigl(x+(j-r/2)u\bigr),\qquad
+ \omega_r(f,t)_p=\sup_{|u|\le t}\|\Delta_u^r f\|_{L^p(\R^d)} .
+\]
+The shift norm is Euclidean. Write \(\cF_{s,p,d}(L)\) for the
+nonnegative probability densities supported on the unit cube with
+\[
+ \|f\|_{L^p(\R^d)}+\sup_{t>0}t^{-s}\omega_r(f,t)_p\le L .
+\]
+The differences act on the zero extension. This condition includes
+behavior at the boundary and allows densities to vanish on sets of
+positive measure.
+
+For \(n\) independent observations with density \(f\), let
+\[
+ R_n=\inf_{\widehat H}\sup_{f\in\cF_{s,p,d}(L)}
+          \bigl(\E_f|\widehat H-H(f)|^2\bigr)^{1/2},
+\]
+where the infimum is over measurable estimators.
+\begin{theorem}\label{thm:main}
+Fix an integer \(d\ge3\), a real \(s>2\), and \(2\le p<\infty\).
+There is an \(L_0(d,s,p)>1\) such that for each fixed \(L\ge L_0\)
+there are constants \(0<c\le C<\infty\) and \(n_0\ge2\), depending
+only on \(d,s,p,L\), for which
+\[
+ c\bigl((n\log n)^{-s/(s+d)}+n^{-1/2}\bigr)
+ \le R_n\le
+ C\bigl((n\log n)^{-s/(s+d)}+n^{-1/2}\bigr)
+ \qquad(n\ge n_0).
+\]
+\end{theorem}
+The estimators establish the rate over the displayed class. Our
+construction is for measurable estimation and gives no bound on
+computational cost.
+
+For the lower bound, the final lower-bound clause of Theorem 1 in
+\cite{HJWWv4} allows all \(s>0\) and \(1\le p<\infty\).
+Equations (1)--(4) there use the same zero-extended, cube-supported
+density class, and (5) uses the same loss. The shifts \(te\), \(|e|\le1\),
+are exactly the shifts \(|u|\le t\) in the definition above. The source lower bound is
+\[
+ R_n\ \ge\ c_{s,p,d}
+ \bigl(L^{d/(s+d)}(n\log n)^{-s/(s+d)}+(\log L)n^{-1/2}\bigr)
+\]
+for \(L\) above a parameter-dependent threshold and
+\(L\le(n\log n)^{s/d}\). The upper restriction on \(L\) holds
+eventually at each fixed radius, so this yields the claimed lower bound.
+
+There are two parts to the upper bound. A likelihood mixture
+attains the parametric rate when \(s\ge d\). For \(2<s<d\), we
+approximate \(f\) on enlarged mesh cells by polynomials and use
+the odd extension \(z\log|z|\). The estimates on a cell depend
+on its count and on the geometry of its projected shape. The
+localization estimate in Section~\ref{sec:geometry} controls the
+number of cells on which that shape approaches zero relative to
+its mean. Section~\ref{sec:angular} constructs polynomial
+estimators with a small power loss confined to these cells.
+Sections~\ref{sec:high} and~\ref{sec:risk} give the large-count
+variance bound and assemble the fixed-sample estimator.
+
+\input{approximation}
+\input{geometry}
+\input{angular}
+\input{high-count}
+\input{risk}
+
+\section*{AI use}
+Codex assisted with the proof development, natural-language
+checking, and preparation of the manuscript.
+
+\begin{thebibliography}{3}
+\bibitem{HJWW}
+Y.~Han, J.~Jiao, T.~Weissman and Y.~Wu,
+\textit{Optimal rates of entropy estimation over Lipschitz balls},
+Ann. Statist. \textbf{48} (2020), 3228--3250.
+\href{https://doi.org/10.1214/19-AOS1927}{doi:10.1214/19-AOS1927}.
+\bibitem{HJWWv4}
+Y.~Han, J.~Jiao, T.~Weissman and Y.~Wu,
+\textit{Optimal rates of entropy estimation over Lipschitz balls},
+author manuscript, version 4.
+\href{https://arxiv.org/abs/1711.02141v4}{arXiv:1711.02141v4}.
+\bibitem{YangBarron}
+Y.~Yang and A.~Barron,
+\textit{Information-theoretic determination of minimax rates of
+convergence}, Ann. Statist. \textbf{27} (1999), 1564--1599.
+\href{https://doi.org/10.1214/aos/1017939142}{doi:10.1214/aos/1017939142}.
+\end{thebibliography}
+\end{document}

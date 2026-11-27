@@ -1,0 +1,91 @@
+\section{Fourier estimates and the range \texorpdfstring{\(s\ge d\)}{s >= d}}
+\label{sec:large-s}
+
+Identify the torus \(\T^d\) with the half-open unit cube and use
+its volume-one measure. Periodize the zero extension of \(f\).
+It agrees with \(f\) almost everywhere on the cube and has
+\(\|f\|_2\le L\) and mean one. We use \(f\) also for the periodized
+function from here on. Constants \(c,C\) may change between
+occurrences and depend on the fixed class parameters. Further
+fixed parameters in the construction are chosen in terms of those
+parameters.
+
+For \(|u|\le\sqrt d\), the supports of the terms of the
+whole-space difference lie in a fixed box. Hölder's inequality in
+that box bounds its \(L^2\) norm by \(C|u|^s\). The periodization
+of the difference is the torus difference. Only a bounded number
+of terms can overlap at each point in this periodization, so
+Cauchy--Schwarz gives \(\|\Delta_u^r f\|_{2,\T^d}\le C|u|^s\).
+On a Fourier mode \(k\in\mathbb Z^d\), the centered difference
+has multiplier \((2i\sin(\pi k\cdot u))^r\). For \(M\ge1\), average
+the squared norm over \(u\in[-M^{-1},M^{-1}]^d\). At any
+frequency \(|k|_\infty>M\), one coordinate of \(k\cdot u\)
+ranges over an interval longer than two as that coordinate of \(u\)
+varies. The average of \(|2\sin(\pi k\cdot u)|^{2r}\) is
+bounded below by a positive constant, by retaining the complete
+periods in that interval. Parseval and Tonelli give
+\begin{equation}\label{eq:tail}
+   \sum_{|k|_\infty>M} |\widehat f(k)|^2\le C M^{-2s}.
+\end{equation}
+All estimates use the original difference order, including \(r=s\)
+at integer \(s\). In the real Fourier shell
+\(2^{j-1}<|k|_\infty\le2^j\) the dimension is \(O(2^{jd})\)
+and the \(L^2\) norm is \(O(2^{-js})\). Use the shell
+\(0<|k|_\infty\le1\) when \(j=0\).
+
+To construct the mixture, fix \(M=2^J\), \(\zeta=M^{-s}\).
+In shell \(j\le J\) choose a deterministic
+\(\zeta 2^{-(J-j)}\)-net of its coefficient ball of radius
+\(C2^{-js}\). The logarithm of the covering cardinality of a
+radius-\(R\) ball in dimension \(m\) at resolution \(\rho\)
+is at most \(m\log(1+2R/\rho)\), by comparing disjoint
+radius-\(\rho/2\) balls centered at a maximal separated set.
+Sum one choice from each shell and adjoin the constant one to
+obtain the family \(\mathcal G_M\). Its members have uniformly
+bounded \(L^2\) norms. By orthogonality and \eqref{eq:tail},
+each \(f\) has a representative \(g\in\mathcal G_M\)
+with \(\|g-f\|_2\le C\zeta\). The covering count is
+\[
+ \log|\mathcal G_M|\le C\sum_{j=0}^J2^{jd}(1+J-j)\le C M^d .
+\]
+For each \(g\), put \(q_g=(g_++\zeta)/Z_g\),
+where \(Z_g=\int(g_++\zeta)\) is in \([1,C]\). For a representative
+\(g\) of \(f\), truncation reduces the distance to \(f\),
+\(|Z_g-1|\le \|g_++\zeta-f\|_1\le C\zeta\), and hence
+\[
+ \|q_g-f\|_2\le C\zeta,\qquad
+ \chi^2(f,q_g):=\int (f-q_g)^2/q_g\le C\zeta .
+\]
+The floor \(q_g\ge c\zeta\) applies to the likelihoods used
+in the estimator.
+
+We use the finite-net likelihood comparison of Yang and Barron
+\cite[Section~2, equation (2)]{YangBarron} as a pointwise
+comparison and bound both signs in \(L^2\). Let
+\(Q_n=|\mathcal G_M|^{-1}\sum_{g\in\mathcal G_M} q_g^{\otimes n}\)
+and use \(\widehat H=-n^{-1}\log Q_n(X_1,\ldots,X_n)\).
+It is finite and measurable on the product cube. If
+\(B=n^{-1}\log(f^{\otimes n}/Q_n)(X_1,\ldots,X_n)\), then
+\(\E_f e^{-nB}\le1\), by integrating the density \(Q_n\)
+over the set where \(f^{\otimes n}>0\). Thus
+\(\PP_f(B<-t)\le e^{-nt}\) and \(\|B_-\|_2\le \sqrt{2}/n\).
+For the representative \(q=q_g\), the corresponding term
+in the mixture bounds \(B\) above by
+\[
+ n^{-1}\log|\mathcal G_M|
+ +n^{-1}\sum_{i=1}^n\log(f(X_i)/q(X_i)).
+\]
+The last average has mean in \([0,\chi^2(f,q)]\) by Jensen
+and \(\log z\le z-1\). Its variance is at most \(C\zeta/n\)
+since \(z(\log z)^2\le C(z-1)^2\) for \(z\ge0\), by
+continuity at \(0,1\) and the bound at infinity. Consequently
+\(\|B_+\|_2\le CM^d/n+C\zeta+C\sqrt{\zeta/n}\).
+The empirical mean of \(-\log f(X_i)\) has mean \(H(f)\)
+and standard deviation at most \(Cn^{-1/2}\), since
+\(z(\log z)^2\le C(1+z^2)\). Adding \(B\) to that mean yields
+\[
+ \|\widehat H-H(f)\|_{L^2(\PP_f)}
+ \le C\bigl(n^{-1/2}+M^{-s}+M^d/n\bigr).
+\]
+Take \(M\asymp n^{1/(s+d)}\) dyadic to get \(Cn^{-1/2}\)
+for every fixed \(s\ge d\), including \(s=d\).

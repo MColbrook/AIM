@@ -1,0 +1,172 @@
+\section{The conditional estimator at large counts}\label{sec:high}
+
+The second moment just proved suffices when the mass of a cell
+is small. At larger counts we will obtain a conditional variance
+bound \(C n^\eta\log^3(n)/N\) on the good pilot event.
+Fix \(\gamma>0\) and suppose
+\(n^\gamma\le N\le n\) with \(w=w_I\) a probability density.
+We keep \(t=\log n/N\), \(q=q_I\), \(e=\|w-q\|_2\) and
+\(r_*=t/K^2\). Split the observations into three independent
+fractions of sizes comparable to \(N\), for a coarse pilot,
+the interval pilot, and the correction group.
+
+The empirical ordinary projection from the coarse pilot,
+with coefficients rounded at scale \(n^{-3}\), gives a
+polynomial \(a\) of uniformly bounded coefficients. It satisfies
+\begin{equation}\label{eq:coarse}
+ \|a-q\|_\infty\le \delta=L_3\sqrt{\log n/N}
+\end{equation}
+with probability at least \(1-n^{-M}\) for any prescribed
+\(M\) with \(L_3\) sufficiently large, by concentration
+of the fixed bounded basis scores. For a fixed \(D_0>2\), set
+\[
+ S=\{x\in W: |a(x)|\le D_0\delta\},\qquad T=W\setminus S .
+\]
+Conditional on the coarse pilot, take intervals for the
+ordinary scores and the finite dictionary of kernels obtained
+by starting the cuts of Section~\ref{sec:angular} at \(S\).
+This includes the indicator of \(S\).
+The real interval pilot is independent of \(a\) and the
+correction sample. On \eqref{eq:coarse},
+\(\sup_S|q|\le(D_0+1)\delta\) and \(|S|\le C\delta^\beta\),
+by Lemma~\ref{lem:sublevel}. If \(\inf_W|q|\ge1/2\),
+then \(S\) is empty for \(n\) large enough, uniformly in
+\(n^\gamma\le N\le n\).
+
+On \(S\) include the linear term \(\int_S q\log\delta\).
+Include the nonlinear correction from the angular construction
+only if \(|S|>0\) and the interval pilot's mean
+\(\widehat p_S\) of \(\one_S\) satisfies
+\(\widehat p_S\le L_4\delta\). On valid pilots, retention implies
+\(p_S\le C\delta\), and rejection of a positive-volume \(S\)
+implies \(p_S\ge (L_4/2)\delta\) for sufficiently large \(n\).
+Both implications follow from
+\(|\widehat p_S-p_S|\le C(\sqrt{tp_S}+t)\) with \(t=o(\delta)\).
+Choose \(L_4/2>D_0+2\).
+In the rejected case,
+\[
+ \sqrt{|S|}\,e\ \ge\ \int_S(w-q)
+   \ \ge\ p_S-(D_0+1)\delta |S|\ \ge\ c\delta .
+\]
+Omitting the centered nonlinear term then incurs bias at
+most \(C\delta|S|\le Ce\), since \(|q|\le(D_0+1)\delta\)
+on \(S\). A null set contributes zero.
+
+For a retained \(S\), start with both support and evaluation
+region equal to \(S\), with its weighted kernel and initial
+mass \(p_S\). In \eqref{eq:piece} the ordinary projection
+\(q\) in the linear term still uses all of \(\Omega\).
+Use \(a_*=\delta\), \(r_*=t/K^2\) and the same Bernstein
+intervals throughout the \(J\) selections. The stage bias and mass
+recurrence from Section~\ref{sec:angular} give
+\(C r_*(1+(p_S/r_*)^\epsilon)+Ce\) for the filter.
+The replacement of regional projections by \(q\) is needed
+from the first weighted stage. At each stage the estimate is
+\(C r_*+C\log n\sqrt{|S|}\,e\), by \eqref{eq:regional},
+\(\|q\|_\infty\le C\), and \(r_*\gtrsim (n\log n)^{-1}\).
+It is \(O(r_*+e)\) because \(|S|\le C\delta^\beta\),
+whose positive power dominates the logarithm for
+\(N\ge n^\gamma\). Thus the centered angular part, with the
+gate included, has absolute conditional bias at most
+\begin{equation}\label{eq:high-bias}
+ C\bigl[e+r_*(1+r_*^{-\epsilon}
+                        \one_{\{\inf_W|q|<1/2\}})\bigr],
+\end{equation}
+using \(p_S\le1\) and the empty-set assertion.
+
+On valid retained histories, all descendant restricted-score
+intervals have endpoints \(O(\delta)\), since their means
+are bounded by \(p_S\le C\delta\) and their widths are
+\(O(\sqrt{t p_S}+t)\). Thus the signed filter acts on
+\(G(c)\) for \(|c|\le C\delta\) on the rectangles, giving
+coefficient norm at most \(C^K\delta\log n\).
+The global score intervals have widths \(O(\delta)\).
+The ordinary projection evaluated at their lower endpoints
+differs from \(q\) by \(O(\delta)\) uniformly, by the bounded
+basis and fixed dimension. Its value on \(S\) is \(O(\delta)\).
+Thus the constant term and each coefficient of that
+projection as an affine expression in normalized scores is
+\(O(\delta)\) on \(S\). Integrating its product with
+\(\log(\ell_j r_*/\delta)\) on any descendant preserves a
+coefficient norm bound \(C\delta\log n\), by the log-envelope
+integral in Section~\ref{sec:angular}. Sum over the finite
+paths via the outgoing probability norm bound. The factorial
+moment argument now bounds the conditional second moment of
+the centered angular estimate by \(C_J^K\delta^2\log^2 n\).
+Its absolute conditional mean is at most \(C\delta\log n\):
+at the true rectangle coordinates, the absolute filtered
+value is bounded by \(C\delta\log n\) by the uniform
+\(L^1\) norm of the filter, and the path weights form a
+probability distribution with fixed depth.
+
+On \(T\), put \(z=(q-a)/a\). On \eqref{eq:coarse} we have
+\(|z|\le 1/D_0\). The pointwise identity
+\[
+ \psi(q)=q\log|a|+a(1+z)\log(1+z)
+\]
+allows the use of the Taylor polynomial of
+\((1+z)\log(1+z)\) at zero of degree
+\(M_T=\lceil C_T\log n\rceil\). Its nonconstant coefficients
+have magnitude at most one. The integrated error is bounded by
+\(C D_0^{-M_T}\int_T |a|\), which is \(o(r_*)\) for fixed
+large \(C_T,D_0\). Estimate each power of \(z(x)\) using
+ordered products of the score
+\[
+ Y(x,X)=\frac{K_\Omega(x,X)-a(x)}{a(x)}
+\]
+on the correction sample, with its actual falling factorial
+denominator. Since \(\E_w K_\Omega(x,X)=q(x)\), the mean
+of this signed score is \(z(x)\). On \(T\), the denominator
+\(a(x)\) is separated
+from zero by the observed threshold on every pilot history.
+On \eqref{eq:coarse}, \(|\E Y|\le1/D_0\) and
+\(\E Y^2\le C(1+N/(D_0^2\log n))\).
+The overlap count from Section~\ref{sec:angular} now retains the
+unshared means. For an order-\(k\) statistic, also with one
+observation omitted, it bounds the second moment by
+\[
+ \bigl(D_0^{-2}+Ck(1+N/(D_0^2\log n))/N\bigr)^k .
+\]
+For \(k\le M_T\) this is at most \(\rho^{2k}\) with
+a fixed \(\rho<1\), by choosing \(D_0\) sufficiently large
+after \(C_T\), and then \(n\) large. The correction size
+is of order \(N\) and \(M_T=o(N)\).
+
+To bound the variance of the integrated Taylor statistic,
+replace one correction observation \(X_i\) by an independent
+copy \(X_i'\). At order \(k\) the difference of the ordered products statistic equals
+\((k/m_c)(Y(x,X_i)-Y(x,X_i'))\) times the order-\((k-1)\)
+statistic omitting \(i\). Here \(k/m_c=k(m_c-1)_{k-1}/(m_c)_k\).
+The factors are independent conditional on the pilots, and
+\[
+ a(x)\bigl(Y(x,X_i)-Y(x,X_i')\bigr)
+  = K_\Omega(x,X_i)-K_\Omega(x,X_i') .
+\]
+Thus after multiplication by \(a(x)\) the first factor has
+\(L^2\) norm at most \(C k/m_c\)
+by the fixed kernel bound. The other factor has \(L^2\) norm
+at most \(\rho^{k-1}\). Minkowski for the integral and
+Taylor sum gives \(O(1/m_c)\) for the \(L^2\) effect of
+each replacement. The Efron--Stein variance bound (the sum
+of these squared replacement effects divided by two) gives
+variance \(O(1/N)\).
+
+Estimate the linear contribution \(\int_T q\log|a|+
+\int_S q\log\delta\) by averaging the corresponding
+kernel integral on the correction sample. The score is bounded
+by \(C\log n\) from the threshold on \(T\) and the uniform
+bound on \(a\). This term has conditional variance
+\(O(\log^2 n/N)\). The three parts may share the correction
+observations, so add their conditional standard deviations.
+The resulting statistic estimates \(\int_W\psi(q)\) with
+bias bounded by \eqref{eq:high-bias} and variance
+\begin{equation}\label{eq:high-var}
+ C n^\eta\log^3 n/N
+\end{equation}
+on the stated good actual pilots, after decreasing \(c_K\)
+as necessary. Its conditional mean is bounded by \(C\log n\):
+use the retained angular mean bound above, the uniform Taylor
+mean bound from the geometric series at \(|z|\le 1/D_0\),
+and the bounded linear score. The estimator is defined by
+observed conditions, and the probability of failure of the
+analytic pilot bounds is \(O(n^{-M})\) conditional on \(N\).
