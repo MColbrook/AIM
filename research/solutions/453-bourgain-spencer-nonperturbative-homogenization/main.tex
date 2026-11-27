@@ -1,0 +1,534 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs,esint}
+\usepackage{lmodern,microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+
+\newtheorem{theorem}{Theorem}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\emergencystretch=2em
+\allowdisplaybreaks[1]
+\hypersetup{pdftitle={Bourgain--Spencer accuracy at finite ellipticity contrast},pdfauthor={Kaiwen Jin}}
+\title{Bourgain--Spencer accuracy at finite ellipticity contrast}
+\author{Kaiwen Jin\thanks{\href{mailto:yui.ui.siki@gmail.com}{yui.ui.siki@gmail.com}}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove the Bourgain--Spencer error bound for a divergence-form elliptic equation whose symmetric coefficient is a bounded, uniformly elliptic function of a smooth finite-range Gaussian field. For each such law in dimension \(d\ge2\), one set of \(2d\) constant tensors gives a deterministic approximation of the mean gradient with global \(L^2\) error \(O_{f,\eta}(\varepsilon^{2d-\eta})\) for every smooth compactly supported forcing and every \(0<\eta<1\). The argument applies to arbitrary fixed ellipticity contrast. An exact decomposition into cell averages and fine fluctuations yields a coarse edge operator whose coefficients at fixed lattice offsets converge in probability as the cells grow. Local sparsity and coercivity control its short and long propagation, and a Bloch representation transfers the resulting decay to the original continuum response.
+\end{abstract}
+
+\section{Introduction and result}\label{sec:introduction}
+Consider an elliptic equation with a rapidly varying random coefficient. The expectation of its gradient is translation invariant as an operator on the forcing. This invariance permits a deterministic response, and the question is how accurately a finite collection of constant tensors can describe it.
+
+In Duerinckx's formulation, the Bourgain--Spencer conjecture concerns the mean gradient with an error of order \(\varepsilon^{2d-\eta}\) in \(L^2\) \cite[Conjecture 1]{Duerinckx}. For Gaussian-generated fields his weak-corrector approach gives order \(\varepsilon^{d-\eta}\) in a mixed local \(L^2\) and global \(L^p\) norm, for small \(\eta>0\) and \(p>d/\eta\) \cite[Theorem 2]{Duerinckx}. For fields with stretched-exponential mixing, Duerinckx, Lemm and Pagano prove the error bound of order \(\varepsilon^{2d-\eta}\) at small contrast, provided \(\eta>\delta K\), where \(\delta\) is the contrast parameter \cite[Corollary 3.6(i) and Remark 2.3]{DLP}. Conlon and Dabkowski prove a second-difference comparison for the averaged massive Green function at arbitrary contrast for i.i.d. lattice coefficients \cite[Theorem 1.1]{ConlonDabkowski}. In the continuum Gaussian model below we obtain the \(\varepsilon^{2d-\eta}\) bound for every fixed ellipticity contrast. A single family of tensors works for all losses \(\eta\). The formulation is the recursive proxy in \href{https://github.com/MColbrook/AIM/blob/b2ec0fac559f532fc0ed04fce81deea0ce07c68b/problems/453-bourgain-spencer-nonperturbative-homogenization.md}{AIM Problem 453}.
+
+For a proof at finite contrast, the coarse energy has to retain its coercivity even where the coefficient differs substantially from its typical value. We use an exact decomposition by cell averages. On large cells the normalized edge operator concentrates on each fixed stencil. At a given separation, a local modification gives a deterministic density bound on the sites with large deviations. The modification changes averaged inverse pairings between cells separated by \(r\) by \(O(r^{-A})\) for any fixed \(A\), using spatial energy tails and the probability of modification. The inverse built from short steps is bounded by coercivity. Long steps between the regions where coefficients are large have a small norm by the density bound. Centering also cancels paths that have a cut between independent sets of noise variables, and the remaining paths have the needed decay.
+
+The coarse forcing and the reconstruction of the potential both contain a random lift. Keeping both lifts gives a scalar Bloch formula for the continuum response, from which the common Taylor coefficients and the recursion follow.
+
+\begin{theorem}\label{thm:main}
+Fix an integer \(d\ge2\). Let \(\xi\) be vector-valued spatial Gaussian white noise, \(C_0\) a smooth compactly supported matrix-valued kernel, and \(a_0\) a \(C_b^1\) map into real symmetric matrices with \(\lambda I\le a_0\le I\) for some \(\lambda>0\). Set \(a=a_0(C_0*\xi)\). For deterministic \(f\in C_c^\infty(\mathbb R^d;\mathbb R^d)\), let \(\nabla u_\varepsilon\in L^2\) solve \[
+ -\nabla\cdot a(x/\varepsilon)\nabla u_\varepsilon=\nabla\cdot f .
+\] There are real constant tensors \(A^1,\ldots,A^{2d}\) depending only on the law of \(a\), with \(A^1\) symmetric positive definite, such that the gradients defined by \[
+\begin{aligned}
+-\nabla\cdot A^1\nabla v_1 &=\nabla\cdot f,\\
+-\nabla\cdot A^1\nabla v_n &=
+ \nabla\cdot\sum_{k=2}^n A^k_{j_1\cdots j_{k-1}}
+ \partial_{j_1}\cdots\partial_{j_{k-1}}\nabla v_{n+1-k},
+ \qquad 2\le n\le 2d,
+\end{aligned}
+\] satisfy, with \(U_\varepsilon=\sum_{n=1}^{2d}\varepsilon^{n-1}v_n\), \[
+ \|\mathbb E\nabla u_\varepsilon-\nabla U_\varepsilon\|_{L^2(\mathbb R^d)}
+ \le C_{f,\eta}\varepsilon^{2d-\eta}
+ \qquad(0<\varepsilon\le1).
+\] Each \(A^k_{j_1\cdots j_{k-1}}\) is a \(d\times d\) matrix. Repeated spatial indices are summed. A single family works for every \(f\) as above and every \(0<\eta<1\). The constants can depend on \(d\), the law and its ellipticity. Both the physical and proxy equations specify their gradients uniquely in the distributional energy sense.
+\end{theorem}
+
+Throughout, inner products are conjugate-linear in the first argument. The Euclidean transform has phase \(e^{-ik\cdot x}\) and prefactor \((2\pi)^{-d/2}\). The microscopic lattice uses counting measure, lattice phase \(e^{-ik\cdot j}\), and dual measure \(dk/(2\pi)^d\). Lattice cutoffs use \(|z|_\infty\) and \(\langle z\rangle=(1+|z|_\infty^2)^{1/2}\). When a generic coefficient is used in the deterministic estimates it is measurable, symmetric, and lies between \(\lambda I\) and \(I\).
+
+\section{Coarse variational equation}\label{sec:fine}
+
+\subsection{Cell averages and fine localization}\label{subsec:fine}
+
+The homogeneous energy space is \(\mathscr V=\{v\in H^1_{\mathrm{loc}}(\mathbb R^d):\nabla v\in L^2\}/\mathbb C\). It is complete. Anchoring each potential by its mean on a fixed cube, the Poincaré estimate makes an energy Cauchy sequence locally \(H^1\)-Cauchy on each larger cube. The resulting limits agree and have the given \(L^2\) gradient. For coarse sequences the corresponding argument uses differences along finite paths from one fixed site. A uniformly positive, symmetric, bounded form on either Hilbert space or a closed subspace has a bounded inverse on its dual. Riesz representation gives a bounded self-adjoint operator \cite[Theorem 1]{TaoHilbert}. The positive lower bound gives a closed range and trivial kernel, so self-adjointness implies the range is dense and hence full. This gives existence, uniqueness and the usual energy bound whenever the load is continuous.
+
+The statement below is that the cell averages have a bounded local lift, the energy splits into the \(a\)-orthogonal mean and fine equations, and the fine response to cell-supported vector or scalar loads is exponentially localized in cell distance. Constants in the normalized unit-cell estimates depend only on \(d,\lambda\).
+
+\subsubsection{A finite-range lift of cell averages}\label{a-finite-range-lift-of-cell-averages}
+
+For \(L\ge1\) use the cubes \(C_j=L(j+[0,1)^d)\). Work with the homogeneous gradient energy space \(\mathscr V\) and cell averages \(M_j u\), regarded modulo a constant sequence. Set \(W=\ker M\), represented by functions with zero mean on each cell. Cell Poincaré gives \(\|w\|_2\lesssim L\|\nabla w\|_2\) on \(W\). Comparing means on the union of two neighboring cubes gives \[
+L^{d-2}\sum_{|i-j|_1=1}|M_i u-M_j u|^2\lesssim\|\nabla u\|_2^2 .
+\] There exists a deterministic bounded lift \(J\) from the space of coarse sequences with this finite nearest-neighbor energy to \(\mathscr V\), with \(M J=I\). Choose translates \(\theta_j\) of a fixed local nodal function forming a partition of unity, and interpolate \(\sum m_j\theta_j\). Correct its mean in each cell with a translate of a fixed smooth interior bubble of cell average one. The correction for \(C_i\) uses only coarse differences in a fixed neighborhood. Constants are exactly preserved. Scaling, local finite overlap, and the discrete Cauchy--Schwarz bound along each short nearest-neighbor path give \[
+\|\nabla Jm\|_2^2\lesssim L^{d-2}\sum_{|i-j|_1=1}|m_i-m_j|^2.
+\] This also defines \(Jm\) locally for sequences modulo constants.
+
+For real potentials write \(B_a(u,v)=\int\nabla u\cdot a\nabla v\). The complex form is obtained by sesquilinear extension. For each \(m\) let \(J_a m\) minimize \(B_a(u,u)\) subject to \(M u=m\). It equals \(Jm+w_a(m)\), with \(w_a(m)\in W\) uniquely solved by energy coercivity. The minimizing lift is \(B_a\)-orthogonal to \(W\). Define \[
+S^a(m,n)=B_a(J_a m,J_a n).
+\] It is uniformly comparable to the discrete nearest-neighbor energy times \(L^{d-2}\), by the two inequalities above and the original ellipticity. For the massless equation of the target, with \(F_f(v)=-\int f\cdot\nabla v\), the exact decomposition is \[
+u=w_f^a+J_a m,\qquad
+B_a(w_f^a,w)=F_f(w)\quad(w\in W),\qquad
+S^a(m,n)=F_f(J_a n)\quad(\text{all coarse }n).
+\] No inverse on the constant potential is used. The coarse sources \(F_f(J_a n)\) and the observed lift both depend on the same coefficient as \(S^a\).
+
+\subsubsection{Exponential localization is uniform at finite contrast}\label{exponential-localization-is-uniform-at-finite-contrast}
+
+Let \(\psi_j^a=J_a\delta_j\), where \(\delta_j\) is the unit coarse sequence. Its energy norm is \(O(L^{d/2-1})\), and the deterministic trial lift \(J\delta_j\) has bounded cell support. For \(w=w_a(\delta_j)\), take a Lipschitz cutoff \(\vartheta\) equal to one on a ball containing the source and zero outside a larger ball, with transition of width a fixed multiple of \(L\). Set \(w_{\rm cut}=(I-JM)(\vartheta w)\). At cells where \(\vartheta\) is constant, the mean of \(\vartheta w\) is zero, so the correction \(JM(\vartheta w)\) is supported in the transition annulus enlarged by a fixed number of cells. Its gradient norm is controlled by the gradient norm of \(w\) in the enlarged annulus. To see this, bound each changed mean by \(L^{-d/2}\|w\|_{L^2(C_i)}\), use cell Poincaré, and apply the local lift bound. The derivative \(\nabla\vartheta\) costs \(O(L^{-1})\) and is covered by the same Poincaré inequality.
+
+The trial function agrees with \(w\) near the forcing and vanishes after the transition annulus. If \(E_n\) is the exterior gradient energy of \(w\) past the \(n\)-cell neighborhood, canceling the unchanged inner energy and load gives \(E_{n+b}\le C(E_n-E_{n+b})\), with fixed buffer width \(b\). Iteration gives exponential decay with constants depending on \(d,\lambda\). Thus \[
+\|\nabla\psi_j^a\|_{L^2(\operatorname{dist}(\cdot,C_j)>nL)}\lesssim
+L^{d/2-1}e^{-c n}\qquad(n\ge1).
+\] The same proof applies to the fine response \(w_f^a\) for \(f\) supported on one cell, with prefactor \(C\|f\|_2\). Thus \(w_f^a\) has a uniformly exponentially localized gradient transfer at fixed \(L\). The coarse matrix entries obey \[
+|S^a_{ij}|\lesssim L^{d-2}e^{-c|i-j|},
+\] by splitting each energy integral into a part far from \(C_i\) and a part far from \(C_j\). For two fields \(a,\widetilde a\), orthogonality to \(W\) gives the exact difference
+
+\begin{equation}\label{eq:energy-difference}
+S^a_{ij}-S^{\widetilde a}_{ij}
+=\int \nabla\psi_i^a\cdot (a-\widetilde a)\nabla\psi_j^{\widetilde a}.
+\end{equation}
+
+The difference of the corresponding lifting gradients is also bounded in energy by the localized forcing \((a-\widetilde a)\nabla\psi_i^{\widetilde a}\), using the equation on \(W\). Thus replacing remote coefficient variables outside a ball of radius \(nL\) about both endpoints changes normalized local matrix entries and lifting gradients by \(O(e^{-cn})\).
+
+The annular comparison applies to a scalar \(L^2\) load supported in one cell because cell Poincaré bounds its action on \(W\). The fine potential has the same cellwise tail bound in \(L^2\) by its zero cell means.
+
+For the random field, the white noise in a deterministic set is the Gaussian family restricted to \(L^2\) tests supported there. Disjoint sets give independent sigma-fields. Translated tests give stationarity in law. A jointly measurable version of the convolved field can be obtained by expanding its translated kernel tests in an orthonormal basis of white noise's \(L^2\) space. On any bounded cube the truncated sums converge in \(L^2\) of probability times the cube, by the white-noise isometry, Parseval in the kernel variable, and the uniform squared norm of the translated tests. The limits on nested cubes agree almost everywhere. Applying the same construction in the closed subspace of tests supported in a fixed noise neighborhood yields the same restriction where the full tests are supported in it. Each deterministic freezing used below consequently gives a jointly measurable admissible coefficient. All statements about agreement of coefficient fields need only almost-everywhere equality. If \(C_0\) has support contained in radius \(r_\xi\), then the coefficient \(a_L(x)=a(Lx)\) on a rescaled set \(F\) only uses white noise within distance \(r_\xi\) of \(LF\). When retaining the noise in a rescaled region \(H\), the physical noise mask is \(LH\). In particular disjoint enlarged rescaled regions give independent sigma-fields.
+
+\subsection{A uniformly coercive operator on all edge fields}\label{subsec:edges}
+
+For every admissible coefficient \(b\), the exact coarse energy on discrete gradients extends to a symmetric uniformly positive bounded operator \(\mathcal A^b\) on all real edge fields in \(\ell^2(\mathbb Z^d;\mathbb R^d)\). We then complexify that operator. The variational formulas in this section use real potentials and edge fields. The extension, its fine potential lift \(N_b\), and its fine gradient lift have exponential spatial tails and uniform exponential sensitivity to changes in the coefficient outside enlargements of the input and output cells. The estimates also hold for the scalar fine inverse \(F_W\) from \(L^2\) physical loads to \(W\). In the following displayed construction the letter \(a\) denotes the particular admissible coefficient in use.
+
+Fix coarse physical scale \(L\) and rescale space so that its cells have side one. The coefficient in these coordinates is \(a_L(x)=a(Lx)\). All unqualified spatial maps below are on the unit cells. Write \(D\) for the oriented nearest-neighbor difference \(D_k m(i)=m(i+e_k)-m(i)\). The cell average \(M\), lift \(J\), fine space \(W\), and energy complement are those of \S\ref{subsec:fine}.
+
+\subsubsection{An exponentially local edge right inverse}\label{an-exponentially-local-edge-right-inverse}
+
+For vector fields \(v\in L^2(\mathbb R^d;\mathbb R^d)\) define \[
+(P_0 v)_k(i)=\int_{C_i}\int_0^1 v_k(x+t e_k)\,dt\,dx .
+\] Then \(P_0\nabla u=DMu\), by the Sobolev fundamental theorem along lines. Each row is a triangular hat on two neighboring cells in direction \(k\), with a unit box in the transverse directions. The rows with different directions are orthogonal as vector fields. For a fixed direction their Gram matrix has diagonal \(2/3\) and nearest-neighbor entries \(1/6\) along that direction. Thus \(P_0P_0^*\) is positive and has Fourier symbol \((2+\cos\xi_k)/3\) on the \(k\)th component. Its inverse has exponential block decay, for example using a convergent finite-band Neumann series. Therefore \(C_{\rm ri}=P_0^*(P_0P_0^*)^{-1}\) is an exponentially local right inverse of \(P_0\).
+
+The fixed finite-range interpolation and bubble lift of \S\ref{subsec:fine} preserves constants. On each cell the coefficient of any \(m_i\) in its gradient can be rewritten as a coefficient of a difference with a fixed neighboring mean. Each such difference is a short sum of components of \(Dm\), using translates of fixed paths for the relevant offsets. This defines a bounded finite-range linear operator \(L_0\) on all edge fields with \(L_0Dm=\nabla Jm\). Put \[
+C=L_0+C_{\rm ri}(I-P_0 L_0).
+\] It is exponentially local and bounded, with \(P_0C=I\) and \(CDm=\nabla Jm\). In particular, \(\nabla W\subset\ker P_0\) and the lift of every edge field is controlled by its cell-difference datum.
+
+\subsubsection{Positive coefficient and local reconstruction}\label{positive-coefficient-and-local-reconstruction}
+
+For edge field \(h\in\ell^2(\mathbb Z^d;\mathbb R^d)\), let \(N_a h\in W\) solve \[
+\int\nabla w\cdot a(\nabla N_a h+C h)=0\qquad(w\in W).
+\] This is the fine energy equation with vector input \(a C h\). Define the symmetric edge operator \(\mathcal A^a\) by the polarized quadratic form \[
+\langle h,\mathcal A^a h\rangle
+ =\min_{w\in W}\int (C h+\nabla w)\cdot a(C h+\nabla w).
+\] Since \(P_0(C h+\nabla w)=h\), its lower bound is \(\lambda\|h\|^2/\|P_0\|^2\), and testing \(w=0\) gives the deterministic upper bound \(\|C\|^2\|h\|^2\). This holds on all edge fields. On \(h=Dm\) it coincides with the exact cell-average energy. The potential lift is \(J_a m=Jm+N_a Dm\).
+
+The exponential unit-cell tail estimate for the fine equation holds for any square-integrable vector source in one cell, with deterministic constants depending only on \(d,\lambda\). Combining it with the exponential decay of \(C\), by decomposing the vector source into cells, gives exponential off-diagonal bounds for \(N_a\) into \(L^2\) cells and for \(\nabla N_a\) into vector cells. Use the zero mean of \(N_a h\) on each cell for its value estimate. The corrected gradient lift \(C+\nabla N_a\) satisfies the same exponential block bound. The matrix of \(\mathcal A^a\) does too by the energy formula and convolution of exponential weights.
+
+For two coefficient fields, the difference of \(N_a\) on unit edge inputs is controlled in energy by \((a-\tilde a)(C h+\nabla N_{\tilde a}h)\), from its equation on \(W\). For \(\mathcal A^a\) the exact bilinear difference between edge inputs \(h,g\) is \[
+\langle h,(\mathcal A^a-\mathcal A^{\tilde a})g\rangle
+=\int (C h+\nabla N_a h)\cdot(a-\tilde a)(C g+\nabla N_{\tilde a}g).
+\] Both formulas imply exponential sensitivity to changes outside growing fixed-radius neighborhoods of the input and output cells. The fine inverse \(F_W\) from scalar \(L^2\) sources to potentials in \(W\) has the same exponential locality. Cell Poincaré bounds the pairing of a cell-supported source with energy tests in \(W\). Precisely the same tail cutoff then applies to its minimizing fine solution.
+
+For example, with a unit edge input \(h\) at \(j\), the difference equation for \(N_bh-N_{\tilde b}h\) is forced by \((b-\tilde b)(Ch+\nabla N_{\tilde b}h)\). If \(b,\tilde b\) agree within \(s\) cells of \(j\), the energy norm of that load is \(O(e^{-cs})\). The same calculation for a unit \(L^2\) source in a physical cell gives the claim for \(F_W\). The fixed radius of \(C_0\) in rescaled units converts exterior coefficient sensitivity to exterior white-noise sensitivity. The estimates are deterministic and uniform over all admissible fields, which allows their use after every deterministic noise restriction.
+
+\subsection{Concentration of fixed stencils}\label{subsec:stencil}
+
+For fixed finitely supported \(h\), the scalar \(\langle h,\mathcal A^{a_L}h\rangle\) tends in probability, as \(L\to\infty\), to \(\langle h,\mathcal A^{a_{\mathrm{hom}}}h\rangle\). The deterministic symmetric matrix \(a_{\mathrm{hom}}\) lies between \(\lambda I\) and \(I\). This implies convergence in probability of all blocks on any fixed finite stencil, by polarization on coordinate edge inputs.
+
+\subsubsection{Affine Dirichlet estimates}\label{affine-dirichlet-estimates}
+
+In the two estimates of Armstrong, Kuusi and Mourrat used below \cite[Propositions 1.7 and 1.10]{AKM}, \(b\) is a random measurable real symmetric field with \(I\le b\le\Lambda I\), \(\Lambda>1\). Its law is stationary under \(\mathbb Z^d\) translations, and the restriction sigma-fields of sets at Euclidean distance at least one are independent. These are the normalized assumptions of \cite[(0.6)--(0.11)]{AKM}. Write \(Q_m=(-3^m/2,3^m/2)^d\). On a cube \(U\), \(v(U,p)\in p\cdot x+H_0^1(U)\) minimizes its energy, and \[
+ \mu(U,p)=\tfrac12\fint_U \nabla v(U,p)\cdot b\nabla v(U,p)
+         =\tfrac12 p\cdot b(U)p .
+\] Let \(\bar\mu(p)=\inf_{m\ge0}\mathbb E\mu(Q_m,p)=\tfrac12p\cdot\bar b p\) and \(\omega(m)=\sup_{|p|\le1}(\mathbb E\mu(Q_m,p)-\bar\mu(p))\). These are the affine minimizers and limiting form of (1.7)--(1.10), Definition 1.2 and (1.27). With \(Z_{n,m}=3^n\mathbb Z^d\cap Q_m\), the quantity in (1.39) is \[
+ \mathcal D_m=\left[\sum_{n=0}^m3^{n-m}
+     \left(\frac1{|Z_{n,m}|}\sum_{z\in Z_{n,m}}
+                     |b(z+Q_n)-\bar b|\right)^{1/2}\right]^2 .
+\] For \(h\in L^2(U)\), the normalized \(H_D^{-1}(U)\) norm of (0.31) is the dual norm for the pairing \(\fint_U h\phi\) with test norm \(|U|^{-1/d}(\fint_U|\phi|^2)^{1/2}+(\fint_U|\nabla\phi|^2)^{1/2}\) on \(H^1(U)\). For vector fields one may use component norms. This is the normalized dual pairing of \cite[(0.31)]{AKM}.
+
+The finite-cube estimate (1.30) is uniform in \(m\). There is a finite \(C(d,\Lambda)\) such that for every integer \(m\ge0\),
+
+\begin{equation}\label{eq:affine-mean}
+\mathbb E|b(Q_m)-\bar b|\le C(d,\Lambda)\big(3^{-dm/4}+\omega(\lfloor m/2\rfloor)\big).
+\end{equation}
+
+The affine-test estimate (1.40) holds for every \(m\ge0\) and \(p\) in the unit ball,
+
+\begin{equation}\label{eq:affine-tests}
+3^{-2m}\left(\|\nabla v(Q_m,p)-p\|_{H_D^{-1}(Q_m)}^2+
+    \|b\nabla v(Q_m,p)-\bar b p\|_{H_D^{-1}(Q_m)}^2\right)
+    \le C(d,\Lambda)\big(3^{-2m}+\mathcal D_m\big).
+\end{equation}
+
+The estimate controls the gradient and flux defects of the affine tests used to identify the limit of the constrained energy. It holds almost surely with quantities from the same law. The affine minimizer is linear in \(p\), so the estimate passes to the sphere by continuity from the interior.
+
+\subsubsection{Homogenization of the constrained energy}\label{homogenization-of-the-constrained-energy}
+
+Choose \(R>2r_\xi\) and set \(b(y)=\lambda^{-1}a(Ry)\). Two \(b\)-regions at distance at least one have disjoint noise neighborhoods. The law is stationary and \(I\le b\le \lambda^{-1}I\), so \eqref{eq:affine-mean} and \eqref{eq:affine-tests} apply with any \(\Lambda>\max(1,\lambda^{-1})\), in the cube and norm conventions above. Affine trial functions and averaging the gradients of zero-trace perturbations give \(I\le b(Q_m)\le\lambda^{-1}I\). Joining the affine minimizers on the \(3^d\) subcubes of the next triadic cube shows \(\mathbb E b(Q_{m+1})\le\mathbb E b(Q_m)\). The corrections to the affine function extend by zero from their tiles, and integer stationarity identifies the expected energy of each tile. The limiting matrix is \(\bar b\) from \eqref{eq:affine-mean}. The trace of \(\mathbb E b(Q_m)-\bar b\) tends to zero by evaluating the quadratic forms on the coordinate vectors, so \(\omega(m)\to0\). Thus \(e_m=\mathbb E|b(Q_m)-\bar b|\to0\) by \eqref{eq:affine-mean}. Weighted Cauchy--Schwarz and stationarity of the tiles yield \[
+ \mathbb E\mathcal D_m\le C\sum_{n=0}^m3^{n-m}e_n\longrightarrow0.
+\] The sum converges to zero by splitting into a fixed initial part and a uniformly small tail.
+
+Let \(Q\) be a fixed centered axis-aligned open cube containing the closures of all the domains to be used. For \(L\to\infty\) set \(t=L/R\) and choose the smallest \(m\ge0\) with \(tQ\subset Q_m\), using the side length of the aligned cube. The ratio \(3^m/t\) is bounded above and below eventually. Set \(w_{L,j}(x)=t^{-1}v(Q_m,e_j)(tx)\) minus its mean on \(Q\). Since \(a_L(x)=\lambda b(tx)\), it is \(a_L\)-harmonic in \(Q\). Affine trial energies and the bounded volume ratio bound its gradient and flux in \(L^2(Q)\). For a compactly supported smooth vector test \(\phi\) in \(Q\), the test \(\phi(y/t)\), extended by zero to \(Q_m\), has normalized \(H^1(Q_m)\) norm at most \(C_\phi/t\). In changing variables from \(Q_m\) to \(Q\), the pairing with the normalized dual norm costs the factor \(t^{-d}|Q_m|\), which is bounded. The factor \(3^m\) from the negative norm in \eqref{eq:affine-tests} times the test norm \(O(t^{-1})\) is bounded. This bounds the tested gradient and flux differences from \(e_j,\lambda\bar b e_j\) by \(C_\phi(3^{-m}+\mathcal D_m^{1/2})\).
+
+For any deterministic sequence \(L\to\infty\), select a subsequence on which the expectations of \(\mathcal D_m\) are summable. On one probability-one event the \(\mathcal D_m\) tend to zero along it. The tested estimates then hold on that event for all these finitely many directions and all \(\phi\), using density and uniform \(L^2\) bounds. The mean-zero \(w_{L,j}\) converge weakly in \(H^1(Q)\) and strongly in \(L^2(Q)\) to the mean-zero affine functions of gradient \(e_j\), and the fluxes converge weakly to \(a_{\mathrm{hom}}e_j\) with \(a_{\mathrm{hom}}=\lambda\bar b\). The strong compactness on a cube follows by approximating functions by their averages on a subcube mesh of size \(s\); on an \(H^1\)-bounded set the \(L^2\) error is \(O(s)\) by the cube Poincaré inequality. The finite-dimensional mesh averages are compact on bounded sets. The weak limit with the prescribed mean and gradient is unique, which identifies every strong cluster point.
+
+\textbf{Forced Dirichlet equations on the same event.} Fix an outcome on this event, a bounded Lipschitz \(O\) with closure inside \(Q\), a trace representative \(u_*\in H^1(O)\), and a fixed \(\ell\in (H_0^1(O))'\). Write \(u_L-u_*\in H_0^1(O)\) for the Dirichlet solution of \(-\nabla\cdot a_L\nabla u_L=\ell\). The energy bound and zero extension of \(u_L-u_*\) to \(Q\) give, on any further subsequence, a subsequence with \(u_L\rightharpoonup u\) in \(H^1(O)\), \(u_L\to u\) strongly in \(L^2(O)\), and \(J_L=a_L\nabla u_L\rightharpoonup J_{\mathrm{lim}}\) in \(L^2(O;\mathbb R^d)\). The limit has the same trace and \(-\nabla\cdot J_{\mathrm{lim}}=\ell\).
+
+For \(\chi\in C_c^\infty(O)\), test the forced equation with \(\chi w_{L,j}\) and the harmonic equation with \(\chi u_L\). Symmetry identifies their cross-gradient integrals. In the first equation the cross term tends to \[
+ \ell(\chi w_j)-\int_O w_j J_{\mathrm{lim}}\cdot\nabla\chi
+    =\int_O\chi e_j\cdot J_{\mathrm{lim}} .
+\] The limit uses the weak \(H^1\) convergence for \(\ell\), and strong \(L^2\) convergence against the weak flux for the other term. In the second equation the same cross term tends to \[
+ -\int_O u\, (a_{\mathrm{hom}}e_j)\cdot\nabla\chi
+    =\int_O\chi\, e_j\cdot a_{\mathrm{hom}}\nabla u .
+\] Thus \(J_{\mathrm{lim}}=a_{\mathrm{hom}}\nabla u\). Uniqueness in the affine trace space identifies \(u,J_{\mathrm{lim}}\) for all cluster subsequences, proving the full convergence along the selected sequence on this event. The proof on the event works for every such \(O,u_*,\ell\), since the event was chosen for the enclosing cube's finitely many harmonic tests.
+
+\textbf{The constrained minima.} Let \(g=Ch\), using the edge lift from \S\ref{subsec:edges}. Its deterministic exponential spatial tail permits truncation to a fixed compactly supported input with arbitrarily small, uniform error in the minimum. Indeed the trial zero gives bounded energy of the minimizer, so Cauchy--Schwarz compares the objectives after perturbing \(g\) in \(L^2\) at either minimizer. For compact \(g\), the exponential decay of the fine minimizer in \S\ref{subsec:fine}, followed by the cutoff \(I-JM\), permits restricting to a fixed large box \(O\) formed of full unit cells, with zero trace and zero cell averages, with arbitrarily small, uniform error.
+
+Approximate the resulting \(g\) on \(O\) by vectors constant on finitely many subcubes forming a partition of \(O\) up to null sets. The same comparison on bounded energy sets deals with this approximation uniformly. On one subcube with constant vector \(g_0\), the objective uses the gradient of \(v=w+g_0\cdot x\). A bounded minimizing sequence of the original \(w\)'s has a weak \(H^1\) and strong \(L^2\) subsequential limit, retaining its trace and cell means. To prove the local lower bound at \(v\), take the preceding Dirichlet solutions \(v_L\) with limit \(v\), trace \(v\), and fixed source \(\ell=-\nabla\cdot a_{\mathrm{hom}}\nabla v\). For any nonnegative compact test \(\chi\), integration by parts shows that the cross term of \(a_L\nabla v_L\) with the minimizing sequence's gradient tends to the integral of \(\chi\,\nabla v\cdot a_{\mathrm{hom}}\nabla v\). In detail, for the sequence of potentials \(v'_L\rightharpoonup v\) the integral is \[
+ \ell(\chi v'_L)-\int v'_L\,a_L\nabla v_L\cdot\nabla\chi ;
+\] the first term has the weak \(H^1\) limit and the second has the strong-potential/weak-flux limit. The same argument with \(v'_L=v_L\) gives the energy term for the recovered potential. The pointwise inequality \(p\cdot a_Lp\ge2p\cdot a_Lq-q\cdot a_Lq\) and exhaustion by \(\chi\) give the lower bound on that subcube. Sum over the subcubes.
+
+For an upper bound at any fixed admissible \(w\), choose on each subcube the Dirichlet recovery with trace \(w+g_0\cdot x\) and its fixed homogenized source, then subtract \(g_0\cdot x\). Testing by \(v_L-v\) gives
+\[
+ \int \nabla v_L\cdot a_L\nabla v_L
+   =\ell(v_L-v)+\int \nabla v\cdot a_L\nabla v_L
+   \longrightarrow\int \nabla v\cdot a_{\rm hom}\nabla v
+\]
+on that subcube, by weak \(H^1\) convergence and weak flux convergence. Since each difference has zero trace, the pieces glue and give strong \(L^2(O)\) convergence to \(w\). Correct the finitely many cell means with interior mean-one bubbles. The corrections go to zero in \(H^1(O)\), so their energy cost tends to zero. The minimized energies for the piecewise constant input converge on the selected event. The uniform input and box comparisons then yield convergence in probability for the original minimum. Explicitly, for any tolerance choose the approximations with deterministic errors below one third of that tolerance and apply the subsequence criterion to the fixed approximate problem. Real coordinate vectors and their sums suffice for polarization of the real symmetric matrices.
+
+\subsection{Deterministic reference projection}\label{subsec:reference}
+
+Let \(A_0=\mathcal A^{a_{\rm hom}}\) on all edge fields. It is deterministic and invariant under lattice translations by the choices of \(J\) and \(L_0\) above. It is positive with the uniform bounds just proved, and exponentially localized. Its Fourier symbol extends analytically to a complex strip, and \(A_0^{1/2}\), \(A_0^{-1/2}\) are exponentially localized as well. For example use a contour for the square root and inverse square root enclosing the positive real spectral interval and stable under sufficiently small complex shifts of the analytic symbol.
+
+Set \[
+B=A_0^{-1/2}\mathcal A^{a_L}A_0^{-1/2}-I,\qquad
+\mathcal G=\operatorname{ran}(A_0^{1/2}D),\qquad
+K_*=\operatorname{proj}_{\mathcal G}.
+\] Then \(I+B\) has uniform upper and lower bounds on all edge fields. It and \(B\) retain exponential block decay and exponential sensitivity to exterior noise. The finitely many nearest entries of \(B\) converge in probability to zero as \(L\to\infty\), by truncating the deterministic exponential conjugating factors before using the fixed-stencil convergence. The normalized gradient equation has energy \(I+B\) on \(\mathcal G\).
+
+For \(k\ne0\) on the lattice torus the projection symbol is \[
+k_*(k)=
+\frac{[A_0^{1/2}(k)D(k)]\,[A_0^{1/2}(k)D(k)]^*}
+     {|A_0^{1/2}(k)D(k)|^2}.
+\] It is smooth away from the sole zero of \(D\), and its derivatives satisfy \(\|\partial^\alpha k_*(k)\|\le C_\alpha |k|^{-|\alpha|}\) near zero. A smooth dyadic partition there gives kernel estimates \(\|k_*(z)\|\lesssim\langle z\rangle^{-d}\) and \(\|k_*(z+e_i)-k_*(z)\|\lesssim\langle z\rangle^{-d-1}\). Indeed on a frequency annulus at radius \(2^{-j}\), summation by parts or smooth Fourier integration bounds coefficients by \(C_M 2^{-jd}(1+2^{-j}|z|)^{-M}\). The multiplier of a unit difference contributes \(O(2^{-j})\) with the corresponding derivative bounds. Sum over \(j\) and add the smooth torus remainder. Larger differences follow by telescoping, for shifts at most a fixed fraction of the separation. This is the reference kernel used in \S\ref{subsec:weight}.
+
+The range here is closed because the norm of \(A_0^{1/2}Dm\) is equivalent to the complete difference norm of the coarse potential. To identify its projection by the displayed symbol, first take finitely supported sequences. Orthogonality to their image is equivalent to \([A_0^{1/2}(k)D(k)]^*\hat h(k)=0\) almost everywhere, by density of trigonometric polynomials. For every finite-energy coarse potential its difference field is curl-free on the lattice, so its transform is proportional to \(D(k)\) for almost every \(k\neq0\). Hence the image of all such potentials is contained in the same fiber line as the finitely supported image, and the asserted projection follows.
+
+\section{Weighted propagation and centered chains}\label{sec:weight}
+
+\subsection{Long-step bounds}\label{subsec:weight}
+
+Use the lattice formulation, with finite-dimensional edge values. Let \(K_*\) be a deterministic convolution, bounded on \(\ell^2\), with kernel satisfying \[
+|k(z)|\le C\langle z\rangle^{-d},\qquad
+|k(z+h)-k(z)|\le C |h|\langle z\rangle^{-d-1}\quad (2|h|\le |z|,\ z\ne0).
+\] For the continuum constant-coefficient gradient kernel the same argument uses integrals. Suppose a nonnegative weight \(W\le C\) satisfies
+
+\begin{equation}\label{eq:density-cap}
+\sum_{u\in B_M(x)} W(u)^2 \le C\delta M^d \qquad\text{for all }x.
+\end{equation}
+
+Covering larger balls by comparable \(M\)-balls extends \eqref{eq:density-cap} to every radius \(\ge M\) with the same order of density constant. For \(T\ge M\), let \(E_T\) average over a ball of radius \(T\) (or a fixed symmetric smooth approximation with nonnegative mass one and size \(CT^{-d}\)). Cauchy--Schwarz with \eqref{eq:density-cap}, followed by summation over the center, gives \(\|E_T W\|_{\ell^2\to\ell^2}\lesssim\sqrt\delta\). Thus \(W H_T W\) has norm at most \(C\delta\) for \(H_T=E_T K_* E_T\). The long cutoff is \(K_{*,>4T}=H_T-(H_T)_{\le4T}+(K_*-H_T)_{>4T}\).
+
+On \(|z|>4T\), the block of \(K_*-E_T K_*E_T\) has size \(C T|z|^{-d-1}\), by the first differences of \(k\) and the support of the averaging. On \(|z|\le4T\), the kernel of the averaged operator has size \(C T^{-d}\), by the energy norm and the two averaging kernels' \(\ell^2\) norms. On blocks of side \(T\) the multiplication weights have square means at most \(C\delta\). Each residual block is bounded by its kernel supremum times the product of the two weighted square sums. Row and column sums of these block norms are \(O(\delta)\): the short residual has bounded block range and the far residual has summable \(d+1\) decay. Hence every long truncation satisfies
+
+\begin{equation}\label{eq:long-bound}
+\|W K_{*,>4T}W\|_{\ell^2\to\ell^2}\lesssim\delta .
+\end{equation}
+
+The same proof gives each block far enough apart a bound \(C\delta\langle i-j\rangle^{-d}\) on any block grid of side at least \(T\). For adjacent blocks the global small norm supplies the similar bound when the long cutoff is at \(4M\). This also controls rectangular coordinate cutoffs, after adjusting fixed numerical radii.
+
+For random \(W\) satisfying \eqref{eq:density-cap} in every realization, let \(\mathsf P\) be sitewise probability expectation and \(Q=I-\mathsf P\). Since \(\mathsf P\) commutes with \(K_*\), \[
+W Q K_{*,>4T} Q W=W K_{*,>4T} W-W\mathsf P K_{*,>4T}\mathsf P W .
+\] The second term has the same bound: \(w(u)=(\mathbf E W(u)^2)^{1/2}\) satisfies \eqref{eq:density-cap} and multiplication \(W\mathsf P\) factors through the scalar weight \(w\) and a sitewise isometry. Thus \eqref{eq:long-bound} holds on \(\ell^2(L^2(\Omega))\) for the centered long step, even for nonstationary locally frozen fields.
+
+\textbf{Unweighted \(\ell^{p_0}\) input.} For \(1<p_0<2\), the kernel estimates in \S\ref{subsec:reference} and the \(\ell^2\) bound imply an \(\ell^{p_0}\) bound with Hilbert-valued data. Here are the needed details. For a finitely supported input \(f\) on the microscopic grid, take maximal dyadic cubes with average of \(\|f\|\) larger than \(t>0\). Their sum of volumes is at most \(\|f\|_1/t\), and their averages are at most \(2^d t\) by the parent bound. Split \(f\) into the cube means and the original values outside the cubes, plus the mean-zero differences \(b_Q\) on the cubes. The mean part has squared \(\ell^2\) norm \(O(t\|f\|_1)\), since singleton cubes resolve point values. Outside a fixed enlargement of \(Q\), subtract the kernel at a fixed site in \(Q\). The sum of its differences over that exterior is bounded independently of the side: it is bounded by \(\sum_{|z|\gtrsim \ell(Q)} C\ell(Q)\langle z\rangle^{-d-1}\). Hence the exterior \(\ell^1\) norm of \(K_* b_Q\) is \(O(\|b_Q\|_1)\). Chebyshev for the two parts and the measure of the enlarged cubes give the weak \((1,1)\) bound. Applying this bound to \(\|f\|>t\) and the strong \((2,2)\) bound to the other part gives the distribution bound \[
+ \#\{\|K_* f\|>2t\}\ \lesssim\
+ t^{-1}\|f\mathbf1_{\|f\|>t}\|_1+
+ t^{-2}\|f\mathbf1_{\|f\|\le t}\|_2^2.
+\] Integrating against \(p_0 t^{p_0-1}\) and interchanging nonnegative sums proves strong \((p_0,p_0)\), since the resulting integrals at each site are bounded by a constant depending on \(p_0\) times \(\|f\|^{p_0}\). The \(\ell^2\) bound for Hilbert-valued fields is obtained by expanding in an orthonormal basis. For a microscopic far cutoff the smoothing in the proof of \eqref{eq:long-bound} gives an \(\ell^{p_0}\) bound uniform in the cutoff: the averaged operator is bounded by the unweighted estimate and the residual now has uniformly summable microscopic coefficients. The same argument applied in the reverse order or to the adjoint gives the corresponding adjoint bounds. The block truncation and interpolation consequences used for the exact random operators are verified in \S\ref{subsec:joint}.
+
+\subsection{Decay of centered block chains}\label{subsec:chain}
+
+Fix an integer \(r_0\ge1\), let \(\mathscr H\) be a Hilbert space, and let \(1<p<2\) with \(\theta=2d/p'\) and \(0<7\theta<d\). Blocks are indexed by \(\mathbb Z^d\), and distances for cutoffs use the \(\ell^\infty\) metric. For each \(1\le j\le n\), a link \(L_j\) has a weight \(\beta_j>0\). Suppose that for all \(i,i'\) and all finite upper cutoffs \(T\ge0\), \[
+\|(L_j)_{ii'}\|\le\beta_j\langle i-i'\rangle^{-d},\qquad
+\|L_j^{\le T}\|_{\ell^p(\mathscr H)\to\ell^p(\mathscr H)}
++\|(L_j^{\le T})^*\|_{\ell^p(\mathscr H)\to\ell^p(\mathscr H)}
+\le\beta_j,
+\] with the same bounds for \(T=\infty\). Fixed constants in these hypotheses may be absorbed in \(\beta_j\). Each factor at a vertex is block diagonal and has uniform block norm at most a fixed \(C_0\). The vertices and links may vary along the chain. Include fixed left and right test vectors of norm one supported on the endpoint blocks \(x,y\). Let \(T(z_0,\ldots,z_n)\) be the resulting path amplitude, with \(z_0=x,z_n=y\). Assume
+
+\begin{equation}\label{eq:independent-cut}
+T(z_0,\ldots,z_n)=0
+\quad\text{if some } j\in\{0,\ldots,n-1\}
+\text{ has }|z_i-z_{i'}|_\infty>r_0
+\text{ for every }i\le j<i'.
+\end{equation}
+
+The same holds after multiplying vertex factors by arbitrary scalar multipliers of modulus at most one on each block, since this only rescales each path amplitude. Then
+
+\begin{equation}\label{eq:chain-bound}
+\left|\sum_{z_1,\ldots,z_{n-1}}T(z_0,\ldots,z_n)\right|
+\le C^n\Big(\prod_{j=1}^n\beta_j\Big)\langle x-y\rangle^{-3d+7\theta}.
+\end{equation}
+
+The constant depends on \(d,p,r_0,C_0\) and is independent of the number of blocks or of the dimension of the block space. The proof also applies with bounded block maps at the endpoints from different Hilbert spaces. The path grouping below adapts the argument of \cite[Lemma 4.6, Lemma 5.5 and Section 5.4]{DLP}.
+
+\subsubsection{Truncated subchains}\label{truncated-subchains}
+
+A subchain of \(m\ge1\) links, with any prescribed separate upper distance cutoffs on the links, has block decay
+
+\begin{equation}\label{eq:subchain}
+C^m\Big(\prod_{\rm subchain}\beta_j\Big)\langle u-v\rangle^{-d+\theta}.
+\end{equation}
+
+The unrestricted estimate from the \(\ell^p\) norms already suffices when \(|u-v|_\infty\le C m\), after absorbing a polynomial in \(m\) into \(C^m\). Otherwise group paths by the first link at the largest dyadic length, namely the first with length in \((D,2D]\) with all links at most \(2D\). Here \(D\) is dyadic and \(D\ge|u-v|_\infty/(2m)\). Once this link is fixed, the restrictions on all other links are upper cutoffs. They leave the preceding and following signed subchains intact. The selected link has norm at most \(C\beta_jD^{-d}\). Each of its endpoints lies in a ball of radius \(2mD\) around the appropriate endpoint of the whole subchain. Pair with fixed unit vectors at the two outer endpoints. On either side, the sum of the norms of the resulting vectors over the ball is bounded by \((C mD)^{d/p'}\) times the \(\ell^p\) operator bound of the signed subchain, using its adjoint on the left. The estimate is uniform over both unit vectors. Sum over the selected link and dyadic \(D\) to obtain \eqref{eq:subchain}. A zero-length subchain is a diagonal factor. For fixed finite length all expansions are absolutely convergent entrywise, by convolution of \(\langle z\rangle^{-d}\) with itself finitely many times. The elementary bound is \(C_m\langle z\rangle^{-d}\log^{m-1}(2+|z|)\), obtained inductively by separating each of the two near regions and the exterior dyadic shells.
+
+\subsubsection{Imposing the disjointness constraints without summing absolute paths}\label{imposing-the-disjointness-constraints-without-summing-absolute-paths}
+
+If an estimate of a restricted path sum is stable under all scalar contractions at the vertices, adding the constraint \(|z_i-z_{i'}|_\infty>r_0\) for all \(i\in E,i'\in F\) multiplies that estimate by at most \(C_{r_0,d}^{|E|+|F|}\). To prove this for a fixed shift \(a\) with \(|a|_\infty\le r_0\), apply phases \(e^{i\phi_{z_i+a}}\) for \(i\in E\) and \(e^{-i\phi_{z_i}}\) for \(i\in F\). The independent phases have the Poisson kernel measure on the circle with \(m\)th Fourier coefficient \(t^{|m|}\), for real \(|t|<1\). Write \(n_E(u)\) and \(n_F(u)\) for the counts of the positive and negative phases at \(u\). The phase expectation is \(t^{\sum_u |n_E(u)-n_F(u)|}\), so the sum is a polynomial of degree at most \(|E|+|F|\). This highest power comes from disjoint shifted sets. By the alternating extreme values of the degree-\(m\) Chebyshev polynomial, the leading coefficient of a real polynomial of degree \(m\) is bounded by \(2^{|E|+|F|}\) times the supremum on \([-1,1]\), by the Chebyshev leading-coefficient inequality. For a complex polynomial first multiply by a phase making that coefficient real and take the real part. Perform this for every one of the finitely many allowed shifts \(a\). Previously inserted contractions may be left in place, so this can be iterated for finitely many pairs of index sets. Absolute entrywise summability justifies the phase expectations. The estimate does not require any positivity of the path amplitudes.
+
+For the Chebyshev coefficient bound, subtract from the real polynomial a multiple of \(T_m\) with the same leading term. The polynomial \(T_m\) has leading coefficient \(2^{m-1}\) for \(m\ge1\), by its elementary three-term recursion, and alternates between \(1\) and \(-1\) at the \(m+1\) points \(\cos(j\pi/m)\). If the leading coefficient were greater in absolute value than \(2^{m-1}\) times the supremum norm, the difference would alternate at those points and have at least \(m\) zeros despite having degree less than \(m\). This also proves the weaker factor \(2^m\) used above. Degree zero is immediate.
+
+\subsubsection{Two long links and two coincidence pairs}\label{two-long-links-and-two-coincidence-pairs}
+
+Let \(r=|x-y|_\infty>C n r_0\), since the global bound for the smaller case is enough. Group paths by the first largest-dyadic link \(j_1\) at length in \((D,2D]\) as in \eqref{eq:subchain}. Condition \eqref{eq:independent-cut} implies a coincidence \(|z_i-z_{i'}|_\infty\le r_0\) with \(i<j_1\le i'\) if links are numbered by their right endpoints. Choose the lexicographically first such pair. The earlier excluded pairs are described by two disjointness constraints: all earlier left indices against all right indices, and the chosen left against the earlier right ones. Next consider only links outside the segment from \(i\) to \(i'\). They must include a link of length \(> r/n\), since the two coincident sites are within \(r_0\) and there are at most \(n-1\) remaining links. Choose the first such outside link \(j_2\), with upper cutoffs on earlier outside links. A second coincidence \((l,l')\) exists across \(j_2\) by \eqref{eq:independent-cut}. Again choose its lexicographically first pair. The preceding phase argument lets us discard all earlier-pair exclusion constraints at cost \(C^n\), if the estimate with only the two selected coincidence constraints and the link length restrictions is stable under blockwise contractions.
+
+For that estimate, extract the two long factors using their block bounds \(\beta_{j_1}D^{-d}\) and \(C\beta_{j_2}(r/n)^{-d}\). Mark the remaining vertices at the endpoints, the four sites in the two coincidence pairs and the endpoints of the selected links. Use \eqref{eq:subchain} on each unmarked intervening chain. Retain the associated support constraints with length at most \(2nD\), since every link was at most \(2D\). After reversing the indices if needed, \(j_2\le i<j_1\le i'\). The two cuts leave the three index intervals
+\[
+    [0,j_2-1]\quad\big|\quad[j_2,j_1-1]\ni i\quad\big|\quad[j_1,n]\ni i'.
+\]
+The pair \(i,i'\) joins the last two intervals. Since \(l<j_2\le l'\), the pair \(l,l'\) joins the first to one of the other two. Thus identifying the two pairs gives a tree on the retained vertices, with \(x,y\) connected. If two marks denote the same index, the intervening segment has length zero and is contracted. To implement identification, sum over the bounded shifts \(z_{i'}-z_i,z_{l'}-z_l\) and use comparability of all weights under those shifts.
+
+A selected-link endpoint that is not also an endpoint \(x,y\) or a coincidence marker is a leaf of the remaining tree. Sum it by the truncated bound \(\sum_{|z|\le CnD}\langle z\rangle^{-d+\theta}\lesssim (nD)^\theta\). There are at most four such leaves. After removing them the tree has at most two other free vertices besides \(x,y\). If the \(x\)-to-\(y\) path has \(\ell\in\{1,2,3\}\) edges, at most \(3-\ell\) remaining free vertices are off that path and can be summed as leaves within radius \(CnD\). Summing over the path vertices costs \(C\langle r\rangle^{-d+\ell\theta}\) by \(\ell\)-fold convolution of the untruncated weight, since \(3\theta<d\). Consequently the bound is, up to fixed polynomial factors in \(n\), \[
+C^n\Big(\prod_j\beta_j\Big)
+r^{-d}D^{-d+(7-\ell)\theta}\langle r\rangle^{-d+\ell\theta}.
+\] This uses no signs except the uniform boundedness of the signed subchains, as required. Sum \(D\ge r/(2n)\), and sum the polynomial number of marked-index choices. Since \(7\theta<d\), the result is \eqref{eq:chain-bound}, absorbing all \(n\)-polynomials in \(C^n\).
+
+\section{Decay of the centered coarse response}\label{sec:mask}
+
+\subsection{Comparison with a sparse mask}\label{subsec:mask}
+
+Fix \(0<\zeta<1\), dimension \(d\ge2\), and the original admissible coefficient law. Adopt the normalized coarse coefficient \(I+B\), reference projection \(K_*\), and spatially exponential localization and concentration from \S\S\ref{subsec:edges}--\ref{subsec:reference}. Let \(P\) be probability expectation, \(Q=I-P\), and \(K_Q=QK_*Q\). For a coefficient \(I+C\) that is positive uniformly on all edge fields, define the extended inverse \(R_C\) to be the inverse of its compression to \(\operatorname{ran}K_Q\), extended by zero on the orthogonal complement.
+
+An allowed endpoint operator \(U\) maps edge fields to either edge fields or physical \(L^2\) cell fields. It may depend on the coefficient and may be evaluated samplewise. Its matrix has uniformly exponentially decaying block norms and exponentially local dependence on the Gaussian noise. The precise latter condition is that its fixed block changes by at most \(C e^{-cs}\) if the coefficient noise is changed only outside a distance \(s\) from the union of its two cells. An exponential tail of the blocks and this bound allow an approximation by a finite spatial band and finite noise dependence with uniformly exponentially small operator-norm error. Examples are \(U=B\) and \(U=N_a A_0^{-1/2}\). The analogous requirements are imposed on \(V\).
+
+We prove, for one sufficiently large fixed \(L\) depending on \(\zeta\) and the law, the joint estimate
+
+\begin{equation}\label{eq:joint-decay}
+\big\|\chi_i P U R_B V^* P\chi_j\big\|
+\le C_{\zeta,L}\langle i-j\rangle^{-3d+\zeta}.
+\end{equation}
+
+Here the input and output cells have side one in rescaled coordinates and may have different Hilbert spaces. The coarse representation is exact for every \(L\). The large fixed \(L\) gives concentration of the local entries.
+
+\subsubsection{Energy and weighted tails}\label{energy-and-weighted-tails}
+
+For any uniformly positive \(I+C\), choose constants \(c>0\), \(0\le\rho<1\), and a normalized self-adjoint \(E\) bounded by one, with \(I+C=c(I+\rho E)\). The constants are uniform over fields with a common spectral interval. Then \[
+R_C=c^{-1}(I+\rho K_Q E Q)^{-1}K_Q
+\] on the full spatial and probability Hilbert space. The displayed extension is valid because \(K_Q E Q\) maps into \(\operatorname{ran}K_Q\). The summands \(K_*,E\) are bounded with norms at most one on \(L^p(\Omega;\ell^2)\), pointwise in the probability variable for \(E\). The projection \(Q\) has norm at most \(2^{1-2/p}\) there for \(p\ge2\), by complex interpolation \cite[Theorem 21]{TaoInterpolation}, between its exact \(L^2(\Omega;\ell^2)\) norm one and its \(L^\infty(\Omega;\ell^2)\) bound two. For Hilbert-valued inputs the scalar strip proof applies to the dual pairing of simple test vectors by keeping their unit directions fixed and interpolating the scalar norms. Hölder gives the endpoint estimates, and density gives the bound at interior exponents. Thus for all \(p>2\) sufficiently close to two the same energy inverse is uniformly bounded on \(L^p(\Omega;\ell^2)\) by the convergent normalized series.
+
+For \(C=B\) the inverse is also bounded after conjugation by the spatial weight \(\langle k-j\rangle^\alpha\), for some \(\alpha>0\) independent of \(j,L\). To verify this first truncate the weight from above. Exponential localization of \(B\) makes its conjugation difference \(O(\alpha)\) by row and column sums. For \(K_*\), split the domain into dyadic annuli about \(j\). Between annuli at indices \(m,n\) with \(|m-n|\ge2\), the kernel bound gives an unweighted absolute-block bound \(C2^{-d|m-n|/2}\) by the two volume factors. The conjugation difference multiplies this by at most \(C\alpha(1+|m-n|)2^{\alpha|m-n|}\). For comparable annuli of size \(2^m\), the weight ratio minus one is bounded by \(C\alpha\min(1,|u-v|/2^m)\). Its product with the kernel has row and column sums \(O(\alpha)\) on those annuli. Sum the annular block bounds and choose \(\alpha\) sufficiently small. Conjugating \(I+\rho K_Q E Q\) then changes it by less than half its uniform inverse stability margin. The weight-truncation limit gives the asserted bound. The constants use the uniform ellipticity and localization of the normalized coarse coefficient and reference only.
+
+Consequently when an input \(h=Q V^*\chi_j f\) with deterministic \(\|f\|=1\) is used, \(R_B h\) has spatial energy tail \(C R^{-\alpha}_b\) outside a ball of radius \(R_b\) at \(j\), and is uniformly bounded in stochastic \(L^p\) energy for some \(p>2\). The localized lift \(V^*\) gives the requisite weighted input bound and uniform pointwise energy bound.
+
+\subsubsection{A finite-range mask for each separation}\label{a-finite-range-mask-for-each-separation}
+
+Let \(r=|i-j|_\infty\) be large and \(A\) be a prescribed large accuracy exponent. For each retained entry, keep the physical white noise in \(L\) times the union of the two rescaled neighborhoods of radius \(C_A\log(2+r)\) about its cells, and set the noise to zero outside. Truncate the spatial band at the same order. This gives a symmetric \(B^r\) such that \[
+\|B^r-B\|\le C_A r^{-A}
+\] uniformly in the noise. Use the same neighborhoods for adjoint entries. The uniform exponential tail and row and column sums give the operator estimate. This construction is a measurable function of the original white noise with a fixed maximum noise neighborhood for each entry. The same approximations for \(U,V\) are valid uniformly. The rules apply for any deterministic freezing of noise outside a set as well, since the resulting coefficient is still uniformly elliptic. All such freezes keep the original deterministic reference and projection fixed. Increasing constants for bounded \(r\) allows us to assume \(I+B^r\) has the same uniform interval with a fixed slack.
+
+Choose a small density parameter \(\delta>0\), to be specified by the operator estimates. Fix a stencil large enough that the part of \(B\) outside it has row and column sums at most \(\delta\). This is possible by the uniform exponential bound. Declare a site bad if the maximum of the norms of the finitely many stencil blocks incident to it, each evaluated with a fixed finite neighborhood of noise and a fixed small approximation error, exceeds a threshold of order \(\delta\) divided by the stencil cardinality. Choose the fixed noise radius so that the error in a relevant entry is much smaller than that threshold. For \(r\) large the approximation by \(B^r\) has the same margin. The operator made of those stencil entries with both sites good has norm at most \(C\delta\) by Schur's test. All other stencil entries are supported, in both indices, on the bad set enlarged by the fixed stencil radius. Denote this enlarged bad set by \(E_0\). Enlarge the good operator by the entire exponential tail, including its tiny approximation errors. This yields the splitting \[
+B^r=G_r+D_0,\qquad \|G_r\|\le C\delta,\qquad D_0=\chi_{E_0}D_0\chi_{E_0},\quad \|D_0\|\le C.
+\] The constants in these inequalities are independent of \(\delta\), after using the threshold and the fixed tail size as described. The stencil labels depend on noise in fixed-size neighborhoods independent of \(r\). By fixed-stencil concentration choose \(L\) so large that the probability of membership in \(E_0\) is as small as required compared with \(\delta\) and the fixed dependence count.
+
+Set \(M=C_A'\lceil\log(2+r)\rceil\), large enough to dominate the spatial band and noise radius of \(B^r\). For each site \(z\), take \(\Pi(z)=0\) if the proportion of sites of \(E_0\) in \(B_{2M}(z)\) exceeds \(\delta\), and one otherwise. The masked coefficient is \(C=\Pi B^r\Pi\), which has \(I+C\) uniformly positive by splitting along \(\Pi\) and \(I-\Pi\). Set \(E_1=\{z:\Pi(z)=1\}\cap E_0\). If an \(M\)-ball meets \(E_1\), it is contained in a \(2M\)-ball around one retained bad site, so \(E_1\) has density \(O(\delta)\) in every \(M\)-ball for every realization. All decisions are local functions of noise with range \(O(M)\). The density cap, locality and positivity hold also after deterministic exterior noise freezes.
+
+The event that any site is masked in a polynomial-size box has probability smaller than any prescribed power of \(r^{-1}\) for large \(r\). To see this, color the original fixed-range labels into finitely many lattice classes in each of which the defining noise neighborhoods are disjoint. Within a color the indicators are independent, with probabilities bounded by a common sufficiently small constant. The Chernoff exponential-moment bound for each color gives \(C e^{-c M^d}\) for exceeding the local density threshold. A union bound over a polynomial box proves the assertion, since \(d\ge2\).
+
+The resolvent identity is \(R_C-R_B=-R_C(C-B)R_B\), with the projections supplied by the endpoints of each inverse. Choose a box radius \(R_b=r^K\) about \(j\) with \(K\alpha>A\). On the complement of the rare event just bounded, \(\Pi B^r\Pi-B^r\) annihilates inputs supported in the smaller box at distance more than the finite band width from its boundary. The original inverse tail controls the remaining input. For unit deterministic tests \(g_i,f_j\) in the endpoint cells, put \(h_i=U^*\chi_i g_i\) and \(h_j=V^*\chi_j f_j\). In the joint Hilbert pairing with \(h_i\), apply the full stochastic \(L^2\) bound of \(R_C\) after splitting its input \((C-B^r)R_B h_j\) by the masking event \(\mathcal M\). The contribution of the event is bounded by
+\[
+ \|\mathbf1_{\mathcal M}(C-B^r)R_B h_j\|_{L^2(\Omega;\ell^2)}
+ \le C\,\mathbb P(\mathcal M)^{1/2-1/p}\qquad(p>2)
+\]
+by Hölder and the \(L^p(\Omega;\ell^2)\) bound on \(R_Bh_j\). The difference \(B^r-B\) is small without a mask. This proves an \(O(r^{-A})\) error in any pairing with the specified endpoint inputs. Replacing \(U,V\) by their finite-range approximants costs \(O(r^{-A})\) by the same uniform energy bounds. We keep the notation \(U,V\) for these approximants in the remaining proof.
+
+\subsection{The short inverse and separated cuts}\label{subsec:joint}
+
+Let \(W=\sqrt\delta+\mathbf1_{E_1}\) and \(J_W=W^{-1} C W^{-1}\). The splitting of \(C\) into \(\Pi G_r\Pi\) and the operator supported on \(E_1\) implies \(\|J_W\|\le C\) uniformly in \(\delta,r\): the former part costs \(O(\delta)\) times \(\delta^{-1}\), and \(W\ge1\) on the latter support. The operator \(J_W\) is banded and depends locally on noise, with both radii \(O(M)\). The weight satisfies \eqref{eq:density-cap} of \S\ref{subsec:weight}.
+
+Split \(K_*=K_s+K_l\) at a fixed large multiple of \(M\), by retaining the near microscopic kernel in \(K_s\). Let \(B_s=WQK_s QW\), \(B_l=WQK_l QW\). The sparse long-step lemma gives \(\|B_l\|\le C\delta\). Algebra of compressed inverses gives
+
+\begin{equation}\label{eq:short-woodbury}
+R_C=K_Q-K_Q W(I+J_W(B_s+B_l))^{-1}J_W W K_Q .
+\end{equation}
+
+Indeed on the range of \(K_Q\) the perturbation of the identity is \(K_Q W J_W W K_Q\), and the push-through inverse identity applies. The inverse in \eqref{eq:short-woodbury} equals \(I-J_W W R_C W\), so it has a uniform bound from the positivity of \(I+C\). If \(\delta\) is small enough, \(T_s=(I+J_W B_s)^{-1}\) is uniformly bounded, by perturbing this inverse by \(J_W B_l\). The same bounds hold with any exterior noise frozen, since the full coefficient remains positive and the density cap holds for every realization. Moreover
+
+\begin{equation}\label{eq:short-neumann}
+(I+J_W(B_s+B_l))^{-1}=T_s(I+J_W B_l T_s)^{-1}.
+\end{equation}
+
+On cells of side \(M\), the operator \(I+J_W B_s\) has a fixed block bandwidth. Conjugate it by a bounded truncation of \(e^{\epsilon |i-i_0|_\infty}\) on these blocks. The difference in operator norm is \(O(\epsilon)\), by the fixed bandwidth, the uniform block norm and the ratios of the weights. Choose \(\epsilon>0\) so that the conjugated inverse has a uniform norm. This proves \(\|\chi_u T_s\chi_v\|\le C e^{-c|u-v|_\infty}\) on the \(M\)-block grid. The bound follows from stability of the inverse under bounded conjugation.
+
+For \(N=C_A''\log(2+r)\), approximate \(T_s\) as follows: drop blocks farther than \(N/4\), and for each retained row block \(u\) use \(T_s\) computed with the physical noise outside the \(L\)-dilate of the rescaled \(4NM\) neighborhood of that row set to zero. The defining banded operators agree on all inner rows beyond a fixed dependence buffer. Their inverse difference is the product of the original inverse, the difference supported on far rows, and the frozen inverse. The exponential row-tail bound therefore makes the error on each retained block \(C e^{-cN}\). Row and column sums, including the discarded tail and the \(O(N^d)\) retained blocks, give an \(O(r^{-A})\) operator error. Call this approximation \(T_s^0\). It is uniformly bounded with finite spatial bandwidth \(O(NM)\) and each of its rows depends on noise only near that row at the same scale.
+
+Here a local block is a linear operator on the stochastic Hilbert space, rather than necessarily multiplication. If one conditions onto any set of noise coordinates containing its stated neighborhood and the input variables, the resulting conditional expectation commutes with the frozen short operator whenever it contains the coefficient variables. It commutes with the deterministic spatial operators and \(P,Q\), and with all coefficient multiplications. Writing \(P_{\mathcal F}\) for this conditional expectation and \(T_{\mathrm f}\) for the inverse in the frozen field gives \(P_{\mathcal F}T_{\mathrm f}=T_{\mathrm f}P_{\mathcal F}\), and taking adjoints gives the same commutation for \(T_{\mathrm f}^*\). Restrict to the desired blocks and apply the relation to an input fixed by \(P_{\mathcal F}\). The resulting field is measurable in the union of the input variables and the block's neighborhood. The finite-range samplewise endpoint maps and local multipliers have the same property.
+
+Replacing \(T_s\) by \(T_s^0\) in \eqref{eq:short-neumann} costs \(O(r^{-A})\) in operator norm because the inverses of \(I+J_W B_l T\) for \(T=T_s,T_s^0\) are both bounded by two for \(\delta\) small. Expand in the weighted long links using the convergent Neumann series. In \eqref{eq:short-woodbury} split each external \(K_Q\) into its short and long parts. Every resulting chain consists of bounded local factors separated by weighted long links \(B_l\) and at most two unweighted end links \(QK_lQ\). The direct term \(K_Q\) contributes only a local term or one unweighted link. The entirely local terms have fixed band at the next scale and vanish at the separated endpoints.
+
+\subsubsection{Truncation bounds and independent cuts}\label{truncation-bounds-and-independent-cuts}
+
+Use blocks of side \(S\) a sufficiently large fixed multiple of \(NM\), including physical cells for the endpoint maps. All local factors now have a fixed block bandwidth, uniform norm, and a noise neighborhood comprising at most a fixed radius in these blocks. Write each local factor as a finite sum of deterministic block shifts followed by block-diagonal operators. Move each shift into the adjacent link on one side, shifting an external test only by a bounded number of blocks. At most a fixed exponential factor in the length is lost by this expansion.
+
+For the long links before or after a bounded block shift, we check precisely the hypotheses of \S\ref{subsec:chain}. Their block norm is bounded by \(C\langle i-j\rangle^{-d}\), and by \(C\delta\langle i-j\rangle^{-d}\) for weighted links. For distant blocks use the kernel bound and the local square sums of \(W\). For nearby blocks use the global norm. The \(P\) part of \(WQ K_l QW\) factors through the deterministic weight \((\mathbf E W^2)^{1/2}\), which has the same density cap. Any block-geometry upper truncation of a weighted long link has \(\ell^2\) norm \(C\delta\): subtract the macro far part, compare it to the microscopic far cutoff at the same nominal distance, and use \eqref{eq:long-bound} for the latter. The error occupies a shell of bounded block width with at most \(C(1+t)^{d-1}\) blocks per row and size \(C\delta\langle t\rangle^{-d}\). Small cutoff radii use fixed-band estimates. A bounded shift changes this comparison by another shell of bounded width. The argument applies to adjoints.
+
+For the higher exponent norm used in interpolation, first note that the unweighted reference convolution is bounded on microscopic \(\ell^{p_0}\) with values in any Hilbert space, \(1<p_0<2\), by \S\ref{subsec:weight}. Its microscopic far truncations are uniformly bounded as well: approximate by a two-sided deterministic smoothing at the truncation scale. The difference has uniformly summable near and far kernels, using \(CT^{-d}\) for the near averaged part and \(CT|z|^{-d-1}\) for the far difference as in \eqref{eq:long-bound}, now with no weights.
+
+These uniform microscopic bounds imply the corresponding \(\ell^{p_0}\) norms of the long operators on the macro block Hilbert spaces. Project to the constants in each macro block. On this subspace the microscopic \(\ell^{p_0}\) norm and the macro norm differ by the same fixed volume factor for input and output, so the projected operator is uniformly bounded. On distant blocks away from the cutoff boundary, the difference from this averaged matrix has summable block norms \(C\langle i-j\rangle^{-d-1}\) by the first-difference bound. The cutoff boundary shell has uniformly bounded row sums by the same estimate of its volume as above. The finitely many near neighboring blocks are bounded by uniform microscopic \(\ell^2\) norms. Near or far microscopic cutoffs and macro block upper truncations can therefore be used in this argument with uniform constants. Multiplication by \(W\) and the probability projections preserve spatial blocks and have uniformly bounded norm. Bounded block shifts and upper truncation do not change the uniform conclusion. Interpolating the Hilbert-valued \(\ell^{p_0}\) and \(\ell^2\) bounds as above yields, for any fixed \(p\in(p_0,2)\), a bound \(C_p\delta^{c_p}\) for weighted long links and their adjoints under all upper truncations, with \(c_p>0\). Unweighted end links have bound \(C_p\).
+
+Finally consider a specific path in a deterministic-endpoint expectation after inserting the macro blocks. If its prefixes and suffixes have all mutual block distances greater than a fixed number \(r_0\), their coefficient neighborhoods are disjoint. Take the sigma-fields generated by the noise neighborhoods on each side, including the corresponding weights if the cut link is weighted. Applying the left chain by adjoints and the right chain directly to the deterministic tests gives fields \(h_-\) and \(h_+\) with these weights included. The block measurability property and commutation with \(P,Q\) make each field measurable in its side's sigma-field. The two sigma-fields are independent. With \(K_{uv}\) the deterministic spatial block including any shift, the cut pairing is
+\[
+ \mathbb E\langle Qh_-,K_{uv}Qh_+\rangle
+   =\langle\mathbb E Qh_-,K_{uv}\mathbb E Qh_+\rangle=0 .
+\] This is condition \eqref{eq:independent-cut} of the abstract chain lemma, including with the deterministic block phases used there. The number \(r_0\) is fixed because we scaled the blocks by \(NM\), uniformly in \(r,\delta,L\).
+
+Choose \(p>1\) sufficiently close to one that \(7(2d/p')<\zeta/2\), then \(p_0\in(1,p)\). The block-chain estimate bounds a term with \(n\) weighted links by \[
+C_\zeta^{n+1}\delta^{c_p n}
+ \langle r/S\rangle^{-3d+\zeta/2},
+\] after incorporating the at most two unweighted end links and the number of local shifts. The constants governing the density choice are uniform in the final block side and in \(L\). First choose \(\delta\) so small that the geometric series sums, and then choose \(L\) large enough for the finite-stencil rarity. Since \(S=O((\log(2+r))^2)\) with fixed constants at this \(L\), its power is absorbed by the remaining \(\zeta/2\) margin. The \(O(r^{-A})\) comparison and approximation errors are smaller by increasing \(A\). This proves \eqref{eq:joint-decay}, including for different pairs of permitted endpoint maps.
+
+The order of choices is as follows. All stochastic and spatial inverse bounds use a common positive spectral interval, the uniform localization in \S\ref{subsec:edges} and \S\ref{subsec:reference}, and, for the three endpoint pairs below, a common set of endpoint bounds. After \(\zeta\) fix the spatial exponent \(p\) and the density parameter \(\delta\) using those bounds. The fixed stencil and its fixed noise radius depend on this choice. Choose the single physical scale \(L\) by \S\ref{subsec:stencil}, before any sites are chosen, to make the labels sufficiently rare. The radius \(r\) is then arbitrary. The widths \(M,N,S\) are prescribed functions of \(r\), with constants permitted to depend on the fixed accuracy exponent and law. The summability bound holds for the actual unmasked operator at that fixed \(L\).
+
+\section{Reconstruction in the continuum}\label{sec:bloch}
+
+\subsection{Averaging and the scalar multiplier}\label{subsec:bloch}
+
+Fix an exponent \(0<\eta<1\), choose \(0<\zeta<\eta\), and choose the fixed coarse physical size \(L\) from the joint estimate with exponent \(\zeta\). Rescale to unit cells, so the coefficient here is \(a_L(x)=a(Lx)\). All coarse maps are in these coordinates. Let \(B=A_0^{-1/2}\mathcal A^{a_L}A_0^{-1/2}-I\), let \(P,Q\) be expectation and its orthogonal complement, and \(K_*\) the spatial reference projection. Let \(R_B\) be the inverse of the \(I+B\) form on \(\operatorname{ran}(K_*Q)\), extended by zero. The deterministic reference \(A_0\) is defined in \S\ref{subsec:reference}. Set \(T=N_{a_L}A_0^{-1/2}\), using the fine-potential correction \(N_{a_L}\), and let \(F_W\) be the fine potential solution operator on the cell-mean-zero space \(W\). The fine inverse is bounded \(L^2\to L^2\) by cell Poincaré and ellipticity.
+
+Consider first scalar potential input \(g\in\mathcal S(\mathbb R^d)\) with Fourier support in the interior of the unit-cell Brillouin zone and away from the origin. In particular \(g\in\dot H^{-1}\), so the physical potential solution \(u\) is defined in the homogeneous energy space modulo constants. Its cell averages \(m\) are likewise determined modulo constants. In each realization \[
+u=F_W g+Jm+T z,\qquad z=A_0^{1/2}D m\in\mathcal G.
+\] For \(n\) a coarse test potential and \(z_n=A_0^{1/2}D n\), the coarse energy equation reads \[
+\langle z_n,(I+B)z\rangle=\langle Jn+T z_n,g\rangle .
+\] The deterministic functional \(n\mapsto\langle Jn,g\rangle\) is bounded on the coarse energy space by the lift bound and the \(\dot H^{-1}\) norm. Therefore it disappears from the centered equation. Writing \(z_P=Pz\), \(z_Q=Qz\), that equation gives the exact identity \[
+z_Q=R_B(T^*g-Bz_P).
+\] Its average equation and the observed mean potential are consequently
+
+\begin{equation}\label{eq:coarse-schur}
+\begin{aligned}
+\mathcal E&=I+P B P-P B R_B B P,\\
+\mathcal Z&=P T P-P T R_B B P,\qquad
+\mathcal N=P F_W P+P T R_B T^* P,\\
+\mathcal J&=J+\mathcal Z A_0^{1/2}D,\qquad
+\mathcal S=D^* A_0^{1/2}\mathcal E A_0^{1/2}D,\\
+\mathcal S\,m_P&=\mathcal J^*g,\qquad \mathbf E u=\mathcal N g+\mathcal J m_P
+\quad\text{modulo constants}.
+\end{aligned}
+\end{equation}
+
+Here \(m_P\) is determined by \(A_0^{1/2}D m_P=z_P\), and \(P\)-sandwiched expressions are understood on deterministic spaces. For example, the mixed coefficient in the coarse forcing is \(\mathcal Z^*\) by symmetry of \(R_B\). The form of \(\mathcal E\) on a deterministic edge vector is the minimum of the full \((I+B)\) form over centered gradient corrections. It therefore retains fixed positive upper and lower energy bounds.
+
+Apply \eqref{eq:joint-decay} to \((B,B)\), \((T,B)\) and \((T,T)\) for the centered terms in \(\mathcal E,\mathcal Z,\mathcal N\), respectively. The remaining kernels in \(\mathcal E,\mathcal Z,\mathcal N\) are local or exponentially localized. Thus the three block kernels are bounded by \(C\langle i-j\rangle^{-3d+\zeta}\). So are the corresponding kernels after multiplication by the deterministic analytic \(A_0^{1/2}\) or a fixed finite shift. The mean terms commute with unit lattice translations by stationarity and covariance of the lifts and projection. Taking Fourier series over the cells therefore gives operator-valued \(C^{2d-1,\,1-\eta}\) symbols on their respective deterministic fibers. Indeed \(\sum_{j}\langle j\rangle^{2d-\eta}\langle j\rangle^{-3d+\zeta}<\infty\) because \(\zeta<\eta\). Differentiating the Fourier series through order \(2d-1\) and estimating phase differences proves the Hölder claim, including for the within-cell \(L^2\) spaces.
+
+For clarity, the physical fiber is \(L^2(\mathcal C)\), where \(\mathcal C=[0,1)^d\) is the reference cell, and the coarse potential fiber is scalar. Use the unit lattice transform \(\sum_i e^{-i k\cdot i}g(i+x')\), \(x'\in \mathcal C\). At a continuum frequency \(k\) in the open fundamental zone, the vector of the continuum zero-alias mode is \(e_k(x')=e^{i k\cdot x'}\), with unit norm. The coarse difference vector is \(D(k)_j=e^{ik_j}-1\). Write \[
+q(k)=D(k)^* A_0^{1/2}(k)\mathcal E(k) A_0^{1/2}(k)D(k),\quad
+j(k)=\langle e_k,\mathcal J(k)1\rangle,\quad
+n(k)=\langle e_k,\mathcal N(k)e_k\rangle .
+\] All coefficients here are \(C^{2d-1,\,1-\eta}\) near zero. They are computed at this fixed \(L\). The unit-cell \(J\) preserves constants, \(D(0)=0\), and hence \(j(0)=1\). Positivity of the coarse energy gives \(q(k)\asymp |D(k)|^2\).
+
+To justify the continuum multiplier, the transform sending a potential \(v\) to its weighted Fourier representative with norm \(\||k|\widehat v\|_2=\|\nabla v\|_2\) identifies \(\mathscr V\) unitarily with \(L^2(dk)\). By Plancherel \cite[Theorem 1.12.10, p.~200]{TaoFourier}, an \(L^2\) gradient has curl-free transform parallel to \(k\) almost everywhere. Any \(L^2\) scalar representative is obtained by approximation with smooth Fourier data on finite annuli, dividing there by \(|k|\), and completing in \(\mathscr V\). The dual transform sends \(g\) to \(\widehat g/|k|\). Continuous stationarity makes the conjugated expected inverse commute with \(e^{ik\cdot x}\) multiplications for all \(x\). It therefore commutes with multiplication by compactly supported smooth functions of \(k\) by Fourier inversion, and with indicators by strong approximation and boundedness. On any finite box \(E\) in frequency space it is then multiplication by its image of \(1_E\), first on simple functions, then by density. Boxes exhausting frequency space give a single scalar symbol. Positivity and the upper and lower bounds follow by writing the inverse quadratic form as the supremum of \(2\operatorname{Re}g(v)-\int\overline{\nabla v}\cdot a\nabla v\) over \(v\in\mathscr V\). Real coefficients and symmetry give a real even symbol.
+
+The mean inverse is determined by the coefficient law. For a fixed load, if admissible coefficients \(b_n\to b\) in \(L^2_{\rm loc}\), the difference energy estimate on the common Hilbert space is \[
+ \|\nabla(u_{b_n}-u_b)\|_2\le
+ \lambda^{-1}\|(b_n-b)\nabla u_b\|_2 .
+\] The right hand side tends to zero by uniform boundedness and dominated convergence along an almost-everywhere subsequence of every subsequence. In particular the bounded gradient solution is measurable as a function of the random coefficient and depends on its law after averaging. The dilation identity on coefficients follows from \(-\nabla\cdot a_L\nabla(v(L\,\cdot))=L^2(-\nabla\cdot a\nabla v)(L\,\cdot)\) in the weak sense. The mean scalar inverse multiplier therefore dilates by \(L^{-2}\mathfrak g_a(k/L)\).
+
+Although the terms of \eqref{eq:coarse-schur} are only lattice invariant, evaluating their quadratic form on zero-alias tests identifies the continuum multiplier
+
+\begin{equation}\label{eq:zero-alias}
+\mathfrak g_{a_L}(k)= n(k)+\frac{|j(k)|^2}{q(k)}
+\qquad(k\ne0\text{ near zero}).
+\end{equation}
+
+For the band-limited \(g\) above, the Fourier coefficient formula for periodic summation gives
+\[
+    (\mathcal B g)(k,x')=(2\pi)^{d/2}\widehat g(k)e_k(x')
+\]
+in the fundamental zone. In the quadratic form of \eqref{eq:coarse-schur}, the factor \((2\pi)^d\) from the two test vectors cancels the density \((2\pi)^{-d}\) of lattice Fourier measure. The coarse scalar inverse multiplies by \(1/q(k)\), so equality of the physical and lattice quadratic forms gives \eqref{eq:zero-alias}. The conjugate numerator comes from the two adjoint lifts in \eqref{eq:coarse-schur}. The standard scalar multiplier \(\mathfrak g_{a_L}\) is real even, with \(|k|^{-2}\le\mathfrak g_{a_L}(k)\le\lambda^{-1}|k|^{-2}\) by quadratic-form order of elliptic inverses and expectation. These bounds apply at all nonzero frequencies almost everywhere.
+
+\subsection{The reciprocal expansion and the recursive approximation}\label{subsec:lift}
+
+Its reciprocal \(s_{a_L}(k)\) near zero is
+
+\begin{equation}\label{eq:reciprocal}
+s_{a_L}(k)=\frac{q(k)}{|j(k)|^2+n(k)q(k)} .
+\end{equation}
+
+The denominator is \(1\) at zero, so it stays positive near zero. Since every component of \(D(k)\) is \(i k_j\) times an analytic factor, \(q(k)\) is a contraction of \(k\otimes k\) with a \(C^{2d-1,1-\eta}\) matrix. Equation \eqref{eq:reciprocal} is consequently such a contraction itself. Its Taylor expansion to the needed order gives homogeneous polynomials \(q_\ell\) with
+
+\begin{equation}\label{eq:jets}
+s_{a_L}(k)=\sum_{\ell=2}^{2d+1}q_\ell(k)+O_\eta(|k|^{2d+2-\eta}).
+\end{equation}
+
+The quadratic part is positive definite by ellipticity. Reality and evenness of \(s_{a_L}\) give real even polynomial parts, with odd-degree parts zero. This uses uniqueness of a polynomial expansion through degree \(2d+1\) with error \(o(|k|^{2d+1})\).
+
+The response for \(a_L(x)=a(Lx)\) satisfies \(s_{a_L}(k)=L^2s_a(k/L)\), by scaling the homogeneous gradient equation or its scalar potential multiplier. Thus \eqref{eq:jets} holds for the original law. Different tolerances may have used different auxiliary \(L\). For the original \(s_a\) the polynomials are unique by the same remainder comparison, so they are the same polynomials for every \(0<\eta<1\). They depend only on the law of \(a\).
+
+\subsubsection{Tensors and the proxy}\label{tensors-and-the-proxy}
+
+Put \(N=2d\). Choose \(A^1\) from the positive quadratic part \(q_2(k)=k\cdot A^1 k\). Represent each subsequent \(q_{m+2}\) in \[
+q_{m+2}(k)= k\cdot A^{m+1}_{j_1\cdots j_m}(ik_{j_1})\cdots(ik_{j_m})k,
+\qquad 1\le m<N .
+\] For even \(m\) the real homogeneous polynomial admits such a representation by \(q_{m+2}=[(m+2)(m+1)]^{-1} k\cdot (\nabla^2 q_{m+2})k\) and by absorbing the real factor \(i^m\). Use the symmetric polarization of each matrix-entry polynomial in the \(m\) derivative indices and zero tensors for odd \(m\). This fixes one law-dependent collection.
+
+Let \(t_m=q_{m+2}/q_2\), of homogeneity \(m\), and define \(h_0=1\) and \(h_j=-\sum_{m=1}^j t_m h_{j-m}\) through \(j=N-1\). The recursion in Theorem~\ref{thm:main} gives \(\widehat v_1=i\xi\cdot\widehat f/q_2\) and \(q_2\widehat v_n=-\sum_{m=1}^{n-1}q_{m+2}\widehat v_{n-m}\). It follows that \[
+\widehat{\nabla v_n}(\xi)
+=-\frac{\xi\otimes\xi}{q_2(\xi)}h_{n-1}(\xi)\widehat f(\xi).
+\] The polynomial growth of these multipliers gives square-integrable gradients for the stipulated smooth data. Multiplication of the two finite homogeneous series cancels all degrees \(1,\ldots,N-1\) in \(\frac{s_a}{q_2}\sum_{j=0}^{N-1}h_j\). The remaining error estimate from \eqref{eq:jets} is therefore
+
+\begin{equation}\label{eq:proxy-error}
+\left|\frac{q_2(k)}{s_a(k)}-\sum_{j=0}^{N-1}h_j(k)\right|
+\le C_\eta |k|^{N-\eta}
+\quad\text{for almost every }k\ne0.
+\end{equation}
+
+At small \(k\) this follows from the series product and ellipticity. Away from zero it follows from bounded \(q_2/s_a\), homogeneity through degree \(N-1\), and \(N-\eta>N-1\).
+
+At scale \(\varepsilon\), the scalar inverse multiplier is \(\varepsilon^2\mathfrak g_a(\varepsilon\xi)\) by dilation. Thus the physical mean gradient has multiplier \(-(\xi\otimes\xi/q_2(\xi))q_2(\varepsilon\xi)/s_a(\varepsilon\xi)\). The proxy uses \(\sum_j h_j(\varepsilon\xi)\) in place of that scalar ratio. Apply \eqref{eq:proxy-error} at \(\varepsilon\xi\) and Plancherel to get the global \(L^2\) error bounded by \(C_\eta\varepsilon^{N-\eta}\|(-\Delta)^{(N-\eta)/2}f\|_2\). The constant may depend on the law and its ellipticity. This proves the claimed bound with the stated quantifier order.
+
+
+\section*{AI assistance}
+The author used OpenAI Codex in developing and checking the argument and in preparing the manuscript.
+
+\begin{thebibliography}{9}
+\bibitem{AKM}
+S.~Armstrong, T.~Kuusi and J.-C.~Mourrat,
+\emph{Quantitative Stochastic Homogenization and Large-Scale Regularity},
+Springer, 2019.
+\href{https://doi.org/10.1007/978-3-030-15545-2}{DOI}.
+\href{https://perso.ens-lyon.fr/jean-christophe.mourrat/AKMbook.pdf}{Author's text, May 7, 2019}.
+
+\bibitem{Duerinckx}
+M.~Duerinckx, Non-perturbative approach to the Bourgain--Spencer conjecture in stochastic homogenization,
+\emph{J. Math. Pures Appl.} \textbf{176} (2023), 183--225.
+\href{https://doi.org/10.1016/j.matpur.2023.06.005}{DOI}.
+
+\bibitem{DLP}
+M.~Duerinckx, M.~Lemm and F.~Pagano, On Bourgain's approach to stochastic homogenization,
+\emph{Arch. Ration. Mech. Anal.} \textbf{249} (2025), article 81.
+\href{https://doi.org/10.1007/s00205-025-02145-5}{DOI}. \href{https://arxiv.org/abs/2406.09909}{Author manuscript}.
+
+\bibitem{ConlonDabkowski}
+J.~G.~Conlon and M.~Dabkowski, On regularity of averaged Green's functions in homogenization of elliptic PDE, 2026.
+\href{https://arxiv.org/abs/2610.01656v1}{arXiv:2610.01656v1}.
+
+\bibitem{TaoHilbert}
+T.~Tao, \emph{245B, Notes 5: Hilbert spaces}, 2009.
+\href{https://terrytao.wordpress.com/2009/01/17/254a-notes-5-hilbert-spaces/}{Lecture notes}.
+
+\bibitem{TaoFourier}
+T.~Tao, \emph{An Epsilon of Room, I: Real Analysis: Pages from Year Three of a Mathematical Blog}, Graduate Studies in Mathematics 117, American Mathematical Society, 2010.
+\href{https://terrytao.wordpress.com/wp-content/uploads/2012/12/gsm-117-tao3-epsilon1.pdf}{Author's text}.
+
+\bibitem{TaoInterpolation}
+T.~Tao, \emph{245C, Notes 1: Interpolation of \(L^p\) spaces}, 2009.
+\href{https://terrytao.wordpress.com/2009/03/30/245c-notes-1-interpolation-of-lp-spaces/}{Lecture notes}.
+\end{thebibliography}
+\end{document}

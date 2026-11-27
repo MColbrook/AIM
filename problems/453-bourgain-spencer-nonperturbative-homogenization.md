@@ -2,9 +2,9 @@
 
 **Area:** Stochastic homogenization; diffusion in heterogeneous media
 
-**Status:** 🔵 OPEN
+**Status:** 🟠 SOLUTION CLAIMED
 
-**Last checked:** 2026-09-22
+**Last checked:** 2026-11-27
 
 ## Problem statement
 
@@ -45,6 +45,8 @@ A high-order deterministic equation for ensemble averages would improve predicti
 
 ## Status review
 
-**Literature check:** Open in cited literature; no later resolution located.
+**Proposed resolution (2026-11-27, UTC):** Kaiwen Jin's [analytic manuscript](../research/solutions/453-bourgain-spencer-nonperturbative-homogenization/paper.pdf) claims the full estimate at every fixed ellipticity contrast, with a single family of tensors for all permitted data and losses. The [target comparison and review scope](../research/solutions/453-bourgain-spencer-nonperturbative-homogenization/target-comparison.md) map the proof to the original recursion and state the scope of the AI checks. The claim awaits independent mathematical review.
+
+**Earlier literature check (2026-09-22):** Open in the literature checked at that date.
 
 The statement specializes Conjecture 1 to smooth finite-range Gaussian-generated coefficients and spells out its higher-order proxy, avoiding an ill-posed truncated high-order PDE. The 2025 paper still requires small contrast and explicitly leaves the non-perturbative improvement open. Searches on 2026-09-22 for Bourgain–Spencer, non-perturbative ensemble averages, proofs and counterexamples, including the authors' publication lists, found no full finite-contrast resolution. The $`d-\eta`$ non-perturbative accuracy and contrast-dependent $`2d-\delta K-\eta`$ results do not give the assertion above.
