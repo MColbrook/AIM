@@ -2,9 +2,9 @@
 
 **Area:** Computational topology and triangulated 3-manifolds
 
-**Status:** 🔵 OPEN
+**Status:** 🟠 SOLUTION CLAIMED
 
-**Last checked:** 2026-09-24
+**Last checked:** 2026-11-27
 
 ## Problem statement
 
@@ -27,6 +27,8 @@ Triangulation moves support manifold recognition and simplification algorithms. 
 
 ## Status review
 
-Arbitrary sequences of $`2`$–$`3`$ and $`3`$–$`2`$ moves are known to connect the triangulations under these hypotheses. Theorem 3.2 of [1] proves a unimodal sequence when the descending moves may instead be $`2`$–$`0`$ moves. That theorem does not establish the conjecture above, which permits only $`2`$–$`3`$ and $`3`$–$`2`$ moves.
+Arbitrary sequences of $`2`$–$`3`$ and $`3`$–$`2`$ moves are known to connect the triangulations under these hypotheses. Burton and He [1] give a unimodal sequence with a $`2`$–$`0`$ descent. Their Conjecture 3.1 (Conjecture 8 in arXiv v3) asks for the descent by $`3`$–$`2`$ moves.
 
-The current arXiv version and the published paper explicitly retain Conjecture 3.1. The connected-manifold formulation above avoids componentwise vertex-count ambiguities. Current literature and announcement searches found no proof or counterexample to this formulation.
+**Proposed solution (2026-11-27):** Kaiwen Jin's [manuscript](../research/solutions/573-unimodal-pachner-connectivity/main.pdf) gives an affirmative proof claim. Theorem 1 produces two positive paths to a common triangulation, with the generalized affine pairings, ideal vertices, and fixed internal vertex count of the stated problem. The [target comparison](../research/solutions/573-unimodal-pachner-connectivity/TARGET_COMPARISON.md) maps the hypotheses and conclusion. The [verifier](../research/solutions/573-unimodal-pachner-connectivity/verify_ear_arch.py) replays the finite affine calculations in the proof.
+
+**Review scope:** OpenAI Codex assisted with the proof and manuscript. A same-context AI natural-language audit was followed by one AI reader pass and one AI referee pass in fresh proof contexts that inherited campaign instructions and shared a filesystem. Their feedback informed one manuscript revision. Independent human review and AIM acceptance remain outstanding.
