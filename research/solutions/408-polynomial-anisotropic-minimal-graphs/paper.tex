@@ -1,0 +1,768 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+
+\hypersetup{pdftitle={Polynomial rigidity for anisotropic minimal graphs in dimensions four and five},pdfauthor={Kaiwen Jin}}
+\newtheorem{theorem}{Theorem}
+\allowdisplaybreaks[2]
+\urlstyle{same}
+
+\raggedbottom
+\begin{document}
+
+\title[Polynomial rigidity for anisotropic minimal graphs]{Polynomial rigidity for anisotropic minimal graphs in dimensions four and five}
+\author{Kaiwen Jin}
+\email{yui.ui.siki@gmail.com}
+\keywords{Anisotropic minimal graphs, Bernstein problem, polynomial solutions, Jacobi fields}
+
+\begin{abstract}
+An entire anisotropic minimal graph over \(\mathbb R^4\) or \(\mathbb R^5\) defined by a polynomial must be affine if the surface integrand is positive, even, \(C^{2,1}\) on the sphere, and uniformly elliptic in tangential directions. The boundaries of the superlevel sets of the leading homogeneous term minimize a restricted surface energy. A comparison of positive Jacobi fields reduces the five-dimensional case to an indefinite quadratic factor. When its cofactor is nonconstant, the Jacobi equation fixes a noninteger scaling exponent for a cluster of polynomial roots. Analyticity of the cluster's centroid then gives the contradiction.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+The anisotropic Bernstein problem asks when an entire stationary graph for a uniformly elliptic surface energy must be a hyperplane. Mooney and Yang constructed nonpolynomial examples over \(\mathbb R^4\) with subquadratic growth \cite{MY}. Over \(\mathbb R^6\), Mooney constructed a quadratic example for a \(C^{2,1}\) surface integrand \cite[Theorem 1.1]{Mooney6}. The polynomial question in the intervening dimensions is posed in \cite[Section 7.2]{MooneySurvey}. We prove rigidity in both dimensions for the full uniformly elliptic \(C^{2,1}\) class of positive even integrands.
+
+\begin{theorem}\label{thm:main}
+Let \(n\in\{4,5\}\) and let \(\Phi\) be a positive even \(C^{2,1}\) function on the unit sphere \(S^n\subset\mathbb R^{n+1}\). Use the same symbol for its positively one-homogeneous extension. Suppose that there is a \(\lambda>0\) such that
+\[
+ D^2\Phi(\nu)[v,v]\ge \lambda |v|^2
+ \quad\text{for all }\nu\in S^n,\ v\in\nu^\perp.
+\]
+If a real polynomial \(u\) on \(\mathbb R^n\) satisfies
+\[
+ \operatorname{div} DF(Du)=0\quad\text{on }\mathbb R^n,\qquad
+ F(p)=\Phi((-p,1)),
+\]
+then \(u\) is affine.
+\end{theorem}
+
+Chen and Lan prove rigidity for entire smooth solutions through
+base dimension seven under a \(C^2\) proximity condition to the
+Euclidean area integrand \cite[Theorem~1.1]{CL}. For smooth uniformly
+elliptic integrands, Yang proves rigidity if the gradient grows as
+\(o(R^\alpha)\) on balls of radius \(R\), for an exponent \(\alpha>0\)
+depending on dimension and integrand \cite[Theorem~1.1]{Yang}.
+
+The proof uses translated dilations to extract the levels of the
+leading homogeneous term and then considers their normal velocities,
+as in Guo's treatment of Euclidean area
+\cite[Theorem~4.7 in the preprint]{Guo}. We use the regularity of
+elliptic minimizing boundaries \cite[Part~I]{SSA} and compare
+positive homogeneous Jacobi fields for the anisotropic operator.
+In dimension four, the boundary of the positive phase of the leading
+term must be a hyperplane. In dimension five, the leading term has
+an indefinite quadratic factor. A constant cofactor gives a
+hyperbolic energy equation, as in \cite[Remark~3.5]{Mooney6}. For a
+nonconstant cofactor we retain the lower-order terms and compare the
+polynomial on transverse lines to a Jacobi field on the product of
+the quadratic cone and the vertical line.
+
+Suppose that \(D=\deg u\ge2\), and let \(U\) denote the homogeneous
+term of degree \(D\). Write \(G(p)=\Phi((p,0))\) for the integrand
+on the horizontal hyperplane, where the last coordinate is zero.
+
+\section{Calibrated graphs, minimizing levels, and regular convergence}\label{sec:blowdown}
+
+The energy of an oriented hypersurface for an integrand \(\Psi\)
+is the surface integral of \(\Psi(\nu)\), with \(\nu\) the unit
+normal. For a set \(E\), we use \(\partial E\) for its oriented
+boundary current in comparisons and use the support of that current
+as its boundary surface.
+
+The homogeneity identity \(D^2\Phi(\xi)\xi=0\) and the positive tangential
+Hessian make the extension convex, with value zero at the origin. In
+particular, the supporting-plane inequality
+\(D\Phi(\xi)\cdot v\le\Phi(v)\) holds for \(\xi\ne0\). The vector field
+\[
+ X(x,z)=D\Phi((-Du(x),1))
+\]
+has zero ambient divergence by the graph equation. Its pairing with the
+upward unit normal to the graph equals the graph energy density, by
+Euler's identity. The associated closed form certifies minimization
+against compactly supported integral current variations. Indeed the
+pairing integrates to the same value under a compactly supported
+boundary variation by Stokes, and is bounded above by the energy of
+each competitor. The upper bound applies to either orientation.
+Dilations and translations preserve this minimizing property.
+
+We use Schoen and Simon's results for locally minimizing oriented
+boundaries of sets in ambient dimension at least three \cite[Part~I]{SSA}.
+At boundary points, their volume estimate (35) gives uniform two-phase
+density, and (33) gives local mass bounds. With these mass bounds and
+local-volume convergence of the sets, Theorem 1.1(vi)--(vii) preserves
+minimization and gives energy convergence in almost every interior comparison
+ball. Theorem 1.2 and Remarks 1 and 3 give local single-graph
+convergence through second derivatives at interior regular points of the limit.
+
+Each integrand used below is autonomous and \(C^{2,1}\) on the sphere. By
+multiplying by a positive constant we may arrange the lower bounds in
+(7)--(8) of \cite[Part~I]{SSA}. The \(C^{2,1}\) bound on the
+sphere and homogeneity give the bounds in (9), including the bound
+for weak third derivatives in the normal variable. All
+spatial derivatives vanish. The same verification applies to
+restrictions to linear subspaces. In the local comparison class
+of \cite[Part~I, Section~1.1]{SSA}, the difference \(S'-S\) between a
+same-boundary integer-rectifiable competitor \(S'\) and the restricted
+boundary current \(S\) is an integral cycle in the comparison ball.
+Coning gives a filling \(B\) supported in the ball with
+\(S'-S=\partial B\). We use the two-dimensional regularity of
+\cite[Part~I, Corollary~3.2 and the following remark]{SSA}, in its
+form for absolutely minimizing integral currents. We restrict the
+minimizing boundary to an interior ball at a radius at which the restriction
+is integral and its boundary is supported on the sphere. Competitors with
+the same boundary supported in the closed ball are admissible compact
+variations of the full surface. Such radii have full measure by slicing,
+and the radius condition on the integrand is automatic in the autonomous
+case.
+
+For each \(c\in\mathbb R\), the subgraphs of
+\(R^{-1}u(Rx)-R^{D-1}c\) converge in local volume to
+\(\{U>c\}\times\mathbb R\). Indeed the term of order \(R^{D-1}\) is
+\(U-c\), and the exceptional level has zero Lebesgue measure. The limit
+therefore minimizes \(\Phi\). Its base boundary \(\partial\{U>c\}\)
+minimizes \(G\). To see the latter claim, if a bounded base perturbation
+reduces the \(G\)-energy by \(\delta>0\), insert that perturbation in the
+cylinder for vertical coordinates in \((-T,T)\) and restore the
+original cylinder above and below it. The saving on the sides is
+\(2T\delta\), and the two caps cost a bounded amount independent of
+\(T\). For a current variation \(\partial B\) of the base boundary,
+the variation in the cylinder is \(\partial(B\times[-T,T])\).
+The cap energies are bounded by \(2\sup_{S^n}\Phi\,\mathbf M(B)\),
+where \(\mathbf M(B)\) denotes the mass of the filling. The side energy
+is computed with \(G\) because the normals are horizontal. This proves
+minimization in the required current class.
+
+We record two facts for subsequent use. First, \(U\) changes sign.
+Otherwise the unshifted graph blow-down subgraphs tend to a constant
+set, in contradiction with two-phase density at \((0,R^{-1}u(0))\).
+Second, for any nonzero positive-degree homogeneous polynomial \(P\)
+whose superlevel boundaries all minimize an autonomous elliptic energy,
+\begin{equation}\label{eq:zeros}
+ \{P=0\}=\operatorname{spt}\partial\{P>0\}.
+\end{equation}
+The inclusion from right to left is immediate. If \(P(x)=0\) and \(x\)
+were outside the support, one phase of \(\{P>0\}\) would have zero volume
+in a ball about \(x\). Choose \(x_k\to x\) with \(P(x_k)=c_k\ne0\).
+Euler's formula makes \(x_k\) a smooth boundary point of
+\(\{P>c_k\}\). The two-phase density bound there contradicts the
+convergence of the latter sets to a constant phase in the ball.
+
+Finally, if the zero boundary of \(U\) were a hyperplane \(H\), the
+unshifted dilated graphs would converge regularly near the origin to
+the vertical hyperplane \(H\times\mathbb R\). Their normals at
+\((0,R^{-1}u(0))\) are independent of \(R\) and have a strictly positive
+upward component. A normal to the limiting hyperplane has upward
+component zero. Regular convergence gives a contradiction.
+
+\section{Positive homogeneous Jacobi fields on a regular cone}\label{sec:exponents}
+
+For an autonomous integrand \(\Psi\) and a stationary hypersurface \(M\),
+write \(A=D_M\nu\) for its shape operator, \(P_\Psi=D^2\Psi(\nu)|_{TM}\),
+and \(V=\operatorname{tr}(P_\Psi A^2)\). The weak Jacobi equation is
+\begin{equation}\label{eq:jacobi}
+ \mathcal J_\Psi f=\operatorname{div}_M(P_\Psi\nabla_M f)+V f=0.
+\end{equation}
+This operator governs the normal velocities of stationary families,
+including translations. For the regularity used here it is enough to
+derive the form by normal variations. In the variation \(x\mapsto x+t f\nu\),
+the integrand times the area element, relative to the original area
+element, is
+\(\det B\,\Psi(\nu-t B^{-1}\nabla_M f)\), where \(B=I+t f A\).
+Writing \(H=\operatorname{tr} A\) and \(Y=(D\Psi(\nu))_T\), the second
+derivative at zero is
+\[
+ \langle P_\Psi\nabla_M f,\nabla_M f\rangle+
+ D_M(f^2)\cdot (A-HI)Y+f^2\Psi(\nu)(H^2-\operatorname{tr} A^2).
+\]
+Codazzi gives \(\operatorname{div}_M(A-HI)=0\), and
+\(D_M Y=P_\Psi A-\Psi(\nu)A\). Taking the trace of
+\((A-HI)D_M Y\) gives
+\[
+ \operatorname{div}_M((A-HI)Y)
+ =V-H\operatorname{tr}(P_\Psi A)+\Psi(\nu)(H^2-\operatorname{tr}A^2).
+\]
+The stationarity condition is \(\operatorname{tr}(P_\Psi A)=0\).
+Integration by parts now gives the quadratic form
+\(\int_M(\langle P_\Psi\nabla_M f,\nabla_M f\rangle-V f^2)\).
+Polarization and differentiation of stationary first variation give
+\eqref{eq:jacobi} for the normal velocity. The expansion uses only derivatives of
+\(\Psi\) through order two. All hypersurfaces where we apply \eqref{eq:jacobi}
+are smooth locally as polynomial graphs, regular algebraic level
+sets, or their cylindrical products.
+
+Consider a connected component of a regular stationary cone away
+from the origin in \(\mathbb R^d\). Its intersection \(S\) with the
+unit sphere is the link. Here \(S\) is compact and has no boundary.
+At \(\theta\in S\), split \(P_\Psi\) relative to the radial direction
+and \(T_\theta S\) as
+\(\left(\begin{smallmatrix}a&b^{\!T}\\b&B\end{smallmatrix}\right)\).
+Write \(V(r\theta)=r^{-2}v(\theta)\), and \(s=d-3\). In the cone
+metric the angular equation for \(r^\ell\psi(\theta)\) is
+\begin{equation}\label{eq:angular}
+ \mathcal A_\ell\psi=
+ \operatorname{div}_S(B\nabla_S\psi)+(s+2\ell)b\cdot\nabla_S\psi+
+  [\ell\operatorname{div}_S b+\ell(s+\ell)a+v]\psi=0.
+\end{equation}
+Indeed the radial divergence contributes the factor \(\ell+s\) to
+the radial component of the flux, and the tangential divergence
+contributes \(\ell\operatorname{div}_S(b\psi)\). Integration by parts
+gives \(\mathcal A_\ell^*=\mathcal A_{-s-\ell}\).
+
+A smooth positive solution \(\psi\) of \(\mathcal A_\ell\psi=0\)
+yields a positive weak solution at the paired exponent \(-s-\ell\).
+For detail, \(Lh=\psi^{-1}\mathcal A_\ell(\psi h)\) is a uniformly
+elliptic divergence form operator with Lipschitz principal coefficients
+and drift, and no zeroth-order term. It has a positive invariant
+density \(\rho\). To construct it, large \(c-L\) is invertible
+\(H^1\to H^{-1}\) by coercivity. The embedding through \(L^2\) is compact,
+so \(L\) and its adjoint are Fredholm of index zero. The compact
+maximum principle \cite[Theorems~8.19--8.20]{GT} gives \(\ker L=\mathbb R\). Any nonzero element of
+the adjoint kernel has nonzero integral, since otherwise \(Lh=1\)
+would be solvable, contrary to the same principle. Normalize its
+integral to one. For smooth \(g\ge0\), Fredholm compatibility solves
+\(Lh=g-\int_S \rho g\). If the integral were negative, the right-hand
+side would be strictly positive everywhere, which is impossible on
+the compact link. Thus \(\rho\ge0\) and local Harnack applied to its
+adjoint equation gives \(\rho>0\). Lipschitz coefficients and drift
+give the usual weak elliptic regularity and bounded zeroth-order
+coefficient for this adjoint equation. It follows by testing
+\(\mathcal A_\ell(\psi h)\) that \(\mathcal A_\ell^*(\rho/\psi)=0\).
+
+There cannot be three distinct real exponents with positive link
+solutions. If \(\ell_1<\ell_2<\ell_3\), choose \(t\in(0,1)\) with
+\(\ell_2=t\ell_1+(1-t)\ell_3\). Applying \eqref{eq:jacobi} to the geometric mean
+of the corresponding outer positive fields gives, for
+\(z=\psi_1^t\psi_3^{1-t}\) and
+\(\xi=(\ell_1-\ell_3,\nabla_S\log\psi_1-\nabla_S\log\psi_3)\),
+\begin{equation}\label{eq:mean}
+ \frac{\mathcal A_{\ell_2}z}{z}
+  =-t(1-t)\langle P_\Psi\xi,\xi\rangle<0.
+\end{equation}
+Weak link solutions are locally \(C^{1,\beta}\) for some \(\beta>0\).
+Indeed, after interior \(W^{2,2}\) regularity, expansion in charts gives
+a strong equation with continuous principal coefficients and bounded
+first- and zeroth-order coefficients. Since the link has dimension
+at most three, Sobolev embedding gives local \(L^4\) bounds for the
+solution and its first derivatives. Moving the lower-order terms
+to the right then gives an \(L^4\) right-hand side. Interior
+higher integrability gives \(W^{2,4}_{\mathrm{loc}}\), which embeds
+into \(C^{1,\beta}_{\mathrm{loc}}\) \cite[Theorems~8.8 and 9.11 and
+Lemma~9.16]{GT}. The weak
+product computation therefore uses admissible products on compact
+charts, with each positive solution bounded away from zero. The inequality is strict uniformly on
+the link by ellipticity and \(\ell_1\ne\ell_3\). Dividing by the strictly
+positive solution at \(\ell_2\) gives a strict supersolution for
+an elliptic operator without a zeroth-order term on a compact
+boundaryless manifold, contradicting the minimum principle.
+
+If the cone is nonflat, any smooth positive homogeneous Jacobi
+field satisfies \(-s<\ell<0\). For \(\ell<-s\) or \(\ell>0\), mix
+\(\ell\) and its paired exponent to obtain \eqref{eq:mean} at zero. Since
+\(v\ge0\), the resulting strict supersolution also contradicts the
+minimum principle for \(\mathcal A_0-v\). If \(\ell=0\) or \(-s\),
+there is a positive solution at zero. It is a supersolution for
+\(\mathcal A_0-v\), hence constant by the strong minimum principle.
+It follows that \(v=0\) identically, and ellipticity gives \(A=0\),
+contrary to nonflatness.
+
+\section{Structure of the leading term in dimensions four and five}\label{sec:leading}
+
+\subsection{A factor on a regular component}
+
+Let \(P\) be a nonzero homogeneous polynomial of positive degree
+whose superlevel boundaries all minimize an autonomous positive
+elliptic \(C^{2,1}\) energy. Assume its zero boundary is regular away from
+the vertex. At a generic point of any connected component of that
+regular cone, precisely one real irreducible homogeneous factor \(p\)
+vanishes and \(Dp\ne0\). One way to see genericity is to choose a
+transverse direction where \(P\) does not vanish, and project the patch
+along that direction. The square-free part of \(P\), with its leading
+constant scaled out, is monic in the transverse variable. It is
+square-free also over the rational function field of the other
+variables by Gauss's lemma. The nonzero discriminant in those variables
+then gives simple transverse roots on a dense subset of the open
+projection. Write \(P=p^m W\) there, with \(W\) the polynomial
+quotient. Since \(P\) changes sign across its minimizing boundary
+and \(W\ne0\) locally, \(m\) is odd.
+
+In fact this factor and multiplicity persist all along the component,
+with \(Dp\ne0\) and \(W\ne0\). The points with these properties are
+relatively open. At any limit point in the regular component the
+factor \(p\) still vanishes. In a fixed graph chart near that point,
+the levels \(\{P=c\}\) for small positive \(c\) converge as single
+graphs to \(\{P=0\}\), by \eqref{eq:zeros}, local volume convergence and the
+minimizing-boundary regularity quoted above. Their graph difference
+has a strict sign by nesting and disjointness. In fixed graph
+coordinates the positive difference solves a uniformly elliptic
+divergence-form equation with coefficients obtained by averaging the
+graph integrand Hessian along the two slopes. Harnack compares its
+values at the limit point and at a point of the open factor patch
+inside the chart. The displacement on the open patch is comparable
+to \(c^{1/m}\) since the transverse derivative of \(p\) is nonzero
+and \(W\ne0\). The displacement magnitude \(h_c\) at the limit point
+is therefore also comparable to \(c^{1/m}\). If \(Dp=0\) there,
+then \(p=o(h_c)\) on the displaced graph. If \(W=0\) there, then
+\(W=o(1)\) and \(p=O(h_c)\) on the displaced graph. In either
+case \(c=p^m W=o(h_c^m)=o(c)\), which proves relative closedness.
+
+The local signed root \(p W^{1/m}\) is smooth along this component
+and homogeneous of degree \(\deg(P)/m\). Nearby levels of the root
+are stationary for the same energy, including the zero level.
+The positive normal velocity is \(1/|D(pW^{1/m})|\). Its homogeneity
+is \(\ell=1-\deg(P)/m\). Every connected link component is compact,
+since it is a connected component of the closed zero link, which
+is regular. If a component is nonflat, Section~\ref{sec:exponents} gives
+\begin{equation}\label{eq:degree-bounds}
+ 1<\deg(P)/m<d-2,
+\end{equation}
+where \(d\) is the ambient base dimension. A linear factor at a
+regular component gives a hyperplane component, because \(Dp,W\)
+remain nonzero there and the component is both open and closed
+in the corresponding punctured hyperplane.
+
+\subsection{Reduction at a nonzero boundary point}
+
+The regularity of the cone away from its vertex follows by dimension reduction. For a nonzero
+point \(x_0\) of the zero boundary of \(P\), let \(T\) be the first
+nonzero polynomial in the Taylor expansion of \(P\) at \(x_0\), and
+let \(k\ge1\) be its degree. Comparing the terms of order \(k-1\) in
+Euler's identity gives \(x_0\cdot DT=0\). The sets
+\(\{y:P(x_0+\varepsilon y)>\varepsilon^k c\}\) converge in local
+volume to \(\{T>c\}\) for all \(c\), so the corresponding superlevel
+boundaries are minimizing. By two-phase density at the old zero boundary point,
+the limit at \(c=0\) has both phases. The limit is a cylinder in
+the \(x_0\)-direction, and the side-and-cap argument of Section~\ref{sec:blowdown}
+gives minimizing superlevel boundaries of \(T|_{x_0^\perp}\) in dimension \(d-1\)
+for the restricted integrand. If \(d=4\), the reduced zero boundary
+is a two-dimensional minimizing cone. It is regular at its vertex
+by \cite[Part~I, Corollary~3.2 and the following remark]{SSA}. A cone regular at its vertex is a
+hyperplane, as seen by comparing its tangent plane at zero with
+its unchanged rescalings. The limiting cylinder in dimension four
+is therefore planar, and regular convergence makes \(x_0\) regular
+for the original zero boundary.
+
+In dimension four, \eqref{eq:degree-bounds} would force \(\deg(P)/m<2\), whereas a
+nonflat component has \(\deg p\ge2\) and \(\deg(P)/m\ge\deg p\).
+Thus all components are planar. Each such component is a whole
+punctured hyperplane, by relative openness, closedness and
+connectedness. Distinct hyperplanes intersect away from zero and
+cannot be distinct regular components. We have proved that in
+dimension four a homogeneous polynomial with minimizing superlevel
+boundaries and a sign-changing zero boundary has just one
+hyperplane zero boundary. Applied to \(P=U\), this contradicts
+the fixed graph normal in Section~\ref{sec:blowdown}.
+
+In dimension five, at any nonzero zero boundary point the same
+Taylor argument gives a four-dimensional homogeneous polynomial
+with minimizing superlevel boundaries and a sign-changing zero boundary.
+The preceding four-dimensional statement makes the reduced
+boundary planar. Regular convergence again gives regularity of
+the original five-dimensional zero boundary away from the vertex.
+
+\subsection{The quadratic in dimension five}
+
+For \(P=U\) in dimension five, there must be a nonflat component
+by Section~\ref{sec:blowdown}. By \eqref{eq:degree-bounds} its irreducible factor has degree two. Such
+a quadratic has both signs since it has regular real zeros. If its
+positive and negative inertias are \(a,b\), the Hessian of the
+quadratic restricted to the tangent space at a regular zero has
+\(a-1\) positive and \(b-1\) negative eigenvalues. For example, use
+the null point and a companion null vector with nonzero quadratic
+pairing to split off one hyperbolic plane. The remainder of the
+tangent quadratic form is the orthogonal complement of that plane,
+with the original kernel and the radial direction contributing
+zeros. If \(\min(a,b)=1\), this second fundamental form is semidefinite
+and nonzero, unless \(a=b=1\), which would factor over the reals.
+The contraction with the positive tangential energy Hessian at a
+regular point cannot vanish for a nonzero semidefinite form.
+Thus \(a,b\ge2\).
+
+After an invertible linear coordinate change, the regular zero set
+of the quadratic is parametrized by the
+product of the two positive-dimensional unit spheres, a common
+positive radius, and a free kernel direction. It is therefore connected.
+The zero-boundary
+component carrying this factor is open and closed within that regular
+zero set, by its local single-factor description and its closedness
+in the punctured zero boundary. If the quadratic had a nontrivial
+kernel, the component would accumulate at a nonzero kernel point.
+Closedness would put that point in the component, contradicting
+the established nonvanishing of \(Dp\) there. Thus its rank is
+five, of inertia \((3,2)\) or \((2,3)\).
+
+Two distinct nonflat components would have distinct quadratic
+factors by the connectedness just proved. Their multiplicities
+\(m_1,m_2\) would each exceed \(D/3\) by \eqref{eq:degree-bounds}, whereas their total
+degree \(2(m_1+m_2)\) is at most \(D\). A hyperplane component
+would intersect the quadratic cone. Indeed, on any hyperplane
+the quadratic takes both signs, since each of its sign subspaces
+has dimension at least two. It therefore has a nonzero zero in
+that hyperplane. The regular components are disjoint. This also
+shows that the cofactor has no other real zeros away from the
+origin, by \eqref{eq:zeros} and its nonvanishing along the quadratic component.
+
+We conclude
+\begin{equation}\label{eq:factorization}
+ \begin{gathered}
+ U=q^m W,\qquad m\text{ odd},\qquad j=\deg W\text{ even},\\
+ 0\le j<m,\qquad D=2m+j,\qquad W>0\text{ off }0.
+ \end{gathered}
+\end{equation}
+Here \(q\) is full-rank indefinite of inertia \((3,2)\) up to sign.
+Change \(q\) to \(-q\) if necessary to arrange the sign of \(W\).
+Homogeneity and positivity imply the asserted parity of \(j\).
+The bound \(j<m\) is exactly \(D/m<3\).
+
+\section{A constant cofactor}\label{sec:constant}
+
+If \(j=0\) then all levels of \(H=qW^{1/m}\) are stationary for \(G\).
+Its gradient is an invertible linear map. The trace equation for
+its levels gives \(D^2G(p):D^2H=0\) for \(p\ne0\), first away from
+the zero level and then by continuity. Set \(M=D^2H\), and write
+\(p=L\widetilde p\) and \(\widetilde G(\widetilde p)=G(L\widetilde p)\)
+for an invertible matrix \(L\). The transformed equation has
+coefficient \(L^{-1}ML^{-T}\) against \(D^2\widetilde G\).
+By the inertia of \(M\), choose \(L\) so that the coefficient is
+\(I_3\oplus(-I_2)\) up to a common sign. The transformed energy is
+one-homogeneous and \(C^{2,1}\) away from the origin. Average it
+over \(O(3)\times O(2)\), preserving the linear equation and its
+positivity. With the two blocks denoted \(p_+,p_-\), write its average
+as \(|p_+|h(v)\) for \(v=|p_-|/|p_+|\). Then
+\begin{equation}\label{eq:ode}
+ (v^2-1)h''-(2v+1/v)h'+2h=0.
+\end{equation}
+This follows by applying \(\Delta_{p_+}-\Delta_{p_-}\), both in
+radial coordinates. Put \(h_1(v)=1+v^2/2\), a solution of \eqref{eq:ode}.
+On either side of \(v=1\) reduction of order gives
+\[
+ (h/h_1)'=c_\pm\,\frac{|v^2-1|^{3/2}}{v h_1(v)^2}.
+\]
+At \(v=0\) a nonzero \(c_-\) gives logarithmic divergence, so
+\(h=h(0)h_1\) for \(v<1\). At \(v=1^+\), a nonzero \(c_+\) gives
+a correction with nonzero leading term proportional to
+\((v-1)^{5/2}\). Its second derivative has leading order
+\((v-1)^{1/2}\), which violates \(C^{2,1}\). Thus continuity at
+one forces \(h=h(0)h_1\) for all \(v\). As \(p_+\to0\) with
+\(p_-\ne0\) fixed, the resulting energy diverges, contrary to
+continuity away from the origin. This excludes the constant-cofactor case.
+
+\section{Rescaled vertical derivatives on the cylinder}\label{sec:derivatives}
+
+Assume \(j\ge2\) in \eqref{eq:factorization}. Put \(C=\{q=0\}\setminus\{0\}\) and
+\(\Gamma=C\times\mathbb R\), the regular part of the unshifted
+blow-down surface. Use \(\nu_C=Dq/|Dq|\) on \(C\), pointing toward
+\(q>0\). For \(y\in C\) and \(z\in\mathbb R\), define for large \(R\)
+\begin{equation}\label{eq:graph}
+ P_{R,y}(t)=R^{-1}u(R(y+t\nu_C(y))),\qquad
+ P_{R,y}(t_R(y,z))=z,
+\end{equation}
+where \(t_R\) is the small normal displacement of the rescaled graph
+over \((y,z)\in\Gamma\). Section~\ref{sec:blowdown} gives a single normal graph with
+\(C^2\) convergence to zero displacement locally on \(\Gamma\).
+Its local charts agree on overlaps by graph uniqueness. In
+particular the slope \(P_{R,y}'(t_R)\) is nonzero. To see its positivity, observe that the oriented normal \((Du,-1)/\sqrt{1+|Du|^2}\) of the graph tends
+to \((\nu_C,0)\) by convergence to the boundary of \(\{q>0\}\times
+\mathbb R\) with orientation towards \(\{q>0\}\). This orientation
+can be used since \(\Phi\) is even. Let
+\[
+ J_R(y,z)=\partial_z t_R(y,z)=(P_{R,y}'(t_R(y,z)))^{-1}>0.
+\]
+If \(\nu_R\) is this oriented normal, then
+\begin{equation}\label{eq:velocity}
+ -\nu_R\cdot e_{n+1}
+    =(\nu_R\cdot(\nu_C,0))J_R.
+\end{equation}
+This follows by differentiating the normal graph in \(z\) and
+taking its tangent derivative's normal component. The factor on
+the right tends to one uniformly on compact patches.
+
+The left side of \eqref{eq:velocity} is the normal velocity of vertical translation
+(up to sign), hence solves \eqref{eq:jacobi} on the rescaled graph. Under the
+normal graph maps to \(\Gamma\), the Jacobi equation has uniformly
+elliptic divergence coefficients and bounded zeroth-order terms
+on compact subcharts. The coefficients converge to those of \eqref{eq:jacobi}
+on \(\Gamma\) by \(C^2\) convergence. Interior Harnack applied
+along a finite chain of such subcharts compares values of \(J_R\)
+on each compact subset of the connected cylinder with its value
+at one fixed reference point \((y_*,0)\). The constants for a
+given compact set are uniform in \(R\). The same local equations
+give uniform H\"older estimates and local \(H^1\) bounds for the
+normal components after division by the reference value,
+by interior elliptic estimates and the Caccioppoli inequality.
+Using \eqref{eq:velocity}, local uniform limits of the normalized \(J_R\) exist
+along subsequences, stay strictly positive, and satisfy the
+cylindrical Jacobi equation in its weak form. The weak passage
+uses the \(H^1\) bounds for the normal components and the
+convergence of coefficients.
+
+\subsection{The normalization scale}
+
+The scale is determined by an algebraic branch.
+If \(a(s)>0\) is a continuous algebraic branch for \(s>0\) small,
+then
+\begin{equation}\label{eq:algebraic}
+ a(s)\sim c s^\alpha,\qquad c>0,\quad \alpha\in\mathbb Q.
+\end{equation}
+For completeness, write a nonzero polynomial relation as
+\(\sum_i p_i(s)a(s)^i=0\), omitting identically zero \(p_i\).
+Every remaining \(p_i\) has an integer vanishing order \(v_i\).
+At each sufficiently small positive \(s\), the term largest in
+absolute value must be comparable within a fixed factor to
+another term, by the equality. This bounds \(a(s)\) between
+\(c_1s^\gamma\) and \(c_2s^\gamma\) for one of the finitely many
+rational slopes \(\gamma=(v_i-v_k)/(k-i)\). For small \(s\)
+the bands for different slopes are disjoint. Continuity on a
+connected interval selects one band, so \(a(s)/s^\gamma\) stays
+in a fixed compact subset of \((0,\infty)\). Divide the relation
+by the smallest power among \(s^{v_i+i\gamma}\). Every limit
+of \(a(s)/s^\gamma\) is a root of the resulting nonzero limiting
+polynomial. Its cluster set is connected, being the intersection
+of the nested closed images of shrinking intervals, and is
+contained in a finite root set. Thus it consists of a single
+positive \(c\), proving \eqref{eq:algebraic}.
+
+For each fixed \((y,z)\), set \(s=1/R\) in \eqref{eq:graph} to get
+\[
+ s^D u((y+t\nu_C(y))/s)-s^{D-1}z=0
+ \qquad\text{at }t=t_R(y,z).
+\]
+This is a polynomial relation in \(s,t\) because \(u\) has degree \(D\).
+The reciprocal derivative formula consequently makes \(J_R\) algebraic
+in \(s\).
+The small root, and hence \(J_R\), depends continuously on \(s\)
+by transversality and local uniqueness for all sufficiently
+small positive \(s\). At the reference point choose \(\alpha\)
+from \eqref{eq:algebraic}, so \(J_R(y_*,0)\sim c R^{-\alpha}\). Harnack
+comparison then forces the same \(\alpha\) at every fixed
+\((y,z)\), by \eqref{eq:algebraic} applied there. Combining pointwise uniqueness
+with the compactness above gives
+\begin{equation}\label{eq:limit}
+ R^\alpha J_R\longrightarrow J>0
+ \quad\text{locally uniformly on }\Gamma,\qquad
+ \mathcal J_\Phi J=0\text{ on }\Gamma.
+\end{equation}
+This step only concerns compact subsets of the regular cylinder.
+
+\subsection{The limiting inverse polynomial}
+
+Let \(T_R(y)=t_R(y,0)\) and introduce the centered variables
+\begin{equation}\label{eq:centered}
+ w_R(y,z)=R^\alpha(t_R(y,z)-T_R(y)),\qquad
+ f_{R,y}(w)=P_{R,y}(T_R(y)+R^{-\alpha}w).
+\end{equation}
+By \eqref{eq:limit}, \(w_R\) tends locally uniformly to
+\(w(y,z)=\int_0^z J(y,h)\,dh\). For each \(y\), evaluate the
+polynomial \(f_{R,y}\) at \(D+1\) distinct chosen height nodes
+\(w_R(y,z_i)\). Their values are exactly \(z_i\). The nodes
+converge to distinct nodes because \(J>0\). Inverting the
+Vandermonde matrix shows coefficientwise convergence to a
+polynomial \(f_y\) of degree at most \(D\), whose coefficients
+depend continuously on \(y\). The convergence is uniform on compact \(y\)-patches, on which the
+limiting node separations have a positive minimum. The identities pass to the limit
+for every real \(z\), giving \(f_y(w(y,z))=z\).
+As \(z\to\pm\infty\), \(w(y,z)\) has infinite limits with
+the same signs, since it is increasing and the polynomial
+is bounded on any compact interval of \(w\). Thus \(f_y\)
+is a bijection of \(\mathbb R\) with
+\(f_y'(w(y,z))J(y,z)=1\). In particular \(f_y'>0\) on
+the entire real line.
+
+The coefficient of \(w^m\) in \(f_{R,y}\) is
+\[
+ R^{D-1-\alpha m}\left[
+ \frac{1}{m!}\partial_t^m U(y+T_R(y)\nu_C(y))+O(R^{-1})
+ \right],
+\]
+where the \(t\)-derivative denotes differentiation in the displayed
+normal direction. The bracket has a nonzero limit because
+\(q\) has nonzero normal derivative at \(y\) and \(W(y)>0\).
+Boundedness of this coefficient gives
+\begin{equation}\label{eq:alpha-bound}
+ \alpha\ge(D-1)/m=2+(j-1)/m>2.
+\end{equation}
+The same coefficient formula shows that every power higher
+than \(m\) vanishes in the limit, since its prefactor has a
+strictly negative exponent and the bracket stays bounded.
+Consequently \(1\le\deg f_y\le m\) for every \(y\).
+
+\section{Cone exponents and the degree of the limiting polynomial}\label{sec:degree}
+
+The cylindrical Jacobi coefficients are independent of \(z\).
+A Harnack chain on the unit link of \(C\) therefore compares
+\(J(y,z)\) at any two unit link points with the same height,
+by constants uniform over all \(z\). The link is connected
+by the quadratic description in Section~\ref{sec:leading}. If \(K_y=\deg f_y\)
+and \(a_{K_y}(y)\) is its positive leading coefficient,
+inverting the polynomial in Section~\ref{sec:derivatives} gives
+\begin{equation}\label{eq:inverse}
+ J(y,z)\sim
+ \frac{1}{K_y}a_{K_y}(y)^{-1/K_y}z^{-1+1/K_y}
+ \quad(z\to+\infty).
+\end{equation}
+Indeed \(w(y,z)\sim (z/a_{K_y}(y))^{1/K_y}\) and
+\(J=1/f_y'(w)\). Distinct \(K_y\) at two points would
+make their ratio unbounded in one direction. Hence there
+is a single degree \(K\) on the unit link. For \(r>0\),
+the identity
+\[
+ t_R(ry,z)=r\,t_{Rr}(y,z/r)
+\]
+follows from \eqref{eq:graph}, since \(\nu_C(ry)=\nu_C(y)\).
+Differentiating in \(z\) and using \eqref{eq:limit} gives
+\(J(ry,z)=r^{-\alpha}J(y,z/r)\). Thus also
+\(w(ry,z)=r^{1-\alpha}w(y,z/r)\) and
+\(f_{ry}(w)=r f_y(r^{\alpha-1}w)\). The degree is \(K\)
+on all of \(C\), and
+\begin{equation}\label{eq:radial-law}
+ a_K(ry)=r^{1+(\alpha-1)K}a_K(y).
+\end{equation}
+
+On every compact subset of \(C\), the leading coefficient
+is bounded below by a positive constant, and all coefficients
+are bounded. Therefore the elementary inversion in \eqref{eq:inverse} is
+uniform on such sets. For \(Z\to+\infty\) the functions
+\(Z^{1-1/K}J(y,Z+z)\) converge locally uniformly on
+\(\Gamma\) to
+\[
+ A_*(y)=K^{-1}a_K(y)^{-1/K}>0 .
+\]
+Each is a cylindrical Jacobi field by vertical translation
+invariance. Caccioppoli and weak passage on each compact regular
+patch show that the limit solves \eqref{eq:jacobi} there. It is independent
+of \(z\). Test the weak equation with \(\varphi(y)\eta(z)\), where
+both factors have compact support and \(\int_{\mathbb R}\eta=1\).
+The mixed horizontal--vertical coefficient contributes a multiple
+of \(\int_{\mathbb R}\eta'=0\), since the coefficients and \(A_*\)
+are independent of \(z\). The horizontal tangential block is
+\(D^2G(\nu_C)|_{TC}\), and the zero vertical principal curvature
+reduces the potential to its base expression. The remaining weak
+equation is the \(G\)-Jacobi equation on \(C\). By \eqref{eq:radial-law} its
+degree is \(\ell_*=-\alpha+1-1/K<-1\).
+
+On the same cone the smooth positive normal speed of the
+stationary levels of \(qW^{1/m}\), from Section~\ref{sec:leading}, has degree
+\(\ell_-=1-D/m<-1\). In base dimension five the paired degree for a positive
+field of Section~\ref{sec:exponents} is \(\ell_+=-2-\ell_->-1\).
+If \(\ell_*\ne\ell_-\), there would be three distinct real
+degrees with positive solutions on the compact regular link.
+Section~\ref{sec:exponents} rules this out. Therefore
+\[
+ -\alpha+1-1/K=1-D/m,\qquad
+ \alpha=D/m-1/K.
+\]
+Combining this with \eqref{eq:alpha-bound} and \(K\le m\) forces \(K=m\) and
+\(\alpha=(D-1)/m\).
+
+\section{The centroid of the root cluster}\label{sec:cluster}
+
+Fix one \(y\in C\). With \(s=R^{-1}\) put
+\[
+ Q(s,t)=s^D u((y+t\nu_C(y))/s)
+       =\sum_{d=0}^D s^{D-d} U_d(y+t\nu_C(y)),
+\]
+where \(U_d\) are the homogeneous parts of \(u\).
+This is a polynomial in \(s,t\). At \(s=0\), zero has
+multiplicity exactly \(m\) as a root in \(t\). Choose a
+small circle about zero enclosing no other root of \(Q(0,t)\).
+For all small complex \(s\) there are \(m\) roots in the
+circle, counted with multiplicity. Their centroid
+\[
+ c(s)=\frac{1}{2\pi i m}\oint t\,\frac{Q_t(s,t)}{Q(s,t)}\,dt
+\]
+is analytic and is real for real \(s\) by complex conjugation.
+Here the circle is positively oriented.
+
+For positive \(s\) we have exact equality
+\[
+ f_{R,y}(w)=s^{-(D-1)}Q(s,T_R(y)+s^\alpha w).
+\]
+The left side converges coefficientwise to \(f_y\), now
+known to have degree exactly \(m\). On a fixed circle in
+the \(w\) plane enclosing all its roots, Rouch\'e's theorem
+puts \(m\) roots of \(f_{R,y}\) inside for all large \(R\).
+Since \(T_R(y)\to0\), these correspond to precisely the
+\(m\) roots in the fixed \(t\) circle. In particular
+\(|c(s)-T_R(y)|=O(s^\alpha)\). Write \(b_s=(c(s)-T_R(y))/s^\alpha\)
+and choose a subsequence \(s\downarrow0\) for which \(b_s\to b\in\mathbb R\).
+The change of center is
+\[
+ s^{-(D-1)}Q(s,c(s)+s^\alpha w)=f_{R,y}(w+b_s).
+\]
+Along the subsequence the polynomial on the right converges coefficientwise
+to \(f_y(w+b)\), whose linear coefficient is \(f_y'(b)>0\).
+The prelimit linear coefficient is
+\[
+ s^{\alpha-(D-1)}\,Q_t(s,c(s)).
+\]
+The analytic factor either has an integer vanishing order or vanishes
+identically. Thus a finite nonzero subsequential
+limit requires \(D-1-\alpha\) to be an integer. This is
+impossible because \(\alpha=2+(j-1)/m\) and \(2\le j<m\).
+
+The contradiction excludes every nonconstant \(W\) in \eqref{eq:factorization}
+with all lower homogeneous terms of \(u\) allowed. Section~\ref{sec:constant}
+excludes the constant cofactor. Together with Section~\ref{sec:leading},
+this proves the stated affine rigidity for both dimensions.
+
+\subsection*{Acknowledgment}
+ChatGPT/Codex assisted with the development and checking of the argument and with the preparation of the manuscript.
+
+\begin{thebibliography}{99}
+
+\bibitem{CL}
+L. Chen and J. Lan,
+\emph{A \(C^2\)-perturbative Bernstein theorem for anisotropic entire minimal graphs},
+preprint, 2026.
+\href{https://arxiv.org/abs/2608.29117v2}{arXiv:2608.29117v2}.
+
+\bibitem{GT}
+D. Gilbarg and N. S. Trudinger,
+\emph{Elliptic Partial Differential Equations of Second Order},
+Classics in Mathematics, Springer, Berlin, 2001.
+\href{https://doi.org/10.1007/978-3-642-61798-0}{doi:10.1007/978-3-642-61798-0}.
+
+\bibitem{Guo}
+Y. Guo,
+\emph{On polynomial solutions to the minimal surface equation},
+Calc. Var. Partial Differential Equations \textbf{65} (2026), article 141.
+\href{https://doi.org/10.1007/s00526-026-03316-2}{doi:10.1007/s00526-026-03316-2}.
+\href{https://arxiv.org/abs/2404.00115v2}{arXiv:2404.00115v2}.
+
+\bibitem{Mooney6}
+C. Mooney,
+\emph{Entire solutions to equations of minimal surface type in six dimensions},
+J. Eur. Math. Soc. \textbf{24} (2022), 4353--4361.
+\href{https://doi.org/10.4171/JEMS/1202}{doi:10.4171/JEMS/1202}.
+
+\bibitem{MooneySurvey}
+C. Mooney,
+\emph{Bernstein theorems for nonlinear geometric PDEs},
+survey, 2024.
+\href{https://arxiv.org/abs/2407.11903v2}{arXiv:2407.11903v2}.
+
+\bibitem{MY}
+C. Mooney and Y. Yang,
+\emph{The anisotropic Bernstein problem},
+Invent. Math. \textbf{235} (2024), 211--232.
+\href{https://doi.org/10.1007/s00222-023-01222-4}{doi:10.1007/s00222-023-01222-4}.
+
+\bibitem{SSA}
+R. Schoen, L. Simon, and F. J. Almgren Jr.,
+\emph{Regularity and singularity estimates on hypersurfaces minimizing parametric elliptic variational integrals},
+Acta Math. \textbf{139} (1977), 217--265.
+\href{https://doi.org/10.1007/BF02392238}{doi:10.1007/BF02392238}.
+
+\bibitem{Yang}
+Y. Yang,
+\emph{A growth gap for anisotropic minimal graphs},
+preprint, 2026.
+\href{https://arxiv.org/abs/2609.08972v1}{arXiv:2609.08972v1}.
+
+\end{thebibliography}
+
+\end{document}

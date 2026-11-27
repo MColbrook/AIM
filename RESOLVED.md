@@ -241,6 +241,14 @@ Complete resolutions with a reviewed Lean proof, statement comparison, and repro
 | --- | --- | --- | --- | --- | --- | --- |
 | 007 | [Pólya–Szegő conjecture for the first buckling load](problems/007-buckling-load-ball.md) | 🏆 LEAN VERIFIED | Affirmative proof | 2026-11-03 | [Proof](https://github.com/QuanyuTang/polya-szego-planar-unconditional-palomar/blob/5311f47821b5da92e81e75b7da5091d176c8deb9/PlanarBucklingSolution.lean) | [Review](research/solution_reviews/2026-11-03-lean-007/scope-review.json) · [Lean evidence](research/solution_reviews/2026-11-03-lean-007/README.md) |
 
+## Solution claimed
+
+A matching complete resolution has been announced, but independent proof review remains outstanding.
+
+| ID | Problem | Status | Outcome | Last checked | Proof | Review |
+| --- | --- | --- | --- | --- | --- | --- |
+| 408 | [Polynomial anisotropic minimal graphs in dimensions four and five](problems/408-polynomial-anisotropic-minimal-graphs.md) | 🟠 SOLUTION CLAIMED | Affine rigidity for entire polynomial graphs in the stated class in both dimensions. | 2026-11-27 | [Proof](research/solutions/408-polynomial-anisotropic-minimal-graphs/paper.pdf) | [Review](research/solutions/408-polynomial-anisotropic-minimal-graphs/TARGET-COMPARISON.md) |
+
 ## Reporting a solution
 
 Open a [GitHub issue](https://github.com/MColbrook/AIM/issues) or pull request with the problem ID, a direct proof or counterexample reference, and a comparison with the entry's assumptions and conclusion. State whether the result is a claim, a published result, or an independently reviewed argument, and identify the review evidence. See [CONTRIBUTING.md](CONTRIBUTING.md#reporting-a-resolution) for how to update the record and index.
