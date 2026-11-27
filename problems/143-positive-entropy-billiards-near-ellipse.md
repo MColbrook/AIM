@@ -2,9 +2,9 @@
 
 **Area:** Hamiltonian billiards / chaotic ray transport
 
-**Status:** 🔵 OPEN
+**Status:** 🟠 SOLUTION CLAIMED
 
-**Last checked:** 2026-09-08
+**Last checked:** 2026-11-27
 
 ## Problem statement
 
@@ -31,6 +31,9 @@ Elliptical optical cavities are integrable. The question asks whether arbitraril
 
 ## Status review
 
-**Literature check:** Open in cited literature; no later resolution located.
+**Evidence review (2026-11-27).** A preprint by Kaiwen Jin claims the complete existence result for the ellipse with semiaxes 2 and the square root of 3. It uses smooth perturbations of the actual wall and proves rowwise positive Kolmogorov–Sinai entropy for the stated normalized collision measure.
 
-Berger's 2026 problem separates billiard-table perturbations from the established unrestricted symplectic-map perturbation theorem. A horseshoe or positive topological entropy can occur on a set of Liouville measure zero and does not answer this metric-entropy question. Searches included “ellipse billiard perturbation positive metric entropy 2026” and “Berger Problem 2.17 billiards solution”. No construction satisfying the stated approximation and measure requirements was located.
+- [Proposed proof](../research/solutions/143-positive-entropy-billiards-near-ellipse/paper.pdf)
+- [Target comparison and review scope](../research/solutions/143-positive-entropy-billiards-near-ellipse/README.md)
+
+The proof received an AI natural-language audit and separate AI manuscript feedback. Independent human review is pending.

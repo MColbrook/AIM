@@ -1,0 +1,1504 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.12in]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[1]
+\title{Positive metric entropy for billiards near a fixed ellipse}
+\author{Kaiwen Jin\thanks{\href{mailto:yui.ui.siki@gmail.com}{\texttt{yui.ui.siki@gmail.com}}}}
+\date{}
+\hypersetup{pdftitle={Positive metric entropy for billiards near a fixed ellipse},pdfauthor={Kaiwen Jin}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We construct smooth strictly convex planar billiards with positive
+Kolmogorov--Sinai entropy for their invariant collision probability,
+whose boundaries converge in \(C^\infty\) to the ellipse with semiaxes
+\(2\) and \(\sqrt{3}\). The focal separatrix of this ellipse provides long
+saddle passages joined by reflections on disjoint boundary arcs.
+Changing these arcs realizes return maps close to the Berger--Turaev
+stochastic-island model. We calibrate the periodic actions and then
+restore the four bounding heteroclinic circles by varying actual
+reflection profiles. The resulting positive-area islands give positive
+entropy for the collision maps.
+\end{abstract}
+
+\section{Introduction}
+
+In a planar convex billiard, straight flights alternate with specular
+reflections at the wall. The collision map acts on boundary arclength and
+outgoing angle. Its invariant area is the natural measure for asking
+whether a set of initial conditions of positive probability is chaotic.
+Elliptical tables are integrable: their confocal caustics organize the
+collision dynamics, and their focal trajectories form a separatrix.
+
+Smooth changes of the wall can produce hyperbolic basic sets. In particular,
+Bessa, Del Magno, Lopes Dias, Gaiv\~ao and Torres proved positive topological
+entropy for a \(C^2\)-open dense set of smooth convex bodies
+\cite[Theorem 1.1 and Corollary 1.2]{Bessa}. Positive entropy for the
+invariant collision probability calls for a positive-measure mechanism.
+Among general smooth area-preserving surface maps, Berger and Turaev
+obtained positive metric entropy by constructing and preserving a
+stochastic island \cite[Theorem A]{BT}. Their perturbations act on the
+phase map. Berger's Problem 2.17 asks for positive metric entropy when
+the perturbation is a change of an elliptical billiard table
+\cite[\S2.3]{BergerICM}.
+
+\begin{theorem}\label{thm:main}
+Let \(\gamma_E(\theta)=(2\cos\theta,\sqrt{3}\sin\theta)\) for
+\(\theta\in S^1=\mathbb R/(2\pi\mathbb Z)\).
+There exist \(C^\infty\) embeddings \(\gamma_j:S^1\to\mathbb R^2\) whose
+images bound strictly convex domains \(D_j\), such that
+\(\gamma_j\to\gamma_E\) in \(C^\infty\) and
+\[
+ h_{\mu_j}(B_j)>0\qquad\text{for every }j.
+\]
+Here \(B_j\) is the specular collision map of \(D_j\). With \(s\) the
+arclength on \(\partial D_j\) and \(\varphi\in(0,\pi)\) the outgoing angle
+from the positive tangent, its invariant probability is
+\[
+ d\mu_j=\frac{\sin\varphi}{2|\partial D_j|}\,ds\,d\varphi .
+\]
+\end{theorem}
+
+The billiard near the focal separatrix makes repeated passes through
+an unaltered saddle neighborhood. Between passes it reflects once at a
+designated small arc of the wall. In rescaled coordinates this last
+reflection supplies a shear, while the intervening passage supplies
+the other part of a H\'enon factor. Physically disjoint arcs allow us
+to compose such factors with a single wall. We first choose the finite
+word and then make its arcs small. This order gives a sequence of
+returns approaching the fixed stochastic-island model.
+
+Approximating the model leaves its heteroclinic branches free to split.
+To restore them, we use periodic chord lengths to remove the mean
+defect. A boundary profile affects every visit to its arc with the same
+scalar function, so the linearized equation must include all such
+visits. Unfolding the first
+visits lets us align the same profile with the native phase. Later visits
+on the longer branch give a contracting contribution in a derivative
+norm. Fixed-loss tame estimates let us solve the
+nonlinear equations on a tail of the sequence. The resulting invariant
+island has positive area in each return chart, and hence positive mass
+for that billiard's collision probability.
+
+The construction uses centrally symmetric normal graphs over
+\(\gamma_E\). Sections~\ref{sec:reflection}--\ref{sec:model} construct
+the returns. Sections~\ref{sec:actions}--\ref{sec:restoration} restore the
+links, and Section~\ref{sec:entropy} transfers entropy to the collision map.
+
+
+\section{Reflection at a perturbed wall}\label{sec:reflection}
+
+For a smooth strictly convex table \(D\), use the annulus of oriented lines crossing
+its interior. Write \(q_+(\ell)\) for the forward exit of an oriented
+line \(\ell\), and \(T_D\ell\) for the new line after reflection there.
+The outgoing collision state immediately after reflection at
+\(q_+(\ell)\) identifies \(T_D\) with the collision map \(B_D\).
+For a centrally symmetric table, the antipodal transformation commutes
+with reflection. We write \(\overline T_D\) for the quotient by this
+transformation, which acts freely on oriented lines.
+
+\subsection{Fixed charts and parameters}\label{fixed-charts-and-parameters}
+
+Let \(\gamma\) be an arclength arc of the fixed ellipse, \(t=\gamma'\), and
+\(n\) its outward unit normal. With positive boundary orientation,
+\(t'=-\kappa n,\ n'=\kappa t\). Fix one reference incoming ray whose last
+intersection in its direction is \(\gamma(s_*)\), with outward normal component
+\(w>0\). Let \(z=(x,y)\) be a fixed smooth canonical chart of the unperturbed
+outgoing rays near the reference reflection, with symplectic form
+\(dy\wedge dx\). The chart may include the fixed antipodal transformation on the
+way from reflection to the representative of the quotient. In the formulas below
+that transformation is included in the outgoing chart. The center
+\(z_*=(x_*,0)\) is a point on the local stable axis and the matching old impact
+function is \(s_b(z)\). The input ray direction \(v(z)\) is obtained by
+inverting the fixed reflection (and undoing the antipodal transformation if
+needed).
+
+Use independent small parameters \(\mu,\epsilon\) and an additional parameter
+\(d\), with \(|d|\leq 1\). On fixed bounded \((X,Z)\)-sets put \[
+ z=z_*+\mu(\alpha X,dZ),\qquad f(s)=\epsilon\mu\,P((s-s_*)/\mu)
+\] with fixed nonzero \(\alpha\). The physical scaling will set
+\(\epsilon=\tau=3^{-k}\), \(\mu=1/k\), \(d=\tau/\mu\), so the height of the
+input tube in physical coordinates is \(O(\tau)\). Let \(P\) be smooth on a
+common fixed interval with a collar around all sample points, with bounded
+\(C^2\) norm. A zero extension is used for supported profiles. The base impact
+coordinate \(\sigma_b=(s_b(z)-s_*)/\mu\) is uniformly smooth in the
+parameterized input, including \(\mu=0\), by the integral formula for the
+difference of \(s_b\) at \(z\) and \(z_*\).
+
+\subsection{The exact impact and readout}\label{the-exact-impact-and-readout}
+
+Write \(s=s_*+\mu\sigma\), \(s_b=s_*+\mu\sigma_b\) and \(\gamma_f=\gamma+fn\).
+The ray crosses \(\gamma(s_b)\). The selected perturbed impact satisfies \[
+ D(\sigma,\sigma_b,z)(\sigma-\sigma_b)
+   +\epsilon\,\det(n(s),v(z))P(\sigma)=0,\qquad
+ D=\int_0^1\det(\gamma'(s_b+\theta(s-s_b)),v(z))\,d\theta.
+\] The factor \(D\) has fixed nonzero sign and a positive lower bound in
+magnitude on the chosen transverse neighborhood. The derivative of the left side
+with respect to \(\sigma\) has that same property for small \(\epsilon,\mu\), by
+transversality and the reference bound on \(P'\). A fixed compact collar and the
+intermediate value theorem give a unique root there with
+\(|\sigma-\sigma_b|\le C|\epsilon|\|P\|_0\). This is the actual exit from the
+strictly convex table: the incoming direction has positive outward normal
+component there, and a line can have only one transverse exit. Define \[
+ B=-\det(n(s),v(z))/D,\qquad s-s_b=\epsilon\mu\, B P(\sigma).
+\]
+
+The impact point differs from \(\gamma(s_b)\) by \(\epsilon\mu\, U\), where \[
+ U=P(\sigma)\left(n(s)+B\int_0^1\gamma'(s_b+\theta(s-s_b))\,d\theta\right).
+\] The unnormalized tangent to the perturbed arc is \[
+ t_f^{\mathrm{un}}=(1+\epsilon\mu\kappa(s)P(\sigma))t(s)+\epsilon P'(\sigma)n(s).
+\] Subtract \(t(s_b)\) using \(s-s_b=\epsilon\mu BP(\sigma)\), producing
+\(\epsilon\) times a smooth expression in the fixed coefficients and the values
+\(P(\sigma), P'(\sigma)\). The segment from \(t(s_b)\) to \(t_f^{\mathrm{un}}\)
+lies in a fixed annulus about the unit circle when \(\epsilon\) is small. Unit
+normalization, rotation to the normal, and reflection
+\(v\mapsto v-2(v\cdot n_f)n_f\) preserve the exact factor \(\epsilon\) in the
+directional increment, by the integral formula for a smooth difference on this
+neighborhood.
+
+An oriented line near the reference has smooth coordinates consisting of a local
+angle of its unit vector \(u\) and a signed offset \(\det(a,u)\), where \(a\) is
+any point on that line. At the output use \(a=\gamma_f(s)\). The position and
+direction differences just found imply that the output line-coordinate
+difference has the factor \(\epsilon\). Apply the same smooth difference formula
+to the fixed outgoing chart from line coordinates to \(z\). Thus the actual
+relative reflection \(g_f\), which sends the reference reflected ray to the new
+reflected ray from the same incoming line, has the exact identity \[
+ g_f(z)-z=\epsilon\,L(\mu,d,\epsilon,X,Z;P).
+\] The components of \(L\) are smooth coefficient expressions evaluated at the
+root and at \(P(\sigma),P'(\sigma)\). All coefficients extend across zero scale
+parameters and have bounded derivatives of each fixed order on compact subsets. The only denominators above come from uniform transversality, the tangent norm,
+or fixed coordinate changes. In particular, the differences of the two outgoing
+coordinates are taken before dividing by the output affine scales.
+
+\subsection{Finite-order functional
+estimates}\label{finite-order-functional-estimates}
+
+Fix \(r,q\geq0\) and a bound on the \(C^{r+q+4}\) norm of the profiles, with
+domains and collars fixed. Implicit differentiation of the exact impact equation
+in \((X,Z,\epsilon)\) and \(q\) profile directions isolates each highest root
+derivative with coefficient \(\partial_\sigma F\), where \(F\) is the left side
+of the impact equation. Remaining terms have earlier root derivatives and
+evaluations of finitely many jets of \(P\) and the directions at the same root.
+Induction through total order at most \(r+q+1\), followed by differentiation of
+\(L\), uses at most \(r+q+2\) jets of profiles and directions. This gives
+uniform mixed finite-order bounds, including one \(\epsilon\) derivative, by a
+constant times the product of the direction norms in \(C^{r+q+4}\). For \(q=0\)
+the product is 1. In particular \(L(\epsilon)-L(0)=O_{r,q}(\epsilon)\) in these
+bounds. The estimates concern output from the enlarged physical tube with
+bounded \((X,Z)\).
+
+When \(\epsilon=\tau\), dividing the nonlinear remainder \(\tau[L(\tau)-L(0)]\)
+by the output scales \(\alpha\mu,\beta\tau\mu\) costs at most \(C\tau/\mu\),
+with fixed \(\beta\ne0\). The same assertion holds after differentiating with
+respect to finitely many bounded profile directions, and after substitution of a
+uniformly smooth bounded incoming \((X,Z)\)-parameterization.
+
+\subsection{Sign and comparison with the prescribed
+shear}\label{sign-and-comparison-with-the-prescribed-shear}
+
+Use coordinates \((s,p)\) of an outgoing ray at its first intersection with the
+unperturbed curve, with the inward-directed branch \(u=p\,t-w n\) and
+\(w=\sqrt{1-p^2}\). The incoming direction is \(v=p\,t+w n\). These coordinates
+have form \(dp\wedge ds\): the line invariant two-form is the exterior
+derivative of \(u\cdot da\), where changing the anchor \(a\) along \(u\) adds an
+exact differential. This is the first-intersection counterpart of the
+last-intersection chart in \cite[\S1.4]{Glutsyuk}. The antipodal readout
+preserves this form.
+
+At amplitude zero the variation of the new impact parameter is
+\(\delta s=pf/w\). Indeed the first-order position difference \(\delta s\,t+fn\)
+must be parallel to \(v\). The unit tangent varies by \((f'-\kappa\delta s)n\),
+and the reflected direction by \(2(f'-\kappa\delta s)(w t+p n)\). The first
+intersection of the new reflected line with the old arc has variation
+\(\delta\widehat s=2pf/w\), by sliding \((f/w)u\) along the outgoing line to
+first order. Consequently its tangential momentum varies by
+\(2w(f'-\kappa\delta s)+\kappa w\delta\widehat s=2w f'\). Thus the first
+variation of the post-relative reflector is \[
+ (-K_p,K_s),\qquad K(s,p)=2w(p)f(s).
+\] The sign here uses \(\iota_{X_K}(dp\wedge ds)=dK\). The two curvature terms
+cancel.
+
+In the fixed output chart this reads \(K(x,y)=A(x,y)f(s_b(x,y))\), \(A=2w\),
+with \(X_K=(-K_y,K_x)\). On the selected stable segment require
+\(\partial_x s_b(x,0)\ne0\), and choose \(f(s_b(x,0))=G(x)/A(x,0)\). The shape
+definition includes a cutoff in a common scaled \(x\)-interval that is one on
+the required larger impact interval. The exact formula \[
+ K(x,y)=R(x,y)G(\xi(x,y)),\qquad
+ s_b(\xi(x,y),0)=s_b(x,y),\qquad
+ R(x,y)=A(x,y)/A(\xi(x,y),0)
+\] has \(\xi-x=y E\) and \(R-1=y E_1\), with \(E,E_1\) smooth and all their
+fixed-order derivatives bounded. Let
+\(G(x_*+\alpha\mu X)=\tau\mu\,\mathcal G(X)\) with uniformly bounded profiles
+\(\mathcal G\) in the prescribed finite norms. The corresponding \(P\) above has
+the same finite-order uniformity by the inverse footpoint map, since the
+rescaled map and its derivative bounds follow from a fixed smooth local inverse
+and the identity for a divided increment. In raw coordinates \((X,Z)\) the
+argument of \(\mathcal G\) at \(\xi\) differs from \(X\) by
+\(O_{C^r}(\tau/\mu)\). Differentiating the last exact formula gives \[
+ K_y=O_{C^r}(\tau),\qquad
+ K_x-G'(x)=O_{C^r}(\tau^2/\mu).
+\] For the second estimate, \(R\xi_x-1=O_{C^r}(\tau)\), \(R_x=O_{C^r}(\tau)\),
+and the integral difference of \(G'(\xi)\) and \(G'(x)\) costs
+\(C_r\tau(\tau/\mu)\). The estimates use at most \(r+2\) profile derivatives.
+The calculation is linear in \(G\), including the cutoff, so it applies to all
+first profile directions and vanishes at higher profile orders. Put \(z=(x_*+\alpha\mu X,\tau Z)\), and let
+\[
+ {\cal A}_{\tau,\mu}(x,y)
+   =\left(\frac{x-x_*}{\alpha\mu},\frac{y}{\beta\tau\mu}\right).
+\]
+The raw pair \((X,Z)\) ranges over a bounded set. Comparing the two
+affine outputs at the same raw input gives
+\[
+ {\cal A}_{\tau,\mu}(g_f(z))-{\cal A}_{\tau,\mu}(z)
+  =\left(0,\frac{G'(x)}{\beta\tau\mu}\right)+O_{C^r}(\tau/\mu^2).
+\]
+The term on the right is the leading vertical kick. The horizontal
+component of the linearized difference is \(O_{C^r}(\tau/\mu)\).
+The error bound holds through any fixed number of profile derivatives
+on bounded sufficiently high norms, with the corresponding multilinear
+direction norms.
+
+\subsection{Uniform tame control of free
+increments}\label{uniform-tame-control-of-free-increments}
+
+A scalar factorization provides a stronger local fact about the unknown free
+profiles on a fixed low-norm neighborhood. Write \(P=P_k^0+\mu U\) with
+\(P_k^0\) a fixed uniformly smooth base family and \(\|U\|_{C^2}\)
+bounded. The scaled fixed footpoint reparametrization and smooth cutoff are
+uniformly bounded linear operations on each \(C^r\), so \(U\) may be the
+rescaled free profile from the physical formula above. Directly from the exact
+reflection identity, \[
+ L(P_k^0+\mu U)-L(P_k^0)
+   =\mu\int_0^1 D_P L(P_k^0+t\mu U)[U]\,dt .
+\] After normalization the vertical difference is the second component of this
+integral divided by \(\beta\). The horizontal difference is the first component
+times \(\tau/\alpha\). This treats the free correction at a common raw input and
+keeps the cancellation before division by \(\tau\mu\).
+
+In an expression formed by differentiating the root and readout formulas, assign
+weight \(\max(j-1,0)\) to a jet \(P^{(j)}(\sigma)\), and \(j\) to a direction
+jet \(U_i^{(j)}(\sigma)\). All smooth fixed coefficients, denominators and the
+unvaried \(P,P'\) are weight zero and uniformly bounded. Keep denominators as
+powers of the scalar impact derivative, the tangent norm or a smooth
+fixed-coordinate factor. The first state derivative of the root is a weight-zero
+expression, and its derivative in one new direction is a weight-zero coefficient
+times \(U_i(\sigma)\). These two facts come from dividing \(-F_{a}\) or
+\(-D_PF[U_i]\) by \(F_\sigma\) in the impact equation. A subsequent state
+derivative can increase the total weight by at most one. A derivative in a new
+profile direction can substitute \(U_i^{(j)}\) for \(P^{(j)}\), or add the root
+derivative in a composition, or differentiate a denominator. Each increases the
+weight by at most one and introduces the direction exactly once. This remains
+true for one amplitude-parameter derivative, which has the same root bound as an
+ordinary state derivative. By induction every term of \(D_{X,Z}^rD_P^q L\) has
+total jet weight at most \(r+q\).
+
+For \(m=r+q>0\), the finite-interval interpolation inequality bounds a \(P\)-jet
+of weight \(j-1\) using low \(C^1\) norm and high \(C^{m+1}\) norm, with high
+exponent \((j-1)/m\). For a direction jet it uses low \(C^0\), high \(C^m\) and
+high exponent \(j/m\). This inequality follows by taking an appropriate \(j\)-th
+Taylor difference on a one-sided interval of length comparable to \(h\) and
+balancing \(h^{-j}\|u\|_0\) against \(h^{m-j}\|u\|_{C^m}\), applied to \(u=P'\)
+or \(u=U_i\). The sums of high exponents are at most one. The weighted
+arithmetic-geometric mean inequality then bounds each term by a constant times
+\[
+ (1+\|P\|_{C^{m+1}})\prod_i\|U_i\|_{C^0}
+ +\sum_i\|U_i\|_{C^m}\prod_{j\ne i}\|U_j\|_{C^0}.
+\] A zero low norm makes its directional term identically zero. The case \(m=0\)
+follows from the undifferentiated coefficient bound. The bounds are uniform on a
+fixed low-norm profile neighborhood, for each \(r,q\), with loss independent of
+\(r\).
+
+The same argument applies under the integral for the free increment. Its
+\(q\)-th \(U\) derivative for \(q\geq1\) has a prefactor \(\mu^{q-1}\) in the
+vertical coordinate from the difference quotient. For \(q=0\) use the integral
+itself, increasing the input shift by at most one. If the base family has
+uniformly bounded higher norms, these estimates give local smooth tame bounds
+for the free increment with a fixed shift for every fixed \(q\).
+
+\subsection{Normalized reflection
+estimate}\label{normalized-reflection-estimate}
+
+On a compact transverse old reflection chart with a regular stable-footpoint
+coordinate, an \(O(\tau\mu)\) supported physical primitive determines a true
+locally perturbed exit and reflection. Its normalized output on
+\(|x-x_*|\leq C\mu,\ |y|\leq C\tau\) equals the prescribed vertical kick up to
+\(O(\tau/\mu^2)\) in each fixed finite state/profile norm with finite input
+loss. For \(G=G^0+\alpha\beta\tau\mu^2 V\) the free increment has the uniform
+fixed-loss local estimates above. Here \(\tau=3^{-k}\), \(\mu=1/k\),
+\(\alpha,\beta\ne0\) are the two fixed affine factors, and \(V\) is the
+fixed-domain smooth primitive.
+
+\section{Realization of a finite Hénon word}\label{sec:word}
+
+\subsection{Finite-word realization}\label{finite-word-realization}
+
+Fix an odd integer \(N\ge1\), a smooth primitive profile \(V_i\) for each factor
+\(H_{V_i'}(X,Y)=(Y,-X+V_i'(Y))\), and a compact starting set \(K\). Fix compact
+partial domains with positive margins containing the partial images of \(K\) and
+common bounds on the relevant profile intervals. These choices precede the limit
+parameter. The claim is that for \(k\) sufficiently large there is one smooth
+strictly convex centrally symmetric table given by an explicit normal graph on
+\(E=(2,\sqrt3)\), and fixed-for-\(k\) affine charts in the old oriented-ray
+coordinates, such that:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Each starting ray follows \(N\) consecutive prescribed blocks, each with \(k\)
+  unchanged saddle iterates followed by a fixed finite transit. Only the last
+  impact of each transit can use a changed part of the table, at its own
+  designated window.
+\item
+  The normalized \(N\)-block return converges to the given word with joint state
+  and profile derivatives of every prescribed finite order. More precisely, for
+  any fixed \(r,q\), convergence in \(C^r\) of the state derivatives of
+  \(D_V^j\), \(0\le j\le q\), is uniform when profiles and their \(C^{r+q+6}\)
+  norms are bounded, the strict margins are uniform, and the direction norms are
+  at most 1 in \(C^{r+q+6}\). We work on a fixed small neighborhood of the input
+  compact where the same margins hold.
+\item
+  The boundary displacement is \(O_{C^r}(3^{-k}k^{r-1})\) for fixed \(r\) and a
+  bounded \(C^r\) family of primitives. The affine charts have a common, nonzero
+  signed Jacobian proportional to \(3^{-k}k^{-2}\).
+\end{enumerate}
+
+Here the profile parameters may be taken on the fixed compact intervals extended
+with smooth collars.
+
+\subsection{Physical coordinates and
+support}\label{physical-coordinates-and-support}
+
+Use the quotient by central symmetry introduced in
+Section~\ref{sec:reflection}. Its area form descends from \(dp\wedge ds\).
+In the ellipse write \(\ell\) in collision coordinates \((\theta,v)\)
+at its current forward exit \(q_+(\ell)=\gamma_E(\theta)\). Here
+\(p\) is the tangential component at that impact and
+\(v=|\gamma_E'(\theta)|p\). With \(s_E\) the ellipse arclength,
+\(dv\wedge d\theta=dp\wedge ds_E\).
+The involution sends \((\theta,v)\) to \((\theta+\pi,v)\).
+
+The unperturbed focal separatrix has parametrization \[
+ q(t)=(2\tanh t,\sqrt3\,\mathrm{sech}\,t).
+\] Here \(q(t)\) is a boundary exit on the upper half of the ellipse,
+and the physical successor is \(-q(t+\log3)\). The quotient advance
+is \(t\mapsto t+\log3\). The expanding and contracting
+multipliers are 3 and \(1/3\) on the quotient. The separatrix formula follows
+from \cite[Lemma 4.1]{DRR}, and the focal chord identification follows from
+\cite[Lemma 2.2]{DCRR}. In canonical angle-momentum coordinates \((\theta,v)\),
+the two tangent lines are \(v=\pm\theta\). The stable sign at the selected
+major-axis point is \(+\), since \(q(t)\) tends to that point as \(t\to+\infty\)
+with \(v=\sin\theta\). Fix canonical saddle coordinates \((x,y)\) with stable
+axis \(y=0\) and unstable axis \(x=0\), and differential
+\(\theta=(x-y)/\sqrt2,\ v=(x+y)/\sqrt2\). Choose the axes to have linear
+restrictions with multiplier \(\lambda=1/3\) and \(1/\lambda\), as in
+\cite[\S6.1]{BT}. Canonical straightening follows by straightening the
+transverse axes, then integrating the density of the area form in the second
+variable. Linearization on each one-dimensional axis follows from the limit
+\(\lambda^{-j} f^j\) for a smooth contraction \(f\) with derivative \(\lambda\)
+at zero, using \(f^{-1}\) on the unstable axis. The limit is smooth on a small
+interval because telescoping increments are \(O_{C^m}((\rho^2/\lambda)^j)\) with
+\(\lambda<\rho<\sqrt\lambda\). Here the bounds \(\|f^j\|_{C^m}=O(\rho^j)\)
+follow inductively by differentiating the recurrence, with the term containing
+the highest derivative multiplied by \(\sup|f'|<\rho\) and all products of lower
+positive-order derivatives \(O(\rho^{2j})\). The canonical extensions
+\((x,y)\mapsto(h(x),y/h'(x))\) and \((x,y)\mapsto(x/j'(y),j(y))\) preserve the
+other axis restriction when \(h'(0)=j'(0)=1\).
+
+The current exit in this chart has arclength
+\(s_E(\theta(x,y))\) up to the fixed antipodal representative.
+For the relative reflection of Section~\ref{sec:reflection},
+\(s_b(x,y)\) is the forward exit of the inverse old ray, evaluated
+at an old output \((x,y)\). On the stable axis,
+\[
+ s_b(x,0)=s_E(\theta(3x,0))
+\]
+in the corresponding arclength chart. Its derivative at the vertex
+has magnitude \(3\sqrt3/\sqrt2\). This supplies the regular arclength
+coordinate for the control profiles. The saddle box is protected
+using its \emph{current} exits.
+
+Choose a small positive stable input center \(x_c\) for a control impact. A
+saddle box \(U\) of radius \(u\in(0.37x_c,0.43x_c)\) contains the old image of
+that stable input, at \(x_c/3\), and excludes the input. The whole old
+last-footpoint projection of \(U\) is at arclength distance at most
+\(2u\sqrt3/\sqrt2+O(u^2)\) from the vertex. The projection of a small stable
+center interval around \(x_c\) is at least \(0.98x_c\sqrt3/\sqrt2+O(x_c^2)\)
+away. This follows from the differential of the chart and
+\(|\gamma_E'(0)|=\sqrt3\). The stated radii give strict separation for
+sufficiently small fixed \(x_c\). Shrink the center interval so it lies in one
+compact separatrix time interval of length less than \(\log3\). Choose the box
+radius to avoid an exact unstable boundary hit along the chosen reference orbit.
+The excluded radii along this one discrete orbit are countable. After shrinking
+the center interval again, one common finite \(m\) takes its last unstable exit
+points inside \(U\) to the stable landing points inside \(U\), with all
+intermediate points outside \(U\). Indeed near each end of the homoclinic orbit
+one coordinate on the appropriate axis changes by \(\lambda\) or \(1/\lambda\)
+until leaving the small chart. The remaining compact portion of the separatrix
+is disjoint from the saddle and stays outside sufficiently small boxes. All
+inequalities retain strict margins on a smaller center interval.
+
+Take \(N\) distinct control centers there. Let \(M_i^+=(x_i^+,0)\) be their old
+outputs, and let \(M_i^-=(0,y_i^-)\) be the unstable starting point of the
+associated \(m\)-step transit. Apart from the designated last input, the finite
+native transit impacts lie outside all control arcs with strict physical
+arclength separation. The native impacts have times shifted by nonzero integer
+multiples of \(\log3\) relative to the selected impact. Their physical
+footpoints modulo the antipodal copies are separated by injectivity of \(q\) on
+the open upper semi-ellipse and by the common time window of length less than
+\(\log3\). Thus the same separation holds on fixed neighborhoods of each finite
+transit up to the last reflection. One can additionally separate the designated
+input arcs from each other. For \(k\) large the \(O(\mu)\) supports lie inside
+these fixed arcs. If an old exit point is off the supports, the point and its
+normal are unchanged. For a convex perturbation with the same crossing at that
+location it is still the unique forward exit on the line, so that reflection is
+exactly the old one.
+
+\subsection{Unperturbed long saddle passage inside the same
+box}\label{unperturbed-long-saddle-passage-inside-the-same-box}
+
+For the fixed old map in the saddle chart write
+\(\bar x=\lambda x+p(x,y)x,\ \bar y=\lambda^{-1}y+q(x,y)y\). The axis
+linearizations give \(p(x,0)=q(0,y)=0\). The area identity on each axis gives
+\(p(0,y)=q(x,0)=0\) by integrating its first derivative there. Thus the error
+coefficients \(p,q\) both have a smooth factor \(xy\). On a small box the mixed
+equations for a step can therefore be written as \[
+ x_{j+1}=\lambda x_j(1+x_j y_{j+1}a(x_j,y_{j+1})),
+ \qquad y_j=\lambda y_{j+1}(1+x_j y_{j+1}b(x_j,y_{j+1})).
+\] In the second equation invert the old \(\bar y\) for a fixed \(x_j\), using
+its uniformly positive derivative near \(\lambda^{-1}\). Both correction
+coefficients are smooth and uniformly bounded with fixed-order derivatives on a
+small enlarged box.
+
+For \(k\) steps set \(A_j=\lambda^{-j}x_j,\ B_j=\lambda^{-(k-j)}y_j\) with
+endpoints \(A_0=x_0,\ B_k=y_k\). The factor \(x_jy_{j+1}\) is
+\(\lambda^{k-1}A_jB_{j+1}\). Sum the recurrences for \(A_{j+1}-A_j\) and
+\(B_j-B_{j+1}\) to express the entire intermediate arrays as a fixed point. The
+right side equals the constant arrays \(x_0,y_k\) plus sums of at most \(k\)
+terms with factor \(\lambda^{k-1}\). On the sup-norm box of radius \(2u\) in the
+arrays it has Lipschitz constant \(O(k\lambda^{k-1})\). Each derivative of any
+prescribed finite order is bounded by \(C_r k\lambda^{k-1}\) for the correction,
+since rescaling the arguments costs only factors of magnitude at most 1. For
+large \(k\) this defines the unique solution in that box, with higher endpoint
+derivatives of the same small order for the correction, by differentiation and
+the uniform inverse of the linearized fixed point equation. In the physical
+coordinates every intermediate component lies in \(U\), since the endpoint
+magnitudes are less than \(u\) and \(2u\lambda<u\) for the other entries. In
+fact \(|x_j|\le \rho^j|x_0|\) with fixed \(\rho<0.5\) on the small saddle box.
+This argument establishes the old local passage on the actual box separated from
+the physical perturbations. The physical perturbation preserves each of these
+steps exactly.
+
+In particular, \[
+ x_k=\lambda^k(x_0+\xi_k(x_0,y_k)),\qquad
+ y_0=\lambda^k(y_k+\eta_k(x_0,y_k)),
+ \qquad
+ \|(\xi_k,\eta_k)\|_{C^r}\le C_r k\lambda^{k-1}.
+\] The proof uses only one fixed unperturbed saddle map.
+
+\subsection{Rescaling, synchronization and
+induction}\label{rescaling-synchronization-and-induction}
+
+Write the fixed outer transit from \(M_i^-\) to \(M_i^+\) near its endpoints as
+\[
+ x'=x_i^++b_i(y-y_i^-)+R_i^{(1)}(x,y-y_i^-),\qquad
+ y'=x\big(c_i+d_i(y-y_i^-)+R_i^{(2)}(x,y-y_i^-)\big).
+\] Both remainders are \(O(|x|+|y-y_i^-|^2)\) and are smooth, as follows by
+Taylor expansion and the fact that the unstable axis maps to the stable axis on
+this interval. At the center the determinant is \(-b_ic_i=1\), so \(b_i,c_i\)
+are nonzero. All \(b_i\) have a common sign by continuity on a sufficiently
+small interval.
+
+Use cyclic indices and choose fixed positive \(\rho_i\) by
+\(\rho_i=-c_i b_{i-1}\rho_{i-2}\). Since \(N\) is odd, the step of two goes
+through the entire cycle, and the product of all ratios
+\(-c_i b_{i-1}=b_{i-1}/b_i\) is one. Thus a positive choice exists with one
+scale fixed freely, including \(N=1\). Set \(a_i=b_i\rho_{i-1}\),
+\(\tau=\lambda^k\), \(\mu=1/k\), and \[
+ Q_{ik}(X,Y)=(x_i^++a_i\mu X,\ \tau(y^-_{i+1}+\rho_i\mu Y)).
+\] The signed Jacobian \(a_i\rho_i\tau\mu^2\) is independent of \(i\) by the
+recursion. We use zero extra centering corrections since the mixed saddle
+estimate above gives \(k\lambda^{k-1}/\mu\to0\).
+
+For a bounded normalized input at slot \(i-1\), the long saddle passage ends at
+\[
+ \tilde x=\tau(x_{i-1}^++a_{i-1}\mu\widetilde X),\qquad
+ \tilde y=y_i^-+\rho_{i-1}\mu\widetilde Y,
+ \qquad (\widetilde X,\widetilde Y)=(X,Y)+o_{C^\infty}(1).
+\] Indeed the exact mixed equation for \(\tilde y\), after division by \(\mu\),
+has an error \(O_{C^r}(k\lambda^{k-1}/\mu)\) for every \(r\) on bounded
+normalized sets and can be solved with derivative uniformly close to the
+identity. The formula for \(\tilde x\) has the same error. The fixed reference
+transit then gives \[
+ X_{\rm raw}=\widetilde Y+e_{1k},\qquad
+ Y_{\rm raw}=C_i/\mu+A_i\widetilde Y-\widetilde X+e_{2k},
+\] where \(C_i=(c_i x_{i-1}^+-y_{i+1}^-)/\rho_i\) and
+\(A_i=d_i x_{i-1}^+\rho_{i-1}/\rho_i\). The \(-\widetilde X\) coefficient is
+\(c_i a_{i-1}/\rho_i=-1\). Both errors tend to zero in each \(C^r\) norm by the
+stated smooth Taylor remainders after substitution and the fact that
+\(\tau/\mu\to0\). In particular the physical raw output can be written as
+\(x=x_i^++a_i\mu X_{\rm raw}\), \(y=\tau Z_{\rm raw}\), where
+\((X_{\rm raw},Z_{\rm raw})\) ranges over a bounded family with all fixed-order
+derivatives bounded. The potentially unbounded coordinate \(Y_{\rm raw}\) is
+never used as a bounded input of a local reflection lemma.
+
+At slot \(i\), prescribe the derivative of the primitive using the raw
+horizontal coordinate \[
+ G_{ik}'(x_i^++a_i\mu X)=\tau\rho_i[-C_i+\mu(-A_i X+V_i'(X))]
+\] on a scaled interval with a strict collar around the relevant
+\(X_{\rm raw}\). Integrate and use a smooth cutoff that is one on that interval
+and vanishes beyond a slightly larger fixed scaled interval. In this coordinate
+its primitive is \(\tau\mu\) times a uniformly smooth fixed base term plus
+the free term \(a_i\rho_i\tau\mu^2 V_i\) with the cutoff (an additive constant
+of the free primitive can be fixed). With the \(s_b\) and \(2w\) of the
+reflection calculation, use \(f_{ik}(s_b(x,0))=G_{ik}(x)/(2w(x,0))\). The fixed
+map \(s_b(x,0)\) here is the last-footpoint map on the inverse old stable
+branch, so its derivative is nonzero. All \(N\) supports can be made disjoint
+for large \(k\), including their antipodal copies. Reflecting at one does not
+evaluate any other profile. Their sum, extended with central symmetry, gives the
+single table. For each control slot the linear variation of this very wall is
+\(J_k(\chi_i U_i)(\sigma(s))/(2w_{\rm old}(s))\) on its support, with the
+analogous antipodal copy. Here \(\sigma(s)\) is its fixed scaled inverse old
+stable-footpoint coordinate, \(\chi_i\) is the fixed primitive cutoff, and
+\(J_k=a_i\rho_i\tau\mu^2\) is that row's signed Jacobian. The other
+profile-dependent terms live on disjoint physical supports. Local inverse and
+product estimates in scaled arclength give the claimed \(C^r\) boundary bounds.
+In particular the boundary stays embedded and strictly positively curved, by
+\(C^2\) smallness and the strict curvature of the ellipse.
+
+Each finite transit is exact until its designated last reflection, by the fixed
+physical margins. For the latter use the true exit and the estimate in
+Section~\ref{sec:reflection}, with \(\beta=\rho_i\). After
+normalization the kick is \(-C_i/\mu-A_iX_{\rm raw}+V_i'(X_{\rm raw})\) plus an
+error tending to zero in all the fixed finite mixed norms. Adding it to
+\(Y_{\rm raw}\) cancels the constant exactly, and produces \[
+ (X_{\rm raw},-\widetilde X+V_i'(X_{\rm raw})+e_{2k}-A_i e_{1k})
+\] up to that small error. This converges jointly to \(H_{V_i'}(X,Y)\). Both the
+intermediate reference estimates and the final profile dependence are evaluated
+on common bounded physical or normalized domains as specified in their
+derivation.
+
+Induct over the fixed \(N\) slots. A normalized output close to the
+corresponding ideal partial image lies in the next compact domain with its
+margin. Its physical image is in \(U\) near that slot's \(M_i^+\), hence the
+next saddle block is the allowed one. This proves the itinerary for every ray in
+the input compact, uniformly with the given margins and profile norms. For mixed
+derivatives up to total order \(m=r+q\), apply the finite chain and product
+rules in the state and the profile directions. Each block uses at most \(m\)
+total derivatives. Comparing evaluations at actual and ideal partial images uses
+one extra state derivative of the limiting factor on the common enlarged domain.
+The finite composition converges in these mixed norms on a bounded \(C^{m+6}\)
+family. The distinct landing centers lie in a narrow stable interval near
+\(x_c/3\). For \(k\) large every intermediate local step contracts \(|x|\) below
+that entire interval, and intermediate outer steps lie outside \(U\). Thus the
+initial landing chart is visited again only after the cyclic \(N\)-block return,
+even if a smaller starting compact is used.
+
+\section{The reference island and diagonal approximation}\label{sec:model}
+
+\subsection{The marked reference island}\label{the-marked-reference-island}
+
+We use the standard-area map \(\check F\) from
+\cite[Proposition 2.1 and \S3.4]{BT}. Its comparison domain is the closed disc
+\(D_{\mathrm{BT}}\), and it has a smooth plane extension
+\(\check F_{\mathrm{ext}}\) equal to the identity outside that disc. A bi-link
+here consists of two invariant heteroclinic arcs from the same unstable endpoint
+\(P\) to the same stable endpoint \(Q\), forming a smooth embedded circle with
+the endpoints. The reference map has one outer circle and three disjoint inner
+circles in its interior. Their eight endpoints are distinct hyperbolic fixed
+points. The region inside the outer circle and outside the inner closed discs is
+a stochastic island in the sense of \cite{BT}.
+
+Let \(\Phi\) denote the area-preserving preparation constructed below
+and \(F_*=\Phi\check F_{\mathrm{ext}}\Phi^{-1}\) the model map.
+On each prepared circle, write \([x_a-2h,x_a]\) and
+\([x_b,x_b+2h]\) for the horizontal projections of the two strips,
+where \(h>0\) is fixed for that circle.
+
+Use smooth rounded rectangles with horizontal upper and lower straight pieces as
+the four model bi-link circles. Give the three inner rectangles disjoint
+horizontal projection intervals inside the outer rectangle, leaving a fixed
+interval to their left. The possibility follows from the strict area inequality:
+the outer disc area exceeds the sum of the three inner disc areas. For example,
+before rounding, choose a common height \(H\) for inner rectangles less than the
+outer height \(H_0\), close enough to \(H_0\) that the sum of their widths
+\(A_i/H\) is strictly less than \(A_0/H_0\). Use this remaining width for the
+left interval and positive gaps. Rounding close to the corners and adjusting the
+widths slightly preserves the exact prescribed areas, the gaps, and the straight
+pieces. Use the left interval for the two outer strips and both outer saddle
+projections. For each rectangle choose its \(a\)-strip to the left of its
+\(b\)-strip. On the upper straight segment put \(P\) just to the right of the
+\(a\)-strip and \(Q\) just to its left, both strictly outside the two strips.
+Then \(L_a\) is the short upper segment directed from right to left, and \(L_b\)
+is the other arc, first crossing the \(b\)-strip rightward on the top and later
+crossing it leftward along the bottom. The widths and strip locations can be
+chosen with strict margins, independently for the four rectangles. This gives
+the labelled circles and straight portions for the local construction of
+\cite[Lemma 4.5]{BT}. For the first leading fundamental interval and its
+translate, the upper coordinate is the horizontal phase \(t\), with area form
+ \(de\wedge dt\). On the upper \(b\)-strip these coordinates are
+\(t=x_b+hu\) and \(e=\epsilon/h\) in the time-energy chart used below.
+The prepared map translates by \(-h\) along the \(a\)-branch
+and by \(+h\) along the \(b\)-branch, including collars of the first interval
+into the second. For the \(b\)-branch use also the time-energy chart
+\((u,\epsilon)\) with unit time step. The coordinate maps in the proof of
+\cite[Lemma 4.5]{BT} are \[
+ (u,\epsilon)\longmapsto(x_b+hu,y_b+\epsilon/h),\qquad
+ (u,\epsilon)\longmapsto(x_b+4h-hu/2,y_b'-2\epsilon/h).
+\] The first formula applies on the upper two-period interval \(0\le u\le2\) and
+the second on the lower four-period interval \(4\le u\le8\), with the retained
+collars. Here \(h>0\) is the horizontal step of the upper chart, \(x_b\) is the
+left edge of the \(b\)-strip, and \(y_b,y_b'\) are its upper and lower heights.
+The fourth iterate of a point starting at horizontal phase \(t\) on the first
+upper interval has horizontal coordinate \(x_b+2h-(t-x_b)/2\). Each of the next
+three steps subtracts \(h/2\). All eight endpoint projections avoid all eight
+closed strips. Each strip also misses each of the other inner circles by a
+positive margin.
+
+For the extension step, take local symplectic annular maps from the construction
+in \cite[Lemma 4.5]{BT}. The source and target annuli surround discs of pairwise
+matching areas. Extend the orientation-preserving maps on smaller collars to a
+smooth plane diffeomorphism \(\Phi_0\), identity outside a large ball. One can
+extend component by component using the smooth classification of compact planar
+surfaces with boundary and the extension of orientation-preserving boundary
+diffeomorphisms over a collar. The complementary compact components are discs
+and a disc with three holes, and the exterior is completed inside the large ball
+with its outer collar fixed. On each complementary component the compactly
+supported difference \(\Phi_0^*\omega-\omega\) integrates to zero, by the
+enclosed areas and the equality of the local annular areas. To obtain a
+compactly supported primitive of the difference, cover its support and
+connecting paths by finitely many overlapping interior coordinate rectangles. A
+partition of unity and transfer of the integral over a spanning tree using
+unit-integral bumps in the overlaps makes each rectangle's contribution have
+integral zero. For \(d(x,y)\,dx\wedge dy\) of integral zero in a rectangle,
+choose an interior bump \(\chi(x)\) of integral one, put
+\(b(y)=\int d(x,y)\,dx\), and use the primitive \[
+ \left[\int_{-\infty}^x (d(v,y)-\chi(v)b(y))\,dv\right]dy
+ -\chi(x)\left[\int_{-\infty}^y b(v)\,dv\right]dx .
+\] It is supported in the rectangle. The sum is a primitive \(\beta\) supported
+away from the collars. The positive interpolated area forms
+\(\omega_u=(1-u)\omega+u\Phi_0^*\omega\) give the compactly supported vector
+field determined by \(\iota_{X_u}\omega_u=-\beta\). Its time-one map pulls
+\(\Phi_0^*\omega\) back to \(\omega\) and equals the identity on the collars, so
+composing it with \(\Phi_0\) supplies the required symplectic extension. The
+branch labels \(a,b\) on each source circle may be chosen in its two possible
+directions to agree with the prescribed plane orientation and order in Lemma
+4.5.
+
+
+
+\subsection{Choosing the words and the
+compression}\label{choosing-the-words-and-the-compression}
+
+Choose one large compact model domain with a collar containing a rectangle whose
+interior contains the prepared closed source disc. Include the buffered saddle
+boxes and the finite reference phase patches and their images used below. This
+choice precedes any word approximation. By Turaev's approximation theorem in the
+planar form used in the proof of \cite[Corollary 6.3]{BT}, a smooth symplectic
+plane map can be approximated on a fixed compact domain in any finite \(C^r\)
+norm by an even number of maps \((X,Y)\mapsto(Y,-X+\psi(Y))\). See also
+\cite[Theorem 2]{Turaev}. Apply this to \(H_0^{-1}\circ F_*\) and append
+\(H_0\). Choose the resulting odd words \(W_j\) with error at most \(2^{-j}\) in
+\(C^j\) on the common collared domain. The finite intermediate compacts may
+depend on \(j\).
+
+Append the action-calibration insertion of
+Section~\ref{sec:actions} and one control block for each of the eight
+strips. Each control block has the form \(H_{\widehat V'}R^3\), where
+\(R=H_0\) and \(\widehat V\) is the active primitive multiplied by its
+fixed strip cutoff. The wall construction uses its own cutoff, equal
+to one on the required impact interval. These are a fixed number of
+blocks, each with even
+total length. The ideal action-calibration insertion is the identity at zero
+calibration, and the ideal free-control blocks are the identity at zero free
+profiles. Use the finite-word construction with \(W_j\) and those appended
+blocks held fixed, then choose \(k=k_j\). On the suffix all variable reflection
+slots are fixed in number. The prefix of the actual return, through \(W_j\)'s
+slots, is exactly independent of those variables on the chosen input domain, by
+separation of the intervening physical impact sites. Its normalized map
+converges to \(W_j\) as \(k\to\infty\), so \(k_j\) can enforce an error of at
+most \(2^{-j}\) in every required fixed norm through order \(j\). The closed
+words remain odd.
+
+One can choose the finite center sets in increasing order on one fixed small
+compact stable arc. The suffix centers can be fixed in a subarc to one side of
+the prefix. The outer map and its nonzero transverse derivative \(b(t)\) there
+are fixed. If the scale recursion is written \(\rho_i/\rho_{i-2}=b_{i-1}/b_i\),
+then the oscillation of \(\log\rho_i\) across the entire cycle is bounded by the
+total variation of \(\log|b|\) over the ordered center set, including the one
+cyclic wrap. Thus the suffix affine factors can be bounded above and away from
+zero uniformly over the varying word lengths. The support widths are reduced
+after fixing the center set and are always disjoint. The intermediate prefix
+images may require its own larger compacts, which affects the choice of \(k_j\)
+but adds no parameter derivative to the suffix.
+
+On the fixed suffix compacts the normalized reflection formulas of
+Section~\ref{sec:reflection} use the same fixed-order loss for
+each profile derivative. Bounded center data, bounded affine factors, and a
+fixed number of variable stages give uniform coefficient estimates there. One
+may also impose \(C^j\) bounds on the parameter-independent normalized matrices
+and reference remainder for the \(j\)-th row when selecting \(k_j\). For each
+prescribed fixed order, the finitely many smaller \(j\) only change the
+corresponding uniform constant. The initial prefix approximation is independent
+of every variable profile, so it preserves this uniformity when composed in.
+This is the mechanism that allows \(N_j\) to grow without a derivative loss
+growing with \(j\).
+
+The selected \(k_j\) can also make the boundary change bounded by \(2^{-j}\) in
+norms through order \(j\) on fixed bounded profile families. For smooth
+corrections that vanish in every fixed norm, the exact normal-graph formula then
+ensures convergence to the one ellipse. More explicitly, a bound with the
+row-dependent shape coefficient and unit profile norm can be enforced separately
+in each order through \(j\). Multiplying by the resulting bounded seminorms of
+the solved profiles preserves convergence.
+
+The actual base returns converge to \(F_*\) in every fixed finite order. For
+bounded calibration parameters the convergence is joint in state and parameters,
+toward \(F_*\) followed by the model action-calibration insertion. This follows by the
+finite chain rule on the collared domains along the fixed suffix. The same
+convergence to \(F_*\) holds after freezing parameters tending to zero in each
+fixed seminorm. Each row has its own \(k_j\) and one physical table.
+
+\section{Periodic actions and protected neighborhoods}\label{sec:actions}
+
+\subsection{Exact ray-space primitive}\label{exact-ray-space-primitive}
+
+In local oriented-line coordinates, choose the point \(a(\ell)\) on the line
+\(\ell\) nearest the origin and let \(u(\ell)\) be the unit direction. Define
+the globally available line one-form \(\alpha=u\cdot da\). If an anchor on the
+same line is \(q=a+t u\), then \(u\cdot dq=\alpha+dt\). The nearest-origin
+anchor and the line parameter are invariant in the required sense under the
+antipodal transformation, so the form descends to the central quotient.
+
+Let \(T\) reflect the incoming line \(\ell\) at its forward exit \(q\), and
+write \(q=a(\ell)+t_{\rm in}u(\ell)=a(T\ell)+t_{\rm out}u(T\ell)\). Equality of
+tangential momenta at the collision, with \(dq\) tangent to the fixed table,
+gives \[
+ T^*\alpha-\alpha=d(t_{\rm in}-t_{\rm out}).
+\] Summing this primitive for \(n\) steps gives an action primitive for \(T^n\).
+At a quotient fixed point of \(T^n\), the value is the physical sum of the \(n\)
+chord lengths. To see this, pair each \(t_{\rm out}\) with the \(t_{\rm in}\) of
+its next collision on the same oriented line. The length is the latter minus the
+former. The quotient action uses these \(n\) steps even when the lift is
+antipodally twisted. Traversing \(2n\) physical reflections always closes the
+lift and doubles that value, also for a lift which already closes after \(n\).
+
+Let \(Q\) be the landing chart in a given row and \(A_n\) the ray
+action for \(n\) reflections, descended to the quotient. On the
+common contractible chart domain, \(Q^*\alpha=JY\,dX+d\chi\), where
+\(J\ne0\) is the signed affine scale. For
+\(F=Q^{-1}\overline T_D^{\,n}Q\), the primitive of
+\(F^*(Y\,dX)-Y\,dX\) is
+\[
+ S(z)=\frac{A_n(Qz)-\chi(Fz)+\chi(z)}{J}.
+\]
+At fixed points the two values of \(\chi\) cancel, so each normalized
+action difference is the corresponding physical length difference
+divided by \(J\).
+
+\subsection{Calibration of the action
+differences}\label{calibration-of-the-action-differences}
+
+Write \(P_i,Q_i\), \(0\le i\le3\), for the distinct endpoints of the prepared
+stochastic bi-links. Pick a real \(t\) such that the first coordinates of
+\(U_tP_i,U_tQ_i\), with \(U_t(X,Y)=(X+tY,Y)\), are pairwise distinct. For pairs
+with unequal second coordinates at most one \(t\) is excluded, and pairs with
+equal second coordinates already differ in first coordinate. Pick fixed small,
+pairwise disjoint collars of these eight projections. Let \(b_i\) be a smooth
+supported primitive equal to 1 near the projected \(P_i\) and 0 near all other
+seven projections, with support contained in its collar. Insert after \(W_j\)
+the action-calibration block \[
+ U_{-t}\, S_{(\sum_i \zeta_i b_i)'}\, U_t,\qquad S_\psi(X,Y)=(X,Y+\psi(X)).
+\] The symbol \(\zeta_i\) here is a calibration parameter. Each \(S_{\phi'}\) is
+\(H_{\phi'}R^3\) for \(R=H_0\). The horizontal shear is a conjugate by \(R\) of
+a vertical linear shear. This uses an even number of factors, fixed independent
+of the approximating word. Zero free-control blocks can follow it.
+
+For the model family the saddles of \(W_j\) lie in the collars for large \(j\),
+and the insertion equals the identity near their images for every small \(\zeta\).
+The primitive of \(S_{\phi'}\) relative to \(Y\,dX\) is \(\phi(X)\). Exactness
+for composition sums the pulled-back primitives. The \(U_t,U_{-t}\) terms cancel
+at the fixed points, where the shear is identity, so the difference
+\(\Delta_i=\mathrm{action}(P_i)-\mathrm{action}(Q_i)\) changes by exactly
+\(\zeta_i\). The action differences for \(F_*\) vanish because integrating its
+action differential along an invariant heteroclinic arc equals the difference
+between the integrals of \(Y\,dX\) along the arc and its image. These oriented
+arcs are identical.
+
+Joint map and parameter convergence of the actual family on a fixed compact
+calibration ball and on a fixed connected model neighborhood gives joint
+convergence of these primitive differences. Indeed the one-form
+\(F^*(Y\,dX)-Y\,dX\) converges with the joint first derivatives needed here, its
+normalized primitive is its line integral from a fixed reference (one can use a
+fixed larger disc), and the saddle continuations depend smoothly on the
+parameters by hyperbolicity. The exact ray-primitive identification makes this
+argument insensitive to the shrinking physical action scale. In the diagonal
+construction the actual action vector satisfies \(\Delta_j(0)\to0\),
+\(\|D_\zeta\Delta_j-I\|\to0\) uniformly on a fixed small ball. The map
+\(\zeta\mapsto\zeta-\Delta_j(\zeta)\) is a contraction and maps the closed ball into itself
+for all large \(j\). Its fixed point \(\zeta^{(j)}\) tends to zero and gives exact
+equality of each pair's actions. Smoothness of the resulting table is preserved.
+This conclusion requires the fixed calibration blocks and joint finite-order
+convergence, as supplied by the one-table construction.
+
+\subsection{Protected neighborhoods}\label{protected-neighborhoods}
+
+At each stage fix the calibrated parameters and the earlier
+vanishing sequences of repaired profiles, with later profiles zero.
+The baseline sets the current active profile to zero. In the model,
+the four-factor blocks at zero free profiles have model composite
+identity and each nontrivial slot observes the same model \(X\) at its own
+four-factor block's output. Each active support lies strictly within its strip.
+For large \(j\), actual normalized old footprints in the designated slots are
+close to the model \(X\): the inverse old footpoint chart of
+Section~\ref{sec:reflection} and the normalized block estimates
+give this convergence on bounded inputs. On a fixed small neighborhood of each
+saddle this leaves a strict physical support gap after rescaling. Applying the baseline map until the first possible changed reflection and inducting over the
+suffix slots proves exact equality of all these nearby return itineraries under
+free controls. The saddles, their local maps and their full quotient actions are
+therefore unchanged during these variations. The same footprint argument
+preserves a previously restored compact inner circle (and the \(a\)-branch under
+its own \(b\)-strip correction) when the source strip avoids it by a strict
+margin. The strict margin holds for the projected footprint of the entire
+reference branch or circle in the relevant slot.
+
+\section{Differentiating the link splitting}\label{sec:splitting}
+
+\subsection{A chart on an unchanged initial
+interval}\label{a-chart-on-an-unchanged-initial-interval}
+
+For the active link choose native first and translated
+fundamental intervals on the upper leading segment. Their charts have
+the form \((t,e)\mapsto(t,y_{\mathrm{top}}+e)\), with signed step
+\(\lambda=-h\) or \(+h\). Pull them back by \(d_{\mathrm{lead}}\) model
+iterates to obtain \(\theta_*\) inside the protected \(P\) neighborhood.
+The entire closed intervals enter a local unstable seed box under
+sufficiently many backward iterates. This holds uniformly on each
+closed subarc because the iterates preserve order and both extreme
+points tend to \(P\). Shrink the phase and energy collars to keep
+positive margins. The actual return \(F_{j,V}\) coincides with the
+baseline on the protected neighborhoods of \(P\) and \(Q\), for every
+active \(V\) in the common small low-norm ball.
+
+Translate the phase origin temporarily and take the \(+h\) direction. In the ideal chart, the
+zero-active-profile return \(G_j\) tends to translation by \(h\). Build a smooth
+coordinate change \(H_j\) on a neighborhood of \([0,h]\times[-a,a]\) that is the
+identity on the collar of \(t=0\) and equals \(T_h G_j^{-1}\) on the collar of
+\(t=h\), where \(T_h(t,e)=(t+h,e)\). One obtains it by interpolating the
+difference from the identity using a fixed cutoff supported at the second
+collar, with \(a\) and the collar widths shrunk first. Its determinant \(D_j\)
+is positive and equals 1 on both collars. The map
+\(K_j(t,e)=(t,\int_0^e D_j(t,s)\,ds)\) has the same pulled-back area form as
+\(H_j\) and is identity on the collars. Then \(H_j K_j^{-1}\) is symplectic on a
+slightly smaller common strip. Extend it into the next strip by
+\(T_h(H_jK_j^{-1})G_j^{-1}\), which agrees identically on the overlap by the
+collar choices. This constructs an exact time-energy chart for the return from the chosen fundamental strip into its image.
+Writing \(\theta_j\) for the resulting symplectic embedding in the
+return domain gives
+\[
+ F_{j,V}\theta_j(t,e)=\theta_j(t+\lambda,e)
+\]
+on the collared first strip for the whole active family. For \(-h\) the seam construction
+runs in the other direction. The charts and their inverses converge in every
+fixed norm to the ideal chart, because the interpolation, integral correction
+and coordinate inversion are on fixed neighborhoods with uniform inverse bounds.
+
+The unstable graph \(e=u_j(t)\) in the resulting chart is fixed during this
+stage. The stable graph \(e=s_{j,V}(t)\) is obtained from the unchanged local
+stable seed at \(Q\) by a fixed number \(L\) of inverse iterates, where \(L\) is chosen at the source on the two closed phase intervals
+with collars. The images at \(L\) and \(L+1\) of the reference arc
+lie inside the smaller \(Q\) seed box with a margin, by forward
+convergence of the extreme points and order preservation. The margin
+persists for the perturbed roots on the same fixed collars. An exact
+scalar implementation uses forward iterates: in the local seed chart, subtract
+the seed graph value from the second coordinate of \(F_{j,V}^{L}\theta_j(t,e)\). At the
+source its \(e\)-derivative is nonzero, since the image of the tangent of the
+initial branch is the tangent of the stable seed and the map is invertible.
+There is a uniform lower bound by compactness. A fixed low-norm neighborhood of
+zero active controls preserves this and puts the root in a fixed strip about the
+source graph. Thus a scalar implicit equation gives the stable graph on the full
+phase interval. Choose the protected boxes so the reference map and its inverse
+are \(C^1\)-close to their hyperbolic linear parts in coordinates adapted to the
+local stable and unstable directions. The zero-active-profile maps converge
+there in every \(C^r\) norm, also after recentering at the continued saddles. On
+smaller boxes the hyperbolic graph transform gives smooth local seeds and
+convergence in each such norm \cite[Theorems 2.3--2.4]{HP}. The support
+exclusion keeps these same seeds fixed as the active profile varies.
+
+The splitting function \(M_{j}(V)=u_j-s_{j,V}\) is smooth periodic of period
+\(h\). The two graph germs at the phase cut match because the chart conjugates
+the return to translation and both branches are invariant. Its mean is zero. In
+a primitive agreeing with \(e\,dt\) on the chart, a fundamental unstable segment
+has integral \(S(z_u)-S(P)\) and a fundamental stable segment integral
+\(S(z_s)-S(Q)\), where \(S\) is the action for one normalized return. This
+follows by applying the action differential to a branch path from \(P\) or
+\(Q\). The chart translation makes \(S(z_u)=S(z_s)\) on the connected strip.
+Therefore the integral of the oriented graph difference is \(S(Q)-S(P)\), which
+vanishes by the exact calibration. The reverse phase direction merely reverses
+the sign of the integral relation. The local gauge change from \(Y\,dX\) is
+exact and leaves fixed-point action differences unchanged.
+
+\subsection{First variation of the stable
+graph}\label{first-variation-of-the-stable-graph}
+
+Let \(F=F_{j,V}\) and vary the active profile in a direction \(U\). In
+normalized phase coordinates, write \(\partial_V F[U]\circ F^{-1}=X_K\), with
+\(\iota_{X_K}\omega=dK\), \(\omega=de\wedge dt\) in the phase chart.
+Differentiating \(F^{-L}\) applied to the fixed seed gives the Hamiltonian
+\(-\sum_{\ell=1}^L K\circ F^\ell\) on the initial graph. Indeed a variation of
+\(F^{-1}\) is \(- (F^{-1})_*X_K=X_{-K\circ F}\), and differentiating the \(L\)
+factors gives the stated sum. A curve variation by \(X_H=(-H_e,H_t)\) changes a
+graph at fixed \(t\) by \(H_t+s'(t)H_e=\partial_t[H(t,s(t))]\). Hence \[
+ D M_j(V)[U](t)=\partial_t\sum_{\ell=1}^L K(F^\ell(t,s_{j,V}(t))).
+\] A moving point of the seed only adds a tangent variation, which gives zero
+graph increment in this formula.
+
+For a physical reflection at the current curve, the post-relative Hamiltonian
+variation is \(2\sin\varphi\) times the normal variation at the current impact.
+This follows by the calculation of Section~\ref{sec:reflection}
+applied at the current curve. A tangential displacement changes only the
+first-order parametrization, hence the reference-normal direction contributes
+\(n_E\cdot n_{\mathrm{current}}\) times its scalar profile. Composing the
+physical flights and reflecting maps adds the transported Hamiltonians, and the
+fixed affine scale divides them by \(J\). Since only the chosen active slots can
+vary, the exact derivative is therefore the phase derivative of a finite sum of
+terms \[
+ a_{\ell i,j,V}(t)\,U_i(\sigma_{\ell i,j,V}(t)).
+\] Here \(i\) labels a physical profile slot and \(\ell\) a normalized return
+visit of the stable branch. The coordinate \(\sigma\) is the actual impact read
+in the scaled inverse old stable-footpoint chart. The coefficient \(a\) is
+\(2\sin\varphi(n_E\cdot n_{\mathrm{current}})\) divided by the fixed
+\(2\sin\varphi_{\mathrm{old}}\) in the definition of that physical profile, with
+the fixed support cutoff when present. The signed \(J\) cancels. At the ideal
+model the uncut coefficient is 1. A later visit at a different phase to the same
+physical slot uses the same function \(U_i\).
+
+The same unrolled stable trajectory at \(t\) and \(t+\lambda\) starts one map iterate
+apart, by exact translation on the chart. The two ends of the finite visit lists
+can be placed in the protected neighborhoods where all active profile
+evaluations are zero. Thus controlled visits at the cut match by shifting the
+iterate labels, with equality of the projected impact maps, weights and their
+germs. This establishes gluing of the actual terms as phase patches. The finite
+sum may therefore be evaluated on either phase patch.
+
+\subsection{Leading and folded visits}\label{leading-and-folded-visits}
+
+For the active block \(H_{\widehat V'}R^3\) let \(I_2=[A,A+2h]\) be
+the two-period interval on the straight leading segment. Parametrize
+the primitive on a fixed large circle in \(X\). Fix \(0<\delta<h/4\),
+take \(K=[A+\delta,A+2h-\delta]\), and put
+\(K^+=[A+3\delta/4,A+2h-3\delta/4]\).
+The fixed strip cutoff is supported inside \(I_2\) and is one on
+\([A+\delta/2,A+2h-\delta/2]\).
+
+At return index \(q\) in the sum above, start from
+\(F_{j,V}^{q-1}\theta_j(t,s_{j,V}(t))\). In the reference model the
+observed \(X\) is the first coordinate of \(F_*^q\theta_*(t,0)\).
+Writing \(d=d_{\mathrm{lead}}\) locally, the potentially contributing
+indices on the first phase interval are
+\[
+\begin{array}{ccl}
+\text{branch}& q & \text{reference }X\\
+a & d,\ d+1 & t,\ t-h\\
+b & d,\ d+1 & t,\ t+h\\
+b & d+4+r,\quad 0\le r\le 3
+    & x_b+2h-(t-x_b)/2-rh/2 .
+\end{array}
+\]
+On the translated phase patch the exact graph translation shifts the
+starting orbit by one return. Thus its \(q\)-th sample is the
+\((q+1)\)-st sample on the first patch, with the same weight and physical
+coordinate. The unmatched end samples start in the protected boxes.
+Every other reference sample has a positive margin to the support
+of the strip cutoff, including any hit at a strip edge. The
+convergence of the fixed finite itinerary and the impact coordinates
+retains this margin on a late tail and common low ball.
+
+The two successive leading visits per period have ideal coordinates \(t,t+h\) in
+the increasing case (and \(t,t-h\) in the decreasing case). Define the actual
+leading footpoint as a function \(\sigma^L(x)\) on the two-period interval: use
+the first visit for its first phase sheet and the next visit for its other
+sheet. At their shared cut, these two formulas agree on a neighborhood, because
+advancing from one phase representative to the next applies exactly one map
+return on the stable branch in the unchanged upstream chart. Their full germs,
+including the action weights \(a^L(x)\), agree. Thus the two visits define one
+smooth leading parametrization on both sheets. This is an unfolded interval of
+physical control \(X\)-coordinates. The two sheets give distinct physical
+coordinates in the same slot. For \(j\) large and all sufficiently small
+controls in one fixed low norm, \(\sigma^L\) is strictly monotone, close to the
+identity in \(C^1\). Its inverse is defined on a common collar of the primitive
+support. The uncut leading coefficient \(a^L\) is at least \(1/2\) on the common
+primitive collar on the same late tail and fixed low ball: at zero profiles it
+tends uniformly to 1 by the weight calculation below, and uniform \(C^0\)
+dependence allows shrinking the ball. The images of the support with its collar
+lie in the fixed cutoff plateau by the same \(C^0\) margin. One physical
+function thus determines both leading contributions.
+
+For support verification, in the source the selected leading segment, and for
+\(b\) the folded segment, are the only points of this link with \(X\) in the
+active strip. The remaining source hits in the fixed finite iterates stay a
+positive distance from the smaller active support. The finitely many model
+rotations of the one identity word and the previously fixed functions are
+controlled on fixed compacts. The diagonal family retains these margins, by
+convergence of the return and of the normalized physical impact readouts. Where
+the endpoints of the leading and folded segments are used, work on collars in
+their smooth prepared neighborhoods. The invariant relation at the cut makes the
+definition smooth across phase sheets. At points whose shifted supports enter no
+visit, extend the control contribution by zero through its fixed smooth collars.
+
+The normalized physical impact readout is the inverse old stable-footpoint
+coordinate of the actual scalar root in the reflection calculation. At a
+reference path its difference from the normalized old output horizontal
+coordinate is \(O_{C^r}(\tau/\mu+\tau)\) for bounded fixed-order profiles: the
+\(\tau/\mu\) term is the old footpoint's dependence on the raw transverse
+height, and the \(\tau\) term is the exact rescaled impact displacement. The
+positive reflection weight is read from the incoming direction, the current
+normal, and the fixed old weight, all in uniformly transverse charts. At zero
+profiles its ratio to the old weight tends to 1 in every fixed norm. The same
+coefficient and root formulas give uniform tame bounds on a fixed low-norm
+neighborhood as in the reflection calculation. The stage maps, actual impact
+readouts and weights are then evaluated along the finitely many normalized
+iterates of the stable graph, computed by the scalar root above, and along the
+fixed suffix. The model prefixes and all frozen charts are uniformly smooth in
+the row. The number of variable and normalized stages in these evaluations is
+fixed, even though the prefix lengths vary.
+
+For the tame calculus here, products and finite compositions are estimated by
+the chain rule with interpolation between a fixed low seminorm and the highest
+needed seminorm. A derivative in each profile direction contributes that
+direction once. For scalar roots or one-dimensional inverse parametrizations,
+differentiation produces a uniform reciprocal of the nonvanishing root derivative
+times the lower terms, allowing the same jet count as in the reflection
+calculation. More explicitly, for composition the total derivative order
+allocated to derivatives of the inside map beyond its first derivative, plus
+derivatives of the outside function beyond its first derivative, is at most the
+total order minus one for state derivatives. New parameter directions increase
+this budget by at most one each when their ordinary derivative orders are
+included. The same accounting in \(D(G^{-1})=1/(G'\circ G^{-1})\) or in the
+differentiated implicit identity, with base low bounds and a fixed positive
+denominator, supplies a loss independent of the output order. Iterating this
+over a fixed number of operations gives \(C^r\) tame estimates with input
+\(C^{r+d_q}\) for each fixed number \(q\) of parameter derivatives. It applies
+to the stable graph, the coefficient functions, the lifted leading map and its
+inverse, and the folded maps below. The coincidence of the germs at a seam
+allows all estimates on a fixed finite set of overlapping patches.
+
+\subsection{Exact leading alignment and the folded
+operator}\label{exact-leading-alignment-and-the-folded-operator}
+
+Choose a fixed nonnegative smooth \(\rho\), supported in the interior
+of \(K\), with \(\rho(t)+\rho(t+\lambda)=1\) on the first phase
+interval. Such a function is obtained by normalizing a nonnegative
+bump under periodization by \(h\), since the interior of \(K\)
+contains representatives of every phase. The actual leading map on
+the collared \(I_2\) has inverse on \(K^+\), and the images of \(K^+\)
+under \(\sigma^L\) lie in the cutoff-one interval by the strict margins
+and \(C^1\) closeness to the identity. For a smooth zero-mean forcing \(g\) of period \(h\), define its supported
+primitive \[
+ V_g(x)=\int_{-\infty}^{x}\rho(v)g(v)\,dv.
+\] The full integral is zero, so this primitive is supported in the same closed
+interior interval. It gains one derivative in all the fixed norms. Use the
+actual direction \[
+ (R_Vg)(\sigma^L(x))=V_g(x)/a^L(x),
+\] extended by zero through its collars on the large input circle. Nearby
+leading images of this support remain inside the region where the fixed profile
+cutoff equals 1. Thus this is a linear-in-\(g\), smooth tame family of bona fide
+physical primitive directions. The two leading action contributions sum to
+\(V_g(t)+V_g(t\pm h)\), and taking the phase derivative produces \(g(t)\)
+exactly. This yields a right inverse on the \(a\)-link, which has no other
+controlled visits.
+
+For the \(b\)-link, four further visits occur on the folded segment. At the
+source, for \(t\in[x_b,x_b+h]\), their coordinates are \[
+ z_\ell^0(t)=(3x_b+\ell h-t)/2,\qquad 1\le\ell\le4,
+\] by the lower time-energy chart in Section~\ref{sec:model} and
+its four-period folding \cite[Definition 4.4 and Lemma 4.5]{BT}. The ratios of
+folded to leading weights are 1. In the actual family use \[
+ z_\ell(t)=(\sigma^L)^{-1}(\sigma_\ell(t)),\qquad
+ c_\ell(t)=a_\ell(t)/a^L(z_\ell(t)),
+\] on the needed enlarged patches, extending through zero-support collars. The
+actual \(z_\ell,c_\ell\) are uniformly tame as just shown, and are arbitrarily
+\(C^2\)-close to \(z_\ell^0,1\) by first taking the diagonal tail and then
+shrinking a fixed low-norm ball of profiles. The \(b\)-link derivative on
+\(R_Vg\) is \[
+ D M_j(V)R_Vg
+ =g+\sum_{\ell=1}^4 c_\ell\rho(z_\ell)z_\ell' g(z_\ell)
+     +\sum_{\ell=1}^4 c_\ell' V_g(z_\ell).
+\] There is no extra primitive-weight term at the source, where the coefficients
+are constant. Each actual term comes from the same physical primitive at its own
+reparameterized impact, so the formula keeps the repeated-visit constraint. The
+operator on the left is periodic and maps into zero mean. The principal
+perturbation contains contracted phase arguments, clustered in pairs that differ
+by \(h\) at the source. The quantitative tame inverse of this operator is the
+input to smooth exact repair.
+
+\section{Smooth restoration of the links}\label{sec:restoration}
+
+For the ambient-map restoration in \cite[\S5]{BT}, the authors' corrigendum uses
+a compactness argument with a loss of one derivative \cite{BTcorr}. Here the
+splitting equations for the billiard profiles use fixed-loss derivative bounds
+and tame local surjectivity.
+
+\subsection{Inverting the folded
+contribution}\label{inverting-the-folded-contribution}
+
+Let \(E_h\) be the zero-mean smooth functions of period \(h\). Use
+\(|g|_1=\|g'\|_\infty\). This is a norm on the zero-mean \(C^1\) completion. Let
+\(T=I-DM(V)R_V\) for the \(b\)-link and write \[
+ Tg=\sum_{\ell=1}^4 a_\ell(t)g(z_\ell(t))
+      +\sum_{\ell=1}^4 b_\ell(t)V_g(z_\ell(t)),\quad
+ a_\ell=-c_\ell\rho(z_\ell)z_\ell',\quad b_\ell=-c_\ell'.
+\] The full \(T\) is periodic and preserves zero mean, as follows from the
+actual splitting map. The summands may be interpreted on phase patches and need
+not be individually periodic. At the source \(z_\ell'= -1/2\), \(c_\ell=1\),
+\(z_{\ell+2}^0=z_\ell^0+h\) for \(\ell=1,2\), and \(a_\ell^0+a_{\ell+2}^0=1/2\).
+In particular \(\sup_t\sum |a_\ell^0|=1\).
+
+Take the \(C^2\) error in \(z_\ell,c_\ell\) at most \(\delta\). In the
+derivative of the principal sum the terms involving \(g'\) have bound
+\((1/2+C\delta)|g|_1\). For each pair write its coefficient-derivative
+contribution as \[
+ (a_\ell'+a_{\ell+2}')\,g(z_\ell^0)
+ + a_\ell'[g(z_\ell)-g(z_\ell^0)]
+ + a_{\ell+2}'[g(z_{\ell+2})-g(z_{\ell+2}^0)].
+\] The coefficient sum is \(O(\delta)\), since the source pair sum is constant.
+The differences are \(O(\delta)|g|_1\), and \(\|g\|_\infty\le h|g|_1\). The
+derivative of the primitive-order sum is \(O(\delta)|g|_1\) because
+\(b_\ell,b_\ell'=O(\delta)\) and \(\|V_g\|_{C^1}\le C|g|_1\). Hence
+\(|Tg|_1\le q_0|g|_1\) with a fixed \(q_0<1\) on a common sufficiently small
+low-norm neighborhood in a sufficiently late tail. The \(C^1\) inverse is the
+Neumann series \(S=(I-T)^{-1}\).
+
+\subsection{Higher regularity with fixed
+loss}\label{higher-regularity-with-fixed-loss}
+
+There are uniform constants \(M,\kappa\), with \(M\kappa<1\) and \(\kappa<1\),
+bounding \(\sum_\ell |a_\ell|\) and \(\max_\ell|z_\ell'|\), respectively. For
+\(r\ge2\) the top term in the principal sum has bound
+\(M\kappa^r\|g^{(r)}\|_\infty\). Every other term there involves \(g^{(p)}\)
+with \(p<r\). The primitive-order terms also have this property because
+\(V_g'=\rho g\).
+
+Here is the quantitative lower-term estimate, with arbitrary \(\eta>0\).
+Interpolate the derivatives of \(a_\ell,b_\ell,z_\ell\) between \(C^1\) and
+\(C^r\), and those of \(g\) between \(C^1\) and \(C^r\). A term
+\(a_\ell^{(l)}g^{(p)}(z_\ell)\prod_{s=1}^p z_\ell^{(m_s)}\), where
+\(l+\sum m_s=r\) and \(m_s\ge1\), has total interpolation weight at most \(r-1\)
+before division by \(r-1\). The weights are \((l-1)_+\), \((p-1)_+\) and
+\(m_s-1\), with the case \(p=0\) interpreted without products. In the
+\(g\)-factor its high exponent is strictly less than one if \(p<r\). For the
+primitive term use \(V_g\) between \(C^2\) and \(C^{r+1}\), whose bounds are
+controlled by those of \(g\). This reduces the weight in that factor further.
+The finite-interval interpolation inequality from the reflection proof and
+Young's inequality bound the sum of non-top terms by \[
+ \eta\|g^{(r)}\|_\infty+
+ C_{r,\eta}(1+\mathcal A_r)|g|_1,
+ \qquad \mathcal A_r=\max_\ell\|(a_\ell,b_\ell,z_\ell)\|_{C^r}.
+\] Here one may first use the full \(C^r\) norm of \(g\), then use its
+equivalence to the highest derivative seminorm on zero-mean periodic functions
+and choose the Young coefficient accordingly. The low coefficient bounds are
+uniform, including for the lifts of \(z_\ell\) on fixed phase patches. The
+relevant derivatives of the primitive are bounded on the fixed enlarged
+projection interval. The coefficients have
+\(\mathcal A_r\le C_r(1+\|V\|_{C^{r+d}})\) for a fixed loss \(d\), by the link
+and readout estimates (including the one derivative in \(b_\ell\)).
+
+Choose \(\eta\) so \(M\kappa^r+\eta\le q_1<1\) for all \(r\ge2\). Keeping the
+lower estimate and iterating the equation for the Neumann partial sums yields
+uniform bounds in each \(C^r\) norm. Compact embedding from \(C^{r+1}\) and the
+unique \(C^1\) limit then show the limit is smooth and give \[
+ \|Sg\|_{C^r}\le C_r\left(\|g\|_{C^r}
+             +(1+\|V\|_{C^{r+d}})\|g\|_{C^1}\right).
+\] All constants are uniform in the row. The shift is independent of the output
+order \(r\).
+
+The same expression for \(T\) and the finite composition estimates show
+\(T(V)g\) is a smooth tame map in \((V,g)\) with a finite shift for each
+parameter derivative. Resolvent differences satisfy
+\(S(V_2)-S(V_1)=S(V_2)(T(V_2)-T(V_1))S(V_1)\). The inverse bounds and this
+identity first give continuity in the smooth topologies and then justify
+differentiating to obtain \(D S(V)[U]g=S(V)(D T(V)[U])S(V)g\). Iterating this
+formula gives each higher derivative by finite products of the same tame maps,
+with total shift depending on the derivative order in \(V\) and independent of
+the output order. Thus \(R_V S(V)\) is the required uniform smooth tame family
+of linear right inverses. The \(a\)-link uses \(R_V\) without the inverse
+correction.
+
+\subsection{The splitting equation on a space of vanishing
+sequences}\label{the-splitting-equation-on-a-space-of-vanishing-sequences}
+
+The input space for this stage is \(C^\infty(\mathbb T_X;c_0)\), where
+\(\mathbb T_X\) is the fixed large circle used for the free primitive and
+\(c_0\) denotes scalar real sequences vanishing at infinity. The output is the
+zero-mean subspace of \(C^\infty(\mathbb R/h\mathbb Z;c_0)\). Equivalent
+seminorms are \(\sup_j\|\cdot\|_{C^r}\), with component sequences vanishing in
+each \(C^r\) norm. For the latter characterization, compactness of the phase
+circle and the definition of the \(c_0\) norm give uniform tail convergence of
+each Banach-valued derivative, and the reverse implication follows by uniform
+Taylor estimates in the next derivative seminorm.
+
+These spaces are tame Fréchet spaces. For a Banach value space \(B=c_0\), use a
+smooth frequency partition \(\Delta_m\) on scales \(e^m\) and spectral cutoff
+\(\widetilde\Delta_m=1\) on each piece's multiplier support. Map \(f\) into
+\((\Delta_m f)_m\) and reconstruct by \(\sum_m\widetilde\Delta_m f_m\). With
+\(B'=C^0(\mathbb T;B)\), the sequence norms \(\sum_m e^{mn}\|f_m\|_{B'}\) use
+the \(\Sigma(B')\) exponential grading. Passing between its sum and supremum
+versions costs one additive grading shift. Smooth-band convolution kernel bounds
+and integration by parts give \[
+ \sum_me^{mn}\|\Delta_m f\|_{B'}\le C_n\|f\|_{C^{n+2}},
+ \qquad
+ \left\|\sum_m\widetilde\Delta_m f_m\right\|_{C^n}
+       \le C_n\sum_m e^{mn}\|f_m\|_{B'}.
+\] The kernel bounds hold for Banach values by the integral triangle inequality.
+Reconstruction on the range is the identity by the partition. Taking zero mean
+is a continuous tame projection. This gives the tame direct summands required by
+the theorem.
+
+Fix one stage with the same protected phase and seed family as in
+Section~\ref{sec:splitting}. On a late tail \(j\ge j_0\) choose one
+integer \(b\) large enough for the scalar root estimates and the
+\(C^2\) folded bounds. The common domain is the open ball
+\[
+ {\cal U}=\{\mathbf V=(V_j):\ %
+      \sup_{j\ge j_0}\|V_j\|_{C^b}<\varepsilon\}
+\]
+in the input tame space. Choose \(\varepsilon\) within the uniform row
+radius. Write \({\cal R}_j(V)\) for \(R_V\) on the \(a\)-branch and
+for \(R_V S(V)\) on the \(b\)-branch, with the data of row \(j\).
+The component maps are
+\[
+ {\cal M}(\mathbf V)_j=M_j(V_j),\qquad
+ (\Psi(\mathbf V)\mathbf g)_j={\cal R}_j(V_j)g_j .
+\]
+The periodic action identity gives zero mean for every \(M_j(V_j)\).
+At zero active profile the protected charts, local seeds and fixed
+finite propagation converge to the same reference arc. Thus the
+residuals \(M_j(0)\) tend to zero in each fixed norm. For a fixed
+output order \(r\), the uniform first derivative and inverse
+estimates bound the two increments by
+\[
+\begin{split}
+ \|M_j(V_j)-M_j(0)\|_{C^r}
+   &\le C_r\big[\|V_j\|_{C^{r+d}}
+       +(1+\|V_j\|_{C^{r+d}})\|V_j\|_{C^b}\big],\\
+ \|{\cal R}_j(V_j)g_j\|_{C^r}
+   &\le C_r\big[\|g_j\|_{C^{r+d}}
+       +(1+\|V_j\|_{C^{r+d}})\|g_j\|_{C^b}\big].
+\end{split}
+\]
+Here a fixed shift \(d\) can be increased to cover the orders below
+\(b\). The first inequality follows by integrating the derivative
+along the segment from zero to \(V_j\). The two bounds show that
+the outputs vanish in every fixed tail norm. For higher
+derivatives the corresponding multilinear bounds keep one factor
+from each direction. Taylor remainders estimated with the next
+derivative are uniform in the row in a finitely higher seminorm.
+This makes the componentwise derivatives actual Fréchet derivatives
+and gives smooth tame evaluation of \({\cal M}\) and \(\Psi\).
+The row identity gives \(D{\cal M}(\mathbf V)\Psi(\mathbf V)=I\) on the
+output space throughout \({\cal U}\). Proposition 51.19 of \cite{KM}
+now gives local surjectivity at zero between these tame Fréchet spaces.
+
+Let \(r_j=M_j(0)\). Form target sequences equal to \(r_j\) up to a variable
+cutoff and zero thereafter. They converge to \(r=(r_j)_j\) in the same smooth
+zero-mean sequence space. For a sufficiently late cutoff, local surjectivity
+produces a preimage \(V\) whose entries are smooth primitives and tend to zero
+in each fixed norm, and which solves \(M_j(V_j)=0\) for every row in the tail.
+The exact invariant graphs then coincide on a full fundamental interval, so
+their stable and unstable extensions supply the whole heteroclinic branch.
+
+Carry this out for the \(a\)- then \(b\)-branch of each inner circle, and last
+for the outer circle, using finitely many fixed slot groups. At each step the
+charts and seeds are fixed for that active family, and their convergence, the
+actual zero-mean splitting and the tame right inverse used in Proposition 51.19
+all refer to the same diagonal rows. Upon freezing the vanishing solutions, the
+inverse chart and the actual finite forward and backward propagations on the
+fixed covering patches converge in the physical model coordinates. At every
+stage the calibrated actions and protected local end behavior remain exact. The
+current suffix supports avoid all previously restored inner circles and, for a
+\(b\)-repair, its companion \(a\)-branch. This is a physical itinerary property
+from the strict projected-support margins, so later active controls preserve the
+earlier branches exactly. All frozen corrections tend to zero in every fixed
+norm. After taking a common tail, every row has all four exact smooth bi-links
+with the source ordering.
+
+\section{Positive entropy of the collision maps}\label{sec:entropy}
+
+Let \(F_j\) be the normalized quotient return of one actual table after the
+successive smooth repairs. Write \(Q_j\) for the first landing chart and \(n_j\)
+for the number of physical quotient reflections per full word. The tables remain
+strictly positively curved and smooth. The actual maps
+\(F_j=Q_j^{-1}\overline T_j^{\,n_j}Q_j\) converge smoothly to the prepared model
+on a fixed neighborhood of its outer circle and enclosed disc. The repairs give
+four smooth invariant bi-links with the model ordering. Their local portions at
+the eight saddles converge in \(C^2\) by the local stable and unstable manifold
+theorem for the nearby smooth maps. The remaining compact portions are obtained
+by a fixed finite number of iterates and converge in \(C^2\) as well. The two
+halves at \(P_i\) belong to the same local unstable manifold, and the two halves
+at \(Q_i\) belong to the same local stable manifold. Thus each whole circle is
+smoothly embedded, including across its two endpoints. Inner and outer ordering
+follows from the strict separations of the four reference circles and their
+fixed small tubular neighborhoods.
+
+To apply stability of the reference island, extend the comparison on its
+original closed disc. On the fixed larger rectangle from
+Section~\ref{sec:model}, the map
+\(\Psi_j^{\mathrm{loc}}=F_*^{-1}\circ F_j\) is symplectic and converges smoothly
+to the identity. Write it as \((x,y)\mapsto(X,Y)\). The derivative
+\(\partial Y/\partial y\) is near one, and the mixed coordinates \((x,Y)\) cover
+a fixed smaller rectangle with a collar containing the prepared source disc. The
+closed one-form \(y\,dx+X\,dY\) has primitive \(xY+\eta_j(x,Y)\), where
+\(\eta_j\to0\) in every finite norm after normalization at a fixed base point.
+
+The closed region inside the prepared outer circle lies compactly in
+\(\Phi(\operatorname{int}D_{\mathrm{BT}})\). Take a fixed cutoff \(\chi\)
+supported inside this latter domain and equal to one near the closed region with
+a fixed margin. Extend \(\chi\eta_j\) by zero in mixed coordinates. The
+equations \[
+ y=Y+\partial_x(\chi\eta_j)(x,Y),\qquad
+ X=x+\partial_Y(\chi\eta_j)(x,Y)
+\] give a global symplectic diffeomorphism \(\Psi_j\). For fixed \(x\), the
+first equation is strictly increasing and onto as a function of \(Y\). For fixed
+\(Y\), the second is strictly increasing and onto as a function of \(x\). Both
+follow from \(C^2\) smallness and compact support. Whenever the correction
+differs from the identity, \((x,Y)\) belongs to the compact interior support and
+\((x,y)=(x,Y)+o(1)\), so the correction is the identity near and outside the
+boundary of the prepared source disc. It agrees with \(\Psi_j^{\mathrm{loc}}\)
+near the four actual circles and the closed outer region for all late \(j\),
+using the fixed margin and the \(C^2\) convergence of those curves.
+
+Then \(G_j=F_*\circ\Psi_j\) agrees with the physical normalized return on that
+neighborhood. Conjugating by \(\Phi^{-1}\) gives a conservative diffeomorphism
+preserving \(D_{\mathrm{BT}}\) and \(C^2\)-close there to the source map. Its
+four bi-links are \(C^2\)-close to the corresponding marked circles, with the
+same continued saddles. By \cite[Proposition 2.1 and Corollary E]{BT} these
+links bound an invariant stochastic island. In the prepared coordinates let
+\(I_j\) be this open island, of positive area and positive maximal Lyapunov
+exponent throughout. The comparison agrees with \(F_j\) on a neighborhood of
+\(I_j\), which gives invariance and the same exponents for \(F_j\) there.
+
+The comparison map is identity outside a compact subset of the plane. It
+therefore defines a smooth area-preserving diffeomorphism of a sufficiently
+large flat torus. The probability given by normalized area on \(I_j\) is
+invariant and absolutely continuous with respect to ambient area. Pesin's
+entropy formula for this probability \cite{Mane} expresses its entropy as the
+integral of the sum of positive Lyapunov exponents with multiplicity. The
+integral is strictly positive, hence the restriction of \(F_j\) to \(I_j\) has
+positive entropy for normalized area.
+
+The island \(Q_j(I_j)\) is invariant under \(\overline T_j^{\,n_j}\) and has
+positive quotient Liouville area, since the affine canonical Jacobian is the
+nonzero \(J_j\). The normalized restriction of quotient Liouville measure is
+carried back by \(Q_j\) to normalized model area. To see positivity for the
+entire quotient probability, choose a finite positive-entropy partition for the
+normalized restriction, and extend it by one atom for the invariant complement.
+If the island has probability \(a>0\), the entropy of each finite joined
+partition is \(a\) times the corresponding entropy on the island plus the
+entropy of the binary island/complement partition. Dividing by the time and
+letting it tend to infinity gives strictly positive full probability entropy for
+\(\overline T_j^{\,n_j}\). For any finite partition the \(m\)-step join under
+the \(n_j\)-th iterate is coarser than the \(mn_j\)-step join under the original
+map. Consequently positive iterate entropy implies positive entropy for
+\(\overline T_j\). The normalized quotient area is the pushforward of the normalized
+full ray area. The antipodal quotient has two sheets and preserves
+area on each, so the degree of the cover cancels after normalization.
+Pulling quotient partitions back to the full oriented-line
+annulus preserves their joined probabilities and gives the same lower bound for
+\(T_j\) with the normalized full Liouville probability.
+
+In the collision chart let \(s\) be the arclength of the \textbf{actual}
+boundary and \(\varphi\in(0,\pi)\) the angle of the outgoing direction from the
+positive tangent. The tangential momentum is \(p=\cos\varphi\), unchanged by
+reflection at the collision. The positive measure of the two-form
+\(dp\wedge ds\) is \(\sin\varphi\,ds\,d\varphi\), and its total mass is
+\(2|\partial D_j|\). The conjugacy from incoming lines to outgoing collision
+states carries \(T_j\) to the physical specular collision map \(B_j\), with
+precisely the probability in the target. Thus \(h_{\mu_j}(B_j)>0\) for all
+sufficiently late rows.
+
+Finally write \(\gamma_E(\theta)=(2\cos\theta,\sqrt3\sin\theta)\) on
+\(S^1=\mathbb R/(2\pi\mathbb Z)\). Each boundary is
+\(\gamma_E(\theta)+f_j(s_E(\theta))n_E(\theta)\), where \(s_E\) is fixed
+reference arclength and \(f_j\) is the sum of the physical normal profiles. The
+designated \(k_j\) suppresses all row-dependent finite coefficients through
+increasing orders. The actual correction profiles vanish in every fixed norm in
+the solved sequence. It follows that \(f_j\to0\) in every fixed \(C^r\) norm,
+and hence the smooth embeddings converge to \(\gamma_E\) in \(C^\infty\).
+Discard the finitely many initial rows and renumber. This proves
+Theorem~\ref{thm:main}.
+
+
+\subsection*{AI assistance}
+AI tools assisted in developing and drafting the mathematical argument,
+checking its natural-language dependencies, and reviewing the exposition.
+
+\begin{thebibliography}{11}
+\bibitem{BergerICM}
+P.~Berger, \emph{Wild dynamics on manifolds}, Proceedings of the
+International Congress of Mathematicians 2026, Vol.~5, 24--41.
+\href{https://doi.org/10.1137/25M1810787}{doi:10.1137/25M1810787}.
+
+\bibitem{BT}
+P.~Berger and D.~Turaev, \emph{On Herman's positive entropy conjecture},
+Adv. Math. \textbf{349} (2019), 1234--1288.
+\href{https://doi.org/10.1016/j.aim.2019.04.002}{doi:10.1016/j.aim.2019.04.002}.
+
+\bibitem{BTcorr}
+P.~Berger and D.~Turaev, \emph{Corrigendum to On Herman's Positive
+Entropy Conjecture}, appended to \href{https://arxiv.org/pdf/1704.02473v2#page=53}
+{arXiv:1704.02473v2}, 2026.
+
+\bibitem{Bessa}
+M.~Bessa, G.~Del Magno, J.~Lopes Dias, J.~P. Gaiv\~ao and M.~J. Torres,
+\emph{Billiards in generic convex bodies have positive topological
+entropy}, Adv. Math. \textbf{442} (2024), 109592.
+\href{https://doi.org/10.1016/j.aim.2024.109592}{doi:10.1016/j.aim.2024.109592}.
+
+\bibitem{DCRR}
+J.~Damasceno, M.~J. Dias Carneiro and R.~Ram\'irez-Ros,
+\emph{The billiard inside an ellipse deformed by the curvature flow},
+Proc. Amer. Math. Soc. \textbf{145} (2017), 705--719.
+\href{https://doi.org/10.1090/proc/13351}{doi:10.1090/proc/13351}.
+
+\bibitem{DRR}
+A.~Delshams and R.~Ram\'irez-Ros, \emph{Poincar\'e--Melnikov--Arnold
+method for analytic planar maps}, Nonlinearity \textbf{9} (1996), 1--26.
+\href{https://doi.org/10.1088/0951-7715/9/1/001}{doi:10.1088/0951-7715/9/1/001}.
+
+\bibitem{Glutsyuk}
+A.~Glutsyuk, \emph{Density of thin film billiard reflection pseudogroup
+in Hamiltonian symplectomorphism pseudogroup},
+\href{https://arxiv.org/abs/2005.02657v5}{arXiv:2005.02657v5}.
+
+\bibitem{HP}
+M.~W. Hirsch and C.~C. Pugh, \emph{Stable manifolds and hyperbolic
+sets}, Global Analysis, Proc. Sympos. Pure Math. \textbf{14} (1970),
+133--163. \href{https://escholarship.org/uc/item/2rr3r1pz}{Primary text}.
+
+\bibitem{KM}
+A.~Kriegl and P.~W. Michor, \emph{The Convenient Setting of Global
+Analysis}, Mathematical Surveys and Monographs \textbf{53}, AMS, 1997.
+\href{https://www.mat.univie.ac.at/~michor/apbookh-ams.pdf}{Authors' edition}.
+
+\bibitem{Mane}
+R.~Ma\~n\'e, \emph{A proof of Pesin's formula}, Ergodic Theory
+Dynam. Systems \textbf{1} (1981), 95--102.
+\href{https://doi.org/10.1017/S0143385700001188}{doi:10.1017/S0143385700001188}.
+
+\bibitem{Turaev}
+D.~Turaev, \emph{Polynomial approximations of symplectic dynamics and
+richness of chaos in non-hyperbolic area-preserving maps},
+Nonlinearity \textbf{16} (2003), no.~1, 123--135.
+\href{https://doi.org/10.1088/0951-7715/16/1/308}{doi:10.1088/0951-7715/16/1/308}.
+\href{https://doi.org/10.20347/WIAS.PREPRINT.722}{WIAS Preprint 722}.
+\end{thebibliography}
+\end{document}

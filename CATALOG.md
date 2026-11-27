@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**844 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**843 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -17,7 +17,7 @@
 | [Geometry and topology](#geometry-and-topology) | [167](#geometry-topology-open) | [24](#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [22](#optimization-information-open) | [4](#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](#waves-quantum-systems-and-spectral-geometry) | [24](#spectral2-open) | [8](#spectral2-solved) |
-| [Imaging, control, geometry and dynamics](#imaging-control-geometry-and-dynamics) | [22](#inverse2-open) | [8](#inverse2-solved) |
+| [Imaging, control, geometry and dynamics](#imaging-control-geometry-and-dynamics) | [21](#inverse2-open) | [8](#inverse2-solved) |
 | [Fluids, kinetic theory and continuum mechanics](#fluids-kinetic-theory-and-continuum-mechanics) | [36](#continuum2-open) | [12](#continuum2-solved) |
 | [Stochastic growth, populations and statistical mechanics](#stochastic-growth-populations-and-statistical-mechanics) | [22](#stochastic2-open) | [9](#stochastic2-solved) |
 | [Many-body physics, quantum information and wave analysis](#many-body-physics-quantum-information-and-wave-analysis) | [24](#spectral3-open) | [15](#spectral3-solved) |
@@ -789,7 +789,6 @@
 | 137 | [Exact capacity of the binary deletion channel](problems/137-binary-deletion-channel-capacity.md) | 🔵 OPEN | Information theory / synchronization errors |
 | 138 | [Recovering a rough planar conductivity from one boundary patch](problems/138-recovering-a-rough-planar-conductivity-from-one-boundary-patch.md) | 🟡 PARTIAL | Inverse problems and imaging |
 | 140 | [Global null control of a heat equation with cubic growth](problems/140-global-cubic-heat-null-control.md) | 🟡 PARTIAL | Nonlinear PDE control / reaction-diffusion |
-| 143 | [Positive metric entropy for billiards arbitrarily close to an ellipse](problems/143-positive-entropy-billiards-near-ellipse.md) | 🔵 OPEN | Hamiltonian billiards / chaotic ray transport |
 | 291 | [The Černý synchronizing-automaton conjecture](problems/291-cerny.md) | 🔵 OPEN | Finite-state control and synchronization |
 | 319 | [Generic stabilization by static output feedback](problems/319-generic-static-output-feedback-stabilization.md) | 🔵 OPEN | Feedback control and real algebraic geometry |
 | 332 | [Decidability of stability under arbitrary switching](problems/332-switched-linear-stability-decidability.md) | 🔵 OPEN | Switched systems, robust control and formal verification |
@@ -809,6 +808,12 @@
 | 141 | [Finite-jet determination of small-time local controllability](problems/141-finite-jet-small-time-control.md) | ✅ SOLVED | A fixed five-dimensional polynomial STLC system has no finite jet guaranteeing STLC with the same bounded controls. | [Proof](research/solutions/141-finite-jet-control-counterexample/paper/main.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/141-review.md) |
 | 142 | [An irrational polygon with nonergodic billiard flow](problems/142-irrational-nonergodic-polygon.md) | ✅ SOLVED | No irrational simple polygon with nonergodic full billiard flow, by the zero-frequency proof extension. | [Proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Weak-mixing-of-triangular-billiards-with-an-irrational-angle-October-5-2026/weak-mixing-triangular-billiards.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/142-independent-zero-frequency-review.md) |
 | 338 | [Decidability of local asymptotic stability for polynomial ODEs](problems/338-polynomial-local-stability-decidability.md) | ✅ SOLVED | Counterexample | [Proof](https://arxiv.org/pdf/2610.12434v1) | [Review](research/solution-status-audit-2026-11-03/lane-b/338.json) |
+
+### Solution claimed
+
+| ID | Problem | Status | Outcome | Proof | Review |
+| --- | --- | --- | --- | --- | --- |
+| 143 | [Positive metric entropy for billiards arbitrarily close to an ellipse](problems/143-positive-entropy-billiards-near-ellipse.md) | 🟠 SOLUTION CLAIMED | Proposed proof of positive collision-map metric entropy for smooth strictly convex tables converging to one fixed ellipse. | [Proof](research/solutions/143-positive-entropy-billiards-near-ellipse/paper.pdf) | [Review](research/solutions/143-positive-entropy-billiards-near-ellipse/README.md) |
 
 ## Fluids, kinetic theory and continuum mechanics
 
@@ -1519,7 +1524,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | Publication batch | Open targets | Entry review dates |
 | --- | ---: | --- |
 | Original collection | 62 | 2026-09-08–2026-11-03 |
-| Second collection | 76 | 2026-09-08–2026-11-03 |
+| Second collection | 75 | 2026-09-08–2026-11-03 |
 | Third collection | 77 | 2026-09-13–2026-11-03 |
 | September 2026 expansion — batch 1 | 8 | 2026-09-17 |
 | September 2026 expansion — batch 2 | 9 | 2026-09-17–2026-10-30 |
