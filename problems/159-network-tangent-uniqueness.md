@@ -2,9 +2,9 @@
 
 **Area:** Grain-boundary evolution
 
-**Status:** 🔵 OPEN
+**Status:** 🟠 SOLUTION CLAIMED
 
-**Last checked:** 2026-09-08
+**Last checked:** 2026-11-27
 
 ## Problem statement
 
@@ -28,6 +28,12 @@ A unique limiting shape would make the local geometry of a grain-rearrangement e
 
 ## Status review
 
-**Literature check:** Open in cited literature; no later resolution located.
+**Claimed outcome:** Kaiwen Jin gives a proof of local weak uniqueness of the tangent arclength varifold at each interior finite-time singularity. The proof includes the integer multiplicities and compares the limits in the fixed coordinates of the statement.
 
-The source distinguishes this question from multiplicity one: different subsequences could have distinct shapes even if each had unit multiplicity. Searches for “network flow uniqueness blow up limits 2025 2026” and “Pluda Pozzetta uniqueness shrinker networks” found conditional convergence results, but no theorem covering all collapsing networks.
+**Known case:** Pluda and Pozzetta's [Theorem 1.1](https://arxiv.org/abs/2204.11675v2) gives smooth convergence for an endpoint-free graph with a nonempty compact nondegenerate blow-up on the same graph. The claim here uses the original local weak varifold topology.
+
+**Literature check:** A targeted search for general degenerate or multiply covered planar network blow-up uniqueness, including recent primary sources, located the restricted results described above and no earlier proof of this exact statement.
+
+**Evidence:** [Manuscript](../research/solutions/159-network-tangent-uniqueness/paper/article.pdf) and [statement comparison](../research/solutions/159-network-tangent-uniqueness/TARGET_COMPARISON.md).
+
+**Review:** Separate AI roles assessed the proof and read a frozen draft in a shared environment. The author revised the draft after the reader and referee reports. Independent external review is outstanding.

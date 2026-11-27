@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**844 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**843 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -18,7 +18,7 @@
 | [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [22](#optimization-information-open) | [4](#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](#waves-quantum-systems-and-spectral-geometry) | [24](#spectral2-open) | [8](#spectral2-solved) |
 | [Imaging, control, geometry and dynamics](#imaging-control-geometry-and-dynamics) | [22](#inverse2-open) | [8](#inverse2-solved) |
-| [Fluids, kinetic theory and continuum mechanics](#fluids-kinetic-theory-and-continuum-mechanics) | [36](#continuum2-open) | [12](#continuum2-solved) |
+| [Fluids, kinetic theory and continuum mechanics](#fluids-kinetic-theory-and-continuum-mechanics) | [35](#continuum2-open) | [12](#continuum2-solved) |
 | [Stochastic growth, populations and statistical mechanics](#stochastic-growth-populations-and-statistical-mechanics) | [22](#stochastic2-open) | [9](#stochastic2-solved) |
 | [Many-body physics, quantum information and wave analysis](#many-body-physics-quantum-information-and-wave-analysis) | [24](#spectral3-open) | [15](#spectral3-solved) |
 | [Nonlinear waves, fluids and kinetic equations](#nonlinear-waves-fluids-and-kinetic-equations) | [51](#waves-fluids-kinetics-open) | [8](#waves-fluids-kinetics-solved) |
@@ -831,7 +831,6 @@
 | 155 | [The full set of zero-energy cubic-to-tetragonal strains](problems/155-tetragonal-quasiconvex-hull.md) | 🔵 OPEN | Materials science and nonlinear elasticity |
 | 156 | [Concentration of eikonal entropy production on jump curves](problems/156-eikonal-entropy-concentration.md) | 🔵 OPEN | Variational interfaces and nonlinear PDE |
 | 158 | [Multiplicity one at planar network singularities](problems/158-network-multiplicity-one.md) | 🟡 PARTIAL | Grain-boundary evolution |
-| 159 | [Uniqueness of the limiting shape at a network singularity](problems/159-network-tangent-uniqueness.md) | 🔵 OPEN | Grain-boundary evolution |
 | 160 | [Sharp enstrophy-limited heat transport in two dimensions](problems/160-two-dimensional-wall-transport.md) | 🔵 OPEN | Heat transfer and flow optimization |
 | 161 | [The maximal heat-transfer exponent at finite Prandtl number](problems/161-finite-prandtl-heat-scaling.md) | 🔵 OPEN | Buoyant convection and heat transfer |
 | 162 | [Does fixed noise select a unique inviscid fluid law?](problems/162-does-fixed-noise-select-a-unique-inviscid-fluid-law.md) | 🟡 PARTIAL | Nonlinear waves, fluids and kinetic equations |
@@ -873,6 +872,12 @@
 | 404 | [Uniform convergence of value functions in local mean-field games](problems/404-local-mfg-uniform-vanishing-viscosity.md) | ✅ SOLVED | Whole-family local uniform vanishing-viscosity convergence for the exact quadratic local MFG in dimensions one through three, with initial vacuum allowed. | [Proof](research/solutions/local-mfg-uniform-vanishing-viscosity/paper/main.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/404-review.md) |
 | 410 | [Quadratic-growth rigidity for the complex Monge–Ampère equation](problems/410-complex-monge-ampere-quadratic-growth.md) | ✅ SOLVED | Affirmative proof | [Proof](https://arxiv.org/pdf/2610.26016v1) | [Review](research/solution-status-audit-2026-11-03/lane-b/410.json) |
 | 436 | [Radial classification of higher-degree entire planar Ginzburg–Landau vortices](problems/436-entire-ginzburg-landau-vortex-symmetry.md) | ✅ SOLVED | Counterexample | [Proof](https://arxiv.org/pdf/2610.34979v1) | [Review](research/solution-status-audit-2026-11-03/lane-b/436.json) |
+
+### Solution claimed
+
+| ID | Problem | Status | Outcome | Proof | Review |
+| --- | --- | --- | --- | --- | --- |
+| 159 | [Uniqueness of the limiting shape at a network singularity](problems/159-network-tangent-uniqueness.md) | 🟠 SOLUTION CLAIMED | Affirmative proof claimed. The arclength varifold limit at any interior singularity is unique, with its full integer multiplicity in fixed coordinates. | [Proof](research/solutions/159-network-tangent-uniqueness/paper/article.pdf) | [Review](research/solutions/159-network-tangent-uniqueness/TARGET_COMPARISON.md) |
 
 ## Stochastic growth, populations and statistical mechanics
 
@@ -1519,7 +1524,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | Publication batch | Open targets | Entry review dates |
 | --- | ---: | --- |
 | Original collection | 62 | 2026-09-08–2026-11-03 |
-| Second collection | 76 | 2026-09-08–2026-11-03 |
+| Second collection | 75 | 2026-09-08–2026-11-03 |
 | Third collection | 77 | 2026-09-13–2026-11-03 |
 | September 2026 expansion — batch 1 | 8 | 2026-09-17 |
 | September 2026 expansion — batch 2 | 9 | 2026-09-17–2026-10-30 |

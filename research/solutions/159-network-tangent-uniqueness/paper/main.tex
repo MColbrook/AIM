@@ -1,0 +1,191 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{mathtools}
+\usepackage[letterpaper,textwidth=6.05in,textheight=8.62in,centering]{geometry}
+\usepackage[hidelinks,pdfencoding=auto]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\hypersetup{pdftitle={Unique tangent varifolds for planar network flow},
+  pdfauthor={Kaiwen Jin},
+  pdfsubject={Curvature flow of planar networks and tangent varifold uniqueness}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\numberwithin{equation}{section}
+\allowdisplaybreaks[3]
+\providecommand{\tightlist}{\setlength{\itemsep}{3pt}\setlength{\parskip}{0pt}}
+\raggedbottom
+
+\title[Unique tangent varifolds for planar network flow]{Unique tangent varifolds for planar network flow}
+\author{Kaiwen Jin}
+\thanks{\href{mailto:yui.ui.siki@gmail.com}{\texttt{yui.ui.siki@gmail.com}}.}
+\keywords{Network flow, tangent varifold, curvature flow, triple junction}
+\subjclass[2020]{53E10, 35K93, 49Q15}
+
+\begin{document}
+\begin{abstract}
+We prove that a finite embedded planar network evolving by curvature has
+a unique parabolically rescaled arclength varifold at each interior
+finite-time singularity. The network has balanced triple junctions and
+fixed boundary endpoints. A Gaussian length estimate, obtained by
+coupling a finite geodesic description of the network inside a disk
+to a signed estimate outside it, gives convergence of the spatial
+weights. A local curvature-action estimate controls the projections of
+the junctions swept out during short comparison windows. The scalar zero-number
+theorem then gives enough intersections with transverse lines to
+identify the tangent directions at arbitrary times. Both the
+multiplicities and the directions are determined in the original
+coordinates.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+\label{sec:introduction}
+
+Planar network flow describes the motion of interfaces with triple
+junctions, including grain boundaries in a two-dimensional idealization.
+Parabolic rescaling at a singularity isolates its local geometry.
+Different sequences of observation times could a priori give different
+limits, even if the limiting lengths in each region were the same.
+AIM Problem 159 \cite{AIM} asks for uniqueness as an arclength
+varifold, retaining integer multiplicities and comparing limits in a
+fixed frame.
+
+The question is related to the blow-up problem of Mantegazza, Novaga,
+Pluda and Schulze \cite[Open Problem~7.25 in the linked author version]{MNPS}.
+Their problem also includes full-family local \(C^1\) convergence.
+For a network without endpoints, Pluda and Pozzetta
+\cite[Theorem~1.1]{PP} prove smooth convergence up to
+reparametrization when there is a nonempty nondegenerate blow-up.
+That blow-up is a compact regular shrinker on the same graph. Their proof uses a \L{}ojasiewicz--Simon inequality
+in a smooth chart about that shrinker. At an arbitrary singularity,
+some material edges may shrink to zero and exterior strands can
+extend beyond every fixed disk in the rescaled variables. We use a
+finite-dimensional energy that is subanalytic at collisions, together
+with a separate estimate for the exterior strands. The conclusion
+uses the local weak topology of arclength varifolds.
+
+\begin{theorem}\label{thm:main}
+Let \(\Gamma(t)\) be a finite embedded planar network moving by
+curvature, with only \(120^\circ\) triple junctions and fixed endpoints
+on the boundary of a smooth strictly convex domain. At any interior
+finite-time singularity \((x_0,T)\), the arclength varifolds of
+\begin{equation}\label{eq:rescale}
+S_\tau=\frac{\Gamma(t)-x_0}{\sqrt{2(T-t)}},
+\qquad \tau=-\tfrac12\log(T-t),
+\end{equation}
+converge locally weakly as \(t\uparrow T\) to a Gaussian-stationary
+integral varifold carried by shrinker arcs. In particular, all locally
+convergent subsequences have the same limiting arclength varifold,
+including its integer multiplicities in the fixed ambient coordinates.
+\end{theorem}
+
+On a regular time interval, the network has fixed finite
+incidence and compact material parameter intervals. Regular edges
+have normal velocity equal to their curvature, the incident edges
+have a common velocity at each junction, and the prescribed
+\(120^\circ\) angles give zero sum of the three outward unit
+tangents. The domain may be unbounded.
+
+The arclength varifold of a network is the sum, over its material
+edges, of arclength pushed forward by position and its unoriented
+tangent line. Local weak convergence is tested on compactly supported
+continuous functions on \(\mathbb R^2\times G(2,1)\), where \(G(2,1)\)
+is the space of unoriented lines through the origin. Its spatial
+weight is the marginal on \(\mathbb R^2\).
+We use periodic parameters for a smooth closed component and mark a
+point when an incidence description is needed.
+We use smooth geometric representatives at positive times.
+For each connected component other than a smooth closed curve, the regular-flow
+conventions of \cite[Definitions~2.1, 2.6 and 2.11 and Theorem~5.6 of
+the arXiv version]{MNPS} give this regularity. For a closed component,
+apply Angenent's closed-curve regularity
+\cite[Theorems~3.1 and 8.1 and their proofs]{AngCurve} with Euclidean
+metric and speed \(V(\mathbf t,k)=k\). At an earlier regular time the
+curvature of a compact regular loop is square integrable. Theorem~8.1
+gives Hölder curvature at positive times, and uniqueness and
+Theorem~3.1 give smooth geometric representatives after restarting.
+Geometric reparametrization preserves the arclength varifold.
+
+The proof has two parts. We first use planar face areas to rule out
+collapsed cycles. The face potentials associated with Gaussian flux
+then control the entire exterior of a fixed disk. The resulting
+gradient estimate inside the disk is strong enough to give finite
+rescaled action and convergence of the spatial weight. We next compare
+an arbitrary starting slice to a nearby small-defect slice. On a
+regular arc of the limiting support, an estimate for the projection
+of the swept junctions allows us to use transverse intersection
+counts to identify the limiting tangent lines. This final step makes
+the conclusion a varifold statement.
+
+\input{proof.tex}
+
+\section*{AI assistance}
+AI tools assisted with proof development, source checking, and
+manuscript preparation. Separate AI roles assessed the complete
+natural-language argument and reviewed a manuscript draft. They
+worked in a shared environment with some prior task context. The
+draft was revised after the reader and referee reports.
+
+\begin{thebibliography}{99}
+
+\bibitem{AIM}
+S. Brunton, M. J. Colbrook, M. V. de Hoop, G. Stepaniants,
+A. Townsend, and R. Ward,
+\emph{159. Uniqueness of the limiting shape at a network singularity},
+in \emph{AIM --- Open Applied Problems}, 2026.
+\href{https://github.com/MColbrook/AIM/blob/b2ec0fac559f532fc0ed04fce81deea0ce07c68b/problems/159-network-tangent-uniqueness.md}{Fixed problem statement}.
+
+
+\bibitem{AngCurve}
+S. B. Angenent,
+\emph{Parabolic equations for curves on surfaces. Part I. Curves with
+\(p\)-integrable curvature},
+Ann. of Math. (2) \textbf{132} (1990), 451--483.
+\href{https://doi.org/10.2307/1971426}{doi:10.2307/1971426}.
+
+\bibitem{AngNodal}
+S. B. Angenent,
+\emph{Nodal properties of solutions of parabolic equations},
+Rocky Mountain J. Math. \textbf{21} (1991), 585--592.
+\href{https://doi.org/10.1216/rmjm/1181072953}{doi:10.1216/rmjm/1181072953}.
+
+\bibitem{BDLS}
+J. Bolte, A. Daniilidis, A. S. Lewis, and M. Shiota,
+\emph{Clarke subgradients of stratifiable functions},
+SIAM J. Optim. \textbf{18} (2007), 556--572.
+\href{https://doi.org/10.1137/060670080}{doi:10.1137/060670080}.
+\href{https://arxiv.org/abs/math/0601530v1}{arXiv:math/0601530v1}.
+
+\bibitem{CL}
+J.-E. Chang and Y.-K. Lue,
+\emph{Uniqueness of regular shrinkers with 2 closed regions},
+\href{https://arxiv.org/abs/1901.10315v1}{arXiv:1901.10315v1} (2019).
+
+\bibitem{MNPS}
+C. Mantegazza, M. Novaga, A. Pluda, and F. Schulze,
+\emph{Evolution of networks with multiple junctions},
+Astérisque \textbf{452} (2024).
+\href{https://people.dm.unipi.it/novaga/papers/mantegazza/tripunto/network-survey.pdf}{Author version linked by AIM}.
+\href{https://arxiv.org/abs/1611.08254v4}{arXiv:1611.08254v4}.
+
+\bibitem{PP}
+A. Pluda and M. Pozzetta,
+\emph{On the uniqueness of nondegenerate blowups for the motion by curvature of networks},
+\href{https://arxiv.org/abs/2204.11675v2}{arXiv:2204.11675v2} (2022).
+
+\bibitem{Teschl}
+G. Teschl,
+\emph{Ordinary Differential Equations and Dynamical Systems},
+Graduate Studies in Mathematics, vol. 140, Amer. Math. Soc.,
+Providence, RI, 2012.
+\href{https://mat.univie.ac.at/~gerald/ftp/book-ode/ode.pdf}{Author's version}.
+
+\bibitem{Valette}
+G. Valette,
+\emph{On subanalytic geometry},
+\href{https://arxiv.org/abs/2507.23622v1}{arXiv:2507.23622v1} (2025).
+
+\end{thebibliography}
+\end{document}
