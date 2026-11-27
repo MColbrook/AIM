@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**844 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**843 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -18,7 +18,7 @@
 | [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [22](#optimization-information-open) | [4](#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](#waves-quantum-systems-and-spectral-geometry) | [24](#spectral2-open) | [8](#spectral2-solved) |
 | [Imaging, control, geometry and dynamics](#imaging-control-geometry-and-dynamics) | [22](#inverse2-open) | [8](#inverse2-solved) |
-| [Fluids, kinetic theory and continuum mechanics](#fluids-kinetic-theory-and-continuum-mechanics) | [36](#continuum2-open) | [12](#continuum2-solved) |
+| [Fluids, kinetic theory and continuum mechanics](#fluids-kinetic-theory-and-continuum-mechanics) | [35](#continuum2-open) | [12](#continuum2-solved) |
 | [Stochastic growth, populations and statistical mechanics](#stochastic-growth-populations-and-statistical-mechanics) | [22](#stochastic2-open) | [9](#stochastic2-solved) |
 | [Many-body physics, quantum information and wave analysis](#many-body-physics-quantum-information-and-wave-analysis) | [24](#spectral3-open) | [15](#spectral3-solved) |
 | [Nonlinear waves, fluids and kinetic equations](#nonlinear-waves-fluids-and-kinetic-equations) | [51](#waves-fluids-kinetics-open) | [8](#waves-fluids-kinetics-solved) |
@@ -848,7 +848,6 @@
 | 405 | [Uniqueness of divergence-free transport with bounded-deformation velocity](problems/405-uniqueness-of-divergence-free-transport-with-bounded-deformation-velocity.md) | 🟡 PARTIAL | Linear transport and nonsmooth flows |
 | 406 | [Stationarity of Lipschitz weak solutions of the minimal-surface system](problems/406-lawson-osserman-stationarity.md) | 🔵 OPEN | Nonlinear elliptic PDE systems / surface energy |
 | 407 | [Polynomial growth of every entire minimal graph](problems/407-entire-minimal-graphs-polynomial-growth.md) | 🔵 OPEN | Quasilinear elliptic PDEs / minimal interfaces |
-| 408 | [Polynomial anisotropic minimal graphs in dimensions four and five](problems/408-polynomial-anisotropic-minimal-graphs.md) | 🔵 OPEN | Quasilinear elliptic PDEs / crystalline surface energy |
 | 413 | [Energy-admissible weak solutions of the undamped hyperbolic p-Laplacian from smooth data](problems/413-energy-admissible-weak-solutions-of-the-undamped-hyperbolic-p-laplacian-from-smooth-data.md) | 🔵 OPEN | Nonlinear wave equations and continuum mechanics |
 | 414 | [Existence of a nonaffine polynomial minimal graph](problems/414-isotropic-polynomial-minimal-graph.md) | 🔵 OPEN | Quasilinear elliptic PDEs / minimal interfaces |
 | 416 | [Time analyticity of trajectories for bounded-vorticity Euler flows](problems/416-time-analyticity-of-trajectories-for-bounded-vorticity-euler-flows.md) | 🔵 OPEN | Ideal fluids and Lagrangian regularity |
@@ -873,6 +872,12 @@
 | 404 | [Uniform convergence of value functions in local mean-field games](problems/404-local-mfg-uniform-vanishing-viscosity.md) | ✅ SOLVED | Whole-family local uniform vanishing-viscosity convergence for the exact quadratic local MFG in dimensions one through three, with initial vacuum allowed. | [Proof](research/solutions/local-mfg-uniform-vanishing-viscosity/paper/main.pdf) | [Review](research/solution_reviews/2026-10-15-active-prs/404-review.md) |
 | 410 | [Quadratic-growth rigidity for the complex Monge–Ampère equation](problems/410-complex-monge-ampere-quadratic-growth.md) | ✅ SOLVED | Affirmative proof | [Proof](https://arxiv.org/pdf/2610.26016v1) | [Review](research/solution-status-audit-2026-11-03/lane-b/410.json) |
 | 436 | [Radial classification of higher-degree entire planar Ginzburg–Landau vortices](problems/436-entire-ginzburg-landau-vortex-symmetry.md) | ✅ SOLVED | Counterexample | [Proof](https://arxiv.org/pdf/2610.34979v1) | [Review](research/solution-status-audit-2026-11-03/lane-b/436.json) |
+
+### Solution claimed
+
+| ID | Problem | Status | Outcome | Proof | Review |
+| --- | --- | --- | --- | --- | --- |
+| 408 | [Polynomial anisotropic minimal graphs in dimensions four and five](problems/408-polynomial-anisotropic-minimal-graphs.md) | 🟠 SOLUTION CLAIMED | Affine rigidity for entire polynomial graphs in the stated class in both dimensions. | [Proof](research/solutions/408-polynomial-anisotropic-minimal-graphs/paper.pdf) | [Review](research/solutions/408-polynomial-anisotropic-minimal-graphs/TARGET-COMPARISON.md) |
 
 ## Stochastic growth, populations and statistical mechanics
 
@@ -1527,7 +1532,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 2026 expansion — batch 4 | 7 | 2026-09-18–2026-10-30 |
 | September 2026 expansion — batch 5 | 8 | 2026-09-18–2026-10-13 |
 | September 2026 expansion — batch 6 | 6 | 2026-09-19–2026-10-13 |
-| September 22 expansion — PDE emphasis | 88 | 2026-09-22–2026-10-30 |
+| September 22 expansion — PDE emphasis | 87 | 2026-09-22–2026-10-30 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23–2026-10-13 |
 | Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 114 | 2026-09-23–2026-11-04 |
 | Retained further problems, integrated 30 October 2026 | 373 | 2026-10-30–2026-11-07 |
